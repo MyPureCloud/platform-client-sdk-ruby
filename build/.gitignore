@@ -47,3 +47,5 @@ git_push.sh
 *.gemspec
 !purecloudplatformclientv2-*.gem
 spec/
+.rspec
+.swagger-codegen-ignore
