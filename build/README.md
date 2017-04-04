@@ -1,7 +1,7 @@
 ---
 title: PureCloud Ruby Gem
 ---
-![](http://ruby-gem-downloads-badge.herokuapp.com/purecloudplatformclientv2?label=2.0.36)
+![](http://ruby-gem-downloads-badge.herokuapp.com/purecloudplatformclientv2?label=2.0.37)
 
 Documentation can be found at https://developer.mypurecloud.com/api/rest/client-libraries/ruby/latest/
 
@@ -10,7 +10,7 @@ Documentation can be found at https://developer.mypurecloud.com/api/rest/client-
 ### from rubygems.org
 
 ~~~
-gem 'purecloudplatformclientv2', '~> 2.0.36'
+gem 'purecloudplatformclientv2', '~> 2.0.37'
 ~~~
 
 ### Install from Git
