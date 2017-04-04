@@ -51,4 +51,6 @@ build-iPhoneSimulator/
 
 
 ### Custom rules ###
+git_push.sh
 *.gemspec
+!purecloudplatformclientv2-*.gem
