@@ -25,9 +25,9 @@ module PureCloud
 
     attr_accessor :certificate
 
-    attr_accessor :issuer_uri
-
     attr_accessor :sso_target_uri
+
+    attr_accessor :issuer_uri
 
     attr_accessor :disabled
 
@@ -40,8 +40,8 @@ module PureCloud
         :'id' => :'id',
         :'name' => :'name',
         :'certificate' => :'certificate',
-        :'issuer_uri' => :'issuerURI',
         :'sso_target_uri' => :'ssoTargetURI',
+        :'issuer_uri' => :'issuerURI',
         :'disabled' => :'disabled',
         :'self_uri' => :'selfUri'
       }
@@ -53,8 +53,8 @@ module PureCloud
         :'id' => :'String',
         :'name' => :'String',
         :'certificate' => :'String',
-        :'issuer_uri' => :'String',
         :'sso_target_uri' => :'String',
+        :'issuer_uri' => :'String',
         :'disabled' => :'BOOLEAN',
         :'self_uri' => :'String'
       }
@@ -80,12 +80,12 @@ module PureCloud
         self.certificate = attributes[:'certificate']
       end
 
-      if attributes.has_key?(:'issuerURI')
-        self.issuer_uri = attributes[:'issuerURI']
-      end
-
       if attributes.has_key?(:'ssoTargetURI')
         self.sso_target_uri = attributes[:'ssoTargetURI']
+      end
+
+      if attributes.has_key?(:'issuerURI')
+        self.issuer_uri = attributes[:'issuerURI']
       end
 
       if attributes.has_key?(:'disabled')
@@ -118,8 +118,8 @@ module PureCloud
           id == o.id &&
           name == o.name &&
           certificate == o.certificate &&
-          issuer_uri == o.issuer_uri &&
           sso_target_uri == o.sso_target_uri &&
+          issuer_uri == o.issuer_uri &&
           disabled == o.disabled &&
           self_uri == o.self_uri
     end
@@ -133,7 +133,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, certificate, issuer_uri, sso_target_uri, disabled, self_uri].hash
+      [id, name, certificate, sso_target_uri, issuer_uri, disabled, self_uri].hash
     end
 
     # build the object from hash

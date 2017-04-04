@@ -51,9 +51,9 @@ module PureCloud
 
     attr_accessor :thumbnails
 
-    attr_accessor :sharing_uri
-
     attr_accessor :download_sharing_uri
+
+    attr_accessor :sharing_uri
 
     # The URI for this object
     attr_accessor :self_uri
@@ -76,8 +76,8 @@ module PureCloud
         :'caller_address' => :'callerAddress',
         :'receiver_address' => :'receiverAddress',
         :'thumbnails' => :'thumbnails',
-        :'sharing_uri' => :'sharingUri',
         :'download_sharing_uri' => :'downloadSharingUri',
+        :'sharing_uri' => :'sharingUri',
         :'self_uri' => :'selfUri'
       }
     end
@@ -100,8 +100,8 @@ module PureCloud
         :'caller_address' => :'String',
         :'receiver_address' => :'String',
         :'thumbnails' => :'Array<DocumentThumbnail>',
-        :'sharing_uri' => :'String',
         :'download_sharing_uri' => :'String',
+        :'sharing_uri' => :'String',
         :'self_uri' => :'String'
       }
     end
@@ -176,12 +176,12 @@ module PureCloud
         end
       end
 
-      if attributes.has_key?(:'sharingUri')
-        self.sharing_uri = attributes[:'sharingUri']
-      end
-
       if attributes.has_key?(:'downloadSharingUri')
         self.download_sharing_uri = attributes[:'downloadSharingUri']
+      end
+
+      if attributes.has_key?(:'sharingUri')
+        self.sharing_uri = attributes[:'sharingUri']
       end
 
       if attributes.has_key?(:'selfUri')
@@ -222,8 +222,8 @@ module PureCloud
           caller_address == o.caller_address &&
           receiver_address == o.receiver_address &&
           thumbnails == o.thumbnails &&
-          sharing_uri == o.sharing_uri &&
           download_sharing_uri == o.download_sharing_uri &&
+          sharing_uri == o.sharing_uri &&
           self_uri == o.self_uri
     end
 
@@ -236,7 +236,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, content_uri, workspace, created_by, content_type, content_length, filename, read, page_count, caller_address, receiver_address, thumbnails, sharing_uri, download_sharing_uri, self_uri].hash
+      [id, name, date_created, date_modified, content_uri, workspace, created_by, content_type, content_length, filename, read, page_count, caller_address, receiver_address, thumbnails, download_sharing_uri, sharing_uri, self_uri].hash
     end
 
     # build the object from hash
