@@ -7,13 +7,12 @@ title: JsonNode
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **array** | **BOOLEAN** |  | [optional] |
-| **null** | **BOOLEAN** |  | [optional] |
 | **node_type** | **String** |  | [optional] |
 | **float** | **BOOLEAN** |  | [optional] |
+| **object** | **BOOLEAN** |  | [optional] |
 | **boolean** | **BOOLEAN** |  | [optional] |
 | **number** | **BOOLEAN** |  | [optional] |
-| **object** | **BOOLEAN** |  | [optional] |
+| **value_node** | **BOOLEAN** |  | [optional] |
 | **container_node** | **BOOLEAN** |  | [optional] |
 | **missing_node** | **BOOLEAN** |  | [optional] |
 | **pojo** | **BOOLEAN** |  | [optional] |
@@ -27,7 +26,8 @@ title: JsonNode
 | **big_integer** | **BOOLEAN** |  | [optional] |
 | **textual** | **BOOLEAN** |  | [optional] |
 | **binary** | **BOOLEAN** |  | [optional] |
-| **value_node** | **BOOLEAN** |  | [optional] |
+| **array** | **BOOLEAN** |  | [optional] |
+| **null** | **BOOLEAN** |  | [optional] |
 {: class="table table-striped"}
 
 
