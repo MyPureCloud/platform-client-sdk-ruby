@@ -1,0 +1,2089 @@
+---
+title: RecordingApi
+---
+
+## PureCloud::RecordingApi
+
+All URIs are relative to *https://api.mypurecloud.com*
+
+Method | Description
+------------- | ------------- | -------------
+[**delete_conversation_recording_annotation**](RecordingApi.html#delete_conversation_recording_annotation) | Delete annotation
+[**delete_orphanrecording**](RecordingApi.html#delete_orphanrecording) | Deletes a single orphan recording
+[**delete_recording_mediaretentionpolicies**](RecordingApi.html#delete_recording_mediaretentionpolicies) | Delete media retention policies
+[**delete_recording_mediaretentionpolicy**](RecordingApi.html#delete_recording_mediaretentionpolicy) | Delete a media retention policy
+[**get_conversation_recording**](RecordingApi.html#get_conversation_recording) | Gets a specific recording.
+[**get_conversation_recording_annotation**](RecordingApi.html#get_conversation_recording_annotation) | Get annotation
+[**get_conversation_recording_annotations**](RecordingApi.html#get_conversation_recording_annotations) | Get annotations for recording
+[**get_conversation_recordings**](RecordingApi.html#get_conversation_recordings) | Get all of a Conversation&#39;s Recordings.
+[**get_orphanrecording**](RecordingApi.html#get_orphanrecording) | Gets a single orphan recording
+[**get_orphanrecording_media**](RecordingApi.html#get_orphanrecording_media) | Gets the media of a single orphan recording
+[**get_orphanrecordings**](RecordingApi.html#get_orphanrecordings) | Gets all orphan recordings
+[**get_recording_localkeys_setting**](RecordingApi.html#get_recording_localkeys_setting) | Get the local encryption settings
+[**get_recording_localkeys_settings**](RecordingApi.html#get_recording_localkeys_settings) | gets a list local key settings data
+[**get_recording_mediaretentionpolicies**](RecordingApi.html#get_recording_mediaretentionpolicies) | Gets media retention policy list with query options to filter on name and enabled.
+[**get_recording_mediaretentionpolicy**](RecordingApi.html#get_recording_mediaretentionpolicy) | Get a media retention policy
+[**get_recording_recordingkeys**](RecordingApi.html#get_recording_recordingkeys) | Get encryption key list
+[**get_recording_recordingkeys_rotationschedule**](RecordingApi.html#get_recording_recordingkeys_rotationschedule) | Get key rotation schedule
+[**get_recording_settings**](RecordingApi.html#get_recording_settings) | Get the Recording Settings for the Organization
+[**get_recordings_screensessions**](RecordingApi.html#get_recordings_screensessions) | Retrieves a paged listing of screen recording sessions
+[**patch_recording_mediaretentionpolicy**](RecordingApi.html#patch_recording_mediaretentionpolicy) | Patch a media retention policy
+[**patch_recordings_screensession**](RecordingApi.html#patch_recordings_screensession) | Update a screen recording session
+[**post_conversation_recording_annotations**](RecordingApi.html#post_conversation_recording_annotations) | Create annotation
+[**post_recording_localkeys**](RecordingApi.html#post_recording_localkeys) | create a local recording key
+[**post_recording_localkeys_settings**](RecordingApi.html#post_recording_localkeys_settings) | create settings for local key creation
+[**post_recording_mediaretentionpolicies**](RecordingApi.html#post_recording_mediaretentionpolicies) | Create media retention policy
+[**post_recording_recordingkeys**](RecordingApi.html#post_recording_recordingkeys) | Create encryption key
+[**put_conversation_recording**](RecordingApi.html#put_conversation_recording) | Updates the retention records on a recording.
+[**put_conversation_recording_annotation**](RecordingApi.html#put_conversation_recording_annotation) | Update annotation
+[**put_orphanrecording**](RecordingApi.html#put_orphanrecording) | Updates an orphan recording to a regular recording with retention values
+[**put_recording_localkeys_setting**](RecordingApi.html#put_recording_localkeys_setting) | Update the local encryption settings
+[**put_recording_mediaretentionpolicy**](RecordingApi.html#put_recording_mediaretentionpolicy) | Update a media retention policy
+[**put_recording_recordingkeys_rotationschedule**](RecordingApi.html#put_recording_recordingkeys_rotationschedule) | Update key rotation schedule
+[**put_recording_settings**](RecordingApi.html#put_recording_settings) | Update the Recording Settings for the Organization
+{: class="table table-striped"}
+
+<a name="delete_conversation_recording_annotation"></a>
+
+## - delete_conversation_recording_annotation(conversation_id, recording_id, annotation_id)
+
+Delete annotation
+
+
+
+Wraps DELETE /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+conversation_id = "conversation_id_example" # String | Conversation ID
+
+recording_id = "recording_id_example" # String | Recording ID
+
+annotation_id = "annotation_id_example" # String | Annotation ID
+
+
+begin
+  #Delete annotation
+  api_instance.delete_conversation_recording_annotation(conversation_id, recording_id, annotation_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->delete_conversation_recording_annotation: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| Conversation ID | 
+ **recording_id** | **String**| Recording ID | 
+ **annotation_id** | **String**| Annotation ID | 
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_orphanrecording"></a>
+
+## -[**OrphanRecording**](OrphanRecording.html) delete_orphanrecording(orphan_id)
+
+Deletes a single orphan recording
+
+
+
+Wraps DELETE /api/v2/orphanrecordings/{orphanId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+orphan_id = "orphan_id_example" # String | Orphan ID
+
+
+begin
+  #Deletes a single orphan recording
+  result = api_instance.delete_orphanrecording(orphan_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->delete_orphanrecording: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orphan_id** | **String**| Orphan ID | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OrphanRecording**](OrphanRecording.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_recording_mediaretentionpolicies"></a>
+
+## -String** delete_recording_mediaretentionpolicies(ids)
+
+Delete media retention policies
+
+Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+
+Wraps DELETE /api/v2/recording/mediaretentionpolicies 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+ids = "ids_example" # String | 
+
+
+begin
+  #Delete media retention policies
+  result = api_instance.delete_recording_mediaretentionpolicies(ids)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->delete_recording_mediaretentionpolicies: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ids** | **String**|  | 
+{: class="table table-striped"}
+
+
+### Return type
+
+**String**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_recording_mediaretentionpolicy"></a>
+
+## -String** delete_recording_mediaretentionpolicy(policy_id)
+
+Delete a media retention policy
+
+
+
+Wraps DELETE /api/v2/recording/mediaretentionpolicies/{policyId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+policy_id = "policy_id_example" # String | Policy ID
+
+
+begin
+  #Delete a media retention policy
+  result = api_instance.delete_recording_mediaretentionpolicy(policy_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->delete_recording_mediaretentionpolicy: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy_id** | **String**| Policy ID | 
+{: class="table table-striped"}
+
+
+### Return type
+
+**String**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversation_recording"></a>
+
+## -[**Recording**](Recording.html) get_conversation_recording(conversation_id, recording_id, opts)
+
+Gets a specific recording.
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/recordings/{recordingId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+conversation_id = "conversation_id_example" # String | Conversation ID
+
+recording_id = "recording_id_example" # String | Recording ID
+
+opts = { 
+  format_id: "WEBM", # String | The desired media format.
+  download: false, # BOOLEAN | requesting a download format of the recording
+  file_name: "file_name_example" # String | the name of the downloaded fileName
+}
+
+begin
+  #Gets a specific recording.
+  result = api_instance.get_conversation_recording(conversation_id, recording_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_conversation_recording: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| Conversation ID | 
+ **recording_id** | **String**| Recording ID | 
+ **format_id** | **String**| The desired media format. | [optional] [default to WEBM]
+ **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false]
+ **file_name** | **String**| the name of the downloaded fileName | [optional] 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Recording**](Recording.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversation_recording_annotation"></a>
+
+## -[**Annotation**](Annotation.html) get_conversation_recording_annotation(conversation_id, recording_id, annotation_id)
+
+Get annotation
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+conversation_id = "conversation_id_example" # String | Conversation ID
+
+recording_id = "recording_id_example" # String | Recording ID
+
+annotation_id = "annotation_id_example" # String | Annotation ID
+
+
+begin
+  #Get annotation
+  result = api_instance.get_conversation_recording_annotation(conversation_id, recording_id, annotation_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_conversation_recording_annotation: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| Conversation ID | 
+ **recording_id** | **String**| Recording ID | 
+ **annotation_id** | **String**| Annotation ID | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Annotation**](Annotation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversation_recording_annotations"></a>
+
+## -[**Array&lt;Annotation&gt;**](Annotation.html) get_conversation_recording_annotations(conversation_id, recording_id)
+
+Get annotations for recording
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+conversation_id = "conversation_id_example" # String | Conversation ID
+
+recording_id = "recording_id_example" # String | Recording ID
+
+
+begin
+  #Get annotations for recording
+  result = api_instance.get_conversation_recording_annotations(conversation_id, recording_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_conversation_recording_annotations: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| Conversation ID | 
+ **recording_id** | **String**| Recording ID | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;Annotation&gt;**](Annotation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversation_recordings"></a>
+
+## -[**Array&lt;Recording&gt;**](Recording.html) get_conversation_recordings(conversation_id, opts)
+
+Get all of a Conversation's Recordings.
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/recordings 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+conversation_id = "conversation_id_example" # String | Conversation ID
+
+opts = { 
+  max_wait_ms: 5000, # Integer | The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value.
+  format_id: "WEBM" # String | The desired media format
+}
+
+begin
+  #Get all of a Conversation's Recordings.
+  result = api_instance.get_conversation_recordings(conversation_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_conversation_recordings: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| Conversation ID | 
+ **max_wait_ms** | **Integer**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000]
+ **format_id** | **String**| The desired media format | [optional] [default to WEBM]
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;Recording&gt;**](Recording.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_orphanrecording"></a>
+
+## -[**OrphanRecording**](OrphanRecording.html) get_orphanrecording(orphan_id)
+
+Gets a single orphan recording
+
+
+
+Wraps GET /api/v2/orphanrecordings/{orphanId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+orphan_id = "orphan_id_example" # String | Orphan ID
+
+
+begin
+  #Gets a single orphan recording
+  result = api_instance.get_orphanrecording(orphan_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_orphanrecording: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orphan_id** | **String**| Orphan ID | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OrphanRecording**](OrphanRecording.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_orphanrecording_media"></a>
+
+## -[**Recording**](Recording.html) get_orphanrecording_media(orphan_id, opts)
+
+Gets the media of a single orphan recording
+
+A 202 response means the orphaned media is currently transcoding and will be available shortly.A 200 response denotes the transcoded orphan media is available now and is contained in the response body.
+
+Wraps GET /api/v2/orphanrecordings/{orphanId}/media 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+orphan_id = "orphan_id_example" # String | Orphan ID
+
+opts = { 
+  format_id: "WEBM", # String | The desired media format.
+  download: false, # BOOLEAN | requesting a download format of the recording
+  file_name: "file_name_example" # String | the name of the downloaded fileName
+}
+
+begin
+  #Gets the media of a single orphan recording
+  result = api_instance.get_orphanrecording_media(orphan_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_orphanrecording_media: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orphan_id** | **String**| Orphan ID | 
+ **format_id** | **String**| The desired media format. | [optional] [default to WEBM]
+ **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false]
+ **file_name** | **String**| the name of the downloaded fileName | [optional] 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Recording**](Recording.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_orphanrecordings"></a>
+
+## -[**OrphanRecordingListing**](OrphanRecordingListing.html) get_orphanrecordings(opts)
+
+Gets all orphan recordings
+
+
+
+Wraps GET /api/v2/orphanrecordings 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+opts = { 
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  expand: nil, # Array<Object> | variable name requested by expand list
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example", # String | Previous page token
+  has_conversation: false # BOOLEAN | Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization.
+}
+
+begin
+  #Gets all orphan recordings
+  result = api_instance.get_orphanrecordings(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_orphanrecordings: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1]
+ **sort_by** | **String**| variable name requested to sort by | [optional] 
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional] 
+ **next_page** | **String**| next page token | [optional] 
+ **previous_page** | **String**| Previous page token | [optional] 
+ **has_conversation** | **BOOLEAN**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false]
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OrphanRecordingListing**](OrphanRecordingListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_recording_localkeys_setting"></a>
+
+## -[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) get_recording_localkeys_setting(settings_id)
+
+Get the local encryption settings
+
+
+
+Wraps GET /api/v2/recording/localkeys/settings/{settingsId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+settings_id = "settings_id_example" # String | Settings Id
+
+
+begin
+  #Get the local encryption settings
+  result = api_instance.get_recording_localkeys_setting(settings_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_recording_localkeys_setting: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **settings_id** | **String**| Settings Id | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_recording_localkeys_settings"></a>
+
+## -[**LocalEncryptionConfigurationListing**](LocalEncryptionConfigurationListing.html) get_recording_localkeys_settings
+
+gets a list local key settings data
+
+
+
+Wraps GET /api/v2/recording/localkeys/settings 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+begin
+  #gets a list local key settings data
+  result = api_instance.get_recording_localkeys_settings
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_recording_localkeys_settings: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LocalEncryptionConfigurationListing**](LocalEncryptionConfigurationListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_recording_mediaretentionpolicies"></a>
+
+## -[**PolicyEntityListing**](PolicyEntityListing.html) get_recording_mediaretentionpolicies(opts)
+
+Gets media retention policy list with query options to filter on name and enabled.
+
+for a less verbose response, add summary=true to this endpoint
+
+Wraps GET /api/v2/recording/mediaretentionpolicies 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+opts = { 
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  expand: nil, # Array<Object> | variable name requested by expand list
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example", # String | Previous page token
+  name: "name_example", # String | the policy name - used for filtering results in searches.
+  enabled: true, # BOOLEAN | checks to see if policy is enabled - use enabled = true or enabled = false
+  summary: false, # BOOLEAN | provides a less verbose response of policy lists.
+  has_errors: true # BOOLEAN | provides a way to fetch all policies with errors or policies that do not have errors
+}
+
+begin
+  #Gets media retention policy list with query options to filter on name and enabled.
+  result = api_instance.get_recording_mediaretentionpolicies(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_recording_mediaretentionpolicies: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1]
+ **sort_by** | **String**| variable name requested to sort by | [optional] 
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional] 
+ **next_page** | **String**| next page token | [optional] 
+ **previous_page** | **String**| Previous page token | [optional] 
+ **name** | **String**| the policy name - used for filtering results in searches. | [optional] 
+ **enabled** | **BOOLEAN**| checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false | [optional] 
+ **summary** | **BOOLEAN**| provides a less verbose response of policy lists. | [optional] [default to false]
+ **has_errors** | **BOOLEAN**| provides a way to fetch all policies with errors or policies that do not have errors | [optional] 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**PolicyEntityListing**](PolicyEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_recording_mediaretentionpolicy"></a>
+
+## -[**Policy**](Policy.html) get_recording_mediaretentionpolicy(policy_id)
+
+Get a media retention policy
+
+
+
+Wraps GET /api/v2/recording/mediaretentionpolicies/{policyId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+policy_id = "policy_id_example" # String | Policy ID
+
+
+begin
+  #Get a media retention policy
+  result = api_instance.get_recording_mediaretentionpolicy(policy_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_recording_mediaretentionpolicy: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy_id** | **String**| Policy ID | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Policy**](Policy.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_recording_recordingkeys"></a>
+
+## -[**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.html) get_recording_recordingkeys(opts)
+
+Get encryption key list
+
+
+
+Wraps GET /api/v2/recording/recordingkeys 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Get encryption key list
+  result = api_instance.get_recording_recordingkeys(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_recording_recordingkeys: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25]
+ **page_number** | **Integer**| Page number | [optional] [default to 1]
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_recording_recordingkeys_rotationschedule"></a>
+
+## -[**KeyRotationSchedule**](KeyRotationSchedule.html) get_recording_recordingkeys_rotationschedule
+
+Get key rotation schedule
+
+
+
+Wraps GET /api/v2/recording/recordingkeys/rotationschedule 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+begin
+  #Get key rotation schedule
+  result = api_instance.get_recording_recordingkeys_rotationschedule
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_recording_recordingkeys_rotationschedule: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**KeyRotationSchedule**](KeyRotationSchedule.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_recording_settings"></a>
+
+## -[**RecordingSettings**](RecordingSettings.html) get_recording_settings(opts)
+
+Get the Recording Settings for the Organization
+
+
+
+Wraps GET /api/v2/recording/settings 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+opts = { 
+  create_default: false # BOOLEAN | If no settings are found, a new one is created with default values
+}
+
+begin
+  #Get the Recording Settings for the Organization
+  result = api_instance.get_recording_settings(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_recording_settings: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_default** | **BOOLEAN**| If no settings are found, a new one is created with default values | [optional] [default to false]
+{: class="table table-striped"}
+
+
+### Return type
+
+[**RecordingSettings**](RecordingSettings.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_recordings_screensessions"></a>
+
+## -[**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html) get_recordings_screensessions(opts)
+
+Retrieves a paged listing of screen recording sessions
+
+
+
+Wraps GET /api/v2/recordings/screensessions 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Retrieves a paged listing of screen recording sessions
+  result = api_instance.get_recordings_screensessions(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_recordings_screensessions: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25]
+ **page_number** | **Integer**| Page number | [optional] [default to 1]
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_recording_mediaretentionpolicy"></a>
+
+## -[**Policy**](Policy.html) patch_recording_mediaretentionpolicy(policy_id, body)
+
+Patch a media retention policy
+
+
+
+Wraps PATCH /api/v2/recording/mediaretentionpolicies/{policyId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+policy_id = "policy_id_example" # String | Policy ID
+
+body = PureCloud::Policy.new # Policy | Policy
+
+
+begin
+  #Patch a media retention policy
+  result = api_instance.patch_recording_mediaretentionpolicy(policy_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->patch_recording_mediaretentionpolicy: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy_id** | **String**| Policy ID | 
+ **body** | [**Policy**](Policy.html)| Policy | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Policy**](Policy.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_recordings_screensession"></a>
+
+## - patch_recordings_screensession(recording_session_id, opts)
+
+Update a screen recording session
+
+
+
+Wraps PATCH /api/v2/recordings/screensessions/{recordingSessionId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+recording_session_id = "recording_session_id_example" # String | Screen recording session ID
+
+opts = { 
+  body: PureCloud::ScreenRecordingSessionRequest.new # ScreenRecordingSessionRequest | 
+}
+
+begin
+  #Update a screen recording session
+  api_instance.patch_recordings_screensession(recording_session_id, opts)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->patch_recordings_screensession: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **recording_session_id** | **String**| Screen recording session ID | 
+ **body** | [**ScreenRecordingSessionRequest**](ScreenRecordingSessionRequest.html)|  | [optional] 
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversation_recording_annotations"></a>
+
+## -[**Annotation**](Annotation.html) post_conversation_recording_annotations(conversation_id, recording_id, body)
+
+Create annotation
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+conversation_id = "conversation_id_example" # String | Conversation ID
+
+recording_id = "recording_id_example" # String | Recording ID
+
+body = PureCloud::Annotation.new # Annotation | annotation
+
+
+begin
+  #Create annotation
+  result = api_instance.post_conversation_recording_annotations(conversation_id, recording_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->post_conversation_recording_annotations: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| Conversation ID | 
+ **recording_id** | **String**| Recording ID | 
+ **body** | [**Annotation**](Annotation.html)| annotation | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Annotation**](Annotation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_recording_localkeys"></a>
+
+## -[**EncryptionKey**](EncryptionKey.html) post_recording_localkeys(body)
+
+create a local recording key
+
+
+
+Wraps POST /api/v2/recording/localkeys 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+body = PureCloud::LocalEncryptionKeyRequest.new # LocalEncryptionKeyRequest | Local Encryption body
+
+
+begin
+  #create a local recording key
+  result = api_instance.post_recording_localkeys(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->post_recording_localkeys: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**LocalEncryptionKeyRequest**](LocalEncryptionKeyRequest.html)| Local Encryption body | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EncryptionKey**](EncryptionKey.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_recording_localkeys_settings"></a>
+
+## -[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) post_recording_localkeys_settings(body)
+
+create settings for local key creation
+
+
+
+Wraps POST /api/v2/recording/localkeys/settings 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+body = PureCloud::LocalEncryptionConfiguration.new # LocalEncryptionConfiguration | Local Encryption Configuration
+
+
+begin
+  #create settings for local key creation
+  result = api_instance.post_recording_localkeys_settings(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->post_recording_localkeys_settings: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)| Local Encryption Configuration | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_recording_mediaretentionpolicies"></a>
+
+## -[**Policy**](Policy.html) post_recording_mediaretentionpolicies(body)
+
+Create media retention policy
+
+
+
+Wraps POST /api/v2/recording/mediaretentionpolicies 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+body = PureCloud::PolicyCreate.new # PolicyCreate | Policy
+
+
+begin
+  #Create media retention policy
+  result = api_instance.post_recording_mediaretentionpolicies(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->post_recording_mediaretentionpolicies: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**PolicyCreate**](PolicyCreate.html)| Policy | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Policy**](Policy.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_recording_recordingkeys"></a>
+
+## -[**EncryptionKey**](EncryptionKey.html) post_recording_recordingkeys
+
+Create encryption key
+
+
+
+Wraps POST /api/v2/recording/recordingkeys 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+begin
+  #Create encryption key
+  result = api_instance.post_recording_recordingkeys
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->post_recording_recordingkeys: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EncryptionKey**](EncryptionKey.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_conversation_recording"></a>
+
+## -[**Recording**](Recording.html) put_conversation_recording(conversation_id, recording_id, body)
+
+Updates the retention records on a recording.
+
+Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+
+Wraps PUT /api/v2/conversations/{conversationId}/recordings/{recordingId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+conversation_id = "conversation_id_example" # String | Conversation ID
+
+recording_id = "recording_id_example" # String | Recording ID
+
+body = PureCloud::Recording.new # Recording | recording
+
+
+begin
+  #Updates the retention records on a recording.
+  result = api_instance.put_conversation_recording(conversation_id, recording_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->put_conversation_recording: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| Conversation ID | 
+ **recording_id** | **String**| Recording ID | 
+ **body** | [**Recording**](Recording.html)| recording | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Recording**](Recording.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_conversation_recording_annotation"></a>
+
+## -[**Annotation**](Annotation.html) put_conversation_recording_annotation(conversation_id, recording_id, annotation_id, body)
+
+Update annotation
+
+
+
+Wraps PUT /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+conversation_id = "conversation_id_example" # String | Conversation ID
+
+recording_id = "recording_id_example" # String | Recording ID
+
+annotation_id = "annotation_id_example" # String | Annotation ID
+
+body = PureCloud::Annotation.new # Annotation | annotation
+
+
+begin
+  #Update annotation
+  result = api_instance.put_conversation_recording_annotation(conversation_id, recording_id, annotation_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->put_conversation_recording_annotation: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| Conversation ID | 
+ **recording_id** | **String**| Recording ID | 
+ **annotation_id** | **String**| Annotation ID | 
+ **body** | [**Annotation**](Annotation.html)| annotation | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Annotation**](Annotation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_orphanrecording"></a>
+
+## -[**Recording**](Recording.html) put_orphanrecording(orphan_id, opts)
+
+Updates an orphan recording to a regular recording with retention values
+
+If this operation is successful the orphan will no longer exist. It will be replaced by the resulting recording in the response. This replacement recording is accessible by the normal Recording api.
+
+Wraps PUT /api/v2/orphanrecordings/{orphanId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+orphan_id = "orphan_id_example" # String | Orphan ID
+
+opts = { 
+  body: PureCloud::OrphanUpdateRequest.new # OrphanUpdateRequest | 
+}
+
+begin
+  #Updates an orphan recording to a regular recording with retention values
+  result = api_instance.put_orphanrecording(orphan_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->put_orphanrecording: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orphan_id** | **String**| Orphan ID | 
+ **body** | [**OrphanUpdateRequest**](OrphanUpdateRequest.html)|  | [optional] 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Recording**](Recording.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_recording_localkeys_setting"></a>
+
+## -[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) put_recording_localkeys_setting(settings_id, body)
+
+Update the local encryption settings
+
+
+
+Wraps PUT /api/v2/recording/localkeys/settings/{settingsId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+settings_id = "settings_id_example" # String | Settings Id
+
+body = PureCloud::LocalEncryptionConfiguration.new # LocalEncryptionConfiguration | Local Encryption metadata
+
+
+begin
+  #Update the local encryption settings
+  result = api_instance.put_recording_localkeys_setting(settings_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->put_recording_localkeys_setting: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **settings_id** | **String**| Settings Id | 
+ **body** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)| Local Encryption metadata | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_recording_mediaretentionpolicy"></a>
+
+## -[**Policy**](Policy.html) put_recording_mediaretentionpolicy(policy_id, body)
+
+Update a media retention policy
+
+
+
+Wraps PUT /api/v2/recording/mediaretentionpolicies/{policyId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+policy_id = "policy_id_example" # String | Policy ID
+
+body = PureCloud::Policy.new # Policy | Policy
+
+
+begin
+  #Update a media retention policy
+  result = api_instance.put_recording_mediaretentionpolicy(policy_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->put_recording_mediaretentionpolicy: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy_id** | **String**| Policy ID | 
+ **body** | [**Policy**](Policy.html)| Policy | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Policy**](Policy.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_recording_recordingkeys_rotationschedule"></a>
+
+## -[**KeyRotationSchedule**](KeyRotationSchedule.html) put_recording_recordingkeys_rotationschedule(body)
+
+Update key rotation schedule
+
+
+
+Wraps PUT /api/v2/recording/recordingkeys/rotationschedule 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+body = PureCloud::KeyRotationSchedule.new # KeyRotationSchedule | KeyRotationSchedule
+
+
+begin
+  #Update key rotation schedule
+  result = api_instance.put_recording_recordingkeys_rotationschedule(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->put_recording_recordingkeys_rotationschedule: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**KeyRotationSchedule**](KeyRotationSchedule.html)| KeyRotationSchedule | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**KeyRotationSchedule**](KeyRotationSchedule.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_recording_settings"></a>
+
+## -[**RecordingSettings**](RecordingSettings.html) put_recording_settings(body)
+
+Update the Recording Settings for the Organization
+
+
+
+Wraps PUT /api/v2/recording/settings 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+body = PureCloud::RecordingSettings.new # RecordingSettings | Recording settings
+
+
+begin
+  #Update the Recording Settings for the Organization
+  result = api_instance.put_recording_settings(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->put_recording_settings: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RecordingSettings**](RecordingSettings.html)| Recording settings | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**RecordingSettings**](RecordingSettings.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
