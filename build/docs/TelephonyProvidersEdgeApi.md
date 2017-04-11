@@ -71,6 +71,7 @@ Method | Description
 [**get_telephony_providers_edges_phonebasesettings_template**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_phonebasesettings_template) | Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance
 [**get_telephony_providers_edges_phones**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_phones) | Get a list of Phone Instances
 [**get_telephony_providers_edges_phones_template**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_phones_template) | Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
+[**get_telephony_providers_edges_physicalinterfaces**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_physicalinterfaces) | Get physical interfaces for edges.
 [**get_telephony_providers_edges_site**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site) | Get a Site by ID.
 [**get_telephony_providers_edges_site_numberplan**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site_numberplan) | Get a Number Plan by ID.
 [**get_telephony_providers_edges_site_numberplans**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site_numberplans) | Get the list of Number Plans for this Site.
@@ -4029,6 +4030,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Phone**](Phone.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_telephony_providers_edges_physicalinterfaces"></a>
+
+## -[**Array&lt;DomainPhysicalInterface&gt;**](DomainPhysicalInterface.html) get_telephony_providers_edges_physicalinterfaces(edge_ids)
+
+Get physical interfaces for edges.
+
+Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
+
+Wraps GET /api/v2/telephony/providers/edges/physicalinterfaces 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_ids = "edge_ids_example" # String | Comma separated list of Edge Id's
+
+
+begin
+  #Get physical interfaces for edges.
+  result = api_instance.get_telephony_providers_edges_physicalinterfaces(edge_ids)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_physicalinterfaces: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_ids** | **String**| Comma separated list of Edge Id&#39;s | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;DomainPhysicalInterface&gt;**](DomainPhysicalInterface.html)
 
 ### HTTP request headers
 

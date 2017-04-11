@@ -153,13 +153,13 @@ nil (empty response body)
 
 <a name="delete_conversations_call_participant_consult"></a>
 
-## -String** delete_conversations_call_participant_consult(call_id, participant_id)
+## -String** delete_conversations_call_participant_consult(conversation_id, participant_id)
 
 Cancel the transfer
 
 
 
-Wraps DELETE /api/v2/conversations/calls/{callId}/participants/{participantId}/consult 
+Wraps DELETE /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult 
 
 
 ### Example
@@ -179,14 +179,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
 
 begin
   #Cancel the transfer
-  result = api_instance.delete_conversations_call_participant_consult(call_id, participant_id)
+  result = api_instance.delete_conversations_call_participant_consult(conversation_id, participant_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->delete_conversations_call_participant_consult: #{e}"
@@ -197,7 +197,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
 {: class="table table-striped"}
 
@@ -215,13 +215,13 @@ Name | Type | Description  | Notes
 
 <a name="delete_conversations_email_messages_draft_attachment"></a>
 
-## -String** delete_conversations_email_messages_draft_attachment(email_id, attachment_id)
+## -String** delete_conversations_email_messages_draft_attachment(conversation_id, attachment_id)
 
 Delete attachment from draft
 
 
 
-Wraps DELETE /api/v2/conversations/emails/{emailId}/messages/draft/attachments/{attachmentId} 
+Wraps DELETE /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId} 
 
 
 ### Example
@@ -241,14 +241,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 attachment_id = "attachment_id_example" # String | attachmentId
 
 
 begin
   #Delete attachment from draft
-  result = api_instance.delete_conversations_email_messages_draft_attachment(email_id, attachment_id)
+  result = api_instance.delete_conversations_email_messages_draft_attachment(conversation_id, attachment_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->delete_conversations_email_messages_draft_attachment: #{e}"
@@ -259,7 +259,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
  **attachment_id** | **String**| attachmentId | 
 {: class="table table-striped"}
 
@@ -583,13 +583,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_call"></a>
 
-## -[**CallConversation**](CallConversation.html) get_conversations_call(call_id)
+## -[**CallConversation**](CallConversation.html) get_conversations_call(conversation_id)
 
 Get call conversation
 
 
 
-Wraps GET /api/v2/conversations/calls/{callId} 
+Wraps GET /api/v2/conversations/calls/{conversationId} 
 
 
 ### Example
@@ -609,12 +609,12 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 
 begin
   #Get call conversation
-  result = api_instance.get_conversations_call(call_id)
+  result = api_instance.get_conversations_call(conversation_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_call: #{e}"
@@ -625,7 +625,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
 {: class="table table-striped"}
 
 
@@ -642,13 +642,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_call_participant_wrapup"></a>
 
-## -[**Wrapup**](Wrapup.html) get_conversations_call_participant_wrapup(call_id, participant_id, opts)
+## -[**Wrapup**](Wrapup.html) get_conversations_call_participant_wrapup(conversation_id, participant_id, opts)
 
 Get the wrap-up for this conversation participant. 
 
 
 
-Wraps GET /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapup 
+Wraps GET /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup 
 
 
 ### Example
@@ -668,7 +668,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -678,7 +678,7 @@ opts = {
 
 begin
   #Get the wrap-up for this conversation participant. 
-  result = api_instance.get_conversations_call_participant_wrapup(call_id, participant_id, opts)
+  result = api_instance.get_conversations_call_participant_wrapup(conversation_id, participant_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_call_participant_wrapup: #{e}"
@@ -689,7 +689,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **provisional** | **BOOLEAN**| Indicates if the wrap-up code is provisional. | [optional] [default to false]
 {: class="table table-striped"}
@@ -708,13 +708,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_call_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_call_participant_wrapupcodes(call_id, participant_id)
+## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_call_participant_wrapupcodes(conversation_id, participant_id)
 
 Get list of wrapup codes for this conversation participant
 
 
 
-Wraps GET /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapupcodes 
+Wraps GET /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapupcodes 
 
 
 ### Example
@@ -734,14 +734,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
 
 begin
   #Get list of wrapup codes for this conversation participant
-  result = api_instance.get_conversations_call_participant_wrapupcodes(call_id, participant_id)
+  result = api_instance.get_conversations_call_participant_wrapupcodes(conversation_id, participant_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_call_participant_wrapupcodes: #{e}"
@@ -752,7 +752,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
 {: class="table table-striped"}
 
@@ -770,13 +770,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_callback"></a>
 
-## -[**CallbackConversation**](CallbackConversation.html) get_conversations_callback(callback_id)
+## -[**CallbackConversation**](CallbackConversation.html) get_conversations_callback(conversation_id)
 
 Get callback conversation
 
 
 
-Wraps GET /api/v2/conversations/callbacks/{callbackId} 
+Wraps GET /api/v2/conversations/callbacks/{conversationId} 
 
 
 ### Example
@@ -796,12 +796,12 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-callback_id = "callback_id_example" # String | callbackId
+conversation_id = "conversation_id_example" # String | conversationId
 
 
 begin
   #Get callback conversation
-  result = api_instance.get_conversations_callback(callback_id)
+  result = api_instance.get_conversations_callback(conversation_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_callback: #{e}"
@@ -812,7 +812,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **callback_id** | **String**| callbackId | 
+ **conversation_id** | **String**| conversationId | 
 {: class="table table-striped"}
 
 
@@ -829,13 +829,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_callback_participant_wrapup"></a>
 
-## -[**Wrapup**](Wrapup.html) get_conversations_callback_participant_wrapup(callback_id, participant_id, opts)
+## -[**Wrapup**](Wrapup.html) get_conversations_callback_participant_wrapup(conversation_id, participant_id, opts)
 
 Get the wrap-up for this conversation participant. 
 
 
 
-Wraps GET /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapup 
+Wraps GET /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup 
 
 
 ### Example
@@ -855,7 +855,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-callback_id = "callback_id_example" # String | callbackId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -865,7 +865,7 @@ opts = {
 
 begin
   #Get the wrap-up for this conversation participant. 
-  result = api_instance.get_conversations_callback_participant_wrapup(callback_id, participant_id, opts)
+  result = api_instance.get_conversations_callback_participant_wrapup(conversation_id, participant_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_callback_participant_wrapup: #{e}"
@@ -876,7 +876,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **callback_id** | **String**| callbackId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **provisional** | **BOOLEAN**| Indicates if the wrap-up code is provisional. | [optional] [default to false]
 {: class="table table-striped"}
@@ -895,13 +895,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_callback_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_callback_participant_wrapupcodes(callback_id, participant_id)
+## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_callback_participant_wrapupcodes(conversation_id, participant_id)
 
 Get list of wrapup codes for this conversation participant
 
 
 
-Wraps GET /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapupcodes 
+Wraps GET /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapupcodes 
 
 
 ### Example
@@ -921,14 +921,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-callback_id = "callback_id_example" # String | callbackId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
 
 begin
   #Get list of wrapup codes for this conversation participant
-  result = api_instance.get_conversations_callback_participant_wrapupcodes(callback_id, participant_id)
+  result = api_instance.get_conversations_callback_participant_wrapupcodes(conversation_id, participant_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_callback_participant_wrapupcodes: #{e}"
@@ -939,7 +939,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **callback_id** | **String**| callbackId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
 {: class="table table-striped"}
 
@@ -1180,13 +1180,13 @@ This endpoint does not need any parameter.
 
 <a name="get_conversations_chat"></a>
 
-## -[**ChatConversation**](ChatConversation.html) get_conversations_chat(chat_id)
+## -[**ChatConversation**](ChatConversation.html) get_conversations_chat(conversation_id)
 
 Get chat conversation
 
 
 
-Wraps GET /api/v2/conversations/chats/{chatId} 
+Wraps GET /api/v2/conversations/chats/{conversationId} 
 
 
 ### Example
@@ -1206,12 +1206,12 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-chat_id = "chat_id_example" # String | chatId
+conversation_id = "conversation_id_example" # String | conversationId
 
 
 begin
   #Get chat conversation
-  result = api_instance.get_conversations_chat(chat_id)
+  result = api_instance.get_conversations_chat(conversation_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_chat: #{e}"
@@ -1222,7 +1222,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chat_id** | **String**| chatId | 
+ **conversation_id** | **String**| conversationId | 
 {: class="table table-striped"}
 
 
@@ -1239,13 +1239,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_chat_participant_wrapup"></a>
 
-## -[**Wrapup**](Wrapup.html) get_conversations_chat_participant_wrapup(chat_id, participant_id, opts)
+## -[**Wrapup**](Wrapup.html) get_conversations_chat_participant_wrapup(conversation_id, participant_id, opts)
 
 Get the wrap-up for this conversation participant. 
 
 
 
-Wraps GET /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapup 
+Wraps GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup 
 
 
 ### Example
@@ -1265,7 +1265,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-chat_id = "chat_id_example" # String | chatId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -1275,7 +1275,7 @@ opts = {
 
 begin
   #Get the wrap-up for this conversation participant. 
-  result = api_instance.get_conversations_chat_participant_wrapup(chat_id, participant_id, opts)
+  result = api_instance.get_conversations_chat_participant_wrapup(conversation_id, participant_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_chat_participant_wrapup: #{e}"
@@ -1286,7 +1286,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chat_id** | **String**| chatId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **provisional** | **BOOLEAN**| Indicates if the wrap-up code is provisional. | [optional] [default to false]
 {: class="table table-striped"}
@@ -1305,13 +1305,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_chat_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_chat_participant_wrapupcodes(chat_id, participant_id)
+## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_chat_participant_wrapupcodes(conversation_id, participant_id)
 
 Get list of wrapup codes for this conversation participant
 
 
 
-Wraps GET /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapupcodes 
+Wraps GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes 
 
 
 ### Example
@@ -1331,14 +1331,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-chat_id = "chat_id_example" # String | chatId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
 
 begin
   #Get list of wrapup codes for this conversation participant
-  result = api_instance.get_conversations_chat_participant_wrapupcodes(chat_id, participant_id)
+  result = api_instance.get_conversations_chat_participant_wrapupcodes(conversation_id, participant_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_chat_participant_wrapupcodes: #{e}"
@@ -1349,7 +1349,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chat_id** | **String**| chatId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
 {: class="table table-striped"}
 
@@ -1420,13 +1420,13 @@ This endpoint does not need any parameter.
 
 <a name="get_conversations_cobrowsesession"></a>
 
-## -[**CobrowseConversation**](CobrowseConversation.html) get_conversations_cobrowsesession(cobrowse_id)
+## -[**CobrowseConversation**](CobrowseConversation.html) get_conversations_cobrowsesession(conversation_id)
 
 Get cobrowse conversation
 
 
 
-Wraps GET /api/v2/conversations/cobrowsesessions/{cobrowseId} 
+Wraps GET /api/v2/conversations/cobrowsesessions/{conversationId} 
 
 
 ### Example
@@ -1446,12 +1446,12 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-cobrowse_id = "cobrowse_id_example" # String | cobrowseId
+conversation_id = "conversation_id_example" # String | conversationId
 
 
 begin
   #Get cobrowse conversation
-  result = api_instance.get_conversations_cobrowsesession(cobrowse_id)
+  result = api_instance.get_conversations_cobrowsesession(conversation_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_cobrowsesession: #{e}"
@@ -1462,7 +1462,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cobrowse_id** | **String**| cobrowseId | 
+ **conversation_id** | **String**| conversationId | 
 {: class="table table-striped"}
 
 
@@ -1479,13 +1479,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_cobrowsesession_participant_wrapup"></a>
 
-## -[**Wrapup**](Wrapup.html) get_conversations_cobrowsesession_participant_wrapup(cobrowse_id, participant_id, opts)
+## -[**Wrapup**](Wrapup.html) get_conversations_cobrowsesession_participant_wrapup(conversation_id, participant_id, opts)
 
 Get the wrap-up for this conversation participant. 
 
 
 
-Wraps GET /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapup 
+Wraps GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup 
 
 
 ### Example
@@ -1505,7 +1505,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-cobrowse_id = "cobrowse_id_example" # String | cobrowseId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -1515,7 +1515,7 @@ opts = {
 
 begin
   #Get the wrap-up for this conversation participant. 
-  result = api_instance.get_conversations_cobrowsesession_participant_wrapup(cobrowse_id, participant_id, opts)
+  result = api_instance.get_conversations_cobrowsesession_participant_wrapup(conversation_id, participant_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_cobrowsesession_participant_wrapup: #{e}"
@@ -1526,7 +1526,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cobrowse_id** | **String**| cobrowseId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **provisional** | **BOOLEAN**| Indicates if the wrap-up code is provisional. | [optional] [default to false]
 {: class="table table-striped"}
@@ -1545,13 +1545,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_cobrowsesession_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_cobrowsesession_participant_wrapupcodes(cobrowse_id, participant_id)
+## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_cobrowsesession_participant_wrapupcodes(conversation_id, participant_id)
 
 Get list of wrapup codes for this conversation participant
 
 
 
-Wraps GET /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapupcodes 
+Wraps GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes 
 
 
 ### Example
@@ -1571,14 +1571,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-cobrowse_id = "cobrowse_id_example" # String | cobrowseId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
 
 begin
   #Get list of wrapup codes for this conversation participant
-  result = api_instance.get_conversations_cobrowsesession_participant_wrapupcodes(cobrowse_id, participant_id)
+  result = api_instance.get_conversations_cobrowsesession_participant_wrapupcodes(conversation_id, participant_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_cobrowsesession_participant_wrapupcodes: #{e}"
@@ -1589,7 +1589,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cobrowse_id** | **String**| cobrowseId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
 {: class="table table-striped"}
 
@@ -1660,13 +1660,13 @@ This endpoint does not need any parameter.
 
 <a name="get_conversations_email"></a>
 
-## -[**EmailConversation**](EmailConversation.html) get_conversations_email(email_id)
+## -[**EmailConversation**](EmailConversation.html) get_conversations_email(conversation_id)
 
 Get email conversation
 
 
 
-Wraps GET /api/v2/conversations/emails/{emailId} 
+Wraps GET /api/v2/conversations/emails/{conversationId} 
 
 
 ### Example
@@ -1686,12 +1686,12 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 
 begin
   #Get email conversation
-  result = api_instance.get_conversations_email(email_id)
+  result = api_instance.get_conversations_email(conversation_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email: #{e}"
@@ -1702,7 +1702,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
 {: class="table table-striped"}
 
 
@@ -1719,13 +1719,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_email_message"></a>
 
-## -[**EmailMessage**](EmailMessage.html) get_conversations_email_message(email_id, message_id)
+## -[**EmailMessage**](EmailMessage.html) get_conversations_email_message(conversation_id, message_id)
 
 Get conversation message
 
 
 
-Wraps GET /api/v2/conversations/emails/{emailId}/messages/{messageId} 
+Wraps GET /api/v2/conversations/emails/{conversationId}/messages/{messageId} 
 
 
 ### Example
@@ -1745,14 +1745,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 message_id = "message_id_example" # String | messageId
 
 
 begin
   #Get conversation message
-  result = api_instance.get_conversations_email_message(email_id, message_id)
+  result = api_instance.get_conversations_email_message(conversation_id, message_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email_message: #{e}"
@@ -1763,7 +1763,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
  **message_id** | **String**| messageId | 
 {: class="table table-striped"}
 
@@ -1781,13 +1781,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_email_messages"></a>
 
-## -[**EmailMessageListing**](EmailMessageListing.html) get_conversations_email_messages(email_id)
+## -[**EmailMessageListing**](EmailMessageListing.html) get_conversations_email_messages(conversation_id)
 
 Get conversation messages
 
 
 
-Wraps GET /api/v2/conversations/emails/{emailId}/messages 
+Wraps GET /api/v2/conversations/emails/{conversationId}/messages 
 
 
 ### Example
@@ -1807,12 +1807,12 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 
 begin
   #Get conversation messages
-  result = api_instance.get_conversations_email_messages(email_id)
+  result = api_instance.get_conversations_email_messages(conversation_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email_messages: #{e}"
@@ -1823,7 +1823,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
 {: class="table table-striped"}
 
 
@@ -1840,13 +1840,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_email_messages_draft"></a>
 
-## -[**EmailMessage**](EmailMessage.html) get_conversations_email_messages_draft(email_id)
+## -[**EmailMessage**](EmailMessage.html) get_conversations_email_messages_draft(conversation_id)
 
 Get conversation draft reply
 
 
 
-Wraps GET /api/v2/conversations/emails/{emailId}/messages/draft 
+Wraps GET /api/v2/conversations/emails/{conversationId}/messages/draft 
 
 
 ### Example
@@ -1866,12 +1866,12 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 
 begin
   #Get conversation draft reply
-  result = api_instance.get_conversations_email_messages_draft(email_id)
+  result = api_instance.get_conversations_email_messages_draft(conversation_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email_messages_draft: #{e}"
@@ -1882,7 +1882,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
 {: class="table table-striped"}
 
 
@@ -1899,13 +1899,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_email_participant_wrapup"></a>
 
-## -[**Wrapup**](Wrapup.html) get_conversations_email_participant_wrapup(email_id, participant_id, opts)
+## -[**Wrapup**](Wrapup.html) get_conversations_email_participant_wrapup(conversation_id, participant_id, opts)
 
 Get the wrap-up for this conversation participant. 
 
 
 
-Wraps GET /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapup 
+Wraps GET /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup 
 
 
 ### Example
@@ -1925,7 +1925,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -1935,7 +1935,7 @@ opts = {
 
 begin
   #Get the wrap-up for this conversation participant. 
-  result = api_instance.get_conversations_email_participant_wrapup(email_id, participant_id, opts)
+  result = api_instance.get_conversations_email_participant_wrapup(conversation_id, participant_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email_participant_wrapup: #{e}"
@@ -1946,7 +1946,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **provisional** | **BOOLEAN**| Indicates if the wrap-up code is provisional. | [optional] [default to false]
 {: class="table table-striped"}
@@ -1965,13 +1965,13 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_email_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_email_participant_wrapupcodes(email_id, participant_id)
+## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_email_participant_wrapupcodes(conversation_id, participant_id)
 
 Get list of wrapup codes for this conversation participant
 
 
 
-Wraps GET /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapupcodes 
+Wraps GET /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes 
 
 
 ### Example
@@ -1991,14 +1991,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
 
 begin
   #Get list of wrapup codes for this conversation participant
-  result = api_instance.get_conversations_email_participant_wrapupcodes(email_id, participant_id)
+  result = api_instance.get_conversations_email_participant_wrapupcodes(conversation_id, participant_id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email_participant_wrapupcodes: #{e}"
@@ -2009,7 +2009,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
 {: class="table table-striped"}
 
@@ -2208,13 +2208,13 @@ nil (empty response body)
 
 <a name="patch_conversations_call"></a>
 
-## -[**Conversation**](Conversation.html) patch_conversations_call(call_id, body)
+## -[**Conversation**](Conversation.html) patch_conversations_call(conversation_id, body)
 
 Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
 
 
 
-Wraps PATCH /api/v2/conversations/calls/{callId} 
+Wraps PATCH /api/v2/conversations/calls/{conversationId} 
 
 
 ### Example
@@ -2234,14 +2234,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 body = PureCloud::Conversation.new # Conversation | Conversation
 
 
 begin
   #Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
-  result = api_instance.patch_conversations_call(call_id, body)
+  result = api_instance.patch_conversations_call(conversation_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_call: #{e}"
@@ -2252,7 +2252,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **body** | [**Conversation**](Conversation.html)| Conversation | 
 {: class="table table-striped"}
 
@@ -2270,13 +2270,13 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_call_participant"></a>
 
-## - patch_conversations_call_participant(call_id, participant_id, body)
+## - patch_conversations_call_participant(conversation_id, participant_id, body)
 
 Update conversation participant
 
 
 
-Wraps PATCH /api/v2/conversations/calls/{callId}/participants/{participantId} 
+Wraps PATCH /api/v2/conversations/calls/{conversationId}/participants/{participantId} 
 
 
 ### Example
@@ -2296,7 +2296,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -2305,7 +2305,7 @@ body = PureCloud::MediaParticipantRequest.new # MediaParticipantRequest | Partic
 
 begin
   #Update conversation participant
-  api_instance.patch_conversations_call_participant(call_id, participant_id, body)
+  api_instance.patch_conversations_call_participant(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_call_participant: #{e}"
 end
@@ -2315,7 +2315,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant request | 
 {: class="table table-striped"}
@@ -2334,13 +2334,13 @@ nil (empty response body)
 
 <a name="patch_conversations_call_participant_attributes"></a>
 
-## - patch_conversations_call_participant_attributes(call_id, participant_id, body)
+## - patch_conversations_call_participant_attributes(conversation_id, participant_id, body)
 
 Update the attributes on a conversation participant.
 
 
 
-Wraps PATCH /api/v2/conversations/calls/{callId}/participants/{participantId}/attributes 
+Wraps PATCH /api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes 
 
 
 ### Example
@@ -2360,7 +2360,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -2369,7 +2369,7 @@ body = PureCloud::ParticipantAttributes.new # ParticipantAttributes | Participan
 
 begin
   #Update the attributes on a conversation participant.
-  api_instance.patch_conversations_call_participant_attributes(call_id, participant_id, body)
+  api_instance.patch_conversations_call_participant_attributes(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_call_participant_attributes: #{e}"
 end
@@ -2379,7 +2379,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes | 
 {: class="table table-striped"}
@@ -2398,13 +2398,13 @@ nil (empty response body)
 
 <a name="patch_conversations_call_participant_communication"></a>
 
-## -[**Empty**](Empty.html) patch_conversations_call_participant_communication(call_id, participant_id, communication_id, body)
+## -[**Empty**](Empty.html) patch_conversations_call_participant_communication(conversation_id, participant_id, communication_id, body)
 
 Update conversation participant's communication by disconnecting it.
 
 
 
-Wraps PATCH /api/v2/conversations/calls/{callId}/participants/{participantId}/communications/{communicationId} 
+Wraps PATCH /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId} 
 
 
 ### Example
@@ -2424,7 +2424,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -2435,7 +2435,7 @@ body = PureCloud::MediaParticipantRequest.new # MediaParticipantRequest | Partic
 
 begin
   #Update conversation participant's communication by disconnecting it.
-  result = api_instance.patch_conversations_call_participant_communication(call_id, participant_id, communication_id, body)
+  result = api_instance.patch_conversations_call_participant_communication(conversation_id, participant_id, communication_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_call_participant_communication: #{e}"
@@ -2446,7 +2446,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **communication_id** | **String**| communicationId | 
  **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant | 
@@ -2466,13 +2466,13 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_call_participant_consult"></a>
 
-## -[**ConsultTransferResponse**](ConsultTransferResponse.html) patch_conversations_call_participant_consult(call_id, participant_id, body)
+## -[**ConsultTransferResponse**](ConsultTransferResponse.html) patch_conversations_call_participant_consult(conversation_id, participant_id, body)
 
 Change who can speak
 
 
 
-Wraps PATCH /api/v2/conversations/calls/{callId}/participants/{participantId}/consult 
+Wraps PATCH /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult 
 
 
 ### Example
@@ -2492,7 +2492,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -2501,7 +2501,7 @@ body = PureCloud::ConsultTransferUpdate.new # ConsultTransferUpdate | new speak 
 
 begin
   #Change who can speak
-  result = api_instance.patch_conversations_call_participant_consult(call_id, participant_id, body)
+  result = api_instance.patch_conversations_call_participant_consult(conversation_id, participant_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_call_participant_consult: #{e}"
@@ -2512,7 +2512,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate.html)| new speak to | 
 {: class="table table-striped"}
@@ -2531,13 +2531,13 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_callback"></a>
 
-## -[**Conversation**](Conversation.html) patch_conversations_callback(callback_id, body)
+## -[**Conversation**](Conversation.html) patch_conversations_callback(conversation_id, body)
 
 Update a conversation by disconnecting all of the participants
 
 
 
-Wraps PATCH /api/v2/conversations/callbacks/{callbackId} 
+Wraps PATCH /api/v2/conversations/callbacks/{conversationId} 
 
 
 ### Example
@@ -2557,14 +2557,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-callback_id = "callback_id_example" # String | callbackId
+conversation_id = "conversation_id_example" # String | conversationId
 
 body = PureCloud::Conversation.new # Conversation | Conversation
 
 
 begin
   #Update a conversation by disconnecting all of the participants
-  result = api_instance.patch_conversations_callback(callback_id, body)
+  result = api_instance.patch_conversations_callback(conversation_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_callback: #{e}"
@@ -2575,7 +2575,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **callback_id** | **String**| callbackId | 
+ **conversation_id** | **String**| conversationId | 
  **body** | [**Conversation**](Conversation.html)| Conversation | 
 {: class="table table-striped"}
 
@@ -2593,13 +2593,13 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_callback_participant"></a>
 
-## - patch_conversations_callback_participant(callback_id, participant_id, body)
+## - patch_conversations_callback_participant(conversation_id, participant_id, body)
 
 Update conversation participant
 
 
 
-Wraps PATCH /api/v2/conversations/callbacks/{callbackId}/participants/{participantId} 
+Wraps PATCH /api/v2/conversations/callbacks/{conversationId}/participants/{participantId} 
 
 
 ### Example
@@ -2619,7 +2619,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-callback_id = "callback_id_example" # String | callbackId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -2628,7 +2628,7 @@ body = PureCloud::MediaParticipantRequest.new # MediaParticipantRequest | Partic
 
 begin
   #Update conversation participant
-  api_instance.patch_conversations_callback_participant(callback_id, participant_id, body)
+  api_instance.patch_conversations_callback_participant(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_callback_participant: #{e}"
 end
@@ -2638,7 +2638,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **callback_id** | **String**| callbackId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant | 
 {: class="table table-striped"}
@@ -2657,13 +2657,13 @@ nil (empty response body)
 
 <a name="patch_conversations_callback_participant_attributes"></a>
 
-## - patch_conversations_callback_participant_attributes(callback_id, participant_id, body)
+## - patch_conversations_callback_participant_attributes(conversation_id, participant_id, body)
 
 Update the attributes on a conversation participant.
 
 
 
-Wraps PATCH /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/attributes 
+Wraps PATCH /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/attributes 
 
 
 ### Example
@@ -2683,7 +2683,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-callback_id = "callback_id_example" # String | callbackId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -2692,7 +2692,7 @@ body = PureCloud::ParticipantAttributes.new # ParticipantAttributes | Attributes
 
 begin
   #Update the attributes on a conversation participant.
-  api_instance.patch_conversations_callback_participant_attributes(callback_id, participant_id, body)
+  api_instance.patch_conversations_callback_participant_attributes(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_callback_participant_attributes: #{e}"
 end
@@ -2702,7 +2702,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **callback_id** | **String**| callbackId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Attributes | 
 {: class="table table-striped"}
@@ -2721,13 +2721,13 @@ nil (empty response body)
 
 <a name="patch_conversations_callback_participant_communication"></a>
 
-## -[**Empty**](Empty.html) patch_conversations_callback_participant_communication(callback_id, participant_id, communication_id, body)
+## -[**Empty**](Empty.html) patch_conversations_callback_participant_communication(conversation_id, participant_id, communication_id, body)
 
 Update conversation participant's communication by disconnecting it.
 
 
 
-Wraps PATCH /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/communications/{communicationId} 
+Wraps PATCH /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId} 
 
 
 ### Example
@@ -2747,7 +2747,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-callback_id = "callback_id_example" # String | callbackId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -2758,7 +2758,7 @@ body = PureCloud::MediaParticipantRequest.new # MediaParticipantRequest | Partic
 
 begin
   #Update conversation participant's communication by disconnecting it.
-  result = api_instance.patch_conversations_callback_participant_communication(callback_id, participant_id, communication_id, body)
+  result = api_instance.patch_conversations_callback_participant_communication(conversation_id, participant_id, communication_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_callback_participant_communication: #{e}"
@@ -2769,7 +2769,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **callback_id** | **String**| callbackId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **communication_id** | **String**| communicationId | 
  **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant | 
@@ -2789,13 +2789,13 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_chat"></a>
 
-## -[**Conversation**](Conversation.html) patch_conversations_chat(chat_id, body)
+## -[**Conversation**](Conversation.html) patch_conversations_chat(conversation_id, body)
 
 Update a conversation by disconnecting all of the participants
 
 
 
-Wraps PATCH /api/v2/conversations/chats/{chatId} 
+Wraps PATCH /api/v2/conversations/chats/{conversationId} 
 
 
 ### Example
@@ -2815,14 +2815,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-chat_id = "chat_id_example" # String | chatId
+conversation_id = "conversation_id_example" # String | conversationId
 
 body = PureCloud::Conversation.new # Conversation | Conversation
 
 
 begin
   #Update a conversation by disconnecting all of the participants
-  result = api_instance.patch_conversations_chat(chat_id, body)
+  result = api_instance.patch_conversations_chat(conversation_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_chat: #{e}"
@@ -2833,7 +2833,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chat_id** | **String**| chatId | 
+ **conversation_id** | **String**| conversationId | 
  **body** | [**Conversation**](Conversation.html)| Conversation | 
 {: class="table table-striped"}
 
@@ -2851,13 +2851,13 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_chat_participant"></a>
 
-## - patch_conversations_chat_participant(chat_id, participant_id, body)
+## - patch_conversations_chat_participant(conversation_id, participant_id, body)
 
 Update conversation participant
 
 
 
-Wraps PATCH /api/v2/conversations/chats/{chatId}/participants/{participantId} 
+Wraps PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId} 
 
 
 ### Example
@@ -2877,7 +2877,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-chat_id = "chat_id_example" # String | chatId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -2886,7 +2886,7 @@ body = PureCloud::MediaParticipantRequest.new # MediaParticipantRequest | Update
 
 begin
   #Update conversation participant
-  api_instance.patch_conversations_chat_participant(chat_id, participant_id, body)
+  api_instance.patch_conversations_chat_participant(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_chat_participant: #{e}"
 end
@@ -2896,7 +2896,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chat_id** | **String**| chatId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request | 
 {: class="table table-striped"}
@@ -2915,13 +2915,13 @@ nil (empty response body)
 
 <a name="patch_conversations_chat_participant_attributes"></a>
 
-## - patch_conversations_chat_participant_attributes(chat_id, participant_id, body)
+## - patch_conversations_chat_participant_attributes(conversation_id, participant_id, body)
 
 Update the attributes on a conversation participant.
 
 
 
-Wraps PATCH /api/v2/conversations/chats/{chatId}/participants/{participantId}/attributes 
+Wraps PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId}/attributes 
 
 
 ### Example
@@ -2941,7 +2941,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-chat_id = "chat_id_example" # String | chatId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -2950,7 +2950,7 @@ body = PureCloud::ParticipantAttributes.new # ParticipantAttributes | Participan
 
 begin
   #Update the attributes on a conversation participant.
-  api_instance.patch_conversations_chat_participant_attributes(chat_id, participant_id, body)
+  api_instance.patch_conversations_chat_participant_attributes(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_chat_participant_attributes: #{e}"
 end
@@ -2960,7 +2960,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chat_id** | **String**| chatId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes | 
 {: class="table table-striped"}
@@ -2979,13 +2979,13 @@ nil (empty response body)
 
 <a name="patch_conversations_chat_participant_communication"></a>
 
-## -[**Empty**](Empty.html) patch_conversations_chat_participant_communication(chat_id, participant_id, communication_id, body)
+## -[**Empty**](Empty.html) patch_conversations_chat_participant_communication(conversation_id, participant_id, communication_id, body)
 
 Update conversation participant's communication by disconnecting it.
 
 
 
-Wraps PATCH /api/v2/conversations/chats/{chatId}/participants/{participantId}/communications/{communicationId} 
+Wraps PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId} 
 
 
 ### Example
@@ -3005,7 +3005,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-chat_id = "chat_id_example" # String | chatId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -3016,7 +3016,7 @@ body = PureCloud::MediaParticipantRequest.new # MediaParticipantRequest | Partic
 
 begin
   #Update conversation participant's communication by disconnecting it.
-  result = api_instance.patch_conversations_chat_participant_communication(chat_id, participant_id, communication_id, body)
+  result = api_instance.patch_conversations_chat_participant_communication(conversation_id, participant_id, communication_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_chat_participant_communication: #{e}"
@@ -3027,7 +3027,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chat_id** | **String**| chatId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **communication_id** | **String**| communicationId | 
  **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant | 
@@ -3047,13 +3047,13 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_cobrowsesession"></a>
 
-## -[**Conversation**](Conversation.html) patch_conversations_cobrowsesession(cobrowse_id, body)
+## -[**Conversation**](Conversation.html) patch_conversations_cobrowsesession(conversation_id, body)
 
 Update a conversation by disconnecting all of the participants
 
 
 
-Wraps PATCH /api/v2/conversations/cobrowsesessions/{cobrowseId} 
+Wraps PATCH /api/v2/conversations/cobrowsesessions/{conversationId} 
 
 
 ### Example
@@ -3073,14 +3073,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-cobrowse_id = "cobrowse_id_example" # String | cobrowseId
+conversation_id = "conversation_id_example" # String | conversationId
 
 body = PureCloud::Conversation.new # Conversation | Conversation
 
 
 begin
   #Update a conversation by disconnecting all of the participants
-  result = api_instance.patch_conversations_cobrowsesession(cobrowse_id, body)
+  result = api_instance.patch_conversations_cobrowsesession(conversation_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_cobrowsesession: #{e}"
@@ -3091,7 +3091,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cobrowse_id** | **String**| cobrowseId | 
+ **conversation_id** | **String**| conversationId | 
  **body** | [**Conversation**](Conversation.html)| Conversation | 
 {: class="table table-striped"}
 
@@ -3109,13 +3109,13 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_cobrowsesession_participant"></a>
 
-## - patch_conversations_cobrowsesession_participant(cobrowse_id, participant_id, opts)
+## - patch_conversations_cobrowsesession_participant(conversation_id, participant_id, opts)
 
 Update conversation participant
 
 
 
-Wraps PATCH /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId} 
+Wraps PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId} 
 
 
 ### Example
@@ -3135,7 +3135,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-cobrowse_id = "cobrowse_id_example" # String | cobrowseId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -3145,7 +3145,7 @@ opts = {
 
 begin
   #Update conversation participant
-  api_instance.patch_conversations_cobrowsesession_participant(cobrowse_id, participant_id, opts)
+  api_instance.patch_conversations_cobrowsesession_participant(conversation_id, participant_id, opts)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_cobrowsesession_participant: #{e}"
 end
@@ -3155,7 +3155,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cobrowse_id** | **String**| cobrowseId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional] 
 {: class="table table-striped"}
@@ -3174,13 +3174,13 @@ nil (empty response body)
 
 <a name="patch_conversations_cobrowsesession_participant_attributes"></a>
 
-## - patch_conversations_cobrowsesession_participant_attributes(cobrowse_id, participant_id, opts)
+## - patch_conversations_cobrowsesession_participant_attributes(conversation_id, participant_id, opts)
 
 Update the attributes on a conversation participant.
 
 
 
-Wraps PATCH /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/attributes 
+Wraps PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes 
 
 
 ### Example
@@ -3200,7 +3200,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-cobrowse_id = "cobrowse_id_example" # String | cobrowseId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -3210,7 +3210,7 @@ opts = {
 
 begin
   #Update the attributes on a conversation participant.
-  api_instance.patch_conversations_cobrowsesession_participant_attributes(cobrowse_id, participant_id, opts)
+  api_instance.patch_conversations_cobrowsesession_participant_attributes(conversation_id, participant_id, opts)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_cobrowsesession_participant_attributes: #{e}"
 end
@@ -3220,7 +3220,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cobrowse_id** | **String**| cobrowseId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional] 
 {: class="table table-striped"}
@@ -3239,13 +3239,13 @@ nil (empty response body)
 
 <a name="patch_conversations_cobrowsesession_participant_communication"></a>
 
-## -[**Empty**](Empty.html) patch_conversations_cobrowsesession_participant_communication(cobrowse_id, participant_id, communication_id, body)
+## -[**Empty**](Empty.html) patch_conversations_cobrowsesession_participant_communication(conversation_id, participant_id, communication_id, body)
 
 Update conversation participant's communication by disconnecting it.
 
 
 
-Wraps PATCH /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/communications/{communicationId} 
+Wraps PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId} 
 
 
 ### Example
@@ -3265,7 +3265,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-cobrowse_id = "cobrowse_id_example" # String | cobrowseId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -3276,7 +3276,7 @@ body = PureCloud::MediaParticipantRequest.new # MediaParticipantRequest | Partic
 
 begin
   #Update conversation participant's communication by disconnecting it.
-  result = api_instance.patch_conversations_cobrowsesession_participant_communication(cobrowse_id, participant_id, communication_id, body)
+  result = api_instance.patch_conversations_cobrowsesession_participant_communication(conversation_id, participant_id, communication_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_cobrowsesession_participant_communication: #{e}"
@@ -3287,7 +3287,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cobrowse_id** | **String**| cobrowseId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **communication_id** | **String**| communicationId | 
  **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant | 
@@ -3307,13 +3307,13 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_email"></a>
 
-## -[**Conversation**](Conversation.html) patch_conversations_email(email_id, body)
+## -[**Conversation**](Conversation.html) patch_conversations_email(conversation_id, body)
 
 Update a conversation by disconnecting all of the participants
 
 
 
-Wraps PATCH /api/v2/conversations/emails/{emailId} 
+Wraps PATCH /api/v2/conversations/emails/{conversationId} 
 
 
 ### Example
@@ -3333,14 +3333,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 body = PureCloud::Conversation.new # Conversation | Conversation
 
 
 begin
   #Update a conversation by disconnecting all of the participants
-  result = api_instance.patch_conversations_email(email_id, body)
+  result = api_instance.patch_conversations_email(conversation_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_email: #{e}"
@@ -3351,7 +3351,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
  **body** | [**Conversation**](Conversation.html)| Conversation | 
 {: class="table table-striped"}
 
@@ -3369,13 +3369,13 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_email_participant"></a>
 
-## - patch_conversations_email_participant(email_id, participant_id, body)
+## - patch_conversations_email_participant(conversation_id, participant_id, body)
 
 Update conversation participant
 
 
 
-Wraps PATCH /api/v2/conversations/emails/{emailId}/participants/{participantId} 
+Wraps PATCH /api/v2/conversations/emails/{conversationId}/participants/{participantId} 
 
 
 ### Example
@@ -3395,7 +3395,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -3404,7 +3404,7 @@ body = PureCloud::MediaParticipantRequest.new # MediaParticipantRequest | Update
 
 begin
   #Update conversation participant
-  api_instance.patch_conversations_email_participant(email_id, participant_id, body)
+  api_instance.patch_conversations_email_participant(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_email_participant: #{e}"
 end
@@ -3414,7 +3414,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request | 
 {: class="table table-striped"}
@@ -3433,13 +3433,13 @@ nil (empty response body)
 
 <a name="patch_conversations_email_participant_attributes"></a>
 
-## - patch_conversations_email_participant_attributes(email_id, participant_id, body)
+## - patch_conversations_email_participant_attributes(conversation_id, participant_id, body)
 
 Update the attributes on a conversation participant.
 
 
 
-Wraps PATCH /api/v2/conversations/emails/{emailId}/participants/{participantId}/attributes 
+Wraps PATCH /api/v2/conversations/emails/{conversationId}/participants/{participantId}/attributes 
 
 
 ### Example
@@ -3459,7 +3459,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -3468,7 +3468,7 @@ body = PureCloud::ParticipantAttributes.new # ParticipantAttributes | Participan
 
 begin
   #Update the attributes on a conversation participant.
-  api_instance.patch_conversations_email_participant_attributes(email_id, participant_id, body)
+  api_instance.patch_conversations_email_participant_attributes(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_email_participant_attributes: #{e}"
 end
@@ -3478,7 +3478,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes | 
 {: class="table table-striped"}
@@ -3497,13 +3497,13 @@ nil (empty response body)
 
 <a name="patch_conversations_email_participant_communication"></a>
 
-## -[**Empty**](Empty.html) patch_conversations_email_participant_communication(email_id, participant_id, communication_id, body)
+## -[**Empty**](Empty.html) patch_conversations_email_participant_communication(conversation_id, participant_id, communication_id, body)
 
 Update conversation participant's communication by disconnecting it.
 
 
 
-Wraps PATCH /api/v2/conversations/emails/{emailId}/participants/{participantId}/communications/{communicationId} 
+Wraps PATCH /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId} 
 
 
 ### Example
@@ -3523,7 +3523,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -3534,7 +3534,7 @@ body = PureCloud::MediaParticipantRequest.new # MediaParticipantRequest | Partic
 
 begin
   #Update conversation participant's communication by disconnecting it.
-  result = api_instance.patch_conversations_email_participant_communication(email_id, participant_id, communication_id, body)
+  result = api_instance.patch_conversations_email_participant_communication(conversation_id, participant_id, communication_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_email_participant_communication: #{e}"
@@ -3545,7 +3545,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **communication_id** | **String**| communicationId | 
  **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant | 
@@ -3874,13 +3874,13 @@ nil (empty response body)
 
 <a name="post_conversations_call"></a>
 
-## -[**Conversation**](Conversation.html) post_conversations_call(call_id, body)
+## -[**Conversation**](Conversation.html) post_conversations_call(conversation_id, body)
 
 Add a new call to a conversation
 
 
 
-Wraps POST /api/v2/conversations/calls/{callId} 
+Wraps POST /api/v2/conversations/calls/{conversationId} 
 
 
 ### Example
@@ -3900,14 +3900,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 body = PureCloud::CallCommand.new # CallCommand | Conversation
 
 
 begin
   #Add a new call to a conversation
-  result = api_instance.post_conversations_call(call_id, body)
+  result = api_instance.post_conversations_call(conversation_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_call: #{e}"
@@ -3918,7 +3918,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **body** | [**CallCommand**](CallCommand.html)| Conversation | 
 {: class="table table-striped"}
 
@@ -3936,13 +3936,13 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_call_participant_consult"></a>
 
-## -[**ConsultTransferResponse**](ConsultTransferResponse.html) post_conversations_call_participant_consult(call_id, participant_id, body)
+## -[**ConsultTransferResponse**](ConsultTransferResponse.html) post_conversations_call_participant_consult(conversation_id, participant_id, body)
 
 Initiate and update consult transfer
 
 
 
-Wraps POST /api/v2/conversations/calls/{callId}/participants/{participantId}/consult 
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult 
 
 
 ### Example
@@ -3962,7 +3962,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -3971,7 +3971,7 @@ body = PureCloud::ConsultTransfer.new # ConsultTransfer | Destination address & 
 
 begin
   #Initiate and update consult transfer
-  result = api_instance.post_conversations_call_participant_consult(call_id, participant_id, body)
+  result = api_instance.post_conversations_call_participant_consult(conversation_id, participant_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_call_participant_consult: #{e}"
@@ -3982,7 +3982,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address &amp; initial speak to | 
 {: class="table table-striped"}
@@ -4001,13 +4001,13 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_call_participant_monitor"></a>
 
-## - post_conversations_call_participant_monitor(call_id, participant_id)
+## - post_conversations_call_participant_monitor(conversation_id, participant_id)
 
 Listen in on the conversation from the point of view of a given participant.
 
 
 
-Wraps POST /api/v2/conversations/calls/{callId}/participants/{participantId}/monitor 
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor 
 
 
 ### Example
@@ -4027,14 +4027,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
 
 begin
   #Listen in on the conversation from the point of view of a given participant.
-  api_instance.post_conversations_call_participant_monitor(call_id, participant_id)
+  api_instance.post_conversations_call_participant_monitor(conversation_id, participant_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_call_participant_monitor: #{e}"
 end
@@ -4044,7 +4044,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
 {: class="table table-striped"}
 
@@ -4062,13 +4062,13 @@ nil (empty response body)
 
 <a name="post_conversations_call_participant_replace"></a>
 
-## - post_conversations_call_participant_replace(call_id, participant_id, body)
+## - post_conversations_call_participant_replace(conversation_id, participant_id, body)
 
 Replace this participant with the specified user and/or address
 
 
 
-Wraps POST /api/v2/conversations/calls/{callId}/participants/{participantId}/replace 
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace 
 
 
 ### Example
@@ -4088,7 +4088,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -4097,7 +4097,7 @@ body = PureCloud::TransferRequest.new # TransferRequest | Transfer request
 
 begin
   #Replace this participant with the specified user and/or address
-  api_instance.post_conversations_call_participant_replace(call_id, participant_id, body)
+  api_instance.post_conversations_call_participant_replace(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_call_participant_replace: #{e}"
 end
@@ -4107,7 +4107,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**TransferRequest**](TransferRequest.html)| Transfer request | 
 {: class="table table-striped"}
@@ -4126,13 +4126,13 @@ nil (empty response body)
 
 <a name="post_conversations_call_participants"></a>
 
-## -[**Conversation**](Conversation.html) post_conversations_call_participants(call_id, body)
+## -[**Conversation**](Conversation.html) post_conversations_call_participants(conversation_id, body)
 
 Add participants to a conversation
 
 
 
-Wraps POST /api/v2/conversations/calls/{callId}/participants 
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants 
 
 
 ### Example
@@ -4152,14 +4152,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-call_id = "call_id_example" # String | callId
+conversation_id = "conversation_id_example" # String | conversationId
 
 body = PureCloud::Conversation.new # Conversation | Conversation
 
 
 begin
   #Add participants to a conversation
-  result = api_instance.post_conversations_call_participants(call_id, body)
+  result = api_instance.post_conversations_call_participants(conversation_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_call_participants: #{e}"
@@ -4170,7 +4170,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_id** | **String**| callId | 
+ **conversation_id** | **String**| conversationId | 
  **body** | [**Conversation**](Conversation.html)| Conversation | 
 {: class="table table-striped"}
 
@@ -4188,13 +4188,13 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_callback_participant_replace"></a>
 
-## - post_conversations_callback_participant_replace(callback_id, participant_id, body)
+## - post_conversations_callback_participant_replace(conversation_id, participant_id, body)
 
 Replace this participant with the specified user and/or address
 
 
 
-Wraps POST /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/replace 
+Wraps POST /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace 
 
 
 ### Example
@@ -4214,7 +4214,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-callback_id = "callback_id_example" # String | callbackId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -4223,7 +4223,7 @@ body = PureCloud::TransferRequest.new # TransferRequest | Transfer request
 
 begin
   #Replace this participant with the specified user and/or address
-  api_instance.post_conversations_callback_participant_replace(callback_id, participant_id, body)
+  api_instance.post_conversations_callback_participant_replace(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_callback_participant_replace: #{e}"
 end
@@ -4233,7 +4233,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **callback_id** | **String**| callbackId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**TransferRequest**](TransferRequest.html)| Transfer request | 
 {: class="table table-striped"}
@@ -4370,13 +4370,13 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_chat_participant_replace"></a>
 
-## - post_conversations_chat_participant_replace(chat_id, participant_id, body)
+## - post_conversations_chat_participant_replace(conversation_id, participant_id, body)
 
 Replace this participant with the specified user and/or address
 
 
 
-Wraps POST /api/v2/conversations/chats/{chatId}/participants/{participantId}/replace 
+Wraps POST /api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace 
 
 
 ### Example
@@ -4396,7 +4396,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-chat_id = "chat_id_example" # String | chatId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -4405,7 +4405,7 @@ body = PureCloud::TransferRequest.new # TransferRequest | Transfer request
 
 begin
   #Replace this participant with the specified user and/or address
-  api_instance.post_conversations_chat_participant_replace(chat_id, participant_id, body)
+  api_instance.post_conversations_chat_participant_replace(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_chat_participant_replace: #{e}"
 end
@@ -4415,7 +4415,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chat_id** | **String**| chatId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**TransferRequest**](TransferRequest.html)| Transfer request | 
 {: class="table table-striped"}
@@ -4493,13 +4493,13 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_cobrowsesession_participant_replace"></a>
 
-## - post_conversations_cobrowsesession_participant_replace(cobrowse_id, participant_id, opts)
+## - post_conversations_cobrowsesession_participant_replace(conversation_id, participant_id, opts)
 
 Replace this participant with the specified user and/or address
 
 
 
-Wraps POST /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/replace 
+Wraps POST /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace 
 
 
 ### Example
@@ -4519,7 +4519,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-cobrowse_id = "cobrowse_id_example" # String | cobrowseId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -4529,7 +4529,7 @@ opts = {
 
 begin
   #Replace this participant with the specified user and/or address
-  api_instance.post_conversations_cobrowsesession_participant_replace(cobrowse_id, participant_id, opts)
+  api_instance.post_conversations_cobrowsesession_participant_replace(conversation_id, participant_id, opts)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_cobrowsesession_participant_replace: #{e}"
 end
@@ -4539,7 +4539,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cobrowse_id** | **String**| cobrowseId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**TransferRequest**](TransferRequest.html)|  | [optional] 
 {: class="table table-striped"}
@@ -4558,13 +4558,13 @@ nil (empty response body)
 
 <a name="post_conversations_email_messages"></a>
 
-## -[**EmailMessage**](EmailMessage.html) post_conversations_email_messages(email_id, body)
+## -[**EmailMessage**](EmailMessage.html) post_conversations_email_messages(conversation_id, body)
 
 Send an email reply
 
 
 
-Wraps POST /api/v2/conversations/emails/{emailId}/messages 
+Wraps POST /api/v2/conversations/emails/{conversationId}/messages 
 
 
 ### Example
@@ -4584,14 +4584,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 body = PureCloud::EmailMessage.new # EmailMessage | Reply
 
 
 begin
   #Send an email reply
-  result = api_instance.post_conversations_email_messages(email_id, body)
+  result = api_instance.post_conversations_email_messages(conversation_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_email_messages: #{e}"
@@ -4602,7 +4602,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
  **body** | [**EmailMessage**](EmailMessage.html)| Reply | 
 {: class="table table-striped"}
 
@@ -4620,13 +4620,13 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_email_participant_replace"></a>
 
-## - post_conversations_email_participant_replace(email_id, participant_id, body)
+## - post_conversations_email_participant_replace(conversation_id, participant_id, body)
 
 Replace this participant with the specified user and/or address
 
 
 
-Wraps POST /api/v2/conversations/emails/{emailId}/participants/{participantId}/replace 
+Wraps POST /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace 
 
 
 ### Example
@@ -4646,7 +4646,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 participant_id = "participant_id_example" # String | participantId
 
@@ -4655,7 +4655,7 @@ body = PureCloud::TransferRequest.new # TransferRequest | Transfer request
 
 begin
   #Replace this participant with the specified user and/or address
-  api_instance.post_conversations_email_participant_replace(email_id, participant_id, body)
+  api_instance.post_conversations_email_participant_replace(conversation_id, participant_id, body)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_email_participant_replace: #{e}"
 end
@@ -4665,7 +4665,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
  **participant_id** | **String**| participantId | 
  **body** | [**TransferRequest**](TransferRequest.html)| Transfer request | 
 {: class="table table-striped"}
@@ -4802,13 +4802,13 @@ Name | Type | Description  | Notes
 
 <a name="put_conversations_email_messages_draft"></a>
 
-## -[**EmailMessage**](EmailMessage.html) put_conversations_email_messages_draft(email_id, body)
+## -[**EmailMessage**](EmailMessage.html) put_conversations_email_messages_draft(conversation_id, body)
 
 Update conversation draft reply
 
 
 
-Wraps PUT /api/v2/conversations/emails/{emailId}/messages/draft 
+Wraps PUT /api/v2/conversations/emails/{conversationId}/messages/draft 
 
 
 ### Example
@@ -4828,14 +4828,14 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-email_id = "email_id_example" # String | emailId
+conversation_id = "conversation_id_example" # String | conversationId
 
 body = PureCloud::EmailMessage.new # EmailMessage | Draft
 
 
 begin
   #Update conversation draft reply
-  result = api_instance.put_conversations_email_messages_draft(email_id, body)
+  result = api_instance.put_conversations_email_messages_draft(conversation_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->put_conversations_email_messages_draft: #{e}"
@@ -4846,7 +4846,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_id** | **String**| emailId | 
+ **conversation_id** | **String**| conversationId | 
  **body** | [**EmailMessage**](EmailMessage.html)| Draft | 
 {: class="table table-striped"}
 

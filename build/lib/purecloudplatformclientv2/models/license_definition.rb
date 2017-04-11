@@ -27,6 +27,8 @@ module PureCloud
 
     attr_accessor :prerequisites
 
+    attr_accessor :comprises
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -37,6 +39,7 @@ module PureCloud
         :'description' => :'description',
         :'permissions' => :'permissions',
         :'prerequisites' => :'prerequisites',
+        :'comprises' => :'comprises',
         :'self_uri' => :'selfUri'
       }
     end
@@ -48,6 +51,7 @@ module PureCloud
         :'description' => :'String',
         :'permissions' => :'Permissions',
         :'prerequisites' => :'Array<AddressableLicenseDefinition>',
+        :'comprises' => :'Array<LicenseDefinition>',
         :'self_uri' => :'String'
       }
     end
@@ -78,6 +82,12 @@ module PureCloud
         end
       end
 
+      if attributes.has_key?(:'comprises')
+        if (value = attributes[:'comprises']).is_a?(Array)
+          self.comprises = value
+        end
+      end
+
       if attributes.has_key?(:'selfUri')
         self.self_uri = attributes[:'selfUri']
       end
@@ -105,6 +115,7 @@ module PureCloud
           description == o.description &&
           permissions == o.permissions &&
           prerequisites == o.prerequisites &&
+          comprises == o.comprises &&
           self_uri == o.self_uri
     end
 
@@ -117,7 +128,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, description, permissions, prerequisites, self_uri].hash
+      [id, description, permissions, prerequisites, comprises, self_uri].hash
     end
 
     # build the object from hash

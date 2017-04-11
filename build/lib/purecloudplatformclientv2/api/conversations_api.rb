@@ -90,31 +90,31 @@ module PureCloud
 
     # Cancel the transfer
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def delete_conversations_call_participant_consult(call_id, participant_id, opts = {})
-      data, _status_code, _headers = delete_conversations_call_participant_consult_with_http_info(call_id, participant_id, opts)
+    def delete_conversations_call_participant_consult(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = delete_conversations_call_participant_consult_with_http_info(conversation_id, participant_id, opts)
       return data
     end
 
     # Cancel the transfer
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def delete_conversations_call_participant_consult_with_http_info(call_id, participant_id, opts = {})
+    def delete_conversations_call_participant_consult_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.delete_conversations_call_participant_consult ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.delete_conversations_call_participant_consult" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.delete_conversations_call_participant_consult" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.delete_conversations_call_participant_consult" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}/participants/{participantId}/consult".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -151,31 +151,31 @@ module PureCloud
 
     # Delete attachment from draft
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param attachment_id attachmentId
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def delete_conversations_email_messages_draft_attachment(email_id, attachment_id, opts = {})
-      data, _status_code, _headers = delete_conversations_email_messages_draft_attachment_with_http_info(email_id, attachment_id, opts)
+    def delete_conversations_email_messages_draft_attachment(conversation_id, attachment_id, opts = {})
+      data, _status_code, _headers = delete_conversations_email_messages_draft_attachment_with_http_info(conversation_id, attachment_id, opts)
       return data
     end
 
     # Delete attachment from draft
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param attachment_id attachmentId
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def delete_conversations_email_messages_draft_attachment_with_http_info(email_id, attachment_id, opts = {})
+    def delete_conversations_email_messages_draft_attachment_with_http_info(conversation_id, attachment_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.delete_conversations_email_messages_draft_attachment ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.delete_conversations_email_messages_draft_attachment" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.delete_conversations_email_messages_draft_attachment" if conversation_id.nil?
       # verify the required parameter 'attachment_id' is set
       fail ArgumentError, "Missing the required parameter 'attachment_id' when calling ConversationsApi.delete_conversations_email_messages_draft_attachment" if attachment_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/messages/draft/attachments/{attachmentId}".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s).sub('{' + 'attachmentId' + '}', attachment_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'attachmentId' + '}', attachment_id.to_s)
 
       # query parameters
       query_params = {}
@@ -507,27 +507,27 @@ module PureCloud
 
     # Get call conversation
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [CallConversation]
-    def get_conversations_call(call_id, opts = {})
-      data, _status_code, _headers = get_conversations_call_with_http_info(call_id, opts)
+    def get_conversations_call(conversation_id, opts = {})
+      data, _status_code, _headers = get_conversations_call_with_http_info(conversation_id, opts)
       return data
     end
 
     # Get call conversation
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [Array<(CallConversation, Fixnum, Hash)>] CallConversation data, response status code and response headers
-    def get_conversations_call_with_http_info(call_id, opts = {})
+    def get_conversations_call_with_http_info(conversation_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_call ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.get_conversations_call" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_call" if conversation_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -564,33 +564,33 @@ module PureCloud
 
     # Get the wrap-up for this conversation participant. 
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
     # @return [Wrapup]
-    def get_conversations_call_participant_wrapup(call_id, participant_id, opts = {})
-      data, _status_code, _headers = get_conversations_call_participant_wrapup_with_http_info(call_id, participant_id, opts)
+    def get_conversations_call_participant_wrapup(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_call_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
     end
 
     # Get the wrap-up for this conversation participant. 
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
     # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
-    def get_conversations_call_participant_wrapup_with_http_info(call_id, participant_id, opts = {})
+    def get_conversations_call_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_call_participant_wrapup ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.get_conversations_call_participant_wrapup" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_call_participant_wrapup" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_call_participant_wrapup" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -628,31 +628,31 @@ module PureCloud
 
     # Get list of wrapup codes for this conversation participant
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<WrapupCode>]
-    def get_conversations_call_participant_wrapupcodes(call_id, participant_id, opts = {})
-      data, _status_code, _headers = get_conversations_call_participant_wrapupcodes_with_http_info(call_id, participant_id, opts)
+    def get_conversations_call_participant_wrapupcodes(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_call_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts)
       return data
     end
 
     # Get list of wrapup codes for this conversation participant
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<WrapupCode>, Fixnum, Hash)>] Array<WrapupCode> data, response status code and response headers
-    def get_conversations_call_participant_wrapupcodes_with_http_info(call_id, participant_id, opts = {})
+    def get_conversations_call_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_call_participant_wrapupcodes ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.get_conversations_call_participant_wrapupcodes" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_call_participant_wrapupcodes" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_call_participant_wrapupcodes" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -689,27 +689,27 @@ module PureCloud
 
     # Get callback conversation
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [CallbackConversation]
-    def get_conversations_callback(callback_id, opts = {})
-      data, _status_code, _headers = get_conversations_callback_with_http_info(callback_id, opts)
+    def get_conversations_callback(conversation_id, opts = {})
+      data, _status_code, _headers = get_conversations_callback_with_http_info(conversation_id, opts)
       return data
     end
 
     # Get callback conversation
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [Array<(CallbackConversation, Fixnum, Hash)>] CallbackConversation data, response status code and response headers
-    def get_conversations_callback_with_http_info(callback_id, opts = {})
+    def get_conversations_callback_with_http_info(conversation_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_callback ..."
       end
-      # verify the required parameter 'callback_id' is set
-      fail ArgumentError, "Missing the required parameter 'callback_id' when calling ConversationsApi.get_conversations_callback" if callback_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_callback" if conversation_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/callbacks/{callbackId}".sub('{format}','json').sub('{' + 'callbackId' + '}', callback_id.to_s)
+      local_var_path = "/api/v2/conversations/callbacks/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -746,33 +746,33 @@ module PureCloud
 
     # Get the wrap-up for this conversation participant. 
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
     # @return [Wrapup]
-    def get_conversations_callback_participant_wrapup(callback_id, participant_id, opts = {})
-      data, _status_code, _headers = get_conversations_callback_participant_wrapup_with_http_info(callback_id, participant_id, opts)
+    def get_conversations_callback_participant_wrapup(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_callback_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
     end
 
     # Get the wrap-up for this conversation participant. 
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
     # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
-    def get_conversations_callback_participant_wrapup_with_http_info(callback_id, participant_id, opts = {})
+    def get_conversations_callback_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_callback_participant_wrapup ..."
       end
-      # verify the required parameter 'callback_id' is set
-      fail ArgumentError, "Missing the required parameter 'callback_id' when calling ConversationsApi.get_conversations_callback_participant_wrapup" if callback_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_callback_participant_wrapup" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_callback_participant_wrapup" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'callbackId' + '}', callback_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -810,31 +810,31 @@ module PureCloud
 
     # Get list of wrapup codes for this conversation participant
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<WrapupCode>]
-    def get_conversations_callback_participant_wrapupcodes(callback_id, participant_id, opts = {})
-      data, _status_code, _headers = get_conversations_callback_participant_wrapupcodes_with_http_info(callback_id, participant_id, opts)
+    def get_conversations_callback_participant_wrapupcodes(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_callback_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts)
       return data
     end
 
     # Get list of wrapup codes for this conversation participant
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<WrapupCode>, Fixnum, Hash)>] Array<WrapupCode> data, response status code and response headers
-    def get_conversations_callback_participant_wrapupcodes_with_http_info(callback_id, participant_id, opts = {})
+    def get_conversations_callback_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_callback_participant_wrapupcodes ..."
       end
-      # verify the required parameter 'callback_id' is set
-      fail ArgumentError, "Missing the required parameter 'callback_id' when calling ConversationsApi.get_conversations_callback_participant_wrapupcodes" if callback_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_callback_participant_wrapupcodes" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_callback_participant_wrapupcodes" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'callbackId' + '}', callback_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1092,27 +1092,27 @@ module PureCloud
 
     # Get chat conversation
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [ChatConversation]
-    def get_conversations_chat(chat_id, opts = {})
-      data, _status_code, _headers = get_conversations_chat_with_http_info(chat_id, opts)
+    def get_conversations_chat(conversation_id, opts = {})
+      data, _status_code, _headers = get_conversations_chat_with_http_info(conversation_id, opts)
       return data
     end
 
     # Get chat conversation
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [Array<(ChatConversation, Fixnum, Hash)>] ChatConversation data, response status code and response headers
-    def get_conversations_chat_with_http_info(chat_id, opts = {})
+    def get_conversations_chat_with_http_info(conversation_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_chat ..."
       end
-      # verify the required parameter 'chat_id' is set
-      fail ArgumentError, "Missing the required parameter 'chat_id' when calling ConversationsApi.get_conversations_chat" if chat_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_chat" if conversation_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/chats/{chatId}".sub('{format}','json').sub('{' + 'chatId' + '}', chat_id.to_s)
+      local_var_path = "/api/v2/conversations/chats/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1149,33 +1149,33 @@ module PureCloud
 
     # Get the wrap-up for this conversation participant. 
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
     # @return [Wrapup]
-    def get_conversations_chat_participant_wrapup(chat_id, participant_id, opts = {})
-      data, _status_code, _headers = get_conversations_chat_participant_wrapup_with_http_info(chat_id, participant_id, opts)
+    def get_conversations_chat_participant_wrapup(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_chat_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
     end
 
     # Get the wrap-up for this conversation participant. 
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
     # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
-    def get_conversations_chat_participant_wrapup_with_http_info(chat_id, participant_id, opts = {})
+    def get_conversations_chat_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_chat_participant_wrapup ..."
       end
-      # verify the required parameter 'chat_id' is set
-      fail ArgumentError, "Missing the required parameter 'chat_id' when calling ConversationsApi.get_conversations_chat_participant_wrapup" if chat_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_chat_participant_wrapup" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_chat_participant_wrapup" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'chatId' + '}', chat_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1213,31 +1213,31 @@ module PureCloud
 
     # Get list of wrapup codes for this conversation participant
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<WrapupCode>]
-    def get_conversations_chat_participant_wrapupcodes(chat_id, participant_id, opts = {})
-      data, _status_code, _headers = get_conversations_chat_participant_wrapupcodes_with_http_info(chat_id, participant_id, opts)
+    def get_conversations_chat_participant_wrapupcodes(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_chat_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts)
       return data
     end
 
     # Get list of wrapup codes for this conversation participant
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<WrapupCode>, Fixnum, Hash)>] Array<WrapupCode> data, response status code and response headers
-    def get_conversations_chat_participant_wrapupcodes_with_http_info(chat_id, participant_id, opts = {})
+    def get_conversations_chat_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_chat_participant_wrapupcodes ..."
       end
-      # verify the required parameter 'chat_id' is set
-      fail ArgumentError, "Missing the required parameter 'chat_id' when calling ConversationsApi.get_conversations_chat_participant_wrapupcodes" if chat_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_chat_participant_wrapupcodes" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_chat_participant_wrapupcodes" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'chatId' + '}', chat_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1327,27 +1327,27 @@ module PureCloud
 
     # Get cobrowse conversation
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [CobrowseConversation]
-    def get_conversations_cobrowsesession(cobrowse_id, opts = {})
-      data, _status_code, _headers = get_conversations_cobrowsesession_with_http_info(cobrowse_id, opts)
+    def get_conversations_cobrowsesession(conversation_id, opts = {})
+      data, _status_code, _headers = get_conversations_cobrowsesession_with_http_info(conversation_id, opts)
       return data
     end
 
     # Get cobrowse conversation
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [Array<(CobrowseConversation, Fixnum, Hash)>] CobrowseConversation data, response status code and response headers
-    def get_conversations_cobrowsesession_with_http_info(cobrowse_id, opts = {})
+    def get_conversations_cobrowsesession_with_http_info(conversation_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_cobrowsesession ..."
       end
-      # verify the required parameter 'cobrowse_id' is set
-      fail ArgumentError, "Missing the required parameter 'cobrowse_id' when calling ConversationsApi.get_conversations_cobrowsesession" if cobrowse_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_cobrowsesession" if conversation_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/cobrowsesessions/{cobrowseId}".sub('{format}','json').sub('{' + 'cobrowseId' + '}', cobrowse_id.to_s)
+      local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1384,33 +1384,33 @@ module PureCloud
 
     # Get the wrap-up for this conversation participant. 
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
     # @return [Wrapup]
-    def get_conversations_cobrowsesession_participant_wrapup(cobrowse_id, participant_id, opts = {})
-      data, _status_code, _headers = get_conversations_cobrowsesession_participant_wrapup_with_http_info(cobrowse_id, participant_id, opts)
+    def get_conversations_cobrowsesession_participant_wrapup(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_cobrowsesession_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
     end
 
     # Get the wrap-up for this conversation participant. 
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
     # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
-    def get_conversations_cobrowsesession_participant_wrapup_with_http_info(cobrowse_id, participant_id, opts = {})
+    def get_conversations_cobrowsesession_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_cobrowsesession_participant_wrapup ..."
       end
-      # verify the required parameter 'cobrowse_id' is set
-      fail ArgumentError, "Missing the required parameter 'cobrowse_id' when calling ConversationsApi.get_conversations_cobrowsesession_participant_wrapup" if cobrowse_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_cobrowsesession_participant_wrapup" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_cobrowsesession_participant_wrapup" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'cobrowseId' + '}', cobrowse_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1448,31 +1448,31 @@ module PureCloud
 
     # Get list of wrapup codes for this conversation participant
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<WrapupCode>]
-    def get_conversations_cobrowsesession_participant_wrapupcodes(cobrowse_id, participant_id, opts = {})
-      data, _status_code, _headers = get_conversations_cobrowsesession_participant_wrapupcodes_with_http_info(cobrowse_id, participant_id, opts)
+    def get_conversations_cobrowsesession_participant_wrapupcodes(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_cobrowsesession_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts)
       return data
     end
 
     # Get list of wrapup codes for this conversation participant
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<WrapupCode>, Fixnum, Hash)>] Array<WrapupCode> data, response status code and response headers
-    def get_conversations_cobrowsesession_participant_wrapupcodes_with_http_info(cobrowse_id, participant_id, opts = {})
+    def get_conversations_cobrowsesession_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_cobrowsesession_participant_wrapupcodes ..."
       end
-      # verify the required parameter 'cobrowse_id' is set
-      fail ArgumentError, "Missing the required parameter 'cobrowse_id' when calling ConversationsApi.get_conversations_cobrowsesession_participant_wrapupcodes" if cobrowse_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_cobrowsesession_participant_wrapupcodes" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_cobrowsesession_participant_wrapupcodes" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'cobrowseId' + '}', cobrowse_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1562,27 +1562,27 @@ module PureCloud
 
     # Get email conversation
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [EmailConversation]
-    def get_conversations_email(email_id, opts = {})
-      data, _status_code, _headers = get_conversations_email_with_http_info(email_id, opts)
+    def get_conversations_email(conversation_id, opts = {})
+      data, _status_code, _headers = get_conversations_email_with_http_info(conversation_id, opts)
       return data
     end
 
     # Get email conversation
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [Array<(EmailConversation, Fixnum, Hash)>] EmailConversation data, response status code and response headers
-    def get_conversations_email_with_http_info(email_id, opts = {})
+    def get_conversations_email_with_http_info(conversation_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.get_conversations_email" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email" if conversation_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1619,31 +1619,31 @@ module PureCloud
 
     # Get conversation message
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param message_id messageId
     # @param [Hash] opts the optional parameters
     # @return [EmailMessage]
-    def get_conversations_email_message(email_id, message_id, opts = {})
-      data, _status_code, _headers = get_conversations_email_message_with_http_info(email_id, message_id, opts)
+    def get_conversations_email_message(conversation_id, message_id, opts = {})
+      data, _status_code, _headers = get_conversations_email_message_with_http_info(conversation_id, message_id, opts)
       return data
     end
 
     # Get conversation message
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param message_id messageId
     # @param [Hash] opts the optional parameters
     # @return [Array<(EmailMessage, Fixnum, Hash)>] EmailMessage data, response status code and response headers
-    def get_conversations_email_message_with_http_info(email_id, message_id, opts = {})
+    def get_conversations_email_message_with_http_info(conversation_id, message_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email_message ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.get_conversations_email_message" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email_message" if conversation_id.nil?
       # verify the required parameter 'message_id' is set
       fail ArgumentError, "Missing the required parameter 'message_id' when calling ConversationsApi.get_conversations_email_message" if message_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/messages/{messageId}".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s).sub('{' + 'messageId' + '}', message_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/messages/{messageId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'messageId' + '}', message_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1680,27 +1680,27 @@ module PureCloud
 
     # Get conversation messages
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [EmailMessageListing]
-    def get_conversations_email_messages(email_id, opts = {})
-      data, _status_code, _headers = get_conversations_email_messages_with_http_info(email_id, opts)
+    def get_conversations_email_messages(conversation_id, opts = {})
+      data, _status_code, _headers = get_conversations_email_messages_with_http_info(conversation_id, opts)
       return data
     end
 
     # Get conversation messages
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [Array<(EmailMessageListing, Fixnum, Hash)>] EmailMessageListing data, response status code and response headers
-    def get_conversations_email_messages_with_http_info(email_id, opts = {})
+    def get_conversations_email_messages_with_http_info(conversation_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email_messages ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.get_conversations_email_messages" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email_messages" if conversation_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/messages".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/messages".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1737,27 +1737,27 @@ module PureCloud
 
     # Get conversation draft reply
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [EmailMessage]
-    def get_conversations_email_messages_draft(email_id, opts = {})
-      data, _status_code, _headers = get_conversations_email_messages_draft_with_http_info(email_id, opts)
+    def get_conversations_email_messages_draft(conversation_id, opts = {})
+      data, _status_code, _headers = get_conversations_email_messages_draft_with_http_info(conversation_id, opts)
       return data
     end
 
     # Get conversation draft reply
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @return [Array<(EmailMessage, Fixnum, Hash)>] EmailMessage data, response status code and response headers
-    def get_conversations_email_messages_draft_with_http_info(email_id, opts = {})
+    def get_conversations_email_messages_draft_with_http_info(conversation_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email_messages_draft ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.get_conversations_email_messages_draft" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email_messages_draft" if conversation_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/messages/draft".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/messages/draft".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1794,33 +1794,33 @@ module PureCloud
 
     # Get the wrap-up for this conversation participant. 
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
     # @return [Wrapup]
-    def get_conversations_email_participant_wrapup(email_id, participant_id, opts = {})
-      data, _status_code, _headers = get_conversations_email_participant_wrapup_with_http_info(email_id, participant_id, opts)
+    def get_conversations_email_participant_wrapup(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_email_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
     end
 
     # Get the wrap-up for this conversation participant. 
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
     # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
-    def get_conversations_email_participant_wrapup_with_http_info(email_id, participant_id, opts = {})
+    def get_conversations_email_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email_participant_wrapup ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.get_conversations_email_participant_wrapup" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email_participant_wrapup" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_email_participant_wrapup" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -1858,31 +1858,31 @@ module PureCloud
 
     # Get list of wrapup codes for this conversation participant
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<WrapupCode>]
-    def get_conversations_email_participant_wrapupcodes(email_id, participant_id, opts = {})
-      data, _status_code, _headers = get_conversations_email_participant_wrapupcodes_with_http_info(email_id, participant_id, opts)
+    def get_conversations_email_participant_wrapupcodes(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_email_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts)
       return data
     end
 
     # Get list of wrapup codes for this conversation participant
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<WrapupCode>, Fixnum, Hash)>] Array<WrapupCode> data, response status code and response headers
-    def get_conversations_email_participant_wrapupcodes_with_http_info(email_id, participant_id, opts = {})
+    def get_conversations_email_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email_participant_wrapupcodes ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.get_conversations_email_participant_wrapupcodes" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email_participant_wrapupcodes" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_email_participant_wrapupcodes" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2100,31 +2100,31 @@ module PureCloud
 
     # Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Conversation]
-    def patch_conversations_call(call_id, body, opts = {})
-      data, _status_code, _headers = patch_conversations_call_with_http_info(call_id, body, opts)
+    def patch_conversations_call(conversation_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_call_with_http_info(conversation_id, body, opts)
       return data
     end
 
     # Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Array<(Conversation, Fixnum, Hash)>] Conversation data, response status code and response headers
-    def patch_conversations_call_with_http_info(call_id, body, opts = {})
+    def patch_conversations_call_with_http_info(conversation_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_call ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.patch_conversations_call" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_call" if conversation_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_call" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2161,35 +2161,35 @@ module PureCloud
 
     # Update conversation participant
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Participant request
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def patch_conversations_call_participant(call_id, participant_id, body, opts = {})
-      patch_conversations_call_participant_with_http_info(call_id, participant_id, body, opts)
+    def patch_conversations_call_participant(conversation_id, participant_id, body, opts = {})
+      patch_conversations_call_participant_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Update conversation participant
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Participant request
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def patch_conversations_call_participant_with_http_info(call_id, participant_id, body, opts = {})
+    def patch_conversations_call_participant_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_call_participant ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.patch_conversations_call_participant" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_call_participant" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_call_participant" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_call_participant" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}/participants/{participantId}".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2225,35 +2225,35 @@ module PureCloud
 
     # Update the attributes on a conversation participant.
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Participant attributes
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def patch_conversations_call_participant_attributes(call_id, participant_id, body, opts = {})
-      patch_conversations_call_participant_attributes_with_http_info(call_id, participant_id, body, opts)
+    def patch_conversations_call_participant_attributes(conversation_id, participant_id, body, opts = {})
+      patch_conversations_call_participant_attributes_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Update the attributes on a conversation participant.
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Participant attributes
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def patch_conversations_call_participant_attributes_with_http_info(call_id, participant_id, body, opts = {})
+    def patch_conversations_call_participant_attributes_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_call_participant_attributes ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.patch_conversations_call_participant_attributes" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_call_participant_attributes" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_call_participant_attributes" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_call_participant_attributes" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2289,31 +2289,31 @@ module PureCloud
 
     # Update conversation participant's communication by disconnecting it.
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param communication_id communicationId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [Empty]
-    def patch_conversations_call_participant_communication(call_id, participant_id, communication_id, body, opts = {})
-      data, _status_code, _headers = patch_conversations_call_participant_communication_with_http_info(call_id, participant_id, communication_id, body, opts)
+    def patch_conversations_call_participant_communication(conversation_id, participant_id, communication_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_call_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts)
       return data
     end
 
     # Update conversation participant&#39;s communication by disconnecting it.
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param communication_id communicationId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
-    def patch_conversations_call_participant_communication_with_http_info(call_id, participant_id, communication_id, body, opts = {})
+    def patch_conversations_call_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_call_participant_communication ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.patch_conversations_call_participant_communication" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_call_participant_communication" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_call_participant_communication" if participant_id.nil?
       # verify the required parameter 'communication_id' is set
@@ -2321,7 +2321,7 @@ module PureCloud
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_call_participant_communication" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2358,35 +2358,35 @@ module PureCloud
 
     # Change who can speak
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body new speak to
     # @param [Hash] opts the optional parameters
     # @return [ConsultTransferResponse]
-    def patch_conversations_call_participant_consult(call_id, participant_id, body, opts = {})
-      data, _status_code, _headers = patch_conversations_call_participant_consult_with_http_info(call_id, participant_id, body, opts)
+    def patch_conversations_call_participant_consult(conversation_id, participant_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_call_participant_consult_with_http_info(conversation_id, participant_id, body, opts)
       return data
     end
 
     # Change who can speak
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body new speak to
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConsultTransferResponse, Fixnum, Hash)>] ConsultTransferResponse data, response status code and response headers
-    def patch_conversations_call_participant_consult_with_http_info(call_id, participant_id, body, opts = {})
+    def patch_conversations_call_participant_consult_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_call_participant_consult ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.patch_conversations_call_participant_consult" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_call_participant_consult" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_call_participant_consult" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_call_participant_consult" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}/participants/{participantId}/consult".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2423,31 +2423,31 @@ module PureCloud
 
     # Update a conversation by disconnecting all of the participants
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Conversation]
-    def patch_conversations_callback(callback_id, body, opts = {})
-      data, _status_code, _headers = patch_conversations_callback_with_http_info(callback_id, body, opts)
+    def patch_conversations_callback(conversation_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_callback_with_http_info(conversation_id, body, opts)
       return data
     end
 
     # Update a conversation by disconnecting all of the participants
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Array<(Conversation, Fixnum, Hash)>] Conversation data, response status code and response headers
-    def patch_conversations_callback_with_http_info(callback_id, body, opts = {})
+    def patch_conversations_callback_with_http_info(conversation_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_callback ..."
       end
-      # verify the required parameter 'callback_id' is set
-      fail ArgumentError, "Missing the required parameter 'callback_id' when calling ConversationsApi.patch_conversations_callback" if callback_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_callback" if conversation_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_callback" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/callbacks/{callbackId}".sub('{format}','json').sub('{' + 'callbackId' + '}', callback_id.to_s)
+      local_var_path = "/api/v2/conversations/callbacks/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2484,35 +2484,35 @@ module PureCloud
 
     # Update conversation participant
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def patch_conversations_callback_participant(callback_id, participant_id, body, opts = {})
-      patch_conversations_callback_participant_with_http_info(callback_id, participant_id, body, opts)
+    def patch_conversations_callback_participant(conversation_id, participant_id, body, opts = {})
+      patch_conversations_callback_participant_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Update conversation participant
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def patch_conversations_callback_participant_with_http_info(callback_id, participant_id, body, opts = {})
+    def patch_conversations_callback_participant_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_callback_participant ..."
       end
-      # verify the required parameter 'callback_id' is set
-      fail ArgumentError, "Missing the required parameter 'callback_id' when calling ConversationsApi.patch_conversations_callback_participant" if callback_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_callback_participant" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_callback_participant" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_callback_participant" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}".sub('{format}','json').sub('{' + 'callbackId' + '}', callback_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2548,35 +2548,35 @@ module PureCloud
 
     # Update the attributes on a conversation participant.
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Attributes
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def patch_conversations_callback_participant_attributes(callback_id, participant_id, body, opts = {})
-      patch_conversations_callback_participant_attributes_with_http_info(callback_id, participant_id, body, opts)
+    def patch_conversations_callback_participant_attributes(conversation_id, participant_id, body, opts = {})
+      patch_conversations_callback_participant_attributes_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Update the attributes on a conversation participant.
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Attributes
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def patch_conversations_callback_participant_attributes_with_http_info(callback_id, participant_id, body, opts = {})
+    def patch_conversations_callback_participant_attributes_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_callback_participant_attributes ..."
       end
-      # verify the required parameter 'callback_id' is set
-      fail ArgumentError, "Missing the required parameter 'callback_id' when calling ConversationsApi.patch_conversations_callback_participant_attributes" if callback_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_callback_participant_attributes" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_callback_participant_attributes" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_callback_participant_attributes" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'callbackId' + '}', callback_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2612,31 +2612,31 @@ module PureCloud
 
     # Update conversation participant's communication by disconnecting it.
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param communication_id communicationId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [Empty]
-    def patch_conversations_callback_participant_communication(callback_id, participant_id, communication_id, body, opts = {})
-      data, _status_code, _headers = patch_conversations_callback_participant_communication_with_http_info(callback_id, participant_id, communication_id, body, opts)
+    def patch_conversations_callback_participant_communication(conversation_id, participant_id, communication_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_callback_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts)
       return data
     end
 
     # Update conversation participant&#39;s communication by disconnecting it.
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param communication_id communicationId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
-    def patch_conversations_callback_participant_communication_with_http_info(callback_id, participant_id, communication_id, body, opts = {})
+    def patch_conversations_callback_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_callback_participant_communication ..."
       end
-      # verify the required parameter 'callback_id' is set
-      fail ArgumentError, "Missing the required parameter 'callback_id' when calling ConversationsApi.patch_conversations_callback_participant_communication" if callback_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_callback_participant_communication" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_callback_participant_communication" if participant_id.nil?
       # verify the required parameter 'communication_id' is set
@@ -2644,7 +2644,7 @@ module PureCloud
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_callback_participant_communication" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'callbackId' + '}', callback_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
+      local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2681,31 +2681,31 @@ module PureCloud
 
     # Update a conversation by disconnecting all of the participants
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Conversation]
-    def patch_conversations_chat(chat_id, body, opts = {})
-      data, _status_code, _headers = patch_conversations_chat_with_http_info(chat_id, body, opts)
+    def patch_conversations_chat(conversation_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_chat_with_http_info(conversation_id, body, opts)
       return data
     end
 
     # Update a conversation by disconnecting all of the participants
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Array<(Conversation, Fixnum, Hash)>] Conversation data, response status code and response headers
-    def patch_conversations_chat_with_http_info(chat_id, body, opts = {})
+    def patch_conversations_chat_with_http_info(conversation_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_chat ..."
       end
-      # verify the required parameter 'chat_id' is set
-      fail ArgumentError, "Missing the required parameter 'chat_id' when calling ConversationsApi.patch_conversations_chat" if chat_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_chat" if conversation_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_chat" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/chats/{chatId}".sub('{format}','json').sub('{' + 'chatId' + '}', chat_id.to_s)
+      local_var_path = "/api/v2/conversations/chats/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2742,35 +2742,35 @@ module PureCloud
 
     # Update conversation participant
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Update request
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def patch_conversations_chat_participant(chat_id, participant_id, body, opts = {})
-      patch_conversations_chat_participant_with_http_info(chat_id, participant_id, body, opts)
+    def patch_conversations_chat_participant(conversation_id, participant_id, body, opts = {})
+      patch_conversations_chat_participant_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Update conversation participant
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Update request
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def patch_conversations_chat_participant_with_http_info(chat_id, participant_id, body, opts = {})
+    def patch_conversations_chat_participant_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_chat_participant ..."
       end
-      # verify the required parameter 'chat_id' is set
-      fail ArgumentError, "Missing the required parameter 'chat_id' when calling ConversationsApi.patch_conversations_chat_participant" if chat_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_chat_participant" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_chat_participant" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_chat_participant" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/chats/{chatId}/participants/{participantId}".sub('{format}','json').sub('{' + 'chatId' + '}', chat_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2806,35 +2806,35 @@ module PureCloud
 
     # Update the attributes on a conversation participant.
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Participant attributes
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def patch_conversations_chat_participant_attributes(chat_id, participant_id, body, opts = {})
-      patch_conversations_chat_participant_attributes_with_http_info(chat_id, participant_id, body, opts)
+    def patch_conversations_chat_participant_attributes(conversation_id, participant_id, body, opts = {})
+      patch_conversations_chat_participant_attributes_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Update the attributes on a conversation participant.
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Participant attributes
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def patch_conversations_chat_participant_attributes_with_http_info(chat_id, participant_id, body, opts = {})
+    def patch_conversations_chat_participant_attributes_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_chat_participant_attributes ..."
       end
-      # verify the required parameter 'chat_id' is set
-      fail ArgumentError, "Missing the required parameter 'chat_id' when calling ConversationsApi.patch_conversations_chat_participant_attributes" if chat_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_chat_participant_attributes" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_chat_participant_attributes" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_chat_participant_attributes" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'chatId' + '}', chat_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2870,31 +2870,31 @@ module PureCloud
 
     # Update conversation participant's communication by disconnecting it.
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param communication_id communicationId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [Empty]
-    def patch_conversations_chat_participant_communication(chat_id, participant_id, communication_id, body, opts = {})
-      data, _status_code, _headers = patch_conversations_chat_participant_communication_with_http_info(chat_id, participant_id, communication_id, body, opts)
+    def patch_conversations_chat_participant_communication(conversation_id, participant_id, communication_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_chat_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts)
       return data
     end
 
     # Update conversation participant&#39;s communication by disconnecting it.
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param communication_id communicationId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
-    def patch_conversations_chat_participant_communication_with_http_info(chat_id, participant_id, communication_id, body, opts = {})
+    def patch_conversations_chat_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_chat_participant_communication ..."
       end
-      # verify the required parameter 'chat_id' is set
-      fail ArgumentError, "Missing the required parameter 'chat_id' when calling ConversationsApi.patch_conversations_chat_participant_communication" if chat_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_chat_participant_communication" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_chat_participant_communication" if participant_id.nil?
       # verify the required parameter 'communication_id' is set
@@ -2902,7 +2902,7 @@ module PureCloud
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_chat_participant_communication" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'chatId' + '}', chat_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
+      local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
 
       # query parameters
       query_params = {}
@@ -2939,31 +2939,31 @@ module PureCloud
 
     # Update a conversation by disconnecting all of the participants
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Conversation]
-    def patch_conversations_cobrowsesession(cobrowse_id, body, opts = {})
-      data, _status_code, _headers = patch_conversations_cobrowsesession_with_http_info(cobrowse_id, body, opts)
+    def patch_conversations_cobrowsesession(conversation_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_cobrowsesession_with_http_info(conversation_id, body, opts)
       return data
     end
 
     # Update a conversation by disconnecting all of the participants
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Array<(Conversation, Fixnum, Hash)>] Conversation data, response status code and response headers
-    def patch_conversations_cobrowsesession_with_http_info(cobrowse_id, body, opts = {})
+    def patch_conversations_cobrowsesession_with_http_info(conversation_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_cobrowsesession ..."
       end
-      # verify the required parameter 'cobrowse_id' is set
-      fail ArgumentError, "Missing the required parameter 'cobrowse_id' when calling ConversationsApi.patch_conversations_cobrowsesession" if cobrowse_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_cobrowsesession" if conversation_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_cobrowsesession" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/cobrowsesessions/{cobrowseId}".sub('{format}','json').sub('{' + 'cobrowseId' + '}', cobrowse_id.to_s)
+      local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -3000,33 +3000,33 @@ module PureCloud
 
     # Update conversation participant
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [MediaParticipantRequest] :body 
     # @return [nil]
-    def patch_conversations_cobrowsesession_participant(cobrowse_id, participant_id, opts = {})
-      patch_conversations_cobrowsesession_participant_with_http_info(cobrowse_id, participant_id, opts)
+    def patch_conversations_cobrowsesession_participant(conversation_id, participant_id, opts = {})
+      patch_conversations_cobrowsesession_participant_with_http_info(conversation_id, participant_id, opts)
       return nil
     end
 
     # Update conversation participant
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [MediaParticipantRequest] :body 
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def patch_conversations_cobrowsesession_participant_with_http_info(cobrowse_id, participant_id, opts = {})
+    def patch_conversations_cobrowsesession_participant_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_cobrowsesession_participant ..."
       end
-      # verify the required parameter 'cobrowse_id' is set
-      fail ArgumentError, "Missing the required parameter 'cobrowse_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant" if cobrowse_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}".sub('{format}','json').sub('{' + 'cobrowseId' + '}', cobrowse_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -3062,33 +3062,33 @@ module PureCloud
 
     # Update the attributes on a conversation participant.
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [ParticipantAttributes] :body 
     # @return [nil]
-    def patch_conversations_cobrowsesession_participant_attributes(cobrowse_id, participant_id, opts = {})
-      patch_conversations_cobrowsesession_participant_attributes_with_http_info(cobrowse_id, participant_id, opts)
+    def patch_conversations_cobrowsesession_participant_attributes(conversation_id, participant_id, opts = {})
+      patch_conversations_cobrowsesession_participant_attributes_with_http_info(conversation_id, participant_id, opts)
       return nil
     end
 
     # Update the attributes on a conversation participant.
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [ParticipantAttributes] :body 
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def patch_conversations_cobrowsesession_participant_attributes_with_http_info(cobrowse_id, participant_id, opts = {})
+    def patch_conversations_cobrowsesession_participant_attributes_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_cobrowsesession_participant_attributes ..."
       end
-      # verify the required parameter 'cobrowse_id' is set
-      fail ArgumentError, "Missing the required parameter 'cobrowse_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_attributes" if cobrowse_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_attributes" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_attributes" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'cobrowseId' + '}', cobrowse_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -3124,31 +3124,31 @@ module PureCloud
 
     # Update conversation participant's communication by disconnecting it.
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param communication_id communicationId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [Empty]
-    def patch_conversations_cobrowsesession_participant_communication(cobrowse_id, participant_id, communication_id, body, opts = {})
-      data, _status_code, _headers = patch_conversations_cobrowsesession_participant_communication_with_http_info(cobrowse_id, participant_id, communication_id, body, opts)
+    def patch_conversations_cobrowsesession_participant_communication(conversation_id, participant_id, communication_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_cobrowsesession_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts)
       return data
     end
 
     # Update conversation participant&#39;s communication by disconnecting it.
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param communication_id communicationId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
-    def patch_conversations_cobrowsesession_participant_communication_with_http_info(cobrowse_id, participant_id, communication_id, body, opts = {})
+    def patch_conversations_cobrowsesession_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_cobrowsesession_participant_communication ..."
       end
-      # verify the required parameter 'cobrowse_id' is set
-      fail ArgumentError, "Missing the required parameter 'cobrowse_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_communication" if cobrowse_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_communication" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_communication" if participant_id.nil?
       # verify the required parameter 'communication_id' is set
@@ -3156,7 +3156,7 @@ module PureCloud
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_communication" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'cobrowseId' + '}', cobrowse_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
+      local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
 
       # query parameters
       query_params = {}
@@ -3193,31 +3193,31 @@ module PureCloud
 
     # Update a conversation by disconnecting all of the participants
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Conversation]
-    def patch_conversations_email(email_id, body, opts = {})
-      data, _status_code, _headers = patch_conversations_email_with_http_info(email_id, body, opts)
+    def patch_conversations_email(conversation_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_email_with_http_info(conversation_id, body, opts)
       return data
     end
 
     # Update a conversation by disconnecting all of the participants
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Array<(Conversation, Fixnum, Hash)>] Conversation data, response status code and response headers
-    def patch_conversations_email_with_http_info(email_id, body, opts = {})
+    def patch_conversations_email_with_http_info(conversation_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_email ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.patch_conversations_email" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_email" if conversation_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_email" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -3254,35 +3254,35 @@ module PureCloud
 
     # Update conversation participant
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Update request
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def patch_conversations_email_participant(email_id, participant_id, body, opts = {})
-      patch_conversations_email_participant_with_http_info(email_id, participant_id, body, opts)
+    def patch_conversations_email_participant(conversation_id, participant_id, body, opts = {})
+      patch_conversations_email_participant_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Update conversation participant
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Update request
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def patch_conversations_email_participant_with_http_info(email_id, participant_id, body, opts = {})
+    def patch_conversations_email_participant_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_email_participant ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.patch_conversations_email_participant" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_email_participant" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_email_participant" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_email_participant" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/participants/{participantId}".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -3318,35 +3318,35 @@ module PureCloud
 
     # Update the attributes on a conversation participant.
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Participant attributes
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def patch_conversations_email_participant_attributes(email_id, participant_id, body, opts = {})
-      patch_conversations_email_participant_attributes_with_http_info(email_id, participant_id, body, opts)
+    def patch_conversations_email_participant_attributes(conversation_id, participant_id, body, opts = {})
+      patch_conversations_email_participant_attributes_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Update the attributes on a conversation participant.
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Participant attributes
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def patch_conversations_email_participant_attributes_with_http_info(email_id, participant_id, body, opts = {})
+    def patch_conversations_email_participant_attributes_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_email_participant_attributes ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.patch_conversations_email_participant_attributes" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_email_participant_attributes" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_email_participant_attributes" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_email_participant_attributes" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -3382,31 +3382,31 @@ module PureCloud
 
     # Update conversation participant's communication by disconnecting it.
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param communication_id communicationId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [Empty]
-    def patch_conversations_email_participant_communication(email_id, participant_id, communication_id, body, opts = {})
-      data, _status_code, _headers = patch_conversations_email_participant_communication_with_http_info(email_id, participant_id, communication_id, body, opts)
+    def patch_conversations_email_participant_communication(conversation_id, participant_id, communication_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_email_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts)
       return data
     end
 
     # Update conversation participant&#39;s communication by disconnecting it.
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param communication_id communicationId
     # @param body Participant
     # @param [Hash] opts the optional parameters
     # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
-    def patch_conversations_email_participant_communication_with_http_info(email_id, participant_id, communication_id, body, opts = {})
+    def patch_conversations_email_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_email_participant_communication ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.patch_conversations_email_participant_communication" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_email_participant_communication" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_email_participant_communication" if participant_id.nil?
       # verify the required parameter 'communication_id' is set
@@ -3414,7 +3414,7 @@ module PureCloud
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_email_participant_communication" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
 
       # query parameters
       query_params = {}
@@ -3752,31 +3752,31 @@ module PureCloud
 
     # Add a new call to a conversation
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Conversation]
-    def post_conversations_call(call_id, body, opts = {})
-      data, _status_code, _headers = post_conversations_call_with_http_info(call_id, body, opts)
+    def post_conversations_call(conversation_id, body, opts = {})
+      data, _status_code, _headers = post_conversations_call_with_http_info(conversation_id, body, opts)
       return data
     end
 
     # Add a new call to a conversation
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Array<(Conversation, Fixnum, Hash)>] Conversation data, response status code and response headers
-    def post_conversations_call_with_http_info(call_id, body, opts = {})
+    def post_conversations_call_with_http_info(conversation_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_call ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.post_conversations_call" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_call" if conversation_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_call" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -3813,35 +3813,35 @@ module PureCloud
 
     # Initiate and update consult transfer
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Destination address &amp; initial speak to
     # @param [Hash] opts the optional parameters
     # @return [ConsultTransferResponse]
-    def post_conversations_call_participant_consult(call_id, participant_id, body, opts = {})
-      data, _status_code, _headers = post_conversations_call_participant_consult_with_http_info(call_id, participant_id, body, opts)
+    def post_conversations_call_participant_consult(conversation_id, participant_id, body, opts = {})
+      data, _status_code, _headers = post_conversations_call_participant_consult_with_http_info(conversation_id, participant_id, body, opts)
       return data
     end
 
     # Initiate and update consult transfer
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Destination address &amp; initial speak to
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConsultTransferResponse, Fixnum, Hash)>] ConsultTransferResponse data, response status code and response headers
-    def post_conversations_call_participant_consult_with_http_info(call_id, participant_id, body, opts = {})
+    def post_conversations_call_participant_consult_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_call_participant_consult ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.post_conversations_call_participant_consult" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_call_participant_consult" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_call_participant_consult" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_call_participant_consult" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}/participants/{participantId}/consult".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -3878,31 +3878,31 @@ module PureCloud
 
     # Listen in on the conversation from the point of view of a given participant.
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def post_conversations_call_participant_monitor(call_id, participant_id, opts = {})
-      post_conversations_call_participant_monitor_with_http_info(call_id, participant_id, opts)
+    def post_conversations_call_participant_monitor(conversation_id, participant_id, opts = {})
+      post_conversations_call_participant_monitor_with_http_info(conversation_id, participant_id, opts)
       return nil
     end
 
     # Listen in on the conversation from the point of view of a given participant.
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def post_conversations_call_participant_monitor_with_http_info(call_id, participant_id, opts = {})
+    def post_conversations_call_participant_monitor_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_call_participant_monitor ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.post_conversations_call_participant_monitor" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_call_participant_monitor" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_call_participant_monitor" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}/participants/{participantId}/monitor".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -3938,35 +3938,35 @@ module PureCloud
 
     # Replace this participant with the specified user and/or address
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Transfer request
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def post_conversations_call_participant_replace(call_id, participant_id, body, opts = {})
-      post_conversations_call_participant_replace_with_http_info(call_id, participant_id, body, opts)
+    def post_conversations_call_participant_replace(conversation_id, participant_id, body, opts = {})
+      post_conversations_call_participant_replace_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Replace this participant with the specified user and/or address
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Transfer request
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def post_conversations_call_participant_replace_with_http_info(call_id, participant_id, body, opts = {})
+    def post_conversations_call_participant_replace_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_call_participant_replace ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.post_conversations_call_participant_replace" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_call_participant_replace" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_call_participant_replace" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_call_participant_replace" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -4002,31 +4002,31 @@ module PureCloud
 
     # Add participants to a conversation
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Conversation]
-    def post_conversations_call_participants(call_id, body, opts = {})
-      data, _status_code, _headers = post_conversations_call_participants_with_http_info(call_id, body, opts)
+    def post_conversations_call_participants(conversation_id, body, opts = {})
+      data, _status_code, _headers = post_conversations_call_participants_with_http_info(conversation_id, body, opts)
       return data
     end
 
     # Add participants to a conversation
     # 
-    # @param call_id callId
+    # @param conversation_id conversationId
     # @param body Conversation
     # @param [Hash] opts the optional parameters
     # @return [Array<(Conversation, Fixnum, Hash)>] Conversation data, response status code and response headers
-    def post_conversations_call_participants_with_http_info(call_id, body, opts = {})
+    def post_conversations_call_participants_with_http_info(conversation_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_call_participants ..."
       end
-      # verify the required parameter 'call_id' is set
-      fail ArgumentError, "Missing the required parameter 'call_id' when calling ConversationsApi.post_conversations_call_participants" if call_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_call_participants" if conversation_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_call_participants" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/calls/{callId}/participants".sub('{format}','json').sub('{' + 'callId' + '}', call_id.to_s)
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -4063,35 +4063,35 @@ module PureCloud
 
     # Replace this participant with the specified user and/or address
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Transfer request
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def post_conversations_callback_participant_replace(callback_id, participant_id, body, opts = {})
-      post_conversations_callback_participant_replace_with_http_info(callback_id, participant_id, body, opts)
+    def post_conversations_callback_participant_replace(conversation_id, participant_id, body, opts = {})
+      post_conversations_callback_participant_replace_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Replace this participant with the specified user and/or address
     # 
-    # @param callback_id callbackId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Transfer request
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def post_conversations_callback_participant_replace_with_http_info(callback_id, participant_id, body, opts = {})
+    def post_conversations_callback_participant_replace_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_callback_participant_replace ..."
       end
-      # verify the required parameter 'callback_id' is set
-      fail ArgumentError, "Missing the required parameter 'callback_id' when calling ConversationsApi.post_conversations_callback_participant_replace" if callback_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_callback_participant_replace" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_callback_participant_replace" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_callback_participant_replace" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'callbackId' + '}', callback_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -4241,35 +4241,35 @@ module PureCloud
 
     # Replace this participant with the specified user and/or address
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Transfer request
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def post_conversations_chat_participant_replace(chat_id, participant_id, body, opts = {})
-      post_conversations_chat_participant_replace_with_http_info(chat_id, participant_id, body, opts)
+    def post_conversations_chat_participant_replace(conversation_id, participant_id, body, opts = {})
+      post_conversations_chat_participant_replace_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Replace this participant with the specified user and/or address
     # 
-    # @param chat_id chatId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Transfer request
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def post_conversations_chat_participant_replace_with_http_info(chat_id, participant_id, body, opts = {})
+    def post_conversations_chat_participant_replace_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_chat_participant_replace ..."
       end
-      # verify the required parameter 'chat_id' is set
-      fail ArgumentError, "Missing the required parameter 'chat_id' when calling ConversationsApi.post_conversations_chat_participant_replace" if chat_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_chat_participant_replace" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_chat_participant_replace" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_chat_participant_replace" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/chats/{chatId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'chatId' + '}', chat_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -4362,33 +4362,33 @@ module PureCloud
 
     # Replace this participant with the specified user and/or address
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [TransferRequest] :body 
     # @return [nil]
-    def post_conversations_cobrowsesession_participant_replace(cobrowse_id, participant_id, opts = {})
-      post_conversations_cobrowsesession_participant_replace_with_http_info(cobrowse_id, participant_id, opts)
+    def post_conversations_cobrowsesession_participant_replace(conversation_id, participant_id, opts = {})
+      post_conversations_cobrowsesession_participant_replace_with_http_info(conversation_id, participant_id, opts)
       return nil
     end
 
     # Replace this participant with the specified user and/or address
     # 
-    # @param cobrowse_id cobrowseId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [TransferRequest] :body 
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def post_conversations_cobrowsesession_participant_replace_with_http_info(cobrowse_id, participant_id, opts = {})
+    def post_conversations_cobrowsesession_participant_replace_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_cobrowsesession_participant_replace ..."
       end
-      # verify the required parameter 'cobrowse_id' is set
-      fail ArgumentError, "Missing the required parameter 'cobrowse_id' when calling ConversationsApi.post_conversations_cobrowsesession_participant_replace" if cobrowse_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_cobrowsesession_participant_replace" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_cobrowsesession_participant_replace" if participant_id.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'cobrowseId' + '}', cobrowse_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -4424,31 +4424,31 @@ module PureCloud
 
     # Send an email reply
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param body Reply
     # @param [Hash] opts the optional parameters
     # @return [EmailMessage]
-    def post_conversations_email_messages(email_id, body, opts = {})
-      data, _status_code, _headers = post_conversations_email_messages_with_http_info(email_id, body, opts)
+    def post_conversations_email_messages(conversation_id, body, opts = {})
+      data, _status_code, _headers = post_conversations_email_messages_with_http_info(conversation_id, body, opts)
       return data
     end
 
     # Send an email reply
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param body Reply
     # @param [Hash] opts the optional parameters
     # @return [Array<(EmailMessage, Fixnum, Hash)>] EmailMessage data, response status code and response headers
-    def post_conversations_email_messages_with_http_info(email_id, body, opts = {})
+    def post_conversations_email_messages_with_http_info(conversation_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_email_messages ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.post_conversations_email_messages" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_email_messages" if conversation_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_email_messages" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/messages".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/messages".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}
@@ -4485,35 +4485,35 @@ module PureCloud
 
     # Replace this participant with the specified user and/or address
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Transfer request
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def post_conversations_email_participant_replace(email_id, participant_id, body, opts = {})
-      post_conversations_email_participant_replace_with_http_info(email_id, participant_id, body, opts)
+    def post_conversations_email_participant_replace(conversation_id, participant_id, body, opts = {})
+      post_conversations_email_participant_replace_with_http_info(conversation_id, participant_id, body, opts)
       return nil
     end
 
     # Replace this participant with the specified user and/or address
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param participant_id participantId
     # @param body Transfer request
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def post_conversations_email_participant_replace_with_http_info(email_id, participant_id, body, opts = {})
+    def post_conversations_email_participant_replace_with_http_info(conversation_id, participant_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_email_participant_replace ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.post_conversations_email_participant_replace" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_email_participant_replace" if conversation_id.nil?
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_email_participant_replace" if participant_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_email_participant_replace" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
       # query parameters
       query_params = {}
@@ -4663,31 +4663,31 @@ module PureCloud
 
     # Update conversation draft reply
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param body Draft
     # @param [Hash] opts the optional parameters
     # @return [EmailMessage]
-    def put_conversations_email_messages_draft(email_id, body, opts = {})
-      data, _status_code, _headers = put_conversations_email_messages_draft_with_http_info(email_id, body, opts)
+    def put_conversations_email_messages_draft(conversation_id, body, opts = {})
+      data, _status_code, _headers = put_conversations_email_messages_draft_with_http_info(conversation_id, body, opts)
       return data
     end
 
     # Update conversation draft reply
     # 
-    # @param email_id emailId
+    # @param conversation_id conversationId
     # @param body Draft
     # @param [Hash] opts the optional parameters
     # @return [Array<(EmailMessage, Fixnum, Hash)>] EmailMessage data, response status code and response headers
-    def put_conversations_email_messages_draft_with_http_info(email_id, body, opts = {})
+    def put_conversations_email_messages_draft_with_http_info(conversation_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.put_conversations_email_messages_draft ..."
       end
-      # verify the required parameter 'email_id' is set
-      fail ArgumentError, "Missing the required parameter 'email_id' when calling ConversationsApi.put_conversations_email_messages_draft" if email_id.nil?
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.put_conversations_email_messages_draft" if conversation_id.nil?
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.put_conversations_email_messages_draft" if body.nil?
       # resource path
-      local_var_path = "/api/v2/conversations/emails/{emailId}/messages/draft".sub('{format}','json').sub('{' + 'emailId' + '}', email_id.to_s)
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/messages/draft".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
       # query parameters
       query_params = {}

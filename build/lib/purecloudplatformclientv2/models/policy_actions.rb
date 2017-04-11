@@ -37,6 +37,8 @@ module PureCloud
 
     attr_accessor :initiate_screen_recording
 
+    attr_accessor :media_transcriptions
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -47,7 +49,8 @@ module PureCloud
         :'assign_metered_evaluations' => :'assignMeteredEvaluations',
         :'assign_calibrations' => :'assignCalibrations',
         :'retention_duration' => :'retentionDuration',
-        :'initiate_screen_recording' => :'initiateScreenRecording'
+        :'initiate_screen_recording' => :'initiateScreenRecording',
+        :'media_transcriptions' => :'mediaTranscriptions'
       }
     end
 
@@ -61,7 +64,8 @@ module PureCloud
         :'assign_metered_evaluations' => :'Array<MeteredEvaluationAssignment>',
         :'assign_calibrations' => :'Array<CalibrationAssignment>',
         :'retention_duration' => :'RetentionDuration',
-        :'initiate_screen_recording' => :'InitiateScreenRecording'
+        :'initiate_screen_recording' => :'InitiateScreenRecording',
+        :'media_transcriptions' => :'Array<MediaTranscription>'
       }
     end
 
@@ -111,6 +115,12 @@ module PureCloud
         self.initiate_screen_recording = attributes[:'initiateScreenRecording']
       end
 
+      if attributes.has_key?(:'mediaTranscriptions')
+        if (value = attributes[:'mediaTranscriptions']).is_a?(Array)
+          self.media_transcriptions = value
+        end
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -137,7 +147,8 @@ module PureCloud
           assign_metered_evaluations == o.assign_metered_evaluations &&
           assign_calibrations == o.assign_calibrations &&
           retention_duration == o.retention_duration &&
-          initiate_screen_recording == o.initiate_screen_recording
+          initiate_screen_recording == o.initiate_screen_recording &&
+          media_transcriptions == o.media_transcriptions
     end
 
     # @see the `==` method
@@ -149,7 +160,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [retain_recording, delete_recording, always_delete, assign_evaluations, assign_metered_evaluations, assign_calibrations, retention_duration, initiate_screen_recording].hash
+      [retain_recording, delete_recording, always_delete, assign_evaluations, assign_metered_evaluations, assign_calibrations, retention_duration, initiate_screen_recording, media_transcriptions].hash
     end
 
     # build the object from hash

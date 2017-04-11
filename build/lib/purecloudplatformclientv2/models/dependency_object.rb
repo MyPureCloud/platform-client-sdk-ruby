@@ -31,6 +31,8 @@ module PureCloud
 
     attr_accessor :updated
 
+    attr_accessor :state_unknown
+
     attr_accessor :consumed_resources
 
     attr_accessor :consuming_resources
@@ -47,6 +49,7 @@ module PureCloud
         :'type' => :'type',
         :'deleted' => :'deleted',
         :'updated' => :'updated',
+        :'state_unknown' => :'stateUnknown',
         :'consumed_resources' => :'consumedResources',
         :'consuming_resources' => :'consumingResources',
         :'self_uri' => :'selfUri'
@@ -62,6 +65,7 @@ module PureCloud
         :'type' => :'String',
         :'deleted' => :'BOOLEAN',
         :'updated' => :'BOOLEAN',
+        :'state_unknown' => :'BOOLEAN',
         :'consumed_resources' => :'Array<Dependency>',
         :'consuming_resources' => :'Array<Dependency>',
         :'self_uri' => :'String'
@@ -100,6 +104,10 @@ module PureCloud
         self.updated = attributes[:'updated']
       end
 
+      if attributes.has_key?(:'stateUnknown')
+        self.state_unknown = attributes[:'stateUnknown']
+      end
+
       if attributes.has_key?(:'consumedResources')
         if (value = attributes[:'consumedResources']).is_a?(Array)
           self.consumed_resources = value
@@ -128,7 +136,7 @@ module PureCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      allowed_values = ["ACDLANGUAGE", "ACDSKILL", "ACDWRAPUPCODE", "BRIDGEACTION", "COMPOSERSCRIPT", "CONTACTLIST", "DATAACTION", "GROUP", "INBOUNDCALLFLOW", "INBOUNDEMAILFLOW", "INQUEUECALLFLOW", "IVRCONFIGURATION", "LANGUAGE", "OUTBOUNDCALLFLOW", "QUEUE", "RESPONSE", "SECUREACTION", "SECURECALLFLOW", "SYSTEMPROMPT", "USER", "USERPROMPT", "VOICEXML", "WORKFLOW"]
+      allowed_values = ["ACDLANGUAGE", "ACDSKILL", "ACDWRAPUPCODE", "BRIDGEACTION", "COMPOSERSCRIPT", "CONTACTLIST", "DATAACTION", "GROUP", "INBOUNDCALLFLOW", "INBOUNDEMAILFLOW", "INQUEUECALLFLOW", "IVRCONFIGURATION", "LANGUAGE", "OUTBOUNDCALLFLOW", "QUEUE", "RESPONSE", "SCHEDULE", "SCHEDULEGROUP", "SECUREACTION", "SECURECALLFLOW", "SYSTEMPROMPT", "USER", "USERPROMPT", "VOICEXML", "WORKFLOW"]
       if @type && !allowed_values.include?(@type)
         return false
       end
@@ -137,7 +145,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
-      allowed_values = ["ACDLANGUAGE", "ACDSKILL", "ACDWRAPUPCODE", "BRIDGEACTION", "COMPOSERSCRIPT", "CONTACTLIST", "DATAACTION", "GROUP", "INBOUNDCALLFLOW", "INBOUNDEMAILFLOW", "INQUEUECALLFLOW", "IVRCONFIGURATION", "LANGUAGE", "OUTBOUNDCALLFLOW", "QUEUE", "RESPONSE", "SECUREACTION", "SECURECALLFLOW", "SYSTEMPROMPT", "USER", "USERPROMPT", "VOICEXML", "WORKFLOW"]
+      allowed_values = ["ACDLANGUAGE", "ACDSKILL", "ACDWRAPUPCODE", "BRIDGEACTION", "COMPOSERSCRIPT", "CONTACTLIST", "DATAACTION", "GROUP", "INBOUNDCALLFLOW", "INBOUNDEMAILFLOW", "INQUEUECALLFLOW", "IVRCONFIGURATION", "LANGUAGE", "OUTBOUNDCALLFLOW", "QUEUE", "RESPONSE", "SCHEDULE", "SCHEDULEGROUP", "SECUREACTION", "SECURECALLFLOW", "SYSTEMPROMPT", "USER", "USERPROMPT", "VOICEXML", "WORKFLOW"]
       if type && !allowed_values.include?(type)
         fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
       end
@@ -155,6 +163,7 @@ module PureCloud
           type == o.type &&
           deleted == o.deleted &&
           updated == o.updated &&
+          state_unknown == o.state_unknown &&
           consumed_resources == o.consumed_resources &&
           consuming_resources == o.consuming_resources &&
           self_uri == o.self_uri
@@ -169,7 +178,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, version, type, deleted, updated, consumed_resources, consuming_resources, self_uri].hash
+      [id, name, version, type, deleted, updated, state_unknown, consumed_resources, consuming_resources, self_uri].hash
     end
 
     # build the object from hash

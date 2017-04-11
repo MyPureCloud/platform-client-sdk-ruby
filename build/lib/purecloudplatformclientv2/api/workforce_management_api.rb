@@ -139,6 +139,68 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get intraday queues for the given date
+    # 
+    # @param mu_id The muId of the management unit.
+    # @param date ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23
+    # @param [Hash] opts the optional parameters
+    # @return [WfmIntradayQueueListing]
+    def get_workforcemanagement_managementunit_intraday_queues(mu_id, date, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_intraday_queues_with_http_info(mu_id, date, opts)
+      return data
+    end
+
+    # Get intraday queues for the given date
+    # 
+    # @param mu_id The muId of the management unit.
+    # @param date ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WfmIntradayQueueListing, Fixnum, Hash)>] WfmIntradayQueueListing data, response status code and response headers
+    def get_workforcemanagement_managementunit_intraday_queues_with_http_info(mu_id, date, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_intraday_queues ..."
+      end
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_intraday_queues" if mu_id.nil?
+      # verify the required parameter 'date' is set
+      fail ArgumentError, "Missing the required parameter 'date' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_intraday_queues" if date.nil?
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/intraday/queues".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'date'] = date
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+            auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WfmIntradayQueueListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_intraday_queues\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a time off request by id
     # 
     # @param mu_id The muId of the management unit.
@@ -554,6 +616,65 @@ module PureCloud
         :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#patch_workforcemanagement_timeoffrequest\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get intraday data for the given date for the requested queueIds
+    # 
+    # @param mu_id The muId of the management unit.
+    # @param [Hash] opts the optional parameters
+    # @option opts [IntradayQueryDataCommand] :body body
+    # @return [IntradayResponse]
+    def post_workforcemanagement_managementunit_intraday(mu_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_intraday_with_http_info(mu_id, opts)
+      return data
+    end
+
+    # Get intraday data for the given date for the requested queueIds
+    # 
+    # @param mu_id The muId of the management unit.
+    # @param [Hash] opts the optional parameters
+    # @option opts [IntradayQueryDataCommand] :body body
+    # @return [Array<(IntradayResponse, Fixnum, Hash)>] IntradayResponse data, response status code and response headers
+    def post_workforcemanagement_managementunit_intraday_with_http_info(mu_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_intraday ..."
+      end
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_intraday" if mu_id.nil?
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/intraday".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IntradayResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_intraday\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

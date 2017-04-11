@@ -10,6 +10,7 @@ Method | Description
 ------------- | ------------- | -------------
 [**get_workforcemanagement_adherence**](WorkforceManagementApi.html#get_workforcemanagement_adherence) | Get a list of UserScheduleAdherence records for the requested users
 [**get_workforcemanagement_managementunit_activitycodes**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_activitycodes) | Get activity codes corresponding to a management unit
+[**get_workforcemanagement_managementunit_intraday_queues**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_intraday_queues) | Get intraday queues for the given date
 [**get_workforcemanagement_managementunit_user_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_user_timeoffrequest) | Get a time off request by id
 [**get_workforcemanagement_managementunit_user_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_user_timeoffrequests) | Get a list of time off requests for any user
 [**get_workforcemanagement_managementunit_users**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_users) | Get agents in the management unit
@@ -17,6 +18,7 @@ Method | Description
 [**get_workforcemanagement_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequest) | Get a time off request for the current user by id
 [**get_workforcemanagement_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequests) | Get a list of time off requests for the current user
 [**patch_workforcemanagement_timeoffrequest**](WorkforceManagementApi.html#patch_workforcemanagement_timeoffrequest) | Mark a time off request for the current user as read or unread
+[**post_workforcemanagement_managementunit_intraday**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_intraday) | Get intraday data for the given date for the requested queueIds
 [**post_workforcemanagement_managementunit_schedules_search**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_schedules_search) | Get user schedules within the given time range
 [**post_workforcemanagement_schedules**](WorkforceManagementApi.html#post_workforcemanagement_schedules) | Get a schedule for the current user
 {: class="table table-striped"}
@@ -131,6 +133,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ActivityCodeContainer**](ActivityCodeContainer.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_workforcemanagement_managementunit_intraday_queues"></a>
+
+## -[**WfmIntradayQueueListing**](WfmIntradayQueueListing.html) get_workforcemanagement_managementunit_intraday_queues(mu_id, date)
+
+Get intraday queues for the given date
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/intraday/queues 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+mu_id = "mu_id_example" # String | The muId of the management unit.
+
+date = "date_example" # String | ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23
+
+
+begin
+  #Get intraday queues for the given date
+  result = api_instance.get_workforcemanagement_managementunit_intraday_queues(mu_id, date)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_intraday_queues: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mu_id** | **String**| The muId of the management unit. | 
+ **date** | **String**| ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23 | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**WfmIntradayQueueListing**](WfmIntradayQueueListing.html)
 
 ### HTTP request headers
 
@@ -566,6 +630,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_workforcemanagement_managementunit_intraday"></a>
+
+## -[**IntradayResponse**](IntradayResponse.html) post_workforcemanagement_managementunit_intraday(mu_id, opts)
+
+Get intraday data for the given date for the requested queueIds
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/intraday 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+mu_id = "mu_id_example" # String | The muId of the management unit.
+
+opts = { 
+  body: PureCloud::IntradayQueryDataCommand.new # IntradayQueryDataCommand | body
+}
+
+begin
+  #Get intraday data for the given date for the requested queueIds
+  result = api_instance.post_workforcemanagement_managementunit_intraday(mu_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_intraday: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mu_id** | **String**| The muId of the management unit. | 
+ **body** | [**IntradayQueryDataCommand**](IntradayQueryDataCommand.html)| body | [optional] 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IntradayResponse**](IntradayResponse.html)
 
 ### HTTP request headers
 
