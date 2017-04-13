@@ -11,6 +11,7 @@ title: UserPresenceNotification
 | **presence_definition** | [**UserPresenceNotificationPresenceDefinition**](UserPresenceNotificationPresenceDefinition.html) |  | [optional] |
 | **primary** | **BOOLEAN** |  | [optional] |
 | **message** | **String** |  | [optional] |
+| **modified_date** | **DateTime** |  | [optional] |
 {: class="table table-striped"}
 
 

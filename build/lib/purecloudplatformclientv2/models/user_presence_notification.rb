@@ -26,13 +26,16 @@ module PureCloud
 
     attr_accessor :message
 
+    attr_accessor :modified_date
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'source' => :'source',
         :'presence_definition' => :'presenceDefinition',
         :'primary' => :'primary',
-        :'message' => :'message'
+        :'message' => :'message',
+        :'modified_date' => :'modifiedDate'
       }
     end
 
@@ -42,7 +45,8 @@ module PureCloud
         :'source' => :'String',
         :'presence_definition' => :'UserPresenceNotificationPresenceDefinition',
         :'primary' => :'BOOLEAN',
-        :'message' => :'String'
+        :'message' => :'String',
+        :'modified_date' => :'DateTime'
       }
     end
 
@@ -70,6 +74,10 @@ module PureCloud
         self.message = attributes[:'message']
       end
 
+      if attributes.has_key?(:'modifiedDate')
+        self.modified_date = attributes[:'modifiedDate']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -92,7 +100,8 @@ module PureCloud
           source == o.source &&
           presence_definition == o.presence_definition &&
           primary == o.primary &&
-          message == o.message
+          message == o.message &&
+          modified_date == o.modified_date
     end
 
     # @see the `==` method
@@ -104,7 +113,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [source, presence_definition, primary, message].hash
+      [source, presence_definition, primary, message, modified_date].hash
     end
 
     # build the object from hash

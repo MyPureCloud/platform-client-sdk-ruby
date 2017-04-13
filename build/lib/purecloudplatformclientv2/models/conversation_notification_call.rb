@@ -48,6 +48,8 @@ module PureCloud
 
     attr_accessor :provider
 
+    attr_accessor :script_id
+
     attr_accessor :connected_time
 
     attr_accessor :disconnected_time
@@ -76,6 +78,7 @@ module PureCloud
         :'_self' => :'self',
         :'other' => :'other',
         :'provider' => :'provider',
+        :'script_id' => :'scriptId',
         :'connected_time' => :'connectedTime',
         :'disconnected_time' => :'disconnectedTime',
         :'disconnect_reasons' => :'disconnectReasons',
@@ -102,6 +105,7 @@ module PureCloud
         :'_self' => :'ConversationNotificationSelf',
         :'other' => :'ConversationNotificationAddress',
         :'provider' => :'String',
+        :'script_id' => :'String',
         :'connected_time' => :'DateTime',
         :'disconnected_time' => :'DateTime',
         :'disconnect_reasons' => :'Array<ConversationNotificationDisconnectReasons>',
@@ -176,6 +180,10 @@ module PureCloud
 
       if attributes.has_key?(:'provider')
         self.provider = attributes[:'provider']
+      end
+
+      if attributes.has_key?(:'scriptId')
+        self.script_id = attributes[:'scriptId']
       end
 
       if attributes.has_key?(:'connectedTime')
@@ -290,6 +298,7 @@ module PureCloud
           _self == o._self &&
           other == o.other &&
           provider == o.provider &&
+          script_id == o.script_id &&
           connected_time == o.connected_time &&
           disconnected_time == o.disconnected_time &&
           disconnect_reasons == o.disconnect_reasons &&
@@ -306,7 +315,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, recording, recording_state, muted, confined, held, error_info, disconnect_type, start_hold_time, direction, document_id, _self, other, provider, connected_time, disconnected_time, disconnect_reasons, fax_status, additional_properties].hash
+      [id, state, recording, recording_state, muted, confined, held, error_info, disconnect_type, start_hold_time, direction, document_id, _self, other, provider, script_id, connected_time, disconnected_time, disconnect_reasons, fax_status, additional_properties].hash
     end
 
     # build the object from hash

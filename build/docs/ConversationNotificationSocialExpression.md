@@ -16,6 +16,7 @@ title: ConversationNotificationSocialExpression
 | **recording_id** | **String** |  | [optional] |
 | **held** | **BOOLEAN** |  | [optional] |
 | **provider** | **String** |  | [optional] |
+| **script_id** | **String** |  | [optional] |
 | **disconnect_type** | **String** |  | [optional] |
 | **start_hold_time** | **DateTime** |  | [optional] |
 | **connected_time** | **DateTime** |  | [optional] |

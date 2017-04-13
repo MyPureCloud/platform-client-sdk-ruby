@@ -30,6 +30,8 @@ module PureCloud
 
     attr_accessor :provider
 
+    attr_accessor :script_id
+
     attr_accessor :disconnect_type
 
     attr_accessor :connected_time
@@ -47,6 +49,7 @@ module PureCloud
         :'context' => :'context',
         :'sharing' => :'sharing',
         :'provider' => :'provider',
+        :'script_id' => :'scriptId',
         :'disconnect_type' => :'disconnectType',
         :'connected_time' => :'connectedTime',
         :'disconnected_time' => :'disconnectedTime',
@@ -63,6 +66,7 @@ module PureCloud
         :'context' => :'String',
         :'sharing' => :'BOOLEAN',
         :'provider' => :'String',
+        :'script_id' => :'String',
         :'disconnect_type' => :'String',
         :'connected_time' => :'DateTime',
         :'disconnected_time' => :'DateTime',
@@ -100,6 +104,10 @@ module PureCloud
 
       if attributes.has_key?(:'provider')
         self.provider = attributes[:'provider']
+      end
+
+      if attributes.has_key?(:'scriptId')
+        self.script_id = attributes[:'scriptId']
       end
 
       if attributes.has_key?(:'disconnectType')
@@ -171,6 +179,7 @@ module PureCloud
           context == o.context &&
           sharing == o.sharing &&
           provider == o.provider &&
+          script_id == o.script_id &&
           disconnect_type == o.disconnect_type &&
           connected_time == o.connected_time &&
           disconnected_time == o.disconnected_time &&
@@ -186,7 +195,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, _self, id, context, sharing, provider, disconnect_type, connected_time, disconnected_time, additional_properties].hash
+      [state, _self, id, context, sharing, provider, script_id, disconnect_type, connected_time, disconnected_time, additional_properties].hash
     end
 
     # build the object from hash

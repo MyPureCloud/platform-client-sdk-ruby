@@ -24,6 +24,8 @@ module PureCloud
 
     attr_accessor :provider
 
+    attr_accessor :script_id
+
     attr_accessor :room_id
 
     attr_accessor :held
@@ -44,6 +46,7 @@ module PureCloud
         :'state' => :'state',
         :'id' => :'id',
         :'provider' => :'provider',
+        :'script_id' => :'scriptId',
         :'room_id' => :'roomId',
         :'held' => :'held',
         :'disconnect_type' => :'disconnectType',
@@ -60,6 +63,7 @@ module PureCloud
         :'state' => :'String',
         :'id' => :'String',
         :'provider' => :'String',
+        :'script_id' => :'String',
         :'room_id' => :'String',
         :'held' => :'BOOLEAN',
         :'disconnect_type' => :'String',
@@ -88,6 +92,10 @@ module PureCloud
 
       if attributes.has_key?(:'provider')
         self.provider = attributes[:'provider']
+      end
+
+      if attributes.has_key?(:'scriptId')
+        self.script_id = attributes[:'scriptId']
       end
 
       if attributes.has_key?(:'roomId')
@@ -168,6 +176,7 @@ module PureCloud
           state == o.state &&
           id == o.id &&
           provider == o.provider &&
+          script_id == o.script_id &&
           room_id == o.room_id &&
           held == o.held &&
           disconnect_type == o.disconnect_type &&
@@ -186,7 +195,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, provider, room_id, held, disconnect_type, start_hold_time, connected_time, disconnected_time, additional_properties].hash
+      [state, id, provider, script_id, room_id, held, disconnect_type, start_hold_time, connected_time, disconnected_time, additional_properties].hash
     end
 
     # build the object from hash

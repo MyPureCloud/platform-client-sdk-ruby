@@ -17,6 +17,7 @@ title: ConversationNotificationCobrowsesessions
 | **controlling** | **Array&lt;String&gt;** |  | [optional] |
 | **viewer_url** | **String** |  | [optional] |
 | **provider** | **String** |  | [optional] |
+| **script_id** | **String** |  | [optional] |
 | **provider_event_time** | **DateTime** |  | [optional] |
 | **connected_time** | **DateTime** |  | [optional] |
 | **disconnected_time** | **DateTime** |  | [optional] |

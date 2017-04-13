@@ -28,6 +28,8 @@ module PureCloud
 
     attr_accessor :provider
 
+    attr_accessor :script_id
+
     attr_accessor :messages_sent
 
     attr_accessor :error_info
@@ -50,6 +52,7 @@ module PureCloud
         :'held' => :'held',
         :'subject' => :'subject',
         :'provider' => :'provider',
+        :'script_id' => :'scriptId',
         :'messages_sent' => :'messagesSent',
         :'error_info' => :'errorInfo',
         :'disconnect_type' => :'disconnectType',
@@ -68,6 +71,7 @@ module PureCloud
         :'held' => :'BOOLEAN',
         :'subject' => :'String',
         :'provider' => :'String',
+        :'script_id' => :'String',
         :'messages_sent' => :'Integer',
         :'error_info' => :'ConversationNotificationErrorDetails',
         :'disconnect_type' => :'String',
@@ -104,6 +108,10 @@ module PureCloud
 
       if attributes.has_key?(:'provider')
         self.provider = attributes[:'provider']
+      end
+
+      if attributes.has_key?(:'scriptId')
+        self.script_id = attributes[:'scriptId']
       end
 
       if attributes.has_key?(:'messagesSent')
@@ -186,6 +194,7 @@ module PureCloud
           held == o.held &&
           subject == o.subject &&
           provider == o.provider &&
+          script_id == o.script_id &&
           messages_sent == o.messages_sent &&
           error_info == o.error_info &&
           disconnect_type == o.disconnect_type &&
@@ -204,7 +213,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, held, subject, provider, messages_sent, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, additional_properties].hash
+      [id, state, held, subject, provider, script_id, messages_sent, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, additional_properties].hash
     end
 
     # build the object from hash

@@ -22,6 +22,7 @@ title: ConversationNotificationCall
 | **_self** | [**ConversationNotificationSelf**](ConversationNotificationSelf.html) |  | [optional] |
 | **other** | [**ConversationNotificationAddress**](ConversationNotificationAddress.html) |  | [optional] |
 | **provider** | **String** |  | [optional] |
+| **script_id** | **String** |  | [optional] |
 | **connected_time** | **DateTime** |  | [optional] |
 | **disconnected_time** | **DateTime** |  | [optional] |
 | **disconnect_reasons** | [**Array&lt;ConversationNotificationDisconnectReasons&gt;**](ConversationNotificationDisconnectReasons.html) |  | [optional] |
