@@ -1,7 +1,7 @@
 
 # SDK changes
 
-* Including auth helpers
+* Documentation updates
 
 # Major Changes (0 changes)
 
