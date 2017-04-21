@@ -1,21 +1,21 @@
 ---
 title: PureCloud Ruby Gem
 ---
-![](http://ruby-gem-downloads-badge.herokuapp.com/purecloudplatformclientv2?label=3.1.6)
+![](http://ruby-gem-downloads-badge.herokuapp.com/purecloudplatformclientv2?label=3.1.7)
 
-Documentation can be found at https://developer.mypurecloud.com/api/rest/client-libraries/ruby/latest/
+Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/ruby/](https://developer.mypurecloud.com/api/rest/client-libraries/ruby/)
 
 ## Installation
 
 ### from rubygems.org
 
-~~~
-gem install 'purecloudplatformclientv2', '~> 3.1.6'
+~~~ ruby
+gem install 'purecloudplatformclientv2', '~> 3.1.7'
 ~~~
 
 ### Install from Git
 
-~~~
+~~~ ruby
 gem install 'purecloudplatformclientv2', :git => 'https://github.com/MyPureCloud/platform-client-sdk-ruby.git'
 ~~~
 
@@ -23,7 +23,7 @@ gem install 'purecloudplatformclientv2', :git => 'https://github.com/MyPureCloud
 
 Please follow the [installation](#installation) procedure and then run the following code:
 
-~~~ruby
+~~~ ruby
 # Load the gem
 require 'purecloudplatformclientv2'
 
