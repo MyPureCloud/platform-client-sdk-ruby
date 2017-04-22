@@ -35,6 +35,12 @@ module PureCloud
     # How many rotations to go through
     attr_accessor :stop_ringing_after_rotations
 
+    #  A fallback group to contact when all of the members in this group did not answer the call.
+    attr_accessor :overflow_group_id
+
+    # Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin.
+    attr_accessor :group_alert_type
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -43,7 +49,9 @@ module PureCloud
         :'enabled' => :'enabled',
         :'send_email_notifications' => :'sendEmailNotifications',
         :'rotate_calls_secs' => :'rotateCallsSecs',
-        :'stop_ringing_after_rotations' => :'stopRingingAfterRotations'
+        :'stop_ringing_after_rotations' => :'stopRingingAfterRotations',
+        :'overflow_group_id' => :'overflowGroupId',
+        :'group_alert_type' => :'groupAlertType'
       }
     end
 
@@ -55,7 +63,9 @@ module PureCloud
         :'enabled' => :'BOOLEAN',
         :'send_email_notifications' => :'BOOLEAN',
         :'rotate_calls_secs' => :'Integer',
-        :'stop_ringing_after_rotations' => :'Integer'
+        :'stop_ringing_after_rotations' => :'Integer',
+        :'overflow_group_id' => :'String',
+        :'group_alert_type' => :'String'
       }
     end
 
@@ -91,6 +101,14 @@ module PureCloud
         self.stop_ringing_after_rotations = attributes[:'stopRingingAfterRotations']
       end
 
+      if attributes.has_key?(:'overflowGroupId')
+        self.overflow_group_id = attributes[:'overflowGroupId']
+      end
+
+      if attributes.has_key?(:'groupAlertType')
+        self.group_alert_type = attributes[:'groupAlertType']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -103,6 +121,20 @@ module PureCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      allowed_values = ["RANDOM", "ROUND_ROBIN", "SEQUENTIAL"]
+      if @group_alert_type && !allowed_values.include?(@group_alert_type)
+        return false
+      end
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] group_alert_type Object to be assigned
+    def group_alert_type=(group_alert_type)
+      allowed_values = ["RANDOM", "ROUND_ROBIN", "SEQUENTIAL"]
+      if group_alert_type && !allowed_values.include?(group_alert_type)
+        fail ArgumentError, "invalid value for 'group_alert_type', must be one of #{allowed_values}."
+      end
+      @group_alert_type = group_alert_type
     end
 
     # Checks equality by comparing each attribute.
@@ -115,7 +147,9 @@ module PureCloud
           enabled == o.enabled &&
           send_email_notifications == o.send_email_notifications &&
           rotate_calls_secs == o.rotate_calls_secs &&
-          stop_ringing_after_rotations == o.stop_ringing_after_rotations
+          stop_ringing_after_rotations == o.stop_ringing_after_rotations &&
+          overflow_group_id == o.overflow_group_id &&
+          group_alert_type == o.group_alert_type
     end
 
     # @see the `==` method
@@ -127,7 +161,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, group, enabled, send_email_notifications, rotate_calls_secs, stop_ringing_after_rotations].hash
+      [name, group, enabled, send_email_notifications, rotate_calls_secs, stop_ringing_after_rotations, overflow_group_id, group_alert_type].hash
     end
 
     # build the object from hash

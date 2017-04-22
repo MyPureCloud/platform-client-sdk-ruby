@@ -17,24 +17,35 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class DocumentDataV2NotificationCreatedBy
-    attr_accessor :id
+  class TrunkMetricsRegisters
+    # Server proxy address that this registers array element represents.
+    attr_accessor :proxy_address
 
-    attr_accessor :name
+    # True if last REGISTER message had positive response; false if error response or no response.
+    attr_accessor :register_state
+
+    # ISO 8601 format UTC absolute date & time of the last change of the register state.
+    attr_accessor :register_state_time
+
+    attr_accessor :error_info
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
-        :'name' => :'name'
+        :'proxy_address' => :'proxyAddress',
+        :'register_state' => :'registerState',
+        :'register_state_time' => :'registerStateTime',
+        :'error_info' => :'errorInfo'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
-        :'name' => :'String'
+        :'proxy_address' => :'String',
+        :'register_state' => :'BOOLEAN',
+        :'register_state_time' => :'DateTime',
+        :'error_info' => :'TrunkErrorInfo'
       }
     end
 
@@ -46,12 +57,20 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.has_key?(:'proxyAddress')
+        self.proxy_address = attributes[:'proxyAddress']
       end
 
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
+      if attributes.has_key?(:'registerState')
+        self.register_state = attributes[:'registerState']
+      end
+
+      if attributes.has_key?(:'registerStateTime')
+        self.register_state_time = attributes[:'registerStateTime']
+      end
+
+      if attributes.has_key?(:'errorInfo')
+        self.error_info = attributes[:'errorInfo']
       end
 
     end
@@ -73,8 +92,10 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name
+          proxy_address == o.proxy_address &&
+          register_state == o.register_state &&
+          register_state_time == o.register_state_time &&
+          error_info == o.error_info
     end
 
     # @see the `==` method
@@ -86,7 +107,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name].hash
+      [proxy_address, register_state, register_state_time, error_info].hash
     end
 
     # build the object from hash

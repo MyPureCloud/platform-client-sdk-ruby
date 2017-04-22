@@ -88,7 +88,7 @@ Method | Description
 
 <a name="delete_outbound_attemptlimit"></a>
 
-## -String** delete_outbound_attemptlimit(attempt_limits_id)
+## - delete_outbound_attemptlimit(attempt_limits_id)
 
 Delete attempt limits
 
@@ -119,8 +119,7 @@ attempt_limits_id = "attempt_limits_id_example" # String | Attempt limits ID
 
 begin
   #Delete attempt limits
-  result = api_instance.delete_outbound_attemptlimit(attempt_limits_id)
-  p result
+  api_instance.delete_outbound_attemptlimit(attempt_limits_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_attemptlimit: #{e}"
 end
@@ -136,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -147,7 +146,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_outbound_callabletimeset"></a>
 
-## -String** delete_outbound_callabletimeset(callable_time_set_id)
+## - delete_outbound_callabletimeset(callable_time_set_id)
 
 Delete callable time set
 
@@ -178,8 +177,7 @@ callable_time_set_id = "callable_time_set_id_example" # String | Callable Time S
 
 begin
   #Delete callable time set
-  result = api_instance.delete_outbound_callabletimeset(callable_time_set_id)
-  p result
+  api_instance.delete_outbound_callabletimeset(callable_time_set_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_callabletimeset: #{e}"
 end
@@ -195,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -206,7 +204,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_outbound_callanalysisresponseset"></a>
 
-## -String** delete_outbound_callanalysisresponseset(call_analysis_set_id)
+## - delete_outbound_callanalysisresponseset(call_analysis_set_id)
 
 Delete a dialer call analysis response set.
 
@@ -237,8 +235,7 @@ call_analysis_set_id = "call_analysis_set_id_example" # String | Call Analysis R
 
 begin
   #Delete a dialer call analysis response set.
-  result = api_instance.delete_outbound_callanalysisresponseset(call_analysis_set_id)
-  p result
+  api_instance.delete_outbound_callanalysisresponseset(call_analysis_set_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_callanalysisresponseset: #{e}"
 end
@@ -254,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -382,7 +379,7 @@ nil (empty response body)
 
 <a name="delete_outbound_campaignrule"></a>
 
-## -String** delete_outbound_campaignrule(campaign_rule_id)
+## - delete_outbound_campaignrule(campaign_rule_id)
 
 Delete Campaign Rule
 
@@ -413,8 +410,7 @@ campaign_rule_id = "campaign_rule_id_example" # String | Campaign Rule ID
 
 begin
   #Delete Campaign Rule
-  result = api_instance.delete_outbound_campaignrule(campaign_rule_id)
-  p result
+  api_instance.delete_outbound_campaignrule(campaign_rule_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_campaignrule: #{e}"
 end
@@ -430,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -441,7 +437,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_outbound_contactlist"></a>
 
-## -String** delete_outbound_contactlist(contact_list_id)
+## - delete_outbound_contactlist(contact_list_id)
 
 Delete a contact list.
 
@@ -472,8 +468,7 @@ contact_list_id = "contact_list_id_example" # String | ContactList ID
 
 begin
   #Delete a contact list.
-  result = api_instance.delete_outbound_contactlist(contact_list_id)
-  p result
+  api_instance.delete_outbound_contactlist(contact_list_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_contactlist: #{e}"
 end
@@ -489,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -500,7 +495,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_outbound_contactlist_contact"></a>
 
-## -String** delete_outbound_contactlist_contact(contact_list_id, contact_id)
+## - delete_outbound_contactlist_contact(contact_list_id, contact_id)
 
 Delete a contact.
 
@@ -533,8 +528,7 @@ contact_id = "contact_id_example" # String | Contact ID
 
 begin
   #Delete a contact.
-  result = api_instance.delete_outbound_contactlist_contact(contact_list_id, contact_id)
-  p result
+  api_instance.delete_outbound_contactlist_contact(contact_list_id, contact_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_contactlist_contact: #{e}"
 end
@@ -551,7 +545,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -562,7 +556,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_outbound_dnclist"></a>
 
-## -String** delete_outbound_dnclist(dnc_list_id)
+## - delete_outbound_dnclist(dnc_list_id)
 
 Delete dialer DNC list
 
@@ -593,8 +587,7 @@ dnc_list_id = "dnc_list_id_example" # String | DncList ID
 
 begin
   #Delete dialer DNC list
-  result = api_instance.delete_outbound_dnclist(dnc_list_id)
-  p result
+  api_instance.delete_outbound_dnclist(dnc_list_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_dnclist: #{e}"
 end
@@ -610,7 +603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -621,7 +614,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_outbound_ruleset"></a>
 
-## -String** delete_outbound_ruleset(rule_set_id)
+## - delete_outbound_ruleset(rule_set_id)
 
 Delete a Rule set.
 
@@ -652,8 +645,7 @@ rule_set_id = "rule_set_id_example" # String | Rule Set ID
 
 begin
   #Delete a Rule set.
-  result = api_instance.delete_outbound_ruleset(rule_set_id)
-  p result
+  api_instance.delete_outbound_ruleset(rule_set_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_ruleset: #{e}"
 end
@@ -669,7 +661,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -680,7 +672,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_outbound_schedules_campaign"></a>
 
-## -String** delete_outbound_schedules_campaign(campaign_id)
+## - delete_outbound_schedules_campaign(campaign_id)
 
 Delete a dialer campaign schedule.
 
@@ -711,8 +703,7 @@ campaign_id = "campaign_id_example" # String | Campaign ID
 
 begin
   #Delete a dialer campaign schedule.
-  result = api_instance.delete_outbound_schedules_campaign(campaign_id)
-  p result
+  api_instance.delete_outbound_schedules_campaign(campaign_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_schedules_campaign: #{e}"
 end
@@ -728,7 +719,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -739,7 +730,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_outbound_schedules_sequence"></a>
 
-## -String** delete_outbound_schedules_sequence(sequence_id)
+## - delete_outbound_schedules_sequence(sequence_id)
 
 Delete a dialer sequence schedule.
 
@@ -770,8 +761,7 @@ sequence_id = "sequence_id_example" # String | Sequence ID
 
 begin
   #Delete a dialer sequence schedule.
-  result = api_instance.delete_outbound_schedules_sequence(sequence_id)
-  p result
+  api_instance.delete_outbound_schedules_sequence(sequence_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_schedules_sequence: #{e}"
 end
@@ -787,7 +777,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -798,7 +788,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_outbound_sequence"></a>
 
-## -String** delete_outbound_sequence(sequence_id)
+## - delete_outbound_sequence(sequence_id)
 
 Delete a dialer campaign sequence.
 
@@ -829,8 +819,7 @@ sequence_id = "sequence_id_example" # String | Campaign Sequence ID
 
 begin
   #Delete a dialer campaign sequence.
-  result = api_instance.delete_outbound_sequence(sequence_id)
-  p result
+  api_instance.delete_outbound_sequence(sequence_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_sequence: #{e}"
 end
@@ -846,7 +835,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 

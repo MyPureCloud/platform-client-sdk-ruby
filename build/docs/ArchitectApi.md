@@ -10,10 +10,10 @@ Method | Description
 ------------- | ------------- | -------------
 [**delete_architect_prompt**](ArchitectApi.html#delete_architect_prompt) | Delete specified user prompt
 [**delete_architect_prompt_resource**](ArchitectApi.html#delete_architect_prompt_resource) | Delete specified user prompt resource
-[**delete_architect_prompts**](ArchitectApi.html#delete_architect_prompts) | Batch-delete a list of prompts asynchronously
+[**delete_architect_prompts**](ArchitectApi.html#delete_architect_prompts) | Batch-delete a list of prompts
 [**delete_architect_systemprompt_resource**](ArchitectApi.html#delete_architect_systemprompt_resource) | Delete a system prompt resource override.
 [**delete_flow**](ArchitectApi.html#delete_flow) | Delete flow
-[**delete_flows**](ArchitectApi.html#delete_flows) | Batch-delete a list of flows asynchronously
+[**delete_flows**](ArchitectApi.html#delete_flows) | Batch-delete a list of flows
 [**get_architect_dependencytracking**](ArchitectApi.html#get_architect_dependencytracking) | Get Dependency Tracking objects that have a given display name
 [**get_architect_dependencytracking_build**](ArchitectApi.html#get_architect_dependencytracking_build) | Get Dependency Tracking build status for an organization
 [**get_architect_dependencytracking_consumedresources**](ArchitectApi.html#get_architect_dependencytracking_consumedresources) | Get resources that are consumed by a given Dependency Tracking object
@@ -182,9 +182,9 @@ nil (empty response body)
 
 ## -[**Operation**](Operation.html) delete_architect_prompts(id)
 
-Batch-delete a list of prompts asynchronously
+Batch-delete a list of prompts
 
-Multiple IDs can be specified, in which case all specified prompts will be deleted.
+Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
 
 Wraps DELETE /api/v2/architect/prompts 
 
@@ -210,7 +210,7 @@ id = ["id_example"] # Array<String> | List of Prompt IDs
 
 
 begin
-  #Batch-delete a list of prompts asynchronously
+  #Batch-delete a list of prompts
   result = api_instance.delete_architect_prompts(id)
   p result
 rescue PureCloud::ApiError => e
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_architect_systemprompt_resource"></a>
 
-## -String** delete_architect_systemprompt_resource(prompt_id, language_code)
+## - delete_architect_systemprompt_resource(prompt_id, language_code)
 
 Delete a system prompt resource override.
 
@@ -272,8 +272,7 @@ language_code = "language_code_example" # String | Language
 
 begin
   #Delete a system prompt resource override.
-  result = api_instance.delete_architect_systemprompt_resource(prompt_id, language_code)
-  p result
+  api_instance.delete_architect_systemprompt_resource(prompt_id, language_code)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_architect_systemprompt_resource: #{e}"
 end
@@ -290,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -361,9 +360,9 @@ nil (empty response body)
 
 ## -[**Operation**](Operation.html) delete_flows(id)
 
-Batch-delete a list of flows asynchronously
+Batch-delete a list of flows
 
-Multiple IDs can be specified, in which case all specified flows will be deleted.
+Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
 
 Wraps DELETE /api/v2/flows 
 
@@ -389,7 +388,7 @@ id = ["id_example"] # Array<String> | List of Flow IDs
 
 
 begin
-  #Batch-delete a list of flows asynchronously
+  #Batch-delete a list of flows
   result = api_instance.delete_flows(id)
   p result
 rescue PureCloud::ApiError => e
@@ -1951,7 +1950,7 @@ Name | Type | Description  | Notes
 
 Rebuild Dependency Tracking data for an organization
 
-
+Asynchronous.  Notification topic: v2.architect.dependencytracking.build
 
 Wraps POST /api/v2/architect/dependencytracking/build 
 
@@ -2312,7 +2311,7 @@ Name | Type | Description  | Notes
 
 Check-in flow
 
-
+Asynchronous.  Notification topic: v2.flows.{flowId}
 
 Wraps POST /api/v2/flows/actions/checkin 
 
@@ -2489,7 +2488,7 @@ Name | Type | Description  | Notes
 
 Publish flow
 
-
+Asynchronous.  Notification topic: v2.flows.{flowId}
 
 Wraps POST /api/v2/flows/actions/publish 
 

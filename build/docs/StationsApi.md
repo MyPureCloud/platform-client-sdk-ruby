@@ -15,7 +15,7 @@ Method | Description
 
 <a name="delete_station_associateduser"></a>
 
-## -String** delete_station_associateduser(station_id)
+## - delete_station_associateduser(station_id)
 
 Unassigns the user assigned to this station
 
@@ -46,8 +46,7 @@ station_id = "station_id_example" # String | Station ID
 
 begin
   #Unassigns the user assigned to this station
-  result = api_instance.delete_station_associateduser(station_id)
-  p result
+  api_instance.delete_station_associateduser(station_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling StationsApi->delete_station_associateduser: #{e}"
 end
@@ -63,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -164,6 +163,7 @@ opts = {
   page_number: 1, # Integer | Page number
   sort_by: "name", # String | Sort by
   name: "name_example", # String | Name
+  web_rtc_user_id: "web_rtc_user_id_example", # String | Filter for the webRtc station of the webRtcUserId
   id: "id_example", # String | Comma separated list of stationIds
   line_appearance_id: "line_appearance_id_example" # String | lineAppearanceId
 }
@@ -185,6 +185,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1]
  **sort_by** | **String**| Sort by | [optional] [default to name]
  **name** | **String**| Name | [optional] 
+ **web_rtc_user_id** | **String**| Filter for the webRtc station of the webRtcUserId | [optional] 
  **id** | **String**| Comma separated list of stationIds | [optional] 
  **line_appearance_id** | **String**| lineAppearanceId | [optional] 
 {: class="table table-striped"}

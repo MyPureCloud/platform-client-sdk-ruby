@@ -27,16 +27,16 @@ module PureCloud
     # Delete  auth token used to make the request.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_tokens_me(opts = {})
-      data, _status_code, _headers = delete_tokens_me_with_http_info(opts)
-      return data
+      delete_tokens_me_with_http_info(opts)
+      return nil
     end
 
     # Delete  auth token used to make the request.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_tokens_me_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TokensApi.delete_tokens_me ..."
@@ -69,8 +69,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TokensApi#delete_tokens_me\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -27,7 +27,11 @@ module PureCloud
 
     attr_accessor :status
 
+    # The Id of the user currently logged in and associated with the station.
     attr_accessor :user_id
+
+    # The Id of the user configured for the station if it is of type inin_webrtc_softphone. Empty if station type is not inin_webrtc_softphone.
+    attr_accessor :web_rtc_user_id
 
     attr_accessor :primary_edge
 
@@ -48,6 +52,7 @@ module PureCloud
         :'description' => :'description',
         :'status' => :'status',
         :'user_id' => :'userId',
+        :'web_rtc_user_id' => :'webRtcUserId',
         :'primary_edge' => :'primaryEdge',
         :'secondary_edge' => :'secondaryEdge',
         :'type' => :'type',
@@ -64,6 +69,7 @@ module PureCloud
         :'description' => :'String',
         :'status' => :'String',
         :'user_id' => :'String',
+        :'web_rtc_user_id' => :'String',
         :'primary_edge' => :'UriReference',
         :'secondary_edge' => :'UriReference',
         :'type' => :'String',
@@ -98,6 +104,10 @@ module PureCloud
 
       if attributes.has_key?(:'userId')
         self.user_id = attributes[:'userId']
+      end
+
+      if attributes.has_key?(:'webRtcUserId')
+        self.web_rtc_user_id = attributes[:'webRtcUserId']
       end
 
       if attributes.has_key?(:'primaryEdge')
@@ -158,6 +168,7 @@ module PureCloud
           description == o.description &&
           status == o.status &&
           user_id == o.user_id &&
+          web_rtc_user_id == o.web_rtc_user_id &&
           primary_edge == o.primary_edge &&
           secondary_edge == o.secondary_edge &&
           type == o.type &&
@@ -174,7 +185,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, status, user_id, primary_edge, secondary_edge, type, line_appearance_id, self_uri].hash
+      [id, name, description, status, user_id, web_rtc_user_id, primary_edge, secondary_edge, type, line_appearance_id, self_uri].hash
     end
 
     # build the object from hash

@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_recording_mediaretentionpolicies"></a>
 
-## -String** delete_recording_mediaretentionpolicies(ids)
+## - delete_recording_mediaretentionpolicies(ids)
 
 Delete media retention policies
 
@@ -199,8 +199,7 @@ ids = "ids_example" # String |
 
 begin
   #Delete media retention policies
-  result = api_instance.delete_recording_mediaretentionpolicies(ids)
-  p result
+  api_instance.delete_recording_mediaretentionpolicies(ids)
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->delete_recording_mediaretentionpolicies: #{e}"
 end
@@ -216,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -227,7 +226,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_recording_mediaretentionpolicy"></a>
 
-## -String** delete_recording_mediaretentionpolicy(policy_id)
+## - delete_recording_mediaretentionpolicy(policy_id)
 
 Delete a media retention policy
 
@@ -258,8 +257,7 @@ policy_id = "policy_id_example" # String | Policy ID
 
 begin
   #Delete a media retention policy
-  result = api_instance.delete_recording_mediaretentionpolicy(policy_id)
-  p result
+  api_instance.delete_recording_mediaretentionpolicy(policy_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->delete_recording_mediaretentionpolicy: #{e}"
 end
@@ -275,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 

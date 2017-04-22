@@ -154,17 +154,17 @@ module PureCloud
     # 
     # @param form_id Form ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_quality_form(form_id, opts = {})
-      data, _status_code, _headers = delete_quality_form_with_http_info(form_id, opts)
-      return data
+      delete_quality_form_with_http_info(form_id, opts)
+      return nil
     end
 
     # Delete an evaluation form.
     # 
     # @param form_id Form ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_quality_form_with_http_info(form_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.delete_quality_form ..."
@@ -199,8 +199,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: QualityApi#delete_quality_form\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -267,17 +266,17 @@ module PureCloud
     # Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
     # @param ids A comma-delimited list of valid KeywordSet ids
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_quality_keywordsets(ids, opts = {})
-      data, _status_code, _headers = delete_quality_keywordsets_with_http_info(ids, opts)
-      return data
+      delete_quality_keywordsets_with_http_info(ids, opts)
+      return nil
     end
 
     # Delete keyword sets
     # Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
     # @param ids A comma-delimited list of valid KeywordSet ids
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_quality_keywordsets_with_http_info(ids, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.delete_quality_keywordsets ..."
@@ -313,8 +312,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: QualityApi#delete_quality_keywordsets\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -568,7 +566,7 @@ module PureCloud
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :recording_id id of the recording
-    # @option opts [String] :entity_type entity type options: Recording, Calibration, Evaluation, Annotation (default to RECORDING)
+    # @option opts [String] :entity_type entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (default to RECORDING)
     # @return [QualityAuditPage]
     def get_quality_conversation_audits(conversation_id, opts = {})
       data, _status_code, _headers = get_quality_conversation_audits_with_http_info(conversation_id, opts)
@@ -586,7 +584,7 @@ module PureCloud
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :recording_id id of the recording
-    # @option opts [String] :entity_type entity type options: Recording, Calibration, Evaluation, Annotation
+    # @option opts [String] :entity_type entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording
     # @return [Array<(QualityAuditPage, Fixnum, Hash)>] QualityAuditPage data, response status code and response headers
     def get_quality_conversation_audits_with_http_info(conversation_id, opts = {})
       if @api_client.config.debugging

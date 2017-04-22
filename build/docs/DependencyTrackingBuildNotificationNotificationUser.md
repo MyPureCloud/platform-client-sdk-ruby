@@ -1,7 +1,7 @@
 ---
-title: DocumentDataV2NotificationCreatedBy
+title: DependencyTrackingBuildNotificationNotificationUser
 ---
-## PureCloud::DocumentDataV2NotificationCreatedBy
+## PureCloud::DependencyTrackingBuildNotificationNotificationUser
 
 ## Properties
 

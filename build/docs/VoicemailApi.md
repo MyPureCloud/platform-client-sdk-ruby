@@ -34,7 +34,7 @@ Method | Description
 
 <a name="delete_voicemail_message"></a>
 
-## -String** delete_voicemail_message(message_id)
+## - delete_voicemail_message(message_id)
 
 Delete a message.
 
@@ -65,8 +65,7 @@ message_id = "message_id_example" # String | Message ID
 
 begin
   #Delete a message.
-  result = api_instance.delete_voicemail_message(message_id)
-  p result
+  api_instance.delete_voicemail_message(message_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->delete_voicemail_message: #{e}"
 end
@@ -82,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -93,7 +92,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_voicemail_messages"></a>
 
-## -String** delete_voicemail_messages
+## - delete_voicemail_messages
 
 Delete all voicemail messages
 
@@ -121,8 +120,7 @@ api_instance = PureCloud::VoicemailApi.new
 
 begin
   #Delete all voicemail messages
-  result = api_instance.delete_voicemail_messages
-  p result
+  api_instance.delete_voicemail_messages
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->delete_voicemail_messages: #{e}"
 end
@@ -135,7 +133,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 

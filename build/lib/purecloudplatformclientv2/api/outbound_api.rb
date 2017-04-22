@@ -28,17 +28,17 @@ module PureCloud
     # 
     # @param attempt_limits_id Attempt limits ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_outbound_attemptlimit(attempt_limits_id, opts = {})
-      data, _status_code, _headers = delete_outbound_attemptlimit_with_http_info(attempt_limits_id, opts)
-      return data
+      delete_outbound_attemptlimit_with_http_info(attempt_limits_id, opts)
+      return nil
     end
 
     # Delete attempt limits
     # 
     # @param attempt_limits_id Attempt limits ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_outbound_attemptlimit_with_http_info(attempt_limits_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_attemptlimit ..."
@@ -73,8 +73,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_attemptlimit\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -85,17 +84,17 @@ module PureCloud
     # 
     # @param callable_time_set_id Callable Time Set ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_outbound_callabletimeset(callable_time_set_id, opts = {})
-      data, _status_code, _headers = delete_outbound_callabletimeset_with_http_info(callable_time_set_id, opts)
-      return data
+      delete_outbound_callabletimeset_with_http_info(callable_time_set_id, opts)
+      return nil
     end
 
     # Delete callable time set
     # 
     # @param callable_time_set_id Callable Time Set ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_outbound_callabletimeset_with_http_info(callable_time_set_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_callabletimeset ..."
@@ -130,8 +129,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_callabletimeset\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -142,17 +140,17 @@ module PureCloud
     # 
     # @param call_analysis_set_id Call Analysis Response Set ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_outbound_callanalysisresponseset(call_analysis_set_id, opts = {})
-      data, _status_code, _headers = delete_outbound_callanalysisresponseset_with_http_info(call_analysis_set_id, opts)
-      return data
+      delete_outbound_callanalysisresponseset_with_http_info(call_analysis_set_id, opts)
+      return nil
     end
 
     # Delete a dialer call analysis response set.
     # 
     # @param call_analysis_set_id Call Analysis Response Set ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_outbound_callanalysisresponseset_with_http_info(call_analysis_set_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_callanalysisresponseset ..."
@@ -187,8 +185,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_callanalysisresponseset\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -312,17 +309,17 @@ module PureCloud
     # 
     # @param campaign_rule_id Campaign Rule ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_outbound_campaignrule(campaign_rule_id, opts = {})
-      data, _status_code, _headers = delete_outbound_campaignrule_with_http_info(campaign_rule_id, opts)
-      return data
+      delete_outbound_campaignrule_with_http_info(campaign_rule_id, opts)
+      return nil
     end
 
     # Delete Campaign Rule
     # 
     # @param campaign_rule_id Campaign Rule ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_outbound_campaignrule_with_http_info(campaign_rule_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_campaignrule ..."
@@ -357,8 +354,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_campaignrule\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -369,17 +365,17 @@ module PureCloud
     # 
     # @param contact_list_id ContactList ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_outbound_contactlist(contact_list_id, opts = {})
-      data, _status_code, _headers = delete_outbound_contactlist_with_http_info(contact_list_id, opts)
-      return data
+      delete_outbound_contactlist_with_http_info(contact_list_id, opts)
+      return nil
     end
 
     # Delete a contact list.
     # 
     # @param contact_list_id ContactList ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_outbound_contactlist_with_http_info(contact_list_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_contactlist ..."
@@ -414,8 +410,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_contactlist\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -427,10 +422,10 @@ module PureCloud
     # @param contact_list_id Contact List ID
     # @param contact_id Contact ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_outbound_contactlist_contact(contact_list_id, contact_id, opts = {})
-      data, _status_code, _headers = delete_outbound_contactlist_contact_with_http_info(contact_list_id, contact_id, opts)
-      return data
+      delete_outbound_contactlist_contact_with_http_info(contact_list_id, contact_id, opts)
+      return nil
     end
 
     # Delete a contact.
@@ -438,7 +433,7 @@ module PureCloud
     # @param contact_list_id Contact List ID
     # @param contact_id Contact ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_outbound_contactlist_contact_with_http_info(contact_list_id, contact_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_contactlist_contact ..."
@@ -475,8 +470,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_contactlist_contact\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -487,17 +481,17 @@ module PureCloud
     # 
     # @param dnc_list_id DncList ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_outbound_dnclist(dnc_list_id, opts = {})
-      data, _status_code, _headers = delete_outbound_dnclist_with_http_info(dnc_list_id, opts)
-      return data
+      delete_outbound_dnclist_with_http_info(dnc_list_id, opts)
+      return nil
     end
 
     # Delete dialer DNC list
     # 
     # @param dnc_list_id DncList ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_outbound_dnclist_with_http_info(dnc_list_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_dnclist ..."
@@ -532,8 +526,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_dnclist\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -544,17 +537,17 @@ module PureCloud
     # 
     # @param rule_set_id Rule Set ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_outbound_ruleset(rule_set_id, opts = {})
-      data, _status_code, _headers = delete_outbound_ruleset_with_http_info(rule_set_id, opts)
-      return data
+      delete_outbound_ruleset_with_http_info(rule_set_id, opts)
+      return nil
     end
 
     # Delete a Rule set.
     # 
     # @param rule_set_id Rule Set ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_outbound_ruleset_with_http_info(rule_set_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_ruleset ..."
@@ -589,8 +582,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_ruleset\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -601,17 +593,17 @@ module PureCloud
     # 
     # @param campaign_id Campaign ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_outbound_schedules_campaign(campaign_id, opts = {})
-      data, _status_code, _headers = delete_outbound_schedules_campaign_with_http_info(campaign_id, opts)
-      return data
+      delete_outbound_schedules_campaign_with_http_info(campaign_id, opts)
+      return nil
     end
 
     # Delete a dialer campaign schedule.
     # 
     # @param campaign_id Campaign ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_outbound_schedules_campaign_with_http_info(campaign_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_schedules_campaign ..."
@@ -646,8 +638,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_schedules_campaign\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -658,17 +649,17 @@ module PureCloud
     # 
     # @param sequence_id Sequence ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_outbound_schedules_sequence(sequence_id, opts = {})
-      data, _status_code, _headers = delete_outbound_schedules_sequence_with_http_info(sequence_id, opts)
-      return data
+      delete_outbound_schedules_sequence_with_http_info(sequence_id, opts)
+      return nil
     end
 
     # Delete a dialer sequence schedule.
     # 
     # @param sequence_id Sequence ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_outbound_schedules_sequence_with_http_info(sequence_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_schedules_sequence ..."
@@ -703,8 +694,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_schedules_sequence\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -715,17 +705,17 @@ module PureCloud
     # 
     # @param sequence_id Campaign Sequence ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_outbound_sequence(sequence_id, opts = {})
-      data, _status_code, _headers = delete_outbound_sequence_with_http_info(sequence_id, opts)
-      return data
+      delete_outbound_sequence_with_http_info(sequence_id, opts)
+      return nil
     end
 
     # Delete a dialer campaign sequence.
     # 
     # @param sequence_id Campaign Sequence ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_outbound_sequence_with_http_info(sequence_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_sequence ..."
@@ -760,8 +750,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_sequence\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

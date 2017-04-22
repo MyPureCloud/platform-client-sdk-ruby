@@ -153,7 +153,7 @@ nil (empty response body)
 
 <a name="delete_conversations_call_participant_consult"></a>
 
-## -String** delete_conversations_call_participant_consult(conversation_id, participant_id)
+## - delete_conversations_call_participant_consult(conversation_id, participant_id)
 
 Cancel the transfer
 
@@ -186,8 +186,7 @@ participant_id = "participant_id_example" # String | participantId
 
 begin
   #Cancel the transfer
-  result = api_instance.delete_conversations_call_participant_consult(conversation_id, participant_id)
-  p result
+  api_instance.delete_conversations_call_participant_consult(conversation_id, participant_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->delete_conversations_call_participant_consult: #{e}"
 end
@@ -204,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -215,7 +214,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_conversations_email_messages_draft_attachment"></a>
 
-## -String** delete_conversations_email_messages_draft_attachment(conversation_id, attachment_id)
+## - delete_conversations_email_messages_draft_attachment(conversation_id, attachment_id)
 
 Delete attachment from draft
 
@@ -248,8 +247,7 @@ attachment_id = "attachment_id_example" # String | attachmentId
 
 begin
   #Delete attachment from draft
-  result = api_instance.delete_conversations_email_messages_draft_attachment(conversation_id, attachment_id)
-  p result
+  api_instance.delete_conversations_email_messages_draft_attachment(conversation_id, attachment_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->delete_conversations_email_messages_draft_attachment: #{e}"
 end
@@ -266,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 

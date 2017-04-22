@@ -11,7 +11,8 @@ title: Station
 | **name** | **String** |  | [optional] |
 | **description** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
-| **user_id** | **String** |  | [optional] |
+| **user_id** | **String** | The Id of the user currently logged in and associated with the station. | [optional] |
+| **web_rtc_user_id** | **String** | The Id of the user configured for the station if it is of type inin_webrtc_softphone. Empty if station type is not inin_webrtc_softphone. | [optional] |
 | **primary_edge** | [**UriReference**](UriReference.html) |  | [optional] |
 | **secondary_edge** | [**UriReference**](UriReference.html) |  | [optional] |
 | **type** | **String** |  | [optional] |

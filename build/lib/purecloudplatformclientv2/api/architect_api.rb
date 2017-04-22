@@ -143,8 +143,8 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Batch-delete a list of prompts asynchronously
-    # Multiple IDs can be specified, in which case all specified prompts will be deleted.
+    # Batch-delete a list of prompts
+    # Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
     # @param id List of Prompt IDs
     # @param [Hash] opts the optional parameters
     # @return [Operation]
@@ -153,8 +153,8 @@ module PureCloud
       return data
     end
 
-    # Batch-delete a list of prompts asynchronously
-    # Multiple IDs can be specified, in which case all specified prompts will be deleted.
+    # Batch-delete a list of prompts
+    # Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
     # @param id List of Prompt IDs
     # @param [Hash] opts the optional parameters
     # @return [Array<(Operation, Fixnum, Hash)>] Operation data, response status code and response headers
@@ -206,10 +206,10 @@ module PureCloud
     # @param prompt_id Prompt ID
     # @param language_code Language
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_architect_systemprompt_resource(prompt_id, language_code, opts = {})
-      data, _status_code, _headers = delete_architect_systemprompt_resource_with_http_info(prompt_id, language_code, opts)
-      return data
+      delete_architect_systemprompt_resource_with_http_info(prompt_id, language_code, opts)
+      return nil
     end
 
     # Delete a system prompt resource override.
@@ -217,7 +217,7 @@ module PureCloud
     # @param prompt_id Prompt ID
     # @param language_code Language
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_architect_systemprompt_resource_with_http_info(prompt_id, language_code, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.delete_architect_systemprompt_resource ..."
@@ -254,8 +254,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#delete_architect_systemprompt_resource\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -318,8 +317,8 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Batch-delete a list of flows asynchronously
-    # Multiple IDs can be specified, in which case all specified flows will be deleted.
+    # Batch-delete a list of flows
+    # Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
     # @param id List of Flow IDs
     # @param [Hash] opts the optional parameters
     # @return [Operation]
@@ -328,8 +327,8 @@ module PureCloud
       return data
     end
 
-    # Batch-delete a list of flows asynchronously
-    # Multiple IDs can be specified, in which case all specified flows will be deleted.
+    # Batch-delete a list of flows
+    # Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
     # @param id List of Flow IDs
     # @param [Hash] opts the optional parameters
     # @return [Array<(Operation, Fixnum, Hash)>] Operation data, response status code and response headers
@@ -1924,7 +1923,7 @@ module PureCloud
     end
 
     # Rebuild Dependency Tracking data for an organization
-    # 
+    # Asynchronous.  Notification topic: v2.architect.dependencytracking.build
     # @param [Hash] opts the optional parameters
     # @return [nil]
     def post_architect_dependencytracking_build(opts = {})
@@ -1933,7 +1932,7 @@ module PureCloud
     end
 
     # Rebuild Dependency Tracking data for an organization
-    # 
+    # Asynchronous.  Notification topic: v2.architect.dependencytracking.build
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def post_architect_dependencytracking_build_with_http_info(opts = {})
@@ -2263,7 +2262,7 @@ module PureCloud
     end
 
     # Check-in flow
-    # 
+    # Asynchronous.  Notification topic: v2.flows.{flowId}
     # @param flow Flow ID
     # @param [Hash] opts the optional parameters
     # @return [Flow]
@@ -2273,7 +2272,7 @@ module PureCloud
     end
 
     # Check-in flow
-    # 
+    # Asynchronous.  Notification topic: v2.flows.{flowId}
     # @param flow Flow ID
     # @param [Hash] opts the optional parameters
     # @return [Array<(Flow, Fixnum, Hash)>] Flow data, response status code and response headers
@@ -2437,7 +2436,7 @@ module PureCloud
     end
 
     # Publish flow
-    # 
+    # Asynchronous.  Notification topic: v2.flows.{flowId}
     # @param flow Flow ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :version version
@@ -2448,7 +2447,7 @@ module PureCloud
     end
 
     # Publish flow
-    # 
+    # Asynchronous.  Notification topic: v2.flows.{flowId}
     # @param flow Flow ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :version version

@@ -171,7 +171,7 @@ nil (empty response body)
 
 <a name="delete_user_routingskill"></a>
 
-## -String** delete_user_routingskill(user_id, skill_id)
+## - delete_user_routingskill(user_id, skill_id)
 
 Remove routing skill from user
 
@@ -204,8 +204,7 @@ skill_id = "skill_id_example" # String | skillId
 
 begin
   #Remove routing skill from user
-  result = api_instance.delete_user_routingskill(user_id, skill_id)
-  p result
+  api_instance.delete_user_routingskill(user_id, skill_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->delete_user_routingskill: #{e}"
 end
@@ -222,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -1498,7 +1497,7 @@ api_instance = PureCloud::UsersApi.new
 
 user_id = "user_id_example" # String | User ID
 
-body = PureCloud::User.new # User | User
+body = PureCloud::UpdateUser.new # UpdateUser | User
 
 
 begin
@@ -1515,7 +1514,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| User ID | 
- **body** | [**User**](User.html)| User | 
+ **body** | [**UpdateUser**](UpdateUser.html)| User | 
 {: class="table table-striped"}
 
 

@@ -61,7 +61,7 @@ module PureCloud
         :'version' => :'Integer',
         :'intervals' => :'Array<CampaignScheduleNotificationIntervals>',
         :'time_zone' => :'String',
-        :'sequence' => :'DocumentDataV2NotificationCreatedBy',
+        :'sequence' => :'DependencyTrackingBuildNotificationNotificationUser',
         :'additional_properties' => :'Object'
       }
     end

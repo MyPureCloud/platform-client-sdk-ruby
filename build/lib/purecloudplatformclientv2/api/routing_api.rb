@@ -28,17 +28,17 @@ module PureCloud
     # 
     # @param domain_id domain ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_routing_email_domain(domain_id, opts = {})
-      data, _status_code, _headers = delete_routing_email_domain_with_http_info(domain_id, opts)
-      return data
+      delete_routing_email_domain_with_http_info(domain_id, opts)
+      return nil
     end
 
     # Delete a domain
     # 
     # @param domain_id domain ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_routing_email_domain_with_http_info(domain_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_email_domain ..."
@@ -73,8 +73,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#delete_routing_email_domain\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -86,10 +85,10 @@ module PureCloud
     # @param domain_name email domain
     # @param route_id route ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_routing_email_domain_route(domain_name, route_id, opts = {})
-      data, _status_code, _headers = delete_routing_email_domain_route_with_http_info(domain_name, route_id, opts)
-      return data
+      delete_routing_email_domain_route_with_http_info(domain_name, route_id, opts)
+      return nil
     end
 
     # Delete a route
@@ -97,7 +96,7 @@ module PureCloud
     # @param domain_name email domain
     # @param route_id route ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_routing_email_domain_route_with_http_info(domain_name, route_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_email_domain_route ..."
@@ -134,8 +133,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#delete_routing_email_domain_route\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -147,10 +145,10 @@ module PureCloud
     # @param queue_id Queue ID
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :force_delete forceDelete
-    # @return [String]
+    # @return [nil]
     def delete_routing_queue(queue_id, opts = {})
-      data, _status_code, _headers = delete_routing_queue_with_http_info(queue_id, opts)
-      return data
+      delete_routing_queue_with_http_info(queue_id, opts)
+      return nil
     end
 
     # Delete a queue
@@ -158,7 +156,7 @@ module PureCloud
     # @param queue_id Queue ID
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :force_delete forceDelete
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_routing_queue_with_http_info(queue_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_queue ..."
@@ -194,8 +192,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#delete_routing_queue\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -207,10 +204,10 @@ module PureCloud
     # @param queue_id Queue ID
     # @param member_id Member ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_routing_queue_user(queue_id, member_id, opts = {})
-      data, _status_code, _headers = delete_routing_queue_user_with_http_info(queue_id, member_id, opts)
-      return data
+      delete_routing_queue_user_with_http_info(queue_id, member_id, opts)
+      return nil
     end
 
     # Delete queue member
@@ -218,7 +215,7 @@ module PureCloud
     # @param queue_id Queue ID
     # @param member_id Member ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_routing_queue_user_with_http_info(queue_id, member_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_queue_user ..."
@@ -255,8 +252,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#delete_routing_queue_user\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -268,10 +264,10 @@ module PureCloud
     # @param queue_id Queue ID
     # @param code_id Code ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_routing_queue_wrapupcode(queue_id, code_id, opts = {})
-      data, _status_code, _headers = delete_routing_queue_wrapupcode_with_http_info(queue_id, code_id, opts)
-      return data
+      delete_routing_queue_wrapupcode_with_http_info(queue_id, code_id, opts)
+      return nil
     end
 
     # Delete a wrap-up code from a queue
@@ -279,7 +275,7 @@ module PureCloud
     # @param queue_id Queue ID
     # @param code_id Code ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_routing_queue_wrapupcode_with_http_info(queue_id, code_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_queue_wrapupcode ..."
@@ -316,8 +312,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#delete_routing_queue_wrapupcode\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -328,17 +323,17 @@ module PureCloud
     # 
     # @param skill_id Skill ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_routing_skill(skill_id, opts = {})
-      data, _status_code, _headers = delete_routing_skill_with_http_info(skill_id, opts)
-      return data
+      delete_routing_skill_with_http_info(skill_id, opts)
+      return nil
     end
 
     # Delete Routing Skill
     # 
     # @param skill_id Skill ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_routing_skill_with_http_info(skill_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_skill ..."
@@ -373,8 +368,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#delete_routing_skill\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -384,16 +378,16 @@ module PureCloud
     # Delete utilization settings and revert to system defaults.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_routing_utilization(opts = {})
-      data, _status_code, _headers = delete_routing_utilization_with_http_info(opts)
-      return data
+      delete_routing_utilization_with_http_info(opts)
+      return nil
     end
 
     # Delete utilization settings and revert to system defaults.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_routing_utilization_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_utilization ..."
@@ -426,8 +420,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#delete_routing_utilization\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -438,17 +431,17 @@ module PureCloud
     # 
     # @param code_id Wrapup Code ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_routing_wrapupcode(code_id, opts = {})
-      data, _status_code, _headers = delete_routing_wrapupcode_with_http_info(code_id, opts)
-      return data
+      delete_routing_wrapupcode_with_http_info(code_id, opts)
+      return nil
     end
 
     # Delete wrap-up code
     # 
     # @param code_id Wrapup Code ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_routing_wrapupcode_with_http_info(code_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_wrapupcode ..."
@@ -483,8 +476,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#delete_routing_wrapupcode\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -496,10 +488,10 @@ module PureCloud
     # @param user_id User ID
     # @param skill_id skillId
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_user_routingskill(user_id, skill_id, opts = {})
-      data, _status_code, _headers = delete_user_routingskill_with_http_info(user_id, skill_id, opts)
-      return data
+      delete_user_routingskill_with_http_info(user_id, skill_id, opts)
+      return nil
     end
 
     # Remove routing skill from user
@@ -507,7 +499,7 @@ module PureCloud
     # @param user_id User ID
     # @param skill_id skillId
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_user_routingskill_with_http_info(user_id, skill_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_user_routingskill ..."
@@ -544,8 +536,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#delete_user_routingskill\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

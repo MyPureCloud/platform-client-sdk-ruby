@@ -28,17 +28,17 @@ module PureCloud
     # 
     # @param schedule_id Schedule ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_analytics_reporting_schedule(schedule_id, opts = {})
-      data, _status_code, _headers = delete_analytics_reporting_schedule_with_http_info(schedule_id, opts)
-      return data
+      delete_analytics_reporting_schedule_with_http_info(schedule_id, opts)
+      return nil
     end
 
     # Delete a scheduled report job.
     # 
     # @param schedule_id Schedule ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_analytics_reporting_schedule_with_http_info(schedule_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.delete_analytics_reporting_schedule ..."
@@ -73,8 +73,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AnalyticsApi#delete_analytics_reporting_schedule\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

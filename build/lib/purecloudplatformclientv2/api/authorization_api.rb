@@ -376,6 +376,7 @@ module PureCloud
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [Array<Object>] :permission 
+    # @option opts [Array<Object>] :default_role_id 
     # @option opts [BOOLEAN] :user_count  (default to true)
     # @return [OrganizationRoleEntityListing]
     def get_authorization_roles(opts = {})
@@ -393,6 +394,7 @@ module PureCloud
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [Array<Object>] :permission 
+    # @option opts [Array<Object>] :default_role_id 
     # @option opts [BOOLEAN] :user_count 
     # @return [Array<(OrganizationRoleEntityListing, Fixnum, Hash)>] OrganizationRoleEntityListing data, response status code and response headers
     def get_authorization_roles_with_http_info(opts = {})
@@ -411,6 +413,7 @@ module PureCloud
       query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
       query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
       query_params[:'permission'] = @api_client.build_collection_param(opts[:'permission'], :multi) if opts[:'permission']
+      query_params[:'defaultRoleId'] = @api_client.build_collection_param(opts[:'default_role_id'], :multi) if opts[:'default_role_id']
       query_params[:'userCount'] = opts[:'user_count'] if opts[:'user_count']
 
       # header parameters

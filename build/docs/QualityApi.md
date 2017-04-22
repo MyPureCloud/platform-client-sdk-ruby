@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_quality_form"></a>
 
-## -String** delete_quality_form(form_id)
+## - delete_quality_form(form_id)
 
 Delete an evaluation form.
 
@@ -202,8 +202,7 @@ form_id = "form_id_example" # String | Form ID
 
 begin
   #Delete an evaluation form.
-  result = api_instance.delete_quality_form(form_id)
-  p result
+  api_instance.delete_quality_form(form_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->delete_quality_form: #{e}"
 end
@@ -219,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -288,7 +287,7 @@ nil (empty response body)
 
 <a name="delete_quality_keywordsets"></a>
 
-## -String** delete_quality_keywordsets(ids)
+## - delete_quality_keywordsets(ids)
 
 Delete keyword sets
 
@@ -319,8 +318,7 @@ ids = "ids_example" # String | A comma-delimited list of valid KeywordSet ids
 
 begin
   #Delete keyword sets
-  result = api_instance.delete_quality_keywordsets(ids)
-  p result
+  api_instance.delete_quality_keywordsets(ids)
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->delete_quality_keywordsets: #{e}"
 end
@@ -336,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -606,7 +604,7 @@ opts = {
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   recording_id: "recording_id_example", # String | id of the recording
-  entity_type: "RECORDING" # String | entity type options: Recording, Calibration, Evaluation, Annotation
+  entity_type: "RECORDING" # String | entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording
 }
 
 begin
@@ -630,7 +628,7 @@ Name | Type | Description  | Notes
  **next_page** | **String**| next page token | [optional] 
  **previous_page** | **String**| Previous page token | [optional] 
  **recording_id** | **String**| id of the recording | [optional] 
- **entity_type** | **String**| entity type options: Recording, Calibration, Evaluation, Annotation | [optional] [default to RECORDING]
+ **entity_type** | **String**| entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording | [optional] [default to RECORDING]
 {: class="table table-striped"}
 
 

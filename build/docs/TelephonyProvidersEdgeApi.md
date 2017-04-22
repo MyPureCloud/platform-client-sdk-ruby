@@ -132,7 +132,7 @@ Method | Description
 
 <a name="delete_telephony_providers_edge"></a>
 
-## -String** delete_telephony_providers_edge(edge_id)
+## - delete_telephony_providers_edge(edge_id)
 
 Delete a edge.
 
@@ -163,8 +163,7 @@ edge_id = "edge_id_example" # String | Edge ID
 
 begin
   #Delete a edge.
-  result = api_instance.delete_telephony_providers_edge(edge_id)
-  p result
+  api_instance.delete_telephony_providers_edge(edge_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edge: #{e}"
 end
@@ -180,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -252,7 +251,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edge_softwareupdate"></a>
 
-## -String** delete_telephony_providers_edge_softwareupdate(edge_id)
+## - delete_telephony_providers_edge_softwareupdate(edge_id)
 
 Cancels any in-progress update for this edge.
 
@@ -283,8 +282,7 @@ edge_id = "edge_id_example" # String | Edge ID
 
 begin
   #Cancels any in-progress update for this edge.
-  result = api_instance.delete_telephony_providers_edge_softwareupdate(edge_id)
-  p result
+  api_instance.delete_telephony_providers_edge_softwareupdate(edge_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edge_softwareupdate: #{e}"
 end
@@ -300,7 +298,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -311,7 +309,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_telephony_providers_edges_certificateauthority"></a>
 
-## -String** delete_telephony_providers_edges_certificateauthority(certificate_id)
+## - delete_telephony_providers_edges_certificateauthority(certificate_id)
 
 Delete a certificate authority.
 
@@ -342,8 +340,7 @@ certificate_id = "certificate_id_example" # String | Certificate ID
 
 begin
   #Delete a certificate authority.
-  result = api_instance.delete_telephony_providers_edges_certificateauthority(certificate_id)
-  p result
+  api_instance.delete_telephony_providers_edges_certificateauthority(certificate_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_certificateauthority: #{e}"
 end
@@ -359,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -370,7 +367,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_telephony_providers_edges_didpool"></a>
 
-## -String** delete_telephony_providers_edges_didpool(did_pool_id)
+## - delete_telephony_providers_edges_didpool(did_pool_id)
 
 Delete a DID Pool by ID.
 
@@ -401,8 +398,7 @@ did_pool_id = "did_pool_id_example" # String | DID pool ID
 
 begin
   #Delete a DID Pool by ID.
-  result = api_instance.delete_telephony_providers_edges_didpool(did_pool_id)
-  p result
+  api_instance.delete_telephony_providers_edges_didpool(did_pool_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_didpool: #{e}"
 end
@@ -418,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -429,7 +425,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_telephony_providers_edges_edgegroup"></a>
 
-## -String** delete_telephony_providers_edges_edgegroup(edge_group_id)
+## - delete_telephony_providers_edges_edgegroup(edge_group_id)
 
 Delete an edge group.
 
@@ -460,8 +456,7 @@ edge_group_id = "edge_group_id_example" # String | Edge group ID
 
 begin
   #Delete an edge group.
-  result = api_instance.delete_telephony_providers_edges_edgegroup(edge_group_id)
-  p result
+  api_instance.delete_telephony_providers_edges_edgegroup(edge_group_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_edgegroup: #{e}"
 end
@@ -477,7 +472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -488,7 +483,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_telephony_providers_edges_endpoint"></a>
 
-## -String** delete_telephony_providers_edges_endpoint(endpoint_id)
+## - delete_telephony_providers_edges_endpoint(endpoint_id)
 
 Delete endpoint
 
@@ -519,8 +514,7 @@ endpoint_id = "endpoint_id_example" # String | Endpoint ID
 
 begin
   #Delete endpoint
-  result = api_instance.delete_telephony_providers_edges_endpoint(endpoint_id)
-  p result
+  api_instance.delete_telephony_providers_edges_endpoint(endpoint_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_endpoint: #{e}"
 end
@@ -536,7 +530,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -547,7 +541,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_telephony_providers_edges_extensionpool"></a>
 
-## -String** delete_telephony_providers_edges_extensionpool(extension_pool_id)
+## - delete_telephony_providers_edges_extensionpool(extension_pool_id)
 
 Delete an extension pool by ID
 
@@ -578,8 +572,7 @@ extension_pool_id = "extension_pool_id_example" # String | Extension pool ID
 
 begin
   #Delete an extension pool by ID
-  result = api_instance.delete_telephony_providers_edges_extensionpool(extension_pool_id)
-  p result
+  api_instance.delete_telephony_providers_edges_extensionpool(extension_pool_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_extensionpool: #{e}"
 end
@@ -595,7 +588,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -606,7 +599,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_telephony_providers_edges_outboundroute"></a>
 
-## -String** delete_telephony_providers_edges_outboundroute(outbound_route_id)
+## - delete_telephony_providers_edges_outboundroute(outbound_route_id)
 
 Delete Outbound Route
 
@@ -637,8 +630,7 @@ outbound_route_id = "outbound_route_id_example" # String | Outbound route ID
 
 begin
   #Delete Outbound Route
-  result = api_instance.delete_telephony_providers_edges_outboundroute(outbound_route_id)
-  p result
+  api_instance.delete_telephony_providers_edges_outboundroute(outbound_route_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_outboundroute: #{e}"
 end
@@ -654,7 +646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -665,7 +657,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_telephony_providers_edges_phone"></a>
 
-## -String** delete_telephony_providers_edges_phone(phone_id)
+## - delete_telephony_providers_edges_phone(phone_id)
 
 Delete a Phone by ID
 
@@ -696,8 +688,7 @@ phone_id = "phone_id_example" # String | Phone ID
 
 begin
   #Delete a Phone by ID
-  result = api_instance.delete_telephony_providers_edges_phone(phone_id)
-  p result
+  api_instance.delete_telephony_providers_edges_phone(phone_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_phone: #{e}"
 end
@@ -713,7 +704,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -724,7 +715,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_telephony_providers_edges_phonebasesetting"></a>
 
-## -String** delete_telephony_providers_edges_phonebasesetting(phone_base_id)
+## - delete_telephony_providers_edges_phonebasesetting(phone_base_id)
 
 Delete a Phone Base Settings by ID
 
@@ -755,8 +746,7 @@ phone_base_id = "phone_base_id_example" # String | Phone base ID
 
 begin
   #Delete a Phone Base Settings by ID
-  result = api_instance.delete_telephony_providers_edges_phonebasesetting(phone_base_id)
-  p result
+  api_instance.delete_telephony_providers_edges_phonebasesetting(phone_base_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_phonebasesetting: #{e}"
 end
@@ -772,7 +762,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -783,7 +773,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_telephony_providers_edges_site"></a>
 
-## -String** delete_telephony_providers_edges_site(site_id)
+## - delete_telephony_providers_edges_site(site_id)
 
 Delete a Site by ID
 
@@ -814,8 +804,7 @@ site_id = "site_id_example" # String | Site ID
 
 begin
   #Delete a Site by ID
-  result = api_instance.delete_telephony_providers_edges_site(site_id)
-  p result
+  api_instance.delete_telephony_providers_edges_site(site_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_site: #{e}"
 end
@@ -831,7 +820,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -842,7 +831,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_telephony_providers_edges_site_outboundroute"></a>
 
-## -String** delete_telephony_providers_edges_site_outboundroute(site_id, outbound_route_id)
+## - delete_telephony_providers_edges_site_outboundroute(site_id, outbound_route_id)
 
 Delete Outbound Route
 
@@ -875,8 +864,7 @@ outbound_route_id = "outbound_route_id_example" # String | Outbound route ID
 
 begin
   #Delete Outbound Route
-  result = api_instance.delete_telephony_providers_edges_site_outboundroute(site_id, outbound_route_id)
-  p result
+  api_instance.delete_telephony_providers_edges_site_outboundroute(site_id, outbound_route_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_site_outboundroute: #{e}"
 end
@@ -893,7 +881,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -904,7 +892,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_telephony_providers_edges_trunkbasesetting"></a>
 
-## -String** delete_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id)
+## - delete_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id)
 
 Delete a Trunk Base Settings object by ID
 
@@ -935,8 +923,7 @@ trunk_base_settings_id = "trunk_base_settings_id_example" # String | Trunk Base 
 
 begin
   #Delete a Trunk Base Settings object by ID
-  result = api_instance.delete_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id)
-  p result
+  api_instance.delete_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_trunkbasesetting: #{e}"
 end
@@ -952,7 +939,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -4040,7 +4027,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_physicalinterfaces"></a>
 
-## -[**Array&lt;DomainPhysicalInterface&gt;**](DomainPhysicalInterface.html) get_telephony_providers_edges_physicalinterfaces(edge_ids)
+## -[**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html) get_telephony_providers_edges_physicalinterfaces(edge_ids)
 
 Get physical interfaces for edges.
 
@@ -4088,7 +4075,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;DomainPhysicalInterface&gt;**](DomainPhysicalInterface.html)
+[**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html)
 
 ### HTTP request headers
 

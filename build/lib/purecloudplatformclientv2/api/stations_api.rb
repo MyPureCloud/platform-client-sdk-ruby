@@ -28,17 +28,17 @@ module PureCloud
     # 
     # @param station_id Station ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_station_associateduser(station_id, opts = {})
-      data, _status_code, _headers = delete_station_associateduser_with_http_info(station_id, opts)
-      return data
+      delete_station_associateduser_with_http_info(station_id, opts)
+      return nil
     end
 
     # Unassigns the user assigned to this station
     # 
     # @param station_id Station ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_station_associateduser_with_http_info(station_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StationsApi.delete_station_associateduser ..."
@@ -73,8 +73,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: StationsApi#delete_station_associateduser\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -145,6 +144,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :sort_by Sort by (default to name)
     # @option opts [String] :name Name
+    # @option opts [String] :web_rtc_user_id Filter for the webRtc station of the webRtcUserId
     # @option opts [String] :id Comma separated list of stationIds
     # @option opts [String] :line_appearance_id lineAppearanceId
     # @return [StationEntityListing]
@@ -160,6 +160,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :name Name
+    # @option opts [String] :web_rtc_user_id Filter for the webRtc station of the webRtcUserId
     # @option opts [String] :id Comma separated list of stationIds
     # @option opts [String] :line_appearance_id lineAppearanceId
     # @return [Array<(StationEntityListing, Fixnum, Hash)>] StationEntityListing data, response status code and response headers
@@ -176,6 +177,7 @@ module PureCloud
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'webRtcUserId'] = opts[:'web_rtc_user_id'] if opts[:'web_rtc_user_id']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'lineAppearanceId'] = opts[:'line_appearance_id'] if opts[:'line_appearance_id']
 

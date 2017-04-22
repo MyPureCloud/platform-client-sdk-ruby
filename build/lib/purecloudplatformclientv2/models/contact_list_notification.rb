@@ -77,7 +77,7 @@ module PureCloud
         :'preview_mode_column_name' => :'String',
         :'preview_mode_accepted_values' => :'Array<String>',
         :'size' => :'Integer',
-        :'attempt_limits' => :'DocumentDataV2NotificationCreatedBy',
+        :'attempt_limits' => :'DependencyTrackingBuildNotificationNotificationUser',
         :'additional_properties' => :'Object'
       }
     end

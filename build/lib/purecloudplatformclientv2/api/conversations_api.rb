@@ -93,10 +93,10 @@ module PureCloud
     # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_conversations_call_participant_consult(conversation_id, participant_id, opts = {})
-      data, _status_code, _headers = delete_conversations_call_participant_consult_with_http_info(conversation_id, participant_id, opts)
-      return data
+      delete_conversations_call_participant_consult_with_http_info(conversation_id, participant_id, opts)
+      return nil
     end
 
     # Cancel the transfer
@@ -104,7 +104,7 @@ module PureCloud
     # @param conversation_id conversationId
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_conversations_call_participant_consult_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.delete_conversations_call_participant_consult ..."
@@ -141,8 +141,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#delete_conversations_call_participant_consult\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -154,10 +153,10 @@ module PureCloud
     # @param conversation_id conversationId
     # @param attachment_id attachmentId
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_conversations_email_messages_draft_attachment(conversation_id, attachment_id, opts = {})
-      data, _status_code, _headers = delete_conversations_email_messages_draft_attachment_with_http_info(conversation_id, attachment_id, opts)
-      return data
+      delete_conversations_email_messages_draft_attachment_with_http_info(conversation_id, attachment_id, opts)
+      return nil
     end
 
     # Delete attachment from draft
@@ -165,7 +164,7 @@ module PureCloud
     # @param conversation_id conversationId
     # @param attachment_id attachmentId
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_conversations_email_messages_draft_attachment_with_http_info(conversation_id, attachment_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.delete_conversations_email_messages_draft_attachment ..."
@@ -202,8 +201,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#delete_conversations_email_messages_draft_attachment\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

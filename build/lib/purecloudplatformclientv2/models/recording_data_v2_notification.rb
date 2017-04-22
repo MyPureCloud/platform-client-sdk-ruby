@@ -83,7 +83,7 @@ module PureCloud
         :'date_created' => :'DateTime',
         :'date_modified' => :'DateTime',
         :'workspace' => :'DocumentDataV2NotificationWorkspace',
-        :'created_by' => :'DocumentDataV2NotificationCreatedBy',
+        :'created_by' => :'DependencyTrackingBuildNotificationNotificationUser',
         :'content_type' => :'String',
         :'content_length' => :'Integer',
         :'filename' => :'String',

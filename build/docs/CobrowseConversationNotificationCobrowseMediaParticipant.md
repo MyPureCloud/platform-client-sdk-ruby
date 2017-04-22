@@ -21,7 +21,7 @@ title: CobrowseConversationNotificationCobrowseMediaParticipant
 | **held** | **BOOLEAN** |  | [optional] |
 | **wrapup_required** | **BOOLEAN** |  | [optional] |
 | **wrapup_prompt** | **String** |  | [optional] |
-| **user** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
+| **user** | [**DependencyTrackingBuildNotificationNotificationUser**](DependencyTrackingBuildNotificationNotificationUser.html) |  | [optional] |
 | **queue** | [**CobrowseConversationNotificationUriReference**](CobrowseConversationNotificationUriReference.html) |  | [optional] |
 | **attributes** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **error_info** | [**CobrowseConversationNotificationErrorInfo**](CobrowseConversationNotificationErrorInfo.html) |  | [optional] |

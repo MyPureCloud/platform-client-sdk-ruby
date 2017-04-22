@@ -149,17 +149,17 @@ module PureCloud
     # Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
     # @param ids 
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_recording_mediaretentionpolicies(ids, opts = {})
-      data, _status_code, _headers = delete_recording_mediaretentionpolicies_with_http_info(ids, opts)
-      return data
+      delete_recording_mediaretentionpolicies_with_http_info(ids, opts)
+      return nil
     end
 
     # Delete media retention policies
     # Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
     # @param ids 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_recording_mediaretentionpolicies_with_http_info(ids, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.delete_recording_mediaretentionpolicies ..."
@@ -195,8 +195,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RecordingApi#delete_recording_mediaretentionpolicies\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -207,17 +206,17 @@ module PureCloud
     # 
     # @param policy_id Policy ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_recording_mediaretentionpolicy(policy_id, opts = {})
-      data, _status_code, _headers = delete_recording_mediaretentionpolicy_with_http_info(policy_id, opts)
-      return data
+      delete_recording_mediaretentionpolicy_with_http_info(policy_id, opts)
+      return nil
     end
 
     # Delete a media retention policy
     # 
     # @param policy_id Policy ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_recording_mediaretentionpolicy_with_http_info(policy_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.delete_recording_mediaretentionpolicy ..."
@@ -252,8 +251,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RecordingApi#delete_recording_mediaretentionpolicy\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

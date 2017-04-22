@@ -34,7 +34,7 @@ Method | Description
 
 <a name="delete_analytics_reporting_schedule"></a>
 
-## -String** delete_analytics_reporting_schedule(schedule_id)
+## - delete_analytics_reporting_schedule(schedule_id)
 
 Delete a scheduled report job.
 
@@ -65,8 +65,7 @@ schedule_id = "schedule_id_example" # String | Schedule ID
 
 begin
   #Delete a scheduled report job.
-  result = api_instance.delete_analytics_reporting_schedule(schedule_id)
-  p result
+  api_instance.delete_analytics_reporting_schedule(schedule_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->delete_analytics_reporting_schedule: #{e}"
 end
@@ -82,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 

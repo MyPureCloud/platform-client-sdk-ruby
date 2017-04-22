@@ -28,17 +28,17 @@ module PureCloud
     # 
     # @param edge_id Edge ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edge(edge_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edge_with_http_info(edge_id, opts)
-      return data
+      delete_telephony_providers_edge_with_http_info(edge_id, opts)
+      return nil
     end
 
     # Delete a edge.
     # 
     # @param edge_id Edge ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edge_with_http_info(edge_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edge ..."
@@ -73,8 +73,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edge\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -145,17 +144,17 @@ module PureCloud
     # 
     # @param edge_id Edge ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edge_softwareupdate(edge_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edge_softwareupdate_with_http_info(edge_id, opts)
-      return data
+      delete_telephony_providers_edge_softwareupdate_with_http_info(edge_id, opts)
+      return nil
     end
 
     # Cancels any in-progress update for this edge.
     # 
     # @param edge_id Edge ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edge_softwareupdate_with_http_info(edge_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edge_softwareupdate ..."
@@ -190,8 +189,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edge_softwareupdate\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -202,17 +200,17 @@ module PureCloud
     # 
     # @param certificate_id Certificate ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edges_certificateauthority(certificate_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edges_certificateauthority_with_http_info(certificate_id, opts)
-      return data
+      delete_telephony_providers_edges_certificateauthority_with_http_info(certificate_id, opts)
+      return nil
     end
 
     # Delete a certificate authority.
     # 
     # @param certificate_id Certificate ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edges_certificateauthority_with_http_info(certificate_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_certificateauthority ..."
@@ -247,8 +245,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edges_certificateauthority\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -259,17 +256,17 @@ module PureCloud
     # 
     # @param did_pool_id DID pool ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edges_didpool(did_pool_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edges_didpool_with_http_info(did_pool_id, opts)
-      return data
+      delete_telephony_providers_edges_didpool_with_http_info(did_pool_id, opts)
+      return nil
     end
 
     # Delete a DID Pool by ID.
     # 
     # @param did_pool_id DID pool ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edges_didpool_with_http_info(did_pool_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_didpool ..."
@@ -304,8 +301,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edges_didpool\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -316,17 +312,17 @@ module PureCloud
     # 
     # @param edge_group_id Edge group ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edges_edgegroup(edge_group_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edges_edgegroup_with_http_info(edge_group_id, opts)
-      return data
+      delete_telephony_providers_edges_edgegroup_with_http_info(edge_group_id, opts)
+      return nil
     end
 
     # Delete an edge group.
     # 
     # @param edge_group_id Edge group ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edges_edgegroup_with_http_info(edge_group_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_edgegroup ..."
@@ -361,8 +357,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edges_edgegroup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -373,17 +368,17 @@ module PureCloud
     # 
     # @param endpoint_id Endpoint ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edges_endpoint(endpoint_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edges_endpoint_with_http_info(endpoint_id, opts)
-      return data
+      delete_telephony_providers_edges_endpoint_with_http_info(endpoint_id, opts)
+      return nil
     end
 
     # Delete endpoint
     # 
     # @param endpoint_id Endpoint ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edges_endpoint_with_http_info(endpoint_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_endpoint ..."
@@ -418,8 +413,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edges_endpoint\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -430,17 +424,17 @@ module PureCloud
     # 
     # @param extension_pool_id Extension pool ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edges_extensionpool(extension_pool_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edges_extensionpool_with_http_info(extension_pool_id, opts)
-      return data
+      delete_telephony_providers_edges_extensionpool_with_http_info(extension_pool_id, opts)
+      return nil
     end
 
     # Delete an extension pool by ID
     # 
     # @param extension_pool_id Extension pool ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edges_extensionpool_with_http_info(extension_pool_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_extensionpool ..."
@@ -475,8 +469,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edges_extensionpool\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -487,17 +480,17 @@ module PureCloud
     # 
     # @param outbound_route_id Outbound route ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edges_outboundroute(outbound_route_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edges_outboundroute_with_http_info(outbound_route_id, opts)
-      return data
+      delete_telephony_providers_edges_outboundroute_with_http_info(outbound_route_id, opts)
+      return nil
     end
 
     # Delete Outbound Route
     # 
     # @param outbound_route_id Outbound route ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edges_outboundroute_with_http_info(outbound_route_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_outboundroute ..."
@@ -532,8 +525,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edges_outboundroute\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -544,17 +536,17 @@ module PureCloud
     # 
     # @param phone_id Phone ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edges_phone(phone_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edges_phone_with_http_info(phone_id, opts)
-      return data
+      delete_telephony_providers_edges_phone_with_http_info(phone_id, opts)
+      return nil
     end
 
     # Delete a Phone by ID
     # 
     # @param phone_id Phone ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edges_phone_with_http_info(phone_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_phone ..."
@@ -589,8 +581,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edges_phone\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -601,17 +592,17 @@ module PureCloud
     # 
     # @param phone_base_id Phone base ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edges_phonebasesetting(phone_base_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edges_phonebasesetting_with_http_info(phone_base_id, opts)
-      return data
+      delete_telephony_providers_edges_phonebasesetting_with_http_info(phone_base_id, opts)
+      return nil
     end
 
     # Delete a Phone Base Settings by ID
     # 
     # @param phone_base_id Phone base ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edges_phonebasesetting_with_http_info(phone_base_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_phonebasesetting ..."
@@ -646,8 +637,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edges_phonebasesetting\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -658,17 +648,17 @@ module PureCloud
     # 
     # @param site_id Site ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edges_site(site_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edges_site_with_http_info(site_id, opts)
-      return data
+      delete_telephony_providers_edges_site_with_http_info(site_id, opts)
+      return nil
     end
 
     # Delete a Site by ID
     # 
     # @param site_id Site ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edges_site_with_http_info(site_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_site ..."
@@ -703,8 +693,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edges_site\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -716,10 +705,10 @@ module PureCloud
     # @param site_id Site ID
     # @param outbound_route_id Outbound route ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edges_site_outboundroute(site_id, outbound_route_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edges_site_outboundroute_with_http_info(site_id, outbound_route_id, opts)
-      return data
+      delete_telephony_providers_edges_site_outboundroute_with_http_info(site_id, outbound_route_id, opts)
+      return nil
     end
 
     # Delete Outbound Route
@@ -727,7 +716,7 @@ module PureCloud
     # @param site_id Site ID
     # @param outbound_route_id Outbound route ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edges_site_outboundroute_with_http_info(site_id, outbound_route_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_site_outboundroute ..."
@@ -764,8 +753,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edges_site_outboundroute\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -776,17 +764,17 @@ module PureCloud
     # 
     # @param trunk_base_settings_id Trunk Base ID
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id, opts = {})
-      data, _status_code, _headers = delete_telephony_providers_edges_trunkbasesetting_with_http_info(trunk_base_settings_id, opts)
-      return data
+      delete_telephony_providers_edges_trunkbasesetting_with_http_info(trunk_base_settings_id, opts)
+      return nil
     end
 
     # Delete a Trunk Base Settings object by ID
     # 
     # @param trunk_base_settings_id Trunk Base ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_telephony_providers_edges_trunkbasesetting_with_http_info(trunk_base_settings_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_trunkbasesetting ..."
@@ -821,8 +809,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#delete_telephony_providers_edges_trunkbasesetting\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -3856,7 +3843,7 @@ module PureCloud
     # Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
     # @param edge_ids Comma separated list of Edge Id&#39;s
     # @param [Hash] opts the optional parameters
-    # @return [Array<DomainPhysicalInterface>]
+    # @return [PhysicalInterfaceEntityListing]
     def get_telephony_providers_edges_physicalinterfaces(edge_ids, opts = {})
       data, _status_code, _headers = get_telephony_providers_edges_physicalinterfaces_with_http_info(edge_ids, opts)
       return data
@@ -3866,7 +3853,7 @@ module PureCloud
     # Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
     # @param edge_ids Comma separated list of Edge Id&#39;s
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<DomainPhysicalInterface>, Fixnum, Hash)>] Array<DomainPhysicalInterface> data, response status code and response headers
+    # @return [Array<(PhysicalInterfaceEntityListing, Fixnum, Hash)>] PhysicalInterfaceEntityListing data, response status code and response headers
     def get_telephony_providers_edges_physicalinterfaces_with_http_info(edge_ids, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_physicalinterfaces ..."
@@ -3903,7 +3890,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<DomainPhysicalInterface>')
+        :return_type => 'PhysicalInterfaceEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edges_physicalinterfaces\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

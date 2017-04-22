@@ -142,10 +142,10 @@ module PureCloud
     # @param user_id User ID
     # @param skill_id skillId
     # @param [Hash] opts the optional parameters
-    # @return [String]
+    # @return [nil]
     def delete_user_routingskill(user_id, skill_id, opts = {})
-      data, _status_code, _headers = delete_user_routingskill_with_http_info(user_id, skill_id, opts)
-      return data
+      delete_user_routingskill_with_http_info(user_id, skill_id, opts)
+      return nil
     end
 
     # Remove routing skill from user
@@ -153,7 +153,7 @@ module PureCloud
     # @param user_id User ID
     # @param skill_id skillId
     # @param [Hash] opts the optional parameters
-    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_user_routingskill_with_http_info(user_id, skill_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.delete_user_routingskill ..."
@@ -190,8 +190,7 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'String')
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#delete_user_routingskill\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -13,7 +13,7 @@ Method | Description
 
 <a name="delete_tokens_me"></a>
 
-## -String** delete_tokens_me
+## - delete_tokens_me
 
 Delete  auth token used to make the request.
 
@@ -41,8 +41,7 @@ api_instance = PureCloud::TokensApi.new
 
 begin
   #Delete  auth token used to make the request.
-  result = api_instance.delete_tokens_me
-  p result
+  api_instance.delete_tokens_me
 rescue PureCloud::ApiError => e
   puts "Exception when calling TokensApi->delete_tokens_me: #{e}"
 end
@@ -55,7 +54,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 

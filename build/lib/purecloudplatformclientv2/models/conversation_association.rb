@@ -18,6 +18,9 @@ require 'date'
 
 module PureCloud
   class ConversationAssociation
+    # External Contact ID; populated from url
+    attr_accessor :external_contact_id
+
     # Conversation ID
     attr_accessor :conversation_id
 
@@ -30,6 +33,7 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'external_contact_id' => :'externalContactId',
         :'conversation_id' => :'conversationId',
         :'communication_id' => :'communicationId',
         :'media_type' => :'mediaType'
@@ -39,6 +43,7 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'external_contact_id' => :'String',
         :'conversation_id' => :'String',
         :'communication_id' => :'String',
         :'media_type' => :'String'
@@ -52,6 +57,10 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      if attributes.has_key?(:'externalContactId')
+        self.external_contact_id = attributes[:'externalContactId']
+      end
 
       if attributes.has_key?(:'conversationId')
         self.conversation_id = attributes[:'conversationId']
@@ -110,6 +119,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          external_contact_id == o.external_contact_id &&
           conversation_id == o.conversation_id &&
           communication_id == o.communication_id &&
           media_type == o.media_type
@@ -124,7 +134,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [conversation_id, communication_id, media_type].hash
+      [external_contact_id, conversation_id, communication_id, media_type].hash
     end
 
     # build the object from hash

@@ -21,7 +21,7 @@ title: SocialConversationNotificationSocialMediaParticipant
 | **held** | **BOOLEAN** |  | [optional] |
 | **wrapup_required** | **BOOLEAN** |  | [optional] |
 | **wrapup_prompt** | **String** |  | [optional] |
-| **user** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
+| **user** | [**DependencyTrackingBuildNotificationNotificationUser**](DependencyTrackingBuildNotificationNotificationUser.html) |  | [optional] |
 | **queue** | [**SocialConversationNotificationUriReference**](SocialConversationNotificationUriReference.html) |  | [optional] |
 | **attributes** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **error_info** | [**SocialConversationNotificationErrorInfo**](SocialConversationNotificationErrorInfo.html) |  | [optional] |

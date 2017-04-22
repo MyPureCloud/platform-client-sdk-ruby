@@ -56,7 +56,7 @@ Method | Description
 
 <a name="delete_routing_email_domain"></a>
 
-## -String** delete_routing_email_domain(domain_id)
+## - delete_routing_email_domain(domain_id)
 
 Delete a domain
 
@@ -87,8 +87,7 @@ domain_id = "domain_id_example" # String | domain ID
 
 begin
   #Delete a domain
-  result = api_instance.delete_routing_email_domain(domain_id)
-  p result
+  api_instance.delete_routing_email_domain(domain_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_email_domain: #{e}"
 end
@@ -104,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -115,7 +114,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_routing_email_domain_route"></a>
 
-## -String** delete_routing_email_domain_route(domain_name, route_id)
+## - delete_routing_email_domain_route(domain_name, route_id)
 
 Delete a route
 
@@ -148,8 +147,7 @@ route_id = "route_id_example" # String | route ID
 
 begin
   #Delete a route
-  result = api_instance.delete_routing_email_domain_route(domain_name, route_id)
-  p result
+  api_instance.delete_routing_email_domain_route(domain_name, route_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_email_domain_route: #{e}"
 end
@@ -166,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -177,7 +175,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_routing_queue"></a>
 
-## -String** delete_routing_queue(queue_id, opts)
+## - delete_routing_queue(queue_id, opts)
 
 Delete a queue
 
@@ -211,8 +209,7 @@ opts = {
 
 begin
   #Delete a queue
-  result = api_instance.delete_routing_queue(queue_id, opts)
-  p result
+  api_instance.delete_routing_queue(queue_id, opts)
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_queue: #{e}"
 end
@@ -229,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -240,7 +237,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_routing_queue_user"></a>
 
-## -String** delete_routing_queue_user(queue_id, member_id)
+## - delete_routing_queue_user(queue_id, member_id)
 
 Delete queue member
 
@@ -273,8 +270,7 @@ member_id = "member_id_example" # String | Member ID
 
 begin
   #Delete queue member
-  result = api_instance.delete_routing_queue_user(queue_id, member_id)
-  p result
+  api_instance.delete_routing_queue_user(queue_id, member_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_queue_user: #{e}"
 end
@@ -291,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -302,7 +298,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_routing_queue_wrapupcode"></a>
 
-## -String** delete_routing_queue_wrapupcode(queue_id, code_id)
+## - delete_routing_queue_wrapupcode(queue_id, code_id)
 
 Delete a wrap-up code from a queue
 
@@ -335,8 +331,7 @@ code_id = "code_id_example" # String | Code ID
 
 begin
   #Delete a wrap-up code from a queue
-  result = api_instance.delete_routing_queue_wrapupcode(queue_id, code_id)
-  p result
+  api_instance.delete_routing_queue_wrapupcode(queue_id, code_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_queue_wrapupcode: #{e}"
 end
@@ -353,7 +348,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -364,7 +359,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_routing_skill"></a>
 
-## -String** delete_routing_skill(skill_id)
+## - delete_routing_skill(skill_id)
 
 Delete Routing Skill
 
@@ -395,8 +390,7 @@ skill_id = "skill_id_example" # String | Skill ID
 
 begin
   #Delete Routing Skill
-  result = api_instance.delete_routing_skill(skill_id)
-  p result
+  api_instance.delete_routing_skill(skill_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_skill: #{e}"
 end
@@ -412,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -423,7 +417,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_routing_utilization"></a>
 
-## -String** delete_routing_utilization
+## - delete_routing_utilization
 
 Delete utilization settings and revert to system defaults.
 
@@ -451,8 +445,7 @@ api_instance = PureCloud::RoutingApi.new
 
 begin
   #Delete utilization settings and revert to system defaults.
-  result = api_instance.delete_routing_utilization
-  p result
+  api_instance.delete_routing_utilization
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_utilization: #{e}"
 end
@@ -465,7 +458,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -476,7 +469,7 @@ This endpoint does not need any parameter.
 
 <a name="delete_routing_wrapupcode"></a>
 
-## -String** delete_routing_wrapupcode(code_id)
+## - delete_routing_wrapupcode(code_id)
 
 Delete wrap-up code
 
@@ -507,8 +500,7 @@ code_id = "code_id_example" # String | Wrapup Code ID
 
 begin
   #Delete wrap-up code
-  result = api_instance.delete_routing_wrapupcode(code_id)
-  p result
+  api_instance.delete_routing_wrapupcode(code_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_wrapupcode: #{e}"
 end
@@ -524,7 +516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -535,7 +527,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_user_routingskill"></a>
 
-## -String** delete_user_routingskill(user_id, skill_id)
+## - delete_user_routingskill(user_id, skill_id)
 
 Remove routing skill from user
 
@@ -568,8 +560,7 @@ skill_id = "skill_id_example" # String | skillId
 
 begin
   #Remove routing skill from user
-  result = api_instance.delete_user_routingskill(user_id, skill_id)
-  p result
+  api_instance.delete_user_routingskill(user_id, skill_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_user_routingskill: #{e}"
 end
@@ -586,7 +577,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### HTTP request headers
 

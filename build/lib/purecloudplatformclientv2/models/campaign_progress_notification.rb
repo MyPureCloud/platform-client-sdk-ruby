@@ -42,7 +42,7 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'campaign' => :'DocumentDataV2NotificationCreatedBy',
+        :'campaign' => :'DependencyTrackingBuildNotificationNotificationUser',
         :'number_of_contacts_called' => :'Float',
         :'total_number_of_contacts' => :'Float',
         :'percentage' => :'Integer',

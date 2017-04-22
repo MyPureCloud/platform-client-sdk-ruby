@@ -59,7 +59,7 @@ module PureCloud
         :'date_created' => :'DateTime',
         :'date_modified' => :'DateTime',
         :'version' => :'Integer',
-        :'contact_list' => :'DocumentDataV2NotificationCreatedBy',
+        :'contact_list' => :'DependencyTrackingBuildNotificationNotificationUser',
         :'queue' => :'RuleSetNotificationUriReference',
         :'rules' => :'Array<RuleSetNotificationRules>',
         :'additional_properties' => :'Object'
