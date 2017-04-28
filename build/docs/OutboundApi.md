@@ -44,6 +44,8 @@ Method | Description
 [**get_outbound_dnclist_export**](OutboundApi.html#get_outbound_dnclist_export) | Get the URI of a DNC list export.
 [**get_outbound_dnclist_importstatus**](OutboundApi.html#get_outbound_dnclist_importstatus) | Get dialer dncList import status.
 [**get_outbound_dnclists**](OutboundApi.html#get_outbound_dnclists) | Query dialer DNC lists
+[**get_outbound_event**](OutboundApi.html#get_outbound_event) | Get Dialer Event
+[**get_outbound_events**](OutboundApi.html#get_outbound_events) | Query Event Logs
 [**get_outbound_ruleset**](OutboundApi.html#get_outbound_ruleset) | Get a Rule Set by ID.
 [**get_outbound_rulesets**](OutboundApi.html#get_outbound_rulesets) | Query a list of Rule Sets.
 [**get_outbound_schedules_campaign**](OutboundApi.html#get_outbound_schedules_campaign) | Get a dialer campaign schedule.
@@ -2311,6 +2313,137 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DncListEntityListing**](DncListEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_outbound_event"></a>
+
+## -[**EventLog**](EventLog.html) get_outbound_event(event_id)
+
+Get Dialer Event
+
+
+
+Wraps GET /api/v2/outbound/events/{eventId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+event_id = "event_id_example" # String | Event Log ID
+
+
+begin
+  #Get Dialer Event
+  result = api_instance.get_outbound_event(event_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_event: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_id** | **String**| Event Log ID | 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EventLog**](EventLog.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_outbound_events"></a>
+
+## -[**DialerEventEntityListing**](DialerEventEntityListing.html) get_outbound_events(opts)
+
+Query Event Logs
+
+
+
+Wraps GET /api/v2/outbound/events 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  filter_type: "Prefix", # String | Filter type
+  category: "category_example", # String | Category
+  level: "level_example", # String | Level
+  sort_by: "sort_by_example", # String | Sort by
+  sort_order: "a" # String | Sort order
+}
+
+begin
+  #Query Event Logs
+  result = api_instance.get_outbound_events(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_events: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25]
+ **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]
+ **category** | **String**| Category | [optional] 
+ **level** | **String**| Level | [optional] 
+ **sort_by** | **String**| Sort by | [optional] 
+ **sort_order** | **String**| Sort order | [optional] [default to a]
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DialerEventEntityListing**](DialerEventEntityListing.html)
 
 ### HTTP request headers
 

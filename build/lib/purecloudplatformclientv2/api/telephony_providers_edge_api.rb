@@ -3508,6 +3508,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :sort_by Value by which to sort (default to name)
     # @option opts [String] :sort_order Sort order (default to ASC)
+    # @option opts [Array<String>] :expand Fields to expand in the response, comma-separated
     # @option opts [String] :name Name
     # @return [PhoneBaseEntityListing]
     def get_telephony_providers_edges_phonebasesettings(opts = {})
@@ -3522,6 +3523,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :sort_by Value by which to sort
     # @option opts [String] :sort_order Sort order
+    # @option opts [Array<String>] :expand Fields to expand in the response, comma-separated
     # @option opts [String] :name Name
     # @return [Array<(PhoneBaseEntityListing, Fixnum, Hash)>] PhoneBaseEntityListing data, response status code and response headers
     def get_telephony_providers_edges_phonebasesettings_with_http_info(opts = {})
@@ -3537,6 +3539,7 @@ module PureCloud
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
 
       # header parameters

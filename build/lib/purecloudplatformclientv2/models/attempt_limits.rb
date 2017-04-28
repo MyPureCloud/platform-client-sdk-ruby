@@ -42,6 +42,9 @@ module PureCloud
     # After how long the number of attempts will be set back to 0
     attr_accessor :reset_period
 
+    # Configuration for recall attempts
+    attr_accessor :recall_entries
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -57,6 +60,7 @@ module PureCloud
         :'max_attempts_per_number' => :'maxAttemptsPerNumber',
         :'time_zone_id' => :'timeZoneId',
         :'reset_period' => :'resetPeriod',
+        :'recall_entries' => :'recallEntries',
         :'self_uri' => :'selfUri'
       }
     end
@@ -73,6 +77,7 @@ module PureCloud
         :'max_attempts_per_number' => :'Integer',
         :'time_zone_id' => :'String',
         :'reset_period' => :'String',
+        :'recall_entries' => :'Hash<String, RecallEntry>',
         :'self_uri' => :'String'
       }
     end
@@ -121,6 +126,12 @@ module PureCloud
         self.reset_period = attributes[:'resetPeriod']
       end
 
+      if attributes.has_key?(:'recallEntries')
+        if (value = attributes[:'recallEntries']).is_a?(Array)
+          self.recall_entries = value
+        end
+      end
+
       if attributes.has_key?(:'selfUri')
         self.self_uri = attributes[:'selfUri']
       end
@@ -167,6 +178,7 @@ module PureCloud
           max_attempts_per_number == o.max_attempts_per_number &&
           time_zone_id == o.time_zone_id &&
           reset_period == o.reset_period &&
+          recall_entries == o.recall_entries &&
           self_uri == o.self_uri
     end
 
@@ -179,7 +191,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, max_attempts_per_contact, max_attempts_per_number, time_zone_id, reset_period, self_uri].hash
+      [id, name, date_created, date_modified, version, max_attempts_per_contact, max_attempts_per_number, time_zone_id, reset_period, recall_entries, self_uri].hash
     end
 
     # build the object from hash

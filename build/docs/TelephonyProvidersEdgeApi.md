@@ -3724,6 +3724,7 @@ opts = {
   page_number: 1, # Integer | Page number
   sort_by: "name", # String | Value by which to sort
   sort_order: "ASC", # String | Sort order
+  expand: ["expand_example"], # Array<String> | Fields to expand in the response, comma-separated
   name: "name_example" # String | Name
 }
 
@@ -3744,6 +3745,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1]
  **sort_by** | **String**| Value by which to sort | [optional] [default to name]
  **sort_order** | **String**| Sort order | [optional] [default to ASC]
+ **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] 
  **name** | **String**| Name | [optional] 
 {: class="table table-striped"}
 

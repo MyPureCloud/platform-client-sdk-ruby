@@ -2257,6 +2257,143 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get Dialer Event
+    # 
+    # @param event_id Event Log ID
+    # @param [Hash] opts the optional parameters
+    # @return [EventLog]
+    def get_outbound_event(event_id, opts = {})
+      data, _status_code, _headers = get_outbound_event_with_http_info(event_id, opts)
+      return data
+    end
+
+    # Get Dialer Event
+    # 
+    # @param event_id Event Log ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EventLog, Fixnum, Hash)>] EventLog data, response status code and response headers
+    def get_outbound_event_with_http_info(event_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_event ..."
+      end
+      # verify the required parameter 'event_id' is set
+      fail ArgumentError, "Missing the required parameter 'event_id' when calling OutboundApi.get_outbound_event" if event_id.nil?
+      # resource path
+      local_var_path = "/api/v2/outbound/events/{eventId}".sub('{format}','json').sub('{' + 'eventId' + '}', event_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+            auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EventLog')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_event\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Query Event Logs
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [String] :filter_type Filter type (default to Prefix)
+    # @option opts [String] :category Category
+    # @option opts [String] :level Level
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order (default to a)
+    # @return [DialerEventEntityListing]
+    def get_outbound_events(opts = {})
+      data, _status_code, _headers = get_outbound_events_with_http_info(opts)
+      return data
+    end
+
+    # Query Event Logs
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @option opts [String] :filter_type Filter type
+    # @option opts [String] :category Category
+    # @option opts [String] :level Level
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order
+    # @return [Array<(DialerEventEntityListing, Fixnum, Hash)>] DialerEventEntityListing data, response status code and response headers
+    def get_outbound_events_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_events ..."
+      end
+      if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
+        fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
+      end
+      if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
+      end
+      # resource path
+      local_var_path = "/api/v2/outbound/events".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
+      query_params[:'category'] = opts[:'category'] if opts[:'category']
+      query_params[:'level'] = opts[:'level'] if opts[:'level']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+            auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DialerEventEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_events\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a Rule Set by ID.
     # 
     # @param rule_set_id Rule Set ID

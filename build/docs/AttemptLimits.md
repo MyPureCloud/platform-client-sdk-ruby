@@ -16,6 +16,7 @@ title: AttemptLimits
 | **max_attempts_per_number** | **Integer** |  | [optional] |
 | **time_zone_id** | **String** | The timezone is necessary to define when \&quot;today\&quot; starts and ends | [optional] |
 | **reset_period** | **String** | After how long the number of attempts will be set back to 0 | [optional] |
+| **recall_entries** | [**Hash&lt;String, RecallEntry&gt;**](RecallEntry.html) | Configuration for recall attempts | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 
