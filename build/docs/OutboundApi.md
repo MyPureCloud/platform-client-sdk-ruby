@@ -16,6 +16,7 @@ Method | Description
 [**delete_outbound_campaignrule**](OutboundApi.html#delete_outbound_campaignrule) | Delete Campaign Rule
 [**delete_outbound_contactlist**](OutboundApi.html#delete_outbound_contactlist) | Delete a contact list.
 [**delete_outbound_contactlist_contact**](OutboundApi.html#delete_outbound_contactlist_contact) | Delete a contact.
+[**delete_outbound_contactlist_contacts**](OutboundApi.html#delete_outbound_contactlist_contacts) | Delete contacts from a contact list.
 [**delete_outbound_dnclist**](OutboundApi.html#delete_outbound_dnclist) | Delete dialer DNC list
 [**delete_outbound_ruleset**](OutboundApi.html#delete_outbound_ruleset) | Delete a Rule set.
 [**delete_outbound_schedules_campaign**](OutboundApi.html#delete_outbound_schedules_campaign) | Delete a dialer campaign schedule.
@@ -542,6 +543,67 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact_list_id** | **String**| Contact List ID | 
  **contact_id** | **String**| Contact ID | 
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_outbound_contactlist_contacts"></a>
+
+## - delete_outbound_contactlist_contacts(contact_list_id, contact_ids)
+
+Delete contacts from a contact list.
+
+
+
+Wraps DELETE /api/v2/outbound/contactlists/{contactListId}/contacts 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+contact_list_id = "contact_list_id_example" # String | Contact List ID
+
+contact_ids = ["contact_ids_example"] # Array<String> | ContactIds to delete.
+
+
+begin
+  #Delete contacts from a contact list.
+  api_instance.delete_outbound_contactlist_contacts(contact_list_id, contact_ids)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->delete_outbound_contactlist_contacts: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contact_list_id** | **String**| Contact List ID | 
+ **contact_ids** | [**Array&lt;String&gt;**](String.html)| ContactIds to delete. | 
 {: class="table table-striped"}
 
 

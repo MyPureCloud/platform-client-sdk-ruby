@@ -98,6 +98,9 @@ module PureCloud
 
     attr_accessor :conversation_count
 
+    # Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed.
+    attr_accessor :proxy
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -141,6 +144,7 @@ module PureCloud
         :'edge_deployment_type' => :'edgeDeploymentType',
         :'call_draining_state' => :'callDrainingState',
         :'conversation_count' => :'conversationCount',
+        :'proxy' => :'proxy',
         :'self_uri' => :'selfUri'
       }
     end
@@ -185,6 +189,7 @@ module PureCloud
         :'edge_deployment_type' => :'String',
         :'call_draining_state' => :'String',
         :'conversation_count' => :'Integer',
+        :'proxy' => :'String',
         :'self_uri' => :'String'
       }
     end
@@ -347,6 +352,10 @@ module PureCloud
         self.conversation_count = attributes[:'conversationCount']
       end
 
+      if attributes.has_key?(:'proxy')
+        self.proxy = attributes[:'proxy']
+      end
+
       if attributes.has_key?(:'selfUri')
         self.self_uri = attributes[:'selfUri']
       end
@@ -481,6 +490,7 @@ module PureCloud
           edge_deployment_type == o.edge_deployment_type &&
           call_draining_state == o.call_draining_state &&
           conversation_count == o.conversation_count &&
+          proxy == o.proxy &&
           self_uri == o.self_uri
     end
 
@@ -493,7 +503,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, interfaces, make, model, api_version, software_version, software_version_timestamp, software_version_platform, software_version_configuration, full_software_version, pairing_id, fingerprint, fingerprint_hint, current_version, staged_version, patch, status_code, edge_group, site, software_status, online_status, serial_number, physical_edge, managed, edge_deployment_type, call_draining_state, conversation_count, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, interfaces, make, model, api_version, software_version, software_version_timestamp, software_version_platform, software_version_configuration, full_software_version, pairing_id, fingerprint, fingerprint_hint, current_version, staged_version, patch, status_code, edge_group, site, software_status, online_status, serial_number, physical_edge, managed, edge_deployment_type, call_draining_state, conversation_count, proxy, self_uri].hash
     end
 
     # build the object from hash
