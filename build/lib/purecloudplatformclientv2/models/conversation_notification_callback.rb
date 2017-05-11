@@ -32,6 +32,8 @@ module PureCloud
 
     attr_accessor :dialer_preview
 
+    attr_accessor :voicemail
+
     attr_accessor :callback_numbers
 
     attr_accessor :callback_user_name
@@ -64,6 +66,7 @@ module PureCloud
         :'disconnect_type' => :'disconnectType',
         :'start_hold_time' => :'startHoldTime',
         :'dialer_preview' => :'dialerPreview',
+        :'voicemail' => :'voicemail',
         :'callback_numbers' => :'callbackNumbers',
         :'callback_user_name' => :'callbackUserName',
         :'script_id' => :'scriptId',
@@ -88,6 +91,7 @@ module PureCloud
         :'disconnect_type' => :'String',
         :'start_hold_time' => :'DateTime',
         :'dialer_preview' => :'ConversationNotificationDialerPreview',
+        :'voicemail' => :'DocumentDataV2NotificationWorkspace',
         :'callback_numbers' => :'Array<String>',
         :'callback_user_name' => :'String',
         :'script_id' => :'String',
@@ -136,6 +140,10 @@ module PureCloud
 
       if attributes.has_key?(:'dialerPreview')
         self.dialer_preview = attributes[:'dialerPreview']
+      end
+
+      if attributes.has_key?(:'voicemail')
+        self.voicemail = attributes[:'voicemail']
       end
 
       if attributes.has_key?(:'callbackNumbers')
@@ -252,6 +260,7 @@ module PureCloud
           disconnect_type == o.disconnect_type &&
           start_hold_time == o.start_hold_time &&
           dialer_preview == o.dialer_preview &&
+          voicemail == o.voicemail &&
           callback_numbers == o.callback_numbers &&
           callback_user_name == o.callback_user_name &&
           script_id == o.script_id &&
@@ -274,7 +283,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, direction, held, disconnect_type, start_hold_time, dialer_preview, callback_numbers, callback_user_name, script_id, skip_enabled, provider, timeout_seconds, connected_time, disconnected_time, callback_scheduled_time, automated_callback_config_id, additional_properties].hash
+      [state, id, direction, held, disconnect_type, start_hold_time, dialer_preview, voicemail, callback_numbers, callback_user_name, script_id, skip_enabled, provider, timeout_seconds, connected_time, disconnected_time, callback_scheduled_time, automated_callback_config_id, additional_properties].hash
     end
 
     # build the object from hash

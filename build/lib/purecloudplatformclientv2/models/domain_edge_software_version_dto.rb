@@ -30,9 +30,9 @@ module PureCloud
 
     attr_accessor :edge_uri
 
-    attr_accessor :latest_release
-
     attr_accessor :current
+
+    attr_accessor :latest_release
 
     # The URI for this object
     attr_accessor :self_uri
@@ -45,8 +45,8 @@ module PureCloud
         :'edge_version' => :'edgeVersion',
         :'publish_date' => :'publishDate',
         :'edge_uri' => :'edgeUri',
-        :'latest_release' => :'latestRelease',
         :'current' => :'current',
+        :'latest_release' => :'latestRelease',
         :'self_uri' => :'selfUri'
       }
     end
@@ -59,8 +59,8 @@ module PureCloud
         :'edge_version' => :'String',
         :'publish_date' => :'DateTime',
         :'edge_uri' => :'String',
-        :'latest_release' => :'BOOLEAN',
         :'current' => :'BOOLEAN',
+        :'latest_release' => :'BOOLEAN',
         :'self_uri' => :'String'
       }
     end
@@ -93,12 +93,12 @@ module PureCloud
         self.edge_uri = attributes[:'edgeUri']
       end
 
-      if attributes.has_key?(:'latestRelease')
-        self.latest_release = attributes[:'latestRelease']
-      end
-
       if attributes.has_key?(:'current')
         self.current = attributes[:'current']
+      end
+
+      if attributes.has_key?(:'latestRelease')
+        self.latest_release = attributes[:'latestRelease']
       end
 
       if attributes.has_key?(:'selfUri')
@@ -129,8 +129,8 @@ module PureCloud
           edge_version == o.edge_version &&
           publish_date == o.publish_date &&
           edge_uri == o.edge_uri &&
-          latest_release == o.latest_release &&
           current == o.current &&
+          latest_release == o.latest_release &&
           self_uri == o.self_uri
     end
 
@@ -143,7 +143,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, edge_version, publish_date, edge_uri, latest_release, current, self_uri].hash
+      [id, name, edge_version, publish_date, edge_uri, current, latest_release, self_uri].hash
     end
 
     # build the object from hash

@@ -18,13 +18,13 @@ require 'date'
 
 module PureCloud
   class ContactListFilterNotificationRange
-    attr_accessor :gt
+    attr_accessor :min
 
-    attr_accessor :gte
+    attr_accessor :max
 
-    attr_accessor :lt
+    attr_accessor :min_inclusive
 
-    attr_accessor :lte
+    attr_accessor :max_inclusive
 
     attr_accessor :in_set
 
@@ -33,10 +33,10 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'gt' => :'gt',
-        :'gte' => :'gte',
-        :'lt' => :'lt',
-        :'lte' => :'lte',
+        :'min' => :'min',
+        :'max' => :'max',
+        :'min_inclusive' => :'minInclusive',
+        :'max_inclusive' => :'maxInclusive',
         :'in_set' => :'inSet',
         :'additional_properties' => :'additionalProperties'
       }
@@ -45,10 +45,10 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'gt' => :'String',
-        :'gte' => :'String',
-        :'lt' => :'String',
-        :'lte' => :'String',
+        :'min' => :'String',
+        :'max' => :'String',
+        :'min_inclusive' => :'BOOLEAN',
+        :'max_inclusive' => :'BOOLEAN',
         :'in_set' => :'Array<String>',
         :'additional_properties' => :'Object'
       }
@@ -62,20 +62,20 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'gt')
-        self.gt = attributes[:'gt']
+      if attributes.has_key?(:'min')
+        self.min = attributes[:'min']
       end
 
-      if attributes.has_key?(:'gte')
-        self.gte = attributes[:'gte']
+      if attributes.has_key?(:'max')
+        self.max = attributes[:'max']
       end
 
-      if attributes.has_key?(:'lt')
-        self.lt = attributes[:'lt']
+      if attributes.has_key?(:'minInclusive')
+        self.min_inclusive = attributes[:'minInclusive']
       end
 
-      if attributes.has_key?(:'lte')
-        self.lte = attributes[:'lte']
+      if attributes.has_key?(:'maxInclusive')
+        self.max_inclusive = attributes[:'maxInclusive']
       end
 
       if attributes.has_key?(:'inSet')
@@ -107,10 +107,10 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          gt == o.gt &&
-          gte == o.gte &&
-          lt == o.lt &&
-          lte == o.lte &&
+          min == o.min &&
+          max == o.max &&
+          min_inclusive == o.min_inclusive &&
+          max_inclusive == o.max_inclusive &&
           in_set == o.in_set &&
           additional_properties == o.additional_properties
     end
@@ -124,7 +124,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [gt, gte, lt, lte, in_set, additional_properties].hash
+      [min, max, min_inclusive, max_inclusive, in_set, additional_properties].hash
     end
 
     # build the object from hash
