@@ -705,7 +705,8 @@ opts = {
   expand: nil, # Array<Object> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
-  has_conversation: false # BOOLEAN | Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization.
+  has_conversation: false, # BOOLEAN | Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization.
+  media: "media_example" # String | Filter resulting orphans based on their media type
 }
 
 begin
@@ -728,6 +729,7 @@ Name | Type | Description  | Notes
  **next_page** | **String**| next page token | [optional] 
  **previous_page** | **String**| Previous page token | [optional] 
  **has_conversation** | **BOOLEAN**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false]
+ **media** | **String**| Filter resulting orphans based on their media type | [optional] 
 {: class="table table-striped"}
 
 

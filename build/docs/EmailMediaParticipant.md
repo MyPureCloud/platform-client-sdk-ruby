@@ -34,6 +34,7 @@ title: EmailMediaParticipant
 | **wrapup** | [**Wrapup**](Wrapup.html) | Wrapup for this participant, if it has been applied. | [optional] |
 | **subject** | **String** | The subject of the email. | [optional] |
 | **messages_sent** | **Integer** | The number of messages that have been sent in this email conversation. | [optional] |
+| **auto_generated** | **BOOLEAN** | Indicates that the email was auto-generated like an Out of Office reply. | [optional] |
 {: class="table table-striped"}
 
 

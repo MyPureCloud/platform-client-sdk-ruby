@@ -17,6 +17,8 @@ title: Station
 | **secondary_edge** | [**UriReference**](UriReference.html) |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **line_appearance_id** | **String** |  | [optional] |
+| **web_rtc_media_dscp** | **Integer** | The default or configured value of media dscp for the station. Empty if station type is not inin_webrtc_softphone. | [optional] |
+| **web_rtc_persistent_enabled** | **BOOLEAN** | The default or configured value of persistent connection setting for the station. Empty if station type is not inin_webrtc_softphone. | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 
