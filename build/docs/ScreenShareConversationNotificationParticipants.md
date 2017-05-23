@@ -32,6 +32,7 @@ title: ScreenShareConversationNotificationParticipants
 | **external_contact** | [**ScreenShareConversationNotificationUriReference**](ScreenShareConversationNotificationUriReference.html) |  | [optional] |
 | **external_organization** | [**ScreenShareConversationNotificationUriReference**](ScreenShareConversationNotificationUriReference.html) |  | [optional] |
 | **wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
+| **peer** | **String** |  | [optional] |
 | **context** | **String** |  | [optional] |
 | **peer_count** | **Integer** |  | [optional] |
 | **sharing** | **BOOLEAN** |  | [optional] |

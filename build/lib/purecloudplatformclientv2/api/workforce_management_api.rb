@@ -84,7 +84,7 @@ module PureCloud
 
     # Get activity codes corresponding to a management unit
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @return [ActivityCodeContainer]
     def get_workforcemanagement_managementunit_activitycodes(mu_id, opts = {})
@@ -94,7 +94,7 @@ module PureCloud
 
     # Get activity codes corresponding to a management unit
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityCodeContainer, Fixnum, Hash)>] ActivityCodeContainer data, response status code and response headers
     def get_workforcemanagement_managementunit_activitycodes_with_http_info(mu_id, opts = {})
@@ -141,7 +141,7 @@ module PureCloud
 
     # Get intraday queues for the given date
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param date ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23
     # @param [Hash] opts the optional parameters
     # @return [WfmIntradayQueueListing]
@@ -152,7 +152,7 @@ module PureCloud
 
     # Get intraday queues for the given date
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param date ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23
     # @param [Hash] opts the optional parameters
     # @return [Array<(WfmIntradayQueueListing, Fixnum, Hash)>] WfmIntradayQueueListing data, response status code and response headers
@@ -203,7 +203,7 @@ module PureCloud
 
     # Get a time off request by id
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param user_id The userId to whom the Time Off Request applies.
     # @param time_off_request_id Time Off Request Id
     # @param [Hash] opts the optional parameters
@@ -215,7 +215,7 @@ module PureCloud
 
     # Get a time off request by id
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param user_id The userId to whom the Time Off Request applies.
     # @param time_off_request_id Time Off Request Id
     # @param [Hash] opts the optional parameters
@@ -268,7 +268,7 @@ module PureCloud
 
     # Get a list of time off requests for any user
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param user_id The userId to whom the Time Off Request applies.
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :recently_reviewed Limit results to requests that have been reviewed within the preceding 30 days (default to false)
@@ -280,7 +280,7 @@ module PureCloud
 
     # Get a list of time off requests for any user
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param user_id The userId to whom the Time Off Request applies.
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :recently_reviewed Limit results to requests that have been reviewed within the preceding 30 days
@@ -332,7 +332,7 @@ module PureCloud
 
     # Get agents in the management unit
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @return [WfmUserEntityListing]
     def get_workforcemanagement_managementunit_users(mu_id, opts = {})
@@ -342,7 +342,7 @@ module PureCloud
 
     # Get agents in the management unit
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @return [Array<(WfmUserEntityListing, Fixnum, Hash)>] WfmUserEntityListing data, response status code and response headers
     def get_workforcemanagement_managementunit_users_with_http_info(mu_id, opts = {})
@@ -622,7 +622,7 @@ module PureCloud
 
     # Get intraday data for the given date for the requested queueIds
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @option opts [IntradayQueryDataCommand] :body body
     # @return [IntradayResponse]
@@ -633,7 +633,7 @@ module PureCloud
 
     # Get intraday data for the given date for the requested queueIds
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @option opts [IntradayQueryDataCommand] :body body
     # @return [Array<(IntradayResponse, Fixnum, Hash)>] IntradayResponse data, response status code and response headers
@@ -681,7 +681,7 @@ module PureCloud
 
     # Get user schedules within the given time range
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @option opts [UserListScheduleRequestBody] :body body
     # @return [UserScheduleContainer]
@@ -692,7 +692,7 @@ module PureCloud
 
     # Get user schedules within the given time range
     # 
-    # @param mu_id The muId of the management unit.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @option opts [UserListScheduleRequestBody] :body body
     # @return [Array<(UserScheduleContainer, Fixnum, Hash)>] UserScheduleContainer data, response status code and response headers

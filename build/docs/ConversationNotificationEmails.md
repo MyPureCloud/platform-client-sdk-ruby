@@ -10,9 +10,11 @@ title: ConversationNotificationEmails
 | **id** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **held** | **BOOLEAN** |  | [optional] |
+| **auto_generated** | **BOOLEAN** |  | [optional] |
 | **subject** | **String** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **script_id** | **String** |  | [optional] |
+| **peer_id** | **String** |  | [optional] |
 | **messages_sent** | **Integer** |  | [optional] |
 | **error_info** | [**ConversationNotificationErrorDetails**](ConversationNotificationErrorDetails.html) |  | [optional] |
 | **disconnect_type** | **String** |  | [optional] |

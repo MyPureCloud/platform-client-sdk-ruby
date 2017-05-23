@@ -32,6 +32,7 @@ title: CallbackConversationNotificationCallbackMediaParticipant
 | **external_contact** | [**CallbackConversationNotificationUriReference**](CallbackConversationNotificationUriReference.html) |  | [optional] |
 | **external_organization** | [**CallbackConversationNotificationUriReference**](CallbackConversationNotificationUriReference.html) |  | [optional] |
 | **wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
+| **peer** | **String** |  | [optional] |
 | **outbound_preview** | [**ConversationNotificationDialerPreview**](ConversationNotificationDialerPreview.html) |  | [optional] |
 | **voicemail** | [**DocumentDataV2NotificationWorkspace**](DocumentDataV2NotificationWorkspace.html) |  | [optional] |
 | **callback_numbers** | **Array&lt;String&gt;** |  | [optional] |

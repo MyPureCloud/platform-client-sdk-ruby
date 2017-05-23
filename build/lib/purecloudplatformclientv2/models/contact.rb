@@ -28,13 +28,17 @@ module PureCloud
 
     attr_accessor :type
 
+    # Use extension instead of address for setting internal extensions
+    attr_accessor :extension
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'address' => :'address',
         :'display' => :'display',
         :'media_type' => :'mediaType',
-        :'type' => :'type'
+        :'type' => :'type',
+        :'extension' => :'extension'
       }
     end
 
@@ -44,7 +48,8 @@ module PureCloud
         :'address' => :'String',
         :'display' => :'String',
         :'media_type' => :'String',
-        :'type' => :'String'
+        :'type' => :'String',
+        :'extension' => :'String'
       }
     end
 
@@ -70,6 +75,10 @@ module PureCloud
 
       if attributes.has_key?(:'type')
         self.type = attributes[:'type']
+      end
+
+      if attributes.has_key?(:'extension')
+        self.extension = attributes[:'extension']
       end
 
     end
@@ -122,7 +131,8 @@ module PureCloud
           address == o.address &&
           display == o.display &&
           media_type == o.media_type &&
-          type == o.type
+          type == o.type &&
+          extension == o.extension
     end
 
     # @see the `==` method
@@ -134,7 +144,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [address, display, media_type, type].hash
+      [address, display, media_type, type, extension].hash
     end
 
     # build the object from hash

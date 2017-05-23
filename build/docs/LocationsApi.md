@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 <a name="get_locations"></a>
 
-## -[**Array&lt;LocationDefinition&gt;**](LocationDefinition.html) get_locations(opts)
+## -[**LocationEntityListing**](LocationEntityListing.html) get_locations(opts)
 
 Get a list of all locations.
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;LocationDefinition&gt;**](LocationDefinition.html)
+[**LocationEntityListing**](LocationEntityListing.html)
 
 ### HTTP request headers
 

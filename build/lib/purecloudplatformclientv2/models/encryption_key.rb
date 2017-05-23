@@ -32,6 +32,9 @@ module PureCloud
     # user that requested generation of public key
     attr_accessor :user
 
+    # Local configuration
+    attr_accessor :local_encryption_configuration
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -43,6 +46,7 @@ module PureCloud
         :'create_date' => :'createDate',
         :'keydata_summary' => :'keydataSummary',
         :'user' => :'user',
+        :'local_encryption_configuration' => :'localEncryptionConfiguration',
         :'self_uri' => :'selfUri'
       }
     end
@@ -55,6 +59,7 @@ module PureCloud
         :'create_date' => :'DateTime',
         :'keydata_summary' => :'String',
         :'user' => :'User',
+        :'local_encryption_configuration' => :'LocalEncryptionConfiguration',
         :'self_uri' => :'String'
       }
     end
@@ -87,6 +92,10 @@ module PureCloud
         self.user = attributes[:'user']
       end
 
+      if attributes.has_key?(:'localEncryptionConfiguration')
+        self.local_encryption_configuration = attributes[:'localEncryptionConfiguration']
+      end
+
       if attributes.has_key?(:'selfUri')
         self.self_uri = attributes[:'selfUri']
       end
@@ -115,6 +124,7 @@ module PureCloud
           create_date == o.create_date &&
           keydata_summary == o.keydata_summary &&
           user == o.user &&
+          local_encryption_configuration == o.local_encryption_configuration &&
           self_uri == o.self_uri
     end
 
@@ -127,7 +137,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, create_date, keydata_summary, user, self_uri].hash
+      [id, name, create_date, keydata_summary, user, local_encryption_configuration, self_uri].hash
     end
 
     # build the object from hash

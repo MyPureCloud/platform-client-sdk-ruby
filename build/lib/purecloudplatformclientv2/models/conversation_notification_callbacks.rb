@@ -40,6 +40,8 @@ module PureCloud
 
     attr_accessor :script_id
 
+    attr_accessor :peer_id
+
     attr_accessor :skip_enabled
 
     attr_accessor :provider
@@ -70,6 +72,7 @@ module PureCloud
         :'callback_numbers' => :'callbackNumbers',
         :'callback_user_name' => :'callbackUserName',
         :'script_id' => :'scriptId',
+        :'peer_id' => :'peerId',
         :'skip_enabled' => :'skipEnabled',
         :'provider' => :'provider',
         :'timeout_seconds' => :'timeoutSeconds',
@@ -95,6 +98,7 @@ module PureCloud
         :'callback_numbers' => :'Array<String>',
         :'callback_user_name' => :'String',
         :'script_id' => :'String',
+        :'peer_id' => :'String',
         :'skip_enabled' => :'BOOLEAN',
         :'provider' => :'String',
         :'timeout_seconds' => :'Integer',
@@ -158,6 +162,10 @@ module PureCloud
 
       if attributes.has_key?(:'scriptId')
         self.script_id = attributes[:'scriptId']
+      end
+
+      if attributes.has_key?(:'peerId')
+        self.peer_id = attributes[:'peerId']
       end
 
       if attributes.has_key?(:'skipEnabled')
@@ -264,6 +272,7 @@ module PureCloud
           callback_numbers == o.callback_numbers &&
           callback_user_name == o.callback_user_name &&
           script_id == o.script_id &&
+          peer_id == o.peer_id &&
           skip_enabled == o.skip_enabled &&
           provider == o.provider &&
           timeout_seconds == o.timeout_seconds &&
@@ -283,7 +292,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, direction, held, disconnect_type, start_hold_time, dialer_preview, voicemail, callback_numbers, callback_user_name, script_id, skip_enabled, provider, timeout_seconds, connected_time, disconnected_time, callback_scheduled_time, automated_callback_config_id, additional_properties].hash
+      [state, id, direction, held, disconnect_type, start_hold_time, dialer_preview, voicemail, callback_numbers, callback_user_name, script_id, peer_id, skip_enabled, provider, timeout_seconds, connected_time, disconnected_time, callback_scheduled_time, automated_callback_config_id, additional_properties].hash
     end
 
     # build the object from hash

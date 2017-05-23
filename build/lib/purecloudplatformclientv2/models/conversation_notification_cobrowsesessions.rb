@@ -40,6 +40,8 @@ module PureCloud
 
     attr_accessor :script_id
 
+    attr_accessor :peer_id
+
     attr_accessor :provider_event_time
 
     attr_accessor :connected_time
@@ -62,6 +64,7 @@ module PureCloud
         :'viewer_url' => :'viewerUrl',
         :'provider' => :'provider',
         :'script_id' => :'scriptId',
+        :'peer_id' => :'peerId',
         :'provider_event_time' => :'providerEventTime',
         :'connected_time' => :'connectedTime',
         :'disconnected_time' => :'disconnectedTime',
@@ -83,6 +86,7 @@ module PureCloud
         :'viewer_url' => :'String',
         :'provider' => :'String',
         :'script_id' => :'String',
+        :'peer_id' => :'String',
         :'provider_event_time' => :'DateTime',
         :'connected_time' => :'DateTime',
         :'disconnected_time' => :'DateTime',
@@ -142,6 +146,10 @@ module PureCloud
 
       if attributes.has_key?(:'scriptId')
         self.script_id = attributes[:'scriptId']
+      end
+
+      if attributes.has_key?(:'peerId')
+        self.peer_id = attributes[:'peerId']
       end
 
       if attributes.has_key?(:'providerEventTime')
@@ -218,6 +226,7 @@ module PureCloud
           viewer_url == o.viewer_url &&
           provider == o.provider &&
           script_id == o.script_id &&
+          peer_id == o.peer_id &&
           provider_event_time == o.provider_event_time &&
           connected_time == o.connected_time &&
           disconnected_time == o.disconnected_time &&
@@ -233,7 +242,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, disconnect_type, id, _self, room_id, cobrowse_session_id, cobrowse_role, controlling, viewer_url, provider, script_id, provider_event_time, connected_time, disconnected_time, additional_properties].hash
+      [state, disconnect_type, id, _self, room_id, cobrowse_session_id, cobrowse_role, controlling, viewer_url, provider, script_id, peer_id, provider_event_time, connected_time, disconnected_time, additional_properties].hash
     end
 
     # build the object from hash

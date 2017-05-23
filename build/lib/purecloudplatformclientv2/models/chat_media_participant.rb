@@ -93,6 +93,9 @@ module PureCloud
     # Wrapup for this participant, if it has been applied.
     attr_accessor :wrapup
 
+    # The peer communication corresponding to a matching leg for this communication.
+    attr_accessor :peer
+
     # The ID of the chat room.
     attr_accessor :room_id
 
@@ -124,6 +127,7 @@ module PureCloud
         :'external_contact' => :'externalContact',
         :'external_organization' => :'externalOrganization',
         :'wrapup' => :'wrapup',
+        :'peer' => :'peer',
         :'room_id' => :'roomId'
       }
     end
@@ -156,6 +160,7 @@ module PureCloud
         :'external_contact' => :'UriReference',
         :'external_organization' => :'UriReference',
         :'wrapup' => :'Wrapup',
+        :'peer' => :'String',
         :'room_id' => :'String'
       }
     end
@@ -270,6 +275,10 @@ module PureCloud
         self.wrapup = attributes[:'wrapup']
       end
 
+      if attributes.has_key?(:'peer')
+        self.peer = attributes[:'peer']
+      end
+
       if attributes.has_key?(:'roomId')
         self.room_id = attributes[:'roomId']
       end
@@ -360,6 +369,7 @@ module PureCloud
           external_contact == o.external_contact &&
           external_organization == o.external_organization &&
           wrapup == o.wrapup &&
+          peer == o.peer &&
           room_id == o.room_id
     end
 
@@ -372,7 +382,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, room_id].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, room_id].hash
     end
 
     # build the object from hash

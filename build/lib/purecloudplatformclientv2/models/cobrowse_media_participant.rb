@@ -93,6 +93,9 @@ module PureCloud
     # Wrapup for this participant, if it has been applied.
     attr_accessor :wrapup
 
+    # The peer communication corresponding to a matching leg for this communication.
+    attr_accessor :peer
+
     # The co-browse session ID.
     attr_accessor :cobrowse_session_id
 
@@ -136,6 +139,7 @@ module PureCloud
         :'external_contact' => :'externalContact',
         :'external_organization' => :'externalOrganization',
         :'wrapup' => :'wrapup',
+        :'peer' => :'peer',
         :'cobrowse_session_id' => :'cobrowseSessionId',
         :'cobrowse_role' => :'cobrowseRole',
         :'controlling' => :'controlling',
@@ -172,6 +176,7 @@ module PureCloud
         :'external_contact' => :'UriReference',
         :'external_organization' => :'UriReference',
         :'wrapup' => :'Wrapup',
+        :'peer' => :'String',
         :'cobrowse_session_id' => :'String',
         :'cobrowse_role' => :'String',
         :'controlling' => :'Array<String>',
@@ -290,6 +295,10 @@ module PureCloud
         self.wrapup = attributes[:'wrapup']
       end
 
+      if attributes.has_key?(:'peer')
+        self.peer = attributes[:'peer']
+      end
+
       if attributes.has_key?(:'cobrowseSessionId')
         self.cobrowse_session_id = attributes[:'cobrowseSessionId']
       end
@@ -398,6 +407,7 @@ module PureCloud
           external_contact == o.external_contact &&
           external_organization == o.external_organization &&
           wrapup == o.wrapup &&
+          peer == o.peer &&
           cobrowse_session_id == o.cobrowse_session_id &&
           cobrowse_role == o.cobrowse_role &&
           controlling == o.controlling &&
@@ -414,7 +424,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, cobrowse_session_id, cobrowse_role, controlling, viewer_url, provider_event_time].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, cobrowse_session_id, cobrowse_role, controlling, viewer_url, provider_event_time].hash
     end
 
     # build the object from hash

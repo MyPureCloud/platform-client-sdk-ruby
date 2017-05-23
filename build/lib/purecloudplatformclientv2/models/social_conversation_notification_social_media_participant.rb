@@ -68,6 +68,8 @@ module PureCloud
 
     attr_accessor :wrapup
 
+    attr_accessor :peer
+
     attr_accessor :social_media_id
 
     attr_accessor :social_media_hub
@@ -104,6 +106,7 @@ module PureCloud
         :'external_contact' => :'externalContact',
         :'external_organization' => :'externalOrganization',
         :'wrapup' => :'wrapup',
+        :'peer' => :'peer',
         :'social_media_id' => :'socialMediaId',
         :'social_media_hub' => :'socialMediaHub',
         :'social_user_name' => :'socialUserName',
@@ -139,6 +142,7 @@ module PureCloud
         :'external_contact' => :'SocialConversationNotificationUriReference',
         :'external_organization' => :'SocialConversationNotificationUriReference',
         :'wrapup' => :'ConversationNotificationWrapup',
+        :'peer' => :'String',
         :'social_media_id' => :'String',
         :'social_media_hub' => :'String',
         :'social_user_name' => :'String',
@@ -256,6 +260,10 @@ module PureCloud
         self.wrapup = attributes[:'wrapup']
       end
 
+      if attributes.has_key?(:'peer')
+        self.peer = attributes[:'peer']
+      end
+
       if attributes.has_key?(:'socialMediaId')
         self.social_media_id = attributes[:'socialMediaId']
       end
@@ -358,6 +366,7 @@ module PureCloud
           external_contact == o.external_contact &&
           external_organization == o.external_organization &&
           wrapup == o.wrapup &&
+          peer == o.peer &&
           social_media_id == o.social_media_id &&
           social_media_hub == o.social_media_hub &&
           social_user_name == o.social_user_name &&
@@ -373,7 +382,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, social_media_id, social_media_hub, social_user_name, preview_text].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, social_media_id, social_media_hub, social_user_name, preview_text].hash
     end
 
     # build the object from hash

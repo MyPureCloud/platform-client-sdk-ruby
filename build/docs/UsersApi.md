@@ -1309,7 +1309,8 @@ opts = {
   page_number: 1, # Integer | Page number
   id: ["id_example"], # Array<String> | id
   sort_order: "ASC", # String | Ascending or descending sort order
-  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand
+  expand: ["expand_example"], # Array<String> | Which fields, if any, to expand
+  state: "active" # String | Only list users of this state
 }
 
 begin
@@ -1330,6 +1331,7 @@ Name | Type | Description  | Notes
  **id** | [**Array&lt;String&gt;**](String.html)| id | [optional] 
  **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]
  **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **state** | **String**| Only list users of this state | [optional] [default to active]
 {: class="table table-striped"}
 
 

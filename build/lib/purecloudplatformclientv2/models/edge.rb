@@ -44,6 +44,7 @@ module PureCloud
 
     attr_accessor :created_by_app
 
+    # The list of interfaces for the edge. (Deprecated) Replaced by configuring trunks/ip info on the logical interface instead
     attr_accessor :interfaces
 
     attr_accessor :make

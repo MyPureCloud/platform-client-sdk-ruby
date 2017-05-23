@@ -38,6 +38,7 @@ Method | Description
 [**get_telephony_providers_edge_setuppackage**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_setuppackage) | Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
 [**get_telephony_providers_edge_softwareupdate**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_softwareupdate) | Gets software update status information about any edge.
 [**get_telephony_providers_edge_softwareversions**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_softwareversions) | Gets all the available software versions for this edge.
+[**get_telephony_providers_edge_trunks**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_trunks) | Get the list of available trunks for the given Edge.
 [**get_telephony_providers_edges**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges) | Get the list of edges.
 [**get_telephony_providers_edges_availablelanguages**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_availablelanguages) | Get the list of available languages.
 [**get_telephony_providers_edges_certificateauthorities**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_certificateauthorities) | Get the list of certificate authorities.
@@ -1954,6 +1955,79 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DomainEdgeSoftwareVersionDtoEntityListing**](DomainEdgeSoftwareVersionDtoEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_telephony_providers_edge_trunks"></a>
+
+## -[**TrunkEntityListing**](TrunkEntityListing.html) get_telephony_providers_edge_trunks(edge_id, opts)
+
+Get the list of available trunks for the given Edge.
+
+Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+
+Wraps GET /api/v2/telephony/providers/edges/{edgeId}/trunks 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_id = "edge_id_example" # String | Edge ID
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  sort_by: "name", # String | Value by which to sort
+  sort_order: "ASC", # String | Sort order
+  trunk_base_id: "trunk_base_id_example", # String | Filter by Trunk Base Ids
+  trunk_type: "trunk_type_example" # String | Filter by a Trunk type
+}
+
+begin
+  #Get the list of available trunks for the given Edge.
+  result = api_instance.get_telephony_providers_edge_trunks(edge_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_trunks: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_id** | **String**| Edge ID | 
+ **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **page_size** | **Integer**| Page size | [optional] [default to 25]
+ **sort_by** | **String**| Value by which to sort | [optional] [default to name]
+ **sort_order** | **String**| Sort order | [optional] [default to ASC]
+ **trunk_base_id** | **String**| Filter by Trunk Base Ids | [optional] 
+ **trunk_type** | **String**| Filter by a Trunk type | [optional] 
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TrunkEntityListing**](TrunkEntityListing.html)
 
 ### HTTP request headers
 

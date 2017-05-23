@@ -84,7 +84,7 @@ module PureCloud
         :'name' => :'String',
         :'description' => :'String',
         :'type' => :'String',
-        :'locked_user' => :'UriReference',
+        :'locked_user' => :'User',
         :'active' => :'BOOLEAN',
         :'system' => :'BOOLEAN',
         :'deleted' => :'BOOLEAN',
@@ -93,7 +93,7 @@ module PureCloud
         :'input_schema' => :'Object',
         :'output_schema' => :'Object',
         :'checked_in_version' => :'FlowVersion',
-        :'published_by' => :'UriReference',
+        :'published_by' => :'User',
         :'current_operation' => :'Operation',
         :'self_uri' => :'String'
       }

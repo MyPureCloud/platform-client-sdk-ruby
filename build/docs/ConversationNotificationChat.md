@@ -11,6 +11,7 @@ title: ConversationNotificationChat
 | **id** | **String** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **script_id** | **String** |  | [optional] |
+| **peer_id** | **String** |  | [optional] |
 | **room_id** | **String** |  | [optional] |
 | **held** | **BOOLEAN** |  | [optional] |
 | **disconnect_type** | **String** |  | [optional] |

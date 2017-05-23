@@ -87,7 +87,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :sort_order Sort order
-    # @return [Array<LocationDefinition>]
+    # @return [LocationEntityListing]
     def get_locations(opts = {})
       data, _status_code, _headers = get_locations_with_http_info(opts)
       return data
@@ -99,7 +99,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :sort_order Sort order
-    # @return [Array<(Array<LocationDefinition>, Fixnum, Hash)>] Array<LocationDefinition> data, response status code and response headers
+    # @return [Array<(LocationEntityListing, Fixnum, Hash)>] LocationEntityListing data, response status code and response headers
     def get_locations_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LocationsApi.get_locations ..."
@@ -139,7 +139,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<LocationDefinition>')
+        :return_type => 'LocationEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: LocationsApi#get_locations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

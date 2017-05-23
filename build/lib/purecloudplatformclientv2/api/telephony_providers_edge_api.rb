@@ -1804,6 +1804,84 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the list of available trunks for the given Edge.
+    # Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+    # @param edge_id Edge ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :sort_by Value by which to sort (default to name)
+    # @option opts [String] :sort_order Sort order (default to ASC)
+    # @option opts [String] :trunk_base_id Filter by Trunk Base Ids
+    # @option opts [String] :trunk_type Filter by a Trunk type
+    # @return [TrunkEntityListing]
+    def get_telephony_providers_edge_trunks(edge_id, opts = {})
+      data, _status_code, _headers = get_telephony_providers_edge_trunks_with_http_info(edge_id, opts)
+      return data
+    end
+
+    # Get the list of available trunks for the given Edge.
+    # Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+    # @param edge_id Edge ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :sort_by Value by which to sort
+    # @option opts [String] :sort_order Sort order
+    # @option opts [String] :trunk_base_id Filter by Trunk Base Ids
+    # @option opts [String] :trunk_type Filter by a Trunk type
+    # @return [Array<(TrunkEntityListing, Fixnum, Hash)>] TrunkEntityListing data, response status code and response headers
+    def get_telephony_providers_edge_trunks_with_http_info(edge_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_trunks ..."
+      end
+      # verify the required parameter 'edge_id' is set
+      fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_trunks" if edge_id.nil?
+      if opts[:'trunk_type'] && !['EXTERNAL', 'PHONE', 'EDGE'].include?(opts[:'trunk_type'])
+        fail ArgumentError, 'invalid value for "trunk_type", must be one of EXTERNAL, PHONE, EDGE'
+      end
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/trunks".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'trunkBase.id'] = opts[:'trunk_base_id'] if opts[:'trunk_base_id']
+      query_params[:'trunkType'] = opts[:'trunk_type'] if opts[:'trunk_type']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+            auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TrunkEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edge_trunks\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get the list of edges.
     # 
     # @param [Hash] opts the optional parameters

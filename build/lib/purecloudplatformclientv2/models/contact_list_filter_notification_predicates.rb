@@ -28,6 +28,8 @@ module PureCloud
 
     attr_accessor :range
 
+    attr_accessor :inverted
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -38,6 +40,7 @@ module PureCloud
         :'operator' => :'operator',
         :'value' => :'value',
         :'range' => :'range',
+        :'inverted' => :'inverted',
         :'additional_properties' => :'additionalProperties'
       }
     end
@@ -50,6 +53,7 @@ module PureCloud
         :'operator' => :'String',
         :'value' => :'String',
         :'range' => :'ContactListFilterNotificationRange',
+        :'inverted' => :'BOOLEAN',
         :'additional_properties' => :'Object'
       }
     end
@@ -80,6 +84,10 @@ module PureCloud
 
       if attributes.has_key?(:'range')
         self.range = attributes[:'range']
+      end
+
+      if attributes.has_key?(:'inverted')
+        self.inverted = attributes[:'inverted']
       end
 
       if attributes.has_key?(:'additionalProperties')
@@ -138,6 +146,7 @@ module PureCloud
           operator == o.operator &&
           value == o.value &&
           range == o.range &&
+          inverted == o.inverted &&
           additional_properties == o.additional_properties
     end
 
@@ -150,7 +159,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [column, column_type, operator, value, range, additional_properties].hash
+      [column, column_type, operator, value, range, inverted, additional_properties].hash
     end
 
     # build the object from hash

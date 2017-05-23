@@ -25,12 +25,15 @@ module PureCloud
 
     attr_accessor :media_image_uri
 
+    attr_accessor :waveform_data
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'id' => :'id',
         :'media_file_uri' => :'mediaFileUri',
-        :'media_image_uri' => :'mediaImageUri'
+        :'media_image_uri' => :'mediaImageUri',
+        :'waveform_data' => :'waveformData'
       }
     end
 
@@ -39,7 +42,8 @@ module PureCloud
       {
         :'id' => :'String',
         :'media_file_uri' => :'String',
-        :'media_image_uri' => :'String'
+        :'media_image_uri' => :'String',
+        :'waveform_data' => :'Array<Float>'
       }
     end
 
@@ -63,6 +67,12 @@ module PureCloud
         self.media_image_uri = attributes[:'mediaImageUri']
       end
 
+      if attributes.has_key?(:'waveformData')
+        if (value = attributes[:'waveformData']).is_a?(Array)
+          self.waveform_data = value
+        end
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -84,7 +94,8 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           media_file_uri == o.media_file_uri &&
-          media_image_uri == o.media_image_uri
+          media_image_uri == o.media_image_uri &&
+          waveform_data == o.waveform_data
     end
 
     # @see the `==` method
@@ -96,7 +107,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, media_file_uri, media_image_uri].hash
+      [id, media_file_uri, media_image_uri, waveform_data].hash
     end
 
     # build the object from hash

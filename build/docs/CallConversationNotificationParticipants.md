@@ -32,6 +32,7 @@ title: CallConversationNotificationParticipants
 | **external_contact** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **external_organization** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
+| **peer** | **String** |  | [optional] |
 | **muted** | **BOOLEAN** |  | [optional] |
 | **confined** | **BOOLEAN** |  | [optional] |
 | **recording** | **BOOLEAN** |  | [optional] |

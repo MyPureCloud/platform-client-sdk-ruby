@@ -110,7 +110,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The muId of the management unit.
+mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 
 
 begin
@@ -126,7 +126,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit. | 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
 {: class="table table-striped"}
 
 
@@ -169,7 +169,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The muId of the management unit.
+mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 
 date = "date_example" # String | ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23
 
@@ -187,7 +187,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit. | 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
  **date** | **String**| ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23 | 
 {: class="table table-striped"}
 
@@ -231,7 +231,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The muId of the management unit.
+mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 
 user_id = "user_id_example" # String | The userId to whom the Time Off Request applies.
 
@@ -251,7 +251,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit. | 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
  **user_id** | **String**| The userId to whom the Time Off Request applies. | 
  **time_off_request_id** | **String**| Time Off Request Id | 
 {: class="table table-striped"}
@@ -296,7 +296,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The muId of the management unit.
+mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 
 user_id = "user_id_example" # String | The userId to whom the Time Off Request applies.
 
@@ -317,7 +317,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit. | 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
  **user_id** | **String**| The userId to whom the Time Off Request applies. | 
  **recently_reviewed** | **BOOLEAN**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false]
 {: class="table table-striped"}
@@ -362,7 +362,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The muId of the management unit.
+mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 
 
 begin
@@ -378,7 +378,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit. | 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
 {: class="table table-striped"}
 
 
@@ -666,7 +666,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The muId of the management unit.
+mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 
 opts = { 
   body: PureCloud::IntradayQueryDataCommand.new # IntradayQueryDataCommand | body
@@ -685,7 +685,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit. | 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
  **body** | [**IntradayQueryDataCommand**](IntradayQueryDataCommand.html)| body | [optional] 
 {: class="table table-striped"}
 
@@ -729,7 +729,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The muId of the management unit.
+mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 
 opts = { 
   body: PureCloud::UserListScheduleRequestBody.new # UserListScheduleRequestBody | body
@@ -748,7 +748,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit. | 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
  **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody.html)| body | [optional] 
 {: class="table table-striped"}
 

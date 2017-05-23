@@ -93,6 +93,9 @@ module PureCloud
     # Wrapup for this participant, if it has been applied.
     attr_accessor :wrapup
 
+    # The peer communication corresponding to a matching leg for this communication.
+    attr_accessor :peer
+
     # Value is true when the call is muted.
     attr_accessor :muted
 
@@ -154,6 +157,7 @@ module PureCloud
         :'external_contact' => :'externalContact',
         :'external_organization' => :'externalOrganization',
         :'wrapup' => :'wrapup',
+        :'peer' => :'peer',
         :'muted' => :'muted',
         :'confined' => :'confined',
         :'recording' => :'recording',
@@ -196,6 +200,7 @@ module PureCloud
         :'external_contact' => :'UriReference',
         :'external_organization' => :'UriReference',
         :'wrapup' => :'Wrapup',
+        :'peer' => :'String',
         :'muted' => :'BOOLEAN',
         :'confined' => :'BOOLEAN',
         :'recording' => :'BOOLEAN',
@@ -318,6 +323,10 @@ module PureCloud
 
       if attributes.has_key?(:'wrapup')
         self.wrapup = attributes[:'wrapup']
+      end
+
+      if attributes.has_key?(:'peer')
+        self.peer = attributes[:'peer']
       end
 
       if attributes.has_key?(:'muted')
@@ -464,6 +473,7 @@ module PureCloud
           external_contact == o.external_contact &&
           external_organization == o.external_organization &&
           wrapup == o.wrapup &&
+          peer == o.peer &&
           muted == o.muted &&
           confined == o.confined &&
           recording == o.recording &&
@@ -486,7 +496,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, muted, confined, recording, recording_state, group, ani, dnis, document_id, fax_status, monitored_participant_id, consult_participant_id].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, muted, confined, recording, recording_state, group, ani, dnis, document_id, fax_status, monitored_participant_id, consult_participant_id].hash
     end
 
     # build the object from hash

@@ -68,6 +68,8 @@ module PureCloud
 
     attr_accessor :wrapup
 
+    attr_accessor :peer
+
     attr_accessor :context
 
     attr_accessor :peer_count
@@ -102,6 +104,7 @@ module PureCloud
         :'external_contact' => :'externalContact',
         :'external_organization' => :'externalOrganization',
         :'wrapup' => :'wrapup',
+        :'peer' => :'peer',
         :'context' => :'context',
         :'peer_count' => :'peerCount',
         :'sharing' => :'sharing'
@@ -136,6 +139,7 @@ module PureCloud
         :'external_contact' => :'ScreenShareConversationNotificationUriReference',
         :'external_organization' => :'ScreenShareConversationNotificationUriReference',
         :'wrapup' => :'ConversationNotificationWrapup',
+        :'peer' => :'String',
         :'context' => :'String',
         :'peer_count' => :'Integer',
         :'sharing' => :'BOOLEAN'
@@ -252,6 +256,10 @@ module PureCloud
         self.wrapup = attributes[:'wrapup']
       end
 
+      if attributes.has_key?(:'peer')
+        self.peer = attributes[:'peer']
+      end
+
       if attributes.has_key?(:'context')
         self.context = attributes[:'context']
       end
@@ -350,6 +358,7 @@ module PureCloud
           external_contact == o.external_contact &&
           external_organization == o.external_organization &&
           wrapup == o.wrapup &&
+          peer == o.peer &&
           context == o.context &&
           peer_count == o.peer_count &&
           sharing == o.sharing
@@ -364,7 +373,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, context, peer_count, sharing].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, context, peer_count, sharing].hash
     end
 
     # build the object from hash

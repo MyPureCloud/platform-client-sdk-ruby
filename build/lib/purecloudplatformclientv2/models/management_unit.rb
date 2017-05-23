@@ -33,6 +33,9 @@ module PureCloud
     # The version of the underlying ManagementUnit object. Useful for handling eventual consistency issues.  User must submit the current version they of the ManagementUnit in any write requests
     attr_accessor :version
 
+    # The date and time at which this management unit was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :date_modified
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -44,6 +47,7 @@ module PureCloud
         :'start_day_of_week' => :'startDayOfWeek',
         :'timezone' => :'timezone',
         :'version' => :'version',
+        :'date_modified' => :'dateModified',
         :'self_uri' => :'selfUri'
       }
     end
@@ -56,6 +60,7 @@ module PureCloud
         :'start_day_of_week' => :'String',
         :'timezone' => :'String',
         :'version' => :'Integer',
+        :'date_modified' => :'DateTime',
         :'self_uri' => :'String'
       }
     end
@@ -86,6 +91,10 @@ module PureCloud
 
       if attributes.has_key?(:'version')
         self.version = attributes[:'version']
+      end
+
+      if attributes.has_key?(:'dateModified')
+        self.date_modified = attributes[:'dateModified']
       end
 
       if attributes.has_key?(:'selfUri')
@@ -134,6 +143,7 @@ module PureCloud
           start_day_of_week == o.start_day_of_week &&
           timezone == o.timezone &&
           version == o.version &&
+          date_modified == o.date_modified &&
           self_uri == o.self_uri
     end
 
@@ -146,7 +156,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, start_day_of_week, timezone, version, self_uri].hash
+      [id, name, start_day_of_week, timezone, version, date_modified, self_uri].hash
     end
 
     # build the object from hash

@@ -42,6 +42,9 @@ module PureCloud
     # The preview data to be used when this callback is a Preview.
     attr_accessor :dialer_preview
 
+    # The voicemail data to be used when this callback is an ACD voicemail.
+    attr_accessor :voicemail
+
     # The phone number(s) to use to place the callback.
     attr_accessor :callback_numbers
 
@@ -72,6 +75,9 @@ module PureCloud
     # The source provider for the callback.
     attr_accessor :provider
 
+    # The id of the peer communication corresponding to a matching leg for this communication.
+    attr_accessor :peer_id
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -83,6 +89,7 @@ module PureCloud
         :'disconnect_type' => :'disconnectType',
         :'start_hold_time' => :'startHoldTime',
         :'dialer_preview' => :'dialerPreview',
+        :'voicemail' => :'voicemail',
         :'callback_numbers' => :'callbackNumbers',
         :'callback_user_name' => :'callbackUserName',
         :'script_id' => :'scriptId',
@@ -92,7 +99,8 @@ module PureCloud
         :'disconnected_time' => :'disconnectedTime',
         :'callback_scheduled_time' => :'callbackScheduledTime',
         :'automated_callback_config_id' => :'automatedCallbackConfigId',
-        :'provider' => :'provider'
+        :'provider' => :'provider',
+        :'peer_id' => :'peerId'
       }
     end
 
@@ -107,6 +115,7 @@ module PureCloud
         :'disconnect_type' => :'String',
         :'start_hold_time' => :'DateTime',
         :'dialer_preview' => :'DialerPreview',
+        :'voicemail' => :'Voicemail',
         :'callback_numbers' => :'Array<String>',
         :'callback_user_name' => :'String',
         :'script_id' => :'String',
@@ -116,7 +125,8 @@ module PureCloud
         :'disconnected_time' => :'DateTime',
         :'callback_scheduled_time' => :'DateTime',
         :'automated_callback_config_id' => :'String',
-        :'provider' => :'String'
+        :'provider' => :'String',
+        :'peer_id' => :'String'
       }
     end
 
@@ -162,6 +172,10 @@ module PureCloud
         self.dialer_preview = attributes[:'dialerPreview']
       end
 
+      if attributes.has_key?(:'voicemail')
+        self.voicemail = attributes[:'voicemail']
+      end
+
       if attributes.has_key?(:'callbackNumbers')
         if (value = attributes[:'callbackNumbers']).is_a?(Array)
           self.callback_numbers = value
@@ -202,6 +216,10 @@ module PureCloud
 
       if attributes.has_key?(:'provider')
         self.provider = attributes[:'provider']
+      end
+
+      if attributes.has_key?(:'peerId')
+        self.peer_id = attributes[:'peerId']
       end
 
     end
@@ -273,6 +291,7 @@ module PureCloud
           disconnect_type == o.disconnect_type &&
           start_hold_time == o.start_hold_time &&
           dialer_preview == o.dialer_preview &&
+          voicemail == o.voicemail &&
           callback_numbers == o.callback_numbers &&
           callback_user_name == o.callback_user_name &&
           script_id == o.script_id &&
@@ -282,7 +301,8 @@ module PureCloud
           disconnected_time == o.disconnected_time &&
           callback_scheduled_time == o.callback_scheduled_time &&
           automated_callback_config_id == o.automated_callback_config_id &&
-          provider == o.provider
+          provider == o.provider &&
+          peer_id == o.peer_id
     end
 
     # @see the `==` method
@@ -294,7 +314,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, segments, direction, held, disconnect_type, start_hold_time, dialer_preview, callback_numbers, callback_user_name, script_id, skip_enabled, timeout_seconds, connected_time, disconnected_time, callback_scheduled_time, automated_callback_config_id, provider].hash
+      [state, id, segments, direction, held, disconnect_type, start_hold_time, dialer_preview, voicemail, callback_numbers, callback_user_name, script_id, skip_enabled, timeout_seconds, connected_time, disconnected_time, callback_scheduled_time, automated_callback_config_id, provider, peer_id].hash
     end
 
     # build the object from hash

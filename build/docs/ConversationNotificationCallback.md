@@ -18,6 +18,7 @@ title: ConversationNotificationCallback
 | **callback_numbers** | **Array&lt;String&gt;** |  | [optional] |
 | **callback_user_name** | **String** |  | [optional] |
 | **script_id** | **String** |  | [optional] |
+| **peer_id** | **String** |  | [optional] |
 | **skip_enabled** | **BOOLEAN** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **timeout_seconds** | **Integer** |  | [optional] |

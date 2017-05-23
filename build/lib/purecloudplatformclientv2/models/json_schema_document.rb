@@ -21,6 +21,8 @@ module PureCloud
   class JsonSchemaDocument
     attr_accessor :id
 
+    attr_accessor :schema
+
     attr_accessor :title
 
     attr_accessor :description
@@ -31,18 +33,16 @@ module PureCloud
 
     attr_accessor :properties
 
-    attr_accessor :schema
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'id' => :'id',
+        :'schema' => :'$schema',
         :'title' => :'title',
         :'description' => :'description',
         :'type' => :'type',
         :'required' => :'required',
-        :'properties' => :'properties',
-        :'schema' => :'$schema'
+        :'properties' => :'properties'
       }
     end
 
@@ -50,12 +50,12 @@ module PureCloud
     def self.swagger_types
       {
         :'id' => :'String',
+        :'schema' => :'String',
         :'title' => :'String',
         :'description' => :'String',
         :'type' => :'String',
         :'required' => :'Array<String>',
-        :'properties' => :'Hash<String, Object>',
-        :'schema' => :'String'
+        :'properties' => :'Hash<String, Object>'
       }
     end
 
@@ -69,6 +69,10 @@ module PureCloud
 
       if attributes.has_key?(:'id')
         self.id = attributes[:'id']
+      end
+
+      if attributes.has_key?(:'$schema')
+        self.schema = attributes[:'$schema']
       end
 
       if attributes.has_key?(:'title')
@@ -95,10 +99,6 @@ module PureCloud
         end
       end
 
-      if attributes.has_key?(:'$schema')
-        self.schema = attributes[:'$schema']
-      end
-
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -119,12 +119,12 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
+          schema == o.schema &&
           title == o.title &&
           description == o.description &&
           type == o.type &&
           required == o.required &&
-          properties == o.properties &&
-          schema == o.schema
+          properties == o.properties
     end
 
     # @see the `==` method
@@ -136,7 +136,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, title, description, type, required, properties, schema].hash
+      [id, schema, title, description, type, required, properties].hash
     end
 
     # build the object from hash

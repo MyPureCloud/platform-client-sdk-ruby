@@ -93,8 +93,14 @@ module PureCloud
     # Wrapup for this participant, if it has been applied.
     attr_accessor :wrapup
 
+    # The peer communication corresponding to a matching leg for this communication.
+    attr_accessor :peer
+
     # The outbound preview associated with this callback.
     attr_accessor :outbound_preview
+
+    # The voicemail associated with this callback.
+    attr_accessor :voicemail
 
     # The list of phone number to use for this callback.
     attr_accessor :callback_numbers
@@ -142,7 +148,9 @@ module PureCloud
         :'external_contact' => :'externalContact',
         :'external_organization' => :'externalOrganization',
         :'wrapup' => :'wrapup',
+        :'peer' => :'peer',
         :'outbound_preview' => :'outboundPreview',
+        :'voicemail' => :'voicemail',
         :'callback_numbers' => :'callbackNumbers',
         :'callback_user_name' => :'callbackUserName',
         :'skip_enabled' => :'skipEnabled',
@@ -180,7 +188,9 @@ module PureCloud
         :'external_contact' => :'UriReference',
         :'external_organization' => :'UriReference',
         :'wrapup' => :'Wrapup',
+        :'peer' => :'String',
         :'outbound_preview' => :'DialerPreview',
+        :'voicemail' => :'Voicemail',
         :'callback_numbers' => :'Array<String>',
         :'callback_user_name' => :'String',
         :'skip_enabled' => :'BOOLEAN',
@@ -300,8 +310,16 @@ module PureCloud
         self.wrapup = attributes[:'wrapup']
       end
 
+      if attributes.has_key?(:'peer')
+        self.peer = attributes[:'peer']
+      end
+
       if attributes.has_key?(:'outboundPreview')
         self.outbound_preview = attributes[:'outboundPreview']
+      end
+
+      if attributes.has_key?(:'voicemail')
+        self.voicemail = attributes[:'voicemail']
       end
 
       if attributes.has_key?(:'callbackNumbers')
@@ -416,7 +434,9 @@ module PureCloud
           external_contact == o.external_contact &&
           external_organization == o.external_organization &&
           wrapup == o.wrapup &&
+          peer == o.peer &&
           outbound_preview == o.outbound_preview &&
+          voicemail == o.voicemail &&
           callback_numbers == o.callback_numbers &&
           callback_user_name == o.callback_user_name &&
           skip_enabled == o.skip_enabled &&
@@ -434,7 +454,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, outbound_preview, callback_numbers, callback_user_name, skip_enabled, timeout_seconds, automated_callback_config_id, callback_scheduled_time].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, outbound_preview, voicemail, callback_numbers, callback_user_name, skip_enabled, timeout_seconds, automated_callback_config_id, callback_scheduled_time].hash
     end
 
     # build the object from hash

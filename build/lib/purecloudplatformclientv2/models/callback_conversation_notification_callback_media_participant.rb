@@ -68,6 +68,8 @@ module PureCloud
 
     attr_accessor :wrapup
 
+    attr_accessor :peer
+
     attr_accessor :outbound_preview
 
     attr_accessor :voicemail
@@ -112,6 +114,7 @@ module PureCloud
         :'external_contact' => :'externalContact',
         :'external_organization' => :'externalOrganization',
         :'wrapup' => :'wrapup',
+        :'peer' => :'peer',
         :'outbound_preview' => :'outboundPreview',
         :'voicemail' => :'voicemail',
         :'callback_numbers' => :'callbackNumbers',
@@ -151,6 +154,7 @@ module PureCloud
         :'external_contact' => :'CallbackConversationNotificationUriReference',
         :'external_organization' => :'CallbackConversationNotificationUriReference',
         :'wrapup' => :'ConversationNotificationWrapup',
+        :'peer' => :'String',
         :'outbound_preview' => :'ConversationNotificationDialerPreview',
         :'voicemail' => :'DocumentDataV2NotificationWorkspace',
         :'callback_numbers' => :'Array<String>',
@@ -270,6 +274,10 @@ module PureCloud
 
       if attributes.has_key?(:'wrapup')
         self.wrapup = attributes[:'wrapup']
+      end
+
+      if attributes.has_key?(:'peer')
+        self.peer = attributes[:'peer']
       end
 
       if attributes.has_key?(:'outboundPreview')
@@ -392,6 +400,7 @@ module PureCloud
           external_contact == o.external_contact &&
           external_organization == o.external_organization &&
           wrapup == o.wrapup &&
+          peer == o.peer &&
           outbound_preview == o.outbound_preview &&
           voicemail == o.voicemail &&
           callback_numbers == o.callback_numbers &&
@@ -411,7 +420,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, outbound_preview, voicemail, callback_numbers, callback_user_name, skip_enabled, timeout_seconds, callback_scheduled_time, automated_callback_config_id].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, outbound_preview, voicemail, callback_numbers, callback_user_name, skip_enabled, timeout_seconds, callback_scheduled_time, automated_callback_config_id].hash
     end
 
     # build the object from hash

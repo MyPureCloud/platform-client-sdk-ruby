@@ -16,6 +16,7 @@ title: ConversationNotificationVideo
 | **sharing_screen** | **BOOLEAN** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **script_id** | **String** |  | [optional] |
+| **peer_id** | **String** |  | [optional] |
 | **disconnect_type** | **String** |  | [optional] |
 | **connected_time** | **DateTime** |  | [optional] |
 | **disconnected_time** | **DateTime** |  | [optional] |

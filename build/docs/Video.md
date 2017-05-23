@@ -18,6 +18,7 @@ title: Video
 | **connected_time** | **DateTime** | The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **disconnected_time** | **DateTime** | The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **provider** | **String** | The source provider for the video. | [optional] |
+| **peer_id** | **String** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 {: class="table table-striped"}
 
 

@@ -38,6 +38,8 @@ module PureCloud
 
     attr_accessor :script_id
 
+    attr_accessor :peer_id
+
     attr_accessor :disconnect_type
 
     attr_accessor :start_hold_time
@@ -61,6 +63,7 @@ module PureCloud
         :'held' => :'held',
         :'provider' => :'provider',
         :'script_id' => :'scriptId',
+        :'peer_id' => :'peerId',
         :'disconnect_type' => :'disconnectType',
         :'start_hold_time' => :'startHoldTime',
         :'connected_time' => :'connectedTime',
@@ -82,6 +85,7 @@ module PureCloud
         :'held' => :'BOOLEAN',
         :'provider' => :'String',
         :'script_id' => :'String',
+        :'peer_id' => :'String',
         :'disconnect_type' => :'String',
         :'start_hold_time' => :'DateTime',
         :'connected_time' => :'DateTime',
@@ -136,6 +140,10 @@ module PureCloud
 
       if attributes.has_key?(:'scriptId')
         self.script_id = attributes[:'scriptId']
+      end
+
+      if attributes.has_key?(:'peerId')
+        self.peer_id = attributes[:'peerId']
       end
 
       if attributes.has_key?(:'disconnectType')
@@ -215,6 +223,7 @@ module PureCloud
           held == o.held &&
           provider == o.provider &&
           script_id == o.script_id &&
+          peer_id == o.peer_id &&
           disconnect_type == o.disconnect_type &&
           start_hold_time == o.start_hold_time &&
           connected_time == o.connected_time &&
@@ -231,7 +240,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, social_media_id, social_media_hub, social_user_name, preview_text, recording_id, held, provider, script_id, disconnect_type, start_hold_time, connected_time, disconnected_time, additional_properties].hash
+      [state, id, social_media_id, social_media_hub, social_user_name, preview_text, recording_id, held, provider, script_id, peer_id, disconnect_type, start_hold_time, connected_time, disconnected_time, additional_properties].hash
     end
 
     # build the object from hash

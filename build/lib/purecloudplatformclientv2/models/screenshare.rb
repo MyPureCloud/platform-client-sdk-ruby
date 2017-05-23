@@ -45,6 +45,9 @@ module PureCloud
     # The source provider for the screen share.
     attr_accessor :provider
 
+    # The id of the peer communication corresponding to a matching leg for this communication.
+    attr_accessor :peer_id
+
     # The time line of the participant's call, divided into activity segments.
     attr_accessor :segments
 
@@ -60,6 +63,7 @@ module PureCloud
         :'connected_time' => :'connectedTime',
         :'disconnected_time' => :'disconnectedTime',
         :'provider' => :'provider',
+        :'peer_id' => :'peerId',
         :'segments' => :'segments'
       }
     end
@@ -76,6 +80,7 @@ module PureCloud
         :'connected_time' => :'DateTime',
         :'disconnected_time' => :'DateTime',
         :'provider' => :'String',
+        :'peer_id' => :'String',
         :'segments' => :'Array<Segment>'
       }
     end
@@ -122,6 +127,10 @@ module PureCloud
 
       if attributes.has_key?(:'provider')
         self.provider = attributes[:'provider']
+      end
+
+      if attributes.has_key?(:'peerId')
+        self.peer_id = attributes[:'peerId']
       end
 
       if attributes.has_key?(:'segments')
@@ -186,6 +195,7 @@ module PureCloud
           connected_time == o.connected_time &&
           disconnected_time == o.disconnected_time &&
           provider == o.provider &&
+          peer_id == o.peer_id &&
           segments == o.segments
     end
 
@@ -198,7 +208,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, context, sharing, peer_count, disconnect_type, connected_time, disconnected_time, provider, segments].hash
+      [state, id, context, sharing, peer_count, disconnect_type, connected_time, disconnected_time, provider, peer_id, segments].hash
     end
 
     # build the object from hash

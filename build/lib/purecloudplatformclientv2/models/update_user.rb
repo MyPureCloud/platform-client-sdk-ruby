@@ -42,7 +42,7 @@ module PureCloud
 
     attr_accessor :images
 
-    # Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH.
+    # This value should be the current version of the user. The current version can be obtained with a GET on the user before doing a PATCH.
     attr_accessor :version
 
     # Skills possessed by the user
@@ -53,6 +53,9 @@ module PureCloud
 
     # The groups the user is a member of
     attr_accessor :groups
+
+    # The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field.
+    attr_accessor :state
 
     # The URI for this object
     attr_accessor :self_uri
@@ -75,6 +78,7 @@ module PureCloud
         :'profile_skills' => :'profileSkills',
         :'locations' => :'locations',
         :'groups' => :'groups',
+        :'state' => :'state',
         :'self_uri' => :'selfUri'
       }
     end
@@ -97,6 +101,7 @@ module PureCloud
         :'profile_skills' => :'Array<String>',
         :'locations' => :'Array<Location>',
         :'groups' => :'Array<Group>',
+        :'state' => :'String',
         :'self_uri' => :'String'
       }
     end
@@ -181,6 +186,10 @@ module PureCloud
         end
       end
 
+      if attributes.has_key?(:'state')
+        self.state = attributes[:'state']
+      end
+
       if attributes.has_key?(:'selfUri')
         self.self_uri = attributes[:'selfUri']
       end
@@ -197,6 +206,24 @@ module PureCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      if @version.nil?
+        return false
+      end
+
+      allowed_values = ["active", "inactive", "deleted"]
+      if @state && !allowed_values.include?(@state)
+        return false
+      end
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] state Object to be assigned
+    def state=(state)
+      allowed_values = ["active", "inactive", "deleted"]
+      if state && !allowed_values.include?(state)
+        fail ArgumentError, "invalid value for 'state', must be one of #{allowed_values}."
+      end
+      @state = state
     end
 
     # Checks equality by comparing each attribute.
@@ -219,6 +246,7 @@ module PureCloud
           profile_skills == o.profile_skills &&
           locations == o.locations &&
           groups == o.groups &&
+          state == o.state &&
           self_uri == o.self_uri
     end
 
@@ -231,7 +259,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, chat, department, email, primary_contact_info, addresses, title, username, manager, images, version, profile_skills, locations, groups, self_uri].hash
+      [id, name, chat, department, email, primary_contact_info, addresses, title, username, manager, images, version, profile_skills, locations, groups, state, self_uri].hash
     end
 
     # build the object from hash

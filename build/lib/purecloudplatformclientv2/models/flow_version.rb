@@ -71,7 +71,7 @@ module PureCloud
         :'configuration_version' => :'String',
         :'type' => :'String',
         :'secure' => :'BOOLEAN',
-        :'created_by' => :'UriReference',
+        :'created_by' => :'User',
         :'configuration_uri' => :'String',
         :'date_created' => :'Integer',
         :'generation_id' => :'String',

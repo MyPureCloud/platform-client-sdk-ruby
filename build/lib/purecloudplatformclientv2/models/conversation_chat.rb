@@ -54,6 +54,9 @@ module PureCloud
     # The source provider for the email.
     attr_accessor :provider
 
+    # The id of the peer communication corresponding to a matching leg for this communication.
+    attr_accessor :peer_id
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -68,7 +71,8 @@ module PureCloud
         :'start_hold_time' => :'startHoldTime',
         :'connected_time' => :'connectedTime',
         :'disconnected_time' => :'disconnectedTime',
-        :'provider' => :'provider'
+        :'provider' => :'provider',
+        :'peer_id' => :'peerId'
       }
     end
 
@@ -86,7 +90,8 @@ module PureCloud
         :'start_hold_time' => :'DateTime',
         :'connected_time' => :'DateTime',
         :'disconnected_time' => :'DateTime',
-        :'provider' => :'String'
+        :'provider' => :'String',
+        :'peer_id' => :'String'
       }
     end
 
@@ -146,6 +151,10 @@ module PureCloud
 
       if attributes.has_key?(:'provider')
         self.provider = attributes[:'provider']
+      end
+
+      if attributes.has_key?(:'peerId')
+        self.peer_id = attributes[:'peerId']
       end
 
     end
@@ -220,7 +229,8 @@ module PureCloud
           start_hold_time == o.start_hold_time &&
           connected_time == o.connected_time &&
           disconnected_time == o.disconnected_time &&
-          provider == o.provider
+          provider == o.provider &&
+          peer_id == o.peer_id
     end
 
     # @see the `==` method
@@ -232,7 +242,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, connected_time, disconnected_time, provider].hash
+      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, connected_time, disconnected_time, provider, peer_id].hash
     end
 
     # build the object from hash
