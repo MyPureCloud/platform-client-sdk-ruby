@@ -163,6 +163,7 @@ opts = {
   page_number: 1, # Integer | Page number
   sort_by: "name", # String | Sort by
   name: "name_example", # String | Name
+  user_selectable: "user_selectable_example", # String | True for stations that the user can select otherwise false
   web_rtc_user_id: "web_rtc_user_id_example", # String | Filter for the webRtc station of the webRtcUserId
   id: "id_example", # String | Comma separated list of stationIds
   line_appearance_id: "line_appearance_id_example" # String | lineAppearanceId
@@ -185,6 +186,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1]
  **sort_by** | **String**| Sort by | [optional] [default to name]
  **name** | **String**| Name | [optional] 
+ **user_selectable** | **String**| True for stations that the user can select otherwise false | [optional] 
  **web_rtc_user_id** | **String**| Filter for the webRtc station of the webRtcUserId | [optional] 
  **id** | **String**| Comma separated list of stationIds | [optional] 
  **line_appearance_id** | **String**| lineAppearanceId | [optional] 

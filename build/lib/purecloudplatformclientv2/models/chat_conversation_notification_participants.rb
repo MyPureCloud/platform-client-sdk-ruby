@@ -122,7 +122,7 @@ module PureCloud
         :'held' => :'BOOLEAN',
         :'wrapup_required' => :'BOOLEAN',
         :'wrapup_prompt' => :'String',
-        :'user' => :'DependencyTrackingBuildNotificationNotificationUser',
+        :'user' => :'DocumentDataV2NotificationCreatedBy',
         :'queue' => :'ChatConversationNotificationUriReference',
         :'attributes' => :'Hash<String, String>',
         :'error_info' => :'ChatConversationNotificationErrorInfo',

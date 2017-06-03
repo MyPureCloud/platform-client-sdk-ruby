@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class ConversationAssociation
-    # External Contact ID; populated from url
+    # External Contact ID
     attr_accessor :external_contact_id
 
     # Conversation ID

@@ -62,7 +62,7 @@ module PureCloud
         :'date_created' => :'DateTime',
         :'date_modified' => :'DateTime',
         :'version' => :'Integer',
-        :'contact_list' => :'DependencyTrackingBuildNotificationNotificationUser',
+        :'contact_list' => :'DocumentDataV2NotificationCreatedBy',
         :'contact_list_columns' => :'Array<String>',
         :'clauses' => :'Array<ContactListFilterNotificationClauses>',
         :'filter_type' => :'String',

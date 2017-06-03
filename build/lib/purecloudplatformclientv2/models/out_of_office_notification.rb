@@ -26,16 +26,13 @@ module PureCloud
 
     attr_accessor :end_date
 
-    attr_accessor :modified_date
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'user' => :'user',
         :'active' => :'active',
         :'start_date' => :'startDate',
-        :'end_date' => :'endDate',
-        :'modified_date' => :'modifiedDate'
+        :'end_date' => :'endDate'
       }
     end
 
@@ -45,8 +42,7 @@ module PureCloud
         :'user' => :'DocumentDataV2NotificationWorkspace',
         :'active' => :'BOOLEAN',
         :'start_date' => :'DateTime',
-        :'end_date' => :'DateTime',
-        :'modified_date' => :'DateTime'
+        :'end_date' => :'DateTime'
       }
     end
 
@@ -74,10 +70,6 @@ module PureCloud
         self.end_date = attributes[:'endDate']
       end
 
-      if attributes.has_key?(:'modifiedDate')
-        self.modified_date = attributes[:'modifiedDate']
-      end
-
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -100,8 +92,7 @@ module PureCloud
           user == o.user &&
           active == o.active &&
           start_date == o.start_date &&
-          end_date == o.end_date &&
-          modified_date == o.modified_date
+          end_date == o.end_date
     end
 
     # @see the `==` method
@@ -113,7 +104,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user, active, start_date, end_date, modified_date].hash
+      [user, active, start_date, end_date].hash
     end
 
     # build the object from hash

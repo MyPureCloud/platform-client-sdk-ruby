@@ -60,7 +60,7 @@ module PureCloud
         :'name' => :'String',
         :'source' => :'String',
         :'primary' => :'BOOLEAN',
-        :'presence_definition' => :'OrganizationPresence',
+        :'presence_definition' => :'PresenceDefinition',
         :'message' => :'String',
         :'modified_date' => :'DateTime',
         :'self_uri' => :'String'

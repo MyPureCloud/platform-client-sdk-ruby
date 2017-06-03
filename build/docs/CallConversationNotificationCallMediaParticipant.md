@@ -21,7 +21,7 @@ title: CallConversationNotificationCallMediaParticipant
 | **held** | **BOOLEAN** |  | [optional] |
 | **wrapup_required** | **BOOLEAN** |  | [optional] |
 | **wrapup_prompt** | **String** |  | [optional] |
-| **user** | [**DependencyTrackingBuildNotificationNotificationUser**](DependencyTrackingBuildNotificationNotificationUser.html) |  | [optional] |
+| **user** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
 | **queue** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **attributes** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **error_info** | [**CallConversationNotificationErrorInfo**](CallConversationNotificationErrorInfo.html) |  | [optional] |

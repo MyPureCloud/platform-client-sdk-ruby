@@ -44,6 +44,9 @@ module PureCloud
 
     attr_accessor :default_site_id
 
+    # Email address where support tickets are sent to.
+    attr_accessor :support_uri
+
     attr_accessor :voicemail_enabled
 
     # The URI for this object
@@ -65,6 +68,7 @@ module PureCloud
         :'version' => :'version',
         :'state' => :'state',
         :'default_site_id' => :'defaultSiteId',
+        :'support_uri' => :'supportURI',
         :'voicemail_enabled' => :'voicemailEnabled',
         :'self_uri' => :'selfUri',
         :'features' => :'features'
@@ -84,6 +88,7 @@ module PureCloud
         :'version' => :'Integer',
         :'state' => :'String',
         :'default_site_id' => :'String',
+        :'support_uri' => :'String',
         :'voicemail_enabled' => :'BOOLEAN',
         :'self_uri' => :'String',
         :'features' => :'Hash<String, BOOLEAN>'
@@ -136,6 +141,10 @@ module PureCloud
 
       if attributes.has_key?(:'defaultSiteId')
         self.default_site_id = attributes[:'defaultSiteId']
+      end
+
+      if attributes.has_key?(:'supportURI')
+        self.support_uri = attributes[:'supportURI']
       end
 
       if attributes.has_key?(:'voicemailEnabled')
@@ -199,6 +208,7 @@ module PureCloud
           version == o.version &&
           state == o.state &&
           default_site_id == o.default_site_id &&
+          support_uri == o.support_uri &&
           voicemail_enabled == o.voicemail_enabled &&
           self_uri == o.self_uri &&
           features == o.features
@@ -213,7 +223,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, default_language, default_country_code, third_party_org_name, third_party_uri, domain, version, state, default_site_id, voicemail_enabled, self_uri, features].hash
+      [id, name, default_language, default_country_code, third_party_org_name, third_party_uri, domain, version, state, default_site_id, support_uri, voicemail_enabled, self_uri, features].hash
     end
 
     # build the object from hash

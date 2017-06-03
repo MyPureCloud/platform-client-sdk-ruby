@@ -144,6 +144,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :sort_by Sort by (default to name)
     # @option opts [String] :name Name
+    # @option opts [String] :user_selectable True for stations that the user can select otherwise false
     # @option opts [String] :web_rtc_user_id Filter for the webRtc station of the webRtcUserId
     # @option opts [String] :id Comma separated list of stationIds
     # @option opts [String] :line_appearance_id lineAppearanceId
@@ -160,6 +161,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :name Name
+    # @option opts [String] :user_selectable True for stations that the user can select otherwise false
     # @option opts [String] :web_rtc_user_id Filter for the webRtc station of the webRtcUserId
     # @option opts [String] :id Comma separated list of stationIds
     # @option opts [String] :line_appearance_id lineAppearanceId
@@ -177,6 +179,7 @@ module PureCloud
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'userSelectable'] = opts[:'user_selectable'] if opts[:'user_selectable']
       query_params[:'webRtcUserId'] = opts[:'web_rtc_user_id'] if opts[:'web_rtc_user_id']
       query_params[:'id'] = opts[:'id'] if opts[:'id']
       query_params[:'lineAppearanceId'] = opts[:'line_appearance_id'] if opts[:'line_appearance_id']

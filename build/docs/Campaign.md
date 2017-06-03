@@ -35,6 +35,7 @@ title: Campaign
 | **no_answer_timeout** | **Integer** | for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds | [optional] |
 | **call_analysis_language** | **String** | The language the edge will use to analyse the call | [optional] |
 | **priority** | **Integer** | The priority of this campaign relative to other campaigns | [optional] |
+| **contact_list_filters** | [**Array&lt;UriReference&gt;**](UriReference.html) | Filter defining a subset of contacts from the contact list to be dialed | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

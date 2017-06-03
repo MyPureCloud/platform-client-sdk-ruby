@@ -33,7 +33,7 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'campaigns' => :'Array<DependencyTrackingBuildNotificationNotificationUser>',
+        :'campaigns' => :'Array<DocumentDataV2NotificationCreatedBy>',
         :'sequences' => :'Array<CampaignRuleNotificationUriReference>'
       }
     end

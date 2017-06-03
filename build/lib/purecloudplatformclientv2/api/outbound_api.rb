@@ -538,6 +538,62 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete Contact List Filter
+    # 
+    # @param contact_list_filter_id Contact List Filter ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_outbound_contactlistfilter(contact_list_filter_id, opts = {})
+      delete_outbound_contactlistfilter_with_http_info(contact_list_filter_id, opts)
+      return nil
+    end
+
+    # Delete Contact List Filter
+    # 
+    # @param contact_list_filter_id Contact List Filter ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_outbound_contactlistfilter_with_http_info(contact_list_filter_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_contactlistfilter ..."
+      end
+      # verify the required parameter 'contact_list_filter_id' is set
+      fail ArgumentError, "Missing the required parameter 'contact_list_filter_id' when calling OutboundApi.delete_outbound_contactlistfilter" if contact_list_filter_id.nil?
+      # resource path
+      local_var_path = "/api/v2/outbound/contactlistfilters/{contactListFilterId}".sub('{format}','json').sub('{' + 'contactListFilterId' + '}', contact_list_filter_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+            auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_contactlistfilter\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete dialer DNC list
     # 
     # @param dnc_list_id DncList ID
@@ -1968,6 +2024,143 @@ module PureCloud
         :return_type => 'ImportStatus')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#get_outbound_contactlist_importstatus\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get Contact list filter
+    # 
+    # @param contact_list_filter_id Contact List Filter ID
+    # @param [Hash] opts the optional parameters
+    # @return [ContactListFilter]
+    def get_outbound_contactlistfilter(contact_list_filter_id, opts = {})
+      data, _status_code, _headers = get_outbound_contactlistfilter_with_http_info(contact_list_filter_id, opts)
+      return data
+    end
+
+    # Get Contact list filter
+    # 
+    # @param contact_list_filter_id Contact List Filter ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ContactListFilter, Fixnum, Hash)>] ContactListFilter data, response status code and response headers
+    def get_outbound_contactlistfilter_with_http_info(contact_list_filter_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_contactlistfilter ..."
+      end
+      # verify the required parameter 'contact_list_filter_id' is set
+      fail ArgumentError, "Missing the required parameter 'contact_list_filter_id' when calling OutboundApi.get_outbound_contactlistfilter" if contact_list_filter_id.nil?
+      # resource path
+      local_var_path = "/api/v2/outbound/contactlistfilters/{contactListFilterId}".sub('{format}','json').sub('{' + 'contactListFilterId' + '}', contact_list_filter_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+            auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ContactListFilter')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_contactlistfilter\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Query Contact list filters
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [String] :filter_type Filter type (default to Prefix)
+    # @option opts [String] :name Name
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order (default to a)
+    # @option opts [String] :contact_list_id Contact List ID
+    # @return [ContactListFilterEntityListing]
+    def get_outbound_contactlistfilters(opts = {})
+      data, _status_code, _headers = get_outbound_contactlistfilters_with_http_info(opts)
+      return data
+    end
+
+    # Query Contact list filters
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @option opts [String] :filter_type Filter type
+    # @option opts [String] :name Name
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order
+    # @option opts [String] :contact_list_id Contact List ID
+    # @return [Array<(ContactListFilterEntityListing, Fixnum, Hash)>] ContactListFilterEntityListing data, response status code and response headers
+    def get_outbound_contactlistfilters_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_contactlistfilters ..."
+      end
+      if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
+        fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
+      end
+      if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
+      end
+      # resource path
+      local_var_path = "/api/v2/outbound/contactlistfilters".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'contactListId'] = opts[:'contact_list_id'] if opts[:'contact_list_id']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+            auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ContactListFilterEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_contactlistfilters\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3595,6 +3788,120 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Create Contact List Filter
+    # 
+    # @param body ContactListFilter
+    # @param [Hash] opts the optional parameters
+    # @return [ContactListFilter]
+    def post_outbound_contactlistfilters(body, opts = {})
+      data, _status_code, _headers = post_outbound_contactlistfilters_with_http_info(body, opts)
+      return data
+    end
+
+    # Create Contact List Filter
+    # 
+    # @param body ContactListFilter
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ContactListFilter, Fixnum, Hash)>] ContactListFilter data, response status code and response headers
+    def post_outbound_contactlistfilters_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_contactlistfilters ..."
+      end
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_contactlistfilters" if body.nil?
+      # resource path
+      local_var_path = "/api/v2/outbound/contactlistfilters".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ContactListFilter')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#post_outbound_contactlistfilters\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a preview of the output of a contact list filter
+    # 
+    # @param body ContactListFilter
+    # @param [Hash] opts the optional parameters
+    # @return [FilterPreviewResponse]
+    def post_outbound_contactlistfilters_preview(body, opts = {})
+      data, _status_code, _headers = post_outbound_contactlistfilters_preview_with_http_info(body, opts)
+      return data
+    end
+
+    # Get a preview of the output of a contact list filter
+    # 
+    # @param body ContactListFilter
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(FilterPreviewResponse, Fixnum, Hash)>] FilterPreviewResponse data, response status code and response headers
+    def post_outbound_contactlistfilters_preview_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_contactlistfilters_preview ..."
+      end
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_contactlistfilters_preview" if body.nil?
+      # resource path
+      local_var_path = "/api/v2/outbound/contactlistfilters/preview".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FilterPreviewResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#post_outbound_contactlistfilters_preview\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create a contact List.
     # 
     # @param body ContactList
@@ -4488,6 +4795,67 @@ module PureCloud
         :return_type => 'DialerContact')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#put_outbound_contactlist_contact\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update Contact List Filter
+    # 
+    # @param contact_list_filter_id Contact List Filter ID
+    # @param body ContactListFilter
+    # @param [Hash] opts the optional parameters
+    # @return [ContactListFilter]
+    def put_outbound_contactlistfilter(contact_list_filter_id, body, opts = {})
+      data, _status_code, _headers = put_outbound_contactlistfilter_with_http_info(contact_list_filter_id, body, opts)
+      return data
+    end
+
+    # Update Contact List Filter
+    # 
+    # @param contact_list_filter_id Contact List Filter ID
+    # @param body ContactListFilter
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ContactListFilter, Fixnum, Hash)>] ContactListFilter data, response status code and response headers
+    def put_outbound_contactlistfilter_with_http_info(contact_list_filter_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_contactlistfilter ..."
+      end
+      # verify the required parameter 'contact_list_filter_id' is set
+      fail ArgumentError, "Missing the required parameter 'contact_list_filter_id' when calling OutboundApi.put_outbound_contactlistfilter" if contact_list_filter_id.nil?
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_contactlistfilter" if body.nil?
+      # resource path
+      local_var_path = "/api/v2/outbound/contactlistfilters/{contactListFilterId}".sub('{format}','json').sub('{' + 'contactListFilterId' + '}', contact_list_filter_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ContactListFilter')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#put_outbound_contactlistfilter\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
