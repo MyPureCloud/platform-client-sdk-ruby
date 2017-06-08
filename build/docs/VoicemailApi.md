@@ -75,7 +75,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message_id** | **String**| Message ID | 
+ **message_id** | **String**| Message ID |  |
 {: class="table table-striped"}
 
 
@@ -186,7 +186,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **String**| groupId | 
+ **group_id** | **String**| groupId |  |
 {: class="table table-striped"}
 
 
@@ -249,9 +249,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **String**| Group ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **group_id** | **String**| Group ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -310,7 +310,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **String**| Group ID | 
+ **group_id** | **String**| Group ID |  |
 {: class="table table-striped"}
 
 
@@ -477,8 +477,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -593,8 +593,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message_id** | **String**| Message ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| If the caller is a known user, which fields, if any, to expand | [optional] 
+ **message_id** | **String**| Message ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| If the caller is a known user, which fields, if any, to expand | [optional] <br />**Values**: callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
 {: class="table table-striped"}
 
 
@@ -656,8 +656,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message_id** | **String**| Message ID | 
- **format_id** | **String**| The desired media format. | [optional] [default to WEBM]
+ **message_id** | **String**| Message ID |  |
+ **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE |
 {: class="table table-striped"}
 
 
@@ -718,8 +718,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ids** | **String**| An optional comma separated list of VoicemailMessage ids | [optional] 
- **expand** | [**Array&lt;String&gt;**](String.html)| If the caller is a known user, which fields, if any, to expand | [optional] 
+ **ids** | **String**| An optional comma separated list of VoicemailMessage ids | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| If the caller is a known user, which fields, if any, to expand | [optional] <br />**Values**: callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
 {: class="table table-striped"}
 
 
@@ -834,8 +834,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q64** | **String**| q64 | 
- **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional] 
+ **q64** | **String**| q64 |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 
@@ -894,7 +894,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -955,8 +955,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **String**| Group ID | 
- **body** | [**VoicemailGroupPolicy**](VoicemailGroupPolicy.html)| The group&#39;s voicemail policy | 
+ **group_id** | **String**| Group ID |  |
+ **body** | [**VoicemailGroupPolicy**](VoicemailGroupPolicy.html)| The group&#39;s voicemail policy |  |
 {: class="table table-striped"}
 
 
@@ -1015,7 +1015,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user&#39;s voicemail policy | 
+ **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user&#39;s voicemail policy |  |
 {: class="table table-striped"}
 
 
@@ -1076,8 +1076,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user&#39;s voicemail policy | 
+ **user_id** | **String**| User ID |  |
+ **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user&#39;s voicemail policy |  |
 {: class="table table-striped"}
 
 
@@ -1137,7 +1137,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CopyVoicemailMessage**](CopyVoicemailMessage.html)|  | [optional] 
+ **body** | [**CopyVoicemailMessage**](CopyVoicemailMessage.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1196,7 +1196,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**VoicemailSearchRequest**](VoicemailSearchRequest.html)| Search request options | 
+ **body** | [**VoicemailSearchRequest**](VoicemailSearchRequest.html)| Search request options |  |
 {: class="table table-striped"}
 
 
@@ -1257,8 +1257,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message_id** | **String**| Message ID | 
- **body** | [**VoicemailMessage**](VoicemailMessage.html)| VoicemailMessage | 
+ **message_id** | **String**| Message ID |  |
+ **body** | [**VoicemailMessage**](VoicemailMessage.html)| VoicemailMessage |  |
 {: class="table table-striped"}
 
 
@@ -1317,7 +1317,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html)| Policy | 
+ **body** | [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html)| Policy |  |
 {: class="table table-striped"}
 
 

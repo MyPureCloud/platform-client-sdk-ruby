@@ -33,20 +33,30 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'target' => :'target',
+        
         :'name' => :'name',
+        
         :'function' => :'function',
+        
         :'range' => :'range'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'target' => :'String',
+        
         :'name' => :'String',
+        
         :'function' => :'String',
+        
         :'range' => :'AggregationRange'
+        
       }
     end
 
@@ -58,52 +68,108 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'target')
+        
+        
         self.target = attributes[:'target']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'function')
+        
+        
         self.function = attributes[:'function']
+        
+      
       end
 
+      
       if attributes.has_key?(:'range')
+        
+        
         self.range = attributes[:'range']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @target.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @function.nil?
         return false
       end
 
+      
+      
       allowed_values = ["rangeBound"]
       if @function && !allowed_values.include?(@function)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] function Object to be assigned
     def function=(function)
@@ -114,6 +180,14 @@ module PureCloud
       @function = function
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

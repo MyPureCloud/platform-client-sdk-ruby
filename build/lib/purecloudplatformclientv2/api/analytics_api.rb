@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.delete_analytics_reporting_schedule ..."
       end
+      
+      
       # verify the required parameter 'schedule_id' is set
       fail ArgumentError, "Missing the required parameter 'schedule_id' when calling AnalyticsApi.delete_analytics_reporting_schedule" if schedule_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/schedules/{scheduleId}".sub('{format}','json').sub('{' + 'scheduleId' + '}', schedule_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -99,8 +107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_conversation_details ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling AnalyticsApi.get_analytics_conversation_details" if conversation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/conversations/{conversationId}/details".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -123,7 +138,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -160,6 +176,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_reporting_metadata ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/metadata".sub('{format}','json')
 
@@ -185,7 +220,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -220,8 +256,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_reporting_report_id_metadata ..."
       end
+      
+      
       # verify the required parameter 'report_id' is set
       fail ArgumentError, "Missing the required parameter 'report_id' when calling AnalyticsApi.get_analytics_reporting_report_id_metadata" if report_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/{reportId}/metadata".sub('{format}','json').sub('{' + 'reportId' + '}', report_id.to_s)
 
@@ -245,7 +294,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -276,6 +326,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_reporting_reportformats ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/reportformats".sub('{format}','json')
 
@@ -298,7 +349,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -331,8 +383,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_reporting_schedule ..."
       end
+      
+      
       # verify the required parameter 'schedule_id' is set
       fail ArgumentError, "Missing the required parameter 'schedule_id' when calling AnalyticsApi.get_analytics_reporting_schedule" if schedule_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/schedules/{scheduleId}".sub('{format}','json').sub('{' + 'scheduleId' + '}', schedule_id.to_s)
 
@@ -355,7 +414,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -392,8 +452,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_reporting_schedule_history ..."
       end
+      
+      
       # verify the required parameter 'schedule_id' is set
       fail ArgumentError, "Missing the required parameter 'schedule_id' when calling AnalyticsApi.get_analytics_reporting_schedule_history" if schedule_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/schedules/{scheduleId}/history".sub('{format}','json').sub('{' + 'scheduleId' + '}', schedule_id.to_s)
 
@@ -418,7 +497,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -451,8 +531,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_reporting_schedule_history_latest ..."
       end
+      
+      
       # verify the required parameter 'schedule_id' is set
       fail ArgumentError, "Missing the required parameter 'schedule_id' when calling AnalyticsApi.get_analytics_reporting_schedule_history_latest" if schedule_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/latest".sub('{format}','json').sub('{' + 'scheduleId' + '}', schedule_id.to_s)
 
@@ -475,7 +562,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -510,10 +598,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_reporting_schedule_history_run_id ..."
       end
+      
+      
       # verify the required parameter 'run_id' is set
       fail ArgumentError, "Missing the required parameter 'run_id' when calling AnalyticsApi.get_analytics_reporting_schedule_history_run_id" if run_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'schedule_id' is set
       fail ArgumentError, "Missing the required parameter 'schedule_id' when calling AnalyticsApi.get_analytics_reporting_schedule_history_run_id" if schedule_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}".sub('{format}','json').sub('{' + 'runId' + '}', run_id.to_s).sub('{' + 'scheduleId' + '}', schedule_id.to_s)
 
@@ -536,7 +637,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -571,6 +673,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_reporting_schedules ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/schedules".sub('{format}','json')
 
@@ -595,7 +710,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -626,6 +742,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_reporting_timeperiods ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/timeperiods".sub('{format}','json')
 
@@ -648,7 +765,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -683,10 +801,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_conversation_details_properties ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling AnalyticsApi.post_analytics_conversation_details_properties" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AnalyticsApi.post_analytics_conversation_details_properties" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/conversations/{conversationId}/details/properties".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -709,6 +840,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -742,8 +874,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_conversations_aggregates_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AnalyticsApi.post_analytics_conversations_aggregates_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/conversations/aggregates/query".sub('{format}','json')
 
@@ -766,6 +905,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -799,8 +939,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_conversations_details_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AnalyticsApi.post_analytics_conversations_details_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/conversations/details/query".sub('{format}','json')
 
@@ -823,6 +970,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -856,8 +1004,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_evaluations_aggregates_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AnalyticsApi.post_analytics_evaluations_aggregates_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/evaluations/aggregates/query".sub('{format}','json')
 
@@ -880,6 +1035,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -913,8 +1069,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_queues_observations_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AnalyticsApi.post_analytics_queues_observations_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/queues/observations/query".sub('{format}','json')
 
@@ -937,6 +1100,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -970,8 +1134,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_reporting_schedule_runreport ..."
       end
+      
+      
       # verify the required parameter 'schedule_id' is set
       fail ArgumentError, "Missing the required parameter 'schedule_id' when calling AnalyticsApi.post_analytics_reporting_schedule_runreport" if schedule_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/schedules/{scheduleId}/runreport".sub('{format}','json').sub('{' + 'scheduleId' + '}', schedule_id.to_s)
 
@@ -994,7 +1165,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1027,8 +1199,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_reporting_schedules ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AnalyticsApi.post_analytics_reporting_schedules" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/schedules".sub('{format}','json')
 
@@ -1051,6 +1230,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1084,8 +1264,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_users_aggregates_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AnalyticsApi.post_analytics_users_aggregates_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/users/aggregates/query".sub('{format}','json')
 
@@ -1108,6 +1295,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1141,8 +1329,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_users_details_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AnalyticsApi.post_analytics_users_details_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/users/details/query".sub('{format}','json')
 
@@ -1165,6 +1360,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1198,8 +1394,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_users_observations_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AnalyticsApi.post_analytics_users_observations_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/users/observations/query".sub('{format}','json')
 
@@ -1222,6 +1425,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1257,10 +1461,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.put_analytics_reporting_schedule ..."
       end
+      
+      
       # verify the required parameter 'schedule_id' is set
       fail ArgumentError, "Missing the required parameter 'schedule_id' when calling AnalyticsApi.put_analytics_reporting_schedule" if schedule_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AnalyticsApi.put_analytics_reporting_schedule" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/schedules/{scheduleId}".sub('{format}','json').sub('{' + 'scheduleId' + '}', schedule_id.to_s)
 
@@ -1283,6 +1500,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

@@ -56,38 +56,66 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'phrase' => :'phrase',
+        
         :'confidence' => :'confidence',
+        
         :'agent_score_modifier' => :'agentScoreModifier',
+        
         :'customer_score_modifier' => :'customerScoreModifier',
+        
         :'alternate_spellings' => :'alternateSpellings',
+        
         :'pronunciations' => :'pronunciations',
+        
         :'anti_words' => :'antiWords',
+        
         :'anti_pronunciations' => :'antiPronunciations',
+        
         :'spotability_index' => :'spotabilityIndex',
+        
         :'margin_of_error' => :'marginOfError',
+        
         :'pronunciation' => :'pronunciation'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'phrase' => :'String',
+        
         :'confidence' => :'Integer',
+        
         :'agent_score_modifier' => :'Integer',
+        
         :'customer_score_modifier' => :'Integer',
+        
         :'alternate_spellings' => :'Array<String>',
+        
         :'pronunciations' => :'Array<String>',
+        
         :'anti_words' => :'Array<String>',
+        
         :'anti_pronunciations' => :'Array<String>',
+        
         :'spotability_index' => :'Float',
+        
         :'margin_of_error' => :'Float',
+        
         :'pronunciation' => :'String'
+        
       }
     end
 
@@ -99,96 +127,287 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'phrase')
+        
+        
         self.phrase = attributes[:'phrase']
+        
+      
       end
 
+      
       if attributes.has_key?(:'confidence')
+        
+        
         self.confidence = attributes[:'confidence']
+        
+      
       end
 
+      
       if attributes.has_key?(:'agentScoreModifier')
+        
+        
         self.agent_score_modifier = attributes[:'agentScoreModifier']
+        
+      
       end
 
+      
       if attributes.has_key?(:'customerScoreModifier')
+        
+        
         self.customer_score_modifier = attributes[:'customerScoreModifier']
+        
+      
       end
 
+      
       if attributes.has_key?(:'alternateSpellings')
+        
         if (value = attributes[:'alternateSpellings']).is_a?(Array)
           self.alternate_spellings = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'pronunciations')
+        
         if (value = attributes[:'pronunciations']).is_a?(Array)
           self.pronunciations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'antiWords')
+        
         if (value = attributes[:'antiWords']).is_a?(Array)
           self.anti_words = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'antiPronunciations')
+        
         if (value = attributes[:'antiPronunciations']).is_a?(Array)
           self.anti_pronunciations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'spotabilityIndex')
+        
+        
         self.spotability_index = attributes[:'spotabilityIndex']
+        
+      
       end
 
+      
       if attributes.has_key?(:'marginOfError')
+        
+        
         self.margin_of_error = attributes[:'marginOfError']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pronunciation')
+        
+        
         self.pronunciation = attributes[:'pronunciation']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @phrase.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @confidence.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @agent_score_modifier.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @customer_score_modifier.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

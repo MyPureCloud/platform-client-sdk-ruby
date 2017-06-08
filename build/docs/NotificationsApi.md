@@ -60,7 +60,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **channel_id** | **String**| Channel ID | 
+ **channel_id** | **String**| Channel ID |  |
 {: class="table table-striped"}
 
 
@@ -120,7 +120,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: description, requiresPermissions, schema |
 {: class="table table-striped"}
 
 
@@ -179,7 +179,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **channel_id** | **String**| Channel ID | 
+ **channel_id** | **String**| Channel ID |  |
 {: class="table table-striped"}
 
 
@@ -293,8 +293,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **channel_id** | **String**| Channel ID | 
- **body** | [**Array&lt;ChannelTopic&gt;**](ChannelTopic.html)| Body | 
+ **channel_id** | **String**| Channel ID |  |
+ **body** | [**Array&lt;ChannelTopic&gt;**](ChannelTopic.html)| Body |  |
 {: class="table table-striped"}
 
 
@@ -408,8 +408,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **channel_id** | **String**| Channel ID | 
- **body** | [**Array&lt;ChannelTopic&gt;**](ChannelTopic.html)| Body | 
+ **channel_id** | **String**| Channel ID |  |
+ **body** | [**Array&lt;ChannelTopic&gt;**](ChannelTopic.html)| Body |  |
 {: class="table table-striped"}
 
 

@@ -37,28 +37,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'type' => :'type',
+        
         :'ip_address' => :'ipAddress',
+        
         :'name' => :'name',
+        
         :'mac_address' => :'macAddress',
+        
         :'if_name' => :'ifName',
+        
         :'endpoints' => :'endpoints',
+        
         :'line_types' => :'lineTypes',
+        
         :'address_family_id' => :'addressFamilyId'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'type' => :'String',
+        
         :'ip_address' => :'String',
+        
         :'name' => :'String',
+        
         :'mac_address' => :'String',
+        
         :'if_name' => :'String',
+        
         :'endpoints' => :'Array<UriReference>',
+        
         :'line_types' => :'Array<String>',
+        
         :'address_family_id' => :'String'
+        
       }
     end
 
@@ -70,56 +88,173 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'type')
+        
+        
         self.type = attributes[:'type']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ipAddress')
+        
+        
         self.ip_address = attributes[:'ipAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'macAddress')
+        
+        
         self.mac_address = attributes[:'macAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ifName')
+        
+        
         self.if_name = attributes[:'ifName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endpoints')
+        
         if (value = attributes[:'endpoints']).is_a?(Array)
           self.endpoints = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'lineTypes')
+        
         if (value = attributes[:'lineTypes']).is_a?(Array)
           self.line_types = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'addressFamilyId')
+        
+        
         self.address_family_id = attributes[:'addressFamilyId']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.delete_user ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.delete_user" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -100,8 +108,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.delete_user_roles ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.delete_user_roles" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/roles".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -124,7 +139,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -158,10 +174,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.delete_user_routingskill ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.delete_user_routingskill" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'skill_id' is set
       fail ArgumentError, "Missing the required parameter 'skill_id' when calling UsersApi.delete_user_routingskill" if skill_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/routingskills/{skillId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'skillId' + '}', skill_id.to_s)
 
@@ -184,7 +213,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -216,8 +246,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.delete_user_station_associatedstation ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.delete_user_station_associatedstation" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/station/associatedstation".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -240,7 +277,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -272,8 +310,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.delete_user_station_defaultstation ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.delete_user_station_defaultstation" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/station/defaultstation".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -296,7 +341,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -328,12 +374,20 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_fieldconfig ..."
       end
+      
+      
       # verify the required parameter 'type' is set
       fail ArgumentError, "Missing the required parameter 'type' when calling UsersApi.get_fieldconfig" if type.nil?
+      
       # verify enum value
       unless ['person', 'group', 'org', 'externalContact'].include?(type)
         fail ArgumentError, "invalid value for 'type', must be one of person, group, org, externalContact"
       end
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/fieldconfig".sub('{format}','json')
 
@@ -357,7 +411,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -376,6 +431,7 @@ module PureCloud
     # @param user_id User ID
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @option opts [String] :state Search for a user with this state (default to active)
     # @return [User]
     def get_user(user_id, opts = {})
       data, _status_code, _headers = get_user_with_http_info(user_id, opts)
@@ -387,19 +443,44 @@ module PureCloud
     # @param user_id User ID
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @option opts [String] :state Search for a user with this state
     # @return [Array<(User, Fixnum, Hash)>] User data, response status code and response headers
     def get_user_with_http_info(user_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'state'] && !['active', 'deleted'].include?(opts[:'state'])
+        fail ArgumentError, 'invalid value for "state", must be one of active, deleted'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
       # query parameters
       query_params = {}
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'state'] = opts[:'state'] if opts[:'state']
 
       # header parameters
       header_params = {}
@@ -417,7 +498,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -452,8 +534,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_adjacents ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_adjacents" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/adjacents".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -477,7 +572,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -510,8 +606,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_callforwarding ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_callforwarding" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/callforwarding".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -534,7 +637,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -569,8 +673,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_directreports ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_directreports" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/directreports".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -594,7 +711,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -635,8 +753,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_favorites ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_favorites" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/favorites".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -663,7 +812,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -698,10 +848,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_geolocation ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_geolocation" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'client_id' is set
       fail ArgumentError, "Missing the required parameter 'client_id' when calling UsersApi.get_user_geolocation" if client_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/geolocations/{clientId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'clientId' + '}', client_id.to_s)
 
@@ -724,7 +887,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -757,8 +921,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_outofoffice ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_outofoffice" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/outofoffice".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -781,7 +952,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -814,8 +986,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_profileskills ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_profileskills" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/profileskills".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -838,7 +1017,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -877,8 +1057,33 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_queues ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_queues" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/queues".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -904,7 +1109,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -937,8 +1143,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_roles ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_roles" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/roles".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -961,7 +1174,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1000,11 +1214,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_routingskills ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_routingskills" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/routingskills".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1030,7 +1270,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1063,8 +1304,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_routingstatus ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_routingstatus" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/routingstatus".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1087,7 +1335,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1120,8 +1369,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_station ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_station" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/station".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1144,7 +1400,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1179,8 +1436,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_user_superiors ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_superiors" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/superiors".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1204,7 +1474,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1247,12 +1518,51 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_users ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'state'] && !['active', 'deleted'].include?(opts[:'state'])
         fail ArgumentError, 'invalid value for "state", must be one of active, deleted'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users".sub('{format}','json')
 
@@ -1281,7 +1591,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1314,6 +1625,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_users_me ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/me".sub('{format}','json')
 
@@ -1337,7 +1655,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1372,8 +1691,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_users_search ..."
       end
+      
+      
       # verify the required parameter 'q64' is set
       fail ArgumentError, "Missing the required parameter 'q64' when calling UsersApi.get_users_search" if q64.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/search".sub('{format}','json')
 
@@ -1398,7 +1730,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1433,10 +1766,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.patch_user ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.patch_user" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.patch_user" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1459,6 +1805,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -1494,10 +1841,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.patch_user_callforwarding ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.patch_user_callforwarding" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.patch_user_callforwarding" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/callforwarding".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1520,6 +1880,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -1557,12 +1918,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.patch_user_geolocation ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.patch_user_geolocation" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'client_id' is set
       fail ArgumentError, "Missing the required parameter 'client_id' when calling UsersApi.patch_user_geolocation" if client_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.patch_user_geolocation" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/geolocations/{clientId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'clientId' + '}', client_id.to_s)
 
@@ -1585,6 +1965,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -1622,12 +2003,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.patch_user_queue ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling UsersApi.patch_user_queue" if queue_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.patch_user_queue" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.patch_user_queue" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/queues/{queueId}".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s).sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1650,6 +2050,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -1685,10 +2086,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.patch_user_queues ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.patch_user_queues" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.patch_user_queues" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/queues".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1711,6 +2125,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -1744,8 +2159,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.post_analytics_users_aggregates_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.post_analytics_users_aggregates_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/users/aggregates/query".sub('{format}','json')
 
@@ -1768,6 +2190,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1801,8 +2224,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.post_analytics_users_details_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.post_analytics_users_details_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/users/details/query".sub('{format}','json')
 
@@ -1825,6 +2255,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1858,8 +2289,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.post_analytics_users_observations_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.post_analytics_users_observations_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/users/observations/query".sub('{format}','json')
 
@@ -1882,6 +2320,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1917,10 +2356,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.post_user_routingskills ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.post_user_routingskills" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.post_user_routingskills" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/routingskills".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1943,6 +2395,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1976,8 +2429,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.post_users ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.post_users" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users".sub('{format}','json')
 
@@ -2000,6 +2460,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2033,8 +2494,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.post_users_search ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.post_users_search" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/search".sub('{format}','json')
 
@@ -2057,6 +2525,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2092,10 +2561,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.put_user_callforwarding ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.put_user_callforwarding" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.put_user_callforwarding" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/callforwarding".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -2118,6 +2600,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2153,10 +2636,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.put_user_outofoffice ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.put_user_outofoffice" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.put_user_outofoffice" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/outofoffice".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -2179,6 +2675,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2214,8 +2711,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.put_user_profileskills ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.put_user_profileskills" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/profileskills".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -2238,6 +2748,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2273,10 +2784,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.put_user_roles ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.put_user_roles" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.put_user_roles" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/roles".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -2299,6 +2823,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2336,12 +2861,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.put_user_routingskill ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.put_user_routingskill" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'skill_id' is set
       fail ArgumentError, "Missing the required parameter 'skill_id' when calling UsersApi.put_user_routingskill" if skill_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.put_user_routingskill" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/routingskills/{skillId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'skillId' + '}', skill_id.to_s)
 
@@ -2364,6 +2908,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2399,10 +2944,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.put_user_routingstatus ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.put_user_routingstatus" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.put_user_routingstatus" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/routingstatus".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -2425,6 +2983,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2460,10 +3019,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.put_user_station_associatedstation_station_id ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.put_user_station_associatedstation_station_id" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'station_id' is set
       fail ArgumentError, "Missing the required parameter 'station_id' when calling UsersApi.put_user_station_associatedstation_station_id" if station_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/station/associatedstation/{stationId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'stationId' + '}', station_id.to_s)
 
@@ -2486,7 +3058,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2520,10 +3093,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.put_user_station_defaultstation_station_id ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.put_user_station_defaultstation_station_id" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'station_id' is set
       fail ArgumentError, "Missing the required parameter 'station_id' when calling UsersApi.put_user_station_defaultstation_station_id" if station_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/station/defaultstation/{stationId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'stationId' + '}', station_id.to_s)
 
@@ -2546,7 +3132,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,

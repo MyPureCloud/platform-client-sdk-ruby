@@ -25,16 +25,22 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'days' => :'days',
+        
         :'storage_medium' => :'storageMedium'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'days' => :'Integer',
+        
         :'storage_medium' => :'String'
+        
       }
     end
 
@@ -46,32 +52,62 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'days')
+        
+        
         self.days = attributes[:'days']
+        
+      
       end
 
+      
       if attributes.has_key?(:'storageMedium')
+        
+        
         self.storage_medium = attributes[:'storageMedium']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["CLOUDARCHIVE"]
       if @storage_medium && !allowed_values.include?(@storage_medium)
         return false
       end
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] storage_medium Object to be assigned
     def storage_medium=(storage_medium)
@@ -82,6 +118,9 @@ module PureCloud
       @storage_medium = storage_medium
     end
 
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

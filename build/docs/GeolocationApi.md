@@ -113,8 +113,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| user Id | 
- **client_id** | **String**| client Id | 
+ **user_id** | **String**| user Id |  |
+ **client_id** | **String**| client Id |  |
 {: class="table table-striped"}
 
 
@@ -173,7 +173,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**GeolocationSettings**](GeolocationSettings.html)| Geolocation settings | 
+ **body** | [**GeolocationSettings**](GeolocationSettings.html)| Geolocation settings |  |
 {: class="table table-striped"}
 
 
@@ -236,9 +236,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| user Id | 
- **client_id** | **String**| client Id | 
- **body** | [**Geolocation**](Geolocation.html)| Geolocation | 
+ **user_id** | **String**| user Id |  |
+ **client_id** | **String**| client Id |  |
+ **body** | [**Geolocation**](Geolocation.html)| Geolocation |  |
 {: class="table table-striped"}
 
 

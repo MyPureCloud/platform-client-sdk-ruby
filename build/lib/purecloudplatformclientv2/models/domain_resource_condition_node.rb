@@ -31,22 +31,34 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'variable_name' => :'variableName',
+        
         :'operator' => :'operator',
+        
         :'operands' => :'operands',
+        
         :'conjunction' => :'conjunction',
+        
         :'terms' => :'terms'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'variable_name' => :'String',
+        
         :'operator' => :'String',
+        
         :'operands' => :'Array<DomainResourceConditionValue>',
+        
         :'conjunction' => :'String',
+        
         :'terms' => :'Array<DomainResourceConditionNode>'
+        
       }
     end
 
@@ -58,52 +70,110 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'variableName')
+        
+        
         self.variable_name = attributes[:'variableName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'operator')
+        
+        
         self.operator = attributes[:'operator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'operands')
+        
         if (value = attributes[:'operands']).is_a?(Array)
           self.operands = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'conjunction')
+        
+        
         self.conjunction = attributes[:'conjunction']
+        
+      
       end
 
+      
       if attributes.has_key?(:'terms')
+        
         if (value = attributes[:'terms']).is_a?(Array)
           self.terms = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["EQ", "IN", "GE", "GT", "LE", "LT"]
       if @operator && !allowed_values.include?(@operator)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["AND", "OR"]
       if @conjunction && !allowed_values.include?(@conjunction)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] operator Object to be assigned
     def operator=(operator)
@@ -114,6 +184,15 @@ module PureCloud
       @operator = operator
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] conjunction Object to be assigned
     def conjunction=(conjunction)
@@ -124,6 +203,14 @@ module PureCloud
       @conjunction = conjunction
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

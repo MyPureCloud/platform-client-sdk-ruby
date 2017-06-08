@@ -65,56 +65,102 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'state' => :'state',
+        
         :'recording' => :'recording',
+        
         :'recording_state' => :'recordingState',
+        
         :'muted' => :'muted',
+        
         :'confined' => :'confined',
+        
         :'held' => :'held',
+        
         :'error_info' => :'errorInfo',
+        
         :'disconnect_type' => :'disconnectType',
+        
         :'start_hold_time' => :'startHoldTime',
+        
         :'direction' => :'direction',
+        
         :'document_id' => :'documentId',
+        
         :'_self' => :'self',
+        
         :'other' => :'other',
+        
         :'provider' => :'provider',
+        
         :'script_id' => :'scriptId',
+        
         :'peer_id' => :'peerId',
+        
         :'connected_time' => :'connectedTime',
+        
         :'disconnected_time' => :'disconnectedTime',
+        
         :'disconnect_reasons' => :'disconnectReasons',
+        
         :'fax_status' => :'faxStatus',
+        
         :'additional_properties' => :'additionalProperties'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'state' => :'String',
+        
         :'recording' => :'BOOLEAN',
+        
         :'recording_state' => :'String',
+        
         :'muted' => :'BOOLEAN',
+        
         :'confined' => :'BOOLEAN',
+        
         :'held' => :'BOOLEAN',
+        
         :'error_info' => :'ConversationNotificationErrorInfo',
+        
         :'disconnect_type' => :'String',
+        
         :'start_hold_time' => :'DateTime',
+        
         :'direction' => :'String',
+        
         :'document_id' => :'String',
+        
         :'_self' => :'ConversationNotificationSelf',
+        
         :'other' => :'ConversationNotificationAddress',
+        
         :'provider' => :'String',
+        
         :'script_id' => :'String',
+        
         :'peer_id' => :'String',
+        
         :'connected_time' => :'DateTime',
+        
         :'disconnected_time' => :'DateTime',
+        
         :'disconnect_reasons' => :'Array<ConversationNotificationDisconnectReasons>',
+        
         :'fax_status' => :'ConversationNotificationFaxStatus',
+        
         :'additional_properties' => :'Object'
+        
       }
     end
 
@@ -126,126 +172,339 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'recording')
+        
+        
         self.recording = attributes[:'recording']
+        
+      
       end
 
+      
       if attributes.has_key?(:'recordingState')
+        
+        
         self.recording_state = attributes[:'recordingState']
+        
+      
       end
 
+      
       if attributes.has_key?(:'muted')
+        
+        
         self.muted = attributes[:'muted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'confined')
+        
+        
         self.confined = attributes[:'confined']
+        
+      
       end
 
+      
       if attributes.has_key?(:'held')
+        
+        
         self.held = attributes[:'held']
+        
+      
       end
 
+      
       if attributes.has_key?(:'errorInfo')
+        
+        
         self.error_info = attributes[:'errorInfo']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectType')
+        
+        
         self.disconnect_type = attributes[:'disconnectType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startHoldTime')
+        
+        
         self.start_hold_time = attributes[:'startHoldTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'direction')
+        
+        
         self.direction = attributes[:'direction']
+        
+      
       end
 
+      
       if attributes.has_key?(:'documentId')
+        
+        
         self.document_id = attributes[:'documentId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'self')
+        
+        
         self._self = attributes[:'self']
+        
+      
       end
 
+      
       if attributes.has_key?(:'other')
+        
+        
         self.other = attributes[:'other']
+        
+      
       end
 
+      
       if attributes.has_key?(:'provider')
+        
+        
         self.provider = attributes[:'provider']
+        
+      
       end
 
+      
       if attributes.has_key?(:'scriptId')
+        
+        
         self.script_id = attributes[:'scriptId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'peerId')
+        
+        
         self.peer_id = attributes[:'peerId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'connectedTime')
+        
+        
         self.connected_time = attributes[:'connectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectedTime')
+        
+        
         self.disconnected_time = attributes[:'disconnectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectReasons')
+        
         if (value = attributes[:'disconnectReasons']).is_a?(Array)
           self.disconnect_reasons = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'faxStatus')
+        
+        
         self.fax_status = attributes[:'faxStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'additionalProperties')
+        
+        
         self.additional_properties = attributes[:'additionalProperties']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["ALERTING", "DIALING", "CONTACTING", "OFFERING", "CONNECTED", "DISCONNECTED", "TERMINATED", "UPLOADING", "CONVERTING", "TRANSMITTING", "NONE"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["NONE", "ACTIVE", "PAUSED"]
       if @recording_state && !allowed_values.include?(@recording_state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["ENDPOINT", "CLIENT", "SYSTEM", "TIMEOUT", "TRANSFER", "TRANSFER_CONFERENCE", "TRANSFER_CONSULT", "TRANSFER_FORWARD", "TRANSFER_NOANSWER", "TRANSFER_NOTAVAILABLE", "TRANSPORT_FAILURE", "ERROR", "PEER", "OTHER", "SPAM", "UNCALLABLE"]
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["OUTBOUND", "INBOUND"]
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -256,6 +515,15 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] recording_state Object to be assigned
     def recording_state=(recording_state)
@@ -266,6 +534,30 @@ module PureCloud
       @recording_state = recording_state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] disconnect_type Object to be assigned
     def disconnect_type=(disconnect_type)
@@ -276,6 +568,15 @@ module PureCloud
       @disconnect_type = disconnect_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] direction Object to be assigned
     def direction=(direction)
@@ -286,6 +587,64 @@ module PureCloud
       @direction = direction
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

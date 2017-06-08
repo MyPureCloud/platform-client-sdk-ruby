@@ -36,22 +36,34 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'prefix' => :'prefix',
+        
         :'nexthop' => :'nexthop',
+        
         :'persistent' => :'persistent',
+        
         :'metric' => :'metric',
+        
         :'family' => :'family'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'prefix' => :'String',
+        
         :'nexthop' => :'String',
+        
         :'persistent' => :'BOOLEAN',
+        
         :'metric' => :'Integer',
+        
         :'family' => :'Integer'
+        
       }
     end
 
@@ -63,44 +75,116 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'prefix')
+        
+        
         self.prefix = attributes[:'prefix']
+        
+      
       end
 
+      
       if attributes.has_key?(:'nexthop')
+        
+        
         self.nexthop = attributes[:'nexthop']
+        
+      
       end
 
+      
       if attributes.has_key?(:'persistent')
+        
+        
         self.persistent = attributes[:'persistent']
+        
+      
       end
 
+      
       if attributes.has_key?(:'metric')
+        
+        
         self.metric = attributes[:'metric']
+        
+      
       end
 
+      
       if attributes.has_key?(:'family')
+        
+        
         self.family = attributes[:'family']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["2", "23"]
       if @family && !allowed_values.include?(@family)
         return false
       end
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] family Object to be assigned
     def family=(family)
@@ -111,6 +195,9 @@ module PureCloud
       @family = family
     end
 
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

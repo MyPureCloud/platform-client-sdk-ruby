@@ -40,30 +40,50 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'change_number' => :'changeNumber',
+        
         :'name' => :'name',
+        
         :'read' => :'read',
+        
         :'add_tags' => :'addTags',
+        
         :'remove_tags' => :'removeTags',
+        
         :'add_tag_ids' => :'addTagIds',
+        
         :'remove_tag_ids' => :'removeTagIds',
+        
         :'update_attributes' => :'updateAttributes',
+        
         :'remove_attributes' => :'removeAttributes'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'change_number' => :'Integer',
+        
         :'name' => :'String',
+        
         :'read' => :'BOOLEAN',
+        
         :'add_tags' => :'Array<String>',
+        
         :'remove_tags' => :'Array<String>',
+        
         :'add_tag_ids' => :'Array<String>',
+        
         :'remove_tag_ids' => :'Array<String>',
+        
         :'update_attributes' => :'Array<DocumentAttribute>',
+        
         :'remove_attributes' => :'Array<String>'
+        
       }
     end
 
@@ -75,72 +95,204 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'changeNumber')
+        
+        
         self.change_number = attributes[:'changeNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'read')
+        
+        
         self.read = attributes[:'read']
+        
+      
       end
 
+      
       if attributes.has_key?(:'addTags')
+        
         if (value = attributes[:'addTags']).is_a?(Array)
           self.add_tags = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'removeTags')
+        
         if (value = attributes[:'removeTags']).is_a?(Array)
           self.remove_tags = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'addTagIds')
+        
         if (value = attributes[:'addTagIds']).is_a?(Array)
           self.add_tag_ids = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'removeTagIds')
+        
         if (value = attributes[:'removeTagIds']).is_a?(Array)
           self.remove_tag_ids = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'updateAttributes')
+        
         if (value = attributes[:'updateAttributes']).is_a?(Array)
           self.update_attributes = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'removeAttributes')
+        
         if (value = attributes[:'removeAttributes']).is_a?(Array)
           self.remove_attributes = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

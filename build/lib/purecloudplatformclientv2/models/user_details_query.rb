@@ -45,28 +45,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'interval' => :'interval',
+        
         :'user_filters' => :'userFilters',
+        
         :'presence_filters' => :'presenceFilters',
+        
         :'routing_status_filters' => :'routingStatusFilters',
+        
         :'presence_aggregations' => :'presenceAggregations',
+        
         :'routing_status_aggregations' => :'routingStatusAggregations',
+        
         :'paging' => :'paging',
+        
         :'order' => :'order'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'interval' => :'String',
+        
         :'user_filters' => :'Array<AnalyticsQueryFilter>',
+        
         :'presence_filters' => :'Array<AnalyticsQueryFilter>',
+        
         :'routing_status_filters' => :'Array<AnalyticsQueryFilter>',
+        
         :'presence_aggregations' => :'Array<AnalyticsQueryAggregation>',
+        
         :'routing_status_aggregations' => :'Array<AnalyticsQueryAggregation>',
+        
         :'paging' => :'PagingSpec',
+        
         :'order' => :'String'
+        
       }
     end
 
@@ -78,66 +96,180 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'interval')
+        
+        
         self.interval = attributes[:'interval']
+        
+      
       end
 
+      
       if attributes.has_key?(:'userFilters')
+        
         if (value = attributes[:'userFilters']).is_a?(Array)
           self.user_filters = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'presenceFilters')
+        
         if (value = attributes[:'presenceFilters']).is_a?(Array)
           self.presence_filters = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'routingStatusFilters')
+        
         if (value = attributes[:'routingStatusFilters']).is_a?(Array)
           self.routing_status_filters = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'presenceAggregations')
+        
         if (value = attributes[:'presenceAggregations']).is_a?(Array)
           self.presence_aggregations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'routingStatusAggregations')
+        
         if (value = attributes[:'routingStatusAggregations']).is_a?(Array)
           self.routing_status_aggregations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'paging')
+        
+        
         self.paging = attributes[:'paging']
+        
+      
       end
 
+      
       if attributes.has_key?(:'order')
+        
+        
         self.order = attributes[:'order']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["asc", "desc"]
       if @order && !allowed_values.include?(@order)
         return false
       end
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] order Object to be assigned
     def order=(order)
@@ -148,6 +280,9 @@ module PureCloud
       @order = order
     end
 
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

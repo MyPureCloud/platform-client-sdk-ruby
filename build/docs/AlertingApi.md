@@ -87,7 +87,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alert_id** | **String**| Alert ID | 
+ **alert_id** | **String**| Alert ID |  |
 {: class="table table-striped"}
 
 
@@ -145,7 +145,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
+ **rule_id** | **String**| Rule ID |  |
 {: class="table table-striped"}
 
 
@@ -203,7 +203,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alert_id** | **String**| Alert ID | 
+ **alert_id** | **String**| Alert ID |  |
 {: class="table table-striped"}
 
 
@@ -261,7 +261,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
+ **rule_id** | **String**| Rule ID |  |
 {: class="table table-striped"}
 
 
@@ -319,7 +319,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alert_id** | **String**| Alert ID | 
+ **alert_id** | **String**| Alert ID |  |
 {: class="table table-striped"}
 
 
@@ -377,7 +377,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
+ **rule_id** | **String**| Rule ID |  |
 {: class="table table-striped"}
 
 
@@ -435,7 +435,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alert_id** | **String**| Alert ID | 
+ **alert_id** | **String**| Alert ID |  |
 {: class="table table-striped"}
 
 
@@ -493,7 +493,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
+ **rule_id** | **String**| Rule ID |  |
 {: class="table table-striped"}
 
 
@@ -555,8 +555,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alert_id** | **String**| Alert ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **alert_id** | **String**| Alert ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -616,7 +616,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -678,8 +678,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **rule_id** | **String**| Rule ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -739,7 +739,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -801,8 +801,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alert_id** | **String**| Alert ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **alert_id** | **String**| Alert ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -862,7 +862,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -977,8 +977,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **rule_id** | **String**| Rule ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -1038,7 +1038,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -1100,8 +1100,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alert_id** | **String**| Alert ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **alert_id** | **String**| Alert ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 
@@ -1161,7 +1161,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 
@@ -1223,8 +1223,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **rule_id** | **String**| Rule ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 
@@ -1284,7 +1284,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 
@@ -1346,8 +1346,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alert_id** | **String**| Alert ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **alert_id** | **String**| Alert ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 
@@ -1407,7 +1407,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 
@@ -1469,8 +1469,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **rule_id** | **String**| Rule ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 
@@ -1530,7 +1530,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 
@@ -1592,8 +1592,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**HeartBeatRule**](HeartBeatRule.html)| HeartBeatRule | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **body** | [**HeartBeatRule**](HeartBeatRule.html)| HeartBeatRule |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -1655,8 +1655,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -1718,8 +1718,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RoutingStatusRule**](RoutingStatusRule.html)| RoutingStatusRule | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **body** | [**RoutingStatusRule**](RoutingStatusRule.html)| RoutingStatusRule |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 
@@ -1781,8 +1781,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UserPresenceRule**](UserPresenceRule.html)| UserPresenceRule | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **body** | [**UserPresenceRule**](UserPresenceRule.html)| UserPresenceRule |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 
@@ -1846,9 +1846,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
- **body** | [**HeartBeatRule**](HeartBeatRule.html)| HeartBeatRule | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **rule_id** | **String**| Rule ID |  |
+ **body** | [**HeartBeatRule**](HeartBeatRule.html)| HeartBeatRule |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -1912,9 +1912,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alert_id** | **String**| Alert ID | 
- **body** | [**UnreadStatus**](UnreadStatus.html)| InteractionStatsAlert | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **alert_id** | **String**| Alert ID |  |
+ **body** | [**UnreadStatus**](UnreadStatus.html)| InteractionStatsAlert |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -1978,9 +1978,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
- **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **rule_id** | **String**| Rule ID |  |
+ **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 
@@ -2044,9 +2044,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
- **body** | [**RoutingStatusRule**](RoutingStatusRule.html)| RoutingStatusRule | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **rule_id** | **String**| Rule ID |  |
+ **body** | [**RoutingStatusRule**](RoutingStatusRule.html)| RoutingStatusRule |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 
@@ -2110,9 +2110,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_id** | **String**| Rule ID | 
- **body** | [**UserPresenceRule**](UserPresenceRule.html)| UserPresenceRule | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **rule_id** | **String**| Rule ID |  |
+ **body** | [**UserPresenceRule**](UserPresenceRule.html)| UserPresenceRule |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 

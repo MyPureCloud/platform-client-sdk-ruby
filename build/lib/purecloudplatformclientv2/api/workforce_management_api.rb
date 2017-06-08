@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_adherence ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling WorkforceManagementApi.get_workforcemanagement_adherence" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/adherence".sub('{format}','json')
 
@@ -68,7 +75,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -101,8 +109,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_activitycodes ..."
       end
+      
+      
       # verify the required parameter 'mu_id' is set
       fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_activitycodes" if mu_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/activitycodes".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
 
@@ -125,7 +140,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -160,10 +176,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_intraday_queues ..."
       end
+      
+      
       # verify the required parameter 'mu_id' is set
       fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_intraday_queues" if mu_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'date' is set
       fail ArgumentError, "Missing the required parameter 'date' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_intraday_queues" if date.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/intraday/queues".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
 
@@ -187,7 +216,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -224,12 +254,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_user_timeoffrequest ..."
       end
+      
+      
       # verify the required parameter 'mu_id' is set
       fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_user_timeoffrequest" if mu_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_user_timeoffrequest" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'time_off_request_id' is set
       fail ArgumentError, "Missing the required parameter 'time_off_request_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_user_timeoffrequest" if time_off_request_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId}".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s).sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'timeOffRequestId' + '}', time_off_request_id.to_s)
 
@@ -252,7 +301,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -289,10 +339,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_user_timeoffrequests ..."
       end
+      
+      
       # verify the required parameter 'mu_id' is set
       fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_user_timeoffrequests" if mu_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_user_timeoffrequests" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s).sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -316,7 +385,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -349,8 +419,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_users ..."
       end
+      
+      
       # verify the required parameter 'mu_id' is set
       fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_users" if mu_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/users".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
 
@@ -373,7 +450,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -410,6 +488,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunits ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits".sub('{format}','json')
 
@@ -435,7 +532,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -468,8 +566,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_timeoffrequest ..."
       end
+      
+      
       # verify the required parameter 'time_off_request_id' is set
       fail ArgumentError, "Missing the required parameter 'time_off_request_id' when calling WorkforceManagementApi.get_workforcemanagement_timeoffrequest" if time_off_request_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}".sub('{format}','json').sub('{' + 'timeOffRequestId' + '}', time_off_request_id.to_s)
 
@@ -492,7 +597,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -525,6 +631,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_timeoffrequests ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/timeoffrequests".sub('{format}','json')
 
@@ -548,7 +661,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -583,8 +697,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.patch_workforcemanagement_timeoffrequest ..."
       end
+      
+      
       # verify the required parameter 'time_off_request_id' is set
       fail ArgumentError, "Missing the required parameter 'time_off_request_id' when calling WorkforceManagementApi.patch_workforcemanagement_timeoffrequest" if time_off_request_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}".sub('{format}','json').sub('{' + 'timeOffRequestId' + '}', time_off_request_id.to_s)
 
@@ -607,6 +734,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -641,8 +769,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_intraday ..."
       end
+      
+      
       # verify the required parameter 'mu_id' is set
       fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_intraday" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/intraday".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
 
@@ -665,6 +806,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -700,8 +842,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_schedules_search ..."
       end
+      
+      
       # verify the required parameter 'mu_id' is set
       fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_schedules_search" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/schedules/search".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
 
@@ -724,6 +879,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -757,6 +913,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_schedules ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/schedules".sub('{format}','json')
 
@@ -779,6 +942,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,

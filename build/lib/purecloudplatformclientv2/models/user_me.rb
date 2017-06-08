@@ -124,86 +124,162 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'chat' => :'chat',
+        
         :'department' => :'department',
+        
         :'email' => :'email',
+        
         :'primary_contact_info' => :'primaryContactInfo',
+        
         :'addresses' => :'addresses',
+        
         :'state' => :'state',
+        
         :'title' => :'title',
+        
         :'username' => :'username',
+        
         :'manager' => :'manager',
+        
         :'images' => :'images',
+        
         :'version' => :'version',
+        
         :'routing_status' => :'routingStatus',
+        
         :'presence' => :'presence',
+        
         :'conversation_summary' => :'conversationSummary',
+        
         :'out_of_office' => :'outOfOffice',
+        
         :'geolocation' => :'geolocation',
+        
         :'station' => :'station',
+        
         :'authorization' => :'authorization',
+        
         :'profile_skills' => :'profileSkills',
+        
         :'locations' => :'locations',
+        
         :'groups' => :'groups',
+        
         :'date' => :'date',
+        
         :'geolocation_settings' => :'geolocationSettings',
+        
         :'organization' => :'organization',
+        
         :'presence_definitions' => :'presenceDefinitions',
+        
         :'location_definitions' => :'locationDefinitions',
+        
         :'org_authorization' => :'orgAuthorization',
+        
         :'favorites' => :'favorites',
+        
         :'superiors' => :'superiors',
+        
         :'direct_reports' => :'directReports',
+        
         :'adjacents' => :'adjacents',
+        
         :'routing_skills' => :'routingSkills',
+        
         :'field_configs' => :'fieldConfigs',
+        
         :'token' => :'token',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'chat' => :'Chat',
+        
         :'department' => :'String',
+        
         :'email' => :'String',
+        
         :'primary_contact_info' => :'Array<Contact>',
+        
         :'addresses' => :'Array<Contact>',
+        
         :'state' => :'String',
+        
         :'title' => :'String',
+        
         :'username' => :'String',
+        
         :'manager' => :'User',
+        
         :'images' => :'Array<UserImage>',
+        
         :'version' => :'Integer',
+        
         :'routing_status' => :'RoutingStatus',
+        
         :'presence' => :'UserPresence',
+        
         :'conversation_summary' => :'UserConversationSummary',
+        
         :'out_of_office' => :'OutOfOffice',
+        
         :'geolocation' => :'Geolocation',
+        
         :'station' => :'UserStations',
+        
         :'authorization' => :'UserAuthorization',
+        
         :'profile_skills' => :'Array<String>',
+        
         :'locations' => :'Array<Location>',
+        
         :'groups' => :'Array<Group>',
+        
         :'date' => :'ServerDate',
+        
         :'geolocation_settings' => :'GeolocationSettings',
+        
         :'organization' => :'Organization',
+        
         :'presence_definitions' => :'Array<OrganizationPresence>',
+        
         :'location_definitions' => :'Array<LocationDefinition>',
+        
         :'org_authorization' => :'Array<DomainOrganizationRole>',
+        
         :'favorites' => :'Array<User>',
+        
         :'superiors' => :'Array<User>',
+        
         :'direct_reports' => :'Array<User>',
+        
         :'adjacents' => :'Adjacents',
+        
         :'routing_skills' => :'Array<RoutingSkill>',
+        
         :'field_configs' => :'FieldConfigs',
+        
         :'token' => :'TokenInfo',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -215,202 +291,578 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'chat')
+        
+        
         self.chat = attributes[:'chat']
+        
+      
       end
 
+      
       if attributes.has_key?(:'department')
+        
+        
         self.department = attributes[:'department']
+        
+      
       end
 
+      
       if attributes.has_key?(:'email')
+        
+        
         self.email = attributes[:'email']
+        
+      
       end
 
+      
       if attributes.has_key?(:'primaryContactInfo')
+        
         if (value = attributes[:'primaryContactInfo']).is_a?(Array)
           self.primary_contact_info = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'addresses')
+        
         if (value = attributes[:'addresses']).is_a?(Array)
           self.addresses = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'title')
+        
+        
         self.title = attributes[:'title']
+        
+      
       end
 
+      
       if attributes.has_key?(:'username')
+        
+        
         self.username = attributes[:'username']
+        
+      
       end
 
+      
       if attributes.has_key?(:'manager')
+        
+        
         self.manager = attributes[:'manager']
+        
+      
       end
 
+      
       if attributes.has_key?(:'images')
+        
         if (value = attributes[:'images']).is_a?(Array)
           self.images = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'routingStatus')
+        
+        
         self.routing_status = attributes[:'routingStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'presence')
+        
+        
         self.presence = attributes[:'presence']
+        
+      
       end
 
+      
       if attributes.has_key?(:'conversationSummary')
+        
+        
         self.conversation_summary = attributes[:'conversationSummary']
+        
+      
       end
 
+      
       if attributes.has_key?(:'outOfOffice')
+        
+        
         self.out_of_office = attributes[:'outOfOffice']
+        
+      
       end
 
+      
       if attributes.has_key?(:'geolocation')
+        
+        
         self.geolocation = attributes[:'geolocation']
+        
+      
       end
 
+      
       if attributes.has_key?(:'station')
+        
+        
         self.station = attributes[:'station']
+        
+      
       end
 
+      
       if attributes.has_key?(:'authorization')
+        
+        
         self.authorization = attributes[:'authorization']
+        
+      
       end
 
+      
       if attributes.has_key?(:'profileSkills')
+        
         if (value = attributes[:'profileSkills']).is_a?(Array)
           self.profile_skills = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'locations')
+        
         if (value = attributes[:'locations']).is_a?(Array)
           self.locations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'groups')
+        
         if (value = attributes[:'groups']).is_a?(Array)
           self.groups = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'date')
+        
+        
         self.date = attributes[:'date']
+        
+      
       end
 
+      
       if attributes.has_key?(:'geolocationSettings')
+        
+        
         self.geolocation_settings = attributes[:'geolocationSettings']
+        
+      
       end
 
+      
       if attributes.has_key?(:'organization')
+        
+        
         self.organization = attributes[:'organization']
+        
+      
       end
 
+      
       if attributes.has_key?(:'presenceDefinitions')
+        
         if (value = attributes[:'presenceDefinitions']).is_a?(Array)
           self.presence_definitions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'locationDefinitions')
+        
         if (value = attributes[:'locationDefinitions']).is_a?(Array)
           self.location_definitions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'orgAuthorization')
+        
         if (value = attributes[:'orgAuthorization']).is_a?(Array)
           self.org_authorization = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'favorites')
+        
         if (value = attributes[:'favorites']).is_a?(Array)
           self.favorites = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'superiors')
+        
         if (value = attributes[:'superiors']).is_a?(Array)
           self.superiors = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'directReports')
+        
         if (value = attributes[:'directReports']).is_a?(Array)
           self.direct_reports = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'adjacents')
+        
+        
         self.adjacents = attributes[:'adjacents']
+        
+      
       end
 
+      
       if attributes.has_key?(:'routingSkills')
+        
         if (value = attributes[:'routingSkills']).is_a?(Array)
           self.routing_skills = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'fieldConfigs')
+        
+        
         self.field_configs = attributes[:'fieldConfigs']
+        
+      
       end
 
+      
       if attributes.has_key?(:'token')
+        
+        
         self.token = attributes[:'token']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["active", "inactive", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @version.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -421,6 +873,154 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

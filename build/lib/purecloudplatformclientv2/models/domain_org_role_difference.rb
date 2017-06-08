@@ -31,22 +31,34 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'removed_permission_policies' => :'removedPermissionPolicies',
+        
         :'added_permission_policies' => :'addedPermissionPolicies',
+        
         :'same_permission_policies' => :'samePermissionPolicies',
+        
         :'user_org_role' => :'userOrgRole',
+        
         :'role_from_default' => :'roleFromDefault'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'removed_permission_policies' => :'Array<DomainPermissionPolicy>',
+        
         :'added_permission_policies' => :'Array<DomainPermissionPolicy>',
+        
         :'same_permission_policies' => :'Array<DomainPermissionPolicy>',
+        
         :'user_org_role' => :'DomainOrganizationRole',
+        
         :'role_from_default' => :'DomainOrganizationRole'
+        
       }
     end
 
@@ -58,46 +70,121 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'removedPermissionPolicies')
+        
         if (value = attributes[:'removedPermissionPolicies']).is_a?(Array)
           self.removed_permission_policies = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'addedPermissionPolicies')
+        
         if (value = attributes[:'addedPermissionPolicies']).is_a?(Array)
           self.added_permission_policies = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'samePermissionPolicies')
+        
         if (value = attributes[:'samePermissionPolicies']).is_a?(Array)
           self.same_permission_policies = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'userOrgRole')
+        
+        
         self.user_org_role = attributes[:'userOrgRole']
+        
+      
       end
 
+      
       if attributes.has_key?(:'roleFromDefault')
+        
+        
         self.role_from_default = attributes[:'roleFromDefault']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

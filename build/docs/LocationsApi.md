@@ -58,7 +58,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **location_id** | **String**| Location ID | 
+ **location_id** | **String**| Location ID |  |
 {: class="table table-striped"}
 
 
@@ -120,9 +120,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_order** | **String**| Sort order | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_order** | **String**| Sort order | [optional] <br />**Values**: asc, desc |
 {: class="table table-striped"}
 
 
@@ -184,8 +184,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q64** | **String**| q64 | 
- **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional] 
+ **q64** | **String**| q64 |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 
@@ -244,7 +244,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**LocationSearchRequest**](LocationSearchRequest.html)| Search request options | 
+ **body** | [**LocationSearchRequest**](LocationSearchRequest.html)| Search request options |  |
 {: class="table table-striped"}
 
 

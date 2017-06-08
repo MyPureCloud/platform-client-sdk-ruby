@@ -42,32 +42,54 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'html_body' => :'htmlBody',
+        
         :'text_body' => :'textBody',
+        
         :'id' => :'id',
+        
         :'to' => :'to',
+        
         :'cc' => :'cc',
+        
         :'bcc' => :'bcc',
+        
         :'from' => :'from',
+        
         :'subject' => :'subject',
+        
         :'attachments' => :'attachments',
+        
         :'time' => :'time'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'html_body' => :'String',
+        
         :'text_body' => :'String',
+        
         :'id' => :'String',
+        
         :'to' => :'Array<EmailAddress>',
+        
         :'cc' => :'Array<EmailAddress>',
+        
         :'bcc' => :'Array<EmailAddress>',
+        
         :'from' => :'EmailAddress',
+        
         :'subject' => :'String',
+        
         :'attachments' => :'Array<EmailAttachment>',
+        
         :'time' => :'DateTime'
+        
       }
     end
 
@@ -79,68 +101,213 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'htmlBody')
+        
+        
         self.html_body = attributes[:'htmlBody']
+        
+      
       end
 
+      
       if attributes.has_key?(:'textBody')
+        
+        
         self.text_body = attributes[:'textBody']
+        
+      
       end
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'to')
+        
         if (value = attributes[:'to']).is_a?(Array)
           self.to = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'cc')
+        
         if (value = attributes[:'cc']).is_a?(Array)
           self.cc = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'bcc')
+        
         if (value = attributes[:'bcc']).is_a?(Array)
           self.bcc = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'from')
+        
+        
         self.from = attributes[:'from']
+        
+      
       end
 
+      
       if attributes.has_key?(:'subject')
+        
+        
         self.subject = attributes[:'subject']
+        
+      
       end
 
+      
       if attributes.has_key?(:'attachments')
+        
         if (value = attributes[:'attachments']).is_a?(Array)
           self.attachments = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'time')
+        
+        
         self.time = attributes[:'time']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

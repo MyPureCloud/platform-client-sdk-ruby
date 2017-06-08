@@ -45,28 +45,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'end_value' => :'endValue',
+        
         :'values' => :'values',
+        
         :'start_value' => :'startValue',
+        
         :'fields' => :'fields',
+        
         :'value' => :'value',
+        
         :'operator' => :'operator',
+        
         :'group' => :'group',
+        
         :'type' => :'type'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'end_value' => :'String',
+        
         :'values' => :'Array<String>',
+        
         :'start_value' => :'String',
+        
         :'fields' => :'Array<String>',
+        
         :'value' => :'String',
+        
         :'operator' => :'String',
+        
         :'group' => :'Array<GroupSearchCriteria>',
+        
         :'type' => :'String'
+        
       }
     end
 
@@ -78,70 +96,176 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'endValue')
+        
+        
         self.end_value = attributes[:'endValue']
+        
+      
       end
 
+      
       if attributes.has_key?(:'values')
+        
         if (value = attributes[:'values']).is_a?(Array)
           self.values = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'startValue')
+        
+        
         self.start_value = attributes[:'startValue']
+        
+      
       end
 
+      
       if attributes.has_key?(:'fields')
+        
         if (value = attributes[:'fields']).is_a?(Array)
           self.fields = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'value')
+        
+        
         self.value = attributes[:'value']
+        
+      
       end
 
+      
       if attributes.has_key?(:'operator')
+        
+        
         self.operator = attributes[:'operator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'group')
+        
         if (value = attributes[:'group']).is_a?(Array)
           self.group = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'type')
+        
+        
         self.type = attributes[:'type']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["AND", "OR", "NOT"]
       if @operator && !allowed_values.include?(@operator)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       if @type.nil?
         return false
       end
 
+      
+      
       allowed_values = ["EXACT", "STARTS_WITH", "CONTAINS", "REGEX", "TERM", "TERMS", "REQUIRED_FIELDS", "MATCH_ALL"]
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] operator Object to be assigned
     def operator=(operator)
@@ -152,6 +276,15 @@ module PureCloud
       @operator = operator
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
@@ -162,6 +295,9 @@ module PureCloud
       @type = type
     end
 
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

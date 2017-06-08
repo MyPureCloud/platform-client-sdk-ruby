@@ -81,52 +81,94 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'state' => :'state',
+        
         :'id' => :'id',
+        
         :'segments' => :'segments',
+        
         :'direction' => :'direction',
+        
         :'held' => :'held',
+        
         :'disconnect_type' => :'disconnectType',
+        
         :'start_hold_time' => :'startHoldTime',
+        
         :'dialer_preview' => :'dialerPreview',
+        
         :'voicemail' => :'voicemail',
+        
         :'callback_numbers' => :'callbackNumbers',
+        
         :'callback_user_name' => :'callbackUserName',
+        
         :'script_id' => :'scriptId',
+        
         :'skip_enabled' => :'skipEnabled',
+        
         :'timeout_seconds' => :'timeoutSeconds',
+        
         :'connected_time' => :'connectedTime',
+        
         :'disconnected_time' => :'disconnectedTime',
+        
         :'callback_scheduled_time' => :'callbackScheduledTime',
+        
         :'automated_callback_config_id' => :'automatedCallbackConfigId',
+        
         :'provider' => :'provider',
+        
         :'peer_id' => :'peerId'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'state' => :'String',
+        
         :'id' => :'String',
+        
         :'segments' => :'Array<Segment>',
+        
         :'direction' => :'String',
+        
         :'held' => :'BOOLEAN',
+        
         :'disconnect_type' => :'String',
+        
         :'start_hold_time' => :'DateTime',
+        
         :'dialer_preview' => :'DialerPreview',
+        
         :'voicemail' => :'Voicemail',
+        
         :'callback_numbers' => :'Array<String>',
+        
         :'callback_user_name' => :'String',
+        
         :'script_id' => :'String',
+        
         :'skip_enabled' => :'BOOLEAN',
+        
         :'timeout_seconds' => :'Integer',
+        
         :'connected_time' => :'DateTime',
+        
         :'disconnected_time' => :'DateTime',
+        
         :'callback_scheduled_time' => :'DateTime',
+        
         :'automated_callback_config_id' => :'String',
+        
         :'provider' => :'String',
+        
         :'peer_id' => :'String'
+        
       }
     end
 
@@ -138,116 +180,305 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'segments')
+        
         if (value = attributes[:'segments']).is_a?(Array)
           self.segments = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'direction')
+        
+        
         self.direction = attributes[:'direction']
+        
+      
       end
 
+      
       if attributes.has_key?(:'held')
+        
+        
         self.held = attributes[:'held']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectType')
+        
+        
         self.disconnect_type = attributes[:'disconnectType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startHoldTime')
+        
+        
         self.start_hold_time = attributes[:'startHoldTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dialerPreview')
+        
+        
         self.dialer_preview = attributes[:'dialerPreview']
+        
+      
       end
 
+      
       if attributes.has_key?(:'voicemail')
+        
+        
         self.voicemail = attributes[:'voicemail']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackNumbers')
+        
         if (value = attributes[:'callbackNumbers']).is_a?(Array)
           self.callback_numbers = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackUserName')
+        
+        
         self.callback_user_name = attributes[:'callbackUserName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'scriptId')
+        
+        
         self.script_id = attributes[:'scriptId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'skipEnabled')
+        
+        
         self.skip_enabled = attributes[:'skipEnabled']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timeoutSeconds')
+        
+        
         self.timeout_seconds = attributes[:'timeoutSeconds']
+        
+      
       end
 
+      
       if attributes.has_key?(:'connectedTime')
+        
+        
         self.connected_time = attributes[:'connectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectedTime')
+        
+        
         self.disconnected_time = attributes[:'disconnectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackScheduledTime')
+        
+        
         self.callback_scheduled_time = attributes[:'callbackScheduledTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'automatedCallbackConfigId')
+        
+        
         self.automated_callback_config_id = attributes[:'automatedCallbackConfigId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'provider')
+        
+        
         self.provider = attributes[:'provider']
+        
+      
       end
 
+      
       if attributes.has_key?(:'peerId')
+        
+        
         self.peer_id = attributes[:'peerId']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["alerting", "dialing", "contacting", "offering", "connected", "disconnected", "terminated", "scheduled", "none"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["inbound", "outbound"]
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["endpoint", "client", "system", "timeout", "transfer", "transfer.conference", "transfer.consult", "transfer.forward", "transfer.noanswer", "transfer.notavailable", "transport.failure", "error", "peer", "other", "spam", "uncallable"]
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -258,6 +489,20 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] direction Object to be assigned
     def direction=(direction)
@@ -268,6 +513,15 @@ module PureCloud
       @direction = direction
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] disconnect_type Object to be assigned
     def disconnect_type=(disconnect_type)
@@ -278,6 +532,79 @@ module PureCloud
       @disconnect_type = disconnect_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

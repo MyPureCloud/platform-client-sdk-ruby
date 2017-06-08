@@ -174,7 +174,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
+ **edge_id** | **String**| Edge ID |  |
 {: class="table table-striped"}
 
 
@@ -234,8 +234,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **interface_id** | **String**| Interface ID | 
+ **edge_id** | **String**| Edge ID |  |
+ **interface_id** | **String**| Interface ID |  |
 {: class="table table-striped"}
 
 
@@ -293,7 +293,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
+ **edge_id** | **String**| Edge ID |  |
 {: class="table table-striped"}
 
 
@@ -351,7 +351,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **certificate_id** | **String**| Certificate ID | 
+ **certificate_id** | **String**| Certificate ID |  |
 {: class="table table-striped"}
 
 
@@ -409,7 +409,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did_pool_id** | **String**| DID pool ID | 
+ **did_pool_id** | **String**| DID pool ID |  |
 {: class="table table-striped"}
 
 
@@ -467,7 +467,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_group_id** | **String**| Edge group ID | 
+ **edge_group_id** | **String**| Edge group ID |  |
 {: class="table table-striped"}
 
 
@@ -525,7 +525,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **endpoint_id** | **String**| Endpoint ID | 
+ **endpoint_id** | **String**| Endpoint ID |  |
 {: class="table table-striped"}
 
 
@@ -583,7 +583,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extension_pool_id** | **String**| Extension pool ID | 
+ **extension_pool_id** | **String**| Extension pool ID |  |
 {: class="table table-striped"}
 
 
@@ -641,7 +641,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **outbound_route_id** | **String**| Outbound route ID | 
+ **outbound_route_id** | **String**| Outbound route ID |  |
 {: class="table table-striped"}
 
 
@@ -699,7 +699,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone_id** | **String**| Phone ID | 
+ **phone_id** | **String**| Phone ID |  |
 {: class="table table-striped"}
 
 
@@ -757,7 +757,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone_base_id** | **String**| Phone base ID | 
+ **phone_base_id** | **String**| Phone base ID |  |
 {: class="table table-striped"}
 
 
@@ -815,7 +815,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
+ **site_id** | **String**| Site ID |  |
 {: class="table table-striped"}
 
 
@@ -875,8 +875,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
- **outbound_route_id** | **String**| Outbound route ID | 
+ **site_id** | **String**| Site ID |  |
+ **outbound_route_id** | **String**| Outbound route ID |  |
 {: class="table table-striped"}
 
 
@@ -934,7 +934,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **trunk_base_settings_id** | **String**| Trunk Base ID | 
+ **trunk_base_settings_id** | **String**| Trunk Base ID |  |
 {: class="table table-striped"}
 
 
@@ -995,8 +995,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -1059,9 +1059,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schema_category** | **String**| Schema category | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **schema_category** | **String**| Schema category |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -1126,10 +1126,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schema_category** | **String**| Schema category | 
- **schema_type** | **String**| Schema type | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **schema_category** | **String**| Schema category |  |
+ **schema_type** | **String**| Schema type |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -1192,9 +1192,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schema_category** | **String**| Schema category | 
- **schema_type** | **String**| Schema type | 
- **schema_id** | **String**| Schema ID | 
+ **schema_category** | **String**| Schema category |  |
+ **schema_type** | **String**| Schema type |  |
+ **schema_id** | **String**| Schema ID |  |
 {: class="table table-striped"}
 
 
@@ -1264,12 +1264,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schema_category** | **String**| Schema category | 
- **schema_type** | **String**| Schema type | 
- **schema_id** | **String**| Schema ID | 
- **extension_type** | **String**| extension | 
- **metadata_id** | **String**| Metadata ID | 
- **type** | **String**| Type | [optional] 
+ **schema_category** | **String**| Schema category |  |
+ **schema_type** | **String**| Schema type |  |
+ **schema_id** | **String**| Schema ID |  |
+ **extension_type** | **String**| extension |  |
+ **metadata_id** | **String**| Metadata ID |  |
+ **type** | **String**| Type | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1331,8 +1331,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] 
+ **edge_id** | **String**| Edge ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: site |
 {: class="table table-striped"}
 
 
@@ -1393,8 +1393,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **line_id** | **String**| Line ID | 
+ **edge_id** | **String**| Edge ID |  |
+ **line_id** | **String**| Line ID |  |
 {: class="table table-striped"}
 
 
@@ -1457,9 +1457,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **edge_id** | **String**| Edge ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -1523,9 +1523,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **interface_id** | **String**| Interface ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Field to expand in the response | [optional] 
+ **edge_id** | **String**| Edge ID |  |
+ **interface_id** | **String**| Interface ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Field to expand in the response | [optional] <br />**Values**: externalTrunkBaseAssignments, phoneTrunkBaseAssignments |
 {: class="table table-striped"}
 
 
@@ -1587,8 +1587,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Field to expand in the response | [optional] 
+ **edge_id** | **String**| Edge ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Field to expand in the response | [optional] <br />**Values**: externalTrunkBaseAssignments, phoneTrunkBaseAssignments |
 {: class="table table-striped"}
 
 
@@ -1649,8 +1649,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **job_id** | **String**| Job ID | 
+ **edge_id** | **String**| Edge ID |  |
+ **job_id** | **String**| Job ID |  |
 {: class="table table-striped"}
 
 
@@ -1711,8 +1711,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **interface_id** | **String**| Interface ID | 
+ **edge_id** | **String**| Edge ID |  |
+ **interface_id** | **String**| Interface ID |  |
 {: class="table table-striped"}
 
 
@@ -1771,7 +1771,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
+ **edge_id** | **String**| Edge ID |  |
 {: class="table table-striped"}
 
 
@@ -1830,7 +1830,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
+ **edge_id** | **String**| Edge ID |  |
 {: class="table table-striped"}
 
 
@@ -1889,7 +1889,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
+ **edge_id** | **String**| Edge ID |  |
 {: class="table table-striped"}
 
 
@@ -1948,7 +1948,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
+ **edge_id** | **String**| Edge ID |  |
 {: class="table table-striped"}
 
 
@@ -2015,13 +2015,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **sort_by** | **String**| Value by which to sort | [optional] [default to name]
- **sort_order** | **String**| Sort order | [optional] [default to ASC]
- **trunk_base_id** | **String**| Filter by Trunk Base Ids | [optional] 
- **trunk_type** | **String**| Filter by a Trunk type | [optional] 
+ **edge_id** | **String**| Edge ID |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Value by which to sort | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+ **trunk_base_id** | **String**| Filter by Trunk Base Ids | [optional]  |
+ **trunk_type** | **String**| Filter by a Trunk type | [optional] <br />**Values**: EXTERNAL, PHONE, EDGE |
 {: class="table table-striped"}
 
 
@@ -2087,13 +2087,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **name** | **String**| Name | [optional] 
- **site_id** | **String**| Filter by site.id | [optional] 
- **edge_group_id** | **String**| Filter by edgeGroup.id | [optional] 
- **sort_by** | **String**| Sort by | [optional] [default to name]
- **managed** | **BOOLEAN**| Filter by managed | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **name** | **String**| Name | [optional]  |
+ **site_id** | **String**| Filter by site.id | [optional]  |
+ **edge_group_id** | **String**| Filter by edgeGroup.id | [optional]  |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **managed** | **BOOLEAN**| Filter by managed | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2258,7 +2258,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **certificate_id** | **String**| Certificate ID | 
+ **certificate_id** | **String**| Certificate ID |  |
 {: class="table table-striped"}
 
 
@@ -2317,7 +2317,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did_id** | **String**| DID ID | 
+ **did_id** | **String**| DID ID |  |
 {: class="table table-striped"}
 
 
@@ -2376,7 +2376,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did_pool_id** | **String**| DID pool ID | 
+ **did_pool_id** | **String**| DID pool ID |  |
 {: class="table table-striped"}
 
 
@@ -2438,9 +2438,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| Sort by | [optional] [default to number]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to number] |
 {: class="table table-striped"}
 
 
@@ -2504,11 +2504,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| Sort by | [optional] [default to number]
- **sort_order** | **String**| Sort order | [optional] [default to ASC]
- **phone_number** | **String**| Filter by phoneNumber | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to number] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+ **phone_number** | **String**| Filter by phoneNumber | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2570,8 +2570,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_group_id** | **String**| Edge group ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response | [optional] 
+ **edge_group_id** | **String**| Edge group ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response | [optional] <br />**Values**: phoneTrunkBases, edgeTrunkBaseAssignment |
 {: class="table table-striped"}
 
 
@@ -2632,8 +2632,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edgegroup_id** | **String**| Edge Group ID | 
- **edgetrunkbase_id** | **String**| Edge Trunk Base ID | 
+ **edgegroup_id** | **String**| Edge Group ID |  |
+ **edgetrunkbase_id** | **String**| Edge Trunk Base ID |  |
 {: class="table table-striped"}
 
 
@@ -2697,11 +2697,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] [default to name]
- **managed** | **BOOLEAN**| Filter by managed | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **managed** | **BOOLEAN**| Filter by managed | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2813,7 +2813,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **endpoint_id** | **String**| Endpoint ID | 
+ **endpoint_id** | **String**| Endpoint ID |  |
 {: class="table table-striped"}
 
 
@@ -2876,10 +2876,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] [default to name]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 
 
@@ -2938,7 +2938,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extension_id** | **String**| Extension ID | 
+ **extension_id** | **String**| Extension ID |  |
 {: class="table table-striped"}
 
 
@@ -2997,7 +2997,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extension_pool_id** | **String**| Extension pool ID | 
+ **extension_pool_id** | **String**| Extension pool ID |  |
 {: class="table table-striped"}
 
 
@@ -3060,10 +3060,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| Sort by | [optional] [default to startNumber]
- **number** | **String**| Number | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to startNumber] |
+ **number** | **String**| Number | [optional]  |
 {: class="table table-striped"}
 
 
@@ -3127,11 +3127,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| Sort by | [optional] [default to number]
- **sort_order** | **String**| Sort order | [optional] [default to ASC]
- **number** | **String**| Filter by number | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to number] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+ **number** | **String**| Filter by number | [optional]  |
 {: class="table table-striped"}
 
 
@@ -3190,7 +3190,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **line_id** | **String**| Line ID | 
+ **line_id** | **String**| Line ID |  |
 {: class="table table-striped"}
 
 
@@ -3249,7 +3249,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **line_base_id** | **String**| Line base ID | 
+ **line_base_id** | **String**| Line base ID |  |
 {: class="table table-striped"}
 
 
@@ -3312,10 +3312,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **sort_by** | **String**| Value by which to sort | [optional] [default to name]
- **sort_order** | **String**| Sort order | [optional] [default to ASC]
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Value by which to sort | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
 {: class="table table-striped"}
 
 
@@ -3379,11 +3379,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Value by which to sort | [optional] [default to name]
- **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Value by which to sort | [optional] [default to name] |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties, site, edgeGroup, primaryEdge, secondaryEdge, edges, assignedUser |
 {: class="table table-striped"}
 
 
@@ -3442,7 +3442,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **line_base_settings_id** | **String**| The id of a Line Base Settings object upon which to base this Line | 
+ **line_base_settings_id** | **String**| The id of a Line Base Settings object upon which to base this Line |  |
 {: class="table table-striped"}
 
 
@@ -3504,8 +3504,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_ids** | **String**| Comma separated list of Edge Id&#39;s | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Field to expand in the response | [optional] 
+ **edge_ids** | **String**| Comma separated list of Edge Id&#39;s |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Field to expand in the response | [optional] <br />**Values**: externalTrunkBaseAssignments, phoneTrunkBaseAssignments |
 {: class="table table-striped"}
 
 
@@ -3564,7 +3564,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **outbound_route_id** | **String**| Outbound route ID | 
+ **outbound_route_id** | **String**| Outbound route ID |  |
 {: class="table table-striped"}
 
 
@@ -3628,11 +3628,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **name** | **String**| Name | [optional] 
- **site_id** | **String**| Filter by site.id | [optional] 
- **sort_by** | **String**| Sort by | [optional] [default to name]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **name** | **String**| Name | [optional]  |
+ **site_id** | **String**| Filter by site.id | [optional]  |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 
 
@@ -3691,7 +3691,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone_id** | **String**| Phone ID | 
+ **phone_id** | **String**| Phone ID |  |
 {: class="table table-striped"}
 
 
@@ -3750,7 +3750,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone_base_id** | **String**| Phone base ID | 
+ **phone_base_id** | **String**| Phone base ID |  |
 {: class="table table-striped"}
 
 
@@ -3815,12 +3815,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| Value by which to sort | [optional] [default to name]
- **sort_order** | **String**| Sort order | [optional] [default to ASC]
- **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] 
- **name** | **String**| Name | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Value by which to sort | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties, lines |
+ **name** | **String**| Name | [optional]  |
 {: class="table table-striped"}
 
 
@@ -3881,8 +3881,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -3941,7 +3941,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone_metabase_id** | **String**| The id of a metabase object upon which to base this Phone Base Settings | 
+ **phone_metabase_id** | **String**| The id of a metabase object upon which to base this Phone Base Settings |  |
 {: class="table table-striped"}
 
 
@@ -4014,20 +4014,20 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **sort_by** | **String**| Value by which to sort | [optional] [default to name]
- **sort_order** | **String**| Sort order | [optional] [default to ASC]
- **site_id** | **String**| Filter by site.id | [optional] 
- **web_rtc_user_id** | **String**| Filter by webRtcUser.id | [optional] 
- **phone_base_settings_id** | **String**| Filter by phoneBaseSettings.id | [optional] 
- **lines_logged_in_user_id** | **String**| Filter by lines.loggedInUser.id | [optional] 
- **lines_default_for_user_id** | **String**| Filter by lines.defaultForUser.id | [optional] 
- **phone_hardware_id** | **String**| Filter by phone_hardwareId | [optional] 
- **lines_id** | **String**| Filter by lines.id | [optional] 
- **lines_name** | **String**| Filter by lines.name | [optional] 
- **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] 
- **fields** | [**Array&lt;String&gt;**](String.html)| Fields and properties to get, comma-separated | [optional] 
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Value by which to sort | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+ **site_id** | **String**| Filter by site.id | [optional]  |
+ **web_rtc_user_id** | **String**| Filter by webRtcUser.id | [optional]  |
+ **phone_base_settings_id** | **String**| Filter by phoneBaseSettings.id | [optional]  |
+ **lines_logged_in_user_id** | **String**| Filter by lines.loggedInUser.id | [optional]  |
+ **lines_default_for_user_id** | **String**| Filter by lines.defaultForUser.id | [optional]  |
+ **phone_hardware_id** | **String**| Filter by phone_hardwareId | [optional]  |
+ **lines_id** | **String**| Filter by lines.id | [optional]  |
+ **lines_name** | **String**| Filter by lines.name | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties, site, status, status.primaryEdgesStatus, status.secondaryEdgesStatus, phoneBaseSettings, lines |
+ **fields** | [**Array&lt;String&gt;**](String.html)| Fields and properties to get, comma-separated | [optional] <br />**Values**: webRtcUser, properties.*, lines.loggedInUser, lines.defaultForUser |
 {: class="table table-striped"}
 
 
@@ -4086,7 +4086,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone_base_settings_id** | **String**| The id of a Phone Base Settings object upon which to base this Phone | 
+ **phone_base_settings_id** | **String**| The id of a Phone Base Settings object upon which to base this Phone |  |
 {: class="table table-striped"}
 
 
@@ -4145,7 +4145,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_ids** | **String**| Comma separated list of Edge Id&#39;s | 
+ **edge_ids** | **String**| Comma separated list of Edge Id&#39;s |  |
 {: class="table table-striped"}
 
 
@@ -4204,7 +4204,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
+ **site_id** | **String**| Site ID |  |
 {: class="table table-striped"}
 
 
@@ -4265,8 +4265,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
- **number_plan_id** | **String**| Number Plan ID | 
+ **site_id** | **String**| Site ID |  |
+ **number_plan_id** | **String**| Number Plan ID |  |
 {: class="table table-striped"}
 
 
@@ -4325,7 +4325,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
+ **site_id** | **String**| Site ID |  |
 {: class="table table-striped"}
 
 
@@ -4387,8 +4387,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
- **classification** | **String**| Classification | [optional] 
+ **site_id** | **String**| Site ID |  |
+ **classification** | **String**| Classification | [optional]  |
 {: class="table table-striped"}
 
 
@@ -4449,8 +4449,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
- **outbound_route_id** | **String**| Outbound route ID | 
+ **site_id** | **String**| Site ID |  |
+ **outbound_route_id** | **String**| Outbound route ID |  |
 {: class="table table-striped"}
 
 
@@ -4515,11 +4515,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] [default to name]
+ **site_id** | **String**| Site ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 
 
@@ -4585,13 +4585,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| Sort by | [optional] [default to name]
- **sort_order** | **String**| Sort order | [optional] [default to ASC]
- **name** | **String**| Name | [optional] 
- **location_id** | **String**| Location Id | [optional] 
- **managed** | **BOOLEAN**| Filter by managed | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+ **name** | **String**| Name | [optional]  |
+ **location_id** | **String**| Location Id | [optional]  |
+ **managed** | **BOOLEAN**| Filter by managed | [optional]  |
 {: class="table table-striped"}
 
 
@@ -4652,8 +4652,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 1000]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **page_size** | **Integer**| Page size | [optional] [default to 1000] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -4712,7 +4712,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **trunk_id** | **String**| Trunk ID | 
+ **trunk_id** | **String**| Trunk ID |  |
 {: class="table table-striped"}
 
 
@@ -4774,8 +4774,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **trunk_base_settings_id** | **String**| Trunk Base ID | 
- **ignore_hidden** | **BOOLEAN**| Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. | [optional] 
+ **trunk_base_settings_id** | **String**| Trunk Base ID |  |
+ **ignore_hidden** | **BOOLEAN**| Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. | [optional]  |
 {: class="table table-striped"}
 
 
@@ -4843,15 +4843,15 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **sort_by** | **String**| Value by which to sort | [optional] [default to name]
- **sort_order** | **String**| Sort order | [optional] [default to ASC]
- **recording_enabled** | **BOOLEAN**| Filter trunks by recording enabled | [optional] 
- **ignore_hidden** | **BOOLEAN**| Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. | [optional] 
- **managed** | **BOOLEAN**| Filter by managed | [optional] 
- **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] 
- **name** | **String**| Name of the TrunkBase to filter by | [optional] 
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Value by which to sort | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+ **recording_enabled** | **BOOLEAN**| Filter trunks by recording enabled | [optional]  |
+ **ignore_hidden** | **BOOLEAN**| Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. | [optional]  |
+ **managed** | **BOOLEAN**| Filter by managed | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties |
+ **name** | **String**| Name of the TrunkBase to filter by | [optional]  |
 {: class="table table-striped"}
 
 
@@ -4913,9 +4913,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type** | **String**|  | [optional] 
- **page_size** | **Integer**|  | [optional] [default to 25]
- **page_number** | **Integer**|  | [optional] [default to 1]
+ **type** | **String**|  | [optional] <br />**Values**: EXTERNAL, PHONE, EDGE |
+ **page_size** | **Integer**|  | [optional] [default to 25] |
+ **page_number** | **Integer**|  | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -4974,7 +4974,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **trunk_metabase_id** | **String**| The id of a metabase object upon which to base this Trunk Base Settings | 
+ **trunk_metabase_id** | **String**| The id of a metabase object upon which to base this Trunk Base Settings |  |
 {: class="table table-striped"}
 
 
@@ -5040,13 +5040,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **sort_by** | **String**| Value by which to sort | [optional] [default to name]
- **sort_order** | **String**| Sort order | [optional] [default to ASC]
- **edge_id** | **String**| Filter by Edge Ids | [optional] 
- **trunk_base_id** | **String**| Filter by Trunk Base Ids | [optional] 
- **trunk_type** | **String**| Filter by a Trunk type | [optional] 
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Value by which to sort | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+ **edge_id** | **String**| Filter by Edge Ids | [optional]  |
+ **trunk_base_id** | **String**| Filter by Trunk Base Ids | [optional]  |
+ **trunk_type** | **String**| Filter by a Trunk type | [optional] <br />**Values**: EXTERNAL, PHONE, EDGE |
 {: class="table table-striped"}
 
 
@@ -5106,7 +5106,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **trunk_type** | **String**| The type of this trunk base. | [optional] 
+ **trunk_type** | **String**| The type of this trunk base. | [optional] <br />**Values**: EXTERNAL, PHONE, EDGE |
 {: class="table table-striped"}
 
 
@@ -5167,8 +5167,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **body** | [**DomainLogicalInterface**](DomainLogicalInterface.html)| Logical interface | 
+ **edge_id** | **String**| Edge ID |  |
+ **body** | [**DomainLogicalInterface**](DomainLogicalInterface.html)| Logical interface |  |
 {: class="table table-striped"}
 
 
@@ -5230,9 +5230,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **job_id** | **String**| Job ID | 
- **body** | [**EdgeLogsJobUploadRequest**](EdgeLogsJobUploadRequest.html)| Log upload request | 
+ **edge_id** | **String**| Edge ID |  |
+ **job_id** | **String**| Job ID |  |
+ **body** | [**EdgeLogsJobUploadRequest**](EdgeLogsJobUploadRequest.html)| Log upload request |  |
 {: class="table table-striped"}
 
 
@@ -5293,8 +5293,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **body** | [**EdgeLogsJobRequest**](EdgeLogsJobRequest.html)| EdgeLogsJobRequest | 
+ **edge_id** | **String**| Edge ID |  |
+ **body** | [**EdgeLogsJobRequest**](EdgeLogsJobRequest.html)| EdgeLogsJobRequest |  |
 {: class="table table-striped"}
 
 
@@ -5356,8 +5356,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **body** | [**EdgeRebootParameters**](EdgeRebootParameters.html)| Parameters for the edge reboot | [optional] 
+ **edge_id** | **String**| Edge ID |  |
+ **body** | [**EdgeRebootParameters**](EdgeRebootParameters.html)| Parameters for the edge reboot | [optional]  |
 {: class="table table-striped"}
 
 
@@ -5418,8 +5418,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **body** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html)| Software update request | 
+ **edge_id** | **String**| Edge ID |  |
+ **body** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html)| Software update request |  |
 {: class="table table-striped"}
 
 
@@ -5481,8 +5481,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **body** | [**EdgeServiceStateRequest**](EdgeServiceStateRequest.html)| Edge Service State | [optional] 
+ **edge_id** | **String**| Edge ID |  |
+ **body** | [**EdgeServiceStateRequest**](EdgeServiceStateRequest.html)| Edge Service State | [optional]  |
 {: class="table table-striped"}
 
 
@@ -5541,7 +5541,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge Id | 
+ **edge_id** | **String**| Edge Id |  |
 {: class="table table-striped"}
 
 
@@ -5600,7 +5600,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Edge**](Edge.html)| Edge | 
+ **body** | [**Edge**](Edge.html)| Edge |  |
 {: class="table table-striped"}
 
 
@@ -5659,7 +5659,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ValidateAddressRequest**](ValidateAddressRequest.html)| Address | 
+ **body** | [**ValidateAddressRequest**](ValidateAddressRequest.html)| Address |  |
 {: class="table table-striped"}
 
 
@@ -5718,7 +5718,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DomainCertificateAuthority**](DomainCertificateAuthority.html)| CertificateAuthority | 
+ **body** | [**DomainCertificateAuthority**](DomainCertificateAuthority.html)| CertificateAuthority |  |
 {: class="table table-striped"}
 
 
@@ -5777,7 +5777,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DIDPool**](DIDPool.html)| DID pool | 
+ **body** | [**DIDPool**](DIDPool.html)| DID pool |  |
 {: class="table table-striped"}
 
 
@@ -5836,7 +5836,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**EdgeGroup**](EdgeGroup.html)| EdgeGroup | 
+ **body** | [**EdgeGroup**](EdgeGroup.html)| EdgeGroup |  |
 {: class="table table-striped"}
 
 
@@ -5895,7 +5895,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate | 
+ **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate |  |
 {: class="table table-striped"}
 
 
@@ -5954,7 +5954,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ExtensionPool**](ExtensionPool.html)| ExtensionPool | 
+ **body** | [**ExtensionPool**](ExtensionPool.html)| ExtensionPool |  |
 {: class="table table-striped"}
 
 
@@ -6013,7 +6013,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute | 
+ **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute |  |
 {: class="table table-striped"}
 
 
@@ -6071,7 +6071,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone_id** | **String**| Phone Id | 
+ **phone_id** | **String**| Phone Id |  |
 {: class="table table-striped"}
 
 
@@ -6130,7 +6130,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PhoneBase**](PhoneBase.html)| Phone base settings | 
+ **body** | [**PhoneBase**](PhoneBase.html)| Phone base settings |  |
 {: class="table table-striped"}
 
 
@@ -6189,7 +6189,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Phone**](Phone.html)| Phone | 
+ **body** | [**Phone**](Phone.html)| Phone |  |
 {: class="table table-striped"}
 
 
@@ -6247,7 +6247,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PhonesReboot**](PhonesReboot.html)| Phones | 
+ **body** | [**PhonesReboot**](PhonesReboot.html)| Phones |  |
 {: class="table table-striped"}
 
 
@@ -6308,8 +6308,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
- **body** | [**OutboundRouteBase**](OutboundRouteBase.html)| OutboundRoute | 
+ **site_id** | **String**| Site ID |  |
+ **body** | [**OutboundRouteBase**](OutboundRouteBase.html)| OutboundRoute |  |
 {: class="table table-striped"}
 
 
@@ -6367,7 +6367,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
+ **site_id** | **String**| Site ID |  |
 {: class="table table-striped"}
 
 
@@ -6426,7 +6426,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Site**](Site.html)| Site | 
+ **body** | [**Site**](Site.html)| Site |  |
 {: class="table table-striped"}
 
 
@@ -6485,7 +6485,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**TrunkBase**](TrunkBase.html)| Trunk base settings | 
+ **body** | [**TrunkBase**](TrunkBase.html)| Trunk base settings |  |
 {: class="table table-striped"}
 
 
@@ -6546,8 +6546,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **body** | [**Edge**](Edge.html)| Edge | 
+ **edge_id** | **String**| Edge ID |  |
+ **body** | [**Edge**](Edge.html)| Edge |  |
 {: class="table table-striped"}
 
 
@@ -6610,9 +6610,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **line_id** | **String**| Line ID | 
- **body** | [**EdgeLine**](EdgeLine.html)| Line | 
+ **edge_id** | **String**| Edge ID |  |
+ **line_id** | **String**| Line ID |  |
+ **body** | [**EdgeLine**](EdgeLine.html)| Line |  |
 {: class="table table-striped"}
 
 
@@ -6675,9 +6675,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_id** | **String**| Edge ID | 
- **interface_id** | **String**| Interface ID | 
- **body** | [**DomainLogicalInterface**](DomainLogicalInterface.html)| Logical interface | 
+ **edge_id** | **String**| Edge ID |  |
+ **interface_id** | **String**| Interface ID |  |
+ **body** | [**DomainLogicalInterface**](DomainLogicalInterface.html)| Logical interface |  |
 {: class="table table-striped"}
 
 
@@ -6738,8 +6738,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **certificate_id** | **String**| Certificate ID | 
- **body** | [**DomainCertificateAuthority**](DomainCertificateAuthority.html)| Certificate authority | 
+ **certificate_id** | **String**| Certificate ID |  |
+ **body** | [**DomainCertificateAuthority**](DomainCertificateAuthority.html)| Certificate authority |  |
 {: class="table table-striped"}
 
 
@@ -6800,8 +6800,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did_id** | **String**| DID ID | 
- **body** | [**DID**](DID.html)| DID | 
+ **did_id** | **String**| DID ID |  |
+ **body** | [**DID**](DID.html)| DID |  |
 {: class="table table-striped"}
 
 
@@ -6862,8 +6862,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **did_pool_id** | **String**| DID pool ID | 
- **body** | [**DIDPool**](DIDPool.html)| DID pool | 
+ **did_pool_id** | **String**| DID pool ID |  |
+ **body** | [**DIDPool**](DIDPool.html)| DID pool |  |
 {: class="table table-striped"}
 
 
@@ -6924,8 +6924,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edge_group_id** | **String**| Edge group ID | 
- **body** | [**EdgeGroup**](EdgeGroup.html)| EdgeGroup | 
+ **edge_group_id** | **String**| Edge group ID |  |
+ **body** | [**EdgeGroup**](EdgeGroup.html)| EdgeGroup |  |
 {: class="table table-striped"}
 
 
@@ -6988,9 +6988,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **edgegroup_id** | **String**| Edge Group ID | 
- **edgetrunkbase_id** | **String**| Edge Trunk Base ID | 
- **body** | [**EdgeTrunkBase**](EdgeTrunkBase.html)| EdgeTrunkBase | 
+ **edgegroup_id** | **String**| Edge Group ID |  |
+ **edgetrunkbase_id** | **String**| Edge Trunk Base ID |  |
+ **body** | [**EdgeTrunkBase**](EdgeTrunkBase.html)| EdgeTrunkBase |  |
 {: class="table table-striped"}
 
 
@@ -7051,8 +7051,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **endpoint_id** | **String**| Endpoint ID | 
- **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate | 
+ **endpoint_id** | **String**| Endpoint ID |  |
+ **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate |  |
 {: class="table table-striped"}
 
 
@@ -7113,8 +7113,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extension_id** | **String**| Extension ID | 
- **body** | [**Extension**](Extension.html)| Extension | 
+ **extension_id** | **String**| Extension ID |  |
+ **body** | [**Extension**](Extension.html)| Extension |  |
 {: class="table table-striped"}
 
 
@@ -7175,8 +7175,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extension_pool_id** | **String**| Extension pool ID | 
- **body** | [**ExtensionPool**](ExtensionPool.html)| ExtensionPool | 
+ **extension_pool_id** | **String**| Extension pool ID |  |
+ **body** | [**ExtensionPool**](ExtensionPool.html)| ExtensionPool |  |
 {: class="table table-striped"}
 
 
@@ -7237,8 +7237,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **outbound_route_id** | **String**| Outbound route ID | 
- **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute | 
+ **outbound_route_id** | **String**| Outbound route ID |  |
+ **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute |  |
 {: class="table table-striped"}
 
 
@@ -7299,8 +7299,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone_id** | **String**| Phone ID | 
- **body** | [**Phone**](Phone.html)| Phone | 
+ **phone_id** | **String**| Phone ID |  |
+ **body** | [**Phone**](Phone.html)| Phone |  |
 {: class="table table-striped"}
 
 
@@ -7361,8 +7361,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone_base_id** | **String**| Phone base ID | 
- **body** | [**PhoneBase**](PhoneBase.html)| Phone base settings | 
+ **phone_base_id** | **String**| Phone base ID |  |
+ **body** | [**PhoneBase**](PhoneBase.html)| Phone base settings |  |
 {: class="table table-striped"}
 
 
@@ -7423,8 +7423,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
- **body** | [**Site**](Site.html)| Site | 
+ **site_id** | **String**| Site ID |  |
+ **body** | [**Site**](Site.html)| Site |  |
 {: class="table table-striped"}
 
 
@@ -7485,8 +7485,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
- **body** | [**Array&lt;NumberPlan&gt;**](NumberPlan.html)| List of number plans | 
+ **site_id** | **String**| Site ID |  |
+ **body** | [**Array&lt;NumberPlan&gt;**](NumberPlan.html)| List of number plans |  |
 {: class="table table-striped"}
 
 
@@ -7549,9 +7549,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site ID | 
- **outbound_route_id** | **String**| Outbound route ID | 
- **body** | [**OutboundRouteBase**](OutboundRouteBase.html)| OutboundRoute | 
+ **site_id** | **String**| Site ID |  |
+ **outbound_route_id** | **String**| Outbound route ID |  |
+ **body** | [**OutboundRouteBase**](OutboundRouteBase.html)| OutboundRoute |  |
 {: class="table table-striped"}
 
 
@@ -7612,8 +7612,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **trunk_base_settings_id** | **String**| Trunk Base ID | 
- **body** | [**TrunkBase**](TrunkBase.html)| Trunk base settings | 
+ **trunk_base_settings_id** | **String**| Trunk Base ID |  |
+ **body** | [**TrunkBase**](TrunkBase.html)| Trunk base settings |  |
 {: class="table table-striped"}
 
 

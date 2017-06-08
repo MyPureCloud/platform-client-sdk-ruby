@@ -41,32 +41,54 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'evaluation_id' => :'evaluationId',
+        
         :'evaluator_id' => :'evaluatorId',
+        
         :'user_id' => :'userId',
+        
         :'event_time' => :'eventTime',
+        
         :'queue_id' => :'queueId',
+        
         :'form_id' => :'formId',
+        
         :'context_id' => :'contextId',
+        
         :'form_name' => :'formName',
+        
         :'geto_total_score' => :'getoTotalScore',
+        
         :'geto_total_critical_score' => :'getoTotalCriticalScore'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'evaluation_id' => :'String',
+        
         :'evaluator_id' => :'String',
+        
         :'user_id' => :'String',
+        
         :'event_time' => :'String',
+        
         :'queue_id' => :'String',
+        
         :'form_id' => :'String',
+        
         :'context_id' => :'String',
+        
         :'form_name' => :'String',
+        
         :'geto_total_score' => :'Integer',
+        
         :'geto_total_critical_score' => :'Integer'
+        
       }
     end
 
@@ -78,60 +100,205 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'evaluationId')
+        
+        
         self.evaluation_id = attributes[:'evaluationId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'evaluatorId')
+        
+        
         self.evaluator_id = attributes[:'evaluatorId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'userId')
+        
+        
         self.user_id = attributes[:'userId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'eventTime')
+        
+        
         self.event_time = attributes[:'eventTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'queueId')
+        
+        
         self.queue_id = attributes[:'queueId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'formId')
+        
+        
         self.form_id = attributes[:'formId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contextId')
+        
+        
         self.context_id = attributes[:'contextId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'formName')
+        
+        
         self.form_name = attributes[:'formName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'getoTotalScore')
+        
+        
         self.geto_total_score = attributes[:'getoTotalScore']
+        
+      
       end
 
+      
       if attributes.has_key?(:'getoTotalCriticalScore')
+        
+        
         self.geto_total_critical_score = attributes[:'getoTotalCriticalScore']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -97,7 +97,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_id** | **String**| domain ID | 
+ **domain_id** | **String**| domain ID |  |
 {: class="table table-striped"}
 
 
@@ -157,8 +157,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_name** | **String**| email domain | 
- **route_id** | **String**| route ID | 
+ **domain_name** | **String**| email domain |  |
+ **route_id** | **String**| route ID |  |
 {: class="table table-striped"}
 
 
@@ -219,8 +219,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
- **force_delete** | **BOOLEAN**| forceDelete | [optional] 
+ **queue_id** | **String**| Queue ID |  |
+ **force_delete** | **BOOLEAN**| forceDelete | [optional]  |
 {: class="table table-striped"}
 
 
@@ -280,8 +280,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
- **member_id** | **String**| Member ID | 
+ **queue_id** | **String**| Queue ID |  |
+ **member_id** | **String**| Member ID |  |
 {: class="table table-striped"}
 
 
@@ -341,8 +341,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
- **code_id** | **String**| Code ID | 
+ **queue_id** | **String**| Queue ID |  |
+ **code_id** | **String**| Code ID |  |
 {: class="table table-striped"}
 
 
@@ -400,7 +400,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skill_id** | **String**| Skill ID | 
+ **skill_id** | **String**| Skill ID |  |
 {: class="table table-striped"}
 
 
@@ -510,7 +510,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **code_id** | **String**| Wrapup Code ID | 
+ **code_id** | **String**| Wrapup Code ID |  |
 {: class="table table-striped"}
 
 
@@ -570,8 +570,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **skill_id** | **String**| skillId | 
+ **user_id** | **String**| User ID |  |
+ **skill_id** | **String**| skillId |  |
 {: class="table table-striped"}
 
 
@@ -630,7 +630,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_id** | **String**| domain ID | 
+ **domain_id** | **String**| domain ID |  |
 {: class="table table-striped"}
 
 
@@ -691,8 +691,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_name** | **String**| email domain | 
- **route_id** | **String**| route ID | 
+ **domain_name** | **String**| email domain |  |
+ **route_id** | **String**| route ID |  |
 {: class="table table-striped"}
 
 
@@ -756,10 +756,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_name** | **String**| email domain | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **pattern** | **String**| Filter routes by the route&#39;s pattern property | [optional] 
+ **domain_name** | **String**| email domain |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **pattern** | **String**| Filter routes by the route&#39;s pattern property | [optional]  |
 {: class="table table-striped"}
 
 
@@ -928,10 +928,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]
- **name** | **String**| Name | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
+ **name** | **String**| Name | [optional]  |
 {: class="table table-striped"}
 
 
@@ -990,7 +990,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
+ **queue_id** | **String**| Queue ID |  |
 {: class="table table-striped"}
 
 
@@ -1052,8 +1052,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| queueId | 
- **conversation_id** | **String**| conversationId | [optional] 
+ **queue_id** | **String**| queueId |  |
+ **conversation_id** | **String**| conversationId | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1114,8 +1114,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| queueId | 
- **media_type** | **String**| mediaType | 
+ **queue_id** | **String**| queueId |  |
+ **media_type** | **String**| mediaType |  |
 {: class="table table-striped"}
 
 
@@ -1187,18 +1187,18 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| Sort by | [optional] [default to name]
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
- **joined** | **BOOLEAN**| Filter by joined status | [optional] 
- **name** | **String**| Filter by queue member name | [optional] 
- **profile_skills** | [**Array&lt;String&gt;**](String.html)| Filter by profile skill | [optional] 
- **skills** | [**Array&lt;String&gt;**](String.html)| Filter by skill | [optional] 
- **languages** | [**Array&lt;String&gt;**](String.html)| Filter by language | [optional] 
- **routing_status** | [**Array&lt;String&gt;**](String.html)| Filter by routing status | [optional] 
- **presence** | [**Array&lt;String&gt;**](String.html)| Filter by presence | [optional] 
+ **queue_id** | **String**| Queue ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token |
+ **joined** | **BOOLEAN**| Filter by joined status | [optional]  |
+ **name** | **String**| Filter by queue member name | [optional]  |
+ **profile_skills** | [**Array&lt;String&gt;**](String.html)| Filter by profile skill | [optional]  |
+ **skills** | [**Array&lt;String&gt;**](String.html)| Filter by skill | [optional]  |
+ **languages** | [**Array&lt;String&gt;**](String.html)| Filter by language | [optional]  |
+ **routing_status** | [**Array&lt;String&gt;**](String.html)| Filter by routing status | [optional]  |
+ **presence** | [**Array&lt;String&gt;**](String.html)| Filter by presence | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1257,7 +1257,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
+ **queue_id** | **String**| Queue ID |  |
 {: class="table table-striped"}
 
 
@@ -1321,11 +1321,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| Sort by | [optional] [default to name]
- **name** | **String**| Name | [optional] 
- **active** | **BOOLEAN**| Active | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **name** | **String**| Name | [optional]  |
+ **active** | **BOOLEAN**| Active | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1384,7 +1384,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **skill_id** | **String**| Skill ID | 
+ **skill_id** | **String**| Skill ID |  |
 {: class="table table-striped"}
 
 
@@ -1446,9 +1446,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **name** | **String**| Filter for results that start with this value | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **name** | **String**| Filter for results that start with this value | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1560,7 +1560,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **code_id** | **String**| Wrapup Code ID | 
+ **code_id** | **String**| Wrapup Code ID |  |
 {: class="table table-striped"}
 
 
@@ -1622,9 +1622,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| Sort by | [optional] [default to name]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 
 
@@ -1688,10 +1688,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]
+ **user_id** | **String**| User ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -1754,9 +1754,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
- **member_id** | **String**| Member ID | 
- **body** | [**QueueMember**](QueueMember.html)| Queue Member | 
+ **queue_id** | **String**| Queue ID |  |
+ **member_id** | **String**| Member ID |  |
+ **body** | [**QueueMember**](QueueMember.html)| Queue Member |  |
 {: class="table table-striped"}
 
 
@@ -1817,8 +1817,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
- **body** | [**Array&lt;QueueMember&gt;**](QueueMember.html)| Queue Members | 
+ **queue_id** | **String**| Queue ID |  |
+ **body** | [**Array&lt;QueueMember&gt;**](QueueMember.html)| Queue Members |  |
 {: class="table table-striped"}
 
 
@@ -1877,7 +1877,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ObservationQuery**](ObservationQuery.html)| query | 
+ **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -1938,8 +1938,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_name** | **String**| email domain | 
- **body** | [**InboundRoute**](InboundRoute.html)| Route | 
+ **domain_name** | **String**| email domain |  |
+ **body** | [**InboundRoute**](InboundRoute.html)| Route |  |
 {: class="table table-striped"}
 
 
@@ -1998,7 +1998,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**InboundDomain**](InboundDomain.html)| Domain | 
+ **body** | [**InboundDomain**](InboundDomain.html)| Domain |  |
 {: class="table table-striped"}
 
 
@@ -2057,7 +2057,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Language**](Language.html)| Language | 
+ **body** | [**Language**](Language.html)| Language |  |
 {: class="table table-striped"}
 
 
@@ -2121,9 +2121,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
- **body** | [**Array&lt;QueueMember&gt;**](QueueMember.html)| Queue Members | 
- **delete** | **BOOLEAN**| True to delete queue members | [optional] [default to false]
+ **queue_id** | **String**| Queue ID |  |
+ **body** | [**Array&lt;QueueMember&gt;**](QueueMember.html)| Queue Members |  |
+ **delete** | **BOOLEAN**| True to delete queue members | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -2184,8 +2184,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
- **body** | [**Array&lt;WrapupCode&gt;**](WrapupCode.html)| List of wrapup codes | 
+ **queue_id** | **String**| Queue ID |  |
+ **body** | [**Array&lt;WrapupCode&gt;**](WrapupCode.html)| List of wrapup codes |  |
 {: class="table table-striped"}
 
 
@@ -2244,7 +2244,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateQueueRequest**](CreateQueueRequest.html)| Queue | 
+ **body** | [**CreateQueueRequest**](CreateQueueRequest.html)| Queue |  |
 {: class="table table-striped"}
 
 
@@ -2303,7 +2303,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RoutingSkill**](RoutingSkill.html)| Skill | 
+ **body** | [**RoutingSkill**](RoutingSkill.html)| Skill |  |
 {: class="table table-striped"}
 
 
@@ -2362,7 +2362,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode | 
+ **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode |  |
 {: class="table table-striped"}
 
 
@@ -2423,8 +2423,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | [**UserRoutingSkillPost**](UserRoutingSkillPost.html)| Skill | 
+ **user_id** | **String**| User ID |  |
+ **body** | [**UserRoutingSkillPost**](UserRoutingSkillPost.html)| Skill |  |
 {: class="table table-striped"}
 
 
@@ -2487,9 +2487,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain_name** | **String**| email domain | 
- **route_id** | **String**| route ID | 
- **body** | [**InboundRoute**](InboundRoute.html)| Route | 
+ **domain_name** | **String**| email domain |  |
+ **route_id** | **String**| route ID |  |
+ **body** | [**InboundRoute**](InboundRoute.html)| Route |  |
 {: class="table table-striped"}
 
 
@@ -2550,8 +2550,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
- **body** | [**Queue**](Queue.html)| Queue | 
+ **queue_id** | **String**| Queue ID |  |
+ **body** | [**Queue**](Queue.html)| Queue |  |
 {: class="table table-striped"}
 
 
@@ -2610,7 +2610,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Utilization**](Utilization.html)| utilization | 
+ **body** | [**Utilization**](Utilization.html)| utilization |  |
 {: class="table table-striped"}
 
 
@@ -2671,8 +2671,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **code_id** | **String**| Wrapup Code ID | 
- **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode | 
+ **code_id** | **String**| Wrapup Code ID |  |
+ **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode |  |
 {: class="table table-striped"}
 
 
@@ -2735,9 +2735,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **skill_id** | **String**| skillId | 
- **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill | 
+ **user_id** | **String**| User ID |  |
+ **skill_id** | **String**| skillId |  |
+ **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill |  |
 {: class="table table-striped"}
 
 

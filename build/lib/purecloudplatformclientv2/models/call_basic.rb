@@ -83,54 +83,98 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'state' => :'state',
+        
         :'id' => :'id',
+        
         :'direction' => :'direction',
+        
         :'recording' => :'recording',
+        
         :'recording_state' => :'recordingState',
+        
         :'muted' => :'muted',
+        
         :'confined' => :'confined',
+        
         :'held' => :'held',
+        
         :'recording_id' => :'recordingId',
+        
         :'segments' => :'segments',
+        
         :'error_info' => :'errorInfo',
+        
         :'disconnect_type' => :'disconnectType',
+        
         :'start_hold_time' => :'startHoldTime',
+        
         :'document_id' => :'documentId',
+        
         :'connected_time' => :'connectedTime',
+        
         :'disconnected_time' => :'disconnectedTime',
+        
         :'disconnect_reasons' => :'disconnectReasons',
+        
         :'fax_status' => :'faxStatus',
+        
         :'provider' => :'provider',
+        
         :'script_id' => :'scriptId',
+        
         :'peer_id' => :'peerId'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'state' => :'String',
+        
         :'id' => :'String',
+        
         :'direction' => :'String',
+        
         :'recording' => :'BOOLEAN',
+        
         :'recording_state' => :'String',
+        
         :'muted' => :'BOOLEAN',
+        
         :'confined' => :'BOOLEAN',
+        
         :'held' => :'BOOLEAN',
+        
         :'recording_id' => :'String',
+        
         :'segments' => :'Array<Segment>',
+        
         :'error_info' => :'ErrorBody',
+        
         :'disconnect_type' => :'String',
+        
         :'start_hold_time' => :'DateTime',
+        
         :'document_id' => :'String',
+        
         :'connected_time' => :'DateTime',
+        
         :'disconnected_time' => :'DateTime',
+        
         :'disconnect_reasons' => :'Array<DisconnectReason>',
+        
         :'fax_status' => :'FaxStatus',
+        
         :'provider' => :'String',
+        
         :'script_id' => :'String',
+        
         :'peer_id' => :'String'
+        
       }
     end
 
@@ -142,124 +186,323 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'direction')
+        
+        
         self.direction = attributes[:'direction']
+        
+      
       end
 
+      
       if attributes.has_key?(:'recording')
+        
+        
         self.recording = attributes[:'recording']
+        
+      
       end
 
+      
       if attributes.has_key?(:'recordingState')
+        
+        
         self.recording_state = attributes[:'recordingState']
+        
+      
       end
 
+      
       if attributes.has_key?(:'muted')
+        
+        
         self.muted = attributes[:'muted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'confined')
+        
+        
         self.confined = attributes[:'confined']
+        
+      
       end
 
+      
       if attributes.has_key?(:'held')
+        
+        
         self.held = attributes[:'held']
+        
+      
       end
 
+      
       if attributes.has_key?(:'recordingId')
+        
+        
         self.recording_id = attributes[:'recordingId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'segments')
+        
         if (value = attributes[:'segments']).is_a?(Array)
           self.segments = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'errorInfo')
+        
+        
         self.error_info = attributes[:'errorInfo']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectType')
+        
+        
         self.disconnect_type = attributes[:'disconnectType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startHoldTime')
+        
+        
         self.start_hold_time = attributes[:'startHoldTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'documentId')
+        
+        
         self.document_id = attributes[:'documentId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'connectedTime')
+        
+        
         self.connected_time = attributes[:'connectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectedTime')
+        
+        
         self.disconnected_time = attributes[:'disconnectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectReasons')
+        
         if (value = attributes[:'disconnectReasons']).is_a?(Array)
           self.disconnect_reasons = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'faxStatus')
+        
+        
         self.fax_status = attributes[:'faxStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'provider')
+        
+        
         self.provider = attributes[:'provider']
+        
+      
       end
 
+      
       if attributes.has_key?(:'scriptId')
+        
+        
         self.script_id = attributes[:'scriptId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'peerId')
+        
+        
         self.peer_id = attributes[:'peerId']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["alerting", "dialing", "contacting", "offering", "connected", "disconnected", "terminated", "converting", "uploading", "transmitting", "none"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["inbound", "outbound"]
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["none", "active", "paused"]
       if @recording_state && !allowed_values.include?(@recording_state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["endpoint", "client", "system", "timeout", "transfer", "transfer.conference", "transfer.consult", "transfer.forward", "transfer.noanswer", "transfer.notavailable", "transport.failure", "error", "peer", "other", "spam", "uncallable"]
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -270,6 +513,15 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] direction Object to be assigned
     def direction=(direction)
@@ -280,6 +532,15 @@ module PureCloud
       @direction = direction
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] recording_state Object to be assigned
     def recording_state=(recording_state)
@@ -290,6 +551,40 @@ module PureCloud
       @recording_state = recording_state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] disconnect_type Object to be assigned
     def disconnect_type=(disconnect_type)
@@ -300,6 +595,54 @@ module PureCloud
       @disconnect_type = disconnect_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -29,20 +29,30 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'name' => :'name',
+        
         :'parameter_type' => :'parameterType',
+        
         :'domain' => :'domain',
+        
         :'required' => :'required'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'name' => :'String',
+        
         :'parameter_type' => :'String',
+        
         :'domain' => :'String',
+        
         :'required' => :'BOOLEAN'
+        
       }
     end
 
@@ -54,44 +64,93 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'parameterType')
+        
+        
         self.parameter_type = attributes[:'parameterType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'domain')
+        
+        
         self.domain = attributes[:'domain']
+        
+      
       end
 
+      
       if attributes.has_key?(:'required')
+        
+        
         self.required = attributes[:'required']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["UUID", "STRING", "UUIDLIST", "STRINGLIST"]
       if @parameter_type && !allowed_values.include?(@parameter_type)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["USERID", "QUEUEID", "MEDIATYPE", "DIALERCAMPAIGNID", "QMEVALFORMID", "UNKNOWN"]
       if @domain && !allowed_values.include?(@domain)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] parameter_type Object to be assigned
     def parameter_type=(parameter_type)
@@ -102,6 +161,10 @@ module PureCloud
       @parameter_type = parameter_type
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] domain Object to be assigned
     def domain=(domain)
@@ -112,6 +175,14 @@ module PureCloud
       @domain = domain
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

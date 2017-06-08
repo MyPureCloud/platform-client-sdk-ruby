@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StationsApi.delete_station_associateduser ..."
       end
+      
+      
       # verify the required parameter 'station_id' is set
       fail ArgumentError, "Missing the required parameter 'station_id' when calling StationsApi.delete_station_associateduser" if station_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/stations/{stationId}/associateduser".sub('{format}','json').sub('{' + 'stationId' + '}', station_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -99,8 +107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StationsApi.get_station ..."
       end
+      
+      
       # verify the required parameter 'station_id' is set
       fail ArgumentError, "Missing the required parameter 'station_id' when calling StationsApi.get_station" if station_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/stations/{stationId}".sub('{format}','json').sub('{' + 'stationId' + '}', station_id.to_s)
 
@@ -123,7 +138,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -170,6 +186,55 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: StationsApi.get_stations ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/stations".sub('{format}','json')
 
@@ -200,7 +265,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,

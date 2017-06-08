@@ -74,48 +74,86 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'user' => :'user',
+        
         :'is_full_day_request' => :'isFullDayRequest',
+        
         :'marked_as_read' => :'markedAsRead',
+        
         :'activity_code_id' => :'activityCodeId',
+        
         :'status' => :'status',
+        
         :'partial_day_start_date_times' => :'partialDayStartDateTimes',
+        
         :'daily_duration_minutes' => :'dailyDurationMinutes',
+        
         :'notes' => :'notes',
+        
         :'submitted_by' => :'submittedBy',
+        
         :'submitted_date' => :'submittedDate',
+        
         :'reviewed_by' => :'reviewedBy',
+        
         :'reviewed_date' => :'reviewedDate',
+        
         :'modified_by' => :'modifiedBy',
+        
         :'modified_date' => :'modifiedDate',
+        
         :'self_uri' => :'selfUri',
+        
         :'full_day_management_unit_dates' => :'fullDayManagementUnitDates'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'user' => :'User',
+        
         :'is_full_day_request' => :'BOOLEAN',
+        
         :'marked_as_read' => :'BOOLEAN',
+        
         :'activity_code_id' => :'String',
+        
         :'status' => :'String',
+        
         :'partial_day_start_date_times' => :'Array<DateTime>',
+        
         :'daily_duration_minutes' => :'Integer',
+        
         :'notes' => :'String',
+        
         :'submitted_by' => :'User',
+        
         :'submitted_date' => :'DateTime',
+        
         :'reviewed_by' => :'User',
+        
         :'reviewed_date' => :'DateTime',
+        
         :'modified_by' => :'User',
+        
         :'modified_date' => :'DateTime',
+        
         :'self_uri' => :'String',
+        
         :'full_day_management_unit_dates' => :'Array<String>'
+        
       }
     end
 
@@ -127,124 +165,329 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'user')
+        
+        
         self.user = attributes[:'user']
+        
+      
       end
 
+      
       if attributes.has_key?(:'isFullDayRequest')
+        
+        
         self.is_full_day_request = attributes[:'isFullDayRequest']
+        
+      
       end
 
+      
       if attributes.has_key?(:'markedAsRead')
+        
+        
         self.marked_as_read = attributes[:'markedAsRead']
+        
+      
       end
 
+      
       if attributes.has_key?(:'activityCodeId')
+        
+        
         self.activity_code_id = attributes[:'activityCodeId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'status')
+        
+        
         self.status = attributes[:'status']
+        
+      
       end
 
+      
       if attributes.has_key?(:'partialDayStartDateTimes')
+        
         if (value = attributes[:'partialDayStartDateTimes']).is_a?(Array)
           self.partial_day_start_date_times = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'dailyDurationMinutes')
+        
+        
         self.daily_duration_minutes = attributes[:'dailyDurationMinutes']
+        
+      
       end
 
+      
       if attributes.has_key?(:'notes')
+        
+        
         self.notes = attributes[:'notes']
+        
+      
       end
 
+      
       if attributes.has_key?(:'submittedBy')
+        
+        
         self.submitted_by = attributes[:'submittedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'submittedDate')
+        
+        
         self.submitted_date = attributes[:'submittedDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'reviewedBy')
+        
+        
         self.reviewed_by = attributes[:'reviewedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'reviewedDate')
+        
+        
         self.reviewed_date = attributes[:'reviewedDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedBy')
+        
+        
         self.modified_by = attributes[:'modifiedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedDate')
+        
+        
         self.modified_date = attributes[:'modifiedDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'fullDayManagementUnitDates')
+        
         if (value = attributes[:'fullDayManagementUnitDates']).is_a?(Array)
           self.full_day_management_unit_dates = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @user.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @is_full_day_request.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @marked_as_read.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @activity_code_id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @status.nil?
         return false
       end
 
+      
+      
       allowed_values = ["PENDING", "APPROVED", "DENIED", "CANCELED"]
       if @status && !allowed_values.include?(@status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       if @daily_duration_minutes.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status Object to be assigned
     def status=(status)
@@ -255,6 +498,64 @@ module PureCloud
       @status = status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

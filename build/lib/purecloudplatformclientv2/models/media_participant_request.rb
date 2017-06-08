@@ -42,26 +42,42 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'wrapup' => :'wrapup',
+        
         :'state' => :'state',
+        
         :'recording' => :'recording',
+        
         :'muted' => :'muted',
+        
         :'confined' => :'confined',
+        
         :'held' => :'held',
+        
         :'wrapup_skipped' => :'wrapupSkipped'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'wrapup' => :'Wrapup',
+        
         :'state' => :'String',
+        
         :'recording' => :'BOOLEAN',
+        
         :'muted' => :'BOOLEAN',
+        
         :'confined' => :'BOOLEAN',
+        
         :'held' => :'BOOLEAN',
+        
         :'wrapup_skipped' => :'BOOLEAN'
+        
       }
     end
 
@@ -73,52 +89,127 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'wrapup')
+        
+        
         self.wrapup = attributes[:'wrapup']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'recording')
+        
+        
         self.recording = attributes[:'recording']
+        
+      
       end
 
+      
       if attributes.has_key?(:'muted')
+        
+        
         self.muted = attributes[:'muted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'confined')
+        
+        
         self.confined = attributes[:'confined']
+        
+      
       end
 
+      
       if attributes.has_key?(:'held')
+        
+        
         self.held = attributes[:'held']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapupSkipped')
+        
+        
         self.wrapup_skipped = attributes[:'wrapupSkipped']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["alerting", "dialing", "contacting", "offering", "connected", "disconnected", "terminated", "converting", "uploading", "transmitting", "none"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -129,6 +220,34 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

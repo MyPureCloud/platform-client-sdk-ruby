@@ -68,52 +68,94 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'first_name' => :'firstName',
+        
         :'middle_name' => :'middleName',
+        
         :'last_name' => :'lastName',
+        
         :'salutation' => :'salutation',
+        
         :'title' => :'title',
+        
         :'work_phone' => :'workPhone',
+        
         :'cell_phone' => :'cellPhone',
+        
         :'home_phone' => :'homePhone',
+        
         :'other_phone' => :'otherPhone',
+        
         :'work_email' => :'workEmail',
+        
         :'personal_email' => :'personalEmail',
+        
         :'other_email' => :'otherEmail',
+        
         :'address' => :'address',
+        
         :'twitter_id' => :'twitterId',
+        
         :'modify_date' => :'modifyDate',
+        
         :'create_date' => :'createDate',
+        
         :'external_organization' => :'externalOrganization',
+        
         :'external_data_sources' => :'externalDataSources',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'first_name' => :'String',
+        
         :'middle_name' => :'String',
+        
         :'last_name' => :'String',
+        
         :'salutation' => :'String',
+        
         :'title' => :'String',
+        
         :'work_phone' => :'PhoneNumber',
+        
         :'cell_phone' => :'PhoneNumber',
+        
         :'home_phone' => :'PhoneNumber',
+        
         :'other_phone' => :'PhoneNumber',
+        
         :'work_email' => :'String',
+        
         :'personal_email' => :'String',
+        
         :'other_email' => :'String',
+        
         :'address' => :'ContactAddress',
+        
         :'twitter_id' => :'TwitterId',
+        
         :'modify_date' => :'DateTime',
+        
         :'create_date' => :'DateTime',
+        
         :'external_organization' => :'ExternalOrganization',
+        
         :'external_data_sources' => :'Array<ExternalDataSource>',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -125,110 +167,397 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'firstName')
+        
+        
         self.first_name = attributes[:'firstName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'middleName')
+        
+        
         self.middle_name = attributes[:'middleName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lastName')
+        
+        
         self.last_name = attributes[:'lastName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'salutation')
+        
+        
         self.salutation = attributes[:'salutation']
+        
+      
       end
 
+      
       if attributes.has_key?(:'title')
+        
+        
         self.title = attributes[:'title']
+        
+      
       end
 
+      
       if attributes.has_key?(:'workPhone')
+        
+        
         self.work_phone = attributes[:'workPhone']
+        
+      
       end
 
+      
       if attributes.has_key?(:'cellPhone')
+        
+        
         self.cell_phone = attributes[:'cellPhone']
+        
+      
       end
 
+      
       if attributes.has_key?(:'homePhone')
+        
+        
         self.home_phone = attributes[:'homePhone']
+        
+      
       end
 
+      
       if attributes.has_key?(:'otherPhone')
+        
+        
         self.other_phone = attributes[:'otherPhone']
+        
+      
       end
 
+      
       if attributes.has_key?(:'workEmail')
+        
+        
         self.work_email = attributes[:'workEmail']
+        
+      
       end
 
+      
       if attributes.has_key?(:'personalEmail')
+        
+        
         self.personal_email = attributes[:'personalEmail']
+        
+      
       end
 
+      
       if attributes.has_key?(:'otherEmail')
+        
+        
         self.other_email = attributes[:'otherEmail']
+        
+      
       end
 
+      
       if attributes.has_key?(:'address')
+        
+        
         self.address = attributes[:'address']
+        
+      
       end
 
+      
       if attributes.has_key?(:'twitterId')
+        
+        
         self.twitter_id = attributes[:'twitterId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifyDate')
+        
+        
         self.modify_date = attributes[:'modifyDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createDate')
+        
+        
         self.create_date = attributes[:'createDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'externalOrganization')
+        
+        
         self.external_organization = attributes[:'externalOrganization']
+        
+      
       end
 
+      
       if attributes.has_key?(:'externalDataSources')
+        
         if (value = attributes[:'externalDataSources']).is_a?(Array)
           self.external_data_sources = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @first_name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @last_name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

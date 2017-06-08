@@ -67,44 +67,78 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'user' => :'user',
+        
         :'correlation_id' => :'correlationId',
+        
         :'transaction_id' => :'transactionId',
+        
         :'transaction_initiator' => :'transactionInitiator',
+        
         :'application' => :'application',
+        
         :'service_name' => :'serviceName',
+        
         :'level' => :'level',
+        
         :'timestamp' => :'timestamp',
+        
         :'received_timestamp' => :'receivedTimestamp',
+        
         :'status' => :'status',
+        
         :'action_context' => :'actionContext',
+        
         :'action' => :'action',
+        
         :'changes' => :'changes',
+        
         :'entity' => :'entity',
+        
         :'service_context' => :'serviceContext'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'user' => :'AuditUser',
+        
         :'correlation_id' => :'String',
+        
         :'transaction_id' => :'String',
+        
         :'transaction_initiator' => :'BOOLEAN',
+        
         :'application' => :'String',
+        
         :'service_name' => :'String',
+        
         :'level' => :'String',
+        
         :'timestamp' => :'String',
+        
         :'received_timestamp' => :'String',
+        
         :'status' => :'String',
+        
         :'action_context' => :'String',
+        
         :'action' => :'String',
+        
         :'changes' => :'Array<Change>',
+        
         :'entity' => :'AuditEntity',
+        
         :'service_context' => :'ServiceContext'
+        
       }
     end
 
@@ -116,106 +150,340 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'user')
+        
+        
         self.user = attributes[:'user']
+        
+      
       end
 
+      
       if attributes.has_key?(:'correlationId')
+        
+        
         self.correlation_id = attributes[:'correlationId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'transactionId')
+        
+        
         self.transaction_id = attributes[:'transactionId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'transactionInitiator')
+        
+        
         self.transaction_initiator = attributes[:'transactionInitiator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'application')
+        
+        
         self.application = attributes[:'application']
+        
+      
       end
 
+      
       if attributes.has_key?(:'serviceName')
+        
+        
         self.service_name = attributes[:'serviceName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'level')
+        
+        
         self.level = attributes[:'level']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timestamp')
+        
+        
         self.timestamp = attributes[:'timestamp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'receivedTimestamp')
+        
+        
         self.received_timestamp = attributes[:'receivedTimestamp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'status')
+        
+        
         self.status = attributes[:'status']
+        
+      
       end
 
+      
       if attributes.has_key?(:'actionContext')
+        
+        
         self.action_context = attributes[:'actionContext']
+        
+      
       end
 
+      
       if attributes.has_key?(:'action')
+        
+        
         self.action = attributes[:'action']
+        
+      
       end
 
+      
       if attributes.has_key?(:'changes')
+        
         if (value = attributes[:'changes']).is_a?(Array)
           self.changes = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'entity')
+        
+        
         self.entity = attributes[:'entity']
+        
+      
       end
 
+      
       if attributes.has_key?(:'serviceContext')
+        
+        
         self.service_context = attributes[:'serviceContext']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @service_name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @level.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @received_timestamp.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @status.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

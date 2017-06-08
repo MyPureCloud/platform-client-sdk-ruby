@@ -54,34 +54,58 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'agent' => :'agent',
+        
         :'routing_status' => :'routingStatus',
+        
         :'routing_limit_in_seconds' => :'routingLimitInSeconds',
+        
         :'rule_id' => :'ruleId',
+        
         :'start_date' => :'startDate',
+        
         :'end_date' => :'endDate',
+        
         :'notification_users' => :'notificationUsers',
+        
         :'alert_types' => :'alertTypes',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'agent' => :'User',
+        
         :'routing_status' => :'String',
+        
         :'routing_limit_in_seconds' => :'Integer',
+        
         :'rule_id' => :'String',
+        
         :'start_date' => :'DateTime',
+        
         :'end_date' => :'DateTime',
+        
         :'notification_users' => :'Array<User>',
+        
         :'alert_types' => :'Array<String>',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -93,104 +117,233 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'agent')
+        
+        
         self.agent = attributes[:'agent']
+        
+      
       end
 
+      
       if attributes.has_key?(:'routingStatus')
+        
+        
         self.routing_status = attributes[:'routingStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'routingLimitInSeconds')
+        
+        
         self.routing_limit_in_seconds = attributes[:'routingLimitInSeconds']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ruleId')
+        
+        
         self.rule_id = attributes[:'ruleId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startDate')
+        
+        
         self.start_date = attributes[:'startDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endDate')
+        
+        
         self.end_date = attributes[:'endDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'notificationUsers')
+        
         if (value = attributes[:'notificationUsers']).is_a?(Array)
           self.notification_users = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'alertTypes')
+        
         if (value = attributes[:'alertTypes']).is_a?(Array)
           self.alert_types = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @agent.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @routing_status.nil?
         return false
       end
 
+      
+      
       allowed_values = ["OFF_QUEUE", "IDLE", "INTERACTING", "NOT_RESPONDING", "COMMUNICATING"]
       if @routing_status && !allowed_values.include?(@routing_status)
         return false
       end
+      
+      
+      
+      
       if @routing_limit_in_seconds.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @rule_id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @start_date.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @notification_users.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @alert_types.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] routing_status Object to be assigned
     def routing_status=(routing_status)
@@ -201,6 +354,44 @@ module PureCloud
       @routing_status = routing_status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

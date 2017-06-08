@@ -45,36 +45,62 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'state' => :'state',
+        
         :'id' => :'id',
+        
         :'provider' => :'provider',
+        
         :'script_id' => :'scriptId',
+        
         :'peer_id' => :'peerId',
+        
         :'room_id' => :'roomId',
+        
         :'held' => :'held',
+        
         :'disconnect_type' => :'disconnectType',
+        
         :'start_hold_time' => :'startHoldTime',
+        
         :'connected_time' => :'connectedTime',
+        
         :'disconnected_time' => :'disconnectedTime',
+        
         :'additional_properties' => :'additionalProperties'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'state' => :'String',
+        
         :'id' => :'String',
+        
         :'provider' => :'String',
+        
         :'script_id' => :'String',
+        
         :'peer_id' => :'String',
+        
         :'room_id' => :'String',
+        
         :'held' => :'BOOLEAN',
+        
         :'disconnect_type' => :'String',
+        
         :'start_hold_time' => :'DateTime',
+        
         :'connected_time' => :'DateTime',
+        
         :'disconnected_time' => :'DateTime',
+        
         :'additional_properties' => :'Object'
+        
       }
     end
 
@@ -86,76 +112,192 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'provider')
+        
+        
         self.provider = attributes[:'provider']
+        
+      
       end
 
+      
       if attributes.has_key?(:'scriptId')
+        
+        
         self.script_id = attributes[:'scriptId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'peerId')
+        
+        
         self.peer_id = attributes[:'peerId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'roomId')
+        
+        
         self.room_id = attributes[:'roomId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'held')
+        
+        
         self.held = attributes[:'held']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectType')
+        
+        
         self.disconnect_type = attributes[:'disconnectType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startHoldTime')
+        
+        
         self.start_hold_time = attributes[:'startHoldTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'connectedTime')
+        
+        
         self.connected_time = attributes[:'connectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectedTime')
+        
+        
         self.disconnected_time = attributes[:'disconnectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'additionalProperties')
+        
+        
         self.additional_properties = attributes[:'additionalProperties']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["ALERTING", "DIALING", "CONTACTING", "OFFERING", "CONNECTED", "DISCONNECTED", "TERMINATED", "NONE"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["ENDPOINT", "CLIENT", "SYSTEM", "TIMEOUT", "TRANSFER", "TRANSFER_CONFERENCE", "TRANSFER_CONSULT", "TRANSFER_NOANSWER", "TRANSFER_NOTAVAILABLE", "TRANSFER_FORWARD", "TRANSPORT_FAILURE", "ERROR", "PEER", "OTHER", "SPAM", "UNCALLABLE"]
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -166,6 +308,40 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] disconnect_type Object to be assigned
     def disconnect_type=(disconnect_type)
@@ -176,6 +352,29 @@ module PureCloud
       @disconnect_type = disconnect_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguagesApi.delete_language ..."
       end
+      
+      
       # verify the required parameter 'language_id' is set
       fail ArgumentError, "Missing the required parameter 'language_id' when calling LanguagesApi.delete_language" if language_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/languages/{languageId}".sub('{format}','json').sub('{' + 'languageId' + '}', language_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -99,8 +107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguagesApi.delete_routing_language ..."
       end
+      
+      
       # verify the required parameter 'language_id' is set
       fail ArgumentError, "Missing the required parameter 'language_id' when calling LanguagesApi.delete_routing_language" if language_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/languages/{languageId}".sub('{format}','json').sub('{' + 'languageId' + '}', language_id.to_s)
 
@@ -123,7 +138,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -155,8 +171,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguagesApi.get_language ..."
       end
+      
+      
       # verify the required parameter 'language_id' is set
       fail ArgumentError, "Missing the required parameter 'language_id' when calling LanguagesApi.get_language" if language_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/languages/{languageId}".sub('{format}','json').sub('{' + 'languageId' + '}', language_id.to_s)
 
@@ -179,7 +202,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -218,9 +242,35 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguagesApi.get_languages ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/languages".sub('{format}','json')
 
@@ -247,7 +297,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -278,6 +329,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguagesApi.get_languages_translations ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/languages/translations".sub('{format}','json')
 
@@ -300,7 +352,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -333,8 +386,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguagesApi.get_languages_translations_builtin ..."
       end
+      
+      
       # verify the required parameter 'language' is set
       fail ArgumentError, "Missing the required parameter 'language' when calling LanguagesApi.get_languages_translations_builtin" if language.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/languages/translations/builtin".sub('{format}','json')
 
@@ -358,7 +418,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -391,8 +452,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguagesApi.get_languages_translations_organization ..."
       end
+      
+      
       # verify the required parameter 'language' is set
       fail ArgumentError, "Missing the required parameter 'language' when calling LanguagesApi.get_languages_translations_organization" if language.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/languages/translations/organization".sub('{format}','json')
 
@@ -416,7 +484,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -449,8 +518,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguagesApi.get_languages_translations_user ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling LanguagesApi.get_languages_translations_user" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/languages/translations/users/{userId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -473,7 +549,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -506,8 +583,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguagesApi.get_routing_language ..."
       end
+      
+      
       # verify the required parameter 'language_id' is set
       fail ArgumentError, "Missing the required parameter 'language_id' when calling LanguagesApi.get_routing_language" if language_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/languages/{languageId}".sub('{format}','json').sub('{' + 'languageId' + '}', language_id.to_s)
 
@@ -530,7 +614,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -563,8 +648,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguagesApi.post_languages ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling LanguagesApi.post_languages" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/languages".sub('{format}','json')
 
@@ -587,6 +679,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,

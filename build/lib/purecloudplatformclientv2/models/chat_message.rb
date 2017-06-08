@@ -39,30 +39,50 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'body' => :'body',
+        
         :'id' => :'id',
+        
         :'to' => :'to',
+        
         :'from' => :'from',
+        
         :'utc' => :'utc',
+        
         :'chat' => :'chat',
+        
         :'message' => :'message',
+        
         :'type' => :'type',
+        
         :'user' => :'user'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'body' => :'String',
+        
         :'id' => :'String',
+        
         :'to' => :'String',
+        
         :'from' => :'String',
+        
         :'utc' => :'String',
+        
         :'chat' => :'String',
+        
         :'message' => :'String',
+        
         :'type' => :'String',
+        
         :'user' => :'ChatMessageUser'
+        
       }
     end
 
@@ -74,56 +94,187 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'body')
+        
+        
         self.body = attributes[:'body']
+        
+      
       end
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'to')
+        
+        
         self.to = attributes[:'to']
+        
+      
       end
 
+      
       if attributes.has_key?(:'from')
+        
+        
         self.from = attributes[:'from']
+        
+      
       end
 
+      
       if attributes.has_key?(:'utc')
+        
+        
         self.utc = attributes[:'utc']
+        
+      
       end
 
+      
       if attributes.has_key?(:'chat')
+        
+        
         self.chat = attributes[:'chat']
+        
+      
       end
 
+      
       if attributes.has_key?(:'message')
+        
+        
         self.message = attributes[:'message']
+        
+      
       end
 
+      
       if attributes.has_key?(:'type')
+        
+        
         self.type = attributes[:'type']
+        
+      
       end
 
+      
       if attributes.has_key?(:'user')
+        
+        
         self.user = attributes[:'user']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

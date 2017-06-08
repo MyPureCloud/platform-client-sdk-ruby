@@ -37,9 +37,9 @@ module PureCloud
     # Optional unless patch operation.
     attr_accessor :role_needs_update
 
-    attr_accessor :default
-
     attr_accessor :base
+
+    attr_accessor :default
 
     # The URI for this object
     attr_accessor :self_uri
@@ -47,34 +47,58 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'description' => :'description',
+        
         :'default_role_id' => :'defaultRoleId',
+        
         :'permissions' => :'permissions',
+        
         :'permission_policies' => :'permissionPolicies',
+        
         :'user_count' => :'userCount',
+        
         :'role_needs_update' => :'roleNeedsUpdate',
-        :'default' => :'default',
+        
         :'base' => :'base',
+        
+        :'default' => :'default',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'description' => :'String',
+        
         :'default_role_id' => :'String',
+        
         :'permissions' => :'Array<String>',
+        
         :'permission_policies' => :'Array<DomainPermissionPolicy>',
+        
         :'user_count' => :'Integer',
+        
         :'role_needs_update' => :'BOOLEAN',
-        :'default' => :'BOOLEAN',
+        
         :'base' => :'BOOLEAN',
+        
+        :'default' => :'BOOLEAN',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -86,72 +110,232 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'description')
+        
+        
         self.description = attributes[:'description']
+        
+      
       end
 
+      
       if attributes.has_key?(:'defaultRoleId')
+        
+        
         self.default_role_id = attributes[:'defaultRoleId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'permissions')
+        
         if (value = attributes[:'permissions']).is_a?(Array)
           self.permissions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'permissionPolicies')
+        
         if (value = attributes[:'permissionPolicies']).is_a?(Array)
           self.permission_policies = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'userCount')
+        
+        
         self.user_count = attributes[:'userCount']
+        
+      
       end
 
+      
       if attributes.has_key?(:'roleNeedsUpdate')
+        
+        
         self.role_needs_update = attributes[:'roleNeedsUpdate']
+        
+      
       end
 
-      if attributes.has_key?(:'default')
-        self.default = attributes[:'default']
-      end
-
+      
       if attributes.has_key?(:'base')
+        
+        
         self.base = attributes[:'base']
+        
+      
       end
 
+      
+      if attributes.has_key?(:'default')
+        
+        
+        self.default = attributes[:'default']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -165,8 +349,8 @@ module PureCloud
           permission_policies == o.permission_policies &&
           user_count == o.user_count &&
           role_needs_update == o.role_needs_update &&
-          default == o.default &&
           base == o.base &&
+          default == o.default &&
           self_uri == o.self_uri
     end
 
@@ -179,7 +363,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, default_role_id, permissions, permission_policies, user_count, role_needs_update, default, base, self_uri].hash
+      [id, name, description, default_role_id, permissions, permission_policies, user_count, role_needs_update, base, default, self_uri].hash
     end
 
     # build the object from hash

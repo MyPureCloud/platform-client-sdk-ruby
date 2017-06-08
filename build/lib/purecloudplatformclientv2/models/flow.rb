@@ -58,44 +58,78 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'description' => :'description',
+        
         :'type' => :'type',
+        
         :'locked_user' => :'lockedUser',
+        
         :'active' => :'active',
+        
         :'system' => :'system',
+        
         :'deleted' => :'deleted',
+        
         :'published_version' => :'publishedVersion',
+        
         :'saved_version' => :'savedVersion',
+        
         :'input_schema' => :'inputSchema',
+        
         :'output_schema' => :'outputSchema',
+        
         :'checked_in_version' => :'checkedInVersion',
+        
         :'published_by' => :'publishedBy',
+        
         :'current_operation' => :'currentOperation',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'description' => :'String',
+        
         :'type' => :'String',
+        
         :'locked_user' => :'User',
+        
         :'active' => :'BOOLEAN',
+        
         :'system' => :'BOOLEAN',
+        
         :'deleted' => :'BOOLEAN',
+        
         :'published_version' => :'FlowVersion',
+        
         :'saved_version' => :'FlowVersion',
+        
         :'input_schema' => :'Object',
+        
         :'output_schema' => :'Object',
+        
         :'checked_in_version' => :'FlowVersion',
+        
         :'published_by' => :'User',
+        
         :'current_operation' => :'Operation',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -107,92 +141,259 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'description')
+        
+        
         self.description = attributes[:'description']
+        
+      
       end
 
+      
       if attributes.has_key?(:'type')
+        
+        
         self.type = attributes[:'type']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lockedUser')
+        
+        
         self.locked_user = attributes[:'lockedUser']
+        
+      
       end
 
+      
       if attributes.has_key?(:'active')
+        
+        
         self.active = attributes[:'active']
+        
+      
       end
 
+      
       if attributes.has_key?(:'system')
+        
+        
         self.system = attributes[:'system']
+        
+      
       end
 
+      
       if attributes.has_key?(:'deleted')
+        
+        
         self.deleted = attributes[:'deleted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'publishedVersion')
+        
+        
         self.published_version = attributes[:'publishedVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'savedVersion')
+        
+        
         self.saved_version = attributes[:'savedVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'inputSchema')
+        
+        
         self.input_schema = attributes[:'inputSchema']
+        
+      
       end
 
+      
       if attributes.has_key?(:'outputSchema')
+        
+        
         self.output_schema = attributes[:'outputSchema']
+        
+      
       end
 
+      
       if attributes.has_key?(:'checkedInVersion')
+        
+        
         self.checked_in_version = attributes[:'checkedInVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'publishedBy')
+        
+        
         self.published_by = attributes[:'publishedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'currentOperation')
+        
+        
         self.current_operation = attributes[:'currentOperation']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["INBOUNDCALL", "INBOUNDEMAIL", "INQUEUECALL", "OUTBOUNDCALL", "SECURECALL", "SPEECH", "WORKFLOW"]
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
@@ -203,6 +404,69 @@ module PureCloud
       @type = type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

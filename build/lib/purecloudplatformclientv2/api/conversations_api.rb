@@ -47,12 +47,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.delete_conversation_participant_code ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.delete_conversation_participant_code" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.delete_conversation_participant_code" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'add_communication_code' is set
       fail ArgumentError, "Missing the required parameter 'add_communication_code' when calling ConversationsApi.delete_conversation_participant_code" if add_communication_code.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'addCommunicationCode' + '}', add_communication_code.to_s)
 
@@ -75,7 +94,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -109,10 +129,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.delete_conversations_call_participant_consult ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.delete_conversations_call_participant_consult" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.delete_conversations_call_participant_consult" if participant_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -135,7 +168,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -169,10 +203,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.delete_conversations_email_messages_draft_attachment ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.delete_conversations_email_messages_draft_attachment" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'attachment_id' is set
       fail ArgumentError, "Missing the required parameter 'attachment_id' when calling ConversationsApi.delete_conversations_email_messages_draft_attachment" if attachment_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'attachmentId' + '}', attachment_id.to_s)
 
@@ -195,7 +242,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -227,8 +275,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_analytics_conversation_details ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_analytics_conversation_details" if conversation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/conversations/{conversationId}/details".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -251,7 +306,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -284,8 +340,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversation ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversation" if conversation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -308,7 +371,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -345,10 +409,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversation_participant_wrapup ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversation_participant_wrapup" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversation_participant_wrapup" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -372,7 +455,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -407,10 +491,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversation_participant_wrapupcodes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversation_participant_wrapupcodes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversation_participant_wrapupcodes" if participant_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -433,7 +530,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -466,6 +564,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations".sub('{format}','json')
 
@@ -489,7 +594,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -522,8 +628,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_call ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_call" if conversation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -546,7 +659,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -583,10 +697,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_call_participant_wrapup ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_call_participant_wrapup" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_call_participant_wrapup" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -610,7 +743,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -645,10 +779,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_call_participant_wrapupcodes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_call_participant_wrapupcodes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_call_participant_wrapupcodes" if participant_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -671,7 +818,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -704,8 +852,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_callback ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_callback" if conversation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/callbacks/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -728,7 +883,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -765,10 +921,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_callback_participant_wrapup ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_callback_participant_wrapup" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_callback_participant_wrapup" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -792,7 +967,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -827,10 +1003,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_callback_participant_wrapupcodes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_callback_participant_wrapupcodes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_callback_participant_wrapupcodes" if participant_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -853,7 +1042,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -884,6 +1074,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_callbacks ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/conversations/callbacks".sub('{format}','json')
 
@@ -906,7 +1097,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -937,6 +1129,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_calls ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls".sub('{format}','json')
 
@@ -959,7 +1152,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -996,6 +1190,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_calls_history ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/history".sub('{format}','json')
 
@@ -1021,7 +1234,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1052,6 +1266,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_calls_maximumconferenceparties ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/maximumconferenceparties".sub('{format}','json')
 
@@ -1074,7 +1289,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1107,8 +1323,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_chat ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_chat" if conversation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/chats/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -1131,7 +1354,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1168,10 +1392,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_chat_participant_wrapup ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_chat_participant_wrapup" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_chat_participant_wrapup" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -1195,7 +1438,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1230,10 +1474,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_chat_participant_wrapupcodes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_chat_participant_wrapupcodes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_chat_participant_wrapupcodes" if participant_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -1256,7 +1513,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1287,6 +1545,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_chats ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/conversations/chats".sub('{format}','json')
 
@@ -1309,7 +1568,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1342,8 +1602,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_cobrowsesession ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_cobrowsesession" if conversation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -1366,7 +1633,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1403,10 +1671,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_cobrowsesession_participant_wrapup ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_cobrowsesession_participant_wrapup" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_cobrowsesession_participant_wrapup" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -1430,7 +1717,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1465,10 +1753,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_cobrowsesession_participant_wrapupcodes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_cobrowsesession_participant_wrapupcodes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_cobrowsesession_participant_wrapupcodes" if participant_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -1491,7 +1792,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1522,6 +1824,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_cobrowsesessions ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/conversations/cobrowsesessions".sub('{format}','json')
 
@@ -1544,7 +1847,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1577,8 +1881,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email" if conversation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -1601,7 +1912,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1636,10 +1948,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email_message ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email_message" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'message_id' is set
       fail ArgumentError, "Missing the required parameter 'message_id' when calling ConversationsApi.get_conversations_email_message" if message_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/messages/{messageId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'messageId' + '}', message_id.to_s)
 
@@ -1662,7 +1987,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1695,8 +2021,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email_messages ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email_messages" if conversation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/messages".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -1719,7 +2052,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1752,8 +2086,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email_messages_draft ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email_messages_draft" if conversation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/messages/draft".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -1776,7 +2117,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1813,10 +2155,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email_participant_wrapup ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email_participant_wrapup" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_email_participant_wrapup" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -1840,7 +2201,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1875,10 +2237,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email_participant_wrapupcodes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_email_participant_wrapupcodes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_email_participant_wrapupcodes" if participant_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -1901,7 +2276,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1932,6 +2308,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_emails ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails".sub('{format}','json')
 
@@ -1954,7 +2331,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1991,12 +2369,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversation_participant ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversation_participant" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversation_participant" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversation_participant" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -2019,6 +2416,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2055,12 +2453,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversation_participant_attributes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversation_participant_attributes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversation_participant_attributes" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversation_participant_attributes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -2083,6 +2500,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2117,10 +2535,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_call ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_call" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_call" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -2143,6 +2574,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2180,12 +2612,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_call_participant ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_call_participant" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_call_participant" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_call_participant" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -2208,6 +2659,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2244,12 +2696,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_call_participant_attributes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_call_participant_attributes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_call_participant_attributes" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_call_participant_attributes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -2272,6 +2743,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2310,14 +2782,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_call_participant_communication ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_call_participant_communication" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_call_participant_communication" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'communication_id' is set
       fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.patch_conversations_call_participant_communication" if communication_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_call_participant_communication" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
 
@@ -2340,6 +2837,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2377,12 +2875,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_call_participant_consult ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_call_participant_consult" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_call_participant_consult" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_call_participant_consult" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -2405,6 +2922,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2440,10 +2958,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_callback ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_callback" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_callback" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/callbacks/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -2466,6 +2997,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2503,12 +3035,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_callback_participant ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_callback_participant" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_callback_participant" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_callback_participant" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -2531,6 +3082,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2567,12 +3119,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_callback_participant_attributes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_callback_participant_attributes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_callback_participant_attributes" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_callback_participant_attributes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -2595,6 +3166,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2633,14 +3205,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_callback_participant_communication ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_callback_participant_communication" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_callback_participant_communication" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'communication_id' is set
       fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.patch_conversations_callback_participant_communication" if communication_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_callback_participant_communication" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
 
@@ -2663,6 +3260,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2698,10 +3296,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_chat ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_chat" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_chat" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/chats/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -2724,6 +3335,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2761,12 +3373,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_chat_participant ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_chat_participant" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_chat_participant" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_chat_participant" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -2789,6 +3420,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2825,12 +3457,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_chat_participant_attributes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_chat_participant_attributes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_chat_participant_attributes" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_chat_participant_attributes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -2853,6 +3504,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2891,14 +3543,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_chat_participant_communication ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_chat_participant_communication" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_chat_participant_communication" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'communication_id' is set
       fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.patch_conversations_chat_participant_communication" if communication_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_chat_participant_communication" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
 
@@ -2921,6 +3598,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -2956,10 +3634,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_cobrowsesession ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_cobrowsesession" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_cobrowsesession" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -2982,6 +3673,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -3019,10 +3711,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_cobrowsesession_participant ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -3045,6 +3756,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -3081,10 +3793,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_cobrowsesession_participant_attributes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_attributes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_attributes" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -3107,6 +3838,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -3145,14 +3877,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_cobrowsesession_participant_communication ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_communication" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_communication" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'communication_id' is set
       fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_communication" if communication_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_cobrowsesession_participant_communication" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
 
@@ -3175,6 +3932,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -3210,10 +3968,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_email ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_email" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_email" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -3236,6 +4007,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -3273,12 +4045,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_email_participant ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_email_participant" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_email_participant" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_email_participant" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -3301,6 +4092,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -3337,12 +4129,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_email_participant_attributes ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_email_participant_attributes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_email_participant_attributes" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_email_participant_attributes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -3365,6 +4176,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -3403,14 +4215,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_email_participant_communication ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_email_participant_communication" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_email_participant_communication" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'communication_id' is set
       fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.patch_conversations_email_participant_communication" if communication_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_email_participant_communication" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
 
@@ -3433,6 +4270,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -3468,10 +4306,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_analytics_conversation_details_properties ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_analytics_conversation_details_properties" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_analytics_conversation_details_properties" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/conversations/{conversationId}/details/properties".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -3494,6 +4345,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3527,8 +4379,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_analytics_conversations_aggregates_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_analytics_conversations_aggregates_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/conversations/aggregates/query".sub('{format}','json')
 
@@ -3551,6 +4410,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3584,8 +4444,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_analytics_conversations_details_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_analytics_conversations_details_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/conversations/details/query".sub('{format}','json')
 
@@ -3608,6 +4475,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3645,10 +4513,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversation_participant_callbacks ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversation_participant_callbacks" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversation_participant_callbacks" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}/callbacks".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -3671,6 +4558,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3707,12 +4595,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversation_participant_replace ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversation_participant_replace" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversation_participant_replace" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversation_participant_replace" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -3735,6 +4642,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3769,10 +4677,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_call ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_call" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_call" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -3795,6 +4716,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3832,12 +4754,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_call_participant_consult ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_call_participant_consult" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_call_participant_consult" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_call_participant_consult" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -3860,6 +4801,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3895,10 +4837,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_call_participant_monitor ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_call_participant_monitor" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_call_participant_monitor" if participant_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -3921,7 +4876,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3957,12 +4913,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_call_participant_replace ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_call_participant_replace" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_call_participant_replace" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_call_participant_replace" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -3985,6 +4960,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4019,10 +4995,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_call_participants ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_call_participants" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_call_participants" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls/{conversationId}/participants".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -4045,6 +5034,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4082,12 +5072,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_callback_participant_replace ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_callback_participant_replace" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_callback_participant_replace" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_callback_participant_replace" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -4110,6 +5119,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4142,8 +5152,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_callbacks ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_callbacks" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/callbacks".sub('{format}','json')
 
@@ -4166,6 +5183,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4199,8 +5217,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_calls ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_calls" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/calls".sub('{format}','json')
 
@@ -4223,6 +5248,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4260,12 +5286,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_chat_participant_replace ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_chat_participant_replace" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_chat_participant_replace" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_chat_participant_replace" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -4288,6 +5333,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4320,8 +5366,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_chats ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_chats" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/chats".sub('{format}','json')
 
@@ -4344,6 +5397,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4381,10 +5435,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_cobrowsesession_participant_replace ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_cobrowsesession_participant_replace" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_cobrowsesession_participant_replace" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -4407,6 +5480,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4441,10 +5515,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_email_messages ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_email_messages" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_email_messages" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/messages".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -4467,6 +5554,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4504,12 +5592,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_email_participant_replace ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_email_participant_replace" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'participant_id' is set
       fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_email_participant_replace" if participant_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_email_participant_replace" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
 
@@ -4532,6 +5639,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4564,8 +5672,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_emails ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_emails" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails".sub('{format}','json')
 
@@ -4588,6 +5703,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4621,8 +5737,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_faxes ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_faxes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/faxes".sub('{format}','json')
 
@@ -4645,6 +5768,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4680,10 +5804,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.put_conversations_email_messages_draft ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.put_conversations_email_messages_draft" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.put_conversations_email_messages_draft" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/emails/{conversationId}/messages/draft".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -4706,6 +5843,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

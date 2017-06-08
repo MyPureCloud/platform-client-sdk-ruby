@@ -38,24 +38,38 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'column' => :'column',
+        
         :'column_type' => :'columnType',
+        
         :'operator' => :'operator',
+        
         :'value' => :'value',
+        
         :'range' => :'range',
+        
         :'inverted' => :'inverted'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'column' => :'String',
+        
         :'column_type' => :'String',
+        
         :'operator' => :'String',
+        
         :'value' => :'String',
+        
         :'range' => :'ContactListFilterRange',
+        
         :'inverted' => :'BOOLEAN'
+        
       }
     end
 
@@ -67,52 +81,119 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'column')
+        
+        
         self.column = attributes[:'column']
+        
+      
       end
 
+      
       if attributes.has_key?(:'columnType')
+        
+        
         self.column_type = attributes[:'columnType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'operator')
+        
+        
         self.operator = attributes[:'operator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'value')
+        
+        
         self.value = attributes[:'value']
+        
+      
       end
 
+      
       if attributes.has_key?(:'range')
+        
+        
         self.range = attributes[:'range']
+        
+      
       end
 
+      
       if attributes.has_key?(:'inverted')
+        
+        
         self.inverted = attributes[:'inverted']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["numeric", "alphabetic"]
       if @column_type && !allowed_values.include?(@column_type)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["EQUALS", "LESS_THAN", "LESS_THAN_EQUALS", "GREATER_THAN", "GREATER_THAN_EQUALS", "CONTAINS", "BEGINS_WITH", "ENDS_WITH", "BEFORE", "AFTER", "BETWEEN", "IN"]
       if @operator && !allowed_values.include?(@operator)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] column_type Object to be assigned
     def column_type=(column_type)
@@ -123,6 +204,10 @@ module PureCloud
       @column_type = column_type
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] operator Object to be assigned
     def operator=(operator)
@@ -133,6 +218,24 @@ module PureCloud
       @operator = operator
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

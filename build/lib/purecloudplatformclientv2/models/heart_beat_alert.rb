@@ -56,36 +56,62 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'sender_id' => :'senderId',
+        
         :'heart_beat_timeout_in_minutes' => :'heartBeatTimeoutInMinutes',
+        
         :'rule_id' => :'ruleId',
+        
         :'start_date' => :'startDate',
+        
         :'end_date' => :'endDate',
+        
         :'notification_users' => :'notificationUsers',
+        
         :'alert_types' => :'alertTypes',
+        
         :'rule_type' => :'ruleType',
+        
         :'rule_uri' => :'ruleUri',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'sender_id' => :'String',
+        
         :'heart_beat_timeout_in_minutes' => :'Integer',
+        
         :'rule_id' => :'String',
+        
         :'start_date' => :'DateTime',
+        
         :'end_date' => :'DateTime',
+        
         :'notification_users' => :'Array<User>',
+        
         :'alert_types' => :'Array<String>',
+        
         :'rule_type' => :'String',
+        
         :'rule_uri' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -97,108 +123,276 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'senderId')
+        
+        
         self.sender_id = attributes[:'senderId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'heartBeatTimeoutInMinutes')
+        
+        
         self.heart_beat_timeout_in_minutes = attributes[:'heartBeatTimeoutInMinutes']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ruleId')
+        
+        
         self.rule_id = attributes[:'ruleId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startDate')
+        
+        
         self.start_date = attributes[:'startDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endDate')
+        
+        
         self.end_date = attributes[:'endDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'notificationUsers')
+        
         if (value = attributes[:'notificationUsers']).is_a?(Array)
           self.notification_users = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'alertTypes')
+        
         if (value = attributes[:'alertTypes']).is_a?(Array)
           self.alert_types = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'ruleType')
+        
+        
         self.rule_type = attributes[:'ruleType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ruleUri')
+        
+        
         self.rule_uri = attributes[:'ruleUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @sender_id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @heart_beat_timeout_in_minutes.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @rule_id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @start_date.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @notification_users.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @alert_types.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @rule_type.nil?
         return false
       end
 
+      
+      
       allowed_values = ["EDGE"]
       if @rule_type && !allowed_values.include?(@rule_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] rule_type Object to be assigned
     def rule_type=(rule_type)
@@ -209,6 +403,19 @@ module PureCloud
       @rule_type = rule_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

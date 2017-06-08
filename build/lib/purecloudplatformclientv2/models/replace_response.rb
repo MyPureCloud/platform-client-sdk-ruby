@@ -33,24 +33,38 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'change_number' => :'changeNumber',
+        
         :'upload_status' => :'uploadStatus',
+        
         :'upload_destination_uri' => :'uploadDestinationUri',
+        
         :'upload_method' => :'uploadMethod'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'change_number' => :'Integer',
+        
         :'upload_status' => :'UriReference',
+        
         :'upload_destination_uri' => :'String',
+        
         :'upload_method' => :'String'
+        
       }
     end
 
@@ -62,48 +76,134 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'changeNumber')
+        
+        
         self.change_number = attributes[:'changeNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'uploadStatus')
+        
+        
         self.upload_status = attributes[:'uploadStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'uploadDestinationUri')
+        
+        
         self.upload_destination_uri = attributes[:'uploadDestinationUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'uploadMethod')
+        
+        
         self.upload_method = attributes[:'uploadMethod']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["SINGLE_PUT", "MULTIPART_POST"]
       if @upload_method && !allowed_values.include?(@upload_method)
         return false
       end
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] upload_method Object to be assigned
     def upload_method=(upload_method)
@@ -114,6 +214,9 @@ module PureCloud
       @upload_method = upload_method
     end
 
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

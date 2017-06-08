@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.delete_authorization_role ..."
       end
+      
+      
       # verify the required parameter 'role_id' is set
       fail ArgumentError, "Missing the required parameter 'role_id' when calling AuthorizationApi.delete_authorization_role" if role_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/{roleId}".sub('{format}','json').sub('{' + 'roleId' + '}', role_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -99,8 +107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.delete_user_roles ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling AuthorizationApi.delete_user_roles" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/roles".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -123,7 +138,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -157,6 +173,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_permissions ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/permissions".sub('{format}','json')
 
@@ -181,7 +210,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -212,6 +242,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_products ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/authorization/products".sub('{format}','json')
 
@@ -234,7 +265,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -267,8 +299,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_role ..."
       end
+      
+      
       # verify the required parameter 'role_id' is set
       fail ArgumentError, "Missing the required parameter 'role_id' when calling AuthorizationApi.get_authorization_role" if role_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/{roleId}".sub('{format}','json').sub('{' + 'roleId' + '}', role_id.to_s)
 
@@ -291,7 +330,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -326,10 +366,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_role_comparedefault_right_role_id ..."
       end
+      
+      
       # verify the required parameter 'left_role_id' is set
       fail ArgumentError, "Missing the required parameter 'left_role_id' when calling AuthorizationApi.get_authorization_role_comparedefault_right_role_id" if left_role_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'right_role_id' is set
       fail ArgumentError, "Missing the required parameter 'right_role_id' when calling AuthorizationApi.get_authorization_role_comparedefault_right_role_id" if right_role_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}".sub('{format}','json').sub('{' + 'leftRoleId' + '}', left_role_id.to_s).sub('{' + 'rightRoleId' + '}', right_role_id.to_s)
 
@@ -352,7 +405,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -401,6 +455,61 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_roles ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles".sub('{format}','json')
 
@@ -432,7 +541,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -465,8 +575,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.get_user_roles ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling AuthorizationApi.get_user_roles" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/roles".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -489,7 +606,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -524,10 +642,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.patch_authorization_role ..."
       end
+      
+      
       # verify the required parameter 'role_id' is set
       fail ArgumentError, "Missing the required parameter 'role_id' when calling AuthorizationApi.patch_authorization_role" if role_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.patch_authorization_role" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/{roleId}".sub('{format}','json').sub('{' + 'roleId' + '}', role_id.to_s)
 
@@ -550,6 +681,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -587,12 +719,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.post_authorization_role_comparedefault_right_role_id ..."
       end
+      
+      
       # verify the required parameter 'left_role_id' is set
       fail ArgumentError, "Missing the required parameter 'left_role_id' when calling AuthorizationApi.post_authorization_role_comparedefault_right_role_id" if left_role_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'right_role_id' is set
       fail ArgumentError, "Missing the required parameter 'right_role_id' when calling AuthorizationApi.post_authorization_role_comparedefault_right_role_id" if right_role_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.post_authorization_role_comparedefault_right_role_id" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}".sub('{format}','json').sub('{' + 'leftRoleId' + '}', left_role_id.to_s).sub('{' + 'rightRoleId' + '}', right_role_id.to_s)
 
@@ -615,6 +766,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -648,8 +800,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.post_authorization_roles ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.post_authorization_roles" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles".sub('{format}','json')
 
@@ -672,6 +831,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -697,7 +857,7 @@ module PureCloud
     end
 
     # Restores all default roles
-    # This endpoint serves several purposes. 1. It provides the org with default roles. This is important for default roles that will be added after go-live (they can retroactively add the new default-role). Note: When not using a query param of force&#x3D;true, it only adds the default roles not configured for the org; it does not overwrite roles. 2. Using the query param force&#x3D;true, you can restore all default roles. Note: This does not have an effect on custom roles.
+    # This endpoint serves several purposes. 1. It provides the org with default roles. This is important for default roles that will be added after go-live (they can retroactively add the new default-role). Note: When not using a query param of force=true, it only adds the default roles not configured for the org; it does not overwrite roles. 2. Using the query param force=true, you can restore all default roles. Note: This does not have an effect on custom roles.
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :force Restore default roles
     # @return [Array<(OrganizationRoleEntityListing, Fixnum, Hash)>] OrganizationRoleEntityListing data, response status code and response headers
@@ -705,6 +865,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.post_authorization_roles_default ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/default".sub('{format}','json')
 
@@ -728,7 +895,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -763,10 +931,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.put_authorization_role ..."
       end
+      
+      
       # verify the required parameter 'role_id' is set
       fail ArgumentError, "Missing the required parameter 'role_id' when calling AuthorizationApi.put_authorization_role" if role_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.put_authorization_role" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/{roleId}".sub('{format}','json').sub('{' + 'roleId' + '}', role_id.to_s)
 
@@ -789,6 +970,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -824,10 +1006,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.put_authorization_role_users_add ..."
       end
+      
+      
       # verify the required parameter 'role_id' is set
       fail ArgumentError, "Missing the required parameter 'role_id' when calling AuthorizationApi.put_authorization_role_users_add" if role_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.put_authorization_role_users_add" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/{roleId}/users/add".sub('{format}','json').sub('{' + 'roleId' + '}', role_id.to_s)
 
@@ -850,6 +1045,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -885,10 +1081,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.put_authorization_role_users_remove ..."
       end
+      
+      
       # verify the required parameter 'role_id' is set
       fail ArgumentError, "Missing the required parameter 'role_id' when calling AuthorizationApi.put_authorization_role_users_remove" if role_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.put_authorization_role_users_remove" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/{roleId}/users/remove".sub('{format}','json').sub('{' + 'roleId' + '}', role_id.to_s)
 
@@ -911,6 +1120,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -944,8 +1154,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.put_authorization_roles_default ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.put_authorization_roles_default" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/default".sub('{format}','json')
 
@@ -968,6 +1185,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1003,10 +1221,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.put_user_roles ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling AuthorizationApi.put_user_roles" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.put_user_roles" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/roles".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1029,6 +1260,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

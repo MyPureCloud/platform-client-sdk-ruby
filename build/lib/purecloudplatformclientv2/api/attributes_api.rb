@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AttributesApi.delete_attribute ..."
       end
+      
+      
       # verify the required parameter 'attribute_id' is set
       fail ArgumentError, "Missing the required parameter 'attribute_id' when calling AttributesApi.delete_attribute" if attribute_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/attributes/{attributeId}".sub('{format}','json').sub('{' + 'attributeId' + '}', attribute_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -99,8 +107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AttributesApi.get_attribute ..."
       end
+      
+      
       # verify the required parameter 'attribute_id' is set
       fail ArgumentError, "Missing the required parameter 'attribute_id' when calling AttributesApi.get_attribute" if attribute_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/attributes/{attributeId}".sub('{format}','json').sub('{' + 'attributeId' + '}', attribute_id.to_s)
 
@@ -123,7 +138,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -158,6 +174,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AttributesApi.get_attributes ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/attributes".sub('{format}','json')
 
@@ -182,7 +211,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -215,8 +245,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AttributesApi.post_attributes ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AttributesApi.post_attributes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/attributes".sub('{format}','json')
 
@@ -239,6 +276,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -272,8 +310,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AttributesApi.post_attributes_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AttributesApi.post_attributes_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/attributes/query".sub('{format}','json')
 
@@ -296,6 +341,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -331,10 +377,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AttributesApi.put_attribute ..."
       end
+      
+      
       # verify the required parameter 'attribute_id' is set
       fail ArgumentError, "Missing the required parameter 'attribute_id' when calling AttributesApi.put_attribute" if attribute_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AttributesApi.put_attribute" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/attributes/{attributeId}".sub('{format}','json').sub('{' + 'attributeId' + '}', attribute_id.to_s)
 
@@ -357,6 +416,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

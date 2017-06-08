@@ -46,28 +46,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'name' => :'name',
+        
         :'is_active' => :'isActive',
+        
         :'is_default' => :'isDefault',
+        
         :'category' => :'category',
+        
         :'length_in_minutes' => :'lengthInMinutes',
+        
         :'counts_as_paid_time' => :'countsAsPaidTime',
+        
         :'counts_as_work_time' => :'countsAsWorkTime',
+        
         :'is_agent_time_off_selectable' => :'isAgentTimeOffSelectable'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'name' => :'String',
+        
         :'is_active' => :'BOOLEAN',
+        
         :'is_default' => :'BOOLEAN',
+        
         :'category' => :'String',
+        
         :'length_in_minutes' => :'Integer',
+        
         :'counts_as_paid_time' => :'BOOLEAN',
+        
         :'counts_as_work_time' => :'BOOLEAN',
+        
         :'is_agent_time_off_selectable' => :'BOOLEAN'
+        
       }
     end
 
@@ -79,56 +97,150 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'isActive')
+        
+        
         self.is_active = attributes[:'isActive']
+        
+      
       end
 
+      
       if attributes.has_key?(:'isDefault')
+        
+        
         self.is_default = attributes[:'isDefault']
+        
+      
       end
 
+      
       if attributes.has_key?(:'category')
+        
+        
         self.category = attributes[:'category']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lengthInMinutes')
+        
+        
         self.length_in_minutes = attributes[:'lengthInMinutes']
+        
+      
       end
 
+      
       if attributes.has_key?(:'countsAsPaidTime')
+        
+        
         self.counts_as_paid_time = attributes[:'countsAsPaidTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'countsAsWorkTime')
+        
+        
         self.counts_as_work_time = attributes[:'countsAsWorkTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'isAgentTimeOffSelectable')
+        
+        
         self.is_agent_time_off_selectable = attributes[:'isAgentTimeOffSelectable']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable"]
       if @category && !allowed_values.include?(@category)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] category Object to be assigned
     def category=(category)
@@ -139,6 +251,29 @@ module PureCloud
       @category = category
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -40,26 +40,42 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'modified_by' => :'modifiedBy',
+        
         :'created_by' => :'createdBy',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'modified_by' => :'String',
+        
         :'created_by' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -71,52 +87,156 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedBy')
+        
+        
         self.modified_by = attributes[:'modifiedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdBy')
+        
+        
         self.created_by = attributes[:'createdBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

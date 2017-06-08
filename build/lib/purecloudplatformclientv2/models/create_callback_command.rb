@@ -45,28 +45,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'script_id' => :'scriptId',
+        
         :'queue_id' => :'queueId',
+        
         :'routing_data' => :'routingData',
+        
         :'callback_user_name' => :'callbackUserName',
+        
         :'callback_numbers' => :'callbackNumbers',
+        
         :'callback_scheduled_time' => :'callbackScheduledTime',
+        
         :'country_code' => :'countryCode',
+        
         :'data' => :'data'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'script_id' => :'String',
+        
         :'queue_id' => :'String',
+        
         :'routing_data' => :'RoutingData',
+        
         :'callback_user_name' => :'String',
+        
         :'callback_numbers' => :'Array<String>',
+        
         :'callback_scheduled_time' => :'DateTime',
+        
         :'country_code' => :'String',
+        
         :'data' => :'Hash<String, String>'
+        
       }
     end
 
@@ -78,60 +96,178 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'scriptId')
+        
+        
         self.script_id = attributes[:'scriptId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'queueId')
+        
+        
         self.queue_id = attributes[:'queueId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'routingData')
+        
+        
         self.routing_data = attributes[:'routingData']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackUserName')
+        
+        
         self.callback_user_name = attributes[:'callbackUserName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackNumbers')
+        
         if (value = attributes[:'callbackNumbers']).is_a?(Array)
           self.callback_numbers = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackScheduledTime')
+        
+        
         self.callback_scheduled_time = attributes[:'callbackScheduledTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'countryCode')
+        
+        
         self.country_code = attributes[:'countryCode']
+        
+      
       end
 
+      
       if attributes.has_key?(:'data')
+        
         if (value = attributes[:'data']).is_a?(Array)
           self.data = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @callback_numbers.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

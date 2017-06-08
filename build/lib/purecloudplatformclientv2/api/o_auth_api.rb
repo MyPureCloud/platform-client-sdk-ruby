@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OAuthApi.delete_oauth_client ..."
       end
+      
+      
       # verify the required parameter 'client_id' is set
       fail ArgumentError, "Missing the required parameter 'client_id' when calling OAuthApi.delete_oauth_client" if client_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/oauth/clients/{clientId}".sub('{format}','json').sub('{' + 'clientId' + '}', client_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -99,8 +107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OAuthApi.get_oauth_client ..."
       end
+      
+      
       # verify the required parameter 'client_id' is set
       fail ArgumentError, "Missing the required parameter 'client_id' when calling OAuthApi.get_oauth_client" if client_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/oauth/clients/{clientId}".sub('{format}','json').sub('{' + 'clientId' + '}', client_id.to_s)
 
@@ -123,7 +138,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -154,6 +170,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OAuthApi.get_oauth_clients ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/oauth/clients".sub('{format}','json')
 
@@ -176,7 +193,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -209,8 +227,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OAuthApi.post_oauth_client_secret ..."
       end
+      
+      
       # verify the required parameter 'client_id' is set
       fail ArgumentError, "Missing the required parameter 'client_id' when calling OAuthApi.post_oauth_client_secret" if client_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/oauth/clients/{clientId}/secret".sub('{format}','json').sub('{' + 'clientId' + '}', client_id.to_s)
 
@@ -233,7 +258,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -266,8 +292,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OAuthApi.post_oauth_clients ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OAuthApi.post_oauth_clients" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/oauth/clients".sub('{format}','json')
 
@@ -290,6 +323,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -325,10 +359,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OAuthApi.put_oauth_client ..."
       end
+      
+      
       # verify the required parameter 'client_id' is set
       fail ArgumentError, "Missing the required parameter 'client_id' when calling OAuthApi.put_oauth_client" if client_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OAuthApi.put_oauth_client" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/oauth/clients/{clientId}".sub('{format}','json').sub('{' + 'clientId' + '}', client_id.to_s)
 
@@ -351,6 +398,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

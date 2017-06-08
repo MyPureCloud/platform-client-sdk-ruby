@@ -50,36 +50,62 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'created_time' => :'createdTime',
+        
         :'recovered_time' => :'recoveredTime',
+        
         :'provider_type' => :'providerType',
+        
         :'media_size_bytes' => :'mediaSizeBytes',
+        
         :'media_type' => :'mediaType',
+        
         :'file_state' => :'fileState',
+        
         :'provider_endpoint' => :'providerEndpoint',
+        
         :'recording' => :'recording',
+        
         :'orphan_status' => :'orphanStatus',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'created_time' => :'DateTime',
+        
         :'recovered_time' => :'DateTime',
+        
         :'provider_type' => :'String',
+        
         :'media_size_bytes' => :'Integer',
+        
         :'media_type' => :'String',
+        
         :'file_state' => :'String',
+        
         :'provider_endpoint' => :'Endpoint',
+        
         :'recording' => :'Recording',
+        
         :'orphan_status' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -91,84 +117,222 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdTime')
+        
+        
         self.created_time = attributes[:'createdTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'recoveredTime')
+        
+        
         self.recovered_time = attributes[:'recoveredTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'providerType')
+        
+        
         self.provider_type = attributes[:'providerType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'mediaSizeBytes')
+        
+        
         self.media_size_bytes = attributes[:'mediaSizeBytes']
+        
+      
       end
 
+      
       if attributes.has_key?(:'mediaType')
+        
+        
         self.media_type = attributes[:'mediaType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'fileState')
+        
+        
         self.file_state = attributes[:'fileState']
+        
+      
       end
 
+      
       if attributes.has_key?(:'providerEndpoint')
+        
+        
         self.provider_endpoint = attributes[:'providerEndpoint']
+        
+      
       end
 
+      
       if attributes.has_key?(:'recording')
+        
+        
         self.recording = attributes[:'recording']
+        
+      
       end
 
+      
       if attributes.has_key?(:'orphanStatus')
+        
+        
         self.orphan_status = attributes[:'orphanStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["EDGE", "CHAT", "EMAIL", "SCREEN_RECORDING"]
       if @provider_type && !allowed_values.include?(@provider_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["CALL", "CHAT", "EMAIL", "SCREEN"]
       if @media_type && !allowed_values.include?(@media_type)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["ARCHIVED", "AVAILABLE", "DELETED", "RESTORED", "RESTORING", "UPLOADING"]
       if @file_state && !allowed_values.include?(@file_state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["NO_CONVERSATION", "UNKNOWN_CONVERSATION", "CONVERSATION_NOT_COMPLETE", "CONVERSATION_NOT_EVALUATED", "EVALUATED"]
       if @orphan_status && !allowed_values.include?(@orphan_status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] provider_type Object to be assigned
     def provider_type=(provider_type)
@@ -179,6 +343,15 @@ module PureCloud
       @provider_type = provider_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] media_type Object to be assigned
     def media_type=(media_type)
@@ -189,6 +362,10 @@ module PureCloud
       @media_type = media_type
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] file_state Object to be assigned
     def file_state=(file_state)
@@ -199,6 +376,20 @@ module PureCloud
       @file_state = file_state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] orphan_status Object to be assigned
     def orphan_status=(orphan_status)
@@ -209,6 +400,14 @@ module PureCloud
       @orphan_status = orphan_status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

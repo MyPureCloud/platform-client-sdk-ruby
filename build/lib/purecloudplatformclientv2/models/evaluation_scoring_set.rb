@@ -33,24 +33,38 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'total_score' => :'totalScore',
+        
         :'total_critical_score' => :'totalCriticalScore',
+        
         :'question_group_scores' => :'questionGroupScores',
+        
         :'any_failed_kill_questions' => :'anyFailedKillQuestions',
+        
         :'comments' => :'comments',
+        
         :'agent_comments' => :'agentComments'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'total_score' => :'Float',
+        
         :'total_critical_score' => :'Float',
+        
         :'question_group_scores' => :'Array<QuestionGroupScore>',
+        
         :'any_failed_kill_questions' => :'BOOLEAN',
+        
         :'comments' => :'String',
+        
         :'agent_comments' => :'String'
+        
       }
     end
 
@@ -62,46 +76,135 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'totalScore')
+        
+        
         self.total_score = attributes[:'totalScore']
+        
+      
       end
 
+      
       if attributes.has_key?(:'totalCriticalScore')
+        
+        
         self.total_critical_score = attributes[:'totalCriticalScore']
+        
+      
       end
 
+      
       if attributes.has_key?(:'questionGroupScores')
+        
         if (value = attributes[:'questionGroupScores']).is_a?(Array)
           self.question_group_scores = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'anyFailedKillQuestions')
+        
+        
         self.any_failed_kill_questions = attributes[:'anyFailedKillQuestions']
+        
+      
       end
 
+      
       if attributes.has_key?(:'comments')
+        
+        
         self.comments = attributes[:'comments']
+        
+      
       end
 
+      
       if attributes.has_key?(:'agentComments')
+        
+        
         self.agent_comments = attributes[:'agentComments']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

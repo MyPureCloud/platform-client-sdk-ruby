@@ -36,26 +36,42 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'status_code' => :'statusCode',
+        
         :'user_message' => :'userMessage',
+        
         :'user_params_message' => :'userParamsMessage',
+        
         :'error_code' => :'errorCode',
+        
         :'correlation_id' => :'correlationId',
+        
         :'user_params' => :'userParams',
+        
         :'insert_date' => :'insertDate'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'status_code' => :'Integer',
+        
         :'user_message' => :'Object',
+        
         :'user_params_message' => :'String',
+        
         :'error_code' => :'String',
+        
         :'correlation_id' => :'String',
+        
         :'user_params' => :'Array<UserParam>',
+        
         :'insert_date' => :'DateTime'
+        
       }
     end
 
@@ -67,50 +83,153 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'statusCode')
+        
+        
         self.status_code = attributes[:'statusCode']
+        
+      
       end
 
+      
       if attributes.has_key?(:'userMessage')
+        
+        
         self.user_message = attributes[:'userMessage']
+        
+      
       end
 
+      
       if attributes.has_key?(:'userParamsMessage')
+        
+        
         self.user_params_message = attributes[:'userParamsMessage']
+        
+      
       end
 
+      
       if attributes.has_key?(:'errorCode')
+        
+        
         self.error_code = attributes[:'errorCode']
+        
+      
       end
 
+      
       if attributes.has_key?(:'correlationId')
+        
+        
         self.correlation_id = attributes[:'correlationId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'userParams')
+        
         if (value = attributes[:'userParams']).is_a?(Array)
           self.user_params = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'insertDate')
+        
+        
         self.insert_date = attributes[:'insertDate']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

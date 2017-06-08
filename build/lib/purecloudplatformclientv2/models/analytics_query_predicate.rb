@@ -45,28 +45,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'type' => :'type',
+        
         :'dimension' => :'dimension',
+        
         :'property_type' => :'propertyType',
+        
         :'property' => :'property',
+        
         :'metric' => :'metric',
+        
         :'operator' => :'operator',
+        
         :'value' => :'value',
+        
         :'range' => :'range'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'type' => :'String',
+        
         :'dimension' => :'String',
+        
         :'property_type' => :'String',
+        
         :'property' => :'String',
+        
         :'metric' => :'String',
+        
         :'operator' => :'String',
+        
         :'value' => :'String',
+        
         :'range' => :'NumericRange'
+        
       }
     end
 
@@ -78,72 +96,155 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'type')
+        
+        
         self.type = attributes[:'type']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dimension')
+        
+        
         self.dimension = attributes[:'dimension']
+        
+      
       end
 
+      
       if attributes.has_key?(:'propertyType')
+        
+        
         self.property_type = attributes[:'propertyType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'property')
+        
+        
         self.property = attributes[:'property']
+        
+      
       end
 
+      
       if attributes.has_key?(:'metric')
+        
+        
         self.metric = attributes[:'metric']
+        
+      
       end
 
+      
       if attributes.has_key?(:'operator')
+        
+        
         self.operator = attributes[:'operator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'value')
+        
+        
         self.value = attributes[:'value']
+        
+      
       end
 
+      
       if attributes.has_key?(:'range')
+        
+        
         self.range = attributes[:'range']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["dimension", "property", "metric"]
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["conversationId", "sessionId", "mediaType", "queueId", "userId", "participantId", "participantName", "direction", "wrapUpCode", "wrapUpNote", "interactionType", "requestedRoutingSkillId", "requestedLanguageId", "purpose", "participantType", "segmentType", "disconnectType", "errorCode", "conversationEnd", "segmentEnd", "externalContactId", "externalOrganizationId", "stationId", "edgeId", "dnis", "ani", "outboundCampaignId", "outboundContactId", "outboundContactListId", "monitoredParticipantId", "sourceSessionId", "destinationSessionId", "sourceConversationId", "destinationConversationId", "remoteNameDisplayable", "sipResponseCode", "q850ResponseCode", "conference", "groupId", "roomId", "addressFrom", "addressTo", "subject", "peerId", "scriptId", "evaluationId", "evaluatorId", "contextId", "formId", "formName", "eventTime", "systemPresence", "organizationPresenceId", "routingStatus"]
       if @dimension && !allowed_values.include?(@dimension)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["bool", "integer", "real", "date", "string", "uuid"]
       if @property_type && !allowed_values.include?(@property_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["tSegmentDuration", "tConversationDuration", "oTotalCriticalScore", "oTotalScore", "nEvaluations", "tAbandon", "tIvr", "tAnswered", "tAcd", "tTalk", "tHeld", "tTalkComplete", "tHeldComplete", "tAcw", "tHandle", "tWait", "tAgentRoutingStatus", "tOrganizationPresence", "tSystemPresence", "tUserResponseTime", "tAgentResponseTime", "nOffered", "nOverSla", "nTransferred", "nOutboundAttempted", "nOutboundConnected", "nOutboundAbandoned", "nError", "oServiceTarget", "oServiceLevel", "tActive", "tInactive", "oActiveUsers", "oMemberUsers", "oActiveQueues", "oMemberQueues", "oInteracting", "oWaiting", "oOnQueueUsers", "oOffQueueUsers", "oUserPresences", "oUserRoutingStatuses"]
       if @metric && !allowed_values.include?(@metric)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["matches", "exists", "notExists"]
       if @operator && !allowed_values.include?(@operator)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
@@ -154,6 +255,10 @@ module PureCloud
       @type = type
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] dimension Object to be assigned
     def dimension=(dimension)
@@ -164,6 +269,10 @@ module PureCloud
       @dimension = dimension
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] property_type Object to be assigned
     def property_type=(property_type)
@@ -174,6 +283,15 @@ module PureCloud
       @property_type = property_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] metric Object to be assigned
     def metric=(metric)
@@ -184,6 +302,10 @@ module PureCloud
       @metric = metric
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] operator Object to be assigned
     def operator=(operator)
@@ -194,6 +316,19 @@ module PureCloud
       @operator = operator
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

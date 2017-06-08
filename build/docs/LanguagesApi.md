@@ -63,7 +63,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **language_id** | **String**| Language ID | 
+ **language_id** | **String**| Language ID |  |
 {: class="table table-striped"}
 
 
@@ -121,7 +121,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **language_id** | **String**| Language ID | 
+ **language_id** | **String**| Language ID |  |
 {: class="table table-striped"}
 
 
@@ -180,7 +180,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **language_id** | **String**| Language ID | 
+ **language_id** | **String**| Language ID |  |
 {: class="table table-striped"}
 
 
@@ -243,10 +243,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]
- **name** | **String**| Name | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
+ **name** | **String**| Name | [optional]  |
 {: class="table table-striped"}
 
 
@@ -358,7 +358,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **language** | **String**| The language of the builtin translation to retrieve | 
+ **language** | **String**| The language of the builtin translation to retrieve |  |
 {: class="table table-striped"}
 
 
@@ -417,7 +417,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **language** | **String**| The language of the translation to retrieve for the organization | 
+ **language** | **String**| The language of the translation to retrieve for the organization |  |
 {: class="table table-striped"}
 
 
@@ -476,7 +476,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| The user id | 
+ **user_id** | **String**| The user id |  |
 {: class="table table-striped"}
 
 
@@ -535,7 +535,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **language_id** | **String**| Language ID | 
+ **language_id** | **String**| Language ID |  |
 {: class="table table-striped"}
 
 
@@ -594,7 +594,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Language**](Language.html)| Language | 
+ **body** | [**Language**](Language.html)| Language |  |
 {: class="table table-striped"}
 
 

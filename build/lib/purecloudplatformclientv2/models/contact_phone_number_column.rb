@@ -30,18 +30,26 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'column_name' => :'columnName',
+        
         :'type' => :'type',
+        
         :'callable_time_column' => :'callableTimeColumn'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'column_name' => :'String',
+        
         :'type' => :'String',
+        
         :'callable_time_column' => :'String'
+        
       }
     end
 
@@ -53,40 +61,89 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'columnName')
+        
+        
         self.column_name = attributes[:'columnName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'type')
+        
+        
         self.type = attributes[:'type']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callableTimeColumn')
+        
+        
         self.callable_time_column = attributes[:'callableTimeColumn']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @column_name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @type.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

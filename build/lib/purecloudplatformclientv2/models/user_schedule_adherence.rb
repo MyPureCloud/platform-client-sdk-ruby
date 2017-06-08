@@ -62,40 +62,70 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'user' => :'user',
+        
         :'management_unit' => :'managementUnit',
+        
         :'scheduled_activity_category' => :'scheduledActivityCategory',
+        
         :'system_presence' => :'systemPresence',
+        
         :'organization_secondary_presence_id' => :'organizationSecondaryPresenceId',
+        
         :'routing_status' => :'routingStatus',
+        
         :'actual_activity_category' => :'actualActivityCategory',
+        
         :'is_out_of_office' => :'isOutOfOffice',
+        
         :'adherence_state' => :'adherenceState',
+        
         :'impact' => :'impact',
+        
         :'time_of_adherence_change' => :'timeOfAdherenceChange',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'user' => :'User',
+        
         :'management_unit' => :'ManagementUnit',
+        
         :'scheduled_activity_category' => :'String',
+        
         :'system_presence' => :'String',
+        
         :'organization_secondary_presence_id' => :'String',
+        
         :'routing_status' => :'String',
+        
         :'actual_activity_category' => :'String',
+        
         :'is_out_of_office' => :'BOOLEAN',
+        
         :'adherence_state' => :'String',
+        
         :'impact' => :'String',
+        
         :'time_of_adherence_change' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -107,100 +137,258 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'user')
+        
+        
         self.user = attributes[:'user']
+        
+      
       end
 
+      
       if attributes.has_key?(:'managementUnit')
+        
+        
         self.management_unit = attributes[:'managementUnit']
+        
+      
       end
 
+      
       if attributes.has_key?(:'scheduledActivityCategory')
+        
+        
         self.scheduled_activity_category = attributes[:'scheduledActivityCategory']
+        
+      
       end
 
+      
       if attributes.has_key?(:'systemPresence')
+        
+        
         self.system_presence = attributes[:'systemPresence']
+        
+      
       end
 
+      
       if attributes.has_key?(:'organizationSecondaryPresenceId')
+        
+        
         self.organization_secondary_presence_id = attributes[:'organizationSecondaryPresenceId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'routingStatus')
+        
+        
         self.routing_status = attributes[:'routingStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'actualActivityCategory')
+        
+        
         self.actual_activity_category = attributes[:'actualActivityCategory']
+        
+      
       end
 
+      
       if attributes.has_key?(:'isOutOfOffice')
+        
+        
         self.is_out_of_office = attributes[:'isOutOfOffice']
+        
+      
       end
 
+      
       if attributes.has_key?(:'adherenceState')
+        
+        
         self.adherence_state = attributes[:'adherenceState']
+        
+      
       end
 
+      
       if attributes.has_key?(:'impact')
+        
+        
         self.impact = attributes[:'impact']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timeOfAdherenceChange')
+        
+        
         self.time_of_adherence_change = attributes[:'timeOfAdherenceChange']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable"]
       if @scheduled_activity_category && !allowed_values.include?(@scheduled_activity_category)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["Available", "Away", "Busy", "Offline", "Idle", "OnQueue", "Meal", "Training", "Meeting", "Break"]
       if @system_presence && !allowed_values.include?(@system_presence)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["OFF_QUEUE", "IDLE", "INTERACTING", "NOT_RESPONDING", "COMMUNICATING"]
       if @routing_status && !allowed_values.include?(@routing_status)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable"]
       if @actual_activity_category && !allowed_values.include?(@actual_activity_category)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["InAdherence", "OutOfAdherence", "Unscheduled", "Unknown"]
       if @adherence_state && !allowed_values.include?(@adherence_state)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["Positive", "Negative", "Neutral", "Unknown"]
       if @impact && !allowed_values.include?(@impact)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] scheduled_activity_category Object to be assigned
     def scheduled_activity_category=(scheduled_activity_category)
@@ -211,6 +399,10 @@ module PureCloud
       @scheduled_activity_category = scheduled_activity_category
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] system_presence Object to be assigned
     def system_presence=(system_presence)
@@ -221,6 +413,15 @@ module PureCloud
       @system_presence = system_presence
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] routing_status Object to be assigned
     def routing_status=(routing_status)
@@ -231,6 +432,10 @@ module PureCloud
       @routing_status = routing_status
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] actual_activity_category Object to be assigned
     def actual_activity_category=(actual_activity_category)
@@ -241,6 +446,15 @@ module PureCloud
       @actual_activity_category = actual_activity_category
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] adherence_state Object to be assigned
     def adherence_state=(adherence_state)
@@ -251,6 +465,10 @@ module PureCloud
       @adherence_state = adherence_state
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] impact Object to be assigned
     def impact=(impact)
@@ -261,6 +479,19 @@ module PureCloud
       @impact = impact
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

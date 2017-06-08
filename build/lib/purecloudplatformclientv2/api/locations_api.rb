@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LocationsApi.get_location ..."
       end
+      
+      
       # verify the required parameter 'location_id' is set
       fail ArgumentError, "Missing the required parameter 'location_id' when calling LocationsApi.get_location" if location_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/locations/{locationId}".sub('{format}','json').sub('{' + 'locationId' + '}', location_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -104,9 +112,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LocationsApi.get_locations ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['asc', 'desc'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of asc, desc'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/locations".sub('{format}','json')
 
@@ -132,7 +160,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -167,8 +196,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LocationsApi.get_locations_search ..."
       end
+      
+      
       # verify the required parameter 'q64' is set
       fail ArgumentError, "Missing the required parameter 'q64' when calling LocationsApi.get_locations_search" if q64.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/locations/search".sub('{format}','json')
 
@@ -193,7 +235,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -226,8 +269,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LocationsApi.post_locations_search ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling LocationsApi.post_locations_search" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/locations/search".sub('{format}','json')
 
@@ -250,6 +300,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,

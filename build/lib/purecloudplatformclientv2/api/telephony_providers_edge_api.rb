@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edge ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edge" if edge_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -101,10 +109,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edge_logicalinterface ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edge_logicalinterface" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'interface_id' is set
       fail ArgumentError, "Missing the required parameter 'interface_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edge_logicalinterface" if interface_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s).sub('{' + 'interfaceId' + '}', interface_id.to_s)
 
@@ -127,7 +148,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -159,8 +181,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edge_softwareupdate ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edge_softwareupdate" if edge_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -183,7 +212,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -215,8 +245,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_certificateauthority ..."
       end
+      
+      
       # verify the required parameter 'certificate_id' is set
       fail ArgumentError, "Missing the required parameter 'certificate_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_certificateauthority" if certificate_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}".sub('{format}','json').sub('{' + 'certificateId' + '}', certificate_id.to_s)
 
@@ -239,7 +276,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -271,8 +309,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_didpool ..."
       end
+      
+      
       # verify the required parameter 'did_pool_id' is set
       fail ArgumentError, "Missing the required parameter 'did_pool_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_didpool" if did_pool_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/didpools/{didPoolId}".sub('{format}','json').sub('{' + 'didPoolId' + '}', did_pool_id.to_s)
 
@@ -295,7 +340,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -327,8 +373,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_edgegroup ..."
       end
+      
+      
       # verify the required parameter 'edge_group_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_group_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_edgegroup" if edge_group_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}".sub('{format}','json').sub('{' + 'edgeGroupId' + '}', edge_group_id.to_s)
 
@@ -351,7 +404,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -383,8 +437,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_endpoint ..."
       end
+      
+      
       # verify the required parameter 'endpoint_id' is set
       fail ArgumentError, "Missing the required parameter 'endpoint_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_endpoint" if endpoint_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/endpoints/{endpointId}".sub('{format}','json').sub('{' + 'endpointId' + '}', endpoint_id.to_s)
 
@@ -407,7 +468,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -439,8 +501,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_extensionpool ..."
       end
+      
+      
       # verify the required parameter 'extension_pool_id' is set
       fail ArgumentError, "Missing the required parameter 'extension_pool_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_extensionpool" if extension_pool_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}".sub('{format}','json').sub('{' + 'extensionPoolId' + '}', extension_pool_id.to_s)
 
@@ -463,7 +532,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -495,8 +565,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_outboundroute ..."
       end
+      
+      
       # verify the required parameter 'outbound_route_id' is set
       fail ArgumentError, "Missing the required parameter 'outbound_route_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_outboundroute" if outbound_route_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}".sub('{format}','json').sub('{' + 'outboundRouteId' + '}', outbound_route_id.to_s)
 
@@ -519,7 +596,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -551,8 +629,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_phone ..."
       end
+      
+      
       # verify the required parameter 'phone_id' is set
       fail ArgumentError, "Missing the required parameter 'phone_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_phone" if phone_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phones/{phoneId}".sub('{format}','json').sub('{' + 'phoneId' + '}', phone_id.to_s)
 
@@ -575,7 +660,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -607,8 +693,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_phonebasesetting ..."
       end
+      
+      
       # verify the required parameter 'phone_base_id' is set
       fail ArgumentError, "Missing the required parameter 'phone_base_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_phonebasesetting" if phone_base_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}".sub('{format}','json').sub('{' + 'phoneBaseId' + '}', phone_base_id.to_s)
 
@@ -631,7 +724,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -663,8 +757,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_site ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_site" if site_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
 
@@ -687,7 +788,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -721,10 +823,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_site_outboundroute ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_site_outboundroute" if site_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'outbound_route_id' is set
       fail ArgumentError, "Missing the required parameter 'outbound_route_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_site_outboundroute" if outbound_route_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s).sub('{' + 'outboundRouteId' + '}', outbound_route_id.to_s)
 
@@ -747,7 +862,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -779,8 +895,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.delete_telephony_providers_edges_trunkbasesetting ..."
       end
+      
+      
       # verify the required parameter 'trunk_base_settings_id' is set
       fail ArgumentError, "Missing the required parameter 'trunk_base_settings_id' when calling TelephonyProvidersEdgeApi.delete_telephony_providers_edges_trunkbasesetting" if trunk_base_settings_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}".sub('{format}','json').sub('{' + 'trunkBaseSettingsId' + '}', trunk_base_settings_id.to_s)
 
@@ -803,7 +926,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -837,6 +961,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/configuration/schemas/edges/vnext".sub('{format}','json')
 
@@ -861,7 +998,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -898,8 +1036,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category ..."
       end
+      
+      
       # verify the required parameter 'schema_category' is set
       fail ArgumentError, "Missing the required parameter 'schema_category' when calling TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category" if schema_category.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}".sub('{format}','json').sub('{' + 'schemaCategory' + '}', schema_category.to_s)
 
@@ -924,7 +1081,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -963,10 +1121,35 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type ..."
       end
+      
+      
       # verify the required parameter 'schema_category' is set
       fail ArgumentError, "Missing the required parameter 'schema_category' when calling TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type" if schema_category.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'schema_type' is set
       fail ArgumentError, "Missing the required parameter 'schema_type' when calling TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type" if schema_type.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}".sub('{format}','json').sub('{' + 'schemaCategory' + '}', schema_category.to_s).sub('{' + 'schemaType' + '}', schema_type.to_s)
 
@@ -991,7 +1174,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1028,12 +1212,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id ..."
       end
+      
+      
       # verify the required parameter 'schema_category' is set
       fail ArgumentError, "Missing the required parameter 'schema_category' when calling TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id" if schema_category.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'schema_type' is set
       fail ArgumentError, "Missing the required parameter 'schema_type' when calling TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id" if schema_type.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'schema_id' is set
       fail ArgumentError, "Missing the required parameter 'schema_id' when calling TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id" if schema_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}".sub('{format}','json').sub('{' + 'schemaCategory' + '}', schema_category.to_s).sub('{' + 'schemaType' + '}', schema_type.to_s).sub('{' + 'schemaId' + '}', schema_id.to_s)
 
@@ -1056,7 +1259,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1099,16 +1303,53 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id ..."
       end
+      
+      
       # verify the required parameter 'schema_category' is set
       fail ArgumentError, "Missing the required parameter 'schema_category' when calling TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id" if schema_category.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'schema_type' is set
       fail ArgumentError, "Missing the required parameter 'schema_type' when calling TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id" if schema_type.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'schema_id' is set
       fail ArgumentError, "Missing the required parameter 'schema_id' when calling TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id" if schema_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'extension_type' is set
       fail ArgumentError, "Missing the required parameter 'extension_type' when calling TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id" if extension_type.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'metadata_id' is set
       fail ArgumentError, "Missing the required parameter 'metadata_id' when calling TelephonyProvidersEdgeApi.get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id" if metadata_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extensionType}/{metadataId}".sub('{format}','json').sub('{' + 'schemaCategory' + '}', schema_category.to_s).sub('{' + 'schemaType' + '}', schema_type.to_s).sub('{' + 'schemaId' + '}', schema_id.to_s).sub('{' + 'extensionType' + '}', extension_type.to_s).sub('{' + 'metadataId' + '}', metadata_id.to_s)
 
@@ -1132,7 +1373,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1167,8 +1409,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge" if edge_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -1192,7 +1447,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1227,10 +1483,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_line ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_line" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'line_id' is set
       fail ArgumentError, "Missing the required parameter 'line_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_line" if line_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s).sub('{' + 'lineId' + '}', line_id.to_s)
 
@@ -1253,7 +1522,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1290,8 +1560,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_lines ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_lines" if edge_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/lines".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -1316,7 +1605,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1353,10 +1643,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_logicalinterface ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_logicalinterface" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'interface_id' is set
       fail ArgumentError, "Missing the required parameter 'interface_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_logicalinterface" if interface_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s).sub('{' + 'interfaceId' + '}', interface_id.to_s)
 
@@ -1380,7 +1689,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1415,8 +1725,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_logicalinterfaces ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_logicalinterfaces" if edge_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -1440,7 +1763,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1475,10 +1799,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_logs_job ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_logs_job" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'job_id' is set
       fail ArgumentError, "Missing the required parameter 'job_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_logs_job" if job_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s).sub('{' + 'jobId' + '}', job_id.to_s)
 
@@ -1501,7 +1838,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1536,10 +1874,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_physicalinterface ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_physicalinterface" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'interface_id' is set
       fail ArgumentError, "Missing the required parameter 'interface_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_physicalinterface" if interface_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId}".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s).sub('{' + 'interfaceId' + '}', interface_id.to_s)
 
@@ -1562,7 +1913,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1595,8 +1947,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_physicalinterfaces ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_physicalinterfaces" if edge_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -1619,7 +1978,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1652,8 +2012,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_setuppackage ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_setuppackage" if edge_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/setuppackage".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -1676,7 +2043,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1709,8 +2077,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_softwareupdate ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_softwareupdate" if edge_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -1733,7 +2108,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1766,8 +2142,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_softwareversions ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_softwareversions" if edge_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/softwareversions".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -1790,7 +2173,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1835,11 +2219,55 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_trunks ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_trunks" if edge_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'trunk_type'] && !['EXTERNAL', 'PHONE', 'EDGE'].include?(opts[:'trunk_type'])
         fail ArgumentError, 'invalid value for "trunk_type", must be one of EXTERNAL, PHONE, EDGE'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/trunks".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -1868,7 +2296,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1913,6 +2342,49 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges".sub('{format}','json')
 
@@ -1942,7 +2414,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1973,6 +2446,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_availablelanguages ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/availablelanguages".sub('{format}','json')
 
@@ -1995,7 +2469,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2026,6 +2501,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_certificateauthorities ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/certificateauthorities".sub('{format}','json')
 
@@ -2048,7 +2524,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2081,8 +2558,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_certificateauthority ..."
       end
+      
+      
       # verify the required parameter 'certificate_id' is set
       fail ArgumentError, "Missing the required parameter 'certificate_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_certificateauthority" if certificate_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}".sub('{format}','json').sub('{' + 'certificateId' + '}', certificate_id.to_s)
 
@@ -2105,7 +2589,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2138,8 +2623,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_did ..."
       end
+      
+      
       # verify the required parameter 'did_id' is set
       fail ArgumentError, "Missing the required parameter 'did_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_did" if did_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/dids/{didId}".sub('{format}','json').sub('{' + 'didId' + '}', did_id.to_s)
 
@@ -2162,7 +2654,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2195,8 +2688,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_didpool ..."
       end
+      
+      
       # verify the required parameter 'did_pool_id' is set
       fail ArgumentError, "Missing the required parameter 'did_pool_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_didpool" if did_pool_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/didpools/{didPoolId}".sub('{format}','json').sub('{' + 'didPoolId' + '}', did_pool_id.to_s)
 
@@ -2219,7 +2719,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2256,6 +2757,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_didpools ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/didpools".sub('{format}','json')
 
@@ -2281,7 +2801,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2322,6 +2843,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_dids ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/dids".sub('{format}','json')
 
@@ -2349,7 +2901,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2384,8 +2937,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroup ..."
       end
+      
+      
       # verify the required parameter 'edge_group_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_group_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroup" if edge_group_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}".sub('{format}','json').sub('{' + 'edgeGroupId' + '}', edge_group_id.to_s)
 
@@ -2409,7 +2975,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2444,10 +3011,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroup_edgetrunkbasis ..."
       end
+      
+      
       # verify the required parameter 'edgegroup_id' is set
       fail ArgumentError, "Missing the required parameter 'edgegroup_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroup_edgetrunkbasis" if edgegroup_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'edgetrunkbase_id' is set
       fail ArgumentError, "Missing the required parameter 'edgetrunkbase_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroup_edgetrunkbasis" if edgetrunkbase_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}".sub('{format}','json').sub('{' + 'edgegroupId' + '}', edgegroup_id.to_s).sub('{' + 'edgetrunkbaseId' + '}', edgetrunkbase_id.to_s)
 
@@ -2470,7 +3050,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2511,6 +3092,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroups ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/edgegroups".sub('{format}','json')
 
@@ -2538,7 +3150,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2569,6 +3182,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgeversionreport ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/edgeversionreport".sub('{format}','json')
 
@@ -2591,7 +3205,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2624,8 +3239,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_endpoint ..."
       end
+      
+      
       # verify the required parameter 'endpoint_id' is set
       fail ArgumentError, "Missing the required parameter 'endpoint_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_endpoint" if endpoint_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/endpoints/{endpointId}".sub('{format}','json').sub('{' + 'endpointId' + '}', endpoint_id.to_s)
 
@@ -2648,7 +3270,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2687,6 +3310,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_endpoints ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/endpoints".sub('{format}','json')
 
@@ -2713,7 +3361,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2746,8 +3395,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_extension ..."
       end
+      
+      
       # verify the required parameter 'extension_id' is set
       fail ArgumentError, "Missing the required parameter 'extension_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_extension" if extension_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/extensions/{extensionId}".sub('{format}','json').sub('{' + 'extensionId' + '}', extension_id.to_s)
 
@@ -2770,7 +3426,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2803,8 +3460,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_extensionpool ..."
       end
+      
+      
       # verify the required parameter 'extension_pool_id' is set
       fail ArgumentError, "Missing the required parameter 'extension_pool_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_extensionpool" if extension_pool_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}".sub('{format}','json').sub('{' + 'extensionPoolId' + '}', extension_pool_id.to_s)
 
@@ -2827,7 +3491,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2866,6 +3531,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_extensionpools ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/extensionpools".sub('{format}','json')
 
@@ -2892,7 +3582,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2933,6 +3624,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_extensions ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/extensions".sub('{format}','json')
 
@@ -2960,7 +3682,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2993,8 +3716,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_line ..."
       end
+      
+      
       # verify the required parameter 'line_id' is set
       fail ArgumentError, "Missing the required parameter 'line_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_line" if line_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/lines/{lineId}".sub('{format}','json').sub('{' + 'lineId' + '}', line_id.to_s)
 
@@ -3017,7 +3747,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3050,8 +3781,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_linebasesetting ..."
       end
+      
+      
       # verify the required parameter 'line_base_id' is set
       fail ArgumentError, "Missing the required parameter 'line_base_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_linebasesetting" if line_base_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/linebasesettings/{lineBaseId}".sub('{format}','json').sub('{' + 'lineBaseId' + '}', line_base_id.to_s)
 
@@ -3074,7 +3812,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3113,6 +3852,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_linebasesettings ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/linebasesettings".sub('{format}','json')
 
@@ -3139,7 +3903,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3180,6 +3945,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_lines ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/lines".sub('{format}','json')
 
@@ -3207,7 +4003,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3240,8 +4037,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_lines_template ..."
       end
+      
+      
       # verify the required parameter 'line_base_settings_id' is set
       fail ArgumentError, "Missing the required parameter 'line_base_settings_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_lines_template" if line_base_settings_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/lines/template".sub('{format}','json')
 
@@ -3265,7 +4069,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3300,8 +4105,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_logicalinterfaces ..."
       end
+      
+      
       # verify the required parameter 'edge_ids' is set
       fail ArgumentError, "Missing the required parameter 'edge_ids' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_logicalinterfaces" if edge_ids.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/logicalinterfaces".sub('{format}','json')
 
@@ -3326,7 +4144,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3359,8 +4178,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_outboundroute ..."
       end
+      
+      
       # verify the required parameter 'outbound_route_id' is set
       fail ArgumentError, "Missing the required parameter 'outbound_route_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_outboundroute" if outbound_route_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}".sub('{format}','json').sub('{' + 'outboundRouteId' + '}', outbound_route_id.to_s)
 
@@ -3383,7 +4209,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3424,6 +4251,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_outboundroutes ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/outboundroutes".sub('{format}','json')
 
@@ -3451,7 +4309,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3484,8 +4343,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_phone ..."
       end
+      
+      
       # verify the required parameter 'phone_id' is set
       fail ArgumentError, "Missing the required parameter 'phone_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_phone" if phone_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phones/{phoneId}".sub('{format}','json').sub('{' + 'phoneId' + '}', phone_id.to_s)
 
@@ -3508,7 +4374,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3541,8 +4408,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_phonebasesetting ..."
       end
+      
+      
       # verify the required parameter 'phone_base_id' is set
       fail ArgumentError, "Missing the required parameter 'phone_base_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_phonebasesetting" if phone_base_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}".sub('{format}','json').sub('{' + 'phoneBaseId' + '}', phone_base_id.to_s)
 
@@ -3565,7 +4439,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3608,6 +4483,43 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_phonebasesettings ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phonebasesettings".sub('{format}','json')
 
@@ -3636,7 +4548,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3671,6 +4584,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_phonebasesettings_availablemetabases ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phonebasesettings/availablemetabases".sub('{format}','json')
 
@@ -3695,7 +4621,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3728,8 +4655,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_phonebasesettings_template ..."
       end
+      
+      
       # verify the required parameter 'phone_metabase_id' is set
       fail ArgumentError, "Missing the required parameter 'phone_metabase_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_phonebasesettings_template" if phone_metabase_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phonebasesettings/template".sub('{format}','json')
 
@@ -3753,7 +4687,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3812,6 +4747,91 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_phones ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phones".sub('{format}','json')
 
@@ -3848,7 +4868,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3881,8 +4902,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_phones_template ..."
       end
+      
+      
       # verify the required parameter 'phone_base_settings_id' is set
       fail ArgumentError, "Missing the required parameter 'phone_base_settings_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_phones_template" if phone_base_settings_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phones/template".sub('{format}','json')
 
@@ -3906,7 +4934,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3939,8 +4968,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_physicalinterfaces ..."
       end
+      
+      
       # verify the required parameter 'edge_ids' is set
       fail ArgumentError, "Missing the required parameter 'edge_ids' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_physicalinterfaces" if edge_ids.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/physicalinterfaces".sub('{format}','json')
 
@@ -3964,7 +5000,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3997,8 +5034,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_site ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_site" if site_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
 
@@ -4021,7 +5065,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4056,10 +5101,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_numberplan ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_numberplan" if site_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'number_plan_id' is set
       fail ArgumentError, "Missing the required parameter 'number_plan_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_numberplan" if number_plan_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId}".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s).sub('{' + 'numberPlanId' + '}', number_plan_id.to_s)
 
@@ -4082,7 +5140,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4115,8 +5174,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_numberplans ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_numberplans" if site_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
 
@@ -4139,7 +5205,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4174,8 +5241,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_numberplans_classifications ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_numberplans_classifications" if site_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans/classifications".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
 
@@ -4199,7 +5279,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4234,10 +5315,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_outboundroute ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_outboundroute" if site_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'outbound_route_id' is set
       fail ArgumentError, "Missing the required parameter 'outbound_route_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_outboundroute" if outbound_route_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s).sub('{' + 'outboundRouteId' + '}', outbound_route_id.to_s)
 
@@ -4260,7 +5354,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4301,8 +5396,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_outboundroutes ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_outboundroutes" if site_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
 
@@ -4329,7 +5455,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4374,6 +5501,49 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_sites ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites".sub('{format}','json')
 
@@ -4403,7 +5573,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4438,6 +5609,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_timezones ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/timezones".sub('{format}','json')
 
@@ -4462,7 +5646,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4495,8 +5680,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunk ..."
       end
+      
+      
       # verify the required parameter 'trunk_id' is set
       fail ArgumentError, "Missing the required parameter 'trunk_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunk" if trunk_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/trunks/{trunkId}".sub('{format}','json').sub('{' + 'trunkId' + '}', trunk_id.to_s)
 
@@ -4519,7 +5711,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4554,8 +5747,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunkbasesetting ..."
       end
+      
+      
       # verify the required parameter 'trunk_base_settings_id' is set
       fail ArgumentError, "Missing the required parameter 'trunk_base_settings_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunkbasesetting" if trunk_base_settings_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}".sub('{format}','json').sub('{' + 'trunkBaseSettingsId' + '}', trunk_base_settings_id.to_s)
 
@@ -4579,7 +5785,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4628,6 +5835,61 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunkbasesettings ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/trunkbasesettings".sub('{format}','json')
 
@@ -4659,7 +5921,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4696,9 +5959,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunkbasesettings_availablemetabases ..."
       end
+      
+      
+      
+      
       if opts[:'type'] && !['EXTERNAL', 'PHONE', 'EDGE'].include?(opts[:'type'])
         fail ArgumentError, 'invalid value for "type", must be one of EXTERNAL, PHONE, EDGE'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/trunkbasesettings/availablemetabases".sub('{format}','json')
 
@@ -4724,7 +6007,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4757,8 +6041,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunkbasesettings_template ..."
       end
+      
+      
       # verify the required parameter 'trunk_metabase_id' is set
       fail ArgumentError, "Missing the required parameter 'trunk_metabase_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunkbasesettings_template" if trunk_metabase_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/trunkbasesettings/template".sub('{format}','json')
 
@@ -4782,7 +6073,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4827,9 +6119,53 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunks ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'trunk_type'] && !['EXTERNAL', 'PHONE', 'EDGE'].include?(opts[:'trunk_type'])
         fail ArgumentError, 'invalid value for "trunk_type", must be one of EXTERNAL, PHONE, EDGE'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/trunks".sub('{format}','json')
 
@@ -4859,7 +6195,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4892,9 +6229,17 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunkswithrecording ..."
       end
+      
+      
+      
+      
       if opts[:'trunk_type'] && !['EXTERNAL', 'PHONE', 'EDGE'].include?(opts[:'trunk_type'])
         fail ArgumentError, 'invalid value for "trunk_type", must be one of EXTERNAL, PHONE, EDGE'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/trunkswithrecording".sub('{format}','json')
 
@@ -4918,7 +6263,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4953,10 +6299,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edge_logicalinterfaces ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_logicalinterfaces" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_logicalinterfaces" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -4979,6 +6338,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5016,12 +6376,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edge_logs_job_upload ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_logs_job_upload" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'job_id' is set
       fail ArgumentError, "Missing the required parameter 'job_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_logs_job_upload" if job_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_logs_job_upload" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s).sub('{' + 'jobId' + '}', job_id.to_s)
 
@@ -5044,6 +6423,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5078,10 +6458,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edge_logs_jobs ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_logs_jobs" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_logs_jobs" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -5104,6 +6497,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5139,8 +6533,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edge_reboot ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_reboot" if edge_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/reboot".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -5163,6 +6570,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5198,10 +6606,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edge_softwareupdate ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_softwareupdate" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_softwareupdate" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -5224,6 +6645,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5259,8 +6681,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edge_statuscode ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_statuscode" if edge_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/statuscode".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -5283,6 +6718,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5316,8 +6752,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edge_unpair ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_unpair" if edge_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/unpair".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -5340,7 +6783,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -5373,8 +6817,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges".sub('{format}','json')
 
@@ -5397,6 +6848,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5430,8 +6882,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_addressvalidation ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_addressvalidation" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/addressvalidation".sub('{format}','json')
 
@@ -5454,6 +6913,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5487,8 +6947,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_certificateauthorities ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_certificateauthorities" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/certificateauthorities".sub('{format}','json')
 
@@ -5511,6 +6978,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5544,8 +7012,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_didpools ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_didpools" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/didpools".sub('{format}','json')
 
@@ -5568,6 +7043,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5601,8 +7077,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_edgegroups ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_edgegroups" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/edgegroups".sub('{format}','json')
 
@@ -5625,6 +7108,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5658,8 +7142,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_endpoints ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_endpoints" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/endpoints".sub('{format}','json')
 
@@ -5682,6 +7173,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5715,8 +7207,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_extensionpools ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_extensionpools" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/extensionpools".sub('{format}','json')
 
@@ -5739,6 +7238,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5772,8 +7272,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_outboundroutes ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_outboundroutes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/outboundroutes".sub('{format}','json')
 
@@ -5796,6 +7303,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5829,8 +7337,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_phone_reboot ..."
       end
+      
+      
       # verify the required parameter 'phone_id' is set
       fail ArgumentError, "Missing the required parameter 'phone_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_phone_reboot" if phone_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phones/{phoneId}/reboot".sub('{format}','json').sub('{' + 'phoneId' + '}', phone_id.to_s)
 
@@ -5853,7 +7368,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -5885,8 +7401,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_phonebasesettings ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_phonebasesettings" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phonebasesettings".sub('{format}','json')
 
@@ -5909,6 +7432,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5942,8 +7466,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_phones ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_phones" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phones".sub('{format}','json')
 
@@ -5966,6 +7497,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -5999,8 +7531,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_phones_reboot ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_phones_reboot" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phones/reboot".sub('{format}','json')
 
@@ -6023,6 +7562,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -6057,10 +7597,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_site_outboundroutes ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_site_outboundroutes" if site_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_site_outboundroutes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
 
@@ -6083,6 +7636,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -6116,8 +7670,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_site_rebalance ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_site_rebalance" if site_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/rebalance".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
 
@@ -6140,7 +7701,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -6172,8 +7734,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_sites ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_sites" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites".sub('{format}','json')
 
@@ -6196,6 +7765,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -6229,8 +7799,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_trunkbasesettings ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_trunkbasesettings" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/trunkbasesettings".sub('{format}','json')
 
@@ -6253,6 +7830,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -6288,10 +7866,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edge ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edge" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edge" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
 
@@ -6314,6 +7905,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -6351,12 +7943,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edge_line ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edge_line" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'line_id' is set
       fail ArgumentError, "Missing the required parameter 'line_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edge_line" if line_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edge_line" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s).sub('{' + 'lineId' + '}', line_id.to_s)
 
@@ -6379,6 +7990,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -6416,12 +8028,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edge_logicalinterface ..."
       end
+      
+      
       # verify the required parameter 'edge_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edge_logicalinterface" if edge_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'interface_id' is set
       fail ArgumentError, "Missing the required parameter 'interface_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edge_logicalinterface" if interface_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edge_logicalinterface" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s).sub('{' + 'interfaceId' + '}', interface_id.to_s)
 
@@ -6444,6 +8075,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -6479,10 +8111,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_certificateauthority ..."
       end
+      
+      
       # verify the required parameter 'certificate_id' is set
       fail ArgumentError, "Missing the required parameter 'certificate_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_certificateauthority" if certificate_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_certificateauthority" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}".sub('{format}','json').sub('{' + 'certificateId' + '}', certificate_id.to_s)
 
@@ -6505,6 +8150,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -6540,10 +8186,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_did ..."
       end
+      
+      
       # verify the required parameter 'did_id' is set
       fail ArgumentError, "Missing the required parameter 'did_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_did" if did_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_did" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/dids/{didId}".sub('{format}','json').sub('{' + 'didId' + '}', did_id.to_s)
 
@@ -6566,6 +8225,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -6601,10 +8261,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_didpool ..."
       end
+      
+      
       # verify the required parameter 'did_pool_id' is set
       fail ArgumentError, "Missing the required parameter 'did_pool_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_didpool" if did_pool_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_didpool" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/didpools/{didPoolId}".sub('{format}','json').sub('{' + 'didPoolId' + '}', did_pool_id.to_s)
 
@@ -6627,6 +8300,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -6662,10 +8336,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup ..."
       end
+      
+      
       # verify the required parameter 'edge_group_id' is set
       fail ArgumentError, "Missing the required parameter 'edge_group_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup" if edge_group_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}".sub('{format}','json').sub('{' + 'edgeGroupId' + '}', edge_group_id.to_s)
 
@@ -6688,6 +8375,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -6725,12 +8413,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbasis ..."
       end
+      
+      
       # verify the required parameter 'edgegroup_id' is set
       fail ArgumentError, "Missing the required parameter 'edgegroup_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbasis" if edgegroup_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'edgetrunkbase_id' is set
       fail ArgumentError, "Missing the required parameter 'edgetrunkbase_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbasis" if edgetrunkbase_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbasis" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}".sub('{format}','json').sub('{' + 'edgegroupId' + '}', edgegroup_id.to_s).sub('{' + 'edgetrunkbaseId' + '}', edgetrunkbase_id.to_s)
 
@@ -6753,6 +8460,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -6788,10 +8496,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_endpoint ..."
       end
+      
+      
       # verify the required parameter 'endpoint_id' is set
       fail ArgumentError, "Missing the required parameter 'endpoint_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_endpoint" if endpoint_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_endpoint" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/endpoints/{endpointId}".sub('{format}','json').sub('{' + 'endpointId' + '}', endpoint_id.to_s)
 
@@ -6814,6 +8535,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -6849,10 +8571,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_extension ..."
       end
+      
+      
       # verify the required parameter 'extension_id' is set
       fail ArgumentError, "Missing the required parameter 'extension_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_extension" if extension_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_extension" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/extensions/{extensionId}".sub('{format}','json').sub('{' + 'extensionId' + '}', extension_id.to_s)
 
@@ -6875,6 +8610,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -6910,10 +8646,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_extensionpool ..."
       end
+      
+      
       # verify the required parameter 'extension_pool_id' is set
       fail ArgumentError, "Missing the required parameter 'extension_pool_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_extensionpool" if extension_pool_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_extensionpool" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}".sub('{format}','json').sub('{' + 'extensionPoolId' + '}', extension_pool_id.to_s)
 
@@ -6936,6 +8685,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -6971,10 +8721,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_outboundroute ..."
       end
+      
+      
       # verify the required parameter 'outbound_route_id' is set
       fail ArgumentError, "Missing the required parameter 'outbound_route_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_outboundroute" if outbound_route_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_outboundroute" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}".sub('{format}','json').sub('{' + 'outboundRouteId' + '}', outbound_route_id.to_s)
 
@@ -6997,6 +8760,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -7032,10 +8796,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_phone ..."
       end
+      
+      
       # verify the required parameter 'phone_id' is set
       fail ArgumentError, "Missing the required parameter 'phone_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_phone" if phone_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_phone" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phones/{phoneId}".sub('{format}','json').sub('{' + 'phoneId' + '}', phone_id.to_s)
 
@@ -7058,6 +8835,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -7093,10 +8871,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_phonebasesetting ..."
       end
+      
+      
       # verify the required parameter 'phone_base_id' is set
       fail ArgumentError, "Missing the required parameter 'phone_base_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_phonebasesetting" if phone_base_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_phonebasesetting" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}".sub('{format}','json').sub('{' + 'phoneBaseId' + '}', phone_base_id.to_s)
 
@@ -7119,6 +8910,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -7154,10 +8946,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_site ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_site" if site_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_site" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
 
@@ -7180,6 +8985,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -7215,10 +9021,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_site_numberplans ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_site_numberplans" if site_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_site_numberplans" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
 
@@ -7241,6 +9060,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -7278,12 +9098,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_site_outboundroute ..."
       end
+      
+      
       # verify the required parameter 'site_id' is set
       fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_site_outboundroute" if site_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'outbound_route_id' is set
       fail ArgumentError, "Missing the required parameter 'outbound_route_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_site_outboundroute" if outbound_route_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_site_outboundroute" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s).sub('{' + 'outboundRouteId' + '}', outbound_route_id.to_s)
 
@@ -7306,6 +9145,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -7341,10 +9181,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_trunkbasesetting ..."
       end
+      
+      
       # verify the required parameter 'trunk_base_settings_id' is set
       fail ArgumentError, "Missing the required parameter 'trunk_base_settings_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_trunkbasesetting" if trunk_base_settings_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_trunkbasesetting" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}".sub('{format}','json').sub('{' + 'trunkBaseSettingsId' + '}', trunk_base_settings_id.to_s)
 
@@ -7367,6 +9220,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

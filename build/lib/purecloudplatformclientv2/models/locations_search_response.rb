@@ -48,30 +48,50 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'total' => :'total',
+        
         :'page_count' => :'pageCount',
+        
         :'page_size' => :'pageSize',
+        
         :'page_number' => :'pageNumber',
+        
         :'previous_page' => :'previousPage',
+        
         :'current_page' => :'currentPage',
+        
         :'next_page' => :'nextPage',
+        
         :'types' => :'types',
+        
         :'results' => :'results'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'total' => :'Integer',
+        
         :'page_count' => :'Integer',
+        
         :'page_size' => :'Integer',
+        
         :'page_number' => :'Integer',
+        
         :'previous_page' => :'String',
+        
         :'current_page' => :'String',
+        
         :'next_page' => :'String',
+        
         :'types' => :'Array<String>',
+        
         :'results' => :'Array<LocationDefinition>'
+        
       }
     end
 
@@ -83,84 +103,221 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'total')
+        
+        
         self.total = attributes[:'total']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pageCount')
+        
+        
         self.page_count = attributes[:'pageCount']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pageSize')
+        
+        
         self.page_size = attributes[:'pageSize']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pageNumber')
+        
+        
         self.page_number = attributes[:'pageNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'previousPage')
+        
+        
         self.previous_page = attributes[:'previousPage']
+        
+      
       end
 
+      
       if attributes.has_key?(:'currentPage')
+        
+        
         self.current_page = attributes[:'currentPage']
+        
+      
       end
 
+      
       if attributes.has_key?(:'nextPage')
+        
+        
         self.next_page = attributes[:'nextPage']
+        
+      
       end
 
+      
       if attributes.has_key?(:'types')
+        
         if (value = attributes[:'types']).is_a?(Array)
           self.types = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'results')
+        
         if (value = attributes[:'results']).is_a?(Array)
           self.results = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @total.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @page_count.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @page_size.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @page_number.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @types.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @results.nil?
         return false
       end
 
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

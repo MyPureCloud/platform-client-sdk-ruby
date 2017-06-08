@@ -66,52 +66,94 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'description' => :'description',
+        
         :'version' => :'version',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'modified_by' => :'modifiedBy',
+        
         :'created_by' => :'createdBy',
+        
         :'state' => :'state',
+        
         :'modified_by_app' => :'modifiedByApp',
+        
         :'created_by_app' => :'createdByApp',
+        
         :'schema' => :'schema',
+        
         :'properties' => :'properties',
+        
         :'edge' => :'edge',
+        
         :'edge_group' => :'edgeGroup',
+        
         :'line_type' => :'lineType',
+        
         :'endpoint' => :'endpoint',
+        
         :'ip_address' => :'ipAddress',
+        
         :'logical_interface_id' => :'logicalInterfaceId',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'description' => :'String',
+        
         :'version' => :'Integer',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'modified_by' => :'String',
+        
         :'created_by' => :'String',
+        
         :'state' => :'String',
+        
         :'modified_by_app' => :'String',
+        
         :'created_by_app' => :'String',
+        
         :'schema' => :'UriReference',
+        
         :'properties' => :'Hash<String, Object>',
+        
         :'edge' => :'Edge',
+        
         :'edge_group' => :'EdgeGroup',
+        
         :'line_type' => :'String',
+        
         :'endpoint' => :'Endpoint',
+        
         :'ip_address' => :'String',
+        
         :'logical_interface_id' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -123,114 +165,343 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'description')
+        
+        
         self.description = attributes[:'description']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedBy')
+        
+        
         self.modified_by = attributes[:'modifiedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdBy')
+        
+        
         self.created_by = attributes[:'createdBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedByApp')
+        
+        
         self.modified_by_app = attributes[:'modifiedByApp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdByApp')
+        
+        
         self.created_by_app = attributes[:'createdByApp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'schema')
+        
+        
         self.schema = attributes[:'schema']
+        
+      
       end
 
+      
       if attributes.has_key?(:'properties')
+        
         if (value = attributes[:'properties']).is_a?(Array)
           self.properties = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'edge')
+        
+        
         self.edge = attributes[:'edge']
+        
+      
       end
 
+      
       if attributes.has_key?(:'edgeGroup')
+        
+        
         self.edge_group = attributes[:'edgeGroup']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lineType')
+        
+        
         self.line_type = attributes[:'lineType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endpoint')
+        
+        
         self.endpoint = attributes[:'endpoint']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ipAddress')
+        
+        
         self.ip_address = attributes[:'ipAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'logicalInterfaceId')
+        
+        
         self.logical_interface_id = attributes[:'logicalInterfaceId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["active", "inactive", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["TIE", "NETWORK", "TRUNK", "STATION"]
       if @line_type && !allowed_values.include?(@line_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -241,6 +512,40 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] line_type Object to be assigned
     def line_type=(line_type)
@@ -251,6 +556,29 @@ module PureCloud
       @line_type = line_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

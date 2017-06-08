@@ -40,28 +40,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'country' => :'country',
+        
         :'a1' => :'A1',
+        
         :'a3' => :'A3',
+        
         :'rd' => :'RD',
+        
         :'hno' => :'HNO',
+        
         :'loc' => :'LOC',
+        
         :'nam' => :'NAM',
+        
         :'pc' => :'PC'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'country' => :'String',
+        
         :'a1' => :'String',
+        
         :'a3' => :'String',
+        
         :'rd' => :'String',
+        
         :'hno' => :'String',
+        
         :'loc' => :'String',
+        
         :'nam' => :'String',
+        
         :'pc' => :'String'
+        
       }
     end
 
@@ -73,64 +91,184 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'country')
+        
+        
         self.country = attributes[:'country']
+        
+      
       end
 
+      
       if attributes.has_key?(:'A1')
+        
+        
         self.a1 = attributes[:'A1']
+        
+      
       end
 
+      
       if attributes.has_key?(:'A3')
+        
+        
         self.a3 = attributes[:'A3']
+        
+      
       end
 
+      
       if attributes.has_key?(:'RD')
+        
+        
         self.rd = attributes[:'RD']
+        
+      
       end
 
+      
       if attributes.has_key?(:'HNO')
+        
+        
         self.hno = attributes[:'HNO']
+        
+      
       end
 
+      
       if attributes.has_key?(:'LOC')
+        
+        
         self.loc = attributes[:'LOC']
+        
+      
       end
 
+      
       if attributes.has_key?(:'NAM')
+        
+        
         self.nam = attributes[:'NAM']
+        
+      
       end
 
+      
       if attributes.has_key?(:'PC')
+        
+        
         self.pc = attributes[:'PC']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @country.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @a1.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @a3.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

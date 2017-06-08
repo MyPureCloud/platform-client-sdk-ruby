@@ -27,18 +27,26 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'pairing_token' => :'pairing-token',
+        
         :'pairing_trust' => :'pairing-trust',
+        
         :'pairing_url' => :'pairing-url'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'pairing_token' => :'String',
+        
         :'pairing_trust' => :'Array<String>',
+        
         :'pairing_url' => :'String'
+        
       }
     end
 
@@ -50,34 +58,81 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'pairing-token')
+        
+        
         self.pairing_token = attributes[:'pairing-token']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pairing-trust')
+        
         if (value = attributes[:'pairing-trust']).is_a?(Array)
           self.pairing_trust = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'pairing-url')
+        
+        
         self.pairing_url = attributes[:'pairing-url']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

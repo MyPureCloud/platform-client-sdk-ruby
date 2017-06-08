@@ -39,30 +39,50 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'max' => :'max',
+        
         :'min' => :'min',
+        
         :'count' => :'count',
+        
         :'sum' => :'sum',
+        
         :'current' => :'current',
+        
         :'ratio' => :'ratio',
+        
         :'numerator' => :'numerator',
+        
         :'denominator' => :'denominator',
+        
         :'target' => :'target'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'max' => :'Float',
+        
         :'min' => :'Float',
+        
         :'count' => :'Integer',
+        
         :'sum' => :'Float',
+        
         :'current' => :'Float',
+        
         :'ratio' => :'Float',
+        
         :'numerator' => :'Float',
+        
         :'denominator' => :'Float',
+        
         :'target' => :'Float'
+        
       }
     end
 
@@ -74,56 +94,187 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'max')
+        
+        
         self.max = attributes[:'max']
+        
+      
       end
 
+      
       if attributes.has_key?(:'min')
+        
+        
         self.min = attributes[:'min']
+        
+      
       end
 
+      
       if attributes.has_key?(:'count')
+        
+        
         self.count = attributes[:'count']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sum')
+        
+        
         self.sum = attributes[:'sum']
+        
+      
       end
 
+      
       if attributes.has_key?(:'current')
+        
+        
         self.current = attributes[:'current']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ratio')
+        
+        
         self.ratio = attributes[:'ratio']
+        
+      
       end
 
+      
       if attributes.has_key?(:'numerator')
+        
+        
         self.numerator = attributes[:'numerator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'denominator')
+        
+        
         self.denominator = attributes[:'denominator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'target')
+        
+        
         self.target = attributes[:'target']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

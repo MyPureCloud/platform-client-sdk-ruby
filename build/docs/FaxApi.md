@@ -59,7 +59,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document_id** | **String**| Document ID | 
+ **document_id** | **String**| Document ID |  |
 {: class="table table-striped"}
 
 
@@ -118,7 +118,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document_id** | **String**| Document ID | 
+ **document_id** | **String**| Document ID |  |
 {: class="table table-striped"}
 
 
@@ -177,7 +177,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document_id** | **String**| Document ID | 
+ **document_id** | **String**| Document ID |  |
 {: class="table table-striped"}
 
 
@@ -238,8 +238,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -353,8 +353,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document_id** | **String**| Document ID | 
- **body** | [**FaxDocument**](FaxDocument.html)| Document | 
+ **document_id** | **String**| Document ID |  |
+ **body** | [**FaxDocument**](FaxDocument.html)| Document |  |
 {: class="table table-striped"}
 
 

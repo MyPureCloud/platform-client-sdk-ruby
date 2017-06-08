@@ -73,54 +73,98 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'campaign' => :'campaign',
+        
         :'agent' => :'agent',
+        
         :'contact' => :'contact',
+        
         :'destination_address' => :'destinationAddress',
+        
         :'active_preview_call' => :'activePreviewCall',
+        
         :'last_active_preview_wrapup_time' => :'lastActivePreviewWrapupTime',
+        
         :'creation_time' => :'creationTime',
+        
         :'call_placed_time' => :'callPlacedTime',
+        
         :'call_routed_time' => :'callRoutedTime',
+        
         :'preview_connected_time' => :'previewConnectedTime',
+        
         :'queue' => :'queue',
+        
         :'script' => :'script',
+        
         :'disposition' => :'disposition',
+        
         :'caller_name' => :'callerName',
+        
         :'caller_address' => :'callerAddress',
+        
         :'preview_pop_delivered_time' => :'previewPopDeliveredTime',
+        
         :'conversation' => :'conversation',
+        
         :'dialer_system_participant_id' => :'dialerSystemParticipantId',
+        
         :'dialing_mode' => :'dialingMode',
+        
         :'skills' => :'skills'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'campaign' => :'UriReference',
+        
         :'agent' => :'UriReference',
+        
         :'contact' => :'UriReference',
+        
         :'destination_address' => :'String',
+        
         :'active_preview_call' => :'BOOLEAN',
+        
         :'last_active_preview_wrapup_time' => :'DateTime',
+        
         :'creation_time' => :'DateTime',
+        
         :'call_placed_time' => :'DateTime',
+        
         :'call_routed_time' => :'DateTime',
+        
         :'preview_connected_time' => :'DateTime',
+        
         :'queue' => :'UriReference',
+        
         :'script' => :'UriReference',
+        
         :'disposition' => :'String',
+        
         :'caller_name' => :'String',
+        
         :'caller_address' => :'String',
+        
         :'preview_pop_delivered_time' => :'DateTime',
+        
         :'conversation' => :'ConversationBasic',
+        
         :'dialer_system_participant_id' => :'String',
+        
         :'dialing_mode' => :'String',
+        
         :'skills' => :'Array<UriReference>'
+        
       }
     end
 
@@ -132,110 +176,371 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'campaign')
+        
+        
         self.campaign = attributes[:'campaign']
+        
+      
       end
 
+      
       if attributes.has_key?(:'agent')
+        
+        
         self.agent = attributes[:'agent']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contact')
+        
+        
         self.contact = attributes[:'contact']
+        
+      
       end
 
+      
       if attributes.has_key?(:'destinationAddress')
+        
+        
         self.destination_address = attributes[:'destinationAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'activePreviewCall')
+        
+        
         self.active_preview_call = attributes[:'activePreviewCall']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lastActivePreviewWrapupTime')
+        
+        
         self.last_active_preview_wrapup_time = attributes[:'lastActivePreviewWrapupTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'creationTime')
+        
+        
         self.creation_time = attributes[:'creationTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callPlacedTime')
+        
+        
         self.call_placed_time = attributes[:'callPlacedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callRoutedTime')
+        
+        
         self.call_routed_time = attributes[:'callRoutedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'previewConnectedTime')
+        
+        
         self.preview_connected_time = attributes[:'previewConnectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'queue')
+        
+        
         self.queue = attributes[:'queue']
+        
+      
       end
 
+      
       if attributes.has_key?(:'script')
+        
+        
         self.script = attributes[:'script']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disposition')
+        
+        
         self.disposition = attributes[:'disposition']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callerName')
+        
+        
         self.caller_name = attributes[:'callerName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callerAddress')
+        
+        
         self.caller_address = attributes[:'callerAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'previewPopDeliveredTime')
+        
+        
         self.preview_pop_delivered_time = attributes[:'previewPopDeliveredTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'conversation')
+        
+        
         self.conversation = attributes[:'conversation']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dialerSystemParticipantId')
+        
+        
         self.dialer_system_participant_id = attributes[:'dialerSystemParticipantId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dialingMode')
+        
+        
         self.dialing_mode = attributes[:'dialingMode']
+        
+      
       end
 
+      
       if attributes.has_key?(:'skills')
+        
         if (value = attributes[:'skills']).is_a?(Array)
           self.skills = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["DISCONNECT", "LIVE_VOICE", "BUSY", "MACHINE", "NO_ANSWER", "SIT_CALLABLE", "SIT_UNCALLABLE", "FAX"]
       if @disposition && !allowed_values.include?(@disposition)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] disposition Object to be assigned
     def disposition=(disposition)
@@ -246,6 +551,44 @@ module PureCloud
       @disposition = disposition
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

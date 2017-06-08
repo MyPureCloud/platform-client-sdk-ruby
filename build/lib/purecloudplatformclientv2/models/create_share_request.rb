@@ -34,22 +34,34 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'shared_entity_type' => :'sharedEntityType',
+        
         :'shared_entity' => :'sharedEntity',
+        
         :'member_type' => :'memberType',
+        
         :'member' => :'member',
+        
         :'members' => :'members'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'shared_entity_type' => :'String',
+        
         :'shared_entity' => :'SharedEntity',
+        
         :'member_type' => :'String',
+        
         :'member' => :'SharedEntity',
+        
         :'members' => :'Array<CreateShareRequestMember>'
+        
       }
     end
 
@@ -61,58 +73,113 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'sharedEntityType')
+        
+        
         self.shared_entity_type = attributes[:'sharedEntityType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sharedEntity')
+        
+        
         self.shared_entity = attributes[:'sharedEntity']
+        
+      
       end
 
+      
       if attributes.has_key?(:'memberType')
+        
+        
         self.member_type = attributes[:'memberType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'member')
+        
+        
         self.member = attributes[:'member']
+        
+      
       end
 
+      
       if attributes.has_key?(:'members')
+        
         if (value = attributes[:'members']).is_a?(Array)
           self.members = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @shared_entity_type.nil?
         return false
       end
 
+      
+      
       allowed_values = ["DOCUMENT"]
       if @shared_entity_type && !allowed_values.include?(@shared_entity_type)
         return false
       end
+      
+      
+      
+      
       if @shared_entity.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
       allowed_values = ["USER", "GROUP", "PUBLIC"]
       if @member_type && !allowed_values.include?(@member_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] shared_entity_type Object to be assigned
     def shared_entity_type=(shared_entity_type)
@@ -123,6 +190,15 @@ module PureCloud
       @shared_entity_type = shared_entity_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] member_type Object to be assigned
     def member_type=(member_type)
@@ -133,6 +209,19 @@ module PureCloud
       @member_type = member_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

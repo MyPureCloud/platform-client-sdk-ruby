@@ -47,38 +47,66 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'realtime_cic' => :'realtimeCIC',
+        
         :'purecloud' => :'purecloud',
+        
         :'hipaa' => :'hipaa',
+        
         :'uc_enabled' => :'ucEnabled',
+        
         :'pci' => :'pci',
+        
         :'purecloud_voice' => :'purecloudVoice',
+        
         :'xmpp_federation' => :'xmppFederation',
+        
         :'chat' => :'chat',
+        
         :'informal_photos' => :'informalPhotos',
+        
         :'directory' => :'directory',
+        
         :'contact_center' => :'contactCenter',
+        
         :'unified_communications' => :'unifiedCommunications',
+        
         :'custserv' => :'custserv'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'realtime_cic' => :'BOOLEAN',
+        
         :'purecloud' => :'BOOLEAN',
+        
         :'hipaa' => :'BOOLEAN',
+        
         :'uc_enabled' => :'BOOLEAN',
+        
         :'pci' => :'BOOLEAN',
+        
         :'purecloud_voice' => :'BOOLEAN',
+        
         :'xmpp_federation' => :'BOOLEAN',
+        
         :'chat' => :'BOOLEAN',
+        
         :'informal_photos' => :'BOOLEAN',
+        
         :'directory' => :'BOOLEAN',
+        
         :'contact_center' => :'BOOLEAN',
+        
         :'unified_communications' => :'BOOLEAN',
+        
         :'custserv' => :'BOOLEAN'
+        
       }
     end
 
@@ -90,72 +118,259 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'realtimeCIC')
+        
+        
         self.realtime_cic = attributes[:'realtimeCIC']
+        
+      
       end
 
+      
       if attributes.has_key?(:'purecloud')
+        
+        
         self.purecloud = attributes[:'purecloud']
+        
+      
       end
 
+      
       if attributes.has_key?(:'hipaa')
+        
+        
         self.hipaa = attributes[:'hipaa']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ucEnabled')
+        
+        
         self.uc_enabled = attributes[:'ucEnabled']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pci')
+        
+        
         self.pci = attributes[:'pci']
+        
+      
       end
 
+      
       if attributes.has_key?(:'purecloudVoice')
+        
+        
         self.purecloud_voice = attributes[:'purecloudVoice']
+        
+      
       end
 
+      
       if attributes.has_key?(:'xmppFederation')
+        
+        
         self.xmpp_federation = attributes[:'xmppFederation']
+        
+      
       end
 
+      
       if attributes.has_key?(:'chat')
+        
+        
         self.chat = attributes[:'chat']
+        
+      
       end
 
+      
       if attributes.has_key?(:'informalPhotos')
+        
+        
         self.informal_photos = attributes[:'informalPhotos']
+        
+      
       end
 
+      
       if attributes.has_key?(:'directory')
+        
+        
         self.directory = attributes[:'directory']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contactCenter')
+        
+        
         self.contact_center = attributes[:'contactCenter']
+        
+      
       end
 
+      
       if attributes.has_key?(:'unifiedCommunications')
+        
+        
         self.unified_communications = attributes[:'unifiedCommunications']
+        
+      
       end
 
+      
       if attributes.has_key?(:'custserv')
+        
+        
         self.custserv = attributes[:'custserv']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

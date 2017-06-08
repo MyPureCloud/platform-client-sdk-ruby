@@ -37,28 +37,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'description' => :'description',
+        
         :'deleted' => :'deleted',
+        
         :'checked_in_version' => :'checkedInVersion',
+        
         :'saved_version' => :'savedVersion',
+        
         :'published_version' => :'publishedVersion',
+        
         :'current_operation' => :'currentOperation'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'description' => :'String',
+        
         :'deleted' => :'BOOLEAN',
+        
         :'checked_in_version' => :'DocumentDataV2NotificationWorkspace',
+        
         :'saved_version' => :'FlowNotificationNotificationFlowVersion',
+        
         :'published_version' => :'FlowNotificationNotificationFlowVersion',
+        
         :'current_operation' => :'PromptNotificationNotificationCurrentOperation'
+        
       }
     end
 
@@ -70,52 +88,169 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'description')
+        
+        
         self.description = attributes[:'description']
+        
+      
       end
 
+      
       if attributes.has_key?(:'deleted')
+        
+        
         self.deleted = attributes[:'deleted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'checkedInVersion')
+        
+        
         self.checked_in_version = attributes[:'checkedInVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'savedVersion')
+        
+        
         self.saved_version = attributes[:'savedVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'publishedVersion')
+        
+        
         self.published_version = attributes[:'publishedVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'currentOperation')
+        
+        
         self.current_operation = attributes[:'currentOperation']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

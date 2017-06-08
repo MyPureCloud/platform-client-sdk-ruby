@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.delete_group ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling GroupsApi.delete_group" if group_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/{groupId}".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -101,10 +109,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.delete_group_members ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling GroupsApi.delete_group_members" if group_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'ids' is set
       fail ArgumentError, "Missing the required parameter 'ids' when calling GroupsApi.delete_group_members" if ids.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/{groupId}/members".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -128,7 +149,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -161,12 +183,20 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.get_fieldconfig ..."
       end
+      
+      
       # verify the required parameter 'type' is set
       fail ArgumentError, "Missing the required parameter 'type' when calling GroupsApi.get_fieldconfig" if type.nil?
+      
       # verify enum value
       unless ['person', 'group', 'org', 'externalContact'].include?(type)
         fail ArgumentError, "invalid value for 'type', must be one of person, group, org, externalContact"
       end
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/fieldconfig".sub('{format}','json')
 
@@ -190,7 +220,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -223,8 +254,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.get_group ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling GroupsApi.get_group" if group_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/{groupId}".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -247,7 +285,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -288,11 +327,43 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.get_group_members ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling GroupsApi.get_group_members" if group_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/{groupId}/members".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -319,7 +390,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -356,9 +428,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.get_groups ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups".sub('{format}','json')
 
@@ -384,7 +476,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -419,8 +512,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.get_groups_search ..."
       end
+      
+      
       # verify the required parameter 'q64' is set
       fail ArgumentError, "Missing the required parameter 'q64' when calling GroupsApi.get_groups_search" if q64.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/search".sub('{format}','json')
 
@@ -445,7 +551,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -480,10 +587,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.post_group_members ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling GroupsApi.post_group_members" if group_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GroupsApi.post_group_members" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/{groupId}/members".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -506,6 +626,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -539,8 +660,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.post_groups ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GroupsApi.post_groups" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups".sub('{format}','json')
 
@@ -563,6 +691,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -596,8 +725,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.post_groups_search ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GroupsApi.post_groups_search" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/search".sub('{format}','json')
 
@@ -620,6 +756,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -655,8 +792,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.put_group ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling GroupsApi.put_group" if group_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/{groupId}".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -679,6 +829,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

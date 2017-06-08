@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FaxApi.delete_fax_document ..."
       end
+      
+      
       # verify the required parameter 'document_id' is set
       fail ArgumentError, "Missing the required parameter 'document_id' when calling FaxApi.delete_fax_document" if document_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/fax/documents/{documentId}".sub('{format}','json').sub('{' + 'documentId' + '}', document_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -99,8 +107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FaxApi.get_fax_document ..."
       end
+      
+      
       # verify the required parameter 'document_id' is set
       fail ArgumentError, "Missing the required parameter 'document_id' when calling FaxApi.get_fax_document" if document_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/fax/documents/{documentId}".sub('{format}','json').sub('{' + 'documentId' + '}', document_id.to_s)
 
@@ -123,7 +138,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -156,8 +172,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FaxApi.get_fax_document_content ..."
       end
+      
+      
       # verify the required parameter 'document_id' is set
       fail ArgumentError, "Missing the required parameter 'document_id' when calling FaxApi.get_fax_document_content" if document_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/fax/documents/{documentId}/content".sub('{format}','json').sub('{' + 'documentId' + '}', document_id.to_s)
 
@@ -180,7 +203,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -215,6 +239,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FaxApi.get_fax_documents ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/fax/documents".sub('{format}','json')
 
@@ -239,7 +276,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -270,6 +308,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FaxApi.get_fax_summary ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/fax/summary".sub('{format}','json')
 
@@ -292,7 +331,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -327,10 +367,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FaxApi.put_fax_document ..."
       end
+      
+      
       # verify the required parameter 'document_id' is set
       fail ArgumentError, "Missing the required parameter 'document_id' when calling FaxApi.put_fax_document" if document_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling FaxApi.put_fax_document" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/fax/documents/{documentId}".sub('{format}','json').sub('{' + 'documentId' + '}', document_id.to_s)
 
@@ -353,6 +406,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

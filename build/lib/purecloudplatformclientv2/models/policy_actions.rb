@@ -42,30 +42,50 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'retain_recording' => :'retainRecording',
+        
         :'delete_recording' => :'deleteRecording',
+        
         :'always_delete' => :'alwaysDelete',
+        
         :'assign_evaluations' => :'assignEvaluations',
+        
         :'assign_metered_evaluations' => :'assignMeteredEvaluations',
+        
         :'assign_calibrations' => :'assignCalibrations',
+        
         :'retention_duration' => :'retentionDuration',
+        
         :'initiate_screen_recording' => :'initiateScreenRecording',
+        
         :'media_transcriptions' => :'mediaTranscriptions'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'retain_recording' => :'BOOLEAN',
+        
         :'delete_recording' => :'BOOLEAN',
+        
         :'always_delete' => :'BOOLEAN',
+        
         :'assign_evaluations' => :'Array<EvaluationAssignment>',
+        
         :'assign_metered_evaluations' => :'Array<MeteredEvaluationAssignment>',
+        
         :'assign_calibrations' => :'Array<CalibrationAssignment>',
+        
         :'retention_duration' => :'RetentionDuration',
+        
         :'initiate_screen_recording' => :'InitiateScreenRecording',
+        
         :'media_transcriptions' => :'Array<MediaTranscription>'
+        
       }
     end
 
@@ -77,64 +97,195 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'retainRecording')
+        
+        
         self.retain_recording = attributes[:'retainRecording']
+        
+      
       end
 
+      
       if attributes.has_key?(:'deleteRecording')
+        
+        
         self.delete_recording = attributes[:'deleteRecording']
+        
+      
       end
 
+      
       if attributes.has_key?(:'alwaysDelete')
+        
+        
         self.always_delete = attributes[:'alwaysDelete']
+        
+      
       end
 
+      
       if attributes.has_key?(:'assignEvaluations')
+        
         if (value = attributes[:'assignEvaluations']).is_a?(Array)
           self.assign_evaluations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'assignMeteredEvaluations')
+        
         if (value = attributes[:'assignMeteredEvaluations']).is_a?(Array)
           self.assign_metered_evaluations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'assignCalibrations')
+        
         if (value = attributes[:'assignCalibrations']).is_a?(Array)
           self.assign_calibrations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'retentionDuration')
+        
+        
         self.retention_duration = attributes[:'retentionDuration']
+        
+      
       end
 
+      
       if attributes.has_key?(:'initiateScreenRecording')
+        
+        
         self.initiate_screen_recording = attributes[:'initiateScreenRecording']
+        
+      
       end
 
+      
       if attributes.has_key?(:'mediaTranscriptions')
+        
         if (value = attributes[:'mediaTranscriptions']).is_a?(Array)
           self.media_transcriptions = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

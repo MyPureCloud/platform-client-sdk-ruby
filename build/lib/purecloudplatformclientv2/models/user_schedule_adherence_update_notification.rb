@@ -41,32 +41,54 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'user' => :'user',
+        
         :'management_unit_id' => :'managementUnitId',
+        
         :'scheduled_activity_category' => :'scheduledActivityCategory',
+        
         :'system_presence' => :'systemPresence',
+        
         :'routing_status' => :'routingStatus',
+        
         :'actual_activity_category' => :'actualActivityCategory',
+        
         :'is_out_of_office' => :'isOutOfOffice',
+        
         :'adherence_state' => :'adherenceState',
+        
         :'impact' => :'impact',
+        
         :'adherence_change_time' => :'adherenceChangeTime'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'user' => :'DocumentDataV2NotificationWorkspace',
+        
         :'management_unit_id' => :'String',
+        
         :'scheduled_activity_category' => :'String',
+        
         :'system_presence' => :'String',
+        
         :'routing_status' => :'String',
+        
         :'actual_activity_category' => :'String',
+        
         :'is_out_of_office' => :'BOOLEAN',
+        
         :'adherence_state' => :'String',
+        
         :'impact' => :'String',
+        
         :'adherence_change_time' => :'String'
+        
       }
     end
 
@@ -78,64 +100,181 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'user')
+        
+        
         self.user = attributes[:'user']
+        
+      
       end
 
+      
       if attributes.has_key?(:'managementUnitId')
+        
+        
         self.management_unit_id = attributes[:'managementUnitId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'scheduledActivityCategory')
+        
+        
         self.scheduled_activity_category = attributes[:'scheduledActivityCategory']
+        
+      
       end
 
+      
       if attributes.has_key?(:'systemPresence')
+        
+        
         self.system_presence = attributes[:'systemPresence']
+        
+      
       end
 
+      
       if attributes.has_key?(:'routingStatus')
+        
+        
         self.routing_status = attributes[:'routingStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'actualActivityCategory')
+        
+        
         self.actual_activity_category = attributes[:'actualActivityCategory']
+        
+      
       end
 
+      
       if attributes.has_key?(:'isOutOfOffice')
+        
+        
         self.is_out_of_office = attributes[:'isOutOfOffice']
+        
+      
       end
 
+      
       if attributes.has_key?(:'adherenceState')
+        
+        
         self.adherence_state = attributes[:'adherenceState']
+        
+      
       end
 
+      
       if attributes.has_key?(:'impact')
+        
+        
         self.impact = attributes[:'impact']
+        
+      
       end
 
+      
       if attributes.has_key?(:'adherenceChangeTime')
+        
+        
         self.adherence_change_time = attributes[:'adherenceChangeTime']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["__EMPTY__", "OFF_QUEUE", "IDLE", "INTERACTING", "NOT_RESPONDING", "COMMUNICATING", "OFFLINE"]
       if @routing_status && !allowed_values.include?(@routing_status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] routing_status Object to be assigned
     def routing_status=(routing_status)
@@ -146,6 +285,34 @@ module PureCloud
       @routing_status = routing_status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -27,16 +27,22 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'wrapup_prompt' => :'wrapupPrompt',
+        
         :'timeout_ms' => :'timeoutMs'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'wrapup_prompt' => :'String',
+        
         :'timeout_ms' => :'Integer'
+        
       }
     end
 
@@ -48,32 +54,57 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'wrapupPrompt')
+        
+        
         self.wrapup_prompt = attributes[:'wrapupPrompt']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timeoutMs')
+        
+        
         self.timeout_ms = attributes[:'timeoutMs']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["MANDATORY", "OPTIONAL", "MANDATORY_TIMEOUT", "MANDATORY_FORCED_TIMEOUT"]
       if @wrapup_prompt && !allowed_values.include?(@wrapup_prompt)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] wrapup_prompt Object to be assigned
     def wrapup_prompt=(wrapup_prompt)
@@ -84,6 +115,14 @@ module PureCloud
       @wrapup_prompt = wrapup_prompt
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

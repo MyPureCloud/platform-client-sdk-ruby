@@ -86,76 +86,142 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'media_type' => :'mediaType',
+        
         :'session_id' => :'sessionId',
+        
         :'address_other' => :'addressOther',
+        
         :'address_self' => :'addressSelf',
+        
         :'ani' => :'ani',
+        
         :'direction' => :'direction',
+        
         :'dnis' => :'dnis',
+        
         :'outbound_campaign_id' => :'outboundCampaignId',
+        
         :'outbound_contact_id' => :'outboundContactId',
+        
         :'outbound_contact_list_id' => :'outboundContactListId',
+        
         :'disposition_analyzer' => :'dispositionAnalyzer',
+        
         :'disposition_name' => :'dispositionName',
+        
         :'edge_id' => :'edgeId',
+        
         :'remote_name_displayable' => :'remoteNameDisplayable',
+        
         :'room_id' => :'roomId',
+        
         :'monitored_session_id' => :'monitoredSessionId',
+        
         :'monitored_participant_id' => :'monitoredParticipantId',
+        
         :'callback_user_name' => :'callbackUserName',
+        
         :'callback_numbers' => :'callbackNumbers',
+        
         :'callback_scheduled_time' => :'callbackScheduledTime',
+        
         :'script_id' => :'scriptId',
+        
         :'skip_enabled' => :'skipEnabled',
+        
         :'timeout_seconds' => :'timeoutSeconds',
+        
         :'cobrowse_role' => :'cobrowseRole',
+        
         :'cobrowse_room_id' => :'cobrowseRoomId',
+        
         :'media_bridge_id' => :'mediaBridgeId',
+        
         :'screen_share_address_self' => :'screenShareAddressSelf',
+        
         :'sharing_screen' => :'sharingScreen',
+        
         :'screen_share_room_id' => :'screenShareRoomId',
+        
         :'video_room_id' => :'videoRoomId',
+        
         :'video_address_self' => :'videoAddressSelf',
+        
         :'segments' => :'segments'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'media_type' => :'String',
+        
         :'session_id' => :'String',
+        
         :'address_other' => :'String',
+        
         :'address_self' => :'String',
+        
         :'ani' => :'String',
+        
         :'direction' => :'String',
+        
         :'dnis' => :'String',
+        
         :'outbound_campaign_id' => :'String',
+        
         :'outbound_contact_id' => :'String',
+        
         :'outbound_contact_list_id' => :'String',
+        
         :'disposition_analyzer' => :'String',
+        
         :'disposition_name' => :'String',
+        
         :'edge_id' => :'String',
+        
         :'remote_name_displayable' => :'String',
+        
         :'room_id' => :'String',
+        
         :'monitored_session_id' => :'String',
+        
         :'monitored_participant_id' => :'String',
+        
         :'callback_user_name' => :'String',
+        
         :'callback_numbers' => :'Array<String>',
+        
         :'callback_scheduled_time' => :'DateTime',
+        
         :'script_id' => :'String',
+        
         :'skip_enabled' => :'BOOLEAN',
+        
         :'timeout_seconds' => :'Integer',
+        
         :'cobrowse_role' => :'String',
+        
         :'cobrowse_room_id' => :'String',
+        
         :'media_bridge_id' => :'String',
+        
         :'screen_share_address_self' => :'String',
+        
         :'sharing_screen' => :'BOOLEAN',
+        
         :'screen_share_room_id' => :'String',
+        
         :'video_room_id' => :'String',
+        
         :'video_address_self' => :'String',
+        
         :'segments' => :'Array<AnalyticsConversationSegment>'
+        
       }
     end
 
@@ -167,160 +233,456 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'mediaType')
+        
+        
         self.media_type = attributes[:'mediaType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sessionId')
+        
+        
         self.session_id = attributes[:'sessionId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'addressOther')
+        
+        
         self.address_other = attributes[:'addressOther']
+        
+      
       end
 
+      
       if attributes.has_key?(:'addressSelf')
+        
+        
         self.address_self = attributes[:'addressSelf']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ani')
+        
+        
         self.ani = attributes[:'ani']
+        
+      
       end
 
+      
       if attributes.has_key?(:'direction')
+        
+        
         self.direction = attributes[:'direction']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dnis')
+        
+        
         self.dnis = attributes[:'dnis']
+        
+      
       end
 
+      
       if attributes.has_key?(:'outboundCampaignId')
+        
+        
         self.outbound_campaign_id = attributes[:'outboundCampaignId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'outboundContactId')
+        
+        
         self.outbound_contact_id = attributes[:'outboundContactId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'outboundContactListId')
+        
+        
         self.outbound_contact_list_id = attributes[:'outboundContactListId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dispositionAnalyzer')
+        
+        
         self.disposition_analyzer = attributes[:'dispositionAnalyzer']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dispositionName')
+        
+        
         self.disposition_name = attributes[:'dispositionName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'edgeId')
+        
+        
         self.edge_id = attributes[:'edgeId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'remoteNameDisplayable')
+        
+        
         self.remote_name_displayable = attributes[:'remoteNameDisplayable']
+        
+      
       end
 
+      
       if attributes.has_key?(:'roomId')
+        
+        
         self.room_id = attributes[:'roomId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'monitoredSessionId')
+        
+        
         self.monitored_session_id = attributes[:'monitoredSessionId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'monitoredParticipantId')
+        
+        
         self.monitored_participant_id = attributes[:'monitoredParticipantId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackUserName')
+        
+        
         self.callback_user_name = attributes[:'callbackUserName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackNumbers')
+        
         if (value = attributes[:'callbackNumbers']).is_a?(Array)
           self.callback_numbers = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackScheduledTime')
+        
+        
         self.callback_scheduled_time = attributes[:'callbackScheduledTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'scriptId')
+        
+        
         self.script_id = attributes[:'scriptId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'skipEnabled')
+        
+        
         self.skip_enabled = attributes[:'skipEnabled']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timeoutSeconds')
+        
+        
         self.timeout_seconds = attributes[:'timeoutSeconds']
+        
+      
       end
 
+      
       if attributes.has_key?(:'cobrowseRole')
+        
+        
         self.cobrowse_role = attributes[:'cobrowseRole']
+        
+      
       end
 
+      
       if attributes.has_key?(:'cobrowseRoomId')
+        
+        
         self.cobrowse_room_id = attributes[:'cobrowseRoomId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'mediaBridgeId')
+        
+        
         self.media_bridge_id = attributes[:'mediaBridgeId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'screenShareAddressSelf')
+        
+        
         self.screen_share_address_self = attributes[:'screenShareAddressSelf']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sharingScreen')
+        
+        
         self.sharing_screen = attributes[:'sharingScreen']
+        
+      
       end
 
+      
       if attributes.has_key?(:'screenShareRoomId')
+        
+        
         self.screen_share_room_id = attributes[:'screenShareRoomId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'videoRoomId')
+        
+        
         self.video_room_id = attributes[:'videoRoomId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'videoAddressSelf')
+        
+        
         self.video_address_self = attributes[:'videoAddressSelf']
+        
+      
       end
 
+      
       if attributes.has_key?(:'segments')
+        
         if (value = attributes[:'segments']).is_a?(Array)
           self.segments = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["voice", "chat", "email", "callback", "cobrowse", "video", "screenshare"]
       if @media_type && !allowed_values.include?(@media_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["inbound", "outbound"]
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] media_type Object to be assigned
     def media_type=(media_type)
@@ -331,6 +693,30 @@ module PureCloud
       @media_type = media_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] direction Object to be assigned
     def direction=(direction)
@@ -341,6 +727,139 @@ module PureCloud
       @direction = direction
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

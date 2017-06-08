@@ -47,36 +47,62 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'commit_version' => :'commitVersion',
+        
         :'configuration_version' => :'configurationVersion',
+        
         :'type' => :'type',
+        
         :'secure' => :'secure',
+        
         :'created_by' => :'createdBy',
+        
         :'configuration_uri' => :'configurationUri',
+        
         :'date_created' => :'dateCreated',
+        
         :'generation_id' => :'generationId',
+        
         :'publish_result_uri' => :'publishResultUri',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'commit_version' => :'String',
+        
         :'configuration_version' => :'String',
+        
         :'type' => :'String',
+        
         :'secure' => :'BOOLEAN',
+        
         :'created_by' => :'User',
+        
         :'configuration_uri' => :'String',
+        
         :'date_created' => :'Integer',
+        
         :'generation_id' => :'String',
+        
         :'publish_result_uri' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -88,72 +114,207 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'commitVersion')
+        
+        
         self.commit_version = attributes[:'commitVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'configurationVersion')
+        
+        
         self.configuration_version = attributes[:'configurationVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'type')
+        
+        
         self.type = attributes[:'type']
+        
+      
       end
 
+      
       if attributes.has_key?(:'secure')
+        
+        
         self.secure = attributes[:'secure']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdBy')
+        
+        
         self.created_by = attributes[:'createdBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'configurationUri')
+        
+        
         self.configuration_uri = attributes[:'configurationUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'generationId')
+        
+        
         self.generation_id = attributes[:'generationId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'publishResultUri')
+        
+        
         self.publish_result_uri = attributes[:'publishResultUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["PUBLISH", "CHECKIN", "SAVE"]
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
@@ -164,6 +325,44 @@ module PureCloud
       @type = type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

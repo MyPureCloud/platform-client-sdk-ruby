@@ -69,7 +69,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **greeting_id** | **String**| Greeting ID | 
+ **greeting_id** | **String**| Greeting ID |  |
 {: class="table table-striped"}
 
 
@@ -128,7 +128,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **greeting_id** | **String**| Greeting ID | 
+ **greeting_id** | **String**| Greeting ID |  |
 {: class="table table-striped"}
 
 
@@ -190,8 +190,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **greeting_id** | **String**| Greeting ID | 
- **format_id** | **String**| The desired media format. | [optional] [default to WAV]
+ **greeting_id** | **String**| Greeting ID |  |
+ **format_id** | **String**| The desired media format. | [optional] [default to WAV]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE |
 {: class="table table-striped"}
 
 
@@ -252,8 +252,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -369,9 +369,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **String**| Group ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **group_id** | **String**| Group ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -430,7 +430,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **String**| Group ID | 
+ **group_id** | **String**| Group ID |  |
 {: class="table table-striped"}
 
 
@@ -493,9 +493,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **user_id** | **String**| User ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -554,7 +554,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -613,7 +613,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Greeting**](Greeting.html)| The Greeting to create | 
+ **body** | [**Greeting**](Greeting.html)| The Greeting to create |  |
 {: class="table table-striped"}
 
 
@@ -674,8 +674,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **String**| Group ID | 
- **body** | [**Greeting**](Greeting.html)| The Greeting to create | 
+ **group_id** | **String**| Group ID |  |
+ **body** | [**Greeting**](Greeting.html)| The Greeting to create |  |
 {: class="table table-striped"}
 
 
@@ -736,8 +736,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | [**Greeting**](Greeting.html)| The Greeting to create | 
+ **user_id** | **String**| User ID |  |
+ **body** | [**Greeting**](Greeting.html)| The Greeting to create |  |
 {: class="table table-striped"}
 
 
@@ -798,8 +798,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **greeting_id** | **String**| Greeting ID | 
- **body** | [**Greeting**](Greeting.html)| The updated Greeting | 
+ **greeting_id** | **String**| Greeting ID |  |
+ **body** | [**Greeting**](Greeting.html)| The updated Greeting |  |
 {: class="table table-striped"}
 
 
@@ -858,7 +858,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DefaultGreetingList**](DefaultGreetingList.html)| The updated defaultGreetingList | 
+ **body** | [**DefaultGreetingList**](DefaultGreetingList.html)| The updated defaultGreetingList |  |
 {: class="table table-striped"}
 
 
@@ -919,8 +919,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **String**| Group ID | 
- **body** | [**DefaultGreetingList**](DefaultGreetingList.html)| The updated defaultGreetingList | 
+ **group_id** | **String**| Group ID |  |
+ **body** | [**DefaultGreetingList**](DefaultGreetingList.html)| The updated defaultGreetingList |  |
 {: class="table table-striped"}
 
 
@@ -981,8 +981,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | [**DefaultGreetingList**](DefaultGreetingList.html)| The updated defaultGreetingList | 
+ **user_id** | **String**| User ID |  |
+ **body** | [**DefaultGreetingList**](DefaultGreetingList.html)| The updated defaultGreetingList |  |
 {: class="table table-striped"}
 
 

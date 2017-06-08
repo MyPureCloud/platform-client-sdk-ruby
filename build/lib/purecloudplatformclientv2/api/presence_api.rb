@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PresenceApi.delete_presencedefinition ..."
       end
+      
+      
       # verify the required parameter 'presence_id' is set
       fail ArgumentError, "Missing the required parameter 'presence_id' when calling PresenceApi.delete_presencedefinition" if presence_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/presencedefinitions/{presenceId}".sub('{format}','json').sub('{' + 'presenceId' + '}', presence_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -101,8 +109,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PresenceApi.get_presencedefinition ..."
       end
+      
+      
       # verify the required parameter 'presence_id' is set
       fail ArgumentError, "Missing the required parameter 'presence_id' when calling PresenceApi.get_presencedefinition" if presence_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/presencedefinitions/{presenceId}".sub('{format}','json').sub('{' + 'presenceId' + '}', presence_id.to_s)
 
@@ -126,7 +147,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -165,6 +187,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PresenceApi.get_presencedefinitions ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/presencedefinitions".sub('{format}','json')
 
@@ -191,7 +238,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -222,6 +270,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PresenceApi.get_systempresences ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/systempresences".sub('{format}','json')
 
@@ -244,7 +293,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -279,10 +329,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PresenceApi.get_user_presence ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling PresenceApi.get_user_presence" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'source_id' is set
       fail ArgumentError, "Missing the required parameter 'source_id' when calling PresenceApi.get_user_presence" if source_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/presences/{sourceId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'sourceId' + '}', source_id.to_s)
 
@@ -305,7 +368,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -342,12 +406,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PresenceApi.patch_user_presence ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling PresenceApi.patch_user_presence" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'source_id' is set
       fail ArgumentError, "Missing the required parameter 'source_id' when calling PresenceApi.patch_user_presence" if source_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling PresenceApi.patch_user_presence" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/presences/{sourceId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'sourceId' + '}', source_id.to_s)
 
@@ -370,6 +453,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -403,8 +487,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PresenceApi.post_presencedefinitions ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling PresenceApi.post_presencedefinitions" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/presencedefinitions".sub('{format}','json')
 
@@ -427,6 +518,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -462,10 +554,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: PresenceApi.put_presencedefinition ..."
       end
+      
+      
       # verify the required parameter 'presence_id' is set
       fail ArgumentError, "Missing the required parameter 'presence_id' when calling PresenceApi.put_presencedefinition" if presence_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling PresenceApi.put_presencedefinition" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/presencedefinitions/{presenceId}".sub('{format}','json').sub('{' + 'presenceId' + '}', presence_id.to_s)
 
@@ -488,6 +593,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

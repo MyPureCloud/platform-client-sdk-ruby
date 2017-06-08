@@ -53,34 +53,58 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'start_time' => :'startTime',
+        
         :'end_time' => :'endTime',
+        
         :'address' => :'address',
+        
         :'participants' => :'participants',
+        
         :'conversation_ids' => :'conversationIds',
+        
         :'max_participants' => :'maxParticipants',
+        
         :'recording_state' => :'recordingState',
+        
         :'state' => :'state',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'start_time' => :'DateTime',
+        
         :'end_time' => :'DateTime',
+        
         :'address' => :'String',
+        
         :'participants' => :'Array<Participant>',
+        
         :'conversation_ids' => :'Array<String>',
+        
         :'max_participants' => :'Integer',
+        
         :'recording_state' => :'String',
+        
         :'state' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -92,84 +116,233 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startTime')
+        
+        
         self.start_time = attributes[:'startTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endTime')
+        
+        
         self.end_time = attributes[:'endTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'address')
+        
+        
         self.address = attributes[:'address']
+        
+      
       end
 
+      
       if attributes.has_key?(:'participants')
+        
         if (value = attributes[:'participants']).is_a?(Array)
           self.participants = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'conversationIds')
+        
         if (value = attributes[:'conversationIds']).is_a?(Array)
           self.conversation_ids = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'maxParticipants')
+        
+        
         self.max_participants = attributes[:'maxParticipants']
+        
+      
       end
 
+      
       if attributes.has_key?(:'recordingState')
+        
+        
         self.recording_state = attributes[:'recordingState']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @start_time.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @participants.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["ACTIVE", "PAUSED", "NONE"]
       if @recording_state && !allowed_values.include?(@recording_state)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["alerting", "dialing", "contacting", "offering", "connected", "disconnected", "terminated", "converting", "uploading", "transmitting", "none"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] recording_state Object to be assigned
     def recording_state=(recording_state)
@@ -180,6 +353,10 @@ module PureCloud
       @recording_state = recording_state
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -190,6 +367,14 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

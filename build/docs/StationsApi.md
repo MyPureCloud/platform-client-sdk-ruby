@@ -56,7 +56,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **station_id** | **String**| Station ID | 
+ **station_id** | **String**| Station ID |  |
 {: class="table table-striped"}
 
 
@@ -115,7 +115,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **station_id** | **String**| Station ID | 
+ **station_id** | **String**| Station ID |  |
 {: class="table table-striped"}
 
 
@@ -182,14 +182,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| Sort by | [optional] [default to name]
- **name** | **String**| Name | [optional] 
- **user_selectable** | **String**| True for stations that the user can select otherwise false | [optional] 
- **web_rtc_user_id** | **String**| Filter for the webRtc station of the webRtcUserId | [optional] 
- **id** | **String**| Comma separated list of stationIds | [optional] 
- **line_appearance_id** | **String**| lineAppearanceId | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **name** | **String**| Name | [optional]  |
+ **user_selectable** | **String**| True for stations that the user can select otherwise false | [optional]  |
+ **web_rtc_user_id** | **String**| Filter for the webRtc station of the webRtcUserId | [optional]  |
+ **id** | **String**| Comma separated list of stationIds | [optional]  |
+ **line_appearance_id** | **String**| lineAppearanceId | [optional]  |
 {: class="table table-striped"}
 
 

@@ -63,7 +63,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **script_id** | **String**| Script ID | 
+ **script_id** | **String**| Script ID |  |
 {: class="table table-striped"}
 
 
@@ -124,8 +124,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **script_id** | **String**| Script ID | 
- **page_id** | **String**| Page ID | 
+ **script_id** | **String**| Script ID |  |
+ **page_id** | **String**| Page ID |  |
 {: class="table table-striped"}
 
 
@@ -184,7 +184,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **script_id** | **String**| Script ID | 
+ **script_id** | **String**| Script ID |  |
 {: class="table table-striped"}
 
 
@@ -251,14 +251,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **expand** | **String**| Expand | [optional] 
- **name** | **String**| Name filter | [optional] 
- **feature** | **String**| Feature filter | [optional] 
- **flow_id** | **String**| Secure flow id filter | [optional] 
- **sort_by** | **String**| SortBy | [optional] 
- **sort_order** | **String**| SortOrder | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **expand** | **String**| Expand | [optional]  |
+ **name** | **String**| Name filter | [optional]  |
+ **feature** | **String**| Feature filter | [optional]  |
+ **flow_id** | **String**| Secure flow id filter | [optional]  |
+ **sort_by** | **String**| SortBy | [optional] <br />**Values**: modifiedDate, createdDate |
+ **sort_order** | **String**| SortOrder | [optional] <br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -323,12 +323,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **expand** | **String**| Expand | [optional] 
- **name** | **String**| Name filter | [optional] 
- **feature** | **String**| Feature filter | [optional] 
- **flow_id** | **String**| Secure flow id filter | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **expand** | **String**| Expand | [optional]  |
+ **name** | **String**| Name filter | [optional]  |
+ **feature** | **String**| Feature filter | [optional]  |
+ **flow_id** | **String**| Secure flow id filter | [optional]  |
 {: class="table table-striped"}
 
 
@@ -387,7 +387,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **script_id** | **String**| Script ID | 
+ **script_id** | **String**| Script ID |  |
 {: class="table table-striped"}
 
 
@@ -448,8 +448,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **script_id** | **String**| Script ID | 
- **page_id** | **String**| Page ID | 
+ **script_id** | **String**| Script ID |  |
+ **page_id** | **String**| Page ID |  |
 {: class="table table-striped"}
 
 
@@ -508,7 +508,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **script_id** | **String**| Script ID | 
+ **script_id** | **String**| Script ID |  |
 {: class="table table-striped"}
 
 
@@ -572,10 +572,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **script_id** | **String**| Script ID | 
- **input** | **String**| input | [optional] 
- **output** | **String**| output | [optional] 
- **type** | **String**| type | [optional] 
+ **script_id** | **String**| Script ID |  |
+ **input** | **String**| input | [optional]  |
+ **output** | **String**| output | [optional]  |
+ **type** | **String**| type | [optional]  |
 {: class="table table-striped"}
 
 

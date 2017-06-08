@@ -39,24 +39,38 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'usage_size_bytes' => :'usageSizeBytes',
+        
         :'total_count' => :'totalCount',
+        
         :'unread_count' => :'unreadCount',
+        
         :'deleted_count' => :'deletedCount',
+        
         :'created_date' => :'createdDate',
+        
         :'modified_date' => :'modifiedDate'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'usage_size_bytes' => :'Integer',
+        
         :'total_count' => :'Integer',
+        
         :'unread_count' => :'Integer',
+        
         :'deleted_count' => :'Integer',
+        
         :'created_date' => :'DateTime',
+        
         :'modified_date' => :'DateTime'
+        
       }
     end
 
@@ -68,44 +82,133 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'usageSizeBytes')
+        
+        
         self.usage_size_bytes = attributes[:'usageSizeBytes']
+        
+      
       end
 
+      
       if attributes.has_key?(:'totalCount')
+        
+        
         self.total_count = attributes[:'totalCount']
+        
+      
       end
 
+      
       if attributes.has_key?(:'unreadCount')
+        
+        
         self.unread_count = attributes[:'unreadCount']
+        
+      
       end
 
+      
       if attributes.has_key?(:'deletedCount')
+        
+        
         self.deleted_count = attributes[:'deletedCount']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdDate')
+        
+        
         self.created_date = attributes[:'createdDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedDate')
+        
+        
         self.modified_date = attributes[:'modifiedDate']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

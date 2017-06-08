@@ -60,7 +60,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **license_id** | **String**| ID | 
+ **license_id** | **String**| ID |  |
 {: class="table table-striped"}
 
 
@@ -225,7 +225,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ID | 
+ **user_id** | **String**| ID |  |
 {: class="table table-striped"}
 
 
@@ -285,7 +285,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**LicenseBatchAssignmentRequest**](LicenseBatchAssignmentRequest.html)| The license assignments to update. | [optional] 
+ **body** | [**LicenseBatchAssignmentRequest**](LicenseBatchAssignmentRequest.html)| The license assignments to update. | [optional]  |
 {: class="table table-striped"}
 
 
@@ -345,7 +345,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **Array&lt;String&gt;**| The user IDs to fetch. | [optional] 
+ **body** | **Array&lt;String&gt;**| The user IDs to fetch. | [optional]  |
 {: class="table table-striped"}
 
 

@@ -41,26 +41,42 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'issuer' => :'issuer',
+        
         :'subject' => :'subject',
+        
         :'expiration_date' => :'expirationDate',
+        
         :'issue_date' => :'issueDate',
+        
         :'expired' => :'expired',
+        
         :'signature_valid' => :'signatureValid',
+        
         :'valid' => :'valid'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'issuer' => :'String',
+        
         :'subject' => :'String',
+        
         :'expiration_date' => :'DateTime',
+        
         :'issue_date' => :'DateTime',
+        
         :'expired' => :'BOOLEAN',
+        
         :'signature_valid' => :'BOOLEAN',
+        
         :'valid' => :'BOOLEAN'
+        
       }
     end
 
@@ -72,48 +88,151 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'issuer')
+        
+        
         self.issuer = attributes[:'issuer']
+        
+      
       end
 
+      
       if attributes.has_key?(:'subject')
+        
+        
         self.subject = attributes[:'subject']
+        
+      
       end
 
+      
       if attributes.has_key?(:'expirationDate')
+        
+        
         self.expiration_date = attributes[:'expirationDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'issueDate')
+        
+        
         self.issue_date = attributes[:'issueDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'expired')
+        
+        
         self.expired = attributes[:'expired']
+        
+      
       end
 
+      
       if attributes.has_key?(:'signatureValid')
+        
+        
         self.signature_valid = attributes[:'signatureValid']
+        
+      
       end
 
+      
       if attributes.has_key?(:'valid')
+        
+        
         self.valid = attributes[:'valid']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

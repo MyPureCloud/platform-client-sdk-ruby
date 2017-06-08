@@ -70,7 +70,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **role_id** | **String**| Role ID | 
+ **role_id** | **String**| Role ID |  |
 {: class="table table-striped"}
 
 
@@ -128,7 +128,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -189,8 +189,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -302,7 +302,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **role_id** | **String**| Role ID | 
+ **role_id** | **String**| Role ID |  |
 {: class="table table-striped"}
 
 
@@ -363,8 +363,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **left_role_id** | **String**| Left Role ID | 
- **right_role_id** | **String**| Right Role id | 
+ **left_role_id** | **String**| Left Role ID |  |
+ **right_role_id** | **String**| Right Role id |  |
 {: class="table table-striped"}
 
 
@@ -432,15 +432,15 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
- **page_number** | **Integer**| The page number requested | [optional] [default to 1]
- **sort_by** | **String**| variable name requested to sort by | [optional] 
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional] 
- **next_page** | **String**| next page token | [optional] 
- **previous_page** | **String**| Previous page token | [optional] 
- **permission** | [**Array&lt;Object&gt;**](Object.html)|  | [optional] 
- **default_role_id** | [**Array&lt;Object&gt;**](Object.html)|  | [optional] 
- **user_count** | **BOOLEAN**|  | [optional] [default to true]
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **permission** | [**Array&lt;Object&gt;**](Object.html)|  | [optional]  |
+ **default_role_id** | [**Array&lt;Object&gt;**](Object.html)|  | [optional]  |
+ **user_count** | **BOOLEAN**|  | [optional] [default to true] |
 {: class="table table-striped"}
 
 
@@ -499,7 +499,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -560,8 +560,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **role_id** | **String**| Role ID | 
- **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)| Organization role | 
+ **role_id** | **String**| Role ID |  |
+ **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)| Organization role |  |
 {: class="table table-striped"}
 
 
@@ -624,9 +624,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **left_role_id** | **String**| Left Role ID | 
- **right_role_id** | **String**| Right Role id | 
- **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)| Organization role | 
+ **left_role_id** | **String**| Left Role ID |  |
+ **right_role_id** | **String**| Right Role id |  |
+ **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)| Organization role |  |
 {: class="table table-striped"}
 
 
@@ -685,7 +685,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DomainOrganizationRoleCreate**](DomainOrganizationRoleCreate.html)| Organization role | 
+ **body** | [**DomainOrganizationRoleCreate**](DomainOrganizationRoleCreate.html)| Organization role |  |
 {: class="table table-striped"}
 
 
@@ -745,7 +745,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **force** | **BOOLEAN**| Restore default roles | [optional] [default to false]
+ **force** | **BOOLEAN**| Restore default roles | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -806,8 +806,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **role_id** | **String**| Role ID | 
- **body** | [**DomainOrganizationRoleUpdate**](DomainOrganizationRoleUpdate.html)| Organization role | 
+ **role_id** | **String**| Role ID |  |
+ **body** | [**DomainOrganizationRoleUpdate**](DomainOrganizationRoleUpdate.html)| Organization role |  |
 {: class="table table-striped"}
 
 
@@ -868,8 +868,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **role_id** | **String**| Role ID | 
- **body** | **Array&lt;String&gt;**| List of user IDs | 
+ **role_id** | **String**| Role ID |  |
+ **body** | **Array&lt;String&gt;**| List of user IDs |  |
 {: class="table table-striped"}
 
 
@@ -930,8 +930,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **role_id** | **String**| Role ID | 
- **body** | **Array&lt;String&gt;**| List of user IDs | 
+ **role_id** | **String**| Role ID |  |
+ **body** | **Array&lt;String&gt;**| List of user IDs |  |
 {: class="table table-striped"}
 
 
@@ -990,7 +990,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Array&lt;DomainOrganizationRole&gt;**](DomainOrganizationRole.html)| Organization roles list | 
+ **body** | [**Array&lt;DomainOrganizationRole&gt;**](DomainOrganizationRole.html)| Organization roles list |  |
 {: class="table table-striped"}
 
 
@@ -1051,8 +1051,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | **Array&lt;String&gt;**| List of roles | 
+ **user_id** | **String**| User ID |  |
+ **body** | **Array&lt;String&gt;**| List of roles |  |
 {: class="table table-striped"}
 
 

@@ -53,44 +53,78 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'rule_id' => :'ruleId',
+        
         :'dimension' => :'dimension',
+        
         :'dimension_value' => :'dimensionValue',
+        
         :'dimension_value_name' => :'dimensionValueName',
+        
         :'metric' => :'metric',
+        
         :'media_type' => :'mediaType',
+        
         :'numeric_range' => :'numericRange',
+        
         :'statistic' => :'statistic',
+        
         :'value' => :'value',
+        
         :'unread' => :'unread',
+        
         :'start_date' => :'startDate',
+        
         :'end_date' => :'endDate',
+        
         :'notification_users' => :'notificationUsers',
+        
         :'alert_types' => :'alertTypes'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'rule_id' => :'String',
+        
         :'dimension' => :'String',
+        
         :'dimension_value' => :'String',
+        
         :'dimension_value_name' => :'String',
+        
         :'metric' => :'String',
+        
         :'media_type' => :'String',
+        
         :'numeric_range' => :'String',
+        
         :'statistic' => :'String',
+        
         :'value' => :'Float',
+        
         :'unread' => :'BOOLEAN',
+        
         :'start_date' => :'DateTime',
+        
         :'end_date' => :'DateTime',
+        
         :'notification_users' => :'Array<HeartBeatAlertNotificationNotificationUsers>',
+        
         :'alert_types' => :'Array<String>'
+        
       }
     end
 
@@ -102,108 +136,278 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ruleId')
+        
+        
         self.rule_id = attributes[:'ruleId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dimension')
+        
+        
         self.dimension = attributes[:'dimension']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dimensionValue')
+        
+        
         self.dimension_value = attributes[:'dimensionValue']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dimensionValueName')
+        
+        
         self.dimension_value_name = attributes[:'dimensionValueName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'metric')
+        
+        
         self.metric = attributes[:'metric']
+        
+      
       end
 
+      
       if attributes.has_key?(:'mediaType')
+        
+        
         self.media_type = attributes[:'mediaType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'numericRange')
+        
+        
         self.numeric_range = attributes[:'numericRange']
+        
+      
       end
 
+      
       if attributes.has_key?(:'statistic')
+        
+        
         self.statistic = attributes[:'statistic']
+        
+      
       end
 
+      
       if attributes.has_key?(:'value')
+        
+        
         self.value = attributes[:'value']
+        
+      
       end
 
+      
       if attributes.has_key?(:'unread')
+        
+        
         self.unread = attributes[:'unread']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startDate')
+        
+        
         self.start_date = attributes[:'startDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endDate')
+        
+        
         self.end_date = attributes[:'endDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'notificationUsers')
+        
         if (value = attributes[:'notificationUsers']).is_a?(Array)
           self.notification_users = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'alertTypes')
+        
         if (value = attributes[:'alertTypes']).is_a?(Array)
           self.alert_types = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["queueId", "userId"]
       if @dimension && !allowed_values.include?(@dimension)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["tAbandon", "tAnswered", "tTalk", "nOffered", "tHandle", "nTransferred", "oServiceLevel", "tWait", "tHeld", "tAcw"]
       if @metric && !allowed_values.include?(@metric)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["voice", "chat", "email"]
       if @media_type && !allowed_values.include?(@media_type)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["gt", "gte", "lt", "lte", "eq", "ne"]
       if @numeric_range && !allowed_values.include?(@numeric_range)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["count", "min", "ratio", "max"]
       if @statistic && !allowed_values.include?(@statistic)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] dimension Object to be assigned
     def dimension=(dimension)
@@ -214,6 +418,20 @@ module PureCloud
       @dimension = dimension
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] metric Object to be assigned
     def metric=(metric)
@@ -224,6 +442,10 @@ module PureCloud
       @metric = metric
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] media_type Object to be assigned
     def media_type=(media_type)
@@ -234,6 +456,10 @@ module PureCloud
       @media_type = media_type
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] numeric_range Object to be assigned
     def numeric_range=(numeric_range)
@@ -244,6 +470,10 @@ module PureCloud
       @numeric_range = numeric_range
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] statistic Object to be assigned
     def statistic=(statistic)
@@ -254,6 +484,39 @@ module PureCloud
       @statistic = statistic
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

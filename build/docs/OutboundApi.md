@@ -138,7 +138,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attempt_limits_id** | **String**| Attempt limits ID | 
+ **attempt_limits_id** | **String**| Attempt limits ID |  |
 {: class="table table-striped"}
 
 
@@ -196,7 +196,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **callable_time_set_id** | **String**| Callable Time Set ID | 
+ **callable_time_set_id** | **String**| Callable Time Set ID |  |
 {: class="table table-striped"}
 
 
@@ -254,7 +254,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_analysis_set_id** | **String**| Call Analysis Response Set ID | 
+ **call_analysis_set_id** | **String**| Call Analysis Response Set ID |  |
 {: class="table table-striped"}
 
 
@@ -313,7 +313,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
+ **campaign_id** | **String**| Campaign ID |  |
 {: class="table table-striped"}
 
 
@@ -371,7 +371,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
+ **campaign_id** | **String**| Campaign ID |  |
 {: class="table table-striped"}
 
 
@@ -429,7 +429,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_rule_id** | **String**| Campaign Rule ID | 
+ **campaign_rule_id** | **String**| Campaign Rule ID |  |
 {: class="table table-striped"}
 
 
@@ -487,7 +487,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_id** | **String**| ContactList ID | 
+ **contact_list_id** | **String**| ContactList ID |  |
 {: class="table table-striped"}
 
 
@@ -547,8 +547,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_id** | **String**| Contact List ID | 
- **contact_id** | **String**| Contact ID | 
+ **contact_list_id** | **String**| Contact List ID |  |
+ **contact_id** | **String**| Contact ID |  |
 {: class="table table-striped"}
 
 
@@ -608,8 +608,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_id** | **String**| Contact List ID | 
- **contact_ids** | [**Array&lt;String&gt;**](String.html)| ContactIds to delete. | 
+ **contact_list_id** | **String**| Contact List ID |  |
+ **contact_ids** | [**Array&lt;String&gt;**](String.html)| ContactIds to delete. |  |
 {: class="table table-striped"}
 
 
@@ -667,7 +667,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_filter_id** | **String**| Contact List Filter ID | 
+ **contact_list_filter_id** | **String**| Contact List Filter ID |  |
 {: class="table table-striped"}
 
 
@@ -725,7 +725,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dnc_list_id** | **String**| DncList ID | 
+ **dnc_list_id** | **String**| DncList ID |  |
 {: class="table table-striped"}
 
 
@@ -783,7 +783,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_set_id** | **String**| Rule Set ID | 
+ **rule_set_id** | **String**| Rule Set ID |  |
 {: class="table table-striped"}
 
 
@@ -841,7 +841,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
+ **campaign_id** | **String**| Campaign ID |  |
 {: class="table table-striped"}
 
 
@@ -899,7 +899,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sequence_id** | **String**| Sequence ID | 
+ **sequence_id** | **String**| Sequence ID |  |
 {: class="table table-striped"}
 
 
@@ -957,7 +957,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sequence_id** | **String**| Campaign Sequence ID | 
+ **sequence_id** | **String**| Campaign Sequence ID |  |
 {: class="table table-striped"}
 
 
@@ -1016,7 +1016,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attempt_limits_id** | **String**| Attempt limits ID | 
+ **attempt_limits_id** | **String**| Attempt limits ID |  |
 {: class="table table-striped"}
 
 
@@ -1081,12 +1081,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **filter_type** | **String**| Filter type | [optional] [default to Prefix]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] [default to a]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -1145,7 +1145,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **callable_time_set_id** | **String**| Callable Time Set ID | 
+ **callable_time_set_id** | **String**| Callable Time Set ID |  |
 {: class="table table-striped"}
 
 
@@ -1210,12 +1210,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **filter_type** | **String**| Filter type | [optional] [default to Prefix]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] [default to a]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -1274,7 +1274,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_analysis_set_id** | **String**| Call Analysis Response Set ID | 
+ **call_analysis_set_id** | **String**| Call Analysis Response Set ID |  |
 {: class="table table-striped"}
 
 
@@ -1339,12 +1339,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **filter_type** | **String**| Filter type | [optional] [default to Prefix]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] [default to a]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -1403,7 +1403,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
+ **campaign_id** | **String**| Campaign ID |  |
 {: class="table table-striped"}
 
 
@@ -1462,7 +1462,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
+ **campaign_id** | **String**| Campaign ID |  |
 {: class="table table-striped"}
 
 
@@ -1521,7 +1521,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
+ **campaign_id** | **String**| Campaign ID |  |
 {: class="table table-striped"}
 
 
@@ -1580,7 +1580,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
+ **campaign_id** | **String**| Campaign ID |  |
 {: class="table table-striped"}
 
 
@@ -1639,7 +1639,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
+ **campaign_id** | **String**| Campaign ID |  |
 {: class="table table-striped"}
 
 
@@ -1698,7 +1698,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_rule_id** | **String**| Campaign Rule ID | 
+ **campaign_rule_id** | **String**| Campaign Rule ID |  |
 {: class="table table-striped"}
 
 
@@ -1763,12 +1763,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **filter_type** | **String**| Filter type | [optional] [default to Prefix]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] [default to a]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -1838,17 +1838,17 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **filter_type** | **String**| Filter type | [optional] [default to Prefix]
- **name** | **String**| Name | [optional] 
- **contact_list_id** | **String**| Contact List ID | [optional] 
- **dnc_list_id** | **String**| DNC list ID | [optional] 
- **distribution_queue_id** | **String**| Distribution queue ID | [optional] 
- **edge_group_id** | **String**| Edge group ID | [optional] 
- **call_analysis_response_set_id** | **String**| Call analysis response set ID | [optional] 
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] [default to a]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+ **name** | **String**| Name | [optional]  |
+ **contact_list_id** | **String**| Contact List ID | [optional]  |
+ **dnc_list_id** | **String**| DNC list ID | [optional]  |
+ **distribution_queue_id** | **String**| Distribution queue ID | [optional]  |
+ **edge_group_id** | **String**| Edge group ID | [optional]  |
+ **call_analysis_response_set_id** | **String**| Call analysis response set ID | [optional]  |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -1911,9 +1911,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_id** | **String**| ContactList ID | 
- **include_import_status** | **BOOLEAN**| Import status | [optional] [default to false]
- **include_size** | **BOOLEAN**| Include size | [optional] [default to false]
+ **contact_list_id** | **String**| ContactList ID |  |
+ **include_import_status** | **BOOLEAN**| Import status | [optional] [default to false] |
+ **include_size** | **BOOLEAN**| Include size | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -1974,8 +1974,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_id** | **String**| Contact List ID | 
- **contact_id** | **String**| Contact ID | 
+ **contact_list_id** | **String**| Contact List ID |  |
+ **contact_id** | **String**| Contact ID |  |
 {: class="table table-striped"}
 
 
@@ -2037,8 +2037,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_id** | **String**| ContactList ID | 
- **download** | **String**| Redirect to download uri | [optional] [default to false]
+ **contact_list_id** | **String**| ContactList ID |  |
+ **download** | **String**| Redirect to download uri | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -2097,7 +2097,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_id** | **String**| ContactList ID | 
+ **contact_list_id** | **String**| ContactList ID |  |
 {: class="table table-striped"}
 
 
@@ -2156,7 +2156,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_filter_id** | **String**| Contact List Filter ID | 
+ **contact_list_filter_id** | **String**| Contact List Filter ID |  |
 {: class="table table-striped"}
 
 
@@ -2222,13 +2222,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **filter_type** | **String**| Filter type | [optional] [default to Prefix]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] [default to a]
- **contact_list_id** | **String**| Contact List ID | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
+ **contact_list_id** | **String**| Contact List ID | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2295,14 +2295,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **include_import_status** | **BOOLEAN**| Include import status | [optional] [default to false]
- **include_size** | **BOOLEAN**| Include size | [optional] [default to false]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **filter_type** | **String**| Filter type | [optional] [default to Prefix]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] [default to a]
+ **include_import_status** | **BOOLEAN**| Include import status | [optional] [default to false] |
+ **include_size** | **BOOLEAN**| Include size | [optional] [default to false] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -2365,9 +2365,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dnc_list_id** | **String**| DncList ID | 
- **include_import_status** | **BOOLEAN**| Import status | [optional] [default to false]
- **include_size** | **BOOLEAN**| Include size | [optional] [default to false]
+ **dnc_list_id** | **String**| DncList ID |  |
+ **include_import_status** | **BOOLEAN**| Import status | [optional] [default to false] |
+ **include_size** | **BOOLEAN**| Include size | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -2429,8 +2429,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dnc_list_id** | **String**| DncList ID | 
- **download** | **String**| Redirect to download uri | [optional] [default to false]
+ **dnc_list_id** | **String**| DncList ID |  |
+ **download** | **String**| Redirect to download uri | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -2489,7 +2489,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dnc_list_id** | **String**| DncList ID | 
+ **dnc_list_id** | **String**| DncList ID |  |
 {: class="table table-striped"}
 
 
@@ -2556,14 +2556,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **include_import_status** | **BOOLEAN**| Import status | [optional] [default to false]
- **include_size** | **BOOLEAN**| Include size | [optional] [default to false]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **filter_type** | **String**| Filter type | [optional] [default to Prefix]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] 
+ **include_import_status** | **BOOLEAN**| Import status | [optional] [default to false] |
+ **include_size** | **BOOLEAN**| Include size | [optional] [default to false] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] <br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -2622,7 +2622,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **event_id** | **String**| Event Log ID | 
+ **event_id** | **String**| Event Log ID |  |
 {: class="table table-striped"}
 
 
@@ -2688,13 +2688,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **filter_type** | **String**| Filter type | [optional] [default to Prefix]
- **category** | **String**| Category | [optional] 
- **level** | **String**| Level | [optional] 
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] [default to a]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+ **category** | **String**| Category | [optional]  |
+ **level** | **String**| Level | [optional]  |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -2753,7 +2753,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_set_id** | **String**| Rule Set ID | 
+ **rule_set_id** | **String**| Rule Set ID |  |
 {: class="table table-striped"}
 
 
@@ -2818,12 +2818,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **filter_type** | **String**| Filter type | [optional] [default to Prefix]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] [default to a]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -2882,7 +2882,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
+ **campaign_id** | **String**| Campaign ID |  |
 {: class="table table-striped"}
 
 
@@ -2994,7 +2994,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sequence_id** | **String**| Sequence ID | 
+ **sequence_id** | **String**| Sequence ID |  |
 {: class="table table-striped"}
 
 
@@ -3106,7 +3106,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sequence_id** | **String**| Campaign Sequence ID | 
+ **sequence_id** | **String**| Campaign Sequence ID |  |
 {: class="table table-striped"}
 
 
@@ -3171,12 +3171,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **filter_type** | **String**| Filter type | [optional] [default to Prefix]
- **name** | **String**| Name | [optional] 
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] [default to a]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+ **name** | **String**| Name | [optional]  |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -3288,7 +3288,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AttemptLimits**](AttemptLimits.html)| AttemptLimits | 
+ **body** | [**AttemptLimits**](AttemptLimits.html)| AttemptLimits |  |
 {: class="table table-striped"}
 
 
@@ -3354,12 +3354,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DialerAuditRequest**](DialerAuditRequest.html)| AuditSearch | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| Sort by | [optional] [default to entity.name]
- **sort_order** | **String**| Sort order | [optional] [default to ascending]
- **facets_only** | **BOOLEAN**| Facets only | [optional] [default to false]
+ **body** | [**DialerAuditRequest**](DialerAuditRequest.html)| AuditSearch |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to entity.name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ascending] |
+ **facets_only** | **BOOLEAN**| Facets only | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -3418,7 +3418,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CallableTimeSet**](CallableTimeSet.html)| DialerCallableTimeSet | 
+ **body** | [**CallableTimeSet**](CallableTimeSet.html)| DialerCallableTimeSet |  |
 {: class="table table-striped"}
 
 
@@ -3477,7 +3477,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ResponseSet**](ResponseSet.html)| ResponseSet | 
+ **body** | [**ResponseSet**](ResponseSet.html)| ResponseSet |  |
 {: class="table table-striped"}
 
 
@@ -3538,8 +3538,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
- **body** | [**ContactCallbackRequest**](ContactCallbackRequest.html)| ContactCallbackRequest | 
+ **campaign_id** | **String**| Campaign ID |  |
+ **body** | [**ContactCallbackRequest**](ContactCallbackRequest.html)| ContactCallbackRequest |  |
 {: class="table table-striped"}
 
 
@@ -3598,7 +3598,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CampaignRule**](CampaignRule.html)| CampaignRule | 
+ **body** | [**CampaignRule**](CampaignRule.html)| CampaignRule |  |
 {: class="table table-striped"}
 
 
@@ -3657,7 +3657,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Campaign**](Campaign.html)| Campaign | 
+ **body** | [**Campaign**](Campaign.html)| Campaign |  |
 {: class="table table-striped"}
 
 
@@ -3716,7 +3716,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **Array&lt;String&gt;**| Campaign IDs | 
+ **body** | **Array&lt;String&gt;**| Campaign IDs |  |
 {: class="table table-striped"}
 
 
@@ -3781,10 +3781,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_id** | **String**| Contact List ID | 
- **body** | [**Array&lt;DialerContact&gt;**](DialerContact.html)| Contact | 
- **priority** | **BOOLEAN**| Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. | [optional] 
- **clear_system_data** | **BOOLEAN**| Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. | [optional] 
+ **contact_list_id** | **String**| Contact List ID |  |
+ **body** | [**Array&lt;DialerContact&gt;**](DialerContact.html)| Contact |  |
+ **priority** | **BOOLEAN**| Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. | [optional]  |
+ **clear_system_data** | **BOOLEAN**| Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. | [optional]  |
 {: class="table table-striped"}
 
 
@@ -3843,7 +3843,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_id** | **String**| ContactList ID | 
+ **contact_list_id** | **String**| ContactList ID |  |
 {: class="table table-striped"}
 
 
@@ -3902,7 +3902,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ContactListFilter**](ContactListFilter.html)| ContactListFilter | 
+ **body** | [**ContactListFilter**](ContactListFilter.html)| ContactListFilter |  |
 {: class="table table-striped"}
 
 
@@ -3961,7 +3961,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ContactListFilter**](ContactListFilter.html)| ContactListFilter | 
+ **body** | [**ContactListFilter**](ContactListFilter.html)| ContactListFilter |  |
 {: class="table table-striped"}
 
 
@@ -4020,7 +4020,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ContactList**](ContactList.html)| ContactList | 
+ **body** | [**ContactList**](ContactList.html)| ContactList |  |
 {: class="table table-striped"}
 
 
@@ -4078,7 +4078,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID | 
+ **conversation_id** | **String**| Conversation ID |  |
 {: class="table table-striped"}
 
 
@@ -4137,7 +4137,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dnc_list_id** | **String**| DncList ID | 
+ **dnc_list_id** | **String**| DncList ID |  |
 {: class="table table-striped"}
 
 
@@ -4197,8 +4197,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dnc_list_id** | **String**| DncList ID | 
- **body** | **Array&lt;String&gt;**| DNC Phone Numbers | 
+ **dnc_list_id** | **String**| DncList ID |  |
+ **body** | **Array&lt;String&gt;**| DNC Phone Numbers |  |
 {: class="table table-striped"}
 
 
@@ -4257,7 +4257,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DncListCreate**](DncListCreate.html)| DncList | 
+ **body** | [**DncListCreate**](DncListCreate.html)| DncList |  |
 {: class="table table-striped"}
 
 
@@ -4316,7 +4316,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RuleSet**](RuleSet.html)| RuleSet | 
+ **body** | [**RuleSet**](RuleSet.html)| RuleSet |  |
 {: class="table table-striped"}
 
 
@@ -4375,7 +4375,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CampaignSequence**](CampaignSequence.html)| Organization | 
+ **body** | [**CampaignSequence**](CampaignSequence.html)| Organization |  |
 {: class="table table-striped"}
 
 
@@ -4436,8 +4436,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attempt_limits_id** | **String**| Attempt limits ID | 
- **body** | [**AttemptLimits**](AttemptLimits.html)| AttemptLimits | 
+ **attempt_limits_id** | **String**| Attempt limits ID |  |
+ **body** | [**AttemptLimits**](AttemptLimits.html)| AttemptLimits |  |
 {: class="table table-striped"}
 
 
@@ -4498,8 +4498,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **callable_time_set_id** | **String**| Callable Time Set ID | 
- **body** | [**CallableTimeSet**](CallableTimeSet.html)| DialerCallableTimeSet | 
+ **callable_time_set_id** | **String**| Callable Time Set ID |  |
+ **body** | [**CallableTimeSet**](CallableTimeSet.html)| DialerCallableTimeSet |  |
 {: class="table table-striped"}
 
 
@@ -4560,8 +4560,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **call_analysis_set_id** | **String**| Call Analysis Response Set ID | 
- **body** | [**ResponseSet**](ResponseSet.html)| ResponseSet | 
+ **call_analysis_set_id** | **String**| Call Analysis Response Set ID |  |
+ **body** | [**ResponseSet**](ResponseSet.html)| ResponseSet |  |
 {: class="table table-striped"}
 
 
@@ -4622,8 +4622,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
- **body** | [**Campaign**](Campaign.html)| Campaign | 
+ **campaign_id** | **String**| Campaign ID |  |
+ **body** | [**Campaign**](Campaign.html)| Campaign |  |
 {: class="table table-striped"}
 
 
@@ -4686,9 +4686,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
- **user_id** | **String**| Agent&#39;s user ID | 
- **body** | [**Agent**](Agent.html)| agent | 
+ **campaign_id** | **String**| Campaign ID |  |
+ **user_id** | **String**| Agent&#39;s user ID |  |
+ **body** | [**Agent**](Agent.html)| agent |  |
 {: class="table table-striped"}
 
 
@@ -4749,8 +4749,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_rule_id** | **String**| Campaign Rule ID | 
- **body** | [**CampaignRule**](CampaignRule.html)| CampaignRule | 
+ **campaign_rule_id** | **String**| Campaign Rule ID |  |
+ **body** | [**CampaignRule**](CampaignRule.html)| CampaignRule |  |
 {: class="table table-striped"}
 
 
@@ -4811,8 +4811,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_id** | **String**| ContactList ID | 
- **body** | [**ContactList**](ContactList.html)| ContactList | 
+ **contact_list_id** | **String**| ContactList ID |  |
+ **body** | [**ContactList**](ContactList.html)| ContactList |  |
 {: class="table table-striped"}
 
 
@@ -4875,9 +4875,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_id** | **String**| Contact List ID | 
- **contact_id** | **String**| Contact ID | 
- **body** | [**DialerContact**](DialerContact.html)| Contact | 
+ **contact_list_id** | **String**| Contact List ID |  |
+ **contact_id** | **String**| Contact ID |  |
+ **body** | [**DialerContact**](DialerContact.html)| Contact |  |
 {: class="table table-striped"}
 
 
@@ -4938,8 +4938,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_list_filter_id** | **String**| Contact List Filter ID | 
- **body** | [**ContactListFilter**](ContactListFilter.html)| ContactListFilter | 
+ **contact_list_filter_id** | **String**| Contact List Filter ID |  |
+ **body** | [**ContactListFilter**](ContactListFilter.html)| ContactListFilter |  |
 {: class="table table-striped"}
 
 
@@ -5000,8 +5000,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dnc_list_id** | **String**| DncList ID | 
- **body** | [**DncList**](DncList.html)| DncList | 
+ **dnc_list_id** | **String**| DncList ID |  |
+ **body** | [**DncList**](DncList.html)| DncList |  |
 {: class="table table-striped"}
 
 
@@ -5062,8 +5062,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_set_id** | **String**| Rule Set ID | 
- **body** | [**RuleSet**](RuleSet.html)| RuleSet | 
+ **rule_set_id** | **String**| Rule Set ID |  |
+ **body** | [**RuleSet**](RuleSet.html)| RuleSet |  |
 {: class="table table-striped"}
 
 
@@ -5124,8 +5124,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID | 
- **body** | [**CampaignSchedule**](CampaignSchedule.html)| CampaignSchedule | 
+ **campaign_id** | **String**| Campaign ID |  |
+ **body** | [**CampaignSchedule**](CampaignSchedule.html)| CampaignSchedule |  |
 {: class="table table-striped"}
 
 
@@ -5186,8 +5186,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sequence_id** | **String**| Sequence ID | 
- **body** | [**SequenceSchedule**](SequenceSchedule.html)| SequenceSchedule | 
+ **sequence_id** | **String**| Sequence ID |  |
+ **body** | [**SequenceSchedule**](SequenceSchedule.html)| SequenceSchedule |  |
 {: class="table table-striped"}
 
 
@@ -5248,8 +5248,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sequence_id** | **String**| Campaign Sequence ID | 
- **body** | [**CampaignSequence**](CampaignSequence.html)| Organization | 
+ **sequence_id** | **String**| Campaign Sequence ID |  |
+ **body** | [**CampaignSequence**](CampaignSequence.html)| Organization |  |
 {: class="table table-striped"}
 
 
@@ -5308,7 +5308,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WrapUpCodeMapping**](WrapUpCodeMapping.html)| wrapUpCodeMapping | 
+ **body** | [**WrapUpCodeMapping**](WrapUpCodeMapping.html)| wrapUpCodeMapping |  |
 {: class="table table-striped"}
 
 

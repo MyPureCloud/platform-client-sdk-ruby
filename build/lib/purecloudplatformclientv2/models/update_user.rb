@@ -63,46 +63,82 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'chat' => :'chat',
+        
         :'department' => :'department',
+        
         :'email' => :'email',
+        
         :'primary_contact_info' => :'primaryContactInfo',
+        
         :'addresses' => :'addresses',
+        
         :'title' => :'title',
+        
         :'username' => :'username',
+        
         :'manager' => :'manager',
+        
         :'images' => :'images',
+        
         :'version' => :'version',
+        
         :'profile_skills' => :'profileSkills',
+        
         :'locations' => :'locations',
+        
         :'groups' => :'groups',
+        
         :'state' => :'state',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'chat' => :'Chat',
+        
         :'department' => :'String',
+        
         :'email' => :'String',
+        
         :'primary_contact_info' => :'Array<Contact>',
+        
         :'addresses' => :'Array<Contact>',
+        
         :'title' => :'String',
+        
         :'username' => :'String',
+        
         :'manager' => :'String',
+        
         :'images' => :'Array<UserImage>',
+        
         :'version' => :'Integer',
+        
         :'profile_skills' => :'Array<String>',
+        
         :'locations' => :'Array<Location>',
+        
         :'groups' => :'Array<Group>',
+        
         :'state' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -114,108 +150,344 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'chat')
+        
+        
         self.chat = attributes[:'chat']
+        
+      
       end
 
+      
       if attributes.has_key?(:'department')
+        
+        
         self.department = attributes[:'department']
+        
+      
       end
 
+      
       if attributes.has_key?(:'email')
+        
+        
         self.email = attributes[:'email']
+        
+      
       end
 
+      
       if attributes.has_key?(:'primaryContactInfo')
+        
         if (value = attributes[:'primaryContactInfo']).is_a?(Array)
           self.primary_contact_info = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'addresses')
+        
         if (value = attributes[:'addresses']).is_a?(Array)
           self.addresses = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'title')
+        
+        
         self.title = attributes[:'title']
+        
+      
       end
 
+      
       if attributes.has_key?(:'username')
+        
+        
         self.username = attributes[:'username']
+        
+      
       end
 
+      
       if attributes.has_key?(:'manager')
+        
+        
         self.manager = attributes[:'manager']
+        
+      
       end
 
+      
       if attributes.has_key?(:'images')
+        
         if (value = attributes[:'images']).is_a?(Array)
           self.images = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'profileSkills')
+        
         if (value = attributes[:'profileSkills']).is_a?(Array)
           self.profile_skills = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'locations')
+        
         if (value = attributes[:'locations']).is_a?(Array)
           self.locations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'groups')
+        
         if (value = attributes[:'groups']).is_a?(Array)
           self.groups = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @version.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["active", "inactive", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -226,6 +498,14 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

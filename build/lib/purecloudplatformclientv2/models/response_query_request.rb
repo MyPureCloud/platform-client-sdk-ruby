@@ -31,18 +31,26 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'query_phrase' => :'queryPhrase',
+        
         :'page_size' => :'pageSize',
+        
         :'filters' => :'filters'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'query_phrase' => :'String',
+        
         :'page_size' => :'Integer',
+        
         :'filters' => :'Array<ResponseFilter>'
+        
       }
     end
 
@@ -54,34 +62,81 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'queryPhrase')
+        
+        
         self.query_phrase = attributes[:'queryPhrase']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pageSize')
+        
+        
         self.page_size = attributes[:'pageSize']
+        
+      
       end
 
+      
       if attributes.has_key?(:'filters')
+        
         if (value = attributes[:'filters']).is_a?(Array)
           self.filters = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

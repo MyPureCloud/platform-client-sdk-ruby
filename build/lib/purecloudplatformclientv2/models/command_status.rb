@@ -40,28 +40,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'expiration' => :'expiration',
+        
         :'user_id' => :'userId',
+        
         :'status_code' => :'statusCode',
+        
         :'command_type' => :'commandType',
+        
         :'document' => :'document',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'expiration' => :'DateTime',
+        
         :'user_id' => :'String',
+        
         :'status_code' => :'String',
+        
         :'command_type' => :'String',
+        
         :'document' => :'Document',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -73,60 +91,160 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'expiration')
+        
+        
         self.expiration = attributes[:'expiration']
+        
+      
       end
 
+      
       if attributes.has_key?(:'userId')
+        
+        
         self.user_id = attributes[:'userId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'statusCode')
+        
+        
         self.status_code = attributes[:'statusCode']
+        
+      
       end
 
+      
       if attributes.has_key?(:'commandType')
+        
+        
         self.command_type = attributes[:'commandType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'document')
+        
+        
         self.document = attributes[:'document']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["INPROGRESS", "COMPLETE", "ERROR", "CANCELING", "CANCELED"]
       if @status_code && !allowed_values.include?(@status_code)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["UPLOAD", "COPYDOCUMENT", "MOVEDOCUMENT", "DELETEWORKSPACE", "DELETEDOCUMENT", "DELETETAG", "UPDATETAG", "REINDEX", "CLEANUP", "REPLACEDOCUMENT"]
       if @command_type && !allowed_values.include?(@command_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status_code Object to be assigned
     def status_code=(status_code)
@@ -137,6 +255,10 @@ module PureCloud
       @status_code = status_code
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] command_type Object to be assigned
     def command_type=(command_type)
@@ -147,6 +269,19 @@ module PureCloud
       @command_type = command_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

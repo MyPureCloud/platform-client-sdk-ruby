@@ -36,22 +36,34 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'start_date' => :'startDate',
+        
         :'end_date' => :'endDate',
+        
         :'metrics' => :'metrics',
+        
         :'queue_ids' => :'queueIds',
+        
         :'interval_length_minutes' => :'intervalLengthMinutes'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'start_date' => :'DateTime',
+        
         :'end_date' => :'DateTime',
+        
         :'metrics' => :'Array<IntradayMetric>',
+        
         :'queue_ids' => :'Array<String>',
+        
         :'interval_length_minutes' => :'Integer'
+        
       }
     end
 
@@ -63,56 +75,134 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'startDate')
+        
+        
         self.start_date = attributes[:'startDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endDate')
+        
+        
         self.end_date = attributes[:'endDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'metrics')
+        
         if (value = attributes[:'metrics']).is_a?(Array)
           self.metrics = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'queueIds')
+        
         if (value = attributes[:'queueIds']).is_a?(Array)
           self.queue_ids = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'intervalLengthMinutes')
+        
+        
         self.interval_length_minutes = attributes[:'intervalLengthMinutes']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @start_date.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @end_date.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @metrics.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

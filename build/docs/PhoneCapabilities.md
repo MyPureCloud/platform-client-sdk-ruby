@@ -13,6 +13,7 @@ title: PhoneCapabilities
 | **hardware_id_type** | **String** |  | [optional] |
 | **allow_reboot** | **BOOLEAN** |  | [optional] |
 | **no_rebalance** | **BOOLEAN** |  | [optional] |
+| **no_cloud_provisioning** | **BOOLEAN** |  | [optional] |
 {: class="table table-striped"}
 
 

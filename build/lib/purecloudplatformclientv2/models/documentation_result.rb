@@ -81,52 +81,94 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'categories' => :'categories',
+        
         :'description' => :'description',
+        
         :'content' => :'content',
+        
         :'excerpt' => :'excerpt',
+        
         :'link' => :'link',
+        
         :'modified' => :'modified',
+        
         :'name' => :'name',
+        
         :'service' => :'service',
+        
         :'slug' => :'slug',
+        
         :'title' => :'title',
+        
         :'get_type' => :'get_type',
+        
         :'facet_feature' => :'facet_feature',
+        
         :'facet_role' => :'facet_role',
+        
         :'facet_service' => :'facet_service',
+        
         :'faq_categories' => :'faq_categories',
+        
         :'releasenote_category' => :'releasenote_category',
+        
         :'releasenote_tag' => :'releasenote_tag',
+        
         :'service_area' => :'service-area',
+        
         :'video_categories' => :'video_categories'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'Integer',
+        
         :'categories' => :'Array<Integer>',
+        
         :'description' => :'String',
+        
         :'content' => :'String',
+        
         :'excerpt' => :'String',
+        
         :'link' => :'String',
+        
         :'modified' => :'DateTime',
+        
         :'name' => :'String',
+        
         :'service' => :'Array<Integer>',
+        
         :'slug' => :'String',
+        
         :'title' => :'String',
+        
         :'get_type' => :'String',
+        
         :'facet_feature' => :'Array<Integer>',
+        
         :'facet_role' => :'Array<Integer>',
+        
         :'facet_service' => :'Array<Integer>',
+        
         :'faq_categories' => :'Array<Integer>',
+        
         :'releasenote_category' => :'Array<Integer>',
+        
         :'releasenote_tag' => :'Array<Integer>',
+        
         :'service_area' => :'Array<Integer>',
+        
         :'video_categories' => :'Array<Integer>'
+        
       }
     end
 
@@ -138,124 +180,410 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'categories')
+        
         if (value = attributes[:'categories']).is_a?(Array)
           self.categories = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'description')
+        
+        
         self.description = attributes[:'description']
+        
+      
       end
 
+      
       if attributes.has_key?(:'content')
+        
+        
         self.content = attributes[:'content']
+        
+      
       end
 
+      
       if attributes.has_key?(:'excerpt')
+        
+        
         self.excerpt = attributes[:'excerpt']
+        
+      
       end
 
+      
       if attributes.has_key?(:'link')
+        
+        
         self.link = attributes[:'link']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modified')
+        
+        
         self.modified = attributes[:'modified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'service')
+        
         if (value = attributes[:'service']).is_a?(Array)
           self.service = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'slug')
+        
+        
         self.slug = attributes[:'slug']
+        
+      
       end
 
+      
       if attributes.has_key?(:'title')
+        
+        
         self.title = attributes[:'title']
+        
+      
       end
 
+      
       if attributes.has_key?(:'get_type')
+        
+        
         self.get_type = attributes[:'get_type']
+        
+      
       end
 
+      
       if attributes.has_key?(:'facet_feature')
+        
         if (value = attributes[:'facet_feature']).is_a?(Array)
           self.facet_feature = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'facet_role')
+        
         if (value = attributes[:'facet_role']).is_a?(Array)
           self.facet_role = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'facet_service')
+        
         if (value = attributes[:'facet_service']).is_a?(Array)
           self.facet_service = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'faq_categories')
+        
         if (value = attributes[:'faq_categories']).is_a?(Array)
           self.faq_categories = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'releasenote_category')
+        
         if (value = attributes[:'releasenote_category']).is_a?(Array)
           self.releasenote_category = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'releasenote_tag')
+        
         if (value = attributes[:'releasenote_tag']).is_a?(Array)
           self.releasenote_tag = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'service-area')
+        
         if (value = attributes[:'service-area']).is_a?(Array)
           self.service_area = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'video_categories')
+        
         if (value = attributes[:'video_categories']).is_a?(Array)
           self.video_categories = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -47,30 +47,50 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'addresses' => :'addresses',
+        
         :'document_id' => :'documentId',
+        
         :'content_type' => :'contentType',
+        
         :'workspace' => :'workspace',
+        
         :'cover_sheet' => :'coverSheet',
+        
         :'time_zone_offset_minutes' => :'timeZoneOffsetMinutes',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'addresses' => :'Array<String>',
+        
         :'document_id' => :'String',
+        
         :'content_type' => :'String',
+        
         :'workspace' => :'Workspace',
+        
         :'cover_sheet' => :'CoverSheet',
+        
         :'time_zone_offset_minutes' => :'Integer',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -82,66 +102,175 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'addresses')
+        
         if (value = attributes[:'addresses']).is_a?(Array)
           self.addresses = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'documentId')
+        
+        
         self.document_id = attributes[:'documentId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contentType')
+        
+        
         self.content_type = attributes[:'contentType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'workspace')
+        
+        
         self.workspace = attributes[:'workspace']
+        
+      
       end
 
+      
       if attributes.has_key?(:'coverSheet')
+        
+        
         self.cover_sheet = attributes[:'coverSheet']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timeZoneOffsetMinutes')
+        
+        
         self.time_zone_offset_minutes = attributes[:'timeZoneOffsetMinutes']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @addresses.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["application/pdf", "image/tiff", "application/msword", "application/vnd.oasis.opendocument.text", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"]
       if @content_type && !allowed_values.include?(@content_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] content_type Object to be assigned
     def content_type=(content_type)
@@ -152,6 +281,29 @@ module PureCloud
       @content_type = content_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

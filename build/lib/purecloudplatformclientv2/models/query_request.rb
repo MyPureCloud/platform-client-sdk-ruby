@@ -37,28 +37,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'query_phrase' => :'queryPhrase',
+        
         :'page_number' => :'pageNumber',
+        
         :'page_size' => :'pageSize',
+        
         :'facet_name_requests' => :'facetNameRequests',
+        
         :'sort' => :'sort',
+        
         :'filters' => :'filters',
+        
         :'attribute_filters' => :'attributeFilters',
+        
         :'include_shares' => :'includeShares'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'query_phrase' => :'String',
+        
         :'page_number' => :'Integer',
+        
         :'page_size' => :'Integer',
+        
         :'facet_name_requests' => :'Array<String>',
+        
         :'sort' => :'Array<SortItem>',
+        
         :'filters' => :'Array<ContentFilterItem>',
+        
         :'attribute_filters' => :'Array<AttributeFilterItem>',
+        
         :'include_shares' => :'BOOLEAN'
+        
       }
     end
 
@@ -70,60 +88,177 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'queryPhrase')
+        
+        
         self.query_phrase = attributes[:'queryPhrase']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pageNumber')
+        
+        
         self.page_number = attributes[:'pageNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pageSize')
+        
+        
         self.page_size = attributes[:'pageSize']
+        
+      
       end
 
+      
       if attributes.has_key?(:'facetNameRequests')
+        
         if (value = attributes[:'facetNameRequests']).is_a?(Array)
           self.facet_name_requests = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'sort')
+        
         if (value = attributes[:'sort']).is_a?(Array)
           self.sort = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'filters')
+        
         if (value = attributes[:'filters']).is_a?(Array)
           self.filters = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'attributeFilters')
+        
         if (value = attributes[:'attributeFilters']).is_a?(Array)
           self.attribute_filters = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'includeShares')
+        
+        
         self.include_shares = attributes[:'includeShares']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

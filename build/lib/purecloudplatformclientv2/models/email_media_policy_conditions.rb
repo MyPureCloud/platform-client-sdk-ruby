@@ -31,22 +31,34 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'for_users' => :'forUsers',
+        
         :'date_ranges' => :'dateRanges',
+        
         :'for_queues' => :'forQueues',
+        
         :'wrapup_codes' => :'wrapupCodes',
+        
         :'time_allowed' => :'timeAllowed'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'for_users' => :'Array<User>',
+        
         :'date_ranges' => :'Array<String>',
+        
         :'for_queues' => :'Array<Queue>',
+        
         :'wrapup_codes' => :'Array<WrapupCode>',
+        
         :'time_allowed' => :'TimeAllowed'
+        
       }
     end
 
@@ -58,48 +70,123 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'forUsers')
+        
         if (value = attributes[:'forUsers']).is_a?(Array)
           self.for_users = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateRanges')
+        
         if (value = attributes[:'dateRanges']).is_a?(Array)
           self.date_ranges = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'forQueues')
+        
         if (value = attributes[:'forQueues']).is_a?(Array)
           self.for_queues = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapupCodes')
+        
         if (value = attributes[:'wrapupCodes']).is_a?(Array)
           self.wrapup_codes = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'timeAllowed')
+        
+        
         self.time_allowed = attributes[:'timeAllowed']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -27,18 +27,26 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'display_name' => :'displayName',
+        
         :'transcription_provider' => :'transcriptionProvider',
+        
         :'integration_id' => :'integrationId'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'display_name' => :'String',
+        
         :'transcription_provider' => :'String',
+        
         :'integration_id' => :'String'
+        
       }
     end
 
@@ -50,36 +58,75 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'displayName')
+        
+        
         self.display_name = attributes[:'displayName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'transcriptionProvider')
+        
+        
         self.transcription_provider = attributes[:'transcriptionProvider']
+        
+      
       end
 
+      
       if attributes.has_key?(:'integrationId')
+        
+        
         self.integration_id = attributes[:'integrationId']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["VOCI"]
       if @transcription_provider && !allowed_values.include?(@transcription_provider)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] transcription_provider Object to be assigned
     def transcription_provider=(transcription_provider)
@@ -90,6 +137,14 @@ module PureCloud
       @transcription_provider = transcription_provider
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

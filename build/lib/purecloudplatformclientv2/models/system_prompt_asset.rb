@@ -50,38 +50,66 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'prompt_id' => :'promptId',
+        
         :'language' => :'language',
+        
         :'duration_seconds' => :'durationSeconds',
+        
         :'media_uri' => :'mediaUri',
+        
         :'tts_string' => :'ttsString',
+        
         :'upload_uri' => :'uploadUri',
+        
         :'upload_status' => :'uploadStatus',
+        
         :'has_default' => :'hasDefault',
+        
         :'language_default' => :'languageDefault',
+        
         :'tags' => :'tags',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'prompt_id' => :'String',
+        
         :'language' => :'String',
+        
         :'duration_seconds' => :'Float',
+        
         :'media_uri' => :'String',
+        
         :'tts_string' => :'String',
+        
         :'upload_uri' => :'String',
+        
         :'upload_status' => :'String',
+        
         :'has_default' => :'BOOLEAN',
+        
         :'language_default' => :'BOOLEAN',
+        
         :'tags' => :'Hash<String, Array<String>>',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -93,82 +121,247 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'promptId')
+        
+        
         self.prompt_id = attributes[:'promptId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'language')
+        
+        
         self.language = attributes[:'language']
+        
+      
       end
 
+      
       if attributes.has_key?(:'durationSeconds')
+        
+        
         self.duration_seconds = attributes[:'durationSeconds']
+        
+      
       end
 
+      
       if attributes.has_key?(:'mediaUri')
+        
+        
         self.media_uri = attributes[:'mediaUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ttsString')
+        
+        
         self.tts_string = attributes[:'ttsString']
+        
+      
       end
 
+      
       if attributes.has_key?(:'uploadUri')
+        
+        
         self.upload_uri = attributes[:'uploadUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'uploadStatus')
+        
+        
         self.upload_status = attributes[:'uploadStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'hasDefault')
+        
+        
         self.has_default = attributes[:'hasDefault']
+        
+      
       end
 
+      
       if attributes.has_key?(:'languageDefault')
+        
+        
         self.language_default = attributes[:'languageDefault']
+        
+      
       end
 
+      
       if attributes.has_key?(:'tags')
+        
         if (value = attributes[:'tags']).is_a?(Array)
           self.tags = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @language.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["created", "uploaded", "transcoded"]
       if @upload_status && !allowed_values.include?(@upload_status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] upload_status Object to be assigned
     def upload_status=(upload_status)
@@ -179,6 +372,29 @@ module PureCloud
       @upload_status = upload_status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

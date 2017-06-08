@@ -30,18 +30,26 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'session_id' => :'sessionId',
+        
         :'target_date' => :'targetDate',
+        
         :'properties' => :'properties'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'session_id' => :'String',
+        
         :'target_date' => :'DateTime',
+        
         :'properties' => :'Array<AnalyticsProperty>'
+        
       }
     end
 
@@ -53,46 +61,96 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'sessionId')
+        
+        
         self.session_id = attributes[:'sessionId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'targetDate')
+        
+        
         self.target_date = attributes[:'targetDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'properties')
+        
         if (value = attributes[:'properties']).is_a?(Array)
           self.properties = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @session_id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @target_date.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @properties.nil?
         return false
       end
 
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

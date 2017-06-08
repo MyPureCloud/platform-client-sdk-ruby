@@ -45,10 +45,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.delete_quality_calibration ..."
       end
+      
+      
       # verify the required parameter 'calibration_id' is set
       fail ArgumentError, "Missing the required parameter 'calibration_id' when calling QualityApi.delete_quality_calibration" if calibration_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'calibrator_id' is set
       fail ArgumentError, "Missing the required parameter 'calibrator_id' when calling QualityApi.delete_quality_calibration" if calibrator_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/calibrations/{calibrationId}".sub('{format}','json').sub('{' + 'calibrationId' + '}', calibration_id.to_s)
 
@@ -72,7 +85,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -109,10 +123,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.delete_quality_conversation_evaluation ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling QualityApi.delete_quality_conversation_evaluation" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'evaluation_id' is set
       fail ArgumentError, "Missing the required parameter 'evaluation_id' when calling QualityApi.delete_quality_conversation_evaluation" if evaluation_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'evaluationId' + '}', evaluation_id.to_s)
 
@@ -136,7 +169,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -169,8 +203,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.delete_quality_form ..."
       end
+      
+      
       # verify the required parameter 'form_id' is set
       fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.delete_quality_form" if form_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/forms/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
 
@@ -193,7 +234,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -225,8 +267,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.delete_quality_keywordset ..."
       end
+      
+      
       # verify the required parameter 'keyword_set_id' is set
       fail ArgumentError, "Missing the required parameter 'keyword_set_id' when calling QualityApi.delete_quality_keywordset" if keyword_set_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/keywordsets/{keywordSetId}".sub('{format}','json').sub('{' + 'keywordSetId' + '}', keyword_set_id.to_s)
 
@@ -249,7 +298,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -281,8 +331,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.delete_quality_keywordsets ..."
       end
+      
+      
       # verify the required parameter 'ids' is set
       fail ArgumentError, "Missing the required parameter 'ids' when calling QualityApi.delete_quality_keywordsets" if ids.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/keywordsets".sub('{format}','json')
 
@@ -306,7 +363,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -360,6 +418,79 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_agents_activity ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/agents/activity".sub('{format}','json')
 
@@ -394,7 +525,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -429,10 +561,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_calibration ..."
       end
+      
+      
       # verify the required parameter 'calibration_id' is set
       fail ArgumentError, "Missing the required parameter 'calibration_id' when calling QualityApi.get_quality_calibration" if calibration_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'calibrator_id' is set
       fail ArgumentError, "Missing the required parameter 'calibrator_id' when calling QualityApi.get_quality_calibration" if calibrator_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/calibrations/{calibrationId}".sub('{format}','json').sub('{' + 'calibrationId' + '}', calibration_id.to_s)
 
@@ -456,7 +601,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -507,8 +653,69 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_calibrations ..."
       end
+      
+      
       # verify the required parameter 'calibrator_id' is set
       fail ArgumentError, "Missing the required parameter 'calibrator_id' when calling QualityApi.get_quality_calibrations" if calibrator_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/calibrations".sub('{format}','json')
 
@@ -541,7 +748,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -590,8 +798,63 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_conversation_audits ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling QualityApi.get_quality_conversation_audits" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/conversations/{conversationId}/audits".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -622,7 +885,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -659,10 +923,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_conversation_evaluation ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling QualityApi.get_quality_conversation_evaluation" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'evaluation_id' is set
       fail ArgumentError, "Missing the required parameter 'evaluation_id' when calling QualityApi.get_quality_conversation_evaluation" if evaluation_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'evaluationId' + '}', evaluation_id.to_s)
 
@@ -686,7 +969,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -751,6 +1035,109 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_evaluations_query ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/evaluations/query".sub('{format}','json')
 
@@ -790,7 +1177,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -843,6 +1231,73 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_evaluators_activity ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/evaluators/activity".sub('{format}','json')
 
@@ -876,7 +1331,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -909,8 +1365,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_form ..."
       end
+      
+      
       # verify the required parameter 'form_id' is set
       fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.get_quality_form" if form_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/forms/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
 
@@ -933,7 +1396,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -970,8 +1434,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_form_versions ..."
       end
+      
+      
       # verify the required parameter 'form_id' is set
       fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.get_quality_form_versions" if form_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/forms/{formId}/versions".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
 
@@ -996,7 +1479,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1041,6 +1525,49 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_forms ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/forms".sub('{format}','json')
 
@@ -1070,7 +1597,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1103,8 +1631,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_keywordset ..."
       end
+      
+      
       # verify the required parameter 'keyword_set_id' is set
       fail ArgumentError, "Missing the required parameter 'keyword_set_id' when calling QualityApi.get_quality_keywordset" if keyword_set_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/keywordsets/{keywordSetId}".sub('{format}','json').sub('{' + 'keywordSetId' + '}', keyword_set_id.to_s)
 
@@ -1127,7 +1662,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1178,9 +1714,71 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_keywordsets ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'operator'] && !['AND', 'OR'].include?(opts[:'operator'])
         fail ArgumentError, 'invalid value for "operator", must be one of AND, OR'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/keywordsets".sub('{format}','json')
 
@@ -1213,7 +1811,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1246,8 +1845,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_publishedform ..."
       end
+      
+      
       # verify the required parameter 'form_id' is set
       fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.get_quality_publishedform" if form_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/publishedforms/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
 
@@ -1270,7 +1876,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1307,6 +1914,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_publishedforms ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/publishedforms".sub('{format}','json')
 
@@ -1332,7 +1958,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1365,8 +1992,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.post_analytics_evaluations_aggregates_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_analytics_evaluations_aggregates_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/evaluations/aggregates/query".sub('{format}','json')
 
@@ -1389,6 +2023,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1424,8 +2059,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.post_quality_calibrations ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_quality_calibrations" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/calibrations".sub('{format}','json')
 
@@ -1449,6 +2097,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1486,10 +2135,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.post_quality_conversation_evaluations ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling QualityApi.post_quality_conversation_evaluations" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_quality_conversation_evaluations" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/conversations/{conversationId}/evaluations".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -1513,6 +2181,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1546,8 +2215,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.post_quality_evaluations_scoring ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_quality_evaluations_scoring" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/evaluations/scoring".sub('{format}','json')
 
@@ -1570,6 +2246,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1603,8 +2280,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.post_quality_forms ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_quality_forms" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/forms".sub('{format}','json')
 
@@ -1627,6 +2311,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1662,8 +2347,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.post_quality_keywordsets ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_quality_keywordsets" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/keywordsets".sub('{format}','json')
 
@@ -1687,6 +2385,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1720,8 +2419,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.post_quality_publishedforms ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_quality_publishedforms" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/publishedforms".sub('{format}','json')
 
@@ -1744,6 +2450,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1777,6 +2484,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.post_quality_spotability ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/spotability".sub('{format}','json')
 
@@ -1799,6 +2513,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1834,10 +2549,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.put_quality_calibration ..."
       end
+      
+      
       # verify the required parameter 'calibration_id' is set
       fail ArgumentError, "Missing the required parameter 'calibration_id' when calling QualityApi.put_quality_calibration" if calibration_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.put_quality_calibration" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/calibrations/{calibrationId}".sub('{format}','json').sub('{' + 'calibrationId' + '}', calibration_id.to_s)
 
@@ -1860,6 +2588,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1899,12 +2628,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.put_quality_conversation_evaluation ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling QualityApi.put_quality_conversation_evaluation" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'evaluation_id' is set
       fail ArgumentError, "Missing the required parameter 'evaluation_id' when calling QualityApi.put_quality_conversation_evaluation" if evaluation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.put_quality_conversation_evaluation" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'evaluationId' + '}', evaluation_id.to_s)
 
@@ -1928,6 +2682,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1963,10 +2718,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.put_quality_form ..."
       end
+      
+      
       # verify the required parameter 'form_id' is set
       fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.put_quality_form" if form_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.put_quality_form" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/forms/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
 
@@ -1989,6 +2757,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2024,10 +2793,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.put_quality_keywordset ..."
       end
+      
+      
       # verify the required parameter 'keyword_set_id' is set
       fail ArgumentError, "Missing the required parameter 'keyword_set_id' when calling QualityApi.put_quality_keywordset" if keyword_set_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.put_quality_keywordset" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/quality/keywordsets/{keywordSetId}".sub('{format}','json').sub('{' + 'keywordSetId' + '}', keyword_set_id.to_s)
 
@@ -2050,6 +2832,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

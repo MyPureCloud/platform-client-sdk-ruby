@@ -54,34 +54,58 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'version' => :'version',
+        
         :'libraries' => :'libraries',
+        
         :'texts' => :'texts',
+        
         :'created_by' => :'createdBy',
+        
         :'date_created' => :'dateCreated',
+        
         :'interaction_type' => :'interactionType',
+        
         :'substitutions' => :'substitutions',
+        
         :'substitutions_schema' => :'substitutionsSchema',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'version' => :'Integer',
+        
         :'libraries' => :'Array<UriReference>',
+        
         :'texts' => :'Array<ResponseText>',
+        
         :'created_by' => :'User',
+        
         :'date_created' => :'DateTime',
+        
         :'interaction_type' => :'String',
+        
         :'substitutions' => :'Array<ResponseSubstitution>',
+        
         :'substitutions_schema' => :'JsonSchemaDocument',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -93,82 +117,225 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'libraries')
+        
         if (value = attributes[:'libraries']).is_a?(Array)
           self.libraries = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'texts')
+        
         if (value = attributes[:'texts']).is_a?(Array)
           self.texts = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdBy')
+        
+        
         self.created_by = attributes[:'createdBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'interactionType')
+        
+        
         self.interaction_type = attributes[:'interactionType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'substitutions')
+        
         if (value = attributes[:'substitutions']).is_a?(Array)
           self.substitutions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'substitutionsSchema')
+        
+        
         self.substitutions_schema = attributes[:'substitutionsSchema']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @libraries.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @texts.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["chat", "email", "twitter"]
       if @interaction_type && !allowed_values.include?(@interaction_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] interaction_type Object to be assigned
     def interaction_type=(interaction_type)
@@ -179,6 +346,24 @@ module PureCloud
       @interaction_type = interaction_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

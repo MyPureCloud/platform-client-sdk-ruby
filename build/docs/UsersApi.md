@@ -96,7 +96,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -154,7 +154,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -214,8 +214,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **skill_id** | **String**| skillId | 
+ **user_id** | **String**| User ID |  |
+ **skill_id** | **String**| skillId |  |
 {: class="table table-striped"}
 
 
@@ -273,7 +273,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -331,7 +331,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -390,7 +390,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type** | **String**| Field type | 
+ **type** | **String**| Field type | <br />**Values**: person, group, org, externalContact |
 {: class="table table-striped"}
 
 
@@ -436,7 +436,8 @@ api_instance = PureCloud::UsersApi.new
 user_id = "user_id_example" # String | User ID
 
 opts = { 
-  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand
+  expand: ["expand_example"], # Array<String> | Which fields, if any, to expand
+  state: "active" # String | Search for a user with this state
 }
 
 begin
@@ -452,8 +453,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **user_id** | **String**| User ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+ **state** | **String**| Search for a user with this state | [optional] [default to active]<br />**Values**: active, deleted |
 {: class="table table-striped"}
 
 
@@ -515,8 +517,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **user_id** | **String**| User ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
 {: class="table table-striped"}
 
 
@@ -575,7 +577,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -637,8 +639,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **user_id** | **String**| User ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
 {: class="table table-striped"}
 
 
@@ -703,11 +705,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_order** | **String**| Sort order | [optional] [default to ASC]
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **user_id** | **String**| User ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
 {: class="table table-striped"}
 
 
@@ -768,8 +770,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| user Id | 
- **client_id** | **String**| client Id | 
+ **user_id** | **String**| user Id |  |
+ **client_id** | **String**| client Id |  |
 {: class="table table-striped"}
 
 
@@ -828,7 +830,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -887,7 +889,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -951,10 +953,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **joined** | **BOOLEAN**| Is joined to the queue | [optional] [default to true]
+ **user_id** | **String**| User ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **joined** | **BOOLEAN**| Is joined to the queue | [optional] [default to true] |
 {: class="table table-striped"}
 
 
@@ -1013,7 +1015,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -1077,10 +1079,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]
+ **user_id** | **String**| User ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
@@ -1139,7 +1141,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -1198,7 +1200,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -1260,8 +1262,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
+ **user_id** | **String**| User ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
 {: class="table table-striped"}
 
 
@@ -1326,12 +1328,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **id** | [**Array&lt;String&gt;**](String.html)| id | [optional] 
- **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
- **state** | **String**| Only list users of this state | [optional] [default to active]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
+ **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+ **state** | **String**| Only list users of this state | [optional] [default to active]<br />**Values**: active, deleted |
 {: class="table table-striped"}
 
 
@@ -1391,7 +1393,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token |
 {: class="table table-striped"}
 
 
@@ -1453,8 +1455,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q64** | **String**| q64 | 
- **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional] 
+ **q64** | **String**| q64 |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1515,8 +1517,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | [**UpdateUser**](UpdateUser.html)| User | 
+ **user_id** | **String**| User ID |  |
+ **body** | [**UpdateUser**](UpdateUser.html)| User |  |
 {: class="table table-striped"}
 
 
@@ -1577,8 +1579,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | [**CallForwarding**](CallForwarding.html)| Call forwarding | 
+ **user_id** | **String**| User ID |  |
+ **body** | [**CallForwarding**](CallForwarding.html)| Call forwarding |  |
 {: class="table table-striped"}
 
 
@@ -1641,9 +1643,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| user Id | 
- **client_id** | **String**| client Id | 
- **body** | [**Geolocation**](Geolocation.html)| Geolocation | 
+ **user_id** | **String**| user Id |  |
+ **client_id** | **String**| client Id |  |
+ **body** | [**Geolocation**](Geolocation.html)| Geolocation |  |
 {: class="table table-striped"}
 
 
@@ -1706,9 +1708,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **queue_id** | **String**| Queue ID | 
- **user_id** | **String**| User ID | 
- **body** | [**UserQueue**](UserQueue.html)| Queue Member | 
+ **queue_id** | **String**| Queue ID |  |
+ **user_id** | **String**| User ID |  |
+ **body** | [**UserQueue**](UserQueue.html)| Queue Member |  |
 {: class="table table-striped"}
 
 
@@ -1769,8 +1771,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | [**Array&lt;UserQueue&gt;**](UserQueue.html)| User Queues | 
+ **user_id** | **String**| User ID |  |
+ **body** | [**Array&lt;UserQueue&gt;**](UserQueue.html)| User Queues |  |
 {: class="table table-striped"}
 
 
@@ -1829,7 +1831,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query | 
+ **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -1888,7 +1890,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UserDetailsQuery**](UserDetailsQuery.html)| query | 
+ **body** | [**UserDetailsQuery**](UserDetailsQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -1947,7 +1949,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ObservationQuery**](ObservationQuery.html)| query | 
+ **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -2008,8 +2010,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | [**UserRoutingSkillPost**](UserRoutingSkillPost.html)| Skill | 
+ **user_id** | **String**| User ID |  |
+ **body** | [**UserRoutingSkillPost**](UserRoutingSkillPost.html)| Skill |  |
 {: class="table table-striped"}
 
 
@@ -2068,7 +2070,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateUser**](CreateUser.html)| User | 
+ **body** | [**CreateUser**](CreateUser.html)| User |  |
 {: class="table table-striped"}
 
 
@@ -2127,7 +2129,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options | 
+ **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options |  |
 {: class="table table-striped"}
 
 
@@ -2188,8 +2190,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | [**CallForwarding**](CallForwarding.html)| Call forwarding | 
+ **user_id** | **String**| User ID |  |
+ **body** | [**CallForwarding**](CallForwarding.html)| Call forwarding |  |
 {: class="table table-striped"}
 
 
@@ -2250,8 +2252,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | [**OutOfOffice**](OutOfOffice.html)| The updated UserPresence | 
+ **user_id** | **String**| User ID |  |
+ **body** | [**OutOfOffice**](OutOfOffice.html)| The updated UserPresence |  |
 {: class="table table-striped"}
 
 
@@ -2313,8 +2315,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | **Array&lt;String&gt;**| Skills | [optional] 
+ **user_id** | **String**| User ID |  |
+ **body** | **Array&lt;String&gt;**| Skills | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2375,8 +2377,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | **Array&lt;String&gt;**| List of roles | 
+ **user_id** | **String**| User ID |  |
+ **body** | **Array&lt;String&gt;**| List of roles |  |
 {: class="table table-striped"}
 
 
@@ -2439,9 +2441,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **skill_id** | **String**| skillId | 
- **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill | 
+ **user_id** | **String**| User ID |  |
+ **skill_id** | **String**| skillId |  |
+ **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill |  |
 {: class="table table-striped"}
 
 
@@ -2502,8 +2504,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **body** | [**RoutingStatus**](RoutingStatus.html)| Routing Status | 
+ **user_id** | **String**| User ID |  |
+ **body** | [**RoutingStatus**](RoutingStatus.html)| Routing Status |  |
 {: class="table table-striped"}
 
 
@@ -2563,8 +2565,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **station_id** | **String**| stationId | 
+ **user_id** | **String**| User ID |  |
+ **station_id** | **String**| stationId |  |
 {: class="table table-striped"}
 
 
@@ -2624,8 +2626,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID | 
- **station_id** | **String**| stationId | 
+ **user_id** | **String**| User ID |  |
+ **station_id** | **String**| stationId |  |
 {: class="table table-striped"}
 
 

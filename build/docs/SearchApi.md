@@ -68,7 +68,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q64** | **String**| q64 | 
+ **q64** | **String**| q64 |  |
 {: class="table table-striped"}
 
 
@@ -130,8 +130,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q64** | **String**| q64 | 
- **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional] 
+ **q64** | **String**| q64 |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 
@@ -193,8 +193,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q64** | **String**| q64 | 
- **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional] 
+ **q64** | **String**| q64 |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 
@@ -257,9 +257,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q64** | **String**| q64 | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
- **profile** | **BOOLEAN**| profile | [optional] [default to true]
+ **q64** | **String**| q64 |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
+ **profile** | **BOOLEAN**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
 
@@ -322,9 +322,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q64** | **String**| q64 | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] 
- **profile** | **BOOLEAN**| profile | [optional] [default to true]
+ **q64** | **String**| q64 |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
+ **profile** | **BOOLEAN**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
 
@@ -386,8 +386,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q64** | **String**| q64 | 
- **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional] 
+ **q64** | **String**| q64 |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 
@@ -449,8 +449,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q64** | **String**| q64 | 
- **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional] 
+ **q64** | **String**| q64 |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 
@@ -509,7 +509,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DocumentationSearchRequest**](DocumentationSearchRequest.html)| Search request options | 
+ **body** | [**DocumentationSearchRequest**](DocumentationSearchRequest.html)| Search request options |  |
 {: class="table table-striped"}
 
 
@@ -568,7 +568,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**GroupSearchRequest**](GroupSearchRequest.html)| Search request options | 
+ **body** | [**GroupSearchRequest**](GroupSearchRequest.html)| Search request options |  |
 {: class="table table-striped"}
 
 
@@ -627,7 +627,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**LocationSearchRequest**](LocationSearchRequest.html)| Search request options | 
+ **body** | [**LocationSearchRequest**](LocationSearchRequest.html)| Search request options |  |
 {: class="table table-striped"}
 
 
@@ -689,8 +689,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**SearchRequest**](SearchRequest.html)| Search request options | 
- **profile** | **BOOLEAN**| profile | [optional] [default to true]
+ **body** | [**SearchRequest**](SearchRequest.html)| Search request options |  |
+ **profile** | **BOOLEAN**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
 
@@ -752,8 +752,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**SuggestSearchRequest**](SuggestSearchRequest.html)| Search request options | 
- **profile** | **BOOLEAN**| profile | [optional] [default to true]
+ **body** | [**SuggestSearchRequest**](SuggestSearchRequest.html)| Search request options |  |
+ **profile** | **BOOLEAN**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
 
@@ -812,7 +812,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options | 
+ **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options |  |
 {: class="table table-striped"}
 
 
@@ -871,7 +871,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**VoicemailSearchRequest**](VoicemailSearchRequest.html)| Search request options | 
+ **body** | [**VoicemailSearchRequest**](VoicemailSearchRequest.html)| Search request options |  |
 {: class="table table-striped"}
 
 

@@ -50,32 +50,54 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'operational_status' => :'operationalStatus',
+        
         :'edges_status' => :'edgesStatus',
+        
         :'event_creation_time' => :'eventCreationTime',
+        
         :'provision' => :'provision',
+        
         :'line_statuses' => :'lineStatuses',
+        
         :'phone_assignment_to_edge_type' => :'phoneAssignmentToEdgeType',
+        
         :'edge' => :'edge',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'operational_status' => :'String',
+        
         :'edges_status' => :'String',
+        
         :'event_creation_time' => :'String',
+        
         :'provision' => :'ProvisionInfo',
+        
         :'line_statuses' => :'Array<LineStatus>',
+        
         :'phone_assignment_to_edge_type' => :'String',
+        
         :'edge' => :'UriReference',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -87,74 +109,183 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'operationalStatus')
+        
+        
         self.operational_status = attributes[:'operationalStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'edgesStatus')
+        
+        
         self.edges_status = attributes[:'edgesStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'eventCreationTime')
+        
+        
         self.event_creation_time = attributes[:'eventCreationTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'provision')
+        
+        
         self.provision = attributes[:'provision']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lineStatuses')
+        
         if (value = attributes[:'lineStatuses']).is_a?(Array)
           self.line_statuses = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'phoneAssignmentToEdgeType')
+        
+        
         self.phone_assignment_to_edge_type = attributes[:'phoneAssignmentToEdgeType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'edge')
+        
+        
         self.edge = attributes[:'edge']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["OPERATIONAL", "DEGRADED", "OFFLINE"]
       if @operational_status && !allowed_values.include?(@operational_status)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["IN_SERVICE", "MIXED_SERVICE", "OUT_OF_SERVICE", "NO_EDGES"]
       if @edges_status && !allowed_values.include?(@edges_status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["PRIMARY", "SECONDARY"]
       if @phone_assignment_to_edge_type && !allowed_values.include?(@phone_assignment_to_edge_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] operational_status Object to be assigned
     def operational_status=(operational_status)
@@ -165,6 +296,10 @@ module PureCloud
       @operational_status = operational_status
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] edges_status Object to be assigned
     def edges_status=(edges_status)
@@ -175,6 +310,25 @@ module PureCloud
       @edges_status = edges_status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] phone_assignment_to_edge_type Object to be assigned
     def phone_assignment_to_edge_type=(phone_assignment_to_edge_type)
@@ -185,6 +339,19 @@ module PureCloud
       @phone_assignment_to_edge_type = phone_assignment_to_edge_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

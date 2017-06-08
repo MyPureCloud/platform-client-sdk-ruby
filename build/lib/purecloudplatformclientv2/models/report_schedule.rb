@@ -63,46 +63,82 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'quartz_cron_expression' => :'quartzCronExpression',
+        
         :'next_fire_time' => :'nextFireTime',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'description' => :'description',
+        
         :'time_zone' => :'timeZone',
+        
         :'time_period' => :'timePeriod',
+        
         :'interval' => :'interval',
+        
         :'report_format' => :'reportFormat',
+        
         :'locale' => :'locale',
+        
         :'enabled' => :'enabled',
+        
         :'report_id' => :'reportId',
+        
         :'parameters' => :'parameters',
+        
         :'last_run' => :'lastRun',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'quartz_cron_expression' => :'String',
+        
         :'next_fire_time' => :'DateTime',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'description' => :'String',
+        
         :'time_zone' => :'String',
+        
         :'time_period' => :'String',
+        
         :'interval' => :'String',
+        
         :'report_format' => :'String',
+        
         :'locale' => :'String',
+        
         :'enabled' => :'BOOLEAN',
+        
         :'report_id' => :'String',
+        
         :'parameters' => :'Hash<String, Object>',
+        
         :'last_run' => :'ReportRunEntry',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -114,98 +150,343 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'quartzCronExpression')
+        
+        
         self.quartz_cron_expression = attributes[:'quartzCronExpression']
+        
+      
       end
 
+      
       if attributes.has_key?(:'nextFireTime')
+        
+        
         self.next_fire_time = attributes[:'nextFireTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'description')
+        
+        
         self.description = attributes[:'description']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timeZone')
+        
+        
         self.time_zone = attributes[:'timeZone']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timePeriod')
+        
+        
         self.time_period = attributes[:'timePeriod']
+        
+      
       end
 
+      
       if attributes.has_key?(:'interval')
+        
+        
         self.interval = attributes[:'interval']
+        
+      
       end
 
+      
       if attributes.has_key?(:'reportFormat')
+        
+        
         self.report_format = attributes[:'reportFormat']
+        
+      
       end
 
+      
       if attributes.has_key?(:'locale')
+        
+        
         self.locale = attributes[:'locale']
+        
+      
       end
 
+      
       if attributes.has_key?(:'enabled')
+        
+        
         self.enabled = attributes[:'enabled']
+        
+      
       end
 
+      
       if attributes.has_key?(:'reportId')
+        
+        
         self.report_id = attributes[:'reportId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'parameters')
+        
         if (value = attributes[:'parameters']).is_a?(Array)
           self.parameters = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'lastRun')
+        
+        
         self.last_run = attributes[:'lastRun']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @quartz_cron_expression.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @report_id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

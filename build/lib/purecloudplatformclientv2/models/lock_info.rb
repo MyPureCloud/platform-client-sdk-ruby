@@ -31,20 +31,30 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'locked_by' => :'lockedBy',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_expires' => :'dateExpires',
+        
         :'action' => :'action'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'locked_by' => :'UriReference',
+        
         :'date_created' => :'DateTime',
+        
         :'date_expires' => :'DateTime',
+        
         :'action' => :'String'
+        
       }
     end
 
@@ -56,40 +66,98 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'lockedBy')
+        
+        
         self.locked_by = attributes[:'lockedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateExpires')
+        
+        
         self.date_expires = attributes[:'dateExpires']
+        
+      
       end
 
+      
       if attributes.has_key?(:'action')
+        
+        
         self.action = attributes[:'action']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["UPDATE", "DELETE", "COPY", "MOVE", "REPLACE", "THUMBNAIL", "TEXT_EXTRACTION"]
       if @action && !allowed_values.include?(@action)
         return false
       end
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] action Object to be assigned
     def action=(action)
@@ -100,6 +168,9 @@ module PureCloud
       @action = action
     end
 
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

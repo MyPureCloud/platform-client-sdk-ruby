@@ -35,26 +35,42 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'order' => :'order',
+        
         :'category' => :'category',
+        
         :'conditions' => :'conditions',
+        
         :'actions' => :'actions',
+        
         :'additional_properties' => :'additionalProperties'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'order' => :'Integer',
+        
         :'category' => :'String',
+        
         :'conditions' => :'Array<RuleSetNotificationConditions>',
+        
         :'actions' => :'Array<RuleSetNotificationActions>',
+        
         :'additional_properties' => :'Object'
+        
       }
     end
 
@@ -66,56 +82,141 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'order')
+        
+        
         self.order = attributes[:'order']
+        
+      
       end
 
+      
       if attributes.has_key?(:'category')
+        
+        
         self.category = attributes[:'category']
+        
+      
       end
 
+      
       if attributes.has_key?(:'conditions')
+        
         if (value = attributes[:'conditions']).is_a?(Array)
           self.conditions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'actions')
+        
         if (value = attributes[:'actions']).is_a?(Array)
           self.actions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'additionalProperties')
+        
+        
         self.additional_properties = attributes[:'additionalProperties']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["DIALER_PRECALL", "DIALER_WRAPUP"]
       if @category && !allowed_values.include?(@category)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] category Object to be assigned
     def category=(category)
@@ -126,6 +227,24 @@ module PureCloud
       @category = category
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

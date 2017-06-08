@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.delete_alerting_heartbeat_alert ..."
       end
+      
+      
       # verify the required parameter 'alert_id' is set
       fail ArgumentError, "Missing the required parameter 'alert_id' when calling AlertingApi.delete_alerting_heartbeat_alert" if alert_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/heartbeat/alerts/{alertId}".sub('{format}','json').sub('{' + 'alertId' + '}', alert_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -99,8 +107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.delete_alerting_heartbeat_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.delete_alerting_heartbeat_rule" if rule_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/heartbeat/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -123,7 +138,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -155,8 +171,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.delete_alerting_interactionstats_alert ..."
       end
+      
+      
       # verify the required parameter 'alert_id' is set
       fail ArgumentError, "Missing the required parameter 'alert_id' when calling AlertingApi.delete_alerting_interactionstats_alert" if alert_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/interactionstats/alerts/{alertId}".sub('{format}','json').sub('{' + 'alertId' + '}', alert_id.to_s)
 
@@ -179,7 +202,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -211,8 +235,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.delete_alerting_interactionstats_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.delete_alerting_interactionstats_rule" if rule_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/interactionstats/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -235,7 +266,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -267,8 +299,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.delete_alerting_routingstatus_alert ..."
       end
+      
+      
       # verify the required parameter 'alert_id' is set
       fail ArgumentError, "Missing the required parameter 'alert_id' when calling AlertingApi.delete_alerting_routingstatus_alert" if alert_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/routingstatus/alerts/{alertId}".sub('{format}','json').sub('{' + 'alertId' + '}', alert_id.to_s)
 
@@ -291,7 +330,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -323,8 +363,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.delete_alerting_routingstatus_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.delete_alerting_routingstatus_rule" if rule_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/routingstatus/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -347,7 +394,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -379,8 +427,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.delete_alerting_userpresence_alert ..."
       end
+      
+      
       # verify the required parameter 'alert_id' is set
       fail ArgumentError, "Missing the required parameter 'alert_id' when calling AlertingApi.delete_alerting_userpresence_alert" if alert_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/userpresence/alerts/{alertId}".sub('{format}','json').sub('{' + 'alertId' + '}', alert_id.to_s)
 
@@ -403,7 +458,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -435,8 +491,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.delete_alerting_userpresence_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.delete_alerting_userpresence_rule" if rule_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/userpresence/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -459,7 +522,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -493,8 +557,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_heartbeat_alert ..."
       end
+      
+      
       # verify the required parameter 'alert_id' is set
       fail ArgumentError, "Missing the required parameter 'alert_id' when calling AlertingApi.get_alerting_heartbeat_alert" if alert_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/heartbeat/alerts/{alertId}".sub('{format}','json').sub('{' + 'alertId' + '}', alert_id.to_s)
 
@@ -518,7 +595,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -551,6 +629,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_heartbeat_alerts ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/heartbeat/alerts".sub('{format}','json')
 
@@ -574,7 +659,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -609,8 +695,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_heartbeat_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.get_alerting_heartbeat_rule" if rule_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/heartbeat/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -634,7 +733,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -667,6 +767,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_heartbeat_rules ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/heartbeat/rules".sub('{format}','json')
 
@@ -690,7 +797,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -725,8 +833,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_interactionstats_alert ..."
       end
+      
+      
       # verify the required parameter 'alert_id' is set
       fail ArgumentError, "Missing the required parameter 'alert_id' when calling AlertingApi.get_alerting_interactionstats_alert" if alert_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/interactionstats/alerts/{alertId}".sub('{format}','json').sub('{' + 'alertId' + '}', alert_id.to_s)
 
@@ -750,7 +871,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -783,6 +905,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_interactionstats_alerts ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/interactionstats/alerts".sub('{format}','json')
 
@@ -806,7 +935,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -837,6 +967,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_interactionstats_alerts_unread ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/alerting/interactionstats/alerts/unread".sub('{format}','json')
 
@@ -859,7 +990,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -894,8 +1026,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_interactionstats_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.get_alerting_interactionstats_rule" if rule_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/interactionstats/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -919,7 +1064,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -952,6 +1098,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_interactionstats_rules ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/interactionstats/rules".sub('{format}','json')
 
@@ -975,7 +1128,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1010,8 +1164,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_routingstatus_alert ..."
       end
+      
+      
       # verify the required parameter 'alert_id' is set
       fail ArgumentError, "Missing the required parameter 'alert_id' when calling AlertingApi.get_alerting_routingstatus_alert" if alert_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/routingstatus/alerts/{alertId}".sub('{format}','json').sub('{' + 'alertId' + '}', alert_id.to_s)
 
@@ -1035,7 +1202,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1068,6 +1236,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_routingstatus_alerts ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/routingstatus/alerts".sub('{format}','json')
 
@@ -1091,7 +1266,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1126,8 +1302,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_routingstatus_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.get_alerting_routingstatus_rule" if rule_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/routingstatus/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -1151,7 +1340,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1184,6 +1374,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_routingstatus_rules ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/routingstatus/rules".sub('{format}','json')
 
@@ -1207,7 +1404,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1242,8 +1440,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_userpresence_alert ..."
       end
+      
+      
       # verify the required parameter 'alert_id' is set
       fail ArgumentError, "Missing the required parameter 'alert_id' when calling AlertingApi.get_alerting_userpresence_alert" if alert_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/userpresence/alerts/{alertId}".sub('{format}','json').sub('{' + 'alertId' + '}', alert_id.to_s)
 
@@ -1267,7 +1478,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1300,6 +1512,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_userpresence_alerts ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/userpresence/alerts".sub('{format}','json')
 
@@ -1323,7 +1542,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1358,8 +1578,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_userpresence_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.get_alerting_userpresence_rule" if rule_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/userpresence/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -1383,7 +1616,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1416,6 +1650,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.get_alerting_userpresence_rules ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/userpresence/rules".sub('{format}','json')
 
@@ -1439,7 +1680,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1474,8 +1716,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.post_alerting_heartbeat_rules ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AlertingApi.post_alerting_heartbeat_rules" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/heartbeat/rules".sub('{format}','json')
 
@@ -1499,6 +1754,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1534,8 +1790,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.post_alerting_interactionstats_rules ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AlertingApi.post_alerting_interactionstats_rules" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/interactionstats/rules".sub('{format}','json')
 
@@ -1559,6 +1828,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1594,8 +1864,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.post_alerting_routingstatus_rules ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AlertingApi.post_alerting_routingstatus_rules" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/routingstatus/rules".sub('{format}','json')
 
@@ -1619,6 +1902,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1654,8 +1938,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.post_alerting_userpresence_rules ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AlertingApi.post_alerting_userpresence_rules" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/userpresence/rules".sub('{format}','json')
 
@@ -1679,6 +1976,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1716,10 +2014,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.put_alerting_heartbeat_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.put_alerting_heartbeat_rule" if rule_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AlertingApi.put_alerting_heartbeat_rule" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/heartbeat/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -1743,6 +2060,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1780,10 +2098,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.put_alerting_interactionstats_alert ..."
       end
+      
+      
       # verify the required parameter 'alert_id' is set
       fail ArgumentError, "Missing the required parameter 'alert_id' when calling AlertingApi.put_alerting_interactionstats_alert" if alert_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AlertingApi.put_alerting_interactionstats_alert" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/interactionstats/alerts/{alertId}".sub('{format}','json').sub('{' + 'alertId' + '}', alert_id.to_s)
 
@@ -1807,6 +2144,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1844,10 +2182,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.put_alerting_interactionstats_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.put_alerting_interactionstats_rule" if rule_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AlertingApi.put_alerting_interactionstats_rule" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/interactionstats/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -1871,6 +2228,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1908,10 +2266,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.put_alerting_routingstatus_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.put_alerting_routingstatus_rule" if rule_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AlertingApi.put_alerting_routingstatus_rule" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/routingstatus/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -1935,6 +2312,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1972,10 +2350,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AlertingApi.put_alerting_userpresence_rule ..."
       end
+      
+      
       # verify the required parameter 'rule_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_id' when calling AlertingApi.put_alerting_userpresence_rule" if rule_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling AlertingApi.put_alerting_userpresence_rule" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/alerting/userpresence/rules/{ruleId}".sub('{format}','json').sub('{' + 'ruleId' + '}', rule_id.to_s)
 
@@ -1999,6 +2396,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

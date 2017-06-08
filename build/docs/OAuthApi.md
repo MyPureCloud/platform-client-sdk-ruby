@@ -59,7 +59,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client_id** | **String**| Client ID | 
+ **client_id** | **String**| Client ID |  |
 {: class="table table-striped"}
 
 
@@ -118,7 +118,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client_id** | **String**| Client ID | 
+ **client_id** | **String**| Client ID |  |
 {: class="table table-striped"}
 
 
@@ -230,7 +230,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client_id** | **String**| Client ID | 
+ **client_id** | **String**| Client ID |  |
 {: class="table table-striped"}
 
 
@@ -289,7 +289,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OAuthClient**](OAuthClient.html)| Client | 
+ **body** | [**OAuthClient**](OAuthClient.html)| Client |  |
 {: class="table table-striped"}
 
 
@@ -350,8 +350,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client_id** | **String**| Client ID | 
- **body** | [**OAuthClient**](OAuthClient.html)| Client | 
+ **client_id** | **String**| Client ID |  |
+ **body** | [**OAuthClient**](OAuthClient.html)| Client |  |
 {: class="table table-striped"}
 
 

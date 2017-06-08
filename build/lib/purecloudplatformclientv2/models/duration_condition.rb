@@ -27,18 +27,26 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'duration_target' => :'durationTarget',
+        
         :'duration_operator' => :'durationOperator',
+        
         :'duration_range' => :'durationRange'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'duration_target' => :'String',
+        
         :'duration_operator' => :'String',
+        
         :'duration_range' => :'String'
+        
       }
     end
 
@@ -50,36 +58,70 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'durationTarget')
+        
+        
         self.duration_target = attributes[:'durationTarget']
+        
+      
       end
 
+      
       if attributes.has_key?(:'durationOperator')
+        
+        
         self.duration_operator = attributes[:'durationOperator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'durationRange')
+        
+        
         self.duration_range = attributes[:'durationRange']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["DURATION", "DURATION_RANGE"]
       if @duration_target && !allowed_values.include?(@duration_target)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] duration_target Object to be assigned
     def duration_target=(duration_target)
@@ -90,6 +132,19 @@ module PureCloud
       @duration_target = duration_target
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

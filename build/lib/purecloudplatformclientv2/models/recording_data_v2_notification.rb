@@ -55,46 +55,82 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'workspace' => :'workspace',
+        
         :'created_by' => :'createdBy',
+        
         :'content_type' => :'contentType',
+        
         :'content_length' => :'contentLength',
+        
         :'filename' => :'filename',
+        
         :'change_number' => :'changeNumber',
+        
         :'date_uploaded' => :'dateUploaded',
+        
         :'uploaded_by' => :'uploadedBy',
+        
         :'lock_info' => :'lockInfo',
+        
         :'self_uri' => :'selfUri',
+        
         :'duration_millieconds' => :'durationMillieconds',
+        
         :'conversation' => :'conversation',
+        
         :'read' => :'read'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'workspace' => :'DocumentDataV2NotificationWorkspace',
+        
         :'created_by' => :'DocumentDataV2NotificationCreatedBy',
+        
         :'content_type' => :'String',
+        
         :'content_length' => :'Integer',
+        
         :'filename' => :'String',
+        
         :'change_number' => :'Integer',
+        
         :'date_uploaded' => :'DateTime',
+        
         :'uploaded_by' => :'RecordingDataV2NotificationUserData',
+        
         :'lock_info' => :'RecordingDataV2NotificationLockInfo',
+        
         :'self_uri' => :'String',
+        
         :'duration_millieconds' => :'Integer',
+        
         :'conversation' => :'DocumentDataV2NotificationWorkspace',
+        
         :'read' => :'BOOLEAN'
+        
       }
     end
 
@@ -106,88 +142,331 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'workspace')
+        
+        
         self.workspace = attributes[:'workspace']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdBy')
+        
+        
         self.created_by = attributes[:'createdBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contentType')
+        
+        
         self.content_type = attributes[:'contentType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contentLength')
+        
+        
         self.content_length = attributes[:'contentLength']
+        
+      
       end
 
+      
       if attributes.has_key?(:'filename')
+        
+        
         self.filename = attributes[:'filename']
+        
+      
       end
 
+      
       if attributes.has_key?(:'changeNumber')
+        
+        
         self.change_number = attributes[:'changeNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateUploaded')
+        
+        
         self.date_uploaded = attributes[:'dateUploaded']
+        
+      
       end
 
+      
       if attributes.has_key?(:'uploadedBy')
+        
+        
         self.uploaded_by = attributes[:'uploadedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lockInfo')
+        
+        
         self.lock_info = attributes[:'lockInfo']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'durationMillieconds')
+        
+        
         self.duration_millieconds = attributes[:'durationMillieconds']
+        
+      
       end
 
+      
       if attributes.has_key?(:'conversation')
+        
+        
         self.conversation = attributes[:'conversation']
+        
+      
       end
 
+      
       if attributes.has_key?(:'read')
+        
+        
         self.read = attributes[:'read']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

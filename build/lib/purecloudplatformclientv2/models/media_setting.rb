@@ -25,16 +25,22 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'alerting_timeout_seconds' => :'alertingTimeoutSeconds',
+        
         :'service_level' => :'serviceLevel'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'alerting_timeout_seconds' => :'Integer',
+        
         :'service_level' => :'ServiceLevel'
+        
       }
     end
 
@@ -46,28 +52,61 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'alertingTimeoutSeconds')
+        
+        
         self.alerting_timeout_seconds = attributes[:'alertingTimeoutSeconds']
+        
+      
       end
 
+      
       if attributes.has_key?(:'serviceLevel')
+        
+        
         self.service_level = attributes[:'serviceLevel']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

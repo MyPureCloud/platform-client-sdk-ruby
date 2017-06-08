@@ -35,26 +35,42 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'type' => :'type',
+        
         :'owner_type' => :'ownerType',
+        
         :'owner' => :'owner',
+        
         :'greeting_audio_file' => :'greetingAudioFile',
+        
         :'audio_tts' => :'audioTTS'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'type' => :'String',
+        
         :'owner_type' => :'String',
+        
         :'owner' => :'DocumentDataV2NotificationWorkspace',
+        
         :'greeting_audio_file' => :'GreetingNotificationGreetingAudioFile',
+        
         :'audio_tts' => :'String'
+        
       }
     end
 
@@ -66,48 +82,151 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'type')
+        
+        
         self.type = attributes[:'type']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ownerType')
+        
+        
         self.owner_type = attributes[:'ownerType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'owner')
+        
+        
         self.owner = attributes[:'owner']
+        
+      
       end
 
+      
       if attributes.has_key?(:'greetingAudioFile')
+        
+        
         self.greeting_audio_file = attributes[:'greetingAudioFile']
+        
+      
       end
 
+      
       if attributes.has_key?(:'audioTTS')
+        
+        
         self.audio_tts = attributes[:'audioTTS']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -39,24 +39,38 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'contact_rate' => :'contactRate',
+        
         :'idle_agents' => :'idleAgents',
+        
         :'effective_idle_agents' => :'effectiveIdleAgents',
+        
         :'adjusted_calls_per_agent' => :'adjustedCallsPerAgent',
+        
         :'outstanding_calls' => :'outstandingCalls',
+        
         :'scheduled_calls' => :'scheduledCalls'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'contact_rate' => :'ConnectRate',
+        
         :'idle_agents' => :'Integer',
+        
         :'effective_idle_agents' => :'Float',
+        
         :'adjusted_calls_per_agent' => :'Float',
+        
         :'outstanding_calls' => :'Integer',
+        
         :'scheduled_calls' => :'Integer'
+        
       }
     end
 
@@ -68,44 +82,133 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'contactRate')
+        
+        
         self.contact_rate = attributes[:'contactRate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'idleAgents')
+        
+        
         self.idle_agents = attributes[:'idleAgents']
+        
+      
       end
 
+      
       if attributes.has_key?(:'effectiveIdleAgents')
+        
+        
         self.effective_idle_agents = attributes[:'effectiveIdleAgents']
+        
+      
       end
 
+      
       if attributes.has_key?(:'adjustedCallsPerAgent')
+        
+        
         self.adjusted_calls_per_agent = attributes[:'adjustedCallsPerAgent']
+        
+      
       end
 
+      
       if attributes.has_key?(:'outstandingCalls')
+        
+        
         self.outstanding_calls = attributes[:'outstandingCalls']
+        
+      
       end
 
+      
       if attributes.has_key?(:'scheduledCalls')
+        
+        
         self.scheduled_calls = attributes[:'scheduledCalls']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

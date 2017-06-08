@@ -37,28 +37,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'direction' => :'direction',
+        
         :'expected_pages' => :'expectedPages',
+        
         :'active_page' => :'activePage',
+        
         :'lines_transmitted' => :'linesTransmitted',
+        
         :'bytes_transmitted' => :'bytesTransmitted',
+        
         :'baud_rate' => :'baudRate',
+        
         :'page_errors' => :'pageErrors',
+        
         :'line_errors' => :'lineErrors'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'direction' => :'String',
+        
         :'expected_pages' => :'Integer',
+        
         :'active_page' => :'Integer',
+        
         :'lines_transmitted' => :'Integer',
+        
         :'bytes_transmitted' => :'Integer',
+        
         :'baud_rate' => :'Integer',
+        
         :'page_errors' => :'Integer',
+        
         :'line_errors' => :'Integer'
+        
       }
     end
 
@@ -70,52 +88,169 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'direction')
+        
+        
         self.direction = attributes[:'direction']
+        
+      
       end
 
+      
       if attributes.has_key?(:'expectedPages')
+        
+        
         self.expected_pages = attributes[:'expectedPages']
+        
+      
       end
 
+      
       if attributes.has_key?(:'activePage')
+        
+        
         self.active_page = attributes[:'activePage']
+        
+      
       end
 
+      
       if attributes.has_key?(:'linesTransmitted')
+        
+        
         self.lines_transmitted = attributes[:'linesTransmitted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'bytesTransmitted')
+        
+        
         self.bytes_transmitted = attributes[:'bytesTransmitted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'baudRate')
+        
+        
         self.baud_rate = attributes[:'baudRate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pageErrors')
+        
+        
         self.page_errors = attributes[:'pageErrors']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lineErrors')
+        
+        
         self.line_errors = attributes[:'lineErrors']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

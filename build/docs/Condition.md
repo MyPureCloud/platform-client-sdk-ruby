@@ -14,6 +14,8 @@ title: Condition
 | **value_type** | **String** | Determines the type of the value associated with the condition | [optional] |
 | **operator** | **String** | An operation type for condition evaluation | [optional] |
 | **codes** | **Array&lt;String&gt;** | List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;) | [optional] |
+| **property_type** | **String** | Determines the type of the property associated with the condition | [optional] |
+| **property** | **String** | A value associated with the property type of this condition | [optional] |
 {: class="table table-striped"}
 
 

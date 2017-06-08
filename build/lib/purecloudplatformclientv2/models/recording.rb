@@ -80,56 +80,102 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'conversation_id' => :'conversationId',
+        
         :'path' => :'path',
+        
         :'start_time' => :'startTime',
+        
         :'end_time' => :'endTime',
+        
         :'media' => :'media',
+        
         :'annotations' => :'annotations',
+        
         :'transcript' => :'transcript',
+        
         :'email_transcript' => :'emailTranscript',
+        
         :'file_state' => :'fileState',
+        
         :'restore_expiration_time' => :'restoreExpirationTime',
+        
         :'media_uris' => :'mediaUris',
+        
         :'estimated_transcode_time_ms' => :'estimatedTranscodeTimeMs',
+        
         :'actual_transcode_time_ms' => :'actualTranscodeTimeMs',
+        
         :'archive_date' => :'archiveDate',
+        
         :'archive_medium' => :'archiveMedium',
+        
         :'delete_date' => :'deleteDate',
+        
         :'max_allowed_restorations_for_org' => :'maxAllowedRestorationsForOrg',
+        
         :'remaining_restorations_allowed_for_org' => :'remainingRestorationsAllowedForOrg',
+        
         :'session_id' => :'sessionId',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'conversation_id' => :'String',
+        
         :'path' => :'String',
+        
         :'start_time' => :'String',
+        
         :'end_time' => :'String',
+        
         :'media' => :'String',
+        
         :'annotations' => :'Array<Annotation>',
+        
         :'transcript' => :'Array<ChatMessage>',
+        
         :'email_transcript' => :'Array<RecordingEmailMessage>',
+        
         :'file_state' => :'String',
+        
         :'restore_expiration_time' => :'DateTime',
+        
         :'media_uris' => :'Hash<String, MediaResult>',
+        
         :'estimated_transcode_time_ms' => :'Integer',
+        
         :'actual_transcode_time_ms' => :'Integer',
+        
         :'archive_date' => :'DateTime',
+        
         :'archive_medium' => :'String',
+        
         :'delete_date' => :'DateTime',
+        
         :'max_allowed_restorations_for_org' => :'Integer',
+        
         :'remaining_restorations_allowed_for_org' => :'Integer',
+        
         :'session_id' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -141,124 +187,380 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'conversationId')
+        
+        
         self.conversation_id = attributes[:'conversationId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'path')
+        
+        
         self.path = attributes[:'path']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startTime')
+        
+        
         self.start_time = attributes[:'startTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endTime')
+        
+        
         self.end_time = attributes[:'endTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'media')
+        
+        
         self.media = attributes[:'media']
+        
+      
       end
 
+      
       if attributes.has_key?(:'annotations')
+        
         if (value = attributes[:'annotations']).is_a?(Array)
           self.annotations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'transcript')
+        
         if (value = attributes[:'transcript']).is_a?(Array)
           self.transcript = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'emailTranscript')
+        
         if (value = attributes[:'emailTranscript']).is_a?(Array)
           self.email_transcript = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'fileState')
+        
+        
         self.file_state = attributes[:'fileState']
+        
+      
       end
 
+      
       if attributes.has_key?(:'restoreExpirationTime')
+        
+        
         self.restore_expiration_time = attributes[:'restoreExpirationTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'mediaUris')
+        
         if (value = attributes[:'mediaUris']).is_a?(Array)
           self.media_uris = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'estimatedTranscodeTimeMs')
+        
+        
         self.estimated_transcode_time_ms = attributes[:'estimatedTranscodeTimeMs']
+        
+      
       end
 
+      
       if attributes.has_key?(:'actualTranscodeTimeMs')
+        
+        
         self.actual_transcode_time_ms = attributes[:'actualTranscodeTimeMs']
+        
+      
       end
 
+      
       if attributes.has_key?(:'archiveDate')
+        
+        
         self.archive_date = attributes[:'archiveDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'archiveMedium')
+        
+        
         self.archive_medium = attributes[:'archiveMedium']
+        
+      
       end
 
+      
       if attributes.has_key?(:'deleteDate')
+        
+        
         self.delete_date = attributes[:'deleteDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'maxAllowedRestorationsForOrg')
+        
+        
         self.max_allowed_restorations_for_org = attributes[:'maxAllowedRestorationsForOrg']
+        
+      
       end
 
+      
       if attributes.has_key?(:'remainingRestorationsAllowedForOrg')
+        
+        
         self.remaining_restorations_allowed_for_org = attributes[:'remainingRestorationsAllowedForOrg']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sessionId')
+        
+        
         self.session_id = attributes[:'sessionId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["ARCHIVED", "AVAILABLE", "DELETED", "RESTORED", "RESTORING", "UPLOADING"]
       if @file_state && !allowed_values.include?(@file_state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["CLOUDARCHIVE"]
       if @archive_medium && !allowed_values.include?(@archive_medium)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] file_state Object to be assigned
     def file_state=(file_state)
@@ -269,6 +571,35 @@ module PureCloud
       @file_state = file_state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] archive_medium Object to be assigned
     def archive_medium=(archive_medium)
@@ -279,6 +610,34 @@ module PureCloud
       @archive_medium = archive_medium
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

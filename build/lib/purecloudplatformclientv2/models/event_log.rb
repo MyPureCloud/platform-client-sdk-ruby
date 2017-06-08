@@ -44,32 +44,54 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'error_entity' => :'errorEntity',
+        
         :'related_entity' => :'relatedEntity',
+        
         :'timestamp' => :'timestamp',
+        
         :'level' => :'level',
+        
         :'category' => :'category',
+        
         :'correlation_id' => :'correlationId',
+        
         :'event_message' => :'eventMessage',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'error_entity' => :'UriReference',
+        
         :'related_entity' => :'UriReference',
+        
         :'timestamp' => :'DateTime',
+        
         :'level' => :'String',
+        
         :'category' => :'String',
+        
         :'correlation_id' => :'String',
+        
         :'event_message' => :'EventMessage',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -81,68 +103,191 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'errorEntity')
+        
+        
         self.error_entity = attributes[:'errorEntity']
+        
+      
       end
 
+      
       if attributes.has_key?(:'relatedEntity')
+        
+        
         self.related_entity = attributes[:'relatedEntity']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timestamp')
+        
+        
         self.timestamp = attributes[:'timestamp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'level')
+        
+        
         self.level = attributes[:'level']
+        
+      
       end
 
+      
       if attributes.has_key?(:'category')
+        
+        
         self.category = attributes[:'category']
+        
+      
       end
 
+      
       if attributes.has_key?(:'correlationId')
+        
+        
         self.correlation_id = attributes[:'correlationId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'eventMessage')
+        
+        
         self.event_message = attributes[:'eventMessage']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["INFO", "WARNING", "ERROR"]
       if @level && !allowed_values.include?(@level)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["CAMPAIGN_RULE", "IMPORT_ERROR", "CALLBACK", "CONTACT_LIST_FILTER", "SCHEDULE", "CALL_RESTRICTION", "CALL_RULE", "ORGANIZATION_CONFIGURATION"]
       if @category && !allowed_values.include?(@category)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] level Object to be assigned
     def level=(level)
@@ -153,6 +298,10 @@ module PureCloud
       @level = level
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] category Object to be assigned
     def category=(category)
@@ -163,6 +312,24 @@ module PureCloud
       @category = category
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

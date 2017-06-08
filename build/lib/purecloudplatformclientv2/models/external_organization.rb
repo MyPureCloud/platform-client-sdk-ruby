@@ -63,48 +63,86 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'company_type' => :'companyType',
+        
         :'industry' => :'industry',
+        
         :'primary_contact_id' => :'primaryContactId',
+        
         :'address' => :'address',
+        
         :'phone_number' => :'phoneNumber',
+        
         :'fax_number' => :'faxNumber',
+        
         :'employee_count' => :'employeeCount',
+        
         :'revenue' => :'revenue',
+        
         :'tags' => :'tags',
+        
         :'websites' => :'websites',
+        
         :'tickers' => :'tickers',
+        
         :'twitter_id' => :'twitterId',
+        
         :'modify_date' => :'modifyDate',
+        
         :'create_date' => :'createDate',
+        
         :'external_data_sources' => :'externalDataSources',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'company_type' => :'String',
+        
         :'industry' => :'String',
+        
         :'primary_contact_id' => :'String',
+        
         :'address' => :'ContactAddress',
+        
         :'phone_number' => :'PhoneNumber',
+        
         :'fax_number' => :'PhoneNumber',
+        
         :'employee_count' => :'Integer',
+        
         :'revenue' => :'Integer',
+        
         :'tags' => :'Array<String>',
+        
         :'websites' => :'Array<String>',
+        
         :'tickers' => :'Array<Ticker>',
+        
         :'twitter_id' => :'TwitterId',
+        
         :'modify_date' => :'DateTime',
+        
         :'create_date' => :'DateTime',
+        
         :'external_data_sources' => :'Array<ExternalDataSource>',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -116,104 +154,362 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'companyType')
+        
+        
         self.company_type = attributes[:'companyType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'industry')
+        
+        
         self.industry = attributes[:'industry']
+        
+      
       end
 
+      
       if attributes.has_key?(:'primaryContactId')
+        
+        
         self.primary_contact_id = attributes[:'primaryContactId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'address')
+        
+        
         self.address = attributes[:'address']
+        
+      
       end
 
+      
       if attributes.has_key?(:'phoneNumber')
+        
+        
         self.phone_number = attributes[:'phoneNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'faxNumber')
+        
+        
         self.fax_number = attributes[:'faxNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'employeeCount')
+        
+        
         self.employee_count = attributes[:'employeeCount']
+        
+      
       end
 
+      
       if attributes.has_key?(:'revenue')
+        
+        
         self.revenue = attributes[:'revenue']
+        
+      
       end
 
+      
       if attributes.has_key?(:'tags')
+        
         if (value = attributes[:'tags']).is_a?(Array)
           self.tags = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'websites')
+        
         if (value = attributes[:'websites']).is_a?(Array)
           self.websites = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'tickers')
+        
         if (value = attributes[:'tickers']).is_a?(Array)
           self.tickers = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'twitterId')
+        
+        
         self.twitter_id = attributes[:'twitterId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifyDate')
+        
+        
         self.modify_date = attributes[:'modifyDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createDate')
+        
+        
         self.create_date = attributes[:'createDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'externalDataSources')
+        
         if (value = attributes[:'externalDataSources']).is_a?(Array)
           self.external_data_sources = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

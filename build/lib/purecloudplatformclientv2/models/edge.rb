@@ -102,96 +102,183 @@ module PureCloud
     # Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed.
     attr_accessor :proxy
 
+    # The name provided by the operating system of the Edge.
+    attr_accessor :os_name
+
     # The URI for this object
     attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'description' => :'description',
+        
         :'version' => :'version',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'modified_by' => :'modifiedBy',
+        
         :'created_by' => :'createdBy',
+        
         :'state' => :'state',
+        
         :'modified_by_app' => :'modifiedByApp',
+        
         :'created_by_app' => :'createdByApp',
+        
         :'interfaces' => :'interfaces',
+        
         :'make' => :'make',
+        
         :'model' => :'model',
+        
         :'api_version' => :'apiVersion',
+        
         :'software_version' => :'softwareVersion',
+        
         :'software_version_timestamp' => :'softwareVersionTimestamp',
+        
         :'software_version_platform' => :'softwareVersionPlatform',
+        
         :'software_version_configuration' => :'softwareVersionConfiguration',
+        
         :'full_software_version' => :'fullSoftwareVersion',
+        
         :'pairing_id' => :'pairingId',
+        
         :'fingerprint' => :'fingerprint',
+        
         :'fingerprint_hint' => :'fingerprintHint',
+        
         :'current_version' => :'currentVersion',
+        
         :'staged_version' => :'stagedVersion',
+        
         :'patch' => :'patch',
+        
         :'status_code' => :'statusCode',
+        
         :'edge_group' => :'edgeGroup',
+        
         :'site' => :'site',
+        
         :'software_status' => :'softwareStatus',
+        
         :'online_status' => :'onlineStatus',
+        
         :'serial_number' => :'serialNumber',
+        
         :'physical_edge' => :'physicalEdge',
+        
         :'managed' => :'managed',
+        
         :'edge_deployment_type' => :'edgeDeploymentType',
+        
         :'call_draining_state' => :'callDrainingState',
+        
         :'conversation_count' => :'conversationCount',
+        
         :'proxy' => :'proxy',
+        
+        :'os_name' => :'osName',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'description' => :'String',
+        
         :'version' => :'Integer',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'modified_by' => :'String',
+        
         :'created_by' => :'String',
+        
         :'state' => :'String',
+        
         :'modified_by_app' => :'String',
+        
         :'created_by_app' => :'String',
+        
         :'interfaces' => :'Array<EdgeInterface>',
+        
         :'make' => :'String',
+        
         :'model' => :'String',
+        
         :'api_version' => :'String',
+        
         :'software_version' => :'String',
+        
         :'software_version_timestamp' => :'String',
+        
         :'software_version_platform' => :'String',
+        
         :'software_version_configuration' => :'String',
+        
         :'full_software_version' => :'String',
+        
         :'pairing_id' => :'String',
+        
         :'fingerprint' => :'String',
+        
         :'fingerprint_hint' => :'String',
+        
         :'current_version' => :'String',
+        
         :'staged_version' => :'String',
+        
         :'patch' => :'String',
+        
         :'status_code' => :'String',
+        
         :'edge_group' => :'EdgeGroup',
+        
         :'site' => :'Site',
+        
         :'software_status' => :'DomainEdgeSoftwareUpdateDto',
+        
         :'online_status' => :'String',
+        
         :'serial_number' => :'String',
+        
         :'physical_edge' => :'BOOLEAN',
+        
         :'managed' => :'BOOLEAN',
+        
         :'edge_deployment_type' => :'String',
+        
         :'call_draining_state' => :'String',
+        
         :'conversation_count' => :'Integer',
+        
         :'proxy' => :'String',
+        
+        :'os_name' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -203,202 +290,618 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'description')
+        
+        
         self.description = attributes[:'description']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedBy')
+        
+        
         self.modified_by = attributes[:'modifiedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdBy')
+        
+        
         self.created_by = attributes[:'createdBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedByApp')
+        
+        
         self.modified_by_app = attributes[:'modifiedByApp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdByApp')
+        
+        
         self.created_by_app = attributes[:'createdByApp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'interfaces')
+        
         if (value = attributes[:'interfaces']).is_a?(Array)
           self.interfaces = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'make')
+        
+        
         self.make = attributes[:'make']
+        
+      
       end
 
+      
       if attributes.has_key?(:'model')
+        
+        
         self.model = attributes[:'model']
+        
+      
       end
 
+      
       if attributes.has_key?(:'apiVersion')
+        
+        
         self.api_version = attributes[:'apiVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'softwareVersion')
+        
+        
         self.software_version = attributes[:'softwareVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'softwareVersionTimestamp')
+        
+        
         self.software_version_timestamp = attributes[:'softwareVersionTimestamp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'softwareVersionPlatform')
+        
+        
         self.software_version_platform = attributes[:'softwareVersionPlatform']
+        
+      
       end
 
+      
       if attributes.has_key?(:'softwareVersionConfiguration')
+        
+        
         self.software_version_configuration = attributes[:'softwareVersionConfiguration']
+        
+      
       end
 
+      
       if attributes.has_key?(:'fullSoftwareVersion')
+        
+        
         self.full_software_version = attributes[:'fullSoftwareVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pairingId')
+        
+        
         self.pairing_id = attributes[:'pairingId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'fingerprint')
+        
+        
         self.fingerprint = attributes[:'fingerprint']
+        
+      
       end
 
+      
       if attributes.has_key?(:'fingerprintHint')
+        
+        
         self.fingerprint_hint = attributes[:'fingerprintHint']
+        
+      
       end
 
+      
       if attributes.has_key?(:'currentVersion')
+        
+        
         self.current_version = attributes[:'currentVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'stagedVersion')
+        
+        
         self.staged_version = attributes[:'stagedVersion']
+        
+      
       end
 
+      
       if attributes.has_key?(:'patch')
+        
+        
         self.patch = attributes[:'patch']
+        
+      
       end
 
+      
       if attributes.has_key?(:'statusCode')
+        
+        
         self.status_code = attributes[:'statusCode']
+        
+      
       end
 
+      
       if attributes.has_key?(:'edgeGroup')
+        
+        
         self.edge_group = attributes[:'edgeGroup']
+        
+      
       end
 
+      
       if attributes.has_key?(:'site')
+        
+        
         self.site = attributes[:'site']
+        
+      
       end
 
+      
       if attributes.has_key?(:'softwareStatus')
+        
+        
         self.software_status = attributes[:'softwareStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'onlineStatus')
+        
+        
         self.online_status = attributes[:'onlineStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'serialNumber')
+        
+        
         self.serial_number = attributes[:'serialNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'physicalEdge')
+        
+        
         self.physical_edge = attributes[:'physicalEdge']
+        
+      
       end
 
+      
       if attributes.has_key?(:'managed')
+        
+        
         self.managed = attributes[:'managed']
+        
+      
       end
 
+      
       if attributes.has_key?(:'edgeDeploymentType')
+        
+        
         self.edge_deployment_type = attributes[:'edgeDeploymentType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callDrainingState')
+        
+        
         self.call_draining_state = attributes[:'callDrainingState']
+        
+      
       end
 
+      
       if attributes.has_key?(:'conversationCount')
+        
+        
         self.conversation_count = attributes[:'conversationCount']
+        
+      
       end
 
+      
       if attributes.has_key?(:'proxy')
+        
+        
         self.proxy = attributes[:'proxy']
+        
+      
       end
 
+      
+      if attributes.has_key?(:'osName')
+        
+        
+        self.os_name = attributes[:'osName']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["active", "inactive", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["NEW", "AWAITING_CONNECTION", "AWAITING_FINGERPRINT", "AWAITING_FINGERPRINT_VERIFICATION", "FINGERPRINT_VERIFIED", "AWAITING_BOOTSTRAP", "ACTIVE", "INACTIVE", "RMA", "UNPAIRING", "UNPAIRED"]
       if @status_code && !allowed_values.include?(@status_code)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["ONLINE", "OFFLINE"]
       if @online_status && !allowed_values.include?(@online_status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["HARDWARE", "LDM", "CDM", "INVALID"]
       if @edge_deployment_type && !allowed_values.include?(@edge_deployment_type)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["NONE", "WAIT", "WAIT_TIMEOUT", "TERMINATE", "COMPLETE"]
       if @call_draining_state && !allowed_values.include?(@call_draining_state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -409,6 +912,95 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status_code Object to be assigned
     def status_code=(status_code)
@@ -419,6 +1011,25 @@ module PureCloud
       @status_code = status_code
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] online_status Object to be assigned
     def online_status=(online_status)
@@ -429,6 +1040,25 @@ module PureCloud
       @online_status = online_status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] edge_deployment_type Object to be assigned
     def edge_deployment_type=(edge_deployment_type)
@@ -439,6 +1069,10 @@ module PureCloud
       @edge_deployment_type = edge_deployment_type
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] call_draining_state Object to be assigned
     def call_draining_state=(call_draining_state)
@@ -449,6 +1083,29 @@ module PureCloud
       @call_draining_state = call_draining_state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -492,6 +1149,7 @@ module PureCloud
           call_draining_state == o.call_draining_state &&
           conversation_count == o.conversation_count &&
           proxy == o.proxy &&
+          os_name == o.os_name &&
           self_uri == o.self_uri
     end
 
@@ -504,7 +1162,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, interfaces, make, model, api_version, software_version, software_version_timestamp, software_version_platform, software_version_configuration, full_software_version, pairing_id, fingerprint, fingerprint_hint, current_version, staged_version, patch, status_code, edge_group, site, software_status, online_status, serial_number, physical_edge, managed, edge_deployment_type, call_draining_state, conversation_count, proxy, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, interfaces, make, model, api_version, software_version, software_version_timestamp, software_version_platform, software_version_configuration, full_software_version, pairing_id, fingerprint, fingerprint_hint, current_version, staged_version, patch, status_code, edge_group, site, software_status, online_status, serial_number, physical_edge, managed, edge_deployment_type, call_draining_state, conversation_count, proxy, os_name, self_uri].hash
     end
 
     # build the object from hash

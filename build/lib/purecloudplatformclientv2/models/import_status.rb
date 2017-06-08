@@ -36,22 +36,34 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'state' => :'state',
+        
         :'total_records' => :'totalRecords',
+        
         :'completed_records' => :'completedRecords',
+        
         :'percent_complete' => :'percentComplete',
+        
         :'failure_reason' => :'failureReason'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'state' => :'String',
+        
         :'total_records' => :'Integer',
+        
         :'completed_records' => :'Integer',
+        
         :'percent_complete' => :'Integer',
+        
         :'failure_reason' => :'String'
+        
       }
     end
 
@@ -63,60 +75,116 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'totalRecords')
+        
+        
         self.total_records = attributes[:'totalRecords']
+        
+      
       end
 
+      
       if attributes.has_key?(:'completedRecords')
+        
+        
         self.completed_records = attributes[:'completedRecords']
+        
+      
       end
 
+      
       if attributes.has_key?(:'percentComplete')
+        
+        
         self.percent_complete = attributes[:'percentComplete']
+        
+      
       end
 
+      
       if attributes.has_key?(:'failureReason')
+        
+        
         self.failure_reason = attributes[:'failureReason']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @state.nil?
         return false
       end
 
+      
+      
       allowed_values = ["IN_PROGRESS", "FAILED"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
       if @total_records.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @completed_records.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @percent_complete.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -127,6 +195,29 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

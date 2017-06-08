@@ -30,18 +30,26 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'intent' => :'intent',
+        
         :'formula' => :'formula',
+        
         :'estimated_wait_time_seconds' => :'estimatedWaitTimeSeconds'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'intent' => :'String',
+        
         :'formula' => :'String',
+        
         :'estimated_wait_time_seconds' => :'Integer'
+        
       }
     end
 
@@ -53,48 +61,85 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'intent')
+        
+        
         self.intent = attributes[:'intent']
+        
+      
       end
 
+      
       if attributes.has_key?(:'formula')
+        
+        
         self.formula = attributes[:'formula']
+        
+      
       end
 
+      
       if attributes.has_key?(:'estimatedWaitTimeSeconds')
+        
+        
         self.estimated_wait_time_seconds = attributes[:'estimatedWaitTimeSeconds']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["ALL", "CALL", "CALLBACK", "CHAT", "EMAIL", "SOCIALEXPRESSION", "VIDEOCOMM"]
       if @intent && !allowed_values.include?(@intent)
         return false
       end
+      
+      
+      
+      
       if @formula.nil?
         return false
       end
 
+      
+      
       allowed_values = ["BEST", "SIMPLE", "ABANDON", "PATIENCE_ABANDON"]
       if @formula && !allowed_values.include?(@formula)
         return false
       end
+      
+      
+      
+      
       if @estimated_wait_time_seconds.nil?
         return false
       end
 
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] intent Object to be assigned
     def intent=(intent)
@@ -105,6 +150,10 @@ module PureCloud
       @intent = intent
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] formula Object to be assigned
     def formula=(formula)
@@ -115,6 +164,14 @@ module PureCloud
       @formula = formula
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

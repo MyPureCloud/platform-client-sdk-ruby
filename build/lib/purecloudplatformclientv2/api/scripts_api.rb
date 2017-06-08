@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ScriptsApi.get_script ..."
       end
+      
+      
       # verify the required parameter 'script_id' is set
       fail ArgumentError, "Missing the required parameter 'script_id' when calling ScriptsApi.get_script" if script_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/{scriptId}".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -102,10 +110,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ScriptsApi.get_script_page ..."
       end
+      
+      
       # verify the required parameter 'script_id' is set
       fail ArgumentError, "Missing the required parameter 'script_id' when calling ScriptsApi.get_script_page" if script_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'page_id' is set
       fail ArgumentError, "Missing the required parameter 'page_id' when calling ScriptsApi.get_script_page" if page_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/{scriptId}/pages/{pageId}".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s).sub('{' + 'pageId' + '}', page_id.to_s)
 
@@ -128,7 +149,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -161,8 +183,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ScriptsApi.get_script_pages ..."
       end
+      
+      
       # verify the required parameter 'script_id' is set
       fail ArgumentError, "Missing the required parameter 'script_id' when calling ScriptsApi.get_script_pages" if script_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/{scriptId}/pages".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
 
@@ -185,7 +214,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -232,12 +262,63 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ScriptsApi.get_scripts ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_by'] && !['modifiedDate', 'createdDate'].include?(opts[:'sort_by'])
         fail ArgumentError, 'invalid value for "sort_by", must be one of modifiedDate, createdDate'
       end
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts".sub('{format}','json')
 
@@ -268,7 +349,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -311,6 +393,43 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ScriptsApi.get_scripts_published ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/published".sub('{format}','json')
 
@@ -339,7 +458,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -372,8 +492,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ScriptsApi.get_scripts_published_script_id ..."
       end
+      
+      
       # verify the required parameter 'script_id' is set
       fail ArgumentError, "Missing the required parameter 'script_id' when calling ScriptsApi.get_scripts_published_script_id" if script_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/published/{scriptId}".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
 
@@ -396,7 +523,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -431,10 +559,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ScriptsApi.get_scripts_published_script_id_page ..."
       end
+      
+      
       # verify the required parameter 'script_id' is set
       fail ArgumentError, "Missing the required parameter 'script_id' when calling ScriptsApi.get_scripts_published_script_id_page" if script_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'page_id' is set
       fail ArgumentError, "Missing the required parameter 'page_id' when calling ScriptsApi.get_scripts_published_script_id_page" if page_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/published/{scriptId}/pages/{pageId}".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s).sub('{' + 'pageId' + '}', page_id.to_s)
 
@@ -457,7 +598,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -490,8 +632,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ScriptsApi.get_scripts_published_script_id_pages ..."
       end
+      
+      
       # verify the required parameter 'script_id' is set
       fail ArgumentError, "Missing the required parameter 'script_id' when calling ScriptsApi.get_scripts_published_script_id_pages" if script_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/published/{scriptId}/pages".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
 
@@ -514,7 +663,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -553,8 +703,33 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ScriptsApi.get_scripts_published_script_id_variables ..."
       end
+      
+      
       # verify the required parameter 'script_id' is set
       fail ArgumentError, "Missing the required parameter 'script_id' when calling ScriptsApi.get_scripts_published_script_id_variables" if script_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/published/{scriptId}/variables".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
 
@@ -580,7 +755,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,

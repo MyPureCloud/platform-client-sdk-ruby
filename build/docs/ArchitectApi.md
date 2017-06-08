@@ -101,8 +101,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **all_resources** | **BOOLEAN**| Whether or not to delete all the prompt resources | [optional] 
+ **prompt_id** | **String**| Prompt ID |  |
+ **all_resources** | **BOOLEAN**| Whether or not to delete all the prompt resources | [optional]  |
 {: class="table table-striped"}
 
 
@@ -162,8 +162,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **language_code** | **String**| Language | 
+ **prompt_id** | **String**| Prompt ID |  |
+ **language_code** | **String**| Language |  |
 {: class="table table-striped"}
 
 
@@ -222,7 +222,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**Array&lt;String&gt;**](String.html)| List of Prompt IDs | 
+ **id** | [**Array&lt;String&gt;**](String.html)| List of Prompt IDs |  |
 {: class="table table-striped"}
 
 
@@ -282,8 +282,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **language_code** | **String**| Language | 
+ **prompt_id** | **String**| Prompt ID |  |
+ **language_code** | **String**| Language |  |
 {: class="table table-striped"}
 
 
@@ -341,7 +341,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow_id** | **String**| Flow ID | 
+ **flow_id** | **String**| Flow ID |  |
 {: class="table table-striped"}
 
 
@@ -400,7 +400,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**Array&lt;String&gt;**](String.html)| List of Flow IDs | 
+ **id** | [**Array&lt;String&gt;**](String.html)| List of Flow IDs |  |
 {: class="table table-striped"}
 
 
@@ -468,14 +468,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **String**| Object name to search for | 
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **object_type** | [**Array&lt;String&gt;**](String.html)| Object type(s) to search for | [optional] 
- **consumed_resources** | **BOOLEAN**| Include resources each result item consumes | [optional] 
- **consuming_resources** | **BOOLEAN**| Include resources that consume each result item | [optional] 
- **consumed_resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consumed resources to return, if consumed resources are requested | [optional] 
- **consuming_resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consuming resources to return, if consuming resources are requested | [optional] 
+ **name** | **String**| Object name to search for |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **object_type** | [**Array&lt;String&gt;**](String.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+ **consumed_resources** | **BOOLEAN**| Include resources each result item consumes | [optional]  |
+ **consuming_resources** | **BOOLEAN**| Include resources that consume each result item | [optional]  |
+ **consumed_resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consumed resources to return, if consumed resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+ **consuming_resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consuming resources to return, if consuming resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 
@@ -594,10 +594,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| Consuming object ID | 
- **version** | **String**| Consuming object version | 
- **object_type** | **String**| Consuming object type | 
- **resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consumed resources to show | [optional] 
+ **id** | **String**| Consuming object ID |  |
+ **version** | **String**| Consuming object version |  |
+ **object_type** | **String**| Consuming object type | <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+ **resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consumed resources to show | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 
@@ -661,9 +661,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| Consumed object ID | 
- **object_type** | **String**| Consumed object type (only versioned object types are valid) | 
- **resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consuming resources to show | [optional] 
+ **id** | **String**| Consumed object ID |  |
+ **object_type** | **String**| Consumed object type (only versioned object types are valid) | <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+ **resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consuming resources to show | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 
@@ -729,13 +729,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **String**| Name to search for | [optional] 
- **object_type** | [**Array&lt;String&gt;**](String.html)| Object type(s) to search for | [optional] 
- **flow_filter** | **String**| Show only checkedIn or published flows | [optional] 
- **consumed_resources** | **BOOLEAN**| Return consumed resources? | [optional] [default to false]
- **consumed_resource_type** | [**Array&lt;String&gt;**](String.html)| Resource type(s) to return | [optional] 
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
+ **name** | **String**| Name to search for | [optional]  |
+ **object_type** | [**Array&lt;String&gt;**](String.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+ **flow_filter** | **String**| Show only checkedIn or published flows | [optional] <br />**Values**: checkedIn, published |
+ **consumed_resources** | **BOOLEAN**| Return consumed resources? | [optional] [default to false] |
+ **consumed_resource_type** | [**Array&lt;String&gt;**](String.html)| Resource type(s) to return | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
 
 
@@ -802,13 +802,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| Object ID | 
- **version** | **String**| Object version | [optional] 
- **object_type** | **String**| Object type | [optional] 
- **consumed_resources** | **BOOLEAN**| Include resources this item consumes | [optional] 
- **consuming_resources** | **BOOLEAN**| Include resources that consume this item | [optional] 
- **consumed_resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consumed resources to return, if consumed resources are requested | [optional] 
- **consuming_resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consuming resources to return, if consuming resources are requested | [optional] 
+ **id** | **String**| Object ID |  |
+ **version** | **String**| Object version | [optional]  |
+ **object_type** | **String**| Object type | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+ **consumed_resources** | **BOOLEAN**| Include resources this item consumes | [optional]  |
+ **consuming_resources** | **BOOLEAN**| Include resources that consume this item | [optional]  |
+ **consumed_resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consumed resources to return, if consumed resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+ **consuming_resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consuming resources to return, if consuming resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 
@@ -867,7 +867,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type_id** | **String**| Type ID | 
+ **type_id** | **String**| Type ID |  |
 {: class="table table-striped"}
 
 
@@ -928,8 +928,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
 
 
@@ -994,12 +994,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **String**| Name to search for | [optional] 
- **object_type** | [**Array&lt;String&gt;**](String.html)| Object type(s) to search for | [optional] 
- **consumed_resources** | **BOOLEAN**| Return consumed resources? | [optional] [default to false]
- **consumed_resource_type** | [**Array&lt;String&gt;**](String.html)| Resource type(s) to return | [optional] 
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
+ **name** | **String**| Name to search for | [optional]  |
+ **object_type** | [**Array&lt;String&gt;**](String.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+ **consumed_resources** | **BOOLEAN**| Return consumed resources? | [optional] [default to false] |
+ **consumed_resource_type** | [**Array&lt;String&gt;**](String.html)| Resource type(s) to return | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
 
 
@@ -1058,7 +1058,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
+ **prompt_id** | **String**| Prompt ID |  |
 {: class="table table-striped"}
 
 
@@ -1119,8 +1119,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **language_code** | **String**| Language | 
+ **prompt_id** | **String**| Prompt ID |  |
+ **language_code** | **String**| Language |  |
 {: class="table table-striped"}
 
 
@@ -1183,9 +1183,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
+ **prompt_id** | **String**| Prompt ID |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
 
 
@@ -1249,11 +1249,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **name** | **String**| Name | [optional] 
- **description** | **String**| Description | [optional] 
- **name_or_description** | **String**| Name or description | [optional] 
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **name** | **String**| Name | [optional]  |
+ **description** | **String**| Description | [optional]  |
+ **name_or_description** | **String**| Name or description | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1312,7 +1312,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| promptId | 
+ **prompt_id** | **String**| promptId |  |
 {: class="table table-striped"}
 
 
@@ -1373,8 +1373,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **language_code** | **String**| Language | 
+ **prompt_id** | **String**| Prompt ID |  |
+ **language_code** | **String**| Language |  |
 {: class="table table-striped"}
 
 
@@ -1439,11 +1439,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **sort_by** | **String**| Sort by | [optional] [default to id]
- **sort_order** | **String**| Sort order | [optional] [default to asc]
+ **prompt_id** | **String**| Prompt ID |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Sort by | [optional] [default to id] |
+ **sort_order** | **String**| Sort order | [optional] [default to asc] |
 {: class="table table-striped"}
 
 
@@ -1509,13 +1509,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **sort_by** | **String**| Sort by | [optional] [default to id]
- **sort_order** | **String**| Sort order | [optional] [default to asc]
- **name** | **String**| Name | [optional] 
- **description** | **String**| Description | [optional] 
- **name_or_description** | **String**| Name or description | [optional] 
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Sort by | [optional] [default to id] |
+ **sort_order** | **String**| Sort order | [optional] [default to asc] |
+ **name** | **String**| Name | [optional]  |
+ **description** | **String**| Description | [optional]  |
+ **name_or_description** | **String**| Name or description | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1577,8 +1577,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow_id** | **String**| Flow ID | 
- **deleted** | **BOOLEAN**| Include deleted flows | [optional] [default to false]
+ **flow_id** | **String**| Flow ID |  |
+ **deleted** | **BOOLEAN**| Include deleted flows | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -1640,8 +1640,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow_id** | **String**| Flow ID | 
- **deleted** | **BOOLEAN**| Include deleted flows | [optional] [default to false]
+ **flow_id** | **String**| Flow ID |  |
+ **deleted** | **BOOLEAN**| Include deleted flows | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -1705,9 +1705,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow_id** | **String**| Flow ID | 
- **version_id** | **String**| Version ID | 
- **deleted** | **String**| Include deleted flows | [optional] 
+ **flow_id** | **String**| Flow ID |  |
+ **version_id** | **String**| Version ID |  |
+ **deleted** | **String**| Include deleted flows | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1771,9 +1771,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow_id** | **String**| Flow ID | 
- **version_id** | **String**| Version ID | 
- **deleted** | **String**| Include deleted flows | [optional] 
+ **flow_id** | **String**| Flow ID |  |
+ **version_id** | **String**| Version ID |  |
+ **deleted** | **String**| Include deleted flows | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1837,10 +1837,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow_id** | **String**| Flow ID | 
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **deleted** | **BOOLEAN**| Include deleted flows | [optional] 
+ **flow_id** | **String**| Flow ID |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **deleted** | **BOOLEAN**| Include deleted flows | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1915,21 +1915,21 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type** | **String**| Type | 
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **sort_by** | **String**| Sort by | [optional] [default to id]
- **sort_order** | **String**| Sort order | [optional] [default to asc]
- **id** | [**Array&lt;String&gt;**](String.html)| ID | [optional] 
- **name** | **String**| Name | [optional] 
- **description** | **String**| Description | [optional] 
- **name_or_description** | **String**| Name or description | [optional] 
- **publish_version_id** | **String**| Publish version ID | [optional] 
- **editable_by** | **String**| Editable by | [optional] 
- **locked_by** | **String**| Locked by | [optional] 
- **secure** | **String**| Secure | [optional] 
- **deleted** | **BOOLEAN**| Include deleted | [optional] [default to false]
- **include_schemas** | **BOOLEAN**| Include variable schemas | [optional] [default to false]
+ **type** | **String**| Type |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Sort by | [optional] [default to id] |
+ **sort_order** | **String**| Sort order | [optional] [default to asc] |
+ **id** | [**Array&lt;String&gt;**](String.html)| ID | [optional]  |
+ **name** | **String**| Name | [optional]  |
+ **description** | **String**| Description | [optional]  |
+ **name_or_description** | **String**| Name or description | [optional]  |
+ **publish_version_id** | **String**| Publish version ID | [optional]  |
+ **editable_by** | **String**| Editable by | [optional]  |
+ **locked_by** | **String**| Locked by | [optional]  |
+ **secure** | **String**| Secure | [optional] <br />**Values**: any, checkedin, published |
+ **deleted** | **BOOLEAN**| Include deleted | [optional] [default to false] |
+ **include_schemas** | **BOOLEAN**| Include variable schemas | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -2043,8 +2043,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **body** | [**PromptAssetCreate**](PromptAssetCreate.html)|  | [optional] 
+ **prompt_id** | **String**| Prompt ID |  |
+ **body** | [**PromptAssetCreate**](PromptAssetCreate.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2104,7 +2104,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Prompt**](Prompt.html)|  | [optional] 
+ **body** | [**Prompt**](Prompt.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2166,8 +2166,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  | [optional] 
+ **prompt_id** | **String**| Prompt ID |  |
+ **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2229,8 +2229,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow_id** | **String**| Flow ID | 
- **body** | **Object**|  | [optional] 
+ **flow_id** | **String**| Flow ID |  |
+ **body** | **Object**|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2290,7 +2290,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Flow**](Flow.html)|  | [optional] 
+ **body** | [**Flow**](Flow.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2349,7 +2349,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow** | **String**| Flow ID | 
+ **flow** | **String**| Flow ID |  |
 {: class="table table-striped"}
 
 
@@ -2408,7 +2408,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow** | **String**| Flow ID | 
+ **flow** | **String**| Flow ID |  |
 {: class="table table-striped"}
 
 
@@ -2467,7 +2467,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow** | **String**| Flow ID | 
+ **flow** | **String**| Flow ID |  |
 {: class="table table-striped"}
 
 
@@ -2529,8 +2529,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow** | **String**| Flow ID | 
- **version** | **String**| version | [optional] 
+ **flow** | **String**| Flow ID |  |
+ **version** | **String**| version | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2589,7 +2589,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow** | **String**| Flow ID | 
+ **flow** | **String**| Flow ID |  |
 {: class="table table-striped"}
 
 
@@ -2648,7 +2648,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow** | **String**| Flow ID | 
+ **flow** | **String**| Flow ID |  |
 {: class="table table-striped"}
 
 
@@ -2710,8 +2710,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **body** | [**Prompt**](Prompt.html)|  | [optional] 
+ **prompt_id** | **String**| Prompt ID |  |
+ **body** | [**Prompt**](Prompt.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2775,9 +2775,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **language_code** | **String**| Language | 
- **body** | [**PromptAsset**](PromptAsset.html)|  | [optional] 
+ **prompt_id** | **String**| Prompt ID |  |
+ **language_code** | **String**| Language |  |
+ **body** | [**PromptAsset**](PromptAsset.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2841,9 +2841,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prompt_id** | **String**| Prompt ID | 
- **language_code** | **String**| Language | 
- **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  | [optional] 
+ **prompt_id** | **String**| Prompt ID |  |
+ **language_code** | **String**| Language |  |
+ **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2905,8 +2905,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow_id** | **String**| Flow ID | 
- **body** | [**Flow**](Flow.html)|  | [optional] 
+ **flow_id** | **String**| Flow ID |  |
+ **body** | [**Flow**](Flow.html)|  | [optional]  |
 {: class="table table-striped"}
 
 

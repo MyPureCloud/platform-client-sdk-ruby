@@ -43,34 +43,58 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'version' => :'version',
+        
         :'campaign_rule_entities' => :'campaignRuleEntities',
+        
         :'campaign_rule_conditions' => :'campaignRuleConditions',
+        
         :'campaign_rule_actions' => :'campaignRuleActions',
+        
         :'match_any_conditions' => :'matchAnyConditions',
+        
         :'enabled' => :'enabled',
+        
         :'additional_properties' => :'additionalProperties'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'version' => :'Integer',
+        
         :'campaign_rule_entities' => :'CampaignRuleNotificationCampaignRuleEntities',
+        
         :'campaign_rule_conditions' => :'Array<CampaignRuleNotificationCampaignRuleConditions>',
+        
         :'campaign_rule_actions' => :'Array<CampaignRuleNotificationCampaignRuleActions>',
+        
         :'match_any_conditions' => :'BOOLEAN',
+        
         :'enabled' => :'BOOLEAN',
+        
         :'additional_properties' => :'Object'
+        
       }
     end
 
@@ -82,68 +106,227 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'campaignRuleEntities')
+        
+        
         self.campaign_rule_entities = attributes[:'campaignRuleEntities']
+        
+      
       end
 
+      
       if attributes.has_key?(:'campaignRuleConditions')
+        
         if (value = attributes[:'campaignRuleConditions']).is_a?(Array)
           self.campaign_rule_conditions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'campaignRuleActions')
+        
         if (value = attributes[:'campaignRuleActions']).is_a?(Array)
           self.campaign_rule_actions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'matchAnyConditions')
+        
+        
         self.match_any_conditions = attributes[:'matchAnyConditions']
+        
+      
       end
 
+      
       if attributes.has_key?(:'enabled')
+        
+        
         self.enabled = attributes[:'enabled']
+        
+      
       end
 
+      
       if attributes.has_key?(:'additionalProperties')
+        
+        
         self.additional_properties = attributes[:'additionalProperties']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

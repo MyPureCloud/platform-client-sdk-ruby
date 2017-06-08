@@ -33,20 +33,30 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'type' => :'type',
+        
         :'action_type_name' => :'actionTypeName',
+        
         :'update_option' => :'updateOption',
+        
         :'properties' => :'properties'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'type' => :'String',
+        
         :'action_type_name' => :'String',
+        
         :'update_option' => :'String',
+        
         :'properties' => :'Hash<String, String>'
+        
       }
     end
 
@@ -58,58 +68,105 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'type')
+        
+        
         self.type = attributes[:'type']
+        
+      
       end
 
+      
       if attributes.has_key?(:'actionTypeName')
+        
+        
         self.action_type_name = attributes[:'actionTypeName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'updateOption')
+        
+        
         self.update_option = attributes[:'updateOption']
+        
+      
       end
 
+      
       if attributes.has_key?(:'properties')
+        
         if (value = attributes[:'properties']).is_a?(Array)
           self.properties = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @type.nil?
         return false
       end
 
+      
+      
       allowed_values = ["Action", "modifyContactAttribute"]
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
       if @action_type_name.nil?
         return false
       end
 
+      
+      
       allowed_values = ["DO_NOT_DIAL", "MODIFY_CONTACT_ATTRIBUTE", "SWITCH_TO_PREVIEW", "APPEND_NUMBER_TO_DNC_LIST", "SCHEDULE_CALLBACK", "CONTACT_UNCALLABLE", "NUMBER_UNCALLABLE", "SET_CALLER_ID", "SET_SKILLS"]
       if @action_type_name && !allowed_values.include?(@action_type_name)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["SET", "INCREMENT", "DECREMENT", "CURRENT_TIME"]
       if @update_option && !allowed_values.include?(@update_option)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
@@ -120,6 +177,10 @@ module PureCloud
       @type = type
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] action_type_name Object to be assigned
     def action_type_name=(action_type_name)
@@ -130,6 +191,10 @@ module PureCloud
       @action_type_name = action_type_name
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] update_option Object to be assigned
     def update_option=(update_option)
@@ -140,6 +205,14 @@ module PureCloud
       @update_option = update_option
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

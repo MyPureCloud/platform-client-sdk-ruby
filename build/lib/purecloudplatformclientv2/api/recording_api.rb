@@ -47,12 +47,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.delete_conversation_recording_annotation ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling RecordingApi.delete_conversation_recording_annotation" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'recording_id' is set
       fail ArgumentError, "Missing the required parameter 'recording_id' when calling RecordingApi.delete_conversation_recording_annotation" if recording_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'annotation_id' is set
       fail ArgumentError, "Missing the required parameter 'annotation_id' when calling RecordingApi.delete_conversation_recording_annotation" if annotation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'recordingId' + '}', recording_id.to_s).sub('{' + 'annotationId' + '}', annotation_id.to_s)
 
@@ -75,7 +94,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -107,8 +127,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.delete_orphanrecording ..."
       end
+      
+      
       # verify the required parameter 'orphan_id' is set
       fail ArgumentError, "Missing the required parameter 'orphan_id' when calling RecordingApi.delete_orphanrecording" if orphan_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/orphanrecordings/{orphanId}".sub('{format}','json').sub('{' + 'orphanId' + '}', orphan_id.to_s)
 
@@ -131,7 +158,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -164,8 +192,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.delete_recording_mediaretentionpolicies ..."
       end
+      
+      
       # verify the required parameter 'ids' is set
       fail ArgumentError, "Missing the required parameter 'ids' when calling RecordingApi.delete_recording_mediaretentionpolicies" if ids.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/mediaretentionpolicies".sub('{format}','json')
 
@@ -189,7 +224,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -221,8 +257,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.delete_recording_mediaretentionpolicy ..."
       end
+      
+      
       # verify the required parameter 'policy_id' is set
       fail ArgumentError, "Missing the required parameter 'policy_id' when calling RecordingApi.delete_recording_mediaretentionpolicy" if policy_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/mediaretentionpolicies/{policyId}".sub('{format}','json').sub('{' + 'policyId' + '}', policy_id.to_s)
 
@@ -245,7 +288,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -285,13 +329,45 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_conversation_recording ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling RecordingApi.get_conversation_recording" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'recording_id' is set
       fail ArgumentError, "Missing the required parameter 'recording_id' when calling RecordingApi.get_conversation_recording" if recording_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'format_id'] && !['WAV', 'WEBM', 'WAV_ULAW', 'OGG_VORBIS', 'OGG_OPUS', 'NONE'].include?(opts[:'format_id'])
         fail ArgumentError, 'invalid value for "format_id", must be one of WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'recordingId' + '}', recording_id.to_s)
 
@@ -317,7 +393,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -354,12 +431,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_conversation_recording_annotation ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling RecordingApi.get_conversation_recording_annotation" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'recording_id' is set
       fail ArgumentError, "Missing the required parameter 'recording_id' when calling RecordingApi.get_conversation_recording_annotation" if recording_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'annotation_id' is set
       fail ArgumentError, "Missing the required parameter 'annotation_id' when calling RecordingApi.get_conversation_recording_annotation" if annotation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'recordingId' + '}', recording_id.to_s).sub('{' + 'annotationId' + '}', annotation_id.to_s)
 
@@ -382,7 +478,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -417,10 +514,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_conversation_recording_annotations ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling RecordingApi.get_conversation_recording_annotations" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'recording_id' is set
       fail ArgumentError, "Missing the required parameter 'recording_id' when calling RecordingApi.get_conversation_recording_annotations" if recording_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'recordingId' + '}', recording_id.to_s)
 
@@ -443,7 +553,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -480,11 +591,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_conversation_recordings ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling RecordingApi.get_conversation_recordings" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'format_id'] && !['WAV', 'WEBM', 'WAV_ULAW', 'OGG_VORBIS', 'OGG_OPUS', 'NONE'].include?(opts[:'format_id'])
         fail ArgumentError, 'invalid value for "format_id", must be one of WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/recordings".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -509,7 +640,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -542,8 +674,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_orphanrecording ..."
       end
+      
+      
       # verify the required parameter 'orphan_id' is set
       fail ArgumentError, "Missing the required parameter 'orphan_id' when calling RecordingApi.get_orphanrecording" if orphan_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/orphanrecordings/{orphanId}".sub('{format}','json').sub('{' + 'orphanId' + '}', orphan_id.to_s)
 
@@ -566,7 +705,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -605,11 +745,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_orphanrecording_media ..."
       end
+      
+      
       # verify the required parameter 'orphan_id' is set
       fail ArgumentError, "Missing the required parameter 'orphan_id' when calling RecordingApi.get_orphanrecording_media" if orphan_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'format_id'] && !['WAV', 'WEBM', 'WAV_ULAW', 'OGG_VORBIS', 'OGG_OPUS', 'NONE'].include?(opts[:'format_id'])
         fail ArgumentError, 'invalid value for "format_id", must be one of WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/orphanrecordings/{orphanId}/media".sub('{format}','json').sub('{' + 'orphanId' + '}', orphan_id.to_s)
 
@@ -635,7 +801,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -682,9 +849,59 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_orphanrecordings ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'media'] && !['Call', 'Screen'].include?(opts[:'media'])
         fail ArgumentError, 'invalid value for "media", must be one of Call, Screen'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/orphanrecordings".sub('{format}','json')
 
@@ -715,7 +932,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -748,8 +966,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_recording_localkeys_setting ..."
       end
+      
+      
       # verify the required parameter 'settings_id' is set
       fail ArgumentError, "Missing the required parameter 'settings_id' when calling RecordingApi.get_recording_localkeys_setting" if settings_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/localkeys/settings/{settingsId}".sub('{format}','json').sub('{' + 'settingsId' + '}', settings_id.to_s)
 
@@ -772,7 +997,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -803,6 +1029,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_recording_localkeys_settings ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/recording/localkeys/settings".sub('{format}','json')
 
@@ -825,7 +1052,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -849,7 +1077,7 @@ module PureCloud
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :name the policy name - used for filtering results in searches.
-    # @option opts [BOOLEAN] :enabled checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false
+    # @option opts [BOOLEAN] :enabled checks to see if policy is enabled - use enabled = true or enabled = false
     # @option opts [BOOLEAN] :summary provides a less verbose response of policy lists. (default to false)
     # @option opts [BOOLEAN] :has_errors provides a way to fetch all policies with errors or policies that do not have errors
     # @return [PolicyEntityListing]
@@ -859,7 +1087,7 @@ module PureCloud
     end
 
     # Gets media retention policy list with query options to filter on name and enabled.
-    # for a less verbose response, add summary&#x3D;true to this endpoint
+    # for a less verbose response, add summary=true to this endpoint
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
@@ -868,7 +1096,7 @@ module PureCloud
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :name the policy name - used for filtering results in searches.
-    # @option opts [BOOLEAN] :enabled checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false
+    # @option opts [BOOLEAN] :enabled checks to see if policy is enabled - use enabled = true or enabled = false
     # @option opts [BOOLEAN] :summary provides a less verbose response of policy lists.
     # @option opts [BOOLEAN] :has_errors provides a way to fetch all policies with errors or policies that do not have errors
     # @return [Array<(PolicyEntityListing, Fixnum, Hash)>] PolicyEntityListing data, response status code and response headers
@@ -876,6 +1104,67 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_recording_mediaretentionpolicies ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/mediaretentionpolicies".sub('{format}','json')
 
@@ -908,7 +1197,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -941,8 +1231,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_recording_mediaretentionpolicy ..."
       end
+      
+      
       # verify the required parameter 'policy_id' is set
       fail ArgumentError, "Missing the required parameter 'policy_id' when calling RecordingApi.get_recording_mediaretentionpolicy" if policy_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/mediaretentionpolicies/{policyId}".sub('{format}','json').sub('{' + 'policyId' + '}', policy_id.to_s)
 
@@ -965,7 +1262,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1000,6 +1298,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_recording_recordingkeys ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/recordingkeys".sub('{format}','json')
 
@@ -1024,7 +1335,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1055,6 +1367,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_recording_recordingkeys_rotationschedule ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/recording/recordingkeys/rotationschedule".sub('{format}','json')
 
@@ -1077,7 +1390,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1110,6 +1424,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_recording_settings ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/settings".sub('{format}','json')
 
@@ -1133,7 +1454,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1168,6 +1490,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_recordings_screensessions ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recordings/screensessions".sub('{format}','json')
 
@@ -1192,7 +1527,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1227,10 +1563,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.patch_recording_mediaretentionpolicy ..."
       end
+      
+      
       # verify the required parameter 'policy_id' is set
       fail ArgumentError, "Missing the required parameter 'policy_id' when calling RecordingApi.patch_recording_mediaretentionpolicy" if policy_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.patch_recording_mediaretentionpolicy" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/mediaretentionpolicies/{policyId}".sub('{format}','json').sub('{' + 'policyId' + '}', policy_id.to_s)
 
@@ -1253,6 +1602,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -1288,8 +1638,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.patch_recordings_screensession ..."
       end
+      
+      
       # verify the required parameter 'recording_session_id' is set
       fail ArgumentError, "Missing the required parameter 'recording_session_id' when calling RecordingApi.patch_recordings_screensession" if recording_session_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recordings/screensessions/{recordingSessionId}".sub('{format}','json').sub('{' + 'recordingSessionId' + '}', recording_session_id.to_s)
 
@@ -1312,6 +1675,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -1348,12 +1712,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.post_conversation_recording_annotations ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling RecordingApi.post_conversation_recording_annotations" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'recording_id' is set
       fail ArgumentError, "Missing the required parameter 'recording_id' when calling RecordingApi.post_conversation_recording_annotations" if recording_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.post_conversation_recording_annotations" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'recordingId' + '}', recording_id.to_s)
 
@@ -1376,6 +1759,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1409,8 +1793,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.post_recording_localkeys ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.post_recording_localkeys" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/localkeys".sub('{format}','json')
 
@@ -1433,6 +1824,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1466,8 +1858,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.post_recording_localkeys_settings ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.post_recording_localkeys_settings" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/localkeys/settings".sub('{format}','json')
 
@@ -1490,6 +1889,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1523,8 +1923,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.post_recording_mediaretentionpolicies ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.post_recording_mediaretentionpolicies" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/mediaretentionpolicies".sub('{format}','json')
 
@@ -1547,6 +1954,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1578,6 +1986,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.post_recording_recordingkeys ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/recording/recordingkeys".sub('{format}','json')
 
@@ -1600,7 +2009,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1637,12 +2047,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.put_conversation_recording ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling RecordingApi.put_conversation_recording" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'recording_id' is set
       fail ArgumentError, "Missing the required parameter 'recording_id' when calling RecordingApi.put_conversation_recording" if recording_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.put_conversation_recording" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'recordingId' + '}', recording_id.to_s)
 
@@ -1665,6 +2094,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1704,14 +2134,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.put_conversation_recording_annotation ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling RecordingApi.put_conversation_recording_annotation" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'recording_id' is set
       fail ArgumentError, "Missing the required parameter 'recording_id' when calling RecordingApi.put_conversation_recording_annotation" if recording_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'annotation_id' is set
       fail ArgumentError, "Missing the required parameter 'annotation_id' when calling RecordingApi.put_conversation_recording_annotation" if annotation_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.put_conversation_recording_annotation" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'recordingId' + '}', recording_id.to_s).sub('{' + 'annotationId' + '}', annotation_id.to_s)
 
@@ -1734,6 +2189,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1769,8 +2225,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.put_orphanrecording ..."
       end
+      
+      
       # verify the required parameter 'orphan_id' is set
       fail ArgumentError, "Missing the required parameter 'orphan_id' when calling RecordingApi.put_orphanrecording" if orphan_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/orphanrecordings/{orphanId}".sub('{format}','json').sub('{' + 'orphanId' + '}', orphan_id.to_s)
 
@@ -1793,6 +2262,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1828,10 +2298,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.put_recording_localkeys_setting ..."
       end
+      
+      
       # verify the required parameter 'settings_id' is set
       fail ArgumentError, "Missing the required parameter 'settings_id' when calling RecordingApi.put_recording_localkeys_setting" if settings_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.put_recording_localkeys_setting" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/localkeys/settings/{settingsId}".sub('{format}','json').sub('{' + 'settingsId' + '}', settings_id.to_s)
 
@@ -1854,6 +2337,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1889,10 +2373,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.put_recording_mediaretentionpolicy ..."
       end
+      
+      
       # verify the required parameter 'policy_id' is set
       fail ArgumentError, "Missing the required parameter 'policy_id' when calling RecordingApi.put_recording_mediaretentionpolicy" if policy_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.put_recording_mediaretentionpolicy" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/mediaretentionpolicies/{policyId}".sub('{format}','json').sub('{' + 'policyId' + '}', policy_id.to_s)
 
@@ -1915,6 +2412,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1948,8 +2446,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.put_recording_recordingkeys_rotationschedule ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.put_recording_recordingkeys_rotationschedule" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/recordingkeys/rotationschedule".sub('{format}','json')
 
@@ -1972,6 +2477,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2005,8 +2511,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.put_recording_settings ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.put_recording_settings" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/settings".sub('{format}','json')
 
@@ -2029,6 +2542,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.delete_voicemail_message ..."
       end
+      
+      
       # verify the required parameter 'message_id' is set
       fail ArgumentError, "Missing the required parameter 'message_id' when calling VoicemailApi.delete_voicemail_message" if message_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/messages/{messageId}".sub('{format}','json').sub('{' + 'messageId' + '}', message_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -97,6 +105,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.delete_voicemail_messages ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/voicemail/messages".sub('{format}','json')
 
@@ -119,7 +128,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -151,8 +161,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_group_mailbox ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling VoicemailApi.get_voicemail_group_mailbox" if group_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/groups/{groupId}/mailbox".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -175,7 +192,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -212,8 +230,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_group_messages ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling VoicemailApi.get_voicemail_group_messages" if group_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/groups/{groupId}/messages".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -238,7 +275,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -271,8 +309,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_group_policy ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling VoicemailApi.get_voicemail_group_policy" if group_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/groups/{groupId}/policy".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -295,7 +340,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -326,6 +372,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_mailbox ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/voicemail/mailbox".sub('{format}','json')
 
@@ -348,7 +395,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -379,6 +427,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_me_mailbox ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/voicemail/me/mailbox".sub('{format}','json')
 
@@ -401,7 +450,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -436,6 +486,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_me_messages ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/me/messages".sub('{format}','json')
 
@@ -460,7 +523,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -491,6 +555,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_me_policy ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/voicemail/me/policy".sub('{format}','json')
 
@@ -513,7 +578,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -548,8 +614,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_message ..."
       end
+      
+      
       # verify the required parameter 'message_id' is set
       fail ArgumentError, "Missing the required parameter 'message_id' when calling VoicemailApi.get_voicemail_message" if message_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/messages/{messageId}".sub('{format}','json').sub('{' + 'messageId' + '}', message_id.to_s)
 
@@ -573,7 +652,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -608,11 +688,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_message_media ..."
       end
+      
+      
       # verify the required parameter 'message_id' is set
       fail ArgumentError, "Missing the required parameter 'message_id' when calling VoicemailApi.get_voicemail_message_media" if message_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'format_id'] && !['WAV', 'WEBM', 'WAV_ULAW', 'OGG_VORBIS', 'OGG_OPUS', 'NONE'].include?(opts[:'format_id'])
         fail ArgumentError, 'invalid value for "format_id", must be one of WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/messages/{messageId}/media".sub('{format}','json').sub('{' + 'messageId' + '}', message_id.to_s)
 
@@ -636,7 +730,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -671,6 +766,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_messages ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/messages".sub('{format}','json')
 
@@ -695,7 +803,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -726,6 +835,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_policy ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/voicemail/policy".sub('{format}','json')
 
@@ -748,7 +858,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -783,8 +894,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_search ..."
       end
+      
+      
       # verify the required parameter 'q64' is set
       fail ArgumentError, "Missing the required parameter 'q64' when calling VoicemailApi.get_voicemail_search" if q64.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/search".sub('{format}','json')
 
@@ -809,7 +933,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -842,8 +967,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_userpolicy ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling VoicemailApi.get_voicemail_userpolicy" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/userpolicies/{userId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -866,7 +998,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -901,10 +1034,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.patch_voicemail_group_policy ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling VoicemailApi.patch_voicemail_group_policy" if group_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling VoicemailApi.patch_voicemail_group_policy" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/groups/{groupId}/policy".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -927,6 +1073,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -960,8 +1107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.patch_voicemail_me_policy ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling VoicemailApi.patch_voicemail_me_policy" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/me/policy".sub('{format}','json')
 
@@ -984,6 +1138,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -1019,10 +1174,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.patch_voicemail_userpolicy ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling VoicemailApi.patch_voicemail_userpolicy" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling VoicemailApi.patch_voicemail_userpolicy" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/userpolicies/{userId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1045,6 +1213,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -1078,6 +1247,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.post_voicemail_messages ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/messages".sub('{format}','json')
 
@@ -1100,6 +1276,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1133,8 +1310,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.post_voicemail_search ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling VoicemailApi.post_voicemail_search" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/search".sub('{format}','json')
 
@@ -1157,6 +1341,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1192,10 +1377,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.put_voicemail_message ..."
       end
+      
+      
       # verify the required parameter 'message_id' is set
       fail ArgumentError, "Missing the required parameter 'message_id' when calling VoicemailApi.put_voicemail_message" if message_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling VoicemailApi.put_voicemail_message" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/messages/{messageId}".sub('{format}','json').sub('{' + 'messageId' + '}', message_id.to_s)
 
@@ -1218,6 +1416,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1251,8 +1450,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: VoicemailApi.put_voicemail_policy ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling VoicemailApi.put_voicemail_policy" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/voicemail/policy".sub('{format}','json')
 
@@ -1275,6 +1481,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

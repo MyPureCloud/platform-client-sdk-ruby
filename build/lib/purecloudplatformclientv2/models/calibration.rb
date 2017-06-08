@@ -56,44 +56,78 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'calibrator' => :'calibrator',
+        
         :'agent' => :'agent',
+        
         :'conversation' => :'conversation',
+        
         :'evaluation_form' => :'evaluationForm',
+        
         :'context_id' => :'contextId',
+        
         :'average_score' => :'averageScore',
+        
         :'high_score' => :'highScore',
+        
         :'low_score' => :'lowScore',
+        
         :'created_date' => :'createdDate',
+        
         :'evaluations' => :'evaluations',
+        
         :'evaluators' => :'evaluators',
+        
         :'scoring_index' => :'scoringIndex',
+        
         :'expert_evaluator' => :'expertEvaluator',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'calibrator' => :'User',
+        
         :'agent' => :'User',
+        
         :'conversation' => :'Conversation',
+        
         :'evaluation_form' => :'EvaluationForm',
+        
         :'context_id' => :'String',
+        
         :'average_score' => :'Integer',
+        
         :'high_score' => :'Integer',
+        
         :'low_score' => :'Integer',
+        
         :'created_date' => :'DateTime',
+        
         :'evaluations' => :'Array<Evaluation>',
+        
         :'evaluators' => :'Array<User>',
+        
         :'scoring_index' => :'Evaluation',
+        
         :'expert_evaluator' => :'User',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -105,88 +139,317 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'calibrator')
+        
+        
         self.calibrator = attributes[:'calibrator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'agent')
+        
+        
         self.agent = attributes[:'agent']
+        
+      
       end
 
+      
       if attributes.has_key?(:'conversation')
+        
+        
         self.conversation = attributes[:'conversation']
+        
+      
       end
 
+      
       if attributes.has_key?(:'evaluationForm')
+        
+        
         self.evaluation_form = attributes[:'evaluationForm']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contextId')
+        
+        
         self.context_id = attributes[:'contextId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'averageScore')
+        
+        
         self.average_score = attributes[:'averageScore']
+        
+      
       end
 
+      
       if attributes.has_key?(:'highScore')
+        
+        
         self.high_score = attributes[:'highScore']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lowScore')
+        
+        
         self.low_score = attributes[:'lowScore']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdDate')
+        
+        
         self.created_date = attributes[:'createdDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'evaluations')
+        
         if (value = attributes[:'evaluations']).is_a?(Array)
           self.evaluations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'evaluators')
+        
         if (value = attributes[:'evaluators']).is_a?(Array)
           self.evaluators = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'scoringIndex')
+        
+        
         self.scoring_index = attributes[:'scoringIndex']
+        
+      
       end
 
+      
       if attributes.has_key?(:'expertEvaluator')
+        
+        
         self.expert_evaluator = attributes[:'expertEvaluator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

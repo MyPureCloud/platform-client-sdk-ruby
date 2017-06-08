@@ -57,36 +57,62 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'queue_id' => :'queueId',
+        
         :'provider' => :'provider',
+        
         :'skill_ids' => :'skillIds',
+        
         :'language_id' => :'languageId',
+        
         :'priority' => :'priority',
+        
         :'attributes' => :'attributes',
+        
         :'to_address' => :'toAddress',
+        
         :'to_name' => :'toName',
+        
         :'from_address' => :'fromAddress',
+        
         :'from_name' => :'fromName',
+        
         :'subject' => :'subject',
+        
         :'direction' => :'direction'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'queue_id' => :'String',
+        
         :'provider' => :'String',
+        
         :'skill_ids' => :'Array<String>',
+        
         :'language_id' => :'String',
+        
         :'priority' => :'Integer',
+        
         :'attributes' => :'Hash<String, String>',
+        
         :'to_address' => :'String',
+        
         :'to_name' => :'String',
+        
         :'from_address' => :'String',
+        
         :'from_name' => :'String',
+        
         :'subject' => :'String',
+        
         :'direction' => :'String'
+        
       }
     end
 
@@ -98,84 +124,256 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'queueId')
+        
+        
         self.queue_id = attributes[:'queueId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'provider')
+        
+        
         self.provider = attributes[:'provider']
+        
+      
       end
 
+      
       if attributes.has_key?(:'skillIds')
+        
         if (value = attributes[:'skillIds']).is_a?(Array)
           self.skill_ids = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'languageId')
+        
+        
         self.language_id = attributes[:'languageId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'priority')
+        
+        
         self.priority = attributes[:'priority']
+        
+      
       end
 
+      
       if attributes.has_key?(:'attributes')
+        
         if (value = attributes[:'attributes']).is_a?(Array)
           self.attributes = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'toAddress')
+        
+        
         self.to_address = attributes[:'toAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'toName')
+        
+        
         self.to_name = attributes[:'toName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'fromAddress')
+        
+        
         self.from_address = attributes[:'fromAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'fromName')
+        
+        
         self.from_name = attributes[:'fromName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'subject')
+        
+        
         self.subject = attributes[:'subject']
+        
+      
       end
 
+      
       if attributes.has_key?(:'direction')
+        
+        
         self.direction = attributes[:'direction']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @queue_id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @provider.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["OUTBOUND", "INBOUND"]
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] direction Object to be assigned
     def direction=(direction)
@@ -186,6 +384,9 @@ module PureCloud
       @direction = direction
     end
 
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

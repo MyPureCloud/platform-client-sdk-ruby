@@ -44,28 +44,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'name' => :'name',
+        
         :'group' => :'group',
+        
         :'enabled' => :'enabled',
+        
         :'send_email_notifications' => :'sendEmailNotifications',
+        
         :'rotate_calls_secs' => :'rotateCallsSecs',
+        
         :'stop_ringing_after_rotations' => :'stopRingingAfterRotations',
+        
         :'overflow_group_id' => :'overflowGroupId',
+        
         :'group_alert_type' => :'groupAlertType'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'name' => :'String',
+        
         :'group' => :'Group',
+        
         :'enabled' => :'BOOLEAN',
+        
         :'send_email_notifications' => :'BOOLEAN',
+        
         :'rotate_calls_secs' => :'Integer',
+        
         :'stop_ringing_after_rotations' => :'Integer',
+        
         :'overflow_group_id' => :'String',
+        
         :'group_alert_type' => :'String'
+        
       }
     end
 
@@ -77,56 +95,170 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'group')
+        
+        
         self.group = attributes[:'group']
+        
+      
       end
 
+      
       if attributes.has_key?(:'enabled')
+        
+        
         self.enabled = attributes[:'enabled']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sendEmailNotifications')
+        
+        
         self.send_email_notifications = attributes[:'sendEmailNotifications']
+        
+      
       end
 
+      
       if attributes.has_key?(:'rotateCallsSecs')
+        
+        
         self.rotate_calls_secs = attributes[:'rotateCallsSecs']
+        
+      
       end
 
+      
       if attributes.has_key?(:'stopRingingAfterRotations')
+        
+        
         self.stop_ringing_after_rotations = attributes[:'stopRingingAfterRotations']
+        
+      
       end
 
+      
       if attributes.has_key?(:'overflowGroupId')
+        
+        
         self.overflow_group_id = attributes[:'overflowGroupId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'groupAlertType')
+        
+        
         self.group_alert_type = attributes[:'groupAlertType']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["RANDOM", "ROUND_ROBIN", "SEQUENTIAL"]
       if @group_alert_type && !allowed_values.include?(@group_alert_type)
         return false
       end
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] group_alert_type Object to be assigned
     def group_alert_type=(group_alert_type)
@@ -137,6 +269,9 @@ module PureCloud
       @group_alert_type = group_alert_type
     end
 
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -47,8 +47,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: SuggestApi.get_search ..."
       end
+      
+      
       # verify the required parameter 'q64' is set
       fail ArgumentError, "Missing the required parameter 'q64' when calling SuggestApi.get_search" if q64.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/search".sub('{format}','json')
 
@@ -74,7 +93,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -111,8 +131,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: SuggestApi.get_search_suggest ..."
       end
+      
+      
       # verify the required parameter 'q64' is set
       fail ArgumentError, "Missing the required parameter 'q64' when calling SuggestApi.get_search_suggest" if q64.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/search/suggest".sub('{format}','json')
 
@@ -138,7 +177,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -173,8 +213,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: SuggestApi.post_search ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling SuggestApi.post_search" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/search".sub('{format}','json')
 
@@ -198,6 +251,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -233,8 +287,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: SuggestApi.post_search_suggest ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling SuggestApi.post_search_suggest" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/search/suggest".sub('{format}','json')
 
@@ -258,6 +325,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,

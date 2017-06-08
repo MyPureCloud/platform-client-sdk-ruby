@@ -58,7 +58,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type** | **String**| Field type | 
+ **type** | **String**| Field type | <br />**Values**: person, group, org, externalContact |
 {: class="table table-striped"}
 
 
@@ -172,8 +172,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **feature_name** | **String**| Organization feature | 
- **enabled** | [**FeatureState**](FeatureState.html)| New state of feature | 
+ **feature_name** | **String**| Organization feature | <br />**Values**: realtimeCIC, purecloud, hipaa, ucEnabled, pci, purecloudVoice, xmppFederation, chat, informalPhotos, directory, contactCenter, unifiedCommunications, custserv |
+ **enabled** | [**FeatureState**](FeatureState.html)| New state of feature |  |
 {: class="table table-striped"}
 
 
@@ -233,7 +233,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Organization**](Organization.html)| Organization | [optional] 
+ **body** | [**Organization**](Organization.html)| Organization | [optional]  |
 {: class="table table-striped"}
 
 

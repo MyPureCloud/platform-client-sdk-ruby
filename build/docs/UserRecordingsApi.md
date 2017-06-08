@@ -59,7 +59,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **recording_id** | **String**| User Recording ID | 
+ **recording_id** | **String**| User Recording ID |  |
 {: class="table table-striped"}
 
 
@@ -121,8 +121,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **recording_id** | **String**| User Recording ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **recording_id** | **String**| User Recording ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
 {: class="table table-striped"}
 
 
@@ -184,8 +184,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **recording_id** | **String**| User Recording ID | 
- **format_id** | **String**| The desired media format. | [optional] [default to WEBM]
+ **recording_id** | **String**| User Recording ID |  |
+ **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE |
 {: class="table table-striped"}
 
 
@@ -247,9 +247,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
 {: class="table table-striped"}
 
 
@@ -366,9 +366,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **recording_id** | **String**| User Recording ID | 
- **body** | [**UserRecording**](UserRecording.html)| UserRecording | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **recording_id** | **String**| User Recording ID |  |
+ **body** | [**UserRecording**](UserRecording.html)| UserRecording |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
 {: class="table table-striped"}
 
 

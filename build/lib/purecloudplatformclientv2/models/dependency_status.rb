@@ -43,30 +43,50 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'user' => :'user',
+        
         :'build_id' => :'buildId',
+        
         :'date_started' => :'dateStarted',
+        
         :'date_completed' => :'dateCompleted',
+        
         :'status' => :'status',
+        
         :'failed_objects' => :'failedObjects',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'user' => :'User',
+        
         :'build_id' => :'String',
+        
         :'date_started' => :'DateTime',
+        
         :'date_completed' => :'DateTime',
+        
         :'status' => :'String',
+        
         :'failed_objects' => :'Array<FailedObject>',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -78,62 +98,180 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'user')
+        
+        
         self.user = attributes[:'user']
+        
+      
       end
 
+      
       if attributes.has_key?(:'buildId')
+        
+        
         self.build_id = attributes[:'buildId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateStarted')
+        
+        
         self.date_started = attributes[:'dateStarted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCompleted')
+        
+        
         self.date_completed = attributes[:'dateCompleted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'status')
+        
+        
         self.status = attributes[:'status']
+        
+      
       end
 
+      
       if attributes.has_key?(:'failedObjects')
+        
         if (value = attributes[:'failedObjects']).is_a?(Array)
           self.failed_objects = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["BUILDINITIALIZING", "BUILDINPROGRESS", "NOTBUILT", "OPERATIONAL", "OPERATIONALNEEDSREBUILD"]
       if @status && !allowed_values.include?(@status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status Object to be assigned
     def status=(status)
@@ -144,6 +282,19 @@ module PureCloud
       @status = status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

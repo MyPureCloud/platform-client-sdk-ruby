@@ -30,27 +30,47 @@ module PureCloud
 
     attr_accessor :no_rebalance
 
+    attr_accessor :no_cloud_provisioning
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'provisions' => :'provisions',
+        
         :'registers' => :'registers',
+        
         :'dual_registers' => :'dualRegisters',
+        
         :'hardware_id_type' => :'hardwareIdType',
+        
         :'allow_reboot' => :'allowReboot',
-        :'no_rebalance' => :'noRebalance'
+        
+        :'no_rebalance' => :'noRebalance',
+        
+        :'no_cloud_provisioning' => :'noCloudProvisioning'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'provisions' => :'BOOLEAN',
+        
         :'registers' => :'BOOLEAN',
+        
         :'dual_registers' => :'BOOLEAN',
+        
         :'hardware_id_type' => :'String',
+        
         :'allow_reboot' => :'BOOLEAN',
-        :'no_rebalance' => :'BOOLEAN'
+        
+        :'no_rebalance' => :'BOOLEAN',
+        
+        :'no_cloud_provisioning' => :'BOOLEAN'
+        
       }
     end
 
@@ -62,44 +82,151 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'provisions')
+        
+        
         self.provisions = attributes[:'provisions']
+        
+      
       end
 
+      
       if attributes.has_key?(:'registers')
+        
+        
         self.registers = attributes[:'registers']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dualRegisters')
+        
+        
         self.dual_registers = attributes[:'dualRegisters']
+        
+      
       end
 
+      
       if attributes.has_key?(:'hardwareIdType')
+        
+        
         self.hardware_id_type = attributes[:'hardwareIdType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'allowReboot')
+        
+        
         self.allow_reboot = attributes[:'allowReboot']
+        
+      
       end
 
+      
       if attributes.has_key?(:'noRebalance')
+        
+        
         self.no_rebalance = attributes[:'noRebalance']
+        
+      
       end
 
+      
+      if attributes.has_key?(:'noCloudProvisioning')
+        
+        
+        self.no_cloud_provisioning = attributes[:'noCloudProvisioning']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -110,7 +237,8 @@ module PureCloud
           dual_registers == o.dual_registers &&
           hardware_id_type == o.hardware_id_type &&
           allow_reboot == o.allow_reboot &&
-          no_rebalance == o.no_rebalance
+          no_rebalance == o.no_rebalance &&
+          no_cloud_provisioning == o.no_cloud_provisioning
     end
 
     # @see the `==` method
@@ -122,7 +250,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [provisions, registers, dual_registers, hardware_id_type, allow_reboot, no_rebalance].hash
+      [provisions, registers, dual_registers, hardware_id_type, allow_reboot, no_rebalance, no_cloud_provisioning].hash
     end
 
     # build the object from hash

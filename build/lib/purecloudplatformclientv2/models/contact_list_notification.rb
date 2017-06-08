@@ -47,38 +47,66 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'version' => :'version',
+        
         :'column_names' => :'columnNames',
+        
         :'phone_columns' => :'phoneColumns',
+        
         :'import_status' => :'importStatus',
+        
         :'preview_mode_column_name' => :'previewModeColumnName',
+        
         :'preview_mode_accepted_values' => :'previewModeAcceptedValues',
+        
         :'size' => :'size',
+        
         :'attempt_limits' => :'attemptLimits',
+        
         :'additional_properties' => :'additionalProperties'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'version' => :'Integer',
+        
         :'column_names' => :'Array<String>',
+        
         :'phone_columns' => :'Array<ContactListNotificationPhoneColumns>',
+        
         :'import_status' => :'ContactListNotificationImportStatus',
+        
         :'preview_mode_column_name' => :'String',
+        
         :'preview_mode_accepted_values' => :'Array<String>',
+        
         :'size' => :'Integer',
+        
         :'attempt_limits' => :'DocumentDataV2NotificationCreatedBy',
+        
         :'additional_properties' => :'Object'
+        
       }
     end
 
@@ -90,78 +118,265 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'columnNames')
+        
         if (value = attributes[:'columnNames']).is_a?(Array)
           self.column_names = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'phoneColumns')
+        
         if (value = attributes[:'phoneColumns']).is_a?(Array)
           self.phone_columns = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'importStatus')
+        
+        
         self.import_status = attributes[:'importStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'previewModeColumnName')
+        
+        
         self.preview_mode_column_name = attributes[:'previewModeColumnName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'previewModeAcceptedValues')
+        
         if (value = attributes[:'previewModeAcceptedValues']).is_a?(Array)
           self.preview_mode_accepted_values = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'size')
+        
+        
         self.size = attributes[:'size']
+        
+      
       end
 
+      
       if attributes.has_key?(:'attemptLimits')
+        
+        
         self.attempt_limits = attributes[:'attemptLimits']
+        
+      
       end
 
+      
       if attributes.has_key?(:'additionalProperties')
+        
+        
         self.additional_properties = attributes[:'additionalProperties']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

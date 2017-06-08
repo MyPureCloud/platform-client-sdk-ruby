@@ -59,7 +59,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attribute_id** | **String**| Attribute ID | 
+ **attribute_id** | **String**| Attribute ID |  |
 {: class="table table-striped"}
 
 
@@ -118,7 +118,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attribute_id** | **String**| Attribute ID | 
+ **attribute_id** | **String**| Attribute ID |  |
 {: class="table table-striped"}
 
 
@@ -179,8 +179,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
 
 
@@ -239,7 +239,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Attribute**](Attribute.html)| Attribute | 
+ **body** | [**Attribute**](Attribute.html)| Attribute |  |
 {: class="table table-striped"}
 
 
@@ -298,7 +298,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AttributeQueryRequest**](AttributeQueryRequest.html)| query | 
+ **body** | [**AttributeQueryRequest**](AttributeQueryRequest.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -359,8 +359,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attribute_id** | **String**| Attribute ID | 
- **body** | [**Attribute**](Attribute.html)| Attribute | 
+ **attribute_id** | **String**| Attribute ID |  |
+ **body** | [**Attribute**](Attribute.html)| Attribute |  |
 {: class="table table-striped"}
 
 

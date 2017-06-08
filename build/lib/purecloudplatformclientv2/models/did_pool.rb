@@ -61,44 +61,78 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'description' => :'description',
+        
         :'version' => :'version',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'modified_by' => :'modifiedBy',
+        
         :'created_by' => :'createdBy',
+        
         :'state' => :'state',
+        
         :'modified_by_app' => :'modifiedByApp',
+        
         :'created_by_app' => :'createdByApp',
+        
         :'start_phone_number' => :'startPhoneNumber',
+        
         :'end_phone_number' => :'endPhoneNumber',
+        
         :'comments' => :'comments',
+        
         :'provider' => :'provider',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'description' => :'String',
+        
         :'version' => :'Integer',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'modified_by' => :'String',
+        
         :'created_by' => :'String',
+        
         :'state' => :'String',
+        
         :'modified_by_app' => :'String',
+        
         :'created_by_app' => :'String',
+        
         :'start_phone_number' => :'String',
+        
         :'end_phone_number' => :'String',
+        
         :'comments' => :'String',
+        
         :'provider' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -110,104 +144,299 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'description')
+        
+        
         self.description = attributes[:'description']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedBy')
+        
+        
         self.modified_by = attributes[:'modifiedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdBy')
+        
+        
         self.created_by = attributes[:'createdBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedByApp')
+        
+        
         self.modified_by_app = attributes[:'modifiedByApp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdByApp')
+        
+        
         self.created_by_app = attributes[:'createdByApp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startPhoneNumber')
+        
+        
         self.start_phone_number = attributes[:'startPhoneNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endPhoneNumber')
+        
+        
         self.end_phone_number = attributes[:'endPhoneNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'comments')
+        
+        
         self.comments = attributes[:'comments']
+        
+      
       end
 
+      
       if attributes.has_key?(:'provider')
+        
+        
         self.provider = attributes[:'provider']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["active", "inactive", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @start_phone_number.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @end_phone_number.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["PURE_CLOUD", "PURE_CLOUD_VOICE"]
       if @provider && !allowed_values.include?(@provider)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -218,6 +447,35 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] provider Object to be assigned
     def provider=(provider)
@@ -228,6 +486,14 @@ module PureCloud
       @provider = provider
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

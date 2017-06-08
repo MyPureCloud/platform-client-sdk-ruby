@@ -75,7 +75,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **String**| Schedule ID | 
+ **schedule_id** | **String**| Schedule ID |  |
 {: class="table table-striped"}
 
 
@@ -134,7 +134,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| conversationId | 
+ **conversation_id** | **String**| conversationId |  |
 {: class="table table-striped"}
 
 
@@ -196,9 +196,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **locale** | **String**| Locale | [optional] 
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **locale** | **String**| Locale | [optional]  |
 {: class="table table-striped"}
 
 
@@ -260,8 +260,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_id** | **String**| Report ID | 
- **locale** | **String**| Locale | [optional] 
+ **report_id** | **String**| Report ID |  |
+ **locale** | **String**| Locale | [optional]  |
 {: class="table table-striped"}
 
 
@@ -373,7 +373,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **String**| Schedule ID | 
+ **schedule_id** | **String**| Schedule ID |  |
 {: class="table table-striped"}
 
 
@@ -436,9 +436,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **String**| Schedule ID | 
- **page_number** | **Integer**|  | [optional] [default to 1]
- **page_size** | **Integer**|  | [optional] [default to 25]
+ **schedule_id** | **String**| Schedule ID |  |
+ **page_number** | **Integer**|  | [optional] [default to 1] |
+ **page_size** | **Integer**|  | [optional] [default to 25] |
 {: class="table table-striped"}
 
 
@@ -497,7 +497,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **String**| Schedule ID | 
+ **schedule_id** | **String**| Schedule ID |  |
 {: class="table table-striped"}
 
 
@@ -558,8 +558,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **run_id** | **String**| Run ID | 
- **schedule_id** | **String**| Schedule ID | 
+ **run_id** | **String**| Run ID |  |
+ **schedule_id** | **String**| Schedule ID |  |
 {: class="table table-striped"}
 
 
@@ -620,8 +620,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
 
 
@@ -735,8 +735,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| conversationId | 
- **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request | 
+ **conversation_id** | **String**| conversationId |  |
+ **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request |  |
 {: class="table table-striped"}
 
 
@@ -795,7 +795,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query | 
+ **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -854,7 +854,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ConversationQuery**](ConversationQuery.html)| query | 
+ **body** | [**ConversationQuery**](ConversationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -913,7 +913,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query | 
+ **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -972,7 +972,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ObservationQuery**](ObservationQuery.html)| query | 
+ **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -1031,7 +1031,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **String**| Schedule ID | 
+ **schedule_id** | **String**| Schedule ID |  |
 {: class="table table-striped"}
 
 
@@ -1090,7 +1090,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule | 
+ **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule |  |
 {: class="table table-striped"}
 
 
@@ -1149,7 +1149,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query | 
+ **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -1208,7 +1208,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UserDetailsQuery**](UserDetailsQuery.html)| query | 
+ **body** | [**UserDetailsQuery**](UserDetailsQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -1267,7 +1267,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ObservationQuery**](ObservationQuery.html)| query | 
+ **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -1328,8 +1328,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **String**| Schedule ID | 
- **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule | 
+ **schedule_id** | **String**| Schedule ID |  |
+ **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule |  |
 {: class="table table-striped"}
 
 

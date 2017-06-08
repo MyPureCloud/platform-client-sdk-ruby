@@ -89,74 +89,138 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'change_number' => :'changeNumber',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'date_uploaded' => :'dateUploaded',
+        
         :'content_uri' => :'contentUri',
+        
         :'workspace' => :'workspace',
+        
         :'created_by' => :'createdBy',
+        
         :'uploaded_by' => :'uploadedBy',
+        
         :'content_type' => :'contentType',
+        
         :'content_length' => :'contentLength',
+        
         :'system_type' => :'systemType',
+        
         :'filename' => :'filename',
+        
         :'page_count' => :'pageCount',
+        
         :'read' => :'read',
+        
         :'caller_address' => :'callerAddress',
+        
         :'receiver_address' => :'receiverAddress',
+        
         :'tags' => :'tags',
+        
         :'tag_values' => :'tagValues',
+        
         :'attributes' => :'attributes',
+        
         :'thumbnails' => :'thumbnails',
+        
         :'upload_status' => :'uploadStatus',
+        
         :'upload_destination_uri' => :'uploadDestinationUri',
+        
         :'upload_method' => :'uploadMethod',
+        
         :'lock_info' => :'lockInfo',
+        
         :'acl' => :'acl',
+        
         :'sharing_status' => :'sharingStatus',
+        
         :'sharing_uri' => :'sharingUri',
+        
         :'download_sharing_uri' => :'downloadSharingUri',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'change_number' => :'Integer',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'date_uploaded' => :'DateTime',
+        
         :'content_uri' => :'String',
+        
         :'workspace' => :'UriReference',
+        
         :'created_by' => :'UriReference',
+        
         :'uploaded_by' => :'UriReference',
+        
         :'content_type' => :'String',
+        
         :'content_length' => :'Integer',
+        
         :'system_type' => :'String',
+        
         :'filename' => :'String',
+        
         :'page_count' => :'Integer',
+        
         :'read' => :'BOOLEAN',
+        
         :'caller_address' => :'String',
+        
         :'receiver_address' => :'String',
+        
         :'tags' => :'Array<String>',
+        
         :'tag_values' => :'Array<TagValue>',
+        
         :'attributes' => :'Array<DocumentAttribute>',
+        
         :'thumbnails' => :'Array<DocumentThumbnail>',
+        
         :'upload_status' => :'UriReference',
+        
         :'upload_destination_uri' => :'String',
+        
         :'upload_method' => :'String',
+        
         :'lock_info' => :'LockInfo',
+        
         :'acl' => :'Array<String>',
+        
         :'sharing_status' => :'String',
+        
         :'sharing_uri' => :'String',
+        
         :'download_sharing_uri' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -168,166 +232,514 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'changeNumber')
+        
+        
         self.change_number = attributes[:'changeNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateUploaded')
+        
+        
         self.date_uploaded = attributes[:'dateUploaded']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contentUri')
+        
+        
         self.content_uri = attributes[:'contentUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'workspace')
+        
+        
         self.workspace = attributes[:'workspace']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdBy')
+        
+        
         self.created_by = attributes[:'createdBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'uploadedBy')
+        
+        
         self.uploaded_by = attributes[:'uploadedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contentType')
+        
+        
         self.content_type = attributes[:'contentType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contentLength')
+        
+        
         self.content_length = attributes[:'contentLength']
+        
+      
       end
 
+      
       if attributes.has_key?(:'systemType')
+        
+        
         self.system_type = attributes[:'systemType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'filename')
+        
+        
         self.filename = attributes[:'filename']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pageCount')
+        
+        
         self.page_count = attributes[:'pageCount']
+        
+      
       end
 
+      
       if attributes.has_key?(:'read')
+        
+        
         self.read = attributes[:'read']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callerAddress')
+        
+        
         self.caller_address = attributes[:'callerAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'receiverAddress')
+        
+        
         self.receiver_address = attributes[:'receiverAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'tags')
+        
         if (value = attributes[:'tags']).is_a?(Array)
           self.tags = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'tagValues')
+        
         if (value = attributes[:'tagValues']).is_a?(Array)
           self.tag_values = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'attributes')
+        
         if (value = attributes[:'attributes']).is_a?(Array)
           self.attributes = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'thumbnails')
+        
         if (value = attributes[:'thumbnails']).is_a?(Array)
           self.thumbnails = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'uploadStatus')
+        
+        
         self.upload_status = attributes[:'uploadStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'uploadDestinationUri')
+        
+        
         self.upload_destination_uri = attributes[:'uploadDestinationUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'uploadMethod')
+        
+        
         self.upload_method = attributes[:'uploadMethod']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lockInfo')
+        
+        
         self.lock_info = attributes[:'lockInfo']
+        
+      
       end
 
+      
       if attributes.has_key?(:'acl')
+        
         if (value = attributes[:'acl']).is_a?(Array)
           self.acl = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'sharingStatus')
+        
+        
         self.sharing_status = attributes[:'sharingStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sharingUri')
+        
+        
         self.sharing_uri = attributes[:'sharingUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'downloadSharingUri')
+        
+        
         self.download_sharing_uri = attributes[:'downloadSharingUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["DOCUMENT", "FAX", "RECORDING"]
       if @system_type && !allowed_values.include?(@system_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["SINGLE_PUT", "MULTIPART_POST"]
       if @upload_method && !allowed_values.include?(@upload_method)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["NONE", "LIMITED", "PUBLIC"]
       if @sharing_status && !allowed_values.include?(@sharing_status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] system_type Object to be assigned
     def system_type=(system_type)
@@ -338,6 +750,65 @@ module PureCloud
       @system_type = system_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] upload_method Object to be assigned
     def upload_method=(upload_method)
@@ -348,6 +819,20 @@ module PureCloud
       @upload_method = upload_method
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] sharing_status Object to be assigned
     def sharing_status=(sharing_status)
@@ -358,6 +843,24 @@ module PureCloud
       @sharing_status = sharing_status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

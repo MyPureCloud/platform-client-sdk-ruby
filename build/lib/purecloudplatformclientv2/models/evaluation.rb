@@ -71,52 +71,94 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'conversation' => :'conversation',
+        
         :'evaluation_form' => :'evaluationForm',
+        
         :'evaluator' => :'evaluator',
+        
         :'agent' => :'agent',
+        
         :'calibration' => :'calibration',
+        
         :'status' => :'status',
+        
         :'answers' => :'answers',
+        
         :'agent_has_read' => :'agentHasRead',
+        
         :'release_date' => :'releaseDate',
+        
         :'assigned_date' => :'assignedDate',
+        
         :'changed_date' => :'changedDate',
+        
         :'queue' => :'queue',
+        
         :'never_release' => :'neverRelease',
+        
         :'resource_id' => :'resourceId',
+        
         :'resource_type' => :'resourceType',
+        
         :'redacted' => :'redacted',
+        
         :'is_scoring_index' => :'isScoringIndex',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'conversation' => :'Conversation',
+        
         :'evaluation_form' => :'EvaluationForm',
+        
         :'evaluator' => :'User',
+        
         :'agent' => :'User',
+        
         :'calibration' => :'Calibration',
+        
         :'status' => :'String',
+        
         :'answers' => :'EvaluationScoringSet',
+        
         :'agent_has_read' => :'BOOLEAN',
+        
         :'release_date' => :'DateTime',
+        
         :'assigned_date' => :'DateTime',
+        
         :'changed_date' => :'DateTime',
+        
         :'queue' => :'Queue',
+        
         :'never_release' => :'BOOLEAN',
+        
         :'resource_id' => :'String',
+        
         :'resource_type' => :'String',
+        
         :'redacted' => :'BOOLEAN',
+        
         :'is_scoring_index' => :'BOOLEAN',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -128,108 +170,331 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'conversation')
+        
+        
         self.conversation = attributes[:'conversation']
+        
+      
       end
 
+      
       if attributes.has_key?(:'evaluationForm')
+        
+        
         self.evaluation_form = attributes[:'evaluationForm']
+        
+      
       end
 
+      
       if attributes.has_key?(:'evaluator')
+        
+        
         self.evaluator = attributes[:'evaluator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'agent')
+        
+        
         self.agent = attributes[:'agent']
+        
+      
       end
 
+      
       if attributes.has_key?(:'calibration')
+        
+        
         self.calibration = attributes[:'calibration']
+        
+      
       end
 
+      
       if attributes.has_key?(:'status')
+        
+        
         self.status = attributes[:'status']
+        
+      
       end
 
+      
       if attributes.has_key?(:'answers')
+        
+        
         self.answers = attributes[:'answers']
+        
+      
       end
 
+      
       if attributes.has_key?(:'agentHasRead')
+        
+        
         self.agent_has_read = attributes[:'agentHasRead']
+        
+      
       end
 
+      
       if attributes.has_key?(:'releaseDate')
+        
+        
         self.release_date = attributes[:'releaseDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'assignedDate')
+        
+        
         self.assigned_date = attributes[:'assignedDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'changedDate')
+        
+        
         self.changed_date = attributes[:'changedDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'queue')
+        
+        
         self.queue = attributes[:'queue']
+        
+      
       end
 
+      
       if attributes.has_key?(:'neverRelease')
+        
+        
         self.never_release = attributes[:'neverRelease']
+        
+      
       end
 
+      
       if attributes.has_key?(:'resourceId')
+        
+        
         self.resource_id = attributes[:'resourceId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'resourceType')
+        
+        
         self.resource_type = attributes[:'resourceType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'redacted')
+        
+        
         self.redacted = attributes[:'redacted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'isScoringIndex')
+        
+        
         self.is_scoring_index = attributes[:'isScoringIndex']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["PENDING", "INPROGRESS", "FINISHED"]
       if @status && !allowed_values.include?(@status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["EMAIL"]
       if @resource_type && !allowed_values.include?(@resource_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status Object to be assigned
     def status=(status)
@@ -240,6 +505,50 @@ module PureCloud
       @status = status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] resource_type Object to be assigned
     def resource_type=(resource_type)
@@ -250,6 +559,24 @@ module PureCloud
       @resource_type = resource_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

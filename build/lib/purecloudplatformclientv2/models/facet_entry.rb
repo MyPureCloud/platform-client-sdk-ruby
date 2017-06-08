@@ -37,28 +37,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'attribute' => :'attribute',
+        
         :'statistics' => :'statistics',
+        
         :'other' => :'other',
+        
         :'total' => :'total',
+        
         :'missing' => :'missing',
+        
         :'term_count' => :'termCount',
+        
         :'term_type' => :'termType',
+        
         :'terms' => :'terms'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'attribute' => :'TermAttribute',
+        
         :'statistics' => :'FacetStatistics',
+        
         :'other' => :'Integer',
+        
         :'total' => :'Integer',
+        
         :'missing' => :'Integer',
+        
         :'term_count' => :'Integer',
+        
         :'term_type' => :'String',
+        
         :'terms' => :'Array<FacetTerm>'
+        
       }
     end
 
@@ -70,58 +88,167 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'attribute')
+        
+        
         self.attribute = attributes[:'attribute']
+        
+      
       end
 
+      
       if attributes.has_key?(:'statistics')
+        
+        
         self.statistics = attributes[:'statistics']
+        
+      
       end
 
+      
       if attributes.has_key?(:'other')
+        
+        
         self.other = attributes[:'other']
+        
+      
       end
 
+      
       if attributes.has_key?(:'total')
+        
+        
         self.total = attributes[:'total']
+        
+      
       end
 
+      
       if attributes.has_key?(:'missing')
+        
+        
         self.missing = attributes[:'missing']
+        
+      
       end
 
+      
       if attributes.has_key?(:'termCount')
+        
+        
         self.term_count = attributes[:'termCount']
+        
+      
       end
 
+      
       if attributes.has_key?(:'termType')
+        
+        
         self.term_type = attributes[:'termType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'terms')
+        
         if (value = attributes[:'terms']).is_a?(Array)
           self.terms = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["TERM", "NUMBERRANGE", "NUMBERHISTOGRAM", "DATERANGE", "DATEHISTOGRAM", "ID"]
       if @term_type && !allowed_values.include?(@term_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] term_type Object to be assigned
     def term_type=(term_type)
@@ -132,6 +259,14 @@ module PureCloud
       @term_type = term_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

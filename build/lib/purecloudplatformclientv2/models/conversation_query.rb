@@ -45,28 +45,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'interval' => :'interval',
+        
         :'conversation_filters' => :'conversationFilters',
+        
         :'evaluation_filters' => :'evaluationFilters',
+        
         :'segment_filters' => :'segmentFilters',
+        
         :'aggregations' => :'aggregations',
+        
         :'paging' => :'paging',
+        
         :'order' => :'order',
+        
         :'order_by' => :'orderBy'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'interval' => :'String',
+        
         :'conversation_filters' => :'Array<AnalyticsQueryFilter>',
+        
         :'evaluation_filters' => :'Array<AnalyticsQueryFilter>',
+        
         :'segment_filters' => :'Array<AnalyticsQueryFilter>',
+        
         :'aggregations' => :'Array<AnalyticsQueryAggregation>',
+        
         :'paging' => :'PagingSpec',
+        
         :'order' => :'String',
+        
         :'order_by' => :'String'
+        
       }
     end
 
@@ -78,68 +96,178 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'interval')
+        
+        
         self.interval = attributes[:'interval']
+        
+      
       end
 
+      
       if attributes.has_key?(:'conversationFilters')
+        
         if (value = attributes[:'conversationFilters']).is_a?(Array)
           self.conversation_filters = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'evaluationFilters')
+        
         if (value = attributes[:'evaluationFilters']).is_a?(Array)
           self.evaluation_filters = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'segmentFilters')
+        
         if (value = attributes[:'segmentFilters']).is_a?(Array)
           self.segment_filters = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'aggregations')
+        
         if (value = attributes[:'aggregations']).is_a?(Array)
           self.aggregations = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'paging')
+        
+        
         self.paging = attributes[:'paging']
+        
+      
       end
 
+      
       if attributes.has_key?(:'order')
+        
+        
         self.order = attributes[:'order']
+        
+      
       end
 
+      
       if attributes.has_key?(:'orderBy')
+        
+        
         self.order_by = attributes[:'orderBy']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["asc", "desc"]
       if @order && !allowed_values.include?(@order)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["conversationStart", "conversationEnd", "segmentStart", "segmentEnd"]
       if @order_by && !allowed_values.include?(@order_by)
         return false
       end
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] order Object to be assigned
     def order=(order)
@@ -150,6 +278,10 @@ module PureCloud
       @order = order
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] order_by Object to be assigned
     def order_by=(order_by)
@@ -160,6 +292,9 @@ module PureCloud
       @order_by = order_by
     end
 
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

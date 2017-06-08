@@ -41,6 +41,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GeolocationApi.get_geolocations_settings ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/geolocations/settings".sub('{format}','json')
 
@@ -63,7 +64,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -98,10 +100,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GeolocationApi.get_user_geolocation ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling GeolocationApi.get_user_geolocation" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'client_id' is set
       fail ArgumentError, "Missing the required parameter 'client_id' when calling GeolocationApi.get_user_geolocation" if client_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/geolocations/{clientId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'clientId' + '}', client_id.to_s)
 
@@ -124,7 +139,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -157,8 +173,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GeolocationApi.patch_geolocations_settings ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GeolocationApi.patch_geolocations_settings" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/geolocations/settings".sub('{format}','json')
 
@@ -181,6 +204,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -218,12 +242,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GeolocationApi.patch_user_geolocation ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling GeolocationApi.patch_user_geolocation" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'client_id' is set
       fail ArgumentError, "Missing the required parameter 'client_id' when calling GeolocationApi.patch_user_geolocation" if client_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GeolocationApi.patch_user_geolocation" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/geolocations/{clientId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'clientId' + '}', client_id.to_s)
 
@@ -246,6 +289,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,

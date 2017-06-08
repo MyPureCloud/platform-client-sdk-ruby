@@ -123,80 +123,150 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'address' => :'address',
+        
         :'start_time' => :'startTime',
+        
         :'connected_time' => :'connectedTime',
+        
         :'end_time' => :'endTime',
+        
         :'start_hold_time' => :'startHoldTime',
+        
         :'purpose' => :'purpose',
+        
         :'state' => :'state',
+        
         :'direction' => :'direction',
+        
         :'disconnect_type' => :'disconnectType',
+        
         :'held' => :'held',
+        
         :'wrapup_required' => :'wrapupRequired',
+        
         :'wrapup_prompt' => :'wrapupPrompt',
+        
         :'user' => :'user',
+        
         :'queue' => :'queue',
+        
         :'attributes' => :'attributes',
+        
         :'error_info' => :'errorInfo',
+        
         :'script' => :'script',
+        
         :'wrapup_timeout_ms' => :'wrapupTimeoutMs',
+        
         :'wrapup_skipped' => :'wrapupSkipped',
+        
         :'provider' => :'provider',
+        
         :'external_contact' => :'externalContact',
+        
         :'external_organization' => :'externalOrganization',
+        
         :'wrapup' => :'wrapup',
+        
         :'peer' => :'peer',
+        
         :'outbound_preview' => :'outboundPreview',
+        
         :'voicemail' => :'voicemail',
+        
         :'callback_numbers' => :'callbackNumbers',
+        
         :'callback_user_name' => :'callbackUserName',
+        
         :'skip_enabled' => :'skipEnabled',
+        
         :'timeout_seconds' => :'timeoutSeconds',
+        
         :'automated_callback_config_id' => :'automatedCallbackConfigId',
+        
         :'callback_scheduled_time' => :'callbackScheduledTime'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'address' => :'String',
+        
         :'start_time' => :'DateTime',
+        
         :'connected_time' => :'DateTime',
+        
         :'end_time' => :'DateTime',
+        
         :'start_hold_time' => :'DateTime',
+        
         :'purpose' => :'String',
+        
         :'state' => :'String',
+        
         :'direction' => :'String',
+        
         :'disconnect_type' => :'String',
+        
         :'held' => :'BOOLEAN',
+        
         :'wrapup_required' => :'BOOLEAN',
+        
         :'wrapup_prompt' => :'String',
+        
         :'user' => :'UriReference',
+        
         :'queue' => :'UriReference',
+        
         :'attributes' => :'Hash<String, String>',
+        
         :'error_info' => :'ErrorBody',
+        
         :'script' => :'UriReference',
+        
         :'wrapup_timeout_ms' => :'Integer',
+        
         :'wrapup_skipped' => :'BOOLEAN',
+        
         :'provider' => :'String',
+        
         :'external_contact' => :'UriReference',
+        
         :'external_organization' => :'UriReference',
+        
         :'wrapup' => :'Wrapup',
+        
         :'peer' => :'String',
+        
         :'outbound_preview' => :'DialerPreview',
+        
         :'voicemail' => :'Voicemail',
+        
         :'callback_numbers' => :'Array<String>',
+        
         :'callback_user_name' => :'String',
+        
         :'skip_enabled' => :'BOOLEAN',
+        
         :'timeout_seconds' => :'Integer',
+        
         :'automated_callback_config_id' => :'String',
+        
         :'callback_scheduled_time' => :'DateTime'
+        
       }
     end
 
@@ -208,172 +278,527 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'address')
+        
+        
         self.address = attributes[:'address']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startTime')
+        
+        
         self.start_time = attributes[:'startTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'connectedTime')
+        
+        
         self.connected_time = attributes[:'connectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endTime')
+        
+        
         self.end_time = attributes[:'endTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startHoldTime')
+        
+        
         self.start_hold_time = attributes[:'startHoldTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'purpose')
+        
+        
         self.purpose = attributes[:'purpose']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'direction')
+        
+        
         self.direction = attributes[:'direction']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectType')
+        
+        
         self.disconnect_type = attributes[:'disconnectType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'held')
+        
+        
         self.held = attributes[:'held']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapupRequired')
+        
+        
         self.wrapup_required = attributes[:'wrapupRequired']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapupPrompt')
+        
+        
         self.wrapup_prompt = attributes[:'wrapupPrompt']
+        
+      
       end
 
+      
       if attributes.has_key?(:'user')
+        
+        
         self.user = attributes[:'user']
+        
+      
       end
 
+      
       if attributes.has_key?(:'queue')
+        
+        
         self.queue = attributes[:'queue']
+        
+      
       end
 
+      
       if attributes.has_key?(:'attributes')
+        
         if (value = attributes[:'attributes']).is_a?(Array)
           self.attributes = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'errorInfo')
+        
+        
         self.error_info = attributes[:'errorInfo']
+        
+      
       end
 
+      
       if attributes.has_key?(:'script')
+        
+        
         self.script = attributes[:'script']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapupTimeoutMs')
+        
+        
         self.wrapup_timeout_ms = attributes[:'wrapupTimeoutMs']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapupSkipped')
+        
+        
         self.wrapup_skipped = attributes[:'wrapupSkipped']
+        
+      
       end
 
+      
       if attributes.has_key?(:'provider')
+        
+        
         self.provider = attributes[:'provider']
+        
+      
       end
 
+      
       if attributes.has_key?(:'externalContact')
+        
+        
         self.external_contact = attributes[:'externalContact']
+        
+      
       end
 
+      
       if attributes.has_key?(:'externalOrganization')
+        
+        
         self.external_organization = attributes[:'externalOrganization']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapup')
+        
+        
         self.wrapup = attributes[:'wrapup']
+        
+      
       end
 
+      
       if attributes.has_key?(:'peer')
+        
+        
         self.peer = attributes[:'peer']
+        
+      
       end
 
+      
       if attributes.has_key?(:'outboundPreview')
+        
+        
         self.outbound_preview = attributes[:'outboundPreview']
+        
+      
       end
 
+      
       if attributes.has_key?(:'voicemail')
+        
+        
         self.voicemail = attributes[:'voicemail']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackNumbers')
+        
         if (value = attributes[:'callbackNumbers']).is_a?(Array)
           self.callback_numbers = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackUserName')
+        
+        
         self.callback_user_name = attributes[:'callbackUserName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'skipEnabled')
+        
+        
         self.skip_enabled = attributes[:'skipEnabled']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timeoutSeconds')
+        
+        
         self.timeout_seconds = attributes[:'timeoutSeconds']
+        
+      
       end
 
+      
       if attributes.has_key?(:'automatedCallbackConfigId')
+        
+        
         self.automated_callback_config_id = attributes[:'automatedCallbackConfigId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbackScheduledTime')
+        
+        
         self.callback_scheduled_time = attributes[:'callbackScheduledTime']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["alerting", "dialing", "contacting", "offering", "connected", "disconnected", "terminated", "converting", "uploading", "transmitting", "none"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["inbound", "outbound"]
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["endpoint", "client", "system", "transfer", "transfer.conference", "transfer.consult", "transfer.forward", "transfer.noanswer", "transfer.notavailable", "transport.failure", "error", "peer", "other", "spam"]
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -384,6 +809,10 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] direction Object to be assigned
     def direction=(direction)
@@ -394,6 +823,10 @@ module PureCloud
       @direction = direction
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] disconnect_type Object to be assigned
     def disconnect_type=(disconnect_type)
@@ -404,6 +837,124 @@ module PureCloud
       @disconnect_type = disconnect_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

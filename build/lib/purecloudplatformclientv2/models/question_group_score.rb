@@ -43,34 +43,58 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'question_group_id' => :'questionGroupId',
+        
         :'total_score' => :'totalScore',
+        
         :'max_total_score' => :'maxTotalScore',
+        
         :'total_critical_score' => :'totalCriticalScore',
+        
         :'max_total_critical_score' => :'maxTotalCriticalScore',
+        
         :'total_score_unweighted' => :'totalScoreUnweighted',
+        
         :'max_total_score_unweighted' => :'maxTotalScoreUnweighted',
+        
         :'total_critical_score_unweighted' => :'totalCriticalScoreUnweighted',
+        
         :'max_total_critical_score_unweighted' => :'maxTotalCriticalScoreUnweighted',
+        
         :'marked_na' => :'markedNA',
+        
         :'question_scores' => :'questionScores'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'question_group_id' => :'String',
+        
         :'total_score' => :'Float',
+        
         :'max_total_score' => :'Float',
+        
         :'total_critical_score' => :'Float',
+        
         :'max_total_critical_score' => :'Float',
+        
         :'total_score_unweighted' => :'Float',
+        
         :'max_total_score_unweighted' => :'Float',
+        
         :'total_critical_score_unweighted' => :'Float',
+        
         :'max_total_critical_score_unweighted' => :'Float',
+        
         :'marked_na' => :'BOOLEAN',
+        
         :'question_scores' => :'Array<QuestionScore>'
+        
       }
     end
 
@@ -82,66 +106,225 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'questionGroupId')
+        
+        
         self.question_group_id = attributes[:'questionGroupId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'totalScore')
+        
+        
         self.total_score = attributes[:'totalScore']
+        
+      
       end
 
+      
       if attributes.has_key?(:'maxTotalScore')
+        
+        
         self.max_total_score = attributes[:'maxTotalScore']
+        
+      
       end
 
+      
       if attributes.has_key?(:'totalCriticalScore')
+        
+        
         self.total_critical_score = attributes[:'totalCriticalScore']
+        
+      
       end
 
+      
       if attributes.has_key?(:'maxTotalCriticalScore')
+        
+        
         self.max_total_critical_score = attributes[:'maxTotalCriticalScore']
+        
+      
       end
 
+      
       if attributes.has_key?(:'totalScoreUnweighted')
+        
+        
         self.total_score_unweighted = attributes[:'totalScoreUnweighted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'maxTotalScoreUnweighted')
+        
+        
         self.max_total_score_unweighted = attributes[:'maxTotalScoreUnweighted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'totalCriticalScoreUnweighted')
+        
+        
         self.total_critical_score_unweighted = attributes[:'totalCriticalScoreUnweighted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'maxTotalCriticalScoreUnweighted')
+        
+        
         self.max_total_critical_score_unweighted = attributes[:'maxTotalCriticalScoreUnweighted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'markedNA')
+        
+        
         self.marked_na = attributes[:'markedNA']
+        
+      
       end
 
+      
       if attributes.has_key?(:'questionScores')
+        
         if (value = attributes[:'questionScores']).is_a?(Array)
           self.question_scores = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -46,34 +46,58 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'report_id' => :'reportId',
+        
         :'run_time' => :'runTime',
+        
         :'run_status' => :'runStatus',
+        
         :'error_message' => :'errorMessage',
+        
         :'run_duration_msec' => :'runDurationMsec',
+        
         :'report_url' => :'reportUrl',
+        
         :'report_format' => :'reportFormat',
+        
         :'schedule_uri' => :'scheduleUri',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'report_id' => :'String',
+        
         :'run_time' => :'DateTime',
+        
         :'run_status' => :'String',
+        
         :'error_message' => :'String',
+        
         :'run_duration_msec' => :'Integer',
+        
         :'report_url' => :'String',
+        
         :'report_format' => :'String',
+        
         :'schedule_uri' => :'String',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -85,68 +109,194 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'reportId')
+        
+        
         self.report_id = attributes[:'reportId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'runTime')
+        
+        
         self.run_time = attributes[:'runTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'runStatus')
+        
+        
         self.run_status = attributes[:'runStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'errorMessage')
+        
+        
         self.error_message = attributes[:'errorMessage']
+        
+      
       end
 
+      
       if attributes.has_key?(:'runDurationMsec')
+        
+        
         self.run_duration_msec = attributes[:'runDurationMsec']
+        
+      
       end
 
+      
       if attributes.has_key?(:'reportUrl')
+        
+        
         self.report_url = attributes[:'reportUrl']
+        
+      
       end
 
+      
       if attributes.has_key?(:'reportFormat')
+        
+        
         self.report_format = attributes[:'reportFormat']
+        
+      
       end
 
+      
       if attributes.has_key?(:'scheduleUri')
+        
+        
         self.schedule_uri = attributes[:'scheduleUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["RUNNING", "COMPLETED", "COMPLETED_WITH_ERRORS", "FAILED", "FAILED_TIMEOUT", "FAILED_DATALIMIT"]
       if @run_status && !allowed_values.include?(@run_status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] run_status Object to be assigned
     def run_status=(run_status)
@@ -157,6 +307,39 @@ module PureCloud
       @run_status = run_status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

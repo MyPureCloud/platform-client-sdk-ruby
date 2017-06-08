@@ -63,40 +63,70 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'state' => :'state',
+        
         :'id' => :'id',
+        
         :'disconnect_type' => :'disconnectType',
+        
         :'_self' => :'self',
+        
         :'cobrowse_session_id' => :'cobrowseSessionId',
+        
         :'cobrowse_role' => :'cobrowseRole',
+        
         :'controlling' => :'controlling',
+        
         :'viewer_url' => :'viewerUrl',
+        
         :'provider_event_time' => :'providerEventTime',
+        
         :'connected_time' => :'connectedTime',
+        
         :'disconnected_time' => :'disconnectedTime',
+        
         :'provider' => :'provider',
+        
         :'peer_id' => :'peerId',
+        
         :'segments' => :'segments'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'state' => :'String',
+        
         :'id' => :'String',
+        
         :'disconnect_type' => :'String',
+        
         :'_self' => :'Address',
+        
         :'cobrowse_session_id' => :'String',
+        
         :'cobrowse_role' => :'String',
+        
         :'controlling' => :'Array<String>',
+        
         :'viewer_url' => :'String',
+        
         :'provider_event_time' => :'DateTime',
+        
         :'connected_time' => :'DateTime',
+        
         :'disconnected_time' => :'DateTime',
+        
         :'provider' => :'String',
+        
         :'peer_id' => :'String',
+        
         :'segments' => :'Array<Segment>'
+        
       }
     end
 
@@ -108,88 +138,222 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectType')
+        
+        
         self.disconnect_type = attributes[:'disconnectType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'self')
+        
+        
         self._self = attributes[:'self']
+        
+      
       end
 
+      
       if attributes.has_key?(:'cobrowseSessionId')
+        
+        
         self.cobrowse_session_id = attributes[:'cobrowseSessionId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'cobrowseRole')
+        
+        
         self.cobrowse_role = attributes[:'cobrowseRole']
+        
+      
       end
 
+      
       if attributes.has_key?(:'controlling')
+        
         if (value = attributes[:'controlling']).is_a?(Array)
           self.controlling = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'viewerUrl')
+        
+        
         self.viewer_url = attributes[:'viewerUrl']
+        
+      
       end
 
+      
       if attributes.has_key?(:'providerEventTime')
+        
+        
         self.provider_event_time = attributes[:'providerEventTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'connectedTime')
+        
+        
         self.connected_time = attributes[:'connectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectedTime')
+        
+        
         self.disconnected_time = attributes[:'disconnectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'provider')
+        
+        
         self.provider = attributes[:'provider']
+        
+      
       end
 
+      
       if attributes.has_key?(:'peerId')
+        
+        
         self.peer_id = attributes[:'peerId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'segments')
+        
         if (value = attributes[:'segments']).is_a?(Array)
           self.segments = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["alerting", "dialing", "contacting", "offering", "connected", "disconnected", "terminated", "scheduled", "none"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["endpoint", "client", "system", "timeout", "transfer", "transfer.conference", "transfer.consult", "transfer.forward", "transport.failure", "error", "peer", "other", "spam", "uncallable"]
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -200,6 +364,15 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] disconnect_type Object to be assigned
     def disconnect_type=(disconnect_type)
@@ -210,6 +383,64 @@ module PureCloud
       @disconnect_type = disconnect_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

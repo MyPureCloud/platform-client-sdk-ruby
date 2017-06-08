@@ -71,60 +71,110 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'segment_start' => :'segmentStart',
+        
         :'segment_end' => :'segmentEnd',
+        
         :'queue_id' => :'queueId',
+        
         :'wrap_up_code' => :'wrapUpCode',
+        
         :'wrap_up_note' => :'wrapUpNote',
+        
         :'wrap_up_tags' => :'wrapUpTags',
+        
         :'error_code' => :'errorCode',
+        
         :'disconnect_type' => :'disconnectType',
+        
         :'segment_type' => :'segmentType',
+        
         :'requested_routing_user_ids' => :'requestedRoutingUserIds',
+        
         :'requested_routing_skill_ids' => :'requestedRoutingSkillIds',
+        
         :'requested_language_id' => :'requestedLanguageId',
+        
         :'properties' => :'properties',
+        
         :'source_conversation_id' => :'sourceConversationId',
+        
         :'destination_conversation_id' => :'destinationConversationId',
+        
         :'source_session_id' => :'sourceSessionId',
+        
         :'destination_session_id' => :'destinationSessionId',
+        
         :'sip_response_codes' => :'sipResponseCodes',
+        
         :'q850_response_codes' => :'q850ResponseCodes',
+        
         :'conference' => :'conference',
+        
         :'group_id' => :'groupId',
+        
         :'subject' => :'subject',
+        
         :'audio_muted' => :'audioMuted',
+        
         :'video_muted' => :'videoMuted'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'segment_start' => :'DateTime',
+        
         :'segment_end' => :'DateTime',
+        
         :'queue_id' => :'String',
+        
         :'wrap_up_code' => :'String',
+        
         :'wrap_up_note' => :'String',
+        
         :'wrap_up_tags' => :'Array<String>',
+        
         :'error_code' => :'String',
+        
         :'disconnect_type' => :'String',
+        
         :'segment_type' => :'String',
+        
         :'requested_routing_user_ids' => :'Array<String>',
+        
         :'requested_routing_skill_ids' => :'Array<String>',
+        
         :'requested_language_id' => :'String',
+        
         :'properties' => :'Array<AnalyticsProperty>',
+        
         :'source_conversation_id' => :'String',
+        
         :'destination_conversation_id' => :'String',
+        
         :'source_session_id' => :'String',
+        
         :'destination_session_id' => :'String',
+        
         :'sip_response_codes' => :'Array<Integer>',
+        
         :'q850_response_codes' => :'Array<Integer>',
+        
         :'conference' => :'BOOLEAN',
+        
         :'group_id' => :'String',
+        
         :'subject' => :'String',
+        
         :'audio_muted' => :'BOOLEAN',
+        
         :'video_muted' => :'BOOLEAN'
+        
       }
     end
 
@@ -136,136 +186,395 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'segmentStart')
+        
+        
         self.segment_start = attributes[:'segmentStart']
+        
+      
       end
 
+      
       if attributes.has_key?(:'segmentEnd')
+        
+        
         self.segment_end = attributes[:'segmentEnd']
+        
+      
       end
 
+      
       if attributes.has_key?(:'queueId')
+        
+        
         self.queue_id = attributes[:'queueId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapUpCode')
+        
+        
         self.wrap_up_code = attributes[:'wrapUpCode']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapUpNote')
+        
+        
         self.wrap_up_note = attributes[:'wrapUpNote']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapUpTags')
+        
         if (value = attributes[:'wrapUpTags']).is_a?(Array)
           self.wrap_up_tags = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'errorCode')
+        
+        
         self.error_code = attributes[:'errorCode']
+        
+      
       end
 
+      
       if attributes.has_key?(:'disconnectType')
+        
+        
         self.disconnect_type = attributes[:'disconnectType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'segmentType')
+        
+        
         self.segment_type = attributes[:'segmentType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'requestedRoutingUserIds')
+        
         if (value = attributes[:'requestedRoutingUserIds']).is_a?(Array)
           self.requested_routing_user_ids = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'requestedRoutingSkillIds')
+        
         if (value = attributes[:'requestedRoutingSkillIds']).is_a?(Array)
           self.requested_routing_skill_ids = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'requestedLanguageId')
+        
+        
         self.requested_language_id = attributes[:'requestedLanguageId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'properties')
+        
         if (value = attributes[:'properties']).is_a?(Array)
           self.properties = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'sourceConversationId')
+        
+        
         self.source_conversation_id = attributes[:'sourceConversationId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'destinationConversationId')
+        
+        
         self.destination_conversation_id = attributes[:'destinationConversationId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sourceSessionId')
+        
+        
         self.source_session_id = attributes[:'sourceSessionId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'destinationSessionId')
+        
+        
         self.destination_session_id = attributes[:'destinationSessionId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sipResponseCodes')
+        
         if (value = attributes[:'sipResponseCodes']).is_a?(Array)
           self.sip_response_codes = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'q850ResponseCodes')
+        
         if (value = attributes[:'q850ResponseCodes']).is_a?(Array)
           self.q850_response_codes = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'conference')
+        
+        
         self.conference = attributes[:'conference']
+        
+      
       end
 
+      
       if attributes.has_key?(:'groupId')
+        
+        
         self.group_id = attributes[:'groupId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'subject')
+        
+        
         self.subject = attributes[:'subject']
+        
+      
       end
 
+      
       if attributes.has_key?(:'audioMuted')
+        
+        
         self.audio_muted = attributes[:'audioMuted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'videoMuted')
+        
+        
         self.video_muted = attributes[:'videoMuted']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["endpoint", "client", "system", "transfer", "error", "peer", "other", "spam", "transportFailure", "conferenceTransfer", "consultTransfer", "forwardTransfer", "timeout", "noAnswerTransfer", "notAvailableTransfer"]
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["unknown", "alert", "system", "delay", "hold", "interact", "ivr", "dialing", "wrapup", "voicemail", "scheduled"]
       if @segment_type && !allowed_values.include?(@segment_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] disconnect_type Object to be assigned
     def disconnect_type=(disconnect_type)
@@ -276,6 +585,10 @@ module PureCloud
       @disconnect_type = disconnect_type
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] segment_type Object to be assigned
     def segment_type=(segment_type)
@@ -286,6 +599,84 @@ module PureCloud
       @segment_type = segment_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

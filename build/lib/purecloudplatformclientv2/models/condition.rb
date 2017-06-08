@@ -39,29 +39,59 @@ module PureCloud
     # List of wrap-up code identifiers (used only in conditions of type 'wrapupCondition')
     attr_accessor :codes
 
+    # Determines the type of the property associated with the condition
+    attr_accessor :property_type
+
+    # A value associated with the property type of this condition
+    attr_accessor :property
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'type' => :'type',
+        
         :'inverted' => :'inverted',
+        
         :'attribute_name' => :'attributeName',
+        
         :'value' => :'value',
+        
         :'value_type' => :'valueType',
+        
         :'operator' => :'operator',
-        :'codes' => :'codes'
+        
+        :'codes' => :'codes',
+        
+        :'property_type' => :'propertyType',
+        
+        :'property' => :'property'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'type' => :'String',
+        
         :'inverted' => :'BOOLEAN',
+        
         :'attribute_name' => :'String',
+        
         :'value' => :'String',
+        
         :'value_type' => :'String',
+        
         :'operator' => :'String',
-        :'codes' => :'Array<String>'
+        
+        :'codes' => :'Array<String>',
+        
+        :'property_type' => :'String',
+        
+        :'property' => :'String'
+        
       }
     end
 
@@ -73,62 +103,165 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'type')
+        
+        
         self.type = attributes[:'type']
+        
+      
       end
 
+      
       if attributes.has_key?(:'inverted')
+        
+        
         self.inverted = attributes[:'inverted']
+        
+      
       end
 
+      
       if attributes.has_key?(:'attributeName')
+        
+        
         self.attribute_name = attributes[:'attributeName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'value')
+        
+        
         self.value = attributes[:'value']
+        
+      
       end
 
+      
       if attributes.has_key?(:'valueType')
+        
+        
         self.value_type = attributes[:'valueType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'operator')
+        
+        
         self.operator = attributes[:'operator']
+        
+      
       end
 
+      
       if attributes.has_key?(:'codes')
+        
         if (value = attributes[:'codes']).is_a?(Array)
           self.codes = value
         end
+        
+        
+      
       end
 
+      
+      if attributes.has_key?(:'propertyType')
+        
+        
+        self.property_type = attributes[:'propertyType']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'property')
+        
+        
+        self.property = attributes[:'property']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["wrapupCondition", "contactAttributeCondition", "phoneNumberCondition", "phoneNumberTypeCondition", "callAnalysisCondition", "contactPropertyCondition"]
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["STRING", "NUMERIC", "DATETIME", "PERIOD"]
       if @value_type && !allowed_values.include?(@value_type)
         return false
       end
+      
+      
+      
+      
+      
       allowed_values = ["EQUALS", "LESS_THAN", "LESS_THAN_EQUALS", "GREATER_THAN", "GREATER_THAN_EQUALS", "CONTAINS", "BEGINS_WITH", "ENDS_WITH", "BEFORE", "AFTER"]
       if @operator && !allowed_values.include?(@operator)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["LAST_ATTEMPT_BY_COLUMN", "LAST_ATTEMPT_OVERALL"]
+      if @property_type && !allowed_values.include?(@property_type)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
@@ -139,6 +272,25 @@ module PureCloud
       @type = type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] value_type Object to be assigned
     def value_type=(value_type)
@@ -149,6 +301,10 @@ module PureCloud
       @value_type = value_type
     end
 
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] operator Object to be assigned
     def operator=(operator)
@@ -159,6 +315,33 @@ module PureCloud
       @operator = operator
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] property_type Object to be assigned
+    def property_type=(property_type)
+      allowed_values = ["LAST_ATTEMPT_BY_COLUMN", "LAST_ATTEMPT_OVERALL"]
+      if property_type && !allowed_values.include?(property_type)
+        fail ArgumentError, "invalid value for 'property_type', must be one of #{allowed_values}."
+      end
+      @property_type = property_type
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -170,7 +353,9 @@ module PureCloud
           value == o.value &&
           value_type == o.value_type &&
           operator == o.operator &&
-          codes == o.codes
+          codes == o.codes &&
+          property_type == o.property_type &&
+          property == o.property
     end
 
     # @see the `==` method
@@ -182,7 +367,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, inverted, attribute_name, value, value_type, operator, codes].hash
+      [type, inverted, attribute_name, value, value_type, operator, codes, property_type, property].hash
     end
 
     # build the object from hash

@@ -42,26 +42,42 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'enabled' => :'enabled',
+        
         :'alert_timeout_seconds' => :'alertTimeoutSeconds',
+        
         :'pin_configuration' => :'pinConfiguration',
+        
         :'voicemail_extension' => :'voicemailExtension',
+        
         :'pin_required' => :'pinRequired',
+        
         :'send_email_notifications' => :'sendEmailNotifications',
+        
         :'modified_date' => :'modifiedDate'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'enabled' => :'BOOLEAN',
+        
         :'alert_timeout_seconds' => :'Integer',
+        
         :'pin_configuration' => :'PINConfiguration',
+        
         :'voicemail_extension' => :'String',
+        
         :'pin_required' => :'BOOLEAN',
+        
         :'send_email_notifications' => :'BOOLEAN',
+        
         :'modified_date' => :'DateTime'
+        
       }
     end
 
@@ -73,48 +89,151 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'enabled')
+        
+        
         self.enabled = attributes[:'enabled']
+        
+      
       end
 
+      
       if attributes.has_key?(:'alertTimeoutSeconds')
+        
+        
         self.alert_timeout_seconds = attributes[:'alertTimeoutSeconds']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pinConfiguration')
+        
+        
         self.pin_configuration = attributes[:'pinConfiguration']
+        
+      
       end
 
+      
       if attributes.has_key?(:'voicemailExtension')
+        
+        
         self.voicemail_extension = attributes[:'voicemailExtension']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pinRequired')
+        
+        
         self.pin_required = attributes[:'pinRequired']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sendEmailNotifications')
+        
+        
         self.send_email_notifications = attributes[:'sendEmailNotifications']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedDate')
+        
+        
         self.modified_date = attributes[:'modifiedDate']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

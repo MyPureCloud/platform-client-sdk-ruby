@@ -37,26 +37,42 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'count' => :'count',
+        
         :'min' => :'min',
+        
         :'max' => :'max',
+        
         :'mean' => :'mean',
+        
         :'std_deviation' => :'stdDeviation',
+        
         :'date_min' => :'dateMin',
+        
         :'date_max' => :'dateMax'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'count' => :'Integer',
+        
         :'min' => :'Float',
+        
         :'max' => :'Float',
+        
         :'mean' => :'Float',
+        
         :'std_deviation' => :'Float',
+        
         :'date_min' => :'DateTime',
+        
         :'date_max' => :'DateTime'
+        
       }
     end
 
@@ -68,48 +84,151 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'count')
+        
+        
         self.count = attributes[:'count']
+        
+      
       end
 
+      
       if attributes.has_key?(:'min')
+        
+        
         self.min = attributes[:'min']
+        
+      
       end
 
+      
       if attributes.has_key?(:'max')
+        
+        
         self.max = attributes[:'max']
+        
+      
       end
 
+      
       if attributes.has_key?(:'mean')
+        
+        
         self.mean = attributes[:'mean']
+        
+      
       end
 
+      
       if attributes.has_key?(:'stdDeviation')
+        
+        
         self.std_deviation = attributes[:'stdDeviation']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateMin')
+        
+        
         self.date_min = attributes[:'dateMin']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateMax')
+        
+        
         self.date_max = attributes[:'dateMax']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -42,26 +42,42 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'queue_id' => :'queueId',
+        
         :'provider' => :'provider',
+        
         :'skill_ids' => :'skillIds',
+        
         :'language_id' => :'languageId',
+        
         :'priority' => :'priority',
+        
         :'attributes' => :'attributes',
+        
         :'customer_name' => :'customerName'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'queue_id' => :'String',
+        
         :'provider' => :'String',
+        
         :'skill_ids' => :'Array<String>',
+        
         :'language_id' => :'String',
+        
         :'priority' => :'Integer',
+        
         :'attributes' => :'Hash<String, String>',
+        
         :'customer_name' => :'String'
+        
       }
     end
 
@@ -73,60 +89,165 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'queueId')
+        
+        
         self.queue_id = attributes[:'queueId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'provider')
+        
+        
         self.provider = attributes[:'provider']
+        
+      
       end
 
+      
       if attributes.has_key?(:'skillIds')
+        
         if (value = attributes[:'skillIds']).is_a?(Array)
           self.skill_ids = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'languageId')
+        
+        
         self.language_id = attributes[:'languageId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'priority')
+        
+        
         self.priority = attributes[:'priority']
+        
+      
       end
 
+      
       if attributes.has_key?(:'attributes')
+        
         if (value = attributes[:'attributes']).is_a?(Array)
           self.attributes = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'customerName')
+        
+        
         self.customer_name = attributes[:'customerName']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @queue_id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @provider.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

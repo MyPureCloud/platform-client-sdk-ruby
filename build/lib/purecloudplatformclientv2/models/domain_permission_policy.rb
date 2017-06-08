@@ -37,28 +37,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'domain' => :'domain',
+        
         :'entity_name' => :'entityName',
+        
         :'policy_name' => :'policyName',
+        
         :'policy_description' => :'policyDescription',
+        
         :'action_set' => :'actionSet',
+        
         :'named_resources' => :'namedResources',
+        
         :'allow_conditions' => :'allowConditions',
+        
         :'resource_condition_node' => :'resourceConditionNode'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'domain' => :'String',
+        
         :'entity_name' => :'String',
+        
         :'policy_name' => :'String',
+        
         :'policy_description' => :'String',
+        
         :'action_set' => :'Array<String>',
+        
         :'named_resources' => :'Array<String>',
+        
         :'allow_conditions' => :'BOOLEAN',
+        
         :'resource_condition_node' => :'DomainResourceConditionNode'
+        
       }
     end
 
@@ -70,56 +88,173 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'domain')
+        
+        
         self.domain = attributes[:'domain']
+        
+      
       end
 
+      
       if attributes.has_key?(:'entityName')
+        
+        
         self.entity_name = attributes[:'entityName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'policyName')
+        
+        
         self.policy_name = attributes[:'policyName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'policyDescription')
+        
+        
         self.policy_description = attributes[:'policyDescription']
+        
+      
       end
 
+      
       if attributes.has_key?(:'actionSet')
+        
         if (value = attributes[:'actionSet']).is_a?(Array)
           self.action_set = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'namedResources')
+        
         if (value = attributes[:'namedResources']).is_a?(Array)
           self.named_resources = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'allowConditions')
+        
+        
         self.allow_conditions = attributes[:'allowConditions']
+        
+      
       end
 
+      
       if attributes.has_key?(:'resourceConditionNode')
+        
+        
         self.resource_condition_node = attributes[:'resourceConditionNode']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

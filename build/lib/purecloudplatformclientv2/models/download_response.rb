@@ -27,18 +27,26 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'content_location_uri' => :'contentLocationUri',
+        
         :'image_uri' => :'imageUri',
+        
         :'thumbnails' => :'thumbnails'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'content_location_uri' => :'String',
+        
         :'image_uri' => :'String',
+        
         :'thumbnails' => :'Array<DocumentThumbnail>'
+        
       }
     end
 
@@ -50,34 +58,81 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'contentLocationUri')
+        
+        
         self.content_location_uri = attributes[:'contentLocationUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'imageUri')
+        
+        
         self.image_uri = attributes[:'imageUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'thumbnails')
+        
         if (value = attributes[:'thumbnails']).is_a?(Array)
           self.thumbnails = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

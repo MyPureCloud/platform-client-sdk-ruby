@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_email_domain ..."
       end
+      
+      
       # verify the required parameter 'domain_id' is set
       fail ArgumentError, "Missing the required parameter 'domain_id' when calling RoutingApi.delete_routing_email_domain" if domain_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/email/domains/{domainId}".sub('{format}','json').sub('{' + 'domainId' + '}', domain_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -101,10 +109,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_email_domain_route ..."
       end
+      
+      
       # verify the required parameter 'domain_name' is set
       fail ArgumentError, "Missing the required parameter 'domain_name' when calling RoutingApi.delete_routing_email_domain_route" if domain_name.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'route_id' is set
       fail ArgumentError, "Missing the required parameter 'route_id' when calling RoutingApi.delete_routing_email_domain_route" if route_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}".sub('{format}','json').sub('{' + 'domainName' + '}', domain_name.to_s).sub('{' + 'routeId' + '}', route_id.to_s)
 
@@ -127,7 +148,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -161,8 +183,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_queue ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.delete_routing_queue" if queue_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s)
 
@@ -186,7 +221,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -220,10 +256,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_queue_user ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.delete_routing_queue_user" if queue_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'member_id' is set
       fail ArgumentError, "Missing the required parameter 'member_id' when calling RoutingApi.delete_routing_queue_user" if member_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}/users/{memberId}".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s).sub('{' + 'memberId' + '}', member_id.to_s)
 
@@ -246,7 +295,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -280,10 +330,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_queue_wrapupcode ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.delete_routing_queue_wrapupcode" if queue_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'code_id' is set
       fail ArgumentError, "Missing the required parameter 'code_id' when calling RoutingApi.delete_routing_queue_wrapupcode" if code_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}/wrapupcodes/{codeId}".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s).sub('{' + 'codeId' + '}', code_id.to_s)
 
@@ -306,7 +369,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -338,8 +402,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_skill ..."
       end
+      
+      
       # verify the required parameter 'skill_id' is set
       fail ArgumentError, "Missing the required parameter 'skill_id' when calling RoutingApi.delete_routing_skill" if skill_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/skills/{skillId}".sub('{format}','json').sub('{' + 'skillId' + '}', skill_id.to_s)
 
@@ -362,7 +433,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -392,6 +464,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_utilization ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/routing/utilization".sub('{format}','json')
 
@@ -414,7 +487,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -446,8 +520,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_wrapupcode ..."
       end
+      
+      
       # verify the required parameter 'code_id' is set
       fail ArgumentError, "Missing the required parameter 'code_id' when calling RoutingApi.delete_routing_wrapupcode" if code_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/wrapupcodes/{codeId}".sub('{format}','json').sub('{' + 'codeId' + '}', code_id.to_s)
 
@@ -470,7 +551,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -504,10 +586,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.delete_user_routingskill ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling RoutingApi.delete_user_routingskill" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'skill_id' is set
       fail ArgumentError, "Missing the required parameter 'skill_id' when calling RoutingApi.delete_user_routingskill" if skill_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/routingskills/{skillId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'skillId' + '}', skill_id.to_s)
 
@@ -530,7 +625,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -562,8 +658,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_email_domain ..."
       end
+      
+      
       # verify the required parameter 'domain_id' is set
       fail ArgumentError, "Missing the required parameter 'domain_id' when calling RoutingApi.get_routing_email_domain" if domain_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/email/domains/{domainId}".sub('{format}','json').sub('{' + 'domainId' + '}', domain_id.to_s)
 
@@ -586,7 +689,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -621,10 +725,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_email_domain_route ..."
       end
+      
+      
       # verify the required parameter 'domain_name' is set
       fail ArgumentError, "Missing the required parameter 'domain_name' when calling RoutingApi.get_routing_email_domain_route" if domain_name.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'route_id' is set
       fail ArgumentError, "Missing the required parameter 'route_id' when calling RoutingApi.get_routing_email_domain_route" if route_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}".sub('{format}','json').sub('{' + 'domainName' + '}', domain_name.to_s).sub('{' + 'routeId' + '}', route_id.to_s)
 
@@ -647,7 +764,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -686,8 +804,33 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_email_domain_routes ..."
       end
+      
+      
       # verify the required parameter 'domain_name' is set
       fail ArgumentError, "Missing the required parameter 'domain_name' when calling RoutingApi.get_routing_email_domain_routes" if domain_name.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/email/domains/{domainName}/routes".sub('{format}','json').sub('{' + 'domainName' + '}', domain_name.to_s)
 
@@ -713,7 +856,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -744,6 +888,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_email_domains ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/routing/email/domains".sub('{format}','json')
 
@@ -766,7 +911,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -797,6 +943,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_email_setup ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/routing/email/setup".sub('{format}','json')
 
@@ -819,7 +966,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -858,9 +1006,35 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_languages ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/languages".sub('{format}','json')
 
@@ -887,7 +1061,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -920,8 +1095,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_queue ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.get_routing_queue" if queue_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s)
 
@@ -944,7 +1126,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -979,8 +1162,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_queue_estimatedwaittime ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.get_routing_queue_estimatedwaittime" if queue_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}/estimatedwaittime".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s)
 
@@ -1004,7 +1200,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1039,10 +1236,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_queue_mediatype_estimatedwaittime ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.get_routing_queue_mediatype_estimatedwaittime" if queue_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'media_type' is set
       fail ArgumentError, "Missing the required parameter 'media_type' when calling RoutingApi.get_routing_queue_mediatype_estimatedwaittime" if media_type.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}/mediatypes/{mediaType}/estimatedwaittime".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s).sub('{' + 'mediaType' + '}', media_type.to_s)
 
@@ -1065,7 +1275,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1120,8 +1331,81 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_queue_users ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.get_routing_queue_users" if queue_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}/users".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s)
 
@@ -1155,7 +1439,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1188,8 +1473,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_queue_wrapupcodes ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.get_routing_queue_wrapupcodes" if queue_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}/wrapupcodes".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s)
 
@@ -1212,7 +1504,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1253,6 +1546,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_queues ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues".sub('{format}','json')
 
@@ -1280,7 +1604,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1313,8 +1638,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_skill ..."
       end
+      
+      
       # verify the required parameter 'skill_id' is set
       fail ArgumentError, "Missing the required parameter 'skill_id' when calling RoutingApi.get_routing_skill" if skill_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/skills/{skillId}".sub('{format}','json').sub('{' + 'skillId' + '}', skill_id.to_s)
 
@@ -1337,7 +1669,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1374,6 +1707,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_skills ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/skills".sub('{format}','json')
 
@@ -1399,7 +1751,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1430,6 +1783,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_utilization ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/routing/utilization".sub('{format}','json')
 
@@ -1452,7 +1806,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1485,8 +1840,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_wrapupcode ..."
       end
+      
+      
       # verify the required parameter 'code_id' is set
       fail ArgumentError, "Missing the required parameter 'code_id' when calling RoutingApi.get_routing_wrapupcode" if code_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/wrapupcodes/{codeId}".sub('{format}','json').sub('{' + 'codeId' + '}', code_id.to_s)
 
@@ -1509,7 +1871,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1546,6 +1909,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_wrapupcodes ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/wrapupcodes".sub('{format}','json')
 
@@ -1571,7 +1953,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1610,11 +1993,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_user_routingskills ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling RoutingApi.get_user_routingskills" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/routingskills".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1640,7 +2049,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1677,12 +2087,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.patch_routing_queue_user ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.patch_routing_queue_user" if queue_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'member_id' is set
       fail ArgumentError, "Missing the required parameter 'member_id' when calling RoutingApi.patch_routing_queue_user" if member_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.patch_routing_queue_user" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}/users/{memberId}".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s).sub('{' + 'memberId' + '}', member_id.to_s)
 
@@ -1705,6 +2134,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -1740,10 +2170,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.patch_routing_queue_users ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.patch_routing_queue_users" if queue_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.patch_routing_queue_users" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}/users".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s)
 
@@ -1766,6 +2209,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -1799,8 +2243,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.post_analytics_queues_observations_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_analytics_queues_observations_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/queues/observations/query".sub('{format}','json')
 
@@ -1823,6 +2274,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1858,10 +2310,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.post_routing_email_domain_routes ..."
       end
+      
+      
       # verify the required parameter 'domain_name' is set
       fail ArgumentError, "Missing the required parameter 'domain_name' when calling RoutingApi.post_routing_email_domain_routes" if domain_name.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_routing_email_domain_routes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/email/domains/{domainName}/routes".sub('{format}','json').sub('{' + 'domainName' + '}', domain_name.to_s)
 
@@ -1884,6 +2349,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1917,8 +2383,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.post_routing_email_domains ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_routing_email_domains" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/email/domains".sub('{format}','json')
 
@@ -1941,6 +2414,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1974,8 +2448,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.post_routing_languages ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_routing_languages" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/languages".sub('{format}','json')
 
@@ -1998,6 +2479,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2035,10 +2517,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.post_routing_queue_users ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.post_routing_queue_users" if queue_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_routing_queue_users" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}/users".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s)
 
@@ -2062,6 +2563,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2097,10 +2599,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.post_routing_queue_wrapupcodes ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.post_routing_queue_wrapupcodes" if queue_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_routing_queue_wrapupcodes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}/wrapupcodes".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s)
 
@@ -2123,6 +2638,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2156,8 +2672,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.post_routing_queues ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_routing_queues" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues".sub('{format}','json')
 
@@ -2180,6 +2703,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2213,8 +2737,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.post_routing_skills ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_routing_skills" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/skills".sub('{format}','json')
 
@@ -2237,6 +2768,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2270,8 +2802,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.post_routing_wrapupcodes ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_routing_wrapupcodes" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/wrapupcodes".sub('{format}','json')
 
@@ -2294,6 +2833,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2329,10 +2869,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.post_user_routingskills ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling RoutingApi.post_user_routingskills" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_user_routingskills" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/routingskills".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -2355,6 +2908,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2392,12 +2946,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.put_routing_email_domain_route ..."
       end
+      
+      
       # verify the required parameter 'domain_name' is set
       fail ArgumentError, "Missing the required parameter 'domain_name' when calling RoutingApi.put_routing_email_domain_route" if domain_name.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'route_id' is set
       fail ArgumentError, "Missing the required parameter 'route_id' when calling RoutingApi.put_routing_email_domain_route" if route_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.put_routing_email_domain_route" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}".sub('{format}','json').sub('{' + 'domainName' + '}', domain_name.to_s).sub('{' + 'routeId' + '}', route_id.to_s)
 
@@ -2420,6 +2993,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2455,10 +3029,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.put_routing_queue ..."
       end
+      
+      
       # verify the required parameter 'queue_id' is set
       fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.put_routing_queue" if queue_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.put_routing_queue" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s)
 
@@ -2481,6 +3068,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2514,8 +3102,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.put_routing_utilization ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.put_routing_utilization" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/utilization".sub('{format}','json')
 
@@ -2538,6 +3133,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2573,10 +3169,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.put_routing_wrapupcode ..."
       end
+      
+      
       # verify the required parameter 'code_id' is set
       fail ArgumentError, "Missing the required parameter 'code_id' when calling RoutingApi.put_routing_wrapupcode" if code_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.put_routing_wrapupcode" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/wrapupcodes/{codeId}".sub('{format}','json').sub('{' + 'codeId' + '}', code_id.to_s)
 
@@ -2599,6 +3208,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2636,12 +3246,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.put_user_routingskill ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling RoutingApi.put_user_routingskill" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'skill_id' is set
       fail ArgumentError, "Missing the required parameter 'skill_id' when calling RoutingApi.put_user_routingskill" if skill_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.put_user_routingskill" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/routingskills/{skillId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'skillId' + '}', skill_id.to_s)
 
@@ -2664,6 +3293,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

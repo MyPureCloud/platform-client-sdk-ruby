@@ -51,34 +51,58 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'version' => :'version',
+        
         :'max_attempts_per_contact' => :'maxAttemptsPerContact',
+        
         :'max_attempts_per_number' => :'maxAttemptsPerNumber',
+        
         :'time_zone_id' => :'timeZoneId',
+        
         :'reset_period' => :'resetPeriod',
+        
         :'recall_entries' => :'recallEntries',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'version' => :'Integer',
+        
         :'max_attempts_per_contact' => :'Integer',
+        
         :'max_attempts_per_number' => :'Integer',
+        
         :'time_zone_id' => :'String',
+        
         :'reset_period' => :'String',
+        
         :'recall_entries' => :'Hash<String, RecallEntry>',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -90,70 +114,216 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'maxAttemptsPerContact')
+        
+        
         self.max_attempts_per_contact = attributes[:'maxAttemptsPerContact']
+        
+      
       end
 
+      
       if attributes.has_key?(:'maxAttemptsPerNumber')
+        
+        
         self.max_attempts_per_number = attributes[:'maxAttemptsPerNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timeZoneId')
+        
+        
         self.time_zone_id = attributes[:'timeZoneId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'resetPeriod')
+        
+        
         self.reset_period = attributes[:'resetPeriod']
+        
+      
       end
 
+      
       if attributes.has_key?(:'recallEntries')
+        
         if (value = attributes[:'recallEntries']).is_a?(Array)
           self.recall_entries = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["NEVER", "TODAY"]
       if @reset_period && !allowed_values.include?(@reset_period)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] reset_period Object to be assigned
     def reset_period=(reset_period)
@@ -164,6 +334,19 @@ module PureCloud
       @reset_period = reset_period
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -33,24 +33,38 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'code' => :'code',
+        
         :'message' => :'message',
+        
         :'message_with_params' => :'messageWithParams',
+        
         :'message_params' => :'messageParams',
+        
         :'documentation_uri' => :'documentationUri',
+        
         :'resource_ur_is' => :'resourceURIs'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'code' => :'String',
+        
         :'message' => :'String',
+        
         :'message_with_params' => :'String',
+        
         :'message_params' => :'Hash<String, Object>',
+        
         :'documentation_uri' => :'String',
+        
         :'resource_ur_is' => :'Array<String>'
+        
       }
     end
 
@@ -62,52 +76,113 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'code')
+        
+        
         self.code = attributes[:'code']
+        
+      
       end
 
+      
       if attributes.has_key?(:'message')
+        
+        
         self.message = attributes[:'message']
+        
+      
       end
 
+      
       if attributes.has_key?(:'messageWithParams')
+        
+        
         self.message_with_params = attributes[:'messageWithParams']
+        
+      
       end
 
+      
       if attributes.has_key?(:'messageParams')
+        
         if (value = attributes[:'messageParams']).is_a?(Array)
           self.message_params = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'documentationUri')
+        
+        
         self.documentation_uri = attributes[:'documentationUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'resourceURIs')
+        
         if (value = attributes[:'resourceURIs']).is_a?(Array)
           self.resource_ur_is = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["CAMPAIGN_START_ERROR", "CAMPAIGN_RULE_START_ERROR", "CAMPAIGN_SET_DIALING_MODE_ERROR", "INVALID_CALLABLE_TIME_ZONE", "CALLBACK_CREATION_INVALID_NUMBER", "CALL_RULE_INVALID_CONTACT_COLUMN", "CALL_RULE_MISMATCH_TYPE", "CALL_RULE_INVALID_OPERATOR", "CALL_RULE_NO_DNC_LISTS_CONFIGURED", "CALL_RULE_UPDATED_PHONE_COLUMN", "CONTACT_LIST_FILTER_EVALUATION_FAILED", "INVALID_PHONE_NUMBER", "IMPORT_FAILED_TO_READ_HEADERS", "IMPORT_COULD_NOT_PARSE_AN_ENTRY", "IMPORT_CONTACT_DOES_NOT_MATCH_LIST_FORMAT", "IMPORT_ENTRY_DOES_NOT_ALIGN_WITH_HEADERS", "IMPORT_INVALID_CUSTOM_ID", "IMPORT_INVALID_DATA", "IMPORT_NO_COLUMNS_DEFINED", "IMPORT_COLUMNS_DO_NOT_EXIST_ON_LIST", "IMPORT_LIST_NO_LONGER_EXISTS", "ORGANIZATION_HAS_NO_DOMAIN_SET", "RECYCLE_CAMPAIGN"]
       if @code && !allowed_values.include?(@code)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] code Object to be assigned
     def code=(code)
@@ -118,6 +193,34 @@ module PureCloud
       @code = code
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

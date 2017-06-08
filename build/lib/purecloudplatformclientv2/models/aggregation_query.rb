@@ -45,28 +45,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'interval' => :'interval',
+        
         :'granularity' => :'granularity',
+        
         :'time_zone' => :'timeZone',
+        
         :'group_by' => :'groupBy',
+        
         :'filter' => :'filter',
+        
         :'metrics' => :'metrics',
+        
         :'flatten_multivalued_dimensions' => :'flattenMultivaluedDimensions',
+        
         :'views' => :'views'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'interval' => :'String',
+        
         :'granularity' => :'String',
+        
         :'time_zone' => :'String',
+        
         :'group_by' => :'Array<String>',
+        
         :'filter' => :'AnalyticsQueryFilter',
+        
         :'metrics' => :'Array<String>',
+        
         :'flatten_multivalued_dimensions' => :'BOOLEAN',
+        
         :'views' => :'Array<AnalyticsView>'
+        
       }
     end
 
@@ -78,58 +96,175 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'interval')
+        
+        
         self.interval = attributes[:'interval']
+        
+      
       end
 
+      
       if attributes.has_key?(:'granularity')
+        
+        
         self.granularity = attributes[:'granularity']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timeZone')
+        
+        
         self.time_zone = attributes[:'timeZone']
+        
+      
       end
 
+      
       if attributes.has_key?(:'groupBy')
+        
         if (value = attributes[:'groupBy']).is_a?(Array)
           self.group_by = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'filter')
+        
+        
         self.filter = attributes[:'filter']
+        
+      
       end
 
+      
       if attributes.has_key?(:'metrics')
+        
         if (value = attributes[:'metrics']).is_a?(Array)
           self.metrics = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'flattenMultivaluedDimensions')
+        
+        
         self.flatten_multivalued_dimensions = attributes[:'flattenMultivaluedDimensions']
+        
+      
       end
 
+      
       if attributes.has_key?(:'views')
+        
         if (value = attributes[:'views']).is_a?(Array)
           self.views = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

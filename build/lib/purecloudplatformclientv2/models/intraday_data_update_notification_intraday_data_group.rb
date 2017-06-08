@@ -35,26 +35,42 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'media_type' => :'mediaType',
+        
         :'forecast_data_per_interval' => :'forecastDataPerInterval',
+        
         :'schedule_data_per_interval' => :'scheduleDataPerInterval',
+        
         :'historical_agent_data_per_interval' => :'historicalAgentDataPerInterval',
+        
         :'historical_queue_data_per_interval' => :'historicalQueueDataPerInterval',
+        
         :'performance_prediction_agent_data_per_interval' => :'performancePredictionAgentDataPerInterval',
+        
         :'performance_prediction_queue_data_per_interval' => :'performancePredictionQueueDataPerInterval'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'media_type' => :'String',
+        
         :'forecast_data_per_interval' => :'Array<IntradayDataUpdateNotificationForecastDataPerInterval>',
+        
         :'schedule_data_per_interval' => :'Array<IntradayDataUpdateNotificationScheduleDataPerInterval>',
+        
         :'historical_agent_data_per_interval' => :'Array<IntradayDataUpdateNotificationHistoricalAgentDataPerInterval>',
+        
         :'historical_queue_data_per_interval' => :'Array<IntradayDataUpdateNotificationHistoricalQueueDataPerInterval>',
+        
         :'performance_prediction_agent_data_per_interval' => :'Array<IntradayDataUpdateNotificationPerformancePredictionAgentDataPerInterval>',
+        
         :'performance_prediction_queue_data_per_interval' => :'Array<IntradayDataUpdateNotificationPerformancePredictionQueueDataPerInterval>'
+        
       }
     end
 
@@ -66,64 +82,134 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'mediaType')
+        
+        
         self.media_type = attributes[:'mediaType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'forecastDataPerInterval')
+        
         if (value = attributes[:'forecastDataPerInterval']).is_a?(Array)
           self.forecast_data_per_interval = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'scheduleDataPerInterval')
+        
         if (value = attributes[:'scheduleDataPerInterval']).is_a?(Array)
           self.schedule_data_per_interval = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'historicalAgentDataPerInterval')
+        
         if (value = attributes[:'historicalAgentDataPerInterval']).is_a?(Array)
           self.historical_agent_data_per_interval = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'historicalQueueDataPerInterval')
+        
         if (value = attributes[:'historicalQueueDataPerInterval']).is_a?(Array)
           self.historical_queue_data_per_interval = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'performancePredictionAgentDataPerInterval')
+        
         if (value = attributes[:'performancePredictionAgentDataPerInterval']).is_a?(Array)
           self.performance_prediction_agent_data_per_interval = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'performancePredictionQueueDataPerInterval')
+        
         if (value = attributes[:'performancePredictionQueueDataPerInterval']).is_a?(Array)
           self.performance_prediction_queue_data_per_interval = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["VOICE", "CHAT", "EMAIL"]
       if @media_type && !allowed_values.include?(@media_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] media_type Object to be assigned
     def media_type=(media_type)
@@ -134,6 +220,39 @@ module PureCloud
       @media_type = media_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

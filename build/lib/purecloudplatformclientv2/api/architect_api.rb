@@ -45,8 +45,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.delete_architect_prompt ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.delete_architect_prompt" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/prompts/{promptId}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s)
 
@@ -70,7 +83,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -104,10 +118,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.delete_architect_prompt_resource ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.delete_architect_prompt_resource" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'language_code' is set
       fail ArgumentError, "Missing the required parameter 'language_code' when calling ArchitectApi.delete_architect_prompt_resource" if language_code.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s).sub('{' + 'languageCode' + '}', language_code.to_s)
 
@@ -130,7 +157,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -162,8 +190,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.delete_architect_prompts ..."
       end
+      
+      
       # verify the required parameter 'id' is set
       fail ArgumentError, "Missing the required parameter 'id' when calling ArchitectApi.delete_architect_prompts" if id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/prompts".sub('{format}','json')
 
@@ -187,7 +222,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -222,10 +258,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.delete_architect_systemprompt_resource ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.delete_architect_systemprompt_resource" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'language_code' is set
       fail ArgumentError, "Missing the required parameter 'language_code' when calling ArchitectApi.delete_architect_systemprompt_resource" if language_code.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s).sub('{' + 'languageCode' + '}', language_code.to_s)
 
@@ -248,7 +297,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -280,8 +330,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.delete_flow ..."
       end
+      
+      
       # verify the required parameter 'flow_id' is set
       fail ArgumentError, "Missing the required parameter 'flow_id' when calling ArchitectApi.delete_flow" if flow_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/{flowId}".sub('{format}','json').sub('{' + 'flowId' + '}', flow_id.to_s)
 
@@ -304,7 +361,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -336,8 +394,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.delete_flows ..."
       end
+      
+      
       # verify the required parameter 'id' is set
       fail ArgumentError, "Missing the required parameter 'id' when calling ArchitectApi.delete_flows" if id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows".sub('{format}','json')
 
@@ -361,7 +426,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -408,8 +474,57 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_dependencytracking ..."
       end
+      
+      
       # verify the required parameter 'name' is set
       fail ArgumentError, "Missing the required parameter 'name' when calling ArchitectApi.get_architect_dependencytracking" if name.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking".sub('{format}','json')
 
@@ -440,7 +555,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -471,6 +587,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_dependencytracking_build ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/build".sub('{format}','json')
 
@@ -493,7 +610,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -532,16 +650,42 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_dependencytracking_consumedresources ..."
       end
+      
+      
       # verify the required parameter 'id' is set
       fail ArgumentError, "Missing the required parameter 'id' when calling ArchitectApi.get_architect_dependencytracking_consumedresources" if id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'version' is set
       fail ArgumentError, "Missing the required parameter 'version' when calling ArchitectApi.get_architect_dependencytracking_consumedresources" if version.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'object_type' is set
       fail ArgumentError, "Missing the required parameter 'object_type' when calling ArchitectApi.get_architect_dependencytracking_consumedresources" if object_type.nil?
+      
       # verify enum value
       unless ['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDEMAILFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SYSTEMPROMPT', 'USER', 'USERPROMPT', 'VOICEXML', 'WORKFLOW'].include?(object_type)
         fail ArgumentError, "invalid value for 'object_type', must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW"
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/consumedresources".sub('{format}','json')
 
@@ -568,7 +712,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -605,14 +750,34 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_dependencytracking_consumingresources ..."
       end
+      
+      
       # verify the required parameter 'id' is set
       fail ArgumentError, "Missing the required parameter 'id' when calling ArchitectApi.get_architect_dependencytracking_consumingresources" if id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'object_type' is set
       fail ArgumentError, "Missing the required parameter 'object_type' when calling ArchitectApi.get_architect_dependencytracking_consumingresources" if object_type.nil?
+      
       # verify enum value
       unless ['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDEMAILFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SYSTEMPROMPT', 'USER', 'USERPROMPT', 'VOICEXML', 'WORKFLOW'].include?(object_type)
         fail ArgumentError, "invalid value for 'object_type', must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW"
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/consumingresources".sub('{format}','json')
 
@@ -638,7 +803,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -683,9 +849,53 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_dependencytracking_deletedresourceconsumers ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'flow_filter'] && !['checkedIn', 'published'].include?(opts[:'flow_filter'])
         fail ArgumentError, 'invalid value for "flow_filter", must be one of checkedIn, published'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/deletedresourceconsumers".sub('{format}','json')
 
@@ -715,7 +925,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -760,11 +971,55 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_dependencytracking_object ..."
       end
+      
+      
       # verify the required parameter 'id' is set
       fail ArgumentError, "Missing the required parameter 'id' when calling ArchitectApi.get_architect_dependencytracking_object" if id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'object_type'] && !['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDEMAILFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SYSTEMPROMPT', 'USER', 'USERPROMPT', 'VOICEXML', 'WORKFLOW'].include?(opts[:'object_type'])
         fail ArgumentError, 'invalid value for "object_type", must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/object".sub('{format}','json')
 
@@ -794,7 +1049,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -827,8 +1083,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_dependencytracking_type ..."
       end
+      
+      
       # verify the required parameter 'type_id' is set
       fail ArgumentError, "Missing the required parameter 'type_id' when calling ArchitectApi.get_architect_dependencytracking_type" if type_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/types/{typeId}".sub('{format}','json').sub('{' + 'typeId' + '}', type_id.to_s)
 
@@ -851,7 +1114,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -886,6 +1150,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_dependencytracking_types ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/types".sub('{format}','json')
 
@@ -910,7 +1187,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -953,6 +1231,43 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_dependencytracking_updatedresourceconsumers ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/updatedresourceconsumers".sub('{format}','json')
 
@@ -981,7 +1296,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1014,8 +1330,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_prompt ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.get_architect_prompt" if prompt_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/prompts/{promptId}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s)
 
@@ -1038,7 +1361,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1073,10 +1397,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_prompt_resource ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.get_architect_prompt_resource" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'language_code' is set
       fail ArgumentError, "Missing the required parameter 'language_code' when calling ArchitectApi.get_architect_prompt_resource" if language_code.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s).sub('{' + 'languageCode' + '}', language_code.to_s)
 
@@ -1099,7 +1436,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1136,8 +1474,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_prompt_resources ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.get_architect_prompt_resources" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/prompts/{promptId}/resources".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s)
 
@@ -1162,7 +1519,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1203,6 +1561,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_prompts ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/prompts".sub('{format}','json')
 
@@ -1230,7 +1619,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1263,8 +1653,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_systemprompt ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.get_architect_systemprompt" if prompt_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/systemprompts/{promptId}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s)
 
@@ -1287,7 +1684,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1322,10 +1720,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_systemprompt_resource ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.get_architect_systemprompt_resource" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'language_code' is set
       fail ArgumentError, "Missing the required parameter 'language_code' when calling ArchitectApi.get_architect_systemprompt_resource" if language_code.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s).sub('{' + 'languageCode' + '}', language_code.to_s)
 
@@ -1348,7 +1759,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1389,8 +1801,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_systemprompt_resources ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.get_architect_systemprompt_resources" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/systemprompts/{promptId}/resources".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s)
 
@@ -1417,7 +1860,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1462,6 +1906,49 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_systemprompts ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/systemprompts".sub('{format}','json')
 
@@ -1491,7 +1978,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1526,8 +2014,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flow ..."
       end
+      
+      
       # verify the required parameter 'flow_id' is set
       fail ArgumentError, "Missing the required parameter 'flow_id' when calling ArchitectApi.get_flow" if flow_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/{flowId}".sub('{format}','json').sub('{' + 'flowId' + '}', flow_id.to_s)
 
@@ -1551,7 +2052,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1586,8 +2088,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flow_latestconfiguration ..."
       end
+      
+      
       # verify the required parameter 'flow_id' is set
       fail ArgumentError, "Missing the required parameter 'flow_id' when calling ArchitectApi.get_flow_latestconfiguration" if flow_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/{flowId}/latestconfiguration".sub('{format}','json').sub('{' + 'flowId' + '}', flow_id.to_s)
 
@@ -1611,7 +2126,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1648,10 +2164,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flow_version ..."
       end
+      
+      
       # verify the required parameter 'flow_id' is set
       fail ArgumentError, "Missing the required parameter 'flow_id' when calling ArchitectApi.get_flow_version" if flow_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'version_id' is set
       fail ArgumentError, "Missing the required parameter 'version_id' when calling ArchitectApi.get_flow_version" if version_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/{flowId}/versions/{versionId}".sub('{format}','json').sub('{' + 'flowId' + '}', flow_id.to_s).sub('{' + 'versionId' + '}', version_id.to_s)
 
@@ -1675,7 +2210,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1712,10 +2248,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flow_version_configuration ..."
       end
+      
+      
       # verify the required parameter 'flow_id' is set
       fail ArgumentError, "Missing the required parameter 'flow_id' when calling ArchitectApi.get_flow_version_configuration" if flow_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'version_id' is set
       fail ArgumentError, "Missing the required parameter 'version_id' when calling ArchitectApi.get_flow_version_configuration" if version_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/{flowId}/versions/{versionId}/configuration".sub('{format}','json').sub('{' + 'flowId' + '}', flow_id.to_s).sub('{' + 'versionId' + '}', version_id.to_s)
 
@@ -1739,7 +2294,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1778,8 +2334,33 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flow_versions ..."
       end
+      
+      
       # verify the required parameter 'flow_id' is set
       fail ArgumentError, "Missing the required parameter 'flow_id' when calling ArchitectApi.get_flow_versions" if flow_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/{flowId}/versions".sub('{format}','json').sub('{' + 'flowId' + '}', flow_id.to_s)
 
@@ -1805,7 +2386,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1866,11 +2448,103 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows ..."
       end
+      
+      
       # verify the required parameter 'type' is set
       fail ArgumentError, "Missing the required parameter 'type' when calling ArchitectApi.get_flows" if type.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'secure'] && !['any', 'checkedin', 'published'].include?(opts[:'secure'])
         fail ArgumentError, 'invalid value for "secure", must be one of any, checkedin, published'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows".sub('{format}','json')
 
@@ -1908,7 +2582,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1939,6 +2614,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_dependencytracking_build ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/build".sub('{format}','json')
 
@@ -1961,7 +2637,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1995,8 +2672,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_prompt_resources ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.post_architect_prompt_resources" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/prompts/{promptId}/resources".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s)
 
@@ -2019,6 +2709,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2052,6 +2743,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_prompts ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/prompts".sub('{format}','json')
 
@@ -2074,6 +2772,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2109,8 +2808,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_systemprompt_resources ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.post_architect_systemprompt_resources" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/systemprompts/{promptId}/resources".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s)
 
@@ -2133,6 +2845,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2168,8 +2881,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_flow_versions ..."
       end
+      
+      
       # verify the required parameter 'flow_id' is set
       fail ArgumentError, "Missing the required parameter 'flow_id' when calling ArchitectApi.post_flow_versions" if flow_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/{flowId}/versions".sub('{format}','json').sub('{' + 'flowId' + '}', flow_id.to_s)
 
@@ -2192,6 +2918,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2225,6 +2952,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows".sub('{format}','json')
 
@@ -2247,6 +2981,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2280,8 +3015,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_actions_checkin ..."
       end
+      
+      
       # verify the required parameter 'flow' is set
       fail ArgumentError, "Missing the required parameter 'flow' when calling ArchitectApi.post_flows_actions_checkin" if flow.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/actions/checkin".sub('{format}','json')
 
@@ -2305,7 +3047,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2338,8 +3081,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_actions_checkout ..."
       end
+      
+      
       # verify the required parameter 'flow' is set
       fail ArgumentError, "Missing the required parameter 'flow' when calling ArchitectApi.post_flows_actions_checkout" if flow.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/actions/checkout".sub('{format}','json')
 
@@ -2363,7 +3113,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2396,8 +3147,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_actions_deactivate ..."
       end
+      
+      
       # verify the required parameter 'flow' is set
       fail ArgumentError, "Missing the required parameter 'flow' when calling ArchitectApi.post_flows_actions_deactivate" if flow.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/actions/deactivate".sub('{format}','json')
 
@@ -2421,7 +3179,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2456,8 +3215,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_actions_publish ..."
       end
+      
+      
       # verify the required parameter 'flow' is set
       fail ArgumentError, "Missing the required parameter 'flow' when calling ArchitectApi.post_flows_actions_publish" if flow.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/actions/publish".sub('{format}','json')
 
@@ -2482,7 +3254,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2515,8 +3288,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_actions_revert ..."
       end
+      
+      
       # verify the required parameter 'flow' is set
       fail ArgumentError, "Missing the required parameter 'flow' when calling ArchitectApi.post_flows_actions_revert" if flow.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/actions/revert".sub('{format}','json')
 
@@ -2540,7 +3320,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2573,8 +3354,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_actions_unlock ..."
       end
+      
+      
       # verify the required parameter 'flow' is set
       fail ArgumentError, "Missing the required parameter 'flow' when calling ArchitectApi.post_flows_actions_unlock" if flow.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/actions/unlock".sub('{format}','json')
 
@@ -2598,7 +3386,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2633,8 +3422,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_prompt ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.put_architect_prompt" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/prompts/{promptId}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s)
 
@@ -2657,6 +3459,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2694,10 +3497,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_prompt_resource ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.put_architect_prompt_resource" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'language_code' is set
       fail ArgumentError, "Missing the required parameter 'language_code' when calling ArchitectApi.put_architect_prompt_resource" if language_code.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s).sub('{' + 'languageCode' + '}', language_code.to_s)
 
@@ -2720,6 +3542,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2757,10 +3580,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_systemprompt_resource ..."
       end
+      
+      
       # verify the required parameter 'prompt_id' is set
       fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.put_architect_systemprompt_resource" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'language_code' is set
       fail ArgumentError, "Missing the required parameter 'language_code' when calling ArchitectApi.put_architect_systemprompt_resource" if language_code.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s).sub('{' + 'languageCode' + '}', language_code.to_s)
 
@@ -2783,6 +3625,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2818,8 +3661,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_flow ..."
       end
+      
+      
       # verify the required parameter 'flow_id' is set
       fail ArgumentError, "Missing the required parameter 'flow_id' when calling ArchitectApi.put_flow" if flow_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/{flowId}".sub('{format}','json').sub('{' + 'flowId' + '}', flow_id.to_s)
 
@@ -2842,6 +3698,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

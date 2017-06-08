@@ -35,26 +35,42 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'participant_id' => :'participantId',
+        
         :'participant_name' => :'participantName',
+        
         :'user_id' => :'userId',
+        
         :'purpose' => :'purpose',
+        
         :'external_contact_id' => :'externalContactId',
+        
         :'external_organization_id' => :'externalOrganizationId',
+        
         :'sessions' => :'sessions'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'participant_id' => :'String',
+        
         :'participant_name' => :'String',
+        
         :'user_id' => :'String',
+        
         :'purpose' => :'String',
+        
         :'external_contact_id' => :'String',
+        
         :'external_organization_id' => :'String',
+        
         :'sessions' => :'Array<AnalyticsSession>'
+        
       }
     end
 
@@ -66,54 +82,139 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'participantId')
+        
+        
         self.participant_id = attributes[:'participantId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'participantName')
+        
+        
         self.participant_name = attributes[:'participantName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'userId')
+        
+        
         self.user_id = attributes[:'userId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'purpose')
+        
+        
         self.purpose = attributes[:'purpose']
+        
+      
       end
 
+      
       if attributes.has_key?(:'externalContactId')
+        
+        
         self.external_contact_id = attributes[:'externalContactId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'externalOrganizationId')
+        
+        
         self.external_organization_id = attributes[:'externalOrganizationId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sessions')
+        
         if (value = attributes[:'sessions']).is_a?(Array)
           self.sessions = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["manual", "dialer", "inbound", "acd", "ivr", "voicemail", "outbound", "agent", "user", "station", "group", "customer", "external"]
       if @purpose && !allowed_values.include?(@purpose)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] purpose Object to be assigned
     def purpose=(purpose)
@@ -124,6 +225,24 @@ module PureCloud
       @purpose = purpose
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

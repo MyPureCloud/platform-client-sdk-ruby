@@ -1089,7 +1089,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ADFS**](ADFS.html)| Provider | 
+ **body** | [**ADFS**](ADFS.html)| Provider |  |
 {: class="table table-striped"}
 
 
@@ -1148,7 +1148,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CustomerInteractionCenter**](CustomerInteractionCenter.html)| Provider | 
+ **body** | [**CustomerInteractionCenter**](CustomerInteractionCenter.html)| Provider |  |
 {: class="table table-striped"}
 
 
@@ -1207,7 +1207,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**GSuite**](GSuite.html)| Provider | 
+ **body** | [**GSuite**](GSuite.html)| Provider |  |
 {: class="table table-striped"}
 
 
@@ -1266,7 +1266,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**IdentityNow**](IdentityNow.html)| Provider | 
+ **body** | [**IdentityNow**](IdentityNow.html)| Provider |  |
 {: class="table table-striped"}
 
 
@@ -1325,7 +1325,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Okta**](Okta.html)| Provider | 
+ **body** | [**Okta**](Okta.html)| Provider |  |
 {: class="table table-striped"}
 
 
@@ -1384,7 +1384,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OneLogin**](OneLogin.html)| Provider | 
+ **body** | [**OneLogin**](OneLogin.html)| Provider |  |
 {: class="table table-striped"}
 
 
@@ -1443,7 +1443,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PingIdentity**](PingIdentity.html)| Provider | 
+ **body** | [**PingIdentity**](PingIdentity.html)| Provider |  |
 {: class="table table-striped"}
 
 
@@ -1502,7 +1502,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PureCloud**](PureCloud.html)| Provider | 
+ **body** | [**PureCloud**](PureCloud.html)| Provider |  |
 {: class="table table-striped"}
 
 
@@ -1561,7 +1561,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Salesforce**](Salesforce.html)| Provider | 
+ **body** | [**Salesforce**](Salesforce.html)| Provider |  |
 {: class="table table-striped"}
 
 

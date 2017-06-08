@@ -39,30 +39,50 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'custom_labels' => :'customLabels',
+        
         :'instruction_text' => :'instructionText',
+        
         :'key' => :'key',
+        
         :'label_keys' => :'labelKeys',
+        
         :'params' => :'params',
+        
         :'repeatable' => :'repeatable',
+        
         :'state' => :'state',
+        
         :'type' => :'type',
+        
         :'required' => :'required'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'custom_labels' => :'BOOLEAN',
+        
         :'instruction_text' => :'String',
+        
         :'key' => :'String',
+        
         :'label_keys' => :'Array<String>',
+        
         :'params' => :'Hash<String, Object>',
+        
         :'repeatable' => :'BOOLEAN',
+        
         :'state' => :'String',
+        
         :'type' => :'String',
+        
         :'required' => :'BOOLEAN'
+        
       }
     end
 
@@ -74,60 +94,191 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'customLabels')
+        
+        
         self.custom_labels = attributes[:'customLabels']
+        
+      
       end
 
+      
       if attributes.has_key?(:'instructionText')
+        
+        
         self.instruction_text = attributes[:'instructionText']
+        
+      
       end
 
+      
       if attributes.has_key?(:'key')
+        
+        
         self.key = attributes[:'key']
+        
+      
       end
 
+      
       if attributes.has_key?(:'labelKeys')
+        
         if (value = attributes[:'labelKeys']).is_a?(Array)
           self.label_keys = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'params')
+        
         if (value = attributes[:'params']).is_a?(Array)
           self.params = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'repeatable')
+        
+        
         self.repeatable = attributes[:'repeatable']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'type')
+        
+        
         self.type = attributes[:'type']
+        
+      
       end
 
+      
       if attributes.has_key?(:'required')
+        
+        
         self.required = attributes[:'required']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

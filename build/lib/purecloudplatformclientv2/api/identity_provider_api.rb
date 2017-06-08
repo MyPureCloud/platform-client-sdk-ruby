@@ -41,6 +41,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.delete_identityproviders_adfs ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/adfs".sub('{format}','json')
 
@@ -63,7 +64,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -94,6 +96,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.delete_identityproviders_cic ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/cic".sub('{format}','json')
 
@@ -116,7 +119,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -147,6 +151,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.delete_identityproviders_gsuite ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/gsuite".sub('{format}','json')
 
@@ -169,7 +174,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -200,6 +206,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.delete_identityproviders_identitynow ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/identitynow".sub('{format}','json')
 
@@ -222,7 +229,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -253,6 +261,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.delete_identityproviders_okta ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/okta".sub('{format}','json')
 
@@ -275,7 +284,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -306,6 +316,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.delete_identityproviders_onelogin ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/onelogin".sub('{format}','json')
 
@@ -328,7 +339,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -359,6 +371,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.delete_identityproviders_ping ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/ping".sub('{format}','json')
 
@@ -381,7 +394,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -412,6 +426,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.delete_identityproviders_purecloud ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/purecloud".sub('{format}','json')
 
@@ -434,7 +449,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -465,6 +481,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.delete_identityproviders_salesforce ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/salesforce".sub('{format}','json')
 
@@ -487,7 +504,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -518,6 +536,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders".sub('{format}','json')
 
@@ -540,7 +559,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -571,6 +591,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders_adfs ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/adfs".sub('{format}','json')
 
@@ -593,7 +614,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -624,6 +646,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders_cic ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/cic".sub('{format}','json')
 
@@ -646,7 +669,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -677,6 +701,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders_gsuite ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/gsuite".sub('{format}','json')
 
@@ -699,7 +724,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -730,6 +756,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders_identitynow ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/identitynow".sub('{format}','json')
 
@@ -752,7 +779,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -783,6 +811,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders_okta ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/okta".sub('{format}','json')
 
@@ -805,7 +834,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -836,6 +866,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders_onelogin ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/onelogin".sub('{format}','json')
 
@@ -858,7 +889,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -889,6 +921,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders_ping ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/ping".sub('{format}','json')
 
@@ -911,7 +944,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -942,6 +976,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders_purecloud ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/purecloud".sub('{format}','json')
 
@@ -964,7 +999,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -995,6 +1031,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders_salesforce ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/salesforce".sub('{format}','json')
 
@@ -1017,7 +1054,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1050,8 +1088,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.put_identityproviders_adfs ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling IdentityProviderApi.put_identityproviders_adfs" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/adfs".sub('{format}','json')
 
@@ -1074,6 +1119,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1107,8 +1153,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.put_identityproviders_cic ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling IdentityProviderApi.put_identityproviders_cic" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/cic".sub('{format}','json')
 
@@ -1131,6 +1184,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1164,8 +1218,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.put_identityproviders_gsuite ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling IdentityProviderApi.put_identityproviders_gsuite" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/gsuite".sub('{format}','json')
 
@@ -1188,6 +1249,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1221,8 +1283,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.put_identityproviders_identitynow ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling IdentityProviderApi.put_identityproviders_identitynow" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/identitynow".sub('{format}','json')
 
@@ -1245,6 +1314,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1278,8 +1348,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.put_identityproviders_okta ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling IdentityProviderApi.put_identityproviders_okta" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/okta".sub('{format}','json')
 
@@ -1302,6 +1379,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1335,8 +1413,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.put_identityproviders_onelogin ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling IdentityProviderApi.put_identityproviders_onelogin" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/onelogin".sub('{format}','json')
 
@@ -1359,6 +1444,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1392,8 +1478,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.put_identityproviders_ping ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling IdentityProviderApi.put_identityproviders_ping" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/ping".sub('{format}','json')
 
@@ -1416,6 +1509,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1449,8 +1543,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.put_identityproviders_purecloud ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling IdentityProviderApi.put_identityproviders_purecloud" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/purecloud".sub('{format}','json')
 
@@ -1473,6 +1574,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1506,8 +1608,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.put_identityproviders_salesforce ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling IdentityProviderApi.put_identityproviders_salesforce" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/identityproviders/salesforce".sub('{format}','json')
 
@@ -1530,6 +1639,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

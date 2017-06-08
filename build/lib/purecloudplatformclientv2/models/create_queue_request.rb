@@ -80,58 +80,106 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'description' => :'description',
+        
         :'version' => :'version',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'modified_by' => :'modifiedBy',
+        
         :'created_by' => :'createdBy',
+        
         :'state' => :'state',
+        
         :'modified_by_app' => :'modifiedByApp',
+        
         :'created_by_app' => :'createdByApp',
+        
         :'media_settings' => :'mediaSettings',
+        
         :'bullseye' => :'bullseye',
+        
         :'acw_settings' => :'acwSettings',
+        
         :'skill_evaluation_method' => :'skillEvaluationMethod',
+        
         :'queue_flow' => :'queueFlow',
+        
         :'calling_party_name' => :'callingPartyName',
+        
         :'calling_party_number' => :'callingPartyNumber',
+        
         :'default_scripts' => :'defaultScripts',
+        
         :'outbound_email_address' => :'outboundEmailAddress',
+        
         :'source_queue_id' => :'sourceQueueId',
+        
         :'member_count' => :'memberCount',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'description' => :'String',
+        
         :'version' => :'Integer',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'modified_by' => :'String',
+        
         :'created_by' => :'String',
+        
         :'state' => :'String',
+        
         :'modified_by_app' => :'String',
+        
         :'created_by_app' => :'String',
+        
         :'media_settings' => :'Hash<String, MediaSetting>',
+        
         :'bullseye' => :'Bullseye',
+        
         :'acw_settings' => :'AcwSettings',
+        
         :'skill_evaluation_method' => :'String',
+        
         :'queue_flow' => :'UriReference',
+        
         :'calling_party_name' => :'String',
+        
         :'calling_party_number' => :'String',
+        
         :'default_scripts' => :'Hash<String, Script>',
+        
         :'outbound_email_address' => :'QueueEmailAddress',
+        
         :'source_queue_id' => :'String',
+        
         :'member_count' => :'Integer',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -143,136 +191,394 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'description')
+        
+        
         self.description = attributes[:'description']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedBy')
+        
+        
         self.modified_by = attributes[:'modifiedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdBy')
+        
+        
         self.created_by = attributes[:'createdBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedByApp')
+        
+        
         self.modified_by_app = attributes[:'modifiedByApp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdByApp')
+        
+        
         self.created_by_app = attributes[:'createdByApp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'mediaSettings')
+        
         if (value = attributes[:'mediaSettings']).is_a?(Array)
           self.media_settings = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'bullseye')
+        
+        
         self.bullseye = attributes[:'bullseye']
+        
+      
       end
 
+      
       if attributes.has_key?(:'acwSettings')
+        
+        
         self.acw_settings = attributes[:'acwSettings']
+        
+      
       end
 
+      
       if attributes.has_key?(:'skillEvaluationMethod')
+        
+        
         self.skill_evaluation_method = attributes[:'skillEvaluationMethod']
+        
+      
       end
 
+      
       if attributes.has_key?(:'queueFlow')
+        
+        
         self.queue_flow = attributes[:'queueFlow']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callingPartyName')
+        
+        
         self.calling_party_name = attributes[:'callingPartyName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callingPartyNumber')
+        
+        
         self.calling_party_number = attributes[:'callingPartyNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'defaultScripts')
+        
         if (value = attributes[:'defaultScripts']).is_a?(Array)
           self.default_scripts = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'outboundEmailAddress')
+        
+        
         self.outbound_email_address = attributes[:'outboundEmailAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sourceQueueId')
+        
+        
         self.source_queue_id = attributes[:'sourceQueueId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'memberCount')
+        
+        
         self.member_count = attributes[:'memberCount']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["active", "inactive", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @media_settings.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @acw_settings.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @skill_evaluation_method.nil?
         return false
       end
 
+      
+      
       allowed_values = ["NONE", "BEST", "ALL"]
       if @skill_evaluation_method && !allowed_values.include?(@skill_evaluation_method)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -283,6 +589,35 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] skill_evaluation_method Object to be assigned
     def skill_evaluation_method=(skill_evaluation_method)
@@ -293,6 +628,49 @@ module PureCloud
       @skill_evaluation_method = skill_evaluation_method
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

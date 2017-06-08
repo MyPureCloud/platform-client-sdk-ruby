@@ -83,74 +83,138 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'version' => :'version',
+        
         :'contact_list' => :'contactList',
+        
         :'queue' => :'queue',
+        
         :'dialing_mode' => :'dialingMode',
+        
         :'script' => :'script',
+        
         :'edge_group' => :'edgeGroup',
+        
         :'campaign_status' => :'campaignStatus',
+        
         :'phone_columns' => :'phoneColumns',
+        
         :'abandon_rate' => :'abandonRate',
+        
         :'dnc_lists' => :'dncLists',
+        
         :'callable_time_set' => :'callableTimeSet',
+        
         :'call_analysis_response_set' => :'callAnalysisResponseSet',
+        
         :'caller_name' => :'callerName',
+        
         :'caller_address' => :'callerAddress',
+        
         :'outbound_line_count' => :'outboundLineCount',
+        
         :'errors' => :'errors',
+        
         :'rule_sets' => :'ruleSets',
+        
         :'skip_preview_disabled' => :'skipPreviewDisabled',
+        
         :'preview_time_out_seconds' => :'previewTimeOutSeconds',
+        
         :'single_number_preview' => :'singleNumberPreview',
+        
         :'contact_sort' => :'contactSort',
+        
         :'contact_sorts' => :'contactSorts',
+        
         :'no_answer_timeout' => :'noAnswerTimeout',
+        
         :'call_analysis_language' => :'callAnalysisLanguage',
+        
         :'priority' => :'priority',
+        
         :'contact_list_filters' => :'contactListFilters',
+        
         :'additional_properties' => :'additionalProperties'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'version' => :'Integer',
+        
         :'contact_list' => :'DocumentDataV2NotificationCreatedBy',
+        
         :'queue' => :'CampaignNotificationUriReference',
+        
         :'dialing_mode' => :'String',
+        
         :'script' => :'CampaignNotificationUriReference',
+        
         :'edge_group' => :'CampaignNotificationUriReference',
+        
         :'campaign_status' => :'String',
+        
         :'phone_columns' => :'Array<CampaignNotificationPhoneColumns>',
+        
         :'abandon_rate' => :'Float',
+        
         :'dnc_lists' => :'Array<CampaignNotificationUriReference>',
+        
         :'callable_time_set' => :'CampaignNotificationUriReference',
+        
         :'call_analysis_response_set' => :'CampaignNotificationUriReference',
+        
         :'caller_name' => :'String',
+        
         :'caller_address' => :'String',
+        
         :'outbound_line_count' => :'Integer',
+        
         :'errors' => :'Array<CampaignNotificationErrors>',
+        
         :'rule_sets' => :'Array<CampaignNotificationUriReference>',
+        
         :'skip_preview_disabled' => :'BOOLEAN',
+        
         :'preview_time_out_seconds' => :'Integer',
+        
         :'single_number_preview' => :'BOOLEAN',
+        
         :'contact_sort' => :'CampaignNotificationContactSort',
+        
         :'contact_sorts' => :'Array<CampaignNotificationContactSort>',
+        
         :'no_answer_timeout' => :'Integer',
+        
         :'call_analysis_language' => :'String',
+        
         :'priority' => :'Integer',
+        
         :'contact_list_filters' => :'Array<CampaignNotificationUriReference>',
+        
         :'additional_properties' => :'Object'
+        
       }
     end
 
@@ -162,164 +226,486 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contactList')
+        
+        
         self.contact_list = attributes[:'contactList']
+        
+      
       end
 
+      
       if attributes.has_key?(:'queue')
+        
+        
         self.queue = attributes[:'queue']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dialingMode')
+        
+        
         self.dialing_mode = attributes[:'dialingMode']
+        
+      
       end
 
+      
       if attributes.has_key?(:'script')
+        
+        
         self.script = attributes[:'script']
+        
+      
       end
 
+      
       if attributes.has_key?(:'edgeGroup')
+        
+        
         self.edge_group = attributes[:'edgeGroup']
+        
+      
       end
 
+      
       if attributes.has_key?(:'campaignStatus')
+        
+        
         self.campaign_status = attributes[:'campaignStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'phoneColumns')
+        
         if (value = attributes[:'phoneColumns']).is_a?(Array)
           self.phone_columns = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'abandonRate')
+        
+        
         self.abandon_rate = attributes[:'abandonRate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dncLists')
+        
         if (value = attributes[:'dncLists']).is_a?(Array)
           self.dnc_lists = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'callableTimeSet')
+        
+        
         self.callable_time_set = attributes[:'callableTimeSet']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callAnalysisResponseSet')
+        
+        
         self.call_analysis_response_set = attributes[:'callAnalysisResponseSet']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callerName')
+        
+        
         self.caller_name = attributes[:'callerName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callerAddress')
+        
+        
         self.caller_address = attributes[:'callerAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'outboundLineCount')
+        
+        
         self.outbound_line_count = attributes[:'outboundLineCount']
+        
+      
       end
 
+      
       if attributes.has_key?(:'errors')
+        
         if (value = attributes[:'errors']).is_a?(Array)
           self.errors = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'ruleSets')
+        
         if (value = attributes[:'ruleSets']).is_a?(Array)
           self.rule_sets = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'skipPreviewDisabled')
+        
+        
         self.skip_preview_disabled = attributes[:'skipPreviewDisabled']
+        
+      
       end
 
+      
       if attributes.has_key?(:'previewTimeOutSeconds')
+        
+        
         self.preview_time_out_seconds = attributes[:'previewTimeOutSeconds']
+        
+      
       end
 
+      
       if attributes.has_key?(:'singleNumberPreview')
+        
+        
         self.single_number_preview = attributes[:'singleNumberPreview']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contactSort')
+        
+        
         self.contact_sort = attributes[:'contactSort']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contactSorts')
+        
         if (value = attributes[:'contactSorts']).is_a?(Array)
           self.contact_sorts = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'noAnswerTimeout')
+        
+        
         self.no_answer_timeout = attributes[:'noAnswerTimeout']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callAnalysisLanguage')
+        
+        
         self.call_analysis_language = attributes[:'callAnalysisLanguage']
+        
+      
       end
 
+      
       if attributes.has_key?(:'priority')
+        
+        
         self.priority = attributes[:'priority']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contactListFilters')
+        
         if (value = attributes[:'contactListFilters']).is_a?(Array)
           self.contact_list_filters = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'additionalProperties')
+        
+        
         self.additional_properties = attributes[:'additionalProperties']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["AGENTLESS", "PREVIEW", "POWER", "PREDICTIVE", "PROGRESSIVE"]
       if @dialing_mode && !allowed_values.include?(@dialing_mode)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["ON", "OFF", "COMPLETE", "STOPPING", "INVALID"]
       if @campaign_status && !allowed_values.include?(@campaign_status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] dialing_mode Object to be assigned
     def dialing_mode=(dialing_mode)
@@ -330,6 +716,20 @@ module PureCloud
       @dialing_mode = dialing_mode
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] campaign_status Object to be assigned
     def campaign_status=(campaign_status)
@@ -340,6 +740,109 @@ module PureCloud
       @campaign_status = campaign_status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

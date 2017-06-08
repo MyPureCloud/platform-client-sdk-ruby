@@ -81,7 +81,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_id** | **String**| ExternalContact ID | 
+ **contact_id** | **String**| ExternalContact ID |  |
 {: class="table table-striped"}
 
 
@@ -141,8 +141,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_id** | **String**| ExternalContact Id | 
- **note_id** | **String**| Note Id | 
+ **contact_id** | **String**| ExternalContact Id |  |
+ **note_id** | **String**| Note Id |  |
 {: class="table table-striped"}
 
 
@@ -200,7 +200,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_organization_id** | **String**| External Organization ID | 
+ **external_organization_id** | **String**| External Organization ID |  |
 {: class="table table-striped"}
 
 
@@ -260,8 +260,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_organization_id** | **String**| External Organization Id | 
- **note_id** | **String**| Note Id | 
+ **external_organization_id** | **String**| External Organization Id |  |
+ **note_id** | **String**| Note Id |  |
 {: class="table table-striped"}
 
 
@@ -319,7 +319,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **relationship_id** | **String**| Relationship Id | 
+ **relationship_id** | **String**| Relationship Id |  |
 {: class="table table-striped"}
 
 
@@ -381,8 +381,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_id** | **String**| ExternalContact ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand (externalOrganization,externalDataSources) | [optional] 
+ **contact_id** | **String**| ExternalContact ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand (externalOrganization,externalDataSources) | [optional] <br />**Values**: externalOrganization, externalDataSources |
 {: class="table table-striped"}
 
 
@@ -446,9 +446,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_id** | **String**| ExternalContact Id | 
- **note_id** | **String**| Note Id | 
- **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] 
+ **contact_id** | **String**| ExternalContact Id |  |
+ **note_id** | **String**| Note Id |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
 {: class="table table-striped"}
 
 
@@ -513,11 +513,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_id** | **String**| ExternalContact Id | 
- **page_size** | **Integer**| Page size | [optional] [default to 20]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_order** | **String**| Sort order | [optional] 
- **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] 
+ **contact_id** | **String**| ExternalContact Id |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_order** | **String**| Sort order | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
 {: class="table table-striped"}
 
 
@@ -581,11 +581,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 20]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional] 
- **sort_order** | **String**| Sort order | [optional] 
- **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
+ **sort_order** | **String**| Sort order | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources |
 {: class="table table-striped"}
 
 
@@ -647,8 +647,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_organization_id** | **String**| External Organization ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand (externalDataSources) | [optional] 
+ **external_organization_id** | **String**| External Organization ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand (externalDataSources) | [optional] <br />**Values**: externalDataSources |
 {: class="table table-striped"}
 
 
@@ -714,12 +714,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_organization_id** | **String**| External Organization ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 20]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional] 
- **sort_order** | **String**| Sort order | [optional] 
- **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand (externalOrganization) | [optional] 
+ **external_organization_id** | **String**| External Organization ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
+ **sort_order** | **String**| Sort order | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand (externalOrganization) | [optional] <br />**Values**: externalOrganization |
 {: class="table table-striped"}
 
 
@@ -783,9 +783,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_organization_id** | **String**| External Organization Id | 
- **note_id** | **String**| Note Id | 
- **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] 
+ **external_organization_id** | **String**| External Organization Id |  |
+ **note_id** | **String**| Note Id |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
 {: class="table table-striped"}
 
 
@@ -850,11 +850,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_organization_id** | **String**| External Organization Id | 
- **page_size** | **Integer**| Page size | [optional] [default to 20]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_order** | **String**| Sort order | [optional] 
- **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] 
+ **external_organization_id** | **String**| External Organization Id |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_order** | **String**| Sort order | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
 {: class="table table-striped"}
 
 
@@ -919,11 +919,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_organization_id** | **String**| External Organization ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 20]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **expand** | **String**| which fields, if any, to expand | [optional] 
- **sort_order** | **String**| Sort order | [optional] 
+ **external_organization_id** | **String**| External Organization ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **expand** | **String**| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
+ **sort_order** | **String**| Sort order | [optional]  |
 {: class="table table-striped"}
 
 
@@ -987,11 +987,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 20]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **q** | **String**| Search query | [optional] 
- **sort_order** | **String**| Sort order | [optional] 
- **expand** | **String**| which fields, if any, to expand | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **q** | **String**| Search query | [optional]  |
+ **sort_order** | **String**| Sort order | [optional]  |
+ **expand** | **String**| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
 {: class="table table-striped"}
 
 
@@ -1053,8 +1053,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **relationship_id** | **String**| Relationship Id | 
- **expand** | **String**| which fields, if any, to expand | [optional] 
+ **relationship_id** | **String**| Relationship Id |  |
+ **expand** | **String**| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
 {: class="table table-striped"}
 
 
@@ -1116,8 +1116,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **lookup_val** | **String**| User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names) | 
- **expand** | [**Array&lt;String&gt;**](String.html)| which field, if any, to expand | [optional] 
+ **lookup_val** | **String**| User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names) |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| which field, if any, to expand | [optional] <br />**Values**: contacts.externalOrganization, externalDataSources |
 {: class="table table-striped"}
 
 
@@ -1179,8 +1179,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_id** | **String**| ExternalContact Id | 
- **body** | [**Note**](Note.html)| ExternalContact | [optional] 
+ **contact_id** | **String**| ExternalContact Id |  |
+ **body** | [**Note**](Note.html)| ExternalContact | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1240,7 +1240,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ExternalContact**](ExternalContact.html)| ExternalContact | [optional] 
+ **body** | [**ExternalContact**](ExternalContact.html)| ExternalContact | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1302,8 +1302,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_organization_id** | **String**| External Organization Id | 
- **body** | [**Note**](Note.html)| ExternalContact | [optional] 
+ **external_organization_id** | **String**| External Organization Id |  |
+ **body** | [**Note**](Note.html)| ExternalContact | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1363,7 +1363,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ExternalOrganization**](ExternalOrganization.html)| ExternalOrganization | [optional] 
+ **body** | [**ExternalOrganization**](ExternalOrganization.html)| ExternalOrganization | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1423,7 +1423,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Relationship**](Relationship.html)| Relationship | [optional] 
+ **body** | [**Relationship**](Relationship.html)| Relationship | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1485,8 +1485,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_id** | **String**| ExternalContact ID | 
- **body** | [**ExternalContact**](ExternalContact.html)| ExternalContact | [optional] 
+ **contact_id** | **String**| ExternalContact ID |  |
+ **body** | [**ExternalContact**](ExternalContact.html)| ExternalContact | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1550,9 +1550,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_id** | **String**| ExternalContact Id | 
- **note_id** | **String**| Note Id | 
- **body** | [**Note**](Note.html)| Note | [optional] 
+ **contact_id** | **String**| ExternalContact Id |  |
+ **note_id** | **String**| Note Id |  |
+ **body** | [**Note**](Note.html)| Note | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1613,8 +1613,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID | 
- **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation | [optional] 
+ **conversation_id** | **String**| Conversation ID |  |
+ **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1676,8 +1676,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_organization_id** | **String**| External Organization ID | 
- **body** | [**ExternalOrganization**](ExternalOrganization.html)| ExternalOrganization | [optional] 
+ **external_organization_id** | **String**| External Organization ID |  |
+ **body** | [**ExternalOrganization**](ExternalOrganization.html)| ExternalOrganization | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1741,9 +1741,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_organization_id** | **String**| External Organization Id | 
- **note_id** | **String**| Note Id | 
- **body** | [**Note**](Note.html)| Note | [optional] 
+ **external_organization_id** | **String**| External Organization Id |  |
+ **note_id** | **String**| Note Id |  |
+ **body** | [**Note**](Note.html)| Note | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1805,8 +1805,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **relationship_id** | **String**| Relationship Id | 
- **body** | [**Relationship**](Relationship.html)| Relationship | [optional] 
+ **relationship_id** | **String**| Relationship Id |  |
+ **body** | [**Relationship**](Relationship.html)| Relationship | [optional]  |
 {: class="table table-striped"}
 
 

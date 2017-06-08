@@ -45,32 +45,54 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'version' => :'version',
+        
         :'max_download_rate' => :'maxDownloadRate',
+        
         :'download_start_time' => :'downloadStartTime',
+        
         :'execute_start_time' => :'executeStartTime',
+        
         :'execute_stop_time' => :'executeStopTime',
+        
         :'execute_on_idle' => :'executeOnIdle',
+        
         :'status' => :'status',
+        
         :'edge_uri' => :'edgeUri',
+        
         :'call_draining_wait_time_seconds' => :'callDrainingWaitTimeSeconds',
+        
         :'current' => :'current'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'version' => :'DomainEdgeSoftwareVersionDto',
+        
         :'max_download_rate' => :'Integer',
+        
         :'download_start_time' => :'DateTime',
+        
         :'execute_start_time' => :'DateTime',
+        
         :'execute_stop_time' => :'DateTime',
+        
         :'execute_on_idle' => :'BOOLEAN',
+        
         :'status' => :'String',
+        
         :'edge_uri' => :'String',
+        
         :'call_draining_wait_time_seconds' => :'Integer',
+        
         :'current' => :'BOOLEAN'
+        
       }
     end
 
@@ -82,68 +104,196 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'maxDownloadRate')
+        
+        
         self.max_download_rate = attributes[:'maxDownloadRate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'downloadStartTime')
+        
+        
         self.download_start_time = attributes[:'downloadStartTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'executeStartTime')
+        
+        
         self.execute_start_time = attributes[:'executeStartTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'executeStopTime')
+        
+        
         self.execute_stop_time = attributes[:'executeStopTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'executeOnIdle')
+        
+        
         self.execute_on_idle = attributes[:'executeOnIdle']
+        
+      
       end
 
+      
       if attributes.has_key?(:'status')
+        
+        
         self.status = attributes[:'status']
+        
+      
       end
 
+      
       if attributes.has_key?(:'edgeUri')
+        
+        
         self.edge_uri = attributes[:'edgeUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'callDrainingWaitTimeSeconds')
+        
+        
         self.call_draining_wait_time_seconds = attributes[:'callDrainingWaitTimeSeconds']
+        
+      
       end
 
+      
       if attributes.has_key?(:'current')
+        
+        
         self.current = attributes[:'current']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @version.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["NONE", "INIT", "IN_PROGRESS", "EXPIRED", "EXCEPTION", "ABORTED", "FAILED", "SUCCEEDED", "DELETE"]
       if @status && !allowed_values.include?(@status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status Object to be assigned
     def status=(status)
@@ -154,6 +304,24 @@ module PureCloud
       @status = status
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

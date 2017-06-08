@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_attemptlimit ..."
       end
+      
+      
       # verify the required parameter 'attempt_limits_id' is set
       fail ArgumentError, "Missing the required parameter 'attempt_limits_id' when calling OutboundApi.delete_outbound_attemptlimit" if attempt_limits_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/attemptlimits/{attemptLimitsId}".sub('{format}','json').sub('{' + 'attemptLimitsId' + '}', attempt_limits_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -99,8 +107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_callabletimeset ..."
       end
+      
+      
       # verify the required parameter 'callable_time_set_id' is set
       fail ArgumentError, "Missing the required parameter 'callable_time_set_id' when calling OutboundApi.delete_outbound_callabletimeset" if callable_time_set_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/callabletimesets/{callableTimeSetId}".sub('{format}','json').sub('{' + 'callableTimeSetId' + '}', callable_time_set_id.to_s)
 
@@ -123,7 +138,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -155,8 +171,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_callanalysisresponseset ..."
       end
+      
+      
       # verify the required parameter 'call_analysis_set_id' is set
       fail ArgumentError, "Missing the required parameter 'call_analysis_set_id' when calling OutboundApi.delete_outbound_callanalysisresponseset" if call_analysis_set_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}".sub('{format}','json').sub('{' + 'callAnalysisSetId' + '}', call_analysis_set_id.to_s)
 
@@ -179,7 +202,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -211,8 +235,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_campaign ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.delete_outbound_campaign" if campaign_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns/{campaignId}".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -235,7 +266,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -268,8 +300,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_campaign_progress ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.delete_outbound_campaign_progress" if campaign_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns/{campaignId}/progress".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -292,7 +331,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -324,8 +364,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_campaignrule ..."
       end
+      
+      
       # verify the required parameter 'campaign_rule_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_rule_id' when calling OutboundApi.delete_outbound_campaignrule" if campaign_rule_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaignrules/{campaignRuleId}".sub('{format}','json').sub('{' + 'campaignRuleId' + '}', campaign_rule_id.to_s)
 
@@ -348,7 +395,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -380,8 +428,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_contactlist ..."
       end
+      
+      
       # verify the required parameter 'contact_list_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.delete_outbound_contactlist" if contact_list_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists/{contactListId}".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s)
 
@@ -404,7 +459,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -438,10 +494,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_contactlist_contact ..."
       end
+      
+      
       # verify the required parameter 'contact_list_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.delete_outbound_contactlist_contact" if contact_list_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'contact_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_id' when calling OutboundApi.delete_outbound_contactlist_contact" if contact_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s).sub('{' + 'contactId' + '}', contact_id.to_s)
 
@@ -464,7 +533,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -498,10 +568,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_contactlist_contacts ..."
       end
+      
+      
       # verify the required parameter 'contact_list_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.delete_outbound_contactlist_contacts" if contact_list_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'contact_ids' is set
       fail ArgumentError, "Missing the required parameter 'contact_ids' when calling OutboundApi.delete_outbound_contactlist_contacts" if contact_ids.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists/{contactListId}/contacts".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s)
 
@@ -525,7 +608,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -557,8 +641,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_contactlistfilter ..."
       end
+      
+      
       # verify the required parameter 'contact_list_filter_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_filter_id' when calling OutboundApi.delete_outbound_contactlistfilter" if contact_list_filter_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlistfilters/{contactListFilterId}".sub('{format}','json').sub('{' + 'contactListFilterId' + '}', contact_list_filter_id.to_s)
 
@@ -581,7 +672,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -613,8 +705,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_dnclist ..."
       end
+      
+      
       # verify the required parameter 'dnc_list_id' is set
       fail ArgumentError, "Missing the required parameter 'dnc_list_id' when calling OutboundApi.delete_outbound_dnclist" if dnc_list_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/dnclists/{dncListId}".sub('{format}','json').sub('{' + 'dncListId' + '}', dnc_list_id.to_s)
 
@@ -637,7 +736,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -669,8 +769,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_ruleset ..."
       end
+      
+      
       # verify the required parameter 'rule_set_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_set_id' when calling OutboundApi.delete_outbound_ruleset" if rule_set_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/rulesets/{ruleSetId}".sub('{format}','json').sub('{' + 'ruleSetId' + '}', rule_set_id.to_s)
 
@@ -693,7 +800,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -725,8 +833,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_schedules_campaign ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.delete_outbound_schedules_campaign" if campaign_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/schedules/campaigns/{campaignId}".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -749,7 +864,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -781,8 +897,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_schedules_sequence ..."
       end
+      
+      
       # verify the required parameter 'sequence_id' is set
       fail ArgumentError, "Missing the required parameter 'sequence_id' when calling OutboundApi.delete_outbound_schedules_sequence" if sequence_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/schedules/sequences/{sequenceId}".sub('{format}','json').sub('{' + 'sequenceId' + '}', sequence_id.to_s)
 
@@ -805,7 +928,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -837,8 +961,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_sequence ..."
       end
+      
+      
       # verify the required parameter 'sequence_id' is set
       fail ArgumentError, "Missing the required parameter 'sequence_id' when calling OutboundApi.delete_outbound_sequence" if sequence_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/sequences/{sequenceId}".sub('{format}','json').sub('{' + 'sequenceId' + '}', sequence_id.to_s)
 
@@ -861,7 +992,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -893,8 +1025,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_attemptlimit ..."
       end
+      
+      
       # verify the required parameter 'attempt_limits_id' is set
       fail ArgumentError, "Missing the required parameter 'attempt_limits_id' when calling OutboundApi.get_outbound_attemptlimit" if attempt_limits_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/attemptlimits/{attemptLimitsId}".sub('{format}','json').sub('{' + 'attemptLimitsId' + '}', attempt_limits_id.to_s)
 
@@ -917,7 +1056,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -960,12 +1100,51 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_attemptlimits ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
         fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/attemptlimits".sub('{format}','json')
 
@@ -994,7 +1173,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1027,8 +1207,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_callabletimeset ..."
       end
+      
+      
       # verify the required parameter 'callable_time_set_id' is set
       fail ArgumentError, "Missing the required parameter 'callable_time_set_id' when calling OutboundApi.get_outbound_callabletimeset" if callable_time_set_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/callabletimesets/{callableTimeSetId}".sub('{format}','json').sub('{' + 'callableTimeSetId' + '}', callable_time_set_id.to_s)
 
@@ -1051,7 +1238,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1094,12 +1282,51 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_callabletimesets ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
         fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/callabletimesets".sub('{format}','json')
 
@@ -1128,7 +1355,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1161,8 +1389,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_callanalysisresponseset ..."
       end
+      
+      
       # verify the required parameter 'call_analysis_set_id' is set
       fail ArgumentError, "Missing the required parameter 'call_analysis_set_id' when calling OutboundApi.get_outbound_callanalysisresponseset" if call_analysis_set_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}".sub('{format}','json').sub('{' + 'callAnalysisSetId' + '}', call_analysis_set_id.to_s)
 
@@ -1185,7 +1420,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1228,12 +1464,51 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_callanalysisresponsesets ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
         fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/callanalysisresponsesets".sub('{format}','json')
 
@@ -1262,7 +1537,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1295,8 +1571,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaign ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.get_outbound_campaign" if campaign_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns/{campaignId}".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -1319,7 +1602,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1352,8 +1636,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaign_diagnostics ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.get_outbound_campaign_diagnostics" if campaign_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns/{campaignId}/diagnostics".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -1376,7 +1667,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1409,8 +1701,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaign_interactions ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.get_outbound_campaign_interactions" if campaign_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns/{campaignId}/interactions".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -1433,7 +1732,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1466,8 +1766,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaign_progress ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.get_outbound_campaign_progress" if campaign_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns/{campaignId}/progress".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -1490,7 +1797,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1523,8 +1831,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaign_stats ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.get_outbound_campaign_stats" if campaign_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns/{campaignId}/stats".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -1547,7 +1862,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1580,8 +1896,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaignrule ..."
       end
+      
+      
       # verify the required parameter 'campaign_rule_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_rule_id' when calling OutboundApi.get_outbound_campaignrule" if campaign_rule_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaignrules/{campaignRuleId}".sub('{format}','json').sub('{' + 'campaignRuleId' + '}', campaign_rule_id.to_s)
 
@@ -1604,7 +1927,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1647,12 +1971,51 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaignrules ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
         fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaignrules".sub('{format}','json')
 
@@ -1681,7 +2044,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1734,12 +2098,81 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaigns ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
         fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns".sub('{format}','json')
 
@@ -1773,7 +2206,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1810,8 +2244,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_contactlist ..."
       end
+      
+      
       # verify the required parameter 'contact_list_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.get_outbound_contactlist" if contact_list_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists/{contactListId}".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s)
 
@@ -1836,7 +2289,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1871,10 +2325,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_contactlist_contact ..."
       end
+      
+      
       # verify the required parameter 'contact_list_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.get_outbound_contactlist_contact" if contact_list_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'contact_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_id' when calling OutboundApi.get_outbound_contactlist_contact" if contact_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s).sub('{' + 'contactId' + '}', contact_id.to_s)
 
@@ -1897,7 +2364,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1932,8 +2400,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_contactlist_export ..."
       end
+      
+      
       # verify the required parameter 'contact_list_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.get_outbound_contactlist_export" if contact_list_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists/{contactListId}/export".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s)
 
@@ -1957,7 +2438,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1990,8 +2472,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_contactlist_importstatus ..."
       end
+      
+      
       # verify the required parameter 'contact_list_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.get_outbound_contactlist_importstatus" if contact_list_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists/{contactListId}/importstatus".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s)
 
@@ -2014,7 +2503,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2047,8 +2537,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_contactlistfilter ..."
       end
+      
+      
       # verify the required parameter 'contact_list_filter_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_filter_id' when calling OutboundApi.get_outbound_contactlistfilter" if contact_list_filter_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlistfilters/{contactListFilterId}".sub('{format}','json').sub('{' + 'contactListFilterId' + '}', contact_list_filter_id.to_s)
 
@@ -2071,7 +2568,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2116,12 +2614,57 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_contactlistfilters ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
         fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlistfilters".sub('{format}','json')
 
@@ -2151,7 +2694,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2198,12 +2742,63 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_contactlists ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
         fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists".sub('{format}','json')
 
@@ -2234,7 +2829,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2271,8 +2867,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_dnclist ..."
       end
+      
+      
       # verify the required parameter 'dnc_list_id' is set
       fail ArgumentError, "Missing the required parameter 'dnc_list_id' when calling OutboundApi.get_outbound_dnclist" if dnc_list_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/dnclists/{dncListId}".sub('{format}','json').sub('{' + 'dncListId' + '}', dnc_list_id.to_s)
 
@@ -2297,7 +2912,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2332,8 +2948,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_dnclist_export ..."
       end
+      
+      
       # verify the required parameter 'dnc_list_id' is set
       fail ArgumentError, "Missing the required parameter 'dnc_list_id' when calling OutboundApi.get_outbound_dnclist_export" if dnc_list_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/dnclists/{dncListId}/export".sub('{format}','json').sub('{' + 'dncListId' + '}', dnc_list_id.to_s)
 
@@ -2357,7 +2986,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2390,8 +3020,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_dnclist_importstatus ..."
       end
+      
+      
       # verify the required parameter 'dnc_list_id' is set
       fail ArgumentError, "Missing the required parameter 'dnc_list_id' when calling OutboundApi.get_outbound_dnclist_importstatus" if dnc_list_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/dnclists/{dncListId}/importstatus".sub('{format}','json').sub('{' + 'dncListId' + '}', dnc_list_id.to_s)
 
@@ -2414,7 +3051,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2461,12 +3099,63 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_dnclists ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
         fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/dnclists".sub('{format}','json')
 
@@ -2497,7 +3186,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2530,8 +3220,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_event ..."
       end
+      
+      
       # verify the required parameter 'event_id' is set
       fail ArgumentError, "Missing the required parameter 'event_id' when calling OutboundApi.get_outbound_event" if event_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/events/{eventId}".sub('{format}','json').sub('{' + 'eventId' + '}', event_id.to_s)
 
@@ -2554,7 +3251,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2599,12 +3297,57 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_events ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
         fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/events".sub('{format}','json')
 
@@ -2634,7 +3377,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2667,8 +3411,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_ruleset ..."
       end
+      
+      
       # verify the required parameter 'rule_set_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_set_id' when calling OutboundApi.get_outbound_ruleset" if rule_set_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/rulesets/{ruleSetId}".sub('{format}','json').sub('{' + 'ruleSetId' + '}', rule_set_id.to_s)
 
@@ -2691,7 +3442,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2734,12 +3486,51 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_rulesets ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
         fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/rulesets".sub('{format}','json')
 
@@ -2768,7 +3559,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2801,8 +3593,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_schedules_campaign ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.get_outbound_schedules_campaign" if campaign_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/schedules/campaigns/{campaignId}".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -2825,7 +3624,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2856,6 +3656,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_schedules_campaigns ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/outbound/schedules/campaigns".sub('{format}','json')
 
@@ -2878,7 +3679,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2911,8 +3713,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_schedules_sequence ..."
       end
+      
+      
       # verify the required parameter 'sequence_id' is set
       fail ArgumentError, "Missing the required parameter 'sequence_id' when calling OutboundApi.get_outbound_schedules_sequence" if sequence_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/schedules/sequences/{sequenceId}".sub('{format}','json').sub('{' + 'sequenceId' + '}', sequence_id.to_s)
 
@@ -2935,7 +3744,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2966,6 +3776,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_schedules_sequences ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/outbound/schedules/sequences".sub('{format}','json')
 
@@ -2988,7 +3799,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3021,8 +3833,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_sequence ..."
       end
+      
+      
       # verify the required parameter 'sequence_id' is set
       fail ArgumentError, "Missing the required parameter 'sequence_id' when calling OutboundApi.get_outbound_sequence" if sequence_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/sequences/{sequenceId}".sub('{format}','json').sub('{' + 'sequenceId' + '}', sequence_id.to_s)
 
@@ -3045,7 +3864,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3088,12 +3908,51 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_sequences ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'filter_type'] && !['Equals', 'RegEx', 'Contains', 'Prefix', 'LessThan', 'LessThanEqualTo', 'GreaterThan', 'GreaterThanEqualTo', 'BeginsWith', 'EndsWith'].include?(opts[:'filter_type'])
         fail ArgumentError, 'invalid value for "filter_type", must be one of Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/sequences".sub('{format}','json')
 
@@ -3122,7 +3981,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3153,6 +4013,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_wrapupcodemappings ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/outbound/wrapupcodemappings".sub('{format}','json')
 
@@ -3175,7 +4036,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3208,8 +4070,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_attemptlimits ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_attemptlimits" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/attemptlimits".sub('{format}','json')
 
@@ -3232,6 +4101,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3275,8 +4145,45 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_audits ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_audits" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/audits".sub('{format}','json')
 
@@ -3304,6 +4211,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3337,8 +4245,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_callabletimesets ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_callabletimesets" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/callabletimesets".sub('{format}','json')
 
@@ -3361,6 +4276,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3394,8 +4310,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_callanalysisresponsesets ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_callanalysisresponsesets" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/callanalysisresponsesets".sub('{format}','json')
 
@@ -3418,6 +4341,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3453,10 +4377,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_campaign_callback_schedule ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.post_outbound_campaign_callback_schedule" if campaign_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_campaign_callback_schedule" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns/{campaignId}/callback/schedule".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -3479,6 +4416,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3512,8 +4450,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_campaignrules ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_campaignrules" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaignrules".sub('{format}','json')
 
@@ -3536,6 +4481,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3569,8 +4515,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_campaigns ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_campaigns" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns".sub('{format}','json')
 
@@ -3593,6 +4546,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3626,8 +4580,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_campaigns_progress ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_campaigns_progress" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns/progress".sub('{format}','json')
 
@@ -3650,6 +4611,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3689,10 +4651,35 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_contactlist_contacts ..."
       end
+      
+      
       # verify the required parameter 'contact_list_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.post_outbound_contactlist_contacts" if contact_list_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_contactlist_contacts" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists/{contactListId}/contacts".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s)
 
@@ -3717,6 +4704,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3750,8 +4738,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_contactlist_export ..."
       end
+      
+      
       # verify the required parameter 'contact_list_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.post_outbound_contactlist_export" if contact_list_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists/{contactListId}/export".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s)
 
@@ -3774,7 +4769,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3807,8 +4803,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_contactlistfilters ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_contactlistfilters" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlistfilters".sub('{format}','json')
 
@@ -3831,6 +4834,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3864,8 +4868,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_contactlistfilters_preview ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_contactlistfilters_preview" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlistfilters/preview".sub('{format}','json')
 
@@ -3888,6 +4899,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3921,8 +4933,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_contactlists ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_contactlists" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists".sub('{format}','json')
 
@@ -3945,6 +4964,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -3978,8 +4998,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_conversation_dnc ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling OutboundApi.post_outbound_conversation_dnc" if conversation_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/conversations/{conversationId}/dnc".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -4002,7 +5029,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4034,8 +5062,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_dnclist_export ..."
       end
+      
+      
       # verify the required parameter 'dnc_list_id' is set
       fail ArgumentError, "Missing the required parameter 'dnc_list_id' when calling OutboundApi.post_outbound_dnclist_export" if dnc_list_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/dnclists/{dncListId}/export".sub('{format}','json').sub('{' + 'dncListId' + '}', dnc_list_id.to_s)
 
@@ -4058,7 +5093,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4093,10 +5129,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_dnclist_phonenumbers ..."
       end
+      
+      
       # verify the required parameter 'dnc_list_id' is set
       fail ArgumentError, "Missing the required parameter 'dnc_list_id' when calling OutboundApi.post_outbound_dnclist_phonenumbers" if dnc_list_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_dnclist_phonenumbers" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers".sub('{format}','json').sub('{' + 'dncListId' + '}', dnc_list_id.to_s)
 
@@ -4119,6 +5168,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4151,8 +5201,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_dnclists ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_dnclists" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/dnclists".sub('{format}','json')
 
@@ -4175,6 +5232,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4208,8 +5266,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_rulesets ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_rulesets" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/rulesets".sub('{format}','json')
 
@@ -4232,6 +5297,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4265,8 +5331,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_sequences ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_sequences" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/sequences".sub('{format}','json')
 
@@ -4289,6 +5362,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -4324,10 +5398,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_attemptlimit ..."
       end
+      
+      
       # verify the required parameter 'attempt_limits_id' is set
       fail ArgumentError, "Missing the required parameter 'attempt_limits_id' when calling OutboundApi.put_outbound_attemptlimit" if attempt_limits_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_attemptlimit" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/attemptlimits/{attemptLimitsId}".sub('{format}','json').sub('{' + 'attemptLimitsId' + '}', attempt_limits_id.to_s)
 
@@ -4350,6 +5437,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -4385,10 +5473,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_callabletimeset ..."
       end
+      
+      
       # verify the required parameter 'callable_time_set_id' is set
       fail ArgumentError, "Missing the required parameter 'callable_time_set_id' when calling OutboundApi.put_outbound_callabletimeset" if callable_time_set_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_callabletimeset" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/callabletimesets/{callableTimeSetId}".sub('{format}','json').sub('{' + 'callableTimeSetId' + '}', callable_time_set_id.to_s)
 
@@ -4411,6 +5512,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -4446,10 +5548,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_callanalysisresponseset ..."
       end
+      
+      
       # verify the required parameter 'call_analysis_set_id' is set
       fail ArgumentError, "Missing the required parameter 'call_analysis_set_id' when calling OutboundApi.put_outbound_callanalysisresponseset" if call_analysis_set_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_callanalysisresponseset" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}".sub('{format}','json').sub('{' + 'callAnalysisSetId' + '}', call_analysis_set_id.to_s)
 
@@ -4472,6 +5587,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -4507,10 +5623,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_campaign ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.put_outbound_campaign" if campaign_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_campaign" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns/{campaignId}".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -4533,6 +5662,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -4570,12 +5700,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_campaign_agent ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.put_outbound_campaign_agent" if campaign_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling OutboundApi.put_outbound_campaign_agent" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_campaign_agent" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaigns/{campaignId}/agents/{userId}".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s).sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -4598,6 +5747,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -4633,10 +5783,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_campaignrule ..."
       end
+      
+      
       # verify the required parameter 'campaign_rule_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_rule_id' when calling OutboundApi.put_outbound_campaignrule" if campaign_rule_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_campaignrule" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/campaignrules/{campaignRuleId}".sub('{format}','json').sub('{' + 'campaignRuleId' + '}', campaign_rule_id.to_s)
 
@@ -4659,6 +5822,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -4694,10 +5858,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_contactlist ..."
       end
+      
+      
       # verify the required parameter 'contact_list_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.put_outbound_contactlist" if contact_list_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_contactlist" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists/{contactListId}".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s)
 
@@ -4720,6 +5897,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -4757,12 +5935,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_contactlist_contact ..."
       end
+      
+      
       # verify the required parameter 'contact_list_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.put_outbound_contactlist_contact" if contact_list_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'contact_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_id' when calling OutboundApi.put_outbound_contactlist_contact" if contact_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_contactlist_contact" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s).sub('{' + 'contactId' + '}', contact_id.to_s)
 
@@ -4785,6 +5982,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -4820,10 +6018,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_contactlistfilter ..."
       end
+      
+      
       # verify the required parameter 'contact_list_filter_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_list_filter_id' when calling OutboundApi.put_outbound_contactlistfilter" if contact_list_filter_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_contactlistfilter" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/contactlistfilters/{contactListFilterId}".sub('{format}','json').sub('{' + 'contactListFilterId' + '}', contact_list_filter_id.to_s)
 
@@ -4846,6 +6057,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -4881,10 +6093,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_dnclist ..."
       end
+      
+      
       # verify the required parameter 'dnc_list_id' is set
       fail ArgumentError, "Missing the required parameter 'dnc_list_id' when calling OutboundApi.put_outbound_dnclist" if dnc_list_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_dnclist" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/dnclists/{dncListId}".sub('{format}','json').sub('{' + 'dncListId' + '}', dnc_list_id.to_s)
 
@@ -4907,6 +6132,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -4942,10 +6168,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_ruleset ..."
       end
+      
+      
       # verify the required parameter 'rule_set_id' is set
       fail ArgumentError, "Missing the required parameter 'rule_set_id' when calling OutboundApi.put_outbound_ruleset" if rule_set_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_ruleset" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/rulesets/{ruleSetId}".sub('{format}','json').sub('{' + 'ruleSetId' + '}', rule_set_id.to_s)
 
@@ -4968,6 +6207,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -5003,10 +6243,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_schedules_campaign ..."
       end
+      
+      
       # verify the required parameter 'campaign_id' is set
       fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.put_outbound_schedules_campaign" if campaign_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_schedules_campaign" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/schedules/campaigns/{campaignId}".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
 
@@ -5029,6 +6282,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -5064,10 +6318,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_schedules_sequence ..."
       end
+      
+      
       # verify the required parameter 'sequence_id' is set
       fail ArgumentError, "Missing the required parameter 'sequence_id' when calling OutboundApi.put_outbound_schedules_sequence" if sequence_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_schedules_sequence" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/schedules/sequences/{sequenceId}".sub('{format}','json').sub('{' + 'sequenceId' + '}', sequence_id.to_s)
 
@@ -5090,6 +6357,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -5125,10 +6393,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_sequence ..."
       end
+      
+      
       # verify the required parameter 'sequence_id' is set
       fail ArgumentError, "Missing the required parameter 'sequence_id' when calling OutboundApi.put_outbound_sequence" if sequence_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_sequence" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/sequences/{sequenceId}".sub('{format}','json').sub('{' + 'sequenceId' + '}', sequence_id.to_s)
 
@@ -5151,6 +6432,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -5184,8 +6466,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_wrapupcodemappings ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_wrapupcodemappings" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/outbound/wrapupcodemappings".sub('{format}','json')
 
@@ -5208,6 +6497,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

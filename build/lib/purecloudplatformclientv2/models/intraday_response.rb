@@ -45,28 +45,46 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'start_date' => :'startDate',
+        
         :'end_date' => :'endDate',
+        
         :'interval_length_minutes' => :'intervalLengthMinutes',
+        
         :'number_of_intervals' => :'numberOfIntervals',
+        
         :'metrics' => :'metrics',
+        
         :'no_data_reason' => :'noDataReason',
+        
         :'queue_ids' => :'queueIds',
+        
         :'intraday_data_groupings' => :'intradayDataGroupings'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'start_date' => :'DateTime',
+        
         :'end_date' => :'DateTime',
+        
         :'interval_length_minutes' => :'Integer',
+        
         :'number_of_intervals' => :'Integer',
+        
         :'metrics' => :'Array<IntradayMetric>',
+        
         :'no_data_reason' => :'String',
+        
         :'queue_ids' => :'Array<String>',
+        
         :'intraday_data_groupings' => :'Array<IntradayDataGroup>'
+        
       }
     end
 
@@ -78,62 +96,166 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'startDate')
+        
+        
         self.start_date = attributes[:'startDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endDate')
+        
+        
         self.end_date = attributes[:'endDate']
+        
+      
       end
 
+      
       if attributes.has_key?(:'intervalLengthMinutes')
+        
+        
         self.interval_length_minutes = attributes[:'intervalLengthMinutes']
+        
+      
       end
 
+      
       if attributes.has_key?(:'numberOfIntervals')
+        
+        
         self.number_of_intervals = attributes[:'numberOfIntervals']
+        
+      
       end
 
+      
       if attributes.has_key?(:'metrics')
+        
         if (value = attributes[:'metrics']).is_a?(Array)
           self.metrics = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'noDataReason')
+        
+        
         self.no_data_reason = attributes[:'noDataReason']
+        
+      
       end
 
+      
       if attributes.has_key?(:'queueIds')
+        
         if (value = attributes[:'queueIds']).is_a?(Array)
           self.queue_ids = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'intradayDataGroupings')
+        
         if (value = attributes[:'intradayDataGroupings']).is_a?(Array)
           self.intraday_data_groupings = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["NoWeekData", "NoPublishedSchedule", "NoSourceForecast"]
       if @no_data_reason && !allowed_values.include?(@no_data_reason)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] no_data_reason Object to be assigned
     def no_data_reason=(no_data_reason)
@@ -144,6 +266,19 @@ module PureCloud
       @no_data_reason = no_data_reason
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

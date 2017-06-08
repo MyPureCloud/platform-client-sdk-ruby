@@ -41,32 +41,54 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'status' => :'status',
+        
         :'code' => :'code',
+        
         :'entity_id' => :'entityId',
+        
         :'entity_name' => :'entityName',
+        
         :'message' => :'message',
+        
         :'message_with_params' => :'messageWithParams',
+        
         :'message_params' => :'messageParams',
+        
         :'context_id' => :'contextId',
+        
         :'details' => :'details',
+        
         :'errors' => :'errors'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'status' => :'Integer',
+        
         :'code' => :'String',
+        
         :'entity_id' => :'String',
+        
         :'entity_name' => :'String',
+        
         :'message' => :'String',
+        
         :'message_with_params' => :'String',
+        
         :'message_params' => :'Hash<String, String>',
+        
         :'context_id' => :'String',
+        
         :'details' => :'Array<CallbackConversationNotificationErrorInfoDetails>',
+        
         :'errors' => :'Array<EmailConversationNotificationErrorBody>'
+        
       }
     end
 
@@ -78,66 +100,211 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'status')
+        
+        
         self.status = attributes[:'status']
+        
+      
       end
 
+      
       if attributes.has_key?(:'code')
+        
+        
         self.code = attributes[:'code']
+        
+      
       end
 
+      
       if attributes.has_key?(:'entityId')
+        
+        
         self.entity_id = attributes[:'entityId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'entityName')
+        
+        
         self.entity_name = attributes[:'entityName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'message')
+        
+        
         self.message = attributes[:'message']
+        
+      
       end
 
+      
       if attributes.has_key?(:'messageWithParams')
+        
+        
         self.message_with_params = attributes[:'messageWithParams']
+        
+      
       end
 
+      
       if attributes.has_key?(:'messageParams')
+        
         if (value = attributes[:'messageParams']).is_a?(Array)
           self.message_params = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'contextId')
+        
+        
         self.context_id = attributes[:'contextId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'details')
+        
         if (value = attributes[:'details']).is_a?(Array)
           self.details = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'errors')
+        
         if (value = attributes[:'errors']).is_a?(Array)
           self.errors = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

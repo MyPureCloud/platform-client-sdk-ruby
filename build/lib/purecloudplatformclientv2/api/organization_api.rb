@@ -43,12 +43,20 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OrganizationApi.get_fieldconfig ..."
       end
+      
+      
       # verify the required parameter 'type' is set
       fail ArgumentError, "Missing the required parameter 'type' when calling OrganizationApi.get_fieldconfig" if type.nil?
+      
       # verify enum value
       unless ['person', 'group', 'org', 'externalContact'].include?(type)
         fail ArgumentError, "invalid value for 'type', must be one of person, group, org, externalContact"
       end
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/fieldconfig".sub('{format}','json')
 
@@ -72,7 +80,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -103,6 +112,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OrganizationApi.get_organizations_me ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/organizations/me".sub('{format}','json')
 
@@ -125,7 +135,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -160,14 +171,28 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OrganizationApi.patch_organizations_feature ..."
       end
+      
+      
       # verify the required parameter 'feature_name' is set
       fail ArgumentError, "Missing the required parameter 'feature_name' when calling OrganizationApi.patch_organizations_feature" if feature_name.nil?
+      
       # verify enum value
       unless ['realtimeCIC', 'purecloud', 'hipaa', 'ucEnabled', 'pci', 'purecloudVoice', 'xmppFederation', 'chat', 'informalPhotos', 'directory', 'contactCenter', 'unifiedCommunications', 'custserv'].include?(feature_name)
         fail ArgumentError, "invalid value for 'feature_name', must be one of realtimeCIC, purecloud, hipaa, ucEnabled, pci, purecloudVoice, xmppFederation, chat, informalPhotos, directory, contactCenter, unifiedCommunications, custserv"
       end
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'enabled' is set
       fail ArgumentError, "Missing the required parameter 'enabled' when calling OrganizationApi.patch_organizations_feature" if enabled.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/organizations/features/{featureName}".sub('{format}','json').sub('{' + 'featureName' + '}', feature_name.to_s)
 
@@ -190,6 +215,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(enabled)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
@@ -223,6 +249,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OrganizationApi.put_organizations_me ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/organizations/me".sub('{format}','json')
 
@@ -245,6 +278,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

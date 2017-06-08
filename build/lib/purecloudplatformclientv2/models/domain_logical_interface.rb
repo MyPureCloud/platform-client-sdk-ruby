@@ -105,78 +105,146 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'description' => :'description',
+        
         :'version' => :'version',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'modified_by' => :'modifiedBy',
+        
         :'created_by' => :'createdBy',
+        
         :'state' => :'state',
+        
         :'modified_by_app' => :'modifiedByApp',
+        
         :'created_by_app' => :'createdByApp',
+        
         :'edge_uri' => :'edgeUri',
+        
         :'edge_assigned_id' => :'edgeAssignedId',
+        
         :'friendly_name' => :'friendlyName',
+        
         :'vlan_tag_id' => :'vlanTagId',
+        
         :'hardware_address' => :'hardwareAddress',
+        
         :'physical_adapter_id' => :'physicalAdapterId',
+        
         :'if_status' => :'ifStatus',
+        
         :'interface_type' => :'interfaceType',
+        
         :'routes' => :'routes',
+        
         :'addresses' => :'addresses',
+        
         :'ipv4_capabilities' => :'ipv4Capabilities',
+        
         :'ipv6_capabilities' => :'ipv6Capabilities',
+        
         :'current_state' => :'currentState',
+        
         :'last_modified_user_id' => :'lastModifiedUserId',
+        
         :'last_modified_correlation_id' => :'lastModifiedCorrelationId',
+        
         :'command_responses' => :'commandResponses',
+        
         :'inherit_phone_trunk_bases_i_pv4' => :'inheritPhoneTrunkBasesIPv4',
+        
         :'inherit_phone_trunk_bases_i_pv6' => :'inheritPhoneTrunkBasesIPv6',
+        
         :'use_for_internal_edge_communication' => :'useForInternalEdgeCommunication',
+        
         :'external_trunk_base_assignments' => :'externalTrunkBaseAssignments',
+        
         :'phone_trunk_base_assignments' => :'phoneTrunkBaseAssignments',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'description' => :'String',
+        
         :'version' => :'Integer',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'modified_by' => :'String',
+        
         :'created_by' => :'String',
+        
         :'state' => :'String',
+        
         :'modified_by_app' => :'String',
+        
         :'created_by_app' => :'String',
+        
         :'edge_uri' => :'String',
+        
         :'edge_assigned_id' => :'String',
+        
         :'friendly_name' => :'String',
+        
         :'vlan_tag_id' => :'Integer',
+        
         :'hardware_address' => :'String',
+        
         :'physical_adapter_id' => :'String',
+        
         :'if_status' => :'String',
+        
         :'interface_type' => :'String',
+        
         :'routes' => :'Array<DomainNetworkRoute>',
+        
         :'addresses' => :'Array<DomainNetworkAddress>',
+        
         :'ipv4_capabilities' => :'DomainCapabilities',
+        
         :'ipv6_capabilities' => :'DomainCapabilities',
+        
         :'current_state' => :'String',
+        
         :'last_modified_user_id' => :'String',
+        
         :'last_modified_correlation_id' => :'String',
+        
         :'command_responses' => :'Array<DomainNetworkCommandResponse>',
+        
         :'inherit_phone_trunk_bases_i_pv4' => :'BOOLEAN',
+        
         :'inherit_phone_trunk_bases_i_pv6' => :'BOOLEAN',
+        
         :'use_for_internal_edge_communication' => :'BOOLEAN',
+        
         :'external_trunk_base_assignments' => :'Array<TrunkBaseAssignment>',
+        
         :'phone_trunk_base_assignments' => :'Array<TrunkBaseAssignment>',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -188,190 +256,540 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'description')
+        
+        
         self.description = attributes[:'description']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedBy')
+        
+        
         self.modified_by = attributes[:'modifiedBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdBy')
+        
+        
         self.created_by = attributes[:'createdBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'modifiedByApp')
+        
+        
         self.modified_by_app = attributes[:'modifiedByApp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'createdByApp')
+        
+        
         self.created_by_app = attributes[:'createdByApp']
+        
+      
       end
 
+      
       if attributes.has_key?(:'edgeUri')
+        
+        
         self.edge_uri = attributes[:'edgeUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'edgeAssignedId')
+        
+        
         self.edge_assigned_id = attributes[:'edgeAssignedId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'friendlyName')
+        
+        
         self.friendly_name = attributes[:'friendlyName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'vlanTagId')
+        
+        
         self.vlan_tag_id = attributes[:'vlanTagId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'hardwareAddress')
+        
+        
         self.hardware_address = attributes[:'hardwareAddress']
+        
+      
       end
 
+      
       if attributes.has_key?(:'physicalAdapterId')
+        
+        
         self.physical_adapter_id = attributes[:'physicalAdapterId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ifStatus')
+        
+        
         self.if_status = attributes[:'ifStatus']
+        
+      
       end
 
+      
       if attributes.has_key?(:'interfaceType')
+        
+        
         self.interface_type = attributes[:'interfaceType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'routes')
+        
         if (value = attributes[:'routes']).is_a?(Array)
           self.routes = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'addresses')
+        
         if (value = attributes[:'addresses']).is_a?(Array)
           self.addresses = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'ipv4Capabilities')
+        
+        
         self.ipv4_capabilities = attributes[:'ipv4Capabilities']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ipv6Capabilities')
+        
+        
         self.ipv6_capabilities = attributes[:'ipv6Capabilities']
+        
+      
       end
 
+      
       if attributes.has_key?(:'currentState')
+        
+        
         self.current_state = attributes[:'currentState']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lastModifiedUserId')
+        
+        
         self.last_modified_user_id = attributes[:'lastModifiedUserId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'lastModifiedCorrelationId')
+        
+        
         self.last_modified_correlation_id = attributes[:'lastModifiedCorrelationId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'commandResponses')
+        
         if (value = attributes[:'commandResponses']).is_a?(Array)
           self.command_responses = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'inheritPhoneTrunkBasesIPv4')
+        
+        
         self.inherit_phone_trunk_bases_i_pv4 = attributes[:'inheritPhoneTrunkBasesIPv4']
+        
+      
       end
 
+      
       if attributes.has_key?(:'inheritPhoneTrunkBasesIPv6')
+        
+        
         self.inherit_phone_trunk_bases_i_pv6 = attributes[:'inheritPhoneTrunkBasesIPv6']
+        
+      
       end
 
+      
       if attributes.has_key?(:'useForInternalEdgeCommunication')
+        
+        
         self.use_for_internal_edge_communication = attributes[:'useForInternalEdgeCommunication']
+        
+      
       end
 
+      
       if attributes.has_key?(:'externalTrunkBaseAssignments')
+        
         if (value = attributes[:'externalTrunkBaseAssignments']).is_a?(Array)
           self.external_trunk_base_assignments = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'phoneTrunkBaseAssignments')
+        
         if (value = attributes[:'phoneTrunkBaseAssignments']).is_a?(Array)
           self.phone_trunk_base_assignments = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["active", "inactive", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @friendly_name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @hardware_address.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @physical_adapter_id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["DIAGNOSTIC", "SYSTEM"]
       if @interface_type && !allowed_values.include?(@interface_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["INIT", "CREATING", "UPDATING", "OK", "EXCEPTION", "DELETING"]
       if @current_state && !allowed_values.include?(@current_state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -382,6 +800,55 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] interface_type Object to be assigned
     def interface_type=(interface_type)
@@ -392,6 +859,30 @@ module PureCloud
       @interface_type = interface_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] current_state Object to be assigned
     def current_state=(current_state)
@@ -402,6 +893,54 @@ module PureCloud
       @current_state = current_state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

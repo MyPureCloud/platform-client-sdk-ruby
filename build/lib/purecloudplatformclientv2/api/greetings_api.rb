@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.delete_greeting ..."
       end
+      
+      
       # verify the required parameter 'greeting_id' is set
       fail ArgumentError, "Missing the required parameter 'greeting_id' when calling GreetingsApi.delete_greeting" if greeting_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/greetings/{greetingId}".sub('{format}','json').sub('{' + 'greetingId' + '}', greeting_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -99,8 +107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.get_greeting ..."
       end
+      
+      
       # verify the required parameter 'greeting_id' is set
       fail ArgumentError, "Missing the required parameter 'greeting_id' when calling GreetingsApi.get_greeting" if greeting_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/greetings/{greetingId}".sub('{format}','json').sub('{' + 'greetingId' + '}', greeting_id.to_s)
 
@@ -123,7 +138,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -158,11 +174,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.get_greeting_media ..."
       end
+      
+      
       # verify the required parameter 'greeting_id' is set
       fail ArgumentError, "Missing the required parameter 'greeting_id' when calling GreetingsApi.get_greeting_media" if greeting_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'format_id'] && !['WAV', 'WEBM', 'WAV_ULAW', 'OGG_VORBIS', 'OGG_OPUS', 'NONE'].include?(opts[:'format_id'])
         fail ArgumentError, 'invalid value for "format_id", must be one of WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/greetings/{greetingId}/media".sub('{format}','json').sub('{' + 'greetingId' + '}', greeting_id.to_s)
 
@@ -186,7 +216,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -221,6 +252,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.get_greetings ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/greetings".sub('{format}','json')
 
@@ -245,7 +289,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -276,6 +321,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.get_greetings_defaults ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/greetings/defaults".sub('{format}','json')
 
@@ -298,7 +344,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -335,8 +382,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.get_group_greetings ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling GreetingsApi.get_group_greetings" if group_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/{groupId}/greetings".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -361,7 +427,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -394,8 +461,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.get_group_greetings_defaults ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling GreetingsApi.get_group_greetings_defaults" if group_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/{groupId}/greetings/defaults".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -418,7 +492,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -455,8 +530,27 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.get_user_greetings ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling GreetingsApi.get_user_greetings" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/greetings".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -481,7 +575,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -514,8 +609,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.get_user_greetings_defaults ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling GreetingsApi.get_user_greetings_defaults" if user_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/greetings/defaults".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -538,7 +640,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -571,8 +674,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.post_greetings ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GreetingsApi.post_greetings" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/greetings".sub('{format}','json')
 
@@ -595,6 +705,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -630,10 +741,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.post_group_greetings ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling GreetingsApi.post_group_greetings" if group_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GreetingsApi.post_group_greetings" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/{groupId}/greetings".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -656,6 +780,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -691,10 +816,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.post_user_greetings ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling GreetingsApi.post_user_greetings" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GreetingsApi.post_user_greetings" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/greetings".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -717,6 +855,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -752,10 +891,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.put_greeting ..."
       end
+      
+      
       # verify the required parameter 'greeting_id' is set
       fail ArgumentError, "Missing the required parameter 'greeting_id' when calling GreetingsApi.put_greeting" if greeting_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GreetingsApi.put_greeting" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/greetings/{greetingId}".sub('{format}','json').sub('{' + 'greetingId' + '}', greeting_id.to_s)
 
@@ -778,6 +930,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -811,8 +964,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.put_greetings_defaults ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GreetingsApi.put_greetings_defaults" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/greetings/defaults".sub('{format}','json')
 
@@ -835,6 +995,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -870,10 +1031,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.put_group_greetings_defaults ..."
       end
+      
+      
       # verify the required parameter 'group_id' is set
       fail ArgumentError, "Missing the required parameter 'group_id' when calling GreetingsApi.put_group_greetings_defaults" if group_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GreetingsApi.put_group_greetings_defaults" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/{groupId}/greetings/defaults".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
@@ -896,6 +1070,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -931,10 +1106,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.put_user_greetings_defaults ..."
       end
+      
+      
       # verify the required parameter 'user_id' is set
       fail ArgumentError, "Missing the required parameter 'user_id' when calling GreetingsApi.put_user_greetings_defaults" if user_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling GreetingsApi.put_user_greetings_defaults" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/greetings/defaults".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -957,6 +1145,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

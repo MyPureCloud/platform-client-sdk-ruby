@@ -94,8 +94,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document_id** | **String**| Document ID | 
- **override** | **BOOLEAN**| Override any lock on the document | [optional] 
+ **document_id** | **String**| Document ID |  |
+ **override** | **BOOLEAN**| Override any lock on the document | [optional]  |
 {: class="table table-striped"}
 
 
@@ -153,7 +153,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **share_id** | **String**| Share ID | 
+ **share_id** | **String**| Share ID |  |
 {: class="table table-striped"}
 
 
@@ -211,7 +211,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status_id** | **String**| Status ID | 
+ **status_id** | **String**| Status ID |  |
 {: class="table table-striped"}
 
 
@@ -272,8 +272,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **move_children_to_workspace_id** | **String**| New location for objects in deleted workspace. | [optional] 
+ **workspace_id** | **String**| Workspace ID |  |
+ **move_children_to_workspace_id** | **String**| New location for objects in deleted workspace. | [optional]  |
 {: class="table table-striped"}
 
 
@@ -333,8 +333,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **member_id** | **String**| Member ID | 
+ **workspace_id** | **String**| Workspace ID |  |
+ **member_id** | **String**| Member ID |  |
 {: class="table table-striped"}
 
 
@@ -394,8 +394,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **tag_id** | **String**| Tag ID | 
+ **workspace_id** | **String**| Workspace ID |  |
+ **tag_id** | **String**| Tag ID |  |
 {: class="table table-striped"}
 
 
@@ -457,8 +457,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document_id** | **String**| Document ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **document_id** | **String**| Document ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: lockInfo, acl, workspace |
 {: class="table table-striped"}
 
 
@@ -525,13 +525,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document_id** | **String**| Document ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **transaction_filter** | **String**| Transaction filter | [optional] 
- **level** | **String**| level | [optional] [default to USER]
- **sort_by** | **String**| Sort by | [optional] 
- **sort_order** | **String**| Sort order | [optional] [default to ascending]
+ **document_id** | **String**| Document ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **transaction_filter** | **String**| Transaction filter | [optional]  |
+ **level** | **String**| level | [optional] [default to USER] |
+ **sort_by** | **String**| Sort by | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to ascending] |
 {: class="table table-striped"}
 
 
@@ -594,9 +594,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document_id** | **String**| Document ID | 
- **disposition** | **String**| Request how the content will be downloaded: a file attachment or inline. Default is attachment. | [optional] 
- **content_type** | **String**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav | [optional] 
+ **document_id** | **String**| Document ID |  |
+ **disposition** | **String**| Request how the content will be downloaded: a file attachment or inline. Default is attachment. | [optional] <br />**Values**: attachment, inline |
+ **content_type** | **String**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav | [optional]  |
 {: class="table table-striped"}
 
 
@@ -663,13 +663,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **name** | **String**| Name | [optional] 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| name or dateCreated | [optional] 
- **sort_order** | **String**| ascending or descending | [optional] [default to ascending]
+ **workspace_id** | **String**| Workspace ID |  |
+ **name** | **String**| Name | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl, workspace |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| name or dateCreated | [optional]  |
+ **sort_order** | **String**| ascending or descending | [optional] [default to ascending] |
 {: class="table table-striped"}
 
 
@@ -735,12 +735,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query_phrase** | **String**| Phrase tokens are ANDed together over all searchable fields | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| name or dateCreated | [optional] [default to name]
- **sort_order** | **String**| ascending or descending | [optional] [default to ascending]
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **query_phrase** | **String**| Phrase tokens are ANDed together over all searchable fields |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| name or dateCreated | [optional] [default to name] |
+ **sort_order** | **String**| ascending or descending | [optional] [default to ascending] |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl, workspace |
 {: class="table table-striped"}
 
 
@@ -799,7 +799,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **security_profile_id** | **String**| Security Profile Id | 
+ **security_profile_id** | **String**| Security Profile Id |  |
 {: class="table table-striped"}
 
 
@@ -914,8 +914,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **share_id** | **String**| Share ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **share_id** | **String**| Share ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
 {: class="table table-striped"}
 
 
@@ -980,11 +980,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shared_id** | **String**| Shared ID | 
- **redirect** | **BOOLEAN**| Turn on or off redirect | [optional] [default to true]
- **disposition** | **String**| Request how the share content will be downloaded: attached as a file or inline. Default is attachment. | [optional] [default to attachment]
- **content_type** | **String**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav | [optional] 
- **expand** | **String**| Expand some document fields | [optional] 
+ **shared_id** | **String**| Shared ID |  |
+ **redirect** | **BOOLEAN**| Turn on or off redirect | [optional] [default to true] |
+ **disposition** | **String**| Request how the share content will be downloaded: attached as a file or inline. Default is attachment. | [optional] [default to attachment]<br />**Values**: attachment, inline, none |
+ **content_type** | **String**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav | [optional]  |
+ **expand** | **String**| Expand some document fields | [optional] <br />**Values**: document.acl |
 {: class="table table-striped"}
 
 
@@ -1047,10 +1047,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **entity_id** | **String**| Filters the shares returned to only the entity specified by the value of this parameter. | [optional] 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **entity_id** | **String**| Filters the shares returned to only the entity specified by the value of this parameter. | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -1111,8 +1111,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -1171,7 +1171,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status_id** | **String**| Status ID | 
+ **status_id** | **String**| Status ID |  |
 {: class="table table-striped"}
 
 
@@ -1286,8 +1286,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **workspace_id** | **String**| Workspace ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: summary, acl |
 {: class="table table-striped"}
 
 
@@ -1353,12 +1353,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **sort_by** | **String**| name or dateCreated | [optional] 
- **sort_order** | **String**| ascending or descending | [optional] [default to ascending]
+ **workspace_id** | **String**| Workspace ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl, workspace |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| name or dateCreated | [optional]  |
+ **sort_order** | **String**| ascending or descending | [optional] [default to ascending] |
 {: class="table table-striped"}
 
 
@@ -1422,9 +1422,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **member_id** | **String**| Member ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **workspace_id** | **String**| Workspace ID |  |
+ **member_id** | **String**| Member ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
 {: class="table table-striped"}
 
 
@@ -1488,10 +1488,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **workspace_id** | **String**| Workspace ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
 {: class="table table-striped"}
 
 
@@ -1555,9 +1555,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **tag_id** | **String**| Tag ID | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **workspace_id** | **String**| Workspace ID |  |
+ **tag_id** | **String**| Tag ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
 {: class="table table-striped"}
 
 
@@ -1622,11 +1622,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **value** | **String**| filter the list of tags returned | [optional] 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **workspace_id** | **String**| Workspace ID |  |
+ **value** | **String**| filter the list of tags returned | [optional]  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
 {: class="table table-striped"}
 
 
@@ -1689,10 +1689,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **access** | [**Array&lt;String&gt;**](String.html)| Requested access level. | [optional] 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **access** | [**Array&lt;String&gt;**](String.html)| Requested access level. | [optional] <br />**Values**: content, admin, document:create, document:viewContent, document:viewMetadata, document:download, document:delete, document:update, document:share, document:shareView, document:email, document:print, document:auditView, document:replace, document:tag, tag:create, tag:view, tag:update, tag:apply, tag:remove, tag:delete |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: summary, acl |
 {: class="table table-striped"}
 
 
@@ -1751,7 +1751,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ContentQueryRequest**](ContentQueryRequest.html)| Allows for a filtered query returning facet information | 
+ **body** | [**ContentQueryRequest**](ContentQueryRequest.html)| Allows for a filtered query returning facet information |  |
 {: class="table table-striped"}
 
 
@@ -1816,10 +1816,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document_id** | **String**| Document ID | 
- **body** | [**DocumentUpdate**](DocumentUpdate.html)| Document | 
- **expand** | **String**| Expand some document fields | [optional] 
- **override** | **BOOLEAN**| Override any lock on the document | [optional] 
+ **document_id** | **String**| Document ID |  |
+ **body** | [**DocumentUpdate**](DocumentUpdate.html)| Document |  |
+ **expand** | **String**| Expand some document fields | [optional] <br />**Values**: acl |
+ **override** | **BOOLEAN**| Override any lock on the document | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1883,9 +1883,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document_id** | **String**| Document ID | 
- **body** | [**ReplaceRequest**](ReplaceRequest.html)| Replace Request | 
- **override** | **BOOLEAN**| Override any lock on the document | [optional] 
+ **document_id** | **String**| Document ID |  |
+ **body** | [**ReplaceRequest**](ReplaceRequest.html)| Replace Request |  |
+ **override** | **BOOLEAN**| Override any lock on the document | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1949,10 +1949,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DocumentUpload**](DocumentUpload.html)| Document | 
- **copy_source** | **String**| Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. | [optional] 
- **move_source** | **String**| Move a document to a new workspace. Provide a document ID as the move source. | [optional] 
- **override** | **BOOLEAN**| Override any lock on the source document | [optional] 
+ **body** | [**DocumentUpload**](DocumentUpload.html)| Document |  |
+ **copy_source** | **String**| Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. | [optional]  |
+ **move_source** | **String**| Move a document to a new workspace. Provide a document ID as the move source. | [optional]  |
+ **override** | **BOOLEAN**| Override any lock on the source document | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2014,8 +2014,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**QueryRequest**](QueryRequest.html)| Allows for a filtered query returning facet information | 
- **expand** | **String**| Expand some document fields | [optional] 
+ **body** | [**QueryRequest**](QueryRequest.html)| Allows for a filtered query returning facet information |  |
+ **expand** | **String**| Expand some document fields | [optional] <br />**Values**: acl, workspace |
 {: class="table table-striped"}
 
 
@@ -2074,7 +2074,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateShareRequest**](CreateShareRequest.html)| CreateShareRequest - entity id and type and a single member or list of members are required | 
+ **body** | [**CreateShareRequest**](CreateShareRequest.html)| CreateShareRequest - entity id and type and a single member or list of members are required |  |
 {: class="table table-striped"}
 
 
@@ -2135,8 +2135,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **body** | [**TagValue**](TagValue.html)| tag | 
+ **workspace_id** | **String**| Workspace ID |  |
+ **body** | [**TagValue**](TagValue.html)| tag |  |
 {: class="table table-striped"}
 
 
@@ -2200,9 +2200,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **body** | [**TagQueryRequest**](TagQueryRequest.html)| query | 
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] 
+ **workspace_id** | **String**| Workspace ID |  |
+ **body** | [**TagQueryRequest**](TagQueryRequest.html)| query |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
 {: class="table table-striped"}
 
 
@@ -2261,7 +2261,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WorkspaceCreate**](WorkspaceCreate.html)| Workspace | 
+ **body** | [**WorkspaceCreate**](WorkspaceCreate.html)| Workspace |  |
 {: class="table table-striped"}
 
 
@@ -2322,8 +2322,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **body** | [**Workspace**](Workspace.html)| Workspace | 
+ **workspace_id** | **String**| Workspace ID |  |
+ **body** | [**Workspace**](Workspace.html)| Workspace |  |
 {: class="table table-striped"}
 
 
@@ -2386,9 +2386,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **member_id** | **String**| Member ID | 
- **body** | [**WorkspaceMember**](WorkspaceMember.html)| Workspace Member | 
+ **workspace_id** | **String**| Workspace ID |  |
+ **member_id** | **String**| Member ID |  |
+ **body** | [**WorkspaceMember**](WorkspaceMember.html)| Workspace Member |  |
 {: class="table table-striped"}
 
 
@@ -2451,9 +2451,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspace_id** | **String**| Workspace ID | 
- **tag_id** | **String**| Tag ID | 
- **body** | [**TagValue**](TagValue.html)| Workspace | 
+ **workspace_id** | **String**| Workspace ID |  |
+ **tag_id** | **String**| Tag ID |  |
+ **body** | [**TagValue**](TagValue.html)| Workspace |  |
 {: class="table table-striped"}
 
 

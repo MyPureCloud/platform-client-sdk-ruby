@@ -33,24 +33,38 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'contact_id' => :'contactId',
+        
         :'contact_list_id' => :'contactListId',
+        
         :'campaign_id' => :'campaignId',
+        
         :'phone_number_columns' => :'phoneNumberColumns',
+        
         :'additional_properties' => :'additionalProperties'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'contact_id' => :'String',
+        
         :'contact_list_id' => :'String',
+        
         :'campaign_id' => :'String',
+        
         :'phone_number_columns' => :'Array<CampaignNotificationPhoneColumns>',
+        
         :'additional_properties' => :'Object'
+        
       }
     end
 
@@ -62,46 +76,135 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contactId')
+        
+        
         self.contact_id = attributes[:'contactId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contactListId')
+        
+        
         self.contact_list_id = attributes[:'contactListId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'campaignId')
+        
+        
         self.campaign_id = attributes[:'campaignId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'phoneNumberColumns')
+        
         if (value = attributes[:'phoneNumberColumns']).is_a?(Array)
           self.phone_number_columns = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'additionalProperties')
+        
+        
         self.additional_properties = attributes[:'additionalProperties']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

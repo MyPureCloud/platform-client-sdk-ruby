@@ -33,24 +33,38 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'evaluation_context_id' => :'evaluationContextId',
+        
         :'evaluators' => :'evaluators',
+        
         :'max_number_evaluations' => :'maxNumberEvaluations',
+        
         :'evaluation_form' => :'evaluationForm',
+        
         :'assign_to_active_user' => :'assignToActiveUser',
+        
         :'time_interval' => :'timeInterval'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'evaluation_context_id' => :'String',
+        
         :'evaluators' => :'Array<User>',
+        
         :'max_number_evaluations' => :'Integer',
+        
         :'evaluation_form' => :'EvaluationForm',
+        
         :'assign_to_active_user' => :'BOOLEAN',
+        
         :'time_interval' => :'TimeInterval'
+        
       }
     end
 
@@ -62,46 +76,135 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'evaluationContextId')
+        
+        
         self.evaluation_context_id = attributes[:'evaluationContextId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'evaluators')
+        
         if (value = attributes[:'evaluators']).is_a?(Array)
           self.evaluators = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'maxNumberEvaluations')
+        
+        
         self.max_number_evaluations = attributes[:'maxNumberEvaluations']
+        
+      
       end
 
+      
       if attributes.has_key?(:'evaluationForm')
+        
+        
         self.evaluation_form = attributes[:'evaluationForm']
+        
+      
       end
 
+      
       if attributes.has_key?(:'assignToActiveUser')
+        
+        
         self.assign_to_active_user = attributes[:'assignToActiveUser']
+        
+      
       end
 
+      
       if attributes.has_key?(:'timeInterval')
+        
+        
         self.time_interval = attributes[:'timeInterval']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

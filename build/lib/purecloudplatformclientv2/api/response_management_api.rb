@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ResponseManagementApi.delete_responsemanagement_library ..."
       end
+      
+      
       # verify the required parameter 'library_id' is set
       fail ArgumentError, "Missing the required parameter 'library_id' when calling ResponseManagementApi.delete_responsemanagement_library" if library_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/libraries/{libraryId}".sub('{format}','json').sub('{' + 'libraryId' + '}', library_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -99,8 +107,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ResponseManagementApi.delete_responsemanagement_response ..."
       end
+      
+      
       # verify the required parameter 'response_id' is set
       fail ArgumentError, "Missing the required parameter 'response_id' when calling ResponseManagementApi.delete_responsemanagement_response" if response_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/responses/{responseId}".sub('{format}','json').sub('{' + 'responseId' + '}', response_id.to_s)
 
@@ -123,7 +138,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -157,6 +173,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ResponseManagementApi.get_responsemanagement_libraries ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/libraries".sub('{format}','json')
 
@@ -181,7 +210,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -214,8 +244,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ResponseManagementApi.get_responsemanagement_library ..."
       end
+      
+      
       # verify the required parameter 'library_id' is set
       fail ArgumentError, "Missing the required parameter 'library_id' when calling ResponseManagementApi.get_responsemanagement_library" if library_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/libraries/{libraryId}".sub('{format}','json').sub('{' + 'libraryId' + '}', library_id.to_s)
 
@@ -238,7 +275,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -273,11 +311,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ResponseManagementApi.get_responsemanagement_response ..."
       end
+      
+      
       # verify the required parameter 'response_id' is set
       fail ArgumentError, "Missing the required parameter 'response_id' when calling ResponseManagementApi.get_responsemanagement_response" if response_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'expand'] && !['substitutionsSchema'].include?(opts[:'expand'])
         fail ArgumentError, 'invalid value for "expand", must be one of substitutionsSchema'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/responses/{responseId}".sub('{format}','json').sub('{' + 'responseId' + '}', response_id.to_s)
 
@@ -301,7 +353,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -340,11 +393,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ResponseManagementApi.get_responsemanagement_responses ..."
       end
+      
+      
       # verify the required parameter 'library_id' is set
       fail ArgumentError, "Missing the required parameter 'library_id' when calling ResponseManagementApi.get_responsemanagement_responses" if library_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'expand'] && !['substitutionsSchema'].include?(opts[:'expand'])
         fail ArgumentError, 'invalid value for "expand", must be one of substitutionsSchema'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/responses".sub('{format}','json')
 
@@ -371,7 +450,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -404,8 +484,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ResponseManagementApi.post_responsemanagement_libraries ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ResponseManagementApi.post_responsemanagement_libraries" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/libraries".sub('{format}','json')
 
@@ -428,6 +515,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -463,11 +551,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ResponseManagementApi.post_responsemanagement_responses ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ResponseManagementApi.post_responsemanagement_responses" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'expand'] && !['substitutionsSchema'].include?(opts[:'expand'])
         fail ArgumentError, 'invalid value for "expand", must be one of substitutionsSchema'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/responses".sub('{format}','json')
 
@@ -491,6 +593,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -524,8 +627,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ResponseManagementApi.post_responsemanagement_responses_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ResponseManagementApi.post_responsemanagement_responses_query" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/responses/query".sub('{format}','json')
 
@@ -548,6 +658,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -583,10 +694,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ResponseManagementApi.put_responsemanagement_library ..."
       end
+      
+      
       # verify the required parameter 'library_id' is set
       fail ArgumentError, "Missing the required parameter 'library_id' when calling ResponseManagementApi.put_responsemanagement_library" if library_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ResponseManagementApi.put_responsemanagement_library" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/libraries/{libraryId}".sub('{format}','json').sub('{' + 'libraryId' + '}', library_id.to_s)
 
@@ -609,6 +733,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -646,13 +771,33 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ResponseManagementApi.put_responsemanagement_response ..."
       end
+      
+      
       # verify the required parameter 'response_id' is set
       fail ArgumentError, "Missing the required parameter 'response_id' when calling ResponseManagementApi.put_responsemanagement_response" if response_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ResponseManagementApi.put_responsemanagement_response" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'expand'] && !['substitutionsSchema'].include?(opts[:'expand'])
         fail ArgumentError, 'invalid value for "expand", must be one of substitutionsSchema'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/responses/{responseId}".sub('{format}','json').sub('{' + 'responseId' + '}', response_id.to_s)
 
@@ -676,6 +821,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

@@ -41,32 +41,54 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'date_created' => :'dateCreated',
+        
         :'date_modified' => :'dateModified',
+        
         :'version' => :'version',
+        
         :'contact_list' => :'contactList',
+        
         :'contact_list_columns' => :'contactListColumns',
+        
         :'clauses' => :'clauses',
+        
         :'filter_type' => :'filterType',
+        
         :'additional_properties' => :'additionalProperties'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'date_created' => :'DateTime',
+        
         :'date_modified' => :'DateTime',
+        
         :'version' => :'Integer',
+        
         :'contact_list' => :'DocumentDataV2NotificationCreatedBy',
+        
         :'contact_list_columns' => :'Array<String>',
+        
         :'clauses' => :'Array<ContactListFilterNotificationClauses>',
+        
         :'filter_type' => :'String',
+        
         :'additional_properties' => :'Object'
+        
       }
     end
 
@@ -78,68 +100,205 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateCreated')
+        
+        
         self.date_created = attributes[:'dateCreated']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dateModified')
+        
+        
         self.date_modified = attributes[:'dateModified']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contactList')
+        
+        
         self.contact_list = attributes[:'contactList']
+        
+      
       end
 
+      
       if attributes.has_key?(:'contactListColumns')
+        
         if (value = attributes[:'contactListColumns']).is_a?(Array)
           self.contact_list_columns = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'clauses')
+        
         if (value = attributes[:'clauses']).is_a?(Array)
           self.clauses = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'filterType')
+        
+        
         self.filter_type = attributes[:'filterType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'additionalProperties')
+        
+        
         self.additional_properties = attributes[:'additionalProperties']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["AND", "OR"]
       if @filter_type && !allowed_values.include?(@filter_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] filter_type Object to be assigned
     def filter_type=(filter_type)
@@ -150,6 +309,14 @@ module PureCloud
       @filter_type = filter_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

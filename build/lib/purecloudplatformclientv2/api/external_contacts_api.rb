@@ -43,8 +43,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_contact ..."
       end
+      
+      
       # verify the required parameter 'contact_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_id' when calling ExternalContactsApi.delete_externalcontacts_contact" if contact_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/contacts/{contactId}".sub('{format}','json').sub('{' + 'contactId' + '}', contact_id.to_s)
 
@@ -67,7 +74,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -101,10 +109,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_contact_note ..."
       end
+      
+      
       # verify the required parameter 'contact_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_id' when calling ExternalContactsApi.delete_externalcontacts_contact_note" if contact_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'note_id' is set
       fail ArgumentError, "Missing the required parameter 'note_id' when calling ExternalContactsApi.delete_externalcontacts_contact_note" if note_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}".sub('{format}','json').sub('{' + 'contactId' + '}', contact_id.to_s).sub('{' + 'noteId' + '}', note_id.to_s)
 
@@ -127,7 +148,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -159,8 +181,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_organization ..."
       end
+      
+      
       # verify the required parameter 'external_organization_id' is set
       fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.delete_externalcontacts_organization" if external_organization_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s)
 
@@ -183,7 +212,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -217,10 +247,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_organization_note ..."
       end
+      
+      
       # verify the required parameter 'external_organization_id' is set
       fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.delete_externalcontacts_organization_note" if external_organization_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'note_id' is set
       fail ArgumentError, "Missing the required parameter 'note_id' when calling ExternalContactsApi.delete_externalcontacts_organization_note" if note_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s).sub('{' + 'noteId' + '}', note_id.to_s)
 
@@ -243,7 +286,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -275,8 +319,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_relationship ..."
       end
+      
+      
       # verify the required parameter 'relationship_id' is set
       fail ArgumentError, "Missing the required parameter 'relationship_id' when calling ExternalContactsApi.delete_externalcontacts_relationship" if relationship_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/relationships/{relationshipId}".sub('{format}','json').sub('{' + 'relationshipId' + '}', relationship_id.to_s)
 
@@ -299,7 +350,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -333,8 +385,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_contact ..."
       end
+      
+      
       # verify the required parameter 'contact_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_id' when calling ExternalContactsApi.get_externalcontacts_contact" if contact_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/contacts/{contactId}".sub('{format}','json').sub('{' + 'contactId' + '}', contact_id.to_s)
 
@@ -358,7 +423,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -395,10 +461,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_contact_note ..."
       end
+      
+      
       # verify the required parameter 'contact_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_id' when calling ExternalContactsApi.get_externalcontacts_contact_note" if contact_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'note_id' is set
       fail ArgumentError, "Missing the required parameter 'note_id' when calling ExternalContactsApi.get_externalcontacts_contact_note" if note_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}".sub('{format}','json').sub('{' + 'contactId' + '}', contact_id.to_s).sub('{' + 'noteId' + '}', note_id.to_s)
 
@@ -422,7 +507,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -463,8 +549,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_contact_notes ..."
       end
+      
+      
       # verify the required parameter 'contact_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_id' when calling ExternalContactsApi.get_externalcontacts_contact_notes" if contact_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/contacts/{contactId}/notes".sub('{format}','json').sub('{' + 'contactId' + '}', contact_id.to_s)
 
@@ -491,7 +608,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -532,6 +650,37 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_contacts ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/contacts".sub('{format}','json')
 
@@ -559,7 +708,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -594,8 +744,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_organization ..."
       end
+      
+      
       # verify the required parameter 'external_organization_id' is set
       fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.get_externalcontacts_organization" if external_organization_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s)
 
@@ -619,7 +782,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -662,8 +826,45 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_organization_contacts ..."
       end
+      
+      
       # verify the required parameter 'external_organization_id' is set
       fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.get_externalcontacts_organization_contacts" if external_organization_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s)
 
@@ -691,7 +892,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -728,10 +930,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_organization_note ..."
       end
+      
+      
       # verify the required parameter 'external_organization_id' is set
       fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.get_externalcontacts_organization_note" if external_organization_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'note_id' is set
       fail ArgumentError, "Missing the required parameter 'note_id' when calling ExternalContactsApi.get_externalcontacts_organization_note" if note_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s).sub('{' + 'noteId' + '}', note_id.to_s)
 
@@ -755,7 +976,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -796,8 +1018,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_organization_notes ..."
       end
+      
+      
       # verify the required parameter 'external_organization_id' is set
       fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.get_externalcontacts_organization_notes" if external_organization_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s)
 
@@ -824,7 +1077,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -865,11 +1119,43 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_organization_relationships ..."
       end
+      
+      
       # verify the required parameter 'external_organization_id' is set
       fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.get_externalcontacts_organization_relationships" if external_organization_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'expand'] && !['externalDataSources'].include?(opts[:'expand'])
         fail ArgumentError, 'invalid value for "expand", must be one of externalDataSources'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/relationships".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s)
 
@@ -896,7 +1182,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -937,9 +1224,41 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_organizations ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'expand'] && !['externalDataSources'].include?(opts[:'expand'])
         fail ArgumentError, 'invalid value for "expand", must be one of externalDataSources'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations".sub('{format}','json')
 
@@ -967,7 +1286,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1002,11 +1322,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_relationship ..."
       end
+      
+      
       # verify the required parameter 'relationship_id' is set
       fail ArgumentError, "Missing the required parameter 'relationship_id' when calling ExternalContactsApi.get_externalcontacts_relationship" if relationship_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'expand'] && !['externalDataSources'].include?(opts[:'expand'])
         fail ArgumentError, 'invalid value for "expand", must be one of externalDataSources'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/relationships/{relationshipId}".sub('{format}','json').sub('{' + 'relationshipId' + '}', relationship_id.to_s)
 
@@ -1030,7 +1364,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1065,8 +1400,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_reversewhitepageslookup ..."
       end
+      
+      
       # verify the required parameter 'lookup_val' is set
       fail ArgumentError, "Missing the required parameter 'lookup_val' when calling ExternalContactsApi.get_externalcontacts_reversewhitepageslookup" if lookup_val.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/reversewhitepageslookup".sub('{format}','json')
 
@@ -1091,7 +1439,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1126,8 +1475,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_contact_notes ..."
       end
+      
+      
       # verify the required parameter 'contact_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_id' when calling ExternalContactsApi.post_externalcontacts_contact_notes" if contact_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/contacts/{contactId}/notes".sub('{format}','json').sub('{' + 'contactId' + '}', contact_id.to_s)
 
@@ -1150,6 +1512,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1183,6 +1546,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_contacts ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/contacts".sub('{format}','json')
 
@@ -1205,6 +1575,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1240,8 +1611,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_organization_notes ..."
       end
+      
+      
       # verify the required parameter 'external_organization_id' is set
       fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.post_externalcontacts_organization_notes" if external_organization_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s)
 
@@ -1264,6 +1648,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1297,6 +1682,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_organizations ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations".sub('{format}','json')
 
@@ -1319,6 +1711,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1352,6 +1745,13 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_relationships ..."
       end
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/relationships".sub('{format}','json')
 
@@ -1374,6 +1774,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1409,8 +1810,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_contact ..."
       end
+      
+      
       # verify the required parameter 'contact_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_id' when calling ExternalContactsApi.put_externalcontacts_contact" if contact_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/contacts/{contactId}".sub('{format}','json').sub('{' + 'contactId' + '}', contact_id.to_s)
 
@@ -1433,6 +1847,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1470,10 +1885,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_contact_note ..."
       end
+      
+      
       # verify the required parameter 'contact_id' is set
       fail ArgumentError, "Missing the required parameter 'contact_id' when calling ExternalContactsApi.put_externalcontacts_contact_note" if contact_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'note_id' is set
       fail ArgumentError, "Missing the required parameter 'note_id' when calling ExternalContactsApi.put_externalcontacts_contact_note" if note_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}".sub('{format}','json').sub('{' + 'contactId' + '}', contact_id.to_s).sub('{' + 'noteId' + '}', note_id.to_s)
 
@@ -1496,6 +1930,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1531,8 +1966,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_conversation ..."
       end
+      
+      
       # verify the required parameter 'conversation_id' is set
       fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ExternalContactsApi.put_externalcontacts_conversation" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/conversations/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
 
@@ -1555,6 +2003,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1589,8 +2038,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_organization ..."
       end
+      
+      
       # verify the required parameter 'external_organization_id' is set
       fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.put_externalcontacts_organization" if external_organization_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s)
 
@@ -1613,6 +2075,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1650,10 +2113,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_organization_note ..."
       end
+      
+      
       # verify the required parameter 'external_organization_id' is set
       fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.put_externalcontacts_organization_note" if external_organization_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'note_id' is set
       fail ArgumentError, "Missing the required parameter 'note_id' when calling ExternalContactsApi.put_externalcontacts_organization_note" if note_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s).sub('{' + 'noteId' + '}', note_id.to_s)
 
@@ -1676,6 +2158,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -1711,8 +2194,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_relationship ..."
       end
+      
+      
       # verify the required parameter 'relationship_id' is set
       fail ArgumentError, "Missing the required parameter 'relationship_id' when calling ExternalContactsApi.put_externalcontacts_relationship" if relationship_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/relationships/{relationshipId}".sub('{format}','json').sub('{' + 'relationshipId' + '}', relationship_id.to_s)
 
@@ -1735,6 +2231,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

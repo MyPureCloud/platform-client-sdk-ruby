@@ -54,34 +54,58 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'presence_user' => :'presenceUser',
+        
         :'presence_type' => :'presenceType',
+        
         :'presence_value' => :'presenceValue',
+        
         :'presence_limit_in_seconds' => :'presenceLimitInSeconds',
+        
         :'enabled' => :'enabled',
+        
         :'in_alarm' => :'inAlarm',
+        
         :'notification_users' => :'notificationUsers',
+        
         :'alert_types' => :'alertTypes',
+        
         :'self_uri' => :'selfUri'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'presence_user' => :'User',
+        
         :'presence_type' => :'String',
+        
         :'presence_value' => :'String',
+        
         :'presence_limit_in_seconds' => :'Integer',
+        
         :'enabled' => :'BOOLEAN',
+        
         :'in_alarm' => :'BOOLEAN',
+        
         :'notification_users' => :'Array<User>',
+        
         :'alert_types' => :'Array<String>',
+        
         :'self_uri' => :'String'
+        
       }
     end
 
@@ -93,104 +117,233 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'presenceUser')
+        
+        
         self.presence_user = attributes[:'presenceUser']
+        
+      
       end
 
+      
       if attributes.has_key?(:'presenceType')
+        
+        
         self.presence_type = attributes[:'presenceType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'presenceValue')
+        
+        
         self.presence_value = attributes[:'presenceValue']
+        
+      
       end
 
+      
       if attributes.has_key?(:'presenceLimitInSeconds')
+        
+        
         self.presence_limit_in_seconds = attributes[:'presenceLimitInSeconds']
+        
+      
       end
 
+      
       if attributes.has_key?(:'enabled')
+        
+        
         self.enabled = attributes[:'enabled']
+        
+      
       end
 
+      
       if attributes.has_key?(:'inAlarm')
+        
+        
         self.in_alarm = attributes[:'inAlarm']
+        
+      
       end
 
+      
       if attributes.has_key?(:'notificationUsers')
+        
         if (value = attributes[:'notificationUsers']).is_a?(Array)
           self.notification_users = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'alertTypes')
+        
         if (value = attributes[:'alertTypes']).is_a?(Array)
           self.alert_types = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
       if @name.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @presence_user.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @presence_type.nil?
         return false
       end
 
+      
+      
       allowed_values = ["SYSTEM", "ORGANIZATION"]
       if @presence_type && !allowed_values.include?(@presence_type)
         return false
       end
+      
+      
+      
+      
       if @presence_value.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @presence_limit_in_seconds.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @enabled.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @notification_users.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @alert_types.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] presence_type Object to be assigned
     def presence_type=(presence_type)
@@ -201,6 +354,44 @@ module PureCloud
       @presence_type = presence_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

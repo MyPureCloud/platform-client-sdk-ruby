@@ -33,24 +33,38 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'address1' => :'address1',
+        
         :'address2' => :'address2',
+        
         :'city' => :'city',
+        
         :'state' => :'state',
+        
         :'postal_code' => :'postalCode',
+        
         :'country_code' => :'countryCode'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'address1' => :'String',
+        
         :'address2' => :'String',
+        
         :'city' => :'String',
+        
         :'state' => :'String',
+        
         :'postal_code' => :'String',
+        
         :'country_code' => :'String'
+        
       }
     end
 
@@ -62,44 +76,133 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'address1')
+        
+        
         self.address1 = attributes[:'address1']
+        
+      
       end
 
+      
       if attributes.has_key?(:'address2')
+        
+        
         self.address2 = attributes[:'address2']
+        
+      
       end
 
+      
       if attributes.has_key?(:'city')
+        
+        
         self.city = attributes[:'city']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'postalCode')
+        
+        
         self.postal_code = attributes[:'postalCode']
+        
+      
       end
 
+      
       if attributes.has_key?(:'countryCode')
+        
+        
         self.country_code = attributes[:'countryCode']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

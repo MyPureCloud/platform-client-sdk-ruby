@@ -120,84 +120,158 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'start_time' => :'startTime',
+        
         :'end_time' => :'endTime',
+        
         :'connected_time' => :'connectedTime',
+        
         :'name' => :'name',
+        
         :'user_uri' => :'userUri',
+        
         :'user_id' => :'userId',
+        
         :'external_contact_id' => :'externalContactId',
+        
         :'external_organization_id' => :'externalOrganizationId',
+        
         :'queue_id' => :'queueId',
+        
         :'group_id' => :'groupId',
+        
         :'queue_name' => :'queueName',
+        
         :'purpose' => :'purpose',
+        
         :'participant_type' => :'participantType',
+        
         :'consult_participant_id' => :'consultParticipantId',
+        
         :'address' => :'address',
+        
         :'ani' => :'ani',
+        
         :'ani_name' => :'aniName',
+        
         :'dnis' => :'dnis',
+        
         :'locale' => :'locale',
+        
         :'wrapup_required' => :'wrapupRequired',
+        
         :'wrapup_prompt' => :'wrapupPrompt',
+        
         :'wrapup_timeout_ms' => :'wrapupTimeoutMs',
+        
         :'wrapup_skipped' => :'wrapupSkipped',
+        
         :'wrapup' => :'wrapup',
+        
         :'monitored_participant_id' => :'monitoredParticipantId',
+        
         :'attributes' => :'attributes',
+        
         :'calls' => :'calls',
+        
         :'callbacks' => :'callbacks',
+        
         :'chats' => :'chats',
+        
         :'cobrowsesessions' => :'cobrowsesessions',
+        
         :'emails' => :'emails',
+        
         :'screenshares' => :'screenshares',
+        
         :'social_expressions' => :'socialExpressions',
+        
         :'videos' => :'videos',
+        
         :'evaluations' => :'evaluations'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'start_time' => :'DateTime',
+        
         :'end_time' => :'DateTime',
+        
         :'connected_time' => :'DateTime',
+        
         :'name' => :'String',
+        
         :'user_uri' => :'String',
+        
         :'user_id' => :'String',
+        
         :'external_contact_id' => :'String',
+        
         :'external_organization_id' => :'String',
+        
         :'queue_id' => :'String',
+        
         :'group_id' => :'String',
+        
         :'queue_name' => :'String',
+        
         :'purpose' => :'String',
+        
         :'participant_type' => :'String',
+        
         :'consult_participant_id' => :'String',
+        
         :'address' => :'String',
+        
         :'ani' => :'String',
+        
         :'ani_name' => :'String',
+        
         :'dnis' => :'String',
+        
         :'locale' => :'String',
+        
         :'wrapup_required' => :'BOOLEAN',
+        
         :'wrapup_prompt' => :'String',
+        
         :'wrapup_timeout_ms' => :'Integer',
+        
         :'wrapup_skipped' => :'BOOLEAN',
+        
         :'wrapup' => :'Wrapup',
+        
         :'monitored_participant_id' => :'String',
+        
         :'attributes' => :'Hash<String, String>',
+        
         :'calls' => :'Array<Call>',
+        
         :'callbacks' => :'Array<Callback>',
+        
         :'chats' => :'Array<ConversationChat>',
+        
         :'cobrowsesessions' => :'Array<Cobrowsesession>',
+        
         :'emails' => :'Array<Email>',
+        
         :'screenshares' => :'Array<Screenshare>',
+        
         :'social_expressions' => :'Array<SocialExpression>',
+        
         :'videos' => :'Array<Video>',
+        
         :'evaluations' => :'Array<Evaluation>'
+        
       }
     end
 
@@ -209,188 +283,624 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'startTime')
+        
+        
         self.start_time = attributes[:'startTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'endTime')
+        
+        
         self.end_time = attributes[:'endTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'connectedTime')
+        
+        
         self.connected_time = attributes[:'connectedTime']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'userUri')
+        
+        
         self.user_uri = attributes[:'userUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'userId')
+        
+        
         self.user_id = attributes[:'userId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'externalContactId')
+        
+        
         self.external_contact_id = attributes[:'externalContactId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'externalOrganizationId')
+        
+        
         self.external_organization_id = attributes[:'externalOrganizationId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'queueId')
+        
+        
         self.queue_id = attributes[:'queueId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'groupId')
+        
+        
         self.group_id = attributes[:'groupId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'queueName')
+        
+        
         self.queue_name = attributes[:'queueName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'purpose')
+        
+        
         self.purpose = attributes[:'purpose']
+        
+      
       end
 
+      
       if attributes.has_key?(:'participantType')
+        
+        
         self.participant_type = attributes[:'participantType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'consultParticipantId')
+        
+        
         self.consult_participant_id = attributes[:'consultParticipantId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'address')
+        
+        
         self.address = attributes[:'address']
+        
+      
       end
 
+      
       if attributes.has_key?(:'ani')
+        
+        
         self.ani = attributes[:'ani']
+        
+      
       end
 
+      
       if attributes.has_key?(:'aniName')
+        
+        
         self.ani_name = attributes[:'aniName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'dnis')
+        
+        
         self.dnis = attributes[:'dnis']
+        
+      
       end
 
+      
       if attributes.has_key?(:'locale')
+        
+        
         self.locale = attributes[:'locale']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapupRequired')
+        
+        
         self.wrapup_required = attributes[:'wrapupRequired']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapupPrompt')
+        
+        
         self.wrapup_prompt = attributes[:'wrapupPrompt']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapupTimeoutMs')
+        
+        
         self.wrapup_timeout_ms = attributes[:'wrapupTimeoutMs']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapupSkipped')
+        
+        
         self.wrapup_skipped = attributes[:'wrapupSkipped']
+        
+      
       end
 
+      
       if attributes.has_key?(:'wrapup')
+        
+        
         self.wrapup = attributes[:'wrapup']
+        
+      
       end
 
+      
       if attributes.has_key?(:'monitoredParticipantId')
+        
+        
         self.monitored_participant_id = attributes[:'monitoredParticipantId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'attributes')
+        
         if (value = attributes[:'attributes']).is_a?(Array)
           self.attributes = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'calls')
+        
         if (value = attributes[:'calls']).is_a?(Array)
           self.calls = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'callbacks')
+        
         if (value = attributes[:'callbacks']).is_a?(Array)
           self.callbacks = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'chats')
+        
         if (value = attributes[:'chats']).is_a?(Array)
           self.chats = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'cobrowsesessions')
+        
         if (value = attributes[:'cobrowsesessions']).is_a?(Array)
           self.cobrowsesessions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'emails')
+        
         if (value = attributes[:'emails']).is_a?(Array)
           self.emails = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'screenshares')
+        
         if (value = attributes[:'screenshares']).is_a?(Array)
           self.screenshares = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'socialExpressions')
+        
         if (value = attributes[:'socialExpressions']).is_a?(Array)
           self.social_expressions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'videos')
+        
         if (value = attributes[:'videos']).is_a?(Array)
           self.videos = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'evaluations')
+        
         if (value = attributes[:'evaluations']).is_a?(Array)
           self.evaluations = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["mandatory", "optional", "timeout", "forcedTimeout"]
       if @wrapup_prompt && !allowed_values.include?(@wrapup_prompt)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] wrapup_prompt Object to be assigned
     def wrapup_prompt=(wrapup_prompt)
@@ -401,6 +911,79 @@ module PureCloud
       @wrapup_prompt = wrapup_prompt
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

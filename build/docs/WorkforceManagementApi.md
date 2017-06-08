@@ -67,7 +67,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | [**Array&lt;String&gt;**](String.html)| User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request | 
+ **user_id** | [**Array&lt;String&gt;**](String.html)| User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request |  |
 {: class="table table-striped"}
 
 
@@ -126,7 +126,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 
@@ -187,8 +187,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
- **date** | **String**| ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23 | 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **date** | **String**| ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23 |  |
 {: class="table table-striped"}
 
 
@@ -251,9 +251,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
- **user_id** | **String**| The userId to whom the Time Off Request applies. | 
- **time_off_request_id** | **String**| Time Off Request Id | 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **user_id** | **String**| The userId to whom the Time Off Request applies. |  |
+ **time_off_request_id** | **String**| Time Off Request Id |  |
 {: class="table table-striped"}
 
 
@@ -317,9 +317,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
- **user_id** | **String**| The userId to whom the Time Off Request applies. | 
- **recently_reviewed** | **BOOLEAN**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false]
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **user_id** | **String**| The userId to whom the Time Off Request applies. |  |
+ **recently_reviewed** | **BOOLEAN**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -378,7 +378,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 
@@ -440,9 +440,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **selector** | **String**| Selector | [optional] 
- **page_size** | **Integer**|  | [optional] [default to 25]
- **page_number** | **Integer**|  | [optional] [default to 1]
+ **selector** | **String**| Selector | [optional]  |
+ **page_size** | **Integer**|  | [optional] [default to 25] |
+ **page_number** | **Integer**|  | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -501,7 +501,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **time_off_request_id** | **String**| Time Off Request Id | 
+ **time_off_request_id** | **String**| Time Off Request Id |  |
 {: class="table table-striped"}
 
 
@@ -561,7 +561,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **recently_reviewed** | **BOOLEAN**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false]
+ **recently_reviewed** | **BOOLEAN**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -622,8 +622,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **time_off_request_id** | **String**| Time Off Request Id | 
- **body** | [**TimeOffRequestPatch**](TimeOffRequestPatch.html)|  | [optional] 
+ **time_off_request_id** | **String**| Time Off Request Id |  |
+ **body** | [**TimeOffRequestPatch**](TimeOffRequestPatch.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -685,8 +685,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
- **body** | [**IntradayQueryDataCommand**](IntradayQueryDataCommand.html)| body | [optional] 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **body** | [**IntradayQueryDataCommand**](IntradayQueryDataCommand.html)| body | [optional]  |
 {: class="table table-striped"}
 
 
@@ -748,8 +748,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | 
- **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody.html)| body | [optional] 
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody.html)| body | [optional]  |
 {: class="table table-striped"}
 
 
@@ -809,7 +809,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CurrentUserScheduleRequestBody**](CurrentUserScheduleRequestBody.html)| body | [optional] 
+ **body** | [**CurrentUserScheduleRequestBody**](CurrentUserScheduleRequestBody.html)| body | [optional]  |
 {: class="table table-striped"}
 
 

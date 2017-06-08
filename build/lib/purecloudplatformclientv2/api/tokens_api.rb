@@ -41,6 +41,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TokensApi.delete_tokens_me ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/tokens/me".sub('{format}','json')
 
@@ -63,7 +64,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -93,6 +95,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TokensApi.get_tokens_me ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/tokens/me".sub('{format}','json')
 
@@ -115,7 +118,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,

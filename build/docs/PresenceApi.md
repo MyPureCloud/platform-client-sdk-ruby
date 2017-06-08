@@ -61,7 +61,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **presence_id** | **String**| Organization Presence ID | 
+ **presence_id** | **String**| Organization Presence ID |  |
 {: class="table table-striped"}
 
 
@@ -123,8 +123,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **presence_id** | **String**| Organization Presence ID | 
- **locale_code** | **String**| The locale code to fetch for the presence definition. Use ALL to fetch everything. | [optional] 
+ **presence_id** | **String**| Organization Presence ID |  |
+ **locale_code** | **String**| The locale code to fetch for the presence definition. Use ALL to fetch everything. | [optional]  |
 {: class="table table-striped"}
 
 
@@ -187,10 +187,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **deleted** | **String**| Deleted query can be TRUE, FALSE or ALL | [optional] [default to false]
- **locale_code** | **String**| The locale code to fetch for each presence definition. Use ALL to fetch everything. | [optional] 
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **deleted** | **String**| Deleted query can be TRUE, FALSE or ALL | [optional] [default to false] |
+ **locale_code** | **String**| The locale code to fetch for each presence definition. Use ALL to fetch everything. | [optional]  |
 {: class="table table-striped"}
 
 
@@ -304,8 +304,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| user Id | 
- **source_id** | **String**| Source | 
+ **user_id** | **String**| user Id |  |
+ **source_id** | **String**| Source |  |
 {: class="table table-striped"}
 
 
@@ -368,9 +368,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **String**| user Id | 
- **source_id** | **String**| Source | 
- **body** | [**UserPresence**](UserPresence.html)| User presence | 
+ **user_id** | **String**| user Id |  |
+ **source_id** | **String**| Source |  |
+ **body** | [**UserPresence**](UserPresence.html)| User presence |  |
 {: class="table table-striped"}
 
 
@@ -429,7 +429,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrganizationPresence**](OrganizationPresence.html)| The Presence Definition to create | 
+ **body** | [**OrganizationPresence**](OrganizationPresence.html)| The Presence Definition to create |  |
 {: class="table table-striped"}
 
 
@@ -490,8 +490,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **presence_id** | **String**| Organization Presence ID | 
- **body** | [**OrganizationPresence**](OrganizationPresence.html)| The OrganizationPresence to update | 
+ **presence_id** | **String**| Organization Presence ID |  |
+ **body** | [**OrganizationPresence**](OrganizationPresence.html)| The OrganizationPresence to update |  |
 {: class="table table-striped"}
 
 

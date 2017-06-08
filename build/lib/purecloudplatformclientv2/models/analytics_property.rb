@@ -30,18 +30,26 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'property_type' => :'propertyType',
+        
         :'property' => :'property',
+        
         :'value' => :'value'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'property_type' => :'String',
+        
         :'property' => :'String',
+        
         :'value' => :'String'
+        
       }
     end
 
@@ -53,48 +61,85 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'propertyType')
+        
+        
         self.property_type = attributes[:'propertyType']
+        
+      
       end
 
+      
       if attributes.has_key?(:'property')
+        
+        
         self.property = attributes[:'property']
+        
+      
       end
 
+      
       if attributes.has_key?(:'value')
+        
+        
         self.value = attributes[:'value']
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @property_type.nil?
         return false
       end
 
+      
+      
       allowed_values = ["bool", "integer", "real", "date", "string", "uuid"]
       if @property_type && !allowed_values.include?(@property_type)
         return false
       end
+      
+      
+      
+      
       if @property.nil?
         return false
       end
 
+      
+      
+      
+      
+      
       if @value.nil?
         return false
       end
 
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] property_type Object to be assigned
     def property_type=(property_type)
@@ -105,6 +150,19 @@ module PureCloud
       @property_type = property_type
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -90,9 +90,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID | 
- **recording_id** | **String**| Recording ID | 
- **annotation_id** | **String**| Annotation ID | 
+ **conversation_id** | **String**| Conversation ID |  |
+ **recording_id** | **String**| Recording ID |  |
+ **annotation_id** | **String**| Annotation ID |  |
 {: class="table table-striped"}
 
 
@@ -151,7 +151,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orphan_id** | **String**| Orphan ID | 
+ **orphan_id** | **String**| Orphan ID |  |
 {: class="table table-striped"}
 
 
@@ -209,7 +209,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ids** | **String**|  | 
+ **ids** | **String**|  |  |
 {: class="table table-striped"}
 
 
@@ -267,7 +267,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **policy_id** | **String**| Policy ID | 
+ **policy_id** | **String**| Policy ID |  |
 {: class="table table-striped"}
 
 
@@ -333,11 +333,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID | 
- **recording_id** | **String**| Recording ID | 
- **format_id** | **String**| The desired media format. | [optional] [default to WEBM]
- **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false]
- **file_name** | **String**| the name of the downloaded fileName | [optional] 
+ **conversation_id** | **String**| Conversation ID |  |
+ **recording_id** | **String**| Recording ID |  |
+ **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE |
+ **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false] |
+ **file_name** | **String**| the name of the downloaded fileName | [optional]  |
 {: class="table table-striped"}
 
 
@@ -400,9 +400,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID | 
- **recording_id** | **String**| Recording ID | 
- **annotation_id** | **String**| Annotation ID | 
+ **conversation_id** | **String**| Conversation ID |  |
+ **recording_id** | **String**| Recording ID |  |
+ **annotation_id** | **String**| Annotation ID |  |
 {: class="table table-striped"}
 
 
@@ -463,8 +463,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID | 
- **recording_id** | **String**| Recording ID | 
+ **conversation_id** | **String**| Conversation ID |  |
+ **recording_id** | **String**| Recording ID |  |
 {: class="table table-striped"}
 
 
@@ -527,9 +527,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID | 
- **max_wait_ms** | **Integer**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000]
- **format_id** | **String**| The desired media format | [optional] [default to WEBM]
+ **conversation_id** | **String**| Conversation ID |  |
+ **max_wait_ms** | **Integer**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
+ **format_id** | **String**| The desired media format | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE |
 {: class="table table-striped"}
 
 
@@ -588,7 +588,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orphan_id** | **String**| Orphan ID | 
+ **orphan_id** | **String**| Orphan ID |  |
 {: class="table table-striped"}
 
 
@@ -652,10 +652,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orphan_id** | **String**| Orphan ID | 
- **format_id** | **String**| The desired media format. | [optional] [default to WEBM]
- **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false]
- **file_name** | **String**| the name of the downloaded fileName | [optional] 
+ **orphan_id** | **String**| Orphan ID |  |
+ **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE |
+ **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false] |
+ **file_name** | **String**| the name of the downloaded fileName | [optional]  |
 {: class="table table-striped"}
 
 
@@ -722,14 +722,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
- **page_number** | **Integer**| The page number requested | [optional] [default to 1]
- **sort_by** | **String**| variable name requested to sort by | [optional] 
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional] 
- **next_page** | **String**| next page token | [optional] 
- **previous_page** | **String**| Previous page token | [optional] 
- **has_conversation** | **BOOLEAN**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false]
- **media** | **String**| Filter resulting orphans based on their media type | [optional] 
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **has_conversation** | **BOOLEAN**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false] |
+ **media** | **String**| Filter resulting orphans based on their media type | [optional] <br />**Values**: Call, Screen |
 {: class="table table-striped"}
 
 
@@ -788,7 +788,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **settings_id** | **String**| Settings Id | 
+ **settings_id** | **String**| Settings Id |  |
 {: class="table table-striped"}
 
 
@@ -910,16 +910,16 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
- **page_number** | **Integer**| The page number requested | [optional] [default to 1]
- **sort_by** | **String**| variable name requested to sort by | [optional] 
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional] 
- **next_page** | **String**| next page token | [optional] 
- **previous_page** | **String**| Previous page token | [optional] 
- **name** | **String**| the policy name - used for filtering results in searches. | [optional] 
- **enabled** | **BOOLEAN**| checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false | [optional] 
- **summary** | **BOOLEAN**| provides a less verbose response of policy lists. | [optional] [default to false]
- **has_errors** | **BOOLEAN**| provides a way to fetch all policies with errors or policies that do not have errors | [optional] 
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **name** | **String**| the policy name - used for filtering results in searches. | [optional]  |
+ **enabled** | **BOOLEAN**| checks to see if policy is enabled - use enabled = true or enabled = false | [optional]  |
+ **summary** | **BOOLEAN**| provides a less verbose response of policy lists. | [optional] [default to false] |
+ **has_errors** | **BOOLEAN**| provides a way to fetch all policies with errors or policies that do not have errors | [optional]  |
 {: class="table table-striped"}
 
 
@@ -978,7 +978,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **policy_id** | **String**| Policy ID | 
+ **policy_id** | **String**| Policy ID |  |
 {: class="table table-striped"}
 
 
@@ -1039,8 +1039,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -1153,7 +1153,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_default** | **BOOLEAN**| If no settings are found, a new one is created with default values | [optional] [default to false]
+ **create_default** | **BOOLEAN**| If no settings are found, a new one is created with default values | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -1214,8 +1214,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -1276,8 +1276,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **policy_id** | **String**| Policy ID | 
- **body** | [**Policy**](Policy.html)| Policy | 
+ **policy_id** | **String**| Policy ID |  |
+ **body** | [**Policy**](Policy.html)| Policy |  |
 {: class="table table-striped"}
 
 
@@ -1338,8 +1338,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **recording_session_id** | **String**| Screen recording session ID | 
- **body** | [**ScreenRecordingSessionRequest**](ScreenRecordingSessionRequest.html)|  | [optional] 
+ **recording_session_id** | **String**| Screen recording session ID |  |
+ **body** | [**ScreenRecordingSessionRequest**](ScreenRecordingSessionRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1402,9 +1402,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID | 
- **recording_id** | **String**| Recording ID | 
- **body** | [**Annotation**](Annotation.html)| annotation | 
+ **conversation_id** | **String**| Conversation ID |  |
+ **recording_id** | **String**| Recording ID |  |
+ **body** | [**Annotation**](Annotation.html)| annotation |  |
 {: class="table table-striped"}
 
 
@@ -1463,7 +1463,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**LocalEncryptionKeyRequest**](LocalEncryptionKeyRequest.html)| Local Encryption body | 
+ **body** | [**LocalEncryptionKeyRequest**](LocalEncryptionKeyRequest.html)| Local Encryption body |  |
 {: class="table table-striped"}
 
 
@@ -1522,7 +1522,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)| Local Encryption Configuration | 
+ **body** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)| Local Encryption Configuration |  |
 {: class="table table-striped"}
 
 
@@ -1581,7 +1581,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PolicyCreate**](PolicyCreate.html)| Policy | 
+ **body** | [**PolicyCreate**](PolicyCreate.html)| Policy |  |
 {: class="table table-striped"}
 
 
@@ -1697,9 +1697,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID | 
- **recording_id** | **String**| Recording ID | 
- **body** | [**Recording**](Recording.html)| recording | 
+ **conversation_id** | **String**| Conversation ID |  |
+ **recording_id** | **String**| Recording ID |  |
+ **body** | [**Recording**](Recording.html)| recording |  |
 {: class="table table-striped"}
 
 
@@ -1764,10 +1764,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID | 
- **recording_id** | **String**| Recording ID | 
- **annotation_id** | **String**| Annotation ID | 
- **body** | [**Annotation**](Annotation.html)| annotation | 
+ **conversation_id** | **String**| Conversation ID |  |
+ **recording_id** | **String**| Recording ID |  |
+ **annotation_id** | **String**| Annotation ID |  |
+ **body** | [**Annotation**](Annotation.html)| annotation |  |
 {: class="table table-striped"}
 
 
@@ -1829,8 +1829,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orphan_id** | **String**| Orphan ID | 
- **body** | [**OrphanUpdateRequest**](OrphanUpdateRequest.html)|  | [optional] 
+ **orphan_id** | **String**| Orphan ID |  |
+ **body** | [**OrphanUpdateRequest**](OrphanUpdateRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1891,8 +1891,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **settings_id** | **String**| Settings Id | 
- **body** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)| Local Encryption metadata | 
+ **settings_id** | **String**| Settings Id |  |
+ **body** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)| Local Encryption metadata |  |
 {: class="table table-striped"}
 
 
@@ -1953,8 +1953,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **policy_id** | **String**| Policy ID | 
- **body** | [**Policy**](Policy.html)| Policy | 
+ **policy_id** | **String**| Policy ID |  |
+ **body** | [**Policy**](Policy.html)| Policy |  |
 {: class="table table-striped"}
 
 
@@ -2013,7 +2013,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**KeyRotationSchedule**](KeyRotationSchedule.html)| KeyRotationSchedule | 
+ **body** | [**KeyRotationSchedule**](KeyRotationSchedule.html)| KeyRotationSchedule |  |
 {: class="table table-striped"}
 
 
@@ -2072,7 +2072,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RecordingSettings**](RecordingSettings.html)| Recording settings | 
+ **body** | [**RecordingSettings**](RecordingSettings.html)| Recording settings |  |
 {: class="table table-striped"}
 
 

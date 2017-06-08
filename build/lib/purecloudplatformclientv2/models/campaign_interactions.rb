@@ -33,24 +33,38 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'campaign' => :'campaign',
+        
         :'pending_interactions' => :'pendingInteractions',
+        
         :'proceeding_interactions' => :'proceedingInteractions',
+        
         :'previewing_interactions' => :'previewingInteractions',
+        
         :'interacting_interactions' => :'interactingInteractions',
+        
         :'scheduled_interactions' => :'scheduledInteractions'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'campaign' => :'UriReference',
+        
         :'pending_interactions' => :'Array<CampaignInteraction>',
+        
         :'proceeding_interactions' => :'Array<CampaignInteraction>',
+        
         :'previewing_interactions' => :'Array<CampaignInteraction>',
+        
         :'interacting_interactions' => :'Array<CampaignInteraction>',
+        
         :'scheduled_interactions' => :'Array<CampaignInteraction>'
+        
       }
     end
 
@@ -62,54 +76,143 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'campaign')
+        
+        
         self.campaign = attributes[:'campaign']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pendingInteractions')
+        
         if (value = attributes[:'pendingInteractions']).is_a?(Array)
           self.pending_interactions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'proceedingInteractions')
+        
         if (value = attributes[:'proceedingInteractions']).is_a?(Array)
           self.proceeding_interactions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'previewingInteractions')
+        
         if (value = attributes[:'previewingInteractions']).is_a?(Array)
           self.previewing_interactions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'interactingInteractions')
+        
         if (value = attributes[:'interactingInteractions']).is_a?(Array)
           self.interacting_interactions = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'scheduledInteractions')
+        
         if (value = attributes[:'scheduledInteractions']).is_a?(Array)
           self.scheduled_interactions = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

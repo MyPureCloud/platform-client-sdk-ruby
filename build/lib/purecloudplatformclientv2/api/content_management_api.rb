@@ -45,8 +45,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.delete_contentmanagement_document ..."
       end
+      
+      
       # verify the required parameter 'document_id' is set
       fail ArgumentError, "Missing the required parameter 'document_id' when calling ContentManagementApi.delete_contentmanagement_document" if document_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/documents/{documentId}".sub('{format}','json').sub('{' + 'documentId' + '}', document_id.to_s)
 
@@ -70,7 +83,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -102,8 +116,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.delete_contentmanagement_share ..."
       end
+      
+      
       # verify the required parameter 'share_id' is set
       fail ArgumentError, "Missing the required parameter 'share_id' when calling ContentManagementApi.delete_contentmanagement_share" if share_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/shares/{shareId}".sub('{format}','json').sub('{' + 'shareId' + '}', share_id.to_s)
 
@@ -126,7 +147,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -158,8 +180,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.delete_contentmanagement_status_status_id ..."
       end
+      
+      
       # verify the required parameter 'status_id' is set
       fail ArgumentError, "Missing the required parameter 'status_id' when calling ContentManagementApi.delete_contentmanagement_status_status_id" if status_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/status/{statusId}".sub('{format}','json').sub('{' + 'statusId' + '}', status_id.to_s)
 
@@ -182,7 +211,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -216,8 +246,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.delete_contentmanagement_workspace ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.delete_contentmanagement_workspace" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s)
 
@@ -241,7 +284,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -275,10 +319,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.delete_contentmanagement_workspace_member ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.delete_contentmanagement_workspace_member" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'member_id' is set
       fail ArgumentError, "Missing the required parameter 'member_id' when calling ContentManagementApi.delete_contentmanagement_workspace_member" if member_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s).sub('{' + 'memberId' + '}', member_id.to_s)
 
@@ -301,7 +358,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -335,10 +393,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.delete_contentmanagement_workspace_tagvalue ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.delete_contentmanagement_workspace_tagvalue" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'tag_id' is set
       fail ArgumentError, "Missing the required parameter 'tag_id' when calling ContentManagementApi.delete_contentmanagement_workspace_tagvalue" if tag_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s).sub('{' + 'tagId' + '}', tag_id.to_s)
 
@@ -361,7 +432,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -395,8 +467,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_document ..."
       end
+      
+      
       # verify the required parameter 'document_id' is set
       fail ArgumentError, "Missing the required parameter 'document_id' when calling ContentManagementApi.get_contentmanagement_document" if document_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/documents/{documentId}".sub('{format}','json').sub('{' + 'documentId' + '}', document_id.to_s)
 
@@ -420,7 +505,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -465,8 +551,51 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_document_audits ..."
       end
+      
+      
       # verify the required parameter 'document_id' is set
       fail ArgumentError, "Missing the required parameter 'document_id' when calling ContentManagementApi.get_contentmanagement_document_audits" if document_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/documents/{documentId}/audits".sub('{format}','json').sub('{' + 'documentId' + '}', document_id.to_s)
 
@@ -495,7 +624,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -514,7 +644,7 @@ module PureCloud
     # @param document_id Document ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :disposition Request how the content will be downloaded: a file attachment or inline. Default is attachment.
-    # @option opts [String] :content_type The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav
+    # @option opts [String] :content_type The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav
     # @return [DownloadResponse]
     def get_contentmanagement_document_content(document_id, opts = {})
       data, _status_code, _headers = get_contentmanagement_document_content_with_http_info(document_id, opts)
@@ -526,17 +656,37 @@ module PureCloud
     # @param document_id Document ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :disposition Request how the content will be downloaded: a file attachment or inline. Default is attachment.
-    # @option opts [String] :content_type The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav
+    # @option opts [String] :content_type The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav
     # @return [Array<(DownloadResponse, Fixnum, Hash)>] DownloadResponse data, response status code and response headers
     def get_contentmanagement_document_content_with_http_info(document_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_document_content ..."
       end
+      
+      
       # verify the required parameter 'document_id' is set
       fail ArgumentError, "Missing the required parameter 'document_id' when calling ContentManagementApi.get_contentmanagement_document_content" if document_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'disposition'] && !['attachment', 'inline'].include?(opts[:'disposition'])
         fail ArgumentError, 'invalid value for "disposition", must be one of attachment, inline'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/documents/{documentId}/content".sub('{format}','json').sub('{' + 'documentId' + '}', document_id.to_s)
 
@@ -561,7 +711,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -606,8 +757,51 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_documents ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.get_contentmanagement_documents" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/documents".sub('{format}','json')
 
@@ -637,7 +831,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -680,8 +875,45 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_query ..."
       end
+      
+      
       # verify the required parameter 'query_phrase' is set
       fail ArgumentError, "Missing the required parameter 'query_phrase' when calling ContentManagementApi.get_contentmanagement_query" if query_phrase.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/query".sub('{format}','json')
 
@@ -710,7 +942,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -743,8 +976,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_securityprofile ..."
       end
+      
+      
       # verify the required parameter 'security_profile_id' is set
       fail ArgumentError, "Missing the required parameter 'security_profile_id' when calling ContentManagementApi.get_contentmanagement_securityprofile" if security_profile_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/securityprofiles/{securityProfileId}".sub('{format}','json').sub('{' + 'securityProfileId' + '}', security_profile_id.to_s)
 
@@ -767,7 +1007,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -798,6 +1039,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_securityprofiles ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/securityprofiles".sub('{format}','json')
 
@@ -820,7 +1062,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -855,8 +1098,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_share ..."
       end
+      
+      
       # verify the required parameter 'share_id' is set
       fail ArgumentError, "Missing the required parameter 'share_id' when calling ContentManagementApi.get_contentmanagement_share" if share_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/shares/{shareId}".sub('{format}','json').sub('{' + 'shareId' + '}', share_id.to_s)
 
@@ -880,7 +1136,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -900,7 +1157,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :redirect Turn on or off redirect (default to true)
     # @option opts [String] :disposition Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (default to attachment)
-    # @option opts [String] :content_type The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav
+    # @option opts [String] :content_type The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav
     # @option opts [String] :expand Expand some document fields
     # @return [SharedResponse]
     def get_contentmanagement_shared_shared_id(shared_id, opts = {})
@@ -914,21 +1171,54 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :redirect Turn on or off redirect
     # @option opts [String] :disposition Request how the share content will be downloaded: attached as a file or inline. Default is attachment.
-    # @option opts [String] :content_type The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav
+    # @option opts [String] :content_type The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav
     # @option opts [String] :expand Expand some document fields
     # @return [Array<(SharedResponse, Fixnum, Hash)>] SharedResponse data, response status code and response headers
     def get_contentmanagement_shared_shared_id_with_http_info(shared_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_shared_shared_id ..."
       end
+      
+      
       # verify the required parameter 'shared_id' is set
       fail ArgumentError, "Missing the required parameter 'shared_id' when calling ContentManagementApi.get_contentmanagement_shared_shared_id" if shared_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'disposition'] && !['attachment', 'inline', 'none'].include?(opts[:'disposition'])
         fail ArgumentError, 'invalid value for "disposition", must be one of attachment, inline, none'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'expand'] && !['document.acl'].include?(opts[:'expand'])
         fail ArgumentError, 'invalid value for "expand", must be one of document.acl'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/shared/{sharedId}".sub('{format}','json').sub('{' + 'sharedId' + '}', shared_id.to_s)
 
@@ -955,7 +1245,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -994,6 +1285,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_shares ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/shares".sub('{format}','json')
 
@@ -1020,7 +1336,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1055,6 +1372,19 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_status ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/status".sub('{format}','json')
 
@@ -1079,7 +1409,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1112,8 +1443,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_status_status_id ..."
       end
+      
+      
       # verify the required parameter 'status_id' is set
       fail ArgumentError, "Missing the required parameter 'status_id' when calling ContentManagementApi.get_contentmanagement_status_status_id" if status_id.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/status/{statusId}".sub('{format}','json').sub('{' + 'statusId' + '}', status_id.to_s)
 
@@ -1136,7 +1474,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1167,6 +1506,7 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_usage ..."
       end
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/usage".sub('{format}','json')
 
@@ -1189,7 +1529,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1224,8 +1565,21 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_workspace ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.get_contentmanagement_workspace" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s)
 
@@ -1249,7 +1603,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1292,8 +1647,45 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_workspace_documents ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.get_contentmanagement_workspace_documents" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}/documents".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s)
 
@@ -1321,7 +1713,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1358,10 +1751,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_workspace_member ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.get_contentmanagement_workspace_member" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'member_id' is set
       fail ArgumentError, "Missing the required parameter 'member_id' when calling ContentManagementApi.get_contentmanagement_workspace_member" if member_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s).sub('{' + 'memberId' + '}', member_id.to_s)
 
@@ -1385,7 +1797,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1424,8 +1837,33 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_workspace_members ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.get_contentmanagement_workspace_members" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}/members".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s)
 
@@ -1451,7 +1889,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1488,10 +1927,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_workspace_tagvalue ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.get_contentmanagement_workspace_tagvalue" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'tag_id' is set
       fail ArgumentError, "Missing the required parameter 'tag_id' when calling ContentManagementApi.get_contentmanagement_workspace_tagvalue" if tag_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s).sub('{' + 'tagId' + '}', tag_id.to_s)
 
@@ -1515,7 +1973,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1556,8 +2015,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_workspace_tagvalues ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.get_contentmanagement_workspace_tagvalues" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s)
 
@@ -1584,7 +2074,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1623,6 +2114,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.get_contentmanagement_workspaces ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces".sub('{format}','json')
 
@@ -1649,7 +2165,8 @@ module PureCloud
 
       # http body (model)
       post_body = nil
-            auth_names = ['PureCloud Auth']
+      
+      auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1682,8 +2199,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.post_contentmanagement_auditquery ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.post_contentmanagement_auditquery" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/auditquery".sub('{format}','json')
 
@@ -1706,6 +2230,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1745,13 +2270,39 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.post_contentmanagement_document ..."
       end
+      
+      
       # verify the required parameter 'document_id' is set
       fail ArgumentError, "Missing the required parameter 'document_id' when calling ContentManagementApi.post_contentmanagement_document" if document_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.post_contentmanagement_document" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'expand'] && !['acl'].include?(opts[:'expand'])
         fail ArgumentError, 'invalid value for "expand", must be one of acl'
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/documents/{documentId}".sub('{format}','json').sub('{' + 'documentId' + '}', document_id.to_s)
 
@@ -1776,6 +2327,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1813,10 +2365,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.post_contentmanagement_document_content ..."
       end
+      
+      
       # verify the required parameter 'document_id' is set
       fail ArgumentError, "Missing the required parameter 'document_id' when calling ContentManagementApi.post_contentmanagement_document_content" if document_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.post_contentmanagement_document_content" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/documents/{documentId}/content".sub('{format}','json').sub('{' + 'documentId' + '}', document_id.to_s)
 
@@ -1840,6 +2411,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1879,8 +2451,33 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.post_contentmanagement_documents ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.post_contentmanagement_documents" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/documents".sub('{format}','json')
 
@@ -1906,6 +2503,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -1941,11 +2539,25 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.post_contentmanagement_query ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.post_contentmanagement_query" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
       if opts[:'expand'] && !['acl', 'workspace'].include?(opts[:'expand'])
         fail ArgumentError, 'invalid value for "expand", must be one of acl, workspace'
       end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/query".sub('{format}','json')
 
@@ -1969,6 +2581,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2002,8 +2615,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.post_contentmanagement_shares ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.post_contentmanagement_shares" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/shares".sub('{format}','json')
 
@@ -2026,6 +2646,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2061,10 +2682,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.post_contentmanagement_workspace_tagvalues ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.post_contentmanagement_workspace_tagvalues" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.post_contentmanagement_workspace_tagvalues" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s)
 
@@ -2087,6 +2721,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2124,10 +2759,29 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.post_contentmanagement_workspace_tagvalues_query ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.post_contentmanagement_workspace_tagvalues_query" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.post_contentmanagement_workspace_tagvalues_query" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s)
 
@@ -2151,6 +2805,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2184,8 +2839,15 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.post_contentmanagement_workspaces ..."
       end
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.post_contentmanagement_workspaces" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces".sub('{format}','json')
 
@@ -2208,6 +2870,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -2243,10 +2906,23 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.put_contentmanagement_workspace ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.put_contentmanagement_workspace" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.put_contentmanagement_workspace" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s)
 
@@ -2269,6 +2945,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2306,12 +2983,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.put_contentmanagement_workspace_member ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.put_contentmanagement_workspace_member" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'member_id' is set
       fail ArgumentError, "Missing the required parameter 'member_id' when calling ContentManagementApi.put_contentmanagement_workspace_member" if member_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.put_contentmanagement_workspace_member" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s).sub('{' + 'memberId' + '}', member_id.to_s)
 
@@ -2334,6 +3030,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -2371,12 +3068,31 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ContentManagementApi.put_contentmanagement_workspace_tagvalue ..."
       end
+      
+      
       # verify the required parameter 'workspace_id' is set
       fail ArgumentError, "Missing the required parameter 'workspace_id' when calling ContentManagementApi.put_contentmanagement_workspace_tagvalue" if workspace_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'tag_id' is set
       fail ArgumentError, "Missing the required parameter 'tag_id' when calling ContentManagementApi.put_contentmanagement_workspace_tagvalue" if tag_id.nil?
+      
+      
+      
+      
+      
+      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ContentManagementApi.put_contentmanagement_workspace_tagvalue" if body.nil?
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}".sub('{format}','json').sub('{' + 'workspaceId' + '}', workspace_id.to_s).sub('{' + 'tagId' + '}', tag_id.to_s)
 
@@ -2399,6 +3115,7 @@ module PureCloud
 
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
+      
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

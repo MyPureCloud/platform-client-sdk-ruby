@@ -36,22 +36,34 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'queue_id' => :'queueId',
+        
         :'language_id' => :'languageId',
+        
         :'priority' => :'priority',
+        
         :'skill_ids' => :'skillIds',
+        
         :'preferred_agent_ids' => :'preferredAgentIds'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'queue_id' => :'String',
+        
         :'language_id' => :'String',
+        
         :'priority' => :'Integer',
+        
         :'skill_ids' => :'Array<String>',
+        
         :'preferred_agent_ids' => :'Array<String>'
+        
       }
     end
 
@@ -63,48 +75,124 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'queueId')
+        
+        
         self.queue_id = attributes[:'queueId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'languageId')
+        
+        
         self.language_id = attributes[:'languageId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'priority')
+        
+        
         self.priority = attributes[:'priority']
+        
+      
       end
 
+      
       if attributes.has_key?(:'skillIds')
+        
         if (value = attributes[:'skillIds']).is_a?(Array)
           self.skill_ids = value
         end
+        
+        
+      
       end
 
+      
       if attributes.has_key?(:'preferredAgentIds')
+        
         if (value = attributes[:'preferredAgentIds']).is_a?(Array)
           self.preferred_agent_ids = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
       if @queue_id.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

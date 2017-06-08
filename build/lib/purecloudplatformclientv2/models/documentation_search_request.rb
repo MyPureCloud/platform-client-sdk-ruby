@@ -35,22 +35,34 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'sort_order' => :'sortOrder',
+        
         :'sort_by' => :'sortBy',
+        
         :'page_size' => :'pageSize',
+        
         :'page_number' => :'pageNumber',
+        
         :'query' => :'query'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'sort_order' => :'String',
+        
         :'sort_by' => :'String',
+        
         :'page_size' => :'Integer',
+        
         :'page_number' => :'Integer',
+        
         :'query' => :'Array<DocumentationSearchCriteria>'
+        
       }
     end
 
@@ -62,46 +74,98 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'sortOrder')
+        
+        
         self.sort_order = attributes[:'sortOrder']
+        
+      
       end
 
+      
       if attributes.has_key?(:'sortBy')
+        
+        
         self.sort_by = attributes[:'sortBy']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pageSize')
+        
+        
         self.page_size = attributes[:'pageSize']
+        
+      
       end
 
+      
       if attributes.has_key?(:'pageNumber')
+        
+        
         self.page_number = attributes[:'pageNumber']
+        
+      
       end
 
+      
       if attributes.has_key?(:'query')
+        
         if (value = attributes[:'query']).is_a?(Array)
           self.query = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
       allowed_values = ["ASC", "DESC", "SCORE"]
       if @sort_order && !allowed_values.include?(@sort_order)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] sort_order Object to be assigned
     def sort_order=(sort_order)
@@ -112,6 +176,29 @@ module PureCloud
       @sort_order = sort_order
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

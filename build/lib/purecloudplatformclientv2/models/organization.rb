@@ -58,40 +58,70 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
         :'id' => :'id',
+        
         :'name' => :'name',
+        
         :'default_language' => :'defaultLanguage',
+        
         :'default_country_code' => :'defaultCountryCode',
+        
         :'third_party_org_name' => :'thirdPartyOrgName',
+        
         :'third_party_uri' => :'thirdPartyURI',
+        
         :'domain' => :'domain',
+        
         :'version' => :'version',
+        
         :'state' => :'state',
+        
         :'default_site_id' => :'defaultSiteId',
+        
         :'support_uri' => :'supportURI',
+        
         :'voicemail_enabled' => :'voicemailEnabled',
+        
         :'self_uri' => :'selfUri',
+        
         :'features' => :'features'
+        
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        
         :'id' => :'String',
+        
         :'name' => :'String',
+        
         :'default_language' => :'String',
+        
         :'default_country_code' => :'String',
+        
         :'third_party_org_name' => :'String',
+        
         :'third_party_uri' => :'String',
+        
         :'domain' => :'String',
+        
         :'version' => :'Integer',
+        
         :'state' => :'String',
+        
         :'default_site_id' => :'String',
+        
         :'support_uri' => :'String',
+        
         :'voicemail_enabled' => :'BOOLEAN',
+        
         :'self_uri' => :'String',
+        
         :'features' => :'Hash<String, BOOLEAN>'
+        
       }
     end
 
@@ -103,86 +133,260 @@ module PureCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      
       if attributes.has_key?(:'id')
+        
+        
         self.id = attributes[:'id']
+        
+      
       end
 
+      
       if attributes.has_key?(:'name')
+        
+        
         self.name = attributes[:'name']
+        
+      
       end
 
+      
       if attributes.has_key?(:'defaultLanguage')
+        
+        
         self.default_language = attributes[:'defaultLanguage']
+        
+      
       end
 
+      
       if attributes.has_key?(:'defaultCountryCode')
+        
+        
         self.default_country_code = attributes[:'defaultCountryCode']
+        
+      
       end
 
+      
       if attributes.has_key?(:'thirdPartyOrgName')
+        
+        
         self.third_party_org_name = attributes[:'thirdPartyOrgName']
+        
+      
       end
 
+      
       if attributes.has_key?(:'thirdPartyURI')
+        
+        
         self.third_party_uri = attributes[:'thirdPartyURI']
+        
+      
       end
 
+      
       if attributes.has_key?(:'domain')
+        
+        
         self.domain = attributes[:'domain']
+        
+      
       end
 
+      
       if attributes.has_key?(:'version')
+        
+        
         self.version = attributes[:'version']
+        
+      
       end
 
+      
       if attributes.has_key?(:'state')
+        
+        
         self.state = attributes[:'state']
+        
+      
       end
 
+      
       if attributes.has_key?(:'defaultSiteId')
+        
+        
         self.default_site_id = attributes[:'defaultSiteId']
+        
+      
       end
 
+      
       if attributes.has_key?(:'supportURI')
+        
+        
         self.support_uri = attributes[:'supportURI']
+        
+      
       end
 
+      
       if attributes.has_key?(:'voicemailEnabled')
+        
+        
         self.voicemail_enabled = attributes[:'voicemailEnabled']
+        
+      
       end
 
+      
       if attributes.has_key?(:'selfUri')
+        
+        
         self.self_uri = attributes[:'selfUri']
+        
+      
       end
 
+      
       if attributes.has_key?(:'features')
+        
         if (value = attributes[:'features']).is_a?(Array)
           self.features = value
         end
+        
+        
+      
       end
 
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      
+      
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @version.nil?
         return false
       end
 
+      
+      
+      
+      
+      
+      
       allowed_values = ["active", "inactive", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
@@ -193,6 +397,34 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)

@@ -87,8 +87,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **calibration_id** | **String**| Calibration ID | 
- **calibrator_id** | **String**| calibratorId | 
+ **calibration_id** | **String**| Calibration ID |  |
+ **calibrator_id** | **String**| calibratorId |  |
 {: class="table table-striped"}
 
 
@@ -152,9 +152,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| conversationId | 
- **evaluation_id** | **String**| evaluationId | 
- **expand** | **String**| evaluatorId | [optional] 
+ **conversation_id** | **String**| conversationId |  |
+ **evaluation_id** | **String**| evaluationId |  |
+ **expand** | **String**| evaluatorId | [optional]  |
 {: class="table table-striped"}
 
 
@@ -212,7 +212,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **form_id** | **String**| Form ID | 
+ **form_id** | **String**| Form ID |  |
 {: class="table table-striped"}
 
 
@@ -270,7 +270,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyword_set_id** | **String**| KeywordSet ID | 
+ **keyword_set_id** | **String**| KeywordSet ID |  |
 {: class="table table-striped"}
 
 
@@ -328,7 +328,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ids** | **String**| A comma-delimited list of valid KeywordSet ids | 
+ **ids** | **String**| A comma-delimited list of valid KeywordSet ids |  |
 {: class="table table-striped"}
 
 
@@ -399,18 +399,18 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
- **page_number** | **Integer**| The page number requested | [optional] [default to 1]
- **sort_by** | **String**| variable name requested to sort by | [optional] 
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional] 
- **next_page** | **String**| next page token | [optional] 
- **previous_page** | **String**| Previous page token | [optional] 
- **start_time** | **DateTime**| Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] 
- **end_time** | **DateTime**| End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] 
- **agent_user_id** | [**Array&lt;Object&gt;**](Object.html)| user id of agent requested | [optional] 
- **evaluator_user_id** | **String**| user id of the evaluator | [optional] 
- **name** | **String**| name | [optional] 
- **group** | **String**| group id | [optional] 
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **start_time** | **DateTime**| Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
+ **end_time** | **DateTime**| End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
+ **agent_user_id** | [**Array&lt;Object&gt;**](Object.html)| user id of agent requested | [optional]  |
+ **evaluator_user_id** | **String**| user id of the evaluator | [optional]  |
+ **name** | **String**| name | [optional]  |
+ **group** | **String**| group id | [optional]  |
 {: class="table table-striped"}
 
 
@@ -471,8 +471,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **calibration_id** | **String**| Calibration ID | 
- **calibrator_id** | **String**| calibratorId | 
+ **calibration_id** | **String**| Calibration ID |  |
+ **calibrator_id** | **String**| calibratorId |  |
 {: class="table table-striped"}
 
 
@@ -542,16 +542,16 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **calibrator_id** | **String**| user id of calibrator | 
- **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
- **page_number** | **Integer**| The page number requested | [optional] [default to 1]
- **sort_by** | **String**| variable name requested to sort by | [optional] 
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional] 
- **next_page** | **String**| next page token | [optional] 
- **previous_page** | **String**| Previous page token | [optional] 
- **conversation_id** | **String**| conversation id | [optional] 
- **start_time** | **DateTime**| Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] 
- **end_time** | **DateTime**| end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] 
+ **calibrator_id** | **String**| user id of calibrator |  |
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **conversation_id** | **String**| conversation id | [optional]  |
+ **start_time** | **DateTime**| Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
+ **end_time** | **DateTime**| end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
 {: class="table table-striped"}
 
 
@@ -620,15 +620,15 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID | 
- **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
- **page_number** | **Integer**| The page number requested | [optional] [default to 1]
- **sort_by** | **String**| variable name requested to sort by | [optional] 
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional] 
- **next_page** | **String**| next page token | [optional] 
- **previous_page** | **String**| Previous page token | [optional] 
- **recording_id** | **String**| id of the recording | [optional] 
- **entity_type** | **String**| entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording | [optional] [default to RECORDING]
+ **conversation_id** | **String**| Conversation ID |  |
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **recording_id** | **String**| id of the recording | [optional]  |
+ **entity_type** | **String**| entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording | [optional] [default to RECORDING] |
 {: class="table table-striped"}
 
 
@@ -692,9 +692,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| conversationId | 
- **evaluation_id** | **String**| evaluationId | 
- **expand** | **String**| agent, evaluator, evaluationForm | [optional] 
+ **conversation_id** | **String**| conversationId |  |
+ **evaluation_id** | **String**| evaluationId |  |
+ **expand** | **String**| agent, evaluator, evaluationForm | [optional]  |
 {: class="table table-striped"}
 
 
@@ -770,23 +770,23 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
- **page_number** | **Integer**| The page number requested | [optional] [default to 1]
- **sort_by** | **String**| variable name requested to sort by | [optional] 
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional] 
- **next_page** | **String**| next page token | [optional] 
- **previous_page** | **String**| Previous page token | [optional] 
- **conversation_id** | **String**| conversationId specified | [optional] 
- **agent_user_id** | **String**| user id of the agent | [optional] 
- **evaluator_user_id** | **String**| evaluator user id | [optional] 
- **queue_id** | **String**| queue id | [optional] 
- **start_time** | **String**| start time of the evaluation query | [optional] 
- **end_time** | **String**| end time of the evaluation query | [optional] 
- **evaluation_state** | [**Array&lt;Object&gt;**](Object.html)| evaluation state options: Pending, InProgress, Finished | [optional] 
- **is_released** | **BOOLEAN**| the evaluation has been released | [optional] 
- **agent_has_read** | **BOOLEAN**| agent has the evaluation | [optional] 
- **expand_answer_total_scores** | **BOOLEAN**| get the total scores for evaluations | [optional] 
- **maximum** | **Integer**| maximum | [optional] 
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **conversation_id** | **String**| conversationId specified | [optional]  |
+ **agent_user_id** | **String**| user id of the agent | [optional]  |
+ **evaluator_user_id** | **String**| evaluator user id | [optional]  |
+ **queue_id** | **String**| queue id | [optional]  |
+ **start_time** | **String**| start time of the evaluation query | [optional]  |
+ **end_time** | **String**| end time of the evaluation query | [optional]  |
+ **evaluation_state** | [**Array&lt;Object&gt;**](Object.html)| evaluation state options: Pending, InProgress, Finished | [optional]  |
+ **is_released** | **BOOLEAN**| the evaluation has been released | [optional]  |
+ **agent_has_read** | **BOOLEAN**| agent has the evaluation | [optional]  |
+ **expand_answer_total_scores** | **BOOLEAN**| get the total scores for evaluations | [optional]  |
+ **maximum** | **Integer**| maximum | [optional]  |
 {: class="table table-striped"}
 
 
@@ -856,17 +856,17 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
- **page_number** | **Integer**| The page number requested | [optional] [default to 1]
- **sort_by** | **String**| variable name requested to sort by | [optional] 
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional] 
- **next_page** | **String**| next page token | [optional] 
- **previous_page** | **String**| Previous page token | [optional] 
- **start_time** | **DateTime**| The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] 
- **end_time** | **DateTime**| The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] 
- **name** | **String**| Evaluator name | [optional] 
- **permission** | [**Array&lt;Object&gt;**](Object.html)| permission strings | [optional] 
- **group** | **String**| group id | [optional] 
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **start_time** | **DateTime**| The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
+ **end_time** | **DateTime**| The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
+ **name** | **String**| Evaluator name | [optional]  |
+ **permission** | [**Array&lt;Object&gt;**](Object.html)| permission strings | [optional]  |
+ **group** | **String**| group id | [optional]  |
 {: class="table table-striped"}
 
 
@@ -925,7 +925,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **form_id** | **String**| Form ID | 
+ **form_id** | **String**| Form ID |  |
 {: class="table table-striped"}
 
 
@@ -988,9 +988,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **form_id** | **String**| Form ID | 
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
+ **form_id** | **String**| Form ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 
@@ -1056,13 +1056,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
- **page_number** | **Integer**| The page number requested | [optional] [default to 1]
- **sort_by** | **String**| variable name requested to sort by | [optional] 
- **next_page** | **String**| next page token | [optional] 
- **previous_page** | **String**| Previous page token | [optional] 
- **expand** | **String**| Expand | [optional] 
- **name** | **String**| Name | [optional] 
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **expand** | **String**| Expand | [optional]  |
+ **name** | **String**| Name | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1121,7 +1121,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyword_set_id** | **String**| KeywordSet ID | 
+ **keyword_set_id** | **String**| KeywordSet ID |  |
 {: class="table table-striped"}
 
 
@@ -1190,16 +1190,16 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| The total page size requested | [optional] [default to 25]
- **page_number** | **Integer**| The page number requested | [optional] [default to 1]
- **sort_by** | **String**| variable name requested to sort by | [optional] 
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional] 
- **next_page** | **String**| next page token | [optional] 
- **previous_page** | **String**| Previous page token | [optional] 
- **name** | **String**| the keyword set name - used for filtering results in searches. | [optional] 
- **queue_id** | **String**| the queue id - used for filtering results in searches. | [optional] 
- **agent_id** | **String**| the agent id - used for filtering results in searches. | [optional] 
- **operator** | **String**| If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. | [optional] 
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **name** | **String**| the keyword set name - used for filtering results in searches. | [optional]  |
+ **queue_id** | **String**| the queue id - used for filtering results in searches. | [optional]  |
+ **agent_id** | **String**| the agent id - used for filtering results in searches. | [optional]  |
+ **operator** | **String**| If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. | [optional] <br />**Values**: AND, OR |
 {: class="table table-striped"}
 
 
@@ -1258,7 +1258,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **form_id** | **String**| Form ID | 
+ **form_id** | **String**| Form ID |  |
 {: class="table table-striped"}
 
 
@@ -1320,9 +1320,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25]
- **page_number** | **Integer**| Page number | [optional] [default to 1]
- **name** | **String**| Name | [optional] 
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **name** | **String**| Name | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1381,7 +1381,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query | 
+ **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
@@ -1443,8 +1443,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CalibrationCreate**](CalibrationCreate.html)| calibration | 
- **expand** | **String**| calibratorId | [optional] 
+ **body** | [**CalibrationCreate**](CalibrationCreate.html)| calibration |  |
+ **expand** | **String**| calibratorId | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1508,9 +1508,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| conversationId | 
- **body** | [**Evaluation**](Evaluation.html)| evaluation | 
- **expand** | **String**| evaluatorId | [optional] 
+ **conversation_id** | **String**| conversationId |  |
+ **body** | [**Evaluation**](Evaluation.html)| evaluation |  |
+ **expand** | **String**| evaluatorId | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1569,7 +1569,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**EvaluationFormAndScoringSet**](EvaluationFormAndScoringSet.html)| evaluationAndScoringSet | 
+ **body** | [**EvaluationFormAndScoringSet**](EvaluationFormAndScoringSet.html)| evaluationAndScoringSet |  |
 {: class="table table-striped"}
 
 
@@ -1628,7 +1628,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form | 
+ **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
 {: class="table table-striped"}
 
 
@@ -1690,8 +1690,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**KeywordSet**](KeywordSet.html)| keywordSet | 
- **expand** | **String**| queueId | [optional] 
+ **body** | [**KeywordSet**](KeywordSet.html)| keywordSet |  |
+ **expand** | **String**| queueId | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1750,7 +1750,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form | 
+ **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
 {: class="table table-striped"}
 
 
@@ -1810,7 +1810,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**KeywordSet**](KeywordSet.html)| Keyword Set | [optional] 
+ **body** | [**KeywordSet**](KeywordSet.html)| Keyword Set | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1871,8 +1871,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **calibration_id** | **String**| Calibration ID | 
- **body** | [**Calibration**](Calibration.html)| Calibration | 
+ **calibration_id** | **String**| Calibration ID |  |
+ **body** | [**Calibration**](Calibration.html)| Calibration |  |
 {: class="table table-striped"}
 
 
@@ -1938,10 +1938,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| conversationId | 
- **evaluation_id** | **String**| evaluationId | 
- **body** | [**Evaluation**](Evaluation.html)| evaluation | 
- **expand** | **String**| evaluatorId | [optional] 
+ **conversation_id** | **String**| conversationId |  |
+ **evaluation_id** | **String**| evaluationId |  |
+ **body** | [**Evaluation**](Evaluation.html)| evaluation |  |
+ **expand** | **String**| evaluatorId | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2002,8 +2002,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **form_id** | **String**| Form ID | 
- **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form | 
+ **form_id** | **String**| Form ID |  |
+ **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
 {: class="table table-striped"}
 
 
@@ -2064,8 +2064,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyword_set_id** | **String**| KeywordSet ID | 
- **body** | [**KeywordSet**](KeywordSet.html)| keywordSet | 
+ **keyword_set_id** | **String**| KeywordSet ID |  |
+ **body** | [**KeywordSet**](KeywordSet.html)| keywordSet |  |
 {: class="table table-striped"}
 
 
