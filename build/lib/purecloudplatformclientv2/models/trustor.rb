@@ -17,50 +17,40 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class LicenseDefinitionListing
-    attr_accessor :entities
+  class Trustor
+    # Organization Id for this trust.
+    attr_accessor :id
 
-    attr_accessor :page_size
+    # If disabled no trustee user will have access, even if they were previously added.
+    attr_accessor :enabled
 
-    attr_accessor :page_number
+    # Date Trust was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :date_created
 
-    attr_accessor :total
+    # User that created trust.
+    attr_accessor :created_by
 
+    # Organization associated with this trust.
+    attr_accessor :organization
+
+    # The URI for this object
     attr_accessor :self_uri
-
-    attr_accessor :first_uri
-
-    attr_accessor :next_uri
-
-    attr_accessor :last_uri
-
-    attr_accessor :previous_uri
-
-    attr_accessor :page_count
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'entities' => :'entities',
+        :'id' => :'id',
         
-        :'page_size' => :'pageSize',
+        :'enabled' => :'enabled',
         
-        :'page_number' => :'pageNumber',
+        :'date_created' => :'dateCreated',
         
-        :'total' => :'total',
+        :'created_by' => :'createdBy',
         
-        :'self_uri' => :'selfUri',
+        :'organization' => :'organization',
         
-        :'first_uri' => :'firstUri',
-        
-        :'next_uri' => :'nextUri',
-        
-        :'last_uri' => :'lastUri',
-        
-        :'previous_uri' => :'previousUri',
-        
-        :'page_count' => :'pageCount'
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -69,25 +59,17 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'entities' => :'Array<LicenseDefinition>',
+        :'id' => :'String',
         
-        :'page_size' => :'Integer',
+        :'enabled' => :'BOOLEAN',
         
-        :'page_number' => :'Integer',
+        :'date_created' => :'DateTime',
         
-        :'total' => :'Integer',
+        :'created_by' => :'OrgUser',
         
-        :'self_uri' => :'String',
+        :'organization' => :'Organization',
         
-        :'first_uri' => :'String',
-        
-        :'next_uri' => :'String',
-        
-        :'last_uri' => :'String',
-        
-        :'previous_uri' => :'String',
-        
-        :'page_count' => :'Integer'
+        :'self_uri' => :'String'
         
       }
     end
@@ -101,39 +83,46 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'entities')
+      if attributes.has_key?(:'id')
         
-        if (value = attributes[:'entities']).is_a?(Array)
-          self.entities = value
-        end
         
+        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes.has_key?(:'pageSize')
+      if attributes.has_key?(:'enabled')
         
         
-        self.page_size = attributes[:'pageSize']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'pageNumber')
-        
-        
-        self.page_number = attributes[:'pageNumber']
+        self.enabled = attributes[:'enabled']
         
       
       end
 
       
-      if attributes.has_key?(:'total')
+      if attributes.has_key?(:'dateCreated')
         
         
-        self.total = attributes[:'total']
+        self.date_created = attributes[:'dateCreated']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'createdBy')
+        
+        
+        self.created_by = attributes[:'createdBy']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'organization')
+        
+        
+        self.organization = attributes[:'organization']
         
       
       end
@@ -143,51 +132,6 @@ module PureCloud
         
         
         self.self_uri = attributes[:'selfUri']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'firstUri')
-        
-        
-        self.first_uri = attributes[:'firstUri']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'nextUri')
-        
-        
-        self.next_uri = attributes[:'nextUri']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'lastUri')
-        
-        
-        self.last_uri = attributes[:'lastUri']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'previousUri')
-        
-        
-        self.previous_uri = attributes[:'previousUri']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'pageCount')
-        
-        
-        self.page_count = attributes[:'pageCount']
         
       
       end
@@ -213,21 +157,10 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      if @enabled.nil?
+        return false
+      end
+
       
       
       
@@ -250,26 +183,6 @@ module PureCloud
       
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -306,16 +219,12 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          entities == o.entities &&
-          page_size == o.page_size &&
-          page_number == o.page_number &&
-          total == o.total &&
-          self_uri == o.self_uri &&
-          first_uri == o.first_uri &&
-          next_uri == o.next_uri &&
-          last_uri == o.last_uri &&
-          previous_uri == o.previous_uri &&
-          page_count == o.page_count
+          id == o.id &&
+          enabled == o.enabled &&
+          date_created == o.date_created &&
+          created_by == o.created_by &&
+          organization == o.organization &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -327,7 +236,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [entities, page_size, page_number, total, self_uri, first_uri, next_uri, last_uri, previous_uri, page_count].hash
+      [id, enabled, date_created, created_by, organization, self_uri].hash
     end
 
     # build the object from hash

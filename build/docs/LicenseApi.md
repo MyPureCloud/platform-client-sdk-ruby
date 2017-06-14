@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 <a name="get_license_definitions"></a>
 
-## -[**LicenseDefinitionListing**](LicenseDefinitionListing.html) get_license_definitions
+## -[**Array&lt;LicenseDefinition&gt;**](LicenseDefinition.html) get_license_definitions
 
 Get all PureCloud license definitions available for the organization.
 
@@ -119,7 +119,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LicenseDefinitionListing**](LicenseDefinitionListing.html)
+[**Array&lt;LicenseDefinition&gt;**](LicenseDefinition.html)
 
 ### HTTP request headers
 
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
 
 <a name="post_license_organization"></a>
 
-## -[**LicenseUpdateResponse**](LicenseUpdateResponse.html) post_license_organization(opts)
+## -[**Array&lt;LicenseUpdateStatus&gt;**](LicenseUpdateStatus.html) post_license_organization(opts)
 
 Update the organization's license assignments in a batch.
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LicenseUpdateResponse**](LicenseUpdateResponse.html)
+[**Array&lt;LicenseUpdateStatus&gt;**](LicenseUpdateStatus.html)
 
 ### HTTP request headers
 

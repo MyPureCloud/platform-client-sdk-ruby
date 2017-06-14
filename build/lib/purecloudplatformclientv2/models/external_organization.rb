@@ -54,6 +54,8 @@ module PureCloud
     # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :create_date
 
+    attr_accessor :trustor
+
     # Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
     attr_accessor :external_data_sources
 
@@ -95,6 +97,8 @@ module PureCloud
         :'modify_date' => :'modifyDate',
         
         :'create_date' => :'createDate',
+        
+        :'trustor' => :'trustor',
         
         :'external_data_sources' => :'externalDataSources',
         
@@ -138,6 +142,8 @@ module PureCloud
         :'modify_date' => :'DateTime',
         
         :'create_date' => :'DateTime',
+        
+        :'trustor' => :'Trustor',
         
         :'external_data_sources' => :'Array<ExternalDataSource>',
         
@@ -305,6 +311,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'trustor')
+        
+        
+        self.trustor = attributes[:'trustor']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'externalDataSources')
         
         if (value = attributes[:'externalDataSources']).is_a?(Array)
@@ -417,8 +432,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -531,6 +555,7 @@ module PureCloud
           twitter_id == o.twitter_id &&
           modify_date == o.modify_date &&
           create_date == o.create_date &&
+          trustor == o.trustor &&
           external_data_sources == o.external_data_sources &&
           self_uri == o.self_uri
     end
@@ -544,7 +569,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, company_type, industry, primary_contact_id, address, phone_number, fax_number, employee_count, revenue, tags, websites, tickers, twitter_id, modify_date, create_date, external_data_sources, self_uri].hash
+      [id, name, company_type, industry, primary_contact_id, address, phone_number, fax_number, employee_count, revenue, tags, websites, tickers, twitter_id, modify_date, create_date, trustor, external_data_sources, self_uri].hash
     end
 
     # build the object from hash

@@ -12,6 +12,7 @@ Method | Description
 [**delete_externalcontacts_contact_note**](ExternalContactsApi.html#delete_externalcontacts_contact_note) | Delete a note for an external contact
 [**delete_externalcontacts_organization**](ExternalContactsApi.html#delete_externalcontacts_organization) | Delete an external organization
 [**delete_externalcontacts_organization_note**](ExternalContactsApi.html#delete_externalcontacts_organization_note) | Delete a note for an external organization
+[**delete_externalcontacts_organization_trustor**](ExternalContactsApi.html#delete_externalcontacts_organization_trustor) | Unlink the Trustor for this External Organization
 [**delete_externalcontacts_relationship**](ExternalContactsApi.html#delete_externalcontacts_relationship) | Delete a relationship
 [**get_externalcontacts_contact**](ExternalContactsApi.html#get_externalcontacts_contact) | Fetch an external contact
 [**get_externalcontacts_contact_note**](ExternalContactsApi.html#get_externalcontacts_contact_note) | Fetch a note for an external contact
@@ -35,6 +36,7 @@ Method | Description
 [**put_externalcontacts_conversation**](ExternalContactsApi.html#put_externalcontacts_conversation) | Associate an external contact with a conversation
 [**put_externalcontacts_organization**](ExternalContactsApi.html#put_externalcontacts_organization) | Update an external organization
 [**put_externalcontacts_organization_note**](ExternalContactsApi.html#put_externalcontacts_organization_note) | Update a note for an external organization
+[**put_externalcontacts_organization_trustor_trustor_id**](ExternalContactsApi.html#put_externalcontacts_organization_trustor_trustor_id) | Links a Trustor with an Extenral Organization
 [**put_externalcontacts_relationship**](ExternalContactsApi.html#put_externalcontacts_relationship) | Update a relationship
 {: class="table table-striped"}
 
@@ -262,6 +264,64 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_organization_id** | **String**| External Organization Id |  |
  **note_id** | **String**| Note Id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_externalcontacts_organization_trustor"></a>
+
+## - delete_externalcontacts_organization_trustor(external_organization_id)
+
+Unlink the Trustor for this External Organization
+
+
+
+Wraps DELETE /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+external_organization_id = "external_organization_id_example" # String | External Organization ID
+
+
+begin
+  #Unlink the Trustor for this External Organization
+  api_instance.delete_externalcontacts_organization_trustor(external_organization_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->delete_externalcontacts_organization_trustor: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **external_organization_id** | **String**| External Organization ID |  |
 {: class="table table-striped"}
 
 
@@ -631,7 +691,8 @@ api_instance = PureCloud::ExternalContactsApi.new
 external_organization_id = "external_organization_id_example" # String | External Organization ID
 
 opts = { 
-  expand: ["expand_example"] # Array<String> | which fields, if any, to expand (externalDataSources)
+  expand: "expand_example", # String | which fields, if any, to expand (externalDataSources)
+  include_trustors: true # BOOLEAN | (true or false) whether or not to include trustor information embedded in the externalOrganization
 }
 
 begin
@@ -648,7 +709,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_organization_id** | **String**| External Organization ID |  |
- **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand (externalDataSources) | [optional] <br />**Values**: externalDataSources |
+ **expand** | **String**| which fields, if any, to expand (externalDataSources) | [optional] <br />**Values**: externalDataSources |
+ **include_trustors** | **BOOLEAN**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
 {: class="table table-striped"}
 
 
@@ -971,7 +1033,8 @@ opts = {
   page_number: 1, # Integer | Page number
   q: "q_example", # String | Search query
   sort_order: "sort_order_example", # String | Sort order
-  expand: "expand_example" # String | which fields, if any, to expand
+  expand: ["expand_example"], # Array<String> | which fields, if any, to expand
+  include_trustors: true # BOOLEAN | (true or false) whether or not to include trustor information embedded in the externalOrganization
 }
 
 begin
@@ -991,7 +1054,8 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **q** | **String**| Search query | [optional]  |
  **sort_order** | **String**| Sort order | [optional]  |
- **expand** | **String**| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
+ **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
+ **include_trustors** | **BOOLEAN**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1750,6 +1814,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Note**](Note.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_externalcontacts_organization_trustor_trustor_id"></a>
+
+## -[**ExternalOrganization**](ExternalOrganization.html) put_externalcontacts_organization_trustor_trustor_id(external_organization_id, trustor_id)
+
+Links a Trustor with an Extenral Organization
+
+
+
+Wraps PUT /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+external_organization_id = "external_organization_id_example" # String | External Organization ID
+
+trustor_id = "trustor_id_example" # String | Trustor ID
+
+
+begin
+  #Links a Trustor with an Extenral Organization
+  result = api_instance.put_externalcontacts_organization_trustor_trustor_id(external_organization_id, trustor_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->put_externalcontacts_organization_trustor_trustor_id: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **external_organization_id** | **String**| External Organization ID |  |
+ **trustor_id** | **String**| Trustor ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ExternalOrganization**](ExternalOrganization.html)
 
 ### HTTP request headers
 

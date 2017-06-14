@@ -92,7 +92,7 @@ module PureCloud
     # Get all PureCloud license definitions available for the organization.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [LicenseDefinitionListing]
+    # @return [Array<LicenseDefinition>]
     def get_license_definitions(opts = {})
       data, _status_code, _headers = get_license_definitions_with_http_info(opts)
       return data
@@ -101,7 +101,7 @@ module PureCloud
     # Get all PureCloud license definitions available for the organization.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(LicenseDefinitionListing, Fixnum, Hash)>] LicenseDefinitionListing data, response status code and response headers
+    # @return [Array<(Array<LicenseDefinition>, Fixnum, Hash)>] Array<LicenseDefinition> data, response status code and response headers
     def get_license_definitions_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LicenseApi.get_license_definitions ..."
@@ -137,7 +137,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'LicenseDefinitionListing')
+        :return_type => 'Array<LicenseDefinition>')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: LicenseApi#get_license_definitions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -268,7 +268,7 @@ module PureCloud
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [LicenseBatchAssignmentRequest] :body The license assignments to update.
-    # @return [LicenseUpdateResponse]
+    # @return [Array<LicenseUpdateStatus>]
     def post_license_organization(opts = {})
       data, _status_code, _headers = post_license_organization_with_http_info(opts)
       return data
@@ -278,7 +278,7 @@ module PureCloud
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [LicenseBatchAssignmentRequest] :body The license assignments to update.
-    # @return [Array<(LicenseUpdateResponse, Fixnum, Hash)>] LicenseUpdateResponse data, response status code and response headers
+    # @return [Array<(Array<LicenseUpdateStatus>, Fixnum, Hash)>] Array<LicenseUpdateStatus> data, response status code and response headers
     def post_license_organization_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LicenseApi.post_license_organization ..."
@@ -320,7 +320,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'LicenseUpdateResponse')
+        :return_type => 'Array<LicenseUpdateStatus>')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: LicenseApi#post_license_organization\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

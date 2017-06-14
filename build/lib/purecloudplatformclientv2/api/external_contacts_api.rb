@@ -300,6 +300,70 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Unlink the Trustor for this External Organization
+    # 
+    # @param external_organization_id External Organization ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_externalcontacts_organization_trustor(external_organization_id, opts = {})
+      delete_externalcontacts_organization_trustor_with_http_info(external_organization_id, opts)
+      return nil
+    end
+
+    # Unlink the Trustor for this External Organization
+    # 
+    # @param external_organization_id External Organization ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_externalcontacts_organization_trustor_with_http_info(external_organization_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_organization_trustor ..."
+      end
+      
+      
+      # verify the required parameter 'external_organization_id' is set
+      fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.delete_externalcontacts_organization_trustor" if external_organization_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#delete_externalcontacts_organization_trustor\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete a relationship
     # 
     # @param relationship_id Relationship Id
@@ -727,7 +791,8 @@ module PureCloud
     # 
     # @param external_organization_id External Organization ID
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :expand which fields, if any, to expand (externalDataSources)
+    # @option opts [String] :expand which fields, if any, to expand (externalDataSources)
+    # @option opts [BOOLEAN] :include_trustors (true or false) whether or not to include trustor information embedded in the externalOrganization
     # @return [ExternalOrganization]
     def get_externalcontacts_organization(external_organization_id, opts = {})
       data, _status_code, _headers = get_externalcontacts_organization_with_http_info(external_organization_id, opts)
@@ -738,7 +803,8 @@ module PureCloud
     # 
     # @param external_organization_id External Organization ID
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :expand which fields, if any, to expand (externalDataSources)
+    # @option opts [String] :expand which fields, if any, to expand (externalDataSources)
+    # @option opts [BOOLEAN] :include_trustors (true or false) whether or not to include trustor information embedded in the externalOrganization
     # @return [Array<(ExternalOrganization, Fixnum, Hash)>] ExternalOrganization data, response status code and response headers
     def get_externalcontacts_organization_with_http_info(external_organization_id, opts = {})
       if @api_client.config.debugging
@@ -756,6 +822,16 @@ module PureCloud
       
       
       
+      if opts[:'expand'] && !['externalDataSources'].include?(opts[:'expand'])
+        fail ArgumentError, 'invalid value for "expand", must be one of externalDataSources'
+      end
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -764,7 +840,8 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
+      query_params[:'includeTrustors'] = opts[:'include_trustors'] if opts[:'include_trustors']
 
       # header parameters
       header_params = {}
@@ -1204,7 +1281,8 @@ module PureCloud
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :q Search query
     # @option opts [String] :sort_order Sort order
-    # @option opts [String] :expand which fields, if any, to expand
+    # @option opts [Array<String>] :expand which fields, if any, to expand
+    # @option opts [BOOLEAN] :include_trustors (true or false) whether or not to include trustor information embedded in the externalOrganization
     # @return [ExternalOrganizationListing]
     def get_externalcontacts_organizations(opts = {})
       data, _status_code, _headers = get_externalcontacts_organizations_with_http_info(opts)
@@ -1218,7 +1296,8 @@ module PureCloud
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :q Search query
     # @option opts [String] :sort_order Sort order
-    # @option opts [String] :expand which fields, if any, to expand
+    # @option opts [Array<String>] :expand which fields, if any, to expand
+    # @option opts [BOOLEAN] :include_trustors (true or false) whether or not to include trustor information embedded in the externalOrganization
     # @return [Array<(ExternalOrganizationListing, Fixnum, Hash)>] ExternalOrganizationListing data, response status code and response headers
     def get_externalcontacts_organizations_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1252,9 +1331,11 @@ module PureCloud
       
       
       
-      if opts[:'expand'] && !['externalDataSources'].include?(opts[:'expand'])
-        fail ArgumentError, 'invalid value for "expand", must be one of externalDataSources'
-      end
+      
+      
+      
+      
+      
       
       
       
@@ -1268,7 +1349,8 @@ module PureCloud
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'q'] = opts[:'q'] if opts[:'q']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
-      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'includeTrustors'] = opts[:'include_trustors'] if opts[:'include_trustors']
 
       # header parameters
       header_params = {}
@@ -2169,6 +2251,81 @@ module PureCloud
         :return_type => 'Note')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ExternalContactsApi#put_externalcontacts_organization_note\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Links a Trustor with an Extenral Organization
+    # 
+    # @param external_organization_id External Organization ID
+    # @param trustor_id Trustor ID
+    # @param [Hash] opts the optional parameters
+    # @return [ExternalOrganization]
+    def put_externalcontacts_organization_trustor_trustor_id(external_organization_id, trustor_id, opts = {})
+      data, _status_code, _headers = put_externalcontacts_organization_trustor_trustor_id_with_http_info(external_organization_id, trustor_id, opts)
+      return data
+    end
+
+    # Links a Trustor with an Extenral Organization
+    # 
+    # @param external_organization_id External Organization ID
+    # @param trustor_id Trustor ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ExternalOrganization, Fixnum, Hash)>] ExternalOrganization data, response status code and response headers
+    def put_externalcontacts_organization_trustor_trustor_id_with_http_info(external_organization_id, trustor_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_organization_trustor_trustor_id ..."
+      end
+      
+      
+      # verify the required parameter 'external_organization_id' is set
+      fail ArgumentError, "Missing the required parameter 'external_organization_id' when calling ExternalContactsApi.put_externalcontacts_organization_trustor_trustor_id" if external_organization_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'trustor_id' is set
+      fail ArgumentError, "Missing the required parameter 'trustor_id' when calling ExternalContactsApi.put_externalcontacts_organization_trustor_trustor_id" if trustor_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId}".sub('{format}','json').sub('{' + 'externalOrganizationId' + '}', external_organization_id.to_s).sub('{' + 'trustorId' + '}', trustor_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ExternalOrganization')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#put_externalcontacts_organization_trustor_trustor_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
