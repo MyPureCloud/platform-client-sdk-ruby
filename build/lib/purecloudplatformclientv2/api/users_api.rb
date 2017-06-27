@@ -2335,6 +2335,79 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Send an activation email to the user
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force Resend the invitation even if one is already outstanding (default to false)
+    # @return [nil]
+    def post_user_invite(user_id, opts = {})
+      post_user_invite_with_http_info(user_id, opts)
+      return nil
+    end
+
+    # Send an activation email to the user
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force Resend the invitation even if one is already outstanding
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def post_user_invite_with_http_info(user_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.post_user_invite ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.post_user_invite" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/invite".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'force'] = opts[:'force'] if opts[:'force']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#post_user_invite\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Add routing skill to user
     # 
     # @param user_id User ID

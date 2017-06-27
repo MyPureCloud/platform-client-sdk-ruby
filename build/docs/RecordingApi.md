@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_id** | **String**| Conversation ID |  |
  **recording_id** | **String**| Recording ID |  |
- **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE |
+ **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
  **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false] |
  **file_name** | **String**| the name of the downloaded fileName | [optional]  |
 {: class="table table-striped"}
@@ -529,7 +529,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_id** | **String**| Conversation ID |  |
  **max_wait_ms** | **Integer**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
- **format_id** | **String**| The desired media format | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE |
+ **format_id** | **String**| The desired media format | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 {: class="table table-striped"}
 
 
@@ -653,7 +653,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orphan_id** | **String**| Orphan ID |  |
- **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE |
+ **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
  **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false] |
  **file_name** | **String**| the name of the downloaded fileName | [optional]  |
 {: class="table table-striped"}

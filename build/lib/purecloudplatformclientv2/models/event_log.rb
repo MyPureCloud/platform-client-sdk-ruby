@@ -240,7 +240,7 @@ module PureCloud
       
       
       
-      allowed_values = ["CAMPAIGN_RULE", "IMPORT_ERROR", "CALLBACK", "CONTACT_LIST_FILTER", "SCHEDULE", "CALL_RESTRICTION", "CALL_RULE", "ORGANIZATION_CONFIGURATION"]
+      allowed_values = ["CAMPAIGN", "CAMPAIGN_RULE", "IMPORT_ERROR", "CALLBACK", "CONTACT_LIST_FILTER", "SCHEDULE", "CALL_RESTRICTION", "CALL_RULE", "ORGANIZATION_CONFIGURATION"]
       if @category && !allowed_values.include?(@category)
         return false
       end
@@ -305,7 +305,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] category Object to be assigned
     def category=(category)
-      allowed_values = ["CAMPAIGN_RULE", "IMPORT_ERROR", "CALLBACK", "CONTACT_LIST_FILTER", "SCHEDULE", "CALL_RESTRICTION", "CALL_RULE", "ORGANIZATION_CONFIGURATION"]
+      allowed_values = ["CAMPAIGN", "CAMPAIGN_RULE", "IMPORT_ERROR", "CALLBACK", "CONTACT_LIST_FILTER", "SCHEDULE", "CALL_RESTRICTION", "CALL_RULE", "ORGANIZATION_CONFIGURATION"]
       if category && !allowed_values.include?(category)
         fail ArgumentError, "invalid value for 'category', must be one of #{allowed_values}."
       end

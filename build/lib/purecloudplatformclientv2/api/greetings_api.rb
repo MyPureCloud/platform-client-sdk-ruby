@@ -186,8 +186,8 @@ module PureCloud
       
       
       
-      if opts[:'format_id'] && !['WAV', 'WEBM', 'WAV_ULAW', 'OGG_VORBIS', 'OGG_OPUS', 'NONE'].include?(opts[:'format_id'])
-        fail ArgumentError, 'invalid value for "format_id", must be one of WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE'
+      if opts[:'format_id'] && !['WAV', 'WEBM', 'WAV_ULAW', 'OGG_VORBIS', 'OGG_OPUS', 'MP3', 'NONE'].include?(opts[:'format_id'])
+        fail ArgumentError, 'invalid value for "format_id", must be one of WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE'
       end
       
       
@@ -659,7 +659,7 @@ module PureCloud
     # 
     # @param body The Greeting to create
     # @param [Hash] opts the optional parameters
-    # @return [DefaultGreetingList]
+    # @return [Greeting]
     def post_greetings(body, opts = {})
       data, _status_code, _headers = post_greetings_with_http_info(body, opts)
       return data
@@ -669,7 +669,7 @@ module PureCloud
     # 
     # @param body The Greeting to create
     # @param [Hash] opts the optional parameters
-    # @return [Array<(DefaultGreetingList, Fixnum, Hash)>] DefaultGreetingList data, response status code and response headers
+    # @return [Array<(Greeting, Fixnum, Hash)>] Greeting data, response status code and response headers
     def post_greetings_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GreetingsApi.post_greetings ..."
@@ -713,7 +713,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'DefaultGreetingList')
+        :return_type => 'Greeting')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: GreetingsApi#post_greetings\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

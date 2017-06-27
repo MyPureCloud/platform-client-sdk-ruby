@@ -195,8 +195,8 @@ module PureCloud
       
       
       
-      if opts[:'format_id'] && !['WAV', 'WEBM', 'WAV_ULAW', 'OGG_VORBIS', 'OGG_OPUS', 'NONE'].include?(opts[:'format_id'])
-        fail ArgumentError, 'invalid value for "format_id", must be one of WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE'
+      if opts[:'format_id'] && !['WAV', 'WEBM', 'WAV_ULAW', 'OGG_VORBIS', 'OGG_OPUS', 'MP3', 'NONE'].include?(opts[:'format_id'])
+        fail ArgumentError, 'invalid value for "format_id", must be one of WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE'
       end
       
       

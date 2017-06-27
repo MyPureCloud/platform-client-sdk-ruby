@@ -1606,6 +1606,7 @@ api_instance = PureCloud::RoutingApi.new
 opts = { 
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
+  name: "name_example", # String | Name
   sort_by: "name" # String | Sort by
 }
 
@@ -1624,6 +1625,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **name** | **String**| Name | [optional]  |
  **sort_by** | **String**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 

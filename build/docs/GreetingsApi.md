@@ -191,7 +191,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **greeting_id** | **String**| Greeting ID |  |
- **format_id** | **String**| The desired media format. | [optional] [default to WAV]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE |
+ **format_id** | **String**| The desired media format. | [optional] [default to WAV]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 {: class="table table-striped"}
 
 
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 
 <a name="post_greetings"></a>
 
-## -[**DefaultGreetingList**](DefaultGreetingList.html) post_greetings(body)
+## -[**Greeting**](Greeting.html) post_greetings(body)
 
 Create a Greeting for an Organization
 
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DefaultGreetingList**](DefaultGreetingList.html)
+[**Greeting**](Greeting.html)
 
 ### HTTP request headers
 
