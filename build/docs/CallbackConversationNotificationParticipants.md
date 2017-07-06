@@ -34,7 +34,7 @@ title: CallbackConversationNotificationParticipants
 | **wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
 | **peer** | **String** |  | [optional] |
 | **outbound_preview** | [**ConversationNotificationDialerPreview**](ConversationNotificationDialerPreview.html) |  | [optional] |
-| **voicemail** | [**DocumentDataV2NotificationWorkspace**](DocumentDataV2NotificationWorkspace.html) |  | [optional] |
+| **voicemail** | [**ConversationNotificationVoicemail**](ConversationNotificationVoicemail.html) |  | [optional] |
 | **callback_numbers** | **Array&lt;String&gt;** |  | [optional] |
 | **callback_user_name** | **String** |  | [optional] |
 | **skip_enabled** | **BOOLEAN** |  | [optional] |

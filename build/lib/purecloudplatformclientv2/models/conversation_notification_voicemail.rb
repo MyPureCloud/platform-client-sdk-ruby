@@ -20,11 +20,15 @@ module PureCloud
   class ConversationNotificationVoicemail
     attr_accessor :id
 
+    attr_accessor :upload_status
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id'
+        :'id' => :'id',
+        
+        :'upload_status' => :'uploadStatus'
         
       }
     end
@@ -33,7 +37,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String'
+        :'id' => :'String',
+        
+        :'upload_status' => :'String'
         
       }
     end
@@ -51,6 +57,15 @@ module PureCloud
         
         
         self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'uploadStatus')
+        
+        
+        self.upload_status = attributes[:'uploadStatus']
         
       
       end
@@ -75,6 +90,15 @@ module PureCloud
       
       
       
+      
+      
+      allowed_values = ["PENDING", "COMPLETE", "FAILED", "TIMEOUT"]
+      if @upload_status && !allowed_values.include?(@upload_status)
+        return false
+      end
+      
+      
+      
     end
 
     
@@ -83,12 +107,27 @@ module PureCloud
     
     
     
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] upload_status Object to be assigned
+    def upload_status=(upload_status)
+      allowed_values = ["PENDING", "COMPLETE", "FAILED", "TIMEOUT"]
+      if upload_status && !allowed_values.include?(upload_status)
+        fail ArgumentError, "invalid value for 'upload_status', must be one of #{allowed_values}."
+      end
+      @upload_status = upload_status
+    end
+
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id
+          id == o.id &&
+          upload_status == o.upload_status
     end
 
     # @see the `==` method
@@ -100,7 +139,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id].hash
+      [id, upload_status].hash
     end
 
     # build the object from hash

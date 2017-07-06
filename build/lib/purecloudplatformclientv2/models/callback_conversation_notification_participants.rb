@@ -219,7 +219,7 @@ module PureCloud
         
         :'outbound_preview' => :'ConversationNotificationDialerPreview',
         
-        :'voicemail' => :'DocumentDataV2NotificationWorkspace',
+        :'voicemail' => :'ConversationNotificationVoicemail',
         
         :'callback_numbers' => :'Array<String>',
         

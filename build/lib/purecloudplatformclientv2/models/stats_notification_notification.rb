@@ -17,18 +17,18 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class CallbackConversationNotificationVoicemail
-    attr_accessor :id
+  class StatsNotificationNotification
+    attr_accessor :group
 
-    attr_accessor :upload_status
+    attr_accessor :data
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'group' => :'group',
         
-        :'upload_status' => :'uploadStatus'
+        :'data' => :'data'
         
       }
     end
@@ -37,9 +37,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
+        :'group' => :'Hash<String, String>',
         
-        :'upload_status' => :'String'
+        :'data' => :'Array<StatsNotificationNotificationData>'
         
       }
     end
@@ -53,19 +53,23 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'group')
         
+        if (value = attributes[:'group']).is_a?(Array)
+          self.group = value
+        end
         
-        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes.has_key?(:'uploadStatus')
+      if attributes.has_key?(:'data')
         
+        if (value = attributes[:'data']).is_a?(Array)
+          self.data = value
+        end
         
-        self.upload_status = attributes[:'uploadStatus']
         
       
       end
@@ -92,11 +96,6 @@ module PureCloud
       
       
       
-      allowed_values = ["PENDING", "COMPLETE", "FAILED", "TIMEOUT"]
-      if @upload_status && !allowed_values.include?(@upload_status)
-        return false
-      end
-      
       
       
     end
@@ -108,16 +107,7 @@ module PureCloud
     
     
     
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] upload_status Object to be assigned
-    def upload_status=(upload_status)
-      allowed_values = ["PENDING", "COMPLETE", "FAILED", "TIMEOUT"]
-      if upload_status && !allowed_values.include?(upload_status)
-        fail ArgumentError, "invalid value for 'upload_status', must be one of #{allowed_values}."
-      end
-      @upload_status = upload_status
-    end
-
+    
     
     
     
@@ -126,8 +116,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          upload_status == o.upload_status
+          group == o.group &&
+          data == o.data
     end
 
     # @see the `==` method
@@ -139,7 +129,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, upload_status].hash
+      [group, data].hash
     end
 
     # build the object from hash

@@ -32,6 +32,10 @@ module PureCloud
 
     attr_accessor :codes
 
+    attr_accessor :property_type
+
+    attr_accessor :property
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -51,6 +55,10 @@ module PureCloud
         :'operator' => :'operator',
         
         :'codes' => :'codes',
+        
+        :'property_type' => :'propertyType',
+        
+        :'property' => :'property',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -74,6 +82,10 @@ module PureCloud
         :'operator' => :'String',
         
         :'codes' => :'Array<String>',
+        
+        :'property_type' => :'String',
+        
+        :'property' => :'String',
         
         :'additional_properties' => :'Object'
         
@@ -154,6 +166,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'propertyType')
+        
+        
+        self.property_type = attributes[:'propertyType']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'property')
+        
+        
+        self.property = attributes[:'property']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -207,6 +237,19 @@ module PureCloud
       
       allowed_values = ["EQUALS", "LESS_THAN", "LESS_THAN_EQUALS", "GREATER_THAN", "GREATER_THAN_EQUALS", "CONTAINS", "BEGINS_WITH", "ENDS_WITH", "BEFORE", "AFTER"]
       if @operator && !allowed_values.include?(@operator)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["LAST_ATTEMPT_BY_COLUMN", "LAST_ATTEMPT_OVERALL", "LAST_RESULT_BY_COLUMN", "LAST_RESULT_OVERALL"]
+      if @property_type && !allowed_values.include?(@property_type)
         return false
       end
       
@@ -277,6 +320,25 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] property_type Object to be assigned
+    def property_type=(property_type)
+      allowed_values = ["LAST_ATTEMPT_BY_COLUMN", "LAST_ATTEMPT_OVERALL", "LAST_RESULT_BY_COLUMN", "LAST_RESULT_OVERALL"]
+      if property_type && !allowed_values.include?(property_type)
+        fail ArgumentError, "invalid value for 'property_type', must be one of #{allowed_values}."
+      end
+      @property_type = property_type
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -293,6 +355,8 @@ module PureCloud
           value_type == o.value_type &&
           operator == o.operator &&
           codes == o.codes &&
+          property_type == o.property_type &&
+          property == o.property &&
           additional_properties == o.additional_properties
     end
 
@@ -305,7 +369,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, inverted, attribute_name, value, value_type, operator, codes, additional_properties].hash
+      [type, inverted, attribute_name, value, value_type, operator, codes, property_type, property, additional_properties].hash
     end
 
     # build the object from hash

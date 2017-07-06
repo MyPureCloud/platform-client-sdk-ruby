@@ -17,46 +17,22 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class FlowNotificationNotificationArchitectOperation
-    attr_accessor :id
+  class StatsNotificationNotificationMetric
+    attr_accessor :metric
 
-    attr_accessor :complete
+    attr_accessor :qualifier
 
-    attr_accessor :user
-
-    attr_accessor :action_name
-
-    attr_accessor :action_status
-
-    attr_accessor :error_message
-
-    attr_accessor :error_code
-
-    attr_accessor :error_message_params
-
-    attr_accessor :error_details
+    attr_accessor :stats
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'metric' => :'metric',
         
-        :'complete' => :'complete',
+        :'qualifier' => :'qualifier',
         
-        :'user' => :'user',
-        
-        :'action_name' => :'actionName',
-        
-        :'action_status' => :'actionStatus',
-        
-        :'error_message' => :'errorMessage',
-        
-        :'error_code' => :'errorCode',
-        
-        :'error_message_params' => :'errorMessageParams',
-        
-        :'error_details' => :'errorDetails'
+        :'stats' => :'stats'
         
       }
     end
@@ -65,23 +41,11 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
+        :'metric' => :'String',
         
-        :'complete' => :'BOOLEAN',
+        :'qualifier' => :'String',
         
-        :'user' => :'DependencyTrackingBuildNotificationNotificationUser',
-        
-        :'action_name' => :'String',
-        
-        :'action_status' => :'String',
-        
-        :'error_message' => :'String',
-        
-        :'error_code' => :'String',
-        
-        :'error_message_params' => :'PromptNotificationNotificationCurrentOperationErrorMessageParams',
-        
-        :'error_details' => :'Array<PromptNotificationNotificationCurrentOperationErrorDetails>'
+        :'stats' => :'Hash<String, Float>'
         
       }
     end
@@ -95,82 +59,28 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'metric')
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'complete')
-        
-        
-        self.complete = attributes[:'complete']
+        self.metric = attributes[:'metric']
         
       
       end
 
       
-      if attributes.has_key?(:'user')
+      if attributes.has_key?(:'qualifier')
         
         
-        self.user = attributes[:'user']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'actionName')
-        
-        
-        self.action_name = attributes[:'actionName']
+        self.qualifier = attributes[:'qualifier']
         
       
       end
 
       
-      if attributes.has_key?(:'actionStatus')
+      if attributes.has_key?(:'stats')
         
-        
-        self.action_status = attributes[:'actionStatus']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'errorMessage')
-        
-        
-        self.error_message = attributes[:'errorMessage']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'errorCode')
-        
-        
-        self.error_code = attributes[:'errorCode']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'errorMessageParams')
-        
-        
-        self.error_message_params = attributes[:'errorMessageParams']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'errorDetails')
-        
-        if (value = attributes[:'errorDetails']).is_a?(Array)
-          self.error_details = value
+        if (value = attributes[:'stats']).is_a?(Array)
+          self.stats = value
         end
         
         
@@ -205,90 +115,8 @@ module PureCloud
       
       
       
-      
-      
-      allowed_values = ["CHECKIN", "DEBUG", "DELETE", "HISTORY", "PUBLISH", "STATE_CHANGE", "VALIDATE"]
-      if @action_name && !allowed_values.include?(@action_name)
-        return false
-      end
-      
-      
-      
-      
-      
-      allowed_values = ["LOCKED", "UNLOCKED", "STARTED", "PENDING_GENERATION", "PENDING_BACKEND_NOTIFICATION", "SUCCESS", "FAILURE"]
-      if @action_status && !allowed_values.include?(@action_status)
-        return false
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] action_name Object to be assigned
-    def action_name=(action_name)
-      allowed_values = ["CHECKIN", "DEBUG", "DELETE", "HISTORY", "PUBLISH", "STATE_CHANGE", "VALIDATE"]
-      if action_name && !allowed_values.include?(action_name)
-        fail ArgumentError, "invalid value for 'action_name', must be one of #{allowed_values}."
-      end
-      @action_name = action_name
-    end
-
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] action_status Object to be assigned
-    def action_status=(action_status)
-      allowed_values = ["LOCKED", "UNLOCKED", "STARTED", "PENDING_GENERATION", "PENDING_BACKEND_NOTIFICATION", "SUCCESS", "FAILURE"]
-      if action_status && !allowed_values.include?(action_status)
-        fail ArgumentError, "invalid value for 'action_status', must be one of #{allowed_values}."
-      end
-      @action_status = action_status
-    end
-
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -310,15 +138,9 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          complete == o.complete &&
-          user == o.user &&
-          action_name == o.action_name &&
-          action_status == o.action_status &&
-          error_message == o.error_message &&
-          error_code == o.error_code &&
-          error_message_params == o.error_message_params &&
-          error_details == o.error_details
+          metric == o.metric &&
+          qualifier == o.qualifier &&
+          stats == o.stats
     end
 
     # @see the `==` method
@@ -330,7 +152,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, complete, user, action_name, action_status, error_message, error_code, error_message_params, error_details].hash
+      [metric, qualifier, stats].hash
     end
 
     # build the object from hash
