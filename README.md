@@ -1,7 +1,7 @@
 ---
 title: PureCloud Ruby Gem
 ---
-![](http://ruby-gem-downloads-badge.herokuapp.com/purecloudplatformclientv2?label=12.0.0)
+![](http://ruby-gem-downloads-badge.herokuapp.com/purecloudplatformclientv2?label=13.0.0)
 
 Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/ruby/](https://developer.mypurecloud.com/api/rest/client-libraries/ruby/)
 
@@ -10,7 +10,7 @@ Documentation can be found at [https://developer.mypurecloud.com/api/rest/client
 ### from rubygems.org
 
 ~~~ ruby
-gem install 'purecloudplatformclientv2', '~> 12.0.0'
+gem install 'purecloudplatformclientv2', '~> 13.0.0'
 ~~~
 
 ### Install from Git
@@ -39,10 +39,10 @@ alert_id = "alert_id_example" # String | Alert ID
 
 
 begin
-  #Delete a heart beat alert
-  api_instance.delete_alerting_heartbeat_alert(alert_id)
+  #Delete an interaction stats alert
+  api_instance.delete_alerting_interactionstats_alert(alert_id)
 rescue PureCloud::ApiError => e
-  puts "Exception when calling AlertingApi->delete_alerting_heartbeat_alert: #{e}"
+  puts "Exception when calling AlertingApi->delete_alerting_interactionstats_alert: #{e}"
 end
 
 ~~~

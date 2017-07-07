@@ -32,6 +32,7 @@ Method | Description
 [**get_architect_systemprompt_resources**](ArchitectApi.html#get_architect_systemprompt_resources) | Get system prompt resources.
 [**get_architect_systemprompts**](ArchitectApi.html#get_architect_systemprompts) | Get System Prompts
 [**get_flow**](ArchitectApi.html#get_flow) | Get flow
+[**get_flow_history_history_id**](ArchitectApi.html#get_flow_history_history_id) | Get generated flow history
 [**get_flow_latestconfiguration**](ArchitectApi.html#get_flow_latestconfiguration) | Get the latest configuration for flow
 [**get_flow_version**](ArchitectApi.html#get_flow_version) | Get flow version
 [**get_flow_version_configuration**](ArchitectApi.html#get_flow_version_configuration) | Create flow version configuration
@@ -1585,6 +1586,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Flow**](Flow.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_flow_history_history_id"></a>
+
+## -[**HistoryListing**](HistoryListing.html) get_flow_history_history_id(flow_id, history_id, opts)
+
+Get generated flow history
+
+
+
+Wraps GET /api/v2/flows/{flowId}/history/{historyId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+flow_id = "flow_id_example" # String | Flow ID
+
+history_id = "history_id_example" # String | History ID (generated history)
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  sort_by: "timestamp", # String | Sort by
+  sort_order: "desc", # String | Sort order
+  action: ["action_example"] # Array<String> | Flow actions
+}
+
+begin
+  #Get generated flow history
+  result = api_instance.get_flow_history_history_id(flow_id, history_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_flow_history_history_id: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **flow_id** | **String**| Flow ID |  |
+ **history_id** | **String**| History ID (generated history) |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
+ **sort_order** | **String**| Sort order | [optional] [default to desc] |
+ **action** | [**Array&lt;String&gt;**](String.html)| Flow actions | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**HistoryListing**](HistoryListing.html)
 
 ### HTTP request headers
 

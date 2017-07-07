@@ -3764,7 +3764,7 @@ contact_list_id = "contact_list_id_example" # String | Contact List ID
 body = [PureCloud::DialerContact.new] # Array<DialerContact> | Contact
 
 opts = { 
-  priority: true, # BOOLEAN | Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end.
+  priority: true, # BOOLEAN | Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue.
   clear_system_data: true # BOOLEAN | Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won't.
 }
 
@@ -3783,7 +3783,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact_list_id** | **String**| Contact List ID |  |
  **body** | [**Array&lt;DialerContact&gt;**](DialerContact.html)| Contact |  |
- **priority** | **BOOLEAN**| Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. | [optional]  |
+ **priority** | **BOOLEAN**| Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. | [optional]  |
  **clear_system_data** | **BOOLEAN**| Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. | [optional]  |
 {: class="table table-striped"}
 

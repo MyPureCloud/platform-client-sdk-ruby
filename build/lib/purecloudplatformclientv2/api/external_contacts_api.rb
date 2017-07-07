@@ -1280,6 +1280,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 20)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :q Search query
+    # @option opts [Array<String>] :trustor_id Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested
     # @option opts [String] :sort_order Sort order
     # @option opts [Array<String>] :expand which fields, if any, to expand
     # @option opts [BOOLEAN] :include_trustors (true or false) whether or not to include trustor information embedded in the externalOrganization
@@ -1295,6 +1296,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :q Search query
+    # @option opts [Array<String>] :trustor_id Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested
     # @option opts [String] :sort_order Sort order
     # @option opts [Array<String>] :expand which fields, if any, to expand
     # @option opts [BOOLEAN] :include_trustors (true or false) whether or not to include trustor information embedded in the externalOrganization
@@ -1340,6 +1342,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/externalcontacts/organizations".sub('{format}','json')
 
@@ -1348,6 +1356,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'q'] = opts[:'q'] if opts[:'q']
+      query_params[:'trustorId'] = @api_client.build_collection_param(opts[:'trustor_id'], :multi) if opts[:'trustor_id']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
       query_params[:'includeTrustors'] = opts[:'include_trustors'] if opts[:'include_trustors']

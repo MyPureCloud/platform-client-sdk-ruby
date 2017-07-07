@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class InboundDomain
-    # The globally unique identifier for the object.
+    # Unique Id of the domain such as: example.com
     attr_accessor :id
 
     attr_accessor :name

@@ -247,7 +247,7 @@ module PureCloud
       
       
       
-      allowed_values = ["LAST_ATTEMPT_BY_COLUMN", "LAST_ATTEMPT_OVERALL"]
+      allowed_values = ["LAST_ATTEMPT_BY_COLUMN", "LAST_ATTEMPT_OVERALL", "LAST_RESULT_BY_COLUMN", "LAST_RESULT_OVERALL"]
       if @property_type && !allowed_values.include?(@property_type)
         return false
       end
@@ -327,7 +327,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] property_type Object to be assigned
     def property_type=(property_type)
-      allowed_values = ["LAST_ATTEMPT_BY_COLUMN", "LAST_ATTEMPT_OVERALL"]
+      allowed_values = ["LAST_ATTEMPT_BY_COLUMN", "LAST_ATTEMPT_OVERALL", "LAST_RESULT_BY_COLUMN", "LAST_RESULT_OVERALL"]
       if property_type && !allowed_values.include?(property_type)
         fail ArgumentError, "invalid value for 'property_type', must be one of #{allowed_values}."
       end

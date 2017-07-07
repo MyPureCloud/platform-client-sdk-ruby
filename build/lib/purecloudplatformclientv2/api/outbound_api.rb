@@ -4631,7 +4631,7 @@ module PureCloud
     # @param contact_list_id Contact List ID
     # @param body Contact
     # @param [Hash] opts the optional parameters
-    # @option opts [BOOLEAN] :priority Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end.
+    # @option opts [BOOLEAN] :priority Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue.
     # @option opts [BOOLEAN] :clear_system_data Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t.
     # @return [Array<DialerContact>]
     def post_outbound_contactlist_contacts(contact_list_id, body, opts = {})
@@ -4644,7 +4644,7 @@ module PureCloud
     # @param contact_list_id Contact List ID
     # @param body Contact
     # @param [Hash] opts the optional parameters
-    # @option opts [BOOLEAN] :priority Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end.
+    # @option opts [BOOLEAN] :priority Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue.
     # @option opts [BOOLEAN] :clear_system_data Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t.
     # @return [Array<(Array<DialerContact>, Fixnum, Hash)>] Array<DialerContact> data, response status code and response headers
     def post_outbound_contactlist_contacts_with_http_info(contact_list_id, body, opts = {})

@@ -17,60 +17,32 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class HeartBeatRule
-    # The globally unique identifier for the object.
-    attr_accessor :id
+  class HistoryEntry
+    # The action performed
+    attr_accessor :action
 
-    # Name of the rule
-    attr_accessor :name
+    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :timestamp
 
-    # The value that identifies the sender of the heartbeat.
-    attr_accessor :sender_id
+    attr_accessor :user
 
-    # The number of minutes to wait before alerting missing heartbeats.
-    attr_accessor :heart_beat_timeout_in_minutes
+    attr_accessor :version
 
-    # Indicates if the rule is enabled.
-    attr_accessor :enabled
-
-    # Indicates if the rule is in alarm state.
-    attr_accessor :in_alarm
-
-    # The ids of users who will be notified of alarm state change.
-    attr_accessor :notification_users
-
-    # A collection of notification methods.
-    attr_accessor :alert_types
-
-    # The type of system the will be generating the heartbeat.
-    attr_accessor :rule_type
-
-    # The URI for this object
-    attr_accessor :self_uri
+    attr_accessor :secure
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'action' => :'action',
         
-        :'name' => :'name',
+        :'timestamp' => :'timestamp',
         
-        :'sender_id' => :'senderId',
+        :'user' => :'user',
         
-        :'heart_beat_timeout_in_minutes' => :'heartBeatTimeoutInMinutes',
+        :'version' => :'version',
         
-        :'enabled' => :'enabled',
-        
-        :'in_alarm' => :'inAlarm',
-        
-        :'notification_users' => :'notificationUsers',
-        
-        :'alert_types' => :'alertTypes',
-        
-        :'rule_type' => :'ruleType',
-        
-        :'self_uri' => :'selfUri'
+        :'secure' => :'secure'
         
       }
     end
@@ -79,25 +51,15 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
+        :'action' => :'String',
         
-        :'name' => :'String',
+        :'timestamp' => :'DateTime',
         
-        :'sender_id' => :'String',
+        :'user' => :'User',
         
-        :'heart_beat_timeout_in_minutes' => :'Integer',
+        :'version' => :'String',
         
-        :'enabled' => :'BOOLEAN',
-        
-        :'in_alarm' => :'BOOLEAN',
-        
-        :'notification_users' => :'Array<User>',
-        
-        :'alert_types' => :'Array<String>',
-        
-        :'rule_type' => :'String',
-        
-        :'self_uri' => :'String'
+        :'secure' => :'BOOLEAN'
         
       }
     end
@@ -111,95 +73,46 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'action')
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
+        self.action = attributes[:'action']
         
       
       end
 
       
-      if attributes.has_key?(:'senderId')
+      if attributes.has_key?(:'timestamp')
         
         
-        self.sender_id = attributes[:'senderId']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'heartBeatTimeoutInMinutes')
-        
-        
-        self.heart_beat_timeout_in_minutes = attributes[:'heartBeatTimeoutInMinutes']
+        self.timestamp = attributes[:'timestamp']
         
       
       end
 
       
-      if attributes.has_key?(:'enabled')
+      if attributes.has_key?(:'user')
         
         
-        self.enabled = attributes[:'enabled']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'inAlarm')
-        
-        
-        self.in_alarm = attributes[:'inAlarm']
+        self.user = attributes[:'user']
         
       
       end
 
       
-      if attributes.has_key?(:'notificationUsers')
+      if attributes.has_key?(:'version')
         
-        if (value = attributes[:'notificationUsers']).is_a?(Array)
-          self.notification_users = value
-        end
         
+        self.version = attributes[:'version']
         
       
       end
 
       
-      if attributes.has_key?(:'alertTypes')
-        
-        if (value = attributes[:'alertTypes']).is_a?(Array)
-          self.alert_types = value
-        end
+      if attributes.has_key?(:'secure')
         
         
-      
-      end
-
-      
-      if attributes.has_key?(:'ruleType')
-        
-        
-        self.rule_type = attributes[:'ruleType']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'selfUri')
-        
-        
-        self.self_uri = attributes[:'selfUri']
+        self.secure = attributes[:'secure']
         
       
       end
@@ -222,40 +135,10 @@ module PureCloud
       
       
       
-      
-      
-      
-      if @name.nil?
+      allowed_values = ["CHECKIN", "CHECKOUT", "CREATE", "DEACTIVATE", "DEBUG", "DELETE", "PUBLISH", "REVERT", "SAVE"]
+      if @action && !allowed_values.include?(@action)
         return false
       end
-
-      
-      
-      
-      
-      
-      if @sender_id.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @heart_beat_timeout_in_minutes.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @enabled.nil?
-        return false
-      end
-
       
       
       
@@ -265,34 +148,9 @@ module PureCloud
       
       
       
-      if @notification_users.nil?
-        return false
-      end
-
       
       
       
-      
-      
-      if @alert_types.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @rule_type.nil?
-        return false
-      end
-
-      
-      
-      allowed_values = ["EDGE"]
-      if @rule_type && !allowed_values.include?(@rule_type)
-        return false
-      end
       
       
       
@@ -302,58 +160,33 @@ module PureCloud
       
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] rule_type Object to be assigned
-    def rule_type=(rule_type)
-      allowed_values = ["EDGE"]
-      if rule_type && !allowed_values.include?(rule_type)
-        fail ArgumentError, "invalid value for 'rule_type', must be one of #{allowed_values}."
+    # @param [Object] action Object to be assigned
+    def action=(action)
+      allowed_values = ["CHECKIN", "CHECKOUT", "CREATE", "DEACTIVATE", "DEBUG", "DELETE", "PUBLISH", "REVERT", "SAVE"]
+      if action && !allowed_values.include?(action)
+        fail ArgumentError, "invalid value for 'action', must be one of #{allowed_values}."
       end
-      @rule_type = rule_type
+      @action = action
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -367,16 +200,11 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name &&
-          sender_id == o.sender_id &&
-          heart_beat_timeout_in_minutes == o.heart_beat_timeout_in_minutes &&
-          enabled == o.enabled &&
-          in_alarm == o.in_alarm &&
-          notification_users == o.notification_users &&
-          alert_types == o.alert_types &&
-          rule_type == o.rule_type &&
-          self_uri == o.self_uri
+          action == o.action &&
+          timestamp == o.timestamp &&
+          user == o.user &&
+          version == o.version &&
+          secure == o.secure
     end
 
     # @see the `==` method
@@ -388,7 +216,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, sender_id, heart_beat_timeout_in_minutes, enabled, in_alarm, notification_users, alert_types, rule_type, self_uri].hash
+      [action, timestamp, user, version, secure].hash
     end
 
     # build the object from hash

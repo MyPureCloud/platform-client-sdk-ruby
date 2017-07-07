@@ -17,65 +17,46 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class UserPresenceRule
-    # The globally unique identifier for the object.
+  class HistoryListing
+    attr_accessor :entities
+
+    attr_accessor :page_size
+
+    attr_accessor :page_number
+
+    attr_accessor :total
+
     attr_accessor :id
 
-    # Name of the rule
     attr_accessor :name
 
-    # The user whose presence will be watched.
-    attr_accessor :presence_user
+    attr_accessor :description
 
-    # Indicates to which presence type the presence value belongs.
-    attr_accessor :presence_type
+    attr_accessor :system
 
-    # The Org's UUID or Systems enum constance indicating the presence of concern.
-    attr_accessor :presence_value
-
-    # The number of seconds to wait before alerting based upon the user's presence.
-    attr_accessor :presence_limit_in_seconds
-
-    # Indicates if the rule is enabled.
-    attr_accessor :enabled
-
-    # Indicates if the rule is in alarm state.
-    attr_accessor :in_alarm
-
-    # The ids of users who will be notified of alarm state change.
-    attr_accessor :notification_users
-
-    # A collection of notification methods.
-    attr_accessor :alert_types
-
-    # The URI for this object
-    attr_accessor :self_uri
+    attr_accessor :page_count
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'entities' => :'entities',
+        
+        :'page_size' => :'pageSize',
+        
+        :'page_number' => :'pageNumber',
+        
+        :'total' => :'total',
+        
         :'id' => :'id',
         
         :'name' => :'name',
         
-        :'presence_user' => :'presenceUser',
+        :'description' => :'description',
         
-        :'presence_type' => :'presenceType',
+        :'system' => :'system',
         
-        :'presence_value' => :'presenceValue',
-        
-        :'presence_limit_in_seconds' => :'presenceLimitInSeconds',
-        
-        :'enabled' => :'enabled',
-        
-        :'in_alarm' => :'inAlarm',
-        
-        :'notification_users' => :'notificationUsers',
-        
-        :'alert_types' => :'alertTypes',
-        
-        :'self_uri' => :'selfUri'
+        :'page_count' => :'pageCount'
         
       }
     end
@@ -84,27 +65,23 @@ module PureCloud
     def self.swagger_types
       {
         
+        :'entities' => :'Array<HistoryEntry>',
+        
+        :'page_size' => :'Integer',
+        
+        :'page_number' => :'Integer',
+        
+        :'total' => :'Integer',
+        
         :'id' => :'String',
         
         :'name' => :'String',
         
-        :'presence_user' => :'User',
+        :'description' => :'String',
         
-        :'presence_type' => :'String',
+        :'system' => :'BOOLEAN',
         
-        :'presence_value' => :'String',
-        
-        :'presence_limit_in_seconds' => :'Integer',
-        
-        :'enabled' => :'BOOLEAN',
-        
-        :'in_alarm' => :'BOOLEAN',
-        
-        :'notification_users' => :'Array<User>',
-        
-        :'alert_types' => :'Array<String>',
-        
-        :'self_uri' => :'String'
+        :'page_count' => :'Integer'
         
       }
     end
@@ -116,6 +93,44 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes.has_key?(:'entities')
+        
+        if (value = attributes[:'entities']).is_a?(Array)
+          self.entities = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'pageSize')
+        
+        
+        self.page_size = attributes[:'pageSize']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'pageNumber')
+        
+        
+        self.page_number = attributes[:'pageNumber']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'total')
+        
+        
+        self.total = attributes[:'total']
+        
+      
+      end
 
       
       if attributes.has_key?(:'id')
@@ -136,86 +151,28 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'presenceUser')
+      if attributes.has_key?(:'description')
         
         
-        self.presence_user = attributes[:'presenceUser']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'presenceType')
-        
-        
-        self.presence_type = attributes[:'presenceType']
+        self.description = attributes[:'description']
         
       
       end
 
       
-      if attributes.has_key?(:'presenceValue')
+      if attributes.has_key?(:'system')
         
         
-        self.presence_value = attributes[:'presenceValue']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'presenceLimitInSeconds')
-        
-        
-        self.presence_limit_in_seconds = attributes[:'presenceLimitInSeconds']
+        self.system = attributes[:'system']
         
       
       end
 
       
-      if attributes.has_key?(:'enabled')
+      if attributes.has_key?(:'pageCount')
         
         
-        self.enabled = attributes[:'enabled']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'inAlarm')
-        
-        
-        self.in_alarm = attributes[:'inAlarm']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'notificationUsers')
-        
-        if (value = attributes[:'notificationUsers']).is_a?(Array)
-          self.notification_users = value
-        end
-        
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'alertTypes')
-        
-        if (value = attributes[:'alertTypes']).is_a?(Array)
-          self.alert_types = value
-        end
-        
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'selfUri')
-        
-        
-        self.self_uri = attributes[:'selfUri']
+        self.page_count = attributes[:'pageCount']
         
       
       end
@@ -241,60 +198,6 @@ module PureCloud
       
       
       
-      if @name.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @presence_user.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @presence_type.nil?
-        return false
-      end
-
-      
-      
-      allowed_values = ["SYSTEM", "ORGANIZATION"]
-      if @presence_type && !allowed_values.include?(@presence_type)
-        return false
-      end
-      
-      
-      
-      
-      if @presence_value.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @presence_limit_in_seconds.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @enabled.nil?
-        return false
-      end
-
       
       
       
@@ -304,19 +207,20 @@ module PureCloud
       
       
       
-      if @notification_users.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @alert_types.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -335,25 +239,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] presence_type Object to be assigned
-    def presence_type=(presence_type)
-      allowed_values = ["SYSTEM", "ORGANIZATION"]
-      if presence_type && !allowed_values.include?(presence_type)
-        fail ArgumentError, "invalid value for 'presence_type', must be one of #{allowed_values}."
-      end
-      @presence_type = presence_type
-    end
-
     
     
     
@@ -397,17 +282,15 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          entities == o.entities &&
+          page_size == o.page_size &&
+          page_number == o.page_number &&
+          total == o.total &&
           id == o.id &&
           name == o.name &&
-          presence_user == o.presence_user &&
-          presence_type == o.presence_type &&
-          presence_value == o.presence_value &&
-          presence_limit_in_seconds == o.presence_limit_in_seconds &&
-          enabled == o.enabled &&
-          in_alarm == o.in_alarm &&
-          notification_users == o.notification_users &&
-          alert_types == o.alert_types &&
-          self_uri == o.self_uri
+          description == o.description &&
+          system == o.system &&
+          page_count == o.page_count
     end
 
     # @see the `==` method
@@ -419,7 +302,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, presence_user, presence_type, presence_value, presence_limit_in_seconds, enabled, in_alarm, notification_users, alert_types, self_uri].hash
+      [entities, page_size, page_number, total, id, name, description, system, page_count].hash
     end
 
     # build the object from hash

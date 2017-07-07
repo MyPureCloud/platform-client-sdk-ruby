@@ -2067,6 +2067,130 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get generated flow history
+    # 
+    # @param flow_id Flow ID
+    # @param history_id History ID (generated history)
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :sort_by Sort by (default to timestamp)
+    # @option opts [String] :sort_order Sort order (default to desc)
+    # @option opts [Array<String>] :action Flow actions
+    # @return [HistoryListing]
+    def get_flow_history_history_id(flow_id, history_id, opts = {})
+      data, _status_code, _headers = get_flow_history_history_id_with_http_info(flow_id, history_id, opts)
+      return data
+    end
+
+    # Get generated flow history
+    # 
+    # @param flow_id Flow ID
+    # @param history_id History ID (generated history)
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order
+    # @option opts [Array<String>] :action Flow actions
+    # @return [Array<(HistoryListing, Fixnum, Hash)>] HistoryListing data, response status code and response headers
+    def get_flow_history_history_id_with_http_info(flow_id, history_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flow_history_history_id ..."
+      end
+      
+      
+      # verify the required parameter 'flow_id' is set
+      fail ArgumentError, "Missing the required parameter 'flow_id' when calling ArchitectApi.get_flow_history_history_id" if flow_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'history_id' is set
+      fail ArgumentError, "Missing the required parameter 'history_id' when calling ArchitectApi.get_flow_history_history_id" if history_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_by'] && !['action', 'timestamp', 'user'].include?(opts[:'sort_by'])
+        fail ArgumentError, 'invalid value for "sort_by", must be one of action, timestamp, user'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/{flowId}/history/{historyId}".sub('{format}','json').sub('{' + 'flowId' + '}', flow_id.to_s).sub('{' + 'historyId' + '}', history_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'action'] = @api_client.build_collection_param(opts[:'action'], :multi) if opts[:'action']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'HistoryListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flow_history_history_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get the latest configuration for flow
     # 
     # @param flow_id Flow ID

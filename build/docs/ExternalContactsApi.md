@@ -1032,6 +1032,7 @@ opts = {
   page_size: 20, # Integer | Page size
   page_number: 1, # Integer | Page number
   q: "q_example", # String | Search query
+  trustor_id: ["trustor_id_example"], # Array<String> | Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested
   sort_order: "sort_order_example", # String | Sort order
   expand: ["expand_example"], # Array<String> | which fields, if any, to expand
   include_trustors: true # BOOLEAN | (true or false) whether or not to include trustor information embedded in the externalOrganization
@@ -1053,6 +1054,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 20] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **q** | **String**| Search query | [optional]  |
+ **trustor_id** | [**Array&lt;String&gt;**](String.html)| Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested | [optional]  |
  **sort_order** | **String**| Sort order | [optional]  |
  **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
  **include_trustors** | **BOOLEAN**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
