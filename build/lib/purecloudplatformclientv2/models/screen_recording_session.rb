@@ -25,8 +25,8 @@ module PureCloud
 
     attr_accessor :user
 
-    # The id of the participant whose screen is being recorded on the conversation
-    attr_accessor :participant_id
+    # The id of the communication that is being recorded on the conversation
+    attr_accessor :communication_id
 
     attr_accessor :conversation
 
@@ -46,7 +46,7 @@ module PureCloud
         
         :'user' => :'user',
         
-        :'participant_id' => :'participantId',
+        :'communication_id' => :'communicationId',
         
         :'conversation' => :'conversation',
         
@@ -67,7 +67,7 @@ module PureCloud
         
         :'user' => :'User',
         
-        :'participant_id' => :'String',
+        :'communication_id' => :'String',
         
         :'conversation' => :'Conversation',
         
@@ -114,10 +114,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'participantId')
+      if attributes.has_key?(:'communicationId')
         
         
-        self.participant_id = attributes[:'participantId']
+        self.communication_id = attributes[:'communicationId']
         
       
       end
@@ -239,7 +239,7 @@ module PureCloud
           id == o.id &&
           name == o.name &&
           user == o.user &&
-          participant_id == o.participant_id &&
+          communication_id == o.communication_id &&
           conversation == o.conversation &&
           start_time == o.start_time &&
           self_uri == o.self_uri
@@ -254,7 +254,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, user, participant_id, conversation, start_time, self_uri].hash
+      [id, name, user, communication_id, conversation, start_time, self_uri].hash
     end
 
     # build the object from hash

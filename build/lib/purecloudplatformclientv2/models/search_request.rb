@@ -30,6 +30,9 @@ module PureCloud
     # The page of resources you want to retrieve
     attr_accessor :page_number
 
+    # Multi-value sort order, list of multiple sort values
+    attr_accessor :sort
+
     # A List of strings.  Possible values are any field in the resource you are searching on.  The other option is to use ALL_FIELDS, when this is provided all fields in the resource will be returned in the search results.
     attr_accessor :return_fields
 
@@ -57,6 +60,8 @@ module PureCloud
         
         :'page_number' => :'pageNumber',
         
+        :'sort' => :'sort',
+        
         :'return_fields' => :'returnFields',
         
         :'expand' => :'expand',
@@ -81,6 +86,8 @@ module PureCloud
         :'page_size' => :'Integer',
         
         :'page_number' => :'Integer',
+        
+        :'sort' => :'Array<SearchSort>',
         
         :'return_fields' => :'Array<String>',
         
@@ -135,6 +142,17 @@ module PureCloud
         
         
         self.page_number = attributes[:'pageNumber']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'sort')
+        
+        if (value = attributes[:'sort']).is_a?(Array)
+          self.sort = value
+        end
+        
         
       
       end
@@ -240,6 +258,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       if @types.nil?
         return false
       end
@@ -313,6 +335,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -322,6 +349,7 @@ module PureCloud
           sort_by == o.sort_by &&
           page_size == o.page_size &&
           page_number == o.page_number &&
+          sort == o.sort &&
           return_fields == o.return_fields &&
           expand == o.expand &&
           types == o.types &&
@@ -338,7 +366,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [sort_order, sort_by, page_size, page_number, return_fields, expand, types, query, aggregations].hash
+      [sort_order, sort_by, page_size, page_number, sort, return_fields, expand, types, query, aggregations].hash
     end
 
     # build the object from hash

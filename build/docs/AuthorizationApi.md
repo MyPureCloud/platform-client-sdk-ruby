@@ -414,6 +414,7 @@ opts = {
   expand: nil, # Array<Object> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
+  name: "name_example", # String | 
   permission: nil, # Array<Object> | 
   default_role_id: nil, # Array<Object> | 
   user_count: true # BOOLEAN | 
@@ -438,6 +439,7 @@ Name | Type | Description  | Notes
  **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
+ **name** | **String**|  | [optional]  |
  **permission** | [**Array&lt;Object&gt;**](Object.html)|  | [optional]  |
  **default_role_id** | [**Array&lt;Object&gt;**](Object.html)|  | [optional]  |
  **user_count** | **BOOLEAN**|  | [optional] [default to true] |

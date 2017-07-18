@@ -8,9 +8,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
+[**delete_architect_ivr**](ArchitectApi.html#delete_architect_ivr) | Delete an IVR Config.
 [**delete_architect_prompt**](ArchitectApi.html#delete_architect_prompt) | Delete specified user prompt
 [**delete_architect_prompt_resource**](ArchitectApi.html#delete_architect_prompt_resource) | Delete specified user prompt resource
 [**delete_architect_prompts**](ArchitectApi.html#delete_architect_prompts) | Batch-delete a list of prompts
+[**delete_architect_schedule**](ArchitectApi.html#delete_architect_schedule) | Delete a schedule by id
+[**delete_architect_schedulegroup**](ArchitectApi.html#delete_architect_schedulegroup) | Deletes a schedule group by ID
 [**delete_architect_systemprompt_resource**](ArchitectApi.html#delete_architect_systemprompt_resource) | Delete a system prompt resource override.
 [**delete_flow**](ArchitectApi.html#delete_flow) | Delete flow
 [**delete_flows**](ArchitectApi.html#delete_flows) | Batch-delete a list of flows
@@ -23,10 +26,16 @@ Method | Description
 [**get_architect_dependencytracking_type**](ArchitectApi.html#get_architect_dependencytracking_type) | Get a Dependency Tracking type.
 [**get_architect_dependencytracking_types**](ArchitectApi.html#get_architect_dependencytracking_types) | Get Dependency Tracking types.
 [**get_architect_dependencytracking_updatedresourceconsumers**](ArchitectApi.html#get_architect_dependencytracking_updatedresourceconsumers) | Get Dependency Tracking objects that depend on updated resources
+[**get_architect_ivr**](ArchitectApi.html#get_architect_ivr) | Get an IVR config.
+[**get_architect_ivrs**](ArchitectApi.html#get_architect_ivrs) | Get IVR configs.
 [**get_architect_prompt**](ArchitectApi.html#get_architect_prompt) | Get specified user prompt
 [**get_architect_prompt_resource**](ArchitectApi.html#get_architect_prompt_resource) | Get specified user prompt resource
 [**get_architect_prompt_resources**](ArchitectApi.html#get_architect_prompt_resources) | Get a pageable list of user prompt resources
 [**get_architect_prompts**](ArchitectApi.html#get_architect_prompts) | Get a pageable list of user prompts
+[**get_architect_schedule**](ArchitectApi.html#get_architect_schedule) | Get a schedule by ID
+[**get_architect_schedulegroup**](ArchitectApi.html#get_architect_schedulegroup) | Gets a schedule group by ID
+[**get_architect_schedulegroups**](ArchitectApi.html#get_architect_schedulegroups) | Get a list of schedule groups.
+[**get_architect_schedules**](ArchitectApi.html#get_architect_schedules) | Get a list of schedules.
 [**get_architect_systemprompt**](ArchitectApi.html#get_architect_systemprompt) | Get a system prompt
 [**get_architect_systemprompt_resource**](ArchitectApi.html#get_architect_systemprompt_resource) | Get a system prompt resource.
 [**get_architect_systemprompt_resources**](ArchitectApi.html#get_architect_systemprompt_resources) | Get system prompt resources.
@@ -39,8 +48,11 @@ Method | Description
 [**get_flow_versions**](ArchitectApi.html#get_flow_versions) | Get flow version list
 [**get_flows**](ArchitectApi.html#get_flows) | Get a pageable list of flows, filtered by query parameters
 [**post_architect_dependencytracking_build**](ArchitectApi.html#post_architect_dependencytracking_build) | Rebuild Dependency Tracking data for an organization
+[**post_architect_ivrs**](ArchitectApi.html#post_architect_ivrs) | Create IVR config.
 [**post_architect_prompt_resources**](ArchitectApi.html#post_architect_prompt_resources) | Create a new user prompt resource
 [**post_architect_prompts**](ArchitectApi.html#post_architect_prompts) | Create a new user prompt
+[**post_architect_schedulegroups**](ArchitectApi.html#post_architect_schedulegroups) | Creates a new schedule group
+[**post_architect_schedules**](ArchitectApi.html#post_architect_schedules) | Create a new schedule.
 [**post_architect_systemprompt_resources**](ArchitectApi.html#post_architect_systemprompt_resources) | Create system prompt resource override.
 [**post_flow_versions**](ArchitectApi.html#post_flow_versions) | Create flow version
 [**post_flows**](ArchitectApi.html#post_flows) | Create flow
@@ -50,11 +62,72 @@ Method | Description
 [**post_flows_actions_publish**](ArchitectApi.html#post_flows_actions_publish) | Publish flow
 [**post_flows_actions_revert**](ArchitectApi.html#post_flows_actions_revert) | Revert flow
 [**post_flows_actions_unlock**](ArchitectApi.html#post_flows_actions_unlock) | Unlock flow
+[**put_architect_ivr**](ArchitectApi.html#put_architect_ivr) | Update an IVR Config.
 [**put_architect_prompt**](ArchitectApi.html#put_architect_prompt) | Update specified user prompt
 [**put_architect_prompt_resource**](ArchitectApi.html#put_architect_prompt_resource) | Update specified user prompt resource
+[**put_architect_schedule**](ArchitectApi.html#put_architect_schedule) | Update schedule by ID
+[**put_architect_schedulegroup**](ArchitectApi.html#put_architect_schedulegroup) | Updates a schedule group by ID
 [**put_architect_systemprompt_resource**](ArchitectApi.html#put_architect_systemprompt_resource) | Updates a system prompt resource override.
 [**put_flow**](ArchitectApi.html#put_flow) | Update flow
 {: class="table table-striped"}
+
+<a name="delete_architect_ivr"></a>
+
+## - delete_architect_ivr(ivr_id)
+
+Delete an IVR Config.
+
+
+
+Wraps DELETE /api/v2/architect/ivrs/{ivrId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+ivr_id = "ivr_id_example" # String | IVR id
+
+
+begin
+  #Delete an IVR Config.
+  api_instance.delete_architect_ivr(ivr_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->delete_architect_ivr: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ivr_id** | **String**| IVR id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 <a name="delete_architect_prompt"></a>
 
@@ -230,6 +303,122 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Operation**](Operation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_architect_schedule"></a>
+
+## - delete_architect_schedule(schedule_id)
+
+Delete a schedule by id
+
+
+
+Wraps DELETE /api/v2/architect/schedules/{scheduleId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+schedule_id = "schedule_id_example" # String | Schedule ID
+
+
+begin
+  #Delete a schedule by id
+  api_instance.delete_architect_schedule(schedule_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->delete_architect_schedule: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schedule_id** | **String**| Schedule ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_architect_schedulegroup"></a>
+
+## - delete_architect_schedulegroup(schedule_group_id)
+
+Deletes a schedule group by ID
+
+
+
+Wraps DELETE /api/v2/architect/schedulegroups/{scheduleGroupId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+schedule_group_id = "schedule_group_id_example" # String | Schedule group ID
+
+
+begin
+  #Deletes a schedule group by ID
+  api_instance.delete_architect_schedulegroup(schedule_group_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->delete_architect_schedulegroup: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schedule_group_id** | **String**| Schedule group ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -1015,6 +1204,131 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_architect_ivr"></a>
+
+## -[**IVR**](IVR.html) get_architect_ivr(ivr_id)
+
+Get an IVR config.
+
+
+
+Wraps GET /api/v2/architect/ivrs/{ivrId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+ivr_id = "ivr_id_example" # String | IVR id
+
+
+begin
+  #Get an IVR config.
+  result = api_instance.get_architect_ivr(ivr_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_architect_ivr: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ivr_id** | **String**| IVR id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IVR**](IVR.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_architect_ivrs"></a>
+
+## -[**IVREntityListing**](IVREntityListing.html) get_architect_ivrs(opts)
+
+Get IVR configs.
+
+
+
+Wraps GET /api/v2/architect/ivrs 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  sort_by: "name", # String | Sort by
+  sort_order: "ASC" # String | Sort order
+}
+
+begin
+  #Get IVR configs.
+  result = api_instance.get_architect_ivrs(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_architect_ivrs: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IVREntityListing**](IVREntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_architect_prompt"></a>
 
 ## -[**Prompt**](Prompt.html) get_architect_prompt(prompt_id)
@@ -1261,6 +1575,256 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PromptEntityListing**](PromptEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_architect_schedule"></a>
+
+## -[**Schedule**](Schedule.html) get_architect_schedule(schedule_id)
+
+Get a schedule by ID
+
+
+
+Wraps GET /api/v2/architect/schedules/{scheduleId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+schedule_id = "schedule_id_example" # String | Schedule ID
+
+
+begin
+  #Get a schedule by ID
+  result = api_instance.get_architect_schedule(schedule_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_architect_schedule: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schedule_id** | **String**| Schedule ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Schedule**](Schedule.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_architect_schedulegroup"></a>
+
+## -[**ScheduleGroup**](ScheduleGroup.html) get_architect_schedulegroup(schedule_group_id)
+
+Gets a schedule group by ID
+
+
+
+Wraps GET /api/v2/architect/schedulegroups/{scheduleGroupId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+schedule_group_id = "schedule_group_id_example" # String | Schedule group ID
+
+
+begin
+  #Gets a schedule group by ID
+  result = api_instance.get_architect_schedulegroup(schedule_group_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_architect_schedulegroup: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schedule_group_id** | **String**| Schedule group ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScheduleGroup**](ScheduleGroup.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_architect_schedulegroups"></a>
+
+## -[**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html) get_architect_schedulegroups(opts)
+
+Get a list of schedule groups.
+
+
+
+Wraps GET /api/v2/architect/schedulegroups 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  sort_by: "name", # String | Sort by
+  sort_order: "ASC" # String | Sort order
+}
+
+begin
+  #Get a list of schedule groups.
+  result = api_instance.get_architect_schedulegroups(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_architect_schedulegroups: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_architect_schedules"></a>
+
+## -[**ScheduleEntityListing**](ScheduleEntityListing.html) get_architect_schedules(opts)
+
+Get a list of schedules.
+
+
+
+Wraps GET /api/v2/architect/schedules 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  sort_by: "name", # String | Sort by
+  sort_order: "ASC" # String | Sort order
+}
+
+begin
+  #Get a list of schedules.
+  result = api_instance.get_architect_schedules(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_architect_schedules: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScheduleEntityListing**](ScheduleEntityListing.html)
 
 ### HTTP request headers
 
@@ -2071,6 +2635,66 @@ nil (empty response body)
 
 
 
+<a name="post_architect_ivrs"></a>
+
+## -[**IVR**](IVR.html) post_architect_ivrs(opts)
+
+Create IVR config.
+
+
+
+Wraps POST /api/v2/architect/ivrs 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+opts = { 
+  body: PureCloud::IVR.new # IVR | 
+}
+
+begin
+  #Create IVR config.
+  result = api_instance.post_architect_ivrs(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->post_architect_ivrs: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**IVR**](IVR.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IVR**](IVR.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_architect_prompt_resources"></a>
 
 ## -[**PromptAsset**](PromptAsset.html) post_architect_prompt_resources(prompt_id, opts)
@@ -2186,6 +2810,126 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Prompt**](Prompt.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_architect_schedulegroups"></a>
+
+## -[**ScheduleGroup**](ScheduleGroup.html) post_architect_schedulegroups(opts)
+
+Creates a new schedule group
+
+
+
+Wraps POST /api/v2/architect/schedulegroups 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+opts = { 
+  body: PureCloud::ScheduleGroup.new # ScheduleGroup | 
+}
+
+begin
+  #Creates a new schedule group
+  result = api_instance.post_architect_schedulegroups(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->post_architect_schedulegroups: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ScheduleGroup**](ScheduleGroup.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScheduleGroup**](ScheduleGroup.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_architect_schedules"></a>
+
+## -[**Schedule**](Schedule.html) post_architect_schedules(opts)
+
+Create a new schedule.
+
+
+
+Wraps POST /api/v2/architect/schedules 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+opts = { 
+  body: PureCloud::Schedule.new # Schedule | 
+}
+
+begin
+  #Create a new schedule.
+  result = api_instance.post_architect_schedules(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->post_architect_schedules: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Schedule**](Schedule.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Schedule**](Schedule.html)
 
 ### HTTP request headers
 
@@ -2738,6 +3482,69 @@ Name | Type | Description  | Notes
 
 
 
+<a name="put_architect_ivr"></a>
+
+## -[**IVR**](IVR.html) put_architect_ivr(ivr_id, opts)
+
+Update an IVR Config.
+
+
+
+Wraps PUT /api/v2/architect/ivrs/{ivrId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+ivr_id = "ivr_id_example" # String | IVR id
+
+opts = { 
+  body: PureCloud::IVR.new # IVR | 
+}
+
+begin
+  #Update an IVR Config.
+  result = api_instance.put_architect_ivr(ivr_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->put_architect_ivr: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ivr_id** | **String**| IVR id |  |
+ **body** | [**IVR**](IVR.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IVR**](IVR.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="put_architect_prompt"></a>
 
 ## -[**Prompt**](Prompt.html) put_architect_prompt(prompt_id, opts)
@@ -2859,6 +3666,132 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PromptAsset**](PromptAsset.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_architect_schedule"></a>
+
+## -[**Schedule**](Schedule.html) put_architect_schedule(schedule_id, opts)
+
+Update schedule by ID
+
+
+
+Wraps PUT /api/v2/architect/schedules/{scheduleId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+schedule_id = "schedule_id_example" # String | Schedule ID
+
+opts = { 
+  body: PureCloud::Schedule.new # Schedule | 
+}
+
+begin
+  #Update schedule by ID
+  result = api_instance.put_architect_schedule(schedule_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->put_architect_schedule: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schedule_id** | **String**| Schedule ID |  |
+ **body** | [**Schedule**](Schedule.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Schedule**](Schedule.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_architect_schedulegroup"></a>
+
+## -[**ScheduleGroup**](ScheduleGroup.html) put_architect_schedulegroup(schedule_group_id, opts)
+
+Updates a schedule group by ID
+
+
+
+Wraps PUT /api/v2/architect/schedulegroups/{scheduleGroupId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+schedule_group_id = "schedule_group_id_example" # String | Schedule group ID
+
+opts = { 
+  body: PureCloud::ScheduleGroup.new # ScheduleGroup | 
+}
+
+begin
+  #Updates a schedule group by ID
+  result = api_instance.put_architect_schedulegroup(schedule_group_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->put_architect_schedulegroup: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schedule_group_id** | **String**| Schedule group ID |  |
+ **body** | [**ScheduleGroup**](ScheduleGroup.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScheduleGroup**](ScheduleGroup.html)
 
 ### HTTP request headers
 

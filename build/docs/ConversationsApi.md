@@ -84,6 +84,7 @@ Method | Description
 [**post_conversations_email_participant_replace**](ConversationsApi.html#post_conversations_email_participant_replace) | Replace this participant with the specified user and/or address
 [**post_conversations_emails**](ConversationsApi.html#post_conversations_emails) | Create an email conversation
 [**post_conversations_faxes**](ConversationsApi.html#post_conversations_faxes) | Create Fax Conversation
+[**put_conversations_call_participant_communication_uuidata**](ConversationsApi.html#put_conversations_call_participant_communication_uuidata) | Set uuiData to be sent on future commands.
 [**put_conversations_email_messages_draft**](ConversationsApi.html#put_conversations_email_messages_draft) | Update conversation draft reply
 {: class="table table-striped"}
 
@@ -3774,7 +3775,7 @@ conversation_id = "conversation_id_example" # String | conversation ID
 participant_id = "participant_id_example" # String | participant ID
 
 opts = { 
-  body: PureCloud::CreateCallbackCommand.new # CreateCallbackCommand | 
+  body: PureCloud::CreateCallbackOnConversationCommand.new # CreateCallbackOnConversationCommand | 
 }
 
 begin
@@ -3791,7 +3792,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_id** | **String**| conversation ID |  |
  **participant_id** | **String**| participant ID |  |
- **body** | [**CreateCallbackCommand**](CreateCallbackCommand.html)|  | [optional]  |
+ **body** | [**CreateCallbackOnConversationCommand**](CreateCallbackOnConversationCommand.html)|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -4790,6 +4791,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FaxSendResponse**](FaxSendResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_conversations_call_participant_communication_uuidata"></a>
+
+## -[**Empty**](Empty.html) put_conversations_call_participant_communication_uuidata(conversation_id, participant_id, communication_id, body)
+
+Set uuiData to be sent on future commands.
+
+
+
+Wraps PUT /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+participant_id = "participant_id_example" # String | participantId
+
+communication_id = "communication_id_example" # String | communicationId
+
+body = PureCloud::SetUuiDataRequest.new # SetUuiDataRequest | UUIData Request
+
+
+begin
+  #Set uuiData to be sent on future commands.
+  result = api_instance.put_conversations_call_participant_communication_uuidata(conversation_id, participant_id, communication_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->put_conversations_call_participant_communication_uuidata: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **participant_id** | **String**| participantId |  |
+ **communication_id** | **String**| communicationId |  |
+ **body** | [**SetUuiDataRequest**](SetUuiDataRequest.html)| UUIData Request |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Empty**](Empty.html)
 
 ### HTTP request headers
 

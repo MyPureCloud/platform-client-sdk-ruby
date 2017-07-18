@@ -429,6 +429,7 @@ module PureCloud
     # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :name 
     # @option opts [Array<Object>] :permission 
     # @option opts [Array<Object>] :default_role_id 
     # @option opts [BOOLEAN] :user_count  (default to true)
@@ -447,6 +448,7 @@ module PureCloud
     # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :name 
     # @option opts [Array<Object>] :permission 
     # @option opts [Array<Object>] :default_role_id 
     # @option opts [BOOLEAN] :user_count 
@@ -455,6 +457,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_roles ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -521,6 +529,7 @@ module PureCloud
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
       query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
       query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'permission'] = @api_client.build_collection_param(opts[:'permission'], :multi) if opts[:'permission']
       query_params[:'defaultRoleId'] = @api_client.build_collection_param(opts[:'default_role_id'], :multi) if opts[:'default_role_id']
       query_params[:'userCount'] = opts[:'user_count'] if opts[:'user_count']

@@ -80,6 +80,9 @@ module PureCloud
     # The id of the peer communication corresponding to a matching leg for this communication.
     attr_accessor :peer_id
 
+    # User to User Information (UUI) data managed by SIP session application.
+    attr_accessor :uui_data
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -124,7 +127,9 @@ module PureCloud
         
         :'script_id' => :'scriptId',
         
-        :'peer_id' => :'peerId'
+        :'peer_id' => :'peerId',
+        
+        :'uui_data' => :'uuiData'
         
       }
     end
@@ -173,7 +178,9 @@ module PureCloud
         
         :'script_id' => :'String',
         
-        :'peer_id' => :'String'
+        :'peer_id' => :'String',
+        
+        :'uui_data' => :'String'
         
       }
     end
@@ -380,6 +387,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'uuiData')
+        
+        
+        self.uui_data = attributes[:'uuiData']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -460,6 +476,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -643,6 +663,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -668,7 +693,8 @@ module PureCloud
           fax_status == o.fax_status &&
           provider == o.provider &&
           script_id == o.script_id &&
-          peer_id == o.peer_id
+          peer_id == o.peer_id &&
+          uui_data == o.uui_data
     end
 
     # @see the `==` method
@@ -680,7 +706,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, direction, recording, recording_state, muted, confined, held, recording_id, segments, error_info, disconnect_type, start_hold_time, document_id, connected_time, disconnected_time, disconnect_reasons, fax_status, provider, script_id, peer_id].hash
+      [state, id, direction, recording, recording_state, muted, confined, held, recording_id, segments, error_info, disconnect_type, start_hold_time, document_id, connected_time, disconnected_time, disconnect_reasons, fax_status, provider, script_id, peer_id, uui_data].hash
     end
 
     # build the object from hash

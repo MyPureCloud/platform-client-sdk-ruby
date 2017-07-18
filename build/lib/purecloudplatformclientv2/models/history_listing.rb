@@ -18,15 +18,25 @@ require 'date'
 
 module PureCloud
   class HistoryListing
-    attr_accessor :entities
-
-    attr_accessor :page_size
-
-    attr_accessor :page_number
-
-    attr_accessor :total
-
     attr_accessor :id
+
+    attr_accessor :complete
+
+    attr_accessor :user
+
+    attr_accessor :error_message
+
+    attr_accessor :error_code
+
+    attr_accessor :error_details
+
+    attr_accessor :error_message_params
+
+    # Action name
+    attr_accessor :action_name
+
+    # Action status
+    attr_accessor :action_status
 
     attr_accessor :name
 
@@ -34,21 +44,33 @@ module PureCloud
 
     attr_accessor :system
 
-    attr_accessor :page_count
+    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :started
+
+    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :completed
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'entities' => :'entities',
-        
-        :'page_size' => :'pageSize',
-        
-        :'page_number' => :'pageNumber',
-        
-        :'total' => :'total',
-        
         :'id' => :'id',
+        
+        :'complete' => :'complete',
+        
+        :'user' => :'user',
+        
+        :'error_message' => :'errorMessage',
+        
+        :'error_code' => :'errorCode',
+        
+        :'error_details' => :'errorDetails',
+        
+        :'error_message_params' => :'errorMessageParams',
+        
+        :'action_name' => :'actionName',
+        
+        :'action_status' => :'actionStatus',
         
         :'name' => :'name',
         
@@ -56,7 +78,9 @@ module PureCloud
         
         :'system' => :'system',
         
-        :'page_count' => :'pageCount'
+        :'started' => :'started',
+        
+        :'completed' => :'completed'
         
       }
     end
@@ -65,15 +89,23 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'entities' => :'Array<HistoryEntry>',
-        
-        :'page_size' => :'Integer',
-        
-        :'page_number' => :'Integer',
-        
-        :'total' => :'Integer',
-        
         :'id' => :'String',
+        
+        :'complete' => :'BOOLEAN',
+        
+        :'user' => :'User',
+        
+        :'error_message' => :'String',
+        
+        :'error_code' => :'String',
+        
+        :'error_details' => :'Array<Detail>',
+        
+        :'error_message_params' => :'Hash<String, String>',
+        
+        :'action_name' => :'String',
+        
+        :'action_status' => :'String',
         
         :'name' => :'String',
         
@@ -81,7 +113,9 @@ module PureCloud
         
         :'system' => :'BOOLEAN',
         
-        :'page_count' => :'Integer'
+        :'started' => :'DateTime',
+        
+        :'completed' => :'DateTime'
         
       }
     end
@@ -95,10 +129,55 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'entities')
+      if attributes.has_key?(:'id')
         
-        if (value = attributes[:'entities']).is_a?(Array)
-          self.entities = value
+        
+        self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'complete')
+        
+        
+        self.complete = attributes[:'complete']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'user')
+        
+        
+        self.user = attributes[:'user']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'errorMessage')
+        
+        
+        self.error_message = attributes[:'errorMessage']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'errorCode')
+        
+        
+        self.error_code = attributes[:'errorCode']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'errorDetails')
+        
+        if (value = attributes[:'errorDetails']).is_a?(Array)
+          self.error_details = value
         end
         
         
@@ -106,37 +185,30 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'pageSize')
+      if attributes.has_key?(:'errorMessageParams')
         
+        if (value = attributes[:'errorMessageParams']).is_a?(Array)
+          self.error_message_params = value
+        end
         
-        self.page_size = attributes[:'pageSize']
         
       
       end
 
       
-      if attributes.has_key?(:'pageNumber')
+      if attributes.has_key?(:'actionName')
         
         
-        self.page_number = attributes[:'pageNumber']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'total')
-        
-        
-        self.total = attributes[:'total']
+        self.action_name = attributes[:'actionName']
         
       
       end
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'actionStatus')
         
         
-        self.id = attributes[:'id']
+        self.action_status = attributes[:'actionStatus']
         
       
       end
@@ -169,10 +241,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'pageCount')
+      if attributes.has_key?(:'started')
         
         
-        self.page_count = attributes[:'pageCount']
+        self.started = attributes[:'started']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'completed')
+        
+        
+        self.completed = attributes[:'completed']
         
       
       end
@@ -223,6 +304,36 @@ module PureCloud
       
       
       
+      allowed_values = ["CHECKIN", "DEBUG", "DELETE", "HISTORY", "PUBLISH", "STATE_CHANGE", "VALIDATE"]
+      if @action_name && !allowed_values.include?(@action_name)
+        return false
+      end
+      
+      
+      
+      
+      
+      allowed_values = ["LOCKED", "UNLOCKED", "STARTED", "PENDING_GENERATION", "PENDING_BACKEND_NOTIFICATION", "SUCCESS", "FAILURE"]
+      if @action_status && !allowed_values.include?(@action_status)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -249,6 +360,49 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] action_name Object to be assigned
+    def action_name=(action_name)
+      allowed_values = ["CHECKIN", "DEBUG", "DELETE", "HISTORY", "PUBLISH", "STATE_CHANGE", "VALIDATE"]
+      if action_name && !allowed_values.include?(action_name)
+        fail ArgumentError, "invalid value for 'action_name', must be one of #{allowed_values}."
+      end
+      @action_name = action_name
+    end
+
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] action_status Object to be assigned
+    def action_status=(action_status)
+      allowed_values = ["LOCKED", "UNLOCKED", "STARTED", "PENDING_GENERATION", "PENDING_BACKEND_NOTIFICATION", "SUCCESS", "FAILURE"]
+      if action_status && !allowed_values.include?(action_status)
+        fail ArgumentError, "invalid value for 'action_status', must be one of #{allowed_values}."
+      end
+      @action_status = action_status
+    end
+
     
     
     
@@ -282,15 +436,20 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          entities == o.entities &&
-          page_size == o.page_size &&
-          page_number == o.page_number &&
-          total == o.total &&
           id == o.id &&
+          complete == o.complete &&
+          user == o.user &&
+          error_message == o.error_message &&
+          error_code == o.error_code &&
+          error_details == o.error_details &&
+          error_message_params == o.error_message_params &&
+          action_name == o.action_name &&
+          action_status == o.action_status &&
           name == o.name &&
           description == o.description &&
           system == o.system &&
-          page_count == o.page_count
+          started == o.started &&
+          completed == o.completed
     end
 
     # @see the `==` method
@@ -302,7 +461,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [entities, page_size, page_number, total, id, name, description, system, page_count].hash
+      [id, complete, user, error_message, error_code, error_details, error_message_params, action_name, action_status, name, description, system, started, completed].hash
     end
 
     # build the object from hash

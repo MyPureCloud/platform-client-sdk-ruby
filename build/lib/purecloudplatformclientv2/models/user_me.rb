@@ -118,6 +118,9 @@ module PureCloud
     # Information about the current token
     attr_accessor :token
 
+    # Organizations having this user as a trustee
+    attr_accessor :trustors
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -196,6 +199,8 @@ module PureCloud
         :'field_configs' => :'fieldConfigs',
         
         :'token' => :'token',
+        
+        :'trustors' => :'trustors',
         
         :'self_uri' => :'selfUri'
         
@@ -277,6 +282,8 @@ module PureCloud
         :'field_configs' => :'FieldConfigs',
         
         :'token' => :'TokenInfo',
+        
+        :'trustors' => :'Array<Trustor>',
         
         :'self_uri' => :'String'
         
@@ -642,6 +649,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'trustors')
+        
+        if (value = attributes[:'trustors']).is_a?(Array)
+          self.trustors = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -724,6 +742,10 @@ module PureCloud
         return false
       end
 
+      
+      
+      
+      
       
       
       
@@ -1021,6 +1043,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1062,6 +1089,7 @@ module PureCloud
           routing_skills == o.routing_skills &&
           field_configs == o.field_configs &&
           token == o.token &&
+          trustors == o.trustors &&
           self_uri == o.self_uri
     end
 
@@ -1074,7 +1102,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, date, geolocation_settings, organization, presence_definitions, location_definitions, org_authorization, favorites, superiors, direct_reports, adjacents, routing_skills, field_configs, token, self_uri].hash
+      [id, name, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, date, geolocation_settings, organization, presence_definitions, location_definitions, org_authorization, favorites, superiors, direct_reports, adjacents, routing_skills, field_configs, token, trustors, self_uri].hash
     end
 
     # build the object from hash

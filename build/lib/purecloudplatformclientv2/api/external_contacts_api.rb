@@ -882,7 +882,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :q User supplied search keywords (no special syntax is currently supported)
     # @option opts [String] :sort_order Sort order
-    # @option opts [Array<String>] :expand which fields, if any, to expand (externalOrganization)
+    # @option opts [Array<String>] :expand which fields, if any, to expand
     # @return [ContactListing]
     def get_externalcontacts_organization_contacts(external_organization_id, opts = {})
       data, _status_code, _headers = get_externalcontacts_organization_contacts_with_http_info(external_organization_id, opts)
@@ -897,7 +897,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :q User supplied search keywords (no special syntax is currently supported)
     # @option opts [String] :sort_order Sort order
-    # @option opts [Array<String>] :expand which fields, if any, to expand (externalOrganization)
+    # @option opts [Array<String>] :expand which fields, if any, to expand
     # @return [Array<(ContactListing, Fixnum, Hash)>] ContactListing data, response status code and response headers
     def get_externalcontacts_organization_contacts_with_http_info(external_organization_id, opts = {})
       if @api_client.config.debugging

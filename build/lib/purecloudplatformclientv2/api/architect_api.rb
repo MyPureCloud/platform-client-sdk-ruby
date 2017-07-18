@@ -24,6 +24,70 @@ module PureCloud
       @api_client = api_client
     end
 
+    # Delete an IVR Config.
+    # 
+    # @param ivr_id IVR id
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_architect_ivr(ivr_id, opts = {})
+      delete_architect_ivr_with_http_info(ivr_id, opts)
+      return nil
+    end
+
+    # Delete an IVR Config.
+    # 
+    # @param ivr_id IVR id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_architect_ivr_with_http_info(ivr_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.delete_architect_ivr ..."
+      end
+      
+      
+      # verify the required parameter 'ivr_id' is set
+      fail ArgumentError, "Missing the required parameter 'ivr_id' when calling ArchitectApi.delete_architect_ivr" if ivr_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/ivrs/{ivrId}".sub('{format}','json').sub('{' + 'ivrId' + '}', ivr_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#delete_architect_ivr\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete specified user prompt
     # 
     # @param prompt_id Prompt ID
@@ -233,6 +297,134 @@ module PureCloud
         :return_type => 'Operation')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#delete_architect_prompts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Delete a schedule by id
+    # 
+    # @param schedule_id Schedule ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_architect_schedule(schedule_id, opts = {})
+      delete_architect_schedule_with_http_info(schedule_id, opts)
+      return nil
+    end
+
+    # Delete a schedule by id
+    # 
+    # @param schedule_id Schedule ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_architect_schedule_with_http_info(schedule_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.delete_architect_schedule ..."
+      end
+      
+      
+      # verify the required parameter 'schedule_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_id' when calling ArchitectApi.delete_architect_schedule" if schedule_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/schedules/{scheduleId}".sub('{format}','json').sub('{' + 'scheduleId' + '}', schedule_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#delete_architect_schedule\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Deletes a schedule group by ID
+    # 
+    # @param schedule_group_id Schedule group ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_architect_schedulegroup(schedule_group_id, opts = {})
+      delete_architect_schedulegroup_with_http_info(schedule_group_id, opts)
+      return nil
+    end
+
+    # Deletes a schedule group by ID
+    # 
+    # @param schedule_group_id Schedule group ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_architect_schedulegroup_with_http_info(schedule_group_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.delete_architect_schedulegroup ..."
+      end
+      
+      
+      # verify the required parameter 'schedule_group_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_group_id' when calling ArchitectApi.delete_architect_schedulegroup" if schedule_group_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/schedulegroups/{scheduleGroupId}".sub('{format}','json').sub('{' + 'scheduleGroupId' + '}', schedule_group_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#delete_architect_schedulegroup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1311,6 +1503,162 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get an IVR config.
+    # 
+    # @param ivr_id IVR id
+    # @param [Hash] opts the optional parameters
+    # @return [IVR]
+    def get_architect_ivr(ivr_id, opts = {})
+      data, _status_code, _headers = get_architect_ivr_with_http_info(ivr_id, opts)
+      return data
+    end
+
+    # Get an IVR config.
+    # 
+    # @param ivr_id IVR id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(IVR, Fixnum, Hash)>] IVR data, response status code and response headers
+    def get_architect_ivr_with_http_info(ivr_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_ivr ..."
+      end
+      
+      
+      # verify the required parameter 'ivr_id' is set
+      fail ArgumentError, "Missing the required parameter 'ivr_id' when calling ArchitectApi.get_architect_ivr" if ivr_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/ivrs/{ivrId}".sub('{format}','json').sub('{' + 'ivrId' + '}', ivr_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IVR')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_architect_ivr\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get IVR configs.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :sort_by Sort by (default to name)
+    # @option opts [String] :sort_order Sort order (default to ASC)
+    # @return [IVREntityListing]
+    def get_architect_ivrs(opts = {})
+      data, _status_code, _headers = get_architect_ivrs_with_http_info(opts)
+      return data
+    end
+
+    # Get IVR configs.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order
+    # @return [Array<(IVREntityListing, Fixnum, Hash)>] IVREntityListing data, response status code and response headers
+    def get_architect_ivrs_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_ivrs ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/ivrs".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IVREntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_architect_ivrs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get specified user prompt
     # 
     # @param prompt_id Prompt ID
@@ -1630,6 +1978,318 @@ module PureCloud
         :return_type => 'PromptEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#get_architect_prompts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a schedule by ID
+    # 
+    # @param schedule_id Schedule ID
+    # @param [Hash] opts the optional parameters
+    # @return [Schedule]
+    def get_architect_schedule(schedule_id, opts = {})
+      data, _status_code, _headers = get_architect_schedule_with_http_info(schedule_id, opts)
+      return data
+    end
+
+    # Get a schedule by ID
+    # 
+    # @param schedule_id Schedule ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Schedule, Fixnum, Hash)>] Schedule data, response status code and response headers
+    def get_architect_schedule_with_http_info(schedule_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_schedule ..."
+      end
+      
+      
+      # verify the required parameter 'schedule_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_id' when calling ArchitectApi.get_architect_schedule" if schedule_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/schedules/{scheduleId}".sub('{format}','json').sub('{' + 'scheduleId' + '}', schedule_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Schedule')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_architect_schedule\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Gets a schedule group by ID
+    # 
+    # @param schedule_group_id Schedule group ID
+    # @param [Hash] opts the optional parameters
+    # @return [ScheduleGroup]
+    def get_architect_schedulegroup(schedule_group_id, opts = {})
+      data, _status_code, _headers = get_architect_schedulegroup_with_http_info(schedule_group_id, opts)
+      return data
+    end
+
+    # Gets a schedule group by ID
+    # 
+    # @param schedule_group_id Schedule group ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ScheduleGroup, Fixnum, Hash)>] ScheduleGroup data, response status code and response headers
+    def get_architect_schedulegroup_with_http_info(schedule_group_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_schedulegroup ..."
+      end
+      
+      
+      # verify the required parameter 'schedule_group_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_group_id' when calling ArchitectApi.get_architect_schedulegroup" if schedule_group_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/schedulegroups/{scheduleGroupId}".sub('{format}','json').sub('{' + 'scheduleGroupId' + '}', schedule_group_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScheduleGroup')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_architect_schedulegroup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of schedule groups.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :sort_by Sort by (default to name)
+    # @option opts [String] :sort_order Sort order (default to ASC)
+    # @return [ScheduleGroupEntityListing]
+    def get_architect_schedulegroups(opts = {})
+      data, _status_code, _headers = get_architect_schedulegroups_with_http_info(opts)
+      return data
+    end
+
+    # Get a list of schedule groups.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order
+    # @return [Array<(ScheduleGroupEntityListing, Fixnum, Hash)>] ScheduleGroupEntityListing data, response status code and response headers
+    def get_architect_schedulegroups_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_schedulegroups ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/schedulegroups".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScheduleGroupEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_architect_schedulegroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of schedules.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :sort_by Sort by (default to name)
+    # @option opts [String] :sort_order Sort order (default to ASC)
+    # @return [ScheduleEntityListing]
+    def get_architect_schedules(opts = {})
+      data, _status_code, _headers = get_architect_schedules_with_http_info(opts)
+      return data
+    end
+
+    # Get a list of schedules.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order
+    # @return [Array<(ScheduleEntityListing, Fixnum, Hash)>] ScheduleEntityListing data, response status code and response headers
+    def get_architect_schedules_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_schedules ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/schedules".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScheduleEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_architect_schedules\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2775,6 +3435,69 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Create IVR config.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [IVR] :body 
+    # @return [IVR]
+    def post_architect_ivrs(opts = {})
+      data, _status_code, _headers = post_architect_ivrs_with_http_info(opts)
+      return data
+    end
+
+    # Create IVR config.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [IVR] :body 
+    # @return [Array<(IVR, Fixnum, Hash)>] IVR data, response status code and response headers
+    def post_architect_ivrs_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_ivrs ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/ivrs".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IVR')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_architect_ivrs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create a new user prompt resource
     # 
     # @param prompt_id Prompt ID
@@ -2907,6 +3630,132 @@ module PureCloud
         :return_type => 'Prompt')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#post_architect_prompts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Creates a new schedule group
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [ScheduleGroup] :body 
+    # @return [ScheduleGroup]
+    def post_architect_schedulegroups(opts = {})
+      data, _status_code, _headers = post_architect_schedulegroups_with_http_info(opts)
+      return data
+    end
+
+    # Creates a new schedule group
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [ScheduleGroup] :body 
+    # @return [Array<(ScheduleGroup, Fixnum, Hash)>] ScheduleGroup data, response status code and response headers
+    def post_architect_schedulegroups_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_schedulegroups ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/schedulegroups".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScheduleGroup')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_architect_schedulegroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a new schedule.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Schedule] :body 
+    # @return [Schedule]
+    def post_architect_schedules(opts = {})
+      data, _status_code, _headers = post_architect_schedules_with_http_info(opts)
+      return data
+    end
+
+    # Create a new schedule.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Schedule] :body 
+    # @return [Array<(Schedule, Fixnum, Hash)>] Schedule data, response status code and response headers
+    def post_architect_schedules_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_schedules ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/schedules".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Schedule')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_architect_schedules\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3525,6 +4374,79 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Update an IVR Config.
+    # 
+    # @param ivr_id IVR id
+    # @param [Hash] opts the optional parameters
+    # @option opts [IVR] :body 
+    # @return [IVR]
+    def put_architect_ivr(ivr_id, opts = {})
+      data, _status_code, _headers = put_architect_ivr_with_http_info(ivr_id, opts)
+      return data
+    end
+
+    # Update an IVR Config.
+    # 
+    # @param ivr_id IVR id
+    # @param [Hash] opts the optional parameters
+    # @option opts [IVR] :body 
+    # @return [Array<(IVR, Fixnum, Hash)>] IVR data, response status code and response headers
+    def put_architect_ivr_with_http_info(ivr_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_ivr ..."
+      end
+      
+      
+      # verify the required parameter 'ivr_id' is set
+      fail ArgumentError, "Missing the required parameter 'ivr_id' when calling ArchitectApi.put_architect_ivr" if ivr_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/ivrs/{ivrId}".sub('{format}','json').sub('{' + 'ivrId' + '}', ivr_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IVR')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#put_architect_ivr\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Update specified user prompt
     # 
     # @param prompt_id Prompt ID
@@ -3677,6 +4599,152 @@ module PureCloud
         :return_type => 'PromptAsset')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#put_architect_prompt_resource\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update schedule by ID
+    # 
+    # @param schedule_id Schedule ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Schedule] :body 
+    # @return [Schedule]
+    def put_architect_schedule(schedule_id, opts = {})
+      data, _status_code, _headers = put_architect_schedule_with_http_info(schedule_id, opts)
+      return data
+    end
+
+    # Update schedule by ID
+    # 
+    # @param schedule_id Schedule ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Schedule] :body 
+    # @return [Array<(Schedule, Fixnum, Hash)>] Schedule data, response status code and response headers
+    def put_architect_schedule_with_http_info(schedule_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_schedule ..."
+      end
+      
+      
+      # verify the required parameter 'schedule_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_id' when calling ArchitectApi.put_architect_schedule" if schedule_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/schedules/{scheduleId}".sub('{format}','json').sub('{' + 'scheduleId' + '}', schedule_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Schedule')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#put_architect_schedule\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Updates a schedule group by ID
+    # 
+    # @param schedule_group_id Schedule group ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [ScheduleGroup] :body 
+    # @return [ScheduleGroup]
+    def put_architect_schedulegroup(schedule_group_id, opts = {})
+      data, _status_code, _headers = put_architect_schedulegroup_with_http_info(schedule_group_id, opts)
+      return data
+    end
+
+    # Updates a schedule group by ID
+    # 
+    # @param schedule_group_id Schedule group ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [ScheduleGroup] :body 
+    # @return [Array<(ScheduleGroup, Fixnum, Hash)>] ScheduleGroup data, response status code and response headers
+    def put_architect_schedulegroup_with_http_info(schedule_group_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_schedulegroup ..."
+      end
+      
+      
+      # verify the required parameter 'schedule_group_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_group_id' when calling ArchitectApi.put_architect_schedulegroup" if schedule_group_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/schedulegroups/{scheduleGroupId}".sub('{format}','json').sub('{' + 'scheduleGroupId' + '}', schedule_group_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScheduleGroup')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#put_architect_schedulegroup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

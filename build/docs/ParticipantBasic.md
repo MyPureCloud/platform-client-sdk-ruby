@@ -43,6 +43,7 @@ title: ParticipantBasic
 | **social_expressions** | [**Array&lt;SocialExpression&gt;**](SocialExpression.html) |  | [optional] |
 | **videos** | [**Array&lt;Video&gt;**](Video.html) |  | [optional] |
 | **evaluations** | [**Array&lt;Evaluation&gt;**](Evaluation.html) |  | [optional] |
+| **screen_recording_state** | **String** | The current screen recording state for this participant. | [optional] |
 {: class="table table-striped"}
 
 

@@ -17,32 +17,25 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class HistoryEntry
-    # The action performed
-    attr_accessor :action
+  class TrustCreate
+    # The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship.
+    attr_accessor :pairing_id
 
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-    attr_accessor :timestamp
+    # If disabled no trustee user will have access, even if they were previously added.
+    attr_accessor :enabled
 
-    attr_accessor :user
-
-    attr_accessor :version
-
-    attr_accessor :secure
+    # The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor.
+    attr_accessor :users
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'action' => :'action',
+        :'pairing_id' => :'pairingId',
         
-        :'timestamp' => :'timestamp',
+        :'enabled' => :'enabled',
         
-        :'user' => :'user',
-        
-        :'version' => :'version',
-        
-        :'secure' => :'secure'
+        :'users' => :'users'
         
       }
     end
@@ -51,15 +44,11 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'action' => :'String',
+        :'pairing_id' => :'String',
         
-        :'timestamp' => :'DateTime',
+        :'enabled' => :'BOOLEAN',
         
-        :'user' => :'User',
-        
-        :'version' => :'String',
-        
-        :'secure' => :'BOOLEAN'
+        :'users' => :'Array<TrustUserCreate>'
         
       }
     end
@@ -73,46 +62,30 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'action')
+      if attributes.has_key?(:'pairingId')
         
         
-        self.action = attributes[:'action']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'timestamp')
-        
-        
-        self.timestamp = attributes[:'timestamp']
+        self.pairing_id = attributes[:'pairingId']
         
       
       end
 
       
-      if attributes.has_key?(:'user')
+      if attributes.has_key?(:'enabled')
         
         
-        self.user = attributes[:'user']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'version')
-        
-        
-        self.version = attributes[:'version']
+        self.enabled = attributes[:'enabled']
         
       
       end
 
       
-      if attributes.has_key?(:'secure')
+      if attributes.has_key?(:'users')
         
+        if (value = attributes[:'users']).is_a?(Array)
+          self.users = value
+        end
         
-        self.secure = attributes[:'secure']
         
       
       end
@@ -134,51 +107,34 @@ module PureCloud
     def valid?
       
       
-      
-      allowed_values = ["CHECKIN", "CHECKOUT", "CREATE", "DEACTIVATE", "DEBUG", "DELETE", "PUBLISH", "REVERT", "SAVE"]
-      if @action && !allowed_values.include?(@action)
+      if @pairing_id.nil?
         return false
       end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    end
 
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] action Object to be assigned
-    def action=(action)
-      allowed_values = ["CHECKIN", "CHECKOUT", "CREATE", "DEACTIVATE", "DEBUG", "DELETE", "PUBLISH", "REVERT", "SAVE"]
-      if action && !allowed_values.include?(action)
-        fail ArgumentError, "invalid value for 'action', must be one of #{allowed_values}."
+      
+      
+      
+      
+      
+      if @enabled.nil?
+        return false
       end
-      @action = action
+
+      
+      
+      
+      
+      
+      if @users.nil?
+        return false
+      end
+
+      
+      
+      
+      
     end
 
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -200,11 +156,9 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          action == o.action &&
-          timestamp == o.timestamp &&
-          user == o.user &&
-          version == o.version &&
-          secure == o.secure
+          pairing_id == o.pairing_id &&
+          enabled == o.enabled &&
+          users == o.users
     end
 
     # @see the `==` method
@@ -216,7 +170,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [action, timestamp, user, version, secure].hash
+      [pairing_id, enabled, users].hash
     end
 
     # build the object from hash

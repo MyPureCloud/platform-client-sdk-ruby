@@ -28,6 +28,7 @@ title: Call
 | **provider** | **String** | The source provider for the call. | [optional] |
 | **script_id** | **String** | The UUID of the script to use. | [optional] |
 | **peer_id** | **String** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
+| **uui_data** | **String** | User to User Information (UUI) data managed by SIP session application. | [optional] |
 {: class="table table-striped"}
 
 

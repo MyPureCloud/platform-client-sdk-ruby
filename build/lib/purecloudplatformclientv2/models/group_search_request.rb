@@ -30,6 +30,9 @@ module PureCloud
     # The page of resources you want to retrieve
     attr_accessor :page_number
 
+    # Multi-value sort order, list of multiple sort values
+    attr_accessor :sort
+
     attr_accessor :query
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -43,6 +46,8 @@ module PureCloud
         :'page_size' => :'pageSize',
         
         :'page_number' => :'pageNumber',
+        
+        :'sort' => :'sort',
         
         :'query' => :'query'
         
@@ -60,6 +65,8 @@ module PureCloud
         :'page_size' => :'Integer',
         
         :'page_number' => :'Integer',
+        
+        :'sort' => :'Array<SearchSort>',
         
         :'query' => :'Array<GroupSearchCriteria>'
         
@@ -106,6 +113,17 @@ module PureCloud
         
         
         self.page_number = attributes[:'pageNumber']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'sort')
+        
+        if (value = attributes[:'sort']).is_a?(Array)
+          self.sort = value
+        end
+        
         
       
       end
@@ -162,6 +180,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -199,6 +221,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -208,6 +235,7 @@ module PureCloud
           sort_by == o.sort_by &&
           page_size == o.page_size &&
           page_number == o.page_number &&
+          sort == o.sort &&
           query == o.query
     end
 
@@ -220,7 +248,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [sort_order, sort_by, page_size, page_number, query].hash
+      [sort_order, sort_by, page_size, page_number, sort, query].hash
     end
 
     # build the object from hash

@@ -760,7 +760,7 @@ opts = {
   page_number: 1, # Integer | Page number
   q: "q_example", # String | User supplied search keywords (no special syntax is currently supported)
   sort_order: "sort_order_example", # String | Sort order
-  expand: ["expand_example"] # Array<String> | which fields, if any, to expand (externalOrganization)
+  expand: ["expand_example"] # Array<String> | which fields, if any, to expand
 }
 
 begin
@@ -781,7 +781,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
  **sort_order** | **String**| Sort order | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand (externalOrganization) | [optional] <br />**Values**: externalOrganization |
+ **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources |
 {: class="table table-striped"}
 
 

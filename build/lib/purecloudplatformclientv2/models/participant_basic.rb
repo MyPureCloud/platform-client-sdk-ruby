@@ -117,6 +117,9 @@ module PureCloud
 
     attr_accessor :evaluations
 
+    # The current screen recording state for this participant.
+    attr_accessor :screen_recording_state
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -191,7 +194,9 @@ module PureCloud
         
         :'videos' => :'videos',
         
-        :'evaluations' => :'evaluations'
+        :'evaluations' => :'evaluations',
+        
+        :'screen_recording_state' => :'screenRecordingState'
         
       }
     end
@@ -270,7 +275,9 @@ module PureCloud
         
         :'videos' => :'Array<Video>',
         
-        :'evaluations' => :'Array<Evaluation>'
+        :'evaluations' => :'Array<Evaluation>',
+        
+        :'screen_recording_state' => :'String'
         
       }
     end
@@ -628,6 +635,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'screenRecordingState')
+        
+        
+        self.screen_recording_state = attributes[:'screenRecordingState']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -789,6 +805,15 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      allowed_values = ["requested", "active", "paused", "stopped", "error"]
+      if @screen_recording_state && !allowed_values.include?(@screen_recording_state)
+        return false
+      end
       
       
       
@@ -984,6 +1009,20 @@ module PureCloud
     
     
     
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] screen_recording_state Object to be assigned
+    def screen_recording_state=(screen_recording_state)
+      allowed_values = ["requested", "active", "paused", "stopped", "error"]
+      if screen_recording_state && !allowed_values.include?(screen_recording_state)
+        fail ArgumentError, "invalid value for 'screen_recording_state', must be one of #{allowed_values}."
+      end
+      @screen_recording_state = screen_recording_state
+    end
+
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1024,7 +1063,8 @@ module PureCloud
           screenshares == o.screenshares &&
           social_expressions == o.social_expressions &&
           videos == o.videos &&
-          evaluations == o.evaluations
+          evaluations == o.evaluations &&
+          screen_recording_state == o.screen_recording_state
     end
 
     # @see the `==` method
@@ -1036,7 +1076,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, start_time, end_time, connected_time, name, user_uri, user_id, external_contact_id, external_organization_id, queue_id, group_id, queue_name, purpose, participant_type, consult_participant_id, address, ani, ani_name, dnis, locale, wrapup_required, wrapup_prompt, wrapup_timeout_ms, wrapup_skipped, wrapup, monitored_participant_id, attributes, calls, callbacks, chats, cobrowsesessions, emails, screenshares, social_expressions, videos, evaluations].hash
+      [id, start_time, end_time, connected_time, name, user_uri, user_id, external_contact_id, external_organization_id, queue_id, group_id, queue_name, purpose, participant_type, consult_participant_id, address, ani, ani_name, dnis, locale, wrapup_required, wrapup_prompt, wrapup_timeout_ms, wrapup_skipped, wrapup, monitored_participant_id, attributes, calls, callbacks, chats, cobrowsesessions, emails, screenshares, social_expressions, videos, evaluations, screen_recording_state].hash
     end
 
     # build the object from hash

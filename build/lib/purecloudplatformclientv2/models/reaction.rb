@@ -111,7 +111,7 @@ module PureCloud
       
       
       
-      allowed_values = ["HANGUP", "TRANSFER", "TRANSFER_FLOW", "PLAY_FILE"]
+      allowed_values = ["hangup", "transfer", "transfer_flow", "play_file"]
       if @reaction_type && !allowed_values.include?(@reaction_type)
         return false
       end
@@ -135,7 +135,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] reaction_type Object to be assigned
     def reaction_type=(reaction_type)
-      allowed_values = ["HANGUP", "TRANSFER", "TRANSFER_FLOW", "PLAY_FILE"]
+      allowed_values = ["hangup", "transfer", "transfer_flow", "play_file"]
       if reaction_type && !allowed_values.include?(reaction_type)
         fail ArgumentError, "invalid value for 'reaction_type', must be one of #{allowed_values}."
       end

@@ -4495,7 +4495,7 @@ module PureCloud
     # @param conversation_id conversation ID
     # @param participant_id participant ID
     # @param [Hash] opts the optional parameters
-    # @option opts [CreateCallbackCommand] :body 
+    # @option opts [CreateCallbackOnConversationCommand] :body 
     # @return [nil]
     def post_conversation_participant_callbacks(conversation_id, participant_id, opts = {})
       post_conversation_participant_callbacks_with_http_info(conversation_id, participant_id, opts)
@@ -4507,7 +4507,7 @@ module PureCloud
     # @param conversation_id conversation ID
     # @param participant_id participant ID
     # @param [Hash] opts the optional parameters
-    # @option opts [CreateCallbackCommand] :body 
+    # @option opts [CreateCallbackOnConversationCommand] :body 
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def post_conversation_participant_callbacks_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
@@ -5779,6 +5779,101 @@ module PureCloud
         :return_type => 'FaxSendResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_faxes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Set uuiData to be sent on future commands.
+    # 
+    # @param conversation_id conversationId
+    # @param participant_id participantId
+    # @param communication_id communicationId
+    # @param body UUIData Request
+    # @param [Hash] opts the optional parameters
+    # @return [Empty]
+    def put_conversations_call_participant_communication_uuidata(conversation_id, participant_id, communication_id, body, opts = {})
+      data, _status_code, _headers = put_conversations_call_participant_communication_uuidata_with_http_info(conversation_id, participant_id, communication_id, body, opts)
+      return data
+    end
+
+    # Set uuiData to be sent on future commands.
+    # 
+    # @param conversation_id conversationId
+    # @param participant_id participantId
+    # @param communication_id communicationId
+    # @param body UUIData Request
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
+    def put_conversations_call_participant_communication_uuidata_with_http_info(conversation_id, participant_id, communication_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.put_conversations_call_participant_communication_uuidata ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.put_conversations_call_participant_communication_uuidata" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.put_conversations_call_participant_communication_uuidata" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'communication_id' is set
+      fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.put_conversations_call_participant_communication_uuidata" if communication_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.put_conversations_call_participant_communication_uuidata" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Empty')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#put_conversations_call_participant_communication_uuidata\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

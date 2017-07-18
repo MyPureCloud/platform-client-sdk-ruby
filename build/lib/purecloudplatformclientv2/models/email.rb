@@ -62,8 +62,14 @@ module PureCloud
     # The source provider for the email.
     attr_accessor :provider
 
+    # The UUID of the script to use.
+    attr_accessor :script_id
+
     # The id of the peer communication corresponding to a matching leg for this communication.
     attr_accessor :peer_id
+
+    # A globally unique identifier for the stored content of this communication.
+    attr_accessor :message_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -99,7 +105,11 @@ module PureCloud
         
         :'provider' => :'provider',
         
-        :'peer_id' => :'peerId'
+        :'script_id' => :'scriptId',
+        
+        :'peer_id' => :'peerId',
+        
+        :'message_id' => :'messageId'
         
       }
     end
@@ -138,7 +148,11 @@ module PureCloud
         
         :'provider' => :'String',
         
-        :'peer_id' => :'String'
+        :'script_id' => :'String',
+        
+        :'peer_id' => :'String',
+        
+        :'message_id' => :'String'
         
       }
     end
@@ -289,10 +303,28 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'scriptId')
+        
+        
+        self.script_id = attributes[:'scriptId']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'peerId')
         
         
         self.peer_id = attributes[:'peerId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'messageId')
+        
+        
+        self.message_id = attributes[:'messageId']
         
       
       end
@@ -365,6 +397,14 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -502,6 +542,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -522,7 +572,9 @@ module PureCloud
           disconnected_time == o.disconnected_time &&
           auto_generated == o.auto_generated &&
           provider == o.provider &&
-          peer_id == o.peer_id
+          script_id == o.script_id &&
+          peer_id == o.peer_id &&
+          message_id == o.message_id
     end
 
     # @see the `==` method
@@ -534,7 +586,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, held, subject, messages_sent, segments, direction, recording_id, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, auto_generated, provider, peer_id].hash
+      [state, id, held, subject, messages_sent, segments, direction, recording_id, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, auto_generated, provider, script_id, peer_id, message_id].hash
     end
 
     # build the object from hash

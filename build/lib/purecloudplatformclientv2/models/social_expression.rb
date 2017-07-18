@@ -60,6 +60,9 @@ module PureCloud
     # The source provider for the social expression.
     attr_accessor :provider
 
+    # The UUID of the script to use.
+    attr_accessor :script_id
+
     # The id of the peer communication corresponding to a matching leg for this communication.
     attr_accessor :peer_id
 
@@ -94,6 +97,8 @@ module PureCloud
         :'disconnected_time' => :'disconnectedTime',
         
         :'provider' => :'provider',
+        
+        :'script_id' => :'scriptId',
         
         :'peer_id' => :'peerId'
         
@@ -131,6 +136,8 @@ module PureCloud
         :'disconnected_time' => :'DateTime',
         
         :'provider' => :'String',
+        
+        :'script_id' => :'String',
         
         :'peer_id' => :'String'
         
@@ -274,6 +281,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'scriptId')
+        
+        
+        self.script_id = attributes[:'scriptId']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'peerId')
         
         
@@ -345,6 +361,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -464,6 +484,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -483,6 +508,7 @@ module PureCloud
           connected_time == o.connected_time &&
           disconnected_time == o.disconnected_time &&
           provider == o.provider &&
+          script_id == o.script_id &&
           peer_id == o.peer_id
     end
 
@@ -495,7 +521,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, social_media_id, social_media_hub, social_user_name, preview_text, recording_id, segments, held, disconnect_type, start_hold_time, connected_time, disconnected_time, provider, peer_id].hash
+      [state, id, social_media_id, social_media_hub, social_user_name, preview_text, recording_id, segments, held, disconnect_type, start_hold_time, connected_time, disconnected_time, provider, script_id, peer_id].hash
     end
 
     # build the object from hash
