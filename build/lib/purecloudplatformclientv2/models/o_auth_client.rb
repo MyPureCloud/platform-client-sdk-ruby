@@ -38,6 +38,18 @@ module PureCloud
     # Roles assigned to this client. Roles only apply to clients using the client_credential grant
     attr_accessor :role_ids
 
+    # Date this client was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :date_created
+
+    # Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :date_modified
+
+    # User that created this client
+    attr_accessor :created_by
+
+    # User that last modified this client
+    attr_accessor :modified_by
+
     # The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. 
     attr_accessor :authorized_grant_type
 
@@ -61,6 +73,14 @@ module PureCloud
         :'secret' => :'secret',
         
         :'role_ids' => :'roleIds',
+        
+        :'date_created' => :'dateCreated',
+        
+        :'date_modified' => :'dateModified',
+        
+        :'created_by' => :'createdBy',
+        
+        :'modified_by' => :'modifiedBy',
         
         :'authorized_grant_type' => :'authorizedGrantType',
         
@@ -86,6 +106,14 @@ module PureCloud
         :'secret' => :'String',
         
         :'role_ids' => :'Array<String>',
+        
+        :'date_created' => :'DateTime',
+        
+        :'date_modified' => :'DateTime',
+        
+        :'created_by' => :'UriReference',
+        
+        :'modified_by' => :'UriReference',
         
         :'authorized_grant_type' => :'String',
         
@@ -170,6 +198,42 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'dateCreated')
+        
+        
+        self.date_created = attributes[:'dateCreated']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'dateModified')
+        
+        
+        self.date_modified = attributes[:'dateModified']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'createdBy')
+        
+        
+        self.created_by = attributes[:'createdBy']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'modifiedBy')
+        
+        
+        self.modified_by = attributes[:'modifiedBy']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'authorizedGrantType')
         
         
@@ -212,6 +276,22 @@ module PureCloud
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -293,6 +373,26 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] authorized_grant_type Object to be assigned
     def authorized_grant_type=(authorized_grant_type)
@@ -323,6 +423,10 @@ module PureCloud
           registered_redirect_uri == o.registered_redirect_uri &&
           secret == o.secret &&
           role_ids == o.role_ids &&
+          date_created == o.date_created &&
+          date_modified == o.date_modified &&
+          created_by == o.created_by &&
+          modified_by == o.modified_by &&
           authorized_grant_type == o.authorized_grant_type &&
           self_uri == o.self_uri
     end
@@ -336,7 +440,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, access_token_validity_seconds, description, registered_redirect_uri, secret, role_ids, authorized_grant_type, self_uri].hash
+      [id, name, access_token_validity_seconds, description, registered_redirect_uri, secret, role_ids, date_created, date_modified, created_by, modified_by, authorized_grant_type, self_uri].hash
     end
 
     # build the object from hash

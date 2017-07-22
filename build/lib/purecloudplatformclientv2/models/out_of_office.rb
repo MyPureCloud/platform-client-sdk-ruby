@@ -33,6 +33,8 @@ module PureCloud
 
     attr_accessor :active
 
+    attr_accessor :indefinite
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -51,6 +53,8 @@ module PureCloud
         :'end_date' => :'endDate',
         
         :'active' => :'active',
+        
+        :'indefinite' => :'indefinite',
         
         :'self_uri' => :'selfUri'
         
@@ -72,6 +76,8 @@ module PureCloud
         :'end_date' => :'DateTime',
         
         :'active' => :'BOOLEAN',
+        
+        :'indefinite' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -141,6 +147,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'indefinite')
+        
+        
+        self.indefinite = attributes[:'indefinite']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -193,8 +208,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -242,6 +266,7 @@ module PureCloud
           start_date == o.start_date &&
           end_date == o.end_date &&
           active == o.active &&
+          indefinite == o.indefinite &&
           self_uri == o.self_uri
     end
 
@@ -254,7 +279,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, user, start_date, end_date, active, self_uri].hash
+      [id, name, user, start_date, end_date, active, indefinite, self_uri].hash
     end
 
     # build the object from hash

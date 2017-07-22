@@ -17,51 +17,21 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  # Activity code data
-  class ActivityCode
-    # The activity code's name
-    attr_accessor :name
+  # Governs how the voicemail is retained when the deleted property is set to true
+  class VoicemailRetentionPolicy
+    # The retention policy type
+    attr_accessor :voicemail_retention_policy_type
 
-    # Whether this activity code is active or only used for historical schedules
-    attr_accessor :is_active
-
-    # Whether this is a default activity code
-    attr_accessor :is_default
-
-    # The activity code's category
-    attr_accessor :category
-
-    # The default length of the activity in minutes
-    attr_accessor :length_in_minutes
-
-    # Whether an agent is paid while performing this activity
-    attr_accessor :counts_as_paid_time
-
-    # Indicates whether or not the activity should be counted as work time
-    attr_accessor :counts_as_work_time
-
-    # Whether an agent can select this activity code when creating or editing a time off request
-    attr_accessor :is_agent_time_off_selectable
+    # If retentionPolicyType == RETAIN_WITH_TTL, then this value represents the number of days for the TTL
+    attr_accessor :number_of_days
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'name' => :'name',
+        :'voicemail_retention_policy_type' => :'voicemailRetentionPolicyType',
         
-        :'is_active' => :'isActive',
-        
-        :'is_default' => :'isDefault',
-        
-        :'category' => :'category',
-        
-        :'length_in_minutes' => :'lengthInMinutes',
-        
-        :'counts_as_paid_time' => :'countsAsPaidTime',
-        
-        :'counts_as_work_time' => :'countsAsWorkTime',
-        
-        :'is_agent_time_off_selectable' => :'isAgentTimeOffSelectable'
+        :'number_of_days' => :'numberOfDays'
         
       }
     end
@@ -70,21 +40,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'name' => :'String',
+        :'voicemail_retention_policy_type' => :'String',
         
-        :'is_active' => :'BOOLEAN',
-        
-        :'is_default' => :'BOOLEAN',
-        
-        :'category' => :'String',
-        
-        :'length_in_minutes' => :'Integer',
-        
-        :'counts_as_paid_time' => :'BOOLEAN',
-        
-        :'counts_as_work_time' => :'BOOLEAN',
-        
-        :'is_agent_time_off_selectable' => :'BOOLEAN'
+        :'number_of_days' => :'Integer'
         
       }
     end
@@ -98,73 +56,19 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'name')
+      if attributes.has_key?(:'voicemailRetentionPolicyType')
         
         
-        self.name = attributes[:'name']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'isActive')
-        
-        
-        self.is_active = attributes[:'isActive']
+        self.voicemail_retention_policy_type = attributes[:'voicemailRetentionPolicyType']
         
       
       end
 
       
-      if attributes.has_key?(:'isDefault')
+      if attributes.has_key?(:'numberOfDays')
         
         
-        self.is_default = attributes[:'isDefault']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'category')
-        
-        
-        self.category = attributes[:'category']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'lengthInMinutes')
-        
-        
-        self.length_in_minutes = attributes[:'lengthInMinutes']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'countsAsPaidTime')
-        
-        
-        self.counts_as_paid_time = attributes[:'countsAsPaidTime']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'countsAsWorkTime')
-        
-        
-        self.counts_as_work_time = attributes[:'countsAsWorkTime']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'isAgentTimeOffSelectable')
-        
-        
-        self.is_agent_time_off_selectable = attributes[:'isAgentTimeOffSelectable']
+        self.number_of_days = attributes[:'numberOfDays']
         
       
       end
@@ -187,20 +91,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable", "Unscheduled"]
-      if @category && !allowed_values.include?(@category)
+      allowed_values = ["RETAIN_INDEFINITELY", "RETAIN_WITH_TTL", "IMMEDIATE_DELETE"]
+      if @voicemail_retention_policy_type && !allowed_values.include?(@voicemail_retention_policy_type)
         return false
       end
       
@@ -210,62 +102,20 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] category Object to be assigned
-    def category=(category)
-      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable", "Unscheduled"]
-      if category && !allowed_values.include?(category)
-        fail ArgumentError, "invalid value for 'category', must be one of #{allowed_values}."
+    # @param [Object] voicemail_retention_policy_type Object to be assigned
+    def voicemail_retention_policy_type=(voicemail_retention_policy_type)
+      allowed_values = ["RETAIN_INDEFINITELY", "RETAIN_WITH_TTL", "IMMEDIATE_DELETE"]
+      if voicemail_retention_policy_type && !allowed_values.include?(voicemail_retention_policy_type)
+        fail ArgumentError, "invalid value for 'voicemail_retention_policy_type', must be one of #{allowed_values}."
       end
-      @category = category
+      @voicemail_retention_policy_type = voicemail_retention_policy_type
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -279,14 +129,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          name == o.name &&
-          is_active == o.is_active &&
-          is_default == o.is_default &&
-          category == o.category &&
-          length_in_minutes == o.length_in_minutes &&
-          counts_as_paid_time == o.counts_as_paid_time &&
-          counts_as_work_time == o.counts_as_work_time &&
-          is_agent_time_off_selectable == o.is_agent_time_off_selectable
+          voicemail_retention_policy_type == o.voicemail_retention_policy_type &&
+          number_of_days == o.number_of_days
     end
 
     # @see the `==` method
@@ -298,7 +142,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, is_active, is_default, category, length_in_minutes, counts_as_paid_time, counts_as_work_time, is_agent_time_off_selectable].hash
+      [voicemail_retention_policy_type, number_of_days].hash
     end
 
     # build the object from hash

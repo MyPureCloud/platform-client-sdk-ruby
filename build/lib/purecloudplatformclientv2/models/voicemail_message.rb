@@ -69,6 +69,9 @@ module PureCloud
     # Represents where this voicemail has been copied to
     attr_accessor :copied_to
 
+    # The retention policy for this voicemail
+    attr_accessor :retention_policy
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -109,6 +112,8 @@ module PureCloud
         :'copied_from' => :'copiedFrom',
         
         :'copied_to' => :'copiedTo',
+        
+        :'retention_policy' => :'retentionPolicy',
         
         :'self_uri' => :'selfUri'
         
@@ -152,6 +157,8 @@ module PureCloud
         :'copied_from' => :'VoicemailCopyRecord',
         
         :'copied_to' => :'Array<VoicemailCopyRecord>',
+        
+        :'retention_policy' => :'VoicemailRetentionPolicy',
         
         :'self_uri' => :'String'
         
@@ -322,6 +329,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'retentionPolicy')
+        
+        
+        self.retention_policy = attributes[:'retentionPolicy']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -418,8 +434,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -533,6 +558,7 @@ module PureCloud
           queue == o.queue &&
           copied_from == o.copied_from &&
           copied_to == o.copied_to &&
+          retention_policy == o.retention_policy &&
           self_uri == o.self_uri
     end
 
@@ -545,7 +571,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, conversation, read, audio_recording_duration_seconds, audio_recording_size_bytes, created_date, modified_date, caller_address, caller_name, caller_user, deleted, note, user, group, queue, copied_from, copied_to, self_uri].hash
+      [id, conversation, read, audio_recording_duration_seconds, audio_recording_size_bytes, created_date, modified_date, caller_address, caller_name, caller_user, deleted, note, user, group, queue, copied_from, copied_to, retention_policy, self_uri].hash
     end
 
     # build the object from hash

@@ -17,51 +17,18 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  # Activity code data
-  class ActivityCode
-    # The activity code's name
-    attr_accessor :name
+  class LicenseOrgToggle
+    attr_accessor :feature_name
 
-    # Whether this activity code is active or only used for historical schedules
-    attr_accessor :is_active
-
-    # Whether this is a default activity code
-    attr_accessor :is_default
-
-    # The activity code's category
-    attr_accessor :category
-
-    # The default length of the activity in minutes
-    attr_accessor :length_in_minutes
-
-    # Whether an agent is paid while performing this activity
-    attr_accessor :counts_as_paid_time
-
-    # Indicates whether or not the activity should be counted as work time
-    attr_accessor :counts_as_work_time
-
-    # Whether an agent can select this activity code when creating or editing a time off request
-    attr_accessor :is_agent_time_off_selectable
+    attr_accessor :enabled
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'name' => :'name',
+        :'feature_name' => :'featureName',
         
-        :'is_active' => :'isActive',
-        
-        :'is_default' => :'isDefault',
-        
-        :'category' => :'category',
-        
-        :'length_in_minutes' => :'lengthInMinutes',
-        
-        :'counts_as_paid_time' => :'countsAsPaidTime',
-        
-        :'counts_as_work_time' => :'countsAsWorkTime',
-        
-        :'is_agent_time_off_selectable' => :'isAgentTimeOffSelectable'
+        :'enabled' => :'enabled'
         
       }
     end
@@ -70,21 +37,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'name' => :'String',
+        :'feature_name' => :'String',
         
-        :'is_active' => :'BOOLEAN',
-        
-        :'is_default' => :'BOOLEAN',
-        
-        :'category' => :'String',
-        
-        :'length_in_minutes' => :'Integer',
-        
-        :'counts_as_paid_time' => :'BOOLEAN',
-        
-        :'counts_as_work_time' => :'BOOLEAN',
-        
-        :'is_agent_time_off_selectable' => :'BOOLEAN'
+        :'enabled' => :'BOOLEAN'
         
       }
     end
@@ -98,73 +53,19 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'name')
+      if attributes.has_key?(:'featureName')
         
         
-        self.name = attributes[:'name']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'isActive')
-        
-        
-        self.is_active = attributes[:'isActive']
+        self.feature_name = attributes[:'featureName']
         
       
       end
 
       
-      if attributes.has_key?(:'isDefault')
+      if attributes.has_key?(:'enabled')
         
         
-        self.is_default = attributes[:'isDefault']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'category')
-        
-        
-        self.category = attributes[:'category']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'lengthInMinutes')
-        
-        
-        self.length_in_minutes = attributes[:'lengthInMinutes']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'countsAsPaidTime')
-        
-        
-        self.counts_as_paid_time = attributes[:'countsAsPaidTime']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'countsAsWorkTime')
-        
-        
-        self.counts_as_work_time = attributes[:'countsAsWorkTime']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'isAgentTimeOffSelectable')
-        
-        
-        self.is_agent_time_off_selectable = attributes[:'isAgentTimeOffSelectable']
+        self.enabled = attributes[:'enabled']
         
       
       end
@@ -193,76 +94,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable", "Unscheduled"]
-      if @category && !allowed_values.include?(@category)
-        return false
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] category Object to be assigned
-    def category=(category)
-      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable", "Unscheduled"]
-      if category && !allowed_values.include?(category)
-        fail ArgumentError, "invalid value for 'category', must be one of #{allowed_values}."
-      end
-      @category = category
-    end
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -279,14 +112,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          name == o.name &&
-          is_active == o.is_active &&
-          is_default == o.is_default &&
-          category == o.category &&
-          length_in_minutes == o.length_in_minutes &&
-          counts_as_paid_time == o.counts_as_paid_time &&
-          counts_as_work_time == o.counts_as_work_time &&
-          is_agent_time_off_selectable == o.is_agent_time_off_selectable
+          feature_name == o.feature_name &&
+          enabled == o.enabled
     end
 
     # @see the `==` method
@@ -298,7 +125,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, is_active, is_default, category, length_in_minutes, counts_as_paid_time, counts_as_work_time, is_agent_time_off_selectable].hash
+      [feature_name, enabled].hash
     end
 
     # build the object from hash

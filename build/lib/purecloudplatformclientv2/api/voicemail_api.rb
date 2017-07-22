@@ -24,8 +24,8 @@ module PureCloud
       @api_client = api_client
     end
 
-    # Delete a message.
-    # 
+    # Delete a voicemail message.
+    # A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
     # @param message_id Message ID
     # @param [Hash] opts the optional parameters
     # @return [nil]
@@ -34,8 +34,8 @@ module PureCloud
       return nil
     end
 
-    # Delete a message.
-    # 
+    # Delete a voicemail message.
+    # A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
     # @param message_id Message ID
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
@@ -593,7 +593,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get message.
+    # Get a voicemail message
     # 
     # @param message_id Message ID
     # @param [Hash] opts the optional parameters
@@ -604,7 +604,7 @@ module PureCloud
       return data
     end
 
-    # Get message.
+    # Get a voicemail message
     # 
     # @param message_id Message ID
     # @param [Hash] opts the optional parameters
@@ -667,7 +667,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get media playback URI for this message
+    # Get media playback URI for this voicemail message
     # 
     # @param message_id Message ID
     # @param [Hash] opts the optional parameters
@@ -678,7 +678,7 @@ module PureCloud
       return data
     end
 
-    # Get media playback URI for this message
+    # Get media playback URI for this voicemail message
     # 
     # @param message_id Message ID
     # @param [Hash] opts the optional parameters
@@ -1153,6 +1153,81 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Update a voicemail message
+    # A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+    # @param message_id Message ID
+    # @param body VoicemailMessage
+    # @param [Hash] opts the optional parameters
+    # @return [VoicemailMessage]
+    def patch_voicemail_message(message_id, body, opts = {})
+      data, _status_code, _headers = patch_voicemail_message_with_http_info(message_id, body, opts)
+      return data
+    end
+
+    # Update a voicemail message
+    # A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+    # @param message_id Message ID
+    # @param body VoicemailMessage
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(VoicemailMessage, Fixnum, Hash)>] VoicemailMessage data, response status code and response headers
+    def patch_voicemail_message_with_http_info(message_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: VoicemailApi.patch_voicemail_message ..."
+      end
+      
+      
+      # verify the required parameter 'message_id' is set
+      fail ArgumentError, "Missing the required parameter 'message_id' when calling VoicemailApi.patch_voicemail_message" if message_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling VoicemailApi.patch_voicemail_message" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/voicemail/messages/{messageId}".sub('{format}','json').sub('{' + 'messageId' + '}', message_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'VoicemailMessage')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: VoicemailApi#patch_voicemail_message\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Update a user's voicemail policy
     # 
     # @param user_id User ID
@@ -1356,8 +1431,8 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update a message.
-    # 
+    # Update a voicemail message
+    # A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
     # @param message_id Message ID
     # @param body VoicemailMessage
     # @param [Hash] opts the optional parameters
@@ -1367,8 +1442,8 @@ module PureCloud
       return data
     end
 
-    # Update a message.
-    # 
+    # Update a voicemail message
+    # A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
     # @param message_id Message ID
     # @param body VoicemailMessage
     # @param [Hash] opts the optional parameters

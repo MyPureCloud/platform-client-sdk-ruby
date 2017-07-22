@@ -11,8 +11,10 @@ Method | Description
 [**get_license_definition**](LicenseApi.html#get_license_definition) | Get PureCloud license definition.
 [**get_license_definitions**](LicenseApi.html#get_license_definitions) | Get all PureCloud license definitions available for the organization.
 [**get_license_organization**](LicenseApi.html#get_license_organization) | Get license assignments for the organization.
+[**get_license_toggle**](LicenseApi.html#get_license_toggle) | Get PureCloud license feature toggle value.
 [**get_license_user**](LicenseApi.html#get_license_user) | Get licenses for specified user.
 [**post_license_organization**](LicenseApi.html#post_license_organization) | Update the organization&#39;s license assignments in a batch.
+[**post_license_toggle**](LicenseApi.html#post_license_toggle) | Switch PureCloud license feature toggle value.
 [**post_license_users**](LicenseApi.html#post_license_users) | Fetch user licenses in a batch.
 {: class="table table-striped"}
 
@@ -181,6 +183,65 @@ This endpoint does not need any parameter.
 
 
 
+<a name="get_license_toggle"></a>
+
+## -[**LicenseOrgToggle**](LicenseOrgToggle.html) get_license_toggle(feature_name)
+
+Get PureCloud license feature toggle value.
+
+
+
+Wraps GET /api/v2/license/toggles/{featureName} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::LicenseApi.new
+
+feature_name = "feature_name_example" # String | featureName
+
+
+begin
+  #Get PureCloud license feature toggle value.
+  result = api_instance.get_license_toggle(feature_name)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling LicenseApi->get_license_toggle: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **feature_name** | **String**| featureName |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LicenseOrgToggle**](LicenseOrgToggle.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_license_user"></a>
 
 ## -[**LicenseUser**](LicenseUser.html) get_license_user(user_id)
@@ -292,6 +353,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Array&lt;LicenseUpdateStatus&gt;**](LicenseUpdateStatus.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_license_toggle"></a>
+
+## -[**LicenseOrgToggle**](LicenseOrgToggle.html) post_license_toggle(feature_name)
+
+Switch PureCloud license feature toggle value.
+
+
+
+Wraps POST /api/v2/license/toggles/{featureName} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::LicenseApi.new
+
+feature_name = "feature_name_example" # String | featureName
+
+
+begin
+  #Switch PureCloud license feature toggle value.
+  result = api_instance.post_license_toggle(feature_name)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling LicenseApi->post_license_toggle: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **feature_name** | **String**| featureName |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LicenseOrgToggle**](LicenseOrgToggle.html)
 
 ### HTTP request headers
 

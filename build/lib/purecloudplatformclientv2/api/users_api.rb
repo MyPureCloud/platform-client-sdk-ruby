@@ -2691,7 +2691,7 @@ module PureCloud
     # Update an OutOfOffice
     # 
     # @param user_id User ID
-    # @param body The updated UserPresence
+    # @param body The updated OutOffOffice
     # @param [Hash] opts the optional parameters
     # @return [OutOfOffice]
     def put_user_outofoffice(user_id, body, opts = {})
@@ -2702,7 +2702,7 @@ module PureCloud
     # Update an OutOfOffice
     # 
     # @param user_id User ID
-    # @param body The updated UserPresence
+    # @param body The updated OutOffOffice
     # @param [Hash] opts the optional parameters
     # @return [Array<(OutOfOffice, Fixnum, Hash)>] OutOfOffice data, response status code and response headers
     def put_user_outofoffice_with_http_info(user_id, body, opts = {})

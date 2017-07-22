@@ -2299,7 +2299,7 @@ api_instance = PureCloud::UsersApi.new
 
 user_id = "user_id_example" # String | User ID
 
-body = PureCloud::OutOfOffice.new # OutOfOffice | The updated UserPresence
+body = PureCloud::OutOfOffice.new # OutOfOffice | The updated OutOffOffice
 
 
 begin
@@ -2316,7 +2316,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| User ID |  |
- **body** | [**OutOfOffice**](OutOfOffice.html)| The updated UserPresence |  |
+ **body** | [**OutOfOffice**](OutOfOffice.html)| The updated OutOffOffice |  |
 {: class="table table-striped"}
 
 

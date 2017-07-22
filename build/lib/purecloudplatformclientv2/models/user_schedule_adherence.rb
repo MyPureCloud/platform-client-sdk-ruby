@@ -297,7 +297,7 @@ module PureCloud
       
       
       
-      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable"]
+      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable", "Unscheduled"]
       if @scheduled_activity_category && !allowed_values.include?(@scheduled_activity_category)
         return false
       end
@@ -328,7 +328,7 @@ module PureCloud
       
       
       
-      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable"]
+      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable", "Unscheduled"]
       if @actual_activity_category && !allowed_values.include?(@actual_activity_category)
         return false
       end
@@ -392,7 +392,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] scheduled_activity_category Object to be assigned
     def scheduled_activity_category=(scheduled_activity_category)
-      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable"]
+      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable", "Unscheduled"]
       if scheduled_activity_category && !allowed_values.include?(scheduled_activity_category)
         fail ArgumentError, "invalid value for 'scheduled_activity_category', must be one of #{allowed_values}."
       end
@@ -439,7 +439,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] actual_activity_category Object to be assigned
     def actual_activity_category=(actual_activity_category)
-      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable"]
+      allowed_values = ["OnQueueWork", "Break", "Meal", "Meeting", "OffQueueWork", "TimeOff", "Training", "Unavailable", "Unscheduled"]
       if actual_activity_category && !allowed_values.include?(actual_activity_category)
         fail ArgumentError, "invalid value for 'actual_activity_category', must be one of #{allowed_values}."
       end

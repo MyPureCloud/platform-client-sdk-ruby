@@ -8,7 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
-[**delete_voicemail_message**](VoicemailApi.html#delete_voicemail_message) | Delete a message.
+[**delete_voicemail_message**](VoicemailApi.html#delete_voicemail_message) | Delete a voicemail message.
 [**delete_voicemail_messages**](VoicemailApi.html#delete_voicemail_messages) | Delete all voicemail messages
 [**get_voicemail_group_mailbox**](VoicemailApi.html#get_voicemail_group_mailbox) | Get the group&#39;s mailbox information
 [**get_voicemail_group_messages**](VoicemailApi.html#get_voicemail_group_messages) | List voicemail messages
@@ -17,18 +17,19 @@ Method | Description
 [**get_voicemail_me_mailbox**](VoicemailApi.html#get_voicemail_me_mailbox) | Get the current user&#39;s mailbox information
 [**get_voicemail_me_messages**](VoicemailApi.html#get_voicemail_me_messages) | List voicemail messages
 [**get_voicemail_me_policy**](VoicemailApi.html#get_voicemail_me_policy) | Get the current user&#39;s voicemail policy
-[**get_voicemail_message**](VoicemailApi.html#get_voicemail_message) | Get message.
-[**get_voicemail_message_media**](VoicemailApi.html#get_voicemail_message_media) | Get media playback URI for this message
+[**get_voicemail_message**](VoicemailApi.html#get_voicemail_message) | Get a voicemail message
+[**get_voicemail_message_media**](VoicemailApi.html#get_voicemail_message_media) | Get media playback URI for this voicemail message
 [**get_voicemail_messages**](VoicemailApi.html#get_voicemail_messages) | List voicemail messages
 [**get_voicemail_policy**](VoicemailApi.html#get_voicemail_policy) | Get a policy
 [**get_voicemail_search**](VoicemailApi.html#get_voicemail_search) | Search voicemails using the q64 value returned from a previous search
 [**get_voicemail_userpolicy**](VoicemailApi.html#get_voicemail_userpolicy) | Get a user&#39;s voicemail policy
 [**patch_voicemail_group_policy**](VoicemailApi.html#patch_voicemail_group_policy) | Update a group&#39;s voicemail policy
 [**patch_voicemail_me_policy**](VoicemailApi.html#patch_voicemail_me_policy) | Update the current user&#39;s voicemail policy
+[**patch_voicemail_message**](VoicemailApi.html#patch_voicemail_message) | Update a voicemail message
 [**patch_voicemail_userpolicy**](VoicemailApi.html#patch_voicemail_userpolicy) | Update a user&#39;s voicemail policy
 [**post_voicemail_messages**](VoicemailApi.html#post_voicemail_messages) | Copy a voicemail message to a user or group
 [**post_voicemail_search**](VoicemailApi.html#post_voicemail_search) | Search voicemails
-[**put_voicemail_message**](VoicemailApi.html#put_voicemail_message) | Update a message.
+[**put_voicemail_message**](VoicemailApi.html#put_voicemail_message) | Update a voicemail message
 [**put_voicemail_policy**](VoicemailApi.html#put_voicemail_policy) | Update a policy
 {: class="table table-striped"}
 
@@ -36,9 +37,9 @@ Method | Description
 
 ## - delete_voicemail_message(message_id)
 
-Delete a message.
+Delete a voicemail message.
 
-
+A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
 
 Wraps DELETE /api/v2/voicemail/messages/{messageId} 
 
@@ -64,7 +65,7 @@ message_id = "message_id_example" # String | Message ID
 
 
 begin
-  #Delete a message.
+  #Delete a voicemail message.
   api_instance.delete_voicemail_message(message_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->delete_voicemail_message: #{e}"
@@ -550,7 +551,7 @@ This endpoint does not need any parameter.
 
 ## -[**VoicemailMessage**](VoicemailMessage.html) get_voicemail_message(message_id, opts)
 
-Get message.
+Get a voicemail message
 
 
 
@@ -581,7 +582,7 @@ opts = {
 }
 
 begin
-  #Get message.
+  #Get a voicemail message
   result = api_instance.get_voicemail_message(message_id, opts)
   p result
 rescue PureCloud::ApiError => e
@@ -613,7 +614,7 @@ Name | Type | Description  | Notes
 
 ## -[**VoicemailMediaInfo**](VoicemailMediaInfo.html) get_voicemail_message_media(message_id, opts)
 
-Get media playback URI for this message
+Get media playback URI for this voicemail message
 
 
 
@@ -644,7 +645,7 @@ opts = {
 }
 
 begin
-  #Get media playback URI for this message
+  #Get media playback URI for this voicemail message
   result = api_instance.get_voicemail_message_media(message_id, opts)
   p result
 rescue PureCloud::ApiError => e
@@ -1030,6 +1031,68 @@ Name | Type | Description  | Notes
 
 
 
+<a name="patch_voicemail_message"></a>
+
+## -[**VoicemailMessage**](VoicemailMessage.html) patch_voicemail_message(message_id, body)
+
+Update a voicemail message
+
+A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+
+Wraps PATCH /api/v2/voicemail/messages/{messageId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::VoicemailApi.new
+
+message_id = "message_id_example" # String | Message ID
+
+body = PureCloud::VoicemailMessage.new # VoicemailMessage | VoicemailMessage
+
+
+begin
+  #Update a voicemail message
+  result = api_instance.patch_voicemail_message(message_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling VoicemailApi->patch_voicemail_message: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **message_id** | **String**| Message ID |  |
+ **body** | [**VoicemailMessage**](VoicemailMessage.html)| VoicemailMessage |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**VoicemailMessage**](VoicemailMessage.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="patch_voicemail_userpolicy"></a>
 
 ## -[**VoicemailUserPolicy**](VoicemailUserPolicy.html) patch_voicemail_userpolicy(user_id, body)
@@ -1215,9 +1278,9 @@ Name | Type | Description  | Notes
 
 ## -[**VoicemailMessage**](VoicemailMessage.html) put_voicemail_message(message_id, body)
 
-Update a message.
+Update a voicemail message
 
-
+A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
 
 Wraps PUT /api/v2/voicemail/messages/{messageId} 
 
@@ -1245,7 +1308,7 @@ body = PureCloud::VoicemailMessage.new # VoicemailMessage | VoicemailMessage
 
 
 begin
-  #Update a message.
+  #Update a voicemail message
   result = api_instance.put_voicemail_message(message_id, body)
   p result
 rescue PureCloud::ApiError => e

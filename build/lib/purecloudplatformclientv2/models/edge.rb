@@ -102,6 +102,9 @@ module PureCloud
     # Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed.
     attr_accessor :proxy
 
+    # True if the offline edge configuration endpoint has been called for this edge.
+    attr_accessor :offline_config_called
+
     # The name provided by the operating system of the Edge.
     attr_accessor :os_name
 
@@ -187,6 +190,8 @@ module PureCloud
         :'conversation_count' => :'conversationCount',
         
         :'proxy' => :'proxy',
+        
+        :'offline_config_called' => :'offlineConfigCalled',
         
         :'os_name' => :'osName',
         
@@ -274,6 +279,8 @@ module PureCloud
         :'conversation_count' => :'Integer',
         
         :'proxy' => :'String',
+        
+        :'offline_config_called' => :'BOOLEAN',
         
         :'os_name' => :'String',
         
@@ -635,6 +642,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'offlineConfigCalled')
+        
+        
+        self.offline_config_called = attributes[:'offlineConfigCalled']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'osName')
         
         
@@ -839,6 +855,10 @@ module PureCloud
       if @call_draining_state && !allowed_values.include?(@call_draining_state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -1106,6 +1126,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1149,6 +1174,7 @@ module PureCloud
           call_draining_state == o.call_draining_state &&
           conversation_count == o.conversation_count &&
           proxy == o.proxy &&
+          offline_config_called == o.offline_config_called &&
           os_name == o.os_name &&
           self_uri == o.self_uri
     end
@@ -1162,7 +1188,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, interfaces, make, model, api_version, software_version, software_version_timestamp, software_version_platform, software_version_configuration, full_software_version, pairing_id, fingerprint, fingerprint_hint, current_version, staged_version, patch, status_code, edge_group, site, software_status, online_status, serial_number, physical_edge, managed, edge_deployment_type, call_draining_state, conversation_count, proxy, os_name, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, interfaces, make, model, api_version, software_version, software_version_timestamp, software_version_platform, software_version_configuration, full_software_version, pairing_id, fingerprint, fingerprint_hint, current_version, staged_version, patch, status_code, edge_group, site, software_status, online_status, serial_number, physical_edge, managed, edge_deployment_type, call_draining_state, conversation_count, proxy, offline_config_called, os_name, self_uri].hash
     end
 
     # build the object from hash

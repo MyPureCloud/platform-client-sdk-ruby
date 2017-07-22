@@ -38,6 +38,18 @@ module PureCloud
     # Roles assigned to this client. Roles only apply to clients using the client_credential grant
     attr_accessor :role_ids
 
+    # Date this client was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :date_created
+
+    # Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :date_modified
+
+    # User that created this client
+    attr_accessor :created_by
+
+    # User that last modified this client
+    attr_accessor :modified_by
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -58,6 +70,14 @@ module PureCloud
         :'secret' => :'secret',
         
         :'role_ids' => :'roleIds',
+        
+        :'date_created' => :'dateCreated',
+        
+        :'date_modified' => :'dateModified',
+        
+        :'created_by' => :'createdBy',
+        
+        :'modified_by' => :'modifiedBy',
         
         :'self_uri' => :'selfUri'
         
@@ -81,6 +101,14 @@ module PureCloud
         :'secret' => :'String',
         
         :'role_ids' => :'Array<String>',
+        
+        :'date_created' => :'DateTime',
+        
+        :'date_modified' => :'DateTime',
+        
+        :'created_by' => :'UriReference',
+        
+        :'modified_by' => :'UriReference',
         
         :'self_uri' => :'String'
         
@@ -163,6 +191,42 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'dateCreated')
+        
+        
+        self.date_created = attributes[:'dateCreated']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'dateModified')
+        
+        
+        self.date_modified = attributes[:'dateModified']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'createdBy')
+        
+        
+        self.created_by = attributes[:'createdBy']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'modifiedBy')
+        
+        
+        self.modified_by = attributes[:'modifiedBy']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -224,8 +288,44 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -279,6 +379,10 @@ module PureCloud
           registered_redirect_uri == o.registered_redirect_uri &&
           secret == o.secret &&
           role_ids == o.role_ids &&
+          date_created == o.date_created &&
+          date_modified == o.date_modified &&
+          created_by == o.created_by &&
+          modified_by == o.modified_by &&
           self_uri == o.self_uri
     end
 
@@ -291,7 +395,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, access_token_validity_seconds, description, registered_redirect_uri, secret, role_ids, self_uri].hash
+      [id, name, access_token_validity_seconds, description, registered_redirect_uri, secret, role_ids, date_created, date_modified, created_by, modified_by, self_uri].hash
     end
 
     # build the object from hash
