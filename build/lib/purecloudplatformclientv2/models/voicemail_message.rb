@@ -39,6 +39,9 @@ module PureCloud
     # The date the voicemail message was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :modified_date
 
+    # The date the voicemail message deleted property was set to true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :deleted_date
+
     # The caller address
     attr_accessor :caller_address
 
@@ -69,8 +72,8 @@ module PureCloud
     # Represents where this voicemail has been copied to
     attr_accessor :copied_to
 
-    # The retention policy for this voicemail
-    attr_accessor :retention_policy
+    # The retention policy for this voicemail when deleted is set to true
+    attr_accessor :delete_retention_policy
 
     # The URI for this object
     attr_accessor :self_uri
@@ -93,6 +96,8 @@ module PureCloud
         
         :'modified_date' => :'modifiedDate',
         
+        :'deleted_date' => :'deletedDate',
+        
         :'caller_address' => :'callerAddress',
         
         :'caller_name' => :'callerName',
@@ -113,7 +118,7 @@ module PureCloud
         
         :'copied_to' => :'copiedTo',
         
-        :'retention_policy' => :'retentionPolicy',
+        :'delete_retention_policy' => :'deleteRetentionPolicy',
         
         :'self_uri' => :'selfUri'
         
@@ -138,6 +143,8 @@ module PureCloud
         
         :'modified_date' => :'DateTime',
         
+        :'deleted_date' => :'DateTime',
+        
         :'caller_address' => :'String',
         
         :'caller_name' => :'String',
@@ -158,7 +165,7 @@ module PureCloud
         
         :'copied_to' => :'Array<VoicemailCopyRecord>',
         
-        :'retention_policy' => :'VoicemailRetentionPolicy',
+        :'delete_retention_policy' => :'VoicemailRetentionPolicy',
         
         :'self_uri' => :'String'
         
@@ -232,6 +239,15 @@ module PureCloud
         
         
         self.modified_date = attributes[:'modifiedDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'deletedDate')
+        
+        
+        self.deleted_date = attributes[:'deletedDate']
         
       
       end
@@ -329,10 +345,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'retentionPolicy')
+      if attributes.has_key?(:'deleteRetentionPolicy')
         
         
-        self.retention_policy = attributes[:'retentionPolicy']
+        self.delete_retention_policy = attributes[:'deleteRetentionPolicy']
         
       
       end
@@ -438,8 +454,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -548,6 +573,7 @@ module PureCloud
           audio_recording_size_bytes == o.audio_recording_size_bytes &&
           created_date == o.created_date &&
           modified_date == o.modified_date &&
+          deleted_date == o.deleted_date &&
           caller_address == o.caller_address &&
           caller_name == o.caller_name &&
           caller_user == o.caller_user &&
@@ -558,7 +584,7 @@ module PureCloud
           queue == o.queue &&
           copied_from == o.copied_from &&
           copied_to == o.copied_to &&
-          retention_policy == o.retention_policy &&
+          delete_retention_policy == o.delete_retention_policy &&
           self_uri == o.self_uri
     end
 
@@ -571,7 +597,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, conversation, read, audio_recording_duration_seconds, audio_recording_size_bytes, created_date, modified_date, caller_address, caller_name, caller_user, deleted, note, user, group, queue, copied_from, copied_to, retention_policy, self_uri].hash
+      [id, conversation, read, audio_recording_duration_seconds, audio_recording_size_bytes, created_date, modified_date, deleted_date, caller_address, caller_name, caller_user, deleted, note, user, group, queue, copied_from, copied_to, delete_retention_policy, self_uri].hash
     end
 
     # build the object from hash

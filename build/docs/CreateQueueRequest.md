@@ -18,7 +18,7 @@ title: CreateQueueRequest
 | **state** | **String** |  | [optional] |
 | **modified_by_app** | **String** |  | [optional] |
 | **created_by_app** | **String** |  | [optional] |
-| **media_settings** | [**Hash&lt;String, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. | |
+| **media_settings** | [**Hash&lt;String, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION | |
 | **bullseye** | [**Bullseye**](Bullseye.html) | The bulls-eye settings for the queue. | [optional] |
 | **acw_settings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | |
 | **skill_evaluation_method** | **String** | The skill evaluation method to use when routing conversations. | |

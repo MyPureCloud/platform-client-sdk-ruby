@@ -873,6 +873,89 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # List voicemail messages
+    # 
+    # @param queue_id Queue ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @return [VoicemailMessageEntityListing]
+    def get_voicemail_queue_messages(queue_id, opts = {})
+      data, _status_code, _headers = get_voicemail_queue_messages_with_http_info(queue_id, opts)
+      return data
+    end
+
+    # List voicemail messages
+    # 
+    # @param queue_id Queue ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @return [Array<(VoicemailMessageEntityListing, Fixnum, Hash)>] VoicemailMessageEntityListing data, response status code and response headers
+    def get_voicemail_queue_messages_with_http_info(queue_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: VoicemailApi.get_voicemail_queue_messages ..."
+      end
+      
+      
+      # verify the required parameter 'queue_id' is set
+      fail ArgumentError, "Missing the required parameter 'queue_id' when calling VoicemailApi.get_voicemail_queue_messages" if queue_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/voicemail/queues/{queueId}/messages".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'VoicemailMessageEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: VoicemailApi#get_voicemail_queue_messages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Search voicemails using the q64 value returned from a previous search
     # 
     # @param q64 q64

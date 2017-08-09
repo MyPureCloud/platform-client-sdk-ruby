@@ -21,7 +21,7 @@ module PureCloud
     # The userId of the agent
     attr_accessor :user_id
 
-    # Indicates the Routing State of the agent.
+    # Indicates the Routing State of the agent.  A value of OFF_QUEUE will be returned if the specified user does not exist.
     attr_accessor :status
 
     # The timestamp when the agent went into this state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ

@@ -410,6 +410,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Array<String>] :id id
     # @option opts [String] :sort_order Ascending or descending sort order (default to ASC)
     # @return [GroupEntityListing]
     def get_groups(opts = {})
@@ -422,12 +423,19 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
+    # @option opts [Array<String>] :id id
     # @option opts [String] :sort_order Ascending or descending sort order
     # @return [Array<(GroupEntityListing, Fixnum, Hash)>] GroupEntityListing data, response status code and response headers
     def get_groups_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.get_groups ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -458,6 +466,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
 
       # header parameters

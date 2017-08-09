@@ -5494,6 +5494,81 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
+    # 
+    # @param conversation_id conversationId
+    # @param body Send external email reply
+    # @param [Hash] opts the optional parameters
+    # @return [EmailConversation]
+    def post_conversations_email_inboundmessages(conversation_id, body, opts = {})
+      data, _status_code, _headers = post_conversations_email_inboundmessages_with_http_info(conversation_id, body, opts)
+      return data
+    end
+
+    # Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
+    # 
+    # @param conversation_id conversationId
+    # @param body Send external email reply
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EmailConversation, Fixnum, Hash)>] EmailConversation data, response status code and response headers
+    def post_conversations_email_inboundmessages_with_http_info(conversation_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_email_inboundmessages ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_email_inboundmessages" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_email_inboundmessages" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/emails/{conversationId}/inboundmessages".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EmailConversation')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_email_inboundmessages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Send an email reply
     # 
     # @param conversation_id conversationId

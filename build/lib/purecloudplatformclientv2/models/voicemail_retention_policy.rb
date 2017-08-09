@@ -17,7 +17,7 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  # Governs how the voicemail is retained when the deleted property is set to true
+  # Governs how the voicemail is retained
   class VoicemailRetentionPolicy
     # The retention policy type
     attr_accessor :voicemail_retention_policy_type

@@ -18,8 +18,11 @@ require 'date'
 
 module PureCloud
   class CreateEmailRequest
-    # The ID of the queue to use for routing the chat conversation.
+    # The ID of the queue to use for routing the chat conversation. This field is mutually exclusive with flowId
     attr_accessor :queue_id
+
+    # The ID of the flow to use for routing chat conversation. This field is mutually exclusive with queueId
+    attr_accessor :flow_id
 
     # The name of the provider that is sourcing the web chat.
     attr_accessor :provider
@@ -60,6 +63,8 @@ module PureCloud
         
         :'queue_id' => :'queueId',
         
+        :'flow_id' => :'flowId',
+        
         :'provider' => :'provider',
         
         :'skill_ids' => :'skillIds',
@@ -90,6 +95,8 @@ module PureCloud
       {
         
         :'queue_id' => :'String',
+        
+        :'flow_id' => :'String',
         
         :'provider' => :'String',
         
@@ -129,6 +136,15 @@ module PureCloud
         
         
         self.queue_id = attributes[:'queueId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'flowId')
+        
+        
+        self.flow_id = attributes[:'flowId']
         
       
       end
@@ -253,10 +269,9 @@ module PureCloud
     def valid?
       
       
-      if @queue_id.nil?
-        return false
-      end
-
+      
+      
+      
       
       
       
@@ -374,6 +389,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] direction Object to be assigned
     def direction=(direction)
@@ -393,6 +413,7 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           queue_id == o.queue_id &&
+          flow_id == o.flow_id &&
           provider == o.provider &&
           skill_ids == o.skill_ids &&
           language_id == o.language_id &&
@@ -415,7 +436,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [queue_id, provider, skill_ids, language_id, priority, attributes, to_address, to_name, from_address, from_name, subject, direction].hash
+      [queue_id, flow_id, provider, skill_ids, language_id, priority, attributes, to_address, to_name, from_address, from_name, subject, direction].hash
     end
 
     # build the object from hash

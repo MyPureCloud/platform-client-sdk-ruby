@@ -21,6 +21,7 @@ Method | Description
 [**get_voicemail_message_media**](VoicemailApi.html#get_voicemail_message_media) | Get media playback URI for this voicemail message
 [**get_voicemail_messages**](VoicemailApi.html#get_voicemail_messages) | List voicemail messages
 [**get_voicemail_policy**](VoicemailApi.html#get_voicemail_policy) | Get a policy
+[**get_voicemail_queue_messages**](VoicemailApi.html#get_voicemail_queue_messages) | List voicemail messages
 [**get_voicemail_search**](VoicemailApi.html#get_voicemail_search) | Search voicemails using the q64 value returned from a previous search
 [**get_voicemail_userpolicy**](VoicemailApi.html#get_voicemail_userpolicy) | Get a user&#39;s voicemail policy
 [**patch_voicemail_group_policy**](VoicemailApi.html#patch_voicemail_group_policy) | Update a group&#39;s voicemail policy
@@ -780,6 +781,71 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_voicemail_queue_messages"></a>
+
+## -[**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) get_voicemail_queue_messages(queue_id, opts)
+
+List voicemail messages
+
+
+
+Wraps GET /api/v2/voicemail/queues/{queueId}/messages 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::VoicemailApi.new
+
+queue_id = "queue_id_example" # String | Queue ID
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #List voicemail messages
+  result = api_instance.get_voicemail_queue_messages(queue_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling VoicemailApi->get_voicemail_queue_messages: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **queue_id** | **String**| Queue ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html)
 
 ### HTTP request headers
 

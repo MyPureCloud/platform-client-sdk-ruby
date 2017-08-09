@@ -28,6 +28,7 @@ title: Recording
 | **max_allowed_restorations_for_org** | **Integer** | How many archive restorations the organization is allowed to have. | [optional] |
 | **remaining_restorations_allowed_for_org** | **Integer** | The remaining archive restorations the organization has. | [optional] |
 | **session_id** | **String** | The session id represents an external resource id, such as email, call, chat, etc | [optional] |
+| **users** | [**Array&lt;User&gt;**](User.html) | The users participating in the conversation | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

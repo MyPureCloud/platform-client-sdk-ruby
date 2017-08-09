@@ -74,6 +74,9 @@ module PureCloud
     # The session id represents an external resource id, such as email, call, chat, etc
     attr_accessor :session_id
 
+    # The users participating in the conversation
+    attr_accessor :users
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -122,6 +125,8 @@ module PureCloud
         :'remaining_restorations_allowed_for_org' => :'remainingRestorationsAllowedForOrg',
         
         :'session_id' => :'sessionId',
+        
+        :'users' => :'users',
         
         :'self_uri' => :'selfUri'
         
@@ -173,6 +178,8 @@ module PureCloud
         :'remaining_restorations_allowed_for_org' => :'Integer',
         
         :'session_id' => :'String',
+        
+        :'users' => :'Array<User>',
         
         :'self_uri' => :'String'
         
@@ -385,6 +392,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'users')
+        
+        if (value = attributes[:'users']).is_a?(Array)
+          self.users = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -484,6 +502,10 @@ module PureCloud
       if @archive_medium && !allowed_values.include?(@archive_medium)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -638,6 +660,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -664,6 +691,7 @@ module PureCloud
           max_allowed_restorations_for_org == o.max_allowed_restorations_for_org &&
           remaining_restorations_allowed_for_org == o.remaining_restorations_allowed_for_org &&
           session_id == o.session_id &&
+          users == o.users &&
           self_uri == o.self_uri
     end
 
@@ -676,7 +704,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, conversation_id, path, start_time, end_time, media, annotations, transcript, email_transcript, file_state, restore_expiration_time, media_uris, estimated_transcode_time_ms, actual_transcode_time_ms, archive_date, archive_medium, delete_date, max_allowed_restorations_for_org, remaining_restorations_allowed_for_org, session_id, self_uri].hash
+      [id, name, conversation_id, path, start_time, end_time, media, annotations, transcript, email_transcript, file_state, restore_expiration_time, media_uris, estimated_transcode_time_ms, actual_transcode_time_ms, archive_date, archive_medium, delete_date, max_allowed_restorations_for_org, remaining_restorations_allowed_for_org, session_id, users, self_uri].hash
     end
 
     # build the object from hash

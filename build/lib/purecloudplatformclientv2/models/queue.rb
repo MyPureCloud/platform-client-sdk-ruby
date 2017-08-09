@@ -43,7 +43,7 @@ module PureCloud
 
     attr_accessor :created_by_app
 
-    # The media settings for the queue.
+    # The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION
     attr_accessor :media_settings
 
     # The bulls-eye settings for the queue.
