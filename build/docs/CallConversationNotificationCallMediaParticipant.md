@@ -33,6 +33,7 @@ title: CallConversationNotificationCallMediaParticipant
 | **external_organization** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
 | **peer** | **String** |  | [optional] |
+| **screen_recording_state** | **String** |  | [optional] |
 | **muted** | **BOOLEAN** |  | [optional] |
 | **confined** | **BOOLEAN** |  | [optional] |
 | **recording** | **BOOLEAN** |  | [optional] |

@@ -18,10 +18,6 @@ require 'date'
 
 module PureCloud
   class JsonNode
-    attr_accessor :array
-
-    attr_accessor :null
-
     attr_accessor :node_type
 
     attr_accessor :float
@@ -32,11 +28,9 @@ module PureCloud
 
     attr_accessor :number
 
-    attr_accessor :value_node
+    attr_accessor :missing_node
 
     attr_accessor :container_node
-
-    attr_accessor :missing_node
 
     attr_accessor :pojo
 
@@ -60,13 +54,15 @@ module PureCloud
 
     attr_accessor :binary
 
+    attr_accessor :value_node
+
+    attr_accessor :array
+
+    attr_accessor :null
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        
-        :'array' => :'array',
-        
-        :'null' => :'null',
         
         :'node_type' => :'nodeType',
         
@@ -78,11 +74,9 @@ module PureCloud
         
         :'number' => :'number',
         
-        :'value_node' => :'valueNode',
+        :'missing_node' => :'missingNode',
         
         :'container_node' => :'containerNode',
-        
-        :'missing_node' => :'missingNode',
         
         :'pojo' => :'pojo',
         
@@ -104,7 +98,13 @@ module PureCloud
         
         :'textual' => :'textual',
         
-        :'binary' => :'binary'
+        :'binary' => :'binary',
+        
+        :'value_node' => :'valueNode',
+        
+        :'array' => :'array',
+        
+        :'null' => :'null'
         
       }
     end
@@ -112,10 +112,6 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        
-        :'array' => :'BOOLEAN',
-        
-        :'null' => :'BOOLEAN',
         
         :'node_type' => :'String',
         
@@ -127,11 +123,9 @@ module PureCloud
         
         :'number' => :'BOOLEAN',
         
-        :'value_node' => :'BOOLEAN',
+        :'missing_node' => :'BOOLEAN',
         
         :'container_node' => :'BOOLEAN',
-        
-        :'missing_node' => :'BOOLEAN',
         
         :'pojo' => :'BOOLEAN',
         
@@ -153,7 +147,13 @@ module PureCloud
         
         :'textual' => :'BOOLEAN',
         
-        :'binary' => :'BOOLEAN'
+        :'binary' => :'BOOLEAN',
+        
+        :'value_node' => :'BOOLEAN',
+        
+        :'array' => :'BOOLEAN',
+        
+        :'null' => :'BOOLEAN'
         
       }
     end
@@ -165,24 +165,6 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes.has_key?(:'array')
-        
-        
-        self.array = attributes[:'array']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'null')
-        
-        
-        self.null = attributes[:'null']
-        
-      
-      end
 
       
       if attributes.has_key?(:'nodeType')
@@ -230,10 +212,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'valueNode')
+      if attributes.has_key?(:'missingNode')
         
         
-        self.value_node = attributes[:'valueNode']
+        self.missing_node = attributes[:'missingNode']
         
       
       end
@@ -243,15 +225,6 @@ module PureCloud
         
         
         self.container_node = attributes[:'containerNode']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'missingNode')
-        
-        
-        self.missing_node = attributes[:'missingNode']
         
       
       end
@@ -356,6 +329,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'valueNode')
+        
+        
+        self.value_node = attributes[:'valueNode']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'array')
+        
+        
+        self.array = attributes[:'array']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'null')
+        
+        
+        self.null = attributes[:'null']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -370,14 +370,6 @@ module PureCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      
-      
-      
-      
-      
-      
-      
-      
       
       
       
@@ -460,18 +452,16 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     # Custom attribute writer method checking allowed values (enum).
@@ -577,21 +567,28 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          array == o.array &&
-          null == o.null &&
           node_type == o.node_type &&
           float == o.float &&
           object == o.object &&
           boolean == o.boolean &&
           number == o.number &&
-          value_node == o.value_node &&
-          container_node == o.container_node &&
           missing_node == o.missing_node &&
+          container_node == o.container_node &&
           pojo == o.pojo &&
           integral_number == o.integral_number &&
           floating_point_number == o.floating_point_number &&
@@ -602,7 +599,10 @@ module PureCloud
           big_decimal == o.big_decimal &&
           big_integer == o.big_integer &&
           textual == o.textual &&
-          binary == o.binary
+          binary == o.binary &&
+          value_node == o.value_node &&
+          array == o.array &&
+          null == o.null
     end
 
     # @see the `==` method
@@ -614,7 +614,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [array, null, node_type, float, object, boolean, number, value_node, container_node, missing_node, pojo, integral_number, floating_point_number, short, int, long, double, big_decimal, big_integer, textual, binary].hash
+      [node_type, float, object, boolean, number, missing_node, container_node, pojo, integral_number, floating_point_number, short, int, long, double, big_decimal, big_integer, textual, binary, value_node, array, null].hash
     end
 
     # build the object from hash

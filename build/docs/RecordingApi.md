@@ -15,6 +15,8 @@ Method | Description
 [**get_conversation_recording**](RecordingApi.html#get_conversation_recording) | Gets a specific recording.
 [**get_conversation_recording_annotation**](RecordingApi.html#get_conversation_recording_annotation) | Get annotation
 [**get_conversation_recording_annotations**](RecordingApi.html#get_conversation_recording_annotations) | Get annotations for recording
+[**get_conversation_recordingmetadata**](RecordingApi.html#get_conversation_recordingmetadata) | Get recording metadata for a conversation. Does not return playable media.
+[**get_conversation_recordingmetadata_recording_id**](RecordingApi.html#get_conversation_recordingmetadata_recording_id) | Get metadata for a specific recording. Does not return playable media.
 [**get_conversation_recordings**](RecordingApi.html#get_conversation_recordings) | Get all of a Conversation&#39;s Recordings.
 [**get_orphanrecording**](RecordingApi.html#get_orphanrecording) | Gets a single orphan recording
 [**get_orphanrecording_media**](RecordingApi.html#get_orphanrecording_media) | Gets the media of a single orphan recording
@@ -471,6 +473,127 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Array&lt;Annotation&gt;**](Annotation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversation_recordingmetadata"></a>
+
+## -[**Array&lt;Recording&gt;**](Recording.html) get_conversation_recordingmetadata(conversation_id)
+
+Get recording metadata for a conversation. Does not return playable media.
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/recordingmetadata 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+conversation_id = "conversation_id_example" # String | Conversation ID
+
+
+begin
+  #Get recording metadata for a conversation. Does not return playable media.
+  result = api_instance.get_conversation_recordingmetadata(conversation_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_conversation_recordingmetadata: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| Conversation ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;Recording&gt;**](Recording.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversation_recordingmetadata_recording_id"></a>
+
+## -[**Recording**](Recording.html) get_conversation_recordingmetadata_recording_id(conversation_id, recording_id)
+
+Get metadata for a specific recording. Does not return playable media.
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/recordingmetadata/{recordingId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+conversation_id = "conversation_id_example" # String | Conversation ID
+
+recording_id = "recording_id_example" # String | Recording ID
+
+
+begin
+  #Get metadata for a specific recording. Does not return playable media.
+  result = api_instance.get_conversation_recordingmetadata_recording_id(conversation_id, recording_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_conversation_recordingmetadata_recording_id: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| Conversation ID |  |
+ **recording_id** | **String**| Recording ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Recording**](Recording.html)
 
 ### HTTP request headers
 

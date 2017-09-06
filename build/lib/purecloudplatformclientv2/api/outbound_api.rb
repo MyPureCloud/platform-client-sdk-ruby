@@ -686,6 +686,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete multiple contact lists.
+    # 
+    # @param id contact list id(s) to delete
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_outbound_contactlists(id, opts = {})
+      delete_outbound_contactlists_with_http_info(id, opts)
+      return nil
+    end
+
+    # Delete multiple contact lists.
+    # 
+    # @param id contact list id(s) to delete
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_outbound_contactlists_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_contactlists ..."
+      end
+      
+      
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling OutboundApi.delete_outbound_contactlists" if id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/contactlists".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'id'] = @api_client.build_collection_param(id, :multi)
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_contactlists\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete dialer DNC list
     # 
     # @param dnc_list_id DncList ID

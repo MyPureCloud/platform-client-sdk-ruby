@@ -46,6 +46,8 @@ module PureCloud
 
     attr_accessor :disconnected_time
 
+    attr_accessor :message_id
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -79,6 +81,8 @@ module PureCloud
         :'connected_time' => :'connectedTime',
         
         :'disconnected_time' => :'disconnectedTime',
+        
+        :'message_id' => :'messageId',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -116,6 +120,8 @@ module PureCloud
         :'connected_time' => :'DateTime',
         
         :'disconnected_time' => :'DateTime',
+        
+        :'message_id' => :'String',
         
         :'additional_properties' => :'Object'
         
@@ -257,6 +263,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'messageId')
+        
+        
+        self.message_id = attributes[:'messageId']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -332,6 +347,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -447,6 +466,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -466,6 +490,7 @@ module PureCloud
           start_hold_time == o.start_hold_time &&
           connected_time == o.connected_time &&
           disconnected_time == o.disconnected_time &&
+          message_id == o.message_id &&
           additional_properties == o.additional_properties
     end
 
@@ -478,7 +503,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, held, auto_generated, subject, provider, script_id, peer_id, messages_sent, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, additional_properties].hash
+      [id, state, held, auto_generated, subject, provider, script_id, peer_id, messages_sent, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, message_id, additional_properties].hash
     end
 
     # build the object from hash

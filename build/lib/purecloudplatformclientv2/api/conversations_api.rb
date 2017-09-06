@@ -4656,7 +4656,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Add a new call to a conversation
+    # Place a new call as part of a callback conversation.
     # 
     # @param conversation_id conversationId
     # @param body Conversation
@@ -4667,7 +4667,7 @@ module PureCloud
       return data
     end
 
-    # Add a new call to a conversation
+    # Place a new call as part of a callback conversation.
     # 
     # @param conversation_id conversationId
     # @param body Conversation

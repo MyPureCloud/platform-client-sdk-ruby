@@ -79,9 +79,9 @@ module PureCloud
 
     attr_accessor :sharing_status
 
-    attr_accessor :sharing_uri
-
     attr_accessor :download_sharing_uri
+
+    attr_accessor :sharing_uri
 
     # The URI for this object
     attr_accessor :self_uri
@@ -146,9 +146,9 @@ module PureCloud
         
         :'sharing_status' => :'sharingStatus',
         
-        :'sharing_uri' => :'sharingUri',
-        
         :'download_sharing_uri' => :'downloadSharingUri',
+        
+        :'sharing_uri' => :'sharingUri',
         
         :'self_uri' => :'selfUri'
         
@@ -215,9 +215,9 @@ module PureCloud
         
         :'sharing_status' => :'String',
         
-        :'sharing_uri' => :'String',
-        
         :'download_sharing_uri' => :'String',
+        
+        :'sharing_uri' => :'String',
         
         :'self_uri' => :'String'
         
@@ -495,19 +495,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'sharingUri')
+      if attributes.has_key?(:'downloadSharingUri')
         
         
-        self.sharing_uri = attributes[:'sharingUri']
+        self.download_sharing_uri = attributes[:'downloadSharingUri']
         
       
       end
 
       
-      if attributes.has_key?(:'downloadSharingUri')
+      if attributes.has_key?(:'sharingUri')
         
         
-        self.download_sharing_uri = attributes[:'downloadSharingUri']
+        self.sharing_uri = attributes[:'sharingUri']
         
       
       end
@@ -894,8 +894,8 @@ module PureCloud
           lock_info == o.lock_info &&
           acl == o.acl &&
           sharing_status == o.sharing_status &&
-          sharing_uri == o.sharing_uri &&
           download_sharing_uri == o.download_sharing_uri &&
+          sharing_uri == o.sharing_uri &&
           self_uri == o.self_uri
     end
 
@@ -908,7 +908,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, change_number, date_created, date_modified, date_uploaded, content_uri, workspace, created_by, uploaded_by, content_type, content_length, system_type, filename, page_count, read, caller_address, receiver_address, tags, tag_values, attributes, thumbnails, upload_status, upload_destination_uri, upload_method, lock_info, acl, sharing_status, sharing_uri, download_sharing_uri, self_uri].hash
+      [id, name, change_number, date_created, date_modified, date_uploaded, content_uri, workspace, created_by, uploaded_by, content_type, content_length, system_type, filename, page_count, read, caller_address, receiver_address, tags, tag_values, attributes, thumbnails, upload_status, upload_destination_uri, upload_method, lock_info, acl, sharing_status, download_sharing_uri, sharing_uri, self_uri].hash
     end
 
     # build the object from hash

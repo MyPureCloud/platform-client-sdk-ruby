@@ -70,6 +70,8 @@ module PureCloud
 
     attr_accessor :peer
 
+    attr_accessor :screen_recording_state
+
     attr_accessor :audio_muted
 
     attr_accessor :video_muted
@@ -135,6 +137,8 @@ module PureCloud
         :'wrapup' => :'wrapup',
         
         :'peer' => :'peer',
+        
+        :'screen_recording_state' => :'screenRecordingState',
         
         :'audio_muted' => :'audioMuted',
         
@@ -204,6 +208,8 @@ module PureCloud
         :'wrapup' => :'ConversationNotificationWrapup',
         
         :'peer' => :'String',
+        
+        :'screen_recording_state' => :'String',
         
         :'audio_muted' => :'BOOLEAN',
         
@@ -463,6 +469,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'screenRecordingState')
+        
+        
+        self.screen_recording_state = attributes[:'screenRecordingState']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'audioMuted')
         
         
@@ -579,6 +594,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -847,6 +866,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -878,6 +902,7 @@ module PureCloud
           external_organization == o.external_organization &&
           wrapup == o.wrapup &&
           peer == o.peer &&
+          screen_recording_state == o.screen_recording_state &&
           audio_muted == o.audio_muted &&
           video_muted == o.video_muted &&
           sharing_screen == o.sharing_screen &&
@@ -894,7 +919,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, audio_muted, video_muted, sharing_screen, peer_count, context].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, screen_recording_state, audio_muted, video_muted, sharing_screen, peer_count, context].hash
     end
 
     # build the object from hash

@@ -10,6 +10,7 @@ Method | Description
 ------------- | ------------- | -------------
 [**delete_alerting_interactionstats_alert**](AlertingApi.html#delete_alerting_interactionstats_alert) | Delete an interaction stats alert
 [**delete_alerting_interactionstats_rule**](AlertingApi.html#delete_alerting_interactionstats_rule) | Delete an interaction stats rule.
+[**get_alerting_alerts_active**](AlertingApi.html#get_alerting_alerts_active) | Gets active alert count for a user.
 [**get_alerting_interactionstats_alert**](AlertingApi.html#get_alerting_interactionstats_alert) | Get an interaction stats alert
 [**get_alerting_interactionstats_alerts**](AlertingApi.html#get_alerting_interactionstats_alerts) | Get interaction stats alert list.
 [**get_alerting_interactionstats_alerts_unread**](AlertingApi.html#get_alerting_interactionstats_alerts_unread) | Gets user unread count of interaction stats alerts.
@@ -128,6 +129,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_alerting_alerts_active"></a>
+
+## -[**ActiveAlertCount**](ActiveAlertCount.html) get_alerting_alerts_active
+
+Gets active alert count for a user.
+
+
+
+Wraps GET /api/v2/alerting/alerts/active 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AlertingApi.new
+
+begin
+  #Gets active alert count for a user.
+  result = api_instance.get_alerting_alerts_active
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AlertingApi->get_alerting_alerts_active: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ActiveAlertCount**](ActiveAlertCount.html)
 
 ### HTTP request headers
 

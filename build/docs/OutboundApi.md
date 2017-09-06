@@ -18,6 +18,7 @@ Method | Description
 [**delete_outbound_contactlist_contact**](OutboundApi.html#delete_outbound_contactlist_contact) | Delete a contact.
 [**delete_outbound_contactlist_contacts**](OutboundApi.html#delete_outbound_contactlist_contacts) | Delete contacts from a contact list.
 [**delete_outbound_contactlistfilter**](OutboundApi.html#delete_outbound_contactlistfilter) | Delete Contact List Filter
+[**delete_outbound_contactlists**](OutboundApi.html#delete_outbound_contactlists) | Delete multiple contact lists.
 [**delete_outbound_dnclist**](OutboundApi.html#delete_outbound_dnclist) | Delete dialer DNC list
 [**delete_outbound_ruleset**](OutboundApi.html#delete_outbound_ruleset) | Delete a Rule set.
 [**delete_outbound_schedules_campaign**](OutboundApi.html#delete_outbound_schedules_campaign) | Delete a dialer campaign schedule.
@@ -668,6 +669,64 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact_list_filter_id** | **String**| Contact List Filter ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_outbound_contactlists"></a>
+
+## - delete_outbound_contactlists(id)
+
+Delete multiple contact lists.
+
+
+
+Wraps DELETE /api/v2/outbound/contactlists 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+id = ["id_example"] # Array<String> | contact list id(s) to delete
+
+
+begin
+  #Delete multiple contact lists.
+  api_instance.delete_outbound_contactlists(id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->delete_outbound_contactlists: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Array&lt;String&gt;**](String.html)| contact list id(s) to delete |  |
 {: class="table table-striped"}
 
 

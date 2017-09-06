@@ -468,10 +468,9 @@ module PureCloud
     # Get management units
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :selector Selector
     # @option opts [Integer] :page_size  (default to 25)
     # @option opts [Integer] :page_number  (default to 1)
-    # @return [Array<ManagementUnit>]
+    # @return [ManagementUnitListing]
     def get_workforcemanagement_managementunits(opts = {})
       data, _status_code, _headers = get_workforcemanagement_managementunits_with_http_info(opts)
       return data
@@ -480,20 +479,13 @@ module PureCloud
     # Get management units
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :selector Selector
     # @option opts [Integer] :page_size 
     # @option opts [Integer] :page_number 
-    # @return [Array<(Array<ManagementUnit>, Fixnum, Hash)>] Array<ManagementUnit> data, response status code and response headers
+    # @return [Array<(ManagementUnitListing, Fixnum, Hash)>] ManagementUnitListing data, response status code and response headers
     def get_workforcemanagement_managementunits_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunits ..."
       end
-      
-      
-      
-      
-      
-      
       
       
       
@@ -512,7 +504,6 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'selector'] = opts[:'selector'] if opts[:'selector']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
 
@@ -540,7 +531,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<ManagementUnit>')
+        :return_type => 'ManagementUnitListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunits\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -28,7 +28,7 @@ module PureCloud
     attr_accessor :start_day_of_week
 
     # The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database)
-    attr_accessor :timezone
+    attr_accessor :time_zone
 
     # The version of the underlying ManagementUnit object. Useful for handling eventual consistency issues.  User must submit the current version they of the ManagementUnit in any write requests
     attr_accessor :version
@@ -49,7 +49,7 @@ module PureCloud
         
         :'start_day_of_week' => :'startDayOfWeek',
         
-        :'timezone' => :'timezone',
+        :'time_zone' => :'timeZone',
         
         :'version' => :'version',
         
@@ -70,7 +70,7 @@ module PureCloud
         
         :'start_day_of_week' => :'String',
         
-        :'timezone' => :'String',
+        :'time_zone' => :'String',
         
         :'version' => :'Integer',
         
@@ -117,10 +117,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'timezone')
+      if attributes.has_key?(:'timeZone')
         
         
-        self.timezone = attributes[:'timezone']
+        self.time_zone = attributes[:'timeZone']
         
       
       end
@@ -261,7 +261,7 @@ module PureCloud
           id == o.id &&
           name == o.name &&
           start_day_of_week == o.start_day_of_week &&
-          timezone == o.timezone &&
+          time_zone == o.time_zone &&
           version == o.version &&
           date_modified == o.date_modified &&
           self_uri == o.self_uri
@@ -276,7 +276,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, start_day_of_week, timezone, version, date_modified, self_uri].hash
+      [id, name, start_day_of_week, time_zone, version, date_modified, self_uri].hash
     end
 
     # build the object from hash

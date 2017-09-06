@@ -821,7 +821,7 @@ module PureCloud
     # 
     # @param id Consuming object ID
     # @param version Consuming object version
-    # @param object_type Consuming object type
+    # @param object_type Consuming object type.  Only versioned types are allowed here.
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :resource_type Types of consumed resources to show
     # @return [ConsumedResourcesEntityListing]
@@ -834,7 +834,7 @@ module PureCloud
     # 
     # @param id Consuming object ID
     # @param version Consuming object version
-    # @param object_type Consuming object type
+    # @param object_type Consuming object type.  Only versioned types are allowed here.
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :resource_type Types of consumed resources to show
     # @return [Array<(ConsumedResourcesEntityListing, Fixnum, Hash)>] ConsumedResourcesEntityListing data, response status code and response headers
@@ -864,8 +864,8 @@ module PureCloud
       fail ArgumentError, "Missing the required parameter 'object_type' when calling ArchitectApi.get_architect_dependencytracking_consumedresources" if object_type.nil?
       
       # verify enum value
-      unless ['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'EMAILROUTE', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDEMAILFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'USER', 'USERPROMPT', 'VOICEXML', 'WORKFLOW'].include?(object_type)
-        fail ArgumentError, "invalid value for 'object_type', must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW"
+      unless ['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'EMAILROUTE', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDEMAILFLOW', 'INBOUNDSHORTMESSAGE', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'USER', 'USERPROMPT', 'VOICEXML', 'WORKFLOW'].include?(object_type)
+        fail ArgumentError, "invalid value for 'object_type', must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW"
       end
       
       
@@ -922,9 +922,9 @@ module PureCloud
     # Get resources that consume a given Dependency Tracking object
     # 
     # @param id Consumed object ID
-    # @param object_type Consumed object type (only versioned object types are valid)
+    # @param object_type Consumed object type
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :resource_type Types of consuming resources to show
+    # @option opts [Array<String>] :resource_type Types of consuming resources to show.  Only versioned types are allowed here.
     # @return [ConsumingResourcesEntityListing]
     def get_architect_dependencytracking_consumingresources(id, object_type, opts = {})
       data, _status_code, _headers = get_architect_dependencytracking_consumingresources_with_http_info(id, object_type, opts)
@@ -934,9 +934,9 @@ module PureCloud
     # Get resources that consume a given Dependency Tracking object
     # 
     # @param id Consumed object ID
-    # @param object_type Consumed object type (only versioned object types are valid)
+    # @param object_type Consumed object type
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :resource_type Types of consuming resources to show
+    # @option opts [Array<String>] :resource_type Types of consuming resources to show.  Only versioned types are allowed here.
     # @return [Array<(ConsumingResourcesEntityListing, Fixnum, Hash)>] ConsumingResourcesEntityListing data, response status code and response headers
     def get_architect_dependencytracking_consumingresources_with_http_info(id, object_type, opts = {})
       if @api_client.config.debugging
@@ -956,8 +956,8 @@ module PureCloud
       fail ArgumentError, "Missing the required parameter 'object_type' when calling ArchitectApi.get_architect_dependencytracking_consumingresources" if object_type.nil?
       
       # verify enum value
-      unless ['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'EMAILROUTE', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDEMAILFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'USER', 'USERPROMPT', 'VOICEXML', 'WORKFLOW'].include?(object_type)
-        fail ArgumentError, "invalid value for 'object_type', must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW"
+      unless ['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'EMAILROUTE', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDEMAILFLOW', 'INBOUNDSHORTMESSAGE', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'USER', 'USERPROMPT', 'VOICEXML', 'WORKFLOW'].include?(object_type)
+        fail ArgumentError, "invalid value for 'object_type', must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW"
       end
       
       
@@ -1181,8 +1181,8 @@ module PureCloud
       
       
       
-      if opts[:'object_type'] && !['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'EMAILROUTE', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDEMAILFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'USER', 'USERPROMPT', 'VOICEXML', 'WORKFLOW'].include?(opts[:'object_type'])
-        fail ArgumentError, 'invalid value for "object_type", must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW'
+      if opts[:'object_type'] && !['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'EMAILROUTE', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDEMAILFLOW', 'INBOUNDSHORTMESSAGE', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'USER', 'USERPROMPT', 'VOICEXML', 'WORKFLOW'].include?(opts[:'object_type'])
+        fail ArgumentError, 'invalid value for "object_type", must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW'
       end
       
       
@@ -1575,6 +1575,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [String] :sort_by Sort by (default to name)
     # @option opts [String] :sort_order Sort order (default to ASC)
+    # @option opts [String] :name Name of the IVR to filter by.
     # @return [IVREntityListing]
     def get_architect_ivrs(opts = {})
       data, _status_code, _headers = get_architect_ivrs_with_http_info(opts)
@@ -1588,11 +1589,18 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order
+    # @option opts [String] :name Name of the IVR to filter by.
     # @return [Array<(IVREntityListing, Fixnum, Hash)>] IVREntityListing data, response status code and response headers
     def get_architect_ivrs_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_ivrs ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1627,6 +1635,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
 
       # header parameters
       header_params = {}
@@ -2119,6 +2128,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [String] :sort_by Sort by (default to name)
     # @option opts [String] :sort_order Sort order (default to ASC)
+    # @option opts [String] :name Name of the Schedule Group to filter by.
     # @return [ScheduleGroupEntityListing]
     def get_architect_schedulegroups(opts = {})
       data, _status_code, _headers = get_architect_schedulegroups_with_http_info(opts)
@@ -2132,11 +2142,18 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order
+    # @option opts [String] :name Name of the Schedule Group to filter by.
     # @return [Array<(ScheduleGroupEntityListing, Fixnum, Hash)>] ScheduleGroupEntityListing data, response status code and response headers
     def get_architect_schedulegroups_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_schedulegroups ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2171,6 +2188,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
 
       # header parameters
       header_params = {}
@@ -2210,6 +2228,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [String] :sort_by Sort by (default to name)
     # @option opts [String] :sort_order Sort order (default to ASC)
+    # @option opts [String] :name Name of the Schedule to filter by.
     # @return [ScheduleEntityListing]
     def get_architect_schedules(opts = {})
       data, _status_code, _headers = get_architect_schedules_with_http_info(opts)
@@ -2223,11 +2242,18 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order
+    # @option opts [String] :name Name of the Schedule to filter by.
     # @return [Array<(ScheduleEntityListing, Fixnum, Hash)>] ScheduleEntityListing data, response status code and response headers
     def get_architect_schedules_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_schedules ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2262,6 +2288,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
 
       # header parameters
       header_params = {}
@@ -2734,9 +2761,9 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [Integer] :page_size Page size (default to 25)
-    # @option opts [String] :sort_by Sort by (default to timestamp)
     # @option opts [String] :sort_order Sort order (default to desc)
-    # @option opts [Array<String>] :action Flow actions
+    # @option opts [String] :sort_by Sort by (default to timestamp)
+    # @option opts [Array<String>] :action Flow actions to include (omit to include all)
     # @return [HistoryListing]
     def get_flow_history_history_id(flow_id, history_id, opts = {})
       data, _status_code, _headers = get_flow_history_history_id_with_http_info(flow_id, history_id, opts)
@@ -2750,9 +2777,9 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_number Page number
     # @option opts [Integer] :page_size Page size
-    # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order
-    # @option opts [Array<String>] :action Flow actions
+    # @option opts [String] :sort_by Sort by
+    # @option opts [Array<String>] :action Flow actions to include (omit to include all)
     # @return [Array<(HistoryListing, Fixnum, Hash)>] HistoryListing data, response status code and response headers
     def get_flow_history_history_id_with_http_info(flow_id, history_id, opts = {})
       if @api_client.config.debugging
@@ -2790,15 +2817,15 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       if opts[:'sort_by'] && !['action', 'timestamp', 'user'].include?(opts[:'sort_by'])
         fail ArgumentError, 'invalid value for "sort_by", must be one of action, timestamp, user'
       end
-      
-      
-      
-      
-      
-      
       
       
       
@@ -2816,8 +2843,8 @@ module PureCloud
       query_params = {}
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
-      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'action'] = @api_client.build_collection_param(opts[:'action'], :multi) if opts[:'action']
 
       # header parameters
@@ -3236,6 +3263,11 @@ module PureCloud
       
       # verify the required parameter 'type' is set
       fail ArgumentError, "Missing the required parameter 'type' when calling ArchitectApi.get_flows" if type.nil?
+      
+      # verify enum value
+      unless ['inboundcall', 'inboundemail', 'inboundshortmessage', 'outboundcall', 'inqueuecall', 'speech', 'securecall', 'surveyinvite', 'workflow'].include?(type)
+        fail ArgumentError, "invalid value for 'type', must be one of inboundcall, inboundemail, inboundshortmessage, outboundcall, inqueuecall, speech, securecall, surveyinvite, workflow"
+      end
       
       
       

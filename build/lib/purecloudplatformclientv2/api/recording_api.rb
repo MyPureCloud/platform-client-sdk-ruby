@@ -568,6 +568,146 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get recording metadata for a conversation. Does not return playable media.
+    # 
+    # @param conversation_id Conversation ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<Recording>]
+    def get_conversation_recordingmetadata(conversation_id, opts = {})
+      data, _status_code, _headers = get_conversation_recordingmetadata_with_http_info(conversation_id, opts)
+      return data
+    end
+
+    # Get recording metadata for a conversation. Does not return playable media.
+    # 
+    # @param conversation_id Conversation ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<Recording>, Fixnum, Hash)>] Array<Recording> data, response status code and response headers
+    def get_conversation_recordingmetadata_with_http_info(conversation_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RecordingApi.get_conversation_recordingmetadata ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling RecordingApi.get_conversation_recordingmetadata" if conversation_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/{conversationId}/recordingmetadata".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<Recording>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RecordingApi#get_conversation_recordingmetadata\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get metadata for a specific recording. Does not return playable media.
+    # 
+    # @param conversation_id Conversation ID
+    # @param recording_id Recording ID
+    # @param [Hash] opts the optional parameters
+    # @return [Recording]
+    def get_conversation_recordingmetadata_recording_id(conversation_id, recording_id, opts = {})
+      data, _status_code, _headers = get_conversation_recordingmetadata_recording_id_with_http_info(conversation_id, recording_id, opts)
+      return data
+    end
+
+    # Get metadata for a specific recording. Does not return playable media.
+    # 
+    # @param conversation_id Conversation ID
+    # @param recording_id Recording ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Recording, Fixnum, Hash)>] Recording data, response status code and response headers
+    def get_conversation_recordingmetadata_recording_id_with_http_info(conversation_id, recording_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RecordingApi.get_conversation_recordingmetadata_recording_id ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling RecordingApi.get_conversation_recordingmetadata_recording_id" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'recording_id' is set
+      fail ArgumentError, "Missing the required parameter 'recording_id' when calling RecordingApi.get_conversation_recordingmetadata_recording_id" if recording_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/{conversationId}/recordingmetadata/{recordingId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'recordingId' + '}', recording_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Recording')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RecordingApi#get_conversation_recordingmetadata_recording_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get all of a Conversation's Recordings.
     # 
     # @param conversation_id Conversation ID

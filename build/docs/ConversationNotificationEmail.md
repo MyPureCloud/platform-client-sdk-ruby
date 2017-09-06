@@ -21,6 +21,7 @@ title: ConversationNotificationEmail
 | **start_hold_time** | **DateTime** |  | [optional] |
 | **connected_time** | **DateTime** |  | [optional] |
 | **disconnected_time** | **DateTime** |  | [optional] |
+| **message_id** | **String** |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

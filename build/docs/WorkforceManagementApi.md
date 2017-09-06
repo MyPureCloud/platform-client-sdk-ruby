@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunits"></a>
 
-## -[**Array&lt;ManagementUnit&gt;**](ManagementUnit.html) get_workforcemanagement_managementunits(opts)
+## -[**ManagementUnitListing**](ManagementUnitListing.html) get_workforcemanagement_managementunits(opts)
 
 Get management units
 
@@ -423,7 +423,6 @@ end
 api_instance = PureCloud::WorkforceManagementApi.new
 
 opts = { 
-  selector: "selector_example", # String | Selector
   page_size: 25, # Integer | 
   page_number: 1 # Integer | 
 }
@@ -441,7 +440,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **selector** | **String**| Selector | [optional]  |
  **page_size** | **Integer**|  | [optional] [default to 25] |
  **page_number** | **Integer**|  | [optional] [default to 1] |
 {: class="table table-striped"}
@@ -449,7 +447,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;ManagementUnit&gt;**](ManagementUnit.html)
+[**ManagementUnitListing**](ManagementUnitListing.html)
 
 ### HTTP request headers
 
