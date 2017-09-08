@@ -1063,7 +1063,7 @@ This endpoint does not need any parameter.
 
 <a name="get_conversations_calls_history"></a>
 
-## -[**CallConversationEntityListing**](CallConversationEntityListing.html) get_conversations_calls_history(opts)
+## -[**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing.html) get_conversations_calls_history(opts)
 
 Get call history
 
@@ -1116,7 +1116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CallConversationEntityListing**](CallConversationEntityListing.html)
+[**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing.html)
 
 ### HTTP request headers
 

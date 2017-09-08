@@ -1173,7 +1173,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :interval Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39;
-    # @return [CallConversationEntityListing]
+    # @return [CallHistoryConversationEntityListing]
     def get_conversations_calls_history(opts = {})
       data, _status_code, _headers = get_conversations_calls_history_with_http_info(opts)
       return data
@@ -1185,7 +1185,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :interval Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39;
-    # @return [Array<(CallConversationEntityListing, Fixnum, Hash)>] CallConversationEntityListing data, response status code and response headers
+    # @return [Array<(CallHistoryConversationEntityListing, Fixnum, Hash)>] CallHistoryConversationEntityListing data, response status code and response headers
     def get_conversations_calls_history_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_calls_history ..."
@@ -1242,7 +1242,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CallConversationEntityListing')
+        :return_type => 'CallHistoryConversationEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_calls_history\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

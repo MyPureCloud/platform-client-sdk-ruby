@@ -20,11 +20,15 @@ module PureCloud
   class UserRoutingStatusNotification
     attr_accessor :routing_status
 
+    attr_accessor :error_info
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'routing_status' => :'routingStatus'
+        :'routing_status' => :'routingStatus',
+        
+        :'error_info' => :'errorInfo'
         
       }
     end
@@ -33,7 +37,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'routing_status' => :'UserRoutingStatusNotificationRoutingStatus'
+        :'routing_status' => :'UserRoutingStatusNotificationRoutingStatus',
+        
+        :'error_info' => :'UserRoutingStatusNotificationErrorInfo'
         
       }
     end
@@ -51,6 +57,15 @@ module PureCloud
         
         
         self.routing_status = attributes[:'routingStatus']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'errorInfo')
+        
+        
+        self.error_info = attributes[:'errorInfo']
         
       
       end
@@ -75,8 +90,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -88,7 +112,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          routing_status == o.routing_status
+          routing_status == o.routing_status &&
+          error_info == o.error_info
     end
 
     # @see the `==` method
@@ -100,7 +125,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [routing_status].hash
+      [routing_status, error_info].hash
     end
 
     # build the object from hash
