@@ -1,0 +1,14 @@
+---
+title: BillingUsageResource
+---
+## PureCloud::BillingUsageResource
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **name** | **String** | Identifies the resource (e.g. license user, device). | |
+| **date** | **DateTime** | The date that the usage was first observed by the billing subsystem. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
+{: class="table table-striped"}
+
+

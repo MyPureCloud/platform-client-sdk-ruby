@@ -21,11 +21,16 @@ module PureCloud
     # The phone number to dial for this call.
     attr_accessor :call_number
 
+    # For a dialer preview or scheduled callback, the phone column associated with the phone number
+    attr_accessor :phone_column
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'call_number' => :'callNumber'
+        :'call_number' => :'callNumber',
+        
+        :'phone_column' => :'phoneColumn'
         
       }
     end
@@ -34,7 +39,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'call_number' => :'String'
+        :'call_number' => :'String',
+        
+        :'phone_column' => :'String'
         
       }
     end
@@ -52,6 +59,15 @@ module PureCloud
         
         
         self.call_number = attributes[:'callNumber']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'phoneColumn')
+        
+        
+        self.phone_column = attributes[:'phoneColumn']
         
       
       end
@@ -81,8 +97,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -94,7 +119,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          call_number == o.call_number
+          call_number == o.call_number &&
+          phone_column == o.phone_column
     end
 
     # @see the `==` method
@@ -106,7 +132,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [call_number].hash
+      [call_number, phone_column].hash
     end
 
     # build the object from hash

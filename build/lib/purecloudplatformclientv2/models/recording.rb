@@ -469,7 +469,7 @@ module PureCloud
       
       
       
-      allowed_values = ["ARCHIVED", "AVAILABLE", "DELETED", "RESTORED", "RESTORING", "UPLOADING"]
+      allowed_values = ["ARCHIVED", "AVAILABLE", "DELETED", "RESTORED", "RESTORING", "UPLOADING", "ERROR"]
       if @file_state && !allowed_values.include?(@file_state)
         return false
       end
@@ -586,7 +586,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] file_state Object to be assigned
     def file_state=(file_state)
-      allowed_values = ["ARCHIVED", "AVAILABLE", "DELETED", "RESTORED", "RESTORING", "UPLOADING"]
+      allowed_values = ["ARCHIVED", "AVAILABLE", "DELETED", "RESTORED", "RESTORING", "UPLOADING", "ERROR"]
       if file_state && !allowed_values.include?(file_state)
         fail ArgumentError, "invalid value for 'file_state', must be one of #{allowed_values}."
       end

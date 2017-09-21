@@ -9,15 +9,15 @@ title: CreateQueueRequest
 |------------ | ------------- | ------------- | -------------|
 | **id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **description** | **String** |  | [optional] |
-| **version** | **Integer** |  | [optional] |
-| **date_created** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **date_modified** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **modified_by** | **String** |  | [optional] |
-| **created_by** | **String** |  | [optional] |
-| **state** | **String** |  | [optional] |
-| **modified_by_app** | **String** |  | [optional] |
-| **created_by_app** | **String** |  | [optional] |
+| **description** | **String** | The resource&#39;s description. | [optional] |
+| **version** | **Integer** | The current version of the resource. | [optional] |
+| **date_created** | **DateTime** | The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **date_modified** | **DateTime** | The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **modified_by** | **String** | The ID of the user that last modified the resource. | [optional] |
+| **created_by** | **String** | The ID of the user that created the resource. | [optional] |
+| **state** | **String** | Indicates if the resource is active, inactive, or deleted. | [optional] |
+| **modified_by_app** | **String** | The application that last modified the resource. | [optional] |
+| **created_by_app** | **String** | The application that created the resource. | [optional] |
 | **media_settings** | [**Hash&lt;String, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION | |
 | **bullseye** | [**Bullseye**](Bullseye.html) | The bulls-eye settings for the queue. | [optional] |
 | **acw_settings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | |

@@ -182,7 +182,7 @@ module PureCloud
       
       
       
-      allowed_values = ["Voice", "Chat", "Email"]
+      allowed_values = ["Voice", "Chat", "Email", "Callback"]
       if @media_type && !allowed_values.include?(@media_type)
         return false
       end
@@ -220,7 +220,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] media_type Object to be assigned
     def media_type=(media_type)
-      allowed_values = ["Voice", "Chat", "Email"]
+      allowed_values = ["Voice", "Chat", "Email", "Callback"]
       if media_type && !allowed_values.include?(media_type)
         fail ArgumentError, "invalid value for 'media_type', must be one of #{allowed_values}."
       end

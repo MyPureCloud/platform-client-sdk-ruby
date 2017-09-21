@@ -18,69 +18,95 @@ require 'date'
 
 module PureCloud
   class AnalyticsSession
+    # The session media type
     attr_accessor :media_type
 
+    # The unique identifier of this session
     attr_accessor :session_id
 
     attr_accessor :address_other
 
     attr_accessor :address_self
 
+    # Automatic Number Identification (caller's number)
     attr_accessor :ani
 
+    # Direction
     attr_accessor :direction
 
+    # Automatic Number Identification (caller's number)
     attr_accessor :dnis
 
+    # (Dialer) Unique identifier of the outbound campaign
     attr_accessor :outbound_campaign_id
 
+    # (Dialer) Unique identifier of the contact
     attr_accessor :outbound_contact_id
 
+    # (Dialer) Unique identifier of the contact list that this contact belongs to
     attr_accessor :outbound_contact_list_id
 
+    # (Dialer) Unique identifier of the contact list that this contact belongs to
     attr_accessor :disposition_analyzer
 
+    # (Dialer) Result of the analysis (for example disposition.classification.callable.machine) 
     attr_accessor :disposition_name
 
+    # Unique identifier of the edge device
     attr_accessor :edge_id
 
     attr_accessor :remote_name_displayable
 
+    # Unique identifier for the room
     attr_accessor :room_id
 
+    # The sessionID being monitored
     attr_accessor :monitored_session_id
 
     attr_accessor :monitored_participant_id
 
+    # The name of the user requesting a call back
     attr_accessor :callback_user_name
 
+    # List of numbers to callback
     attr_accessor :callback_numbers
 
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :callback_scheduled_time
 
+    # Scheduled callback date/time, Date time is represented as an ISO-8601 string. 
     attr_accessor :script_id
 
+    # (Dialer) Whether the agent can skip the dialer contact
     attr_accessor :skip_enabled
 
+    # The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling
     attr_accessor :timeout_seconds
 
+    # Describe side of the cobrowse (sharer or viewer)
     attr_accessor :cobrowse_role
 
+    # A unique identifier for a PureCloud Cobrowse room.
     attr_accessor :cobrowse_room_id
 
     attr_accessor :media_bridge_id
 
+    # Direct ScreenShare address
     attr_accessor :screen_share_address_self
 
+    # Flag determining if screenShare is started or not (true/false)
     attr_accessor :sharing_screen
 
+    # A unique identifier for a PureCloud ScreenShare room.
     attr_accessor :screen_share_room_id
 
+    # A unique identifier for a PureCloud video room.
     attr_accessor :video_room_id
 
+    # Direct Video address
     attr_accessor :video_address_self
 
+    # List of segments for this session
     attr_accessor :segments
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -597,6 +623,11 @@ module PureCloud
       
       
       
+      allowed_values = ["disconnect", "person", "busy", "machine", "noanswer", "fax", "sit"]
+      if @disposition_name && !allowed_values.include?(@disposition_name)
+        return false
+      end
+      
       
       
       
@@ -756,7 +787,16 @@ module PureCloud
     
     
     
-    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] disposition_name Object to be assigned
+    def disposition_name=(disposition_name)
+      allowed_values = ["disconnect", "person", "busy", "machine", "noanswer", "fax", "sit"]
+      if disposition_name && !allowed_values.include?(disposition_name)
+        fail ArgumentError, "invalid value for 'disposition_name', must be one of #{allowed_values}."
+      end
+      @disposition_name = disposition_name
+    end
+
     
     
     

@@ -24,24 +24,31 @@ module PureCloud
     # The name of the entity.
     attr_accessor :name
 
+    # The resource's description.
     attr_accessor :description
 
+    # The current version of the resource.
     attr_accessor :version
 
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_created
 
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_modified
 
+    # The ID of the user that last modified the resource.
     attr_accessor :modified_by
 
+    # The ID of the user that created the resource.
     attr_accessor :created_by
 
+    # Indicates if the resource is active, inactive, or deleted.
     attr_accessor :state
 
+    # The application that last modified the resource.
     attr_accessor :modified_by_app
 
+    # The application that created the resource.
     attr_accessor :created_by_app
 
     # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ

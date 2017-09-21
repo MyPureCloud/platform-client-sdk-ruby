@@ -1556,8 +1556,8 @@ module PureCloud
       
       
       
-      if opts[:'state'] && !['active', 'deleted'].include?(opts[:'state'])
-        fail ArgumentError, 'invalid value for "state", must be one of active, deleted'
+      if opts[:'state'] && !['active', 'inactive', 'deleted'].include?(opts[:'state'])
+        fail ArgumentError, 'invalid value for "state", must be one of active, inactive, deleted'
       end
       
       

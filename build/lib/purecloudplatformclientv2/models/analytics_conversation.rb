@@ -18,16 +18,19 @@ require 'date'
 
 module PureCloud
   class AnalyticsConversation
+    # Unique identifier for the conversation
     attr_accessor :conversation_id
 
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # Date/time the conversation started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :conversation_start
 
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :conversation_end
 
+    # Participants in the conversation
     attr_accessor :participants
 
+    # Evaluations tied to this conersation
     attr_accessor :evaluations
 
     # Attribute mapping from ruby-style variable name to JSON key.

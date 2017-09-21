@@ -9,15 +9,15 @@ title: Edge
 |------------ | ------------- | ------------- | -------------|
 | **id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The name of the entity. | |
-| **description** | **String** |  | [optional] |
-| **version** | **Integer** |  | [optional] |
-| **date_created** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **date_modified** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **modified_by** | **String** |  | [optional] |
-| **created_by** | **String** |  | [optional] |
-| **state** | **String** |  | [optional] |
-| **modified_by_app** | **String** |  | [optional] |
-| **created_by_app** | **String** |  | [optional] |
+| **description** | **String** | The resource&#39;s description. | [optional] |
+| **version** | **Integer** | The current version of the resource. | [optional] |
+| **date_created** | **DateTime** | The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **date_modified** | **DateTime** | The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **modified_by** | **String** | The ID of the user that last modified the resource. | [optional] |
+| **created_by** | **String** | The ID of the user that created the resource. | [optional] |
+| **state** | **String** | Indicates if the resource is active, inactive, or deleted. | [optional] |
+| **modified_by_app** | **String** | The application that last modified the resource. | [optional] |
+| **created_by_app** | **String** | The application that created the resource. | [optional] |
 | **interfaces** | [**Array&lt;EdgeInterface&gt;**](EdgeInterface.html) | The list of interfaces for the edge. (Deprecated) Replaced by configuring trunks/ip info on the logical interface instead | [optional] |
 | **make** | **String** |  | [optional] |
 | **model** | **String** |  | [optional] |
@@ -33,7 +33,7 @@ title: Edge
 | **current_version** | **String** |  | [optional] |
 | **staged_version** | **String** |  | [optional] |
 | **patch** | **String** |  | [optional] |
-| **status_code** | **String** |  | [optional] |
+| **status_code** | **String** | The current status of the Edge. | [optional] |
 | **edge_group** | [**EdgeGroup**](EdgeGroup.html) |  | [optional] |
 | **site** | [**Site**](Site.html) | The Site to which the Edge is assigned. | [optional] |
 | **software_status** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) |  | [optional] |

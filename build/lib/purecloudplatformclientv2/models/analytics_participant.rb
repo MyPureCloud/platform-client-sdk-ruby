@@ -18,18 +18,25 @@ require 'date'
 
 module PureCloud
   class AnalyticsParticipant
+    # Unique identifier for the participant
     attr_accessor :participant_id
 
+    # A human readable name identifying the participant
     attr_accessor :participant_name
 
+    # If a user, then this will be the unique identifier for the user
     attr_accessor :user_id
 
+    # The participant's purpose
     attr_accessor :purpose
 
+    # External Contact Identifier
     attr_accessor :external_contact_id
 
+    # External Organization Identifier
     attr_accessor :external_organization_id
 
+    # List of sessions associated to this participant
     attr_accessor :sessions
 
     # Attribute mapping from ruby-style variable name to JSON key.

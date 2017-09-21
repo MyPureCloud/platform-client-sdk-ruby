@@ -18,30 +18,36 @@ require 'date'
 
 module PureCloud
   class AnalyticsConversationSegment
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :segment_start
 
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :segment_end
 
+    # Queue identifier
     attr_accessor :queue_id
 
+    # Wrapup Code id
     attr_accessor :wrap_up_code
 
+    # Note entered by an agent during after-call work
     attr_accessor :wrap_up_note
 
     attr_accessor :wrap_up_tags
 
     attr_accessor :error_code
 
+    # A description of the event that disconnected the segment
     attr_accessor :disconnect_type
 
+    # The activity taking place for the participant in the segment
     attr_accessor :segment_type
 
     attr_accessor :requested_routing_user_ids
 
     attr_accessor :requested_routing_skill_ids
 
+    # A unique identifier for the language requested for an interaction.
     attr_accessor :requested_language_id
 
     attr_accessor :properties
@@ -58,6 +64,7 @@ module PureCloud
 
     attr_accessor :q850_response_codes
 
+    # Indicates whether the segment was a conference
     attr_accessor :conference
 
     attr_accessor :group_id

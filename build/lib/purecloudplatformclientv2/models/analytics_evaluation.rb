@@ -18,24 +18,34 @@ require 'date'
 
 module PureCloud
   class AnalyticsEvaluation
+    # Unique identifier for the evaluation
     attr_accessor :evaluation_id
 
+    # A unique identifier of the PureCloud user who evaluated the interaction
     attr_accessor :evaluator_id
 
+    # Unique identifier for the user being evaluated
     attr_accessor :user_id
 
+    # Specifies when an evaluation occurred
     attr_accessor :event_time
 
+    # Unique identifier for the queue the conversation was on
     attr_accessor :queue_id
 
+    # Unique identifier for the form used to evaluate the conversation/agent
     attr_accessor :form_id
 
+    # A unique identifier for an evaluation form, regardless of version
     attr_accessor :context_id
 
+    # Name of the evaluation form
     attr_accessor :form_name
 
+    # The total evaluation for interactions
     attr_accessor :geto_total_score
 
+    # The score for critical evaluation questions
     attr_accessor :geto_total_critical_score
 
     # Attribute mapping from ruby-style variable name to JSON key.

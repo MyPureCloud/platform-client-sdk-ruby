@@ -59,7 +59,9 @@ Method | Description
 [**get_outbound_schedules_sequences**](OutboundApi.html#get_outbound_schedules_sequences) | Query for a list of dialer sequence schedules.
 [**get_outbound_sequence**](OutboundApi.html#get_outbound_sequence) | Get a dialer campaign sequence.
 [**get_outbound_sequences**](OutboundApi.html#get_outbound_sequences) | Query a list of dialer campaign sequences.
+[**get_outbound_settings**](OutboundApi.html#get_outbound_settings) | Get the outbound settings for this organization
 [**get_outbound_wrapupcodemappings**](OutboundApi.html#get_outbound_wrapupcodemappings) | Get the Dialer wrap up code mapping.
+[**patch_outbound_settings**](OutboundApi.html#patch_outbound_settings) | Update the outbound settings for this organization
 [**post_outbound_attemptlimits**](OutboundApi.html#post_outbound_attemptlimits) | Create attempt limits
 [**post_outbound_audits**](OutboundApi.html#post_outbound_audits) | Retrieves audits for dialer.
 [**post_outbound_callabletimesets**](OutboundApi.html#post_outbound_callabletimesets) | Create callable time set
@@ -3250,6 +3252,59 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_outbound_settings"></a>
+
+## -[**OutboundSettings**](OutboundSettings.html) get_outbound_settings
+
+Get the outbound settings for this organization
+
+
+
+Wraps GET /api/v2/outbound/settings 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+begin
+  #Get the outbound settings for this organization
+  result = api_instance.get_outbound_settings
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_settings: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OutboundSettings**](OutboundSettings.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_outbound_wrapupcodemappings"></a>
 
 ## -[**WrapUpCodeMapping**](WrapUpCodeMapping.html) get_outbound_wrapupcodemappings
@@ -3295,6 +3350,64 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**WrapUpCodeMapping**](WrapUpCodeMapping.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_outbound_settings"></a>
+
+## - patch_outbound_settings(body)
+
+Update the outbound settings for this organization
+
+
+
+Wraps PATCH /api/v2/outbound/settings 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+body = PureCloud::OutboundSettings.new # OutboundSettings | outboundSettings
+
+
+begin
+  #Update the outbound settings for this organization
+  api_instance.patch_outbound_settings(body)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->patch_outbound_settings: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**OutboundSettings**](OutboundSettings.html)| outboundSettings |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 

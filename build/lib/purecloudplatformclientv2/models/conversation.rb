@@ -44,7 +44,7 @@ module PureCloud
     # On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.
     attr_accessor :recording_state
 
-    # The conversation's state.  Values can be: 'disconnected'
+    # The conversation's state
     attr_accessor :state
 
     # The URI for this object
