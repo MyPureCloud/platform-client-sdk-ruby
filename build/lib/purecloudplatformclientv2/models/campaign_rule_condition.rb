@@ -20,8 +20,10 @@ module PureCloud
   class CampaignRuleCondition
     attr_accessor :id
 
+    # The parameters for the CampaignRuleCondition.
     attr_accessor :parameters
 
+    # The type of condition to evaluate.
     attr_accessor :condition_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -106,9 +108,19 @@ module PureCloud
       
       
       
+      if @parameters.nil?
+        return false
+      end
+
       
       
       
+      
+      
+      if @condition_type.nil?
+        return false
+      end
+
       
       
       allowed_values = ["campaignProgress", "campaignAgents"]

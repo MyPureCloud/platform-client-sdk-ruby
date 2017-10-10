@@ -31,6 +31,18 @@ module PureCloud
     # Duration of annotation in milliseconds.
     attr_accessor :duration_ms
 
+    # Offset of annotation (milliseconds) from start of recording.
+    attr_accessor :absolute_location
+
+    # Duration of annotation (milliseconds).
+    attr_accessor :absolute_duration_ms
+
+    # Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts
+    attr_accessor :recording_location
+
+    # Duration of annotation (milliseconds), adjusted for any recording cuts.
+    attr_accessor :recording_duration_ms
+
     # User that created this annotation (if any).
     attr_accessor :user
 
@@ -84,6 +96,14 @@ module PureCloud
         
         :'duration_ms' => :'durationMs',
         
+        :'absolute_location' => :'absoluteLocation',
+        
+        :'absolute_duration_ms' => :'absoluteDurationMs',
+        
+        :'recording_location' => :'recordingLocation',
+        
+        :'recording_duration_ms' => :'recordingDurationMs',
+        
         :'user' => :'user',
         
         :'description' => :'description',
@@ -126,6 +146,14 @@ module PureCloud
         :'location' => :'Integer',
         
         :'duration_ms' => :'Integer',
+        
+        :'absolute_location' => :'Integer',
+        
+        :'absolute_duration_ms' => :'Integer',
+        
+        :'recording_location' => :'Integer',
+        
+        :'recording_duration_ms' => :'Integer',
         
         :'user' => :'User',
         
@@ -205,6 +233,42 @@ module PureCloud
         
         
         self.duration_ms = attributes[:'durationMs']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'absoluteLocation')
+        
+        
+        self.absolute_location = attributes[:'absoluteLocation']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'absoluteDurationMs')
+        
+        
+        self.absolute_duration_ms = attributes[:'absoluteDurationMs']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'recordingLocation')
+        
+        
+        self.recording_location = attributes[:'recordingLocation']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'recordingDurationMs')
+        
+        
+        self.recording_duration_ms = attributes[:'recordingDurationMs']
         
       
       end
@@ -403,6 +467,22 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @agent_score_modifier.nil?
         return false
       end
@@ -517,6 +597,26 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -527,6 +627,10 @@ module PureCloud
           type == o.type &&
           location == o.location &&
           duration_ms == o.duration_ms &&
+          absolute_location == o.absolute_location &&
+          absolute_duration_ms == o.absolute_duration_ms &&
+          recording_location == o.recording_location &&
+          recording_duration_ms == o.recording_duration_ms &&
           user == o.user &&
           description == o.description &&
           keyword_name == o.keyword_name &&
@@ -551,7 +655,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, type, location, duration_ms, user, description, keyword_name, confidence, keyword_set_id, keyword_set_name, utterance, time_begin, time_end, keyword_confidence_threshold, agent_score_modifier, customer_score_modifier, self_uri].hash
+      [id, name, type, location, duration_ms, absolute_location, absolute_duration_ms, recording_location, recording_duration_ms, user, description, keyword_name, confidence, keyword_set_id, keyword_set_name, utterance, time_begin, time_end, keyword_confidence_threshold, agent_score_modifier, customer_score_modifier, self_uri].hash
     end
 
     # build the object from hash

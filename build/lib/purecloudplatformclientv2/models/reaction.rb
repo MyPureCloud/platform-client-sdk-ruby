@@ -18,10 +18,13 @@ require 'date'
 
 module PureCloud
   class Reaction
+    # Parameter for this reaction. For transfer_flow, this would be the outbound flow id.
     attr_accessor :data
 
+    # Name of the parameter for this reaction. For transfer_flow, this would be the outbound flow name.
     attr_accessor :name
 
+    # The reaction to take for a given call analysis result.
     attr_accessor :reaction_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -109,6 +112,11 @@ module PureCloud
       
       
       
+      
+      if @reaction_type.nil?
+        return false
+      end
+
       
       
       allowed_values = ["hangup", "transfer", "transfer_flow", "play_file"]

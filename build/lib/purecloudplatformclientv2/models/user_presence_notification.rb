@@ -51,7 +51,7 @@ module PureCloud
         
         :'source' => :'String',
         
-        :'presence_definition' => :'UserPresenceNotificationPresenceDefinition',
+        :'presence_definition' => :'AgentActivityNotificationPresencePresenceDefinition',
         
         :'primary' => :'BOOLEAN',
         

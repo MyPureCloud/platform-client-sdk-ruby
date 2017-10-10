@@ -21,6 +21,7 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
+    # The name of the CampaignRule.
     attr_accessor :name
 
     # Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -32,17 +33,18 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
-    # the list of entities the rule monitors
+    # The list of entities that this CampaignRule monitors.
     attr_accessor :campaign_rule_entities
 
-    # the list of conditions the are evaluated
+    # The list of conditions that are evaluated on the entities.
     attr_accessor :campaign_rule_conditions
 
-    # the list of actions that are executed if the conditions are satisfied
+    # The list of actions that are executed if the conditions are satisfied.
     attr_accessor :campaign_rule_actions
 
     attr_accessor :match_any_conditions
 
+    # Whether or not this CampaignRule is currently enabled. Required on updates.
     attr_accessor :enabled
 
     # The URI for this object
@@ -237,6 +239,11 @@ module PureCloud
       
       
       
+      
+      if @name.nil?
+        return false
+      end
+
       
       
       

@@ -18,9 +18,10 @@ require 'date'
 
 module PureCloud
   class ContactListFilterClause
-    # The filter type tells the api how to compare between predicates
+    # How to join predicates together.
     attr_accessor :filter_type
 
+    # Conditions to filter the contacts by.
     attr_accessor :predicates
 
     # Attribute mapping from ruby-style variable name to JSON key.

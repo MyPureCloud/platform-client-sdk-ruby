@@ -21,6 +21,7 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
+    # The name of the RuleSet.
     attr_accessor :name
 
     # Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -32,13 +33,13 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
-    # The identifier of an example contact list that provides user-interface suggestions for contact-based conditions and actions
+    # A ContactList to provide user-interface suggestions for contact columns on relevant conditions and actions.
     attr_accessor :contact_list
 
-    # The identifier of an example queue that provides user-interface suggestions for wrap-up associated conditions
+    # A Queue to provide user-interface suggestions for wrap-up codes on relevant conditions and actions.
     attr_accessor :queue
 
-    # The list of rules
+    # The list of rules.
     attr_accessor :rules
 
     # The URI for this object
@@ -205,6 +206,11 @@ module PureCloud
       
       
       
+      
+      if @name.nil?
+        return false
+      end
+
       
       
       

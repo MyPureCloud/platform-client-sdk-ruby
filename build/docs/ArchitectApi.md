@@ -2544,7 +2544,9 @@ opts = {
   locked_by: "locked_by_example", # String | Locked by
   secure: "secure_example", # String | Secure
   deleted: false, # BOOLEAN | Include deleted
-  include_schemas: false # BOOLEAN | Include variable schemas
+  include_schemas: false, # BOOLEAN | Include variable schemas
+  published_after: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01", # String | Published after
+  published_before: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01" # String | Published before
 }
 
 begin
@@ -2575,6 +2577,8 @@ Name | Type | Description  | Notes
  **secure** | **String**| Secure | [optional] <br />**Values**: any, checkedin, published |
  **deleted** | **BOOLEAN**| Include deleted | [optional] [default to false] |
  **include_schemas** | **BOOLEAN**| Include variable schemas | [optional] [default to false] |
+ **published_after** | **String**| Published after | [optional]  |
+ **published_before** | **String**| Published before | [optional]  |
 {: class="table table-striped"}
 
 

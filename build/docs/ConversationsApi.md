@@ -68,6 +68,7 @@ Method | Description
 [**post_analytics_conversations_aggregates_query**](ConversationsApi.html#post_analytics_conversations_aggregates_query) | Query for conversation aggregates
 [**post_analytics_conversations_details_query**](ConversationsApi.html#post_analytics_conversations_details_query) | Query for conversation details
 [**post_conversation_participant_callbacks**](ConversationsApi.html#post_conversation_participant_callbacks) | Create a new callback for the specified participant on the conversation.
+[**post_conversation_participant_digits**](ConversationsApi.html#post_conversation_participant_digits) | Sends DTMF to the participant
 [**post_conversation_participant_replace**](ConversationsApi.html#post_conversation_participant_replace) | Replace this participant with the specified user and/or address
 [**post_conversations_call**](ConversationsApi.html#post_conversations_call) | Place a new call as part of a callback conversation.
 [**post_conversations_call_participant_consult**](ConversationsApi.html#post_conversations_call_participant_consult) | Initiate and update consult transfer
@@ -1090,9 +1091,10 @@ end
 api_instance = PureCloud::ConversationsApi.new
 
 opts = { 
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size, maximum 50
   page_number: 1, # Integer | Page number
-  interval: "interval_example" # String | Interval string; format is ISO-8601. Separate start and end times with forward slash '/'
+  interval: "interval_example", # String | Interval string; format is ISO-8601. Separate start and end times with forward slash '/'
+  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand.
 }
 
 begin
@@ -1108,9 +1110,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size, maximum 50 | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **interval** | **String**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: externalorganization, externalcontact, user, queue, group |
 {: class="table table-striped"}
 
 
@@ -3794,6 +3797,71 @@ Name | Type | Description  | Notes
  **conversation_id** | **String**| conversation ID |  |
  **participant_id** | **String**| participant ID |  |
  **body** | [**CreateCallbackOnConversationCommand**](CreateCallbackOnConversationCommand.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversation_participant_digits"></a>
+
+## - post_conversation_participant_digits(conversation_id, participant_id, opts)
+
+Sends DTMF to the participant
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/digits 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversation ID
+
+participant_id = "participant_id_example" # String | participant ID
+
+opts = { 
+  body: PureCloud::Digits.new # Digits | Digits
+}
+
+begin
+  #Sends DTMF to the participant
+  api_instance.post_conversation_participant_digits(conversation_id, participant_id, opts)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversation_participant_digits: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversation ID |  |
+ **participant_id** | **String**| participant ID |  |
+ **body** | [**Digits**](Digits.html)| Digits | [optional]  |
 {: class="table table-striped"}
 
 

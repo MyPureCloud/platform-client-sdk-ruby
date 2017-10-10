@@ -33,6 +33,7 @@ Method | Description
 [**get_telephony_providers_edge_logicalinterface**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_logicalinterface) | Get an edge logical interface
 [**get_telephony_providers_edge_logicalinterfaces**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_logicalinterfaces) | Get edge logical interfaces.
 [**get_telephony_providers_edge_logs_job**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_logs_job) | Get an Edge logs job.
+[**get_telephony_providers_edge_metrics**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_metrics) | Get the edge metrics.
 [**get_telephony_providers_edge_physicalinterface**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_physicalinterface) | Get edge physical interface.
 [**get_telephony_providers_edge_physicalinterfaces**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_physicalinterfaces) | Retrieve a list of all configured physical interfaces from a specific edge.
 [**get_telephony_providers_edge_setuppackage**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_setuppackage) | Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
@@ -63,6 +64,7 @@ Method | Description
 [**get_telephony_providers_edges_lines**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_lines) | Get a list of Lines
 [**get_telephony_providers_edges_lines_template**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_lines_template) | Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance
 [**get_telephony_providers_edges_logicalinterfaces**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_logicalinterfaces) | Get edge logical interfaces.
+[**get_telephony_providers_edges_metrics**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_metrics) | Get the metrics for a list of edges.
 [**get_telephony_providers_edges_outboundroute**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_outboundroute) | Get outbound route
 [**get_telephony_providers_edges_outboundroutes**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_outboundroutes) | Get outbound routes
 [**get_telephony_providers_edges_phone**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_phone) | Get a Phone by ID
@@ -74,6 +76,7 @@ Method | Description
 [**get_telephony_providers_edges_phones_template**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_phones_template) | Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
 [**get_telephony_providers_edges_physicalinterfaces**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_physicalinterfaces) | Get physical interfaces for edges.
 [**get_telephony_providers_edges_site**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site) | Get a Site by ID.
+[**get_telephony_providers_edges_site_autoscalinggroups**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site_autoscalinggroups) | Gets the basic information about an asg in a specified site
 [**get_telephony_providers_edges_site_numberplan**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site_numberplan) | Get a Number Plan by ID.
 [**get_telephony_providers_edges_site_numberplans**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site_numberplans) | Get the list of Number Plans for this Site.
 [**get_telephony_providers_edges_site_numberplans_classifications**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site_numberplans_classifications) | Get a list of Classifications for this Site
@@ -82,11 +85,13 @@ Method | Description
 [**get_telephony_providers_edges_sites**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_sites) | Get the list of Sites.
 [**get_telephony_providers_edges_timezones**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_timezones) | Get a list of Edge-compatible time zones
 [**get_telephony_providers_edges_trunk**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunk) | Get a Trunk by ID
+[**get_telephony_providers_edges_trunk_metrics**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunk_metrics) | Get the trunk metrics.
 [**get_telephony_providers_edges_trunkbasesetting**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunkbasesetting) | Get a Trunk Base Settings object by ID
 [**get_telephony_providers_edges_trunkbasesettings**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunkbasesettings) | Get Trunk Base Settings listing
 [**get_telephony_providers_edges_trunkbasesettings_availablemetabases**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunkbasesettings_availablemetabases) | Get a list of available makes and models to create a new Trunk Base Settings
 [**get_telephony_providers_edges_trunkbasesettings_template**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunkbasesettings_template) | Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
 [**get_telephony_providers_edges_trunks**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunks) | Get the list of available trunks.
+[**get_telephony_providers_edges_trunks_metrics**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunks_metrics) | Get the metrics for a list of trunks.
 [**get_telephony_providers_edges_trunkswithrecording**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunkswithrecording) | Get Counts of trunks that have recording disabled or enabled
 [**post_telephony_providers_edge_logicalinterfaces**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edge_logicalinterfaces) | Create an edge logical interface.
 [**post_telephony_providers_edge_logs_job_upload**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edge_logs_job_upload) | Request that the specified fileIds be uploaded from the Edge.
@@ -107,6 +112,7 @@ Method | Description
 [**post_telephony_providers_edges_phonebasesettings**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_phonebasesettings) | Create a new Phone Base Settings object
 [**post_telephony_providers_edges_phones**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_phones) | Create a new Phone
 [**post_telephony_providers_edges_phones_reboot**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_phones_reboot) | Reboot Multiple Phones
+[**post_telephony_providers_edges_site_autoscalinggroups**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_site_autoscalinggroups) | Creates an ASG for the specified site
 [**post_telephony_providers_edges_site_outboundroutes**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_site_outboundroutes) | Create outbound route
 [**post_telephony_providers_edges_site_rebalance**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_site_rebalance) | Triggers the rebalance operation.
 [**post_telephony_providers_edges_sites**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_sites) | Create a Site.
@@ -1657,6 +1663,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EdgeLogsJob**](EdgeLogsJob.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_telephony_providers_edge_metrics"></a>
+
+## -[**EdgeMetrics**](EdgeMetrics.html) get_telephony_providers_edge_metrics(edge_id)
+
+Get the edge metrics.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/{edgeId}/metrics 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_id = "edge_id_example" # String | Edge Id
+
+
+begin
+  #Get the edge metrics.
+  result = api_instance.get_telephony_providers_edge_metrics(edge_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_metrics: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_id** | **String**| Edge Id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EdgeMetrics**](EdgeMetrics.html)
 
 ### HTTP request headers
 
@@ -3520,6 +3585,65 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_telephony_providers_edges_metrics"></a>
+
+## -[**Array&lt;EdgeMetrics&gt;**](EdgeMetrics.html) get_telephony_providers_edges_metrics(edge_ids)
+
+Get the metrics for a list of edges.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/metrics 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_ids = "edge_ids_example" # String | Comma separated list of Edge Id's
+
+
+begin
+  #Get the metrics for a list of edges.
+  result = api_instance.get_telephony_providers_edges_metrics(edge_ids)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_metrics: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_ids** | **String**| Comma separated list of Edge Id&#39;s |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;EdgeMetrics&gt;**](EdgeMetrics.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_telephony_providers_edges_outboundroute"></a>
 
 ## -[**OutboundRoute**](OutboundRoute.html) get_telephony_providers_edges_outboundroute(outbound_route_id)
@@ -4219,6 +4343,65 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_telephony_providers_edges_site_autoscalinggroups"></a>
+
+## -[**AsgInfoResponse**](AsgInfoResponse.html) get_telephony_providers_edges_site_autoscalinggroups(site_id)
+
+Gets the basic information about an asg in a specified site
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/sites/{siteId}/autoscalinggroups 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+site_id = "site_id_example" # String | Site id associated with the asg
+
+
+begin
+  #Gets the basic information about an asg in a specified site
+  result = api_instance.get_telephony_providers_edges_site_autoscalinggroups(site_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_site_autoscalinggroups: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **String**| Site id associated with the asg |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AsgInfoResponse**](AsgInfoResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_telephony_providers_edges_site_numberplan"></a>
 
 ## -[**NumberPlan**](NumberPlan.html) get_telephony_providers_edges_site_numberplan(site_id, number_plan_id)
@@ -4727,6 +4910,65 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_telephony_providers_edges_trunk_metrics"></a>
+
+## -[**TrunkMetrics**](TrunkMetrics.html) get_telephony_providers_edges_trunk_metrics(trunk_id)
+
+Get the trunk metrics.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/trunks/{trunkId}/metrics 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+trunk_id = "trunk_id_example" # String | Trunk Id
+
+
+begin
+  #Get the trunk metrics.
+  result = api_instance.get_telephony_providers_edges_trunk_metrics(trunk_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_trunk_metrics: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **trunk_id** | **String**| Trunk Id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TrunkMetrics**](TrunkMetrics.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_telephony_providers_edges_trunkbasesetting"></a>
 
 ## -[**TrunkBase**](TrunkBase.html) get_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id, opts)
@@ -5053,6 +5295,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TrunkEntityListing**](TrunkEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_telephony_providers_edges_trunks_metrics"></a>
+
+## -[**Array&lt;TrunkMetrics&gt;**](TrunkMetrics.html) get_telephony_providers_edges_trunks_metrics(trunk_ids)
+
+Get the metrics for a list of trunks.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/trunks/metrics 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+trunk_ids = "trunk_ids_example" # String | Comma separated list of Trunk Id's
+
+
+begin
+  #Get the metrics for a list of trunks.
+  result = api_instance.get_telephony_providers_edges_trunks_metrics(trunk_ids)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_trunks_metrics: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **trunk_ids** | **String**| Comma separated list of Trunk Id&#39;s |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;TrunkMetrics&gt;**](TrunkMetrics.html)
 
 ### HTTP request headers
 
@@ -6254,6 +6555,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_telephony_providers_edges_site_autoscalinggroups"></a>
+
+## -String** post_telephony_providers_edges_site_autoscalinggroups(site_id, body)
+
+Creates an ASG for the specified site
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/sites/{siteId}/autoscalinggroups 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+site_id = "site_id_example" # String | Site that will be associated with the asg
+
+body = PureCloud::CreateAsgRequest.new # CreateAsgRequest | CreateAsgRequest
+
+
+begin
+  #Creates an ASG for the specified site
+  result = api_instance.post_telephony_providers_edges_site_autoscalinggroups(site_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_site_autoscalinggroups: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **String**| Site that will be associated with the asg |  |
+ **body** | [**CreateAsgRequest**](CreateAsgRequest.html)| CreateAsgRequest |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+**String**
 
 ### HTTP request headers
 

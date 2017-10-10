@@ -3230,6 +3230,8 @@ module PureCloud
     # @option opts [String] :secure Secure
     # @option opts [BOOLEAN] :deleted Include deleted (default to false)
     # @option opts [BOOLEAN] :include_schemas Include variable schemas (default to false)
+    # @option opts [String] :published_after Published after
+    # @option opts [String] :published_before Published before
     # @return [FlowEntityListing]
     def get_flows(type, opts = {})
       data, _status_code, _headers = get_flows_with_http_info(type, opts)
@@ -3254,6 +3256,8 @@ module PureCloud
     # @option opts [String] :secure Secure
     # @option opts [BOOLEAN] :deleted Include deleted
     # @option opts [BOOLEAN] :include_schemas Include variable schemas
+    # @option opts [String] :published_after Published after
+    # @option opts [String] :published_before Published before
     # @return [Array<(FlowEntityListing, Fixnum, Hash)>] FlowEntityListing data, response status code and response headers
     def get_flows_with_http_info(type, opts = {})
       if @api_client.config.debugging
@@ -3361,6 +3365,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows".sub('{format}','json')
 
@@ -3381,6 +3397,8 @@ module PureCloud
       query_params[:'secure'] = opts[:'secure'] if opts[:'secure']
       query_params[:'deleted'] = opts[:'deleted'] if opts[:'deleted']
       query_params[:'includeSchemas'] = opts[:'include_schemas'] if opts[:'include_schemas']
+      query_params[:'publishedAfter'] = opts[:'published_after'] if opts[:'published_after']
+      query_params[:'publishedBefore'] = opts[:'published_before'] if opts[:'published_before']
 
       # header parameters
       header_params = {}

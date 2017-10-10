@@ -18,14 +18,19 @@ require 'date'
 
 module PureCloud
   class ContactListFilterRange
+    # The minimum value of the range. Required for the operator BETWEEN.
     attr_accessor :min
 
+    # The maximum value of the range. Required for the operator BETWEEN.
     attr_accessor :max
 
+    # Whether or not to include the minimum in the range.
     attr_accessor :min_inclusive
 
+    # Whether or not to include the maximum in the range.
     attr_accessor :max_inclusive
 
+    # A set of values that the contact data should be in. Required for the IN operator.
     attr_accessor :in_set
 
     # Attribute mapping from ruby-style variable name to JSON key.

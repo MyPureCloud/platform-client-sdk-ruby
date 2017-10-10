@@ -38,6 +38,8 @@ module PureCloud
 
     attr_accessor :edge_group
 
+    attr_accessor :site
+
     attr_accessor :campaign_status
 
     attr_accessor :phone_columns
@@ -103,6 +105,8 @@ module PureCloud
         :'script' => :'script',
         
         :'edge_group' => :'edgeGroup',
+        
+        :'site' => :'site',
         
         :'campaign_status' => :'campaignStatus',
         
@@ -172,6 +176,8 @@ module PureCloud
         :'script' => :'CampaignNotificationUriReference',
         
         :'edge_group' => :'CampaignNotificationUriReference',
+        
+        :'site' => :'CampaignNotificationUriReference',
         
         :'campaign_status' => :'String',
         
@@ -312,6 +318,15 @@ module PureCloud
         
         
         self.edge_group = attributes[:'edgeGroup']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'site')
+        
+        
+        self.site = attributes[:'site']
         
       
       end
@@ -580,6 +595,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["ON", "OFF", "COMPLETE", "STOPPING", "INVALID"]
       if @campaign_status && !allowed_values.include?(@campaign_status)
         return false
@@ -730,6 +749,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] campaign_status Object to be assigned
     def campaign_status=(campaign_status)
@@ -858,6 +882,7 @@ module PureCloud
           dialing_mode == o.dialing_mode &&
           script == o.script &&
           edge_group == o.edge_group &&
+          site == o.site &&
           campaign_status == o.campaign_status &&
           phone_columns == o.phone_columns &&
           abandon_rate == o.abandon_rate &&
@@ -890,7 +915,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, contact_list, queue, dialing_mode, script, edge_group, campaign_status, phone_columns, abandon_rate, dnc_lists, callable_time_set, call_analysis_response_set, caller_name, caller_address, outbound_line_count, errors, rule_sets, skip_preview_disabled, preview_time_out_seconds, single_number_preview, contact_sort, contact_sorts, no_answer_timeout, call_analysis_language, priority, contact_list_filters, additional_properties].hash
+      [id, name, date_created, date_modified, version, contact_list, queue, dialing_mode, script, edge_group, site, campaign_status, phone_columns, abandon_rate, dnc_lists, callable_time_set, call_analysis_response_set, caller_name, caller_address, outbound_line_count, errors, rule_sets, skip_preview_disabled, preview_time_out_seconds, single_number_preview, contact_sort, contact_sorts, no_answer_timeout, call_analysis_language, priority, contact_list_filters, additional_properties].hash
     end
 
     # build the object from hash

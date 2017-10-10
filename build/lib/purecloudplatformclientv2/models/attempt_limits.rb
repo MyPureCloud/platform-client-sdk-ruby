@@ -32,17 +32,19 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
+    # The maximum number of times a contact can be called within the resetPeriod. Required if maxAttemptsPerNumber is not defined.
     attr_accessor :max_attempts_per_contact
 
+    # The maximum number of times a phone number can be called within the resetPeriod. Required if maxAttemptsPerContact is not defined.
     attr_accessor :max_attempts_per_number
 
-    # The timezone is necessary to define when \"today\" starts and ends
+    # If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY.
     attr_accessor :time_zone_id
 
-    # After how long the number of attempts will be set back to 0
+    # After how long the number of attempts will be set back to 0. Defaults to NEVER.
     attr_accessor :reset_period
 
-    # Configuration for recall attempts
+    # Configuration for recall attempts.
     attr_accessor :recall_entries
 
     # The URI for this object

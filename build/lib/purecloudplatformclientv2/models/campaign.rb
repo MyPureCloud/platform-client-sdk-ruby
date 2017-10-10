@@ -21,6 +21,7 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
+    # The name of the Campaign.
     attr_accessor :name
 
     # Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -32,76 +33,79 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
-    # identifier of the contact list for the campaign
+    # The ContactList for this Campaign to dial.
     attr_accessor :contact_list
 
-    # identifier of the agent assignment queue, required for all dialing modes other than agentless
+    # The Queue for this Campaign to route calls to. Required for all dialing modes except agentless.
     attr_accessor :queue
 
-    # dialing mode of the campaign
+    # The strategy this Campaign will use for dialing.
     attr_accessor :dialing_mode
 
-    # identifier of the campaign script, required for all dialing modes other than agentless
+    # The Script to be displayed to agents that are handling outbound calls. Required for all dialing modes except agentless.
     attr_accessor :script
 
-    # identifier of the edge group, required for all dialing modes other than preview
+    # The EdgeGroup that will place the calls. Required for all dialing modes except preview.
     attr_accessor :edge_group
 
-    # status of the campaign; can be set to 'on' or 'off'
+    # The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates.
     attr_accessor :campaign_status
 
-    # the contact list phone columns to be called for the campaign
+    # The ContactPhoneNumberColumns on the ContactList that this Campaign should dial.
     attr_accessor :phone_columns
 
-    # the targeted abandon rate percentage
+    # The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns.
     attr_accessor :abandon_rate
 
-    # identifiers of the do not call lists
+    # DncLists for this Campaign to check before placing a call.
     attr_accessor :dnc_lists
 
-    # the identifier of the callable time set
+    # The callable time set for this campaign to check before placing a call.
     attr_accessor :callable_time_set
 
-    # the identifier of the call analysis response set, required for all dialing modes other than preview
+    # The call analysis response set to handle call analysis results from the edge. Required for all dialing modes except preview.
     attr_accessor :call_analysis_response_set
 
-    # a list of current error conditions associated with the campaign
+    # A list of current error conditions associated with the campaign.
     attr_accessor :errors
 
-    # caller id name to be displayed on the outbound call
+    # The caller id name to be displayed on the outbound call.
     attr_accessor :caller_name
 
-    # caller id phone number to be displayed on the outbound call
+    # The caller id phone number to be displayed on the outbound call.
     attr_accessor :caller_address
 
-    # for agentless campaigns, the number of outbound lines to be concurrently dialed
+    # The number of outbound lines to be concurrently dialed. Only applicable to non-preview campaigns; only required for agentless.
     attr_accessor :outbound_line_count
 
-    # identifiers of the rule sets
+    # Rule sets to be applied while this campaign is dialing.
     attr_accessor :rule_sets
 
-    # for preview campaigns, indicator of whether the agent can skip a preview without placing a call
+    # Whether or not agents can skip previews without placing a call. Only applicable for preview campaigns.
     attr_accessor :skip_preview_disabled
 
-    # for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls
+    # The number of seconds before a call will be automatically placed on a preview. A value of 0 indicates no automatic placement of calls. Only applicable to preview campaigns.
     attr_accessor :preview_time_out_seconds
 
-    # information determining the order in which the contacts will be dialed
+    # Indicates (when true) that the campaign will remain on after contacts are depleted, allowing additional contacts to be appended/added to the contact list and processed by the still-running campaign. The campaign can still be turned off manually.
+    attr_accessor :always_running
+
+    # The order in which to sort contacts for dialing, based on a column.
     attr_accessor :contact_sort
 
-    # column prioritized information determining the order in which the contacts will be dialed
+    # The order in which to sort contacts for dialing, based on up to four columns.
     attr_accessor :contact_sorts
 
-    # for non-preview campaigns, how long to wait before dispositioning as 'no-answer', default 30 seconds
+    # How long to wait before dispositioning a call as 'no-answer'. Default 30 seconds. Only applicable to non-preview campaigns.
     attr_accessor :no_answer_timeout
 
-    # The language the edge will use to analyse the call
+    # The language the edge will use to analyze the call.
     attr_accessor :call_analysis_language
 
-    # The priority of this campaign relative to other campaigns
+    # The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest.
     attr_accessor :priority
 
-    # Filter defining a subset of contacts from the contact list to be dialed
+    # Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied.
     attr_accessor :contact_list_filters
 
     # The URI for this object
@@ -156,6 +160,8 @@ module PureCloud
         :'skip_preview_disabled' => :'skipPreviewDisabled',
         
         :'preview_time_out_seconds' => :'previewTimeOutSeconds',
+        
+        :'always_running' => :'alwaysRunning',
         
         :'contact_sort' => :'contactSort',
         
@@ -223,6 +229,8 @@ module PureCloud
         :'skip_preview_disabled' => :'BOOLEAN',
         
         :'preview_time_out_seconds' => :'Integer',
+        
+        :'always_running' => :'BOOLEAN',
         
         :'contact_sort' => :'ContactSort',
         
@@ -465,6 +473,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'alwaysRunning')
+        
+        
+        self.always_running = attributes[:'alwaysRunning']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'contactSort')
         
         
@@ -552,6 +569,11 @@ module PureCloud
       
       
       
+      if @name.nil?
+        return false
+      end
+
+      
       
       
       
@@ -577,11 +599,6 @@ module PureCloud
       
       
       
-      if @queue.nil?
-        return false
-      end
-
-      
       
       
       
@@ -600,28 +617,13 @@ module PureCloud
       
       
       
-      if @script.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @edge_group.nil?
-        return false
-      end
-
       
       
-      
-      
-      
-      if @campaign_status.nil?
-        return false
-      end
-
       
       
       allowed_values = ["on", "stopping", "off", "complete", "invalid"]
@@ -653,7 +655,15 @@ module PureCloud
       
       
       
-      if @call_analysis_response_set.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      if @caller_name.nil?
         return false
       end
 
@@ -662,9 +672,10 @@ module PureCloud
       
       
       
-      
-      
-      
+      if @caller_address.nil?
+        return false
+      end
+
       
       
       
@@ -888,6 +899,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -916,6 +932,7 @@ module PureCloud
           rule_sets == o.rule_sets &&
           skip_preview_disabled == o.skip_preview_disabled &&
           preview_time_out_seconds == o.preview_time_out_seconds &&
+          always_running == o.always_running &&
           contact_sort == o.contact_sort &&
           contact_sorts == o.contact_sorts &&
           no_answer_timeout == o.no_answer_timeout &&
@@ -934,7 +951,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, contact_list, queue, dialing_mode, script, edge_group, campaign_status, phone_columns, abandon_rate, dnc_lists, callable_time_set, call_analysis_response_set, errors, caller_name, caller_address, outbound_line_count, rule_sets, skip_preview_disabled, preview_time_out_seconds, contact_sort, contact_sorts, no_answer_timeout, call_analysis_language, priority, contact_list_filters, self_uri].hash
+      [id, name, date_created, date_modified, version, contact_list, queue, dialing_mode, script, edge_group, campaign_status, phone_columns, abandon_rate, dnc_lists, callable_time_set, call_analysis_response_set, errors, caller_name, caller_address, outbound_line_count, rule_sets, skip_preview_disabled, preview_time_out_seconds, always_running, contact_sort, contact_sorts, no_answer_timeout, call_analysis_language, priority, contact_list_filters, self_uri].hash
     end
 
     # build the object from hash

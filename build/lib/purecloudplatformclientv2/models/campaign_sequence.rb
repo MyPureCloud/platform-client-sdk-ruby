@@ -32,19 +32,19 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
-    # the ordered list of campaign identifiers
+    # The ordered list of Campaigns that this CampaignSequence will run.
     attr_accessor :campaigns
 
-    # the zero-based index of the current campaign in the campaigns list
+    # A zero-based index indicating which Campaign this CampaignSequence is currently on.
     attr_accessor :current_campaign
 
-    # status of the sequence
+    # The current status of the CampaignSequence. A CampaignSequence can be turned 'on' or 'off'.
     attr_accessor :status
 
-    # if a sequence has unexpectedly stopped, this message provides the reason
+    # A message indicating if and why a CampaignSequence has stopped unexpectedly.
     attr_accessor :stop_message
 
-    # indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false
+    # Indicates if a sequence should repeat from the beginning after the last campaign completes. Default is false.
     attr_accessor :repeat
 
     # The URI for this object

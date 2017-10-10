@@ -20,10 +20,13 @@ module PureCloud
   class CampaignRuleAction
     attr_accessor :id
 
+    # The parameters for the CampaignRuleAction. Required for certain actionTypes.
     attr_accessor :parameters
 
+    # The action to take on the campaignRuleActionEntities.
     attr_accessor :action_type
 
+    # The list of entities that this action will apply to.
     attr_accessor :campaign_rule_action_entities
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -125,6 +128,11 @@ module PureCloud
       
       
       
+      if @action_type.nil?
+        return false
+      end
+
+      
       
       allowed_values = ["turnOnCampaign", "turnOffCampaign", "turnOnSequence", "turnOffSequence", "setCampaignPriority", "recycleCampaign", "setCampaignDialingMode"]
       if @action_type && !allowed_values.include?(@action_type)
@@ -133,6 +141,11 @@ module PureCloud
       
       
       
+      
+      if @campaign_rule_action_entities.nil?
+        return false
+      end
+
       
       
       

@@ -18,22 +18,22 @@ require 'date'
 
 module PureCloud
   class DialerRule
-    # The identifier of the rule
+    # The identifier of the rule.
     attr_accessor :id
 
-    # The name of the rule
+    # The name of the rule.
     attr_accessor :name
 
-    # The ranked order of the rule; rules are processed from lowest number to highest
+    # The ranked order of the rule. Rules are processed from lowest number to highest.
     attr_accessor :order
 
-    # The category of the rule
+    # The category of the rule.
     attr_accessor :category
 
-    # The list of rule conditions; all must evaluate to true to trigger the rule actions
+    # A list of Conditions. All of the Conditions must evaluate to true to trigger the actions.
     attr_accessor :conditions
 
-    # The list of rule actions to be taken if the conditions are true
+    # The list of actions to be taken if the conditions are true.
     attr_accessor :actions
 
     # Attribute mapping from ruby-style variable name to JSON key.

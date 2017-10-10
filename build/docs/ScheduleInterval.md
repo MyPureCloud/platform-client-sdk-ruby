@@ -7,8 +7,8 @@ title: ScheduleInterval
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **start** | **String** | scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **_end** | **String** | scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **start** | **String** | The scheduled start time as an ISO-8601 string, i.e yyyy-MM-ddTHH:mm:ss.SSSZ | |
+| **_end** | **String** | The scheduled end time as an ISO-8601 string, i.e. yyyy-MM-ddTHH:mm:ss.SSSZ | |
 {: class="table table-striped"}
 
 

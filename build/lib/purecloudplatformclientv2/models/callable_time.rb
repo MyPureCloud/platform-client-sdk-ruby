@@ -18,10 +18,10 @@ require 'date'
 
 module PureCloud
   class CallableTime
-    # intervals for which it is acceptable to place outbound calls
+    # The time intervals for which it is acceptable to place outbound calls.
     attr_accessor :time_slots
 
-    # time zone identifier to be applied to the time slots; for example Africa/Abidjan
+    # The time zone for the time slots; for example, Africa/Abidjan
     attr_accessor :time_zone_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -90,6 +90,11 @@ module PureCloud
     # @return true if the model is valid
     def valid?
       
+      
+      if @time_slots.nil?
+        return false
+      end
+
       
       
       

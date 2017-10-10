@@ -21,6 +21,7 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
+    # The name of the list.
     attr_accessor :name
 
     # Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -32,12 +33,13 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
-    # The contact list the filter is based on
+    # The contact list the filter is based on.
     attr_accessor :contact_list
 
+    # Groups of conditions to filter the contacts by.
     attr_accessor :clauses
 
-    # The filter type tells the api how to compare between clauses
+    # How to join clauses together.
     attr_accessor :filter_type
 
     # The URI for this object
@@ -204,6 +206,11 @@ module PureCloud
       
       
       
+      
+      if @name.nil?
+        return false
+      end
+
       
       
       

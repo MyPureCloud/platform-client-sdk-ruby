@@ -18,16 +18,16 @@ require 'date'
 
 module PureCloud
   class CampaignRuleParameters
-    # The operator for comparison. Required for all campaign rule conditions
+    # The operator for comparison. Required for a CampaignRuleCondition.
     attr_accessor :operator
 
-    # The value for comparison. Required for all campaign rule conditions
+    # The value for comparison. Required for a CampaignRuleCondition.
     attr_accessor :value
 
-    # The priority to set the campaign to. Required for 'set campaign priority' actions
+    # The priority to set a campaign to. Required for the 'setCampaignPriority' action.
     attr_accessor :priority
 
-    # The dialing mode to set the campaign to. Reqired for 'set campaign dialing mode' actions
+    # The dialing mode to set a campaign to. Required for the 'setCampaignDialingMode' action.
     attr_accessor :dialing_mode
 
     # Attribute mapping from ruby-style variable name to JSON key.

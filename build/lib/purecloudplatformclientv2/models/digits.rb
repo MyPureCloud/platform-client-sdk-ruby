@@ -17,18 +17,15 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class UserPresenceNotificationPresenceDefinition
-    attr_accessor :id
-
-    attr_accessor :system_presence
+  class Digits
+    # A string representing the DTMF tones to play. Valid DTMF values: 1234567890#*ABCD
+    attr_accessor :digits
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
-        
-        :'system_presence' => :'systemPresence'
+        :'digits' => :'digits'
         
       }
     end
@@ -37,9 +34,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
-        
-        :'system_presence' => :'String'
+        :'digits' => :'String'
         
       }
     end
@@ -53,19 +48,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'digits')
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'systemPresence')
-        
-        
-        self.system_presence = attributes[:'systemPresence']
+        self.digits = attributes[:'digits']
         
       
       end
@@ -87,20 +73,16 @@ module PureCloud
     def valid?
       
       
-      
-      
-      
+      if @digits.nil?
+        return false
+      end
+
       
       
       
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -112,8 +94,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          system_presence == o.system_presence
+          digits == o.digits
     end
 
     # @see the `==` method
@@ -125,7 +106,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, system_presence].hash
+      [digits].hash
     end
 
     # build the object from hash

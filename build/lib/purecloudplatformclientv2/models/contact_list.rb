@@ -32,25 +32,25 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
-    # the contact column names
+    # The names of the contact data columns.
     attr_accessor :column_names
 
-    # the columns containing phone numbers
+    # Indicates which columns are phone numbers.
     attr_accessor :phone_columns
 
-    # the status of the import process
+    # The status of the import process.
     attr_accessor :import_status
 
-    # the name of the column that holds the indicators for contacts that are to be dialed in preview mode only
+    # A column to check if a contact should always be dialed in preview mode.
     attr_accessor :preview_mode_column_name
 
-    # list of user-defined values indicating the contact is to be dialed in preview mode only
+    # The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode.
     attr_accessor :preview_mode_accepted_values
 
-    # the number of contacts in the contact list
+    # The number of contacts in the ContactList.
     attr_accessor :size
 
-    # the associated AttemptLimits
+    # AttemptLimits for this ContactList
     attr_accessor :attempt_limits
 
     # The URI for this object

@@ -18,32 +18,32 @@ require 'date'
 
 module PureCloud
   class Condition
-    # The type of the condition
+    # The type of the condition.
     attr_accessor :type
 
-    # Indicates whether to evaluate for the opposite of the stated condition; default is false
+    # If true, inverts the result of evaluating this Condition. Default is false.
     attr_accessor :inverted
 
-    # An attribute name associated with the condition (applies only to certain rule conditions)
+    # An attribute name associated with this Condition. Required for a contactAttributeCondition.
     attr_accessor :attribute_name
 
-    # A value associated with the condition. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes).
+    # A value associated with this Condition. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes).
     attr_accessor :value
 
-    # Determines the type of the value associated with the condition
+    # The type of the value associated with this Condition.
     attr_accessor :value_type
 
-    # An operation type for condition evaluation
+    # An operation with which to evaluate the Condition.
     attr_accessor :operator
 
-    # List of wrap-up code identifiers (used only in conditions of type 'wrapupCondition')
+    # List of wrap-up code identifiers. Required for a wrapupCondition.
     attr_accessor :codes
 
-    # Determines the type of the property associated with the condition
-    attr_accessor :property_type
-
-    # A value associated with the property type of this condition
+    # A value associated with the property type of this Condition. Required for a contactPropertyCondition.
     attr_accessor :property
+
+    # The type of the property associated with this Condition.
+    attr_accessor :property_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -63,9 +63,9 @@ module PureCloud
         
         :'codes' => :'codes',
         
-        :'property_type' => :'propertyType',
+        :'property' => :'property',
         
-        :'property' => :'property'
+        :'property_type' => :'propertyType'
         
       }
     end
@@ -88,9 +88,9 @@ module PureCloud
         
         :'codes' => :'Array<String>',
         
-        :'property_type' => :'String',
+        :'property' => :'String',
         
-        :'property' => :'String'
+        :'property_type' => :'String'
         
       }
     end
@@ -169,19 +169,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'propertyType')
+      if attributes.has_key?(:'property')
         
         
-        self.property_type = attributes[:'propertyType']
+        self.property = attributes[:'property']
         
       
       end
 
       
-      if attributes.has_key?(:'property')
+      if attributes.has_key?(:'propertyType')
         
         
-        self.property = attributes[:'property']
+        self.property_type = attributes[:'propertyType']
         
       
       end
@@ -247,14 +247,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["LAST_ATTEMPT_BY_COLUMN", "LAST_ATTEMPT_OVERALL", "LAST_WRAPUP_BY_COLUMN", "LAST_WRAPUP_OVERALL"]
       if @property_type && !allowed_values.include?(@property_type)
         return false
       end
-      
-      
-      
-      
       
       
       
@@ -324,6 +324,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] property_type Object to be assigned
     def property_type=(property_type)
@@ -334,11 +339,6 @@ module PureCloud
       @property_type = property_type
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -354,8 +354,8 @@ module PureCloud
           value_type == o.value_type &&
           operator == o.operator &&
           codes == o.codes &&
-          property_type == o.property_type &&
-          property == o.property
+          property == o.property &&
+          property_type == o.property_type
     end
 
     # @see the `==` method
@@ -367,7 +367,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, inverted, attribute_name, value, value_type, operator, codes, property_type, property].hash
+      [type, inverted, attribute_name, value, value_type, operator, codes, property, property_type].hash
     end
 
     # build the object from hash

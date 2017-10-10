@@ -23,19 +23,19 @@ module PureCloud
 
     attr_accessor :name
 
-    # Identifier of the contact list containing this contact
+    # The identifier of the contact list containing this contact.
     attr_accessor :contact_list_id
 
-    # An ordered map of the contact's data attributes and values
+    # An ordered map of the contact's columns and corresponding values.
     attr_accessor :data
 
-    # A map of call records for the contact phone columns
+    # A map of call records for the contact phone columns.
     attr_accessor :call_records
 
-    # false if the contact is not to be called
+    # Indicates whether or not the contact can be called.
     attr_accessor :callable
 
-    # A map of statuses for the contact phone columns
+    # A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not.
     attr_accessor :phone_number_status
 
     # The URI for this object
@@ -206,6 +206,11 @@ module PureCloud
       
       
       
+      
+      if @data.nil?
+        return false
+      end
+
       
       
       

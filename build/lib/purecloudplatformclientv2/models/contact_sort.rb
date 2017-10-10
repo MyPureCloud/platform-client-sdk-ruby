@@ -20,10 +20,10 @@ module PureCloud
   class ContactSort
     attr_accessor :field_name
 
-    # The sort direction
+    # The direction in which to sort contacts.
     attr_accessor :direction
 
-    # Whether that column contains numeric data
+    # Whether or not the column contains numeric data.
     attr_accessor :numeric
 
     # Attribute mapping from ruby-style variable name to JSON key.

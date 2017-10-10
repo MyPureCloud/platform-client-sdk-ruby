@@ -32,10 +32,10 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
-    # The default set of wrapup values
+    # The default set of wrap-up flags. These will be used if there is no entry for a given wrap-up code in the mapping.
     attr_accessor :default_set
 
-    # A map from wrapup code identifiers to a set of wrapup values
+    # A map from wrap-up code identifiers to a set of wrap-up flags.
     attr_accessor :mapping
 
     # The URI for this object

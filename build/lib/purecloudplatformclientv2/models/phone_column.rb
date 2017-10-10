@@ -18,10 +18,10 @@ require 'date'
 
 module PureCloud
   class PhoneColumn
-    # name of the phone column
+    # The name of the phone column.
     attr_accessor :column_name
 
-    # type of the phone column, for example, 'cell' or 'home'
+    # The type of the phone column. For example, 'cell' or 'home'.
     attr_accessor :type
 
     # Attribute mapping from ruby-style variable name to JSON key.

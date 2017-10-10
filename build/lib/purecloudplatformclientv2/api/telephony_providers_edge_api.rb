@@ -1853,6 +1853,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the edge metrics.
+    # 
+    # @param edge_id Edge Id
+    # @param [Hash] opts the optional parameters
+    # @return [EdgeMetrics]
+    def get_telephony_providers_edge_metrics(edge_id, opts = {})
+      data, _status_code, _headers = get_telephony_providers_edge_metrics_with_http_info(edge_id, opts)
+      return data
+    end
+
+    # Get the edge metrics.
+    # 
+    # @param edge_id Edge Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EdgeMetrics, Fixnum, Hash)>] EdgeMetrics data, response status code and response headers
+    def get_telephony_providers_edge_metrics_with_http_info(edge_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_metrics ..."
+      end
+      
+      
+      # verify the required parameter 'edge_id' is set
+      fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_metrics" if edge_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/metrics".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EdgeMetrics')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edge_metrics\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get edge physical interface.
     # Retrieve a physical interface from a specific edge.
     # @param edge_id Edge ID
@@ -4159,6 +4224,72 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the metrics for a list of edges.
+    # 
+    # @param edge_ids Comma separated list of Edge Id&#39;s
+    # @param [Hash] opts the optional parameters
+    # @return [Array<EdgeMetrics>]
+    def get_telephony_providers_edges_metrics(edge_ids, opts = {})
+      data, _status_code, _headers = get_telephony_providers_edges_metrics_with_http_info(edge_ids, opts)
+      return data
+    end
+
+    # Get the metrics for a list of edges.
+    # 
+    # @param edge_ids Comma separated list of Edge Id&#39;s
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<EdgeMetrics>, Fixnum, Hash)>] Array<EdgeMetrics> data, response status code and response headers
+    def get_telephony_providers_edges_metrics_with_http_info(edge_ids, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_metrics ..."
+      end
+      
+      
+      # verify the required parameter 'edge_ids' is set
+      fail ArgumentError, "Missing the required parameter 'edge_ids' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_metrics" if edge_ids.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/metrics".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'edgeIds'] = edge_ids
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<EdgeMetrics>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edges_metrics\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get outbound route
     # 
     # @param outbound_route_id Outbound route ID
@@ -5080,6 +5211,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Gets the basic information about an asg in a specified site
+    # 
+    # @param site_id Site id associated with the asg
+    # @param [Hash] opts the optional parameters
+    # @return [AsgInfoResponse]
+    def get_telephony_providers_edges_site_autoscalinggroups(site_id, opts = {})
+      data, _status_code, _headers = get_telephony_providers_edges_site_autoscalinggroups_with_http_info(site_id, opts)
+      return data
+    end
+
+    # Gets the basic information about an asg in a specified site
+    # 
+    # @param site_id Site id associated with the asg
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AsgInfoResponse, Fixnum, Hash)>] AsgInfoResponse data, response status code and response headers
+    def get_telephony_providers_edges_site_autoscalinggroups_with_http_info(site_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_autoscalinggroups ..."
+      end
+      
+      
+      # verify the required parameter 'site_id' is set
+      fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_site_autoscalinggroups" if site_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/autoscalinggroups".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AsgInfoResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edges_site_autoscalinggroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a Number Plan by ID.
     # 
     # @param site_id Site ID
@@ -5726,6 +5922,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the trunk metrics.
+    # 
+    # @param trunk_id Trunk Id
+    # @param [Hash] opts the optional parameters
+    # @return [TrunkMetrics]
+    def get_telephony_providers_edges_trunk_metrics(trunk_id, opts = {})
+      data, _status_code, _headers = get_telephony_providers_edges_trunk_metrics_with_http_info(trunk_id, opts)
+      return data
+    end
+
+    # Get the trunk metrics.
+    # 
+    # @param trunk_id Trunk Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TrunkMetrics, Fixnum, Hash)>] TrunkMetrics data, response status code and response headers
+    def get_telephony_providers_edges_trunk_metrics_with_http_info(trunk_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunk_metrics ..."
+      end
+      
+      
+      # verify the required parameter 'trunk_id' is set
+      fail ArgumentError, "Missing the required parameter 'trunk_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunk_metrics" if trunk_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/trunks/{trunkId}/metrics".sub('{format}','json').sub('{' + 'trunkId' + '}', trunk_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TrunkMetrics')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edges_trunk_metrics\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a Trunk Base Settings object by ID
     # Managed properties will not be returned unless the user is assigned the managed:all:all permission.
     # @param trunk_base_settings_id Trunk Base ID
@@ -6206,6 +6467,72 @@ module PureCloud
         :return_type => 'TrunkEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edges_trunks\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the metrics for a list of trunks.
+    # 
+    # @param trunk_ids Comma separated list of Trunk Id&#39;s
+    # @param [Hash] opts the optional parameters
+    # @return [Array<TrunkMetrics>]
+    def get_telephony_providers_edges_trunks_metrics(trunk_ids, opts = {})
+      data, _status_code, _headers = get_telephony_providers_edges_trunks_metrics_with_http_info(trunk_ids, opts)
+      return data
+    end
+
+    # Get the metrics for a list of trunks.
+    # 
+    # @param trunk_ids Comma separated list of Trunk Id&#39;s
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<TrunkMetrics>, Fixnum, Hash)>] Array<TrunkMetrics> data, response status code and response headers
+    def get_telephony_providers_edges_trunks_metrics_with_http_info(trunk_ids, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunks_metrics ..."
+      end
+      
+      
+      # verify the required parameter 'trunk_ids' is set
+      fail ArgumentError, "Missing the required parameter 'trunk_ids' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_trunks_metrics" if trunk_ids.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/trunks/metrics".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'trunkIds'] = trunk_ids
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<TrunkMetrics>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edges_trunks_metrics\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -7572,6 +7899,81 @@ module PureCloud
         :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#post_telephony_providers_edges_phones_reboot\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Creates an ASG for the specified site
+    # 
+    # @param site_id Site that will be associated with the asg
+    # @param body CreateAsgRequest
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def post_telephony_providers_edges_site_autoscalinggroups(site_id, body, opts = {})
+      data, _status_code, _headers = post_telephony_providers_edges_site_autoscalinggroups_with_http_info(site_id, body, opts)
+      return data
+    end
+
+    # Creates an ASG for the specified site
+    # 
+    # @param site_id Site that will be associated with the asg
+    # @param body CreateAsgRequest
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def post_telephony_providers_edges_site_autoscalinggroups_with_http_info(site_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edges_site_autoscalinggroups ..."
+      end
+      
+      
+      # verify the required parameter 'site_id' is set
+      fail ArgumentError, "Missing the required parameter 'site_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_site_autoscalinggroups" if site_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edges_site_autoscalinggroups" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/autoscalinggroups".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#post_telephony_providers_edges_site_autoscalinggroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

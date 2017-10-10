@@ -18,13 +18,13 @@ require 'date'
 
 module PureCloud
   class ContactPhoneNumberColumn
-    # name of the phone column
+    # The name of the phone column.
     attr_accessor :column_name
 
-    # type of the phone column, for example, 'cell' or 'home'
+    # Indicates the type of the phone column. For example, 'cell' or 'home'.
     attr_accessor :type
 
-    # name of the column indicating the timezone to be considered for determining callable times
+    # A column that indicates the timezone to use for a given contact when checking callable times.
     attr_accessor :callable_time_column
 
     # Attribute mapping from ruby-style variable name to JSON key.

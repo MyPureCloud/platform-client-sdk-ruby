@@ -1,7 +1,7 @@
 ---
-title: UserPresenceNotificationPresenceDefinition
+title: AgentActivityNotificationOrganizationPresence
 ---
-## PureCloud::UserPresenceNotificationPresenceDefinition
+## PureCloud::AgentActivityNotificationOrganizationPresence
 
 ## Properties
 

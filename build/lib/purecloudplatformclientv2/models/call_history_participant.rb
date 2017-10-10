@@ -122,17 +122,17 @@ module PureCloud
         
         :'dnis' => :'String',
         
-        :'user' => :'UriReference',
+        :'user' => :'User',
         
-        :'queue' => :'UriReference',
+        :'queue' => :'Queue',
         
-        :'group' => :'UriReference',
+        :'group' => :'Group',
         
         :'disconnect_type' => :'String',
         
-        :'external_contact' => :'UriReference',
+        :'external_contact' => :'ExternalContact',
         
-        :'external_organization' => :'UriReference'
+        :'external_organization' => :'ExternalOrganization'
         
       }
     end

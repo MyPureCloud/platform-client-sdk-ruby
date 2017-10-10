@@ -12,6 +12,10 @@ title: Annotation
 | **type** | **String** |  | [optional] |
 | **location** | **Integer** | Offset of annotation in milliseconds. | [optional] |
 | **duration_ms** | **Integer** | Duration of annotation in milliseconds. | [optional] |
+| **absolute_location** | **Integer** | Offset of annotation (milliseconds) from start of recording. | [optional] |
+| **absolute_duration_ms** | **Integer** | Duration of annotation (milliseconds). | [optional] |
+| **recording_location** | **Integer** | Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts | [optional] |
+| **recording_duration_ms** | **Integer** | Duration of annotation (milliseconds), adjusted for any recording cuts. | [optional] |
 | **user** | [**User**](User.html) | User that created this annotation (if any). | [optional] |
 | **description** | **String** | Text of annotation. | [optional] |
 | **keyword_name** | **String** | The word or phrase which is being looked for with speech recognition. | [optional] |

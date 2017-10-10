@@ -37,7 +37,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'routing_status' => :'UserRoutingStatusNotificationRoutingStatus',
+        :'routing_status' => :'AgentActivityNotificationRoutingStatus',
         
         :'error_info' => :'UserRoutingStatusNotificationErrorInfo'
         

@@ -18,10 +18,13 @@ require 'date'
 
 module PureCloud
   class CampaignRuleActionEntities
+    # The list of campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a campaign.
     attr_accessor :campaigns
 
+    # The list of sequences for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a sequence.
     attr_accessor :sequences
 
+    # If true, the CampaignRuleAction will apply to the same entity that triggered the CampaignRuleCondition.
     attr_accessor :use_triggering_entity
 
     # Attribute mapping from ruby-style variable name to JSON key.

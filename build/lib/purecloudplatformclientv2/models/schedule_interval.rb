@@ -18,10 +18,10 @@ require 'date'
 
 module PureCloud
   class ScheduleInterval
-    # scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The scheduled start time as an ISO-8601 string, i.e yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :start
 
-    # scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The scheduled end time as an ISO-8601 string, i.e. yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :_end
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -89,9 +89,19 @@ module PureCloud
     def valid?
       
       
+      if @start.nil?
+        return false
+      end
+
       
       
       
+      
+      
+      if @_end.nil?
+        return false
+      end
+
       
       
       

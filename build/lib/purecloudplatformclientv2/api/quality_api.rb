@@ -540,24 +540,26 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get a calibration by id.
+    # Get a calibration by id.  Requires either calibrator id or conversation id
     # 
     # @param calibration_id Calibration ID
-    # @param calibrator_id calibratorId
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :calibrator_id calibratorId
+    # @option opts [String] :conversation_id conversationId
     # @return [Calibration]
-    def get_quality_calibration(calibration_id, calibrator_id, opts = {})
-      data, _status_code, _headers = get_quality_calibration_with_http_info(calibration_id, calibrator_id, opts)
+    def get_quality_calibration(calibration_id, opts = {})
+      data, _status_code, _headers = get_quality_calibration_with_http_info(calibration_id, opts)
       return data
     end
 
-    # Get a calibration by id.
+    # Get a calibration by id.  Requires either calibrator id or conversation id
     # 
     # @param calibration_id Calibration ID
-    # @param calibrator_id calibratorId
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :calibrator_id calibratorId
+    # @option opts [String] :conversation_id conversationId
     # @return [Array<(Calibration, Fixnum, Hash)>] Calibration data, response status code and response headers
-    def get_quality_calibration_with_http_info(calibration_id, calibrator_id, opts = {})
+    def get_quality_calibration_with_http_info(calibration_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_calibration ..."
       end
@@ -571,8 +573,12 @@ module PureCloud
       
       
       
-      # verify the required parameter 'calibrator_id' is set
-      fail ArgumentError, "Missing the required parameter 'calibrator_id' when calling QualityApi.get_quality_calibration" if calibrator_id.nil?
+      
+      
+      
+      
+      
+      
       
       
       
@@ -583,7 +589,8 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'calibratorId'] = calibrator_id
+      query_params[:'calibratorId'] = opts[:'calibrator_id'] if opts[:'calibrator_id']
+      query_params[:'conversationId'] = opts[:'conversation_id'] if opts[:'conversation_id']
 
       # header parameters
       header_params = {}

@@ -21,6 +21,7 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
+    # The name of the CallableTimeSet.
     attr_accessor :name
 
     # Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -32,7 +33,7 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
-    # list of time/timezone groupings for which it is acceptable to place outbound calls
+    # The list of CallableTimes for which it is acceptable to place outbound calls.
     attr_accessor :callable_times
 
     # The URI for this object
@@ -173,6 +174,11 @@ module PureCloud
       
       
       
+      
+      if @name.nil?
+        return false
+      end
+
       
       
       

@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class PhoneNumberStatus
-    # false if the phone number is not callable
+    # Indicates whether or not a phone number is callable.
     attr_accessor :callable
 
     # Attribute mapping from ruby-style variable name to JSON key.

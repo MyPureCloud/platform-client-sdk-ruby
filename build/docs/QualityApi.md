@@ -14,7 +14,7 @@ Method | Description
 [**delete_quality_keywordset**](QualityApi.html#delete_quality_keywordset) | Delete a keywordSet by id.
 [**delete_quality_keywordsets**](QualityApi.html#delete_quality_keywordsets) | Delete keyword sets
 [**get_quality_agents_activity**](QualityApi.html#get_quality_agents_activity) | Gets a list of Agent Activities
-[**get_quality_calibration**](QualityApi.html#get_quality_calibration) | Get a calibration by id.
+[**get_quality_calibration**](QualityApi.html#get_quality_calibration) | Get a calibration by id.  Requires either calibrator id or conversation id
 [**get_quality_calibrations**](QualityApi.html#get_quality_calibrations) | Get the list of calibrations
 [**get_quality_conversation_audits**](QualityApi.html#get_quality_conversation_audits) | Get audits for conversation or recording
 [**get_quality_conversation_evaluation**](QualityApi.html#get_quality_conversation_evaluation) | Get an evaluation
@@ -427,9 +427,9 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_calibration"></a>
 
-## -[**Calibration**](Calibration.html) get_quality_calibration(calibration_id, calibrator_id)
+## -[**Calibration**](Calibration.html) get_quality_calibration(calibration_id, opts)
 
-Get a calibration by id.
+Get a calibration by id.  Requires either calibrator id or conversation id
 
 
 
@@ -455,12 +455,14 @@ api_instance = PureCloud::QualityApi.new
 
 calibration_id = "calibration_id_example" # String | Calibration ID
 
-calibrator_id = "calibrator_id_example" # String | calibratorId
-
+opts = { 
+  calibrator_id: "calibrator_id_example", # String | calibratorId
+  conversation_id: "conversation_id_example" # String | conversationId
+}
 
 begin
-  #Get a calibration by id.
-  result = api_instance.get_quality_calibration(calibration_id, calibrator_id)
+  #Get a calibration by id.  Requires either calibrator id or conversation id
+  result = api_instance.get_quality_calibration(calibration_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_calibration: #{e}"
@@ -472,7 +474,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **calibration_id** | **String**| Calibration ID |  |
- **calibrator_id** | **String**| calibratorId |  |
+ **calibrator_id** | **String**| calibratorId | [optional]  |
+ **conversation_id** | **String**| conversationId | [optional]  |
 {: class="table table-striped"}
 
 

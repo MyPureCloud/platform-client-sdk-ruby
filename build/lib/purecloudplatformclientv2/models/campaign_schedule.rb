@@ -32,13 +32,13 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
-    # a list of start and end times
+    # A list of intervals during which to run the associated Campaign.
     attr_accessor :intervals
 
-    # time zone identifier to be applied to the intervals; for example Africa/Abidjan
+    # The time zone for this CampaignSchedule. For example, Africa/Abidjan.
     attr_accessor :time_zone
 
-    # identifier of the campaign to be scheduled
+    # The Campaign that this CampaignSchedule is for.
     attr_accessor :campaign
 
     # The URI for this object

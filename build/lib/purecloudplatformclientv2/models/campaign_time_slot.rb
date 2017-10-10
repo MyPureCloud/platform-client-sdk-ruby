@@ -18,13 +18,13 @@ require 'date'
 
 module PureCloud
   class CampaignTimeSlot
-    # interval start time as an ISO-8601 string. For example: HH:mm:ss
+    # The start time of the interval as an ISO-8601 string, i.e. HH:mm:ss
     attr_accessor :start_time
 
-    # interval stop time as an ISO-8601 string. For example: HH:mm:ss
+    # The end time of the interval as an ISO-8601 string, i.e. HH:mm:ss
     attr_accessor :stop_time
 
-    # must be within [1-7], representing Monday through Sunday
+    # The day of the interval. Valid values: [1-7], representing Monday through Sunday
     attr_accessor :day
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -105,9 +105,19 @@ module PureCloud
     def valid?
       
       
+      if @start_time.nil?
+        return false
+      end
+
       
       
       
+      
+      
+      if @stop_time.nil?
+        return false
+      end
+
       
       
       
