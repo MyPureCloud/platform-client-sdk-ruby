@@ -467,7 +467,7 @@ module PureCloud
       
       
       
-      allowed_values = ["endpoint", "client", "system", "transfer", "error", "peer", "other", "spam", "transportFailure", "conferenceTransfer", "consultTransfer", "forwardTransfer", "timeout", "noAnswerTransfer", "notAvailableTransfer"]
+      allowed_values = ["endpoint", "client", "system", "transfer", "error", "peer", "other", "spam", "transportFailure", "conferenceTransfer", "consultTransfer", "forwardTransfer", "timeout", "noAnswerTransfer", "notAvailableTransfer", "uncallable"]
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
@@ -585,7 +585,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] disconnect_type Object to be assigned
     def disconnect_type=(disconnect_type)
-      allowed_values = ["endpoint", "client", "system", "transfer", "error", "peer", "other", "spam", "transportFailure", "conferenceTransfer", "consultTransfer", "forwardTransfer", "timeout", "noAnswerTransfer", "notAvailableTransfer"]
+      allowed_values = ["endpoint", "client", "system", "transfer", "error", "peer", "other", "spam", "transportFailure", "conferenceTransfer", "consultTransfer", "forwardTransfer", "timeout", "noAnswerTransfer", "notAvailableTransfer", "uncallable"]
       if disconnect_type && !allowed_values.include?(disconnect_type)
         fail ArgumentError, "invalid value for 'disconnect_type', must be one of #{allowed_values}."
       end

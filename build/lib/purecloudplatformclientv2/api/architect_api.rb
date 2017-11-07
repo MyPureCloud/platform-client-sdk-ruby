@@ -1733,6 +1733,130 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get generated prompt history
+    # 
+    # @param prompt_id Prompt ID
+    # @param history_id History request ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :sort_order Sort order (default to desc)
+    # @option opts [String] :sort_by Sort by (default to timestamp)
+    # @option opts [Array<String>] :action Flow actions to include (omit to include all)
+    # @return [HistoryListing]
+    def get_architect_prompt_history_history_id(prompt_id, history_id, opts = {})
+      data, _status_code, _headers = get_architect_prompt_history_history_id_with_http_info(prompt_id, history_id, opts)
+      return data
+    end
+
+    # Get generated prompt history
+    # 
+    # @param prompt_id Prompt ID
+    # @param history_id History request ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :sort_order Sort order
+    # @option opts [String] :sort_by Sort by
+    # @option opts [Array<String>] :action Flow actions to include (omit to include all)
+    # @return [Array<(HistoryListing, Fixnum, Hash)>] HistoryListing data, response status code and response headers
+    def get_architect_prompt_history_history_id_with_http_info(prompt_id, history_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_prompt_history_history_id ..."
+      end
+      
+      
+      # verify the required parameter 'prompt_id' is set
+      fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.get_architect_prompt_history_history_id" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'history_id' is set
+      fail ArgumentError, "Missing the required parameter 'history_id' when calling ArchitectApi.get_architect_prompt_history_history_id" if history_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_by'] && !['action', 'timestamp', 'user'].include?(opts[:'sort_by'])
+        fail ArgumentError, 'invalid value for "sort_by", must be one of action, timestamp, user'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/prompts/{promptId}/history/{historyId}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s).sub('{' + 'historyId' + '}', history_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'action'] = @api_client.build_collection_param(opts[:'action'], :multi) if opts[:'action']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'HistoryListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_architect_prompt_history_history_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get specified user prompt resource
     # 
     # @param prompt_id Prompt ID
@@ -2386,6 +2510,130 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get generated prompt history
+    # 
+    # @param prompt_id promptId
+    # @param history_id History request ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :sort_order Sort order (default to desc)
+    # @option opts [String] :sort_by Sort by (default to timestamp)
+    # @option opts [Array<String>] :action Flow actions to include (omit to include all)
+    # @return [HistoryListing]
+    def get_architect_systemprompt_history_history_id(prompt_id, history_id, opts = {})
+      data, _status_code, _headers = get_architect_systemprompt_history_history_id_with_http_info(prompt_id, history_id, opts)
+      return data
+    end
+
+    # Get generated prompt history
+    # 
+    # @param prompt_id promptId
+    # @param history_id History request ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :sort_order Sort order
+    # @option opts [String] :sort_by Sort by
+    # @option opts [Array<String>] :action Flow actions to include (omit to include all)
+    # @return [Array<(HistoryListing, Fixnum, Hash)>] HistoryListing data, response status code and response headers
+    def get_architect_systemprompt_history_history_id_with_http_info(prompt_id, history_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_systemprompt_history_history_id ..."
+      end
+      
+      
+      # verify the required parameter 'prompt_id' is set
+      fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.get_architect_systemprompt_history_history_id" if prompt_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'history_id' is set
+      fail ArgumentError, "Missing the required parameter 'history_id' when calling ArchitectApi.get_architect_systemprompt_history_history_id" if history_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_by'] && !['action', 'timestamp', 'user'].include?(opts[:'sort_by'])
+        fail ArgumentError, 'invalid value for "sort_by", must be one of action, timestamp, user'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/systemprompts/{promptId}/history/{historyId}".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s).sub('{' + 'historyId' + '}', history_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'action'] = @api_client.build_collection_param(opts[:'action'], :multi) if opts[:'action']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'HistoryListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_architect_systemprompt_history_history_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a system prompt resource.
     # 
     # @param prompt_id Prompt ID
@@ -2757,7 +3005,7 @@ module PureCloud
     # Get generated flow history
     # 
     # @param flow_id Flow ID
-    # @param history_id History ID (generated history)
+    # @param history_id History request ID
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [Integer] :page_size Page size (default to 25)
@@ -2773,7 +3021,7 @@ module PureCloud
     # Get generated flow history
     # 
     # @param flow_id Flow ID
-    # @param history_id History ID (generated history)
+    # @param history_id History request ID
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_number Page number
     # @option opts [Integer] :page_size Page size
@@ -3548,6 +3796,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Generate prompt history
+    # Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+    # @param prompt_id Prompt ID
+    # @param [Hash] opts the optional parameters
+    # @return [Operation]
+    def post_architect_prompt_history(prompt_id, opts = {})
+      data, _status_code, _headers = post_architect_prompt_history_with_http_info(prompt_id, opts)
+      return data
+    end
+
+    # Generate prompt history
+    # Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+    # @param prompt_id Prompt ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Operation, Fixnum, Hash)>] Operation data, response status code and response headers
+    def post_architect_prompt_history_with_http_info(prompt_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_prompt_history ..."
+      end
+      
+      
+      # verify the required parameter 'prompt_id' is set
+      fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.post_architect_prompt_history" if prompt_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/prompts/{promptId}/history".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Operation')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_architect_prompt_history\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create a new user prompt resource
     # 
     # @param prompt_id Prompt ID
@@ -3806,6 +4119,71 @@ module PureCloud
         :return_type => 'Schedule')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#post_architect_schedules\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Generate system prompt history
+    # Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+    # @param prompt_id promptId
+    # @param [Hash] opts the optional parameters
+    # @return [Operation]
+    def post_architect_systemprompt_history(prompt_id, opts = {})
+      data, _status_code, _headers = post_architect_systemprompt_history_with_http_info(prompt_id, opts)
+      return data
+    end
+
+    # Generate system prompt history
+    # Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+    # @param prompt_id promptId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Operation, Fixnum, Hash)>] Operation data, response status code and response headers
+    def post_architect_systemprompt_history_with_http_info(prompt_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_systemprompt_history ..."
+      end
+      
+      
+      # verify the required parameter 'prompt_id' is set
+      fail ArgumentError, "Missing the required parameter 'prompt_id' when calling ArchitectApi.post_architect_systemprompt_history" if prompt_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/systemprompts/{promptId}/history".sub('{format}','json').sub('{' + 'promptId' + '}', prompt_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Operation')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_architect_systemprompt_history\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -68,6 +68,8 @@ module PureCloud
 
     attr_accessor :emails
 
+    attr_accessor :messages
+
     attr_accessor :screenshares
 
     attr_accessor :social_expressions
@@ -129,6 +131,8 @@ module PureCloud
         :'cobrowsesessions' => :'cobrowsesessions',
         
         :'emails' => :'emails',
+        
+        :'messages' => :'messages',
         
         :'screenshares' => :'screenshares',
         
@@ -194,6 +198,8 @@ module PureCloud
         :'cobrowsesessions' => :'Array<ConversationNotificationCobrowsesessions>',
         
         :'emails' => :'Array<ConversationNotificationEmails>',
+        
+        :'messages' => :'Array<ConversationNotificationMessages1>',
         
         :'screenshares' => :'Array<ConversationNotificationScreenshares>',
         
@@ -452,6 +458,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'messages')
+        
+        if (value = attributes[:'messages']).is_a?(Array)
+          self.messages = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'screenshares')
         
         if (value = attributes[:'screenshares']).is_a?(Array)
@@ -583,10 +600,14 @@ module PureCloud
       
       
       
-      allowed_values = ["REQUESTED", "ACTIVE", "PAUSED", "STOPPED", "ERROR"]
+      allowed_values = ["REQUESTED", "ACTIVE", "PAUSED", "STOPPED", "ERROR", "TIMEOUT"]
       if @screen_recording_state && !allowed_values.include?(@screen_recording_state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -727,13 +748,18 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] screen_recording_state Object to be assigned
     def screen_recording_state=(screen_recording_state)
-      allowed_values = ["REQUESTED", "ACTIVE", "PAUSED", "STOPPED", "ERROR"]
+      allowed_values = ["REQUESTED", "ACTIVE", "PAUSED", "STOPPED", "ERROR", "TIMEOUT"]
       if screen_recording_state && !allowed_values.include?(screen_recording_state)
         fail ArgumentError, "invalid value for 'screen_recording_state', must be one of #{allowed_values}."
       end
       @screen_recording_state = screen_recording_state
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -817,6 +843,7 @@ module PureCloud
           chats == o.chats &&
           cobrowsesessions == o.cobrowsesessions &&
           emails == o.emails &&
+          messages == o.messages &&
           screenshares == o.screenshares &&
           social_expressions == o.social_expressions &&
           videos == o.videos &&
@@ -832,7 +859,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, connected_time, end_time, user_id, external_contact_id, external_organization_id, name, queue_id, group_id, purpose, consult_participant_id, address, wrapup_required, wrapup_expected, wrapup_prompt, wrapup_timeout_ms, wrapup, monitored_participant_id, screen_recording_state, attributes, calls, callbacks, chats, cobrowsesessions, emails, screenshares, social_expressions, videos, additional_properties].hash
+      [id, connected_time, end_time, user_id, external_contact_id, external_organization_id, name, queue_id, group_id, purpose, consult_participant_id, address, wrapup_required, wrapup_expected, wrapup_prompt, wrapup_timeout_ms, wrapup, monitored_participant_id, screen_recording_state, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, additional_properties].hash
     end
 
     # build the object from hash

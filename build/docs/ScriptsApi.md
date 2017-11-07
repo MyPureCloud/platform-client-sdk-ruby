@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 <a name="get_script_page"></a>
 
-## -[**Page**](Page.html) get_script_page(script_id, page_id)
+## -[**Page**](Page.html) get_script_page(script_id, page_id, opts)
 
 Get a page
 
@@ -110,10 +110,13 @@ script_id = "script_id_example" # String | Script ID
 
 page_id = "page_id_example" # String | Page ID
 
+opts = { 
+  script_data_version: "script_data_version_example" # String | Advanced usage - controls the data version of the script
+}
 
 begin
   #Get a page
-  result = api_instance.get_script_page(script_id, page_id)
+  result = api_instance.get_script_page(script_id, page_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_script_page: #{e}"
@@ -126,6 +129,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **script_id** | **String**| Script ID |  |
  **page_id** | **String**| Page ID |  |
+ **script_data_version** | **String**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 
@@ -142,7 +146,7 @@ Name | Type | Description  | Notes
 
 <a name="get_script_pages"></a>
 
-## -[**Array&lt;Page&gt;**](Page.html) get_script_pages(script_id)
+## -[**Array&lt;Page&gt;**](Page.html) get_script_pages(script_id, opts)
 
 Get the list of pages
 
@@ -170,10 +174,13 @@ api_instance = PureCloud::ScriptsApi.new
 
 script_id = "script_id_example" # String | Script ID
 
+opts = { 
+  script_data_version: "script_data_version_example" # String | Advanced usage - controls the data version of the script
+}
 
 begin
   #Get the list of pages
-  result = api_instance.get_script_pages(script_id)
+  result = api_instance.get_script_pages(script_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_script_pages: #{e}"
@@ -185,6 +192,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **script_id** | **String**| Script ID |  |
+ **script_data_version** | **String**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 
@@ -235,7 +243,8 @@ opts = {
   feature: "feature_example", # String | Feature filter
   flow_id: "flow_id_example", # String | Secure flow id filter
   sort_by: "sort_by_example", # String | SortBy
-  sort_order: "sort_order_example" # String | SortOrder
+  sort_order: "sort_order_example", # String | SortOrder
+  script_data_version: "script_data_version_example" # String | Advanced usage - controls the data version of the script
 }
 
 begin
@@ -259,6 +268,7 @@ Name | Type | Description  | Notes
  **flow_id** | **String**| Secure flow id filter | [optional]  |
  **sort_by** | **String**| SortBy | [optional] <br />**Values**: modifiedDate, createdDate |
  **sort_order** | **String**| SortOrder | [optional] <br />**Values**: ascending, descending |
+ **script_data_version** | **String**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 
@@ -275,7 +285,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts_published"></a>
 
-## -[**ScriptEntityListing**](ScriptEntityListing.html) get_scripts_published(opts)
+## -[**ScriptEntityListing**](ScriptEntityListing.html) get_scripts_published(script_id, opts)
 
 Get the published scripts.
 
@@ -301,18 +311,21 @@ end
 
 api_instance = PureCloud::ScriptsApi.new
 
+script_id = "script_id_example" # String | Script ID
+
 opts = { 
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
   expand: "expand_example", # String | Expand
   name: "name_example", # String | Name filter
   feature: "feature_example", # String | Feature filter
-  flow_id: "flow_id_example" # String | Secure flow id filter
+  flow_id: "flow_id_example", # String | Secure flow id filter
+  script_data_version: "script_data_version_example" # String | Advanced usage - controls the data version of the script
 }
 
 begin
   #Get the published scripts.
-  result = api_instance.get_scripts_published(opts)
+  result = api_instance.get_scripts_published(script_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts_published: #{e}"
@@ -323,12 +336,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **script_id** | **String**| Script ID |  |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **expand** | **String**| Expand | [optional]  |
  **name** | **String**| Name filter | [optional]  |
  **feature** | **String**| Feature filter | [optional]  |
  **flow_id** | **String**| Secure flow id filter | [optional]  |
+ **script_data_version** | **String**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 
@@ -345,7 +360,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts_published_script_id"></a>
 
-## -[**Script**](Script.html) get_scripts_published_script_id(script_id)
+## -[**Script**](Script.html) get_scripts_published_script_id(script_id, opts)
 
 Get the published script.
 
@@ -373,10 +388,13 @@ api_instance = PureCloud::ScriptsApi.new
 
 script_id = "script_id_example" # String | Script ID
 
+opts = { 
+  script_data_version: "script_data_version_example" # String | Advanced usage - controls the data version of the script
+}
 
 begin
   #Get the published script.
-  result = api_instance.get_scripts_published_script_id(script_id)
+  result = api_instance.get_scripts_published_script_id(script_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts_published_script_id: #{e}"
@@ -388,6 +406,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **script_id** | **String**| Script ID |  |
+ **script_data_version** | **String**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 
@@ -404,7 +423,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts_published_script_id_page"></a>
 
-## -[**Page**](Page.html) get_scripts_published_script_id_page(script_id, page_id)
+## -[**Page**](Page.html) get_scripts_published_script_id_page(script_id, page_id, opts)
 
 Get the published page.
 
@@ -434,10 +453,13 @@ script_id = "script_id_example" # String | Script ID
 
 page_id = "page_id_example" # String | Page ID
 
+opts = { 
+  script_data_version: "script_data_version_example" # String | Advanced usage - controls the data version of the script
+}
 
 begin
   #Get the published page.
-  result = api_instance.get_scripts_published_script_id_page(script_id, page_id)
+  result = api_instance.get_scripts_published_script_id_page(script_id, page_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts_published_script_id_page: #{e}"
@@ -450,6 +472,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **script_id** | **String**| Script ID |  |
  **page_id** | **String**| Page ID |  |
+ **script_data_version** | **String**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 
@@ -466,7 +489,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts_published_script_id_pages"></a>
 
-## -[**Array&lt;Page&gt;**](Page.html) get_scripts_published_script_id_pages(script_id)
+## -[**Array&lt;Page&gt;**](Page.html) get_scripts_published_script_id_pages(script_id, opts)
 
 Get the list of published pages
 
@@ -494,10 +517,14 @@ api_instance = PureCloud::ScriptsApi.new
 
 script_id = "script_id_example" # String | Script ID
 
+opts = { 
+  foo: 25, # Integer | 
+  script_data_version: "script_data_version_example" # String | Advanced usage - controls the data version of the script
+}
 
 begin
   #Get the list of published pages
-  result = api_instance.get_scripts_published_script_id_pages(script_id)
+  result = api_instance.get_scripts_published_script_id_pages(script_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts_published_script_id_pages: #{e}"
@@ -509,6 +536,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **script_id** | **String**| Script ID |  |
+ **foo** | **Integer**|  | [optional] [default to 25] |
+ **script_data_version** | **String**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 
@@ -556,7 +585,8 @@ script_id = "script_id_example" # String | Script ID
 opts = { 
   input: "input_example", # String | input
   output: "output_example", # String | output
-  type: "type_example" # String | type
+  type: "type_example", # String | type
+  script_data_version: "script_data_version_example" # String | Advanced usage - controls the data version of the script
 }
 
 begin
@@ -576,6 +606,7 @@ Name | Type | Description  | Notes
  **input** | **String**| input | [optional]  |
  **output** | **String**| output | [optional]  |
  **type** | **String**| type | [optional]  |
+ **script_data_version** | **String**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 

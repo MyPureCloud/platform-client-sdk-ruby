@@ -94,6 +94,7 @@ module PureCloud
     # @param script_id Script ID
     # @param page_id Page ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Page]
     def get_script_page(script_id, page_id, opts = {})
       data, _status_code, _headers = get_script_page_with_http_info(script_id, page_id, opts)
@@ -105,6 +106,7 @@ module PureCloud
     # @param script_id Script ID
     # @param page_id Page ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<(Page, Fixnum, Hash)>] Page data, response status code and response headers
     def get_script_page_with_http_info(script_id, page_id, opts = {})
       if @api_client.config.debugging
@@ -127,11 +129,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/{scriptId}/pages/{pageId}".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s).sub('{' + 'pageId' + '}', page_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'scriptDataVersion'] = opts[:'script_data_version'] if opts[:'script_data_version']
 
       # header parameters
       header_params = {}
@@ -168,6 +177,7 @@ module PureCloud
     # 
     # @param script_id Script ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<Page>]
     def get_script_pages(script_id, opts = {})
       data, _status_code, _headers = get_script_pages_with_http_info(script_id, opts)
@@ -178,6 +188,7 @@ module PureCloud
     # 
     # @param script_id Script ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<(Array<Page>, Fixnum, Hash)>] Array<Page> data, response status code and response headers
     def get_script_pages_with_http_info(script_id, opts = {})
       if @api_client.config.debugging
@@ -192,11 +203,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/{scriptId}/pages".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'scriptDataVersion'] = opts[:'script_data_version'] if opts[:'script_data_version']
 
       # header parameters
       header_params = {}
@@ -240,6 +258,7 @@ module PureCloud
     # @option opts [String] :flow_id Secure flow id filter
     # @option opts [String] :sort_by SortBy
     # @option opts [String] :sort_order SortOrder
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [ScriptEntityListing]
     def get_scripts(opts = {})
       data, _status_code, _headers = get_scripts_with_http_info(opts)
@@ -257,6 +276,7 @@ module PureCloud
     # @option opts [String] :flow_id Secure flow id filter
     # @option opts [String] :sort_by SortBy
     # @option opts [String] :sort_order SortOrder
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<(ScriptEntityListing, Fixnum, Hash)>] ScriptEntityListing data, response status code and response headers
     def get_scripts_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -319,6 +339,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts".sub('{format}','json')
 
@@ -332,6 +358,7 @@ module PureCloud
       query_params[:'flowId'] = opts[:'flow_id'] if opts[:'flow_id']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'scriptDataVersion'] = opts[:'script_data_version'] if opts[:'script_data_version']
 
       # header parameters
       header_params = {}
@@ -366,6 +393,7 @@ module PureCloud
 
     # Get the published scripts.
     # 
+    # @param script_id Script ID
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
@@ -373,14 +401,16 @@ module PureCloud
     # @option opts [String] :name Name filter
     # @option opts [String] :feature Feature filter
     # @option opts [String] :flow_id Secure flow id filter
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [ScriptEntityListing]
-    def get_scripts_published(opts = {})
-      data, _status_code, _headers = get_scripts_published_with_http_info(opts)
+    def get_scripts_published(script_id, opts = {})
+      data, _status_code, _headers = get_scripts_published_with_http_info(script_id, opts)
       return data
     end
 
     # Get the published scripts.
     # 
+    # @param script_id Script ID
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
@@ -388,11 +418,26 @@ module PureCloud
     # @option opts [String] :name Name filter
     # @option opts [String] :feature Feature filter
     # @option opts [String] :flow_id Secure flow id filter
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<(ScriptEntityListing, Fixnum, Hash)>] ScriptEntityListing data, response status code and response headers
-    def get_scripts_published_with_http_info(opts = {})
+    def get_scripts_published_with_http_info(script_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ScriptsApi.get_scripts_published ..."
       end
+      
+      
+      # verify the required parameter 'script_id' is set
+      fail ArgumentError, "Missing the required parameter 'script_id' when calling ScriptsApi.get_scripts_published" if script_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -431,7 +476,7 @@ module PureCloud
       
       
       # resource path
-      local_var_path = "/api/v2/scripts/published".sub('{format}','json')
+      local_var_path = "/api/v2/scripts/published".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
 
       # query parameters
       query_params = {}
@@ -441,6 +486,7 @@ module PureCloud
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'feature'] = opts[:'feature'] if opts[:'feature']
       query_params[:'flowId'] = opts[:'flow_id'] if opts[:'flow_id']
+      query_params[:'scriptDataVersion'] = opts[:'script_data_version'] if opts[:'script_data_version']
 
       # header parameters
       header_params = {}
@@ -477,6 +523,7 @@ module PureCloud
     # 
     # @param script_id Script ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Script]
     def get_scripts_published_script_id(script_id, opts = {})
       data, _status_code, _headers = get_scripts_published_script_id_with_http_info(script_id, opts)
@@ -487,6 +534,7 @@ module PureCloud
     # 
     # @param script_id Script ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<(Script, Fixnum, Hash)>] Script data, response status code and response headers
     def get_scripts_published_script_id_with_http_info(script_id, opts = {})
       if @api_client.config.debugging
@@ -501,11 +549,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/published/{scriptId}".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'scriptDataVersion'] = opts[:'script_data_version'] if opts[:'script_data_version']
 
       # header parameters
       header_params = {}
@@ -543,6 +598,7 @@ module PureCloud
     # @param script_id Script ID
     # @param page_id Page ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Page]
     def get_scripts_published_script_id_page(script_id, page_id, opts = {})
       data, _status_code, _headers = get_scripts_published_script_id_page_with_http_info(script_id, page_id, opts)
@@ -554,6 +610,7 @@ module PureCloud
     # @param script_id Script ID
     # @param page_id Page ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<(Page, Fixnum, Hash)>] Page data, response status code and response headers
     def get_scripts_published_script_id_page_with_http_info(script_id, page_id, opts = {})
       if @api_client.config.debugging
@@ -576,11 +633,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/published/{scriptId}/pages/{pageId}".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s).sub('{' + 'pageId' + '}', page_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'scriptDataVersion'] = opts[:'script_data_version'] if opts[:'script_data_version']
 
       # header parameters
       header_params = {}
@@ -617,6 +681,8 @@ module PureCloud
     # 
     # @param script_id Script ID
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :foo  (default to 25)
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<Page>]
     def get_scripts_published_script_id_pages(script_id, opts = {})
       data, _status_code, _headers = get_scripts_published_script_id_pages_with_http_info(script_id, opts)
@@ -627,6 +693,8 @@ module PureCloud
     # 
     # @param script_id Script ID
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :foo 
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<(Array<Page>, Fixnum, Hash)>] Array<Page> data, response status code and response headers
     def get_scripts_published_script_id_pages_with_http_info(script_id, opts = {})
       if @api_client.config.debugging
@@ -641,11 +709,25 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/published/{scriptId}/pages".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'foo'] = opts[:'foo'] if opts[:'foo']
+      query_params[:'scriptDataVersion'] = opts[:'script_data_version'] if opts[:'script_data_version']
 
       # header parameters
       header_params = {}
@@ -685,6 +767,7 @@ module PureCloud
     # @option opts [String] :input input
     # @option opts [String] :output output
     # @option opts [String] :type type
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Object]
     def get_scripts_published_script_id_variables(script_id, opts = {})
       data, _status_code, _headers = get_scripts_published_script_id_variables_with_http_info(script_id, opts)
@@ -698,6 +781,7 @@ module PureCloud
     # @option opts [String] :input input
     # @option opts [String] :output output
     # @option opts [String] :type type
+    # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def get_scripts_published_script_id_variables_with_http_info(script_id, opts = {})
       if @api_client.config.debugging
@@ -730,6 +814,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scripts/published/{scriptId}/variables".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
 
@@ -738,6 +828,7 @@ module PureCloud
       query_params[:'input'] = opts[:'input'] if opts[:'input']
       query_params[:'output'] = opts[:'output'] if opts[:'output']
       query_params[:'type'] = opts[:'type'] if opts[:'type']
+      query_params[:'scriptDataVersion'] = opts[:'script_data_version'] if opts[:'script_data_version']
 
       # header parameters
       header_params = {}

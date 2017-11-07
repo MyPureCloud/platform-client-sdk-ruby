@@ -753,7 +753,7 @@ opts = {
   queue_id: "queue_id_example", # String | queue id
   start_time: "start_time_example", # String | start time of the evaluation query
   end_time: "end_time_example", # String | end time of the evaluation query
-  evaluation_state: nil, # Array<Object> | evaluation state options: Pending, InProgress, Finished
+  evaluation_state: nil, # Array<Object> | 
   is_released: true, # BOOLEAN | the evaluation has been released
   agent_has_read: true, # BOOLEAN | agent has the evaluation
   expand_answer_total_scores: true, # BOOLEAN | get the total scores for evaluations
@@ -785,7 +785,7 @@ Name | Type | Description  | Notes
  **queue_id** | **String**| queue id | [optional]  |
  **start_time** | **String**| start time of the evaluation query | [optional]  |
  **end_time** | **String**| end time of the evaluation query | [optional]  |
- **evaluation_state** | [**Array&lt;Object&gt;**](Object.html)| evaluation state options: Pending, InProgress, Finished | [optional]  |
+ **evaluation_state** | [**Array&lt;Object&gt;**](Object.html)|  | [optional]  |
  **is_released** | **BOOLEAN**| the evaluation has been released | [optional]  |
  **agent_has_read** | **BOOLEAN**| agent has the evaluation | [optional]  |
  **expand_answer_total_scores** | **BOOLEAN**| get the total scores for evaluations | [optional]  |

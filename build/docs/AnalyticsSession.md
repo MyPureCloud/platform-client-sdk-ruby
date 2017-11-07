@@ -11,6 +11,8 @@ title: AnalyticsSession
 | **session_id** | **String** | The unique identifier of this session | [optional] |
 | **address_other** | **String** |  | [optional] |
 | **address_self** | **String** |  | [optional] |
+| **address_from** | **String** |  | [optional] |
+| **address_to** | **String** |  | [optional] |
 | **ani** | **String** | Automatic Number Identification (caller&#39;s number) | [optional] |
 | **direction** | **String** | Direction | [optional] |
 | **dnis** | **String** | Automatic Number Identification (caller&#39;s number) | [optional] |
@@ -28,6 +30,7 @@ title: AnalyticsSession
 | **callback_numbers** | **Array&lt;String&gt;** | List of numbers to callback | [optional] |
 | **callback_scheduled_time** | **DateTime** | Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **script_id** | **String** | Scheduled callback date/time, Date time is represented as an ISO-8601 string.  | [optional] |
+| **peer_id** | **String** | A unique identifier for a peer | [optional] |
 | **skip_enabled** | **BOOLEAN** | (Dialer) Whether the agent can skip the dialer contact | [optional] |
 | **timeout_seconds** | **Integer** | The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling | [optional] |
 | **cobrowse_role** | **String** | Describe side of the cobrowse (sharer or viewer) | [optional] |

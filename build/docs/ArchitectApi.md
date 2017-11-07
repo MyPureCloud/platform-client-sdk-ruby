@@ -29,6 +29,7 @@ Method | Description
 [**get_architect_ivr**](ArchitectApi.html#get_architect_ivr) | Get an IVR config.
 [**get_architect_ivrs**](ArchitectApi.html#get_architect_ivrs) | Get IVR configs.
 [**get_architect_prompt**](ArchitectApi.html#get_architect_prompt) | Get specified user prompt
+[**get_architect_prompt_history_history_id**](ArchitectApi.html#get_architect_prompt_history_history_id) | Get generated prompt history
 [**get_architect_prompt_resource**](ArchitectApi.html#get_architect_prompt_resource) | Get specified user prompt resource
 [**get_architect_prompt_resources**](ArchitectApi.html#get_architect_prompt_resources) | Get a pageable list of user prompt resources
 [**get_architect_prompts**](ArchitectApi.html#get_architect_prompts) | Get a pageable list of user prompts
@@ -37,6 +38,7 @@ Method | Description
 [**get_architect_schedulegroups**](ArchitectApi.html#get_architect_schedulegroups) | Get a list of schedule groups.
 [**get_architect_schedules**](ArchitectApi.html#get_architect_schedules) | Get a list of schedules.
 [**get_architect_systemprompt**](ArchitectApi.html#get_architect_systemprompt) | Get a system prompt
+[**get_architect_systemprompt_history_history_id**](ArchitectApi.html#get_architect_systemprompt_history_history_id) | Get generated prompt history
 [**get_architect_systemprompt_resource**](ArchitectApi.html#get_architect_systemprompt_resource) | Get a system prompt resource.
 [**get_architect_systemprompt_resources**](ArchitectApi.html#get_architect_systemprompt_resources) | Get system prompt resources.
 [**get_architect_systemprompts**](ArchitectApi.html#get_architect_systemprompts) | Get System Prompts
@@ -49,10 +51,12 @@ Method | Description
 [**get_flows**](ArchitectApi.html#get_flows) | Get a pageable list of flows, filtered by query parameters
 [**post_architect_dependencytracking_build**](ArchitectApi.html#post_architect_dependencytracking_build) | Rebuild Dependency Tracking data for an organization
 [**post_architect_ivrs**](ArchitectApi.html#post_architect_ivrs) | Create IVR config.
+[**post_architect_prompt_history**](ArchitectApi.html#post_architect_prompt_history) | Generate prompt history
 [**post_architect_prompt_resources**](ArchitectApi.html#post_architect_prompt_resources) | Create a new user prompt resource
 [**post_architect_prompts**](ArchitectApi.html#post_architect_prompts) | Create a new user prompt
 [**post_architect_schedulegroups**](ArchitectApi.html#post_architect_schedulegroups) | Creates a new schedule group
 [**post_architect_schedules**](ArchitectApi.html#post_architect_schedules) | Create a new schedule.
+[**post_architect_systemprompt_history**](ArchitectApi.html#post_architect_systemprompt_history) | Generate system prompt history
 [**post_architect_systemprompt_resources**](ArchitectApi.html#post_architect_systemprompt_resources) | Create system prompt resource override.
 [**post_flow_versions**](ArchitectApi.html#post_flow_versions) | Create flow version
 [**post_flows**](ArchitectApi.html#post_flows) | Create flow
@@ -1390,6 +1394,80 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_architect_prompt_history_history_id"></a>
+
+## -[**HistoryListing**](HistoryListing.html) get_architect_prompt_history_history_id(prompt_id, history_id, opts)
+
+Get generated prompt history
+
+
+
+Wraps GET /api/v2/architect/prompts/{promptId}/history/{historyId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+prompt_id = "prompt_id_example" # String | Prompt ID
+
+history_id = "history_id_example" # String | History request ID
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  sort_order: "desc", # String | Sort order
+  sort_by: "timestamp", # String | Sort by
+  action: ["action_example"] # Array<String> | Flow actions to include (omit to include all)
+}
+
+begin
+  #Get generated prompt history
+  result = api_instance.get_architect_prompt_history_history_id(prompt_id, history_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_architect_prompt_history_history_id: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **prompt_id** | **String**| Prompt ID |  |
+ **history_id** | **String**| History request ID |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_order** | **String**| Sort order | [optional] [default to desc] |
+ **sort_by** | **String**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
+ **action** | [**Array&lt;String&gt;**](String.html)| Flow actions to include (omit to include all) | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**HistoryListing**](HistoryListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_architect_prompt_resource"></a>
 
 ## -[**PromptAsset**](PromptAsset.html) get_architect_prompt_resource(prompt_id, language_code)
@@ -1898,6 +1976,80 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_architect_systemprompt_history_history_id"></a>
+
+## -[**HistoryListing**](HistoryListing.html) get_architect_systemprompt_history_history_id(prompt_id, history_id, opts)
+
+Get generated prompt history
+
+
+
+Wraps GET /api/v2/architect/systemprompts/{promptId}/history/{historyId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+prompt_id = "prompt_id_example" # String | promptId
+
+history_id = "history_id_example" # String | History request ID
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  sort_order: "desc", # String | Sort order
+  sort_by: "timestamp", # String | Sort by
+  action: ["action_example"] # Array<String> | Flow actions to include (omit to include all)
+}
+
+begin
+  #Get generated prompt history
+  result = api_instance.get_architect_systemprompt_history_history_id(prompt_id, history_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_architect_systemprompt_history_history_id: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **prompt_id** | **String**| promptId |  |
+ **history_id** | **String**| History request ID |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_order** | **String**| Sort order | [optional] [default to desc] |
+ **sort_by** | **String**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
+ **action** | [**Array&lt;String&gt;**](String.html)| Flow actions to include (omit to include all) | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**HistoryListing**](HistoryListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_architect_systemprompt_resource"></a>
 
 ## -[**SystemPromptAsset**](SystemPromptAsset.html) get_architect_systemprompt_resource(prompt_id, language_code)
@@ -2194,7 +2346,7 @@ api_instance = PureCloud::ArchitectApi.new
 
 flow_id = "flow_id_example" # String | Flow ID
 
-history_id = "history_id_example" # String | History ID (generated history)
+history_id = "history_id_example" # String | History request ID
 
 opts = { 
   page_number: 1, # Integer | Page number
@@ -2218,7 +2370,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **flow_id** | **String**| Flow ID |  |
- **history_id** | **String**| History ID (generated history) |  |
+ **history_id** | **String**| History request ID |  |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **sort_order** | **String**| Sort order | [optional] [default to desc] |
@@ -2705,6 +2857,65 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_architect_prompt_history"></a>
+
+## -[**Operation**](Operation.html) post_architect_prompt_history(prompt_id)
+
+Generate prompt history
+
+Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+
+Wraps POST /api/v2/architect/prompts/{promptId}/history 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+prompt_id = "prompt_id_example" # String | Prompt ID
+
+
+begin
+  #Generate prompt history
+  result = api_instance.post_architect_prompt_history(prompt_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->post_architect_prompt_history: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **prompt_id** | **String**| Prompt ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Operation**](Operation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_architect_prompt_resources"></a>
 
 ## -[**PromptAsset**](PromptAsset.html) post_architect_prompt_resources(prompt_id, opts)
@@ -2940,6 +3151,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Schedule**](Schedule.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_architect_systemprompt_history"></a>
+
+## -[**Operation**](Operation.html) post_architect_systemprompt_history(prompt_id)
+
+Generate system prompt history
+
+Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+
+Wraps POST /api/v2/architect/systemprompts/{promptId}/history 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+prompt_id = "prompt_id_example" # String | promptId
+
+
+begin
+  #Generate system prompt history
+  result = api_instance.post_architect_systemprompt_history(prompt_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->post_architect_systemprompt_history: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **prompt_id** | **String**| promptId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Operation**](Operation.html)
 
 ### HTTP request headers
 

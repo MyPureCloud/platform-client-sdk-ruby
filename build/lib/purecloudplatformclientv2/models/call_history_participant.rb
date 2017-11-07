@@ -63,6 +63,12 @@ module PureCloud
     # The PureCloud external organization
     attr_accessor :external_organization
 
+    # Indicates whether the contact ever connected
+    attr_accessor :did_interact
+
+    # Indicates SIP Response codes associated with the participant
+    attr_accessor :sip_response_codes
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -95,7 +101,11 @@ module PureCloud
         
         :'external_contact' => :'externalContact',
         
-        :'external_organization' => :'externalOrganization'
+        :'external_organization' => :'externalOrganization',
+        
+        :'did_interact' => :'didInteract',
+        
+        :'sip_response_codes' => :'sipResponseCodes'
         
       }
     end
@@ -132,7 +142,11 @@ module PureCloud
         
         :'external_contact' => :'ExternalContact',
         
-        :'external_organization' => :'ExternalOrganization'
+        :'external_organization' => :'ExternalOrganization',
+        
+        :'did_interact' => :'BOOLEAN',
+        
+        :'sip_response_codes' => :'Array<Integer>'
         
       }
     end
@@ -281,6 +295,26 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'didInteract')
+        
+        
+        self.did_interact = attributes[:'didInteract']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'sipResponseCodes')
+        
+        if (value = attributes[:'sipResponseCodes']).is_a?(Array)
+          self.sip_response_codes = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -355,6 +389,14 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -462,6 +504,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -481,7 +533,9 @@ module PureCloud
           group == o.group &&
           disconnect_type == o.disconnect_type &&
           external_contact == o.external_contact &&
-          external_organization == o.external_organization
+          external_organization == o.external_organization &&
+          did_interact == o.did_interact &&
+          sip_response_codes == o.sip_response_codes
     end
 
     # @see the `==` method
@@ -493,7 +547,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, end_time, purpose, direction, ani, dnis, user, queue, group, disconnect_type, external_contact, external_organization].hash
+      [id, name, address, start_time, end_time, purpose, direction, ani, dnis, user, queue, group, disconnect_type, external_contact, external_organization, did_interact, sip_response_codes].hash
     end
 
     # build the object from hash

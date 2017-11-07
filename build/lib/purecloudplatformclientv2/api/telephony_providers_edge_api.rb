@@ -3061,8 +3061,8 @@ module PureCloud
     # @param edgetrunkbase_id Edge Trunk Base ID
     # @param [Hash] opts the optional parameters
     # @return [EdgeTrunkBase]
-    def get_telephony_providers_edges_edgegroup_edgetrunkbasis(edgegroup_id, edgetrunkbase_id, opts = {})
-      data, _status_code, _headers = get_telephony_providers_edges_edgegroup_edgetrunkbasis_with_http_info(edgegroup_id, edgetrunkbase_id, opts)
+    def get_telephony_providers_edges_edgegroup_edgetrunkbase(edgegroup_id, edgetrunkbase_id, opts = {})
+      data, _status_code, _headers = get_telephony_providers_edges_edgegroup_edgetrunkbase_with_http_info(edgegroup_id, edgetrunkbase_id, opts)
       return data
     end
 
@@ -3072,14 +3072,14 @@ module PureCloud
     # @param edgetrunkbase_id Edge Trunk Base ID
     # @param [Hash] opts the optional parameters
     # @return [Array<(EdgeTrunkBase, Fixnum, Hash)>] EdgeTrunkBase data, response status code and response headers
-    def get_telephony_providers_edges_edgegroup_edgetrunkbasis_with_http_info(edgegroup_id, edgetrunkbase_id, opts = {})
+    def get_telephony_providers_edges_edgegroup_edgetrunkbase_with_http_info(edgegroup_id, edgetrunkbase_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroup_edgetrunkbasis ..."
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroup_edgetrunkbase ..."
       end
       
       
       # verify the required parameter 'edgegroup_id' is set
-      fail ArgumentError, "Missing the required parameter 'edgegroup_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroup_edgetrunkbasis" if edgegroup_id.nil?
+      fail ArgumentError, "Missing the required parameter 'edgegroup_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroup_edgetrunkbase" if edgegroup_id.nil?
       
       
       
@@ -3087,7 +3087,7 @@ module PureCloud
       
       
       # verify the required parameter 'edgetrunkbase_id' is set
-      fail ArgumentError, "Missing the required parameter 'edgetrunkbase_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroup_edgetrunkbasis" if edgetrunkbase_id.nil?
+      fail ArgumentError, "Missing the required parameter 'edgetrunkbase_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edges_edgegroup_edgetrunkbase" if edgetrunkbase_id.nil?
       
       
       
@@ -3125,7 +3125,7 @@ module PureCloud
         :auth_names => auth_names,
         :return_type => 'EdgeTrunkBase')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edges_edgegroup_edgetrunkbasis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edges_edgegroup_edgetrunkbase\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -8799,8 +8799,8 @@ module PureCloud
     # @param body EdgeTrunkBase
     # @param [Hash] opts the optional parameters
     # @return [EdgeTrunkBase]
-    def put_telephony_providers_edges_edgegroup_edgetrunkbasis(edgegroup_id, edgetrunkbase_id, body, opts = {})
-      data, _status_code, _headers = put_telephony_providers_edges_edgegroup_edgetrunkbasis_with_http_info(edgegroup_id, edgetrunkbase_id, body, opts)
+    def put_telephony_providers_edges_edgegroup_edgetrunkbase(edgegroup_id, edgetrunkbase_id, body, opts = {})
+      data, _status_code, _headers = put_telephony_providers_edges_edgegroup_edgetrunkbase_with_http_info(edgegroup_id, edgetrunkbase_id, body, opts)
       return data
     end
 
@@ -8811,14 +8811,14 @@ module PureCloud
     # @param body EdgeTrunkBase
     # @param [Hash] opts the optional parameters
     # @return [Array<(EdgeTrunkBase, Fixnum, Hash)>] EdgeTrunkBase data, response status code and response headers
-    def put_telephony_providers_edges_edgegroup_edgetrunkbasis_with_http_info(edgegroup_id, edgetrunkbase_id, body, opts = {})
+    def put_telephony_providers_edges_edgegroup_edgetrunkbase_with_http_info(edgegroup_id, edgetrunkbase_id, body, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbasis ..."
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbase ..."
       end
       
       
       # verify the required parameter 'edgegroup_id' is set
-      fail ArgumentError, "Missing the required parameter 'edgegroup_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbasis" if edgegroup_id.nil?
+      fail ArgumentError, "Missing the required parameter 'edgegroup_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbase" if edgegroup_id.nil?
       
       
       
@@ -8826,7 +8826,7 @@ module PureCloud
       
       
       # verify the required parameter 'edgetrunkbase_id' is set
-      fail ArgumentError, "Missing the required parameter 'edgetrunkbase_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbasis" if edgetrunkbase_id.nil?
+      fail ArgumentError, "Missing the required parameter 'edgetrunkbase_id' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbase" if edgetrunkbase_id.nil?
       
       
       
@@ -8834,7 +8834,7 @@ module PureCloud
       
       
       # verify the required parameter 'body' is set
-      fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbasis" if body.nil?
+      fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.put_telephony_providers_edges_edgegroup_edgetrunkbase" if body.nil?
       
       
       
@@ -8872,7 +8872,7 @@ module PureCloud
         :auth_names => auth_names,
         :return_type => 'EdgeTrunkBase')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#put_telephony_providers_edges_edgegroup_edgetrunkbasis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#put_telephony_providers_edges_edgegroup_edgetrunkbase\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

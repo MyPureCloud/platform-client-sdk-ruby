@@ -1006,7 +1006,7 @@ module PureCloud
     # @option opts [String] :queue_id queue id
     # @option opts [String] :start_time start time of the evaluation query
     # @option opts [String] :end_time end time of the evaluation query
-    # @option opts [Array<Object>] :evaluation_state evaluation state options: Pending, InProgress, Finished
+    # @option opts [Array<Object>] :evaluation_state 
     # @option opts [BOOLEAN] :is_released the evaluation has been released
     # @option opts [BOOLEAN] :agent_has_read agent has the evaluation
     # @option opts [BOOLEAN] :expand_answer_total_scores get the total scores for evaluations
@@ -1032,7 +1032,7 @@ module PureCloud
     # @option opts [String] :queue_id queue id
     # @option opts [String] :start_time start time of the evaluation query
     # @option opts [String] :end_time end time of the evaluation query
-    # @option opts [Array<Object>] :evaluation_state evaluation state options: Pending, InProgress, Finished
+    # @option opts [Array<Object>] :evaluation_state 
     # @option opts [BOOLEAN] :is_released the evaluation has been released
     # @option opts [BOOLEAN] :agent_has_read agent has the evaluation
     # @option opts [BOOLEAN] :expand_answer_total_scores get the total scores for evaluations

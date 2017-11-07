@@ -48,6 +48,8 @@ module PureCloud
 
     attr_accessor :message_id
 
+    attr_accessor :direction
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -83,6 +85,8 @@ module PureCloud
         :'disconnected_time' => :'disconnectedTime',
         
         :'message_id' => :'messageId',
+        
+        :'direction' => :'direction',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -122,6 +126,8 @@ module PureCloud
         :'disconnected_time' => :'DateTime',
         
         :'message_id' => :'String',
+        
+        :'direction' => :'String',
         
         :'additional_properties' => :'Object'
         
@@ -272,6 +278,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'direction')
+        
+        
+        self.direction = attributes[:'direction']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -363,6 +378,15 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      allowed_values = ["OUTBOUND", "INBOUND"]
+      if @direction && !allowed_values.include?(@direction)
+        return false
+      end
       
       
       
@@ -467,6 +491,20 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] direction Object to be assigned
+    def direction=(direction)
+      allowed_values = ["OUTBOUND", "INBOUND"]
+      if direction && !allowed_values.include?(direction)
+        fail ArgumentError, "invalid value for 'direction', must be one of #{allowed_values}."
+      end
+      @direction = direction
+    end
+
+    
+    
+    
+    
     
     
     
@@ -491,6 +529,7 @@ module PureCloud
           connected_time == o.connected_time &&
           disconnected_time == o.disconnected_time &&
           message_id == o.message_id &&
+          direction == o.direction &&
           additional_properties == o.additional_properties
     end
 
@@ -503,7 +542,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, held, auto_generated, subject, provider, script_id, peer_id, messages_sent, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, message_id, additional_properties].hash
+      [id, state, held, auto_generated, subject, provider, script_id, peer_id, messages_sent, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, message_id, direction, additional_properties].hash
     end
 
     # build the object from hash

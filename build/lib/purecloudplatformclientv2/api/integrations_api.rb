@@ -696,6 +696,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :category Filter by category name
     # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
@@ -713,6 +714,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :category Filter by category name
     # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
@@ -736,6 +738,16 @@ module PureCloud
       
       if opts[:'secure'] && !['true', 'false'].include?(opts[:'secure'])
         fail ArgumentError, 'invalid value for "secure", must be one of true, false'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'include_auth_actions'] && !['true', 'false'].include?(opts[:'include_auth_actions'])
+        fail ArgumentError, 'invalid value for "include_auth_actions", must be one of true, false'
       end
       
       
@@ -784,6 +796,7 @@ module PureCloud
       query_params = {}
       query_params[:'category'] = opts[:'category'] if opts[:'category']
       query_params[:'secure'] = opts[:'secure'] if opts[:'secure']
+      query_params[:'includeAuthActions'] = opts[:'include_auth_actions'] if opts[:'include_auth_actions']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
@@ -949,6 +962,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :category Filter by category name
     # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
@@ -966,6 +980,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :category Filter by category name
     # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
@@ -989,6 +1004,16 @@ module PureCloud
       
       if opts[:'secure'] && !['true', 'false'].include?(opts[:'secure'])
         fail ArgumentError, 'invalid value for "secure", must be one of true, false'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'include_auth_actions'] && !['true', 'false'].include?(opts[:'include_auth_actions'])
+        fail ArgumentError, 'invalid value for "include_auth_actions", must be one of true, false'
       end
       
       
@@ -1037,6 +1062,7 @@ module PureCloud
       query_params = {}
       query_params[:'category'] = opts[:'category'] if opts[:'category']
       query_params[:'secure'] = opts[:'secure'] if opts[:'secure']
+      query_params[:'includeAuthActions'] = opts[:'include_auth_actions'] if opts[:'include_auth_actions']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']

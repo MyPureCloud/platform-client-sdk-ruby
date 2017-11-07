@@ -615,6 +615,7 @@ api_instance = PureCloud::IntegrationsApi.new
 opts = { 
   category: "category_example", # String | Filter by category name
   secure: "secure_example", # String | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+  include_auth_actions: "include_auth_actions_example", # String | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
@@ -638,6 +639,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category** | **String**| Filter by category name | [optional]  |
  **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
+ **include_auth_actions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] <br />**Values**: true, false |
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
@@ -761,6 +763,7 @@ api_instance = PureCloud::IntegrationsApi.new
 opts = { 
   category: "category_example", # String | Filter by category name
   secure: "secure_example", # String | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+  include_auth_actions: "include_auth_actions_example", # String | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
@@ -784,6 +787,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category** | **String**| Filter by category name | [optional]  |
  **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
+ **include_auth_actions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] <br />**Values**: true, false |
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |

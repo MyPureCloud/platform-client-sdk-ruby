@@ -109,6 +109,8 @@ module PureCloud
 
     attr_accessor :emails
 
+    attr_accessor :messages
+
     attr_accessor :screenshares
 
     attr_accessor :social_expressions
@@ -187,6 +189,8 @@ module PureCloud
         :'cobrowsesessions' => :'cobrowsesessions',
         
         :'emails' => :'emails',
+        
+        :'messages' => :'messages',
         
         :'screenshares' => :'screenshares',
         
@@ -268,6 +272,8 @@ module PureCloud
         :'cobrowsesessions' => :'Array<Cobrowsesession>',
         
         :'emails' => :'Array<Email>',
+        
+        :'messages' => :'Array<Message>',
         
         :'screenshares' => :'Array<Screenshare>',
         
@@ -591,6 +597,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'messages')
+        
+        if (value = attributes[:'messages']).is_a?(Array)
+          self.messages = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'screenshares')
         
         if (value = attributes[:'screenshares']).is_a?(Array)
@@ -749,6 +766,10 @@ module PureCloud
       if @wrapup_prompt && !allowed_values.include?(@wrapup_prompt)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -1010,6 +1031,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] screen_recording_state Object to be assigned
     def screen_recording_state=(screen_recording_state)
@@ -1060,6 +1086,7 @@ module PureCloud
           chats == o.chats &&
           cobrowsesessions == o.cobrowsesessions &&
           emails == o.emails &&
+          messages == o.messages &&
           screenshares == o.screenshares &&
           social_expressions == o.social_expressions &&
           videos == o.videos &&
@@ -1076,7 +1103,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, start_time, end_time, connected_time, name, user_uri, user_id, external_contact_id, external_organization_id, queue_id, group_id, queue_name, purpose, participant_type, consult_participant_id, address, ani, ani_name, dnis, locale, wrapup_required, wrapup_prompt, wrapup_timeout_ms, wrapup_skipped, wrapup, monitored_participant_id, attributes, calls, callbacks, chats, cobrowsesessions, emails, screenshares, social_expressions, videos, evaluations, screen_recording_state].hash
+      [id, start_time, end_time, connected_time, name, user_uri, user_id, external_contact_id, external_organization_id, queue_id, group_id, queue_name, purpose, participant_type, consult_participant_id, address, ani, ani_name, dnis, locale, wrapup_required, wrapup_prompt, wrapup_timeout_ms, wrapup_skipped, wrapup, monitored_participant_id, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, evaluations, screen_recording_state].hash
     end
 
     # build the object from hash

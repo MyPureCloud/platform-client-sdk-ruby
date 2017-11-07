@@ -184,7 +184,7 @@ module PureCloud
       
       
       
-      allowed_values = ["manual", "dialer", "inbound", "acd", "ivr", "voicemail", "outbound", "agent", "user", "station", "group", "customer", "external"]
+      allowed_values = ["manual", "dialer", "inbound", "acd", "ivr", "voicemail", "outbound", "agent", "user", "station", "group", "customer", "external", "fax", "workflow"]
       if @purpose && !allowed_values.include?(@purpose)
         return false
       end
@@ -225,7 +225,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] purpose Object to be assigned
     def purpose=(purpose)
-      allowed_values = ["manual", "dialer", "inbound", "acd", "ivr", "voicemail", "outbound", "agent", "user", "station", "group", "customer", "external"]
+      allowed_values = ["manual", "dialer", "inbound", "acd", "ivr", "voicemail", "outbound", "agent", "user", "station", "group", "customer", "external", "fax", "workflow"]
       if purpose && !allowed_values.include?(purpose)
         fail ArgumentError, "invalid value for 'purpose', must be one of #{allowed_values}."
       end
