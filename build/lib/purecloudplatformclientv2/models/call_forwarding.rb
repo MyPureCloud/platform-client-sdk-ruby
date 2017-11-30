@@ -25,9 +25,17 @@ module PureCloud
 
     attr_accessor :user
 
+    # Whether or not CallForwarding is enabled
     attr_accessor :enabled
 
+    # This property is deprecated. Please use the calls property
     attr_accessor :phone_number
+
+    # An ordered list of CallRoutes to be executed when CallForwarding is enabled
+    attr_accessor :calls
+
+    # The type of voicemail to use with the callForwarding configuration
+    attr_accessor :voicemail
 
     # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :modified_date
@@ -49,6 +57,10 @@ module PureCloud
         
         :'phone_number' => :'phoneNumber',
         
+        :'calls' => :'calls',
+        
+        :'voicemail' => :'voicemail',
+        
         :'modified_date' => :'modifiedDate',
         
         :'self_uri' => :'selfUri'
@@ -69,6 +81,10 @@ module PureCloud
         :'enabled' => :'BOOLEAN',
         
         :'phone_number' => :'String',
+        
+        :'calls' => :'Array<CallRoute>',
+        
+        :'voicemail' => :'String',
         
         :'modified_date' => :'DateTime',
         
@@ -126,6 +142,26 @@ module PureCloud
         
         
         self.phone_number = attributes[:'phoneNumber']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'calls')
+        
+        if (value = attributes[:'calls']).is_a?(Array)
+          self.calls = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'voicemail')
+        
+        
+        self.voicemail = attributes[:'voicemail']
         
       
       end
@@ -190,6 +226,19 @@ module PureCloud
       
       
       
+      allowed_values = ["PURECLOUD", "LASTCALL", "NONE"]
+      if @voicemail && !allowed_values.include?(@voicemail)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
     end
@@ -217,6 +266,25 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] voicemail Object to be assigned
+    def voicemail=(voicemail)
+      allowed_values = ["PURECLOUD", "LASTCALL", "NONE"]
+      if voicemail && !allowed_values.include?(voicemail)
+        fail ArgumentError, "invalid value for 'voicemail', must be one of #{allowed_values}."
+      end
+      @voicemail = voicemail
+    end
+
     
     
     
@@ -240,6 +308,8 @@ module PureCloud
           user == o.user &&
           enabled == o.enabled &&
           phone_number == o.phone_number &&
+          calls == o.calls &&
+          voicemail == o.voicemail &&
           modified_date == o.modified_date &&
           self_uri == o.self_uri
     end
@@ -253,7 +323,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, user, enabled, phone_number, modified_date, self_uri].hash
+      [id, name, user, enabled, phone_number, calls, voicemail, modified_date, self_uri].hash
     end
 
     # build the object from hash

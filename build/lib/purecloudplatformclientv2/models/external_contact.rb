@@ -59,6 +59,8 @@ module PureCloud
 
     attr_accessor :external_organization
 
+    attr_accessor :survey_opt_out
+
     # Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
     attr_accessor :external_data_sources
 
@@ -104,6 +106,8 @@ module PureCloud
         :'create_date' => :'createDate',
         
         :'external_organization' => :'externalOrganization',
+        
+        :'survey_opt_out' => :'surveyOptOut',
         
         :'external_data_sources' => :'externalDataSources',
         
@@ -151,6 +155,8 @@ module PureCloud
         :'create_date' => :'DateTime',
         
         :'external_organization' => :'ExternalOrganization',
+        
+        :'survey_opt_out' => :'BOOLEAN',
         
         :'external_data_sources' => :'Array<ExternalDataSource>',
         
@@ -330,6 +336,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'surveyOptOut')
+        
+        
+        self.survey_opt_out = attributes[:'surveyOptOut']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'externalDataSources')
         
         if (value = attributes[:'externalDataSources']).is_a?(Array)
@@ -455,8 +470,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -581,6 +605,7 @@ module PureCloud
           modify_date == o.modify_date &&
           create_date == o.create_date &&
           external_organization == o.external_organization &&
+          survey_opt_out == o.survey_opt_out &&
           external_data_sources == o.external_data_sources &&
           self_uri == o.self_uri
     end
@@ -594,7 +619,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, first_name, middle_name, last_name, salutation, title, work_phone, cell_phone, home_phone, other_phone, work_email, personal_email, other_email, address, twitter_id, modify_date, create_date, external_organization, external_data_sources, self_uri].hash
+      [id, first_name, middle_name, last_name, salutation, title, work_phone, cell_phone, home_phone, other_phone, work_email, personal_email, other_email, address, twitter_id, modify_date, create_date, external_organization, survey_opt_out, external_data_sources, self_uri].hash
     end
 
     # build the object from hash

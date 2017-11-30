@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class AnalyticsView
-    # Target metric name
+    # CallTarget metric name
     attr_accessor :target
 
     # A unique name for this view. Must be distinct from other views and built-in metric names.

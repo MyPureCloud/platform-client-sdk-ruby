@@ -22,13 +22,21 @@ module PureCloud
 
     attr_accessor :message_time
 
+    attr_accessor :message_status
+
+    attr_accessor :message_segment_count
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'message_id' => :'messageId',
         
-        :'message_time' => :'messageTime'
+        :'message_time' => :'messageTime',
+        
+        :'message_status' => :'messageStatus',
+        
+        :'message_segment_count' => :'messageSegmentCount'
         
       }
     end
@@ -39,7 +47,11 @@ module PureCloud
         
         :'message_id' => :'String',
         
-        :'message_time' => :'DateTime'
+        :'message_time' => :'DateTime',
+        
+        :'message_status' => :'String',
+        
+        :'message_segment_count' => :'Integer'
         
       }
     end
@@ -71,6 +83,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'messageStatus')
+        
+        
+        self.message_status = attributes[:'messageStatus']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'messageSegmentCount')
+        
+        
+        self.message_segment_count = attributes[:'messageSegmentCount']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -94,11 +124,43 @@ module PureCloud
       
       
       
+      
+      
+      allowed_values = ["QUEUED", "SENT", "FAILED", "RECEIVED"]
+      if @message_status && !allowed_values.include?(@message_status)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
     end
 
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] message_status Object to be assigned
+    def message_status=(message_status)
+      allowed_values = ["QUEUED", "SENT", "FAILED", "RECEIVED"]
+      if message_status && !allowed_values.include?(message_status)
+        fail ArgumentError, "invalid value for 'message_status', must be one of #{allowed_values}."
+      end
+      @message_status = message_status
+    end
+
     
     
     
@@ -113,7 +175,9 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           message_id == o.message_id &&
-          message_time == o.message_time
+          message_time == o.message_time &&
+          message_status == o.message_status &&
+          message_segment_count == o.message_segment_count
     end
 
     # @see the `==` method
@@ -125,7 +189,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [message_id, message_time].hash
+      [message_id, message_time, message_status, message_segment_count].hash
     end
 
     # build the object from hash

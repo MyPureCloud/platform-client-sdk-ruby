@@ -17,24 +17,30 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  # Management Unit object for Workforce Management.
+  # Management Unit object for Workforce Management
   class ManagementUnit
     # The globally unique identifier for the object.
     attr_accessor :id
 
     attr_accessor :name
 
-    # Start day of week for workforce management planning purposes
+    # Start day of week for scheduling and forecasting purposes
     attr_accessor :start_day_of_week
 
     # The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database)
     attr_accessor :time_zone
 
-    # The version of the underlying ManagementUnit object. Useful for handling eventual consistency issues.  User must submit the current version they of the ManagementUnit in any write requests
+    # The configuration settings for this management unit
+    attr_accessor :settings
+
+    # The version of the underlying entity
     attr_accessor :version
 
-    # The date and time at which this management unit was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The date and time at which this entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_modified
+
+    # The user who last modified this entity
+    attr_accessor :modified_by
 
     # The URI for this object
     attr_accessor :self_uri
@@ -51,9 +57,13 @@ module PureCloud
         
         :'time_zone' => :'timeZone',
         
+        :'settings' => :'settings',
+        
         :'version' => :'version',
         
         :'date_modified' => :'dateModified',
+        
+        :'modified_by' => :'modifiedBy',
         
         :'self_uri' => :'selfUri'
         
@@ -72,9 +82,13 @@ module PureCloud
         
         :'time_zone' => :'String',
         
+        :'settings' => :'ManagementUnitSettings',
+        
         :'version' => :'Integer',
         
         :'date_modified' => :'DateTime',
+        
+        :'modified_by' => :'User',
         
         :'self_uri' => :'String'
         
@@ -126,6 +140,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'settings')
+        
+        
+        self.settings = attributes[:'settings']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'version')
         
         
@@ -139,6 +162,15 @@ module PureCloud
         
         
         self.date_modified = attributes[:'dateModified']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'modifiedBy')
+        
+        
+        self.modified_by = attributes[:'modifiedBy']
         
       
       end
@@ -178,10 +210,14 @@ module PureCloud
       
       
       
-      allowed_values = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+      allowed_values = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
       if @start_day_of_week && !allowed_values.include?(@start_day_of_week)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -194,6 +230,10 @@ module PureCloud
         return false
       end
 
+      
+      
+      
+      
       
       
       
@@ -223,13 +263,23 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] start_day_of_week Object to be assigned
     def start_day_of_week=(start_day_of_week)
-      allowed_values = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+      allowed_values = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
       if start_day_of_week && !allowed_values.include?(start_day_of_week)
         fail ArgumentError, "invalid value for 'start_day_of_week', must be one of #{allowed_values}."
       end
       @start_day_of_week = start_day_of_week
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -262,8 +312,10 @@ module PureCloud
           name == o.name &&
           start_day_of_week == o.start_day_of_week &&
           time_zone == o.time_zone &&
+          settings == o.settings &&
           version == o.version &&
           date_modified == o.date_modified &&
+          modified_by == o.modified_by &&
           self_uri == o.self_uri
     end
 
@@ -276,7 +328,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, start_day_of_week, time_zone, version, date_modified, self_uri].hash
+      [id, name, start_day_of_week, time_zone, settings, version, date_modified, modified_by, self_uri].hash
     end
 
     # build the object from hash

@@ -46,6 +46,12 @@ module PureCloud
 
     attr_accessor :messages_transcript_uri
 
+    attr_accessor :type
+
+    attr_accessor :recipient_country
+
+    attr_accessor :recipient_type
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -79,6 +85,12 @@ module PureCloud
         :'messages' => :'messages',
         
         :'messages_transcript_uri' => :'messagesTranscriptUri',
+        
+        :'type' => :'type',
+        
+        :'recipient_country' => :'recipientCountry',
+        
+        :'recipient_type' => :'recipientType',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -116,6 +128,12 @@ module PureCloud
         :'messages' => :'Array<ConversationNotificationMessages>',
         
         :'messages_transcript_uri' => :'String',
+        
+        :'type' => :'String',
+        
+        :'recipient_country' => :'String',
+        
+        :'recipient_type' => :'String',
         
         :'additional_properties' => :'Object'
         
@@ -259,6 +277,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'type')
+        
+        
+        self.type = attributes[:'type']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'recipientCountry')
+        
+        
+        self.recipient_country = attributes[:'recipientCountry']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'recipientType')
+        
+        
+        self.recipient_type = attributes[:'recipientType']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -338,6 +383,23 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["SMS"]
+      if @type && !allowed_values.include?(@type)
+        return false
+      end
       
       
       
@@ -445,6 +507,30 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] type Object to be assigned
+    def type=(type)
+      allowed_values = ["SMS"]
+      if type && !allowed_values.include?(type)
+        fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
+      end
+      @type = type
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -468,6 +554,9 @@ module PureCloud
           from_address == o.from_address &&
           messages == o.messages &&
           messages_transcript_uri == o.messages_transcript_uri &&
+          type == o.type &&
+          recipient_country == o.recipient_country &&
+          recipient_type == o.recipient_type &&
           additional_properties == o.additional_properties
     end
 
@@ -480,7 +569,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, held, provider, script_id, peer_id, disconnect_type, start_hold_time, connected_time, disconnected_time, to_address, from_address, messages, messages_transcript_uri, additional_properties].hash
+      [id, state, held, provider, script_id, peer_id, disconnect_type, start_hold_time, connected_time, disconnected_time, to_address, from_address, messages, messages_transcript_uri, type, recipient_country, recipient_type, additional_properties].hash
     end
 
     # build the object from hash

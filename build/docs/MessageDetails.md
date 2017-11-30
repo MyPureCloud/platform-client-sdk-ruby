@@ -9,6 +9,8 @@ title: MessageDetails
 |------------ | ------------- | ------------- | -------------|
 | **message_id** | **String** | UUID identifying the message media. | [optional] |
 | **message_uri** | **String** | A URI for this message entity. | [optional] |
+| **message_status** | **String** | Indicates the delivery status of the message. | [optional] |
+| **message_segment_count** | **Integer** | The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits. | [optional] |
 | **message_time** | **DateTime** | The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 {: class="table table-striped"}
 

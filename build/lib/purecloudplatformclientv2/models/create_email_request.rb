@@ -57,6 +57,12 @@ module PureCloud
     # Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.
     attr_accessor :direction
 
+    # An HTML body content of the email.
+    attr_accessor :html_body
+
+    # A text body content of the email.
+    attr_accessor :text_body
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -85,7 +91,11 @@ module PureCloud
         
         :'subject' => :'subject',
         
-        :'direction' => :'direction'
+        :'direction' => :'direction',
+        
+        :'html_body' => :'htmlBody',
+        
+        :'text_body' => :'textBody'
         
       }
     end
@@ -118,7 +128,11 @@ module PureCloud
         
         :'subject' => :'String',
         
-        :'direction' => :'String'
+        :'direction' => :'String',
+        
+        :'html_body' => :'String',
+        
+        :'text_body' => :'String'
         
       }
     end
@@ -253,6 +267,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'htmlBody')
+        
+        
+        self.html_body = attributes[:'htmlBody']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'textBody')
+        
+        
+        self.text_body = attributes[:'textBody']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -327,6 +359,14 @@ module PureCloud
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -407,6 +447,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -424,7 +474,9 @@ module PureCloud
           from_address == o.from_address &&
           from_name == o.from_name &&
           subject == o.subject &&
-          direction == o.direction
+          direction == o.direction &&
+          html_body == o.html_body &&
+          text_body == o.text_body
     end
 
     # @see the `==` method
@@ -436,7 +488,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [queue_id, flow_id, provider, skill_ids, language_id, priority, attributes, to_address, to_name, from_address, from_name, subject, direction].hash
+      [queue_id, flow_id, provider, skill_ids, language_id, priority, attributes, to_address, to_name, from_address, from_name, subject, direction, html_body, text_body].hash
     end
 
     # build the object from hash

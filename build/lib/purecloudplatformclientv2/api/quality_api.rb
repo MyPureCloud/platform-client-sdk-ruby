@@ -1011,6 +1011,7 @@ module PureCloud
     # @option opts [BOOLEAN] :agent_has_read agent has the evaluation
     # @option opts [BOOLEAN] :expand_answer_total_scores get the total scores for evaluations
     # @option opts [Integer] :maximum maximum
+    # @option opts [String] :sort_order sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;
     # @return [EvaluationEntityListing]
     def get_quality_evaluations_query(opts = {})
       data, _status_code, _headers = get_quality_evaluations_query_with_http_info(opts)
@@ -1037,11 +1038,18 @@ module PureCloud
     # @option opts [BOOLEAN] :agent_has_read agent has the evaluation
     # @option opts [BOOLEAN] :expand_answer_total_scores get the total scores for evaluations
     # @option opts [Integer] :maximum maximum
+    # @option opts [String] :sort_order sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39;
     # @return [Array<(EvaluationEntityListing, Fixnum, Hash)>] EvaluationEntityListing data, response status code and response headers
     def get_quality_evaluations_query_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_evaluations_query ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1167,6 +1175,7 @@ module PureCloud
       query_params[:'agentHasRead'] = opts[:'agent_has_read'] if opts[:'agent_has_read']
       query_params[:'expandAnswerTotalScores'] = opts[:'expand_answer_total_scores'] if opts[:'expand_answer_total_scores']
       query_params[:'maximum'] = opts[:'maximum'] if opts[:'maximum']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
 
       # header parameters
       header_params = {}

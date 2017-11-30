@@ -24,6 +24,12 @@ module PureCloud
     # A URI for this message entity.
     attr_accessor :message_uri
 
+    # Indicates the delivery status of the message.
+    attr_accessor :message_status
+
+    # The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits.
+    attr_accessor :message_segment_count
+
     # The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :message_time
 
@@ -34,6 +40,10 @@ module PureCloud
         :'message_id' => :'messageId',
         
         :'message_uri' => :'messageURI',
+        
+        :'message_status' => :'messageStatus',
+        
+        :'message_segment_count' => :'messageSegmentCount',
         
         :'message_time' => :'messageTime'
         
@@ -47,6 +57,10 @@ module PureCloud
         :'message_id' => :'String',
         
         :'message_uri' => :'String',
+        
+        :'message_status' => :'String',
+        
+        :'message_segment_count' => :'Integer',
         
         :'message_time' => :'DateTime'
         
@@ -75,6 +89,24 @@ module PureCloud
         
         
         self.message_uri = attributes[:'messageURI']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'messageStatus')
+        
+        
+        self.message_status = attributes[:'messageStatus']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'messageSegmentCount')
+        
+        
+        self.message_segment_count = attributes[:'messageSegmentCount']
         
       
       end
@@ -114,6 +146,19 @@ module PureCloud
       
       
       
+      allowed_values = ["queued", "sent", "failed", "received"]
+      if @message_status && !allowed_values.include?(@message_status)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
     end
@@ -121,6 +166,25 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] message_status Object to be assigned
+    def message_status=(message_status)
+      allowed_values = ["queued", "sent", "failed", "received"]
+      if message_status && !allowed_values.include?(message_status)
+        fail ArgumentError, "invalid value for 'message_status', must be one of #{allowed_values}."
+      end
+      @message_status = message_status
+    end
+
     
     
     
@@ -141,6 +205,8 @@ module PureCloud
       self.class == o.class &&
           message_id == o.message_id &&
           message_uri == o.message_uri &&
+          message_status == o.message_status &&
+          message_segment_count == o.message_segment_count &&
           message_time == o.message_time
     end
 
@@ -153,7 +219,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [message_id, message_uri, message_time].hash
+      [message_id, message_uri, message_status, message_segment_count, message_time].hash
     end
 
     # build the object from hash

@@ -21,6 +21,9 @@ title: ConversationNotificationMessages1
 | **from_address** | [**ConversationNotificationAddress**](ConversationNotificationAddress.html) |  | [optional] |
 | **messages** | [**Array&lt;ConversationNotificationMessages&gt;**](ConversationNotificationMessages.html) |  | [optional] |
 | **messages_transcript_uri** | **String** |  | [optional] |
+| **type** | **String** |  | [optional] |
+| **recipient_country** | **String** |  | [optional] |
+| **recipient_type** | **String** |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

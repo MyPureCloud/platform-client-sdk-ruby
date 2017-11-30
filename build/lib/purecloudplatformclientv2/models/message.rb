@@ -53,6 +53,15 @@ module PureCloud
     # The source provider for the message.
     attr_accessor :provider
 
+    # Indicates the type of message platform from which the message originated.
+    attr_accessor :type
+
+    # Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format.
+    attr_accessor :recipient_country
+
+    # The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type.
+    attr_accessor :recipient_type
+
     # The UUID of the script to use.
     attr_accessor :script_id
 
@@ -96,6 +105,12 @@ module PureCloud
         
         :'provider' => :'provider',
         
+        :'type' => :'type',
+        
+        :'recipient_country' => :'recipientCountry',
+        
+        :'recipient_type' => :'recipientType',
+        
         :'script_id' => :'scriptId',
         
         :'peer_id' => :'peerId',
@@ -136,6 +151,12 @@ module PureCloud
         :'disconnected_time' => :'DateTime',
         
         :'provider' => :'String',
+        
+        :'type' => :'String',
+        
+        :'recipient_country' => :'String',
+        
+        :'recipient_type' => :'String',
         
         :'script_id' => :'String',
         
@@ -269,6 +290,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'type')
+        
+        
+        self.type = attributes[:'type']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'recipientCountry')
+        
+        
+        self.recipient_country = attributes[:'recipientCountry']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'recipientType')
+        
+        
+        self.recipient_type = attributes[:'recipientType']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'scriptId')
         
         
@@ -396,6 +444,23 @@ module PureCloud
       
       
       
+      allowed_values = ["sms"]
+      if @type && !allowed_values.include?(@type)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -505,6 +570,30 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] type Object to be assigned
+    def type=(type)
+      allowed_values = ["sms"]
+      if type && !allowed_values.include?(type)
+        fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
+      end
+      @type = type
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -546,6 +635,9 @@ module PureCloud
           connected_time == o.connected_time &&
           disconnected_time == o.disconnected_time &&
           provider == o.provider &&
+          type == o.type &&
+          recipient_country == o.recipient_country &&
+          recipient_type == o.recipient_type &&
           script_id == o.script_id &&
           peer_id == o.peer_id &&
           to_address == o.to_address &&
@@ -562,7 +654,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, held, segments, direction, recording_id, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, provider, script_id, peer_id, to_address, from_address, messages].hash
+      [state, id, held, segments, direction, recording_id, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, provider, type, recipient_country, recipient_type, script_id, peer_id, to_address, from_address, messages].hash
     end
 
     # build the object from hash

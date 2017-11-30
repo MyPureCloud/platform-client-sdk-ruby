@@ -32,6 +32,9 @@ module PureCloud
 
     attr_accessor :address_to
 
+    # Message type for messaging services such as sms
+    attr_accessor :message_type
+
     # Automatic Number Identification (caller's number)
     attr_accessor :ani
 
@@ -132,6 +135,8 @@ module PureCloud
         
         :'address_to' => :'addressTo',
         
+        :'message_type' => :'messageType',
+        
         :'ani' => :'ani',
         
         :'direction' => :'direction',
@@ -208,6 +213,8 @@ module PureCloud
         :'address_from' => :'String',
         
         :'address_to' => :'String',
+        
+        :'message_type' => :'String',
         
         :'ani' => :'String',
         
@@ -328,6 +335,15 @@ module PureCloud
         
         
         self.address_to = attributes[:'addressTo']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'messageType')
+        
+        
+        self.message_type = attributes[:'messageType']
         
       
       end
@@ -644,6 +660,15 @@ module PureCloud
       
       
       
+      allowed_values = ["sms"]
+      if @message_type && !allowed_values.include?(@message_type)
+        return false
+      end
+      
+      
+      
+      
+      
       
       
       
@@ -807,6 +832,20 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] message_type Object to be assigned
+    def message_type=(message_type)
+      allowed_values = ["sms"]
+      if message_type && !allowed_values.include?(message_type)
+        fail ArgumentError, "invalid value for 'message_type', must be one of #{allowed_values}."
+      end
+      @message_type = message_type
+    end
+
     
     
     
@@ -984,6 +1023,7 @@ module PureCloud
           address_self == o.address_self &&
           address_from == o.address_from &&
           address_to == o.address_to &&
+          message_type == o.message_type &&
           ani == o.ani &&
           direction == o.direction &&
           dnis == o.dnis &&
@@ -1024,7 +1064,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_type, session_id, address_other, address_self, address_from, address_to, ani, direction, dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments].hash
+      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments].hash
     end
 
     # build the object from hash

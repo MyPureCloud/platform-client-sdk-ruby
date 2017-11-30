@@ -26,6 +26,8 @@ module PureCloud
 
     attr_accessor :email
 
+    attr_accessor :message
+
     attr_accessor :chat
 
     attr_accessor :social_expression
@@ -43,6 +45,8 @@ module PureCloud
         :'callback' => :'callback',
         
         :'email' => :'email',
+        
+        :'message' => :'message',
         
         :'chat' => :'chat',
         
@@ -64,6 +68,8 @@ module PureCloud
         :'callback' => :'UserConversationSummaryNotificationMediaSummary',
         
         :'email' => :'UserConversationSummaryNotificationMediaSummary',
+        
+        :'message' => :'UserConversationSummaryNotificationMediaSummary',
         
         :'chat' => :'UserConversationSummaryNotificationMediaSummary',
         
@@ -114,6 +120,15 @@ module PureCloud
         
         
         self.email = attributes[:'email']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'message')
+        
+        
+        self.message = attributes[:'message']
         
       
       end
@@ -189,8 +204,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -236,6 +260,7 @@ module PureCloud
           call == o.call &&
           callback == o.callback &&
           email == o.email &&
+          message == o.message &&
           chat == o.chat &&
           social_expression == o.social_expression &&
           video == o.video
@@ -250,7 +275,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user_id, call, callback, email, chat, social_expression, video].hash
+      [user_id, call, callback, email, message, chat, social_expression, video].hash
     end
 
     # build the object from hash

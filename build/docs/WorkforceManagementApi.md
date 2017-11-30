@@ -18,6 +18,7 @@ Method | Description
 [**get_workforcemanagement_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequest) | Get a time off request for the current user by id
 [**get_workforcemanagement_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequests) | Get a list of time off requests for the current user
 [**patch_workforcemanagement_timeoffrequest**](WorkforceManagementApi.html#patch_workforcemanagement_timeoffrequest) | Mark a time off request for the current user as read or unread
+[**post_workforcemanagement_agents_managementunits**](WorkforceManagementApi.html#post_workforcemanagement_agents_managementunits) | Get the management units to which the agents belong
 [**post_workforcemanagement_managementunit_historicaladherencequery**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_historicaladherencequery) | Request a historical adherence report
 [**post_workforcemanagement_managementunit_intraday**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_intraday) | Get intraday data for the given date for the requested queueIds
 [**post_workforcemanagement_managementunit_schedules_search**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_schedules_search) | Get user schedules within the given time range
@@ -629,6 +630,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_workforcemanagement_agents_managementunits"></a>
+
+## -[**Array&lt;AgentManagementUnitReference&gt;**](AgentManagementUnitReference.html) post_workforcemanagement_agents_managementunits(opts)
+
+Get the management units to which the agents belong
+
+
+
+Wraps POST /api/v2/workforcemanagement/agents/managementunits 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+opts = { 
+  body: [PureCloud::Array<String>.new] # Array<String> | body
+}
+
+begin
+  #Get the management units to which the agents belong
+  result = api_instance.post_workforcemanagement_agents_managementunits(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_agents_managementunits: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **Array&lt;String&gt;**| body | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;AgentManagementUnitReference&gt;**](AgentManagementUnitReference.html)
 
 ### HTTP request headers
 

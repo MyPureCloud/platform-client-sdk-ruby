@@ -386,6 +386,166 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Fetch info on a secure session
+    # 
+    # @param conversation_id conversation ID
+    # @param participant_id participant ID
+    # @param secure_session_id secure IVR session ID
+    # @param [Hash] opts the optional parameters
+    # @return [SecureSession]
+    def get_conversation_participant_secureivrsession(conversation_id, participant_id, secure_session_id, opts = {})
+      data, _status_code, _headers = get_conversation_participant_secureivrsession_with_http_info(conversation_id, participant_id, secure_session_id, opts)
+      return data
+    end
+
+    # Fetch info on a secure session
+    # 
+    # @param conversation_id conversation ID
+    # @param participant_id participant ID
+    # @param secure_session_id secure IVR session ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SecureSession, Fixnum, Hash)>] SecureSession data, response status code and response headers
+    def get_conversation_participant_secureivrsession_with_http_info(conversation_id, participant_id, secure_session_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversation_participant_secureivrsession ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversation_participant_secureivrsession" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversation_participant_secureivrsession" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'secure_session_id' is set
+      fail ArgumentError, "Missing the required parameter 'secure_session_id' when calling ConversationsApi.get_conversation_participant_secureivrsession" if secure_session_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'secureSessionId' + '}', secure_session_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SecureSession')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversation_participant_secureivrsession\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of secure sessions for this participant.
+    # 
+    # @param conversation_id conversation ID
+    # @param participant_id participant ID
+    # @param [Hash] opts the optional parameters
+    # @return [SecureSessionEntityListing]
+    def get_conversation_participant_secureivrsessions(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversation_participant_secureivrsessions_with_http_info(conversation_id, participant_id, opts)
+      return data
+    end
+
+    # Get a list of secure sessions for this participant.
+    # 
+    # @param conversation_id conversation ID
+    # @param participant_id participant ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SecureSessionEntityListing, Fixnum, Hash)>] SecureSessionEntityListing data, response status code and response headers
+    def get_conversation_participant_secureivrsessions_with_http_info(conversation_id, participant_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversation_participant_secureivrsessions ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversation_participant_secureivrsessions" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversation_participant_secureivrsessions" if participant_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SecureSessionEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversation_participant_secureivrsessions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get the wrap-up for this conversation participant. 
     # 
     # @param conversation_id conversation ID
@@ -4743,6 +4903,89 @@ module PureCloud
         :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#post_conversation_participant_replace\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
+    # 
+    # @param conversation_id conversation ID
+    # @param participant_id participant ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateSecureSession] :body 
+    # @return [SecureSession]
+    def post_conversation_participant_secureivrsessions(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = post_conversation_participant_secureivrsessions_with_http_info(conversation_id, participant_id, opts)
+      return data
+    end
+
+    # Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
+    # 
+    # @param conversation_id conversation ID
+    # @param participant_id participant ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateSecureSession] :body 
+    # @return [Array<(SecureSession, Fixnum, Hash)>] SecureSession data, response status code and response headers
+    def post_conversation_participant_secureivrsessions_with_http_info(conversation_id, participant_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversation_participant_secureivrsessions ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversation_participant_secureivrsessions" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversation_participant_secureivrsessions" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SecureSession')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_conversation_participant_secureivrsessions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

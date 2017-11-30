@@ -13,6 +13,8 @@ Method | Description
 [**delete_conversations_email_messages_draft_attachment**](ConversationsApi.html#delete_conversations_email_messages_draft_attachment) | Delete attachment from draft
 [**get_analytics_conversation_details**](ConversationsApi.html#get_analytics_conversation_details) | Get a conversation by id
 [**get_conversation**](ConversationsApi.html#get_conversation) | Get conversation
+[**get_conversation_participant_secureivrsession**](ConversationsApi.html#get_conversation_participant_secureivrsession) | Fetch info on a secure session
+[**get_conversation_participant_secureivrsessions**](ConversationsApi.html#get_conversation_participant_secureivrsessions) | Get a list of secure sessions for this participant.
 [**get_conversation_participant_wrapup**](ConversationsApi.html#get_conversation_participant_wrapup) | Get the wrap-up for this conversation participant. 
 [**get_conversation_participant_wrapupcodes**](ConversationsApi.html#get_conversation_participant_wrapupcodes) | Get list of wrapup codes for this conversation participant
 [**get_conversations**](ConversationsApi.html#get_conversations) | Get conversations
@@ -70,6 +72,7 @@ Method | Description
 [**post_conversation_participant_callbacks**](ConversationsApi.html#post_conversation_participant_callbacks) | Create a new callback for the specified participant on the conversation.
 [**post_conversation_participant_digits**](ConversationsApi.html#post_conversation_participant_digits) | Sends DTMF to the participant
 [**post_conversation_participant_replace**](ConversationsApi.html#post_conversation_participant_replace) | Replace this participant with the specified user and/or address
+[**post_conversation_participant_secureivrsessions**](ConversationsApi.html#post_conversation_participant_secureivrsessions) | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
 [**post_conversations_call**](ConversationsApi.html#post_conversations_call) | Place a new call as part of a callback conversation.
 [**post_conversations_call_participant_consult**](ConversationsApi.html#post_conversations_call_participant_consult) | Initiate and update consult transfer
 [**post_conversations_call_participant_monitor**](ConversationsApi.html#post_conversations_call_participant_monitor) | Listen in on the conversation from the point of view of a given participant.
@@ -386,6 +389,133 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Conversation**](Conversation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversation_participant_secureivrsession"></a>
+
+## -[**SecureSession**](SecureSession.html) get_conversation_participant_secureivrsession(conversation_id, participant_id, secure_session_id)
+
+Fetch info on a secure session
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversation ID
+
+participant_id = "participant_id_example" # String | participant ID
+
+secure_session_id = "secure_session_id_example" # String | secure IVR session ID
+
+
+begin
+  #Fetch info on a secure session
+  result = api_instance.get_conversation_participant_secureivrsession(conversation_id, participant_id, secure_session_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->get_conversation_participant_secureivrsession: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversation ID |  |
+ **participant_id** | **String**| participant ID |  |
+ **secure_session_id** | **String**| secure IVR session ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SecureSession**](SecureSession.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversation_participant_secureivrsessions"></a>
+
+## -[**SecureSessionEntityListing**](SecureSessionEntityListing.html) get_conversation_participant_secureivrsessions(conversation_id, participant_id)
+
+Get a list of secure sessions for this participant.
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversation ID
+
+participant_id = "participant_id_example" # String | participant ID
+
+
+begin
+  #Get a list of secure sessions for this participant.
+  result = api_instance.get_conversation_participant_secureivrsessions(conversation_id, participant_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->get_conversation_participant_secureivrsessions: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversation ID |  |
+ **participant_id** | **String**| participant ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SecureSessionEntityListing**](SecureSessionEntityListing.html)
 
 ### HTTP request headers
 
@@ -3932,6 +4062,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversation_participant_secureivrsessions"></a>
+
+## -[**SecureSession**](SecureSession.html) post_conversation_participant_secureivrsessions(conversation_id, participant_id, opts)
+
+Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversation ID
+
+participant_id = "participant_id_example" # String | participant ID
+
+opts = { 
+  body: PureCloud::CreateSecureSession.new # CreateSecureSession | 
+}
+
+begin
+  #Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
+  result = api_instance.post_conversation_participant_secureivrsessions(conversation_id, participant_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversation_participant_secureivrsessions: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversation ID |  |
+ **participant_id** | **String**| participant ID |  |
+ **body** | [**CreateSecureSession**](CreateSecureSession.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SecureSession**](SecureSession.html)
 
 ### HTTP request headers
 

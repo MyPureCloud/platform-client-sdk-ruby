@@ -29,9 +29,10 @@ module PureCloud
 
     attr_accessor :email
 
+    # The address(s) used for primary contact. Updates to the corresponding address in the addresses list will be reflected here.
     attr_accessor :primary_contact_info
 
-    # Email addresses and phone numbers for this user
+    # Email address, phone number, and/or extension for this user. One entry is allowed per media type
     attr_accessor :addresses
 
     attr_accessor :title

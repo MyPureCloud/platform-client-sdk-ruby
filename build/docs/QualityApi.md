@@ -757,7 +757,8 @@ opts = {
   is_released: true, # BOOLEAN | the evaluation has been released
   agent_has_read: true, # BOOLEAN | agent has the evaluation
   expand_answer_total_scores: true, # BOOLEAN | get the total scores for evaluations
-  maximum: 56 # Integer | maximum
+  maximum: 56, # Integer | maximum
+  sort_order: "sort_order_example" # String | sort order options for agentUserId or evaluatorUserId query. Valid options are 'a', 'asc', 'ascending', 'd', 'desc', 'descending'
 }
 
 begin
@@ -790,6 +791,7 @@ Name | Type | Description  | Notes
  **agent_has_read** | **BOOLEAN**| agent has the evaluation | [optional]  |
  **expand_answer_total_scores** | **BOOLEAN**| get the total scores for evaluations | [optional]  |
  **maximum** | **Integer**| maximum | [optional]  |
+ **sort_order** | **String**| sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; | [optional]  |
 {: class="table table-striped"}
 
 

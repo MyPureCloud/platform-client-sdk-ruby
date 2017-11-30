@@ -831,7 +831,7 @@ module PureCloud
       
       
       
-      allowed_values = ["requested", "active", "paused", "stopped", "error"]
+      allowed_values = ["requested", "active", "paused", "stopped", "error", "timeout"]
       if @screen_recording_state && !allowed_values.include?(@screen_recording_state)
         return false
       end
@@ -1039,7 +1039,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] screen_recording_state Object to be assigned
     def screen_recording_state=(screen_recording_state)
-      allowed_values = ["requested", "active", "paused", "stopped", "error"]
+      allowed_values = ["requested", "active", "paused", "stopped", "error", "timeout"]
       if screen_recording_state && !allowed_values.include?(screen_recording_state)
         fail ArgumentError, "invalid value for 'screen_recording_state', must be one of #{allowed_values}."
       end

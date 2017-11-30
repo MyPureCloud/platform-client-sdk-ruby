@@ -476,7 +476,7 @@ module PureCloud
       
       
       
-      allowed_values = ["unknown", "alert", "system", "delay", "hold", "interact", "ivr", "dialing", "wrapup", "voicemail", "scheduled"]
+      allowed_values = ["unknown", "alert", "system", "delay", "hold", "interact", "ivr", "dialing", "wrapup", "voicemail", "scheduled", "contacting", "transmitting", "converting", "uploading", "sharing"]
       if @segment_type && !allowed_values.include?(@segment_type)
         return false
       end
@@ -599,7 +599,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] segment_type Object to be assigned
     def segment_type=(segment_type)
-      allowed_values = ["unknown", "alert", "system", "delay", "hold", "interact", "ivr", "dialing", "wrapup", "voicemail", "scheduled"]
+      allowed_values = ["unknown", "alert", "system", "delay", "hold", "interact", "ivr", "dialing", "wrapup", "voicemail", "scheduled", "contacting", "transmitting", "converting", "uploading", "sharing"]
       if segment_type && !allowed_values.include?(segment_type)
         fail ArgumentError, "invalid value for 'segment_type', must be one of #{allowed_values}."
       end

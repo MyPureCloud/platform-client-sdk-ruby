@@ -65,6 +65,12 @@ module PureCloud
     # The in-queue flow to use for conversations waiting in queue.
     attr_accessor :queue_flow
 
+    # The prompt used for whisper audio on the queue, if configured.
+    attr_accessor :whisper
+
+    # Specifies whether the configured whisper audio should play for all ACD calls, or only for those which are auto-answered.
+    attr_accessor :auto_answer_only
+
     # The name to use for caller identification for outbound calls from this queue.
     attr_accessor :calling_party_name
 
@@ -119,6 +125,10 @@ module PureCloud
         
         :'queue_flow' => :'queueFlow',
         
+        :'whisper' => :'whisper',
+        
+        :'auto_answer_only' => :'autoAnswerOnly',
+        
         :'calling_party_name' => :'callingPartyName',
         
         :'calling_party_number' => :'callingPartyNumber',
@@ -171,6 +181,10 @@ module PureCloud
         :'skill_evaluation_method' => :'String',
         
         :'queue_flow' => :'UriReference',
+        
+        :'whisper' => :'UriReference',
+        
+        :'auto_answer_only' => :'BOOLEAN',
         
         :'calling_party_name' => :'String',
         
@@ -339,6 +353,24 @@ module PureCloud
         
         
         self.queue_flow = attributes[:'queueFlow']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'whisper')
+        
+        
+        self.whisper = attributes[:'whisper']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'autoAnswerOnly')
+        
+        
+        self.auto_answer_only = attributes[:'autoAnswerOnly']
         
       
       end
@@ -541,6 +573,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -677,6 +717,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -698,6 +748,8 @@ module PureCloud
           acw_settings == o.acw_settings &&
           skill_evaluation_method == o.skill_evaluation_method &&
           queue_flow == o.queue_flow &&
+          whisper == o.whisper &&
+          auto_answer_only == o.auto_answer_only &&
           calling_party_name == o.calling_party_name &&
           calling_party_number == o.calling_party_number &&
           default_scripts == o.default_scripts &&
@@ -716,7 +768,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, calling_party_name, calling_party_number, default_scripts, outbound_email_address, joined, member_count, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_email_address, joined, member_count, self_uri].hash
     end
 
     # build the object from hash

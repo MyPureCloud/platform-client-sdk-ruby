@@ -74,6 +74,12 @@ module PureCloud
 
     attr_accessor :messages
 
+    attr_accessor :type
+
+    attr_accessor :recipient_country
+
+    attr_accessor :recipient_type
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -132,7 +138,13 @@ module PureCloud
         
         :'screen_recording_state' => :'screenRecordingState',
         
-        :'messages' => :'messages'
+        :'messages' => :'messages',
+        
+        :'type' => :'type',
+        
+        :'recipient_country' => :'recipientCountry',
+        
+        :'recipient_type' => :'recipientType'
         
       }
     end
@@ -195,7 +207,13 @@ module PureCloud
         
         :'screen_recording_state' => :'String',
         
-        :'messages' => :'Array<MessageConversationNotificationMessages>'
+        :'messages' => :'Array<MessageConversationNotificationMessages>',
+        
+        :'type' => :'String',
+        
+        :'recipient_country' => :'String',
+        
+        :'recipient_type' => :'String'
         
       }
     end
@@ -465,6 +483,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'type')
+        
+        
+        self.type = attributes[:'type']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'recipientCountry')
+        
+        
+        self.recipient_country = attributes[:'recipientCountry']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'recipientType')
+        
+        
+        self.recipient_type = attributes[:'recipientType']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -596,6 +641,23 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["SMS"]
+      if @type && !allowed_values.include?(@type)
+        return false
+      end
       
       
       
@@ -777,6 +839,30 @@ module PureCloud
     
     
     
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] type Object to be assigned
+    def type=(type)
+      allowed_values = ["SMS"]
+      if type && !allowed_values.include?(type)
+        fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
+      end
+      @type = type
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -809,7 +895,10 @@ module PureCloud
           wrapup == o.wrapup &&
           peer == o.peer &&
           screen_recording_state == o.screen_recording_state &&
-          messages == o.messages
+          messages == o.messages &&
+          type == o.type &&
+          recipient_country == o.recipient_country &&
+          recipient_type == o.recipient_type
     end
 
     # @see the `==` method
@@ -821,7 +910,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, screen_recording_state, messages].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, screen_recording_state, messages, type, recipient_country, recipient_type].hash
     end
 
     # build the object from hash

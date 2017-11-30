@@ -28,7 +28,7 @@ module PureCloud
 
     attr_accessor :type
 
-    # Use extension instead of address for setting internal extensions
+    # Use internal extension instead of address. Mutually exclusive with the address field.
     attr_accessor :extension
 
     # Attribute mapping from ruby-style variable name to JSON key.

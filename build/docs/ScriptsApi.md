@@ -17,6 +17,7 @@ Method | Description
 [**get_scripts_published_script_id_page**](ScriptsApi.html#get_scripts_published_script_id_page) | Get the published page.
 [**get_scripts_published_script_id_pages**](ScriptsApi.html#get_scripts_published_script_id_pages) | Get the list of published pages
 [**get_scripts_published_script_id_variables**](ScriptsApi.html#get_scripts_published_script_id_variables) | Get the published variables
+[**get_scripts_upload_status**](ScriptsApi.html#get_scripts_upload_status) | Get the upload status of an imported script
 {: class="table table-striped"}
 
 <a name="get_script"></a>
@@ -613,6 +614,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_scripts_upload_status"></a>
+
+## -[**ImportScriptStatusResponse**](ImportScriptStatusResponse.html) get_scripts_upload_status(upload_id, opts)
+
+Get the upload status of an imported script
+
+
+
+Wraps GET /api/v2/scripts/uploads/{uploadId}/status 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ScriptsApi.new
+
+upload_id = "upload_id_example" # String | Upload ID
+
+opts = { 
+  long_poll: false # BOOLEAN | Enable longPolling endpoint
+}
+
+begin
+  #Get the upload status of an imported script
+  result = api_instance.get_scripts_upload_status(upload_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ScriptsApi->get_scripts_upload_status: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **upload_id** | **String**| Upload ID |  |
+ **long_poll** | **BOOLEAN**| Enable longPolling endpoint | [optional] [default to false] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ImportScriptStatusResponse**](ImportScriptStatusResponse.html)
 
 ### HTTP request headers
 

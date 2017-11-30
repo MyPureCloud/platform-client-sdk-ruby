@@ -47,6 +47,9 @@ module PureCloud
     # The flow to use for processing the email.
     attr_accessor :flow
 
+    # The route to use for email replies.
+    attr_accessor :reply_route
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -73,6 +76,8 @@ module PureCloud
         :'from_email' => :'fromEmail',
         
         :'flow' => :'flow',
+        
+        :'reply_route' => :'replyRoute',
         
         :'self_uri' => :'selfUri'
         
@@ -102,6 +107,8 @@ module PureCloud
         :'from_email' => :'String',
         
         :'flow' => :'UriReference',
+        
+        :'reply_route' => :'UriReference',
         
         :'self_uri' => :'String'
         
@@ -209,6 +216,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'replyRoute')
+        
+        
+        self.reply_route = attributes[:'replyRoute']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -292,8 +308,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -365,6 +390,7 @@ module PureCloud
           from_name == o.from_name &&
           from_email == o.from_email &&
           flow == o.flow &&
+          reply_route == o.reply_route &&
           self_uri == o.self_uri
     end
 
@@ -377,7 +403,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, pattern, queue, priority, skills, language, from_name, from_email, flow, self_uri].hash
+      [id, name, pattern, queue, priority, skills, language, from_name, from_email, flow, reply_route, self_uri].hash
     end
 
     # build the object from hash
