@@ -424,8 +424,9 @@ end
 api_instance = PureCloud::WorkforceManagementApi.new
 
 opts = { 
-  page_size: 25, # Integer | 
-  page_number: 1 # Integer | 
+  page_size: 56, # Integer | 
+  page_number: 1, # Integer | 
+  expand: "expand_example" # String | 
 }
 
 begin
@@ -441,8 +442,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**|  | [optional] [default to 25] |
+ **page_size** | **Integer**|  | [optional]  |
  **page_number** | **Integer**|  | [optional] [default to 1] |
+ **expand** | **String**|  | [optional] <br />**Values**: details |
 {: class="table table-striped"}
 
 

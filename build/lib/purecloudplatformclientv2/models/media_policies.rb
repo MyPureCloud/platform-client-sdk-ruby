@@ -27,6 +27,9 @@ module PureCloud
     # Conditions and actions for emails
     attr_accessor :email_policy
 
+    # Conditions and actions for messages
+    attr_accessor :message_policy
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -35,7 +38,9 @@ module PureCloud
         
         :'chat_policy' => :'chatPolicy',
         
-        :'email_policy' => :'emailPolicy'
+        :'email_policy' => :'emailPolicy',
+        
+        :'message_policy' => :'messagePolicy'
         
       }
     end
@@ -48,7 +53,9 @@ module PureCloud
         
         :'chat_policy' => :'ChatMediaPolicy',
         
-        :'email_policy' => :'EmailMediaPolicy'
+        :'email_policy' => :'EmailMediaPolicy',
+        
+        :'message_policy' => :'MessageMediaPolicy'
         
       }
     end
@@ -89,6 +96,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'messagePolicy')
+        
+        
+        self.message_policy = attributes[:'messagePolicy']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -116,8 +132,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -141,7 +166,8 @@ module PureCloud
       self.class == o.class &&
           call_policy == o.call_policy &&
           chat_policy == o.chat_policy &&
-          email_policy == o.email_policy
+          email_policy == o.email_policy &&
+          message_policy == o.message_policy
     end
 
     # @see the `==` method
@@ -153,7 +179,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [call_policy, chat_policy, email_policy].hash
+      [call_policy, chat_policy, email_policy, message_policy].hash
     end
 
     # build the object from hash

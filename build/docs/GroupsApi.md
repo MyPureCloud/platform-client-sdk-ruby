@@ -13,6 +13,7 @@ Method | Description
 [**get_fieldconfig**](GroupsApi.html#get_fieldconfig) | Fetch field config for an entity type
 [**get_group**](GroupsApi.html#get_group) | Get group
 [**get_group_members**](GroupsApi.html#get_group_members) | Get group members
+[**get_group_profile**](GroupsApi.html#get_group_profile) | Get group profile
 [**get_groups**](GroupsApi.html#get_groups) | Get a group list
 [**get_groups_search**](GroupsApi.html#get_groups_search) | Search groups using the q64 value returned from a previous search
 [**post_group_members**](GroupsApi.html#post_group_members) | Add members
@@ -320,6 +321,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserEntityListing**](UserEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_group_profile"></a>
+
+## -[**GroupProfile**](GroupProfile.html) get_group_profile(group_id)
+
+Get group profile
+
+
+
+Wraps GET /api/v2/groups/{groupId}/profile 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::GroupsApi.new
+
+group_id = "group_id_example" # String | groupId
+
+
+begin
+  #Get group profile
+  result = api_instance.get_group_profile(group_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling GroupsApi->get_group_profile: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| groupId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**GroupProfile**](GroupProfile.html)
 
 ### HTTP request headers
 

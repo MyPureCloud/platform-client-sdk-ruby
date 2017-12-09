@@ -17,42 +17,30 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class UserConversationSummary
-    attr_accessor :user_id
+  class MessageMediaPolicyConditions
+    attr_accessor :for_users
 
-    attr_accessor :call
+    attr_accessor :date_ranges
 
-    attr_accessor :callback
+    attr_accessor :for_queues
 
-    attr_accessor :email
+    attr_accessor :wrapup_codes
 
-    attr_accessor :message
-
-    attr_accessor :chat
-
-    attr_accessor :social_expression
-
-    attr_accessor :video
+    attr_accessor :time_allowed
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'user_id' => :'userId',
+        :'for_users' => :'forUsers',
         
-        :'call' => :'call',
+        :'date_ranges' => :'dateRanges',
         
-        :'callback' => :'callback',
+        :'for_queues' => :'forQueues',
         
-        :'email' => :'email',
+        :'wrapup_codes' => :'wrapupCodes',
         
-        :'message' => :'message',
-        
-        :'chat' => :'chat',
-        
-        :'social_expression' => :'socialExpression',
-        
-        :'video' => :'video'
+        :'time_allowed' => :'timeAllowed'
         
       }
     end
@@ -61,21 +49,15 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'user_id' => :'String',
+        :'for_users' => :'Array<User>',
         
-        :'call' => :'MediaSummary',
+        :'date_ranges' => :'Array<String>',
         
-        :'callback' => :'MediaSummary',
+        :'for_queues' => :'Array<Queue>',
         
-        :'email' => :'MediaSummary',
+        :'wrapup_codes' => :'Array<WrapupCode>',
         
-        :'message' => :'MediaSummary',
-        
-        :'chat' => :'MediaSummary',
-        
-        :'social_expression' => :'MediaSummary',
-        
-        :'video' => :'MediaSummary'
+        :'time_allowed' => :'TimeAllowed'
         
       }
     end
@@ -89,73 +71,54 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'userId')
+      if attributes.has_key?(:'forUsers')
         
+        if (value = attributes[:'forUsers']).is_a?(Array)
+          self.for_users = value
+        end
         
-        self.user_id = attributes[:'userId']
         
       
       end
 
       
-      if attributes.has_key?(:'call')
+      if attributes.has_key?(:'dateRanges')
         
+        if (value = attributes[:'dateRanges']).is_a?(Array)
+          self.date_ranges = value
+        end
         
-        self.call = attributes[:'call']
         
       
       end
 
       
-      if attributes.has_key?(:'callback')
+      if attributes.has_key?(:'forQueues')
         
+        if (value = attributes[:'forQueues']).is_a?(Array)
+          self.for_queues = value
+        end
         
-        self.callback = attributes[:'callback']
         
       
       end
 
       
-      if attributes.has_key?(:'email')
+      if attributes.has_key?(:'wrapupCodes')
         
+        if (value = attributes[:'wrapupCodes']).is_a?(Array)
+          self.wrapup_codes = value
+        end
         
-        self.email = attributes[:'email']
         
       
       end
 
       
-      if attributes.has_key?(:'message')
+      if attributes.has_key?(:'timeAllowed')
         
         
-        self.message = attributes[:'message']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'chat')
-        
-        
-        self.chat = attributes[:'chat']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'socialExpression')
-        
-        
-        self.social_expression = attributes[:'socialExpression']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'video')
-        
-        
-        self.video = attributes[:'video']
+        self.time_allowed = attributes[:'timeAllowed']
         
       
       end
@@ -196,35 +159,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -256,14 +192,11 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          user_id == o.user_id &&
-          call == o.call &&
-          callback == o.callback &&
-          email == o.email &&
-          message == o.message &&
-          chat == o.chat &&
-          social_expression == o.social_expression &&
-          video == o.video
+          for_users == o.for_users &&
+          date_ranges == o.date_ranges &&
+          for_queues == o.for_queues &&
+          wrapup_codes == o.wrapup_codes &&
+          time_allowed == o.time_allowed
     end
 
     # @see the `==` method
@@ -275,7 +208,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user_id, call, callback, email, message, chat, social_expression, video].hash
+      [for_users, date_ranges, for_queues, wrapup_codes, time_allowed].hash
     end
 
     # build the object from hash

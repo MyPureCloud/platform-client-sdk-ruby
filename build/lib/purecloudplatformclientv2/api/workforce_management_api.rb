@@ -468,8 +468,9 @@ module PureCloud
     # Get management units
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size  (default to 25)
+    # @option opts [Integer] :page_size 
     # @option opts [Integer] :page_number  (default to 1)
+    # @option opts [String] :expand 
     # @return [ManagementUnitListing]
     def get_workforcemanagement_managementunits(opts = {})
       data, _status_code, _headers = get_workforcemanagement_managementunits_with_http_info(opts)
@@ -481,6 +482,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size 
     # @option opts [Integer] :page_number 
+    # @option opts [String] :expand 
     # @return [Array<(ManagementUnitListing, Fixnum, Hash)>] ManagementUnitListing data, response status code and response headers
     def get_workforcemanagement_managementunits_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -499,6 +501,16 @@ module PureCloud
       
       
       
+      
+      
+      
+      if opts[:'expand'] && !['details'].include?(opts[:'expand'])
+        fail ArgumentError, 'invalid value for "expand", must be one of details'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits".sub('{format}','json')
 
@@ -506,6 +518,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
 
       # header parameters
       header_params = {}

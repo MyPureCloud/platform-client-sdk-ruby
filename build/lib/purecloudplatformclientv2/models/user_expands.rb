@@ -17,42 +17,45 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class UserConversationSummary
-    attr_accessor :user_id
+  class UserExpands
+    # ACD routing status
+    attr_accessor :routing_status
 
-    attr_accessor :call
+    # Active presence
+    attr_accessor :presence
 
-    attr_accessor :callback
+    # Summary of conversion statistics for conversation types.
+    attr_accessor :conversation_summary
 
-    attr_accessor :email
+    # Determine if out of office is enabled
+    attr_accessor :out_of_office
 
-    attr_accessor :message
+    # Current geolocation position
+    attr_accessor :geolocation
 
-    attr_accessor :chat
+    # Effective, default, and last station information
+    attr_accessor :station
 
-    attr_accessor :social_expression
-
-    attr_accessor :video
+    # Roles and permissions assigned to the user
+    attr_accessor :authorization
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'user_id' => :'userId',
+        :'routing_status' => :'routingStatus',
         
-        :'call' => :'call',
+        :'presence' => :'presence',
         
-        :'callback' => :'callback',
+        :'conversation_summary' => :'conversationSummary',
         
-        :'email' => :'email',
+        :'out_of_office' => :'outOfOffice',
         
-        :'message' => :'message',
+        :'geolocation' => :'geolocation',
         
-        :'chat' => :'chat',
+        :'station' => :'station',
         
-        :'social_expression' => :'socialExpression',
-        
-        :'video' => :'video'
+        :'authorization' => :'authorization'
         
       }
     end
@@ -61,21 +64,19 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'user_id' => :'String',
+        :'routing_status' => :'RoutingStatus',
         
-        :'call' => :'MediaSummary',
+        :'presence' => :'UserPresence',
         
-        :'callback' => :'MediaSummary',
+        :'conversation_summary' => :'UserConversationSummary',
         
-        :'email' => :'MediaSummary',
+        :'out_of_office' => :'OutOfOffice',
         
-        :'message' => :'MediaSummary',
+        :'geolocation' => :'Geolocation',
         
-        :'chat' => :'MediaSummary',
+        :'station' => :'UserStations',
         
-        :'social_expression' => :'MediaSummary',
-        
-        :'video' => :'MediaSummary'
+        :'authorization' => :'UserAuthorization'
         
       }
     end
@@ -89,73 +90,64 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'userId')
+      if attributes.has_key?(:'routingStatus')
         
         
-        self.user_id = attributes[:'userId']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'call')
-        
-        
-        self.call = attributes[:'call']
+        self.routing_status = attributes[:'routingStatus']
         
       
       end
 
       
-      if attributes.has_key?(:'callback')
+      if attributes.has_key?(:'presence')
         
         
-        self.callback = attributes[:'callback']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'email')
-        
-        
-        self.email = attributes[:'email']
+        self.presence = attributes[:'presence']
         
       
       end
 
       
-      if attributes.has_key?(:'message')
+      if attributes.has_key?(:'conversationSummary')
         
         
-        self.message = attributes[:'message']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'chat')
-        
-        
-        self.chat = attributes[:'chat']
+        self.conversation_summary = attributes[:'conversationSummary']
         
       
       end
 
       
-      if attributes.has_key?(:'socialExpression')
+      if attributes.has_key?(:'outOfOffice')
         
         
-        self.social_expression = attributes[:'socialExpression']
+        self.out_of_office = attributes[:'outOfOffice']
         
       
       end
 
       
-      if attributes.has_key?(:'video')
+      if attributes.has_key?(:'geolocation')
         
         
-        self.video = attributes[:'video']
+        self.geolocation = attributes[:'geolocation']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'station')
+        
+        
+        self.station = attributes[:'station']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'authorization')
+        
+        
+        self.authorization = attributes[:'authorization']
         
       
       end
@@ -204,17 +196,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -256,14 +239,13 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          user_id == o.user_id &&
-          call == o.call &&
-          callback == o.callback &&
-          email == o.email &&
-          message == o.message &&
-          chat == o.chat &&
-          social_expression == o.social_expression &&
-          video == o.video
+          routing_status == o.routing_status &&
+          presence == o.presence &&
+          conversation_summary == o.conversation_summary &&
+          out_of_office == o.out_of_office &&
+          geolocation == o.geolocation &&
+          station == o.station &&
+          authorization == o.authorization
     end
 
     # @see the `==` method
@@ -275,7 +257,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user_id, call, callback, email, message, chat, social_expression, video].hash
+      [routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization].hash
     end
 
     # build the object from hash

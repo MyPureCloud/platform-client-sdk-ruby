@@ -17,42 +17,50 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class UserConversationSummary
-    attr_accessor :user_id
+  class UserProfileEntityListing
+    attr_accessor :entities
 
-    attr_accessor :call
+    attr_accessor :page_size
 
-    attr_accessor :callback
+    attr_accessor :page_number
 
-    attr_accessor :email
+    attr_accessor :total
 
-    attr_accessor :message
+    attr_accessor :self_uri
 
-    attr_accessor :chat
+    attr_accessor :first_uri
 
-    attr_accessor :social_expression
+    attr_accessor :previous_uri
 
-    attr_accessor :video
+    attr_accessor :next_uri
+
+    attr_accessor :last_uri
+
+    attr_accessor :page_count
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'user_id' => :'userId',
+        :'entities' => :'entities',
         
-        :'call' => :'call',
+        :'page_size' => :'pageSize',
         
-        :'callback' => :'callback',
+        :'page_number' => :'pageNumber',
         
-        :'email' => :'email',
+        :'total' => :'total',
         
-        :'message' => :'message',
+        :'self_uri' => :'selfUri',
         
-        :'chat' => :'chat',
+        :'first_uri' => :'firstUri',
         
-        :'social_expression' => :'socialExpression',
+        :'previous_uri' => :'previousUri',
         
-        :'video' => :'video'
+        :'next_uri' => :'nextUri',
+        
+        :'last_uri' => :'lastUri',
+        
+        :'page_count' => :'pageCount'
         
       }
     end
@@ -61,21 +69,25 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'user_id' => :'String',
+        :'entities' => :'Array<UserProfile>',
         
-        :'call' => :'MediaSummary',
+        :'page_size' => :'Integer',
         
-        :'callback' => :'MediaSummary',
+        :'page_number' => :'Integer',
         
-        :'email' => :'MediaSummary',
+        :'total' => :'Integer',
         
-        :'message' => :'MediaSummary',
+        :'self_uri' => :'String',
         
-        :'chat' => :'MediaSummary',
+        :'first_uri' => :'String',
         
-        :'social_expression' => :'MediaSummary',
+        :'previous_uri' => :'String',
         
-        :'video' => :'MediaSummary'
+        :'next_uri' => :'String',
+        
+        :'last_uri' => :'String',
+        
+        :'page_count' => :'Integer'
         
       }
     end
@@ -89,73 +101,93 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'userId')
+      if attributes.has_key?(:'entities')
         
+        if (value = attributes[:'entities']).is_a?(Array)
+          self.entities = value
+        end
         
-        self.user_id = attributes[:'userId']
         
       
       end
 
       
-      if attributes.has_key?(:'call')
+      if attributes.has_key?(:'pageSize')
         
         
-        self.call = attributes[:'call']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'callback')
-        
-        
-        self.callback = attributes[:'callback']
+        self.page_size = attributes[:'pageSize']
         
       
       end
 
       
-      if attributes.has_key?(:'email')
+      if attributes.has_key?(:'pageNumber')
         
         
-        self.email = attributes[:'email']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'message')
-        
-        
-        self.message = attributes[:'message']
+        self.page_number = attributes[:'pageNumber']
         
       
       end
 
       
-      if attributes.has_key?(:'chat')
+      if attributes.has_key?(:'total')
         
         
-        self.chat = attributes[:'chat']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'socialExpression')
-        
-        
-        self.social_expression = attributes[:'socialExpression']
+        self.total = attributes[:'total']
         
       
       end
 
       
-      if attributes.has_key?(:'video')
+      if attributes.has_key?(:'selfUri')
         
         
-        self.video = attributes[:'video']
+        self.self_uri = attributes[:'selfUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'firstUri')
+        
+        
+        self.first_uri = attributes[:'firstUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'previousUri')
+        
+        
+        self.previous_uri = attributes[:'previousUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'nextUri')
+        
+        
+        self.next_uri = attributes[:'nextUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'lastUri')
+        
+        
+        self.last_uri = attributes[:'lastUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'pageCount')
+        
+        
+        self.page_count = attributes[:'pageCount']
         
       
       end
@@ -208,8 +240,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -256,14 +306,16 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          user_id == o.user_id &&
-          call == o.call &&
-          callback == o.callback &&
-          email == o.email &&
-          message == o.message &&
-          chat == o.chat &&
-          social_expression == o.social_expression &&
-          video == o.video
+          entities == o.entities &&
+          page_size == o.page_size &&
+          page_number == o.page_number &&
+          total == o.total &&
+          self_uri == o.self_uri &&
+          first_uri == o.first_uri &&
+          previous_uri == o.previous_uri &&
+          next_uri == o.next_uri &&
+          last_uri == o.last_uri &&
+          page_count == o.page_count
     end
 
     # @see the `==` method
@@ -275,7 +327,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user_id, call, callback, email, message, chat, social_expression, video].hash
+      [entities, page_size, page_number, total, self_uri, first_uri, previous_uri, next_uri, last_uri, page_count].hash
     end
 
     # build the object from hash

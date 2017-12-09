@@ -43,9 +43,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'organization' => :'Entity',
+        :'organization' => :'NamedEntity',
         
-        :'home_organization' => :'Entity',
+        :'home_organization' => :'NamedEntity',
         
         :'o_auth_client' => :'OrgOAuthClient'
         

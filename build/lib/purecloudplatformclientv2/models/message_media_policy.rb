@@ -17,42 +17,20 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class UserConversationSummary
-    attr_accessor :user_id
+  class MessageMediaPolicy
+    # Actions applied when specified conditions are met
+    attr_accessor :actions
 
-    attr_accessor :call
-
-    attr_accessor :callback
-
-    attr_accessor :email
-
-    attr_accessor :message
-
-    attr_accessor :chat
-
-    attr_accessor :social_expression
-
-    attr_accessor :video
+    # Conditions for when actions should be applied
+    attr_accessor :conditions
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'user_id' => :'userId',
+        :'actions' => :'actions',
         
-        :'call' => :'call',
-        
-        :'callback' => :'callback',
-        
-        :'email' => :'email',
-        
-        :'message' => :'message',
-        
-        :'chat' => :'chat',
-        
-        :'social_expression' => :'socialExpression',
-        
-        :'video' => :'video'
+        :'conditions' => :'conditions'
         
       }
     end
@@ -61,21 +39,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'user_id' => :'String',
+        :'actions' => :'PolicyActions',
         
-        :'call' => :'MediaSummary',
-        
-        :'callback' => :'MediaSummary',
-        
-        :'email' => :'MediaSummary',
-        
-        :'message' => :'MediaSummary',
-        
-        :'chat' => :'MediaSummary',
-        
-        :'social_expression' => :'MediaSummary',
-        
-        :'video' => :'MediaSummary'
+        :'conditions' => :'MessageMediaPolicyConditions'
         
       }
     end
@@ -89,73 +55,19 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'userId')
+      if attributes.has_key?(:'actions')
         
         
-        self.user_id = attributes[:'userId']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'call')
-        
-        
-        self.call = attributes[:'call']
+        self.actions = attributes[:'actions']
         
       
       end
 
       
-      if attributes.has_key?(:'callback')
+      if attributes.has_key?(:'conditions')
         
         
-        self.callback = attributes[:'callback']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'email')
-        
-        
-        self.email = attributes[:'email']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'message')
-        
-        
-        self.message = attributes[:'message']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'chat')
-        
-        
-        self.chat = attributes[:'chat']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'socialExpression')
-        
-        
-        self.social_expression = attributes[:'socialExpression']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'video')
-        
-        
-        self.video = attributes[:'video']
+        self.conditions = attributes[:'conditions']
         
       
       end
@@ -184,62 +96,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -256,14 +114,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          user_id == o.user_id &&
-          call == o.call &&
-          callback == o.callback &&
-          email == o.email &&
-          message == o.message &&
-          chat == o.chat &&
-          social_expression == o.social_expression &&
-          video == o.video
+          actions == o.actions &&
+          conditions == o.conditions
     end
 
     # @see the `==` method
@@ -275,7 +127,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user_id, call, callback, email, message, chat, social_expression, video].hash
+      [actions, conditions].hash
     end
 
     # build the object from hash

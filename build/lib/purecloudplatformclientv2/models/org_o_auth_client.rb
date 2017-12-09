@@ -83,7 +83,7 @@ module PureCloud
         
         :'authorized_grant_type' => :'String',
         
-        :'organization' => :'Entity'
+        :'organization' => :'NamedEntity'
         
       }
     end

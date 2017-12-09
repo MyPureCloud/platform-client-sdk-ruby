@@ -17,42 +17,44 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class UserConversationSummary
-    attr_accessor :user_id
+  class UserProfile
+    # The globally unique identifier for the object.
+    attr_accessor :id
 
-    attr_accessor :call
+    attr_accessor :name
 
-    attr_accessor :callback
+    # The state of the user resource
+    attr_accessor :state
 
-    attr_accessor :email
+    # Datetime of the last modification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :date_modified
 
-    attr_accessor :message
+    # The version of the group resource
+    attr_accessor :version
 
-    attr_accessor :chat
+    # User information expansions
+    attr_accessor :expands
 
-    attr_accessor :social_expression
-
-    attr_accessor :video
+    # The URI for this object
+    attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'user_id' => :'userId',
+        :'id' => :'id',
         
-        :'call' => :'call',
+        :'name' => :'name',
         
-        :'callback' => :'callback',
+        :'state' => :'state',
         
-        :'email' => :'email',
+        :'date_modified' => :'dateModified',
         
-        :'message' => :'message',
+        :'version' => :'version',
         
-        :'chat' => :'chat',
+        :'expands' => :'expands',
         
-        :'social_expression' => :'socialExpression',
-        
-        :'video' => :'video'
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -61,21 +63,19 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'user_id' => :'String',
+        :'id' => :'String',
         
-        :'call' => :'MediaSummary',
+        :'name' => :'String',
         
-        :'callback' => :'MediaSummary',
+        :'state' => :'String',
         
-        :'email' => :'MediaSummary',
+        :'date_modified' => :'DateTime',
         
-        :'message' => :'MediaSummary',
+        :'version' => :'Integer',
         
-        :'chat' => :'MediaSummary',
+        :'expands' => :'UserExpands',
         
-        :'social_expression' => :'MediaSummary',
-        
-        :'video' => :'MediaSummary'
+        :'self_uri' => :'String'
         
       }
     end
@@ -89,73 +89,64 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'userId')
+      if attributes.has_key?(:'id')
         
         
-        self.user_id = attributes[:'userId']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'call')
-        
-        
-        self.call = attributes[:'call']
+        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes.has_key?(:'callback')
+      if attributes.has_key?(:'name')
         
         
-        self.callback = attributes[:'callback']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'email')
-        
-        
-        self.email = attributes[:'email']
+        self.name = attributes[:'name']
         
       
       end
 
       
-      if attributes.has_key?(:'message')
+      if attributes.has_key?(:'state')
         
         
-        self.message = attributes[:'message']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'chat')
-        
-        
-        self.chat = attributes[:'chat']
+        self.state = attributes[:'state']
         
       
       end
 
       
-      if attributes.has_key?(:'socialExpression')
+      if attributes.has_key?(:'dateModified')
         
         
-        self.social_expression = attributes[:'socialExpression']
+        self.date_modified = attributes[:'dateModified']
         
       
       end
 
       
-      if attributes.has_key?(:'video')
+      if attributes.has_key?(:'version')
         
         
-        self.video = attributes[:'video']
+        self.version = attributes[:'version']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'expands')
+        
+        
+        self.expands = attributes[:'expands']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -186,6 +177,10 @@ module PureCloud
       
       
       
+      allowed_values = ["active", "inactive", "deleted"]
+      if @state && !allowed_values.include?(@state)
+        return false
+      end
       
       
       
@@ -194,8 +189,10 @@ module PureCloud
       
       
       
-      
-      
+      if @version.nil?
+        return false
+      end
+
       
       
       
@@ -222,12 +219,16 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
-    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] state Object to be assigned
+    def state=(state)
+      allowed_values = ["active", "inactive", "deleted"]
+      if state && !allowed_values.include?(state)
+        fail ArgumentError, "invalid value for 'state', must be one of #{allowed_values}."
+      end
+      @state = state
+    end
+
     
     
     
@@ -256,14 +257,13 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          user_id == o.user_id &&
-          call == o.call &&
-          callback == o.callback &&
-          email == o.email &&
-          message == o.message &&
-          chat == o.chat &&
-          social_expression == o.social_expression &&
-          video == o.video
+          id == o.id &&
+          name == o.name &&
+          state == o.state &&
+          date_modified == o.date_modified &&
+          version == o.version &&
+          expands == o.expands &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -275,7 +275,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user_id, call, callback, email, message, chat, social_expression, video].hash
+      [id, name, state, date_modified, version, expands, self_uri].hash
     end
 
     # build the object from hash

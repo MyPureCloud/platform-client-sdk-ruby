@@ -21,15 +21,11 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
-    attr_accessor :name
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
-        
-        :'name' => :'name'
+        :'id' => :'id'
         
       }
     end
@@ -38,9 +34,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
-        
-        :'name' => :'String'
+        :'id' => :'String'
         
       }
     end
@@ -58,15 +52,6 @@ module PureCloud
         
         
         self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
         
       
       end
@@ -91,17 +76,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -113,8 +89,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name
+          id == o.id
     end
 
     # @see the `==` method
@@ -126,7 +101,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name].hash
+      [id].hash
     end
 
     # build the object from hash

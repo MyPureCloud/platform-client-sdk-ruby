@@ -14,6 +14,7 @@ Method | Description
 [**delete_user_station_associatedstation**](UsersApi.html#delete_user_station_associatedstation) | Clear associated station
 [**delete_user_station_defaultstation**](UsersApi.html#delete_user_station_defaultstation) | Clear default station
 [**get_fieldconfig**](UsersApi.html#get_fieldconfig) | Fetch field config for an entity type
+[**get_profiles_users**](UsersApi.html#get_profiles_users) | Get a user profile listing
 [**get_user**](UsersApi.html#get_user) | Get user.
 [**get_user_adjacents**](UsersApi.html#get_user_adjacents) | Get adjacents
 [**get_user_callforwarding**](UsersApi.html#get_user_callforwarding) | Get a user&#39;s CallForwarding
@@ -21,6 +22,7 @@ Method | Description
 [**get_user_favorites**](UsersApi.html#get_user_favorites) | Get favorites
 [**get_user_geolocation**](UsersApi.html#get_user_geolocation) | Get a user&#39;s Geolocation
 [**get_user_outofoffice**](UsersApi.html#get_user_outofoffice) | Get a OutOfOffice
+[**get_user_profile**](UsersApi.html#get_user_profile) | Get user profile
 [**get_user_profileskills**](UsersApi.html#get_user_profileskills) | List profile skills for a user
 [**get_user_queues**](UsersApi.html#get_user_queues) | Get queues for user
 [**get_user_roles**](UsersApi.html#get_user_roles) | Returns a listing of roles and permissions for a user.
@@ -398,6 +400,78 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FieldConfig**](FieldConfig.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_profiles_users"></a>
+
+## -[**UserProfileEntityListing**](UserProfileEntityListing.html) get_profiles_users(opts)
+
+Get a user profile listing
+
+
+
+Wraps GET /api/v2/profiles/users 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  id: ["id_example"], # Array<String> | id
+  jid: ["jid_example"], # Array<String> | jid
+  sort_order: "ASC", # String | Ascending or descending sort order
+  expand: ["expand_example"], # Array<String> | Which fields, if any, to expand
+  state: "active" # String | Only list users of this state
+}
+
+begin
+  #Get a user profile listing
+  result = api_instance.get_profiles_users(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->get_profiles_users: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
+ **jid** | [**Array&lt;String&gt;**](String.html)| jid | [optional]  |
+ **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization |
+ **state** | **String**| Only list users of this state | [optional] [default to active]<br />**Values**: active, deleted |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserProfileEntityListing**](UserProfileEntityListing.html)
 
 ### HTTP request headers
 
@@ -838,6 +912,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OutOfOffice**](OutOfOffice.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_user_profile"></a>
+
+## -[**UserProfile**](UserProfile.html) get_user_profile(user_id, opts)
+
+Get user profile
+
+
+
+Wraps GET /api/v2/users/{userId}/profile 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+user_id = "user_id_example" # String | userId
+
+opts = { 
+  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand
+}
+
+begin
+  #Get user profile
+  result = api_instance.get_user_profile(user_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->get_user_profile: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| userId |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserProfile**](UserProfile.html)
 
 ### HTTP request headers
 
