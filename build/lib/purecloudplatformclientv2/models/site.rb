@@ -71,6 +71,9 @@ module PureCloud
 
     attr_accessor :managed
 
+    # Network Time Protocol settings for the site
+    attr_accessor :ntp_settings
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -117,6 +120,8 @@ module PureCloud
         :'location' => :'location',
         
         :'managed' => :'managed',
+        
+        :'ntp_settings' => :'ntpSettings',
         
         :'self_uri' => :'selfUri'
         
@@ -166,6 +171,8 @@ module PureCloud
         :'location' => :'LocationDefinition',
         
         :'managed' => :'BOOLEAN',
+        
+        :'ntp_settings' => :'NTPSettings',
         
         :'self_uri' => :'String'
         
@@ -373,6 +380,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'ntpSettings')
+        
+        
+        self.ntp_settings = attributes[:'ntpSettings']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -484,6 +500,10 @@ module PureCloud
         return false
       end
 
+      
+      
+      
+      
       
       
       
@@ -613,6 +633,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -638,6 +663,7 @@ module PureCloud
           edge_auto_update_config == o.edge_auto_update_config &&
           location == o.location &&
           managed == o.managed &&
+          ntp_settings == o.ntp_settings &&
           self_uri == o.self_uri
     end
 
@@ -650,7 +676,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, primary_sites, secondary_sites, primary_edges, secondary_edges, addresses, edges, edge_auto_update_config, location, managed, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, primary_sites, secondary_sites, primary_edges, secondary_edges, addresses, edges, edge_auto_update_config, location, managed, ntp_settings, self_uri].hash
     end
 
     # build the object from hash

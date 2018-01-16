@@ -22,6 +22,8 @@ module PureCloud
 
     attr_accessor :active
 
+    attr_accessor :indefinite
+
     attr_accessor :start_date
 
     attr_accessor :end_date
@@ -33,6 +35,8 @@ module PureCloud
         :'user' => :'user',
         
         :'active' => :'active',
+        
+        :'indefinite' => :'indefinite',
         
         :'start_date' => :'startDate',
         
@@ -48,6 +52,8 @@ module PureCloud
         :'user' => :'DocumentDataV2NotificationWorkspace',
         
         :'active' => :'BOOLEAN',
+        
+        :'indefinite' => :'BOOLEAN',
         
         :'start_date' => :'DateTime',
         
@@ -78,6 +84,15 @@ module PureCloud
         
         
         self.active = attributes[:'active']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'indefinite')
+        
+        
+        self.indefinite = attributes[:'indefinite']
         
       
       end
@@ -132,8 +147,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -162,6 +186,7 @@ module PureCloud
       self.class == o.class &&
           user == o.user &&
           active == o.active &&
+          indefinite == o.indefinite &&
           start_date == o.start_date &&
           end_date == o.end_date
     end
@@ -175,7 +200,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user, active, start_date, end_date].hash
+      [user, active, indefinite, start_date, end_date].hash
     end
 
     # build the object from hash

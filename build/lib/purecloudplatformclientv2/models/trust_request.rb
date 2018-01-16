@@ -33,6 +33,9 @@ module PureCloud
     # The list of trustee users that are requesting access.
     attr_accessor :users
 
+    # The list of trustee groups that are requesting access.
+    attr_accessor :groups
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -49,6 +52,8 @@ module PureCloud
         :'trustee' => :'trustee',
         
         :'users' => :'users',
+        
+        :'groups' => :'groups',
         
         :'self_uri' => :'selfUri'
         
@@ -68,6 +73,8 @@ module PureCloud
         :'trustee' => :'Organization',
         
         :'users' => :'Array<OrgUser>',
+        
+        :'groups' => :'Array<TrustGroup>',
         
         :'self_uri' => :'String'
         
@@ -130,6 +137,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'groups')
+        
+        if (value = attributes[:'groups']).is_a?(Array)
+          self.groups = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -176,10 +194,9 @@ module PureCloud
       
       
       
-      if @users.nil?
-        return false
-      end
-
+      
+      
+      
       
       
       
@@ -190,6 +207,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -231,6 +253,7 @@ module PureCloud
           date_created == o.date_created &&
           trustee == o.trustee &&
           users == o.users &&
+          groups == o.groups &&
           self_uri == o.self_uri
     end
 
@@ -243,7 +266,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, created_by, date_created, trustee, users, self_uri].hash
+      [id, created_by, date_created, trustee, users, groups, self_uri].hash
     end
 
     # build the object from hash

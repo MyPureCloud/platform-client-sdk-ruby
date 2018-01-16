@@ -21,16 +21,11 @@ module PureCloud
     # A list of CallTargets to be called when the CallRoute is executed
     attr_accessor :targets
 
-    # The amount of time until the call times out
-    attr_accessor :timeout_milliseconds
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'targets' => :'targets',
-        
-        :'timeout_milliseconds' => :'timeoutMilliseconds'
+        :'targets' => :'targets'
         
       }
     end
@@ -39,9 +34,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'targets' => :'Array<CallTarget>',
-        
-        :'timeout_milliseconds' => :'Integer'
+        :'targets' => :'Array<CallTarget>'
         
       }
     end
@@ -66,15 +59,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'timeoutMilliseconds')
-        
-        
-        self.timeout_milliseconds = attributes[:'timeoutMilliseconds']
-        
-      
-      end
-
-      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -94,17 +78,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -116,8 +91,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          targets == o.targets &&
-          timeout_milliseconds == o.timeout_milliseconds
+          targets == o.targets
     end
 
     # @see the `==` method
@@ -129,7 +103,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [targets, timeout_milliseconds].hash
+      [targets].hash
     end
 
     # build the object from hash

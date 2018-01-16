@@ -18,14 +18,19 @@ require 'date'
 
 module PureCloud
   class TrustRequestCreate
-    # The list of trustee users that are requesting access.
+    # The list of trustee users that are requesting access. If no users are specified, at least one group is required.
     attr_accessor :user_ids
+
+    # The list of trustee groups that are requesting access. If no groups are specified, at least one user is required.
+    attr_accessor :group_ids
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'user_ids' => :'userIds'
+        :'user_ids' => :'userIds',
+        
+        :'group_ids' => :'groupIds'
         
       }
     end
@@ -34,7 +39,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'user_ids' => :'Array<String>'
+        :'user_ids' => :'Array<String>',
+        
+        :'group_ids' => :'Array<String>'
         
       }
     end
@@ -59,6 +66,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'groupIds')
+        
+        if (value = attributes[:'groupIds']).is_a?(Array)
+          self.group_ids = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -75,16 +93,20 @@ module PureCloud
     def valid?
       
       
-      if @user_ids.nil?
-        return false
-      end
-
+      
+      
+      
       
       
       
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -96,7 +118,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          user_ids == o.user_ids
+          user_ids == o.user_ids &&
+          group_ids == o.group_ids
     end
 
     # @see the `==` method
@@ -108,7 +131,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user_ids].hash
+      [user_ids, group_ids].hash
     end
 
     # build the object from hash

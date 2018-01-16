@@ -1038,7 +1038,7 @@ api_instance = PureCloud::OrganizationAuthorizationApi.new
 
 trustee_org_id = "trustee_org_id_example" # String | Trustee Organization Id
 
-body = PureCloud::TrustUserCreate.new # TrustUserCreate | Trust
+body = PureCloud::TrustMemberCreate.new # TrustMemberCreate | Trust
 
 
 begin
@@ -1055,7 +1055,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **trustee_org_id** | **String**| Trustee Organization Id |  |
- **body** | [**TrustUserCreate**](TrustUserCreate.html)| Trust |  |
+ **body** | [**TrustMemberCreate**](TrustMemberCreate.html)| Trust |  |
 {: class="table table-striped"}
 
 

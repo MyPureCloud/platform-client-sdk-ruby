@@ -71,6 +71,7 @@ Method | Description
 [**post_outbound_campaigns**](OutboundApi.html#post_outbound_campaigns) | Create a campaign.
 [**post_outbound_campaigns_progress**](OutboundApi.html#post_outbound_campaigns_progress) | Get progress for a list of campaigns
 [**post_outbound_contactlist_contacts**](OutboundApi.html#post_outbound_contactlist_contacts) | Add contacts to a contact list.
+[**post_outbound_contactlist_contacts_bulk**](OutboundApi.html#post_outbound_contactlist_contacts_bulk) | Get contacts from a contact list.
 [**post_outbound_contactlist_export**](OutboundApi.html#post_outbound_contactlist_export) | Initiate the export of a contact list.
 [**post_outbound_contactlistfilters**](OutboundApi.html#post_outbound_contactlistfilters) | Create Contact List Filter
 [**post_outbound_contactlistfilters_preview**](OutboundApi.html#post_outbound_contactlistfilters_preview) | Get a preview of the output of a contact list filter
@@ -3957,6 +3958,68 @@ Name | Type | Description  | Notes
  **body** | [**Array&lt;DialerContact&gt;**](DialerContact.html)| Contact |  |
  **priority** | **BOOLEAN**| Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. | [optional]  |
  **clear_system_data** | **BOOLEAN**| Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;DialerContact&gt;**](DialerContact.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_outbound_contactlist_contacts_bulk"></a>
+
+## -[**Array&lt;DialerContact&gt;**](DialerContact.html) post_outbound_contactlist_contacts_bulk(contact_list_id, body)
+
+Get contacts from a contact list.
+
+
+
+Wraps POST /api/v2/outbound/contactlists/{contactListId}/contacts/bulk 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+contact_list_id = "contact_list_id_example" # String | Contact List ID
+
+body = [PureCloud::Array<String>.new] # Array<String> | ContactIds to get.
+
+
+begin
+  #Get contacts from a contact list.
+  result = api_instance.post_outbound_contactlist_contacts_bulk(contact_list_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->post_outbound_contactlist_contacts_bulk: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contact_list_id** | **String**| Contact List ID |  |
+ **body** | **Array&lt;String&gt;**| ContactIds to get. |  |
 {: class="table table-striped"}
 
 

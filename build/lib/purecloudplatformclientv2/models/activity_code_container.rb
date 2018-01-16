@@ -22,11 +22,16 @@ module PureCloud
     # Map of activity code id to activity code
     attr_accessor :activity_codes
 
+    # Version metadata for the associated management unit's list of activity codes
+    attr_accessor :metadata
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'activity_codes' => :'activityCodes'
+        :'activity_codes' => :'activityCodes',
+        
+        :'metadata' => :'metadata'
         
       }
     end
@@ -35,7 +40,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'activity_codes' => :'Hash<String, ActivityCode>'
+        :'activity_codes' => :'Hash<String, ActivityCode>',
+        
+        :'metadata' => :'WfmVersionedEntityMetadata'
         
       }
     end
@@ -60,6 +67,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'metadata')
+        
+        
+        self.metadata = attributes[:'metadata']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -79,8 +95,22 @@ module PureCloud
       
       
       
+      
+      if @metadata.nil?
+        return false
+      end
+
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -92,7 +122,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          activity_codes == o.activity_codes
+          activity_codes == o.activity_codes &&
+          metadata == o.metadata
     end
 
     # @see the `==` method
@@ -104,7 +135,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [activity_codes].hash
+      [activity_codes, metadata].hash
     end
 
     # build the object from hash

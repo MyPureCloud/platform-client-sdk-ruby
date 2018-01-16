@@ -433,6 +433,7 @@ module PureCloud
     # @option opts [Array<Object>] :permission 
     # @option opts [Array<Object>] :default_role_id 
     # @option opts [BOOLEAN] :user_count  (default to true)
+    # @option opts [Array<String>] :id id
     # @return [OrganizationRoleEntityListing]
     def get_authorization_roles(opts = {})
       data, _status_code, _headers = get_authorization_roles_with_http_info(opts)
@@ -452,11 +453,18 @@ module PureCloud
     # @option opts [Array<Object>] :permission 
     # @option opts [Array<Object>] :default_role_id 
     # @option opts [BOOLEAN] :user_count 
+    # @option opts [Array<String>] :id id
     # @return [Array<(OrganizationRoleEntityListing, Fixnum, Hash)>] OrganizationRoleEntityListing data, response status code and response headers
     def get_authorization_roles_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_roles ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -533,6 +541,7 @@ module PureCloud
       query_params[:'permission'] = @api_client.build_collection_param(opts[:'permission'], :multi) if opts[:'permission']
       query_params[:'defaultRoleId'] = @api_client.build_collection_param(opts[:'default_role_id'], :multi) if opts[:'default_role_id']
       query_params[:'userCount'] = opts[:'user_count'] if opts[:'user_count']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
 
       # header parameters
       header_params = {}

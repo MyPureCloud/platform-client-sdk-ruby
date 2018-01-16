@@ -417,7 +417,8 @@ opts = {
   name: "name_example", # String | 
   permission: nil, # Array<Object> | 
   default_role_id: nil, # Array<Object> | 
-  user_count: true # BOOLEAN | 
+  user_count: true, # BOOLEAN | 
+  id: ["id_example"] # Array<String> | id
 }
 
 begin
@@ -443,6 +444,7 @@ Name | Type | Description  | Notes
  **permission** | [**Array&lt;Object&gt;**](Object.html)|  | [optional]  |
  **default_role_id** | [**Array&lt;Object&gt;**](Object.html)|  | [optional]  |
  **user_count** | **BOOLEAN**|  | [optional] [default to true] |
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
 {: class="table table-striped"}
 
 

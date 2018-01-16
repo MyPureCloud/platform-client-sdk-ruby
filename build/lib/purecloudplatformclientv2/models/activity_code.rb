@@ -19,16 +19,19 @@ require 'date'
 module PureCloud
   # Activity code data
   class ActivityCode
-    # The activity code's name
+    # The globally unique identifier for the object.
+    attr_accessor :id
+
+    # The name of the activity code. Default activity codes will be created with an empty name
     attr_accessor :name
 
-    # Whether this activity code is active or only used for historical schedules
+    # Whether this activity code is active or has been deleted
     attr_accessor :is_active
 
     # Whether this is a default activity code
     attr_accessor :is_default
 
-    # The activity code's category
+    # The activity code's category.
     attr_accessor :category
 
     # The default length of the activity in minutes
@@ -37,15 +40,23 @@ module PureCloud
     # Whether an agent is paid while performing this activity
     attr_accessor :counts_as_paid_time
 
-    # Indicates whether or not the activity should be counted as work time
+    # Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints
     attr_accessor :counts_as_work_time
 
-    # Whether an agent can select this activity code when creating or editing a time off request
-    attr_accessor :is_agent_time_off_selectable
+    # Whether an agent can select this activity code when creating or editing a time off request. Null if the activity's category is not time off.
+    attr_accessor :agent_time_off_selectable
+
+    # Version metadata for the associated management unit's list of activity codes
+    attr_accessor :metadata
+
+    # The URI for this object
+    attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
+        :'id' => :'id',
         
         :'name' => :'name',
         
@@ -61,7 +72,11 @@ module PureCloud
         
         :'counts_as_work_time' => :'countsAsWorkTime',
         
-        :'is_agent_time_off_selectable' => :'isAgentTimeOffSelectable'
+        :'agent_time_off_selectable' => :'agentTimeOffSelectable',
+        
+        :'metadata' => :'metadata',
+        
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -69,6 +84,8 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        
+        :'id' => :'String',
         
         :'name' => :'String',
         
@@ -84,7 +101,11 @@ module PureCloud
         
         :'counts_as_work_time' => :'BOOLEAN',
         
-        :'is_agent_time_off_selectable' => :'BOOLEAN'
+        :'agent_time_off_selectable' => :'BOOLEAN',
+        
+        :'metadata' => :'WfmVersionedEntityMetadata',
+        
+        :'self_uri' => :'String'
         
       }
     end
@@ -96,6 +117,15 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes.has_key?(:'id')
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
 
       
       if attributes.has_key?(:'name')
@@ -161,10 +191,28 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'isAgentTimeOffSelectable')
+      if attributes.has_key?(:'agentTimeOffSelectable')
         
         
-        self.is_agent_time_off_selectable = attributes[:'isAgentTimeOffSelectable']
+        self.agent_time_off_selectable = attributes[:'agentTimeOffSelectable']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'metadata')
+        
+        
+        self.metadata = attributes[:'metadata']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -184,6 +232,10 @@ module PureCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
       
       
       
@@ -222,8 +274,26 @@ module PureCloud
       
       
       
+      
+      if @metadata.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -274,11 +344,22 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id == o.id &&
           name == o.name &&
           is_active == o.is_active &&
           is_default == o.is_default &&
@@ -286,7 +367,9 @@ module PureCloud
           length_in_minutes == o.length_in_minutes &&
           counts_as_paid_time == o.counts_as_paid_time &&
           counts_as_work_time == o.counts_as_work_time &&
-          is_agent_time_off_selectable == o.is_agent_time_off_selectable
+          agent_time_off_selectable == o.agent_time_off_selectable &&
+          metadata == o.metadata &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -298,7 +381,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, is_active, is_default, category, length_in_minutes, counts_as_paid_time, counts_as_work_time, is_agent_time_off_selectable].hash
+      [id, name, is_active, is_default, category, length_in_minutes, counts_as_paid_time, counts_as_work_time, agent_time_off_selectable, metadata, self_uri].hash
     end
 
     # build the object from hash

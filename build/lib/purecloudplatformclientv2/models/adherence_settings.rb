@@ -70,7 +70,7 @@ module PureCloud
         
         :'track_on_queue_activity' => :'BOOLEAN',
         
-        :'ignored_activity_categories' => :'Array<String>'
+        :'ignored_activity_categories' => :'IgnoredActivityCategories'
         
       }
     end
@@ -131,10 +131,8 @@ module PureCloud
       
       if attributes.has_key?(:'ignoredActivityCategories')
         
-        if (value = attributes[:'ignoredActivityCategories']).is_a?(Array)
-          self.ignored_activity_categories = value
-        end
         
+        self.ignored_activity_categories = attributes[:'ignoredActivityCategories']
         
       
       end

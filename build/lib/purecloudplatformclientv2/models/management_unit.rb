@@ -33,14 +33,17 @@ module PureCloud
     # The configuration settings for this management unit
     attr_accessor :settings
 
-    # The version of the underlying entity
+    # The version of the underlying entity.  Deprecated, use metadata field instead
     attr_accessor :version
 
-    # The date and time at which this entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The date and time at which this entity was last modified.  Deprecated, use metadata field instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_modified
 
-    # The user who last modified this entity
+    # The user who last modified this entity.  Deprecated, use metadata field instead
     attr_accessor :modified_by
+
+    # Version info metadata for this management unit
+    attr_accessor :metadata
 
     # The URI for this object
     attr_accessor :self_uri
@@ -65,6 +68,8 @@ module PureCloud
         
         :'modified_by' => :'modifiedBy',
         
+        :'metadata' => :'metadata',
+        
         :'self_uri' => :'selfUri'
         
       }
@@ -88,7 +93,9 @@ module PureCloud
         
         :'date_modified' => :'DateTime',
         
-        :'modified_by' => :'User',
+        :'modified_by' => :'UserReference',
+        
+        :'metadata' => :'WfmVersionedEntityMetadata',
         
         :'self_uri' => :'String'
         
@@ -176,6 +183,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'metadata')
+        
+        
+        self.metadata = attributes[:'metadata']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -243,6 +259,15 @@ module PureCloud
       
       
       
+      if @metadata.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       
       
       
@@ -303,6 +328,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -316,6 +346,7 @@ module PureCloud
           version == o.version &&
           date_modified == o.date_modified &&
           modified_by == o.modified_by &&
+          metadata == o.metadata &&
           self_uri == o.self_uri
     end
 
@@ -328,7 +359,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, start_day_of_week, time_zone, settings, version, date_modified, modified_by, self_uri].hash
+      [id, name, start_day_of_week, time_zone, settings, version, date_modified, modified_by, metadata, self_uri].hash
     end
 
     # build the object from hash

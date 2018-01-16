@@ -2170,7 +2170,7 @@ api_instance = PureCloud::RoutingApi.new
 
 queue_id = "queue_id_example" # String | Queue ID
 
-body = [PureCloud::Entity.new] # Array<Entity> | List of wrapup codes
+body = [PureCloud::WrapUpCodeReference.new] # Array<WrapUpCodeReference> | List of wrapup codes
 
 
 begin
@@ -2187,7 +2187,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **queue_id** | **String**| Queue ID |  |
- **body** | [**Array&lt;Entity&gt;**](Entity.html)| List of wrapup codes |  |
+ **body** | [**Array&lt;WrapUpCodeReference&gt;**](WrapUpCodeReference.html)| List of wrapup codes |  |
 {: class="table table-striped"}
 
 

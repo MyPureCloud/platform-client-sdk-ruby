@@ -43,6 +43,9 @@ module PureCloud
     # Represents an email transcript
     attr_accessor :email_transcript
 
+    # Represents a messaging transcript
+    attr_accessor :messaging_transcript
+
     # Represents the current file state for a recording. Examples: Uploading, Archived, etc
     attr_accessor :file_state
 
@@ -104,6 +107,8 @@ module PureCloud
         
         :'email_transcript' => :'emailTranscript',
         
+        :'messaging_transcript' => :'messagingTranscript',
+        
         :'file_state' => :'fileState',
         
         :'restore_expiration_time' => :'restoreExpirationTime',
@@ -156,6 +161,8 @@ module PureCloud
         :'transcript' => :'Array<ChatMessage>',
         
         :'email_transcript' => :'Array<RecordingEmailMessage>',
+        
+        :'messaging_transcript' => :'Array<RecordingMessagingMessage>',
         
         :'file_state' => :'String',
         
@@ -284,6 +291,17 @@ module PureCloud
         
         if (value = attributes[:'emailTranscript']).is_a?(Array)
           self.email_transcript = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'messagingTranscript')
+        
+        if (value = attributes[:'messagingTranscript']).is_a?(Array)
+          self.messaging_transcript = value
         end
         
         
@@ -469,6 +487,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["ARCHIVED", "AVAILABLE", "DELETED", "RESTORED", "RESTORING", "UPLOADING", "ERROR"]
       if @file_state && !allowed_values.include?(@file_state)
         return false
@@ -531,6 +553,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -680,6 +707,7 @@ module PureCloud
           annotations == o.annotations &&
           transcript == o.transcript &&
           email_transcript == o.email_transcript &&
+          messaging_transcript == o.messaging_transcript &&
           file_state == o.file_state &&
           restore_expiration_time == o.restore_expiration_time &&
           media_uris == o.media_uris &&
@@ -704,7 +732,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, conversation_id, path, start_time, end_time, media, annotations, transcript, email_transcript, file_state, restore_expiration_time, media_uris, estimated_transcode_time_ms, actual_transcode_time_ms, archive_date, archive_medium, delete_date, max_allowed_restorations_for_org, remaining_restorations_allowed_for_org, session_id, users, self_uri].hash
+      [id, name, conversation_id, path, start_time, end_time, media, annotations, transcript, email_transcript, messaging_transcript, file_state, restore_expiration_time, media_uris, estimated_transcode_time_ms, actual_transcode_time_ms, archive_date, archive_medium, delete_date, max_allowed_restorations_for_org, remaining_restorations_allowed_for_org, session_id, users, self_uri].hash
     end
 
     # build the object from hash

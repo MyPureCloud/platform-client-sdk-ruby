@@ -1087,6 +1087,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @return [BatchDownloadJobStatusResult]
+    def get_recording_batchrequest(job_id, opts = {})
+      data, _status_code, _headers = get_recording_batchrequest_with_http_info(job_id, opts)
+      return data
+    end
+
+    # Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(BatchDownloadJobStatusResult, Fixnum, Hash)>] BatchDownloadJobStatusResult data, response status code and response headers
+    def get_recording_batchrequest_with_http_info(job_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RecordingApi.get_recording_batchrequest ..."
+      end
+      
+      
+      # verify the required parameter 'job_id' is set
+      fail ArgumentError, "Missing the required parameter 'job_id' when calling RecordingApi.get_recording_batchrequest" if job_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/recording/batchrequests/{jobId}".sub('{format}','json').sub('{' + 'jobId' + '}', job_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'BatchDownloadJobStatusResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RecordingApi#get_recording_batchrequest\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get the local encryption settings
     # 
     # @param settings_id Settings Id
@@ -1910,6 +1975,71 @@ module PureCloud
         :return_type => 'Annotation')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RecordingApi#post_conversation_recording_annotations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Submit a batch download request
+    # 
+    # @param body Job submission criteria
+    # @param [Hash] opts the optional parameters
+    # @return [BatchDownloadJobSubmissionResult]
+    def post_recording_batchrequests(body, opts = {})
+      data, _status_code, _headers = post_recording_batchrequests_with_http_info(body, opts)
+      return data
+    end
+
+    # Submit a batch download request
+    # 
+    # @param body Job submission criteria
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(BatchDownloadJobSubmissionResult, Fixnum, Hash)>] BatchDownloadJobSubmissionResult data, response status code and response headers
+    def post_recording_batchrequests_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RecordingApi.post_recording_batchrequests ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.post_recording_batchrequests" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/recording/batchrequests".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'BatchDownloadJobSubmissionResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RecordingApi#post_recording_batchrequests\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

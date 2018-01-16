@@ -17,12 +17,29 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class TrustUserCreate
-    # Trustee User Id
+  class BatchDownloadJobResult
+    # The globally unique identifier for the object.
     attr_accessor :id
 
-    # The list of trustor organization roles granting this user access.
-    attr_accessor :role_ids
+    attr_accessor :name
+
+    # Conversation id of the result
+    attr_accessor :conversation_id
+
+    # Recording id of the result
+    attr_accessor :recording_id
+
+    # URL of results... HTTP GET from this location to download results for this item
+    attr_accessor :result_url
+
+    # Content type of this result
+    attr_accessor :content_type
+
+    # An error message, in case of failed processing will indicate the cause of the failure
+    attr_accessor :error_msg
+
+    # The URI for this object
+    attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -30,7 +47,19 @@ module PureCloud
         
         :'id' => :'id',
         
-        :'role_ids' => :'roleIds'
+        :'name' => :'name',
+        
+        :'conversation_id' => :'conversationId',
+        
+        :'recording_id' => :'recordingId',
+        
+        :'result_url' => :'resultUrl',
+        
+        :'content_type' => :'contentType',
+        
+        :'error_msg' => :'errorMsg',
+        
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -41,7 +70,19 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'role_ids' => :'Array<String>'
+        :'name' => :'String',
+        
+        :'conversation_id' => :'String',
+        
+        :'recording_id' => :'String',
+        
+        :'result_url' => :'String',
+        
+        :'content_type' => :'String',
+        
+        :'error_msg' => :'String',
+        
+        :'self_uri' => :'String'
         
       }
     end
@@ -64,12 +105,64 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'roleIds')
+      if attributes.has_key?(:'name')
         
-        if (value = attributes[:'roleIds']).is_a?(Array)
-          self.role_ids = value
-        end
         
+        self.name = attributes[:'name']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'conversationId')
+        
+        
+        self.conversation_id = attributes[:'conversationId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'recordingId')
+        
+        
+        self.recording_id = attributes[:'recordingId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'resultUrl')
+        
+        
+        self.result_url = attributes[:'resultUrl']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'contentType')
+        
+        
+        self.content_type = attributes[:'contentType']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'errorMsg')
+        
+        
+        self.error_msg = attributes[:'errorMsg']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -91,25 +184,69 @@ module PureCloud
     def valid?
       
       
-      if @id.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @role_ids.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -127,7 +264,13 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          role_ids == o.role_ids
+          name == o.name &&
+          conversation_id == o.conversation_id &&
+          recording_id == o.recording_id &&
+          result_url == o.result_url &&
+          content_type == o.content_type &&
+          error_msg == o.error_msg &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -139,7 +282,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, role_ids].hash
+      [id, name, conversation_id, recording_id, result_url, content_type, error_msg, self_uri].hash
     end
 
     # build the object from hash

@@ -25,13 +25,18 @@ module PureCloud
     # Default shrinkage percent for scheduling
     attr_accessor :default_shrinkage_percent
 
+    # Shrinkage overrides for scheduling
+    attr_accessor :shrinkage_overrides
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'max_occupancy_percent_for_deferred_work' => :'maxOccupancyPercentForDeferredWork',
         
-        :'default_shrinkage_percent' => :'defaultShrinkagePercent'
+        :'default_shrinkage_percent' => :'defaultShrinkagePercent',
+        
+        :'shrinkage_overrides' => :'shrinkageOverrides'
         
       }
     end
@@ -42,7 +47,9 @@ module PureCloud
         
         :'max_occupancy_percent_for_deferred_work' => :'Integer',
         
-        :'default_shrinkage_percent' => :'Float'
+        :'default_shrinkage_percent' => :'Float',
+        
+        :'shrinkage_overrides' => :'ShrinkageOverrides'
         
       }
     end
@@ -74,6 +81,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'shrinkageOverrides')
+        
+        
+        self.shrinkage_overrides = attributes[:'shrinkageOverrides']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -97,8 +113,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -116,7 +141,8 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           max_occupancy_percent_for_deferred_work == o.max_occupancy_percent_for_deferred_work &&
-          default_shrinkage_percent == o.default_shrinkage_percent
+          default_shrinkage_percent == o.default_shrinkage_percent &&
+          shrinkage_overrides == o.shrinkage_overrides
     end
 
     # @see the `==` method
@@ -128,7 +154,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [max_occupancy_percent_for_deferred_work, default_shrinkage_percent].hash
+      [max_occupancy_percent_for_deferred_work, default_shrinkage_percent, shrinkage_overrides].hash
     end
 
     # build the object from hash

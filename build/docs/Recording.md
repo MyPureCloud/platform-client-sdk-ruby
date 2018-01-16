@@ -17,6 +17,7 @@ title: Recording
 | **annotations** | [**Array&lt;Annotation&gt;**](Annotation.html) | Annotations that belong to the recording. | [optional] |
 | **transcript** | [**Array&lt;ChatMessage&gt;**](ChatMessage.html) | Represents a chat transcript | [optional] |
 | **email_transcript** | [**Array&lt;RecordingEmailMessage&gt;**](RecordingEmailMessage.html) | Represents an email transcript | [optional] |
+| **messaging_transcript** | [**Array&lt;RecordingMessagingMessage&gt;**](RecordingMessagingMessage.html) | Represents a messaging transcript | [optional] |
 | **file_state** | **String** | Represents the current file state for a recording. Examples: Uploading, Archived, etc | [optional] |
 | **restore_expiration_time** | **DateTime** | The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **media_uris** | [**Hash&lt;String, MediaResult&gt;**](MediaResult.html) | The different mediaUris for the recording. | [optional] |

@@ -1,7 +1,7 @@
 ---
-title: Entity
+title: WrapUpCodeReference
 ---
-## PureCloud::Entity
+## PureCloud::WrapUpCodeReference
 
 ## Properties
 

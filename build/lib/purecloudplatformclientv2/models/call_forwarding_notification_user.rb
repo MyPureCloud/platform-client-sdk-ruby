@@ -17,8 +17,7 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class Entity
-    # The globally unique identifier for the object.
+  class CallForwardingNotificationUser
     attr_accessor :id
 
     # Attribute mapping from ruby-style variable name to JSON key.

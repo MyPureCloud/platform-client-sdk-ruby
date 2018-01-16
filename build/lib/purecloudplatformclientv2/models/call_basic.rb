@@ -83,6 +83,12 @@ module PureCloud
     # User to User Information (UUI) data managed by SIP session application.
     attr_accessor :uui_data
 
+    # Address and name data for a call endpoint.
+    attr_accessor :_self
+
+    # Address and name data for a call endpoint.
+    attr_accessor :other
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -129,7 +135,11 @@ module PureCloud
         
         :'peer_id' => :'peerId',
         
-        :'uui_data' => :'uuiData'
+        :'uui_data' => :'uuiData',
+        
+        :'_self' => :'self',
+        
+        :'other' => :'other'
         
       }
     end
@@ -180,7 +190,11 @@ module PureCloud
         
         :'peer_id' => :'String',
         
-        :'uui_data' => :'String'
+        :'uui_data' => :'String',
+        
+        :'_self' => :'Address',
+        
+        :'other' => :'Address'
         
       }
     end
@@ -396,6 +410,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'self')
+        
+        
+        self._self = attributes[:'self']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'other')
+        
+        
+        self.other = attributes[:'other']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -476,6 +508,14 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -668,6 +708,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -694,7 +744,9 @@ module PureCloud
           provider == o.provider &&
           script_id == o.script_id &&
           peer_id == o.peer_id &&
-          uui_data == o.uui_data
+          uui_data == o.uui_data &&
+          _self == o._self &&
+          other == o.other
     end
 
     # @see the `==` method
@@ -706,7 +758,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, direction, recording, recording_state, muted, confined, held, recording_id, segments, error_info, disconnect_type, start_hold_time, document_id, connected_time, disconnected_time, disconnect_reasons, fax_status, provider, script_id, peer_id, uui_data].hash
+      [state, id, direction, recording, recording_state, muted, confined, held, recording_id, segments, error_info, disconnect_type, start_hold_time, document_id, connected_time, disconnected_time, disconnect_reasons, fax_status, provider, script_id, peer_id, uui_data, _self, other].hash
     end
 
     # build the object from hash

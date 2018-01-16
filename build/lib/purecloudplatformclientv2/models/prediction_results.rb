@@ -106,7 +106,7 @@ module PureCloud
       
       
       
-      allowed_values = ["ALL", "CALL", "CALLBACK", "CHAT", "EMAIL", "SOCIALEXPRESSION", "VIDEOCOMM"]
+      allowed_values = ["ALL", "CALL", "CALLBACK", "CHAT", "EMAIL", "SOCIALEXPRESSION", "VIDEOCOMM", "MESSAGE"]
       if @intent && !allowed_values.include?(@intent)
         return false
       end
@@ -143,7 +143,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] intent Object to be assigned
     def intent=(intent)
-      allowed_values = ["ALL", "CALL", "CALLBACK", "CHAT", "EMAIL", "SOCIALEXPRESSION", "VIDEOCOMM"]
+      allowed_values = ["ALL", "CALL", "CALLBACK", "CHAT", "EMAIL", "SOCIALEXPRESSION", "VIDEOCOMM", "MESSAGE"]
       if intent && !allowed_values.include?(intent)
         fail ArgumentError, "invalid value for 'intent', must be one of #{allowed_values}."
       end

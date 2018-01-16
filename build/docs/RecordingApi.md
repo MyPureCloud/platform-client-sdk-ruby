@@ -21,6 +21,7 @@ Method | Description
 [**get_orphanrecording**](RecordingApi.html#get_orphanrecording) | Gets a single orphan recording
 [**get_orphanrecording_media**](RecordingApi.html#get_orphanrecording_media) | Gets the media of a single orphan recording
 [**get_orphanrecordings**](RecordingApi.html#get_orphanrecordings) | Gets all orphan recordings
+[**get_recording_batchrequest**](RecordingApi.html#get_recording_batchrequest) | Get the status and results for a batch request job, only the user that submitted the job may retrieve results
 [**get_recording_localkeys_setting**](RecordingApi.html#get_recording_localkeys_setting) | Get the local encryption settings
 [**get_recording_localkeys_settings**](RecordingApi.html#get_recording_localkeys_settings) | gets a list local key settings data
 [**get_recording_mediaretentionpolicies**](RecordingApi.html#get_recording_mediaretentionpolicies) | Gets media retention policy list with query options to filter on name and enabled.
@@ -32,6 +33,7 @@ Method | Description
 [**patch_recording_mediaretentionpolicy**](RecordingApi.html#patch_recording_mediaretentionpolicy) | Patch a media retention policy
 [**patch_recordings_screensession**](RecordingApi.html#patch_recordings_screensession) | Update a screen recording session
 [**post_conversation_recording_annotations**](RecordingApi.html#post_conversation_recording_annotations) | Create annotation
+[**post_recording_batchrequests**](RecordingApi.html#post_recording_batchrequests) | Submit a batch download request
 [**post_recording_localkeys**](RecordingApi.html#post_recording_localkeys) | create a local recording key
 [**post_recording_localkeys_settings**](RecordingApi.html#post_recording_localkeys_settings) | create settings for local key creation
 [**post_recording_mediaretentionpolicies**](RecordingApi.html#post_recording_mediaretentionpolicies) | Create media retention policy
@@ -867,6 +869,65 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_recording_batchrequest"></a>
+
+## -[**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult.html) get_recording_batchrequest(job_id)
+
+Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+
+
+
+Wraps GET /api/v2/recording/batchrequests/{jobId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+job_id = "job_id_example" # String | jobId
+
+
+begin
+  #Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+  result = api_instance.get_recording_batchrequest(job_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_recording_batchrequest: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| jobId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_recording_localkeys_setting"></a>
 
 ## -[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) get_recording_localkeys_setting(settings_id)
@@ -1534,6 +1595,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Annotation**](Annotation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_recording_batchrequests"></a>
+
+## -[**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html) post_recording_batchrequests(body)
+
+Submit a batch download request
+
+
+
+Wraps POST /api/v2/recording/batchrequests 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+body = PureCloud::BatchDownloadJobSubmission.new # BatchDownloadJobSubmission | Job submission criteria
+
+
+begin
+  #Submit a batch download request
+  result = api_instance.post_recording_batchrequests(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->post_recording_batchrequests: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**BatchDownloadJobSubmission**](BatchDownloadJobSubmission.html)| Job submission criteria |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html)
 
 ### HTTP request headers
 

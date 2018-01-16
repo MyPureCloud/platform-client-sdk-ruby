@@ -31,14 +31,8 @@ module PureCloud
     # Scheduling settings for this management unit
     attr_accessor :scheduling
 
-    # The version of the underlying entity
-    attr_accessor :version
-
-    # The date and time at which this entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-    attr_accessor :date_modified
-
-    # The user who last modified this entity
-    attr_accessor :modified_by
+    # Version info metadata for the associated management unit
+    attr_accessor :metadata
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -52,11 +46,7 @@ module PureCloud
         
         :'scheduling' => :'scheduling',
         
-        :'version' => :'version',
-        
-        :'date_modified' => :'dateModified',
-        
-        :'modified_by' => :'modifiedBy'
+        :'metadata' => :'metadata'
         
       }
     end
@@ -73,11 +63,7 @@ module PureCloud
         
         :'scheduling' => :'SchedulingSettings',
         
-        :'version' => :'Integer',
-        
-        :'date_modified' => :'DateTime',
-        
-        :'modified_by' => :'User'
+        :'metadata' => :'WfmVersionedEntityMetadata'
         
       }
     end
@@ -127,28 +113,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'version')
+      if attributes.has_key?(:'metadata')
         
         
-        self.version = attributes[:'version']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'dateModified')
-        
-        
-        self.date_modified = attributes[:'dateModified']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'modifiedBy')
-        
-        
-        self.modified_by = attributes[:'modifiedBy']
+        self.metadata = attributes[:'metadata']
         
       
       end
@@ -186,7 +154,7 @@ module PureCloud
       
       
       
-      if @version.nil?
+      if @metadata.nil?
         return false
       end
 
@@ -194,26 +162,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -249,9 +199,7 @@ module PureCloud
           short_term_forecasting == o.short_term_forecasting &&
           time_off == o.time_off &&
           scheduling == o.scheduling &&
-          version == o.version &&
-          date_modified == o.date_modified &&
-          modified_by == o.modified_by
+          metadata == o.metadata
     end
 
     # @see the `==` method
@@ -263,7 +211,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [adherence, short_term_forecasting, time_off, scheduling, version, date_modified, modified_by].hash
+      [adherence, short_term_forecasting, time_off, scheduling, metadata].hash
     end
 
     # build the object from hash

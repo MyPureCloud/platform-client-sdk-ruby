@@ -4903,6 +4903,81 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get contacts from a contact list.
+    # 
+    # @param contact_list_id Contact List ID
+    # @param body ContactIds to get.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DialerContact>]
+    def post_outbound_contactlist_contacts_bulk(contact_list_id, body, opts = {})
+      data, _status_code, _headers = post_outbound_contactlist_contacts_bulk_with_http_info(contact_list_id, body, opts)
+      return data
+    end
+
+    # Get contacts from a contact list.
+    # 
+    # @param contact_list_id Contact List ID
+    # @param body ContactIds to get.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DialerContact>, Fixnum, Hash)>] Array<DialerContact> data, response status code and response headers
+    def post_outbound_contactlist_contacts_bulk_with_http_info(contact_list_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_contactlist_contacts_bulk ..."
+      end
+      
+      
+      # verify the required parameter 'contact_list_id' is set
+      fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.post_outbound_contactlist_contacts_bulk" if contact_list_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_contactlist_contacts_bulk" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<DialerContact>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#post_outbound_contactlist_contacts_bulk\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Initiate the export of a contact list.
     # Returns 200 if received OK.
     # @param contact_list_id ContactList ID

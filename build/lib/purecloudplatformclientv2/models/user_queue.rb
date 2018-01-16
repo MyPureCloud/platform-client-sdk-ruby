@@ -23,31 +23,34 @@ module PureCloud
 
     attr_accessor :name
 
-    # The resource's description.
+    # The queue description.
     attr_accessor :description
 
-    # The current version of the resource.
+    # The current version of the queue.
     attr_accessor :version
 
-    # The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The division to which this queue belongs.
+    attr_accessor :division
+
+    # The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_created
 
-    # The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_modified
 
-    # The ID of the user that last modified the resource.
+    # The ID of the user that last modified the queue.
     attr_accessor :modified_by
 
-    # The ID of the user that created the resource.
+    # The ID of the user that created the queue.
     attr_accessor :created_by
 
-    # Indicates if the resource is active, inactive, or deleted.
+    # Indicates if the queue is active, inactive, or deleted.
     attr_accessor :state
 
-    # The application that last modified the resource.
+    # The application that last modified the queue.
     attr_accessor :modified_by_app
 
-    # The application that created the resource.
+    # The application that created the queue.
     attr_accessor :created_by_app
 
     # The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION
@@ -65,10 +68,10 @@ module PureCloud
     # The in-queue flow to use for conversations waiting in queue.
     attr_accessor :queue_flow
 
-    # The prompt used for whisper audio on the queue, if configured.
+    # ID of the whisper configured for this queue, if any.
     attr_accessor :whisper
 
-    # Specifies whether the configured whisper audio should play for all ACD calls, or only for those which are auto-answered.
+    # Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.
     attr_accessor :auto_answer_only
 
     # The name to use for caller identification for outbound calls from this queue.
@@ -100,6 +103,8 @@ module PureCloud
         :'description' => :'description',
         
         :'version' => :'version',
+        
+        :'division' => :'division',
         
         :'date_created' => :'dateCreated',
         
@@ -157,6 +162,8 @@ module PureCloud
         :'description' => :'String',
         
         :'version' => :'Integer',
+        
+        :'division' => :'UriReference',
         
         :'date_created' => :'DateTime',
         
@@ -243,6 +250,15 @@ module PureCloud
         
         
         self.version = attributes[:'version']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'division')
+        
+        
+        self.division = attributes[:'division']
         
       
       end
@@ -490,6 +506,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["active", "inactive", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
@@ -583,6 +603,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -736,6 +761,7 @@ module PureCloud
           name == o.name &&
           description == o.description &&
           version == o.version &&
+          division == o.division &&
           date_created == o.date_created &&
           date_modified == o.date_modified &&
           modified_by == o.modified_by &&
@@ -768,7 +794,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_email_address, joined, member_count, self_uri].hash
+      [id, name, description, version, division, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_email_address, joined, member_count, self_uri].hash
     end
 
     # build the object from hash

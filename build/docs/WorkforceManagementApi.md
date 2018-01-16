@@ -9,7 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 Method | Description
 ------------- | ------------- | -------------
 [**get_workforcemanagement_adherence**](WorkforceManagementApi.html#get_workforcemanagement_adherence) | Get a list of UserScheduleAdherence records for the requested users
-[**get_workforcemanagement_managementunit_activitycodes**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_activitycodes) | Get activity codes corresponding to a management unit
+[**get_workforcemanagement_managementunit_activitycodes**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_activitycodes) | Get activity codes
 [**get_workforcemanagement_managementunit_intraday_queues**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_intraday_queues) | Get intraday queues for the given date
 [**get_workforcemanagement_managementunit_user_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_user_timeoffrequest) | Get a time off request by id
 [**get_workforcemanagement_managementunit_user_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_user_timeoffrequests) | Get a list of time off requests for any user
@@ -18,7 +18,9 @@ Method | Description
 [**get_workforcemanagement_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequest) | Get a time off request for the current user by id
 [**get_workforcemanagement_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequests) | Get a list of time off requests for the current user
 [**patch_workforcemanagement_timeoffrequest**](WorkforceManagementApi.html#patch_workforcemanagement_timeoffrequest) | Mark a time off request for the current user as read or unread
+[**post_workforcemanagement_agents**](WorkforceManagementApi.html#post_workforcemanagement_agents) | Move agents in and out of management unit
 [**post_workforcemanagement_agents_managementunits**](WorkforceManagementApi.html#post_workforcemanagement_agents_managementunits) | Get the management units to which the agents belong
+[**post_workforcemanagement_managementunit_activitycodes**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_activitycodes) | Create a new activity code
 [**post_workforcemanagement_managementunit_historicaladherencequery**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_historicaladherencequery) | Request a historical adherence report
 [**post_workforcemanagement_managementunit_intraday**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_intraday) | Get intraday data for the given date for the requested queueIds
 [**post_workforcemanagement_managementunit_schedules_search**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_schedules_search) | Get user schedules within the given time range
@@ -88,7 +90,7 @@ Name | Type | Description  | Notes
 
 ## -[**ActivityCodeContainer**](ActivityCodeContainer.html) get_workforcemanagement_managementunit_activitycodes(mu_id)
 
-Get activity codes corresponding to a management unit
+Get activity codes
 
 
 
@@ -116,7 +118,7 @@ mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' fo
 
 
 begin
-  #Get activity codes corresponding to a management unit
+  #Get activity codes
   result = api_instance.get_workforcemanagement_managementunit_activitycodes(mu_id)
   p result
 rescue PureCloud::ApiError => e
@@ -640,6 +642,66 @@ nil (empty response body)
 
 
 
+<a name="post_workforcemanagement_agents"></a>
+
+## -[**MoveAgentsResponse**](MoveAgentsResponse.html) post_workforcemanagement_agents(opts)
+
+Move agents in and out of management unit
+
+
+
+Wraps POST /api/v2/workforcemanagement/agents 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+opts = { 
+  body: PureCloud::MoveAgentsRequest.new # MoveAgentsRequest | body
+}
+
+begin
+  #Move agents in and out of management unit
+  result = api_instance.post_workforcemanagement_agents(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_agents: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**MoveAgentsRequest**](MoveAgentsRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MoveAgentsResponse**](MoveAgentsResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_workforcemanagement_agents_managementunits"></a>
 
 ## -[**Array&lt;AgentManagementUnitReference&gt;**](AgentManagementUnitReference.html) post_workforcemanagement_agents_managementunits(opts)
@@ -692,6 +754,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Array&lt;AgentManagementUnitReference&gt;**](AgentManagementUnitReference.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_workforcemanagement_managementunit_activitycodes"></a>
+
+## -[**ActivityCode**](ActivityCode.html) post_workforcemanagement_managementunit_activitycodes(mu_id, opts)
+
+Create a new activity code
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/activitycodes 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+
+opts = { 
+  body: PureCloud::CreateActivityCodeRequest.new # CreateActivityCodeRequest | body
+}
+
+begin
+  #Create a new activity code
+  result = api_instance.post_workforcemanagement_managementunit_activitycodes(mu_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_activitycodes: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ActivityCode**](ActivityCode.html)
 
 ### HTTP request headers
 

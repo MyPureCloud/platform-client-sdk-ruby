@@ -1,13 +1,13 @@
 ---
-title: SignedData
+title: IgnoredActivityCategories
 ---
-## PureCloud::SignedData
+## PureCloud::IgnoredActivityCategories
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **jwt** | **String** |  | [optional] |
+| **values** | **Array&lt;String&gt;** | Activity categories list | [optional] |
 {: class="table table-striped"}
 
 

@@ -24,8 +24,11 @@ module PureCloud
     # If disabled no trustee user will have access, even if they were previously added.
     attr_accessor :enabled
 
-    # The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor.
+    # The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor. If no users are specified, at least one group is required.
     attr_accessor :users
+
+    # The list of groups and their roles to which access will be granted. The groups are from the trustee and the roles are from the trustor. If no groups are specified, at least one user is required.
+    attr_accessor :groups
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -35,7 +38,9 @@ module PureCloud
         
         :'enabled' => :'enabled',
         
-        :'users' => :'users'
+        :'users' => :'users',
+        
+        :'groups' => :'groups'
         
       }
     end
@@ -48,7 +53,9 @@ module PureCloud
         
         :'enabled' => :'BOOLEAN',
         
-        :'users' => :'Array<TrustUserCreate>'
+        :'users' => :'Array<TrustMemberCreate>',
+        
+        :'groups' => :'Array<TrustMemberCreate>'
         
       }
     end
@@ -91,6 +98,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'groups')
+        
+        if (value = attributes[:'groups']).is_a?(Array)
+          self.groups = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -125,16 +143,20 @@ module PureCloud
       
       
       
-      if @users.nil?
-        return false
-      end
-
+      
+      
+      
       
       
       
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -158,7 +180,8 @@ module PureCloud
       self.class == o.class &&
           pairing_id == o.pairing_id &&
           enabled == o.enabled &&
-          users == o.users
+          users == o.users &&
+          groups == o.groups
     end
 
     # @see the `==` method
@@ -170,7 +193,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [pairing_id, enabled, users].hash
+      [pairing_id, enabled, users, groups].hash
     end
 
     # build the object from hash

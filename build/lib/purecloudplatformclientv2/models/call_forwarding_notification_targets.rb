@@ -17,14 +17,18 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class SignedData
-    attr_accessor :jwt
+  class CallForwardingNotificationTargets
+    attr_accessor :type
+
+    attr_accessor :value
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'jwt' => :'jwt'
+        :'type' => :'type',
+        
+        :'value' => :'value'
         
       }
     end
@@ -33,7 +37,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'jwt' => :'String'
+        :'type' => :'String',
+        
+        :'value' => :'String'
         
       }
     end
@@ -47,10 +53,19 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'jwt')
+      if attributes.has_key?(:'type')
         
         
-        self.jwt = attributes[:'jwt']
+        self.type = attributes[:'type']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'value')
+        
+        
+        self.value = attributes[:'value']
         
       
       end
@@ -75,8 +90,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -88,7 +112,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          jwt == o.jwt
+          type == o.type &&
+          value == o.value
     end
 
     # @see the `==` method
@@ -100,7 +125,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [jwt].hash
+      [type, value].hash
     end
 
     # build the object from hash
