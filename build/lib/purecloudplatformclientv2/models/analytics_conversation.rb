@@ -30,8 +30,11 @@ module PureCloud
     # Participants in the conversation
     attr_accessor :participants
 
-    # Evaluations tied to this conersation
+    # Evaluations tied to this conversation
     attr_accessor :evaluations
+
+    # Identifiers of divisions associated with this conversation
+    attr_accessor :division_ids
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -45,7 +48,9 @@ module PureCloud
         
         :'participants' => :'participants',
         
-        :'evaluations' => :'evaluations'
+        :'evaluations' => :'evaluations',
+        
+        :'division_ids' => :'divisionIds'
         
       }
     end
@@ -62,7 +67,9 @@ module PureCloud
         
         :'participants' => :'Array<AnalyticsParticipant>',
         
-        :'evaluations' => :'Array<AnalyticsEvaluation>'
+        :'evaluations' => :'Array<AnalyticsEvaluation>',
+        
+        :'division_ids' => :'Array<String>'
         
       }
     end
@@ -125,6 +132,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'divisionIds')
+        
+        if (value = attributes[:'divisionIds']).is_a?(Array)
+          self.division_ids = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -160,8 +178,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -197,7 +224,8 @@ module PureCloud
           conversation_start == o.conversation_start &&
           conversation_end == o.conversation_end &&
           participants == o.participants &&
-          evaluations == o.evaluations
+          evaluations == o.evaluations &&
+          division_ids == o.division_ids
     end
 
     # @see the `==` method
@@ -209,7 +237,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [conversation_id, conversation_start, conversation_end, participants, evaluations].hash
+      [conversation_id, conversation_start, conversation_end, participants, evaluations, division_ids].hash
     end
 
     # build the object from hash

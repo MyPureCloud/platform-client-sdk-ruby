@@ -26,6 +26,8 @@ module PureCloud
 
     attr_accessor :message_status
 
+    attr_accessor :media
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -36,7 +38,9 @@ module PureCloud
         
         :'message_segment_count' => :'messageSegmentCount',
         
-        :'message_status' => :'messageStatus'
+        :'message_status' => :'messageStatus',
+        
+        :'media' => :'media'
         
       }
     end
@@ -51,7 +55,9 @@ module PureCloud
         
         :'message_segment_count' => :'Integer',
         
-        :'message_status' => :'String'
+        :'message_status' => :'String',
+        
+        :'media' => :'Array<ConversationNotificationMedia>'
         
       }
     end
@@ -101,6 +107,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'media')
+        
+        if (value = attributes[:'media']).is_a?(Array)
+          self.media = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -137,6 +154,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -169,6 +190,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -177,7 +203,8 @@ module PureCloud
           message == o.message &&
           message_time == o.message_time &&
           message_segment_count == o.message_segment_count &&
-          message_status == o.message_status
+          message_status == o.message_status &&
+          media == o.media
     end
 
     # @see the `==` method
@@ -189,7 +216,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [message, message_time, message_segment_count, message_status].hash
+      [message, message_time, message_segment_count, message_status, media].hash
     end
 
     # build the object from hash

@@ -68,8 +68,8 @@ module PureCloud
     # The in-queue flow to use for conversations waiting in queue.
     attr_accessor :queue_flow
 
-    # ID of the whisper configured for this queue, if any.
-    attr_accessor :whisper
+    # The prompt used for whisper on the queue, if configured.
+    attr_accessor :whisper_prompt
 
     # Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.
     attr_accessor :auto_answer_only
@@ -128,7 +128,7 @@ module PureCloud
         
         :'queue_flow' => :'queueFlow',
         
-        :'whisper' => :'whisper',
+        :'whisper_prompt' => :'whisperPrompt',
         
         :'auto_answer_only' => :'autoAnswerOnly',
         
@@ -185,7 +185,7 @@ module PureCloud
         
         :'queue_flow' => :'UriReference',
         
-        :'whisper' => :'UriReference',
+        :'whisper_prompt' => :'UriReference',
         
         :'auto_answer_only' => :'BOOLEAN',
         
@@ -368,10 +368,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'whisper')
+      if attributes.has_key?(:'whisperPrompt')
         
         
-        self.whisper = attributes[:'whisper']
+        self.whisper_prompt = attributes[:'whisperPrompt']
         
       
       end
@@ -750,7 +750,7 @@ module PureCloud
           acw_settings == o.acw_settings &&
           skill_evaluation_method == o.skill_evaluation_method &&
           queue_flow == o.queue_flow &&
-          whisper == o.whisper &&
+          whisper_prompt == o.whisper_prompt &&
           auto_answer_only == o.auto_answer_only &&
           calling_party_name == o.calling_party_name &&
           calling_party_number == o.calling_party_number &&
@@ -769,7 +769,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, division, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_email_address, member_count, self_uri].hash
+      [id, name, description, version, division, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_email_address, member_count, self_uri].hash
     end
 
     # build the object from hash

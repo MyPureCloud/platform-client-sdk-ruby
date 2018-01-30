@@ -681,7 +681,6 @@ module PureCloud
     # 
     # @param script_id Script ID
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :foo  (default to 25)
     # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<Page>]
     def get_scripts_published_script_id_pages(script_id, opts = {})
@@ -693,7 +692,6 @@ module PureCloud
     # 
     # @param script_id Script ID
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :foo 
     # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<(Array<Page>, Fixnum, Hash)>] Array<Page> data, response status code and response headers
     def get_scripts_published_script_id_pages_with_http_info(script_id, opts = {})
@@ -715,18 +713,11 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
       # resource path
       local_var_path = "/api/v2/scripts/published/{scriptId}/pages".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
 
       # query parameters
       query_params = {}
-      query_params[:'foo'] = opts[:'foo'] if opts[:'foo']
       query_params[:'scriptDataVersion'] = opts[:'script_data_version'] if opts[:'script_data_version']
 
       # header parameters
@@ -931,6 +922,79 @@ module PureCloud
         :return_type => 'ImportScriptStatusResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ScriptsApi#get_scripts_upload_status\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Export a script via download service.
+    # 
+    # @param script_id Script ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [ExportScriptRequest] :body 
+    # @return [ExportScriptResponse]
+    def post_script_export(script_id, opts = {})
+      data, _status_code, _headers = post_script_export_with_http_info(script_id, opts)
+      return data
+    end
+
+    # Export a script via download service.
+    # 
+    # @param script_id Script ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [ExportScriptRequest] :body 
+    # @return [Array<(ExportScriptResponse, Fixnum, Hash)>] ExportScriptResponse data, response status code and response headers
+    def post_script_export_with_http_info(script_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ScriptsApi.post_script_export ..."
+      end
+      
+      
+      # verify the required parameter 'script_id' is set
+      fail ArgumentError, "Missing the required parameter 'script_id' when calling ScriptsApi.post_script_export" if script_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scripts/{scriptId}/export".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ExportScriptResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ScriptsApi#post_script_export\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

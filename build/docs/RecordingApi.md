@@ -33,7 +33,7 @@ Method | Description
 [**patch_recording_mediaretentionpolicy**](RecordingApi.html#patch_recording_mediaretentionpolicy) | Patch a media retention policy
 [**patch_recordings_screensession**](RecordingApi.html#patch_recordings_screensession) | Update a screen recording session
 [**post_conversation_recording_annotations**](RecordingApi.html#post_conversation_recording_annotations) | Create annotation
-[**post_recording_batchrequests**](RecordingApi.html#post_recording_batchrequests) | Submit a batch download request
+[**post_recording_batchrequests**](RecordingApi.html#post_recording_batchrequests) | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
 [**post_recording_localkeys**](RecordingApi.html#post_recording_localkeys) | create a local recording key
 [**post_recording_localkeys_settings**](RecordingApi.html#post_recording_localkeys_settings) | create settings for local key creation
 [**post_recording_mediaretentionpolicies**](RecordingApi.html#post_recording_mediaretentionpolicies) | Create media retention policy
@@ -636,7 +636,7 @@ conversation_id = "conversation_id_example" # String | Conversation ID
 
 opts = { 
   max_wait_ms: 5000, # Integer | The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value.
-  format_id: "WEBM" # String | The desired media format
+  format_id: "WEBM" # String | The desired media format. Possible values: NONE, MP3, WAV, or WEBM
 }
 
 begin
@@ -654,7 +654,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_id** | **String**| Conversation ID |  |
  **max_wait_ms** | **Integer**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
- **format_id** | **String**| The desired media format | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+ **format_id** | **String**| The desired media format. Possible values: NONE, MP3, WAV, or WEBM | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 {: class="table table-striped"}
 
 
@@ -1607,7 +1607,7 @@ Name | Type | Description  | Notes
 
 ## -[**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html) post_recording_batchrequests(body)
 
-Submit a batch download request
+Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
 
 
 
@@ -1635,7 +1635,7 @@ body = PureCloud::BatchDownloadJobSubmission.new # BatchDownloadJobSubmission | 
 
 
 begin
-  #Submit a batch download request
+  #Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
   result = api_instance.post_recording_batchrequests(body)
   p result
 rescue PureCloud::ApiError => e

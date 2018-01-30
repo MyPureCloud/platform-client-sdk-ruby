@@ -18,6 +18,7 @@ Method | Description
 [**get_scripts_published_script_id_pages**](ScriptsApi.html#get_scripts_published_script_id_pages) | Get the list of published pages
 [**get_scripts_published_script_id_variables**](ScriptsApi.html#get_scripts_published_script_id_variables) | Get the published variables
 [**get_scripts_upload_status**](ScriptsApi.html#get_scripts_upload_status) | Get the upload status of an imported script
+[**post_script_export**](ScriptsApi.html#post_script_export) | Export a script via download service.
 {: class="table table-striped"}
 
 <a name="get_script"></a>
@@ -519,7 +520,6 @@ api_instance = PureCloud::ScriptsApi.new
 script_id = "script_id_example" # String | Script ID
 
 opts = { 
-  foo: 25, # Integer | 
   script_data_version: "script_data_version_example" # String | Advanced usage - controls the data version of the script
 }
 
@@ -537,7 +537,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **script_id** | **String**| Script ID |  |
- **foo** | **Integer**|  | [optional] [default to 25] |
  **script_data_version** | **String**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
@@ -677,6 +676,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ImportScriptStatusResponse**](ImportScriptStatusResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_script_export"></a>
+
+## -[**ExportScriptResponse**](ExportScriptResponse.html) post_script_export(script_id, opts)
+
+Export a script via download service.
+
+
+
+Wraps POST /api/v2/scripts/{scriptId}/export 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ScriptsApi.new
+
+script_id = "script_id_example" # String | Script ID
+
+opts = { 
+  body: PureCloud::ExportScriptRequest.new # ExportScriptRequest | 
+}
+
+begin
+  #Export a script via download service.
+  result = api_instance.post_script_export(script_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ScriptsApi->post_script_export: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **script_id** | **String**| Script ID |  |
+ **body** | [**ExportScriptRequest**](ExportScriptRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ExportScriptResponse**](ExportScriptResponse.html)
 
 ### HTTP request headers
 

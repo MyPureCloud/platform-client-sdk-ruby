@@ -713,7 +713,7 @@ module PureCloud
     # @param conversation_id Conversation ID
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :max_wait_ms The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (default to 5000)
-    # @option opts [String] :format_id The desired media format (default to WEBM)
+    # @option opts [String] :format_id The desired media format. Possible values: NONE, MP3, WAV, or WEBM (default to WEBM)
     # @return [Array<Recording>]
     def get_conversation_recordings(conversation_id, opts = {})
       data, _status_code, _headers = get_conversation_recordings_with_http_info(conversation_id, opts)
@@ -725,7 +725,7 @@ module PureCloud
     # @param conversation_id Conversation ID
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :max_wait_ms The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value.
-    # @option opts [String] :format_id The desired media format
+    # @option opts [String] :format_id The desired media format. Possible values: NONE, MP3, WAV, or WEBM
     # @return [Array<(Array<Recording>, Fixnum, Hash)>] Array<Recording> data, response status code and response headers
     def get_conversation_recordings_with_http_info(conversation_id, opts = {})
       if @api_client.config.debugging
@@ -1979,7 +1979,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Submit a batch download request
+    # Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
     # 
     # @param body Job submission criteria
     # @param [Hash] opts the optional parameters
@@ -1989,7 +1989,7 @@ module PureCloud
       return data
     end
 
-    # Submit a batch download request
+    # Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
     # 
     # @param body Job submission criteria
     # @param [Hash] opts the optional parameters

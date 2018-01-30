@@ -15,5 +15,5 @@ Terms of Service: https://developer.mypurecloud.com/tos
 =end
 
 module PureCloud
-  VERSION = "23.0.0"
+  VERSION = "24.0.0"
 end

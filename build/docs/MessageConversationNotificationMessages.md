@@ -11,6 +11,7 @@ title: MessageConversationNotificationMessages
 | **message_time** | **DateTime** |  | [optional] |
 | **message_segment_count** | **Integer** |  | [optional] |
 | **message_status** | **String** |  | [optional] |
+| **media** | [**Array&lt;ConversationNotificationMedia&gt;**](ConversationNotificationMedia.html) |  | [optional] |
 {: class="table table-striped"}
 
 

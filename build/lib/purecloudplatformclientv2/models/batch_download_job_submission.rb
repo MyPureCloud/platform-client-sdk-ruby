@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class BatchDownloadJobSubmission
-    # List of items requested
+    # List of up to 100 items requested
     attr_accessor :batch_download_request_list
 
     # Attribute mapping from ruby-style variable name to JSON key.

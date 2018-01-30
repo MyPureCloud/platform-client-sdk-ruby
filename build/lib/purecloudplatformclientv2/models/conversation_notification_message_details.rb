@@ -26,6 +26,8 @@ module PureCloud
 
     attr_accessor :message_segment_count
 
+    attr_accessor :media
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -36,7 +38,9 @@ module PureCloud
         
         :'message_status' => :'messageStatus',
         
-        :'message_segment_count' => :'messageSegmentCount'
+        :'message_segment_count' => :'messageSegmentCount',
+        
+        :'media' => :'media'
         
       }
     end
@@ -51,7 +55,9 @@ module PureCloud
         
         :'message_status' => :'String',
         
-        :'message_segment_count' => :'Integer'
+        :'message_segment_count' => :'Integer',
+        
+        :'media' => :'Array<ConversationNotificationMedia>'
         
       }
     end
@@ -101,6 +107,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'media')
+        
+        if (value = attributes[:'media']).is_a?(Array)
+          self.media = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -130,6 +147,10 @@ module PureCloud
       if @message_status && !allowed_values.include?(@message_status)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -169,6 +190,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -177,7 +203,8 @@ module PureCloud
           message_id == o.message_id &&
           message_time == o.message_time &&
           message_status == o.message_status &&
-          message_segment_count == o.message_segment_count
+          message_segment_count == o.message_segment_count &&
+          media == o.media
     end
 
     # @see the `==` method
@@ -189,7 +216,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [message_id, message_time, message_status, message_segment_count].hash
+      [message_id, message_time, message_status, message_segment_count, media].hash
     end
 
     # build the object from hash
