@@ -18,13 +18,13 @@ require 'date'
 
 module PureCloud
   class CreateEmailRequest
-    # The ID of the queue to use for routing the chat conversation. This field is mutually exclusive with flowId
+    # The ID of the queue to use for routing the email conversation. This field is mutually exclusive with flowId
     attr_accessor :queue_id
 
-    # The ID of the flow to use for routing chat conversation. This field is mutually exclusive with queueId
+    # The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId
     attr_accessor :flow_id
 
-    # The name of the provider that is sourcing the web chat.
+    # The name of the provider that is sourcing the emails. The Provider \"PureCloud Email\" is reserved for native emails.
     attr_accessor :provider
 
     # The list of skill ID's to use for routing.
@@ -54,7 +54,7 @@ module PureCloud
     # The subject of the email
     attr_accessor :subject
 
-    # Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.
+    # Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based.
     attr_accessor :direction
 
     # An HTML body content of the email.

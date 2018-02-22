@@ -341,7 +341,7 @@ module PureCloud
       
       
       
-      allowed_values = ["InAdherence", "OutOfAdherence", "Unscheduled", "Unknown"]
+      allowed_values = ["InAdherence", "OutOfAdherence", "Unscheduled", "Unknown", "Ignored"]
       if @adherence_state && !allowed_values.include?(@adherence_state)
         return false
       end
@@ -458,7 +458,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] adherence_state Object to be assigned
     def adherence_state=(adherence_state)
-      allowed_values = ["InAdherence", "OutOfAdherence", "Unscheduled", "Unknown"]
+      allowed_values = ["InAdherence", "OutOfAdherence", "Unscheduled", "Unknown", "Ignored"]
       if adherence_state && !allowed_values.include?(adherence_state)
         fail ArgumentError, "invalid value for 'adherence_state', must be one of #{allowed_values}."
       end

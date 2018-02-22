@@ -3937,8 +3937,9 @@ contact_list_id = "contact_list_id_example" # String | Contact List ID
 body = [PureCloud::DialerContact.new] # Array<DialerContact> | Contact
 
 opts = { 
-  priority: true, # BOOLEAN | Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue.
-  clear_system_data: true # BOOLEAN | Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won't.
+  priority: true, # BOOLEAN | Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue.
+  clear_system_data: true, # BOOLEAN | Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won't.
+  do_not_queue: true # BOOLEAN | Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the 'priority' parameter.
 }
 
 begin
@@ -3956,8 +3957,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact_list_id** | **String**| Contact List ID |  |
  **body** | [**Array&lt;DialerContact&gt;**](DialerContact.html)| Contact |  |
- **priority** | **BOOLEAN**| Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. | [optional]  |
- **clear_system_data** | **BOOLEAN**| Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. | [optional]  |
+ **priority** | **BOOLEAN**| Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. | [optional]  |
+ **clear_system_data** | **BOOLEAN**| Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. | [optional]  |
+ **do_not_queue** | **BOOLEAN**| Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. | [optional]  |
 {: class="table table-striped"}
 
 

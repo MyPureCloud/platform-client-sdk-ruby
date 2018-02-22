@@ -317,7 +317,7 @@ module PureCloud
       
       
       
-      allowed_values = ["ALERTING", "CONNECTED", "DISCONNECTED", "NONE"]
+      allowed_values = ["ALERTING", "CONNECTED", "DISCONNECTED", "NONE", "TRANSMITTING"]
       if @state && !allowed_values.include?(@state)
         return false
       end
@@ -406,7 +406,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] state Object to be assigned
     def state=(state)
-      allowed_values = ["ALERTING", "CONNECTED", "DISCONNECTED", "NONE"]
+      allowed_values = ["ALERTING", "CONNECTED", "DISCONNECTED", "NONE", "TRANSMITTING"]
       if state && !allowed_values.include?(state)
         fail ArgumentError, "invalid value for 'state', must be one of #{allowed_values}."
       end

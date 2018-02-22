@@ -248,6 +248,134 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete an evaluation form.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_quality_forms_evaluation(form_id, opts = {})
+      delete_quality_forms_evaluation_with_http_info(form_id, opts)
+      return nil
+    end
+
+    # Delete an evaluation form.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_quality_forms_evaluation_with_http_info(form_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.delete_quality_forms_evaluation ..."
+      end
+      
+      
+      # verify the required parameter 'form_id' is set
+      fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.delete_quality_forms_evaluation" if form_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/evaluations/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#delete_quality_forms_evaluation\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Delete a survey form.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_quality_forms_survey(form_id, opts = {})
+      delete_quality_forms_survey_with_http_info(form_id, opts)
+      return nil
+    end
+
+    # Delete a survey form.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_quality_forms_survey_with_http_info(form_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.delete_quality_forms_survey ..."
+      end
+      
+      
+      # verify the required parameter 'form_id' is set
+      fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.delete_quality_forms_survey" if form_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/surveys/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#delete_quality_forms_survey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete a keywordSet by id.
     # 
     # @param keyword_set_id KeywordSet ID
@@ -1628,6 +1756,538 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get an evaluation form
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [EvaluationForm]
+    def get_quality_forms_evaluation(form_id, opts = {})
+      data, _status_code, _headers = get_quality_forms_evaluation_with_http_info(form_id, opts)
+      return data
+    end
+
+    # Get an evaluation form
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EvaluationForm, Fixnum, Hash)>] EvaluationForm data, response status code and response headers
+    def get_quality_forms_evaluation_with_http_info(form_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_forms_evaluation ..."
+      end
+      
+      
+      # verify the required parameter 'form_id' is set
+      fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.get_quality_forms_evaluation" if form_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/evaluations/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EvaluationForm')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_forms_evaluation\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Gets all the revisions for a specific evaluation.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @return [EvaluationFormEntityListing]
+    def get_quality_forms_evaluation_versions(form_id, opts = {})
+      data, _status_code, _headers = get_quality_forms_evaluation_versions_with_http_info(form_id, opts)
+      return data
+    end
+
+    # Gets all the revisions for a specific evaluation.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @return [Array<(EvaluationFormEntityListing, Fixnum, Hash)>] EvaluationFormEntityListing data, response status code and response headers
+    def get_quality_forms_evaluation_versions_with_http_info(form_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_forms_evaluation_versions ..."
+      end
+      
+      
+      # verify the required parameter 'form_id' is set
+      fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.get_quality_forms_evaluation_versions" if form_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/evaluations/{formId}/versions".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EvaluationFormEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_forms_evaluation_versions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the list of evaluation forms
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested (default to 25)
+    # @option opts [Integer] :page_number The page number requested (default to 1)
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :expand Expand
+    # @option opts [String] :name Name
+    # @return [EvaluationFormEntityListing]
+    def get_quality_forms_evaluations(opts = {})
+      data, _status_code, _headers = get_quality_forms_evaluations_with_http_info(opts)
+      return data
+    end
+
+    # Get the list of evaluation forms
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested
+    # @option opts [Integer] :page_number The page number requested
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :expand Expand
+    # @option opts [String] :name Name
+    # @return [Array<(EvaluationFormEntityListing, Fixnum, Hash)>] EvaluationFormEntityListing data, response status code and response headers
+    def get_quality_forms_evaluations_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_forms_evaluations ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/evaluations".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
+      query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EvaluationFormEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_forms_evaluations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a survey form
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [SurveyForm]
+    def get_quality_forms_survey(form_id, opts = {})
+      data, _status_code, _headers = get_quality_forms_survey_with_http_info(form_id, opts)
+      return data
+    end
+
+    # Get a survey form
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SurveyForm, Fixnum, Hash)>] SurveyForm data, response status code and response headers
+    def get_quality_forms_survey_with_http_info(form_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_forms_survey ..."
+      end
+      
+      
+      # verify the required parameter 'form_id' is set
+      fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.get_quality_forms_survey" if form_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/surveys/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SurveyForm')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_forms_survey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Gets all the revisions for a specific survey.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @return [SurveyFormEntityListing]
+    def get_quality_forms_survey_versions(form_id, opts = {})
+      data, _status_code, _headers = get_quality_forms_survey_versions_with_http_info(form_id, opts)
+      return data
+    end
+
+    # Gets all the revisions for a specific survey.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @return [Array<(SurveyFormEntityListing, Fixnum, Hash)>] SurveyFormEntityListing data, response status code and response headers
+    def get_quality_forms_survey_versions_with_http_info(form_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_forms_survey_versions ..."
+      end
+      
+      
+      # verify the required parameter 'form_id' is set
+      fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.get_quality_forms_survey_versions" if form_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/surveys/{formId}/versions".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SurveyFormEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_forms_survey_versions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the list of survey forms
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested (default to 25)
+    # @option opts [Integer] :page_number The page number requested (default to 1)
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :expand Expand
+    # @option opts [String] :name Name
+    # @return [SurveyFormEntityListing]
+    def get_quality_forms_surveys(opts = {})
+      data, _status_code, _headers = get_quality_forms_surveys_with_http_info(opts)
+      return data
+    end
+
+    # Get the list of survey forms
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested
+    # @option opts [Integer] :page_number The page number requested
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :expand Expand
+    # @option opts [String] :name Name
+    # @return [Array<(SurveyFormEntityListing, Fixnum, Hash)>] SurveyFormEntityListing data, response status code and response headers
+    def get_quality_forms_surveys_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_forms_surveys ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/surveys".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
+      query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SurveyFormEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_forms_surveys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a keywordSet by id.
     # 
     # @param keyword_set_id KeywordSet ID
@@ -1989,6 +2649,375 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the most recent published version of an evaluation form.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [EvaluationForm]
+    def get_quality_publishedforms_evaluation(form_id, opts = {})
+      data, _status_code, _headers = get_quality_publishedforms_evaluation_with_http_info(form_id, opts)
+      return data
+    end
+
+    # Get the most recent published version of an evaluation form.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EvaluationForm, Fixnum, Hash)>] EvaluationForm data, response status code and response headers
+    def get_quality_publishedforms_evaluation_with_http_info(form_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_publishedforms_evaluation ..."
+      end
+      
+      
+      # verify the required parameter 'form_id' is set
+      fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.get_quality_publishedforms_evaluation" if form_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/publishedforms/evaluations/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EvaluationForm')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_publishedforms_evaluation\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the published evaluation forms.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [String] :name Name
+    # @return [EvaluationFormEntityListing]
+    def get_quality_publishedforms_evaluations(opts = {})
+      data, _status_code, _headers = get_quality_publishedforms_evaluations_with_http_info(opts)
+      return data
+    end
+
+    # Get the published evaluation forms.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @option opts [String] :name Name
+    # @return [Array<(EvaluationFormEntityListing, Fixnum, Hash)>] EvaluationFormEntityListing data, response status code and response headers
+    def get_quality_publishedforms_evaluations_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_publishedforms_evaluations ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/publishedforms/evaluations".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EvaluationFormEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_publishedforms_evaluations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the most recent published version of a survey form.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [SurveyForm]
+    def get_quality_publishedforms_survey(form_id, opts = {})
+      data, _status_code, _headers = get_quality_publishedforms_survey_with_http_info(form_id, opts)
+      return data
+    end
+
+    # Get the most recent published version of a survey form.
+    # 
+    # @param form_id Form ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SurveyForm, Fixnum, Hash)>] SurveyForm data, response status code and response headers
+    def get_quality_publishedforms_survey_with_http_info(form_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_publishedforms_survey ..."
+      end
+      
+      
+      # verify the required parameter 'form_id' is set
+      fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.get_quality_publishedforms_survey" if form_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/publishedforms/surveys/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SurveyForm')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_publishedforms_survey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the published survey forms.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [String] :name Name
+    # @return [SurveyFormEntityListing]
+    def get_quality_publishedforms_surveys(opts = {})
+      data, _status_code, _headers = get_quality_publishedforms_surveys_with_http_info(opts)
+      return data
+    end
+
+    # Get the published survey forms.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @option opts [String] :name Name
+    # @return [Array<(SurveyFormEntityListing, Fixnum, Hash)>] SurveyFormEntityListing data, response status code and response headers
+    def get_quality_publishedforms_surveys_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_publishedforms_surveys ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/publishedforms/surveys".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SurveyFormEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_publishedforms_surveys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
+    # 
+    # @param form_id Form ID
+    # @param body Survey form
+    # @param [Hash] opts the optional parameters
+    # @return [SurveyForm]
+    def patch_quality_forms_survey(form_id, body, opts = {})
+      data, _status_code, _headers = patch_quality_forms_survey_with_http_info(form_id, body, opts)
+      return data
+    end
+
+    # Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
+    # 
+    # @param form_id Form ID
+    # @param body Survey form
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SurveyForm, Fixnum, Hash)>] SurveyForm data, response status code and response headers
+    def patch_quality_forms_survey_with_http_info(form_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.patch_quality_forms_survey ..."
+      end
+      
+      
+      # verify the required parameter 'form_id' is set
+      fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.patch_quality_forms_survey" if form_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.patch_quality_forms_survey" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/surveys/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SurveyForm')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#patch_quality_forms_survey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Query for evaluation aggregates
     # 
     # @param body query
@@ -2342,6 +3371,136 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Create an evaluation form.
+    # 
+    # @param body Evaluation form
+    # @param [Hash] opts the optional parameters
+    # @return [EvaluationForm]
+    def post_quality_forms_evaluations(body, opts = {})
+      data, _status_code, _headers = post_quality_forms_evaluations_with_http_info(body, opts)
+      return data
+    end
+
+    # Create an evaluation form.
+    # 
+    # @param body Evaluation form
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EvaluationForm, Fixnum, Hash)>] EvaluationForm data, response status code and response headers
+    def post_quality_forms_evaluations_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.post_quality_forms_evaluations ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_quality_forms_evaluations" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/evaluations".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EvaluationForm')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#post_quality_forms_evaluations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a survey form.
+    # 
+    # @param body Survey form
+    # @param [Hash] opts the optional parameters
+    # @return [SurveyForm]
+    def post_quality_forms_surveys(body, opts = {})
+      data, _status_code, _headers = post_quality_forms_surveys_with_http_info(body, opts)
+      return data
+    end
+
+    # Create a survey form.
+    # 
+    # @param body Survey form
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SurveyForm, Fixnum, Hash)>] SurveyForm data, response status code and response headers
+    def post_quality_forms_surveys_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.post_quality_forms_surveys ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_quality_forms_surveys" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/surveys".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SurveyForm')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#post_quality_forms_surveys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create a Keyword Set
     # 
     # @param body keywordSet
@@ -2477,6 +3636,136 @@ module PureCloud
         :return_type => 'EvaluationForm')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: QualityApi#post_quality_publishedforms\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Publish an evaluation form.
+    # 
+    # @param body Evaluation form
+    # @param [Hash] opts the optional parameters
+    # @return [EvaluationForm]
+    def post_quality_publishedforms_evaluations(body, opts = {})
+      data, _status_code, _headers = post_quality_publishedforms_evaluations_with_http_info(body, opts)
+      return data
+    end
+
+    # Publish an evaluation form.
+    # 
+    # @param body Evaluation form
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EvaluationForm, Fixnum, Hash)>] EvaluationForm data, response status code and response headers
+    def post_quality_publishedforms_evaluations_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.post_quality_publishedforms_evaluations ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_quality_publishedforms_evaluations" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/publishedforms/evaluations".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EvaluationForm')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#post_quality_publishedforms_evaluations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Publish a survey form.
+    # 
+    # @param body Survey form
+    # @param [Hash] opts the optional parameters
+    # @return [SurveyForm]
+    def post_quality_publishedforms_surveys(body, opts = {})
+      data, _status_code, _headers = post_quality_publishedforms_surveys_with_http_info(body, opts)
+      return data
+    end
+
+    # Publish a survey form.
+    # 
+    # @param body Survey form
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SurveyForm, Fixnum, Hash)>] SurveyForm data, response status code and response headers
+    def post_quality_publishedforms_surveys_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.post_quality_publishedforms_surveys ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_quality_publishedforms_surveys" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/publishedforms/surveys".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SurveyForm')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#post_quality_publishedforms_surveys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2784,6 +4073,156 @@ module PureCloud
         :return_type => 'EvaluationForm')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: QualityApi#put_quality_form\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update an evaluation form.
+    # 
+    # @param form_id Form ID
+    # @param body Evaluation form
+    # @param [Hash] opts the optional parameters
+    # @return [EvaluationForm]
+    def put_quality_forms_evaluation(form_id, body, opts = {})
+      data, _status_code, _headers = put_quality_forms_evaluation_with_http_info(form_id, body, opts)
+      return data
+    end
+
+    # Update an evaluation form.
+    # 
+    # @param form_id Form ID
+    # @param body Evaluation form
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EvaluationForm, Fixnum, Hash)>] EvaluationForm data, response status code and response headers
+    def put_quality_forms_evaluation_with_http_info(form_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.put_quality_forms_evaluation ..."
+      end
+      
+      
+      # verify the required parameter 'form_id' is set
+      fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.put_quality_forms_evaluation" if form_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.put_quality_forms_evaluation" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/evaluations/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EvaluationForm')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#put_quality_forms_evaluation\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a survey form.
+    # 
+    # @param form_id Form ID
+    # @param body Survey form
+    # @param [Hash] opts the optional parameters
+    # @return [SurveyForm]
+    def put_quality_forms_survey(form_id, body, opts = {})
+      data, _status_code, _headers = put_quality_forms_survey_with_http_info(form_id, body, opts)
+      return data
+    end
+
+    # Update a survey form.
+    # 
+    # @param form_id Form ID
+    # @param body Survey form
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SurveyForm, Fixnum, Hash)>] SurveyForm data, response status code and response headers
+    def put_quality_forms_survey_with_http_info(form_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.put_quality_forms_survey ..."
+      end
+      
+      
+      # verify the required parameter 'form_id' is set
+      fail ArgumentError, "Missing the required parameter 'form_id' when calling QualityApi.put_quality_forms_survey" if form_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.put_quality_forms_survey" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/forms/surveys/{formId}".sub('{format}','json').sub('{' + 'formId' + '}', form_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SurveyForm')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#put_quality_forms_survey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -43,6 +43,7 @@ title: AnalyticsSession
 | **video_room_id** | **String** | A unique identifier for a PureCloud video room. | [optional] |
 | **video_address_self** | **String** | Direct Video address | [optional] |
 | **segments** | [**Array&lt;AnalyticsConversationSegment&gt;**](AnalyticsConversationSegment.html) | List of segments for this session | [optional] |
+| **metrics** | [**Array&lt;AnalyticsSessionMetric&gt;**](AnalyticsSessionMetric.html) | List of metrics for this session | [optional] |
 {: class="table table-striped"}
 
 

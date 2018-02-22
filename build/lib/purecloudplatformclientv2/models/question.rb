@@ -26,21 +26,24 @@ module PureCloud
 
     attr_accessor :type
 
-    attr_accessor :weight
-
-    attr_accessor :na_required
+    attr_accessor :na_enabled
 
     attr_accessor :comments_required
+
+    attr_accessor :visibility_condition
+
+    # Options from which to choose an answer for this question. Only used by Multiple Choice type questions.
+    attr_accessor :answer_options
+
+    # How many characters are allowed in the text response to this question. Used by NPS and Free Text question types.
+    attr_accessor :max_response_characters
+
+    # Prompt for details explaining the chosen NPS score. Used by NPS questions.
+    attr_accessor :explanation_prompt
 
     attr_accessor :is_kill
 
     attr_accessor :is_critical
-
-    attr_accessor :na_enabled
-
-    attr_accessor :visibility_condition
-
-    attr_accessor :answer_options
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -54,21 +57,21 @@ module PureCloud
         
         :'type' => :'type',
         
-        :'weight' => :'weight',
-        
-        :'na_required' => :'naRequired',
+        :'na_enabled' => :'naEnabled',
         
         :'comments_required' => :'commentsRequired',
         
-        :'is_kill' => :'isKill',
-        
-        :'is_critical' => :'isCritical',
-        
-        :'na_enabled' => :'naEnabled',
-        
         :'visibility_condition' => :'visibilityCondition',
         
-        :'answer_options' => :'answerOptions'
+        :'answer_options' => :'answerOptions',
+        
+        :'max_response_characters' => :'maxResponseCharacters',
+        
+        :'explanation_prompt' => :'explanationPrompt',
+        
+        :'is_kill' => :'isKill',
+        
+        :'is_critical' => :'isCritical'
         
       }
     end
@@ -85,21 +88,21 @@ module PureCloud
         
         :'type' => :'String',
         
-        :'weight' => :'Float',
-        
-        :'na_required' => :'BOOLEAN',
+        :'na_enabled' => :'BOOLEAN',
         
         :'comments_required' => :'BOOLEAN',
         
-        :'is_kill' => :'BOOLEAN',
-        
-        :'is_critical' => :'BOOLEAN',
-        
-        :'na_enabled' => :'BOOLEAN',
-        
         :'visibility_condition' => :'VisibilityCondition',
         
-        :'answer_options' => :'Array<AnswerOption>'
+        :'answer_options' => :'Array<AnswerOption>',
+        
+        :'max_response_characters' => :'Integer',
+        
+        :'explanation_prompt' => :'String',
+        
+        :'is_kill' => :'BOOLEAN',
+        
+        :'is_critical' => :'BOOLEAN'
         
       }
     end
@@ -149,19 +152,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'weight')
+      if attributes.has_key?(:'naEnabled')
         
         
-        self.weight = attributes[:'weight']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'naRequired')
-        
-        
-        self.na_required = attributes[:'naRequired']
+        self.na_enabled = attributes[:'naEnabled']
         
       
       end
@@ -171,33 +165,6 @@ module PureCloud
         
         
         self.comments_required = attributes[:'commentsRequired']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'isKill')
-        
-        
-        self.is_kill = attributes[:'isKill']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'isCritical')
-        
-        
-        self.is_critical = attributes[:'isCritical']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'naEnabled')
-        
-        
-        self.na_enabled = attributes[:'naEnabled']
         
       
       end
@@ -218,6 +185,42 @@ module PureCloud
           self.answer_options = value
         end
         
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'maxResponseCharacters')
+        
+        
+        self.max_response_characters = attributes[:'maxResponseCharacters']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'explanationPrompt')
+        
+        
+        self.explanation_prompt = attributes[:'explanationPrompt']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isKill')
+        
+        
+        self.is_kill = attributes[:'isKill']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isCritical')
+        
+        
+        self.is_critical = attributes[:'isCritical']
         
       
       end
@@ -252,6 +255,11 @@ module PureCloud
       
       
       
+      allowed_values = ["multipleChoiceQuestion", "freeTextQuestion", "npsQuestion", "readOnlyTextBlockQuestion"]
+      if @type && !allowed_values.include?(@type)
+        return false
+      end
+      
       
       
       
@@ -305,7 +313,16 @@ module PureCloud
     
     
     
-    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] type Object to be assigned
+    def type=(type)
+      allowed_values = ["multipleChoiceQuestion", "freeTextQuestion", "npsQuestion", "readOnlyTextBlockQuestion"]
+      if type && !allowed_values.include?(type)
+        fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
+      end
+      @type = type
+    end
+
     
     
     
@@ -358,14 +375,14 @@ module PureCloud
           text == o.text &&
           help_text == o.help_text &&
           type == o.type &&
-          weight == o.weight &&
-          na_required == o.na_required &&
-          comments_required == o.comments_required &&
-          is_kill == o.is_kill &&
-          is_critical == o.is_critical &&
           na_enabled == o.na_enabled &&
+          comments_required == o.comments_required &&
           visibility_condition == o.visibility_condition &&
-          answer_options == o.answer_options
+          answer_options == o.answer_options &&
+          max_response_characters == o.max_response_characters &&
+          explanation_prompt == o.explanation_prompt &&
+          is_kill == o.is_kill &&
+          is_critical == o.is_critical
     end
 
     # @see the `==` method
@@ -377,7 +394,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, text, help_text, type, weight, na_required, comments_required, is_kill, is_critical, na_enabled, visibility_condition, answer_options].hash
+      [id, text, help_text, type, na_enabled, comments_required, visibility_condition, answer_options, max_response_characters, explanation_prompt, is_kill, is_critical].hash
     end
 
     # build the object from hash

@@ -11,6 +11,8 @@ Method | Description
 [**delete_quality_calibration**](QualityApi.html#delete_quality_calibration) | Delete a calibration by id.
 [**delete_quality_conversation_evaluation**](QualityApi.html#delete_quality_conversation_evaluation) | Delete an evaluation
 [**delete_quality_form**](QualityApi.html#delete_quality_form) | Delete an evaluation form.
+[**delete_quality_forms_evaluation**](QualityApi.html#delete_quality_forms_evaluation) | Delete an evaluation form.
+[**delete_quality_forms_survey**](QualityApi.html#delete_quality_forms_survey) | Delete a survey form.
 [**delete_quality_keywordset**](QualityApi.html#delete_quality_keywordset) | Delete a keywordSet by id.
 [**delete_quality_keywordsets**](QualityApi.html#delete_quality_keywordsets) | Delete keyword sets
 [**get_quality_agents_activity**](QualityApi.html#get_quality_agents_activity) | Gets a list of Agent Activities
@@ -23,21 +25,38 @@ Method | Description
 [**get_quality_form**](QualityApi.html#get_quality_form) | Get an evaluation form
 [**get_quality_form_versions**](QualityApi.html#get_quality_form_versions) | Gets all the revisions for a specific evaluation.
 [**get_quality_forms**](QualityApi.html#get_quality_forms) | Get the list of evaluation forms
+[**get_quality_forms_evaluation**](QualityApi.html#get_quality_forms_evaluation) | Get an evaluation form
+[**get_quality_forms_evaluation_versions**](QualityApi.html#get_quality_forms_evaluation_versions) | Gets all the revisions for a specific evaluation.
+[**get_quality_forms_evaluations**](QualityApi.html#get_quality_forms_evaluations) | Get the list of evaluation forms
+[**get_quality_forms_survey**](QualityApi.html#get_quality_forms_survey) | Get a survey form
+[**get_quality_forms_survey_versions**](QualityApi.html#get_quality_forms_survey_versions) | Gets all the revisions for a specific survey.
+[**get_quality_forms_surveys**](QualityApi.html#get_quality_forms_surveys) | Get the list of survey forms
 [**get_quality_keywordset**](QualityApi.html#get_quality_keywordset) | Get a keywordSet by id.
 [**get_quality_keywordsets**](QualityApi.html#get_quality_keywordsets) | Get the list of keyword sets
 [**get_quality_publishedform**](QualityApi.html#get_quality_publishedform) | Get the published evaluation forms.
 [**get_quality_publishedforms**](QualityApi.html#get_quality_publishedforms) | Get the published evaluation forms.
+[**get_quality_publishedforms_evaluation**](QualityApi.html#get_quality_publishedforms_evaluation) | Get the most recent published version of an evaluation form.
+[**get_quality_publishedforms_evaluations**](QualityApi.html#get_quality_publishedforms_evaluations) | Get the published evaluation forms.
+[**get_quality_publishedforms_survey**](QualityApi.html#get_quality_publishedforms_survey) | Get the most recent published version of a survey form.
+[**get_quality_publishedforms_surveys**](QualityApi.html#get_quality_publishedforms_surveys) | Get the published survey forms.
+[**patch_quality_forms_survey**](QualityApi.html#patch_quality_forms_survey) | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
 [**post_analytics_evaluations_aggregates_query**](QualityApi.html#post_analytics_evaluations_aggregates_query) | Query for evaluation aggregates
 [**post_quality_calibrations**](QualityApi.html#post_quality_calibrations) | Create a calibration
 [**post_quality_conversation_evaluations**](QualityApi.html#post_quality_conversation_evaluations) | Create an evaluation
 [**post_quality_evaluations_scoring**](QualityApi.html#post_quality_evaluations_scoring) | Score evaluation
 [**post_quality_forms**](QualityApi.html#post_quality_forms) | Create an evaluation form.
+[**post_quality_forms_evaluations**](QualityApi.html#post_quality_forms_evaluations) | Create an evaluation form.
+[**post_quality_forms_surveys**](QualityApi.html#post_quality_forms_surveys) | Create a survey form.
 [**post_quality_keywordsets**](QualityApi.html#post_quality_keywordsets) | Create a Keyword Set
 [**post_quality_publishedforms**](QualityApi.html#post_quality_publishedforms) | Publish an evaluation form.
+[**post_quality_publishedforms_evaluations**](QualityApi.html#post_quality_publishedforms_evaluations) | Publish an evaluation form.
+[**post_quality_publishedforms_surveys**](QualityApi.html#post_quality_publishedforms_surveys) | Publish a survey form.
 [**post_quality_spotability**](QualityApi.html#post_quality_spotability) | Retrieve the spotability statistic
 [**put_quality_calibration**](QualityApi.html#put_quality_calibration) | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
 [**put_quality_conversation_evaluation**](QualityApi.html#put_quality_conversation_evaluation) | Update an evaluation
 [**put_quality_form**](QualityApi.html#put_quality_form) | Update an evaluation form.
+[**put_quality_forms_evaluation**](QualityApi.html#put_quality_forms_evaluation) | Update an evaluation form.
+[**put_quality_forms_survey**](QualityApi.html#put_quality_forms_survey) | Update a survey form.
 [**put_quality_keywordset**](QualityApi.html#put_quality_keywordset) | Update a keywordSet to the specified keywordSet via PUT.
 {: class="table table-striped"}
 
@@ -205,6 +224,122 @@ begin
   api_instance.delete_quality_form(form_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->delete_quality_form: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **form_id** | **String**| Form ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_quality_forms_evaluation"></a>
+
+## - delete_quality_forms_evaluation(form_id)
+
+Delete an evaluation form.
+
+
+
+Wraps DELETE /api/v2/quality/forms/evaluations/{formId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+form_id = "form_id_example" # String | Form ID
+
+
+begin
+  #Delete an evaluation form.
+  api_instance.delete_quality_forms_evaluation(form_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->delete_quality_forms_evaluation: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **form_id** | **String**| Form ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_quality_forms_survey"></a>
+
+## - delete_quality_forms_survey(form_id)
+
+Delete a survey form.
+
+
+
+Wraps DELETE /api/v2/quality/forms/surveys/{formId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+form_id = "form_id_example" # String | Form ID
+
+
+begin
+  #Delete a survey form.
+  api_instance.delete_quality_forms_survey(form_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->delete_quality_forms_survey: #{e}"
 end
 ~~~
 
@@ -1082,6 +1217,398 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_quality_forms_evaluation"></a>
+
+## -[**EvaluationForm**](EvaluationForm.html) get_quality_forms_evaluation(form_id)
+
+Get an evaluation form
+
+
+
+Wraps GET /api/v2/quality/forms/evaluations/{formId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+form_id = "form_id_example" # String | Form ID
+
+
+begin
+  #Get an evaluation form
+  result = api_instance.get_quality_forms_evaluation(form_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_forms_evaluation: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **form_id** | **String**| Form ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EvaluationForm**](EvaluationForm.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_forms_evaluation_versions"></a>
+
+## -[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_forms_evaluation_versions(form_id, opts)
+
+Gets all the revisions for a specific evaluation.
+
+
+
+Wraps GET /api/v2/quality/forms/evaluations/{formId}/versions 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+form_id = "form_id_example" # String | Form ID
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Gets all the revisions for a specific evaluation.
+  result = api_instance.get_quality_forms_evaluation_versions(form_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_forms_evaluation_versions: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **form_id** | **String**| Form ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_forms_evaluations"></a>
+
+## -[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_forms_evaluations(opts)
+
+Get the list of evaluation forms
+
+
+
+Wraps GET /api/v2/quality/forms/evaluations 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+opts = { 
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example", # String | Previous page token
+  expand: "expand_example", # String | Expand
+  name: "name_example" # String | Name
+}
+
+begin
+  #Get the list of evaluation forms
+  result = api_instance.get_quality_forms_evaluations(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_forms_evaluations: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **expand** | **String**| Expand | [optional]  |
+ **name** | **String**| Name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_forms_survey"></a>
+
+## -[**SurveyForm**](SurveyForm.html) get_quality_forms_survey(form_id)
+
+Get a survey form
+
+
+
+Wraps GET /api/v2/quality/forms/surveys/{formId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+form_id = "form_id_example" # String | Form ID
+
+
+begin
+  #Get a survey form
+  result = api_instance.get_quality_forms_survey(form_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_forms_survey: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **form_id** | **String**| Form ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_forms_survey_versions"></a>
+
+## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_survey_versions(form_id, opts)
+
+Gets all the revisions for a specific survey.
+
+
+
+Wraps GET /api/v2/quality/forms/surveys/{formId}/versions 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+form_id = "form_id_example" # String | Form ID
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Gets all the revisions for a specific survey.
+  result = api_instance.get_quality_forms_survey_versions(form_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_forms_survey_versions: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **form_id** | **String**| Form ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_forms_surveys"></a>
+
+## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_surveys(opts)
+
+Get the list of survey forms
+
+
+
+Wraps GET /api/v2/quality/forms/surveys 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+opts = { 
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example", # String | Previous page token
+  expand: "expand_example", # String | Expand
+  name: "name_example" # String | Name
+}
+
+begin
+  #Get the list of survey forms
+  result = api_instance.get_quality_forms_surveys(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_forms_surveys: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **expand** | **String**| Expand | [optional]  |
+ **name** | **String**| Name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_quality_keywordset"></a>
 
 ## -[**KeywordSet**](KeywordSet.html) get_quality_keywordset(keyword_set_id)
@@ -1334,6 +1861,314 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_publishedforms_evaluation"></a>
+
+## -[**EvaluationForm**](EvaluationForm.html) get_quality_publishedforms_evaluation(form_id)
+
+Get the most recent published version of an evaluation form.
+
+
+
+Wraps GET /api/v2/quality/publishedforms/evaluations/{formId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+form_id = "form_id_example" # String | Form ID
+
+
+begin
+  #Get the most recent published version of an evaluation form.
+  result = api_instance.get_quality_publishedforms_evaluation(form_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_publishedforms_evaluation: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **form_id** | **String**| Form ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EvaluationForm**](EvaluationForm.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_publishedforms_evaluations"></a>
+
+## -[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_publishedforms_evaluations(opts)
+
+Get the published evaluation forms.
+
+
+
+Wraps GET /api/v2/quality/publishedforms/evaluations 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  name: "name_example" # String | Name
+}
+
+begin
+  #Get the published evaluation forms.
+  result = api_instance.get_quality_publishedforms_evaluations(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_publishedforms_evaluations: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **name** | **String**| Name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_publishedforms_survey"></a>
+
+## -[**SurveyForm**](SurveyForm.html) get_quality_publishedforms_survey(form_id)
+
+Get the most recent published version of a survey form.
+
+
+
+Wraps GET /api/v2/quality/publishedforms/surveys/{formId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+form_id = "form_id_example" # String | Form ID
+
+
+begin
+  #Get the most recent published version of a survey form.
+  result = api_instance.get_quality_publishedforms_survey(form_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_publishedforms_survey: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **form_id** | **String**| Form ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_publishedforms_surveys"></a>
+
+## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_publishedforms_surveys(opts)
+
+Get the published survey forms.
+
+
+
+Wraps GET /api/v2/quality/publishedforms/surveys 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  name: "name_example" # String | Name
+}
+
+begin
+  #Get the published survey forms.
+  result = api_instance.get_quality_publishedforms_surveys(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_publishedforms_surveys: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **name** | **String**| Name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_quality_forms_survey"></a>
+
+## -[**SurveyForm**](SurveyForm.html) patch_quality_forms_survey(form_id, body)
+
+Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
+
+
+
+Wraps PATCH /api/v2/quality/forms/surveys/{formId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+form_id = "form_id_example" # String | Form ID
+
+body = PureCloud::SurveyForm.new # SurveyForm | Survey form
+
+
+begin
+  #Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
+  result = api_instance.patch_quality_forms_survey(form_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->patch_quality_forms_survey: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **form_id** | **String**| Form ID |  |
+ **body** | [**SurveyForm**](SurveyForm.html)| Survey form |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
 
 ### HTTP request headers
 
@@ -1648,6 +2483,124 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_quality_forms_evaluations"></a>
+
+## -[**EvaluationForm**](EvaluationForm.html) post_quality_forms_evaluations(body)
+
+Create an evaluation form.
+
+
+
+Wraps POST /api/v2/quality/forms/evaluations 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+body = PureCloud::EvaluationForm.new # EvaluationForm | Evaluation form
+
+
+begin
+  #Create an evaluation form.
+  result = api_instance.post_quality_forms_evaluations(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->post_quality_forms_evaluations: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EvaluationForm**](EvaluationForm.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_quality_forms_surveys"></a>
+
+## -[**SurveyForm**](SurveyForm.html) post_quality_forms_surveys(body)
+
+Create a survey form.
+
+
+
+Wraps POST /api/v2/quality/forms/surveys 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+body = PureCloud::SurveyForm.new # SurveyForm | Survey form
+
+
+begin
+  #Create a survey form.
+  result = api_instance.post_quality_forms_surveys(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->post_quality_forms_surveys: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**SurveyForm**](SurveyForm.html)| Survey form |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_quality_keywordsets"></a>
 
 ## -[**KeywordSet**](KeywordSet.html) post_quality_keywordsets(body, opts)
@@ -1762,6 +2715,124 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EvaluationForm**](EvaluationForm.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_quality_publishedforms_evaluations"></a>
+
+## -[**EvaluationForm**](EvaluationForm.html) post_quality_publishedforms_evaluations(body)
+
+Publish an evaluation form.
+
+
+
+Wraps POST /api/v2/quality/publishedforms/evaluations 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+body = PureCloud::PublishForm.new # PublishForm | Evaluation form
+
+
+begin
+  #Publish an evaluation form.
+  result = api_instance.post_quality_publishedforms_evaluations(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->post_quality_publishedforms_evaluations: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**PublishForm**](PublishForm.html)| Evaluation form |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EvaluationForm**](EvaluationForm.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_quality_publishedforms_surveys"></a>
+
+## -[**SurveyForm**](SurveyForm.html) post_quality_publishedforms_surveys(body)
+
+Publish a survey form.
+
+
+
+Wraps POST /api/v2/quality/publishedforms/surveys 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+body = PureCloud::PublishForm.new # PublishForm | Survey form
+
+
+begin
+  #Publish a survey form.
+  result = api_instance.post_quality_publishedforms_surveys(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->post_quality_publishedforms_surveys: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**PublishForm**](PublishForm.html)| Survey form |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
 
 ### HTTP request headers
 
@@ -2015,6 +3086,130 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EvaluationForm**](EvaluationForm.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_quality_forms_evaluation"></a>
+
+## -[**EvaluationForm**](EvaluationForm.html) put_quality_forms_evaluation(form_id, body)
+
+Update an evaluation form.
+
+
+
+Wraps PUT /api/v2/quality/forms/evaluations/{formId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+form_id = "form_id_example" # String | Form ID
+
+body = PureCloud::EvaluationForm.new # EvaluationForm | Evaluation form
+
+
+begin
+  #Update an evaluation form.
+  result = api_instance.put_quality_forms_evaluation(form_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->put_quality_forms_evaluation: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **form_id** | **String**| Form ID |  |
+ **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EvaluationForm**](EvaluationForm.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_quality_forms_survey"></a>
+
+## -[**SurveyForm**](SurveyForm.html) put_quality_forms_survey(form_id, body)
+
+Update a survey form.
+
+
+
+Wraps PUT /api/v2/quality/forms/surveys/{formId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+form_id = "form_id_example" # String | Form ID
+
+body = PureCloud::SurveyForm.new # SurveyForm | Survey form
+
+
+begin
+  #Update a survey form.
+  result = api_instance.put_quality_forms_survey(form_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->put_quality_forms_survey: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **form_id** | **String**| Form ID |  |
+ **body** | [**SurveyForm**](SurveyForm.html)| Survey form |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
 
 ### HTTP request headers
 

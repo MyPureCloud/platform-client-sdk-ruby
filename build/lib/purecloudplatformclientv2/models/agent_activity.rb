@@ -29,6 +29,18 @@ module PureCloud
 
     attr_accessor :average_evaluation_score
 
+    attr_accessor :num_critical_evaluations
+
+    attr_accessor :average_critical_score
+
+    attr_accessor :highest_evaluation_score
+
+    attr_accessor :lowest_evaluation_score
+
+    attr_accessor :highest_critical_score
+
+    attr_accessor :lowest_critical_score
+
     attr_accessor :agent_evaluator_activity_list
 
     # The URI for this object
@@ -47,6 +59,18 @@ module PureCloud
         :'num_evaluations' => :'numEvaluations',
         
         :'average_evaluation_score' => :'averageEvaluationScore',
+        
+        :'num_critical_evaluations' => :'numCriticalEvaluations',
+        
+        :'average_critical_score' => :'averageCriticalScore',
+        
+        :'highest_evaluation_score' => :'highestEvaluationScore',
+        
+        :'lowest_evaluation_score' => :'lowestEvaluationScore',
+        
+        :'highest_critical_score' => :'highestCriticalScore',
+        
+        :'lowest_critical_score' => :'lowestCriticalScore',
         
         :'agent_evaluator_activity_list' => :'agentEvaluatorActivityList',
         
@@ -68,6 +92,18 @@ module PureCloud
         :'num_evaluations' => :'Integer',
         
         :'average_evaluation_score' => :'Integer',
+        
+        :'num_critical_evaluations' => :'Integer',
+        
+        :'average_critical_score' => :'Float',
+        
+        :'highest_evaluation_score' => :'Float',
+        
+        :'lowest_evaluation_score' => :'Float',
+        
+        :'highest_critical_score' => :'Float',
+        
+        :'lowest_critical_score' => :'Float',
         
         :'agent_evaluator_activity_list' => :'Array<AgentEvaluatorActivity>',
         
@@ -125,6 +161,60 @@ module PureCloud
         
         
         self.average_evaluation_score = attributes[:'averageEvaluationScore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'numCriticalEvaluations')
+        
+        
+        self.num_critical_evaluations = attributes[:'numCriticalEvaluations']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'averageCriticalScore')
+        
+        
+        self.average_critical_score = attributes[:'averageCriticalScore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'highestEvaluationScore')
+        
+        
+        self.highest_evaluation_score = attributes[:'highestEvaluationScore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'lowestEvaluationScore')
+        
+        
+        self.lowest_evaluation_score = attributes[:'lowestEvaluationScore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'highestCriticalScore')
+        
+        
+        self.highest_critical_score = attributes[:'highestCriticalScore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'lowestCriticalScore')
+        
+        
+        self.lowest_critical_score = attributes[:'lowestCriticalScore']
         
       
       end
@@ -193,8 +283,62 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -241,6 +385,12 @@ module PureCloud
           agent == o.agent &&
           num_evaluations == o.num_evaluations &&
           average_evaluation_score == o.average_evaluation_score &&
+          num_critical_evaluations == o.num_critical_evaluations &&
+          average_critical_score == o.average_critical_score &&
+          highest_evaluation_score == o.highest_evaluation_score &&
+          lowest_evaluation_score == o.lowest_evaluation_score &&
+          highest_critical_score == o.highest_critical_score &&
+          lowest_critical_score == o.lowest_critical_score &&
           agent_evaluator_activity_list == o.agent_evaluator_activity_list &&
           self_uri == o.self_uri
     end
@@ -254,7 +404,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, agent, num_evaluations, average_evaluation_score, agent_evaluator_activity_list, self_uri].hash
+      [id, name, agent, num_evaluations, average_evaluation_score, num_critical_evaluations, average_critical_score, highest_evaluation_score, lowest_evaluation_score, highest_critical_score, lowest_critical_score, agent_evaluator_activity_list, self_uri].hash
     end
 
     # build the object from hash

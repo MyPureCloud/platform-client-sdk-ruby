@@ -24,9 +24,6 @@ module PureCloud
     # The evaluation form name
     attr_accessor :name
 
-    # The form type (evaluation)
-    attr_accessor :type
-
     # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :modified_date
 
@@ -50,8 +47,6 @@ module PureCloud
         
         :'name' => :'name',
         
-        :'type' => :'type',
-        
         :'modified_date' => :'modifiedDate',
         
         :'published' => :'published',
@@ -74,8 +69,6 @@ module PureCloud
         :'id' => :'String',
         
         :'name' => :'String',
-        
-        :'type' => :'String',
         
         :'modified_date' => :'DateTime',
         
@@ -114,15 +107,6 @@ module PureCloud
         
         
         self.name = attributes[:'name']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'type')
-        
-        
-        self.type = attributes[:'type']
         
       
       end
@@ -213,15 +197,6 @@ module PureCloud
       
       
       
-      if @type.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
       
       
       
@@ -293,11 +268,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -305,7 +275,6 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
-          type == o.type &&
           modified_date == o.modified_date &&
           published == o.published &&
           context_id == o.context_id &&
@@ -323,7 +292,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, type, modified_date, published, context_id, question_groups, published_versions, self_uri].hash
+      [id, name, modified_date, published, context_id, question_groups, published_versions, self_uri].hash
     end
 
     # build the object from hash
