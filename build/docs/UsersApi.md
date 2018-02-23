@@ -42,8 +42,10 @@ Method | Description
 [**post_analytics_users_details_query**](UsersApi.html#post_analytics_users_details_query) | Query for user details
 [**post_analytics_users_observations_query**](UsersApi.html#post_analytics_users_observations_query) | Query for user observations
 [**post_user_invite**](UsersApi.html#post_user_invite) | Send an activation email to the user
+[**post_user_password**](UsersApi.html#post_user_password) | Change a users password
 [**post_user_routingskills**](UsersApi.html#post_user_routingskills) | Add routing skill to user
 [**post_users**](UsersApi.html#post_users) | Create user
+[**post_users_me_password**](UsersApi.html#post_users_me_password) | Change your password
 [**post_users_search**](UsersApi.html#post_users_search) | Search users
 [**put_user_callforwarding**](UsersApi.html#put_user_callforwarding) | Update a user&#39;s CallForwarding
 [**put_user_outofoffice**](UsersApi.html#put_user_outofoffice) | Update an OutOfOffice
@@ -2164,6 +2166,67 @@ nil (empty response body)
 
 
 
+<a name="post_user_password"></a>
+
+## - post_user_password(user_id, body)
+
+Change a users password
+
+
+
+Wraps POST /api/v2/users/{userId}/password 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+user_id = "user_id_example" # String | User ID
+
+body = PureCloud::ChangePasswordRequest.new # ChangePasswordRequest | Password
+
+
+begin
+  #Change a users password
+  api_instance.post_user_password(user_id, body)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->post_user_password: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **body** | [**ChangePasswordRequest**](ChangePasswordRequest.html)| Password |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_user_routingskills"></a>
 
 ## -[**UserRoutingSkill**](UserRoutingSkill.html) post_user_routingskills(user_id, body)
@@ -2277,6 +2340,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**User**](User.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_users_me_password"></a>
+
+## - post_users_me_password(body)
+
+Change your password
+
+
+
+Wraps POST /api/v2/users/me/password 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+body = PureCloud::ChangeMyPasswordRequest.new # ChangeMyPasswordRequest | Password
+
+
+begin
+  #Change your password
+  api_instance.post_users_me_password(body)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->post_users_me_password: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ChangeMyPasswordRequest**](ChangeMyPasswordRequest.html)| Password |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 

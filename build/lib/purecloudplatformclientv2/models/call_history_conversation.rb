@@ -41,6 +41,15 @@ module PureCloud
     # Was this conversation a conference
     attr_accessor :was_conference
 
+    # Was this conversation a callback
+    attr_accessor :was_callback
+
+    # Did this conversation have a screen share session
+    attr_accessor :had_screen_share
+
+    # Did this conversation have a cobrowse session
+    attr_accessor :had_cobrowse
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -63,6 +72,12 @@ module PureCloud
         :'start_time' => :'startTime',
         
         :'was_conference' => :'wasConference',
+        
+        :'was_callback' => :'wasCallback',
+        
+        :'had_screen_share' => :'hadScreenShare',
+        
+        :'had_cobrowse' => :'hadCobrowse',
         
         :'self_uri' => :'selfUri'
         
@@ -88,6 +103,12 @@ module PureCloud
         :'start_time' => :'DateTime',
         
         :'was_conference' => :'BOOLEAN',
+        
+        :'was_callback' => :'BOOLEAN',
+        
+        :'had_screen_share' => :'BOOLEAN',
+        
+        :'had_cobrowse' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -177,6 +198,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'wasCallback')
+        
+        
+        self.was_callback = attributes[:'wasCallback']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'hadScreenShare')
+        
+        
+        self.had_screen_share = attributes[:'hadScreenShare']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'hadCobrowse')
+        
+        
+        self.had_cobrowse = attributes[:'hadCobrowse']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -219,6 +267,18 @@ module PureCloud
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -299,6 +359,21 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -312,6 +387,9 @@ module PureCloud
           missed_call == o.missed_call &&
           start_time == o.start_time &&
           was_conference == o.was_conference &&
+          was_callback == o.was_callback &&
+          had_screen_share == o.had_screen_share &&
+          had_cobrowse == o.had_cobrowse &&
           self_uri == o.self_uri
     end
 
@@ -324,7 +402,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, participants, direction, went_to_voicemail, missed_call, start_time, was_conference, self_uri].hash
+      [id, name, participants, direction, went_to_voicemail, missed_call, start_time, was_conference, was_callback, had_screen_share, had_cobrowse, self_uri].hash
     end
 
     # build the object from hash

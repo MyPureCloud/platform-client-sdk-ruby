@@ -3577,7 +3577,7 @@ module PureCloud
 
     # Publish an evaluation form.
     # 
-    # @param body Evaluation form
+    # @param body Publish request containing id of form to publish
     # @param [Hash] opts the optional parameters
     # @return [EvaluationForm]
     def post_quality_publishedforms(body, opts = {})
@@ -3587,7 +3587,7 @@ module PureCloud
 
     # Publish an evaluation form.
     # 
-    # @param body Evaluation form
+    # @param body Publish request containing id of form to publish
     # @param [Hash] opts the optional parameters
     # @return [Array<(EvaluationForm, Fixnum, Hash)>] EvaluationForm data, response status code and response headers
     def post_quality_publishedforms_with_http_info(body, opts = {})
@@ -3642,7 +3642,7 @@ module PureCloud
 
     # Publish an evaluation form.
     # 
-    # @param body Evaluation form
+    # @param body Publish request containing id of form to publish
     # @param [Hash] opts the optional parameters
     # @return [EvaluationForm]
     def post_quality_publishedforms_evaluations(body, opts = {})
@@ -3652,7 +3652,7 @@ module PureCloud
 
     # Publish an evaluation form.
     # 
-    # @param body Evaluation form
+    # @param body Publish request containing id of form to publish
     # @param [Hash] opts the optional parameters
     # @return [Array<(EvaluationForm, Fixnum, Hash)>] EvaluationForm data, response status code and response headers
     def post_quality_publishedforms_evaluations_with_http_info(body, opts = {})

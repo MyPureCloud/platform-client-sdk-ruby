@@ -28,9 +28,7 @@ module PureCloud
 
     attr_accessor :number
 
-    attr_accessor :container_node
-
-    attr_accessor :missing_node
+    attr_accessor :value_node
 
     attr_accessor :pojo
 
@@ -54,7 +52,9 @@ module PureCloud
 
     attr_accessor :binary
 
-    attr_accessor :value_node
+    attr_accessor :container_node
+
+    attr_accessor :missing_node
 
     attr_accessor :array
 
@@ -74,9 +74,7 @@ module PureCloud
         
         :'number' => :'number',
         
-        :'container_node' => :'containerNode',
-        
-        :'missing_node' => :'missingNode',
+        :'value_node' => :'valueNode',
         
         :'pojo' => :'pojo',
         
@@ -100,7 +98,9 @@ module PureCloud
         
         :'binary' => :'binary',
         
-        :'value_node' => :'valueNode',
+        :'container_node' => :'containerNode',
+        
+        :'missing_node' => :'missingNode',
         
         :'array' => :'array',
         
@@ -123,9 +123,7 @@ module PureCloud
         
         :'number' => :'BOOLEAN',
         
-        :'container_node' => :'BOOLEAN',
-        
-        :'missing_node' => :'BOOLEAN',
+        :'value_node' => :'BOOLEAN',
         
         :'pojo' => :'BOOLEAN',
         
@@ -149,7 +147,9 @@ module PureCloud
         
         :'binary' => :'BOOLEAN',
         
-        :'value_node' => :'BOOLEAN',
+        :'container_node' => :'BOOLEAN',
+        
+        :'missing_node' => :'BOOLEAN',
         
         :'array' => :'BOOLEAN',
         
@@ -212,19 +212,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'containerNode')
+      if attributes.has_key?(:'valueNode')
         
         
-        self.container_node = attributes[:'containerNode']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'missingNode')
-        
-        
-        self.missing_node = attributes[:'missingNode']
+        self.value_node = attributes[:'valueNode']
         
       
       end
@@ -329,10 +320,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'valueNode')
+      if attributes.has_key?(:'containerNode')
         
         
-        self.value_node = attributes[:'valueNode']
+        self.container_node = attributes[:'containerNode']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'missingNode')
+        
+        
+        self.missing_node = attributes[:'missingNode']
         
       
       end
@@ -587,8 +587,7 @@ module PureCloud
           object == o.object &&
           boolean == o.boolean &&
           number == o.number &&
-          container_node == o.container_node &&
-          missing_node == o.missing_node &&
+          value_node == o.value_node &&
           pojo == o.pojo &&
           integral_number == o.integral_number &&
           floating_point_number == o.floating_point_number &&
@@ -600,7 +599,8 @@ module PureCloud
           big_integer == o.big_integer &&
           textual == o.textual &&
           binary == o.binary &&
-          value_node == o.value_node &&
+          container_node == o.container_node &&
+          missing_node == o.missing_node &&
           array == o.array &&
           null == o.null
     end
@@ -614,7 +614,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [node_type, float, object, boolean, number, container_node, missing_node, pojo, integral_number, floating_point_number, short, int, long, double, big_decimal, big_integer, textual, binary, value_node, array, null].hash
+      [node_type, float, object, boolean, number, value_node, pojo, integral_number, floating_point_number, short, int, long, double, big_decimal, big_integer, textual, binary, container_node, missing_node, array, null].hash
     end
 
     # build the object from hash

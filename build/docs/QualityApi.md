@@ -2692,7 +2692,7 @@ end
 
 api_instance = PureCloud::QualityApi.new
 
-body = PureCloud::EvaluationForm.new # EvaluationForm | Evaluation form
+body = PureCloud::PublishForm.new # PublishForm | Publish request containing id of form to publish
 
 
 begin
@@ -2708,7 +2708,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
+ **body** | [**PublishForm**](PublishForm.html)| Publish request containing id of form to publish |  |
 {: class="table table-striped"}
 
 
@@ -2751,7 +2751,7 @@ end
 
 api_instance = PureCloud::QualityApi.new
 
-body = PureCloud::PublishForm.new # PublishForm | Evaluation form
+body = PureCloud::PublishForm.new # PublishForm | Publish request containing id of form to publish
 
 
 begin
@@ -2767,7 +2767,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PublishForm**](PublishForm.html)| Evaluation form |  |
+ **body** | [**PublishForm**](PublishForm.html)| Publish request containing id of form to publish |  |
 {: class="table table-striped"}
 
 

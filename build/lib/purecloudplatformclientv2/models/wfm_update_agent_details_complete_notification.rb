@@ -18,13 +18,13 @@ require 'date'
 
 module PureCloud
   class WfmUpdateAgentDetailsCompleteNotification
-    attr_accessor :result
+    attr_accessor :status
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'result' => :'result'
+        :'status' => :'status'
         
       }
     end
@@ -33,7 +33,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'result' => :'String'
+        :'status' => :'String'
         
       }
     end
@@ -47,10 +47,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'result')
+      if attributes.has_key?(:'status')
         
         
-        self.result = attributes[:'result']
+        self.status = attributes[:'status']
         
       
       end
@@ -73,8 +73,8 @@ module PureCloud
       
       
       
-      allowed_values = ["Processing", "Error", "Complete"]
-      if @result && !allowed_values.include?(@result)
+      allowed_values = ["Processing", "Complete", "Error"]
+      if @status && !allowed_values.include?(@status)
         return false
       end
       
@@ -85,13 +85,13 @@ module PureCloud
     
     
     # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] result Object to be assigned
-    def result=(result)
-      allowed_values = ["Processing", "Error", "Complete"]
-      if result && !allowed_values.include?(result)
-        fail ArgumentError, "invalid value for 'result', must be one of #{allowed_values}."
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      allowed_values = ["Processing", "Complete", "Error"]
+      if status && !allowed_values.include?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
       end
-      @result = result
+      @status = status
     end
 
     
@@ -102,7 +102,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          result == o.result
+          status == o.status
     end
 
     # @see the `==` method
@@ -114,7 +114,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [result].hash
+      [status].hash
     end
 
     # build the object from hash

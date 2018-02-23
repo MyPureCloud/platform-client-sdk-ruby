@@ -18,6 +18,7 @@ title: Metabase
 | **state** | **String** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **modified_by_app** | **String** | The application that last modified the resource. | [optional] |
 | **created_by_app** | **String** | The application that created the resource. | [optional] |
+| **type** | **String** |  | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

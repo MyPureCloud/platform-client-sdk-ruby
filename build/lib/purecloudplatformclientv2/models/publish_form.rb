@@ -21,8 +21,8 @@ module PureCloud
     # Is this form published
     attr_accessor :published
 
-    # Unique Id for all versions of this form
-    attr_accessor :context_id
+    # Unique Id for this version of this form
+    attr_accessor :id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -30,7 +30,7 @@ module PureCloud
         
         :'published' => :'published',
         
-        :'context_id' => :'contextId'
+        :'id' => :'id'
         
       }
     end
@@ -41,7 +41,7 @@ module PureCloud
         
         :'published' => :'BOOLEAN',
         
-        :'context_id' => :'String'
+        :'id' => :'String'
         
       }
     end
@@ -64,10 +64,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'contextId')
+      if attributes.has_key?(:'id')
         
         
-        self.context_id = attributes[:'contextId']
+        self.id = attributes[:'id']
         
       
       end
@@ -98,7 +98,7 @@ module PureCloud
       
       
       
-      if @context_id.nil?
+      if @id.nil?
         return false
       end
 
@@ -125,7 +125,7 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           published == o.published &&
-          context_id == o.context_id
+          id == o.id
     end
 
     # @see the `==` method
@@ -137,7 +137,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [published, context_id].hash
+      [published, id].hash
     end
 
     # build the object from hash

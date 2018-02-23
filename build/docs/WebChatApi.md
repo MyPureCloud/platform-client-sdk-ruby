@@ -14,7 +14,6 @@ Method | Description
 [**get_webchat_deployments**](WebChatApi.html#get_webchat_deployments) | List WebChat deployments
 [**get_webchat_settings**](WebChatApi.html#get_webchat_settings) | Get WebChat deployment settings
 [**post_webchat_deployments**](WebChatApi.html#post_webchat_deployments) | Create WebChat deployment
-[**post_webchat_settings**](WebChatApi.html#post_webchat_settings) | Create WebChat deployment settings
 [**put_webchat_deployment**](WebChatApi.html#put_webchat_deployment) | Update a WebChat deployment
 [**put_webchat_settings**](WebChatApi.html#put_webchat_settings) | Update WebChat deployment settings
 {: class="table table-striped"}
@@ -345,65 +344,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WebChatDeployment**](WebChatDeployment.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-<a name="post_webchat_settings"></a>
-
-## -[**WebChatSettings**](WebChatSettings.html) post_webchat_settings(body)
-
-Create WebChat deployment settings
-
-
-
-Wraps POST /api/v2/webchat/settings 
-
-
-### Example
-~~~ruby
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::WebChatApi.new
-
-body = PureCloud::WebChatSettings.new # WebChatSettings | webChatSettings
-
-
-begin
-  #Create WebChat deployment settings
-  result = api_instance.post_webchat_settings(body)
-  p result
-rescue PureCloud::ApiError => e
-  puts "Exception when calling WebChatApi->post_webchat_settings: #{e}"
-end
-~~~
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**WebChatSettings**](WebChatSettings.html)| webChatSettings |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-[**WebChatSettings**](WebChatSettings.html)
 
 ### HTTP request headers
 

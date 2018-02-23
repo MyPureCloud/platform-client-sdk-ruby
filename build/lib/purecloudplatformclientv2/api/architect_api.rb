@@ -633,6 +633,144 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # deletes a specific datatable by id
+    # deletes an entire datatable (including schema and data) with a given datatableId)
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_flows_datatable(datatable_id, opts = {})
+      delete_flows_datatable_with_http_info(datatable_id, opts)
+      return nil
+    end
+
+    # deletes a specific datatable by id
+    # deletes an entire datatable (including schema and data) with a given datatableId)
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_flows_datatable_with_http_info(datatable_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.delete_flows_datatable ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.delete_flows_datatable" if datatable_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#delete_flows_datatable\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Delete a row entry
+    # Deletes a row with a given rowId.
+    # @param datatable_id id of datatable
+    # @param row_id the key for the row
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_flows_datatable_row(datatable_id, row_id, opts = {})
+      delete_flows_datatable_row_with_http_info(datatable_id, row_id, opts)
+      return nil
+    end
+
+    # Delete a row entry
+    # Deletes a row with a given rowId.
+    # @param datatable_id id of datatable
+    # @param row_id the key for the row
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_flows_datatable_row_with_http_info(datatable_id, row_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.delete_flows_datatable_row ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.delete_flows_datatable_row" if datatable_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'row_id' is set
+      fail ArgumentError, "Missing the required parameter 'row_id' when calling ArchitectApi.delete_flows_datatable_row" if row_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s).sub('{' + 'rowId' + '}', row_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#delete_flows_datatable_row\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get Dependency Tracking objects that have a given display name
     # 
     # @param name Object name to search for
@@ -3697,6 +3835,302 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Returns a specific datatable by datatableId
+    # Given a datableid returns the schema associated with it.
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :showbrief If true returns a shortened version of the schema including the name, id and description] (default to true)
+    # @return [JsonSchemaDocument]
+    def get_flows_datatable(datatable_id, opts = {})
+      data, _status_code, _headers = get_flows_datatable_with_http_info(datatable_id, opts)
+      return data
+    end
+
+    # Returns a specific datatable by datatableId
+    # Given a datableid returns the schema associated with it.
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :showbrief If true returns a shortened version of the schema including the name, id and description]
+    # @return [Array<(JsonSchemaDocument, Fixnum, Hash)>] JsonSchemaDocument data, response status code and response headers
+    def get_flows_datatable_with_http_info(datatable_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_datatable ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.get_flows_datatable" if datatable_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'showbrief'] = opts[:'showbrief'] if opts[:'showbrief']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'JsonSchemaDocument')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flows_datatable\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns a specific row for the datatable
+    # Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+    # @param datatable_id id of datatable
+    # @param row_id The key for the row
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :showbrief if true returns just the key field for the row (default to true)
+    # @return [Hash<String, Object>]
+    def get_flows_datatable_row(datatable_id, row_id, opts = {})
+      data, _status_code, _headers = get_flows_datatable_row_with_http_info(datatable_id, row_id, opts)
+      return data
+    end
+
+    # Returns a specific row for the datatable
+    # Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+    # @param datatable_id id of datatable
+    # @param row_id The key for the row
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :showbrief if true returns just the key field for the row
+    # @return [Array<(Hash<String, Object>, Fixnum, Hash)>] Hash<String, Object> data, response status code and response headers
+    def get_flows_datatable_row_with_http_info(datatable_id, row_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_datatable_row ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.get_flows_datatable_row" if datatable_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'row_id' is set
+      fail ArgumentError, "Missing the required parameter 'row_id' when calling ArchitectApi.get_flows_datatable_row" if row_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s).sub('{' + 'rowId' + '}', row_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'showbrief'] = opts[:'showbrief'] if opts[:'showbrief']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Hash<String, Object>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flows_datatable_row\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns the rows for the datatable
+    # Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :showbrief If true returns just the key value of the row (default to true)
+    # @return [Array<Hash<String, Object>>]
+    def get_flows_datatable_rows(datatable_id, opts = {})
+      data, _status_code, _headers = get_flows_datatable_rows_with_http_info(datatable_id, opts)
+      return data
+    end
+
+    # Returns the rows for the datatable
+    # Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :showbrief If true returns just the key value of the row
+    # @return [Array<(Array<Hash<String, Object>>, Fixnum, Hash)>] Array<Hash<String, Object>> data, response status code and response headers
+    def get_flows_datatable_rows_with_http_info(datatable_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_datatable_rows ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.get_flows_datatable_rows" if datatable_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}/rows".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'showbrief'] = opts[:'showbrief'] if opts[:'showbrief']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<Hash<String, Object>>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flows_datatable_rows\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Retrieve a list of datatables for the org
+    # Returns a metadata list of the datatables associated with this org, including ID, name and description.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :showbrief If true, returns a shortened version of the schema including the name, id and description (default to true)
+    # @return [Array<JsonSchemaDocument>]
+    def get_flows_datatables(opts = {})
+      data, _status_code, _headers = get_flows_datatables_with_http_info(opts)
+      return data
+    end
+
+    # Retrieve a list of datatables for the org
+    # Returns a metadata list of the datatables associated with this org, including ID, name and description.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :showbrief If true, returns a shortened version of the schema including the name, id and description
+    # @return [Array<(Array<JsonSchemaDocument>, Fixnum, Hash)>] Array<JsonSchemaDocument> data, response status code and response headers
+    def get_flows_datatables_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_datatables ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'showbrief'] = opts[:'showbrief'] if opts[:'showbrief']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<JsonSchemaDocument>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flows_datatables\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Rebuild Dependency Tracking data for an organization
     # Asynchronous.  Notification topic: v2.architect.dependencytracking.build
     # @param [Hash] opts the optional parameters
@@ -4820,6 +5254,146 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Create a new row entry
+    # Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+    # @param datatable_id id of datatable
+    # @param data_table_row 
+    # @param [Hash] opts the optional parameters
+    # @return [Hash<String, Object>]
+    def post_flows_datatable_rows(datatable_id, data_table_row, opts = {})
+      data, _status_code, _headers = post_flows_datatable_rows_with_http_info(datatable_id, data_table_row, opts)
+      return data
+    end
+
+    # Create a new row entry
+    # Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+    # @param datatable_id id of datatable
+    # @param data_table_row 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Hash<String, Object>, Fixnum, Hash)>] Hash<String, Object> data, response status code and response headers
+    def post_flows_datatable_rows_with_http_info(datatable_id, data_table_row, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_datatable_rows ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.post_flows_datatable_rows" if datatable_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'data_table_row' is set
+      fail ArgumentError, "Missing the required parameter 'data_table_row' when calling ArchitectApi.post_flows_datatable_rows" if data_table_row.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}/rows".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(data_table_row)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Hash<String, Object>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_flows_datatable_rows\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a new datatable with the specified json-schema definition
+    # This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+    # @param body datatable json-schema
+    # @param [Hash] opts the optional parameters
+    # @return [JsonSchemaDocument]
+    def post_flows_datatables(body, opts = {})
+      data, _status_code, _headers = post_flows_datatables_with_http_info(body, opts)
+      return data
+    end
+
+    # Create a new datatable with the specified json-schema definition
+    # This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+    # @param body datatable json-schema
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(JsonSchemaDocument, Fixnum, Hash)>] JsonSchemaDocument data, response status code and response headers
+    def post_flows_datatables_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_datatables ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.post_flows_datatables" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'JsonSchemaDocument')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_flows_datatables\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Update an IVR Config.
     # 
     # @param ivr_id IVR id
@@ -5347,6 +5921,171 @@ module PureCloud
         :return_type => 'Flow')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#put_flow\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Updates a specific datatable by datatableId
+    # Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :showbrief If true returns a shortened version of the schema including the name, id and description (default to true)
+    # @option opts [JsonSchemaDocument] :body datatable json-schema
+    # @return [JsonSchemaDocument]
+    def put_flows_datatable(datatable_id, opts = {})
+      data, _status_code, _headers = put_flows_datatable_with_http_info(datatable_id, opts)
+      return data
+    end
+
+    # Updates a specific datatable by datatableId
+    # Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :showbrief If true returns a shortened version of the schema including the name, id and description
+    # @option opts [JsonSchemaDocument] :body datatable json-schema
+    # @return [Array<(JsonSchemaDocument, Fixnum, Hash)>] JsonSchemaDocument data, response status code and response headers
+    def put_flows_datatable_with_http_info(datatable_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.put_flows_datatable ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.put_flows_datatable" if datatable_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'showbrief'] = opts[:'showbrief'] if opts[:'showbrief']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'JsonSchemaDocument')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#put_flows_datatable\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a row entry
+    # Updates a row with the given to the new values.
+    # @param datatable_id id of datatable
+    # @param row_id the key for the row
+    # @param [Hash] opts the optional parameters
+    # @option opts [Object] :body datatable row
+    # @return [Hash<String, Object>]
+    def put_flows_datatable_row(datatable_id, row_id, opts = {})
+      data, _status_code, _headers = put_flows_datatable_row_with_http_info(datatable_id, row_id, opts)
+      return data
+    end
+
+    # Update a row entry
+    # Updates a row with the given to the new values.
+    # @param datatable_id id of datatable
+    # @param row_id the key for the row
+    # @param [Hash] opts the optional parameters
+    # @option opts [Object] :body datatable row
+    # @return [Array<(Hash<String, Object>, Fixnum, Hash)>] Hash<String, Object> data, response status code and response headers
+    def put_flows_datatable_row_with_http_info(datatable_id, row_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.put_flows_datatable_row ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.put_flows_datatable_row" if datatable_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'row_id' is set
+      fail ArgumentError, "Missing the required parameter 'row_id' when calling ArchitectApi.put_flows_datatable_row" if row_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s).sub('{' + 'rowId' + '}', row_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Hash<String, Object>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#put_flows_datatable_row\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

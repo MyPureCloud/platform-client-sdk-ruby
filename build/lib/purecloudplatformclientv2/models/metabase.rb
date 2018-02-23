@@ -50,6 +50,8 @@ module PureCloud
     # The application that created the resource.
     attr_accessor :created_by_app
 
+    attr_accessor :type
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -78,6 +80,8 @@ module PureCloud
         :'modified_by_app' => :'modifiedByApp',
         
         :'created_by_app' => :'createdByApp',
+        
+        :'type' => :'type',
         
         :'self_uri' => :'selfUri'
         
@@ -109,6 +113,8 @@ module PureCloud
         :'modified_by_app' => :'String',
         
         :'created_by_app' => :'String',
+        
+        :'type' => :'String',
         
         :'self_uri' => :'String'
         
@@ -223,6 +229,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'type')
+        
+        
+        self.type = attributes[:'type']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -303,6 +318,15 @@ module PureCloud
       
       
       
+      allowed_values = ["EXTERNAL", "EXTERNAL_PCV", "EXTERNAL_PCV_AWS", "EXTERNAL_BYOC_CARRIER", "EXTERNAL_BYOC_PBX", "STATION", "TIE"]
+      if @type && !allowed_values.include?(@type)
+        return false
+      end
+      
+      
+      
+      
+      
       
       
     end
@@ -373,6 +397,20 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] type Object to be assigned
+    def type=(type)
+      allowed_values = ["EXTERNAL", "EXTERNAL_PCV", "EXTERNAL_PCV_AWS", "EXTERNAL_BYOC_CARRIER", "EXTERNAL_BYOC_PBX", "STATION", "TIE"]
+      if type && !allowed_values.include?(type)
+        fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
+      end
+      @type = type
+    end
+
+    
+    
+    
+    
     
     
     
@@ -393,6 +431,7 @@ module PureCloud
           state == o.state &&
           modified_by_app == o.modified_by_app &&
           created_by_app == o.created_by_app &&
+          type == o.type &&
           self_uri == o.self_uri
     end
 
@@ -405,7 +444,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, type, self_uri].hash
     end
 
     # build the object from hash

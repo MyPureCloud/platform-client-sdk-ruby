@@ -33,6 +33,8 @@ module PureCloud
 
     attr_accessor :assign_calibrations
 
+    attr_accessor :assign_surveys
+
     attr_accessor :retention_duration
 
     attr_accessor :initiate_screen_recording
@@ -54,6 +56,8 @@ module PureCloud
         :'assign_metered_evaluations' => :'assignMeteredEvaluations',
         
         :'assign_calibrations' => :'assignCalibrations',
+        
+        :'assign_surveys' => :'assignSurveys',
         
         :'retention_duration' => :'retentionDuration',
         
@@ -79,6 +83,8 @@ module PureCloud
         :'assign_metered_evaluations' => :'Array<MeteredEvaluationAssignment>',
         
         :'assign_calibrations' => :'Array<CalibrationAssignment>',
+        
+        :'assign_surveys' => :'Array<SurveyAssignment>',
         
         :'retention_duration' => :'RetentionDuration',
         
@@ -151,6 +157,17 @@ module PureCloud
         
         if (value = attributes[:'assignCalibrations']).is_a?(Array)
           self.assign_calibrations = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'assignSurveys')
+        
+        if (value = attributes[:'assignSurveys']).is_a?(Array)
+          self.assign_surveys = value
         end
         
         
@@ -238,8 +255,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -297,6 +323,7 @@ module PureCloud
           assign_evaluations == o.assign_evaluations &&
           assign_metered_evaluations == o.assign_metered_evaluations &&
           assign_calibrations == o.assign_calibrations &&
+          assign_surveys == o.assign_surveys &&
           retention_duration == o.retention_duration &&
           initiate_screen_recording == o.initiate_screen_recording &&
           media_transcriptions == o.media_transcriptions
@@ -311,7 +338,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [retain_recording, delete_recording, always_delete, assign_evaluations, assign_metered_evaluations, assign_calibrations, retention_duration, initiate_screen_recording, media_transcriptions].hash
+      [retain_recording, delete_recording, always_delete, assign_evaluations, assign_metered_evaluations, assign_calibrations, assign_surveys, retention_duration, initiate_screen_recording, media_transcriptions].hash
     end
 
     # build the object from hash

@@ -33,6 +33,8 @@ module PureCloud
 
     attr_accessor :properties
 
+    attr_accessor :additional_properties
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -49,7 +51,9 @@ module PureCloud
         
         :'required' => :'required',
         
-        :'properties' => :'properties'
+        :'properties' => :'properties',
+        
+        :'additional_properties' => :'additionalProperties'
         
       }
     end
@@ -70,7 +74,9 @@ module PureCloud
         
         :'required' => :'Array<String>',
         
-        :'properties' => :'Hash<String, Object>'
+        :'properties' => :'Hash<String, Object>',
+        
+        :'additional_properties' => :'Object'
         
       }
     end
@@ -151,6 +157,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'additionalProperties')
+        
+        
+        self.additional_properties = attributes[:'additionalProperties']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -194,8 +209,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -243,7 +267,8 @@ module PureCloud
           description == o.description &&
           type == o.type &&
           required == o.required &&
-          properties == o.properties
+          properties == o.properties &&
+          additional_properties == o.additional_properties
     end
 
     # @see the `==` method
@@ -255,7 +280,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, schema, title, description, type, required, properties].hash
+      [id, schema, title, description, type, required, properties, additional_properties].hash
     end
 
     # build the object from hash

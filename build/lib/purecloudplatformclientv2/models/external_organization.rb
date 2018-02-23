@@ -48,6 +48,9 @@ module PureCloud
 
     attr_accessor :twitter_id
 
+    # Identifies an external system-of-record resource that may have more detailed information on the organization
+    attr_accessor :external_system_url
+
     # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :modify_date
 
@@ -94,6 +97,8 @@ module PureCloud
         
         :'twitter_id' => :'twitterId',
         
+        :'external_system_url' => :'externalSystemUrl',
+        
         :'modify_date' => :'modifyDate',
         
         :'create_date' => :'createDate',
@@ -138,6 +143,8 @@ module PureCloud
         :'tickers' => :'Array<Ticker>',
         
         :'twitter_id' => :'TwitterId',
+        
+        :'external_system_url' => :'String',
         
         :'modify_date' => :'DateTime',
         
@@ -293,6 +300,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'externalSystemUrl')
+        
+        
+        self.external_system_url = attributes[:'externalSystemUrl']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'modifyDate')
         
         
@@ -436,8 +452,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -553,6 +578,7 @@ module PureCloud
           websites == o.websites &&
           tickers == o.tickers &&
           twitter_id == o.twitter_id &&
+          external_system_url == o.external_system_url &&
           modify_date == o.modify_date &&
           create_date == o.create_date &&
           trustor == o.trustor &&
@@ -569,7 +595,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, company_type, industry, primary_contact_id, address, phone_number, fax_number, employee_count, revenue, tags, websites, tickers, twitter_id, modify_date, create_date, trustor, external_data_sources, self_uri].hash
+      [id, name, company_type, industry, primary_contact_id, address, phone_number, fax_number, employee_count, revenue, tags, websites, tickers, twitter_id, external_system_url, modify_date, create_date, trustor, external_data_sources, self_uri].hash
     end
 
     # build the object from hash

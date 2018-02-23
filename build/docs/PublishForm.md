@@ -8,7 +8,7 @@ title: PublishForm
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **published** | **BOOLEAN** | Is this form published | |
-| **context_id** | **String** | Unique Id for all versions of this form | |
+| **id** | **String** | Unique Id for this version of this form | |
 {: class="table table-striped"}
 
 

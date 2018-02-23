@@ -42,6 +42,10 @@ module PureCloud
 
     attr_accessor :attempt_limits
 
+    attr_accessor :automatic_time_zone_mapping
+
+    attr_accessor :zip_code_column_name
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -71,6 +75,10 @@ module PureCloud
         :'size' => :'size',
         
         :'attempt_limits' => :'attemptLimits',
+        
+        :'automatic_time_zone_mapping' => :'automaticTimeZoneMapping',
+        
+        :'zip_code_column_name' => :'zipCodeColumnName',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -104,6 +112,10 @@ module PureCloud
         :'size' => :'Integer',
         
         :'attempt_limits' => :'DocumentDataV2NotificationCreatedBy',
+        
+        :'automatic_time_zone_mapping' => :'BOOLEAN',
+        
+        :'zip_code_column_name' => :'String',
         
         :'additional_properties' => :'Object'
         
@@ -233,6 +245,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'automaticTimeZoneMapping')
+        
+        
+        self.automatic_time_zone_mapping = attributes[:'automaticTimeZoneMapping']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'zipCodeColumnName')
+        
+        
+        self.zip_code_column_name = attributes[:'zipCodeColumnName']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -309,8 +339,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -394,6 +442,8 @@ module PureCloud
           preview_mode_accepted_values == o.preview_mode_accepted_values &&
           size == o.size &&
           attempt_limits == o.attempt_limits &&
+          automatic_time_zone_mapping == o.automatic_time_zone_mapping &&
+          zip_code_column_name == o.zip_code_column_name &&
           additional_properties == o.additional_properties
     end
 
@@ -406,7 +456,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, column_names, phone_columns, import_status, preview_mode_column_name, preview_mode_accepted_values, size, attempt_limits, additional_properties].hash
+      [id, name, date_created, date_modified, version, column_names, phone_columns, import_status, preview_mode_column_name, preview_mode_accepted_values, size, attempt_limits, automatic_time_zone_mapping, zip_code_column_name, additional_properties].hash
     end
 
     # build the object from hash

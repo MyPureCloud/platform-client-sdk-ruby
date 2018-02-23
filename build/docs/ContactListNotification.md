@@ -19,6 +19,8 @@ title: ContactListNotification
 | **preview_mode_accepted_values** | **Array&lt;String&gt;** |  | [optional] |
 | **size** | **Integer** |  | [optional] |
 | **attempt_limits** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
+| **automatic_time_zone_mapping** | **BOOLEAN** |  | [optional] |
+| **zip_code_column_name** | **String** |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

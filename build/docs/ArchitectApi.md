@@ -17,6 +17,8 @@ Method | Description
 [**delete_architect_systemprompt_resource**](ArchitectApi.html#delete_architect_systemprompt_resource) | Delete a system prompt resource override.
 [**delete_flow**](ArchitectApi.html#delete_flow) | Delete flow
 [**delete_flows**](ArchitectApi.html#delete_flows) | Batch-delete a list of flows
+[**delete_flows_datatable**](ArchitectApi.html#delete_flows_datatable) | deletes a specific datatable by id
+[**delete_flows_datatable_row**](ArchitectApi.html#delete_flows_datatable_row) | Delete a row entry
 [**get_architect_dependencytracking**](ArchitectApi.html#get_architect_dependencytracking) | Get Dependency Tracking objects that have a given display name
 [**get_architect_dependencytracking_build**](ArchitectApi.html#get_architect_dependencytracking_build) | Get Dependency Tracking build status for an organization
 [**get_architect_dependencytracking_consumedresources**](ArchitectApi.html#get_architect_dependencytracking_consumedresources) | Get resources that are consumed by a given Dependency Tracking object
@@ -49,6 +51,10 @@ Method | Description
 [**get_flow_version_configuration**](ArchitectApi.html#get_flow_version_configuration) | Create flow version configuration
 [**get_flow_versions**](ArchitectApi.html#get_flow_versions) | Get flow version list
 [**get_flows**](ArchitectApi.html#get_flows) | Get a pageable list of flows, filtered by query parameters
+[**get_flows_datatable**](ArchitectApi.html#get_flows_datatable) | Returns a specific datatable by datatableId
+[**get_flows_datatable_row**](ArchitectApi.html#get_flows_datatable_row) | Returns a specific row for the datatable
+[**get_flows_datatable_rows**](ArchitectApi.html#get_flows_datatable_rows) | Returns the rows for the datatable
+[**get_flows_datatables**](ArchitectApi.html#get_flows_datatables) | Retrieve a list of datatables for the org
 [**post_architect_dependencytracking_build**](ArchitectApi.html#post_architect_dependencytracking_build) | Rebuild Dependency Tracking data for an organization
 [**post_architect_ivrs**](ArchitectApi.html#post_architect_ivrs) | Create IVR config.
 [**post_architect_prompt_history**](ArchitectApi.html#post_architect_prompt_history) | Generate prompt history
@@ -66,6 +72,8 @@ Method | Description
 [**post_flows_actions_publish**](ArchitectApi.html#post_flows_actions_publish) | Publish flow
 [**post_flows_actions_revert**](ArchitectApi.html#post_flows_actions_revert) | Revert flow
 [**post_flows_actions_unlock**](ArchitectApi.html#post_flows_actions_unlock) | Unlock flow
+[**post_flows_datatable_rows**](ArchitectApi.html#post_flows_datatable_rows) | Create a new row entry
+[**post_flows_datatables**](ArchitectApi.html#post_flows_datatables) | Create a new datatable with the specified json-schema definition
 [**put_architect_ivr**](ArchitectApi.html#put_architect_ivr) | Update an IVR Config.
 [**put_architect_prompt**](ArchitectApi.html#put_architect_prompt) | Update specified user prompt
 [**put_architect_prompt_resource**](ArchitectApi.html#put_architect_prompt_resource) | Update specified user prompt resource
@@ -73,6 +81,8 @@ Method | Description
 [**put_architect_schedulegroup**](ArchitectApi.html#put_architect_schedulegroup) | Updates a schedule group by ID
 [**put_architect_systemprompt_resource**](ArchitectApi.html#put_architect_systemprompt_resource) | Updates a system prompt resource override.
 [**put_flow**](ArchitectApi.html#put_flow) | Update flow
+[**put_flows_datatable**](ArchitectApi.html#put_flows_datatable) | Updates a specific datatable by datatableId
+[**put_flows_datatable_row**](ArchitectApi.html#put_flows_datatable_row) | Update a row entry
 {: class="table table-striped"}
 
 <a name="delete_architect_ivr"></a>
@@ -601,6 +611,125 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Operation**](Operation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_flows_datatable"></a>
+
+## - delete_flows_datatable(datatable_id)
+
+deletes a specific datatable by id
+
+deletes an entire datatable (including schema and data) with a given datatableId)
+
+Wraps DELETE /api/v2/flows/datatables/{datatableId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+
+begin
+  #deletes a specific datatable by id
+  api_instance.delete_flows_datatable(datatable_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->delete_flows_datatable: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_flows_datatable_row"></a>
+
+## - delete_flows_datatable_row(datatable_id, row_id)
+
+Delete a row entry
+
+Deletes a row with a given rowId.
+
+Wraps DELETE /api/v2/flows/datatables/{datatableId}/rows/{rowId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+row_id = "row_id_example" # String | the key for the row
+
+
+begin
+  #Delete a row entry
+  api_instance.delete_flows_datatable_row(datatable_id, row_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->delete_flows_datatable_row: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **row_id** | **String**| the key for the row |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -2749,6 +2878,258 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_flows_datatable"></a>
+
+## -[**JsonSchemaDocument**](JsonSchemaDocument.html) get_flows_datatable(datatable_id, opts)
+
+Returns a specific datatable by datatableId
+
+Given a datableid returns the schema associated with it.
+
+Wraps GET /api/v2/flows/datatables/{datatableId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+opts = { 
+  showbrief: true # BOOLEAN | If true returns a shortened version of the schema including the name, id and description]
+}
+
+begin
+  #Returns a specific datatable by datatableId
+  result = api_instance.get_flows_datatable(datatable_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_flows_datatable: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **showbrief** | **BOOLEAN**| If true returns a shortened version of the schema including the name, id and description] | [optional] [default to true] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**JsonSchemaDocument**](JsonSchemaDocument.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_flows_datatable_row"></a>
+
+## -Hash&lt;String, Object&gt;** get_flows_datatable_row(datatable_id, row_id, opts)
+
+Returns a specific row for the datatable
+
+Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+
+Wraps GET /api/v2/flows/datatables/{datatableId}/rows/{rowId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+row_id = "row_id_example" # String | The key for the row
+
+opts = { 
+  showbrief: true # BOOLEAN | if true returns just the key field for the row
+}
+
+begin
+  #Returns a specific row for the datatable
+  result = api_instance.get_flows_datatable_row(datatable_id, row_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_flows_datatable_row: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **row_id** | **String**| The key for the row |  |
+ **showbrief** | **BOOLEAN**| if true returns just the key field for the row | [optional] [default to true] |
+{: class="table table-striped"}
+
+
+### Return type
+
+**Hash&lt;String, Object&gt;**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_flows_datatable_rows"></a>
+
+## -Array&lt;Hash&lt;String, Object&gt;&gt;** get_flows_datatable_rows(datatable_id, opts)
+
+Returns the rows for the datatable
+
+Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+
+Wraps GET /api/v2/flows/datatables/{datatableId}/rows 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+opts = { 
+  showbrief: true # BOOLEAN | If true returns just the key value of the row
+}
+
+begin
+  #Returns the rows for the datatable
+  result = api_instance.get_flows_datatable_rows(datatable_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_flows_datatable_rows: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **showbrief** | **BOOLEAN**| If true returns just the key value of the row | [optional] [default to true] |
+{: class="table table-striped"}
+
+
+### Return type
+
+**Array&lt;Hash&lt;String, Object&gt;&gt;**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_flows_datatables"></a>
+
+## -[**Array&lt;JsonSchemaDocument&gt;**](JsonSchemaDocument.html) get_flows_datatables(opts)
+
+Retrieve a list of datatables for the org
+
+Returns a metadata list of the datatables associated with this org, including ID, name and description.
+
+Wraps GET /api/v2/flows/datatables 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+opts = { 
+  showbrief: true # BOOLEAN | If true, returns a shortened version of the schema including the name, id and description
+}
+
+begin
+  #Retrieve a list of datatables for the org
+  result = api_instance.get_flows_datatables(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_flows_datatables: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **showbrief** | **BOOLEAN**| If true, returns a shortened version of the schema including the name, id and description | [optional] [default to true] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;JsonSchemaDocument&gt;**](JsonSchemaDocument.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_architect_dependencytracking_build"></a>
 
 ## - post_architect_dependencytracking_build
@@ -3766,6 +4147,127 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_flows_datatable_rows"></a>
+
+## -Hash&lt;String, Object&gt;** post_flows_datatable_rows(datatable_id, data_table_row)
+
+Create a new row entry
+
+Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+
+Wraps POST /api/v2/flows/datatables/{datatableId}/rows 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+data_table_row = nil # Object | 
+
+
+begin
+  #Create a new row entry
+  result = api_instance.post_flows_datatable_rows(datatable_id, data_table_row)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->post_flows_datatable_rows: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **data_table_row** | **Object**|  |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+**Hash&lt;String, Object&gt;**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_flows_datatables"></a>
+
+## -[**JsonSchemaDocument**](JsonSchemaDocument.html) post_flows_datatables(body)
+
+Create a new datatable with the specified json-schema definition
+
+This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+
+Wraps POST /api/v2/flows/datatables 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+body = PureCloud::JsonSchemaDocument.new # JsonSchemaDocument | datatable json-schema
+
+
+begin
+  #Create a new datatable with the specified json-schema definition
+  result = api_instance.post_flows_datatables(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->post_flows_datatables: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**JsonSchemaDocument**](JsonSchemaDocument.html)| datatable json-schema |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**JsonSchemaDocument**](JsonSchemaDocument.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="put_architect_ivr"></a>
 
 ## -[**IVR**](IVR.html) put_architect_ivr(ivr_id, opts)
@@ -4205,6 +4707,137 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Flow**](Flow.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_flows_datatable"></a>
+
+## -[**JsonSchemaDocument**](JsonSchemaDocument.html) put_flows_datatable(datatable_id, opts)
+
+Updates a specific datatable by datatableId
+
+Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+
+Wraps PUT /api/v2/flows/datatables/{datatableId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+opts = { 
+  showbrief: true, # BOOLEAN | If true returns a shortened version of the schema including the name, id and description
+  body: PureCloud::JsonSchemaDocument.new # JsonSchemaDocument | datatable json-schema
+}
+
+begin
+  #Updates a specific datatable by datatableId
+  result = api_instance.put_flows_datatable(datatable_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->put_flows_datatable: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **showbrief** | **BOOLEAN**| If true returns a shortened version of the schema including the name, id and description | [optional] [default to true] |
+ **body** | [**JsonSchemaDocument**](JsonSchemaDocument.html)| datatable json-schema | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**JsonSchemaDocument**](JsonSchemaDocument.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_flows_datatable_row"></a>
+
+## -Hash&lt;String, Object&gt;** put_flows_datatable_row(datatable_id, row_id, opts)
+
+Update a row entry
+
+Updates a row with the given to the new values.
+
+Wraps PUT /api/v2/flows/datatables/{datatableId}/rows/{rowId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+row_id = "row_id_example" # String | the key for the row
+
+opts = { 
+  body: nil # Object | datatable row
+}
+
+begin
+  #Update a row entry
+  result = api_instance.put_flows_datatable_row(datatable_id, row_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->put_flows_datatable_row: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **row_id** | **String**| the key for the row |  |
+ **body** | **Object**| datatable row | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+**Hash&lt;String, Object&gt;**
 
 ### HTTP request headers
 
