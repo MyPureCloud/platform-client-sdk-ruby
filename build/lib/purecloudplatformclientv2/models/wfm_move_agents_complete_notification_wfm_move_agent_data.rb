@@ -20,7 +20,7 @@ module PureCloud
   class WfmMoveAgentsCompleteNotificationWfmMoveAgentData
     attr_accessor :user
 
-    attr_accessor :move_agent_result
+    attr_accessor :result
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -28,7 +28,7 @@ module PureCloud
         
         :'user' => :'user',
         
-        :'move_agent_result' => :'moveAgentResult'
+        :'result' => :'result'
         
       }
     end
@@ -39,7 +39,7 @@ module PureCloud
         
         :'user' => :'WfmMoveAgentsCompleteNotificationUser',
         
-        :'move_agent_result' => :'String'
+        :'result' => :'String'
         
       }
     end
@@ -62,10 +62,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'moveAgentResult')
+      if attributes.has_key?(:'result')
         
         
-        self.move_agent_result = attributes[:'moveAgentResult']
+        self.result = attributes[:'result']
         
       
       end
@@ -93,7 +93,7 @@ module PureCloud
       
       
       allowed_values = ["MoveSuccessful", "NothingToDo", "AlreadyMoved", "DestinationManagementUnitDoesNotExist", "DestinationManagementUnitAgentLimitExceeded", "MovingToDifferentManagementUnit"]
-      if @move_agent_result && !allowed_values.include?(@move_agent_result)
+      if @result && !allowed_values.include?(@result)
         return false
       end
       
@@ -109,13 +109,13 @@ module PureCloud
     
     
     # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] move_agent_result Object to be assigned
-    def move_agent_result=(move_agent_result)
+    # @param [Object] result Object to be assigned
+    def result=(result)
       allowed_values = ["MoveSuccessful", "NothingToDo", "AlreadyMoved", "DestinationManagementUnitDoesNotExist", "DestinationManagementUnitAgentLimitExceeded", "MovingToDifferentManagementUnit"]
-      if move_agent_result && !allowed_values.include?(move_agent_result)
-        fail ArgumentError, "invalid value for 'move_agent_result', must be one of #{allowed_values}."
+      if result && !allowed_values.include?(result)
+        fail ArgumentError, "invalid value for 'result', must be one of #{allowed_values}."
       end
-      @move_agent_result = move_agent_result
+      @result = result
     end
 
     
@@ -127,7 +127,7 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           user == o.user &&
-          move_agent_result == o.move_agent_result
+          result == o.result
     end
 
     # @see the `==` method
@@ -139,7 +139,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user, move_agent_result].hash
+      [user, result].hash
     end
 
     # build the object from hash

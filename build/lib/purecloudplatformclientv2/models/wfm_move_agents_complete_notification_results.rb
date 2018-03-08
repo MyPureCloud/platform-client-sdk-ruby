@@ -17,21 +17,18 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  # POST request body for fetching the current user's schedule over a given range
-  class CurrentUserScheduleRequestBody
-    # Beginning of the range of schedules to fetch, in ISO-8601 format
-    attr_accessor :start_date
+  class WfmMoveAgentsCompleteNotificationResults
+    attr_accessor :user
 
-    # End of the range of schedules to fetch, in ISO-8601 format
-    attr_accessor :end_date
+    attr_accessor :result
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'start_date' => :'startDate',
+        :'user' => :'user',
         
-        :'end_date' => :'endDate'
+        :'result' => :'result'
         
       }
     end
@@ -40,9 +37,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'start_date' => :'DateTime',
+        :'user' => :'WfmMoveAgentsCompleteNotificationUser',
         
-        :'end_date' => :'DateTime'
+        :'result' => :'String'
         
       }
     end
@@ -56,19 +53,19 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'startDate')
+      if attributes.has_key?(:'user')
         
         
-        self.start_date = attributes[:'startDate']
+        self.user = attributes[:'user']
         
       
       end
 
       
-      if attributes.has_key?(:'endDate')
+      if attributes.has_key?(:'result')
         
         
-        self.end_date = attributes[:'endDate']
+        self.result = attributes[:'result']
         
       
       end
@@ -90,20 +87,15 @@ module PureCloud
     def valid?
       
       
-      if @start_date.nil?
+      
+      
+      
+      
+      
+      allowed_values = ["MoveSuccessful", "NothingToDo", "AlreadyMoved", "DestinationManagementUnitDoesNotExist", "DestinationManagementUnitAgentLimitExceeded", "MovingToDifferentManagementUnit"]
+      if @result && !allowed_values.include?(@result)
         return false
       end
-
-      
-      
-      
-      
-      
-      if @end_date.nil?
-        return false
-      end
-
-      
       
       
       
@@ -116,7 +108,16 @@ module PureCloud
     
     
     
-    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] result Object to be assigned
+    def result=(result)
+      allowed_values = ["MoveSuccessful", "NothingToDo", "AlreadyMoved", "DestinationManagementUnitDoesNotExist", "DestinationManagementUnitAgentLimitExceeded", "MovingToDifferentManagementUnit"]
+      if result && !allowed_values.include?(result)
+        fail ArgumentError, "invalid value for 'result', must be one of #{allowed_values}."
+      end
+      @result = result
+    end
+
     
     
     
@@ -125,8 +126,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          start_date == o.start_date &&
-          end_date == o.end_date
+          user == o.user &&
+          result == o.result
     end
 
     # @see the `==` method
@@ -138,7 +139,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [start_date, end_date].hash
+      [user, result].hash
     end
 
     # build the object from hash

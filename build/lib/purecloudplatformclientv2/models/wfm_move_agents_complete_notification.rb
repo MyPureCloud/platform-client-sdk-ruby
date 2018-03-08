@@ -22,7 +22,7 @@ module PureCloud
 
     attr_accessor :destination_management_unit
 
-    attr_accessor :move_agent_results
+    attr_accessor :results
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -32,7 +32,7 @@ module PureCloud
         
         :'destination_management_unit' => :'destinationManagementUnit',
         
-        :'move_agent_results' => :'moveAgentResults'
+        :'results' => :'results'
         
       }
     end
@@ -45,7 +45,7 @@ module PureCloud
         
         :'destination_management_unit' => :'DocumentDataV2NotificationWorkspace',
         
-        :'move_agent_results' => :'Array<WfmMoveAgentsCompleteNotificationMoveAgentResults>'
+        :'results' => :'Array<WfmMoveAgentsCompleteNotificationResults>'
         
       }
     end
@@ -77,10 +77,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'moveAgentResults')
+      if attributes.has_key?(:'results')
         
-        if (value = attributes[:'moveAgentResults']).is_a?(Array)
-          self.move_agent_results = value
+        if (value = attributes[:'results']).is_a?(Array)
+          self.results = value
         end
         
         
@@ -140,7 +140,7 @@ module PureCloud
       self.class == o.class &&
           requesting_user == o.requesting_user &&
           destination_management_unit == o.destination_management_unit &&
-          move_agent_results == o.move_agent_results
+          results == o.results
     end
 
     # @see the `==` method
@@ -152,7 +152,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [requesting_user, destination_management_unit, move_agent_results].hash
+      [requesting_user, destination_management_unit, results].hash
     end
 
     # build the object from hash

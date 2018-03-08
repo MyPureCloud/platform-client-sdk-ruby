@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 <a name="get_group_profile"></a>
 
-## -[**GroupProfile**](GroupProfile.html) get_group_profile(group_id)
+## -[**GroupProfile**](GroupProfile.html) get_group_profile(group_id, opts)
 
 Get group profile
 
@@ -359,10 +359,13 @@ api_instance = PureCloud::GroupsApi.new
 
 group_id = "group_id_example" # String | groupId
 
+opts = { 
+  fields: "fields_example" # String | Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList
+}
 
 begin
   #Get group profile
-  result = api_instance.get_group_profile(group_id)
+  result = api_instance.get_group_profile(group_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->get_group_profile: #{e}"
@@ -374,6 +377,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **String**| groupId |  |
+ **fields** | **String**| Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList | [optional]  |
 {: class="table table-striped"}
 
 

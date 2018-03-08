@@ -409,6 +409,7 @@ module PureCloud
     # 
     # @param group_id groupId
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :fields Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList
     # @return [GroupProfile]
     def get_group_profile(group_id, opts = {})
       data, _status_code, _headers = get_group_profile_with_http_info(group_id, opts)
@@ -419,6 +420,7 @@ module PureCloud
     # 
     # @param group_id groupId
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :fields Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList
     # @return [Array<(GroupProfile, Fixnum, Hash)>] GroupProfile data, response status code and response headers
     def get_group_profile_with_http_info(group_id, opts = {})
       if @api_client.config.debugging
@@ -433,11 +435,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/groups/{groupId}/profile".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'fields'] = opts[:'fields'] if opts[:'fields']
 
       # header parameters
       header_params = {}

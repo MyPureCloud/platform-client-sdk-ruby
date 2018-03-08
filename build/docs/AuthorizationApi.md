@@ -10,6 +10,7 @@ Method | Description
 ------------- | ------------- | -------------
 [**delete_authorization_role**](AuthorizationApi.html#delete_authorization_role) | Delete an organization role.
 [**delete_user_roles**](AuthorizationApi.html#delete_user_roles) | Removes all the roles from the user.
+[**get_authorization_divisions_limit**](AuthorizationApi.html#get_authorization_divisions_limit) | Returns the maximum allowed number of divisions.
 [**get_authorization_permissions**](AuthorizationApi.html#get_authorization_permissions) | Get all permissions.
 [**get_authorization_products**](AuthorizationApi.html#get_authorization_products) | Get the list of enabled products
 [**get_authorization_role**](AuthorizationApi.html#get_authorization_role) | Get a single organization role.
@@ -135,6 +136,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_divisions_limit"></a>
+
+## -Integer** get_authorization_divisions_limit
+
+Returns the maximum allowed number of divisions.
+
+
+
+Wraps GET /api/v2/authorization/divisions/limit 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+begin
+  #Returns the maximum allowed number of divisions.
+  result = api_instance.get_authorization_divisions_limit
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_divisions_limit: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+**Integer**
 
 ### HTTP request headers
 
