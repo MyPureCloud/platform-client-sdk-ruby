@@ -634,7 +634,7 @@ module PureCloud
     end
 
     # deletes a specific datatable by id
-    # deletes an entire datatable (including schema and data) with a given datatableId)
+    # deletes an entire datatable (including schema and data) with a given id)
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
     # @return [nil]
@@ -644,7 +644,7 @@ module PureCloud
     end
 
     # deletes a specific datatable by id
-    # deletes an entire datatable (including schema and data) with a given datatableId)
+    # deletes an entire datatable (including schema and data) with a given id)
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
@@ -3835,23 +3835,23 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Returns a specific datatable by datatableId
+    # Returns a specific datatable by id
     # Given a datableid returns the schema associated with it.
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
-    # @option opts [BOOLEAN] :showbrief If true returns a shortened version of the schema including the name, id and description] (default to true)
-    # @return [JsonSchemaDocument]
+    # @option opts [String] :expand Expand instructions for the result
+    # @return [DataTable]
     def get_flows_datatable(datatable_id, opts = {})
       data, _status_code, _headers = get_flows_datatable_with_http_info(datatable_id, opts)
       return data
     end
 
-    # Returns a specific datatable by datatableId
+    # Returns a specific datatable by id
     # Given a datableid returns the schema associated with it.
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
-    # @option opts [BOOLEAN] :showbrief If true returns a shortened version of the schema including the name, id and description]
-    # @return [Array<(JsonSchemaDocument, Fixnum, Hash)>] JsonSchemaDocument data, response status code and response headers
+    # @option opts [String] :expand Expand instructions for the result
+    # @return [Array<(DataTable, Fixnum, Hash)>] DataTable data, response status code and response headers
     def get_flows_datatable_with_http_info(datatable_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_datatable ..."
@@ -3868,6 +3868,10 @@ module PureCloud
       
       
       
+      if opts[:'expand'] && !['schema'].include?(opts[:'expand'])
+        fail ArgumentError, 'invalid value for "expand", must be one of schema'
+      end
+      
       
       
       
@@ -3876,7 +3880,7 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'showbrief'] = opts[:'showbrief'] if opts[:'showbrief']
+      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
 
       # header parameters
       header_params = {}
@@ -3902,7 +3906,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'JsonSchemaDocument')
+        :return_type => 'DataTable')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#get_flows_datatable\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -3997,8 +4001,10 @@ module PureCloud
     # Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [BOOLEAN] :showbrief If true returns just the key value of the row (default to true)
-    # @return [Array<Hash<String, Object>>]
+    # @return [DataTableRowEntityListing]
     def get_flows_datatable_rows(datatable_id, opts = {})
       data, _status_code, _headers = get_flows_datatable_rows_with_http_info(datatable_id, opts)
       return data
@@ -4008,8 +4014,10 @@ module PureCloud
     # Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
     # @option opts [BOOLEAN] :showbrief If true returns just the key value of the row
-    # @return [Array<(Array<Hash<String, Object>>, Fixnum, Hash)>] Array<Hash<String, Object>> data, response status code and response headers
+    # @return [Array<(DataTableRowEntityListing, Fixnum, Hash)>] DataTableRowEntityListing data, response status code and response headers
     def get_flows_datatable_rows_with_http_info(datatable_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_datatable_rows ..."
@@ -4029,11 +4037,25 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/datatables/{datatableId}/rows".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'showbrief'] = opts[:'showbrief'] if opts[:'showbrief']
 
       # header parameters
@@ -4060,7 +4082,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<Hash<String, Object>>')
+        :return_type => 'DataTableRowEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#get_flows_datatable_rows\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -4070,8 +4092,12 @@ module PureCloud
     # Retrieve a list of datatables for the org
     # Returns a metadata list of the datatables associated with this org, including ID, name and description.
     # @param [Hash] opts the optional parameters
-    # @option opts [BOOLEAN] :showbrief If true, returns a shortened version of the schema including the name, id and description (default to true)
-    # @return [Array<JsonSchemaDocument>]
+    # @option opts [String] :expand Expand instructions for the result
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [String] :sort_by Sort by (default to id)
+    # @option opts [String] :sort_order Sort order (default to ascending)
+    # @return [DataTablesDomainEntityListing]
     def get_flows_datatables(opts = {})
       data, _status_code, _headers = get_flows_datatables_with_http_info(opts)
       return data
@@ -4080,8 +4106,12 @@ module PureCloud
     # Retrieve a list of datatables for the org
     # Returns a metadata list of the datatables associated with this org, including ID, name and description.
     # @param [Hash] opts the optional parameters
-    # @option opts [BOOLEAN] :showbrief If true, returns a shortened version of the schema including the name, id and description
-    # @return [Array<(Array<JsonSchemaDocument>, Fixnum, Hash)>] Array<JsonSchemaDocument> data, response status code and response headers
+    # @option opts [String] :expand Expand instructions for the result
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order
+    # @return [Array<(DataTablesDomainEntityListing, Fixnum, Hash)>] DataTablesDomainEntityListing data, response status code and response headers
     def get_flows_datatables_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_datatables ..."
@@ -4089,6 +4119,42 @@ module PureCloud
       
       
       
+      
+      if opts[:'expand'] && !['schema'].include?(opts[:'expand'])
+        fail ArgumentError, 'invalid value for "expand", must be one of schema'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_by'] && !['id', 'name'].include?(opts[:'sort_by'])
+        fail ArgumentError, 'invalid value for "sort_by", must be one of id, name'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
+      end
       
       
       
@@ -4098,7 +4164,11 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'showbrief'] = opts[:'showbrief'] if opts[:'showbrief']
+      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
 
       # header parameters
       header_params = {}
@@ -4124,7 +4194,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<JsonSchemaDocument>')
+        :return_type => 'DataTablesDomainEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#get_flows_datatables\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -5333,7 +5403,7 @@ module PureCloud
     # This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
     # @param body datatable json-schema
     # @param [Hash] opts the optional parameters
-    # @return [JsonSchemaDocument]
+    # @return [DataTable]
     def post_flows_datatables(body, opts = {})
       data, _status_code, _headers = post_flows_datatables_with_http_info(body, opts)
       return data
@@ -5343,7 +5413,7 @@ module PureCloud
     # This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
     # @param body datatable json-schema
     # @param [Hash] opts the optional parameters
-    # @return [Array<(JsonSchemaDocument, Fixnum, Hash)>] JsonSchemaDocument data, response status code and response headers
+    # @return [Array<(DataTable, Fixnum, Hash)>] DataTable data, response status code and response headers
     def post_flows_datatables_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_datatables ..."
@@ -5387,7 +5457,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'JsonSchemaDocument')
+        :return_type => 'DataTable')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#post_flows_datatables\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -5925,25 +5995,25 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Updates a specific datatable by datatableId
-    # Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+    # Updates a specific datatable by id
+    # Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
-    # @option opts [BOOLEAN] :showbrief If true returns a shortened version of the schema including the name, id and description (default to true)
-    # @option opts [JsonSchemaDocument] :body datatable json-schema
-    # @return [JsonSchemaDocument]
+    # @option opts [String] :expand Expand instructions for the result
+    # @option opts [DataTable] :body datatable json-schema
+    # @return [DataTable]
     def put_flows_datatable(datatable_id, opts = {})
       data, _status_code, _headers = put_flows_datatable_with_http_info(datatable_id, opts)
       return data
     end
 
-    # Updates a specific datatable by datatableId
-    # Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+    # Updates a specific datatable by id
+    # Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
-    # @option opts [BOOLEAN] :showbrief If true returns a shortened version of the schema including the name, id and description
-    # @option opts [JsonSchemaDocument] :body datatable json-schema
-    # @return [Array<(JsonSchemaDocument, Fixnum, Hash)>] JsonSchemaDocument data, response status code and response headers
+    # @option opts [String] :expand Expand instructions for the result
+    # @option opts [DataTable] :body datatable json-schema
+    # @return [Array<(DataTable, Fixnum, Hash)>] DataTable data, response status code and response headers
     def put_flows_datatable_with_http_info(datatable_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_flows_datatable ..."
@@ -5960,6 +6030,10 @@ module PureCloud
       
       
       
+      if opts[:'expand'] && !['schema'].include?(opts[:'expand'])
+        fail ArgumentError, 'invalid value for "expand", must be one of schema'
+      end
+      
       
       
       
@@ -5974,7 +6048,7 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'showbrief'] = opts[:'showbrief'] if opts[:'showbrief']
+      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
 
       # header parameters
       header_params = {}
@@ -6000,7 +6074,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'JsonSchemaDocument')
+        :return_type => 'DataTable')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#put_flows_datatable\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

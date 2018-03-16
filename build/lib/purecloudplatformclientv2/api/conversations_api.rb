@@ -705,7 +705,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get conversations
+    # Get active conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :communication_type Call or Chat communication filtering
@@ -715,7 +715,7 @@ module PureCloud
       return data
     end
 
-    # Get conversations
+    # Get active conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :communication_type Call or Chat communication filtering
@@ -1217,7 +1217,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get callback conversations
+    # Get active callback conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @return [CallbackConversationEntityListing]
@@ -1226,7 +1226,7 @@ module PureCloud
       return data
     end
 
-    # Get callback conversations
+    # Get active callback conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @return [Array<(CallbackConversationEntityListing, Fixnum, Hash)>] CallbackConversationEntityListing data, response status code and response headers
@@ -1272,7 +1272,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get recent conversations
+    # Get active call conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @return [CallConversationEntityListing]
@@ -1281,7 +1281,7 @@ module PureCloud
       return data
     end
 
-    # Get recent conversations
+    # Get active call conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @return [Array<(CallConversationEntityListing, Fixnum, Hash)>] CallConversationEntityListing data, response status code and response headers
@@ -1697,7 +1697,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get recent chat conversations
+    # Get active chat conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @return [ChatConversationEntityListing]
@@ -1706,7 +1706,7 @@ module PureCloud
       return data
     end
 
-    # Get recent chat conversations
+    # Get active chat conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ChatConversationEntityListing, Fixnum, Hash)>] ChatConversationEntityListing data, response status code and response headers
@@ -1976,7 +1976,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get recent cobrowse conversations
+    # Get active cobrowse conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @return [CobrowseConversationEntityListing]
@@ -1985,7 +1985,7 @@ module PureCloud
       return data
     end
 
-    # Get recent cobrowse conversations
+    # Get active cobrowse conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @return [Array<(CobrowseConversationEntityListing, Fixnum, Hash)>] CobrowseConversationEntityListing data, response status code and response headers
@@ -2460,7 +2460,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get recent email conversations
+    # Get active email conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @return [EmailConversationEntityListing]
@@ -2469,7 +2469,7 @@ module PureCloud
       return data
     end
 
-    # Get recent email conversations
+    # Get active email conversations for the logged in user
     # 
     # @param [Hash] opts the optional parameters
     # @return [Array<(EmailConversationEntityListing, Fixnum, Hash)>] EmailConversationEntityListing data, response status code and response headers
@@ -2511,6 +2511,360 @@ module PureCloud
         :return_type => 'EmailConversationEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_emails\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get message conversation
+    # 
+    # @param conversation_id conversationId
+    # @param [Hash] opts the optional parameters
+    # @return [MessageConversation]
+    def get_conversations_message(conversation_id, opts = {})
+      data, _status_code, _headers = get_conversations_message_with_http_info(conversation_id, opts)
+      return data
+    end
+
+    # Get message conversation
+    # 
+    # @param conversation_id conversationId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(MessageConversation, Fixnum, Hash)>] MessageConversation data, response status code and response headers
+    def get_conversations_message_with_http_info(conversation_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_message ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_message" if conversation_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessageConversation')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_message\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get message
+    # 
+    # @param conversation_id conversationId
+    # @param message_id messageId
+    # @param [Hash] opts the optional parameters
+    # @return [MessageData]
+    def get_conversations_message_message(conversation_id, message_id, opts = {})
+      data, _status_code, _headers = get_conversations_message_message_with_http_info(conversation_id, message_id, opts)
+      return data
+    end
+
+    # Get message
+    # 
+    # @param conversation_id conversationId
+    # @param message_id messageId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(MessageData, Fixnum, Hash)>] MessageData data, response status code and response headers
+    def get_conversations_message_message_with_http_info(conversation_id, message_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_message_message ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_message_message" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'message_id' is set
+      fail ArgumentError, "Missing the required parameter 'message_id' when calling ConversationsApi.get_conversations_message_message" if message_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}/messages/{messageId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'messageId' + '}', message_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessageData')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_message_message\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the wrap-up for this conversation participant. 
+    # 
+    # @param conversation_id conversationId
+    # @param participant_id participantId
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
+    # @return [Wrapup]
+    def get_conversations_message_participant_wrapup(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_message_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
+      return data
+    end
+
+    # Get the wrap-up for this conversation participant. 
+    # 
+    # @param conversation_id conversationId
+    # @param participant_id participantId
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
+    # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
+    def get_conversations_message_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_message_participant_wrapup ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_message_participant_wrapup" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_message_participant_wrapup" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'provisional'] = opts[:'provisional'] if opts[:'provisional']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Wrapup')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_message_participant_wrapup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get list of wrapup codes for this conversation participant
+    # 
+    # @param conversation_id  conversationId
+    # @param participant_id participantId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<WrapupCode>]
+    def get_conversations_message_participant_wrapupcodes(conversation_id, participant_id, opts = {})
+      data, _status_code, _headers = get_conversations_message_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts)
+      return data
+    end
+
+    # Get list of wrapup codes for this conversation participant
+    # 
+    # @param conversation_id  conversationId
+    # @param participant_id participantId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<WrapupCode>, Fixnum, Hash)>] Array<WrapupCode> data, response status code and response headers
+    def get_conversations_message_participant_wrapupcodes_with_http_info(conversation_id, participant_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_message_participant_wrapupcodes ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_message_participant_wrapupcodes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.get_conversations_message_participant_wrapupcodes" if participant_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<WrapupCode>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_message_participant_wrapupcodes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get active message conversations for the logged in user
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [MessageConversationEntityListing]
+    def get_conversations_messages(opts = {})
+      data, _status_code, _headers = get_conversations_messages_with_http_info(opts)
+      return data
+    end
+
+    # Get active message conversations for the logged in user
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(MessageConversationEntityListing, Fixnum, Hash)>] MessageConversationEntityListing data, response status code and response headers
+    def get_conversations_messages_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_messages ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessageConversationEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_messages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4454,6 +4808,340 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Update a conversation by disconnecting all of the participants
+    # 
+    # @param conversation_id conversationId
+    # @param body Conversation
+    # @param [Hash] opts the optional parameters
+    # @return [Conversation]
+    def patch_conversations_message(conversation_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_message_with_http_info(conversation_id, body, opts)
+      return data
+    end
+
+    # Update a conversation by disconnecting all of the participants
+    # 
+    # @param conversation_id conversationId
+    # @param body Conversation
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Conversation, Fixnum, Hash)>] Conversation data, response status code and response headers
+    def patch_conversations_message_with_http_info(conversation_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_message ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_message" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_message" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Conversation')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#patch_conversations_message\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update conversation participant
+    # 
+    # @param conversation_id  conversationId
+    # @param participant_id participantId
+    # @param [Hash] opts the optional parameters
+    # @option opts [MediaParticipantRequest] :body 
+    # @return [nil]
+    def patch_conversations_message_participant(conversation_id, participant_id, opts = {})
+      patch_conversations_message_participant_with_http_info(conversation_id, participant_id, opts)
+      return nil
+    end
+
+    # Update conversation participant
+    # 
+    # @param conversation_id  conversationId
+    # @param participant_id participantId
+    # @param [Hash] opts the optional parameters
+    # @option opts [MediaParticipantRequest] :body 
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def patch_conversations_message_participant_with_http_info(conversation_id, participant_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_message_participant ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_message_participant" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_message_participant" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#patch_conversations_message_participant\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update the attributes on a conversation participant.
+    # 
+    # @param conversation_id  conversationId
+    # @param participant_id participantId
+    # @param [Hash] opts the optional parameters
+    # @option opts [ParticipantAttributes] :body 
+    # @return [nil]
+    def patch_conversations_message_participant_attributes(conversation_id, participant_id, opts = {})
+      patch_conversations_message_participant_attributes_with_http_info(conversation_id, participant_id, opts)
+      return nil
+    end
+
+    # Update the attributes on a conversation participant.
+    # 
+    # @param conversation_id  conversationId
+    # @param participant_id participantId
+    # @param [Hash] opts the optional parameters
+    # @option opts [ParticipantAttributes] :body 
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def patch_conversations_message_participant_attributes_with_http_info(conversation_id, participant_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_message_participant_attributes ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_message_participant_attributes" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_message_participant_attributes" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#patch_conversations_message_participant_attributes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update conversation participant's communication by disconnecting it.
+    # 
+    # @param conversation_id  conversationId
+    # @param participant_id participantId
+    # @param communication_id communicationId
+    # @param body Participant
+    # @param [Hash] opts the optional parameters
+    # @return [Empty]
+    def patch_conversations_message_participant_communication(conversation_id, participant_id, communication_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_message_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts)
+      return data
+    end
+
+    # Update conversation participant&#39;s communication by disconnecting it.
+    # 
+    # @param conversation_id  conversationId
+    # @param participant_id participantId
+    # @param communication_id communicationId
+    # @param body Participant
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
+    def patch_conversations_message_participant_communication_with_http_info(conversation_id, participant_id, communication_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_message_participant_communication ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.patch_conversations_message_participant_communication" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.patch_conversations_message_participant_communication" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'communication_id' is set
+      fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.patch_conversations_message_participant_communication" if communication_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_message_participant_communication" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Empty')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#patch_conversations_message_participant_communication\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Index conversation properties
     # 
     # @param conversation_id conversationId
@@ -6188,6 +6876,248 @@ module PureCloud
         :return_type => 'FaxSendResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_faxes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Send message
+    # 
+    # @param conversation_id conversationId
+    # @param communication_id communicationId
+    # @param body Message
+    # @param [Hash] opts the optional parameters
+    # @return [MessageData]
+    def post_conversations_message_communication_messages(conversation_id, communication_id, body, opts = {})
+      data, _status_code, _headers = post_conversations_message_communication_messages_with_http_info(conversation_id, communication_id, body, opts)
+      return data
+    end
+
+    # Send message
+    # 
+    # @param conversation_id conversationId
+    # @param communication_id communicationId
+    # @param body Message
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(MessageData, Fixnum, Hash)>] MessageData data, response status code and response headers
+    def post_conversations_message_communication_messages_with_http_info(conversation_id, communication_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_message_communication_messages ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_message_communication_messages" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'communication_id' is set
+      fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.post_conversations_message_communication_messages" if communication_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_message_communication_messages" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessageData')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_message_communication_messages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get messages in batch
+    # 
+    # @param conversation_id conversationId
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :body messageIds
+    # @return [TextMessageListing]
+    def post_conversations_message_messages_bulk(conversation_id, opts = {})
+      data, _status_code, _headers = post_conversations_message_messages_bulk_with_http_info(conversation_id, opts)
+      return data
+    end
+
+    # Get messages in batch
+    # 
+    # @param conversation_id conversationId
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :body messageIds
+    # @return [Array<(TextMessageListing, Fixnum, Hash)>] TextMessageListing data, response status code and response headers
+    def post_conversations_message_messages_bulk_with_http_info(conversation_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_message_messages_bulk ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_message_messages_bulk" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}/messages/bulk".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TextMessageListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_message_messages_bulk\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Replace this participant with the specified user and/or address
+    # 
+    # @param conversation_id conversationId
+    # @param participant_id participantId
+    # @param body Transfer request
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def post_conversations_message_participant_replace(conversation_id, participant_id, body, opts = {})
+      post_conversations_message_participant_replace_with_http_info(conversation_id, participant_id, body, opts)
+      return nil
+    end
+
+    # Replace this participant with the specified user and/or address
+    # 
+    # @param conversation_id conversationId
+    # @param participant_id participantId
+    # @param body Transfer request
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def post_conversations_message_participant_replace_with_http_info(conversation_id, participant_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_message_participant_replace ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_message_participant_replace" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.post_conversations_message_participant_replace" if participant_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_message_participant_replace" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_message_participant_replace\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

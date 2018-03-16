@@ -17,32 +17,37 @@ Method | Description
 [**get_conversation_participant_secureivrsessions**](ConversationsApi.html#get_conversation_participant_secureivrsessions) | Get a list of secure sessions for this participant.
 [**get_conversation_participant_wrapup**](ConversationsApi.html#get_conversation_participant_wrapup) | Get the wrap-up for this conversation participant. 
 [**get_conversation_participant_wrapupcodes**](ConversationsApi.html#get_conversation_participant_wrapupcodes) | Get list of wrapup codes for this conversation participant
-[**get_conversations**](ConversationsApi.html#get_conversations) | Get conversations
+[**get_conversations**](ConversationsApi.html#get_conversations) | Get active conversations for the logged in user
 [**get_conversations_call**](ConversationsApi.html#get_conversations_call) | Get call conversation
 [**get_conversations_call_participant_wrapup**](ConversationsApi.html#get_conversations_call_participant_wrapup) | Get the wrap-up for this conversation participant. 
 [**get_conversations_call_participant_wrapupcodes**](ConversationsApi.html#get_conversations_call_participant_wrapupcodes) | Get list of wrapup codes for this conversation participant
 [**get_conversations_callback**](ConversationsApi.html#get_conversations_callback) | Get callback conversation
 [**get_conversations_callback_participant_wrapup**](ConversationsApi.html#get_conversations_callback_participant_wrapup) | Get the wrap-up for this conversation participant. 
 [**get_conversations_callback_participant_wrapupcodes**](ConversationsApi.html#get_conversations_callback_participant_wrapupcodes) | Get list of wrapup codes for this conversation participant
-[**get_conversations_callbacks**](ConversationsApi.html#get_conversations_callbacks) | Get callback conversations
-[**get_conversations_calls**](ConversationsApi.html#get_conversations_calls) | Get recent conversations
+[**get_conversations_callbacks**](ConversationsApi.html#get_conversations_callbacks) | Get active callback conversations for the logged in user
+[**get_conversations_calls**](ConversationsApi.html#get_conversations_calls) | Get active call conversations for the logged in user
 [**get_conversations_calls_history**](ConversationsApi.html#get_conversations_calls_history) | Get call history
 [**get_conversations_calls_maximumconferenceparties**](ConversationsApi.html#get_conversations_calls_maximumconferenceparties) | Get the maximum number of participants that this user can have on a conference
 [**get_conversations_chat**](ConversationsApi.html#get_conversations_chat) | Get chat conversation
 [**get_conversations_chat_participant_wrapup**](ConversationsApi.html#get_conversations_chat_participant_wrapup) | Get the wrap-up for this conversation participant. 
 [**get_conversations_chat_participant_wrapupcodes**](ConversationsApi.html#get_conversations_chat_participant_wrapupcodes) | Get list of wrapup codes for this conversation participant
-[**get_conversations_chats**](ConversationsApi.html#get_conversations_chats) | Get recent chat conversations
+[**get_conversations_chats**](ConversationsApi.html#get_conversations_chats) | Get active chat conversations for the logged in user
 [**get_conversations_cobrowsesession**](ConversationsApi.html#get_conversations_cobrowsesession) | Get cobrowse conversation
 [**get_conversations_cobrowsesession_participant_wrapup**](ConversationsApi.html#get_conversations_cobrowsesession_participant_wrapup) | Get the wrap-up for this conversation participant. 
 [**get_conversations_cobrowsesession_participant_wrapupcodes**](ConversationsApi.html#get_conversations_cobrowsesession_participant_wrapupcodes) | Get list of wrapup codes for this conversation participant
-[**get_conversations_cobrowsesessions**](ConversationsApi.html#get_conversations_cobrowsesessions) | Get recent cobrowse conversations
+[**get_conversations_cobrowsesessions**](ConversationsApi.html#get_conversations_cobrowsesessions) | Get active cobrowse conversations for the logged in user
 [**get_conversations_email**](ConversationsApi.html#get_conversations_email) | Get email conversation
 [**get_conversations_email_message**](ConversationsApi.html#get_conversations_email_message) | Get conversation message
 [**get_conversations_email_messages**](ConversationsApi.html#get_conversations_email_messages) | Get conversation messages
 [**get_conversations_email_messages_draft**](ConversationsApi.html#get_conversations_email_messages_draft) | Get conversation draft reply
 [**get_conversations_email_participant_wrapup**](ConversationsApi.html#get_conversations_email_participant_wrapup) | Get the wrap-up for this conversation participant. 
 [**get_conversations_email_participant_wrapupcodes**](ConversationsApi.html#get_conversations_email_participant_wrapupcodes) | Get list of wrapup codes for this conversation participant
-[**get_conversations_emails**](ConversationsApi.html#get_conversations_emails) | Get recent email conversations
+[**get_conversations_emails**](ConversationsApi.html#get_conversations_emails) | Get active email conversations for the logged in user
+[**get_conversations_message**](ConversationsApi.html#get_conversations_message) | Get message conversation
+[**get_conversations_message_message**](ConversationsApi.html#get_conversations_message_message) | Get message
+[**get_conversations_message_participant_wrapup**](ConversationsApi.html#get_conversations_message_participant_wrapup) | Get the wrap-up for this conversation participant. 
+[**get_conversations_message_participant_wrapupcodes**](ConversationsApi.html#get_conversations_message_participant_wrapupcodes) | Get list of wrapup codes for this conversation participant
+[**get_conversations_messages**](ConversationsApi.html#get_conversations_messages) | Get active message conversations for the logged in user
 [**patch_conversation_participant**](ConversationsApi.html#patch_conversation_participant) | Update a participant.
 [**patch_conversation_participant_attributes**](ConversationsApi.html#patch_conversation_participant_attributes) | Update the attributes on a conversation participant.
 [**patch_conversations_call**](ConversationsApi.html#patch_conversations_call) | Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
@@ -66,6 +71,10 @@ Method | Description
 [**patch_conversations_email_participant**](ConversationsApi.html#patch_conversations_email_participant) | Update conversation participant
 [**patch_conversations_email_participant_attributes**](ConversationsApi.html#patch_conversations_email_participant_attributes) | Update the attributes on a conversation participant.
 [**patch_conversations_email_participant_communication**](ConversationsApi.html#patch_conversations_email_participant_communication) | Update conversation participant&#39;s communication by disconnecting it.
+[**patch_conversations_message**](ConversationsApi.html#patch_conversations_message) | Update a conversation by disconnecting all of the participants
+[**patch_conversations_message_participant**](ConversationsApi.html#patch_conversations_message_participant) | Update conversation participant
+[**patch_conversations_message_participant_attributes**](ConversationsApi.html#patch_conversations_message_participant_attributes) | Update the attributes on a conversation participant.
+[**patch_conversations_message_participant_communication**](ConversationsApi.html#patch_conversations_message_participant_communication) | Update conversation participant&#39;s communication by disconnecting it.
 [**post_analytics_conversation_details_properties**](ConversationsApi.html#post_analytics_conversation_details_properties) | Index conversation properties
 [**post_analytics_conversations_aggregates_query**](ConversationsApi.html#post_analytics_conversations_aggregates_query) | Query for conversation aggregates
 [**post_analytics_conversations_details_query**](ConversationsApi.html#post_analytics_conversations_details_query) | Query for conversation details
@@ -89,6 +98,9 @@ Method | Description
 [**post_conversations_email_participant_replace**](ConversationsApi.html#post_conversations_email_participant_replace) | Replace this participant with the specified user and/or address
 [**post_conversations_emails**](ConversationsApi.html#post_conversations_emails) | Create an email conversation
 [**post_conversations_faxes**](ConversationsApi.html#post_conversations_faxes) | Create Fax Conversation
+[**post_conversations_message_communication_messages**](ConversationsApi.html#post_conversations_message_communication_messages) | Send message
+[**post_conversations_message_messages_bulk**](ConversationsApi.html#post_conversations_message_messages_bulk) | Get messages in batch
+[**post_conversations_message_participant_replace**](ConversationsApi.html#post_conversations_message_participant_replace) | Replace this participant with the specified user and/or address
 [**put_conversations_call_participant_communication_uuidata**](ConversationsApi.html#put_conversations_call_participant_communication_uuidata) | Set uuiData to be sent on future commands.
 [**put_conversations_email_messages_draft**](ConversationsApi.html#put_conversations_email_messages_draft) | Update conversation draft reply
 {: class="table table-striped"}
@@ -656,7 +668,7 @@ Name | Type | Description  | Notes
 
 ## -[**ConversationEntityListing**](ConversationEntityListing.html) get_conversations(opts)
 
-Get conversations
+Get active conversations for the logged in user
 
 
 
@@ -685,7 +697,7 @@ opts = {
 }
 
 begin
-  #Get conversations
+  #Get active conversations for the logged in user
   result = api_instance.get_conversations(opts)
   p result
 rescue PureCloud::ApiError => e
@@ -1090,7 +1102,7 @@ Name | Type | Description  | Notes
 
 ## -[**CallbackConversationEntityListing**](CallbackConversationEntityListing.html) get_conversations_callbacks
 
-Get callback conversations
+Get active callback conversations for the logged in user
 
 
 
@@ -1115,7 +1127,7 @@ end
 api_instance = PureCloud::ConversationsApi.new
 
 begin
-  #Get callback conversations
+  #Get active callback conversations for the logged in user
   result = api_instance.get_conversations_callbacks
   p result
 rescue PureCloud::ApiError => e
@@ -1143,7 +1155,7 @@ This endpoint does not need any parameter.
 
 ## -[**CallConversationEntityListing**](CallConversationEntityListing.html) get_conversations_calls
 
-Get recent conversations
+Get active call conversations for the logged in user
 
 
 
@@ -1168,7 +1180,7 @@ end
 api_instance = PureCloud::ConversationsApi.new
 
 begin
-  #Get recent conversations
+  #Get active call conversations for the logged in user
   result = api_instance.get_conversations_calls
   p result
 rescue PureCloud::ApiError => e
@@ -1502,7 +1514,7 @@ Name | Type | Description  | Notes
 
 ## -[**ChatConversationEntityListing**](ChatConversationEntityListing.html) get_conversations_chats
 
-Get recent chat conversations
+Get active chat conversations for the logged in user
 
 
 
@@ -1527,7 +1539,7 @@ end
 api_instance = PureCloud::ConversationsApi.new
 
 begin
-  #Get recent chat conversations
+  #Get active chat conversations for the logged in user
   result = api_instance.get_conversations_chats
   p result
 rescue PureCloud::ApiError => e
@@ -1742,7 +1754,7 @@ Name | Type | Description  | Notes
 
 ## -[**CobrowseConversationEntityListing**](CobrowseConversationEntityListing.html) get_conversations_cobrowsesessions
 
-Get recent cobrowse conversations
+Get active cobrowse conversations for the logged in user
 
 
 
@@ -1767,7 +1779,7 @@ end
 api_instance = PureCloud::ConversationsApi.new
 
 begin
-  #Get recent cobrowse conversations
+  #Get active cobrowse conversations for the logged in user
   result = api_instance.get_conversations_cobrowsesessions
   p result
 rescue PureCloud::ApiError => e
@@ -2162,7 +2174,7 @@ Name | Type | Description  | Notes
 
 ## -[**EmailConversationEntityListing**](EmailConversationEntityListing.html) get_conversations_emails
 
-Get recent email conversations
+Get active email conversations for the logged in user
 
 
 
@@ -2187,7 +2199,7 @@ end
 api_instance = PureCloud::ConversationsApi.new
 
 begin
-  #Get recent email conversations
+  #Get active email conversations for the logged in user
   result = api_instance.get_conversations_emails
   p result
 rescue PureCloud::ApiError => e
@@ -2203,6 +2215,308 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**EmailConversationEntityListing**](EmailConversationEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_message"></a>
+
+## -[**MessageConversation**](MessageConversation.html) get_conversations_message(conversation_id)
+
+Get message conversation
+
+
+
+Wraps GET /api/v2/conversations/messages/{conversationId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+
+begin
+  #Get message conversation
+  result = api_instance.get_conversations_message(conversation_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->get_conversations_message: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessageConversation**](MessageConversation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_message_message"></a>
+
+## -[**MessageData**](MessageData.html) get_conversations_message_message(conversation_id, message_id)
+
+Get message
+
+
+
+Wraps GET /api/v2/conversations/messages/{conversationId}/messages/{messageId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+message_id = "message_id_example" # String | messageId
+
+
+begin
+  #Get message
+  result = api_instance.get_conversations_message_message(conversation_id, message_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->get_conversations_message_message: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **message_id** | **String**| messageId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessageData**](MessageData.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_message_participant_wrapup"></a>
+
+## -[**Wrapup**](Wrapup.html) get_conversations_message_participant_wrapup(conversation_id, participant_id, opts)
+
+Get the wrap-up for this conversation participant. 
+
+
+
+Wraps GET /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+participant_id = "participant_id_example" # String | participantId
+
+opts = { 
+  provisional: false # BOOLEAN | Indicates if the wrap-up code is provisional.
+}
+
+begin
+  #Get the wrap-up for this conversation participant. 
+  result = api_instance.get_conversations_message_participant_wrapup(conversation_id, participant_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->get_conversations_message_participant_wrapup: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **participant_id** | **String**| participantId |  |
+ **provisional** | **BOOLEAN**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Wrapup**](Wrapup.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_message_participant_wrapupcodes"></a>
+
+## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_message_participant_wrapupcodes(conversation_id, participant_id)
+
+Get list of wrapup codes for this conversation participant
+
+
+
+Wraps GET /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String |  conversationId
+
+participant_id = "participant_id_example" # String | participantId
+
+
+begin
+  #Get list of wrapup codes for this conversation participant
+  result = api_instance.get_conversations_message_participant_wrapupcodes(conversation_id, participant_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->get_conversations_message_participant_wrapupcodes: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**|  conversationId |  |
+ **participant_id** | **String**| participantId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;WrapupCode&gt;**](WrapupCode.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_messages"></a>
+
+## -[**MessageConversationEntityListing**](MessageConversationEntityListing.html) get_conversations_messages
+
+Get active message conversations for the logged in user
+
+
+
+Wraps GET /api/v2/conversations/messages 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+begin
+  #Get active message conversations for the logged in user
+  result = api_instance.get_conversations_messages
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->get_conversations_messages: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessageConversationEntityListing**](MessageConversationEntityListing.html)
 
 ### HTTP request headers
 
@@ -3696,6 +4010,266 @@ Name | Type | Description  | Notes
 
 
 
+<a name="patch_conversations_message"></a>
+
+## -[**Conversation**](Conversation.html) patch_conversations_message(conversation_id, body)
+
+Update a conversation by disconnecting all of the participants
+
+
+
+Wraps PATCH /api/v2/conversations/messages/{conversationId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+body = PureCloud::Conversation.new # Conversation | Conversation
+
+
+begin
+  #Update a conversation by disconnecting all of the participants
+  result = api_instance.patch_conversations_message(conversation_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->patch_conversations_message: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **body** | [**Conversation**](Conversation.html)| Conversation |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Conversation**](Conversation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_conversations_message_participant"></a>
+
+## - patch_conversations_message_participant(conversation_id, participant_id, opts)
+
+Update conversation participant
+
+
+
+Wraps PATCH /api/v2/conversations/messages/{conversationId}/participants/{participantId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String |  conversationId
+
+participant_id = "participant_id_example" # String | participantId
+
+opts = { 
+  body: PureCloud::MediaParticipantRequest.new # MediaParticipantRequest | 
+}
+
+begin
+  #Update conversation participant
+  api_instance.patch_conversations_message_participant(conversation_id, participant_id, opts)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->patch_conversations_message_participant: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**|  conversationId |  |
+ **participant_id** | **String**| participantId |  |
+ **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_conversations_message_participant_attributes"></a>
+
+## - patch_conversations_message_participant_attributes(conversation_id, participant_id, opts)
+
+Update the attributes on a conversation participant.
+
+
+
+Wraps PATCH /api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String |  conversationId
+
+participant_id = "participant_id_example" # String | participantId
+
+opts = { 
+  body: PureCloud::ParticipantAttributes.new # ParticipantAttributes | 
+}
+
+begin
+  #Update the attributes on a conversation participant.
+  api_instance.patch_conversations_message_participant_attributes(conversation_id, participant_id, opts)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->patch_conversations_message_participant_attributes: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**|  conversationId |  |
+ **participant_id** | **String**| participantId |  |
+ **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_conversations_message_participant_communication"></a>
+
+## -[**Empty**](Empty.html) patch_conversations_message_participant_communication(conversation_id, participant_id, communication_id, body)
+
+Update conversation participant's communication by disconnecting it.
+
+
+
+Wraps PATCH /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String |  conversationId
+
+participant_id = "participant_id_example" # String | participantId
+
+communication_id = "communication_id_example" # String | communicationId
+
+body = PureCloud::MediaParticipantRequest.new # MediaParticipantRequest | Participant
+
+
+begin
+  #Update conversation participant's communication by disconnecting it.
+  result = api_instance.patch_conversations_message_participant_communication(conversation_id, participant_id, communication_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->patch_conversations_message_participant_communication: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**|  conversationId |  |
+ **participant_id** | **String**| participantId |  |
+ **communication_id** | **String**| communicationId |  |
+ **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Empty**](Empty.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_analytics_conversation_details_properties"></a>
 
 ## -[**PropertyIndexRequest**](PropertyIndexRequest.html) post_analytics_conversation_details_properties(conversation_id, body)
@@ -5118,6 +5692,198 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FaxSendResponse**](FaxSendResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversations_message_communication_messages"></a>
+
+## -[**MessageData**](MessageData.html) post_conversations_message_communication_messages(conversation_id, communication_id, body)
+
+Send message
+
+
+
+Wraps POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+communication_id = "communication_id_example" # String | communicationId
+
+body = PureCloud::AdditionalMessage.new # AdditionalMessage | Message
+
+
+begin
+  #Send message
+  result = api_instance.post_conversations_message_communication_messages(conversation_id, communication_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversations_message_communication_messages: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **communication_id** | **String**| communicationId |  |
+ **body** | [**AdditionalMessage**](AdditionalMessage.html)| Message |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessageData**](MessageData.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversations_message_messages_bulk"></a>
+
+## -[**TextMessageListing**](TextMessageListing.html) post_conversations_message_messages_bulk(conversation_id, opts)
+
+Get messages in batch
+
+
+
+Wraps POST /api/v2/conversations/messages/{conversationId}/messages/bulk 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+opts = { 
+  body: [PureCloud::Array<String>.new] # Array<String> | messageIds
+}
+
+begin
+  #Get messages in batch
+  result = api_instance.post_conversations_message_messages_bulk(conversation_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversations_message_messages_bulk: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **body** | **Array&lt;String&gt;**| messageIds | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TextMessageListing**](TextMessageListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversations_message_participant_replace"></a>
+
+## - post_conversations_message_participant_replace(conversation_id, participant_id, body)
+
+Replace this participant with the specified user and/or address
+
+
+
+Wraps POST /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+participant_id = "participant_id_example" # String | participantId
+
+body = PureCloud::TransferRequest.new # TransferRequest | Transfer request
+
+
+begin
+  #Replace this participant with the specified user and/or address
+  api_instance.post_conversations_message_participant_replace(conversation_id, participant_id, body)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversations_message_participant_replace: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **participant_id** | **String**| participantId |  |
+ **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 

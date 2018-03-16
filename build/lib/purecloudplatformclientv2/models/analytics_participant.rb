@@ -36,6 +36,9 @@ module PureCloud
     # External Organization Identifier
     attr_accessor :external_organization_id
 
+    # Reason for which participant flagged conversation
+    attr_accessor :flagged_reason
+
     # List of sessions associated to this participant
     attr_accessor :sessions
 
@@ -54,6 +57,8 @@ module PureCloud
         :'external_contact_id' => :'externalContactId',
         
         :'external_organization_id' => :'externalOrganizationId',
+        
+        :'flagged_reason' => :'flaggedReason',
         
         :'sessions' => :'sessions'
         
@@ -75,6 +80,8 @@ module PureCloud
         :'external_contact_id' => :'String',
         
         :'external_organization_id' => :'String',
+        
+        :'flagged_reason' => :'String',
         
         :'sessions' => :'Array<AnalyticsSession>'
         
@@ -144,6 +151,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'flaggedReason')
+        
+        
+        self.flagged_reason = attributes[:'flaggedReason']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'sessions')
         
         if (value = attributes[:'sessions']).is_a?(Array)
@@ -201,6 +217,15 @@ module PureCloud
       
       
       
+      allowed_values = ["general"]
+      if @flagged_reason && !allowed_values.include?(@flagged_reason)
+        return false
+      end
+      
+      
+      
+      
+      
       
       
     end
@@ -246,6 +271,20 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] flagged_reason Object to be assigned
+    def flagged_reason=(flagged_reason)
+      allowed_values = ["general"]
+      if flagged_reason && !allowed_values.include?(flagged_reason)
+        fail ArgumentError, "invalid value for 'flagged_reason', must be one of #{allowed_values}."
+      end
+      @flagged_reason = flagged_reason
+    end
+
+    
+    
+    
+    
     
     
     
@@ -261,6 +300,7 @@ module PureCloud
           purpose == o.purpose &&
           external_contact_id == o.external_contact_id &&
           external_organization_id == o.external_organization_id &&
+          flagged_reason == o.flagged_reason &&
           sessions == o.sessions
     end
 
@@ -273,7 +313,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [participant_id, participant_name, user_id, purpose, external_contact_id, external_organization_id, sessions].hash
+      [participant_id, participant_name, user_id, purpose, external_contact_id, external_organization_id, flagged_reason, sessions].hash
     end
 
     # build the object from hash

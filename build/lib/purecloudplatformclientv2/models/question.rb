@@ -41,9 +41,9 @@ module PureCloud
     # Prompt for details explaining the chosen NPS score. Used by NPS questions.
     attr_accessor :explanation_prompt
 
-    attr_accessor :is_kill
-
     attr_accessor :is_critical
+
+    attr_accessor :is_kill
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -69,9 +69,9 @@ module PureCloud
         
         :'explanation_prompt' => :'explanationPrompt',
         
-        :'is_kill' => :'isKill',
+        :'is_critical' => :'isCritical',
         
-        :'is_critical' => :'isCritical'
+        :'is_kill' => :'isKill'
         
       }
     end
@@ -100,9 +100,9 @@ module PureCloud
         
         :'explanation_prompt' => :'String',
         
-        :'is_kill' => :'BOOLEAN',
+        :'is_critical' => :'BOOLEAN',
         
-        :'is_critical' => :'BOOLEAN'
+        :'is_kill' => :'BOOLEAN'
         
       }
     end
@@ -208,19 +208,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'isKill')
+      if attributes.has_key?(:'isCritical')
         
         
-        self.is_kill = attributes[:'isKill']
+        self.is_critical = attributes[:'isCritical']
         
       
       end
 
       
-      if attributes.has_key?(:'isCritical')
+      if attributes.has_key?(:'isKill')
         
         
-        self.is_critical = attributes[:'isCritical']
+        self.is_kill = attributes[:'isKill']
         
       
       end
@@ -381,8 +381,8 @@ module PureCloud
           answer_options == o.answer_options &&
           max_response_characters == o.max_response_characters &&
           explanation_prompt == o.explanation_prompt &&
-          is_kill == o.is_kill &&
-          is_critical == o.is_critical
+          is_critical == o.is_critical &&
+          is_kill == o.is_kill
     end
 
     # @see the `==` method
@@ -394,7 +394,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, text, help_text, type, na_enabled, comments_required, visibility_condition, answer_options, max_response_characters, explanation_prompt, is_kill, is_critical].hash
+      [id, text, help_text, type, na_enabled, comments_required, visibility_condition, answer_options, max_response_characters, explanation_prompt, is_critical, is_kill].hash
     end
 
     # build the object from hash

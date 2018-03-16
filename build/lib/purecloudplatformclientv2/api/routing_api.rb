@@ -447,6 +447,70 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete a phone number provisioned for SMS.
+    # 
+    # @param address_id Address ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_routing_sms_phonenumber(address_id, opts = {})
+      delete_routing_sms_phonenumber_with_http_info(address_id, opts)
+      return nil
+    end
+
+    # Delete a phone number provisioned for SMS.
+    # 
+    # @param address_id Address ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_routing_sms_phonenumber_with_http_info(address_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_sms_phonenumber ..."
+      end
+      
+      
+      # verify the required parameter 'address_id' is set
+      fail ArgumentError, "Missing the required parameter 'address_id' when calling RoutingApi.delete_routing_sms_phonenumber" if address_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/sms/phonenumbers/{addressId}".sub('{format}','json').sub('{' + 'addressId' + '}', address_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#delete_routing_sms_phonenumber\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete utilization settings and revert to system defaults.
     # 
     # @param [Hash] opts the optional parameters
@@ -1072,6 +1136,144 @@ module PureCloud
         :return_type => 'LanguageEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#get_routing_languages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a recipient
+    # 
+    # @param recipient_id Recipient ID
+    # @param [Hash] opts the optional parameters
+    # @return [Recipient]
+    def get_routing_message_recipient(recipient_id, opts = {})
+      data, _status_code, _headers = get_routing_message_recipient_with_http_info(recipient_id, opts)
+      return data
+    end
+
+    # Get a recipient
+    # 
+    # @param recipient_id Recipient ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Recipient, Fixnum, Hash)>] Recipient data, response status code and response headers
+    def get_routing_message_recipient_with_http_info(recipient_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_message_recipient ..."
+      end
+      
+      
+      # verify the required parameter 'recipient_id' is set
+      fail ArgumentError, "Missing the required parameter 'recipient_id' when calling RoutingApi.get_routing_message_recipient" if recipient_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/message/recipients/{recipientId}".sub('{format}','json').sub('{' + 'recipientId' + '}', recipient_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Recipient')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#get_routing_message_recipient\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get recipients
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @return [RecipientListing]
+    def get_routing_message_recipients(opts = {})
+      data, _status_code, _headers = get_routing_message_recipients_with_http_info(opts)
+      return data
+    end
+
+    # Get recipients
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @return [Array<(RecipientListing, Fixnum, Hash)>] RecipientListing data, response status code and response headers
+    def get_routing_message_recipients_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_message_recipients ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/message/recipients".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'RecipientListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#get_routing_message_recipients\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1762,6 +1964,310 @@ module PureCloud
         :return_type => 'SkillEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#get_routing_skills\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of available phone numbers for SMS provisioning.
+    # This request will return up to 30 random phone numbers matching the criteria specified.  To get additional phone numbers repeat the request.
+    # @param country_code The ISO 3166-1 alpha-2 country code of the county for which available phone numbers should be returned
+    # @param phone_number_type Type of available phone numbers searched
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :region Region/province/state that can be used to restrict the numbers returned
+    # @option opts [String] :city City that can be used to restrict the numbers returned
+    # @option opts [String] :area_code Area code that can be used to restrict the numbers returned
+    # @option opts [String] :pattern A pattern to match phone numbers. Valid characters are &#39;*&#39; and [0-9a-zA-Z]. The &#39;*&#39; character will match any single digit.
+    # @option opts [String] :address_requirement This indicates whether the phone number requires to have an Address registered.
+    # @return [SMSAvailablePhoneNumberEntityListing]
+    def get_routing_sms_availablephonenumbers(country_code, phone_number_type, opts = {})
+      data, _status_code, _headers = get_routing_sms_availablephonenumbers_with_http_info(country_code, phone_number_type, opts)
+      return data
+    end
+
+    # Get a list of available phone numbers for SMS provisioning.
+    # This request will return up to 30 random phone numbers matching the criteria specified.  To get additional phone numbers repeat the request.
+    # @param country_code The ISO 3166-1 alpha-2 country code of the county for which available phone numbers should be returned
+    # @param phone_number_type Type of available phone numbers searched
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :region Region/province/state that can be used to restrict the numbers returned
+    # @option opts [String] :city City that can be used to restrict the numbers returned
+    # @option opts [String] :area_code Area code that can be used to restrict the numbers returned
+    # @option opts [String] :pattern A pattern to match phone numbers. Valid characters are &#39;*&#39; and [0-9a-zA-Z]. The &#39;*&#39; character will match any single digit.
+    # @option opts [String] :address_requirement This indicates whether the phone number requires to have an Address registered.
+    # @return [Array<(SMSAvailablePhoneNumberEntityListing, Fixnum, Hash)>] SMSAvailablePhoneNumberEntityListing data, response status code and response headers
+    def get_routing_sms_availablephonenumbers_with_http_info(country_code, phone_number_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_sms_availablephonenumbers ..."
+      end
+      
+      
+      # verify the required parameter 'country_code' is set
+      fail ArgumentError, "Missing the required parameter 'country_code' when calling RoutingApi.get_routing_sms_availablephonenumbers" if country_code.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'phone_number_type' is set
+      fail ArgumentError, "Missing the required parameter 'phone_number_type' when calling RoutingApi.get_routing_sms_availablephonenumbers" if phone_number_type.nil?
+      
+      # verify enum value
+      unless ['local', 'mobile', 'tollfree'].include?(phone_number_type)
+        fail ArgumentError, "invalid value for 'phone_number_type', must be one of local, mobile, tollfree"
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'address_requirement'] && !['none', 'any', 'local', 'foreign'].include?(opts[:'address_requirement'])
+        fail ArgumentError, 'invalid value for "address_requirement", must be one of none, any, local, foreign'
+      end
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/sms/availablephonenumbers".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'countryCode'] = country_code
+      query_params[:'phoneNumberType'] = phone_number_type
+      query_params[:'region'] = opts[:'region'] if opts[:'region']
+      query_params[:'city'] = opts[:'city'] if opts[:'city']
+      query_params[:'areaCode'] = opts[:'area_code'] if opts[:'area_code']
+      query_params[:'pattern'] = opts[:'pattern'] if opts[:'pattern']
+      query_params[:'addressRequirement'] = opts[:'address_requirement'] if opts[:'address_requirement']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SMSAvailablePhoneNumberEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#get_routing_sms_availablephonenumbers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a phone number provisioned for SMS.
+    # 
+    # @param address_id Address ID
+    # @param [Hash] opts the optional parameters
+    # @return [SmsPhoneNumber]
+    def get_routing_sms_phonenumber(address_id, opts = {})
+      data, _status_code, _headers = get_routing_sms_phonenumber_with_http_info(address_id, opts)
+      return data
+    end
+
+    # Get a phone number provisioned for SMS.
+    # 
+    # @param address_id Address ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SmsPhoneNumber, Fixnum, Hash)>] SmsPhoneNumber data, response status code and response headers
+    def get_routing_sms_phonenumber_with_http_info(address_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_sms_phonenumber ..."
+      end
+      
+      
+      # verify the required parameter 'address_id' is set
+      fail ArgumentError, "Missing the required parameter 'address_id' when calling RoutingApi.get_routing_sms_phonenumber" if address_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/sms/phonenumbers/{addressId}".sub('{format}','json').sub('{' + 'addressId' + '}', address_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SmsPhoneNumber')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#get_routing_sms_phonenumber\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of provisioned phone numbers.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :phone_number Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used.
+    # @option opts [String] :phone_number_type Filter on phone number type
+    # @option opts [String] :phone_number_status Filter on phone number status
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @return [SmsPhoneNumberEntityListing]
+    def get_routing_sms_phonenumbers(opts = {})
+      data, _status_code, _headers = get_routing_sms_phonenumbers_with_http_info(opts)
+      return data
+    end
+
+    # Get a list of provisioned phone numbers.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :phone_number Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used.
+    # @option opts [String] :phone_number_type Filter on phone number type
+    # @option opts [String] :phone_number_status Filter on phone number status
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @return [Array<(SmsPhoneNumberEntityListing, Fixnum, Hash)>] SmsPhoneNumberEntityListing data, response status code and response headers
+    def get_routing_sms_phonenumbers_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_sms_phonenumbers ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'phone_number_type'] && !['local', 'mobile', 'tollfree'].include?(opts[:'phone_number_type'])
+        fail ArgumentError, 'invalid value for "phone_number_type", must be one of local, mobile, tollfree'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'phone_number_status'] && !['active', 'invalid', 'porting'].include?(opts[:'phone_number_status'])
+        fail ArgumentError, 'invalid value for "phone_number_status", must be one of active, invalid, porting'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/sms/phonenumbers".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'phoneNumber'] = opts[:'phone_number'] if opts[:'phone_number']
+      query_params[:'phoneNumberType'] = opts[:'phone_number_type'] if opts[:'phone_number_type']
+      query_params[:'phoneNumberStatus'] = opts[:'phone_number_status'] if opts[:'phone_number_status']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SmsPhoneNumberEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#get_routing_sms_phonenumbers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2792,6 +3298,136 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Provision an Address for SMS
+    # 
+    # @param body SmsAddress
+    # @param [Hash] opts the optional parameters
+    # @return [SmsPhoneNumber]
+    def post_routing_sms_addresses(body, opts = {})
+      data, _status_code, _headers = post_routing_sms_addresses_with_http_info(body, opts)
+      return data
+    end
+
+    # Provision an Address for SMS
+    # 
+    # @param body SmsAddress
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SmsPhoneNumber, Fixnum, Hash)>] SmsPhoneNumber data, response status code and response headers
+    def post_routing_sms_addresses_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.post_routing_sms_addresses ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_routing_sms_addresses" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/sms/addresses".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SmsPhoneNumber')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#post_routing_sms_addresses\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Provision a phone number for SMS
+    # 
+    # @param body SmsPhoneNumber
+    # @param [Hash] opts the optional parameters
+    # @return [SmsPhoneNumber]
+    def post_routing_sms_phonenumbers(body, opts = {})
+      data, _status_code, _headers = post_routing_sms_phonenumbers_with_http_info(body, opts)
+      return data
+    end
+
+    # Provision a phone number for SMS
+    # 
+    # @param body SmsPhoneNumber
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SmsPhoneNumber, Fixnum, Hash)>] SmsPhoneNumber data, response status code and response headers
+    def post_routing_sms_phonenumbers_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.post_routing_sms_phonenumbers ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.post_routing_sms_phonenumbers" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/sms/phonenumbers".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SmsPhoneNumber')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#post_routing_sms_phonenumbers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create a wrap-up code
     # 
     # @param body WrapupCode
@@ -3017,6 +3653,81 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Update a recipient
+    # 
+    # @param recipient_id Recipient ID
+    # @param body Recipient
+    # @param [Hash] opts the optional parameters
+    # @return [Recipient]
+    def put_routing_message_recipient(recipient_id, body, opts = {})
+      data, _status_code, _headers = put_routing_message_recipient_with_http_info(recipient_id, body, opts)
+      return data
+    end
+
+    # Update a recipient
+    # 
+    # @param recipient_id Recipient ID
+    # @param body Recipient
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Recipient, Fixnum, Hash)>] Recipient data, response status code and response headers
+    def put_routing_message_recipient_with_http_info(recipient_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.put_routing_message_recipient ..."
+      end
+      
+      
+      # verify the required parameter 'recipient_id' is set
+      fail ArgumentError, "Missing the required parameter 'recipient_id' when calling RoutingApi.put_routing_message_recipient" if recipient_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.put_routing_message_recipient" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/message/recipients/{recipientId}".sub('{format}','json').sub('{' + 'recipientId' + '}', recipient_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Recipient')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#put_routing_message_recipient\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Update a queue
     # 
     # @param queue_id Queue ID
@@ -3088,6 +3799,81 @@ module PureCloud
         :return_type => 'Queue')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#put_routing_queue\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a phone number provisioned for SMS.
+    # 
+    # @param address_id Address ID
+    # @param body SmsPhoneNumber
+    # @param [Hash] opts the optional parameters
+    # @return [SmsPhoneNumber]
+    def put_routing_sms_phonenumber(address_id, body, opts = {})
+      data, _status_code, _headers = put_routing_sms_phonenumber_with_http_info(address_id, body, opts)
+      return data
+    end
+
+    # Update a phone number provisioned for SMS.
+    # 
+    # @param address_id Address ID
+    # @param body SmsPhoneNumber
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SmsPhoneNumber, Fixnum, Hash)>] SmsPhoneNumber data, response status code and response headers
+    def put_routing_sms_phonenumber_with_http_info(address_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.put_routing_sms_phonenumber ..."
+      end
+      
+      
+      # verify the required parameter 'address_id' is set
+      fail ArgumentError, "Missing the required parameter 'address_id' when calling RoutingApi.put_routing_sms_phonenumber" if address_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.put_routing_sms_phonenumber" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/sms/phonenumbers/{addressId}".sub('{format}','json').sub('{' + 'addressId' + '}', address_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SmsPhoneNumber')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#put_routing_sms_phonenumber\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

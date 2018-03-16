@@ -51,7 +51,7 @@ Method | Description
 [**get_flow_version_configuration**](ArchitectApi.html#get_flow_version_configuration) | Create flow version configuration
 [**get_flow_versions**](ArchitectApi.html#get_flow_versions) | Get flow version list
 [**get_flows**](ArchitectApi.html#get_flows) | Get a pageable list of flows, filtered by query parameters
-[**get_flows_datatable**](ArchitectApi.html#get_flows_datatable) | Returns a specific datatable by datatableId
+[**get_flows_datatable**](ArchitectApi.html#get_flows_datatable) | Returns a specific datatable by id
 [**get_flows_datatable_row**](ArchitectApi.html#get_flows_datatable_row) | Returns a specific row for the datatable
 [**get_flows_datatable_rows**](ArchitectApi.html#get_flows_datatable_rows) | Returns the rows for the datatable
 [**get_flows_datatables**](ArchitectApi.html#get_flows_datatables) | Retrieve a list of datatables for the org
@@ -81,7 +81,7 @@ Method | Description
 [**put_architect_schedulegroup**](ArchitectApi.html#put_architect_schedulegroup) | Updates a schedule group by ID
 [**put_architect_systemprompt_resource**](ArchitectApi.html#put_architect_systemprompt_resource) | Updates a system prompt resource override.
 [**put_flow**](ArchitectApi.html#put_flow) | Update flow
-[**put_flows_datatable**](ArchitectApi.html#put_flows_datatable) | Updates a specific datatable by datatableId
+[**put_flows_datatable**](ArchitectApi.html#put_flows_datatable) | Updates a specific datatable by id
 [**put_flows_datatable_row**](ArchitectApi.html#put_flows_datatable_row) | Update a row entry
 {: class="table table-striped"}
 
@@ -625,7 +625,7 @@ Name | Type | Description  | Notes
 
 deletes a specific datatable by id
 
-deletes an entire datatable (including schema and data) with a given datatableId)
+deletes an entire datatable (including schema and data) with a given id)
 
 Wraps DELETE /api/v2/flows/datatables/{datatableId} 
 
@@ -2880,9 +2880,9 @@ Name | Type | Description  | Notes
 
 <a name="get_flows_datatable"></a>
 
-## -[**JsonSchemaDocument**](JsonSchemaDocument.html) get_flows_datatable(datatable_id, opts)
+## -[**DataTable**](DataTable.html) get_flows_datatable(datatable_id, opts)
 
-Returns a specific datatable by datatableId
+Returns a specific datatable by id
 
 Given a datableid returns the schema associated with it.
 
@@ -2909,11 +2909,11 @@ api_instance = PureCloud::ArchitectApi.new
 datatable_id = "datatable_id_example" # String | id of datatable
 
 opts = { 
-  showbrief: true # BOOLEAN | If true returns a shortened version of the schema including the name, id and description]
+  expand: "expand_example" # String | Expand instructions for the result
 }
 
 begin
-  #Returns a specific datatable by datatableId
+  #Returns a specific datatable by id
   result = api_instance.get_flows_datatable(datatable_id, opts)
   p result
 rescue PureCloud::ApiError => e
@@ -2926,13 +2926,13 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datatable_id** | **String**| id of datatable |  |
- **showbrief** | **BOOLEAN**| If true returns a shortened version of the schema including the name, id and description] | [optional] [default to true] |
+ **expand** | **String**| Expand instructions for the result | [optional] <br />**Values**: schema |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**JsonSchemaDocument**](JsonSchemaDocument.html)
+[**DataTable**](DataTable.html)
 
 ### HTTP request headers
 
@@ -3009,7 +3009,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flows_datatable_rows"></a>
 
-## -Array&lt;Hash&lt;String, Object&gt;&gt;** get_flows_datatable_rows(datatable_id, opts)
+## -[**DataTableRowEntityListing**](DataTableRowEntityListing.html) get_flows_datatable_rows(datatable_id, opts)
 
 Returns the rows for the datatable
 
@@ -3038,6 +3038,8 @@ api_instance = PureCloud::ArchitectApi.new
 datatable_id = "datatable_id_example" # String | id of datatable
 
 opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
   showbrief: true # BOOLEAN | If true returns just the key value of the row
 }
 
@@ -3055,13 +3057,15 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datatable_id** | **String**| id of datatable |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **showbrief** | **BOOLEAN**| If true returns just the key value of the row | [optional] [default to true] |
 {: class="table table-striped"}
 
 
 ### Return type
 
-**Array&lt;Hash&lt;String, Object&gt;&gt;**
+[**DataTableRowEntityListing**](DataTableRowEntityListing.html)
 
 ### HTTP request headers
 
@@ -3072,7 +3076,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flows_datatables"></a>
 
-## -[**Array&lt;JsonSchemaDocument&gt;**](JsonSchemaDocument.html) get_flows_datatables(opts)
+## -[**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html) get_flows_datatables(opts)
 
 Retrieve a list of datatables for the org
 
@@ -3099,7 +3103,11 @@ end
 api_instance = PureCloud::ArchitectApi.new
 
 opts = { 
-  showbrief: true # BOOLEAN | If true, returns a shortened version of the schema including the name, id and description
+  expand: "expand_example", # String | Expand instructions for the result
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  sort_by: "id", # String | Sort by
+  sort_order: "ascending" # String | Sort order
 }
 
 begin
@@ -3115,13 +3123,17 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **showbrief** | **BOOLEAN**| If true, returns a shortened version of the schema including the name, id and description | [optional] [default to true] |
+ **expand** | **String**| Expand instructions for the result | [optional] <br />**Values**: schema |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to id]<br />**Values**: id, name |
+ **sort_order** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**Array&lt;JsonSchemaDocument&gt;**](JsonSchemaDocument.html)
+[**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html)
 
 ### HTTP request headers
 
@@ -4211,7 +4223,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flows_datatables"></a>
 
-## -[**JsonSchemaDocument**](JsonSchemaDocument.html) post_flows_datatables(body)
+## -[**DataTable**](DataTable.html) post_flows_datatables(body)
 
 Create a new datatable with the specified json-schema definition
 
@@ -4237,7 +4249,7 @@ end
 
 api_instance = PureCloud::ArchitectApi.new
 
-body = PureCloud::JsonSchemaDocument.new # JsonSchemaDocument | datatable json-schema
+body = PureCloud::DataTable.new # DataTable | datatable json-schema
 
 
 begin
@@ -4253,13 +4265,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**JsonSchemaDocument**](JsonSchemaDocument.html)| datatable json-schema |  |
+ **body** | [**DataTable**](DataTable.html)| datatable json-schema |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**JsonSchemaDocument**](JsonSchemaDocument.html)
+[**DataTable**](DataTable.html)
 
 ### HTTP request headers
 
@@ -4717,11 +4729,11 @@ Name | Type | Description  | Notes
 
 <a name="put_flows_datatable"></a>
 
-## -[**JsonSchemaDocument**](JsonSchemaDocument.html) put_flows_datatable(datatable_id, opts)
+## -[**DataTable**](DataTable.html) put_flows_datatable(datatable_id, opts)
 
-Updates a specific datatable by datatableId
+Updates a specific datatable by id
 
-Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
 
 Wraps PUT /api/v2/flows/datatables/{datatableId} 
 
@@ -4746,12 +4758,12 @@ api_instance = PureCloud::ArchitectApi.new
 datatable_id = "datatable_id_example" # String | id of datatable
 
 opts = { 
-  showbrief: true, # BOOLEAN | If true returns a shortened version of the schema including the name, id and description
-  body: PureCloud::JsonSchemaDocument.new # JsonSchemaDocument | datatable json-schema
+  expand: "expand_example", # String | Expand instructions for the result
+  body: PureCloud::DataTable.new # DataTable | datatable json-schema
 }
 
 begin
-  #Updates a specific datatable by datatableId
+  #Updates a specific datatable by id
   result = api_instance.put_flows_datatable(datatable_id, opts)
   p result
 rescue PureCloud::ApiError => e
@@ -4764,14 +4776,14 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datatable_id** | **String**| id of datatable |  |
- **showbrief** | **BOOLEAN**| If true returns a shortened version of the schema including the name, id and description | [optional] [default to true] |
- **body** | [**JsonSchemaDocument**](JsonSchemaDocument.html)| datatable json-schema | [optional]  |
+ **expand** | **String**| Expand instructions for the result | [optional] <br />**Values**: schema |
+ **body** | [**DataTable**](DataTable.html)| datatable json-schema | [optional]  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**JsonSchemaDocument**](JsonSchemaDocument.html)
+[**DataTable**](DataTable.html)
 
 ### HTTP request headers
 

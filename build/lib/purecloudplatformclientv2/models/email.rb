@@ -71,6 +71,9 @@ module PureCloud
     # A globally unique identifier for the stored content of this communication.
     attr_accessor :message_id
 
+    # A list of uploaded attachments on the email draft.
+    attr_accessor :draft_attachments
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -109,7 +112,9 @@ module PureCloud
         
         :'peer_id' => :'peerId',
         
-        :'message_id' => :'messageId'
+        :'message_id' => :'messageId',
+        
+        :'draft_attachments' => :'draftAttachments'
         
       }
     end
@@ -152,7 +157,9 @@ module PureCloud
         
         :'peer_id' => :'String',
         
-        :'message_id' => :'String'
+        :'message_id' => :'String',
+        
+        :'draft_attachments' => :'Array<Attachment>'
         
       }
     end
@@ -330,6 +337,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'draftAttachments')
+        
+        if (value = attributes[:'draftAttachments']).is_a?(Array)
+          self.draft_attachments = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -397,6 +415,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -552,6 +574,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -574,7 +601,8 @@ module PureCloud
           provider == o.provider &&
           script_id == o.script_id &&
           peer_id == o.peer_id &&
-          message_id == o.message_id
+          message_id == o.message_id &&
+          draft_attachments == o.draft_attachments
     end
 
     # @see the `==` method
@@ -586,7 +614,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, held, subject, messages_sent, segments, direction, recording_id, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, auto_generated, provider, script_id, peer_id, message_id].hash
+      [state, id, held, subject, messages_sent, segments, direction, recording_id, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, auto_generated, provider, script_id, peer_id, message_id, draft_attachments].hash
     end
 
     # build the object from hash

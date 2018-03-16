@@ -18,14 +18,19 @@ require 'date'
 
 module PureCloud
   class Attachment
+    # The unique identifier for the attachment.
     attr_accessor :attachment_id
 
+    # The name of the attachment.
     attr_accessor :name
 
+    # The content uri of the attachment. If set, this is commonly a public api download location.
     attr_accessor :content_uri
 
+    # The type of file the attachment is.
     attr_accessor :content_type
 
+    # The length of the attachment file.
     attr_accessor :content_length
 
     # Attribute mapping from ruby-style variable name to JSON key.
