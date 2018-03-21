@@ -10,6 +10,7 @@ Method | Description
 ------------- | ------------- | -------------
 [**delete_analytics_reporting_schedule**](AnalyticsApi.html#delete_analytics_reporting_schedule) | Delete a scheduled report job.
 [**get_analytics_conversation_details**](AnalyticsApi.html#get_analytics_conversation_details) | Get a conversation by id
+[**get_analytics_reporting_exports**](AnalyticsApi.html#get_analytics_reporting_exports) | Get all view export requests for a user
 [**get_analytics_reporting_metadata**](AnalyticsApi.html#get_analytics_reporting_metadata) | Get list of reporting metadata.
 [**get_analytics_reporting_report_id_metadata**](AnalyticsApi.html#get_analytics_reporting_report_id_metadata) | Get a reporting metadata.
 [**get_analytics_reporting_reportformats**](AnalyticsApi.html#get_analytics_reporting_reportformats) | Get a list of report formats
@@ -24,6 +25,7 @@ Method | Description
 [**post_analytics_conversations_details_query**](AnalyticsApi.html#post_analytics_conversations_details_query) | Query for conversation details
 [**post_analytics_evaluations_aggregates_query**](AnalyticsApi.html#post_analytics_evaluations_aggregates_query) | Query for evaluation aggregates
 [**post_analytics_queues_observations_query**](AnalyticsApi.html#post_analytics_queues_observations_query) | Query for queue observations
+[**post_analytics_reporting_exports**](AnalyticsApi.html#post_analytics_reporting_exports) | Generate a view export request
 [**post_analytics_reporting_schedule_runreport**](AnalyticsApi.html#post_analytics_reporting_schedule_runreport) | Place a scheduled report immediately into the reporting queue
 [**post_analytics_reporting_schedules**](AnalyticsApi.html#post_analytics_reporting_schedules) | Create a scheduled report job
 [**post_analytics_users_aggregates_query**](AnalyticsApi.html#post_analytics_users_aggregates_query) | Query for user aggregates
@@ -141,6 +143,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AnalyticsConversation**](AnalyticsConversation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_analytics_reporting_exports"></a>
+
+## -[**ReportingExportJobListing**](ReportingExportJobListing.html) get_analytics_reporting_exports
+
+Get all view export requests for a user
+
+
+
+Wraps GET /api/v2/analytics/reporting/exports 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+begin
+  #Get all view export requests for a user
+  result = api_instance.get_analytics_reporting_exports
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->get_analytics_reporting_exports: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ReportingExportJobListing**](ReportingExportJobListing.html)
 
 ### HTTP request headers
 
@@ -979,6 +1034,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_analytics_reporting_exports"></a>
+
+## -[**ReportingExportJobResponse**](ReportingExportJobResponse.html) post_analytics_reporting_exports(body)
+
+Generate a view export request
+
+
+
+Wraps POST /api/v2/analytics/reporting/exports 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+body = PureCloud::ReportingExportJobRequest.new # ReportingExportJobRequest | ReportingExportJobRequest
+
+
+begin
+  #Generate a view export request
+  result = api_instance.post_analytics_reporting_exports(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->post_analytics_reporting_exports: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ReportingExportJobRequest**](ReportingExportJobRequest.html)| ReportingExportJobRequest |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ReportingExportJobResponse**](ReportingExportJobResponse.html)
 
 ### HTTP request headers
 

@@ -51,6 +51,9 @@ module PureCloud
     # Who can view this group
     attr_accessor :visibility
 
+    # Owners of the group
+    attr_accessor :owners
+
     # The date on which the trusted group was added. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_created
 
@@ -84,6 +87,8 @@ module PureCloud
         :'rules_visible' => :'rulesVisible',
         
         :'visibility' => :'visibility',
+        
+        :'owners' => :'owners',
         
         :'date_created' => :'dateCreated',
         
@@ -119,6 +124,8 @@ module PureCloud
         :'rules_visible' => :'BOOLEAN',
         
         :'visibility' => :'String',
+        
+        :'owners' => :'Array<User>',
         
         :'date_created' => :'DateTime',
         
@@ -248,6 +255,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'owners')
+        
+        if (value = attributes[:'owners']).is_a?(Array)
+          self.owners = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'dateCreated')
         
         
@@ -372,6 +390,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -472,6 +494,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -489,6 +516,7 @@ module PureCloud
           addresses == o.addresses &&
           rules_visible == o.rules_visible &&
           visibility == o.visibility &&
+          owners == o.owners &&
           date_created == o.date_created &&
           created_by == o.created_by
     end
@@ -502,7 +530,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, date_modified, member_count, state, version, type, images, addresses, rules_visible, visibility, date_created, created_by].hash
+      [id, name, description, date_modified, member_count, state, version, type, images, addresses, rules_visible, visibility, owners, date_created, created_by].hash
     end
 
     # build the object from hash

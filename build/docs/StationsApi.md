@@ -11,6 +11,8 @@ Method | Description
 [**delete_station_associateduser**](StationsApi.html#delete_station_associateduser) | Unassigns the user assigned to this station
 [**get_station**](StationsApi.html#get_station) | Get station.
 [**get_stations**](StationsApi.html#get_stations) | Get the list of available stations.
+[**get_stations_settings**](StationsApi.html#get_stations_settings) | Get an organization&#39;s StationSettings
+[**patch_stations_settings**](StationsApi.html#patch_stations_settings) | Patch an organization&#39;s StationSettings
 {: class="table table-striped"}
 
 <a name="delete_station_associateduser"></a>
@@ -196,6 +198,118 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StationEntityListing**](StationEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_stations_settings"></a>
+
+## -[**StationSettings**](StationSettings.html) get_stations_settings
+
+Get an organization's StationSettings
+
+
+
+Wraps GET /api/v2/stations/settings 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::StationsApi.new
+
+begin
+  #Get an organization's StationSettings
+  result = api_instance.get_stations_settings
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling StationsApi->get_stations_settings: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**StationSettings**](StationSettings.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_stations_settings"></a>
+
+## -[**StationSettings**](StationSettings.html) patch_stations_settings(body)
+
+Patch an organization's StationSettings
+
+
+
+Wraps PATCH /api/v2/stations/settings 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::StationsApi.new
+
+body = PureCloud::StationSettings.new # StationSettings | Station settings
+
+
+begin
+  #Patch an organization's StationSettings
+  result = api_instance.patch_stations_settings(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling StationsApi->patch_stations_settings: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**StationSettings**](StationSettings.html)| Station settings |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**StationSettings**](StationSettings.html)
 
 ### HTTP request headers
 

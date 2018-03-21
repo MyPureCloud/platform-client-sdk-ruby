@@ -348,7 +348,7 @@ module PureCloud
     end
 
     # Create a new channel
-    # There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
+    # There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
     # @param [Hash] opts the optional parameters
     # @return [Channel]
     def post_notifications_channels(opts = {})
@@ -357,7 +357,7 @@ module PureCloud
     end
 
     # Create a new channel
-    # There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
+    # There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Channel, Fixnum, Hash)>] Channel data, response status code and response headers
     def post_notifications_channels_with_http_info(opts = {})

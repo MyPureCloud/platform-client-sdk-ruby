@@ -4001,8 +4001,8 @@ module PureCloud
     # Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [BOOLEAN] :showbrief If true returns just the key value of the row (default to true)
     # @return [DataTableRowEntityListing]
     def get_flows_datatable_rows(datatable_id, opts = {})
@@ -4014,8 +4014,8 @@ module PureCloud
     # Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
     # @option opts [BOOLEAN] :showbrief If true returns just the key value of the row
     # @return [Array<(DataTableRowEntityListing, Fixnum, Hash)>] DataTableRowEntityListing data, response status code and response headers
     def get_flows_datatable_rows_with_http_info(datatable_id, opts = {})
@@ -4054,8 +4054,8 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'showbrief'] = opts[:'showbrief'] if opts[:'showbrief']
 
       # header parameters
@@ -4093,8 +4093,8 @@ module PureCloud
     # Returns a metadata list of the datatables associated with this org, including ID, name and description.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :expand Expand instructions for the result
-    # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [String] :sort_by Sort by (default to id)
     # @option opts [String] :sort_order Sort order (default to ascending)
     # @return [DataTablesDomainEntityListing]
@@ -4107,8 +4107,8 @@ module PureCloud
     # Returns a metadata list of the datatables associated with this org, including ID, name and description.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :expand Expand instructions for the result
-    # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order
     # @return [Array<(DataTablesDomainEntityListing, Fixnum, Hash)>] DataTablesDomainEntityListing data, response status code and response headers
@@ -4165,8 +4165,8 @@ module PureCloud
       # query parameters
       query_params = {}
       query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
-      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
 

@@ -18,6 +18,7 @@ Method | Description
 [**get_authorization_roles**](AuthorizationApi.html#get_authorization_roles) | Retrieve a list of all roles defined for the organization
 [**get_user_roles**](AuthorizationApi.html#get_user_roles) | Returns a listing of roles and permissions for a user.
 [**patch_authorization_role**](AuthorizationApi.html#patch_authorization_role) | Patch Organization Role for needsUpdate Field
+[**post_authorization_division_object**](AuthorizationApi.html#post_authorization_division_object) | Set the division of a list of objects. The objects must all be of the same type: CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, QUEUE, USER
 [**post_authorization_role_comparedefault_right_role_id**](AuthorizationApi.html#post_authorization_role_comparedefault_right_role_id) | Get an unsaved org role to default role comparison
 [**post_authorization_roles**](AuthorizationApi.html#post_authorization_roles) | Create an organization role.
 [**post_authorization_roles_default**](AuthorizationApi.html#post_authorization_roles_default) | Restores all default roles
@@ -626,6 +627,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DomainOrganizationRole**](DomainOrganizationRole.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_authorization_division_object"></a>
+
+## -[**Array&lt;AuthzTypedObject&gt;**](AuthzTypedObject.html) post_authorization_division_object(division_id, object_type, body)
+
+Set the division of a list of objects. The objects must all be of the same type: CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, QUEUE, USER
+
+
+
+Wraps POST /api/v2/authorization/divisions/{divisionId}/objects/{objectType} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+division_id = "division_id_example" # String | Division ID
+
+object_type = "object_type_example" # String | The type of the objects. Must be one of the valid object types
+
+body = [PureCloud::Array<String>.new] # Array<String> | Object Id List
+
+
+begin
+  #Set the division of a list of objects. The objects must all be of the same type: CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, QUEUE, USER
+  result = api_instance.post_authorization_division_object(division_id, object_type, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->post_authorization_division_object: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **division_id** | **String**| Division ID |  |
+ **object_type** | **String**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, USER |
+ **body** | **Array&lt;String&gt;**| Object Id List |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;AuthzTypedObject&gt;**](AuthzTypedObject.html)
 
 ### HTTP request headers
 

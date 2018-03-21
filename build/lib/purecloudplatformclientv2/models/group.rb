@@ -51,6 +51,9 @@ module PureCloud
     # Who can view this group
     attr_accessor :visibility
 
+    # Owners of the group
+    attr_accessor :owners
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -81,6 +84,8 @@ module PureCloud
         :'rules_visible' => :'rulesVisible',
         
         :'visibility' => :'visibility',
+        
+        :'owners' => :'owners',
         
         :'self_uri' => :'selfUri'
         
@@ -114,6 +119,8 @@ module PureCloud
         :'rules_visible' => :'BOOLEAN',
         
         :'visibility' => :'String',
+        
+        :'owners' => :'Array<User>',
         
         :'self_uri' => :'String'
         
@@ -241,6 +248,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'owners')
+        
+        if (value = attributes[:'owners']).is_a?(Array)
+          self.owners = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -352,6 +370,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -447,6 +469,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -464,6 +491,7 @@ module PureCloud
           addresses == o.addresses &&
           rules_visible == o.rules_visible &&
           visibility == o.visibility &&
+          owners == o.owners &&
           self_uri == o.self_uri
     end
 
@@ -476,7 +504,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, date_modified, member_count, state, version, type, images, addresses, rules_visible, visibility, self_uri].hash
+      [id, name, description, date_modified, member_count, state, version, type, images, addresses, rules_visible, visibility, owners, self_uri].hash
     end
 
     # build the object from hash

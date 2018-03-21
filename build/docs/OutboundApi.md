@@ -1878,6 +1878,7 @@ opts = {
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
+  id: ["id_example"], # Array<String> | id
   contact_list_id: "contact_list_id_example", # String | Contact List ID
   dnc_list_id: "dnc_list_id_example", # String | DNC list ID
   distribution_queue_id: "distribution_queue_id_example", # String | Distribution queue ID
@@ -1904,6 +1905,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
  **contact_list_id** | **String**| Contact List ID | [optional]  |
  **dnc_list_id** | **String**| DNC list ID | [optional]  |
  **distribution_queue_id** | **String**| Distribution queue ID | [optional]  |
@@ -2340,6 +2342,7 @@ opts = {
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
+  id: ["id_example"], # Array<String> | id
   sort_by: "sort_by_example", # String | Sort by
   sort_order: "a" # String | Sort order
 }
@@ -2363,6 +2366,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
  **sort_by** | **String**| Sort by | [optional]  |
  **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}

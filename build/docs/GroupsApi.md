@@ -611,7 +611,7 @@ end
 
 api_instance = PureCloud::GroupsApi.new
 
-body = PureCloud::Group.new # Group | Group
+body = PureCloud::GroupCreate.new # GroupCreate | Group
 
 
 begin
@@ -627,7 +627,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Group**](Group.html)| Group |  |
+ **body** | [**GroupCreate**](GroupCreate.html)| Group |  |
 {: class="table table-striped"}
 
 

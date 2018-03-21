@@ -2131,6 +2131,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
+    # @option opts [Array<String>] :id id
     # @option opts [String] :contact_list_id Contact List ID
     # @option opts [String] :dnc_list_id DNC list ID
     # @option opts [String] :distribution_queue_id Distribution queue ID
@@ -2151,6 +2152,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
+    # @option opts [Array<String>] :id id
     # @option opts [String] :contact_list_id Contact List ID
     # @option opts [String] :dnc_list_id DNC list ID
     # @option opts [String] :distribution_queue_id Distribution queue ID
@@ -2231,6 +2233,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
@@ -2247,6 +2255,7 @@ module PureCloud
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
       query_params[:'contactListId'] = opts[:'contact_list_id'] if opts[:'contact_list_id']
       query_params[:'dncListId'] = opts[:'dnc_list_id'] if opts[:'dnc_list_id']
       query_params[:'distributionQueueId'] = opts[:'distribution_queue_id'] if opts[:'distribution_queue_id']
@@ -2783,6 +2792,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
+    # @option opts [Array<String>] :id id
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order (default to a)
     # @return [ContactListEntityListing]
@@ -2800,6 +2810,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
+    # @option opts [Array<String>] :id id
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order
     # @return [Array<(ContactListEntityListing, Fixnum, Hash)>] ContactListEntityListing data, response status code and response headers
@@ -2857,6 +2868,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
@@ -2875,6 +2892,7 @@ module PureCloud
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
 

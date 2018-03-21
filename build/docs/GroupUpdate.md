@@ -16,6 +16,7 @@ title: GroupUpdate
 | **addresses** | [**Array&lt;GroupContact&gt;**](GroupContact.html) |  | [optional] |
 | **rules_visible** | **BOOLEAN** | Are membership rules visible to the person requesting to view the group | [optional] |
 | **visibility** | **String** | Who can view this group | [optional] |
+| **owner_ids** | **Array&lt;String&gt;** | Owners of the group | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

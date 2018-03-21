@@ -42,6 +42,9 @@ module PureCloud
     # Who can view this group
     attr_accessor :visibility
 
+    # Owners of the group
+    attr_accessor :owner_ids
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -66,6 +69,8 @@ module PureCloud
         :'rules_visible' => :'rulesVisible',
         
         :'visibility' => :'visibility',
+        
+        :'owner_ids' => :'ownerIds',
         
         :'self_uri' => :'selfUri'
         
@@ -93,6 +98,8 @@ module PureCloud
         :'rules_visible' => :'BOOLEAN',
         
         :'visibility' => :'String',
+        
+        :'owner_ids' => :'Array<String>',
         
         :'self_uri' => :'String'
         
@@ -193,6 +200,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'ownerIds')
+        
+        if (value = attributes[:'ownerIds']).is_a?(Array)
+          self.owner_ids = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -261,10 +279,14 @@ module PureCloud
       
       
       
-      allowed_values = ["public", "owners", "members"]
+      allowed_values = ["public", "ownerIds", "members"]
       if @visibility && !allowed_values.include?(@visibility)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -328,13 +350,18 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] visibility Object to be assigned
     def visibility=(visibility)
-      allowed_values = ["public", "owners", "members"]
+      allowed_values = ["public", "ownerIds", "members"]
       if visibility && !allowed_values.include?(visibility)
         fail ArgumentError, "invalid value for 'visibility', must be one of #{allowed_values}."
       end
       @visibility = visibility
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -357,6 +384,7 @@ module PureCloud
           addresses == o.addresses &&
           rules_visible == o.rules_visible &&
           visibility == o.visibility &&
+          owner_ids == o.owner_ids &&
           self_uri == o.self_uri
     end
 
@@ -369,7 +397,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, state, version, images, addresses, rules_visible, visibility, self_uri].hash
+      [id, name, description, state, version, images, addresses, rules_visible, visibility, owner_ids, self_uri].hash
     end
 
     # build the object from hash

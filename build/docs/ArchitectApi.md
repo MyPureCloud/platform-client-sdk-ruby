@@ -3038,8 +3038,8 @@ api_instance = PureCloud::ArchitectApi.new
 datatable_id = "datatable_id_example" # String | id of datatable
 
 opts = { 
-  page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
   showbrief: true # BOOLEAN | If true returns just the key value of the row
 }
 
@@ -3057,8 +3057,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datatable_id** | **String**| id of datatable |  |
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **showbrief** | **BOOLEAN**| If true returns just the key value of the row | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -3104,8 +3104,8 @@ api_instance = PureCloud::ArchitectApi.new
 
 opts = { 
   expand: "expand_example", # String | Expand instructions for the result
-  page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
   sort_by: "id", # String | Sort by
   sort_order: "ascending" # String | Sort order
 }
@@ -3124,8 +3124,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **expand** | **String**| Expand instructions for the result | [optional] <br />**Values**: schema |
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **sort_by** | **String**| Sort by | [optional] [default to id]<br />**Values**: id, name |
  **sort_order** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
