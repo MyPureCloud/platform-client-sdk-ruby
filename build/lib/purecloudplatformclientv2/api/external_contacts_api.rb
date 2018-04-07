@@ -590,8 +590,8 @@ module PureCloud
     # 
     # @param contact_id ExternalContact Id
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 20)
-    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 20)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 1)
     # @option opts [String] :sort_order Sort order
     # @option opts [Array<String>] :expand which fields, if any, to expand
     # @return [NoteListing]
@@ -604,8 +604,8 @@ module PureCloud
     # 
     # @param contact_id ExternalContact Id
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
-    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
     # @option opts [String] :sort_order Sort order
     # @option opts [Array<String>] :expand which fields, if any, to expand
     # @return [Array<(NoteListing, Fixnum, Hash)>] NoteListing data, response status code and response headers
@@ -690,8 +690,8 @@ module PureCloud
     # Search for external contacts
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 20)
-    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 20)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 1)
     # @option opts [String] :q User supplied search keywords (no special syntax is currently supported)
     # @option opts [String] :sort_order Sort order
     # @option opts [Array<String>] :expand which fields, if any, to expand
@@ -704,8 +704,8 @@ module PureCloud
     # Search for external contacts
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
-    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
     # @option opts [String] :q User supplied search keywords (no special syntax is currently supported)
     # @option opts [String] :sort_order Sort order
     # @option opts [Array<String>] :expand which fields, if any, to expand
@@ -878,8 +878,8 @@ module PureCloud
     # 
     # @param external_organization_id External Organization ID
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 20)
-    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 20)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 1)
     # @option opts [String] :q User supplied search keywords (no special syntax is currently supported)
     # @option opts [String] :sort_order Sort order
     # @option opts [Array<String>] :expand which fields, if any, to expand
@@ -893,8 +893,8 @@ module PureCloud
     # 
     # @param external_organization_id External Organization ID
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
-    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
     # @option opts [String] :q User supplied search keywords (no special syntax is currently supported)
     # @option opts [String] :sort_order Sort order
     # @option opts [Array<String>] :expand which fields, if any, to expand
@@ -1072,8 +1072,8 @@ module PureCloud
     # 
     # @param external_organization_id External Organization Id
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 20)
-    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 20)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 1)
     # @option opts [String] :sort_order Sort order
     # @option opts [Array<String>] :expand which fields, if any, to expand
     # @return [NoteListing]
@@ -1086,8 +1086,8 @@ module PureCloud
     # 
     # @param external_organization_id External Organization Id
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
-    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
     # @option opts [String] :sort_order Sort order
     # @option opts [Array<String>] :expand which fields, if any, to expand
     # @return [Array<(NoteListing, Fixnum, Hash)>] NoteListing data, response status code and response headers
@@ -1173,8 +1173,8 @@ module PureCloud
     # 
     # @param external_organization_id External Organization ID
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 20)
-    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 20)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 1)
     # @option opts [String] :expand which fields, if any, to expand
     # @option opts [String] :sort_order Sort order
     # @return [RelationshipListing]
@@ -1187,8 +1187,8 @@ module PureCloud
     # 
     # @param external_organization_id External Organization ID
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
-    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
     # @option opts [String] :expand which fields, if any, to expand
     # @option opts [String] :sort_order Sort order
     # @return [Array<(RelationshipListing, Fixnum, Hash)>] RelationshipListing data, response status code and response headers
@@ -1277,8 +1277,8 @@ module PureCloud
     # Search for external organizations
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 20)
-    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 20)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (default to 1)
     # @option opts [String] :q Search query
     # @option opts [Array<String>] :trustor_id Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested
     # @option opts [String] :sort_order Sort order
@@ -1293,8 +1293,8 @@ module PureCloud
     # Search for external organizations
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
-    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
+    # @option opts [Integer] :page_number Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000)
     # @option opts [String] :q Search query
     # @option opts [Array<String>] :trustor_id Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested
     # @option opts [String] :sort_order Sort order

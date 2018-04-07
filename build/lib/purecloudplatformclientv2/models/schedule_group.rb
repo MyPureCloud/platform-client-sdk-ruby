@@ -61,6 +61,9 @@ module PureCloud
     # The schedules defining the hours an organization is closed.
     attr_accessor :closed_schedules
 
+    # The schedules defining the hours an organization is closed for the holidays.
+    attr_accessor :holiday_schedules
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -95,6 +98,8 @@ module PureCloud
         :'open_schedules' => :'openSchedules',
         
         :'closed_schedules' => :'closedSchedules',
+        
+        :'holiday_schedules' => :'holidaySchedules',
         
         :'self_uri' => :'selfUri'
         
@@ -132,6 +137,8 @@ module PureCloud
         :'open_schedules' => :'Array<UriReference>',
         
         :'closed_schedules' => :'Array<UriReference>',
+        
+        :'holiday_schedules' => :'Array<UriReference>',
         
         :'self_uri' => :'String'
         
@@ -277,6 +284,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'holidaySchedules')
+        
+        if (value = attributes[:'holidaySchedules']).is_a?(Array)
+          self.holiday_schedules = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -344,6 +362,10 @@ module PureCloud
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -458,6 +480,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -477,6 +504,7 @@ module PureCloud
           time_zone == o.time_zone &&
           open_schedules == o.open_schedules &&
           closed_schedules == o.closed_schedules &&
+          holiday_schedules == o.holiday_schedules &&
           self_uri == o.self_uri
     end
 
@@ -489,7 +517,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, time_zone, open_schedules, closed_schedules, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, time_zone, open_schedules, closed_schedules, holiday_schedules, self_uri].hash
     end
 
     # build the object from hash

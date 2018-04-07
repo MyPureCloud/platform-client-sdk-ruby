@@ -12,10 +12,12 @@ Method | Description
 [**delete_group_members**](GroupsApi.html#delete_group_members) | Remove members
 [**get_fieldconfig**](GroupsApi.html#get_fieldconfig) | Fetch field config for an entity type
 [**get_group**](GroupsApi.html#get_group) | Get group
-[**get_group_members**](GroupsApi.html#get_group_members) | Get group members
+[**get_group_individuals**](GroupsApi.html#get_group_individuals) | Get all individuals associated with the group
+[**get_group_members**](GroupsApi.html#get_group_members) | Get group members, includes individuals, owners, and dynamically included people
 [**get_group_profile**](GroupsApi.html#get_group_profile) | Get group profile
 [**get_groups**](GroupsApi.html#get_groups) | Get a group list
 [**get_groups_search**](GroupsApi.html#get_groups_search) | Search groups using the q64 value returned from a previous search
+[**get_profiles_groups**](GroupsApi.html#get_profiles_groups) | Get group profile listing
 [**post_group_members**](GroupsApi.html#post_group_members) | Add members
 [**post_groups**](GroupsApi.html#post_groups) | Create a group
 [**post_groups_search**](GroupsApi.html#post_groups_search) | Search groups
@@ -260,11 +262,70 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_group_individuals"></a>
+
+## -[**Array&lt;UserEntityListing&gt;**](UserEntityListing.html) get_group_individuals(group_id)
+
+Get all individuals associated with the group
+
+
+
+Wraps GET /api/v2/groups/{groupId}/individuals 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::GroupsApi.new
+
+group_id = "group_id_example" # String | Group ID
+
+
+begin
+  #Get all individuals associated with the group
+  result = api_instance.get_group_individuals(group_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling GroupsApi->get_group_individuals: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| Group ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;UserEntityListing&gt;**](UserEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_group_members"></a>
 
 ## -[**UserEntityListing**](UserEntityListing.html) get_group_members(group_id, opts)
 
-Get group members
+Get group members, includes individuals, owners, and dynamically included people
 
 
 
@@ -298,7 +359,7 @@ opts = {
 }
 
 begin
-  #Get group members
+  #Get group members, includes individuals, owners, and dynamically included people
   result = api_instance.get_group_members(group_id, opts)
   p result
 rescue PureCloud::ApiError => e
@@ -513,6 +574,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GroupsSearchResponse**](GroupsSearchResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_profiles_groups"></a>
+
+## -[**GroupProfileEntityListing**](GroupProfileEntityListing.html) get_profiles_groups(opts)
+
+Get group profile listing
+
+
+
+Wraps GET /api/v2/profiles/groups 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::GroupsApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  id: ["id_example"], # Array<String> | id
+  sort_order: "ASC" # String | Ascending or descending sort order
+}
+
+begin
+  #Get group profile listing
+  result = api_instance.get_profiles_groups(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling GroupsApi->get_profiles_groups: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
+ **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**GroupProfileEntityListing**](GroupProfileEntityListing.html)
 
 ### HTTP request headers
 

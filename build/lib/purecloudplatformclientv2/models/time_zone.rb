@@ -18,25 +18,27 @@ require 'date'
 
 module PureCloud
   class TimeZone
-    attr_accessor :display_name
-
+    # The globally unique identifier for the object.
     attr_accessor :id
 
-    attr_accessor :dstsavings
+    attr_accessor :name
 
-    attr_accessor :raw_offset
+    attr_accessor :offset
+
+    # The URI for this object
+    attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'display_name' => :'displayName',
-        
         :'id' => :'id',
         
-        :'dstsavings' => :'dstsavings',
+        :'name' => :'name',
         
-        :'raw_offset' => :'rawOffset'
+        :'offset' => :'offset',
+        
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -45,13 +47,13 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'display_name' => :'String',
-        
         :'id' => :'String',
         
-        :'dstsavings' => :'Integer',
+        :'name' => :'String',
         
-        :'raw_offset' => :'Integer'
+        :'offset' => :'Integer',
+        
+        :'self_uri' => :'String'
         
       }
     end
@@ -65,15 +67,6 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'displayName')
-        
-        
-        self.display_name = attributes[:'displayName']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'id')
         
         
@@ -83,19 +76,28 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'dstsavings')
+      if attributes.has_key?(:'name')
         
         
-        self.dstsavings = attributes[:'dstsavings']
+        self.name = attributes[:'name']
         
       
       end
 
       
-      if attributes.has_key?(:'rawOffset')
+      if attributes.has_key?(:'offset')
         
         
-        self.raw_offset = attributes[:'rawOffset']
+        self.offset = attributes[:'offset']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -160,10 +162,10 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          display_name == o.display_name &&
           id == o.id &&
-          dstsavings == o.dstsavings &&
-          raw_offset == o.raw_offset
+          name == o.name &&
+          offset == o.offset &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -175,7 +177,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [display_name, id, dstsavings, raw_offset].hash
+      [id, name, offset, self_uri].hash
     end
 
     # build the object from hash

@@ -24,6 +24,70 @@ module PureCloud
       @api_client = api_client
     end
 
+    # Deletes a emergency group by ID
+    # 
+    # @param emergency_group_id Emergency group ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_architect_emergencygroup(emergency_group_id, opts = {})
+      delete_architect_emergencygroup_with_http_info(emergency_group_id, opts)
+      return nil
+    end
+
+    # Deletes a emergency group by ID
+    # 
+    # @param emergency_group_id Emergency group ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_architect_emergencygroup_with_http_info(emergency_group_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.delete_architect_emergencygroup ..."
+      end
+      
+      
+      # verify the required parameter 'emergency_group_id' is set
+      fail ArgumentError, "Missing the required parameter 'emergency_group_id' when calling ArchitectApi.delete_architect_emergencygroup" if emergency_group_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/emergencygroups/{emergencyGroupId}".sub('{format}','json').sub('{' + 'emergencyGroupId' + '}', emergency_group_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#delete_architect_emergencygroup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete an IVR Config.
     # 
     # @param ivr_id IVR id
@@ -637,6 +701,7 @@ module PureCloud
     # deletes an entire datatable (including schema and data) with a given id)
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force force delete, even if in use (default to false)
     # @return [nil]
     def delete_flows_datatable(datatable_id, opts = {})
       delete_flows_datatable_with_http_info(datatable_id, opts)
@@ -647,6 +712,7 @@ module PureCloud
     # deletes an entire datatable (including schema and data) with a given id)
     # @param datatable_id id of datatable
     # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force force delete, even if in use
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_flows_datatable_with_http_info(datatable_id, opts = {})
       if @api_client.config.debugging
@@ -661,11 +727,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows/datatables/{datatableId}".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'force'] = opts[:'force'] if opts[:'force']
 
       # header parameters
       header_params = {}
@@ -1637,6 +1710,171 @@ module PureCloud
         :return_type => 'DependencyObjectEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#get_architect_dependencytracking_updatedresourceconsumers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Gets a emergency group by ID
+    # 
+    # @param emergency_group_id Emergency group ID
+    # @param [Hash] opts the optional parameters
+    # @return [EmergencyGroup]
+    def get_architect_emergencygroup(emergency_group_id, opts = {})
+      data, _status_code, _headers = get_architect_emergencygroup_with_http_info(emergency_group_id, opts)
+      return data
+    end
+
+    # Gets a emergency group by ID
+    # 
+    # @param emergency_group_id Emergency group ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EmergencyGroup, Fixnum, Hash)>] EmergencyGroup data, response status code and response headers
+    def get_architect_emergencygroup_with_http_info(emergency_group_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_emergencygroup ..."
+      end
+      
+      
+      # verify the required parameter 'emergency_group_id' is set
+      fail ArgumentError, "Missing the required parameter 'emergency_group_id' when calling ArchitectApi.get_architect_emergencygroup" if emergency_group_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/emergencygroups/{emergencyGroupId}".sub('{format}','json').sub('{' + 'emergencyGroupId' + '}', emergency_group_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EmergencyGroup')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_architect_emergencygroup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of emergency groups.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :sort_by Sort by (default to name)
+    # @option opts [String] :sort_order Sort order (default to ASC)
+    # @option opts [String] :name Name of the Emergency Group to filter by.
+    # @return [EmergencyGroupListing]
+    def get_architect_emergencygroups(opts = {})
+      data, _status_code, _headers = get_architect_emergencygroups_with_http_info(opts)
+      return data
+    end
+
+    # Get a list of emergency groups.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order
+    # @option opts [String] :name Name of the Emergency Group to filter by.
+    # @return [Array<(EmergencyGroupListing, Fixnum, Hash)>] EmergencyGroupListing data, response status code and response headers
+    def get_architect_emergencygroups_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_architect_emergencygroups ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/emergencygroups".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EmergencyGroupListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_architect_emergencygroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4152,10 +4390,6 @@ module PureCloud
       
       
       
-      if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
-        fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
-      end
-      
       
       
       
@@ -4251,6 +4485,69 @@ module PureCloud
         :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#post_architect_dependencytracking_build\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Creates a new emergency group
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [EmergencyGroup] :body 
+    # @return [EmergencyGroup]
+    def post_architect_emergencygroups(opts = {})
+      data, _status_code, _headers = post_architect_emergencygroups_with_http_info(opts)
+      return data
+    end
+
+    # Creates a new emergency group
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [EmergencyGroup] :body 
+    # @return [Array<(EmergencyGroup, Fixnum, Hash)>] EmergencyGroup data, response status code and response headers
+    def post_architect_emergencygroups_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_emergencygroups ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/emergencygroups".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EmergencyGroup')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_architect_emergencygroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -5460,6 +5757,79 @@ module PureCloud
         :return_type => 'DataTable')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#post_flows_datatables\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Updates a emergency group by ID
+    # 
+    # @param emergency_group_id Emergency group ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [EmergencyGroup] :body 
+    # @return [EmergencyGroup]
+    def put_architect_emergencygroup(emergency_group_id, opts = {})
+      data, _status_code, _headers = put_architect_emergencygroup_with_http_info(emergency_group_id, opts)
+      return data
+    end
+
+    # Updates a emergency group by ID
+    # 
+    # @param emergency_group_id Emergency group ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [EmergencyGroup] :body 
+    # @return [Array<(EmergencyGroup, Fixnum, Hash)>] EmergencyGroup data, response status code and response headers
+    def put_architect_emergencygroup_with_http_info(emergency_group_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_emergencygroup ..."
+      end
+      
+      
+      # verify the required parameter 'emergency_group_id' is set
+      fail ArgumentError, "Missing the required parameter 'emergency_group_id' when calling ArchitectApi.put_architect_emergencygroup" if emergency_group_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/architect/emergencygroups/{emergencyGroupId}".sub('{format}','json').sub('{' + 'emergencyGroupId' + '}', emergency_group_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EmergencyGroup')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#put_architect_emergencygroup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

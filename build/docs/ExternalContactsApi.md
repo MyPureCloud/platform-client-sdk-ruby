@@ -554,8 +554,8 @@ api_instance = PureCloud::ExternalContactsApi.new
 contact_id = "contact_id_example" # String | ExternalContact Id
 
 opts = { 
-  page_size: 20, # Integer | Page size
-  page_number: 1, # Integer | Page number
+  page_size: 20, # Integer | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+  page_number: 1, # Integer | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
   sort_order: "sort_order_example", # String | Sort order
   expand: ["expand_example"] # Array<String> | which fields, if any, to expand
 }
@@ -574,8 +574,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact_id** | **String**| ExternalContact Id |  |
- **page_size** | **Integer**| Page size | [optional] [default to 20] |
- **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
  **sort_order** | **String**| Sort order | [optional]  |
  **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
 {: class="table table-striped"}
@@ -621,8 +621,8 @@ end
 api_instance = PureCloud::ExternalContactsApi.new
 
 opts = { 
-  page_size: 20, # Integer | Page size
-  page_number: 1, # Integer | Page number
+  page_size: 20, # Integer | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+  page_number: 1, # Integer | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
   q: "q_example", # String | User supplied search keywords (no special syntax is currently supported)
   sort_order: "sort_order_example", # String | Sort order
   expand: ["expand_example"] # Array<String> | which fields, if any, to expand
@@ -641,8 +641,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 20] |
- **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
  **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
  **sort_order** | **String**| Sort order | [optional]  |
  **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources |
@@ -756,8 +756,8 @@ api_instance = PureCloud::ExternalContactsApi.new
 external_organization_id = "external_organization_id_example" # String | External Organization ID
 
 opts = { 
-  page_size: 20, # Integer | Page size
-  page_number: 1, # Integer | Page number
+  page_size: 20, # Integer | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+  page_number: 1, # Integer | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
   q: "q_example", # String | User supplied search keywords (no special syntax is currently supported)
   sort_order: "sort_order_example", # String | Sort order
   expand: ["expand_example"] # Array<String> | which fields, if any, to expand
@@ -777,8 +777,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_organization_id** | **String**| External Organization ID |  |
- **page_size** | **Integer**| Page size | [optional] [default to 20] |
- **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
  **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
  **sort_order** | **String**| Sort order | [optional]  |
  **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources |
@@ -893,8 +893,8 @@ api_instance = PureCloud::ExternalContactsApi.new
 external_organization_id = "external_organization_id_example" # String | External Organization Id
 
 opts = { 
-  page_size: 20, # Integer | Page size
-  page_number: 1, # Integer | Page number
+  page_size: 20, # Integer | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+  page_number: 1, # Integer | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
   sort_order: "sort_order_example", # String | Sort order
   expand: ["expand_example"] # Array<String> | which fields, if any, to expand
 }
@@ -913,8 +913,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_organization_id** | **String**| External Organization Id |  |
- **page_size** | **Integer**| Page size | [optional] [default to 20] |
- **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
  **sort_order** | **String**| Sort order | [optional]  |
  **expand** | [**Array&lt;String&gt;**](String.html)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
 {: class="table table-striped"}
@@ -962,8 +962,8 @@ api_instance = PureCloud::ExternalContactsApi.new
 external_organization_id = "external_organization_id_example" # String | External Organization ID
 
 opts = { 
-  page_size: 20, # Integer | Page size
-  page_number: 1, # Integer | Page number
+  page_size: 20, # Integer | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+  page_number: 1, # Integer | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
   expand: "expand_example", # String | which fields, if any, to expand
   sort_order: "sort_order_example" # String | Sort order
 }
@@ -982,8 +982,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_organization_id** | **String**| External Organization ID |  |
- **page_size** | **Integer**| Page size | [optional] [default to 20] |
- **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
  **expand** | **String**| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
  **sort_order** | **String**| Sort order | [optional]  |
 {: class="table table-striped"}
@@ -1029,8 +1029,8 @@ end
 api_instance = PureCloud::ExternalContactsApi.new
 
 opts = { 
-  page_size: 20, # Integer | Page size
-  page_number: 1, # Integer | Page number
+  page_size: 20, # Integer | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+  page_number: 1, # Integer | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
   q: "q_example", # String | Search query
   trustor_id: ["trustor_id_example"], # Array<String> | Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested
   sort_order: "sort_order_example", # String | Sort order
@@ -1051,8 +1051,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 20] |
- **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 20] |
+ **page_number** | **Integer**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) | [optional] [default to 1] |
  **q** | **String**| Search query | [optional]  |
  **trustor_id** | [**Array&lt;String&gt;**](String.html)| Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested | [optional]  |
  **sort_order** | **String**| Sort order | [optional]  |

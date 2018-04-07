@@ -30,6 +30,7 @@ Method | Description
 [**get_user_routingstatus**](UsersApi.html#get_user_routingstatus) | Fetch the routing status of a user
 [**get_user_station**](UsersApi.html#get_user_station) | Get station information for user
 [**get_user_superiors**](UsersApi.html#get_user_superiors) | Get superiors
+[**get_user_trustors**](UsersApi.html#get_user_trustors) | List the organizations that have authorized/trusted the user.
 [**get_users**](UsersApi.html#get_users) | Get the list of available users.
 [**get_users_me**](UsersApi.html#get_users_me) | Get current user details.
 [**get_users_search**](UsersApi.html#get_users_search) | Search users using the q64 value returned from a previous search
@@ -1410,6 +1411,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Array&lt;User&gt;**](User.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_user_trustors"></a>
+
+## -[**TrustorEntityListing**](TrustorEntityListing.html) get_user_trustors(user_id, opts)
+
+List the organizations that have authorized/trusted the user.
+
+
+
+Wraps GET /api/v2/users/{userId}/trustors 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+user_id = "user_id_example" # String | User ID
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #List the organizations that have authorized/trusted the user.
+  result = api_instance.get_user_trustors(user_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->get_user_trustors: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TrustorEntityListing**](TrustorEntityListing.html)
 
 ### HTTP request headers
 

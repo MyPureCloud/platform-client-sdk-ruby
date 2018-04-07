@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
+[**delete_architect_emergencygroup**](ArchitectApi.html#delete_architect_emergencygroup) | Deletes a emergency group by ID
 [**delete_architect_ivr**](ArchitectApi.html#delete_architect_ivr) | Delete an IVR Config.
 [**delete_architect_prompt**](ArchitectApi.html#delete_architect_prompt) | Delete specified user prompt
 [**delete_architect_prompt_resource**](ArchitectApi.html#delete_architect_prompt_resource) | Delete specified user prompt resource
@@ -28,6 +29,8 @@ Method | Description
 [**get_architect_dependencytracking_type**](ArchitectApi.html#get_architect_dependencytracking_type) | Get a Dependency Tracking type.
 [**get_architect_dependencytracking_types**](ArchitectApi.html#get_architect_dependencytracking_types) | Get Dependency Tracking types.
 [**get_architect_dependencytracking_updatedresourceconsumers**](ArchitectApi.html#get_architect_dependencytracking_updatedresourceconsumers) | Get Dependency Tracking objects that depend on updated resources
+[**get_architect_emergencygroup**](ArchitectApi.html#get_architect_emergencygroup) | Gets a emergency group by ID
+[**get_architect_emergencygroups**](ArchitectApi.html#get_architect_emergencygroups) | Get a list of emergency groups.
 [**get_architect_ivr**](ArchitectApi.html#get_architect_ivr) | Get an IVR config.
 [**get_architect_ivrs**](ArchitectApi.html#get_architect_ivrs) | Get IVR configs.
 [**get_architect_prompt**](ArchitectApi.html#get_architect_prompt) | Get specified user prompt
@@ -56,6 +59,7 @@ Method | Description
 [**get_flows_datatable_rows**](ArchitectApi.html#get_flows_datatable_rows) | Returns the rows for the datatable
 [**get_flows_datatables**](ArchitectApi.html#get_flows_datatables) | Retrieve a list of datatables for the org
 [**post_architect_dependencytracking_build**](ArchitectApi.html#post_architect_dependencytracking_build) | Rebuild Dependency Tracking data for an organization
+[**post_architect_emergencygroups**](ArchitectApi.html#post_architect_emergencygroups) | Creates a new emergency group
 [**post_architect_ivrs**](ArchitectApi.html#post_architect_ivrs) | Create IVR config.
 [**post_architect_prompt_history**](ArchitectApi.html#post_architect_prompt_history) | Generate prompt history
 [**post_architect_prompt_resources**](ArchitectApi.html#post_architect_prompt_resources) | Create a new user prompt resource
@@ -74,6 +78,7 @@ Method | Description
 [**post_flows_actions_unlock**](ArchitectApi.html#post_flows_actions_unlock) | Unlock flow
 [**post_flows_datatable_rows**](ArchitectApi.html#post_flows_datatable_rows) | Create a new row entry
 [**post_flows_datatables**](ArchitectApi.html#post_flows_datatables) | Create a new datatable with the specified json-schema definition
+[**put_architect_emergencygroup**](ArchitectApi.html#put_architect_emergencygroup) | Updates a emergency group by ID
 [**put_architect_ivr**](ArchitectApi.html#put_architect_ivr) | Update an IVR Config.
 [**put_architect_prompt**](ArchitectApi.html#put_architect_prompt) | Update specified user prompt
 [**put_architect_prompt_resource**](ArchitectApi.html#put_architect_prompt_resource) | Update specified user prompt resource
@@ -84,6 +89,64 @@ Method | Description
 [**put_flows_datatable**](ArchitectApi.html#put_flows_datatable) | Updates a specific datatable by id
 [**put_flows_datatable_row**](ArchitectApi.html#put_flows_datatable_row) | Update a row entry
 {: class="table table-striped"}
+
+<a name="delete_architect_emergencygroup"></a>
+
+## - delete_architect_emergencygroup(emergency_group_id)
+
+Deletes a emergency group by ID
+
+
+
+Wraps DELETE /api/v2/architect/emergencygroups/{emergencyGroupId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+emergency_group_id = "emergency_group_id_example" # String | Emergency group ID
+
+
+begin
+  #Deletes a emergency group by ID
+  api_instance.delete_architect_emergencygroup(emergency_group_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->delete_architect_emergencygroup: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **emergency_group_id** | **String**| Emergency group ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 <a name="delete_architect_ivr"></a>
 
@@ -621,7 +684,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_flows_datatable"></a>
 
-## - delete_flows_datatable(datatable_id)
+## - delete_flows_datatable(datatable_id, opts)
 
 deletes a specific datatable by id
 
@@ -649,10 +712,13 @@ api_instance = PureCloud::ArchitectApi.new
 
 datatable_id = "datatable_id_example" # String | id of datatable
 
+opts = { 
+  force: false # BOOLEAN | force delete, even if in use
+}
 
 begin
   #deletes a specific datatable by id
-  api_instance.delete_flows_datatable(datatable_id)
+  api_instance.delete_flows_datatable(datatable_id, opts)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_flows_datatable: #{e}"
 end
@@ -663,6 +729,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datatable_id** | **String**| id of datatable |  |
+ **force** | **BOOLEAN**| force delete, even if in use | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -1329,6 +1396,133 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_architect_emergencygroup"></a>
+
+## -[**EmergencyGroup**](EmergencyGroup.html) get_architect_emergencygroup(emergency_group_id)
+
+Gets a emergency group by ID
+
+
+
+Wraps GET /api/v2/architect/emergencygroups/{emergencyGroupId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+emergency_group_id = "emergency_group_id_example" # String | Emergency group ID
+
+
+begin
+  #Gets a emergency group by ID
+  result = api_instance.get_architect_emergencygroup(emergency_group_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_architect_emergencygroup: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **emergency_group_id** | **String**| Emergency group ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EmergencyGroup**](EmergencyGroup.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_architect_emergencygroups"></a>
+
+## -[**EmergencyGroupListing**](EmergencyGroupListing.html) get_architect_emergencygroups(opts)
+
+Get a list of emergency groups.
+
+
+
+Wraps GET /api/v2/architect/emergencygroups 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  sort_by: "name", # String | Sort by
+  sort_order: "ASC", # String | Sort order
+  name: "name_example" # String | Name of the Emergency Group to filter by.
+}
+
+begin
+  #Get a list of emergency groups.
+  result = api_instance.get_architect_emergencygroups(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_architect_emergencygroups: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to ASC] |
+ **name** | **String**| Name of the Emergency Group to filter by. | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EmergencyGroupListing**](EmergencyGroupListing.html)
 
 ### HTTP request headers
 
@@ -3127,7 +3321,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **sort_by** | **String**| Sort by | [optional] [default to id]<br />**Values**: id, name |
- **sort_order** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
+ **sort_order** | **String**| Sort order | [optional] [default to ascending] |
 {: class="table table-striped"}
 
 
@@ -3186,6 +3380,66 @@ This endpoint does not need any parameter.
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_architect_emergencygroups"></a>
+
+## -[**EmergencyGroup**](EmergencyGroup.html) post_architect_emergencygroups(opts)
+
+Creates a new emergency group
+
+
+
+Wraps POST /api/v2/architect/emergencygroups 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+opts = { 
+  body: PureCloud::EmergencyGroup.new # EmergencyGroup | 
+}
+
+begin
+  #Creates a new emergency group
+  result = api_instance.post_architect_emergencygroups(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->post_architect_emergencygroups: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**EmergencyGroup**](EmergencyGroup.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EmergencyGroup**](EmergencyGroup.html)
 
 ### HTTP request headers
 
@@ -4272,6 +4526,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DataTable**](DataTable.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_architect_emergencygroup"></a>
+
+## -[**EmergencyGroup**](EmergencyGroup.html) put_architect_emergencygroup(emergency_group_id, opts)
+
+Updates a emergency group by ID
+
+
+
+Wraps PUT /api/v2/architect/emergencygroups/{emergencyGroupId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+emergency_group_id = "emergency_group_id_example" # String | Emergency group ID
+
+opts = { 
+  body: PureCloud::EmergencyGroup.new # EmergencyGroup | 
+}
+
+begin
+  #Updates a emergency group by ID
+  result = api_instance.put_architect_emergencygroup(emergency_group_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->put_architect_emergencygroup: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **emergency_group_id** | **String**| Emergency group ID |  |
+ **body** | [**EmergencyGroup**](EmergencyGroup.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EmergencyGroup**](EmergencyGroup.html)
 
 ### HTTP request headers
 

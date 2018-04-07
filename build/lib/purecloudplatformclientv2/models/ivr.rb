@@ -61,6 +61,9 @@ module PureCloud
     # The Architect flow to execute during the hours an organization is closed.
     attr_accessor :closed_hours_flow
 
+    # The Architect flow to execute during an organization's holiday hours.
+    attr_accessor :holiday_hours_flow
+
     # The schedule group defining the open and closed hours for an organization.  If this is provided, an open flow and a closed flow must be specified as well.
     attr_accessor :schedule_group
 
@@ -98,6 +101,8 @@ module PureCloud
         :'open_hours_flow' => :'openHoursFlow',
         
         :'closed_hours_flow' => :'closedHoursFlow',
+        
+        :'holiday_hours_flow' => :'holidayHoursFlow',
         
         :'schedule_group' => :'scheduleGroup',
         
@@ -137,6 +142,8 @@ module PureCloud
         :'open_hours_flow' => :'UriReference',
         
         :'closed_hours_flow' => :'UriReference',
+        
+        :'holiday_hours_flow' => :'UriReference',
         
         :'schedule_group' => :'UriReference',
         
@@ -282,6 +289,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'holidayHoursFlow')
+        
+        
+        self.holiday_hours_flow = attributes[:'holidayHoursFlow']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'scheduleGroup')
         
         
@@ -358,6 +374,10 @@ module PureCloud
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -481,6 +501,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -500,6 +525,7 @@ module PureCloud
           dnis == o.dnis &&
           open_hours_flow == o.open_hours_flow &&
           closed_hours_flow == o.closed_hours_flow &&
+          holiday_hours_flow == o.holiday_hours_flow &&
           schedule_group == o.schedule_group &&
           self_uri == o.self_uri
     end
@@ -513,7 +539,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, dnis, open_hours_flow, closed_hours_flow, schedule_group, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, dnis, open_hours_flow, closed_hours_flow, holiday_hours_flow, schedule_group, self_uri].hash
     end
 
     # build the object from hash

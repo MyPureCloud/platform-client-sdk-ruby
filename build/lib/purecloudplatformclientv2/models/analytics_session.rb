@@ -56,7 +56,7 @@ module PureCloud
     # (Dialer) Unique identifier of the contact list that this contact belongs to
     attr_accessor :disposition_analyzer
 
-    # (Dialer) Result of the analysis (for example disposition.classification.callable.machine) 
+    # (Dialer) Result of the analysis
     attr_accessor :disposition_name
 
     # Unique identifier of the edge device
@@ -720,11 +720,6 @@ module PureCloud
       
       
       
-      allowed_values = ["disconnect", "person", "busy", "machine", "noanswer", "fax", "sit"]
-      if @disposition_name && !allowed_values.include?(@disposition_name)
-        return false
-      end
-      
       
       
       
@@ -916,16 +911,7 @@ module PureCloud
     
     
     
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] disposition_name Object to be assigned
-    def disposition_name=(disposition_name)
-      allowed_values = ["disconnect", "person", "busy", "machine", "noanswer", "fax", "sit"]
-      if disposition_name && !allowed_values.include?(disposition_name)
-        fail ArgumentError, "invalid value for 'disposition_name', must be one of #{allowed_values}."
-      end
-      @disposition_name = disposition_name
-    end
-
+    
     
     
     

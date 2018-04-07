@@ -54,6 +54,9 @@ module PureCloud
     # The id of the peer communication corresponding to a matching leg for this communication.
     attr_accessor :peer_id
 
+    # List of media stream ids
+    attr_accessor :msids
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -80,7 +83,9 @@ module PureCloud
         
         :'provider' => :'provider',
         
-        :'peer_id' => :'peerId'
+        :'peer_id' => :'peerId',
+        
+        :'msids' => :'msids'
         
       }
     end
@@ -111,7 +116,9 @@ module PureCloud
         
         :'provider' => :'String',
         
-        :'peer_id' => :'String'
+        :'peer_id' => :'String',
+        
+        :'msids' => :'Array<String>'
         
       }
     end
@@ -233,6 +240,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'msids')
+        
+        if (value = attributes[:'msids']).is_a?(Array)
+          self.msids = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -287,6 +305,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -387,6 +409,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -403,7 +430,8 @@ module PureCloud
           connected_time == o.connected_time &&
           disconnected_time == o.disconnected_time &&
           provider == o.provider &&
-          peer_id == o.peer_id
+          peer_id == o.peer_id &&
+          msids == o.msids
     end
 
     # @see the `==` method
@@ -415,7 +443,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, context, audio_muted, video_muted, sharing_screen, peer_count, disconnect_type, connected_time, disconnected_time, provider, peer_id].hash
+      [state, id, context, audio_muted, video_muted, sharing_screen, peer_count, disconnect_type, connected_time, disconnected_time, provider, peer_id, msids].hash
     end
 
     # build the object from hash
