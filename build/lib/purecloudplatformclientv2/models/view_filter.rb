@@ -18,38 +18,71 @@ require 'date'
 
 module PureCloud
   class ViewFilter
-    # The media types used to filter the data export request
+    # The media types are used to filter the view
     attr_accessor :media_types
 
-    # The queue ids used to filter the data export request
+    # The queue ids are used to filter the view
     attr_accessor :queue_ids
 
-    # The skill ids used to filter the data export request
+    # The skill ids are used to filter the view
     attr_accessor :skill_ids
 
-    # The language ids used to filter the data export request
+    # The language ids are used to filter the view
     attr_accessor :language_ids
 
-    # The directions used to filter the data export request
+    # The directions are used to filter the view
     attr_accessor :directions
 
-    # The wrap up codes used to filter the data export request
+    # The wrap up codes are used to filter the view
     attr_accessor :wrap_up_codes
 
-    # The dnis list used to filter the data export request
+    # The dnis list is used to filter the view
     attr_accessor :dnis_list
 
-    # The user ids used to filter the data export request
+    # The user ids are used to filter the view
     attr_accessor :user_ids
 
-    # The address To values used to filter the data export request
+    # The address To values are used to filter the view
     attr_accessor :address_tos
 
-    # The outbound campaign ids used to filter the data export request
+    # The address from values are used to filter the view
+    attr_accessor :address_froms
+
+    # The outbound campaign ids are used to filter the view
     attr_accessor :outbound_campaign_ids
 
-    # The outbound contact list ids used to filter the data export request
+    # The outbound contact list ids are used to filter the view
     attr_accessor :outbound_contact_list_ids
+
+    # The contact ids are used to filter the view
+    attr_accessor :contact_ids
+
+    # The ani list ids are used to filter the view
+    attr_accessor :ani_list
+
+    # The duration is used to filter the view
+    attr_accessor :duration_milliseconds
+
+    # The evaluationScore is used to filter the view
+    attr_accessor :evaluation_score
+
+    # The evaluationCriticalScore is used to filter the view
+    attr_accessor :evaluation_critical_score
+
+    # The evaluation form ids are used to filter the view
+    attr_accessor :evaluation_form_ids
+
+    # The evaluated agent ids are used to filter the view
+    attr_accessor :evaluated_agent_ids
+
+    # The evaluator ids are used to filter the view
+    attr_accessor :evaluator_ids
+
+    # Indicates filtering for transfers
+    attr_accessor :transferred
+
+    # Indicates filtering for abandons
+    attr_accessor :abandoned
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -73,9 +106,31 @@ module PureCloud
         
         :'address_tos' => :'addressTos',
         
+        :'address_froms' => :'addressFroms',
+        
         :'outbound_campaign_ids' => :'outboundCampaignIds',
         
-        :'outbound_contact_list_ids' => :'outboundContactListIds'
+        :'outbound_contact_list_ids' => :'outboundContactListIds',
+        
+        :'contact_ids' => :'contactIds',
+        
+        :'ani_list' => :'aniList',
+        
+        :'duration_milliseconds' => :'durationMilliseconds',
+        
+        :'evaluation_score' => :'evaluationScore',
+        
+        :'evaluation_critical_score' => :'evaluationCriticalScore',
+        
+        :'evaluation_form_ids' => :'evaluationFormIds',
+        
+        :'evaluated_agent_ids' => :'evaluatedAgentIds',
+        
+        :'evaluator_ids' => :'evaluatorIds',
+        
+        :'transferred' => :'transferred',
+        
+        :'abandoned' => :'abandoned'
         
       }
     end
@@ -102,9 +157,31 @@ module PureCloud
         
         :'address_tos' => :'Array<String>',
         
+        :'address_froms' => :'Array<String>',
+        
         :'outbound_campaign_ids' => :'Array<String>',
         
-        :'outbound_contact_list_ids' => :'Array<String>'
+        :'outbound_contact_list_ids' => :'Array<String>',
+        
+        :'contact_ids' => :'Array<String>',
+        
+        :'ani_list' => :'Array<String>',
+        
+        :'duration_milliseconds' => :'NumericRange',
+        
+        :'evaluation_score' => :'NumericRange',
+        
+        :'evaluation_critical_score' => :'NumericRange',
+        
+        :'evaluation_form_ids' => :'Array<String>',
+        
+        :'evaluated_agent_ids' => :'Array<String>',
+        
+        :'evaluator_ids' => :'Array<String>',
+        
+        :'transferred' => :'BOOLEAN',
+        
+        :'abandoned' => :'BOOLEAN'
         
       }
     end
@@ -217,6 +294,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'addressFroms')
+        
+        if (value = attributes[:'addressFroms']).is_a?(Array)
+          self.address_froms = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'outboundCampaignIds')
         
         if (value = attributes[:'outboundCampaignIds']).is_a?(Array)
@@ -234,6 +322,106 @@ module PureCloud
           self.outbound_contact_list_ids = value
         end
         
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'contactIds')
+        
+        if (value = attributes[:'contactIds']).is_a?(Array)
+          self.contact_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'aniList')
+        
+        if (value = attributes[:'aniList']).is_a?(Array)
+          self.ani_list = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'durationMilliseconds')
+        
+        
+        self.duration_milliseconds = attributes[:'durationMilliseconds']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'evaluationScore')
+        
+        
+        self.evaluation_score = attributes[:'evaluationScore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'evaluationCriticalScore')
+        
+        
+        self.evaluation_critical_score = attributes[:'evaluationCriticalScore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'evaluationFormIds')
+        
+        if (value = attributes[:'evaluationFormIds']).is_a?(Array)
+          self.evaluation_form_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'evaluatedAgentIds')
+        
+        if (value = attributes[:'evaluatedAgentIds']).is_a?(Array)
+          self.evaluated_agent_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'evaluatorIds')
+        
+        if (value = attributes[:'evaluatorIds']).is_a?(Array)
+          self.evaluator_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'transferred')
+        
+        
+        self.transferred = attributes[:'transferred']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'abandoned')
+        
+        
+        self.abandoned = attributes[:'abandoned']
         
       
       end
@@ -298,8 +486,107 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -370,8 +657,19 @@ module PureCloud
           dnis_list == o.dnis_list &&
           user_ids == o.user_ids &&
           address_tos == o.address_tos &&
+          address_froms == o.address_froms &&
           outbound_campaign_ids == o.outbound_campaign_ids &&
-          outbound_contact_list_ids == o.outbound_contact_list_ids
+          outbound_contact_list_ids == o.outbound_contact_list_ids &&
+          contact_ids == o.contact_ids &&
+          ani_list == o.ani_list &&
+          duration_milliseconds == o.duration_milliseconds &&
+          evaluation_score == o.evaluation_score &&
+          evaluation_critical_score == o.evaluation_critical_score &&
+          evaluation_form_ids == o.evaluation_form_ids &&
+          evaluated_agent_ids == o.evaluated_agent_ids &&
+          evaluator_ids == o.evaluator_ids &&
+          transferred == o.transferred &&
+          abandoned == o.abandoned
     end
 
     # @see the `==` method
@@ -383,7 +681,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, language_ids, directions, wrap_up_codes, dnis_list, user_ids, address_tos, outbound_campaign_ids, outbound_contact_list_ids].hash
+      [media_types, queue_ids, skill_ids, language_ids, directions, wrap_up_codes, dnis_list, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, duration_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned].hash
     end
 
     # build the object from hash

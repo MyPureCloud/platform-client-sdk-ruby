@@ -177,28 +177,13 @@ module PureCloud
       
       
       
-      if @length_in_minutes.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @counts_as_paid_time.nil?
-        return false
-      end
-
       
       
-      
-      
-      
-      if @counts_as_work_time.nil?
-        return false
-      end
-
       
       
       

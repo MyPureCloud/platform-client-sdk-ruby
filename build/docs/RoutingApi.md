@@ -17,6 +17,7 @@ Method | Description
 [**delete_routing_sms_phonenumber**](RoutingApi.html#delete_routing_sms_phonenumber) | Delete a phone number provisioned for SMS.
 [**delete_routing_utilization**](RoutingApi.html#delete_routing_utilization) | Delete utilization settings and revert to system defaults.
 [**delete_routing_wrapupcode**](RoutingApi.html#delete_routing_wrapupcode) | Delete wrap-up code
+[**delete_user_routinglanguage**](RoutingApi.html#delete_user_routinglanguage) | Remove routing language from user
 [**delete_user_routingskill**](RoutingApi.html#delete_user_routingskill) | Remove routing skill from user
 [**get_routing_email_domain**](RoutingApi.html#get_routing_email_domain) | Get domain
 [**get_routing_email_domain_route**](RoutingApi.html#get_routing_email_domain_route) | Get a route
@@ -40,9 +41,11 @@ Method | Description
 [**get_routing_utilization**](RoutingApi.html#get_routing_utilization) | Get the utilization settings.
 [**get_routing_wrapupcode**](RoutingApi.html#get_routing_wrapupcode) | Get details about this wrap-up code.
 [**get_routing_wrapupcodes**](RoutingApi.html#get_routing_wrapupcodes) | Get list of wrapup codes.
+[**get_user_routinglanguages**](RoutingApi.html#get_user_routinglanguages) | List routing language for user
 [**get_user_routingskills**](RoutingApi.html#get_user_routingskills) | List routing skills for user
 [**patch_routing_queue_user**](RoutingApi.html#patch_routing_queue_user) | Update the ring number of joined status for a User in a Queue
 [**patch_routing_queue_users**](RoutingApi.html#patch_routing_queue_users) | Join or unjoin a set of users for a queue
+[**patch_user_routinglanguage**](RoutingApi.html#patch_user_routinglanguage) | Update routing language proficiency or state.
 [**post_analytics_queues_observations_query**](RoutingApi.html#post_analytics_queues_observations_query) | Query for queue observations
 [**post_routing_email_domain_routes**](RoutingApi.html#post_routing_email_domain_routes) | Create a route
 [**post_routing_email_domains**](RoutingApi.html#post_routing_email_domains) | Create a domain
@@ -54,6 +57,7 @@ Method | Description
 [**post_routing_sms_addresses**](RoutingApi.html#post_routing_sms_addresses) | Provision an Address for SMS
 [**post_routing_sms_phonenumbers**](RoutingApi.html#post_routing_sms_phonenumbers) | Provision a phone number for SMS
 [**post_routing_wrapupcodes**](RoutingApi.html#post_routing_wrapupcodes) | Create a wrap-up code
+[**post_user_routinglanguages**](RoutingApi.html#post_user_routinglanguages) | Add routing language to user
 [**post_user_routingskills**](RoutingApi.html#post_user_routingskills) | Add routing skill to user
 [**put_routing_email_domain_route**](RoutingApi.html#put_routing_email_domain_route) | Update a route
 [**put_routing_message_recipient**](RoutingApi.html#put_routing_message_recipient) | Update a recipient
@@ -579,6 +583,67 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **code_id** | **String**| Wrapup Code ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_user_routinglanguage"></a>
+
+## - delete_user_routinglanguage(user_id, language_id)
+
+Remove routing language from user
+
+
+
+Wraps DELETE /api/v2/users/{userId}/routinglanguages/{languageId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+language_id = "language_id_example" # String | languageId
+
+
+begin
+  #Remove routing language from user
+  api_instance.delete_user_routinglanguage(user_id, language_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->delete_user_routinglanguage: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **language_id** | **String**| languageId |  |
 {: class="table table-striped"}
 
 
@@ -2031,6 +2096,73 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_user_routinglanguages"></a>
+
+## -[**UserLanguageEntityListing**](UserLanguageEntityListing.html) get_user_routinglanguages(user_id, opts)
+
+List routing language for user
+
+
+
+Wraps GET /api/v2/users/{userId}/routinglanguages 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  sort_order: "ASC" # String | Ascending or descending sort order
+}
+
+begin
+  #List routing language for user
+  result = api_instance.get_user_routinglanguages(user_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->get_user_routinglanguages: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserLanguageEntityListing**](UserLanguageEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_user_routingskills"></a>
 
 ## -[**UserSkillEntityListing**](UserSkillEntityListing.html) get_user_routingskills(user_id, opts)
@@ -2217,6 +2349,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**QueueMemberEntityListing**](QueueMemberEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_user_routinglanguage"></a>
+
+## -[**UserRoutingLanguage**](UserRoutingLanguage.html) patch_user_routinglanguage(user_id, language_id, body)
+
+Update routing language proficiency or state.
+
+
+
+Wraps PATCH /api/v2/users/{userId}/routinglanguages/{languageId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+language_id = "language_id_example" # String | languageId
+
+body = PureCloud::UserRoutingLanguage.new # UserRoutingLanguage | Language
+
+
+begin
+  #Update routing language proficiency or state.
+  result = api_instance.patch_user_routinglanguage(user_id, language_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->patch_user_routinglanguage: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **language_id** | **String**| languageId |  |
+ **body** | [**UserRoutingLanguage**](UserRoutingLanguage.html)| Language |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserRoutingLanguage**](UserRoutingLanguage.html)
 
 ### HTTP request headers
 
@@ -2879,6 +3076,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WrapupCode**](WrapupCode.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_user_routinglanguages"></a>
+
+## -[**UserRoutingLanguage**](UserRoutingLanguage.html) post_user_routinglanguages(user_id, body)
+
+Add routing language to user
+
+
+
+Wraps POST /api/v2/users/{userId}/routinglanguages 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+body = PureCloud::UserRoutingLanguagePost.new # UserRoutingLanguagePost | Language
+
+
+begin
+  #Add routing language to user
+  result = api_instance.post_user_routinglanguages(user_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->post_user_routinglanguages: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **body** | [**UserRoutingLanguagePost**](UserRoutingLanguagePost.html)| Language |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserRoutingLanguage**](UserRoutingLanguage.html)
 
 ### HTTP request headers
 

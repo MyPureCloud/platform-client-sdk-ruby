@@ -153,6 +153,80 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Remove routing language from user
+    # 
+    # @param user_id User ID
+    # @param language_id languageId
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_user_routinglanguage(user_id, language_id, opts = {})
+      delete_user_routinglanguage_with_http_info(user_id, language_id, opts)
+      return nil
+    end
+
+    # Remove routing language from user
+    # 
+    # @param user_id User ID
+    # @param language_id languageId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_user_routinglanguage_with_http_info(user_id, language_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.delete_user_routinglanguage ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.delete_user_routinglanguage" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'language_id' is set
+      fail ArgumentError, "Missing the required parameter 'language_id' when calling UsersApi.delete_user_routinglanguage" if language_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/routinglanguages/{languageId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'languageId' + '}', language_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#delete_user_routinglanguage\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Remove routing skill from user
     # 
     # @param user_id User ID
@@ -1389,6 +1463,102 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # List routing language for user
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [String] :sort_order Ascending or descending sort order (default to ASC)
+    # @return [UserLanguageEntityListing]
+    def get_user_routinglanguages(user_id, opts = {})
+      data, _status_code, _headers = get_user_routinglanguages_with_http_info(user_id, opts)
+      return data
+    end
+
+    # List routing language for user
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @option opts [String] :sort_order Ascending or descending sort order
+    # @return [Array<(UserLanguageEntityListing, Fixnum, Hash)>] UserLanguageEntityListing data, response status code and response headers
+    def get_user_routinglanguages_with_http_info(user_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.get_user_routinglanguages ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_routinglanguages" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
+      end
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/routinglanguages".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserLanguageEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#get_user_routinglanguages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # List routing skills for user
     # 
     # @param user_id User ID
@@ -2423,6 +2593,91 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Update routing language proficiency or state.
+    # 
+    # @param user_id User ID
+    # @param language_id languageId
+    # @param body Language
+    # @param [Hash] opts the optional parameters
+    # @return [UserRoutingLanguage]
+    def patch_user_routinglanguage(user_id, language_id, body, opts = {})
+      data, _status_code, _headers = patch_user_routinglanguage_with_http_info(user_id, language_id, body, opts)
+      return data
+    end
+
+    # Update routing language proficiency or state.
+    # 
+    # @param user_id User ID
+    # @param language_id languageId
+    # @param body Language
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UserRoutingLanguage, Fixnum, Hash)>] UserRoutingLanguage data, response status code and response headers
+    def patch_user_routinglanguage_with_http_info(user_id, language_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.patch_user_routinglanguage ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.patch_user_routinglanguage" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'language_id' is set
+      fail ArgumentError, "Missing the required parameter 'language_id' when calling UsersApi.patch_user_routinglanguage" if language_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.patch_user_routinglanguage" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/routinglanguages/{languageId}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'languageId' + '}', language_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserRoutingLanguage')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#patch_user_routinglanguage\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Query for user aggregates
     # 
     # @param body query
@@ -2761,6 +3016,81 @@ module PureCloud
         :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#post_user_password\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Add routing language to user
+    # 
+    # @param user_id User ID
+    # @param body Language
+    # @param [Hash] opts the optional parameters
+    # @return [UserRoutingLanguage]
+    def post_user_routinglanguages(user_id, body, opts = {})
+      data, _status_code, _headers = post_user_routinglanguages_with_http_info(user_id, body, opts)
+      return data
+    end
+
+    # Add routing language to user
+    # 
+    # @param user_id User ID
+    # @param body Language
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UserRoutingLanguage, Fixnum, Hash)>] UserRoutingLanguage data, response status code and response headers
+    def post_user_routinglanguages_with_http_info(user_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.post_user_routinglanguages ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.post_user_routinglanguages" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.post_user_routinglanguages" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/routinglanguages".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserRoutingLanguage')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#post_user_routinglanguages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
