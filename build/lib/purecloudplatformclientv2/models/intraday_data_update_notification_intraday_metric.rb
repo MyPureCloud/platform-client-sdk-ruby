@@ -88,7 +88,7 @@ module PureCloud
       
       
       
-      allowed_values = ["HISTORICAL_QUEUE_DATA", "HISTORICAL_AGENT_DATA", "FORECAST_DATA", "SCHEDULE_DATA", "PERFORMANCE_PREDICTION_AGENT_DATA", "PERFORMANCE_PREDICTION_QUEUE_DATA"]
+      allowed_values = ["HistoricalQueueData", "HistoricalAgentData", "ForecastData", "ScheduleData", "PerformancePredictionAgentData", "PerformancePredictionQueueData"]
       if @category && !allowed_values.include?(@category)
         return false
       end
@@ -106,7 +106,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] category Object to be assigned
     def category=(category)
-      allowed_values = ["HISTORICAL_QUEUE_DATA", "HISTORICAL_AGENT_DATA", "FORECAST_DATA", "SCHEDULE_DATA", "PERFORMANCE_PREDICTION_AGENT_DATA", "PERFORMANCE_PREDICTION_QUEUE_DATA"]
+      allowed_values = ["HistoricalQueueData", "HistoricalAgentData", "ForecastData", "ScheduleData", "PerformancePredictionAgentData", "PerformancePredictionQueueData"]
       if category && !allowed_values.include?(category)
         fail ArgumentError, "invalid value for 'category', must be one of #{allowed_values}."
       end

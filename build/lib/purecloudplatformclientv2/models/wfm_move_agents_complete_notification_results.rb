@@ -37,7 +37,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'user' => :'WfmMoveAgentsCompleteNotificationUser',
+        :'user' => :'WfmMoveAgentsCompleteNotificationUserReference',
         
         :'result' => :'String'
         

@@ -30,9 +30,6 @@ module PureCloud
     # The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
     attr_accessor :interval
 
-    # The data columns included in the export
-    attr_accessor :data_columns
-
     # The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
     attr_accessor :period
 
@@ -44,6 +41,9 @@ module PureCloud
 
     # Indicates if the request has been marked as read
     attr_accessor :read
+
+    # The locale use for localization of the exported data, i.e. en-us, es-mx  
+    attr_accessor :locale
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -57,15 +57,15 @@ module PureCloud
         
         :'interval' => :'interval',
         
-        :'data_columns' => :'dataColumns',
-        
         :'period' => :'period',
         
         :'view_type' => :'viewType',
         
         :'filter' => :'filter',
         
-        :'read' => :'read'
+        :'read' => :'read',
+        
+        :'locale' => :'locale'
         
       }
     end
@@ -82,15 +82,15 @@ module PureCloud
         
         :'interval' => :'String',
         
-        :'data_columns' => :'Array<DataColumn>',
-        
         :'period' => :'String',
         
         :'view_type' => :'String',
         
         :'filter' => :'ViewFilter',
         
-        :'read' => :'BOOLEAN'
+        :'read' => :'BOOLEAN',
+        
+        :'locale' => :'String'
         
       }
     end
@@ -140,17 +140,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'dataColumns')
-        
-        if (value = attributes[:'dataColumns']).is_a?(Array)
-          self.data_columns = value
-        end
-        
-        
-      
-      end
-
-      
       if attributes.has_key?(:'period')
         
         
@@ -182,6 +171,15 @@ module PureCloud
         
         
         self.read = attributes[:'read']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'locale')
+        
+        
+        self.locale = attributes[:'locale']
         
       
       end
@@ -239,15 +237,6 @@ module PureCloud
       
       
       
-      if @data_columns.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
       
       
       
@@ -274,6 +263,15 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      if @locale.nil?
+        return false
+      end
+
       
       
       
@@ -316,11 +314,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] view_type Object to be assigned
     def view_type=(view_type)
@@ -344,6 +337,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -353,11 +351,11 @@ module PureCloud
           time_zone == o.time_zone &&
           export_format == o.export_format &&
           interval == o.interval &&
-          data_columns == o.data_columns &&
           period == o.period &&
           view_type == o.view_type &&
           filter == o.filter &&
-          read == o.read
+          read == o.read &&
+          locale == o.locale
     end
 
     # @see the `==` method
@@ -369,7 +367,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, time_zone, export_format, interval, data_columns, period, view_type, filter, read].hash
+      [name, time_zone, export_format, interval, period, view_type, filter, read, locale].hash
     end
 
     # build the object from hash

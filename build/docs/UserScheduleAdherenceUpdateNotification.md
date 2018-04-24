@@ -16,7 +16,8 @@ title: UserScheduleAdherenceUpdateNotification
 | **is_out_of_office** | **BOOLEAN** |  | [optional] |
 | **adherence_state** | **String** |  | [optional] |
 | **impact** | **String** |  | [optional] |
-| **adherence_change_time** | **String** |  | [optional] |
+| **adherence_change_time** | [**IntradayDataUpdateNotificationStartDate**](IntradayDataUpdateNotificationStartDate.html) |  | [optional] |
+| **presence_update_time** | [**UserScheduleAdherenceUpdateNotificationDateTime**](UserScheduleAdherenceUpdateNotificationDateTime.html) |  | [optional] |
 {: class="table table-striped"}
 
 

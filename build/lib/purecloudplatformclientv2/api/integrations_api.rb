@@ -24,6 +24,71 @@ module PureCloud
       @api_client = api_client
     end
 
+    # Delete integration.
+    # 
+    # @param integration_id Integration Id
+    # @param [Hash] opts the optional parameters
+    # @return [Integration]
+    def delete_integration(integration_id, opts = {})
+      data, _status_code, _headers = delete_integration_with_http_info(integration_id, opts)
+      return data
+    end
+
+    # Delete integration.
+    # 
+    # @param integration_id Integration Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Integration, Fixnum, Hash)>] Integration data, response status code and response headers
+    def delete_integration_with_http_info(integration_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.delete_integration ..."
+      end
+      
+      
+      # verify the required parameter 'integration_id' is set
+      fail ArgumentError, "Missing the required parameter 'integration_id' when calling IntegrationsApi.delete_integration" if integration_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/{integrationId}".sub('{format}','json').sub('{' + 'integrationId' + '}', integration_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Integration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#delete_integration\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete an Action
     # 
     # @param action_id actionId
@@ -148,6 +213,363 @@ module PureCloud
         :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IntegrationsApi#delete_integrations_action_draft\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Delete a set of credentials
+    # 
+    # @param credential_id Credential ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_integrations_credential(credential_id, opts = {})
+      delete_integrations_credential_with_http_info(credential_id, opts)
+      return nil
+    end
+
+    # Delete a set of credentials
+    # 
+    # @param credential_id Credential ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_integrations_credential_with_http_info(credential_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.delete_integrations_credential ..."
+      end
+      
+      
+      # verify the required parameter 'credential_id' is set
+      fail ArgumentError, "Missing the required parameter 'credential_id' when calling IntegrationsApi.delete_integrations_credential" if credential_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/credentials/{credentialId}".sub('{format}','json').sub('{' + 'credentialId' + '}', credential_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#delete_integrations_credential\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get integration.
+    # 
+    # @param integration_id Integration Id
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested (default to 25)
+    # @option opts [Integer] :page_number The page number requested (default to 1)
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [Integration]
+    def get_integration(integration_id, opts = {})
+      data, _status_code, _headers = get_integration_with_http_info(integration_id, opts)
+      return data
+    end
+
+    # Get integration.
+    # 
+    # @param integration_id Integration Id
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested
+    # @option opts [Integer] :page_number The page number requested
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [Array<(Integration, Fixnum, Hash)>] Integration data, response status code and response headers
+    def get_integration_with_http_info(integration_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integration ..."
+      end
+      
+      
+      # verify the required parameter 'integration_id' is set
+      fail ArgumentError, "Missing the required parameter 'integration_id' when calling IntegrationsApi.get_integration" if integration_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/{integrationId}".sub('{format}','json').sub('{' + 'integrationId' + '}', integration_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
+      query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Integration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integration\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get integration configuration.
+    # 
+    # @param integration_id Integration Id
+    # @param [Hash] opts the optional parameters
+    # @return [IntegrationConfiguration]
+    def get_integration_config_current(integration_id, opts = {})
+      data, _status_code, _headers = get_integration_config_current_with_http_info(integration_id, opts)
+      return data
+    end
+
+    # Get integration configuration.
+    # 
+    # @param integration_id Integration Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(IntegrationConfiguration, Fixnum, Hash)>] IntegrationConfiguration data, response status code and response headers
+    def get_integration_config_current_with_http_info(integration_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integration_config_current ..."
+      end
+      
+      
+      # verify the required parameter 'integration_id' is set
+      fail ArgumentError, "Missing the required parameter 'integration_id' when calling IntegrationsApi.get_integration_config_current" if integration_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/{integrationId}/config/current".sub('{format}','json').sub('{' + 'integrationId' + '}', integration_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IntegrationConfiguration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integration_config_current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List integrations
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested (default to 25)
+    # @option opts [Integer] :page_number The page number requested (default to 1)
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [IntegrationEntityListing]
+    def get_integrations(opts = {})
+      data, _status_code, _headers = get_integrations_with_http_info(opts)
+      return data
+    end
+
+    # List integrations
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested
+    # @option opts [Integer] :page_number The page number requested
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [Array<(IntegrationEntityListing, Fixnum, Hash)>] IntegrationEntityListing data, response status code and response headers
+    def get_integrations_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
+      query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IntegrationEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1101,6 +1523,854 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # List permitted client app integrations for the logged in user
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested (default to 25)
+    # @option opts [Integer] :page_number The page number requested (default to 1)
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [ClientAppEntityListing]
+    def get_integrations_clientapps(opts = {})
+      data, _status_code, _headers = get_integrations_clientapps_with_http_info(opts)
+      return data
+    end
+
+    # List permitted client app integrations for the logged in user
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested
+    # @option opts [Integer] :page_number The page number requested
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [Array<(ClientAppEntityListing, Fixnum, Hash)>] ClientAppEntityListing data, response status code and response headers
+    def get_integrations_clientapps_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_clientapps ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/clientapps".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
+      query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ClientAppEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_clientapps\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a single credential with sensitive fields redacted
+    # 
+    # @param credential_id Credential ID
+    # @param [Hash] opts the optional parameters
+    # @return [Credential]
+    def get_integrations_credential(credential_id, opts = {})
+      data, _status_code, _headers = get_integrations_credential_with_http_info(credential_id, opts)
+      return data
+    end
+
+    # Get a single credential with sensitive fields redacted
+    # 
+    # @param credential_id Credential ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Credential, Fixnum, Hash)>] Credential data, response status code and response headers
+    def get_integrations_credential_with_http_info(credential_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_credential ..."
+      end
+      
+      
+      # verify the required parameter 'credential_id' is set
+      fail ArgumentError, "Missing the required parameter 'credential_id' when calling IntegrationsApi.get_integrations_credential" if credential_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/credentials/{credentialId}".sub('{format}','json').sub('{' + 'credentialId' + '}', credential_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Credential')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_credential\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List multiple sets of credentials
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @return [CredentialInfoListing]
+    def get_integrations_credentials(opts = {})
+      data, _status_code, _headers = get_integrations_credentials_with_http_info(opts)
+      return data
+    end
+
+    # List multiple sets of credentials
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @return [Array<(CredentialInfoListing, Fixnum, Hash)>] CredentialInfoListing data, response status code and response headers
+    def get_integrations_credentials_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_credentials ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/credentials".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CredentialInfoListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_credentials\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List all credential types
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [CredentialTypeListing]
+    def get_integrations_credentials_types(opts = {})
+      data, _status_code, _headers = get_integrations_credentials_types_with_http_info(opts)
+      return data
+    end
+
+    # List all credential types
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CredentialTypeListing, Fixnum, Hash)>] CredentialTypeListing data, response status code and response headers
+    def get_integrations_credentials_types_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_credentials_types ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/credentials/types".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CredentialTypeListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_credentials_types\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List all events
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [String] :sort_by Sort by (default to timestamp)
+    # @option opts [String] :sort_order Order by (default to descending)
+    # @option opts [String] :entity_id Include only events with this entity ID
+    # @return [IntegrationEventEntityListing]
+    def get_integrations_eventlog(opts = {})
+      data, _status_code, _headers = get_integrations_eventlog_with_http_info(opts)
+      return data
+    end
+
+    # List all events
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Order by
+    # @option opts [String] :entity_id Include only events with this entity ID
+    # @return [Array<(IntegrationEventEntityListing, Fixnum, Hash)>] IntegrationEventEntityListing data, response status code and response headers
+    def get_integrations_eventlog_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_eventlog ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/eventlog".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'entityId'] = opts[:'entity_id'] if opts[:'entity_id']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IntegrationEventEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_eventlog\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a single event
+    # 
+    # @param event_id Event Id
+    # @param [Hash] opts the optional parameters
+    # @return [IntegrationEvent]
+    def get_integrations_eventlog_event_id(event_id, opts = {})
+      data, _status_code, _headers = get_integrations_eventlog_event_id_with_http_info(event_id, opts)
+      return data
+    end
+
+    # Get a single event
+    # 
+    # @param event_id Event Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(IntegrationEvent, Fixnum, Hash)>] IntegrationEvent data, response status code and response headers
+    def get_integrations_eventlog_event_id_with_http_info(event_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_eventlog_event_id ..."
+      end
+      
+      
+      # verify the required parameter 'event_id' is set
+      fail ArgumentError, "Missing the required parameter 'event_id' when calling IntegrationsApi.get_integrations_eventlog_event_id" if event_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/eventlog/{eventId}".sub('{format}','json').sub('{' + 'eventId' + '}', event_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IntegrationEvent')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_eventlog_event_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get integration type.
+    # 
+    # @param type_id Integration Type Id
+    # @param [Hash] opts the optional parameters
+    # @return [IntegrationType]
+    def get_integrations_type(type_id, opts = {})
+      data, _status_code, _headers = get_integrations_type_with_http_info(type_id, opts)
+      return data
+    end
+
+    # Get integration type.
+    # 
+    # @param type_id Integration Type Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(IntegrationType, Fixnum, Hash)>] IntegrationType data, response status code and response headers
+    def get_integrations_type_with_http_info(type_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_type ..."
+      end
+      
+      
+      # verify the required parameter 'type_id' is set
+      fail ArgumentError, "Missing the required parameter 'type_id' when calling IntegrationsApi.get_integrations_type" if type_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/types/{typeId}".sub('{format}','json').sub('{' + 'typeId' + '}', type_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IntegrationType')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_type\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get properties config schema for an integration type.
+    # 
+    # @param type_id Integration Type Id
+    # @param config_type Config schema type
+    # @param [Hash] opts the optional parameters
+    # @return [JsonSchemaDocument]
+    def get_integrations_type_configschema(type_id, config_type, opts = {})
+      data, _status_code, _headers = get_integrations_type_configschema_with_http_info(type_id, config_type, opts)
+      return data
+    end
+
+    # Get properties config schema for an integration type.
+    # 
+    # @param type_id Integration Type Id
+    # @param config_type Config schema type
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(JsonSchemaDocument, Fixnum, Hash)>] JsonSchemaDocument data, response status code and response headers
+    def get_integrations_type_configschema_with_http_info(type_id, config_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_type_configschema ..."
+      end
+      
+      
+      # verify the required parameter 'type_id' is set
+      fail ArgumentError, "Missing the required parameter 'type_id' when calling IntegrationsApi.get_integrations_type_configschema" if type_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'config_type' is set
+      fail ArgumentError, "Missing the required parameter 'config_type' when calling IntegrationsApi.get_integrations_type_configschema" if config_type.nil?
+      
+      # verify enum value
+      unless ['properties', 'advanced'].include?(config_type)
+        fail ArgumentError, "invalid value for 'config_type', must be one of properties, advanced"
+      end
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/types/{typeId}/configschemas/{configType}".sub('{format}','json').sub('{' + 'typeId' + '}', type_id.to_s).sub('{' + 'configType' + '}', config_type.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'JsonSchemaDocument')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_type_configschema\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List integration types
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested (default to 25)
+    # @option opts [Integer] :page_number The page number requested (default to 1)
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [IntegrationTypeEntityListing]
+    def get_integrations_types(opts = {})
+      data, _status_code, _headers = get_integrations_types_with_http_info(opts)
+      return data
+    end
+
+    # List integration types
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested
+    # @option opts [Integer] :page_number The page number requested
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [Array<(IntegrationTypeEntityListing, Fixnum, Hash)>] IntegrationTypeEntityListing data, response status code and response headers
+    def get_integrations_types_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_types ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/types".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
+      query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IntegrationTypeEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_types\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update an integration.
+    # 
+    # @param integration_id Integration Id
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integration] :body Integration Update
+    # @option opts [Integer] :page_size The total page size requested (default to 25)
+    # @option opts [Integer] :page_number The page number requested (default to 1)
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [Integration]
+    def patch_integration(integration_id, opts = {})
+      data, _status_code, _headers = patch_integration_with_http_info(integration_id, opts)
+      return data
+    end
+
+    # Update an integration.
+    # 
+    # @param integration_id Integration Id
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integration] :body Integration Update
+    # @option opts [Integer] :page_size The total page size requested
+    # @option opts [Integer] :page_number The page number requested
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [Array<(Integration, Fixnum, Hash)>] Integration data, response status code and response headers
+    def patch_integration_with_http_info(integration_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.patch_integration ..."
+      end
+      
+      
+      # verify the required parameter 'integration_id' is set
+      fail ArgumentError, "Missing the required parameter 'integration_id' when calling IntegrationsApi.patch_integration" if integration_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/{integrationId}".sub('{format}','json').sub('{' + 'integrationId' + '}', integration_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
+      query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Integration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#patch_integration\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Patch an Action
     # 
     # @param action_id actionId
@@ -1247,6 +2517,69 @@ module PureCloud
         :return_type => 'Action')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IntegrationsApi#patch_integrations_action_draft\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create an integration.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateIntegrationRequest] :body Integration
+    # @return [Integration]
+    def post_integrations(opts = {})
+      data, _status_code, _headers = post_integrations_with_http_info(opts)
+      return data
+    end
+
+    # Create an integration.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateIntegrationRequest] :body Integration
+    # @return [Array<(Integration, Fixnum, Hash)>] Integration data, response status code and response headers
+    def post_integrations_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.post_integrations ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Integration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#post_integrations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1742,6 +3075,278 @@ module PureCloud
         :return_type => 'Action')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IntegrationsApi#post_integrations_actions_drafts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a set of credentials
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Credential] :body Credential
+    # @return [CredentialInfo]
+    def post_integrations_credentials(opts = {})
+      data, _status_code, _headers = post_integrations_credentials_with_http_info(opts)
+      return data
+    end
+
+    # Create a set of credentials
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Credential] :body Credential
+    # @return [Array<(CredentialInfo, Fixnum, Hash)>] CredentialInfo data, response status code and response headers
+    def post_integrations_credentials_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.post_integrations_credentials ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/credentials".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CredentialInfo')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#post_integrations_credentials\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Add a vendor connection
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [VendorConnectionRequest] :body 
+    # @return [UserActionCategoryEntityListing]
+    def post_integrations_workforcemanagement_vendorconnection(opts = {})
+      data, _status_code, _headers = post_integrations_workforcemanagement_vendorconnection_with_http_info(opts)
+      return data
+    end
+
+    # Add a vendor connection
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [VendorConnectionRequest] :body 
+    # @return [Array<(UserActionCategoryEntityListing, Fixnum, Hash)>] UserActionCategoryEntityListing data, response status code and response headers
+    def post_integrations_workforcemanagement_vendorconnection_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.post_integrations_workforcemanagement_vendorconnection ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/workforcemanagement/vendorconnection".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserActionCategoryEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#post_integrations_workforcemanagement_vendorconnection\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update integration configuration.
+    # 
+    # @param integration_id Integration Id
+    # @param [Hash] opts the optional parameters
+    # @option opts [IntegrationConfiguration] :body Integration Configuration
+    # @return [IntegrationConfiguration]
+    def put_integration_config_current(integration_id, opts = {})
+      data, _status_code, _headers = put_integration_config_current_with_http_info(integration_id, opts)
+      return data
+    end
+
+    # Update integration configuration.
+    # 
+    # @param integration_id Integration Id
+    # @param [Hash] opts the optional parameters
+    # @option opts [IntegrationConfiguration] :body Integration Configuration
+    # @return [Array<(IntegrationConfiguration, Fixnum, Hash)>] IntegrationConfiguration data, response status code and response headers
+    def put_integration_config_current_with_http_info(integration_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.put_integration_config_current ..."
+      end
+      
+      
+      # verify the required parameter 'integration_id' is set
+      fail ArgumentError, "Missing the required parameter 'integration_id' when calling IntegrationsApi.put_integration_config_current" if integration_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/{integrationId}/config/current".sub('{format}','json').sub('{' + 'integrationId' + '}', integration_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IntegrationConfiguration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#put_integration_config_current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a set of credentials
+    # 
+    # @param credential_id Credential ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Credential] :body Credential
+    # @return [CredentialInfo]
+    def put_integrations_credential(credential_id, opts = {})
+      data, _status_code, _headers = put_integrations_credential_with_http_info(credential_id, opts)
+      return data
+    end
+
+    # Update a set of credentials
+    # 
+    # @param credential_id Credential ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Credential] :body Credential
+    # @return [Array<(CredentialInfo, Fixnum, Hash)>] CredentialInfo data, response status code and response headers
+    def put_integrations_credential_with_http_info(credential_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.put_integrations_credential ..."
+      end
+      
+      
+      # verify the required parameter 'credential_id' is set
+      fail ArgumentError, "Missing the required parameter 'credential_id' when calling IntegrationsApi.put_integrations_credential" if credential_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/credentials/{credentialId}".sub('{format}','json').sub('{' + 'credentialId' + '}', credential_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CredentialInfo')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#put_integrations_credential\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

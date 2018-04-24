@@ -35,9 +35,6 @@ module PureCloud
     # The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
     attr_accessor :interval
 
-    # The data columns included in the export
-    attr_accessor :data_columns
-
     # The url to download the request if it's status is completed
     attr_accessor :download_url
 
@@ -62,6 +59,9 @@ module PureCloud
     # The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :modified_date_time
 
+    # The locale use for localization of the exported data, i.e. en-us, es-mx  
+    attr_accessor :locale
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -81,8 +81,6 @@ module PureCloud
         
         :'interval' => :'interval',
         
-        :'data_columns' => :'dataColumns',
-        
         :'download_url' => :'downloadUrl',
         
         :'view_type' => :'viewType',
@@ -98,6 +96,8 @@ module PureCloud
         :'created_date_time' => :'createdDateTime',
         
         :'modified_date_time' => :'modifiedDateTime',
+        
+        :'locale' => :'locale',
         
         :'self_uri' => :'selfUri'
         
@@ -120,8 +120,6 @@ module PureCloud
         
         :'interval' => :'String',
         
-        :'data_columns' => :'Array<DataColumn>',
-        
         :'download_url' => :'String',
         
         :'view_type' => :'String',
@@ -137,6 +135,8 @@ module PureCloud
         :'created_date_time' => :'DateTime',
         
         :'modified_date_time' => :'DateTime',
+        
+        :'locale' => :'String',
         
         :'self_uri' => :'String'
         
@@ -201,17 +201,6 @@ module PureCloud
         
         
         self.interval = attributes[:'interval']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'dataColumns')
-        
-        if (value = attributes[:'dataColumns']).is_a?(Array)
-          self.data_columns = value
-        end
-        
         
       
       end
@@ -284,6 +273,15 @@ module PureCloud
         
         
         self.modified_date_time = attributes[:'modifiedDateTime']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'locale')
+        
+        
+        self.locale = attributes[:'locale']
         
       
       end
@@ -363,15 +361,6 @@ module PureCloud
       
       
       
-      if @data_columns.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
       
       
       
@@ -439,6 +428,15 @@ module PureCloud
       
       
       
+      if @locale.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       
       
       
@@ -485,11 +483,6 @@ module PureCloud
       @export_format = export_format
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -561,6 +554,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -572,7 +570,6 @@ module PureCloud
           time_zone == o.time_zone &&
           export_format == o.export_format &&
           interval == o.interval &&
-          data_columns == o.data_columns &&
           download_url == o.download_url &&
           view_type == o.view_type &&
           export_error_messages_type == o.export_error_messages_type &&
@@ -581,6 +578,7 @@ module PureCloud
           read == o.read &&
           created_date_time == o.created_date_time &&
           modified_date_time == o.modified_date_time &&
+          locale == o.locale &&
           self_uri == o.self_uri
     end
 
@@ -593,7 +591,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, status, time_zone, export_format, interval, data_columns, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, self_uri].hash
+      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, self_uri].hash
     end
 
     # build the object from hash

@@ -33,6 +33,7 @@ title: CallMediaParticipant
 | **external_organization** | [**UriReference**](UriReference.html) | If this participant represents an external org, then this will be the reference for the external org. | [optional] |
 | **wrapup** | [**Wrapup**](Wrapup.html) | Wrapup for this participant, if it has been applied. | [optional] |
 | **peer** | **String** | The peer communication corresponding to a matching leg for this communication. | [optional] |
+| **flagged_reason** | **String** | The reason specifying why participant flagged the conversation. | [optional] |
 | **muted** | **BOOLEAN** | Value is true when the call is muted. | [optional] |
 | **confined** | **BOOLEAN** | Value is true when the call is confined. | [optional] |
 | **recording** | **BOOLEAN** | Value is true when the call is being recorded. | [optional] |

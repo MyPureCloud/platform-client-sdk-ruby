@@ -13,7 +13,6 @@ title: ReportingExportJobResponse
 | **time_zone** | [**TimeZone**](TimeZone.html) | The requested timezone of the exported data | |
 | **export_format** | **String** | The requested format of the exported data | |
 | **interval** | **String** | The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
-| **data_columns** | [**Array&lt;DataColumn&gt;**](DataColumn.html) | The data columns included in the export | |
 | **download_url** | **String** | The url to download the request if it&#39;s status is completed | [optional] |
 | **view_type** | **String** | The type of view export job to be created | |
 | **export_error_messages_type** | **String** | The error message in case the export request failed | [optional] |
@@ -22,6 +21,7 @@ title: ReportingExportJobResponse
 | **read** | **BOOLEAN** | Indicates if the request has been marked as read | |
 | **created_date_time** | **DateTime** | The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
 | **modified_date_time** | **DateTime** | The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
+| **locale** | **String** | The locale use for localization of the exported data, i.e. en-us, es-mx   | |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

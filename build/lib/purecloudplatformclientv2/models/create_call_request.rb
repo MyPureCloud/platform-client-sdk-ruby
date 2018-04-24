@@ -21,6 +21,12 @@ module PureCloud
     # The phone number to dial.
     attr_accessor :phone_number
 
+    # The caller id phone number for this outbound call.
+    attr_accessor :caller_id
+
+    # The caller id name for this outbound call.
+    attr_accessor :caller_id_name
+
     # The queue ID to call on behalf of.
     attr_accessor :call_from_queue_id
 
@@ -51,6 +57,10 @@ module PureCloud
         
         :'phone_number' => :'phoneNumber',
         
+        :'caller_id' => :'callerId',
+        
+        :'caller_id_name' => :'callerIdName',
+        
         :'call_from_queue_id' => :'callFromQueueId',
         
         :'call_queue_id' => :'callQueueId',
@@ -75,6 +85,10 @@ module PureCloud
       {
         
         :'phone_number' => :'String',
+        
+        :'caller_id' => :'String',
+        
+        :'caller_id_name' => :'String',
         
         :'call_from_queue_id' => :'String',
         
@@ -108,6 +122,24 @@ module PureCloud
         
         
         self.phone_number = attributes[:'phoneNumber']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'callerId')
+        
+        
+        self.caller_id = attributes[:'callerId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'callerIdName')
+        
+        
+        self.caller_id_name = attributes[:'callerIdName']
         
       
       end
@@ -242,8 +274,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -296,6 +346,8 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           phone_number == o.phone_number &&
+          caller_id == o.caller_id &&
+          caller_id_name == o.caller_id_name &&
           call_from_queue_id == o.call_from_queue_id &&
           call_queue_id == o.call_queue_id &&
           call_user_id == o.call_user_id &&
@@ -315,7 +367,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [phone_number, call_from_queue_id, call_queue_id, call_user_id, priority, language_id, routing_skills_ids, conversation_ids, participants].hash
+      [phone_number, caller_id, caller_id_name, call_from_queue_id, call_queue_id, call_user_id, priority, language_id, routing_skills_ids, conversation_ids, participants].hash
     end
 
     # build the object from hash

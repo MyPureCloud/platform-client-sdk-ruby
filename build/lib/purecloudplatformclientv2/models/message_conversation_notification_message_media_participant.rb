@@ -72,6 +72,8 @@ module PureCloud
 
     attr_accessor :screen_recording_state
 
+    attr_accessor :flagged_reason
+
     attr_accessor :messages
 
     attr_accessor :type
@@ -137,6 +139,8 @@ module PureCloud
         :'peer' => :'peer',
         
         :'screen_recording_state' => :'screenRecordingState',
+        
+        :'flagged_reason' => :'flaggedReason',
         
         :'messages' => :'messages',
         
@@ -206,6 +210,8 @@ module PureCloud
         :'peer' => :'String',
         
         :'screen_recording_state' => :'String',
+        
+        :'flagged_reason' => :'String',
         
         :'messages' => :'Array<MessageConversationNotificationMessages>',
         
@@ -472,6 +478,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'flaggedReason')
+        
+        
+        self.flagged_reason = attributes[:'flaggedReason']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'messages')
         
         if (value = attributes[:'messages']).is_a?(Array)
@@ -645,6 +660,15 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      allowed_values = ["general"]
+      if @flagged_reason && !allowed_values.include?(@flagged_reason)
+        return false
+      end
       
       
       
@@ -835,6 +859,20 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] flagged_reason Object to be assigned
+    def flagged_reason=(flagged_reason)
+      allowed_values = ["general"]
+      if flagged_reason && !allowed_values.include?(flagged_reason)
+        fail ArgumentError, "invalid value for 'flagged_reason', must be one of #{allowed_values}."
+      end
+      @flagged_reason = flagged_reason
+    end
+
+    
+    
+    
+    
     
     
     
@@ -895,6 +933,7 @@ module PureCloud
           wrapup == o.wrapup &&
           peer == o.peer &&
           screen_recording_state == o.screen_recording_state &&
+          flagged_reason == o.flagged_reason &&
           messages == o.messages &&
           type == o.type &&
           recipient_country == o.recipient_country &&
@@ -910,7 +949,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, screen_recording_state, messages, type, recipient_country, recipient_type].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, provider, external_contact, external_organization, wrapup, peer, screen_recording_state, flagged_reason, messages, type, recipient_country, recipient_type].hash
     end
 
     # build the object from hash

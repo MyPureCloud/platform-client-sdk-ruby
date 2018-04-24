@@ -7,7 +7,7 @@ title: WfmMoveAgentsCompleteNotificationWfmMoveAgentData
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **user** | [**WfmMoveAgentsCompleteNotificationUser**](WfmMoveAgentsCompleteNotificationUser.html) |  | [optional] |
+| **user** | [**WfmMoveAgentsCompleteNotificationUserReference**](WfmMoveAgentsCompleteNotificationUserReference.html) |  | [optional] |
 | **result** | **String** |  | [optional] |
 {: class="table table-striped"}
 

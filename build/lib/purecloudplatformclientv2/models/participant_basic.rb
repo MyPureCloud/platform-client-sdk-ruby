@@ -122,6 +122,9 @@ module PureCloud
     # The current screen recording state for this participant.
     attr_accessor :screen_recording_state
 
+    # The reason specifying why participant flagged the conversation.
+    attr_accessor :flagged_reason
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -200,7 +203,9 @@ module PureCloud
         
         :'evaluations' => :'evaluations',
         
-        :'screen_recording_state' => :'screenRecordingState'
+        :'screen_recording_state' => :'screenRecordingState',
+        
+        :'flagged_reason' => :'flaggedReason'
         
       }
     end
@@ -283,7 +288,9 @@ module PureCloud
         
         :'evaluations' => :'Array<Evaluation>',
         
-        :'screen_recording_state' => :'String'
+        :'screen_recording_state' => :'String',
+        
+        :'flagged_reason' => :'String'
         
       }
     end
@@ -661,6 +668,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'flaggedReason')
+        
+        
+        self.flagged_reason = attributes[:'flaggedReason']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -833,6 +849,15 @@ module PureCloud
       
       allowed_values = ["requested", "active", "paused", "stopped", "error", "timeout"]
       if @screen_recording_state && !allowed_values.include?(@screen_recording_state)
+        return false
+      end
+      
+      
+      
+      
+      
+      allowed_values = ["general"]
+      if @flagged_reason && !allowed_values.include?(@flagged_reason)
         return false
       end
       
@@ -1049,6 +1074,20 @@ module PureCloud
     
     
     
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] flagged_reason Object to be assigned
+    def flagged_reason=(flagged_reason)
+      allowed_values = ["general"]
+      if flagged_reason && !allowed_values.include?(flagged_reason)
+        fail ArgumentError, "invalid value for 'flagged_reason', must be one of #{allowed_values}."
+      end
+      @flagged_reason = flagged_reason
+    end
+
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1091,7 +1130,8 @@ module PureCloud
           social_expressions == o.social_expressions &&
           videos == o.videos &&
           evaluations == o.evaluations &&
-          screen_recording_state == o.screen_recording_state
+          screen_recording_state == o.screen_recording_state &&
+          flagged_reason == o.flagged_reason
     end
 
     # @see the `==` method
@@ -1103,7 +1143,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, start_time, end_time, connected_time, name, user_uri, user_id, external_contact_id, external_organization_id, queue_id, group_id, queue_name, purpose, participant_type, consult_participant_id, address, ani, ani_name, dnis, locale, wrapup_required, wrapup_prompt, wrapup_timeout_ms, wrapup_skipped, wrapup, monitored_participant_id, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, evaluations, screen_recording_state].hash
+      [id, start_time, end_time, connected_time, name, user_uri, user_id, external_contact_id, external_organization_id, queue_id, group_id, queue_name, purpose, participant_type, consult_participant_id, address, ani, ani_name, dnis, locale, wrapup_required, wrapup_prompt, wrapup_timeout_ms, wrapup_skipped, wrapup, monitored_participant_id, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, evaluations, screen_recording_state, flagged_reason].hash
     end
 
     # build the object from hash

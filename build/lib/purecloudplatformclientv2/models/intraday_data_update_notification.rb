@@ -57,9 +57,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'start_date' => :'DateTime',
+        :'start_date' => :'IntradayDataUpdateNotificationStartDate',
         
-        :'end_date' => :'DateTime',
+        :'end_date' => :'IntradayDataUpdateNotificationDateTime',
         
         :'interval_length_minutes' => :'Integer',
         

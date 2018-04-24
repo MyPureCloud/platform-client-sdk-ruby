@@ -8,8 +8,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
+[**delete_integration**](IntegrationsApi.html#delete_integration) | Delete integration.
 [**delete_integrations_action**](IntegrationsApi.html#delete_integrations_action) | Delete an Action
 [**delete_integrations_action_draft**](IntegrationsApi.html#delete_integrations_action_draft) | Delete a Draft
+[**delete_integrations_credential**](IntegrationsApi.html#delete_integrations_credential) | Delete a set of credentials
+[**get_integration**](IntegrationsApi.html#get_integration) | Get integration.
+[**get_integration_config_current**](IntegrationsApi.html#get_integration_config_current) | Get integration configuration.
+[**get_integrations**](IntegrationsApi.html#get_integrations) | List integrations
 [**get_integrations_action**](IntegrationsApi.html#get_integrations_action) | Retrieves a single Action matching id.
 [**get_integrations_action_draft**](IntegrationsApi.html#get_integrations_action_draft) | Retrieve a Draft
 [**get_integrations_action_draft_schema**](IntegrationsApi.html#get_integrations_action_draft_schema) | Retrieve schema for a Draft based on filename.
@@ -20,8 +25,19 @@ Method | Description
 [**get_integrations_actions**](IntegrationsApi.html#get_integrations_actions) | Retrieves all actions associated with filters passed in via query param.
 [**get_integrations_actions_categories**](IntegrationsApi.html#get_integrations_actions_categories) | Retrieves all categories of available Actions
 [**get_integrations_actions_drafts**](IntegrationsApi.html#get_integrations_actions_drafts) | Retrieves all action drafts associated with the filters passed in via query param.
+[**get_integrations_clientapps**](IntegrationsApi.html#get_integrations_clientapps) | List permitted client app integrations for the logged in user
+[**get_integrations_credential**](IntegrationsApi.html#get_integrations_credential) | Get a single credential with sensitive fields redacted
+[**get_integrations_credentials**](IntegrationsApi.html#get_integrations_credentials) | List multiple sets of credentials
+[**get_integrations_credentials_types**](IntegrationsApi.html#get_integrations_credentials_types) | List all credential types
+[**get_integrations_eventlog**](IntegrationsApi.html#get_integrations_eventlog) | List all events
+[**get_integrations_eventlog_event_id**](IntegrationsApi.html#get_integrations_eventlog_event_id) | Get a single event
+[**get_integrations_type**](IntegrationsApi.html#get_integrations_type) | Get integration type.
+[**get_integrations_type_configschema**](IntegrationsApi.html#get_integrations_type_configschema) | Get properties config schema for an integration type.
+[**get_integrations_types**](IntegrationsApi.html#get_integrations_types) | List integration types
+[**patch_integration**](IntegrationsApi.html#patch_integration) | Update an integration.
 [**patch_integrations_action**](IntegrationsApi.html#patch_integrations_action) | Patch an Action
 [**patch_integrations_action_draft**](IntegrationsApi.html#patch_integrations_action_draft) | Update an existing Draft
+[**post_integrations**](IntegrationsApi.html#post_integrations) | Create an integration.
 [**post_integrations_action_draft**](IntegrationsApi.html#post_integrations_action_draft) | Create a new Draft from existing Action
 [**post_integrations_action_draft_publish**](IntegrationsApi.html#post_integrations_action_draft_publish) | Publish a Draft and make it the active Action configuration
 [**post_integrations_action_draft_test**](IntegrationsApi.html#post_integrations_action_draft_test) | Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -29,7 +45,70 @@ Method | Description
 [**post_integrations_action_test**](IntegrationsApi.html#post_integrations_action_test) | Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
 [**post_integrations_actions**](IntegrationsApi.html#post_integrations_actions) | Create a new Action
 [**post_integrations_actions_drafts**](IntegrationsApi.html#post_integrations_actions_drafts) | Create a new Draft
+[**post_integrations_credentials**](IntegrationsApi.html#post_integrations_credentials) | Create a set of credentials
+[**post_integrations_workforcemanagement_vendorconnection**](IntegrationsApi.html#post_integrations_workforcemanagement_vendorconnection) | Add a vendor connection
+[**put_integration_config_current**](IntegrationsApi.html#put_integration_config_current) | Update integration configuration.
+[**put_integrations_credential**](IntegrationsApi.html#put_integrations_credential) | Update a set of credentials
 {: class="table table-striped"}
+
+<a name="delete_integration"></a>
+
+## -[**Integration**](Integration.html) delete_integration(integration_id)
+
+Delete integration.
+
+
+
+Wraps DELETE /api/v2/integrations/{integrationId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+integration_id = "integration_id_example" # String | Integration Id
+
+
+begin
+  #Delete integration.
+  result = api_instance.delete_integration(integration_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->delete_integration: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration Id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Integration**](Integration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 <a name="delete_integrations_action"></a>
 
@@ -139,6 +218,266 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_integrations_credential"></a>
+
+## - delete_integrations_credential(credential_id)
+
+Delete a set of credentials
+
+
+
+Wraps DELETE /api/v2/integrations/credentials/{credentialId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+credential_id = "credential_id_example" # String | Credential ID
+
+
+begin
+  #Delete a set of credentials
+  api_instance.delete_integrations_credential(credential_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->delete_integrations_credential: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credential_id** | **String**| Credential ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integration"></a>
+
+## -[**Integration**](Integration.html) get_integration(integration_id, opts)
+
+Get integration.
+
+
+
+Wraps GET /api/v2/integrations/{integrationId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+integration_id = "integration_id_example" # String | Integration Id
+
+opts = { 
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  expand: nil, # Array<Object> | variable name requested by expand list
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example" # String | Previous page token
+}
+
+begin
+  #Get integration.
+  result = api_instance.get_integration(integration_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integration: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration Id |  |
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Integration**](Integration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integration_config_current"></a>
+
+## -[**IntegrationConfiguration**](IntegrationConfiguration.html) get_integration_config_current(integration_id)
+
+Get integration configuration.
+
+
+
+Wraps GET /api/v2/integrations/{integrationId}/config/current 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+integration_id = "integration_id_example" # String | Integration Id
+
+
+begin
+  #Get integration configuration.
+  result = api_instance.get_integration_config_current(integration_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integration_config_current: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration Id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IntegrationConfiguration**](IntegrationConfiguration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations"></a>
+
+## -[**IntegrationEntityListing**](IntegrationEntityListing.html) get_integrations(opts)
+
+List integrations
+
+
+
+Wraps GET /api/v2/integrations 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  expand: nil, # Array<Object> | variable name requested by expand list
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example" # String | Previous page token
+}
+
+begin
+  #List integrations
+  result = api_instance.get_integrations(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IntegrationEntityListing**](IntegrationEntityListing.html)
 
 ### HTTP request headers
 
@@ -808,6 +1147,643 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_integrations_clientapps"></a>
+
+## -[**ClientAppEntityListing**](ClientAppEntityListing.html) get_integrations_clientapps(opts)
+
+List permitted client app integrations for the logged in user
+
+
+
+Wraps GET /api/v2/integrations/clientapps 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  expand: nil, # Array<Object> | variable name requested by expand list
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example" # String | Previous page token
+}
+
+begin
+  #List permitted client app integrations for the logged in user
+  result = api_instance.get_integrations_clientapps(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_clientapps: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ClientAppEntityListing**](ClientAppEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_credential"></a>
+
+## -[**Credential**](Credential.html) get_integrations_credential(credential_id)
+
+Get a single credential with sensitive fields redacted
+
+
+
+Wraps GET /api/v2/integrations/credentials/{credentialId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+credential_id = "credential_id_example" # String | Credential ID
+
+
+begin
+  #Get a single credential with sensitive fields redacted
+  result = api_instance.get_integrations_credential(credential_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_credential: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credential_id** | **String**| Credential ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Credential**](Credential.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_credentials"></a>
+
+## -[**CredentialInfoListing**](CredentialInfoListing.html) get_integrations_credentials(opts)
+
+List multiple sets of credentials
+
+
+
+Wraps GET /api/v2/integrations/credentials 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25 # Integer | Page size
+}
+
+begin
+  #List multiple sets of credentials
+  result = api_instance.get_integrations_credentials(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_credentials: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CredentialInfoListing**](CredentialInfoListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_credentials_types"></a>
+
+## -[**CredentialTypeListing**](CredentialTypeListing.html) get_integrations_credentials_types
+
+List all credential types
+
+
+
+Wraps GET /api/v2/integrations/credentials/types 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+begin
+  #List all credential types
+  result = api_instance.get_integrations_credentials_types
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_credentials_types: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CredentialTypeListing**](CredentialTypeListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_eventlog"></a>
+
+## -[**IntegrationEventEntityListing**](IntegrationEventEntityListing.html) get_integrations_eventlog(opts)
+
+List all events
+
+
+
+Wraps GET /api/v2/integrations/eventlog 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  sort_by: "timestamp", # String | Sort by
+  sort_order: "descending", # String | Order by
+  entity_id: "entity_id_example" # String | Include only events with this entity ID
+}
+
+begin
+  #List all events
+  result = api_instance.get_integrations_eventlog(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_eventlog: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to timestamp] |
+ **sort_order** | **String**| Order by | [optional] [default to descending] |
+ **entity_id** | **String**| Include only events with this entity ID | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IntegrationEventEntityListing**](IntegrationEventEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_eventlog_event_id"></a>
+
+## -[**IntegrationEvent**](IntegrationEvent.html) get_integrations_eventlog_event_id(event_id)
+
+Get a single event
+
+
+
+Wraps GET /api/v2/integrations/eventlog/{eventId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+event_id = "event_id_example" # String | Event Id
+
+
+begin
+  #Get a single event
+  result = api_instance.get_integrations_eventlog_event_id(event_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_eventlog_event_id: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_id** | **String**| Event Id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IntegrationEvent**](IntegrationEvent.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_type"></a>
+
+## -[**IntegrationType**](IntegrationType.html) get_integrations_type(type_id)
+
+Get integration type.
+
+
+
+Wraps GET /api/v2/integrations/types/{typeId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+type_id = "type_id_example" # String | Integration Type Id
+
+
+begin
+  #Get integration type.
+  result = api_instance.get_integrations_type(type_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_type: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type_id** | **String**| Integration Type Id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IntegrationType**](IntegrationType.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_type_configschema"></a>
+
+## -[**JsonSchemaDocument**](JsonSchemaDocument.html) get_integrations_type_configschema(type_id, config_type)
+
+Get properties config schema for an integration type.
+
+
+
+Wraps GET /api/v2/integrations/types/{typeId}/configschemas/{configType} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+type_id = "type_id_example" # String | Integration Type Id
+
+config_type = "config_type_example" # String | Config schema type
+
+
+begin
+  #Get properties config schema for an integration type.
+  result = api_instance.get_integrations_type_configschema(type_id, config_type)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_type_configschema: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type_id** | **String**| Integration Type Id |  |
+ **config_type** | **String**| Config schema type | <br />**Values**: properties, advanced |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**JsonSchemaDocument**](JsonSchemaDocument.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_types"></a>
+
+## -[**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html) get_integrations_types(opts)
+
+List integration types
+
+
+
+Wraps GET /api/v2/integrations/types 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  expand: nil, # Array<Object> | variable name requested by expand list
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example" # String | Previous page token
+}
+
+begin
+  #List integration types
+  result = api_instance.get_integrations_types(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_types: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_integration"></a>
+
+## -[**Integration**](Integration.html) patch_integration(integration_id, opts)
+
+Update an integration.
+
+
+
+Wraps PATCH /api/v2/integrations/{integrationId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+integration_id = "integration_id_example" # String | Integration Id
+
+opts = { 
+  body: PureCloud::Integration.new, # Integration | Integration Update
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  expand: nil, # Array<Object> | variable name requested by expand list
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example" # String | Previous page token
+}
+
+begin
+  #Update an integration.
+  result = api_instance.patch_integration(integration_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->patch_integration: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration Id |  |
+ **body** | [**Integration**](Integration.html)| Integration Update | [optional]  |
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Integration**](Integration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="patch_integrations_action"></a>
 
 ## -[**Action**](Action.html) patch_integrations_action(action_id, body)
@@ -924,6 +1900,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Action**](Action.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_integrations"></a>
+
+## -[**Integration**](Integration.html) post_integrations(opts)
+
+Create an integration.
+
+
+
+Wraps POST /api/v2/integrations 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  body: PureCloud::CreateIntegrationRequest.new # CreateIntegrationRequest | Integration
+}
+
+begin
+  #Create an integration.
+  result = api_instance.post_integrations(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->post_integrations: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CreateIntegrationRequest**](CreateIntegrationRequest.html)| Integration | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Integration**](Integration.html)
 
 ### HTTP request headers
 
@@ -1349,6 +2385,252 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Action**](Action.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_integrations_credentials"></a>
+
+## -[**CredentialInfo**](CredentialInfo.html) post_integrations_credentials(opts)
+
+Create a set of credentials
+
+
+
+Wraps POST /api/v2/integrations/credentials 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  body: PureCloud::Credential.new # Credential | Credential
+}
+
+begin
+  #Create a set of credentials
+  result = api_instance.post_integrations_credentials(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->post_integrations_credentials: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Credential**](Credential.html)| Credential | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CredentialInfo**](CredentialInfo.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_integrations_workforcemanagement_vendorconnection"></a>
+
+## -[**UserActionCategoryEntityListing**](UserActionCategoryEntityListing.html) post_integrations_workforcemanagement_vendorconnection(opts)
+
+Add a vendor connection
+
+
+
+Wraps POST /api/v2/integrations/workforcemanagement/vendorconnection 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  body: PureCloud::VendorConnectionRequest.new # VendorConnectionRequest | 
+}
+
+begin
+  #Add a vendor connection
+  result = api_instance.post_integrations_workforcemanagement_vendorconnection(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->post_integrations_workforcemanagement_vendorconnection: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**VendorConnectionRequest**](VendorConnectionRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserActionCategoryEntityListing**](UserActionCategoryEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_integration_config_current"></a>
+
+## -[**IntegrationConfiguration**](IntegrationConfiguration.html) put_integration_config_current(integration_id, opts)
+
+Update integration configuration.
+
+
+
+Wraps PUT /api/v2/integrations/{integrationId}/config/current 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+integration_id = "integration_id_example" # String | Integration Id
+
+opts = { 
+  body: PureCloud::IntegrationConfiguration.new # IntegrationConfiguration | Integration Configuration
+}
+
+begin
+  #Update integration configuration.
+  result = api_instance.put_integration_config_current(integration_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->put_integration_config_current: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration Id |  |
+ **body** | [**IntegrationConfiguration**](IntegrationConfiguration.html)| Integration Configuration | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IntegrationConfiguration**](IntegrationConfiguration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_integrations_credential"></a>
+
+## -[**CredentialInfo**](CredentialInfo.html) put_integrations_credential(credential_id, opts)
+
+Update a set of credentials
+
+
+
+Wraps PUT /api/v2/integrations/credentials/{credentialId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+credential_id = "credential_id_example" # String | Credential ID
+
+opts = { 
+  body: PureCloud::Credential.new # Credential | Credential
+}
+
+begin
+  #Update a set of credentials
+  result = api_instance.put_integrations_credential(credential_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->put_integrations_credential: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credential_id** | **String**| Credential ID |  |
+ **body** | [**Credential**](Credential.html)| Credential | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CredentialInfo**](CredentialInfo.html)
 
 ### HTTP request headers
 

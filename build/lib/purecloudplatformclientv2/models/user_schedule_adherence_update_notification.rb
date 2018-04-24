@@ -38,6 +38,8 @@ module PureCloud
 
     attr_accessor :adherence_change_time
 
+    attr_accessor :presence_update_time
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -60,7 +62,9 @@ module PureCloud
         
         :'impact' => :'impact',
         
-        :'adherence_change_time' => :'adherenceChangeTime'
+        :'adherence_change_time' => :'adherenceChangeTime',
+        
+        :'presence_update_time' => :'presenceUpdateTime'
         
       }
     end
@@ -87,7 +91,9 @@ module PureCloud
         
         :'impact' => :'String',
         
-        :'adherence_change_time' => :'String'
+        :'adherence_change_time' => :'IntradayDataUpdateNotificationStartDate',
+        
+        :'presence_update_time' => :'UserScheduleAdherenceUpdateNotificationDateTime'
         
       }
     end
@@ -191,6 +197,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'presenceUpdateTime')
+        
+        
+        self.presence_update_time = attributes[:'presenceUpdateTime']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -236,6 +251,15 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      allowed_values = ["InAdherence", "OutOfAdherence", "Unscheduled", "Unknown", "Ignored"]
+      if @adherence_state && !allowed_values.include?(@adherence_state)
+        return false
+      end
       
       
       
@@ -299,6 +323,20 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] adherence_state Object to be assigned
+    def adherence_state=(adherence_state)
+      allowed_values = ["InAdherence", "OutOfAdherence", "Unscheduled", "Unknown", "Ignored"]
+      if adherence_state && !allowed_values.include?(adherence_state)
+        fail ArgumentError, "invalid value for 'adherence_state', must be one of #{allowed_values}."
+      end
+      @adherence_state = adherence_state
+    end
+
+    
+    
+    
+    
     
     
     
@@ -327,7 +365,8 @@ module PureCloud
           is_out_of_office == o.is_out_of_office &&
           adherence_state == o.adherence_state &&
           impact == o.impact &&
-          adherence_change_time == o.adherence_change_time
+          adherence_change_time == o.adherence_change_time &&
+          presence_update_time == o.presence_update_time
     end
 
     # @see the `==` method
@@ -339,7 +378,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user, management_unit_id, scheduled_activity_category, system_presence, routing_status, actual_activity_category, is_out_of_office, adherence_state, impact, adherence_change_time].hash
+      [user, management_unit_id, scheduled_activity_category, system_presence, routing_status, actual_activity_category, is_out_of_office, adherence_state, impact, adherence_change_time, presence_update_time].hash
     end
 
     # build the object from hash

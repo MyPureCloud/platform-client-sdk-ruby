@@ -56,6 +56,9 @@ module PureCloud
     # Time when the user entered the current adherenceState in ISO-8601 format
     attr_accessor :time_of_adherence_change
 
+    # Time when presence was last updated.  Used to calculate time in current status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :presence_update_time
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -88,6 +91,8 @@ module PureCloud
         :'impact' => :'impact',
         
         :'time_of_adherence_change' => :'timeOfAdherenceChange',
+        
+        :'presence_update_time' => :'presenceUpdateTime',
         
         :'self_uri' => :'selfUri'
         
@@ -122,7 +127,9 @@ module PureCloud
         
         :'impact' => :'String',
         
-        :'time_of_adherence_change' => :'String',
+        :'time_of_adherence_change' => :'DateTime',
+        
+        :'presence_update_time' => :'DateTime',
         
         :'self_uri' => :'String'
         
@@ -255,6 +262,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'presenceUpdateTime')
+        
+        
+        self.presence_update_time = attributes[:'presenceUpdateTime']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -354,6 +370,10 @@ module PureCloud
       if @impact && !allowed_values.include?(@impact)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -492,6 +512,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -510,6 +535,7 @@ module PureCloud
           adherence_state == o.adherence_state &&
           impact == o.impact &&
           time_of_adherence_change == o.time_of_adherence_change &&
+          presence_update_time == o.presence_update_time &&
           self_uri == o.self_uri
     end
 
@@ -522,7 +548,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, user, management_unit, scheduled_activity_category, system_presence, organization_secondary_presence_id, routing_status, actual_activity_category, is_out_of_office, adherence_state, impact, time_of_adherence_change, self_uri].hash
+      [id, name, user, management_unit, scheduled_activity_category, system_presence, organization_secondary_presence_id, routing_status, actual_activity_category, is_out_of_office, adherence_state, impact, time_of_adherence_change, presence_update_time, self_uri].hash
     end
 
     # build the object from hash
