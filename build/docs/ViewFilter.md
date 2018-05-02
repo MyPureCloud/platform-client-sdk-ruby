@@ -21,7 +21,7 @@ title: ViewFilter
 | **outbound_contact_list_ids** | **Array&lt;String&gt;** | The outbound contact list ids are used to filter the view | [optional] |
 | **contact_ids** | **Array&lt;String&gt;** | The contact ids are used to filter the view | [optional] |
 | **ani_list** | **Array&lt;String&gt;** | The ani list ids are used to filter the view | [optional] |
-| **duration_milliseconds** | [**NumericRange**](NumericRange.html) | The duration is used to filter the view | [optional] |
+| **durations_milliseconds** | [**Array&lt;NumericRange&gt;**](NumericRange.html) | The durations in milliseconds used to filter the view | [optional] |
 | **evaluation_score** | [**NumericRange**](NumericRange.html) | The evaluationScore is used to filter the view | [optional] |
 | **evaluation_critical_score** | [**NumericRange**](NumericRange.html) | The evaluationCriticalScore is used to filter the view | [optional] |
 | **evaluation_form_ids** | **Array&lt;String&gt;** | The evaluation form ids are used to filter the view | [optional] |

@@ -60,8 +60,8 @@ module PureCloud
     # The ani list ids are used to filter the view
     attr_accessor :ani_list
 
-    # The duration is used to filter the view
-    attr_accessor :duration_milliseconds
+    # The durations in milliseconds used to filter the view
+    attr_accessor :durations_milliseconds
 
     # The evaluationScore is used to filter the view
     attr_accessor :evaluation_score
@@ -116,7 +116,7 @@ module PureCloud
         
         :'ani_list' => :'aniList',
         
-        :'duration_milliseconds' => :'durationMilliseconds',
+        :'durations_milliseconds' => :'durationsMilliseconds',
         
         :'evaluation_score' => :'evaluationScore',
         
@@ -167,7 +167,7 @@ module PureCloud
         
         :'ani_list' => :'Array<String>',
         
-        :'duration_milliseconds' => :'NumericRange',
+        :'durations_milliseconds' => :'Array<NumericRange>',
         
         :'evaluation_score' => :'NumericRange',
         
@@ -349,10 +349,12 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'durationMilliseconds')
+      if attributes.has_key?(:'durationsMilliseconds')
         
+        if (value = attributes[:'durationsMilliseconds']).is_a?(Array)
+          self.durations_milliseconds = value
+        end
         
-        self.duration_milliseconds = attributes[:'durationMilliseconds']
         
       
       end
@@ -662,7 +664,7 @@ module PureCloud
           outbound_contact_list_ids == o.outbound_contact_list_ids &&
           contact_ids == o.contact_ids &&
           ani_list == o.ani_list &&
-          duration_milliseconds == o.duration_milliseconds &&
+          durations_milliseconds == o.durations_milliseconds &&
           evaluation_score == o.evaluation_score &&
           evaluation_critical_score == o.evaluation_critical_score &&
           evaluation_form_ids == o.evaluation_form_ids &&
@@ -681,7 +683,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, language_ids, directions, wrap_up_codes, dnis_list, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, duration_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned].hash
+      [media_types, queue_ids, skill_ids, language_ids, directions, wrap_up_codes, dnis_list, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned].hash
     end
 
     # build the object from hash

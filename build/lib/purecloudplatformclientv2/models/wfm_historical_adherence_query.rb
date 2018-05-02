@@ -22,15 +22,16 @@ module PureCloud
     # Beginning of the date range to query in ISO-8601 format
     attr_accessor :start_date
 
-    # End of the date range to query in ISO-8601 format
+    # End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time
     attr_accessor :end_date
 
-    # The time zone to use for returned results in olson format (See https://www.ibm.com/developerworks/aix/library/au-aix-posix/)
+    # The time zone to use for returned results in olson format. If it is not set, the management unit time zone will be used to compute adherence
     attr_accessor :time_zone
 
-    # The userIds to report on
+    # The userIds to report on. If it is not set, adherence will be computed for all the users in management unit
     attr_accessor :user_ids
 
+    # Whether user exceptions should be returned as part of the results
     attr_accessor :include_exceptions
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -148,10 +149,6 @@ module PureCloud
       
       
       
-      if @end_date.nil?
-        return false
-      end
-
       
       
       
@@ -159,12 +156,6 @@ module PureCloud
       
       
       
-      
-      
-      if @user_ids.nil?
-        return false
-      end
-
       
       
       
