@@ -92,7 +92,7 @@ module PureCloud
 
     # Get activity codes
     # 
-    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @return [ActivityCodeContainer]
     def get_workforcemanagement_managementunit_activitycodes(mu_id, opts = {})
@@ -102,7 +102,7 @@ module PureCloud
 
     # Get activity codes
     # 
-    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @return [Array<(ActivityCodeContainer, Fixnum, Hash)>] ActivityCodeContainer data, response status code and response headers
     def get_workforcemanagement_managementunit_activitycodes_with_http_info(mu_id, opts = {})
@@ -231,25 +231,25 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get a time off request by id
+    # Get a time off request
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param user_id The userId to whom the Time Off Request applies.
     # @param time_off_request_id Time Off Request Id
     # @param [Hash] opts the optional parameters
-    # @return [TimeOffRequest]
+    # @return [TimeOffRequestResponse]
     def get_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id, opts = {})
       data, _status_code, _headers = get_workforcemanagement_managementunit_user_timeoffrequest_with_http_info(mu_id, user_id, time_off_request_id, opts)
       return data
     end
 
-    # Get a time off request by id
+    # Get a time off request
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param user_id The userId to whom the Time Off Request applies.
     # @param time_off_request_id Time Off Request Id
     # @param [Hash] opts the optional parameters
-    # @return [Array<(TimeOffRequest, Fixnum, Hash)>] TimeOffRequest data, response status code and response headers
+    # @return [Array<(TimeOffRequestResponse, Fixnum, Hash)>] TimeOffRequestResponse data, response status code and response headers
     def get_workforcemanagement_managementunit_user_timeoffrequest_with_http_info(mu_id, user_id, time_off_request_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_user_timeoffrequest ..."
@@ -309,16 +309,16 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'TimeOffRequest')
+        :return_type => 'TimeOffRequestResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_user_timeoffrequest\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Get a list of time off requests for any user
+    # Get a list of time off requests for a given user
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param user_id The userId to whom the Time Off Request applies.
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :recently_reviewed Limit results to requests that have been reviewed within the preceding 30 days (default to false)
@@ -328,9 +328,9 @@ module PureCloud
       return data
     end
 
-    # Get a list of time off requests for any user
+    # Get a list of time off requests for a given user
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param user_id The userId to whom the Time Off Request applies.
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :recently_reviewed Limit results to requests that have been reviewed within the preceding 30 days
@@ -551,9 +551,102 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Create a new activity code
+    # Update a time off request
     # 
     # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param user_id The id of the user the requested time off request belongs to
+    # @param time_off_request_id The id of the time off request to update
+    # @param [Hash] opts the optional parameters
+    # @option opts [AdminTimeOffRequestPatch] :body body
+    # @return [TimeOffRequestResponse]
+    def patch_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id, opts = {})
+      data, _status_code, _headers = patch_workforcemanagement_managementunit_user_timeoffrequest_with_http_info(mu_id, user_id, time_off_request_id, opts)
+      return data
+    end
+
+    # Update a time off request
+    # 
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param user_id The id of the user the requested time off request belongs to
+    # @param time_off_request_id The id of the time off request to update
+    # @param [Hash] opts the optional parameters
+    # @option opts [AdminTimeOffRequestPatch] :body body
+    # @return [Array<(TimeOffRequestResponse, Fixnum, Hash)>] TimeOffRequestResponse data, response status code and response headers
+    def patch_workforcemanagement_managementunit_user_timeoffrequest_with_http_info(mu_id, user_id, time_off_request_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.patch_workforcemanagement_managementunit_user_timeoffrequest ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_user_timeoffrequest" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_user_timeoffrequest" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'time_off_request_id' is set
+      fail ArgumentError, "Missing the required parameter 'time_off_request_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_user_timeoffrequest" if time_off_request_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId}".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s).sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'timeOffRequestId' + '}', time_off_request_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TimeOffRequestResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#patch_workforcemanagement_managementunit_user_timeoffrequest\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a new activity code
+    # 
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @option opts [CreateActivityCodeRequest] :body body
     # @return [ActivityCode]
@@ -564,7 +657,7 @@ module PureCloud
 
     # Create a new activity code
     # 
-    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @option opts [CreateActivityCodeRequest] :body body
     # @return [Array<(ActivityCode, Fixnum, Hash)>] ActivityCode data, response status code and response headers
@@ -770,7 +863,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get user schedules within the given time range
+    # Query published schedules for given given time range for set of users
     # 
     # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
@@ -781,7 +874,7 @@ module PureCloud
       return data
     end
 
-    # Get user schedules within the given time range
+    # Query published schedules for given given time range for set of users
     # 
     # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters

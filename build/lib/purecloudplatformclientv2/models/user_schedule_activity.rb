@@ -37,6 +37,9 @@ module PureCloud
     # Whether this activity spans a DST fallback
     attr_accessor :is_dst_fallback
 
+    # Time off request id of this activity
+    attr_accessor :time_off_request_id
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -51,7 +54,9 @@ module PureCloud
         
         :'counts_as_paid_time' => :'countsAsPaidTime',
         
-        :'is_dst_fallback' => :'isDstFallback'
+        :'is_dst_fallback' => :'isDstFallback',
+        
+        :'time_off_request_id' => :'timeOffRequestId'
         
       }
     end
@@ -70,7 +75,9 @@ module PureCloud
         
         :'counts_as_paid_time' => :'BOOLEAN',
         
-        :'is_dst_fallback' => :'BOOLEAN'
+        :'is_dst_fallback' => :'BOOLEAN',
+        
+        :'time_off_request_id' => :'String'
         
       }
     end
@@ -138,6 +145,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'timeOffRequestId')
+        
+        
+        self.time_off_request_id = attributes[:'timeOffRequestId']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -177,8 +193,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -220,7 +245,8 @@ module PureCloud
           length_in_minutes == o.length_in_minutes &&
           description == o.description &&
           counts_as_paid_time == o.counts_as_paid_time &&
-          is_dst_fallback == o.is_dst_fallback
+          is_dst_fallback == o.is_dst_fallback &&
+          time_off_request_id == o.time_off_request_id
     end
 
     # @see the `==` method
@@ -232,7 +258,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [activity_code_id, start_date, length_in_minutes, description, counts_as_paid_time, is_dst_fallback].hash
+      [activity_code_id, start_date, length_in_minutes, description, counts_as_paid_time, is_dst_fallback, time_off_request_id].hash
     end
 
     # build the object from hash

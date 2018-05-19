@@ -17,7 +17,7 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class Entity
+  class WritableEntity
     # The globally unique identifier for the object.
     attr_accessor :id
 

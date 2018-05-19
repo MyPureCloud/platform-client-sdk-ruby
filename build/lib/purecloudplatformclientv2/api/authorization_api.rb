@@ -426,12 +426,12 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :name 
-    # @option opts [Array<Object>] :permission 
-    # @option opts [Array<Object>] :default_role_id 
+    # @option opts [Array<String>] :permission 
+    # @option opts [Array<String>] :default_role_id 
     # @option opts [BOOLEAN] :user_count  (default to true)
     # @option opts [Array<String>] :id id
     # @return [OrganizationRoleEntityListing]
@@ -446,12 +446,12 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :name 
-    # @option opts [Array<Object>] :permission 
-    # @option opts [Array<Object>] :default_role_id 
+    # @option opts [Array<String>] :permission 
+    # @option opts [Array<String>] :default_role_id 
     # @option opts [BOOLEAN] :user_count 
     # @option opts [Array<String>] :id id
     # @return [Array<(OrganizationRoleEntityListing, Fixnum, Hash)>] OrganizationRoleEntityListing data, response status code and response headers

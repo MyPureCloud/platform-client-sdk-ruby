@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 <a name="get_group_individuals"></a>
 
-## -[**Array&lt;UserEntityListing&gt;**](UserEntityListing.html) get_group_individuals(group_id)
+## -[**UserEntityListing**](UserEntityListing.html) get_group_individuals(group_id)
 
 Get all individuals associated with the group
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;UserEntityListing&gt;**](UserEntityListing.html)
+[**UserEntityListing**](UserEntityListing.html)
 
 ### HTTP request headers
 

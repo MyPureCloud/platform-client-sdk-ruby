@@ -18,7 +18,6 @@ require 'date'
 
 module PureCloud
   class ChannelTopic
-    # Topic id for subscription
     attr_accessor :id
 
     # The URI for this object

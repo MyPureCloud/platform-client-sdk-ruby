@@ -69,6 +69,9 @@ module PureCloud
     # Indicates SIP Response codes associated with the participant
     attr_accessor :sip_response_codes
 
+    # The reason specifying why participant flagged the conversation.
+    attr_accessor :flagged_reason
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -105,7 +108,9 @@ module PureCloud
         
         :'did_interact' => :'didInteract',
         
-        :'sip_response_codes' => :'sipResponseCodes'
+        :'sip_response_codes' => :'sipResponseCodes',
+        
+        :'flagged_reason' => :'flaggedReason'
         
       }
     end
@@ -146,7 +151,9 @@ module PureCloud
         
         :'did_interact' => :'BOOLEAN',
         
-        :'sip_response_codes' => :'Array<Integer>'
+        :'sip_response_codes' => :'Array<Integer>',
+        
+        :'flagged_reason' => :'String'
         
       }
     end
@@ -315,6 +322,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'flaggedReason')
+        
+        
+        self.flagged_reason = attributes[:'flaggedReason']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -405,6 +421,15 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      allowed_values = ["general"]
+      if @flagged_reason && !allowed_values.include?(@flagged_reason)
+        return false
+      end
       
       
       
@@ -514,6 +539,20 @@ module PureCloud
     
     
     
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] flagged_reason Object to be assigned
+    def flagged_reason=(flagged_reason)
+      allowed_values = ["general"]
+      if flagged_reason && !allowed_values.include?(flagged_reason)
+        fail ArgumentError, "invalid value for 'flagged_reason', must be one of #{allowed_values}."
+      end
+      @flagged_reason = flagged_reason
+    end
+
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -535,7 +574,8 @@ module PureCloud
           external_contact == o.external_contact &&
           external_organization == o.external_organization &&
           did_interact == o.did_interact &&
-          sip_response_codes == o.sip_response_codes
+          sip_response_codes == o.sip_response_codes &&
+          flagged_reason == o.flagged_reason
     end
 
     # @see the `==` method
@@ -547,7 +587,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, end_time, purpose, direction, ani, dnis, user, queue, group, disconnect_type, external_contact, external_organization, did_interact, sip_response_codes].hash
+      [id, name, address, start_time, end_time, purpose, direction, ani, dnis, user, queue, group, disconnect_type, external_contact, external_organization, did_interact, sip_response_codes, flagged_reason].hash
     end
 
     # build the object from hash

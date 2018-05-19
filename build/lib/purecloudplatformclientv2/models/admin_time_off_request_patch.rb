@@ -17,21 +17,45 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  # Represents a category used to filter listings within the AppFoundry
-  class AppFoundryListingCategory
-    # Name of the category
-    attr_accessor :name
+  class AdminTimeOffRequestPatch
+    # The status of this time off request
+    attr_accessor :status
 
-    # Subcategories under this category
-    attr_accessor :sub_categories
+    # The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category
+    attr_accessor :activity_code_id
+
+    # Notes about the time off request
+    attr_accessor :notes
+
+    # A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.
+    attr_accessor :full_day_management_unit_dates
+
+    # A set of start date-times in ISO-8601 format for partial day requests.
+    attr_accessor :partial_day_start_date_times
+
+    # The daily duration of this time off request in minutes
+    attr_accessor :daily_duration_minutes
+
+    # Version metadata for the time off request
+    attr_accessor :metadata
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'name' => :'name',
+        :'status' => :'status',
         
-        :'sub_categories' => :'subCategories'
+        :'activity_code_id' => :'activityCodeId',
+        
+        :'notes' => :'notes',
+        
+        :'full_day_management_unit_dates' => :'fullDayManagementUnitDates',
+        
+        :'partial_day_start_date_times' => :'partialDayStartDateTimes',
+        
+        :'daily_duration_minutes' => :'dailyDurationMinutes',
+        
+        :'metadata' => :'metadata'
         
       }
     end
@@ -40,9 +64,19 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'name' => :'String',
+        :'status' => :'String',
         
-        :'sub_categories' => :'Array<String>'
+        :'activity_code_id' => :'String',
+        
+        :'notes' => :'String',
+        
+        :'full_day_management_unit_dates' => :'Array<String>',
+        
+        :'partial_day_start_date_times' => :'Array<DateTime>',
+        
+        :'daily_duration_minutes' => :'Integer',
+        
+        :'metadata' => :'WfmVersionedEntityMetadata'
         
       }
     end
@@ -56,21 +90,68 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'name')
+      if attributes.has_key?(:'status')
         
         
-        self.name = attributes[:'name']
+        self.status = attributes[:'status']
         
       
       end
 
       
-      if attributes.has_key?(:'subCategories')
+      if attributes.has_key?(:'activityCodeId')
         
-        if (value = attributes[:'subCategories']).is_a?(Array)
-          self.sub_categories = value
+        
+        self.activity_code_id = attributes[:'activityCodeId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'notes')
+        
+        
+        self.notes = attributes[:'notes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'fullDayManagementUnitDates')
+        
+        if (value = attributes[:'fullDayManagementUnitDates']).is_a?(Array)
+          self.full_day_management_unit_dates = value
         end
         
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'partialDayStartDateTimes')
+        
+        if (value = attributes[:'partialDayStartDateTimes']).is_a?(Array)
+          self.partial_day_start_date_times = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'dailyDurationMinutes')
+        
+        
+        self.daily_duration_minutes = attributes[:'dailyDurationMinutes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'metadata')
+        
+        
+        self.metadata = attributes[:'metadata']
         
       
       end
@@ -93,14 +174,78 @@ module PureCloud
       
       
       
+      allowed_values = ["PENDING", "APPROVED", "DENIED"]
+      if @status && !allowed_values.include?(@status)
+        return false
+      end
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if @metadata.nil?
+        return false
+      end
+
       
       
       
       
     end
 
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      allowed_values = ["PENDING", "APPROVED", "DENIED"]
+      if status && !allowed_values.include?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
+      end
+      @status = status
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -117,8 +262,13 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          name == o.name &&
-          sub_categories == o.sub_categories
+          status == o.status &&
+          activity_code_id == o.activity_code_id &&
+          notes == o.notes &&
+          full_day_management_unit_dates == o.full_day_management_unit_dates &&
+          partial_day_start_date_times == o.partial_day_start_date_times &&
+          daily_duration_minutes == o.daily_duration_minutes &&
+          metadata == o.metadata
     end
 
     # @see the `==` method
@@ -130,7 +280,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, sub_categories].hash
+      [status, activity_code_id, notes, full_day_management_unit_dates, partial_day_start_date_times, daily_duration_minutes, metadata].hash
     end
 
     # build the object from hash

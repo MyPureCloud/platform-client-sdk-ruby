@@ -18,9 +18,19 @@ require 'date'
 
 module PureCloud
   class ContactColumnTimeZone
+    # Time zone that the column matched to. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
+    attr_accessor :time_zone
+
+    # Column Type will be either PHONE or ZIP
+    attr_accessor :column_type
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
+        :'time_zone' => :'timeZone',
+        
+        :'column_type' => :'columnType'
         
       }
     end
@@ -28,6 +38,10 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        
+        :'time_zone' => :'String',
+        
+        :'column_type' => :'String'
         
       }
     end
@@ -39,6 +53,24 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes.has_key?(:'timeZone')
+        
+        
+        self.time_zone = attributes[:'timeZone']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'columnType')
+        
+        
+        self.column_type = attributes[:'columnType']
+        
+      
+      end
 
       
     end
@@ -56,14 +88,48 @@ module PureCloud
     # @return true if the model is valid
     def valid?
       
+      
+      
+      
+      
+      
+      
+      allowed_values = ["PHONE", "ZIP"]
+      if @column_type && !allowed_values.include?(@column_type)
+        return false
+      end
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] column_type Object to be assigned
+    def column_type=(column_type)
+      allowed_values = ["PHONE", "ZIP"]
+      if column_type && !allowed_values.include?(column_type)
+        fail ArgumentError, "invalid value for 'column_type', must be one of #{allowed_values}."
+      end
+      @column_type = column_type
+    end
+
+    
+    
     
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
-      self.class == o.class
+      self.class == o.class &&
+          time_zone == o.time_zone &&
+          column_type == o.column_type
     end
 
     # @see the `==` method
@@ -75,7 +141,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [].hash
+      [time_zone, column_type].hash
     end
 
     # build the object from hash

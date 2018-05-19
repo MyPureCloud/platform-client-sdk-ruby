@@ -11,14 +11,15 @@ Method | Description
 [**get_workforcemanagement_adherence**](WorkforceManagementApi.html#get_workforcemanagement_adherence) | Get a list of UserScheduleAdherence records for the requested users
 [**get_workforcemanagement_managementunit_activitycodes**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_activitycodes) | Get activity codes
 [**get_workforcemanagement_managementunit_intraday_queues**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_intraday_queues) | Get intraday queues for the given date
-[**get_workforcemanagement_managementunit_user_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_user_timeoffrequest) | Get a time off request by id
-[**get_workforcemanagement_managementunit_user_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_user_timeoffrequests) | Get a list of time off requests for any user
+[**get_workforcemanagement_managementunit_user_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_user_timeoffrequest) | Get a time off request
+[**get_workforcemanagement_managementunit_user_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_user_timeoffrequests) | Get a list of time off requests for a given user
 [**get_workforcemanagement_managementunit_users**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_users) | Get agents in the management unit
 [**get_workforcemanagement_managementunits**](WorkforceManagementApi.html#get_workforcemanagement_managementunits) | Get management units
+[**patch_workforcemanagement_managementunit_user_timeoffrequest**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_user_timeoffrequest) | Update a time off request
 [**post_workforcemanagement_managementunit_activitycodes**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_activitycodes) | Create a new activity code
 [**post_workforcemanagement_managementunit_historicaladherencequery**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_historicaladherencequery) | Request a historical adherence report
 [**post_workforcemanagement_managementunit_intraday**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_intraday) | Get intraday data for the given date for the requested queueIds
-[**post_workforcemanagement_managementunit_schedules_search**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_schedules_search) | Get user schedules within the given time range
+[**post_workforcemanagement_managementunit_schedules_search**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_schedules_search) | Query published schedules for given given time range for set of users
 {: class="table table-striped"}
 
 <a name="get_workforcemanagement_adherence"></a>
@@ -108,7 +109,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+mu_id = "mu_id_example" # String | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 
 begin
@@ -124,7 +125,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **mu_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 
@@ -203,9 +204,9 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_user_timeoffrequest"></a>
 
-## -[**TimeOffRequest**](TimeOffRequest.html) get_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id)
+## -[**TimeOffRequestResponse**](TimeOffRequestResponse.html) get_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id)
 
-Get a time off request by id
+Get a time off request
 
 
 
@@ -229,7 +230,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 
 user_id = "user_id_example" # String | The userId to whom the Time Off Request applies.
 
@@ -237,7 +238,7 @@ time_off_request_id = "time_off_request_id_example" # String | Time Off Request 
 
 
 begin
-  #Get a time off request by id
+  #Get a time off request
   result = api_instance.get_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id)
   p result
 rescue PureCloud::ApiError => e
@@ -249,7 +250,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
  **user_id** | **String**| The userId to whom the Time Off Request applies. |  |
  **time_off_request_id** | **String**| Time Off Request Id |  |
 {: class="table table-striped"}
@@ -257,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TimeOffRequest**](TimeOffRequest.html)
+[**TimeOffRequestResponse**](TimeOffRequestResponse.html)
 
 ### HTTP request headers
 
@@ -270,7 +271,7 @@ Name | Type | Description  | Notes
 
 ## -[**TimeOffRequestList**](TimeOffRequestList.html) get_workforcemanagement_managementunit_user_timeoffrequests(mu_id, user_id, opts)
 
-Get a list of time off requests for any user
+Get a list of time off requests for a given user
 
 
 
@@ -294,7 +295,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 
 user_id = "user_id_example" # String | The userId to whom the Time Off Request applies.
 
@@ -303,7 +304,7 @@ opts = {
 }
 
 begin
-  #Get a list of time off requests for any user
+  #Get a list of time off requests for a given user
   result = api_instance.get_workforcemanagement_managementunit_user_timeoffrequests(mu_id, user_id, opts)
   p result
 rescue PureCloud::ApiError => e
@@ -315,7 +316,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
  **user_id** | **String**| The userId to whom the Time Off Request applies. |  |
  **recently_reviewed** | **BOOLEAN**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
 {: class="table table-striped"}
@@ -455,6 +456,75 @@ Name | Type | Description  | Notes
 
 
 
+<a name="patch_workforcemanagement_managementunit_user_timeoffrequest"></a>
+
+## -[**TimeOffRequestResponse**](TimeOffRequestResponse.html) patch_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id, opts)
+
+Update a time off request
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId} 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+
+user_id = "user_id_example" # String | The id of the user the requested time off request belongs to
+
+time_off_request_id = "time_off_request_id_example" # String | The id of the time off request to update
+
+opts = { 
+  body: PureCloud::AdminTimeOffRequestPatch.new # AdminTimeOffRequestPatch | body
+}
+
+begin
+  #Update a time off request
+  result = api_instance.patch_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_managementunit_user_timeoffrequest: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **user_id** | **String**| The id of the user the requested time off request belongs to |  |
+ **time_off_request_id** | **String**| The id of the time off request to update |  |
+ **body** | [**AdminTimeOffRequestPatch**](AdminTimeOffRequestPatch.html)| body | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TimeOffRequestResponse**](TimeOffRequestResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_workforcemanagement_managementunit_activitycodes"></a>
 
 ## -[**ActivityCode**](ActivityCode.html) post_workforcemanagement_managementunit_activitycodes(mu_id, opts)
@@ -483,7 +553,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+mu_id = "mu_id_example" # String | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 opts = { 
   body: PureCloud::CreateActivityCodeRequest.new # CreateActivityCodeRequest | body
@@ -502,7 +572,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **mu_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
  **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -648,7 +718,7 @@ Name | Type | Description  | Notes
 
 ## -[**UserScheduleContainer**](UserScheduleContainer.html) post_workforcemanagement_managementunit_schedules_search(mu_id, opts)
 
-Get user schedules within the given time range
+Query published schedules for given given time range for set of users
 
 
 
@@ -679,7 +749,7 @@ opts = {
 }
 
 begin
-  #Get user schedules within the given time range
+  #Query published schedules for given given time range for set of users
   result = api_instance.post_workforcemanagement_managementunit_schedules_search(mu_id, opts)
   p result
 rescue PureCloud::ApiError => e

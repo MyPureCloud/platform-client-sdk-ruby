@@ -48,6 +48,9 @@ module PureCloud
     # The EdgeGroup that will place the calls. Required for all dialing modes except preview.
     attr_accessor :edge_group
 
+    # The identifier of the site to be used for dialing; can be set in place of an edge group.
+    attr_accessor :site
+
     # The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates.
     attr_accessor :campaign_status
 
@@ -135,6 +138,8 @@ module PureCloud
         
         :'edge_group' => :'edgeGroup',
         
+        :'site' => :'site',
+        
         :'campaign_status' => :'campaignStatus',
         
         :'phone_columns' => :'phoneColumns',
@@ -203,6 +208,8 @@ module PureCloud
         :'script' => :'UriReference',
         
         :'edge_group' => :'UriReference',
+        
+        :'site' => :'UriReference',
         
         :'campaign_status' => :'String',
         
@@ -343,6 +350,15 @@ module PureCloud
         
         
         self.edge_group = attributes[:'edgeGroup']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'site')
+        
+        
+        self.site = attributes[:'site']
         
       
       end
@@ -626,6 +642,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["on", "stopping", "off", "complete", "invalid"]
       if @campaign_status && !allowed_values.include?(@campaign_status)
         return false
@@ -791,6 +811,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] campaign_status Object to be assigned
     def campaign_status=(campaign_status)
@@ -919,6 +944,7 @@ module PureCloud
           dialing_mode == o.dialing_mode &&
           script == o.script &&
           edge_group == o.edge_group &&
+          site == o.site &&
           campaign_status == o.campaign_status &&
           phone_columns == o.phone_columns &&
           abandon_rate == o.abandon_rate &&
@@ -951,7 +977,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, contact_list, queue, dialing_mode, script, edge_group, campaign_status, phone_columns, abandon_rate, dnc_lists, callable_time_set, call_analysis_response_set, errors, caller_name, caller_address, outbound_line_count, rule_sets, skip_preview_disabled, preview_time_out_seconds, always_running, contact_sort, contact_sorts, no_answer_timeout, call_analysis_language, priority, contact_list_filters, self_uri].hash
+      [id, name, date_created, date_modified, version, contact_list, queue, dialing_mode, script, edge_group, site, campaign_status, phone_columns, abandon_rate, dnc_lists, callable_time_set, call_analysis_response_set, errors, caller_name, caller_address, outbound_line_count, rule_sets, skip_preview_disabled, preview_time_out_seconds, always_running, contact_sort, contact_sorts, no_answer_timeout, call_analysis_language, priority, contact_list_filters, self_uri].hash
     end
 
     # build the object from hash

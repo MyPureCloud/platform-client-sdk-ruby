@@ -20,7 +20,6 @@ module PureCloud
   class AvailableTopic
     attr_accessor :description
 
-    # The globally unique identifier for the object.
     attr_accessor :id
 
     attr_accessor :requires_permissions

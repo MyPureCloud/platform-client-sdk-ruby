@@ -1,7 +1,7 @@
 ---
-title: Entity
+title: WritableEntity
 ---
-## PureCloud::Entity
+## PureCloud::WritableEntity
 
 ## Properties
 

@@ -19,7 +19,7 @@ require 'date'
 module PureCloud
   # Marker to indicate an approved full day time off request
   class UserScheduleFullDayTimeOffMarker
-    # The date associated with the time off request that this marker corresponds to.  Date only, in ISO-8601 format
+    # The date associated with the time off request that this marker corresponds to.  Date only, in ISO-8601 format.
     attr_accessor :management_unit_date
 
     # The id for the activity code.  Look up a map of activity codes with the activities route
@@ -34,6 +34,9 @@ module PureCloud
     # The description associated with the time off request that this marker corresponds to
     attr_accessor :description
 
+    # If marked true for updating an existing full day time off marker, it will be deleted
+    attr_accessor :delete
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -46,7 +49,9 @@ module PureCloud
         
         :'length_in_minutes' => :'lengthInMinutes',
         
-        :'description' => :'description'
+        :'description' => :'description',
+        
+        :'delete' => :'delete'
         
       }
     end
@@ -63,7 +68,9 @@ module PureCloud
         
         :'length_in_minutes' => :'Integer',
         
-        :'description' => :'String'
+        :'description' => :'String',
+        
+        :'delete' => :'BOOLEAN'
         
       }
     end
@@ -122,6 +129,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'delete')
+        
+        
+        self.delete = attributes[:'delete']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -157,8 +173,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -194,7 +219,8 @@ module PureCloud
           activity_code_id == o.activity_code_id &&
           is_paid == o.is_paid &&
           length_in_minutes == o.length_in_minutes &&
-          description == o.description
+          description == o.description &&
+          delete == o.delete
     end
 
     # @see the `==` method
@@ -206,7 +232,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [management_unit_date, activity_code_id, is_paid, length_in_minutes, description].hash
+      [management_unit_date, activity_code_id, is_paid, length_in_minutes, description, delete].hash
     end
 
     # build the object from hash

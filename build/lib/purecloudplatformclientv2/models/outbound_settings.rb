@@ -38,6 +38,12 @@ module PureCloud
     # The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0]
     attr_accessor :max_line_utilization
 
+    # The number of seconds used to determine if a call is abandoned
+    attr_accessor :abandon_seconds
+
+    # The denominator to be used in determining the compliance abandon rate
+    attr_accessor :compliance_abandon_rate_denominator
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -58,6 +64,10 @@ module PureCloud
         :'max_calls_per_agent' => :'maxCallsPerAgent',
         
         :'max_line_utilization' => :'maxLineUtilization',
+        
+        :'abandon_seconds' => :'abandonSeconds',
+        
+        :'compliance_abandon_rate_denominator' => :'complianceAbandonRateDenominator',
         
         :'self_uri' => :'selfUri'
         
@@ -81,6 +91,10 @@ module PureCloud
         :'max_calls_per_agent' => :'Integer',
         
         :'max_line_utilization' => :'Float',
+        
+        :'abandon_seconds' => :'Float',
+        
+        :'compliance_abandon_rate_denominator' => :'String',
         
         :'self_uri' => :'String'
         
@@ -159,6 +173,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'abandonSeconds')
+        
+        
+        self.abandon_seconds = attributes[:'abandonSeconds']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'complianceAbandonRateDenominator')
+        
+        
+        self.compliance_abandon_rate_denominator = attributes[:'complianceAbandonRateDenominator']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -215,6 +247,19 @@ module PureCloud
       
       
       
+      
+      
+      allowed_values = ["ALL_CALLS", "CALLS_THAT_REACHED_QUEUE"]
+      if @compliance_abandon_rate_denominator && !allowed_values.include?(@compliance_abandon_rate_denominator)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -250,6 +295,25 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] compliance_abandon_rate_denominator Object to be assigned
+    def compliance_abandon_rate_denominator=(compliance_abandon_rate_denominator)
+      allowed_values = ["ALL_CALLS", "CALLS_THAT_REACHED_QUEUE"]
+      if compliance_abandon_rate_denominator && !allowed_values.include?(compliance_abandon_rate_denominator)
+        fail ArgumentError, "invalid value for 'compliance_abandon_rate_denominator', must be one of #{allowed_values}."
+      end
+      @compliance_abandon_rate_denominator = compliance_abandon_rate_denominator
+    end
+
     
     
     
@@ -270,6 +334,8 @@ module PureCloud
           version == o.version &&
           max_calls_per_agent == o.max_calls_per_agent &&
           max_line_utilization == o.max_line_utilization &&
+          abandon_seconds == o.abandon_seconds &&
+          compliance_abandon_rate_denominator == o.compliance_abandon_rate_denominator &&
           self_uri == o.self_uri
     end
 
@@ -282,7 +348,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, max_calls_per_agent, max_line_utilization, self_uri].hash
+      [id, name, date_created, date_modified, version, max_calls_per_agent, max_line_utilization, abandon_seconds, compliance_abandon_rate_denominator, self_uri].hash
     end
 
     # build the object from hash

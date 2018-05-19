@@ -18,7 +18,9 @@ title: ContactList
 | **preview_mode_column_name** | **String** | A column to check if a contact should always be dialed in preview mode. | [optional] |
 | **preview_mode_accepted_values** | **Array&lt;String&gt;** | The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode. | [optional] |
 | **size** | **Integer** | The number of contacts in the ContactList. | [optional] |
-| **attempt_limits** | [**UriReference**](UriReference.html) | AttemptLimits for this ContactList | [optional] |
+| **attempt_limits** | [**UriReference**](UriReference.html) | AttemptLimits for this ContactList. | [optional] |
+| **automatic_time_zone_mapping** | **BOOLEAN** | Indicates if automatic time zone mapping is to be used for this ContactList. | [optional] |
+| **zip_code_column_name** | **String** | The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true. | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

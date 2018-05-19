@@ -51,7 +51,7 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'time_off_requests' => :'Array<TimeOffRequest>',
+        :'time_off_requests' => :'Array<TimeOffRequestResponse>',
         
         :'self_uri' => :'String'
         

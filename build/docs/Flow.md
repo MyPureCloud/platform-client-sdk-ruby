@@ -10,6 +10,7 @@ title: Flow
 | **id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The flow name | |
 | **description** | **String** |  | [optional] |
+| **division** | [**AuthzDivision**](AuthzDivision.html) |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **locked_user** | [**User**](User.html) |  | [optional] |
 | **active** | **BOOLEAN** |  | [optional] |

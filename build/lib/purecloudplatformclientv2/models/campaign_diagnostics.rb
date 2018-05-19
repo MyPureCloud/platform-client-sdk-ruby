@@ -30,6 +30,9 @@ module PureCloud
     # Current number of outstanding interactions on the campaign
     attr_accessor :outstanding_interactions_count
 
+    # Current number of scheduled interactions on the campaign
+    attr_accessor :scheduled_interactions_count
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -40,7 +43,9 @@ module PureCloud
         
         :'rule_set_diagnostics' => :'ruleSetDiagnostics',
         
-        :'outstanding_interactions_count' => :'outstandingInteractionsCount'
+        :'outstanding_interactions_count' => :'outstandingInteractionsCount',
+        
+        :'scheduled_interactions_count' => :'scheduledInteractionsCount'
         
       }
     end
@@ -55,7 +60,9 @@ module PureCloud
         
         :'rule_set_diagnostics' => :'Array<RuleSetDiagnostic>',
         
-        :'outstanding_interactions_count' => :'Integer'
+        :'outstanding_interactions_count' => :'Integer',
+        
+        :'scheduled_interactions_count' => :'Integer'
         
       }
     end
@@ -107,6 +114,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'scheduledInteractionsCount')
+        
+        
+        self.scheduled_interactions_count = attributes[:'scheduledInteractionsCount']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -138,8 +154,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -169,7 +194,8 @@ module PureCloud
           callable_contacts == o.callable_contacts &&
           queue_utilization_diagnostic == o.queue_utilization_diagnostic &&
           rule_set_diagnostics == o.rule_set_diagnostics &&
-          outstanding_interactions_count == o.outstanding_interactions_count
+          outstanding_interactions_count == o.outstanding_interactions_count &&
+          scheduled_interactions_count == o.scheduled_interactions_count
     end
 
     # @see the `==` method
@@ -181,7 +207,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [callable_contacts, queue_utilization_diagnostic, rule_set_diagnostics, outstanding_interactions_count].hash
+      [callable_contacts, queue_utilization_diagnostic, rule_set_diagnostics, outstanding_interactions_count, scheduled_interactions_count].hash
     end
 
     # build the object from hash

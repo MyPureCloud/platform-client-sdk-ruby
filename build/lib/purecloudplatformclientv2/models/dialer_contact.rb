@@ -38,6 +38,9 @@ module PureCloud
     # A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not.
     attr_accessor :phone_number_status
 
+    # Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip
+    attr_accessor :contact_column_time_zones
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -58,6 +61,8 @@ module PureCloud
         :'callable' => :'callable',
         
         :'phone_number_status' => :'phoneNumberStatus',
+        
+        :'contact_column_time_zones' => :'contactColumnTimeZones',
         
         :'self_uri' => :'selfUri'
         
@@ -81,6 +86,8 @@ module PureCloud
         :'callable' => :'BOOLEAN',
         
         :'phone_number_status' => :'Hash<String, PhoneNumberStatus>',
+        
+        :'contact_column_time_zones' => :'Hash<String, ContactColumnTimeZone>',
         
         :'self_uri' => :'String'
         
@@ -165,6 +172,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'contactColumnTimeZones')
+        
+        if (value = attributes[:'contactColumnTimeZones']).is_a?(Array)
+          self.contact_column_time_zones = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -231,8 +249,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -286,6 +313,7 @@ module PureCloud
           call_records == o.call_records &&
           callable == o.callable &&
           phone_number_status == o.phone_number_status &&
+          contact_column_time_zones == o.contact_column_time_zones &&
           self_uri == o.self_uri
     end
 
@@ -298,7 +326,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, contact_list_id, data, call_records, callable, phone_number_status, self_uri].hash
+      [id, name, contact_list_id, data, call_records, callable, phone_number_status, contact_column_time_zones, self_uri].hash
     end
 
     # build the object from hash

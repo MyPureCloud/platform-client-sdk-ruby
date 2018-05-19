@@ -28,6 +28,8 @@ module PureCloud
 
     attr_accessor :allows_conditions
 
+    attr_accessor :division_aware
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -40,7 +42,9 @@ module PureCloud
         
         :'label' => :'label',
         
-        :'allows_conditions' => :'allowsConditions'
+        :'allows_conditions' => :'allowsConditions',
+        
+        :'division_aware' => :'divisionAware'
         
       }
     end
@@ -57,7 +61,9 @@ module PureCloud
         
         :'label' => :'String',
         
-        :'allows_conditions' => :'BOOLEAN'
+        :'allows_conditions' => :'BOOLEAN',
+        
+        :'division_aware' => :'BOOLEAN'
         
       }
     end
@@ -116,6 +122,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'divisionAware')
+        
+        
+        self.division_aware = attributes[:'divisionAware']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -151,8 +166,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -188,7 +212,8 @@ module PureCloud
           entity_type == o.entity_type &&
           action == o.action &&
           label == o.label &&
-          allows_conditions == o.allows_conditions
+          allows_conditions == o.allows_conditions &&
+          division_aware == o.division_aware
     end
 
     # @see the `==` method
@@ -200,7 +225,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [domain, entity_type, action, label, allows_conditions].hash
+      [domain, entity_type, action, label, allows_conditions, division_aware].hash
     end
 
     # build the object from hash

@@ -24,6 +24,7 @@ title: CallHistoryParticipant
 | **external_organization** | [**ExternalOrganization**](ExternalOrganization.html) | The PureCloud external organization | [optional] |
 | **did_interact** | **BOOLEAN** | Indicates whether the contact ever connected | [optional] |
 | **sip_response_codes** | **Array&lt;Integer&gt;** | Indicates SIP Response codes associated with the participant | [optional] |
+| **flagged_reason** | **String** | The reason specifying why participant flagged the conversation. | [optional] |
 {: class="table table-striped"}
 
 

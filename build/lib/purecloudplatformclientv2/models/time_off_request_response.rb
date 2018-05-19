@@ -17,13 +17,11 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class TimeOffRequest
+  class TimeOffRequestResponse
     # The globally unique identifier for the object.
     attr_accessor :id
 
-    attr_accessor :name
-
-    # The user associated with this TimeOffRequest
+    # The user associated with this time off request
     attr_accessor :user
 
     # Whether this is a full day request (false means partial day)
@@ -32,52 +30,53 @@ module PureCloud
     # Whether this request has been marked as read by the agent
     attr_accessor :marked_as_read
 
-    # The ID of the activity code associated with this TimeOffRequest
+    # The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category
     attr_accessor :activity_code_id
 
-    # The administrative status of this TimeOffRequest
+    # The status of this time off request
     attr_accessor :status
 
-    # The start date-times for partial day requests.  Required if isFullDayRequest == false
+    # A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false
     attr_accessor :partial_day_start_date_times
 
-    # The daily duration of this TimeOffRequest in minutes
+    # A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true
+    attr_accessor :full_day_management_unit_dates
+
+    # The daily duration of this time off request in minutes
     attr_accessor :daily_duration_minutes
 
-    # The notes as input by the one who entered the TimeOffRequest
+    # Notes about the time off request
     attr_accessor :notes
 
-    # The user who submitted this TimeOffRequest
+    # The user who submitted this time off request
     attr_accessor :submitted_by
 
     # The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :submitted_date
 
-    # The user who reviewed this TimeOffRequest
+    # The user who reviewed this time off request
     attr_accessor :reviewed_by
 
     # The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :reviewed_date
 
-    # The user who last modified this TimeOffRequest
+    # The user who last modified this TimeOffRequestResponse
     attr_accessor :modified_by
 
     # The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :modified_date
 
+    # The version metadata of the time off request
+    attr_accessor :metadata
+
     # The URI for this object
     attr_accessor :self_uri
-
-    # ISO-8601 date only with no timezones.  Should be interpreted in the Management Unit's configured time zone.  Required if isFullDayRequest == true
-    attr_accessor :full_day_management_unit_dates
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'id' => :'id',
-        
-        :'name' => :'name',
         
         :'user' => :'user',
         
@@ -90,6 +89,8 @@ module PureCloud
         :'status' => :'status',
         
         :'partial_day_start_date_times' => :'partialDayStartDateTimes',
+        
+        :'full_day_management_unit_dates' => :'fullDayManagementUnitDates',
         
         :'daily_duration_minutes' => :'dailyDurationMinutes',
         
@@ -107,9 +108,9 @@ module PureCloud
         
         :'modified_date' => :'modifiedDate',
         
-        :'self_uri' => :'selfUri',
+        :'metadata' => :'metadata',
         
-        :'full_day_management_unit_dates' => :'fullDayManagementUnitDates'
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -119,8 +120,6 @@ module PureCloud
       {
         
         :'id' => :'String',
-        
-        :'name' => :'String',
         
         :'user' => :'User',
         
@@ -134,6 +133,8 @@ module PureCloud
         
         :'partial_day_start_date_times' => :'Array<DateTime>',
         
+        :'full_day_management_unit_dates' => :'Array<String>',
+        
         :'daily_duration_minutes' => :'Integer',
         
         :'notes' => :'String',
@@ -146,13 +147,13 @@ module PureCloud
         
         :'reviewed_date' => :'DateTime',
         
-        :'modified_by' => :'User',
+        :'modified_by' => :'UserReference',
         
         :'modified_date' => :'DateTime',
         
-        :'self_uri' => :'String',
+        :'metadata' => :'WfmVersionedEntityMetadata',
         
-        :'full_day_management_unit_dates' => :'Array<String>'
+        :'self_uri' => :'String'
         
       }
     end
@@ -170,15 +171,6 @@ module PureCloud
         
         
         self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
         
       
       end
@@ -233,6 +225,17 @@ module PureCloud
         
         if (value = attributes[:'partialDayStartDateTimes']).is_a?(Array)
           self.partial_day_start_date_times = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'fullDayManagementUnitDates')
+        
+        if (value = attributes[:'fullDayManagementUnitDates']).is_a?(Array)
+          self.full_day_management_unit_dates = value
         end
         
         
@@ -312,21 +315,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'selfUri')
+      if attributes.has_key?(:'metadata')
         
         
-        self.self_uri = attributes[:'selfUri']
+        self.metadata = attributes[:'metadata']
         
       
       end
 
       
-      if attributes.has_key?(:'fullDayManagementUnitDates')
+      if attributes.has_key?(:'selfUri')
         
-        if (value = attributes[:'fullDayManagementUnitDates']).is_a?(Array)
-          self.full_day_management_unit_dates = value
-        end
         
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -356,46 +357,17 @@ module PureCloud
       
       
       
-      if @user.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @is_full_day_request.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @marked_as_read.nil?
-        return false
-      end
-
       
-      
-      
-      
-      
-      if @activity_code_id.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @status.nil?
-        return false
-      end
-
       
       
       allowed_values = ["PENDING", "APPROVED", "DENIED", "CANCELED"]
@@ -410,10 +382,9 @@ module PureCloud
       
       
       
-      if @daily_duration_minutes.nil?
-        return false
-      end
-
+      
+      
+      
       
       
       
@@ -456,11 +427,6 @@ module PureCloud
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -556,19 +522,24 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          name == o.name &&
           user == o.user &&
           is_full_day_request == o.is_full_day_request &&
           marked_as_read == o.marked_as_read &&
           activity_code_id == o.activity_code_id &&
           status == o.status &&
           partial_day_start_date_times == o.partial_day_start_date_times &&
+          full_day_management_unit_dates == o.full_day_management_unit_dates &&
           daily_duration_minutes == o.daily_duration_minutes &&
           notes == o.notes &&
           submitted_by == o.submitted_by &&
@@ -577,8 +548,8 @@ module PureCloud
           reviewed_date == o.reviewed_date &&
           modified_by == o.modified_by &&
           modified_date == o.modified_date &&
-          self_uri == o.self_uri &&
-          full_day_management_unit_dates == o.full_day_management_unit_dates
+          metadata == o.metadata &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -590,7 +561,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, user, is_full_day_request, marked_as_read, activity_code_id, status, partial_day_start_date_times, daily_duration_minutes, notes, submitted_by, submitted_date, reviewed_by, reviewed_date, modified_by, modified_date, self_uri, full_day_management_unit_dates].hash
+      [id, user, is_full_day_request, marked_as_read, activity_code_id, status, partial_day_start_date_times, full_day_management_unit_dates, daily_duration_minutes, notes, submitted_by, submitted_date, reviewed_by, reviewed_date, modified_by, modified_date, metadata, self_uri].hash
     end
 
     # build the object from hash

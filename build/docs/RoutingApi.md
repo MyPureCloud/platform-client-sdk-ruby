@@ -2691,7 +2691,7 @@ api_instance = PureCloud::RoutingApi.new
 
 queue_id = "queue_id_example" # String | Queue ID
 
-body = [PureCloud::Entity.new] # Array<Entity> | Queue Members
+body = [PureCloud::WritableEntity.new] # Array<WritableEntity> | Queue Members
 
 opts = { 
   delete: false # BOOLEAN | True to delete queue members
@@ -2711,7 +2711,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **queue_id** | **String**| Queue ID |  |
- **body** | [**Array&lt;Entity&gt;**](Entity.html)| Queue Members |  |
+ **body** | [**Array&lt;WritableEntity&gt;**](WritableEntity.html)| Queue Members |  |
  **delete** | **BOOLEAN**| True to delete queue members | [optional] [default to false] |
 {: class="table table-striped"}
 

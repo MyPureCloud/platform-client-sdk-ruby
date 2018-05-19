@@ -304,7 +304,7 @@ module PureCloud
     # 
     # @param group_id Group ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<UserEntityListing>]
+    # @return [UserEntityListing]
     def get_group_individuals(group_id, opts = {})
       data, _status_code, _headers = get_group_individuals_with_http_info(group_id, opts)
       return data
@@ -314,7 +314,7 @@ module PureCloud
     # 
     # @param group_id Group ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<UserEntityListing>, Fixnum, Hash)>] Array<UserEntityListing> data, response status code and response headers
+    # @return [Array<(UserEntityListing, Fixnum, Hash)>] UserEntityListing data, response status code and response headers
     def get_group_individuals_with_http_info(group_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: GroupsApi.get_group_individuals ..."
@@ -358,7 +358,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<UserEntityListing>')
+        :return_type => 'UserEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: GroupsApi#get_group_individuals\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

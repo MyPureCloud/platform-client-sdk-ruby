@@ -84,6 +84,9 @@ module PureCloud
     # Indicates filtering for abandons
     attr_accessor :abandoned
 
+    # The message media types used to filter the view
+    attr_accessor :message_types
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -130,7 +133,9 @@ module PureCloud
         
         :'transferred' => :'transferred',
         
-        :'abandoned' => :'abandoned'
+        :'abandoned' => :'abandoned',
+        
+        :'message_types' => :'messageTypes'
         
       }
     end
@@ -181,7 +186,9 @@ module PureCloud
         
         :'transferred' => :'BOOLEAN',
         
-        :'abandoned' => :'BOOLEAN'
+        :'abandoned' => :'BOOLEAN',
+        
+        :'message_types' => :'Array<String>'
         
       }
     end
@@ -429,6 +436,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'messageTypes')
+        
+        if (value = attributes[:'messageTypes']).is_a?(Array)
+          self.message_types = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -532,8 +550,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -671,7 +698,8 @@ module PureCloud
           evaluated_agent_ids == o.evaluated_agent_ids &&
           evaluator_ids == o.evaluator_ids &&
           transferred == o.transferred &&
-          abandoned == o.abandoned
+          abandoned == o.abandoned &&
+          message_types == o.message_types
     end
 
     # @see the `==` method
@@ -683,7 +711,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, language_ids, directions, wrap_up_codes, dnis_list, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned].hash
+      [media_types, queue_ids, skill_ids, language_ids, directions, wrap_up_codes, dnis_list, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types].hash
     end
 
     # build the object from hash

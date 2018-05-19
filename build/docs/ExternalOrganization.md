@@ -21,7 +21,7 @@ title: ExternalOrganization
 | **websites** | **Array&lt;String&gt;** |  | [optional] |
 | **tickers** | [**Array&lt;Ticker&gt;**](Ticker.html) |  | [optional] |
 | **twitter_id** | [**TwitterId**](TwitterId.html) |  | [optional] |
-| **external_system_url** | **String** | Identifies an external system-of-record resource that may have more detailed information on the organization | [optional] |
+| **external_system_url** | **String** | A string that identifies an external system-of-record resource that may have more detailed information on the organization. It should be a valid URL (including the HTTP protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace. | [optional] |
 | **modify_date** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **create_date** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **trustor** | [**Trustor**](Trustor.html) |  | [optional] |

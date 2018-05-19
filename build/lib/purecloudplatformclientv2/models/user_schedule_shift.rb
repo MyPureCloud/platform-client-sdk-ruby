@@ -19,6 +19,9 @@ require 'date'
 module PureCloud
   # Single shift in a user's schedule
   class UserScheduleShift
+    # ID of the schedule shift. This is only for the case of updating and deleting an existing shift
+    attr_accessor :id
+
     # Start time in UTC for this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :start_date
 
@@ -28,15 +31,27 @@ module PureCloud
     # List of activities in this shift
     attr_accessor :activities
 
+    # If marked true for updating this schedule shift, it will be deleted
+    attr_accessor :delete
+
+    # Whether the shift was set as manually edited
+    attr_accessor :manually_edited
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
+        :'id' => :'id',
         
         :'start_date' => :'startDate',
         
         :'length_in_minutes' => :'lengthInMinutes',
         
-        :'activities' => :'activities'
+        :'activities' => :'activities',
+        
+        :'delete' => :'delete',
+        
+        :'manually_edited' => :'manuallyEdited'
         
       }
     end
@@ -45,11 +60,17 @@ module PureCloud
     def self.swagger_types
       {
         
+        :'id' => :'String',
+        
         :'start_date' => :'DateTime',
         
         :'length_in_minutes' => :'Integer',
         
-        :'activities' => :'Array<UserScheduleActivity>'
+        :'activities' => :'Array<UserScheduleActivity>',
+        
+        :'delete' => :'BOOLEAN',
+        
+        :'manually_edited' => :'BOOLEAN'
         
       }
     end
@@ -61,6 +82,15 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes.has_key?(:'id')
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
 
       
       if attributes.has_key?(:'startDate')
@@ -87,6 +117,24 @@ module PureCloud
           self.activities = value
         end
         
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'delete')
+        
+        
+        self.delete = attributes[:'delete']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'manuallyEdited')
+        
+        
+        self.manually_edited = attributes[:'manuallyEdited']
         
       
       end
@@ -119,8 +167,35 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -142,9 +217,12 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id == o.id &&
           start_date == o.start_date &&
           length_in_minutes == o.length_in_minutes &&
-          activities == o.activities
+          activities == o.activities &&
+          delete == o.delete &&
+          manually_edited == o.manually_edited
     end
 
     # @see the `==` method
@@ -156,7 +234,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [start_date, length_in_minutes, activities].hash
+      [id, start_date, length_in_minutes, activities, delete, manually_edited].hash
     end
 
     # build the object from hash

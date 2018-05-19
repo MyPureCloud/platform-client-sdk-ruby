@@ -25,13 +25,28 @@ module PureCloud
     # Markers to indicate a full day time off request, relative to the management unit time zone
     attr_accessor :full_day_time_off_markers
 
+    # If marked true for updating an existing user schedule, it will be deleted
+    attr_accessor :delete
+
+    # Version metadata for this schedule
+    attr_accessor :metadata
+
+    # ID of the work plan associated with the user during schedule creation
+    attr_accessor :work_plan_id
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'shifts' => :'shifts',
         
-        :'full_day_time_off_markers' => :'fullDayTimeOffMarkers'
+        :'full_day_time_off_markers' => :'fullDayTimeOffMarkers',
+        
+        :'delete' => :'delete',
+        
+        :'metadata' => :'metadata',
+        
+        :'work_plan_id' => :'workPlanId'
         
       }
     end
@@ -42,7 +57,13 @@ module PureCloud
         
         :'shifts' => :'Array<UserScheduleShift>',
         
-        :'full_day_time_off_markers' => :'Array<UserScheduleFullDayTimeOffMarker>'
+        :'full_day_time_off_markers' => :'Array<UserScheduleFullDayTimeOffMarker>',
+        
+        :'delete' => :'BOOLEAN',
+        
+        :'metadata' => :'WfmVersionedEntityMetadata',
+        
+        :'work_plan_id' => :'String'
         
       }
     end
@@ -78,6 +99,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'delete')
+        
+        
+        self.delete = attributes[:'delete']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'metadata')
+        
+        
+        self.metadata = attributes[:'metadata']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'workPlanId')
+        
+        
+        self.work_plan_id = attributes[:'workPlanId']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -101,8 +149,40 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      if @metadata.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -120,7 +200,10 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           shifts == o.shifts &&
-          full_day_time_off_markers == o.full_day_time_off_markers
+          full_day_time_off_markers == o.full_day_time_off_markers &&
+          delete == o.delete &&
+          metadata == o.metadata &&
+          work_plan_id == o.work_plan_id
     end
 
     # @see the `==` method
@@ -132,7 +215,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [shifts, full_day_time_off_markers].hash
+      [shifts, full_day_time_off_markers, delete, metadata, work_plan_id].hash
     end
 
     # build the object from hash

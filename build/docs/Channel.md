@@ -8,7 +8,7 @@ title: Channel
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **connect_uri** | **String** |  | [optional] |
-| **id** | **String** | The channel identifier. | [optional] |
+| **id** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

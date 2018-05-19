@@ -29,6 +29,7 @@ title: ViewFilter
 | **evaluator_ids** | **Array&lt;String&gt;** | The evaluator ids are used to filter the view | [optional] |
 | **transferred** | **BOOLEAN** | Indicates filtering for transfers | [optional] |
 | **abandoned** | **BOOLEAN** | Indicates filtering for abandons | [optional] |
+| **message_types** | **Array&lt;String&gt;** | The message media types used to filter the view | [optional] |
 {: class="table table-striped"}
 
 

@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class Digits
-    # A string representing the DTMF tones to play. Valid DTMF values: 1234567890#*ABCD
+    # A string representing the digits pressed on phone.
     attr_accessor :digits
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -72,11 +72,6 @@ module PureCloud
     # @return true if the model is valid
     def valid?
       
-      
-      if @digits.nil?
-        return false
-      end
-
       
       
       

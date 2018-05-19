@@ -17,21 +17,39 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  # Represents a suggested use case for an AppFoundry listing
-  class SmartCase
-    # Title of the use case
-    attr_accessor :title
+  class AuthzDivision
+    # The globally unique identifier for the object.
+    attr_accessor :id
 
-    # Description of how the listing meets the use case
+    attr_accessor :name
+
+    # A helpful description for the division.
     attr_accessor :description
+
+    # A flag indicating whether this division is the \"Home\" (default) division. Cannot be modified and any supplied value will be ignored on create or update.
+    attr_accessor :home_division
+
+    # A count of objects in this division, grouped by type.
+    attr_accessor :object_counts
+
+    # The URI for this object
+    attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'title' => :'title',
+        :'id' => :'id',
         
-        :'description' => :'description'
+        :'name' => :'name',
+        
+        :'description' => :'description',
+        
+        :'home_division' => :'homeDivision',
+        
+        :'object_counts' => :'objectCounts',
+        
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -40,9 +58,17 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'title' => :'LocalizedField',
+        :'id' => :'String',
         
-        :'description' => :'LocalizedField'
+        :'name' => :'String',
+        
+        :'description' => :'String',
+        
+        :'home_division' => :'BOOLEAN',
+        
+        :'object_counts' => :'Hash<String, Integer>',
+        
+        :'self_uri' => :'String'
         
       }
     end
@@ -56,10 +82,19 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'title')
+      if attributes.has_key?(:'id')
         
         
-        self.title = attributes[:'title']
+        self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'name')
+        
+        
+        self.name = attributes[:'name']
         
       
       end
@@ -69,6 +104,35 @@ module PureCloud
         
         
         self.description = attributes[:'description']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'homeDivision')
+        
+        
+        self.home_division = attributes[:'homeDivision']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'objectCounts')
+        
+        if (value = attributes[:'objectCounts']).is_a?(Array)
+          self.object_counts = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -97,8 +161,49 @@ module PureCloud
       
       
       
+      
+      if @description.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -115,8 +220,12 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          title == o.title &&
-          description == o.description
+          id == o.id &&
+          name == o.name &&
+          description == o.description &&
+          home_division == o.home_division &&
+          object_counts == o.object_counts &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -128,7 +237,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [title, description].hash
+      [id, name, description, home_division, object_counts, self_uri].hash
     end
 
     # build the object from hash

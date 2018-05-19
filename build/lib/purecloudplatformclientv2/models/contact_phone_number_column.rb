@@ -24,7 +24,7 @@ module PureCloud
     # Indicates the type of the phone column. For example, 'cell' or 'home'.
     attr_accessor :type
 
-    # A column that indicates the timezone to use for a given contact when checking callable times.
+    # A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if 'automaticTimeZoneMapping' is set to true.
     attr_accessor :callable_time_column
 
     # Attribute mapping from ruby-style variable name to JSON key.

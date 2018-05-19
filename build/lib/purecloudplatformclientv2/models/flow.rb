@@ -26,6 +26,8 @@ module PureCloud
 
     attr_accessor :description
 
+    attr_accessor :division
+
     attr_accessor :type
 
     attr_accessor :locked_user
@@ -65,6 +67,8 @@ module PureCloud
         
         :'description' => :'description',
         
+        :'division' => :'division',
+        
         :'type' => :'type',
         
         :'locked_user' => :'lockedUser',
@@ -103,6 +107,8 @@ module PureCloud
         :'name' => :'String',
         
         :'description' => :'String',
+        
+        :'division' => :'AuthzDivision',
         
         :'type' => :'String',
         
@@ -164,6 +170,15 @@ module PureCloud
         
         
         self.description = attributes[:'description']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'division')
+        
+        
+        self.division = attributes[:'division']
         
       
       end
@@ -320,6 +335,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["INBOUNDCALL", "INBOUNDEMAIL", "INBOUNDSHORTMESSAGE", "INQUEUECALL", "OUTBOUNDCALL", "SECURECALL", "SPEECH", "SURVEYINVITE", "WORKFLOW"]
       if @type && !allowed_values.include?(@type)
         return false
@@ -377,6 +396,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -475,6 +499,7 @@ module PureCloud
           id == o.id &&
           name == o.name &&
           description == o.description &&
+          division == o.division &&
           type == o.type &&
           locked_user == o.locked_user &&
           active == o.active &&
@@ -499,7 +524,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, type, locked_user, active, system, deleted, published_version, saved_version, input_schema, output_schema, checked_in_version, published_by, current_operation, self_uri].hash
+      [id, name, description, division, type, locked_user, active, system, deleted, published_version, saved_version, input_schema, output_schema, checked_in_version, published_by, current_operation, self_uri].hash
     end
 
     # build the object from hash

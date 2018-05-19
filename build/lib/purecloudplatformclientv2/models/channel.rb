@@ -20,7 +20,6 @@ module PureCloud
   class Channel
     attr_accessor :connect_uri
 
-    # The channel identifier.
     attr_accessor :id
 
     # Attribute mapping from ruby-style variable name to JSON key.
