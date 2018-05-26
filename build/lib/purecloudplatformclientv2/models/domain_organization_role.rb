@@ -36,9 +36,9 @@ module PureCloud
     # Optional unless patch operation.
     attr_accessor :role_needs_update
 
-    attr_accessor :base
-
     attr_accessor :default
+
+    attr_accessor :base
 
     # The URI for this object
     attr_accessor :self_uri
@@ -63,9 +63,9 @@ module PureCloud
         
         :'role_needs_update' => :'roleNeedsUpdate',
         
-        :'base' => :'base',
-        
         :'default' => :'default',
+        
+        :'base' => :'base',
         
         :'self_uri' => :'selfUri'
         
@@ -92,9 +92,9 @@ module PureCloud
         
         :'role_needs_update' => :'BOOLEAN',
         
-        :'base' => :'BOOLEAN',
-        
         :'default' => :'BOOLEAN',
+        
+        :'base' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -186,19 +186,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'base')
+      if attributes.has_key?(:'default')
         
         
-        self.base = attributes[:'base']
+        self.default = attributes[:'default']
         
       
       end
 
       
-      if attributes.has_key?(:'default')
+      if attributes.has_key?(:'base')
         
         
-        self.default = attributes[:'default']
+        self.base = attributes[:'base']
         
       
       end
@@ -343,8 +343,8 @@ module PureCloud
           permission_policies == o.permission_policies &&
           user_count == o.user_count &&
           role_needs_update == o.role_needs_update &&
-          base == o.base &&
           default == o.default &&
+          base == o.base &&
           self_uri == o.self_uri
     end
 
@@ -357,7 +357,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, default_role_id, permissions, permission_policies, user_count, role_needs_update, base, default, self_uri].hash
+      [id, name, description, default_role_id, permissions, permission_policies, user_count, role_needs_update, default, base, self_uri].hash
     end
 
     # build the object from hash

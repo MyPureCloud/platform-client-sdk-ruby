@@ -220,6 +220,7 @@ module PureCloud
     # The list of existing channels
     # 
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :includechannels Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (default to token)
     # @return [ChannelEntityListing]
     def get_notifications_channels(opts = {})
       data, _status_code, _headers = get_notifications_channels_with_http_info(opts)
@@ -229,17 +230,29 @@ module PureCloud
     # The list of existing channels
     # 
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :includechannels Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence.
     # @return [Array<(ChannelEntityListing, Fixnum, Hash)>] ChannelEntityListing data, response status code and response headers
     def get_notifications_channels_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: NotificationsApi.get_notifications_channels ..."
       end
       
+      
+      
+      
+      if opts[:'includechannels'] && !['token', 'oauthclient'].include?(opts[:'includechannels'])
+        fail ArgumentError, 'invalid value for "includechannels", must be one of token, oauthclient'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/notifications/channels".sub('{format}','json')
 
       # query parameters
       query_params = {}
+      query_params[:'includechannels'] = opts[:'includechannels'] if opts[:'includechannels']
 
       # header parameters
       header_params = {}
@@ -348,7 +361,7 @@ module PureCloud
     end
 
     # Create a new channel
-    # There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+    # There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
     # @param [Hash] opts the optional parameters
     # @return [Channel]
     def post_notifications_channels(opts = {})
@@ -357,7 +370,7 @@ module PureCloud
     end
 
     # Create a new channel
-    # There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+    # There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Channel, Fixnum, Hash)>] Channel data, response status code and response headers
     def post_notifications_channels_with_http_info(opts = {})

@@ -18,25 +18,25 @@ require 'date'
 
 module PureCloud
   class TimeZone
-    attr_accessor :dstsavings
-
-    attr_accessor :raw_offset
+    attr_accessor :display_name
 
     attr_accessor :id
 
-    attr_accessor :display_name
+    attr_accessor :dstsavings
+
+    attr_accessor :raw_offset
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'dstsavings' => :'dstsavings',
-        
-        :'raw_offset' => :'rawOffset',
+        :'display_name' => :'displayName',
         
         :'id' => :'id',
         
-        :'display_name' => :'displayName'
+        :'dstsavings' => :'dstsavings',
+        
+        :'raw_offset' => :'rawOffset'
         
       }
     end
@@ -45,13 +45,13 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'dstsavings' => :'Integer',
-        
-        :'raw_offset' => :'Integer',
+        :'display_name' => :'String',
         
         :'id' => :'String',
         
-        :'display_name' => :'String'
+        :'dstsavings' => :'Integer',
+        
+        :'raw_offset' => :'Integer'
         
       }
     end
@@ -63,6 +63,24 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes.has_key?(:'displayName')
+        
+        
+        self.display_name = attributes[:'displayName']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'id')
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
 
       
       if attributes.has_key?(:'dstsavings')
@@ -78,24 +96,6 @@ module PureCloud
         
         
         self.raw_offset = attributes[:'rawOffset']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'id')
-        
-        
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'displayName')
-        
-        
-        self.display_name = attributes[:'displayName']
         
       
       end
@@ -160,10 +160,10 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          dstsavings == o.dstsavings &&
-          raw_offset == o.raw_offset &&
+          display_name == o.display_name &&
           id == o.id &&
-          display_name == o.display_name
+          dstsavings == o.dstsavings &&
+          raw_offset == o.raw_offset
     end
 
     # @see the `==` method
@@ -175,7 +175,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [dstsavings, raw_offset, id, display_name].hash
+      [display_name, id, dstsavings, raw_offset].hash
     end
 
     # build the object from hash

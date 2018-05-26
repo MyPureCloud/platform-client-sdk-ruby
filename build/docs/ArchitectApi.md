@@ -58,6 +58,7 @@ Method | Description
 [**get_flows_datatable_row**](ArchitectApi.html#get_flows_datatable_row) | Returns a specific row for the datatable
 [**get_flows_datatable_rows**](ArchitectApi.html#get_flows_datatable_rows) | Returns the rows for the datatable
 [**get_flows_datatables**](ArchitectApi.html#get_flows_datatables) | Retrieve a list of datatables for the org
+[**get_flows_divisionviews**](ArchitectApi.html#get_flows_divisionviews) | Get a pageable list of basic flow information objects filterable by query parameters.
 [**post_architect_dependencytracking_build**](ArchitectApi.html#post_architect_dependencytracking_build) | Rebuild Dependency Tracking data for an organization
 [**post_architect_emergencygroups**](ArchitectApi.html#post_architect_emergencygroups) | Creates a new emergency group
 [**post_architect_ivrs**](ArchitectApi.html#post_architect_ivrs) | Create IVR config.
@@ -3328,6 +3329,85 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_flows_divisionviews"></a>
+
+## -[**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html) get_flows_divisionviews(type, opts)
+
+Get a pageable list of basic flow information objects filterable by query parameters.
+
+This returns a simplified version of /flow consisting of name and type.
+
+Wraps GET /api/v2/flows/divisionviews 
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+type = "type_example" # String | Type
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  sort_by: "id", # String | Sort by
+  sort_order: "asc", # String | Sort order
+  id: ["id_example"], # Array<String> | ID
+  name: "name_example", # String | Name
+  publish_version_id: "publish_version_id_example", # String | Publish version ID
+  published_after: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01", # String | Published after
+  published_before: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01" # String | Published before
+}
+
+begin
+  #Get a pageable list of basic flow information objects filterable by query parameters.
+  result = api_instance.get_flows_divisionviews(type, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_flows_divisionviews: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **String**| Type | <br />**Values**: inboundcall, inboundemail, inboundshortmessage, outboundcall, inqueuecall, speech, securecall, surveyinvite, workflow |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **sort_by** | **String**| Sort by | [optional] [default to id] |
+ **sort_order** | **String**| Sort order | [optional] [default to asc] |
+ **id** | [**Array&lt;String&gt;**](String.html)| ID | [optional]  |
+ **name** | **String**| Name | [optional]  |
+ **publish_version_id** | **String**| Publish version ID | [optional]  |
+ **published_after** | **String**| Published after | [optional]  |
+ **published_before** | **String**| Published before | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html)
 
 ### HTTP request headers
 

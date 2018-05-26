@@ -23,14 +23,14 @@ module PureCloud
 
     attr_accessor :name
 
+    # The division to which this entity belongs.
+    attr_accessor :division
+
     # The queue description.
     attr_accessor :description
 
     # The current version of the queue.
     attr_accessor :version
-
-    # The division to which this queue belongs.
-    attr_accessor :division
 
     # The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_created
@@ -100,11 +100,11 @@ module PureCloud
         
         :'name' => :'name',
         
+        :'division' => :'division',
+        
         :'description' => :'description',
         
         :'version' => :'version',
-        
-        :'division' => :'division',
         
         :'date_created' => :'dateCreated',
         
@@ -159,11 +159,11 @@ module PureCloud
         
         :'name' => :'String',
         
+        :'division' => :'UriReference',
+        
         :'description' => :'String',
         
         :'version' => :'Integer',
-        
-        :'division' => :'UriReference',
         
         :'date_created' => :'DateTime',
         
@@ -237,6 +237,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'division')
+        
+        
+        self.division = attributes[:'division']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'description')
         
         
@@ -250,15 +259,6 @@ module PureCloud
         
         
         self.version = attributes[:'version']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'division')
-        
-        
-        self.division = attributes[:'division']
         
       
       end
@@ -759,9 +759,9 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
+          division == o.division &&
           description == o.description &&
           version == o.version &&
-          division == o.division &&
           date_created == o.date_created &&
           date_modified == o.date_modified &&
           modified_by == o.modified_by &&
@@ -794,7 +794,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, division, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_email_address, joined, member_count, self_uri].hash
+      [id, name, division, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_email_address, joined, member_count, self_uri].hash
     end
 
     # build the object from hash

@@ -22,13 +22,18 @@ module PureCloud
 
     attr_accessor :id
 
+    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :expires
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'connect_uri' => :'connectUri',
         
-        :'id' => :'id'
+        :'id' => :'id',
+        
+        :'expires' => :'expires'
         
       }
     end
@@ -39,7 +44,9 @@ module PureCloud
         
         :'connect_uri' => :'String',
         
-        :'id' => :'String'
+        :'id' => :'String',
+        
+        :'expires' => :'DateTime'
         
       }
     end
@@ -71,6 +78,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'expires')
+        
+        
+        self.expires = attributes[:'expires']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -94,8 +110,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -113,7 +138,8 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           connect_uri == o.connect_uri &&
-          id == o.id
+          id == o.id &&
+          expires == o.expires
     end
 
     # @see the `==` method
@@ -125,7 +151,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [connect_uri, id].hash
+      [connect_uri, id, expires].hash
     end
 
     # build the object from hash

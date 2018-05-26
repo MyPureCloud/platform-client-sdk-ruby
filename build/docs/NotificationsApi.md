@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 <a name="get_notifications_channels"></a>
 
-## -[**ChannelEntityListing**](ChannelEntityListing.html) get_notifications_channels
+## -[**ChannelEntityListing**](ChannelEntityListing.html) get_notifications_channels(opts)
 
 The list of existing channels
 
@@ -222,9 +222,13 @@ end
 
 api_instance = PureCloud::NotificationsApi.new
 
+opts = { 
+  includechannels: "token" # String | Show user's channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence.
+}
+
 begin
   #The list of existing channels
-  result = api_instance.get_notifications_channels
+  result = api_instance.get_notifications_channels(opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling NotificationsApi->get_notifications_channels: #{e}"
@@ -232,7 +236,10 @@ end
 ~~~
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **includechannels** | **String**| Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. | [optional] [default to token]<br />**Values**: token, oauthclient |
 {: class="table table-striped"}
 
 
@@ -315,7 +322,7 @@ Name | Type | Description  | Notes
 
 Create a new channel
 
-There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
 
 Wraps POST /api/v2/notifications/channels 
 

@@ -4435,6 +4435,158 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get a pageable list of basic flow information objects filterable by query parameters.
+    # This returns a simplified version of /flow consisting of name and type.
+    # @param type Type
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :sort_by Sort by (default to id)
+    # @option opts [String] :sort_order Sort order (default to asc)
+    # @option opts [Array<String>] :id ID
+    # @option opts [String] :name Name
+    # @option opts [String] :publish_version_id Publish version ID
+    # @option opts [String] :published_after Published after
+    # @option opts [String] :published_before Published before
+    # @return [FlowDivisionViewEntityListing]
+    def get_flows_divisionviews(type, opts = {})
+      data, _status_code, _headers = get_flows_divisionviews_with_http_info(type, opts)
+      return data
+    end
+
+    # Get a pageable list of basic flow information objects filterable by query parameters.
+    # This returns a simplified version of /flow consisting of name and type.
+    # @param type Type
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order
+    # @option opts [Array<String>] :id ID
+    # @option opts [String] :name Name
+    # @option opts [String] :publish_version_id Publish version ID
+    # @option opts [String] :published_after Published after
+    # @option opts [String] :published_before Published before
+    # @return [Array<(FlowDivisionViewEntityListing, Fixnum, Hash)>] FlowDivisionViewEntityListing data, response status code and response headers
+    def get_flows_divisionviews_with_http_info(type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_divisionviews ..."
+      end
+      
+      
+      # verify the required parameter 'type' is set
+      fail ArgumentError, "Missing the required parameter 'type' when calling ArchitectApi.get_flows_divisionviews" if type.nil?
+      
+      # verify enum value
+      unless ['inboundcall', 'inboundemail', 'inboundshortmessage', 'outboundcall', 'inqueuecall', 'speech', 'securecall', 'surveyinvite', 'workflow'].include?(type)
+        fail ArgumentError, "invalid value for 'type', must be one of inboundcall, inboundemail, inboundshortmessage, outboundcall, inqueuecall, speech, securecall, surveyinvite, workflow"
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/divisionviews".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'type'] = type
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'publishVersionId'] = opts[:'publish_version_id'] if opts[:'publish_version_id']
+      query_params[:'publishedAfter'] = opts[:'published_after'] if opts[:'published_after']
+      query_params[:'publishedBefore'] = opts[:'published_before'] if opts[:'published_before']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FlowDivisionViewEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flows_divisionviews\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Rebuild Dependency Tracking data for an organization
     # Asynchronous.  Notification topic: v2.architect.dependencytracking.build
     # @param [Hash] opts the optional parameters

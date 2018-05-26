@@ -27,8 +27,14 @@ module PureCloud
     # The skill ids are used to filter the view
     attr_accessor :skill_ids
 
+    # The skill groups used to filter the view
+    attr_accessor :skill_groups
+
     # The language ids are used to filter the view
     attr_accessor :language_ids
+
+    # The language groups used to filter the view
+    attr_accessor :language_groups
 
     # The directions are used to filter the view
     attr_accessor :directions
@@ -97,7 +103,11 @@ module PureCloud
         
         :'skill_ids' => :'skillIds',
         
+        :'skill_groups' => :'skillGroups',
+        
         :'language_ids' => :'languageIds',
+        
+        :'language_groups' => :'languageGroups',
         
         :'directions' => :'directions',
         
@@ -150,7 +160,11 @@ module PureCloud
         
         :'skill_ids' => :'Array<String>',
         
+        :'skill_groups' => :'Array<String>',
+        
         :'language_ids' => :'Array<String>',
+        
+        :'language_groups' => :'Array<String>',
         
         :'directions' => :'Array<String>',
         
@@ -235,10 +249,32 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'skillGroups')
+        
+        if (value = attributes[:'skillGroups']).is_a?(Array)
+          self.skill_groups = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'languageIds')
         
         if (value = attributes[:'languageIds']).is_a?(Array)
           self.language_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'languageGroups')
+        
+        if (value = attributes[:'languageGroups']).is_a?(Array)
+          self.language_groups = value
         end
         
         
@@ -554,8 +590,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -680,7 +734,9 @@ module PureCloud
           media_types == o.media_types &&
           queue_ids == o.queue_ids &&
           skill_ids == o.skill_ids &&
+          skill_groups == o.skill_groups &&
           language_ids == o.language_ids &&
+          language_groups == o.language_groups &&
           directions == o.directions &&
           wrap_up_codes == o.wrap_up_codes &&
           dnis_list == o.dnis_list &&
@@ -711,7 +767,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, language_ids, directions, wrap_up_codes, dnis_list, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types].hash
     end
 
     # build the object from hash
