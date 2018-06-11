@@ -1313,6 +1313,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [BOOLEAN] :joined Is joined to the queue (default to true)
+    # @option opts [Array<String>] :division_id Division ID(s)
     # @return [UserQueueEntityListing]
     def get_user_queues(user_id, opts = {})
       data, _status_code, _headers = get_user_queues_with_http_info(user_id, opts)
@@ -1326,6 +1327,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
     # @option opts [BOOLEAN] :joined Is joined to the queue
+    # @option opts [Array<String>] :division_id Division ID(s)
     # @return [Array<(UserQueueEntityListing, Fixnum, Hash)>] UserQueueEntityListing data, response status code and response headers
     def get_user_queues_with_http_info(user_id, opts = {})
       if @api_client.config.debugging
@@ -1358,6 +1360,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/queues".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
@@ -1366,6 +1374,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'joined'] = opts[:'joined'] if opts[:'joined']
+      query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
 
       # header parameters
       header_params = {}
@@ -2523,6 +2532,7 @@ module PureCloud
     # @param user_id User ID
     # @param body User Queues
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :division_id Division ID(s)
     # @return [UserQueueEntityListing]
     def patch_user_queues(user_id, body, opts = {})
       data, _status_code, _headers = patch_user_queues_with_http_info(user_id, body, opts)
@@ -2534,6 +2544,7 @@ module PureCloud
     # @param user_id User ID
     # @param body User Queues
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :division_id Division ID(s)
     # @return [Array<(UserQueueEntityListing, Fixnum, Hash)>] UserQueueEntityListing data, response status code and response headers
     def patch_user_queues_with_http_info(user_id, body, opts = {})
       if @api_client.config.debugging
@@ -2556,11 +2567,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/queues".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
 
       # header parameters
       header_params = {}

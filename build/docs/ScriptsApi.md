@@ -25,11 +25,17 @@ Method | Description
 
 ## -[**Script**](Script.html) get_script(script_id)
 
+
+
 Get a script
 
 
 
 Wraps GET /api/v2/scripts/{scriptId} 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 
 ### Example
@@ -84,11 +90,17 @@ Name | Type | Description  | Notes
 
 ## -[**Page**](Page.html) get_script_page(script_id, page_id, opts)
 
+
+
 Get a page
 
 
 
 Wraps GET /api/v2/scripts/{scriptId}/pages/{pageId} 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 
 ### Example
@@ -150,11 +162,17 @@ Name | Type | Description  | Notes
 
 ## -[**Array&lt;Page&gt;**](Page.html) get_script_pages(script_id, opts)
 
+
+
 Get the list of pages
 
 
 
 Wraps GET /api/v2/scripts/{scriptId}/pages 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 
 ### Example
@@ -213,11 +231,17 @@ Name | Type | Description  | Notes
 
 ## -[**ScriptEntityListing**](ScriptEntityListing.html) get_scripts(opts)
 
+
+
 Get the list of scripts
 
 
 
 Wraps GET /api/v2/scripts 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 
 ### Example
@@ -289,11 +313,17 @@ Name | Type | Description  | Notes
 
 ## -[**ScriptEntityListing**](ScriptEntityListing.html) get_scripts_published(script_id, opts)
 
+
+
 Get the published scripts.
 
 
 
 Wraps GET /api/v2/scripts/published 
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:view
 
 
 ### Example
@@ -364,11 +394,17 @@ Name | Type | Description  | Notes
 
 ## -[**Script**](Script.html) get_scripts_published_script_id(script_id, opts)
 
+
+
 Get the published script.
 
 
 
 Wraps GET /api/v2/scripts/published/{scriptId} 
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:view
 
 
 ### Example
@@ -427,11 +463,17 @@ Name | Type | Description  | Notes
 
 ## -[**Page**](Page.html) get_scripts_published_script_id_page(script_id, page_id, opts)
 
+
+
 Get the published page.
 
 
 
 Wraps GET /api/v2/scripts/published/{scriptId}/pages/{pageId} 
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:view
 
 
 ### Example
@@ -493,11 +535,17 @@ Name | Type | Description  | Notes
 
 ## -[**Array&lt;Page&gt;**](Page.html) get_scripts_published_script_id_pages(script_id, opts)
 
+
+
 Get the list of published pages
 
 
 
 Wraps GET /api/v2/scripts/published/{scriptId}/pages 
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:view
 
 
 ### Example
@@ -556,11 +604,17 @@ Name | Type | Description  | Notes
 
 ## -Object** get_scripts_published_script_id_variables(script_id, opts)
 
+
+
 Get the published variables
 
 
 
 Wraps GET /api/v2/scripts/published/{scriptId}/variables 
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:view
 
 
 ### Example
@@ -625,11 +679,17 @@ Name | Type | Description  | Notes
 
 ## -[**ImportScriptStatusResponse**](ImportScriptStatusResponse.html) get_scripts_upload_status(upload_id, opts)
 
+
+
 Get the upload status of an imported script
 
 
 
 Wraps GET /api/v2/scripts/uploads/{uploadId}/status 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 
 ### Example
@@ -688,11 +748,17 @@ Name | Type | Description  | Notes
 
 ## -[**ExportScriptResponse**](ExportScriptResponse.html) post_script_export(script_id, opts)
 
+
+
 Export a script via download service.
 
 
 
 Wraps POST /api/v2/scripts/{scriptId}/export 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 
 ### Example

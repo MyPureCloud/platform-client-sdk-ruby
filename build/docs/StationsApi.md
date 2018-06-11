@@ -19,11 +19,17 @@ Method | Description
 
 ## - delete_station_associateduser(station_id)
 
+
+
 Unassigns the user assigned to this station
 
 
 
 Wraps DELETE /api/v2/stations/{stationId}/associateduser 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -77,11 +83,17 @@ nil (empty response body)
 
 ## -[**Station**](Station.html) get_station(station_id)
 
+
+
 Get station.
 
 
 
 Wraps GET /api/v2/stations/{stationId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -136,11 +148,17 @@ Name | Type | Description  | Notes
 
 ## -[**StationEntityListing**](StationEntityListing.html) get_stations(opts)
 
+
+
 Get the list of available stations.
 
 
 
 Wraps GET /api/v2/stations 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -210,11 +228,17 @@ Name | Type | Description  | Notes
 
 ## -[**StationSettings**](StationSettings.html) get_stations_settings
 
+
+
 Get an organization's StationSettings
 
 
 
 Wraps GET /api/v2/stations/settings 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -263,11 +287,17 @@ This endpoint does not need any parameter.
 
 ## -[**StationSettings**](StationSettings.html) patch_stations_settings(body)
 
+
+
 Patch an organization's StationSettings
 
 
 
 Wraps PATCH /api/v2/stations/settings 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example

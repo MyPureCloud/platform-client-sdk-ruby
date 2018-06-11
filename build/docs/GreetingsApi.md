@@ -30,11 +30,17 @@ Method | Description
 
 ## - delete_greeting(greeting_id)
 
+
+
 Deletes a Greeting with the given GreetingId
 
 
 
 Wraps DELETE /api/v2/greetings/{greetingId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -88,11 +94,17 @@ nil (empty response body)
 
 ## -[**Greeting**](Greeting.html) get_greeting(greeting_id)
 
+
+
 Get a Greeting with the given GreetingId
 
 
 
 Wraps GET /api/v2/greetings/{greetingId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -147,11 +159,17 @@ Name | Type | Description  | Notes
 
 ## -[**GreetingMediaInfo**](GreetingMediaInfo.html) get_greeting_media(greeting_id, opts)
 
+
+
 Get media playback URI for this greeting
 
 
 
 Wraps GET /api/v2/greetings/{greetingId}/media 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -210,11 +228,17 @@ Name | Type | Description  | Notes
 
 ## -[**DomainEntityListing**](DomainEntityListing.html) get_greetings(opts)
 
+
+
 Gets an Organization's Greetings
 
 
 
 Wraps GET /api/v2/greetings 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -272,11 +296,17 @@ Name | Type | Description  | Notes
 
 ## -[**DefaultGreetingList**](DefaultGreetingList.html) get_greetings_defaults
 
+
+
 Get an Organization's DefaultGreetingList
 
 
 
 Wraps GET /api/v2/greetings/defaults 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -325,11 +355,17 @@ This endpoint does not need any parameter.
 
 ## -[**GreetingListing**](GreetingListing.html) get_group_greetings(group_id, opts)
 
+
+
 Get a list of the Group's Greetings
 
 
 
 Wraps GET /api/v2/groups/{groupId}/greetings 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -390,11 +426,17 @@ Name | Type | Description  | Notes
 
 ## -[**DefaultGreetingList**](DefaultGreetingList.html) get_group_greetings_defaults(group_id)
 
+
+
 Grabs the list of Default Greetings given a Group's ID
 
 
 
 Wraps GET /api/v2/groups/{groupId}/greetings/defaults 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -449,11 +491,17 @@ Name | Type | Description  | Notes
 
 ## -[**DomainEntityListing**](DomainEntityListing.html) get_user_greetings(user_id, opts)
 
+
+
 Get a list of the User's Greetings
 
 
 
 Wraps GET /api/v2/users/{userId}/greetings 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -514,11 +562,17 @@ Name | Type | Description  | Notes
 
 ## -[**DefaultGreetingList**](DefaultGreetingList.html) get_user_greetings_defaults(user_id)
 
+
+
 Grabs the list of Default Greetings given a User's ID
 
 
 
 Wraps GET /api/v2/users/{userId}/greetings/defaults 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -573,11 +627,17 @@ Name | Type | Description  | Notes
 
 ## -[**Greeting**](Greeting.html) post_greetings(body)
 
+
+
 Create a Greeting for an Organization
 
 
 
 Wraps POST /api/v2/greetings 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -632,11 +692,17 @@ Name | Type | Description  | Notes
 
 ## -[**Greeting**](Greeting.html) post_group_greetings(group_id, body)
 
+
+
 Creates a Greeting for a Group
 
 
 
 Wraps POST /api/v2/groups/{groupId}/greetings 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -694,11 +760,17 @@ Name | Type | Description  | Notes
 
 ## -[**Greeting**](Greeting.html) post_user_greetings(user_id, body)
 
+
+
 Creates a Greeting for a User
 
 
 
 Wraps POST /api/v2/users/{userId}/greetings 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -756,11 +828,17 @@ Name | Type | Description  | Notes
 
 ## -[**Greeting**](Greeting.html) put_greeting(greeting_id, body)
 
+
+
 Updates the Greeting with the given GreetingId
 
 
 
 Wraps PUT /api/v2/greetings/{greetingId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -818,11 +896,17 @@ Name | Type | Description  | Notes
 
 ## -[**DefaultGreetingList**](DefaultGreetingList.html) put_greetings_defaults(body)
 
+
+
 Update an Organization's DefaultGreetingList
 
 
 
 Wraps PUT /api/v2/greetings/defaults 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -877,11 +961,17 @@ Name | Type | Description  | Notes
 
 ## -[**DefaultGreetingList**](DefaultGreetingList.html) put_group_greetings_defaults(group_id, body)
 
+
+
 Updates the DefaultGreetingList of the specified Group
 
 
 
 Wraps PUT /api/v2/groups/{groupId}/greetings/defaults 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -939,11 +1029,17 @@ Name | Type | Description  | Notes
 
 ## -[**DefaultGreetingList**](DefaultGreetingList.html) put_user_greetings_defaults(user_id, body)
 
+
+
 Updates the DefaultGreetingList of the specified User
 
 
 
 Wraps PUT /api/v2/users/{userId}/greetings/defaults 
+
+Requires NO permissions: 
+
+
 
 
 ### Example

@@ -31,11 +31,17 @@ Method | Description
 
 ## - delete_authorization_role(role_id)
 
+
+
 Delete an organization role.
 
 
 
 Wraps DELETE /api/v2/authorization/roles/{roleId} 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:role:delete
 
 
 ### Example
@@ -89,11 +95,17 @@ nil (empty response body)
 
 ## - delete_user_roles(user_id)
 
+
+
 Removes all the roles from the user.
 
 
 
 Wraps DELETE /api/v2/users/{userId}/roles 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:delete
 
 
 ### Example
@@ -147,11 +159,17 @@ nil (empty response body)
 
 ## -[**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.html) get_authorization_permissions(opts)
 
+
+
 Get all permissions.
 
 Retrieve a list of all permission defined in the system.
 
 Wraps GET /api/v2/authorization/permissions 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -209,11 +227,17 @@ Name | Type | Description  | Notes
 
 ## -[**OrganizationProductEntityListing**](OrganizationProductEntityListing.html) get_authorization_products
 
+
+
 Get the list of enabled products
 
 Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
 
 Wraps GET /api/v2/authorization/products 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -262,11 +286,17 @@ This endpoint does not need any parameter.
 
 ## -[**DomainOrganizationRole**](DomainOrganizationRole.html) get_authorization_role(role_id)
 
+
+
 Get a single organization role.
 
 Get the organization role specified by its ID.
 
 Wraps GET /api/v2/authorization/roles/{roleId} 
+
+Requires ANY permissions: 
+
+* authorization:role:view
 
 
 ### Example
@@ -321,11 +351,17 @@ Name | Type | Description  | Notes
 
 ## -[**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) get_authorization_role_comparedefault_right_role_id(left_role_id, right_role_id)
 
+
+
 Get an org role to default role comparison comparison
 
 Compares any organization role to a default role id and show differences
 
 Wraps GET /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} 
+
+Requires ANY permissions: 
+
+* authorization:role:view
 
 
 ### Example
@@ -383,11 +419,17 @@ Name | Type | Description  | Notes
 
 ## -[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) get_authorization_roles(opts)
 
+
+
 Retrieve a list of all roles defined for the organization
 
 
 
 Wraps GET /api/v2/authorization/roles 
+
+Requires ANY permissions: 
+
+* authorization:role:view
 
 
 ### Example
@@ -463,11 +505,17 @@ Name | Type | Description  | Notes
 
 ## -[**UserAuthorization**](UserAuthorization.html) get_user_roles(user_id)
 
+
+
 Returns a listing of roles and permissions for a user.
 
 
 
 Wraps GET /api/v2/users/{userId}/roles 
+
+Requires ANY permissions: 
+
+* authorization:grant:view
 
 
 ### Example
@@ -522,11 +570,17 @@ Name | Type | Description  | Notes
 
 ## -[**DomainOrganizationRole**](DomainOrganizationRole.html) patch_authorization_role(role_id, body)
 
+
+
 Patch Organization Role for needsUpdate Field
 
 Patch Organization Role for needsUpdate Field
 
 Wraps PATCH /api/v2/authorization/roles/{roleId} 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:role:edit
 
 
 ### Example
@@ -584,11 +638,17 @@ Name | Type | Description  | Notes
 
 ## -[**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) post_authorization_role_comparedefault_right_role_id(left_role_id, right_role_id, body)
 
+
+
 Get an unsaved org role to default role comparison
 
 Allows users to compare their existing roles in an unsaved state to its default role
 
 Wraps POST /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} 
+
+Requires ANY permissions: 
+
+* authorization:role:view
 
 
 ### Example
@@ -649,11 +709,17 @@ Name | Type | Description  | Notes
 
 ## -[**DomainOrganizationRole**](DomainOrganizationRole.html) post_authorization_roles(body)
 
+
+
 Create an organization role.
 
 
 
 Wraps POST /api/v2/authorization/roles 
+
+Requires ANY permissions: 
+
+* authorization:role:add
 
 
 ### Example
@@ -708,11 +774,17 @@ Name | Type | Description  | Notes
 
 ## -[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) post_authorization_roles_default(opts)
 
+
+
 Restores all default roles
 
 This endpoint serves several purposes. 1. It provides the org with default roles. This is important for default roles that will be added after go-live (they can retroactively add the new default-role). Note: When not using a query param of force=true, it only adds the default roles not configured for the org; it does not overwrite roles. 2. Using the query param force=true, you can restore all default roles. Note: This does not have an effect on custom roles.
 
 Wraps POST /api/v2/authorization/roles/default 
+
+Requires ANY permissions: 
+
+* authorization:role:edit
 
 
 ### Example
@@ -768,11 +840,17 @@ Name | Type | Description  | Notes
 
 ## -[**DomainOrganizationRole**](DomainOrganizationRole.html) put_authorization_role(role_id, body)
 
+
+
 Update an organization role.
 
 Update
 
 Wraps PUT /api/v2/authorization/roles/{roleId} 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:role:edit
 
 
 ### Example
@@ -830,11 +908,17 @@ Name | Type | Description  | Notes
 
 ## -Array&lt;String&gt;** put_authorization_role_users_add(role_id, body)
 
+
+
 Sets the users for the role
 
 
 
 Wraps PUT /api/v2/authorization/roles/{roleId}/users/add 
+
+Requires ANY permissions: 
+
+* authorization:grant:add
 
 
 ### Example
@@ -892,11 +976,17 @@ Name | Type | Description  | Notes
 
 ## -Array&lt;String&gt;** put_authorization_role_users_remove(role_id, body)
 
+
+
 Removes the users from the role
 
 
 
 Wraps PUT /api/v2/authorization/roles/{roleId}/users/remove 
+
+Requires ANY permissions: 
+
+* authorization:grant:delete
 
 
 ### Example
@@ -954,11 +1044,17 @@ Name | Type | Description  | Notes
 
 ## -[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) put_authorization_roles_default(body)
 
+
+
 Restore specified default roles
 
 
 
 Wraps PUT /api/v2/authorization/roles/default 
+
+Requires ANY permissions: 
+
+* authorization:role:edit
 
 
 ### Example
@@ -1013,11 +1109,17 @@ Name | Type | Description  | Notes
 
 ## -[**UserAuthorization**](UserAuthorization.html) put_user_roles(user_id, body)
 
+
+
 Sets the user's roles
 
 
 
 Wraps PUT /api/v2/users/{userId}/roles 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:add
 
 
 ### Example

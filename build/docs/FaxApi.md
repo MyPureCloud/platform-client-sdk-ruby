@@ -20,11 +20,17 @@ Method | Description
 
 ## - delete_fax_document(document_id)
 
+
+
 Delete a fax document.
 
 
 
 Wraps DELETE /api/v2/fax/documents/{documentId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -78,11 +84,17 @@ nil (empty response body)
 
 ## -[**FaxDocument**](FaxDocument.html) get_fax_document(document_id)
 
+
+
 Get a document.
 
 
 
 Wraps GET /api/v2/fax/documents/{documentId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -137,11 +149,17 @@ Name | Type | Description  | Notes
 
 ## -[**DownloadResponse**](DownloadResponse.html) get_fax_document_content(document_id)
 
+
+
 Download a fax document.
 
 
 
 Wraps GET /api/v2/fax/documents/{documentId}/content 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -196,11 +214,17 @@ Name | Type | Description  | Notes
 
 ## -[**FaxDocumentEntityListing**](FaxDocumentEntityListing.html) get_fax_documents(opts)
 
+
+
 Get a list of fax documents.
 
 
 
 Wraps GET /api/v2/fax/documents 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -258,11 +282,17 @@ Name | Type | Description  | Notes
 
 ## -[**FaxSummary**](FaxSummary.html) get_fax_summary
 
+
+
 Get fax summary
 
 
 
 Wraps GET /api/v2/fax/summary 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -311,11 +341,17 @@ This endpoint does not need any parameter.
 
 ## -[**FaxDocument**](FaxDocument.html) put_fax_document(document_id, body)
 
+
+
 Update a fax document.
 
 
 
 Wraps PUT /api/v2/fax/documents/{documentId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example

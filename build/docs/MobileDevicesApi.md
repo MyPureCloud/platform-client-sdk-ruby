@@ -19,11 +19,17 @@ Method | Description
 
 ## - delete_mobiledevice(device_id)
 
+
+
 Delete device
 
 
 
 Wraps DELETE /api/v2/mobiledevices/{deviceId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -77,11 +83,17 @@ nil (empty response body)
 
 ## -[**UserDevice**](UserDevice.html) get_mobiledevice(device_id)
 
+
+
 Get device
 
 
 
 Wraps GET /api/v2/mobiledevices/{deviceId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -136,11 +148,17 @@ Name | Type | Description  | Notes
 
 ## -[**DirectoryUserDevicesListing**](DirectoryUserDevicesListing.html) get_mobiledevices(opts)
 
+
+
 Get a list of all devices.
 
 
 
 Wraps GET /api/v2/mobiledevices 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -200,11 +218,17 @@ Name | Type | Description  | Notes
 
 ## -[**UserDevice**](UserDevice.html) post_mobiledevices(body)
 
+
+
 Create User device
 
 
 
 Wraps POST /api/v2/mobiledevices 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -259,11 +283,17 @@ Name | Type | Description  | Notes
 
 ## -[**UserDevice**](UserDevice.html) put_mobiledevice(device_id, opts)
 
+
+
 Update device
 
 
 
 Wraps PUT /api/v2/mobiledevices/{deviceId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example

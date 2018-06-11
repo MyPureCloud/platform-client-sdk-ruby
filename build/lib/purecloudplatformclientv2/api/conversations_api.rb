@@ -552,7 +552,7 @@ module PureCloud
     # @param participant_id participant ID
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
-    # @return [WrapupCode]
+    # @return [AssignedWrapupCode]
     def get_conversation_participant_wrapup(conversation_id, participant_id, opts = {})
       data, _status_code, _headers = get_conversation_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
@@ -564,7 +564,7 @@ module PureCloud
     # @param participant_id participant ID
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
-    # @return [Array<(WrapupCode, Fixnum, Hash)>] WrapupCode data, response status code and response headers
+    # @return [Array<(AssignedWrapupCode, Fixnum, Hash)>] AssignedWrapupCode data, response status code and response headers
     def get_conversation_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversation_participant_wrapup ..."
@@ -623,7 +623,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'WrapupCode')
+        :return_type => 'AssignedWrapupCode')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#get_conversation_participant_wrapup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -840,7 +840,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
-    # @return [Wrapup]
+    # @return [AssignedWrapupCode]
     def get_conversations_call_participant_wrapup(conversation_id, participant_id, opts = {})
       data, _status_code, _headers = get_conversations_call_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
@@ -852,7 +852,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
-    # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
+    # @return [Array<(AssignedWrapupCode, Fixnum, Hash)>] AssignedWrapupCode data, response status code and response headers
     def get_conversations_call_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_call_participant_wrapup ..."
@@ -911,7 +911,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Wrapup')
+        :return_type => 'AssignedWrapupCode')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_call_participant_wrapup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1064,7 +1064,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
-    # @return [Wrapup]
+    # @return [AssignedWrapupCode]
     def get_conversations_callback_participant_wrapup(conversation_id, participant_id, opts = {})
       data, _status_code, _headers = get_conversations_callback_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
@@ -1076,7 +1076,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
-    # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
+    # @return [Array<(AssignedWrapupCode, Fixnum, Hash)>] AssignedWrapupCode data, response status code and response headers
     def get_conversations_callback_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_callback_participant_wrapup ..."
@@ -1135,7 +1135,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Wrapup')
+        :return_type => 'AssignedWrapupCode')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_callback_participant_wrapup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1544,7 +1544,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
-    # @return [Wrapup]
+    # @return [AssignedWrapupCode]
     def get_conversations_chat_participant_wrapup(conversation_id, participant_id, opts = {})
       data, _status_code, _headers = get_conversations_chat_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
@@ -1556,7 +1556,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
-    # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
+    # @return [Array<(AssignedWrapupCode, Fixnum, Hash)>] AssignedWrapupCode data, response status code and response headers
     def get_conversations_chat_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_chat_participant_wrapup ..."
@@ -1615,7 +1615,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Wrapup')
+        :return_type => 'AssignedWrapupCode')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_chat_participant_wrapup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1823,7 +1823,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
-    # @return [Wrapup]
+    # @return [AssignedWrapupCode]
     def get_conversations_cobrowsesession_participant_wrapup(conversation_id, participant_id, opts = {})
       data, _status_code, _headers = get_conversations_cobrowsesession_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
@@ -1835,7 +1835,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
-    # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
+    # @return [Array<(AssignedWrapupCode, Fixnum, Hash)>] AssignedWrapupCode data, response status code and response headers
     def get_conversations_cobrowsesession_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_cobrowsesession_participant_wrapup ..."
@@ -1894,7 +1894,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Wrapup')
+        :return_type => 'AssignedWrapupCode')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_cobrowsesession_participant_wrapup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -2307,7 +2307,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
-    # @return [Wrapup]
+    # @return [AssignedWrapupCode]
     def get_conversations_email_participant_wrapup(conversation_id, participant_id, opts = {})
       data, _status_code, _headers = get_conversations_email_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
@@ -2319,7 +2319,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
-    # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
+    # @return [Array<(AssignedWrapupCode, Fixnum, Hash)>] AssignedWrapupCode data, response status code and response headers
     def get_conversations_email_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_email_participant_wrapup ..."
@@ -2378,7 +2378,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Wrapup')
+        :return_type => 'AssignedWrapupCode')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_email_participant_wrapup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -2661,7 +2661,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional. (default to false)
-    # @return [Wrapup]
+    # @return [AssignedWrapupCode]
     def get_conversations_message_participant_wrapup(conversation_id, participant_id, opts = {})
       data, _status_code, _headers = get_conversations_message_participant_wrapup_with_http_info(conversation_id, participant_id, opts)
       return data
@@ -2673,7 +2673,7 @@ module PureCloud
     # @param participant_id participantId
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :provisional Indicates if the wrap-up code is provisional.
-    # @return [Array<(Wrapup, Fixnum, Hash)>] Wrapup data, response status code and response headers
+    # @return [Array<(AssignedWrapupCode, Fixnum, Hash)>] AssignedWrapupCode data, response status code and response headers
     def get_conversations_message_participant_wrapup_with_http_info(conversation_id, participant_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_message_participant_wrapup ..."
@@ -2732,7 +2732,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Wrapup')
+        :return_type => 'AssignedWrapupCode')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_message_participant_wrapup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -469,7 +469,7 @@ module PureCloud
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size 
-    # @option opts [Integer] :page_number  (default to 1)
+    # @option opts [Integer] :page_number 
     # @option opts [String] :expand 
     # @return [ManagementUnitListing]
     def get_workforcemanagement_managementunits(opts = {})

@@ -17,39 +17,35 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class AuthzDivision
-    # The globally unique identifier for the object.
-    attr_accessor :id
+  class AssignedWrapupCode
+    # The user configured wrap up code id.
+    attr_accessor :code
 
-    attr_accessor :name
+    # Text entered by the agent to describe the call or disposition.
+    attr_accessor :notes
 
-    # A helpful description for the division.
-    attr_accessor :description
+    # List of tags selected by the agent to describe the call or disposition.
+    attr_accessor :tags
 
-    # A flag indicating whether this division is the \"Home\" (default) division. Cannot be modified and any supplied value will be ignored on create or update.
-    attr_accessor :home_division
+    # The duration in seconds of the wrap-up segment.
+    attr_accessor :duration_seconds
 
-    # A count of objects in this division, grouped by type.
-    attr_accessor :object_counts
-
-    # The URI for this object
-    attr_accessor :self_uri
+    # The timestamp when the wrap-up segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :end_time
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'code' => :'code',
         
-        :'name' => :'name',
+        :'notes' => :'notes',
         
-        :'description' => :'description',
+        :'tags' => :'tags',
         
-        :'home_division' => :'homeDivision',
+        :'duration_seconds' => :'durationSeconds',
         
-        :'object_counts' => :'objectCounts',
-        
-        :'self_uri' => :'selfUri'
+        :'end_time' => :'endTime'
         
       }
     end
@@ -58,17 +54,15 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
+        :'code' => :'String',
         
-        :'name' => :'String',
+        :'notes' => :'String',
         
-        :'description' => :'String',
+        :'tags' => :'Array<String>',
         
-        :'home_division' => :'BOOLEAN',
+        :'duration_seconds' => :'Integer',
         
-        :'object_counts' => :'Hash<String, Integer>',
-        
-        :'self_uri' => :'String'
+        :'end_time' => :'DateTime'
         
       }
     end
@@ -82,46 +76,28 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'code')
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
+        self.code = attributes[:'code']
         
       
       end
 
       
-      if attributes.has_key?(:'description')
+      if attributes.has_key?(:'notes')
         
         
-        self.description = attributes[:'description']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'homeDivision')
-        
-        
-        self.home_division = attributes[:'homeDivision']
+        self.notes = attributes[:'notes']
         
       
       end
 
       
-      if attributes.has_key?(:'objectCounts')
+      if attributes.has_key?(:'tags')
         
-        if (value = attributes[:'objectCounts']).is_a?(Array)
-          self.object_counts = value
+        if (value = attributes[:'tags']).is_a?(Array)
+          self.tags = value
         end
         
         
@@ -129,10 +105,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'selfUri')
+      if attributes.has_key?(:'durationSeconds')
         
         
-        self.self_uri = attributes[:'selfUri']
+        self.duration_seconds = attributes[:'durationSeconds']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'endTime')
+        
+        
+        self.end_time = attributes[:'endTime']
         
       
       end
@@ -162,15 +147,6 @@ module PureCloud
       
       
       
-      if @description.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
       
       
       
@@ -184,11 +160,6 @@ module PureCloud
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -220,12 +191,11 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name &&
-          description == o.description &&
-          home_division == o.home_division &&
-          object_counts == o.object_counts &&
-          self_uri == o.self_uri
+          code == o.code &&
+          notes == o.notes &&
+          tags == o.tags &&
+          duration_seconds == o.duration_seconds &&
+          end_time == o.end_time
     end
 
     # @see the `==` method
@@ -237,7 +207,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, home_division, object_counts, self_uri].hash
+      [code, notes, tags, duration_seconds, end_time].hash
     end
 
     # build the object from hash

@@ -38,11 +38,17 @@ Method | Description
 
 ## - delete_analytics_reporting_schedule(schedule_id)
 
+
+
 Delete a scheduled report job.
 
 
 
 Wraps DELETE /api/v2/analytics/reporting/schedules/{scheduleId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -96,11 +102,17 @@ nil (empty response body)
 
 ## -[**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversation_details(conversation_id)
 
+
+
 Get a conversation by id
 
 
 
 Wraps GET /api/v2/analytics/conversations/{conversationId}/details 
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
 
 
 ### Example
@@ -155,11 +167,17 @@ Name | Type | Description  | Notes
 
 ## -[**ReportingExportJobListing**](ReportingExportJobListing.html) get_analytics_reporting_exports
 
+
+
 Get all view export requests for a user
 
 
 
 Wraps GET /api/v2/analytics/reporting/exports 
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
 
 
 ### Example
@@ -208,11 +226,17 @@ This endpoint does not need any parameter.
 
 ## -[**ReportMetaDataEntityListing**](ReportMetaDataEntityListing.html) get_analytics_reporting_metadata(opts)
 
+
+
 Get list of reporting metadata.
 
 
 
 Wraps GET /api/v2/analytics/reporting/metadata 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -272,11 +296,17 @@ Name | Type | Description  | Notes
 
 ## -[**ReportMetaData**](ReportMetaData.html) get_analytics_reporting_report_id_metadata(report_id, opts)
 
+
+
 Get a reporting metadata.
 
 
 
 Wraps GET /api/v2/analytics/reporting/{reportId}/metadata 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -335,11 +365,17 @@ Name | Type | Description  | Notes
 
 ## -Array&lt;String&gt;** get_analytics_reporting_reportformats
 
+
+
 Get a list of report formats
 
 Get a list of report formats.
 
 Wraps GET /api/v2/analytics/reporting/reportformats 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -388,11 +424,17 @@ This endpoint does not need any parameter.
 
 ## -[**ReportSchedule**](ReportSchedule.html) get_analytics_reporting_schedule(schedule_id)
 
+
+
 Get a scheduled report job.
 
 
 
 Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -447,11 +489,17 @@ Name | Type | Description  | Notes
 
 ## -[**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html) get_analytics_reporting_schedule_history(schedule_id, opts)
 
+
+
 Get list of completed scheduled report jobs.
 
 
 
 Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -512,11 +560,17 @@ Name | Type | Description  | Notes
 
 ## -[**ReportRunEntry**](ReportRunEntry.html) get_analytics_reporting_schedule_history_latest(schedule_id)
 
+
+
 Get most recently completed scheduled report job.
 
 
 
 Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -571,11 +625,17 @@ Name | Type | Description  | Notes
 
 ## -[**ReportRunEntry**](ReportRunEntry.html) get_analytics_reporting_schedule_history_run_id(run_id, schedule_id)
 
+
+
 A completed scheduled report job
 
 A completed scheduled report job.
 
 Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -633,11 +693,17 @@ Name | Type | Description  | Notes
 
 ## -[**ReportScheduleEntityListing**](ReportScheduleEntityListing.html) get_analytics_reporting_schedules(opts)
 
+
+
 Get a list of scheduled report jobs
 
 Get a list of scheduled report jobs.
 
 Wraps GET /api/v2/analytics/reporting/schedules 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -695,11 +761,17 @@ Name | Type | Description  | Notes
 
 ## -Array&lt;String&gt;** get_analytics_reporting_timeperiods
 
+
+
 Get a list of report time periods.
 
 
 
 Wraps GET /api/v2/analytics/reporting/timeperiods 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -748,11 +820,17 @@ This endpoint does not need any parameter.
 
 ## -[**PropertyIndexRequest**](PropertyIndexRequest.html) post_analytics_conversation_details_properties(conversation_id, body)
 
+
+
 Index conversation properties
 
 
 
 Wraps POST /api/v2/analytics/conversations/{conversationId}/details/properties 
+
+Requires ANY permissions: 
+
+* analytics:conversationProperties:index
 
 
 ### Example
@@ -810,11 +888,17 @@ Name | Type | Description  | Notes
 
 ## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_conversations_aggregates_query(body)
 
+
+
 Query for conversation aggregates
 
 
 
 Wraps POST /api/v2/analytics/conversations/aggregates/query 
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
 
 
 ### Example
@@ -869,11 +953,17 @@ Name | Type | Description  | Notes
 
 ## -[**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) post_analytics_conversations_details_query(body)
 
+
+
 Query for conversation details
 
 
 
 Wraps POST /api/v2/analytics/conversations/details/query 
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
 
 
 ### Example
@@ -928,11 +1018,17 @@ Name | Type | Description  | Notes
 
 ## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_evaluations_aggregates_query(body)
 
+
+
 Query for evaluation aggregates
 
 
 
 Wraps POST /api/v2/analytics/evaluations/aggregates/query 
+
+Requires ANY permissions: 
+
+* analytics:evaluationAggregate:view
 
 
 ### Example
@@ -987,11 +1083,17 @@ Name | Type | Description  | Notes
 
 ## -[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) post_analytics_queues_observations_query(body)
 
+
+
 Query for queue observations
 
 
 
 Wraps POST /api/v2/analytics/queues/observations/query 
+
+Requires ANY permissions: 
+
+* analytics:queueObservation:view
 
 
 ### Example
@@ -1046,11 +1148,17 @@ Name | Type | Description  | Notes
 
 ## -[**ReportingExportJobResponse**](ReportingExportJobResponse.html) post_analytics_reporting_exports(body)
 
+
+
 Generate a view export request
 
 
 
 Wraps POST /api/v2/analytics/reporting/exports 
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
 
 
 ### Example
@@ -1105,11 +1213,17 @@ Name | Type | Description  | Notes
 
 ## -[**RunNowResponse**](RunNowResponse.html) post_analytics_reporting_schedule_runreport(schedule_id)
 
+
+
 Place a scheduled report immediately into the reporting queue
 
 
 
 Wraps POST /api/v2/analytics/reporting/schedules/{scheduleId}/runreport 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -1164,11 +1278,17 @@ Name | Type | Description  | Notes
 
 ## -[**ReportSchedule**](ReportSchedule.html) post_analytics_reporting_schedules(body)
 
+
+
 Create a scheduled report job
 
 Create a scheduled report job.
 
 Wraps POST /api/v2/analytics/reporting/schedules 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -1223,11 +1343,17 @@ Name | Type | Description  | Notes
 
 ## -[**PresenceQueryResponse**](PresenceQueryResponse.html) post_analytics_users_aggregates_query(body)
 
+
+
 Query for user aggregates
 
 
 
 Wraps POST /api/v2/analytics/users/aggregates/query 
+
+Requires ANY permissions: 
+
+* analytics:userAggregate:view
 
 
 ### Example
@@ -1282,11 +1408,17 @@ Name | Type | Description  | Notes
 
 ## -[**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html) post_analytics_users_details_query(body)
 
+
+
 Query for user details
 
 
 
 Wraps POST /api/v2/analytics/users/details/query 
+
+Requires ANY permissions: 
+
+* analytics:userObservation:view
 
 
 ### Example
@@ -1341,11 +1473,17 @@ Name | Type | Description  | Notes
 
 ## -[**ObservationQueryResponse**](ObservationQueryResponse.html) post_analytics_users_observations_query(body)
 
+
+
 Query for user observations
 
 
 
 Wraps POST /api/v2/analytics/users/observations/query 
+
+Requires ANY permissions: 
+
+* analytics:userObservation:view
 
 
 ### Example
@@ -1400,11 +1538,17 @@ Name | Type | Description  | Notes
 
 ## -[**ReportSchedule**](ReportSchedule.html) put_analytics_reporting_schedule(schedule_id, body)
 
+
+
 Update a scheduled report job.
 
 
 
 Wraps PUT /api/v2/analytics/reporting/schedules/{scheduleId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example

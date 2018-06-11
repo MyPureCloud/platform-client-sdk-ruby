@@ -3874,6 +3874,7 @@ module PureCloud
     # @option opts [BOOLEAN] :include_schemas Include variable schemas (default to false)
     # @option opts [String] :published_after Published after
     # @option opts [String] :published_before Published before
+    # @option opts [Array<String>] :division_id division ID(s)
     # @return [FlowEntityListing]
     def get_flows(type, opts = {})
       data, _status_code, _headers = get_flows_with_http_info(type, opts)
@@ -3900,6 +3901,7 @@ module PureCloud
     # @option opts [BOOLEAN] :include_schemas Include variable schemas
     # @option opts [String] :published_after Published after
     # @option opts [String] :published_before Published before
+    # @option opts [Array<String>] :division_id division ID(s)
     # @return [Array<(FlowEntityListing, Fixnum, Hash)>] FlowEntityListing data, response status code and response headers
     def get_flows_with_http_info(type, opts = {})
       if @api_client.config.debugging
@@ -4019,6 +4021,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/flows".sub('{format}','json')
 
@@ -4041,6 +4049,7 @@ module PureCloud
       query_params[:'includeSchemas'] = opts[:'include_schemas'] if opts[:'include_schemas']
       query_params[:'publishedAfter'] = opts[:'published_after'] if opts[:'published_after']
       query_params[:'publishedBefore'] = opts[:'published_before'] if opts[:'published_before']
+      query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
 
       # header parameters
       header_params = {}
@@ -4448,6 +4457,7 @@ module PureCloud
     # @option opts [String] :publish_version_id Publish version ID
     # @option opts [String] :published_after Published after
     # @option opts [String] :published_before Published before
+    # @option opts [Array<String>] :division_id division ID(s)
     # @return [FlowDivisionViewEntityListing]
     def get_flows_divisionviews(type, opts = {})
       data, _status_code, _headers = get_flows_divisionviews_with_http_info(type, opts)
@@ -4467,6 +4477,7 @@ module PureCloud
     # @option opts [String] :publish_version_id Publish version ID
     # @option opts [String] :published_after Published after
     # @option opts [String] :published_before Published before
+    # @option opts [Array<String>] :division_id division ID(s)
     # @return [Array<(FlowDivisionViewEntityListing, Fixnum, Hash)>] FlowDivisionViewEntityListing data, response status code and response headers
     def get_flows_divisionviews_with_http_info(type, opts = {})
       if @api_client.config.debugging
@@ -4481,6 +4492,12 @@ module PureCloud
       unless ['inboundcall', 'inboundemail', 'inboundshortmessage', 'outboundcall', 'inqueuecall', 'speech', 'securecall', 'surveyinvite', 'workflow'].include?(type)
         fail ArgumentError, "invalid value for 'type', must be one of inboundcall, inboundemail, inboundshortmessage, outboundcall, inqueuecall, speech, securecall, surveyinvite, workflow"
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -4555,6 +4572,7 @@ module PureCloud
       query_params[:'publishVersionId'] = opts[:'publish_version_id'] if opts[:'publish_version_id']
       query_params[:'publishedAfter'] = opts[:'published_after'] if opts[:'published_after']
       query_params[:'publishedBefore'] = opts[:'published_before'] if opts[:'published_before']
+      query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
 
       # header parameters
       header_params = {}

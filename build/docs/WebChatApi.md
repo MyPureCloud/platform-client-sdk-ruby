@@ -22,11 +22,17 @@ Method | Description
 
 ## - delete_webchat_deployment(deployment_id)
 
+
+
 Delete a WebChat deployment
 
 
 
 Wraps DELETE /api/v2/webchat/deployments/{deploymentId} 
+
+Requires ANY permissions: 
+
+* webchat:deployment:delete
 
 
 ### Example
@@ -80,11 +86,17 @@ nil (empty response body)
 
 ## - delete_webchat_settings
 
+
+
 Remove WebChat deployment settings
 
 
 
 Wraps DELETE /api/v2/webchat/settings 
+
+Requires ANY permissions: 
+
+* webchat:deployment:delete
 
 
 ### Example
@@ -132,11 +144,17 @@ nil (empty response body)
 
 ## -[**WebChatDeployment**](WebChatDeployment.html) get_webchat_deployment(deployment_id)
 
+
+
 Get a WebChat deployment
 
 
 
 Wraps GET /api/v2/webchat/deployments/{deploymentId} 
+
+Requires ANY permissions: 
+
+* webchat:deployment:read
 
 
 ### Example
@@ -191,11 +209,17 @@ Name | Type | Description  | Notes
 
 ## -[**WebChatDeploymentEntityListing**](WebChatDeploymentEntityListing.html) get_webchat_deployments
 
+
+
 List WebChat deployments
 
 
 
 Wraps GET /api/v2/webchat/deployments 
+
+Requires ANY permissions: 
+
+* webchat:deployment:read
 
 
 ### Example
@@ -244,11 +268,17 @@ This endpoint does not need any parameter.
 
 ## -[**WebChatSettings**](WebChatSettings.html) get_webchat_settings
 
+
+
 Get WebChat deployment settings
 
 
 
 Wraps GET /api/v2/webchat/settings 
+
+Requires ANY permissions: 
+
+* webchat:deployment:read
 
 
 ### Example
@@ -297,11 +327,17 @@ This endpoint does not need any parameter.
 
 ## -[**WebChatDeployment**](WebChatDeployment.html) post_webchat_deployments(body)
 
+
+
 Create WebChat deployment
 
 
 
 Wraps POST /api/v2/webchat/deployments 
+
+Requires ANY permissions: 
+
+* webchat:deployment:create
 
 
 ### Example
@@ -356,11 +392,17 @@ Name | Type | Description  | Notes
 
 ## -[**WebChatDeployment**](WebChatDeployment.html) put_webchat_deployment(deployment_id, body)
 
+
+
 Update a WebChat deployment
 
 
 
 Wraps PUT /api/v2/webchat/deployments/{deploymentId} 
+
+Requires ANY permissions: 
+
+* webchat:deployment:update
 
 
 ### Example
@@ -418,11 +460,17 @@ Name | Type | Description  | Notes
 
 ## -[**WebChatSettings**](WebChatSettings.html) put_webchat_settings(body)
 
+
+
 Update WebChat deployment settings
 
 
 
 Wraps PUT /api/v2/webchat/settings 
+
+Requires ANY permissions: 
+
+* webchat:deployment:update
 
 
 ### Example

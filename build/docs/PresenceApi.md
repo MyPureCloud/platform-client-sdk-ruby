@@ -22,11 +22,17 @@ Method | Description
 
 ## - delete_presencedefinition(presence_id)
 
+
+
 Delete a Presence Definition
 
 
 
 Wraps DELETE /api/v2/presencedefinitions/{presenceId} 
+
+Requires ANY permissions: 
+
+* presence:presenceDefinition:delete
 
 
 ### Example
@@ -80,11 +86,17 @@ nil (empty response body)
 
 ## -[**OrganizationPresence**](OrganizationPresence.html) get_presencedefinition(presence_id, opts)
 
+
+
 Get a Presence Definition
 
 
 
 Wraps GET /api/v2/presencedefinitions/{presenceId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -143,11 +155,17 @@ Name | Type | Description  | Notes
 
 ## -[**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) get_presencedefinitions(opts)
 
+
+
 Get an Organization's list of Presence Definitions
 
 
 
 Wraps GET /api/v2/presencedefinitions 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -209,11 +227,17 @@ Name | Type | Description  | Notes
 
 ## -[**Array&lt;SystemPresence&gt;**](SystemPresence.html) get_systempresences
 
+
+
 Get the list of SystemPresences
 
 
 
 Wraps GET /api/v2/systempresences 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -262,11 +286,17 @@ This endpoint does not need any parameter.
 
 ## -[**UserPresence**](UserPresence.html) get_user_presence(user_id, source_id)
 
+
+
 Get a user's Presence
 
 
 
 Wraps GET /api/v2/users/{userId}/presences/{sourceId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -324,11 +354,17 @@ Name | Type | Description  | Notes
 
 ## -[**UserPresence**](UserPresence.html) patch_user_presence(user_id, source_id, body)
 
+
+
 Patch a user's Presence
 
 The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
 
 Wraps PATCH /api/v2/users/{userId}/presences/{sourceId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -389,11 +425,17 @@ Name | Type | Description  | Notes
 
 ## -[**OrganizationPresence**](OrganizationPresence.html) post_presencedefinitions(body)
 
+
+
 Create a Presence Definition
 
 
 
 Wraps POST /api/v2/presencedefinitions 
+
+Requires ANY permissions: 
+
+* presence:presenceDefinition:add
 
 
 ### Example
@@ -448,11 +490,17 @@ Name | Type | Description  | Notes
 
 ## -[**OrganizationPresence**](OrganizationPresence.html) put_presencedefinition(presence_id, body)
 
+
+
 Update a Presence Definition
 
 
 
 Wraps PUT /api/v2/presencedefinitions/{presenceId} 
+
+Requires ANY permissions: 
+
+* presence:presenceDefinition:edit
 
 
 ### Example

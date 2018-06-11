@@ -27,10 +27,12 @@ module PureCloud
 
     attr_accessor :authentication_required
 
-    # URL for third party service authenticating webchat clients. See https://github.com/MyPureCloud/authenticated-web-chat-server-examples
+    # URL for third party service authenticating web chat clients. See https://github.com/MyPureCloud/authenticated-web-chat-server-examples
     attr_accessor :authentication_url
 
     attr_accessor :disabled
+
+    attr_accessor :web_chat_config
 
     # The URI for this object
     attr_accessor :self_uri
@@ -50,6 +52,8 @@ module PureCloud
         :'authentication_url' => :'authenticationUrl',
         
         :'disabled' => :'disabled',
+        
+        :'web_chat_config' => :'webChatConfig',
         
         :'self_uri' => :'selfUri'
         
@@ -71,6 +75,8 @@ module PureCloud
         :'authentication_url' => :'String',
         
         :'disabled' => :'BOOLEAN',
+        
+        :'web_chat_config' => :'WebChatConfig',
         
         :'self_uri' => :'String'
         
@@ -140,6 +146,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'webChatConfig')
+        
+        
+        self.web_chat_config = attributes[:'webChatConfig']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -192,8 +207,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -241,6 +265,7 @@ module PureCloud
           authentication_required == o.authentication_required &&
           authentication_url == o.authentication_url &&
           disabled == o.disabled &&
+          web_chat_config == o.web_chat_config &&
           self_uri == o.self_uri
     end
 
@@ -253,7 +278,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, authentication_required, authentication_url, disabled, self_uri].hash
+      [id, name, description, authentication_required, authentication_url, disabled, web_chat_config, self_uri].hash
     end
 
     # build the object from hash

@@ -95,11 +95,17 @@ Method | Description
 
 ## - delete_architect_emergencygroup(emergency_group_id)
 
+
+
 Deletes a emergency group by ID
 
 
 
 Wraps DELETE /api/v2/architect/emergencygroups/{emergencyGroupId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -153,11 +159,17 @@ nil (empty response body)
 
 ## - delete_architect_ivr(ivr_id)
 
+
+
 Delete an IVR Config.
 
 
 
 Wraps DELETE /api/v2/architect/ivrs/{ivrId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -211,11 +223,17 @@ nil (empty response body)
 
 ## - delete_architect_prompt(prompt_id, opts)
 
+
+
 Delete specified user prompt
 
 
 
 Wraps DELETE /api/v2/architect/prompts/{promptId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -273,11 +291,17 @@ nil (empty response body)
 
 ## - delete_architect_prompt_resource(prompt_id, language_code)
 
+
+
 Delete specified user prompt resource
 
 
 
 Wraps DELETE /api/v2/architect/prompts/{promptId}/resources/{languageCode} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -334,11 +358,17 @@ nil (empty response body)
 
 ## -[**Operation**](Operation.html) delete_architect_prompts(id)
 
+
+
 Batch-delete a list of prompts
 
 Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
 
 Wraps DELETE /api/v2/architect/prompts 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -393,11 +423,17 @@ Name | Type | Description  | Notes
 
 ## - delete_architect_schedule(schedule_id)
 
+
+
 Delete a schedule by id
 
 
 
 Wraps DELETE /api/v2/architect/schedules/{scheduleId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -451,11 +487,17 @@ nil (empty response body)
 
 ## - delete_architect_schedulegroup(schedule_group_id)
 
+
+
 Deletes a schedule group by ID
 
 
 
 Wraps DELETE /api/v2/architect/schedulegroups/{scheduleGroupId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -509,11 +551,17 @@ nil (empty response body)
 
 ## - delete_architect_systemprompt_resource(prompt_id, language_code)
 
+
+
 Delete a system prompt resource override.
 
 
 
 Wraps DELETE /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -570,11 +618,17 @@ nil (empty response body)
 
 ## - delete_flow(flow_id)
 
+
+
 Delete flow
 
 
 
 Wraps DELETE /api/v2/flows/{flowId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -628,11 +682,17 @@ nil (empty response body)
 
 ## -[**Operation**](Operation.html) delete_flows(id)
 
+
+
 Batch-delete a list of flows
 
 Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
 
 Wraps DELETE /api/v2/flows 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -687,11 +747,17 @@ Name | Type | Description  | Notes
 
 ## - delete_flows_datatable(datatable_id, opts)
 
+
+
 deletes a specific datatable by id
 
 deletes an entire datatable (including schema and data) with a given id)
 
 Wraps DELETE /api/v2/flows/datatables/{datatableId} 
+
+Requires ANY permissions: 
+
+* architect:datatable:delete
 
 
 ### Example
@@ -749,11 +815,17 @@ nil (empty response body)
 
 ## - delete_flows_datatable_row(datatable_id, row_id)
 
+
+
 Delete a row entry
 
 Deletes a row with a given rowId.
 
 Wraps DELETE /api/v2/flows/datatables/{datatableId}/rows/{rowId} 
+
+Requires ANY permissions: 
+
+* architect:datatable:delete
 
 
 ### Example
@@ -810,11 +882,17 @@ nil (empty response body)
 
 ## -[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) get_architect_dependencytracking(name, opts)
 
+
+
 Get Dependency Tracking objects that have a given display name
 
 
 
 Wraps GET /api/v2/architect/dependencytracking 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -885,11 +963,17 @@ Name | Type | Description  | Notes
 
 ## -[**DependencyStatus**](DependencyStatus.html) get_architect_dependencytracking_build
 
+
+
 Get Dependency Tracking build status for an organization
 
 
 
 Wraps GET /api/v2/architect/dependencytracking/build 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -938,11 +1022,17 @@ This endpoint does not need any parameter.
 
 ## -[**ConsumedResourcesEntityListing**](ConsumedResourcesEntityListing.html) get_architect_dependencytracking_consumedresources(id, version, object_type, opts)
 
+
+
 Get resources that are consumed by a given Dependency Tracking object
 
 
 
 Wraps GET /api/v2/architect/dependencytracking/consumedresources 
+
+Requires ANY permissions: 
+
+* admin* editor* readonly
 
 
 ### Example
@@ -1007,11 +1097,17 @@ Name | Type | Description  | Notes
 
 ## -[**ConsumingResourcesEntityListing**](ConsumingResourcesEntityListing.html) get_architect_dependencytracking_consumingresources(id, object_type, opts)
 
+
+
 Get resources that consume a given Dependency Tracking object
 
 
 
 Wraps GET /api/v2/architect/dependencytracking/consumingresources 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -1073,11 +1169,17 @@ Name | Type | Description  | Notes
 
 ## -[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) get_architect_dependencytracking_deletedresourceconsumers(opts)
 
+
+
 Get Dependency Tracking objects that consume deleted resources
 
 
 
 Wraps GET /api/v2/architect/dependencytracking/deletedresourceconsumers 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -1145,11 +1247,17 @@ Name | Type | Description  | Notes
 
 ## -[**DependencyObject**](DependencyObject.html) get_architect_dependencytracking_object(id, opts)
 
+
+
 Get a Dependency Tracking object
 
 
 
 Wraps GET /api/v2/architect/dependencytracking/object 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -1218,11 +1326,17 @@ Name | Type | Description  | Notes
 
 ## -[**DependencyType**](DependencyType.html) get_architect_dependencytracking_type(type_id)
 
+
+
 Get a Dependency Tracking type.
 
 
 
 Wraps GET /api/v2/architect/dependencytracking/types/{typeId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -1277,11 +1391,17 @@ Name | Type | Description  | Notes
 
 ## -[**DependencyTypeEntityListing**](DependencyTypeEntityListing.html) get_architect_dependencytracking_types(opts)
 
+
+
 Get Dependency Tracking types.
 
 
 
 Wraps GET /api/v2/architect/dependencytracking/types 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -1339,11 +1459,17 @@ Name | Type | Description  | Notes
 
 ## -[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) get_architect_dependencytracking_updatedresourceconsumers(opts)
 
+
+
 Get Dependency Tracking objects that depend on updated resources
 
 
 
 Wraps GET /api/v2/architect/dependencytracking/updatedresourceconsumers 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -1409,11 +1535,17 @@ Name | Type | Description  | Notes
 
 ## -[**EmergencyGroup**](EmergencyGroup.html) get_architect_emergencygroup(emergency_group_id)
 
+
+
 Gets a emergency group by ID
 
 
 
 Wraps GET /api/v2/architect/emergencygroups/{emergencyGroupId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -1468,11 +1600,17 @@ Name | Type | Description  | Notes
 
 ## -[**EmergencyGroupListing**](EmergencyGroupListing.html) get_architect_emergencygroups(opts)
 
+
+
 Get a list of emergency groups.
 
 
 
 Wraps GET /api/v2/architect/emergencygroups 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -1536,11 +1674,17 @@ Name | Type | Description  | Notes
 
 ## -[**IVR**](IVR.html) get_architect_ivr(ivr_id)
 
+
+
 Get an IVR config.
 
 
 
 Wraps GET /api/v2/architect/ivrs/{ivrId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -1595,11 +1739,17 @@ Name | Type | Description  | Notes
 
 ## -[**IVREntityListing**](IVREntityListing.html) get_architect_ivrs(opts)
 
+
+
 Get IVR configs.
 
 
 
 Wraps GET /api/v2/architect/ivrs 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -1663,11 +1813,17 @@ Name | Type | Description  | Notes
 
 ## -[**Prompt**](Prompt.html) get_architect_prompt(prompt_id)
 
+
+
 Get specified user prompt
 
 
 
 Wraps GET /api/v2/architect/prompts/{promptId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -1722,11 +1878,17 @@ Name | Type | Description  | Notes
 
 ## -[**HistoryListing**](HistoryListing.html) get_architect_prompt_history_history_id(prompt_id, history_id, opts)
 
+
+
 Get generated prompt history
 
 
 
 Wraps GET /api/v2/architect/prompts/{promptId}/history/{historyId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -1796,11 +1958,17 @@ Name | Type | Description  | Notes
 
 ## -[**PromptAsset**](PromptAsset.html) get_architect_prompt_resource(prompt_id, language_code)
 
+
+
 Get specified user prompt resource
 
 
 
 Wraps GET /api/v2/architect/prompts/{promptId}/resources/{languageCode} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -1858,11 +2026,17 @@ Name | Type | Description  | Notes
 
 ## -[**PromptAssetEntityListing**](PromptAssetEntityListing.html) get_architect_prompt_resources(prompt_id, opts)
 
+
+
 Get a pageable list of user prompt resources
 
 The returned list is pageable, and query parameters can be used for filtering.
 
 Wraps GET /api/v2/architect/prompts/{promptId}/resources 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -1923,11 +2097,17 @@ Name | Type | Description  | Notes
 
 ## -[**PromptEntityListing**](PromptEntityListing.html) get_architect_prompts(opts)
 
+
+
 Get a pageable list of user prompts
 
 The returned list is pageable, and query parameters can be used for filtering.  Multiple names can be specified, in which case all matching prompts will be returned, and no other filters will be evaluated.
 
 Wraps GET /api/v2/architect/prompts 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -1995,11 +2175,17 @@ Name | Type | Description  | Notes
 
 ## -[**Schedule**](Schedule.html) get_architect_schedule(schedule_id)
 
+
+
 Get a schedule by ID
 
 
 
 Wraps GET /api/v2/architect/schedules/{scheduleId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -2054,11 +2240,17 @@ Name | Type | Description  | Notes
 
 ## -[**ScheduleGroup**](ScheduleGroup.html) get_architect_schedulegroup(schedule_group_id)
 
+
+
 Gets a schedule group by ID
 
 
 
 Wraps GET /api/v2/architect/schedulegroups/{scheduleGroupId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -2113,11 +2305,17 @@ Name | Type | Description  | Notes
 
 ## -[**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html) get_architect_schedulegroups(opts)
 
+
+
 Get a list of schedule groups.
 
 
 
 Wraps GET /api/v2/architect/schedulegroups 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -2181,11 +2379,17 @@ Name | Type | Description  | Notes
 
 ## -[**ScheduleEntityListing**](ScheduleEntityListing.html) get_architect_schedules(opts)
 
+
+
 Get a list of schedules.
 
 
 
 Wraps GET /api/v2/architect/schedules 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -2249,11 +2453,17 @@ Name | Type | Description  | Notes
 
 ## -[**SystemPrompt**](SystemPrompt.html) get_architect_systemprompt(prompt_id)
 
+
+
 Get a system prompt
 
 
 
 Wraps GET /api/v2/architect/systemprompts/{promptId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -2308,11 +2518,17 @@ Name | Type | Description  | Notes
 
 ## -[**HistoryListing**](HistoryListing.html) get_architect_systemprompt_history_history_id(prompt_id, history_id, opts)
 
+
+
 Get generated prompt history
 
 
 
 Wraps GET /api/v2/architect/systemprompts/{promptId}/history/{historyId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -2382,11 +2598,17 @@ Name | Type | Description  | Notes
 
 ## -[**SystemPromptAsset**](SystemPromptAsset.html) get_architect_systemprompt_resource(prompt_id, language_code)
 
+
+
 Get a system prompt resource.
 
 
 
 Wraps GET /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -2444,11 +2666,17 @@ Name | Type | Description  | Notes
 
 ## -[**SystemPromptAssetEntityListing**](SystemPromptAssetEntityListing.html) get_architect_systemprompt_resources(prompt_id, opts)
 
+
+
 Get system prompt resources.
 
 
 
 Wraps GET /api/v2/architect/systemprompts/{promptId}/resources 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -2513,11 +2741,17 @@ Name | Type | Description  | Notes
 
 ## -[**SystemPromptEntityListing**](SystemPromptEntityListing.html) get_architect_systemprompts(opts)
 
+
+
 Get System Prompts
 
 
 
 Wraps GET /api/v2/architect/systemprompts 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -2585,11 +2819,17 @@ Name | Type | Description  | Notes
 
 ## -[**Flow**](Flow.html) get_flow(flow_id, opts)
 
+
+
 Get flow
 
 
 
 Wraps GET /api/v2/flows/{flowId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -2648,11 +2888,17 @@ Name | Type | Description  | Notes
 
 ## -[**HistoryListing**](HistoryListing.html) get_flow_history_history_id(flow_id, history_id, opts)
 
+
+
 Get generated flow history
 
 
 
 Wraps GET /api/v2/flows/{flowId}/history/{historyId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -2722,11 +2968,17 @@ Name | Type | Description  | Notes
 
 ## -Object** get_flow_latestconfiguration(flow_id, opts)
 
+
+
 Get the latest configuration for flow
 
 
 
 Wraps GET /api/v2/flows/{flowId}/latestconfiguration 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -2785,11 +3037,17 @@ Name | Type | Description  | Notes
 
 ## -[**FlowVersion**](FlowVersion.html) get_flow_version(flow_id, version_id, opts)
 
+
+
 Get flow version
 
 
 
 Wraps GET /api/v2/flows/{flowId}/versions/{versionId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -2851,11 +3109,17 @@ Name | Type | Description  | Notes
 
 ## -Object** get_flow_version_configuration(flow_id, version_id, opts)
 
+
+
 Create flow version configuration
 
 
 
 Wraps GET /api/v2/flows/{flowId}/versions/{versionId}/configuration 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -2917,11 +3181,17 @@ Name | Type | Description  | Notes
 
 ## -[**FlowVersionEntityListing**](FlowVersionEntityListing.html) get_flow_versions(flow_id, opts)
 
+
+
 Get flow version list
 
 
 
 Wraps GET /api/v2/flows/{flowId}/versions 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -2984,11 +3254,17 @@ Name | Type | Description  | Notes
 
 ## -[**FlowEntityListing**](FlowEntityListing.html) get_flows(type, opts)
 
+
+
 Get a pageable list of flows, filtered by query parameters
 
 Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
 
 Wraps GET /api/v2/flows 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -3026,7 +3302,8 @@ opts = {
   deleted: false, # BOOLEAN | Include deleted
   include_schemas: false, # BOOLEAN | Include variable schemas
   published_after: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01", # String | Published after
-  published_before: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01" # String | Published before
+  published_before: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01", # String | Published before
+  division_id: ["division_id_example"] # Array<String> | division ID(s)
 }
 
 begin
@@ -3059,6 +3336,7 @@ Name | Type | Description  | Notes
  **include_schemas** | **BOOLEAN**| Include variable schemas | [optional] [default to false] |
  **published_after** | **String**| Published after | [optional]  |
  **published_before** | **String**| Published before | [optional]  |
+ **division_id** | [**Array&lt;String&gt;**](String.html)| division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 
@@ -3077,11 +3355,17 @@ Name | Type | Description  | Notes
 
 ## -[**DataTable**](DataTable.html) get_flows_datatable(datatable_id, opts)
 
+
+
 Returns a specific datatable by id
 
 Given a datableid returns the schema associated with it.
 
 Wraps GET /api/v2/flows/datatables/{datatableId} 
+
+Requires ANY permissions: 
+
+* architect:datatable:view
 
 
 ### Example
@@ -3140,11 +3424,17 @@ Name | Type | Description  | Notes
 
 ## -Hash&lt;String, Object&gt;** get_flows_datatable_row(datatable_id, row_id, opts)
 
+
+
 Returns a specific row for the datatable
 
 Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
 
 Wraps GET /api/v2/flows/datatables/{datatableId}/rows/{rowId} 
+
+Requires ANY permissions: 
+
+* architect:datatable:view
 
 
 ### Example
@@ -3206,11 +3496,17 @@ Name | Type | Description  | Notes
 
 ## -[**DataTableRowEntityListing**](DataTableRowEntityListing.html) get_flows_datatable_rows(datatable_id, opts)
 
+
+
 Returns the rows for the datatable
 
 Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
 
 Wraps GET /api/v2/flows/datatables/{datatableId}/rows 
+
+Requires ANY permissions: 
+
+* architect:datatable:view
 
 
 ### Example
@@ -3273,11 +3569,17 @@ Name | Type | Description  | Notes
 
 ## -[**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html) get_flows_datatables(opts)
 
+
+
 Retrieve a list of datatables for the org
 
 Returns a metadata list of the datatables associated with this org, including ID, name and description.
 
 Wraps GET /api/v2/flows/datatables 
+
+Requires ANY permissions: 
+
+* architect:datatable:view
 
 
 ### Example
@@ -3341,11 +3643,17 @@ Name | Type | Description  | Notes
 
 ## -[**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html) get_flows_divisionviews(type, opts)
 
+
+
 Get a pageable list of basic flow information objects filterable by query parameters.
 
 This returns a simplified version of /flow consisting of name and type.
 
 Wraps GET /api/v2/flows/divisionviews 
+
+Requires ANY permissions: 
+
+* architect:flow:search
 
 
 ### Example
@@ -3376,7 +3684,8 @@ opts = {
   name: "name_example", # String | Name
   publish_version_id: "publish_version_id_example", # String | Publish version ID
   published_after: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01", # String | Published after
-  published_before: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01" # String | Published before
+  published_before: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01", # String | Published before
+  division_id: ["division_id_example"] # Array<String> | division ID(s)
 }
 
 begin
@@ -3402,6 +3711,7 @@ Name | Type | Description  | Notes
  **publish_version_id** | **String**| Publish version ID | [optional]  |
  **published_after** | **String**| Published after | [optional]  |
  **published_before** | **String**| Published before | [optional]  |
+ **division_id** | [**Array&lt;String&gt;**](String.html)| division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 
@@ -3420,11 +3730,17 @@ Name | Type | Description  | Notes
 
 ## - post_architect_dependencytracking_build
 
+
+
 Rebuild Dependency Tracking data for an organization
 
 Asynchronous.  Notification topic: v2.architect.dependencytracking.build
 
 Wraps POST /api/v2/architect/dependencytracking/build 
+
+Requires ANY permissions: 
+
+* architect:user:admin
 
 
 ### Example
@@ -3472,11 +3788,17 @@ nil (empty response body)
 
 ## -[**EmergencyGroup**](EmergencyGroup.html) post_architect_emergencygroups(opts)
 
+
+
 Creates a new emergency group
 
 
 
 Wraps POST /api/v2/architect/emergencygroups 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -3532,11 +3854,17 @@ Name | Type | Description  | Notes
 
 ## -[**IVR**](IVR.html) post_architect_ivrs(opts)
 
+
+
 Create IVR config.
 
 
 
 Wraps POST /api/v2/architect/ivrs 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -3592,11 +3920,17 @@ Name | Type | Description  | Notes
 
 ## -[**Operation**](Operation.html) post_architect_prompt_history(prompt_id)
 
+
+
 Generate prompt history
 
 Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
 
 Wraps POST /api/v2/architect/prompts/{promptId}/history 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -3651,11 +3985,17 @@ Name | Type | Description  | Notes
 
 ## -[**PromptAsset**](PromptAsset.html) post_architect_prompt_resources(prompt_id, opts)
 
+
+
 Create a new user prompt resource
 
 
 
 Wraps POST /api/v2/architect/prompts/{promptId}/resources 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -3714,11 +4054,17 @@ Name | Type | Description  | Notes
 
 ## -[**Prompt**](Prompt.html) post_architect_prompts(opts)
 
+
+
 Create a new user prompt
 
 
 
 Wraps POST /api/v2/architect/prompts 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -3774,11 +4120,17 @@ Name | Type | Description  | Notes
 
 ## -[**ScheduleGroup**](ScheduleGroup.html) post_architect_schedulegroups(opts)
 
+
+
 Creates a new schedule group
 
 
 
 Wraps POST /api/v2/architect/schedulegroups 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -3834,11 +4186,17 @@ Name | Type | Description  | Notes
 
 ## -[**Schedule**](Schedule.html) post_architect_schedules(opts)
 
+
+
 Create a new schedule.
 
 
 
 Wraps POST /api/v2/architect/schedules 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -3894,11 +4252,17 @@ Name | Type | Description  | Notes
 
 ## -[**Operation**](Operation.html) post_architect_systemprompt_history(prompt_id)
 
+
+
 Generate system prompt history
 
 Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
 
 Wraps POST /api/v2/architect/systemprompts/{promptId}/history 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -3953,11 +4317,17 @@ Name | Type | Description  | Notes
 
 ## -[**SystemPromptAsset**](SystemPromptAsset.html) post_architect_systemprompt_resources(prompt_id, opts)
 
+
+
 Create system prompt resource override.
 
 
 
 Wraps POST /api/v2/architect/systemprompts/{promptId}/resources 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -4016,11 +4386,17 @@ Name | Type | Description  | Notes
 
 ## -[**FlowVersion**](FlowVersion.html) post_flow_versions(flow_id, opts)
 
+
+
 Create flow version
 
 
 
 Wraps POST /api/v2/flows/{flowId}/versions 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -4079,11 +4455,17 @@ Name | Type | Description  | Notes
 
 ## -[**Flow**](Flow.html) post_flows(opts)
 
+
+
 Create flow
 
 
 
 Wraps POST /api/v2/flows 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 
 ### Example
@@ -4139,11 +4521,17 @@ Name | Type | Description  | Notes
 
 ## -[**Flow**](Flow.html) post_flows_actions_checkin(flow)
 
+
+
 Check-in flow
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
 
 Wraps POST /api/v2/flows/actions/checkin 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -4198,11 +4586,17 @@ Name | Type | Description  | Notes
 
 ## -[**Flow**](Flow.html) post_flows_actions_checkout(flow)
 
+
+
 Check-out flow
 
 
 
 Wraps POST /api/v2/flows/actions/checkout 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -4257,11 +4651,17 @@ Name | Type | Description  | Notes
 
 ## -[**Flow**](Flow.html) post_flows_actions_deactivate(flow)
 
+
+
 Deactivate flow
 
 
 
 Wraps POST /api/v2/flows/actions/deactivate 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -4316,11 +4716,17 @@ Name | Type | Description  | Notes
 
 ## -[**Operation**](Operation.html) post_flows_actions_publish(flow, opts)
 
+
+
 Publish flow
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
 
 Wraps POST /api/v2/flows/actions/publish 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -4379,11 +4785,17 @@ Name | Type | Description  | Notes
 
 ## -[**Flow**](Flow.html) post_flows_actions_revert(flow)
 
+
+
 Revert flow
 
 
 
 Wraps POST /api/v2/flows/actions/revert 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -4438,11 +4850,17 @@ Name | Type | Description  | Notes
 
 ## -[**Flow**](Flow.html) post_flows_actions_unlock(flow)
 
+
+
 Unlock flow
 
 Allows for unlocking a flow in the case where there is no flow configuration available, and thus a check-in will not unlock the flow. The user must have Architect Admin permissions to perform this action.
 
 Wraps POST /api/v2/flows/actions/unlock 
+
+Requires ANY permissions: 
+
+* architect:user:admin
 
 
 ### Example
@@ -4497,11 +4915,17 @@ Name | Type | Description  | Notes
 
 ## -Hash&lt;String, Object&gt;** post_flows_datatable_rows(datatable_id, data_table_row)
 
+
+
 Create a new row entry
 
 Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
 
 Wraps POST /api/v2/flows/datatables/{datatableId}/rows 
+
+Requires ANY permissions: 
+
+* architect:datatable:add
 
 
 ### Example
@@ -4559,11 +4983,17 @@ Name | Type | Description  | Notes
 
 ## -[**DataTable**](DataTable.html) post_flows_datatables(body)
 
+
+
 Create a new datatable with the specified json-schema definition
 
 This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
 
 Wraps POST /api/v2/flows/datatables 
+
+Requires ANY permissions: 
+
+* architect:datatable:add
 
 
 ### Example
@@ -4618,11 +5048,17 @@ Name | Type | Description  | Notes
 
 ## -[**EmergencyGroup**](EmergencyGroup.html) put_architect_emergencygroup(emergency_group_id, opts)
 
+
+
 Updates a emergency group by ID
 
 
 
 Wraps PUT /api/v2/architect/emergencygroups/{emergencyGroupId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -4681,11 +5117,17 @@ Name | Type | Description  | Notes
 
 ## -[**IVR**](IVR.html) put_architect_ivr(ivr_id, opts)
 
+
+
 Update an IVR Config.
 
 
 
 Wraps PUT /api/v2/architect/ivrs/{ivrId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -4744,11 +5186,17 @@ Name | Type | Description  | Notes
 
 ## -[**Prompt**](Prompt.html) put_architect_prompt(prompt_id, opts)
 
+
+
 Update specified user prompt
 
 
 
 Wraps PUT /api/v2/architect/prompts/{promptId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -4807,11 +5255,17 @@ Name | Type | Description  | Notes
 
 ## -[**PromptAsset**](PromptAsset.html) put_architect_prompt_resource(prompt_id, language_code, opts)
 
+
+
 Update specified user prompt resource
 
 
 
 Wraps PUT /api/v2/architect/prompts/{promptId}/resources/{languageCode} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -4873,11 +5327,17 @@ Name | Type | Description  | Notes
 
 ## -[**Schedule**](Schedule.html) put_architect_schedule(schedule_id, opts)
 
+
+
 Update schedule by ID
 
 
 
 Wraps PUT /api/v2/architect/schedules/{scheduleId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -4936,11 +5396,17 @@ Name | Type | Description  | Notes
 
 ## -[**ScheduleGroup**](ScheduleGroup.html) put_architect_schedulegroup(schedule_group_id, opts)
 
+
+
 Updates a schedule group by ID
 
 
 
 Wraps PUT /api/v2/architect/schedulegroups/{scheduleGroupId} 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 
 ### Example
@@ -4999,11 +5465,17 @@ Name | Type | Description  | Notes
 
 ## -[**SystemPromptAsset**](SystemPromptAsset.html) put_architect_systemprompt_resource(prompt_id, language_code, opts)
 
+
+
 Updates a system prompt resource override.
 
 
 
 Wraps PUT /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -5065,11 +5537,17 @@ Name | Type | Description  | Notes
 
 ## -[**Flow**](Flow.html) put_flow(flow_id, opts)
 
+
+
 Update flow
 
 
 
 Wraps PUT /api/v2/flows/{flowId} 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 
 ### Example
@@ -5128,11 +5606,17 @@ Name | Type | Description  | Notes
 
 ## -[**DataTable**](DataTable.html) put_flows_datatable(datatable_id, opts)
 
+
+
 Updates a specific datatable by id
 
 Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
 
 Wraps PUT /api/v2/flows/datatables/{datatableId} 
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
 
 
 ### Example
@@ -5193,11 +5677,17 @@ Name | Type | Description  | Notes
 
 ## -Hash&lt;String, Object&gt;** put_flows_datatable_row(datatable_id, row_id, opts)
 
+
+
 Update a row entry
 
 Updates a row with the given to the new values.
 
 Wraps PUT /api/v2/flows/datatables/{datatableId}/rows/{rowId} 
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
 
 
 ### Example

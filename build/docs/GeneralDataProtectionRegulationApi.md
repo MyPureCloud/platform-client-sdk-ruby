@@ -18,11 +18,17 @@ Method | Description
 
 ## -[**GDPRRequest**](GDPRRequest.html) get_gdpr_request(request_id)
 
+
+
 Get an existing GDPR request
 
 
 
 Wraps GET /api/v2/gdpr/requests/{requestId} 
+
+Requires ANY permissions: 
+
+* gdpr:request:view
 
 
 ### Example
@@ -77,11 +83,17 @@ Name | Type | Description  | Notes
 
 ## -[**GDPRRequestEntityListing**](GDPRRequestEntityListing.html) get_gdpr_requests(opts)
 
+
+
 Get all GDPR requests
 
 
 
 Wraps GET /api/v2/gdpr/requests 
+
+Requires ANY permissions: 
+
+* gdpr:request:view
 
 
 ### Example
@@ -139,11 +151,17 @@ Name | Type | Description  | Notes
 
 ## -[**GDPRSubjectEntityListing**](GDPRSubjectEntityListing.html) get_gdpr_subjects(search_type, search_value)
 
+
+
 Get GDPR subjects
 
 
 
 Wraps GET /api/v2/gdpr/subjects 
+
+Requires ANY permissions: 
+
+* gdpr:subject:view
 
 
 ### Example
@@ -201,11 +219,17 @@ Name | Type | Description  | Notes
 
 ## -[**GDPRRequest**](GDPRRequest.html) post_gdpr_requests(body, opts)
 
+
+
 Submit a new GDPR request
 
 
 
 Wraps POST /api/v2/gdpr/requests 
+
+Requires ANY permissions: 
+
+* gdpr:request:add
 
 
 ### Example

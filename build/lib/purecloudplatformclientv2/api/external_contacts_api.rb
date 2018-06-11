@@ -1548,21 +1548,21 @@ module PureCloud
     # Create a note for an external contact
     # 
     # @param contact_id ExternalContact Id
+    # @param body ExternalContact
     # @param [Hash] opts the optional parameters
-    # @option opts [Note] :body ExternalContact
     # @return [Note]
-    def post_externalcontacts_contact_notes(contact_id, opts = {})
-      data, _status_code, _headers = post_externalcontacts_contact_notes_with_http_info(contact_id, opts)
+    def post_externalcontacts_contact_notes(contact_id, body, opts = {})
+      data, _status_code, _headers = post_externalcontacts_contact_notes_with_http_info(contact_id, body, opts)
       return data
     end
 
     # Create a note for an external contact
     # 
     # @param contact_id ExternalContact Id
+    # @param body ExternalContact
     # @param [Hash] opts the optional parameters
-    # @option opts [Note] :body ExternalContact
     # @return [Array<(Note, Fixnum, Hash)>] Note data, response status code and response headers
-    def post_externalcontacts_contact_notes_with_http_info(contact_id, opts = {})
+    def post_externalcontacts_contact_notes_with_http_info(contact_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_contact_notes ..."
       end
@@ -1576,6 +1576,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.post_externalcontacts_contact_notes" if body.nil?
       
       
       
@@ -1602,7 +1604,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -1620,25 +1622,27 @@ module PureCloud
 
     # Create an external contact
     # 
+    # @param body ExternalContact
     # @param [Hash] opts the optional parameters
-    # @option opts [ExternalContact] :body ExternalContact
     # @return [ExternalContact]
-    def post_externalcontacts_contacts(opts = {})
-      data, _status_code, _headers = post_externalcontacts_contacts_with_http_info(opts)
+    def post_externalcontacts_contacts(body, opts = {})
+      data, _status_code, _headers = post_externalcontacts_contacts_with_http_info(body, opts)
       return data
     end
 
     # Create an external contact
     # 
+    # @param body ExternalContact
     # @param [Hash] opts the optional parameters
-    # @option opts [ExternalContact] :body ExternalContact
     # @return [Array<(ExternalContact, Fixnum, Hash)>] ExternalContact data, response status code and response headers
-    def post_externalcontacts_contacts_with_http_info(opts = {})
+    def post_externalcontacts_contacts_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_contacts ..."
       end
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.post_externalcontacts_contacts" if body.nil?
       
       
       
@@ -1665,7 +1669,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -1684,21 +1688,21 @@ module PureCloud
     # Create a note for an external organization
     # 
     # @param external_organization_id External Organization Id
+    # @param body ExternalContact
     # @param [Hash] opts the optional parameters
-    # @option opts [Note] :body ExternalContact
     # @return [Note]
-    def post_externalcontacts_organization_notes(external_organization_id, opts = {})
-      data, _status_code, _headers = post_externalcontacts_organization_notes_with_http_info(external_organization_id, opts)
+    def post_externalcontacts_organization_notes(external_organization_id, body, opts = {})
+      data, _status_code, _headers = post_externalcontacts_organization_notes_with_http_info(external_organization_id, body, opts)
       return data
     end
 
     # Create a note for an external organization
     # 
     # @param external_organization_id External Organization Id
+    # @param body ExternalContact
     # @param [Hash] opts the optional parameters
-    # @option opts [Note] :body ExternalContact
     # @return [Array<(Note, Fixnum, Hash)>] Note data, response status code and response headers
-    def post_externalcontacts_organization_notes_with_http_info(external_organization_id, opts = {})
+    def post_externalcontacts_organization_notes_with_http_info(external_organization_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_organization_notes ..."
       end
@@ -1712,6 +1716,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.post_externalcontacts_organization_notes" if body.nil?
       
       
       
@@ -1738,7 +1744,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -1756,25 +1762,27 @@ module PureCloud
 
     # Create an external organization
     # 
+    # @param body ExternalOrganization
     # @param [Hash] opts the optional parameters
-    # @option opts [ExternalOrganization] :body ExternalOrganization
     # @return [ExternalOrganization]
-    def post_externalcontacts_organizations(opts = {})
-      data, _status_code, _headers = post_externalcontacts_organizations_with_http_info(opts)
+    def post_externalcontacts_organizations(body, opts = {})
+      data, _status_code, _headers = post_externalcontacts_organizations_with_http_info(body, opts)
       return data
     end
 
     # Create an external organization
     # 
+    # @param body ExternalOrganization
     # @param [Hash] opts the optional parameters
-    # @option opts [ExternalOrganization] :body ExternalOrganization
     # @return [Array<(ExternalOrganization, Fixnum, Hash)>] ExternalOrganization data, response status code and response headers
-    def post_externalcontacts_organizations_with_http_info(opts = {})
+    def post_externalcontacts_organizations_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_organizations ..."
       end
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.post_externalcontacts_organizations" if body.nil?
       
       
       
@@ -1801,7 +1809,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -1819,25 +1827,27 @@ module PureCloud
 
     # Create a relationship
     # 
+    # @param body Relationship
     # @param [Hash] opts the optional parameters
-    # @option opts [Relationship] :body Relationship
     # @return [Relationship]
-    def post_externalcontacts_relationships(opts = {})
-      data, _status_code, _headers = post_externalcontacts_relationships_with_http_info(opts)
+    def post_externalcontacts_relationships(body, opts = {})
+      data, _status_code, _headers = post_externalcontacts_relationships_with_http_info(body, opts)
       return data
     end
 
     # Create a relationship
     # 
+    # @param body Relationship
     # @param [Hash] opts the optional parameters
-    # @option opts [Relationship] :body Relationship
     # @return [Array<(Relationship, Fixnum, Hash)>] Relationship data, response status code and response headers
-    def post_externalcontacts_relationships_with_http_info(opts = {})
+    def post_externalcontacts_relationships_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_relationships ..."
       end
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.post_externalcontacts_relationships" if body.nil?
       
       
       
@@ -1864,7 +1874,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -1883,21 +1893,21 @@ module PureCloud
     # Update an external contact
     # 
     # @param contact_id ExternalContact ID
+    # @param body ExternalContact
     # @param [Hash] opts the optional parameters
-    # @option opts [ExternalContact] :body ExternalContact
     # @return [ExternalContact]
-    def put_externalcontacts_contact(contact_id, opts = {})
-      data, _status_code, _headers = put_externalcontacts_contact_with_http_info(contact_id, opts)
+    def put_externalcontacts_contact(contact_id, body, opts = {})
+      data, _status_code, _headers = put_externalcontacts_contact_with_http_info(contact_id, body, opts)
       return data
     end
 
     # Update an external contact
     # 
     # @param contact_id ExternalContact ID
+    # @param body ExternalContact
     # @param [Hash] opts the optional parameters
-    # @option opts [ExternalContact] :body ExternalContact
     # @return [Array<(ExternalContact, Fixnum, Hash)>] ExternalContact data, response status code and response headers
-    def put_externalcontacts_contact_with_http_info(contact_id, opts = {})
+    def put_externalcontacts_contact_with_http_info(contact_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_contact ..."
       end
@@ -1911,6 +1921,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.put_externalcontacts_contact" if body.nil?
       
       
       
@@ -1937,7 +1949,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -1957,11 +1969,11 @@ module PureCloud
     # 
     # @param contact_id ExternalContact Id
     # @param note_id Note Id
+    # @param body Note
     # @param [Hash] opts the optional parameters
-    # @option opts [Note] :body Note
     # @return [Note]
-    def put_externalcontacts_contact_note(contact_id, note_id, opts = {})
-      data, _status_code, _headers = put_externalcontacts_contact_note_with_http_info(contact_id, note_id, opts)
+    def put_externalcontacts_contact_note(contact_id, note_id, body, opts = {})
+      data, _status_code, _headers = put_externalcontacts_contact_note_with_http_info(contact_id, note_id, body, opts)
       return data
     end
 
@@ -1969,10 +1981,10 @@ module PureCloud
     # 
     # @param contact_id ExternalContact Id
     # @param note_id Note Id
+    # @param body Note
     # @param [Hash] opts the optional parameters
-    # @option opts [Note] :body Note
     # @return [Array<(Note, Fixnum, Hash)>] Note data, response status code and response headers
-    def put_externalcontacts_contact_note_with_http_info(contact_id, note_id, opts = {})
+    def put_externalcontacts_contact_note_with_http_info(contact_id, note_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_contact_note ..."
       end
@@ -1994,6 +2006,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.put_externalcontacts_contact_note" if body.nil?
       
       
       
@@ -2020,7 +2034,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -2039,21 +2053,21 @@ module PureCloud
     # Associate an external contact with a conversation
     # 
     # @param conversation_id Conversation ID
+    # @param body ConversationAssociation
     # @param [Hash] opts the optional parameters
-    # @option opts [ConversationAssociation] :body ConversationAssociation
     # @return [nil]
-    def put_externalcontacts_conversation(conversation_id, opts = {})
-      put_externalcontacts_conversation_with_http_info(conversation_id, opts)
+    def put_externalcontacts_conversation(conversation_id, body, opts = {})
+      put_externalcontacts_conversation_with_http_info(conversation_id, body, opts)
       return nil
     end
 
     # Associate an external contact with a conversation
     # 
     # @param conversation_id Conversation ID
+    # @param body ConversationAssociation
     # @param [Hash] opts the optional parameters
-    # @option opts [ConversationAssociation] :body ConversationAssociation
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def put_externalcontacts_conversation_with_http_info(conversation_id, opts = {})
+    def put_externalcontacts_conversation_with_http_info(conversation_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_conversation ..."
       end
@@ -2067,6 +2081,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.put_externalcontacts_conversation" if body.nil?
       
       
       
@@ -2093,7 +2109,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -2111,21 +2127,21 @@ module PureCloud
     # Update an external organization
     # 
     # @param external_organization_id External Organization ID
+    # @param body ExternalOrganization
     # @param [Hash] opts the optional parameters
-    # @option opts [ExternalOrganization] :body ExternalOrganization
     # @return [ExternalOrganization]
-    def put_externalcontacts_organization(external_organization_id, opts = {})
-      data, _status_code, _headers = put_externalcontacts_organization_with_http_info(external_organization_id, opts)
+    def put_externalcontacts_organization(external_organization_id, body, opts = {})
+      data, _status_code, _headers = put_externalcontacts_organization_with_http_info(external_organization_id, body, opts)
       return data
     end
 
     # Update an external organization
     # 
     # @param external_organization_id External Organization ID
+    # @param body ExternalOrganization
     # @param [Hash] opts the optional parameters
-    # @option opts [ExternalOrganization] :body ExternalOrganization
     # @return [Array<(ExternalOrganization, Fixnum, Hash)>] ExternalOrganization data, response status code and response headers
-    def put_externalcontacts_organization_with_http_info(external_organization_id, opts = {})
+    def put_externalcontacts_organization_with_http_info(external_organization_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_organization ..."
       end
@@ -2139,6 +2155,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.put_externalcontacts_organization" if body.nil?
       
       
       
@@ -2165,7 +2183,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -2185,11 +2203,11 @@ module PureCloud
     # 
     # @param external_organization_id External Organization Id
     # @param note_id Note Id
+    # @param body Note
     # @param [Hash] opts the optional parameters
-    # @option opts [Note] :body Note
     # @return [Note]
-    def put_externalcontacts_organization_note(external_organization_id, note_id, opts = {})
-      data, _status_code, _headers = put_externalcontacts_organization_note_with_http_info(external_organization_id, note_id, opts)
+    def put_externalcontacts_organization_note(external_organization_id, note_id, body, opts = {})
+      data, _status_code, _headers = put_externalcontacts_organization_note_with_http_info(external_organization_id, note_id, body, opts)
       return data
     end
 
@@ -2197,10 +2215,10 @@ module PureCloud
     # 
     # @param external_organization_id External Organization Id
     # @param note_id Note Id
+    # @param body Note
     # @param [Hash] opts the optional parameters
-    # @option opts [Note] :body Note
     # @return [Array<(Note, Fixnum, Hash)>] Note data, response status code and response headers
-    def put_externalcontacts_organization_note_with_http_info(external_organization_id, note_id, opts = {})
+    def put_externalcontacts_organization_note_with_http_info(external_organization_id, note_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_organization_note ..."
       end
@@ -2222,6 +2240,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.put_externalcontacts_organization_note" if body.nil?
       
       
       
@@ -2248,7 +2268,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -2264,7 +2284,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Links a Trustor with an Extenral Organization
+    # Links a Trustor with an External Organization
     # 
     # @param external_organization_id External Organization ID
     # @param trustor_id Trustor ID
@@ -2275,7 +2295,7 @@ module PureCloud
       return data
     end
 
-    # Links a Trustor with an Extenral Organization
+    # Links a Trustor with an External Organization
     # 
     # @param external_organization_id External Organization ID
     # @param trustor_id Trustor ID
@@ -2342,21 +2362,21 @@ module PureCloud
     # Update a relationship
     # 
     # @param relationship_id Relationship Id
+    # @param body Relationship
     # @param [Hash] opts the optional parameters
-    # @option opts [Relationship] :body Relationship
     # @return [Relationship]
-    def put_externalcontacts_relationship(relationship_id, opts = {})
-      data, _status_code, _headers = put_externalcontacts_relationship_with_http_info(relationship_id, opts)
+    def put_externalcontacts_relationship(relationship_id, body, opts = {})
+      data, _status_code, _headers = put_externalcontacts_relationship_with_http_info(relationship_id, body, opts)
       return data
     end
 
     # Update a relationship
     # 
     # @param relationship_id Relationship Id
+    # @param body Relationship
     # @param [Hash] opts the optional parameters
-    # @option opts [Relationship] :body Relationship
     # @return [Array<(Relationship, Fixnum, Hash)>] Relationship data, response status code and response headers
-    def put_externalcontacts_relationship_with_http_info(relationship_id, opts = {})
+    def put_externalcontacts_relationship_with_http_info(relationship_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_relationship ..."
       end
@@ -2370,6 +2390,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.put_externalcontacts_relationship" if body.nil?
       
       
       
@@ -2396,7 +2418,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,

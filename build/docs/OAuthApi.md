@@ -20,11 +20,17 @@ Method | Description
 
 ## - delete_oauth_client(client_id)
 
+
+
 Delete OAuth Client
 
 
 
 Wraps DELETE /api/v2/oauth/clients/{clientId} 
+
+Requires ANY permissions: 
+
+* oauth:client:delete
 
 
 ### Example
@@ -78,11 +84,17 @@ nil (empty response body)
 
 ## -[**OAuthClient**](OAuthClient.html) get_oauth_client(client_id)
 
+
+
 Get OAuth Client
 
 
 
 Wraps GET /api/v2/oauth/clients/{clientId} 
+
+Requires ANY permissions: 
+
+* oauth:client:view
 
 
 ### Example
@@ -137,11 +149,17 @@ Name | Type | Description  | Notes
 
 ## -[**OAuthClientEntityListing**](OAuthClientEntityListing.html) get_oauth_clients
 
+
+
 The list of OAuth clients
 
 
 
 Wraps GET /api/v2/oauth/clients 
+
+Requires ANY permissions: 
+
+* oauth:client:view
 
 
 ### Example
@@ -190,11 +208,17 @@ This endpoint does not need any parameter.
 
 ## -[**OAuthClient**](OAuthClient.html) post_oauth_client_secret(client_id)
 
+
+
 Regenerate Client Secret
 
 This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
 
 Wraps POST /api/v2/oauth/clients/{clientId}/secret 
+
+Requires ANY permissions: 
+
+* oauth:client:edit
 
 
 ### Example
@@ -249,11 +273,17 @@ Name | Type | Description  | Notes
 
 ## -[**OAuthClient**](OAuthClient.html) post_oauth_clients(body)
 
+
+
 Create OAuth client
 
 The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
 
 Wraps POST /api/v2/oauth/clients 
+
+Requires ANY permissions: 
+
+* oauth:client:add
 
 
 ### Example
@@ -308,11 +338,17 @@ Name | Type | Description  | Notes
 
 ## -[**OAuthClient**](OAuthClient.html) put_oauth_client(client_id, body)
 
+
+
 Update OAuth Client
 
 
 
 Wraps PUT /api/v2/oauth/clients/{clientId} 
+
+Requires ANY permissions: 
+
+* oauth:client:edit
 
 
 ### Example

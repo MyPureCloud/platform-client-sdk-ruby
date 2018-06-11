@@ -20,11 +20,17 @@ Method | Description
 
 ## - delete_userrecording(recording_id)
 
+
+
 Delete a user recording.
 
 
 
 Wraps DELETE /api/v2/userrecordings/{recordingId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -78,11 +84,17 @@ nil (empty response body)
 
 ## -[**UserRecording**](UserRecording.html) get_userrecording(recording_id, opts)
 
+
+
 Get a user recording.
 
 
 
 Wraps GET /api/v2/userrecordings/{recordingId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -141,11 +153,17 @@ Name | Type | Description  | Notes
 
 ## -[**DownloadResponse**](DownloadResponse.html) get_userrecording_media(recording_id, opts)
 
+
+
 Download a user recording.
 
 
 
 Wraps GET /api/v2/userrecordings/{recordingId}/media 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -204,11 +222,17 @@ Name | Type | Description  | Notes
 
 ## -[**UserRecordingEntityListing**](UserRecordingEntityListing.html) get_userrecordings(opts)
 
+
+
 Get a list of user recordings.
 
 
 
 Wraps GET /api/v2/userrecordings 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -268,11 +292,17 @@ Name | Type | Description  | Notes
 
 ## -[**FaxSummary**](FaxSummary.html) get_userrecordings_summary
 
+
+
 Get user recording summary
 
 
 
 Wraps GET /api/v2/userrecordings/summary 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -321,11 +351,17 @@ This endpoint does not need any parameter.
 
 ## -[**UserRecording**](UserRecording.html) put_userrecording(recording_id, body, opts)
 
+
+
 Update a user recording.
 
 
 
 Wraps PUT /api/v2/userrecordings/{recordingId} 
+
+Requires NO permissions: 
+
+
 
 
 ### Example

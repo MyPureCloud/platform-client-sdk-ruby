@@ -18,11 +18,17 @@ Method | Description
 
 ## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) get_search(q64, opts)
 
+
+
 Search using the q64 value returned from a previous search.
 
 
 
 Wraps GET /api/v2/search 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -83,11 +89,17 @@ Name | Type | Description  | Notes
 
 ## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) get_search_suggest(q64, opts)
 
+
+
 Suggest resources using the q64 value returned from a previous suggest query.
 
 
 
 Wraps GET /api/v2/search/suggest 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -148,11 +160,17 @@ Name | Type | Description  | Notes
 
 ## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) post_search(body, opts)
 
+
+
 Search resources.
 
 
 
 Wraps POST /api/v2/search 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
@@ -211,11 +229,17 @@ Name | Type | Description  | Notes
 
 ## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) post_search_suggest(body, opts)
 
+
+
 Suggest resources.
 
 
 
 Wraps POST /api/v2/search/suggest 
+
+Requires NO permissions: 
+
+
 
 
 ### Example
