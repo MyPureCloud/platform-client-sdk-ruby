@@ -24,6 +24,9 @@ module PureCloud
 
     attr_accessor :name
 
+    # The division to which this entity belongs.
+    attr_accessor :division
+
     # Start day of week for scheduling and forecasting purposes
     attr_accessor :start_day_of_week
 
@@ -56,6 +59,8 @@ module PureCloud
         
         :'name' => :'name',
         
+        :'division' => :'division',
+        
         :'start_day_of_week' => :'startDayOfWeek',
         
         :'time_zone' => :'timeZone',
@@ -82,6 +87,8 @@ module PureCloud
         :'id' => :'String',
         
         :'name' => :'String',
+        
+        :'division' => :'Division',
         
         :'start_day_of_week' => :'String',
         
@@ -124,6 +131,15 @@ module PureCloud
         
         
         self.name = attributes[:'name']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'division')
+        
+        
+        self.division = attributes[:'division']
         
       
       end
@@ -226,6 +242,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
       if @start_day_of_week && !allowed_values.include?(@start_day_of_week)
         return false
@@ -273,6 +293,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -340,6 +365,7 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
+          division == o.division &&
           start_day_of_week == o.start_day_of_week &&
           time_zone == o.time_zone &&
           settings == o.settings &&
@@ -359,7 +385,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, start_day_of_week, time_zone, settings, version, date_modified, modified_by, metadata, self_uri].hash
+      [id, name, division, start_day_of_week, time_zone, settings, version, date_modified, modified_by, metadata, self_uri].hash
     end
 
     # build the object from hash

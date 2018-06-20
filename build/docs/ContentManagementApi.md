@@ -64,7 +64,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -132,7 +131,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -196,7 +194,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -257,7 +254,6 @@ Delete a workspace
 Wraps DELETE /api/v2/contentmanagement/workspaces/{workspaceId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -328,7 +324,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -392,7 +387,6 @@ Delete a tag from a workspace. Will remove this tag from all documents.
 Wraps DELETE /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -462,7 +456,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -528,7 +521,6 @@ Get a list of audits for a document.
 Wraps GET /api/v2/contentmanagement/documents/{documentId}/audits 
 
 Requires NO permissions: 
-
 
 
 
@@ -610,7 +602,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -678,7 +669,6 @@ Get a list of documents.
 Wraps GET /api/v2/contentmanagement/documents 
 
 Requires NO permissions: 
-
 
 
 
@@ -760,7 +750,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -837,7 +826,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -902,7 +890,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -958,7 +945,6 @@ Retrieve details about an existing share.
 Wraps GET /api/v2/contentmanagement/shares/{shareId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -1027,7 +1013,6 @@ This method requires the download sharing URI obtained in the get document respo
 Wraps GET /api/v2/contentmanagement/shared/{sharedId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -1105,7 +1090,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1177,7 +1161,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1245,7 +1228,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1310,7 +1292,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1366,7 +1347,6 @@ Get a workspace.
 Wraps GET /api/v2/contentmanagement/workspaces/{workspaceId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -1435,7 +1415,6 @@ Get a list of documents.
 Wraps GET /api/v2/contentmanagement/workspaces/{workspaceId}/documents 
 
 Requires NO permissions: 
-
 
 
 
@@ -1515,7 +1494,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1584,7 +1562,6 @@ Get a list workspace members
 Wraps GET /api/v2/contentmanagement/workspaces/{workspaceId}/members 
 
 Requires NO permissions: 
-
 
 
 
@@ -1660,7 +1637,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1729,7 +1705,6 @@ Get a list of workspace tags
 Wraps GET /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues 
 
 Requires NO permissions: 
-
 
 
 
@@ -1807,7 +1782,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1879,7 +1853,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1941,7 +1914,6 @@ Update a document.
 Wraps POST /api/v2/contentmanagement/documents/{documentId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -2018,7 +1990,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2087,7 +2058,6 @@ Add a document.
 Wraps POST /api/v2/contentmanagement/documents 
 
 Requires NO permissions: 
-
 
 
 
@@ -2163,7 +2133,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2232,7 +2201,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2294,7 +2262,6 @@ Create a workspace tag
 Wraps POST /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues 
 
 Requires NO permissions: 
-
 
 
 
@@ -2362,7 +2329,6 @@ Perform a prefix query on tags in the workspace
 Wraps POST /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query 
 
 Requires NO permissions: 
-
 
 
 
@@ -2437,7 +2403,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2499,7 +2464,6 @@ Update a workspace
 Wraps PUT /api/v2/contentmanagement/workspaces/{workspaceId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -2570,7 +2534,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2638,7 +2601,6 @@ Update a workspace tag. Will update all documents with the new tag value.
 Wraps PUT /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} 
 
 Requires NO permissions: 
-
 
 
 

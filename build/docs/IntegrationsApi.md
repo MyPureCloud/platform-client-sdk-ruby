@@ -67,7 +67,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -260,7 +259,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -321,7 +319,6 @@ Get integration.
 Wraps GET /api/v2/integrations/{integrationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -403,7 +400,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -465,7 +461,6 @@ List integrations
 Wraps GET /api/v2/integrations 
 
 Requires NO permissions: 
-
 
 
 
@@ -542,7 +537,8 @@ Wraps GET /api/v2/integrations/actions/{actionId}
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 
 ### Example
@@ -613,7 +609,8 @@ Wraps GET /api/v2/integrations/actions/{actionId}/draft
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 
 ### Example
@@ -684,7 +681,8 @@ Wraps GET /api/v2/integrations/actions/{actionId}/draft/schemas/{fileName}
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 
 ### Example
@@ -752,7 +750,8 @@ Wraps GET /api/v2/integrations/actions/{actionId}/draft/templates/{fileName}
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 
 ### Example
@@ -885,7 +884,8 @@ Wraps GET /api/v2/integrations/actions/{actionId}/schemas/{fileName}
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 
 ### Example
@@ -953,7 +953,8 @@ Wraps GET /api/v2/integrations/actions/{actionId}/templates/{fileName}
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 
 ### Example
@@ -1021,7 +1022,8 @@ Wraps GET /api/v2/integrations/actions
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 
 ### Example
@@ -1103,7 +1105,8 @@ Wraps GET /api/v2/integrations/actions/categories
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 
 ### Example
@@ -1181,7 +1184,8 @@ Wraps GET /api/v2/integrations/actions/drafts
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 
 ### Example
@@ -1265,7 +1269,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1341,7 +1344,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1403,7 +1405,6 @@ List multiple sets of credentials
 Wraps GET /api/v2/integrations/credentials 
 
 Requires NO permissions: 
-
 
 
 
@@ -1474,7 +1475,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1531,7 +1531,8 @@ Wraps GET /api/v2/integrations/eventlog
 
 Requires ANY permissions: 
 
-* integrations:integration:view* bridge:notification:view
+* integrations:integration:view
+* bridge:notification:view
 
 
 ### Example
@@ -1605,7 +1606,8 @@ Wraps GET /api/v2/integrations/eventlog/{eventId}
 
 Requires ANY permissions: 
 
-* integrations:integration:view* bridge:notification:view
+* integrations:integration:view
+* bridge:notification:view
 
 
 ### Example
@@ -1669,7 +1671,6 @@ Get integration type.
 Wraps GET /api/v2/integrations/types/{typeId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -1737,7 +1738,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1802,7 +1802,6 @@ List integration types
 Wraps GET /api/v2/integrations/types 
 
 Requires NO permissions: 
-
 
 
 
@@ -1878,7 +1877,6 @@ Update an integration.
 Wraps PATCH /api/v2/integrations/{integrationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -2095,7 +2093,6 @@ Create an integration.
 Wraps POST /api/v2/integrations 
 
 Requires NO permissions: 
-
 
 
 
@@ -2363,7 +2360,8 @@ Wraps POST /api/v2/integrations/actions/{actionId}/execute
 
 Requires ANY permissions: 
 
-* integrations:action:execute* bridge:actions:execute
+* integrations:action:execute
+* bridge:actions:execute
 
 
 ### Example
@@ -2431,7 +2429,8 @@ Wraps POST /api/v2/integrations/actions/{actionId}/test
 
 Requires ANY permissions: 
 
-* integrations:action:execute* bridge:actions:execute
+* integrations:action:execute
+* bridge:actions:execute
 
 
 ### Example
@@ -2631,7 +2630,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2694,7 +2692,6 @@ Add a vendor connection
 Wraps POST /api/v2/integrations/workforcemanagement/vendorconnection 
 
 Requires NO permissions: 
-
 
 
 
@@ -2763,7 +2760,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2829,7 +2825,6 @@ Update a set of credentials
 Wraps PUT /api/v2/integrations/credentials/{credentialId} 
 
 Requires NO permissions: 
-
 
 
 

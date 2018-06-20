@@ -78,7 +78,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -141,7 +140,9 @@ Wraps DELETE /api/v2/users/{userId}/roles
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:delete
+* admin
+* role_manager
+* authorization:grant:delete
 
 
 ### Example
@@ -205,7 +206,8 @@ Wraps DELETE /api/v2/users/{userId}/routinglanguages/{languageId}
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example
@@ -272,7 +274,8 @@ Wraps DELETE /api/v2/users/{userId}/routingskills/{skillId}
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example
@@ -341,7 +344,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -403,7 +405,8 @@ Wraps DELETE /api/v2/users/{userId}/station/defaultstation
 
 Requires ANY permissions: 
 
-* telephony:plugin:all* telephony:phone:assign
+* telephony:plugin:all
+* telephony:phone:assign
 
 
 ### Example
@@ -469,7 +472,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -531,7 +533,6 @@ Get a user profile listing
 Wraps GET /api/v2/profiles/users 
 
 Requires NO permissions: 
-
 
 
 
@@ -612,7 +613,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -680,7 +680,6 @@ Get adjacents
 Wraps GET /api/v2/users/{userId}/adjacents 
 
 Requires NO permissions: 
-
 
 
 
@@ -752,7 +751,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -814,7 +812,6 @@ Get direct reports
 Wraps GET /api/v2/users/{userId}/directreports 
 
 Requires NO permissions: 
-
 
 
 
@@ -883,7 +880,6 @@ Get favorites
 Wraps GET /api/v2/users/{userId}/favorites 
 
 Requires NO permissions: 
-
 
 
 
@@ -961,7 +957,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1029,7 +1024,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1091,7 +1085,6 @@ Get user profile
 Wraps GET /api/v2/users/{userId}/profile 
 
 Requires NO permissions: 
-
 
 
 
@@ -1368,7 +1361,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1438,7 +1430,6 @@ List routing skills for user
 Wraps GET /api/v2/users/{userId}/routingskills 
 
 Requires NO permissions: 
-
 
 
 
@@ -1514,7 +1505,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1579,7 +1569,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1641,7 +1630,6 @@ Get superiors
 Wraps GET /api/v2/users/{userId}/superiors 
 
 Requires NO permissions: 
-
 
 
 
@@ -1784,7 +1772,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1860,7 +1847,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1923,7 +1909,6 @@ Search users using the q64 value returned from a previous search
 Wraps GET /api/v2/users/search 
 
 Requires NO permissions: 
-
 
 
 
@@ -1995,7 +1980,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2063,7 +2047,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2128,7 +2111,6 @@ The geolocation object can be patched one of three ways. Option 1: Set the 'prim
 Wraps PATCH /api/v2/users/{userId}/geolocations/{clientId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -2343,7 +2325,8 @@ Wraps PATCH /api/v2/users/{userId}/routinglanguages/{languageId}
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example
@@ -2609,7 +2592,9 @@ Wraps POST /api/v2/users/{userId}/invite
 
 Requires ANY permissions: 
 
-* directory:user:add* user_manager* user_administration
+* directory:user:add
+* user_manager
+* user_administration
 
 
 ### Example
@@ -2677,7 +2662,8 @@ Wraps POST /api/v2/users/{userId}/password
 
 Requires ANY permissions: 
 
-* user_administration* directory:userPassword:edit
+* user_administration
+* directory:userPassword:edit
 
 
 ### Example
@@ -2744,7 +2730,8 @@ Wraps POST /api/v2/users/{userId}/routinglanguages
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example
@@ -2812,7 +2799,8 @@ Wraps POST /api/v2/users/{userId}/routingskills
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example
@@ -2947,7 +2935,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3008,7 +2995,6 @@ Search users
 Wraps POST /api/v2/users/search 
 
 Requires NO permissions: 
-
 
 
 
@@ -3073,7 +3059,6 @@ Update a user's CallForwarding
 Wraps PUT /api/v2/users/{userId}/callforwarding 
 
 Requires NO permissions: 
-
 
 
 
@@ -3144,7 +3129,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3210,7 +3194,10 @@ Wraps PUT /api/v2/users/{userId}/profileskills
 
 Requires ANY permissions: 
 
-* directory:userProfile:edit* admin* user_manager* user_administration
+* directory:userProfile:edit
+* admin
+* user_manager
+* user_administration
 
 
 ### Example
@@ -3279,7 +3266,9 @@ Wraps PUT /api/v2/users/{userId}/roles
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:add
+* admin
+* role_manager
+* authorization:grant:add
 
 
 ### Example
@@ -3347,7 +3336,8 @@ Wraps PUT /api/v2/users/{userId}/routingskills/{skillId}
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example
@@ -3420,7 +3410,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3488,7 +3477,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3553,7 +3541,8 @@ Wraps PUT /api/v2/users/{userId}/station/defaultstation/{stationId}
 
 Requires ANY permissions: 
 
-* telephony:plugin:all* telephony:phone:assign
+* telephony:plugin:all
+* telephony:phone:assign
 
 
 ### Example

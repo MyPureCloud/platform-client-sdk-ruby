@@ -33,7 +33,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -94,7 +93,6 @@ Get available notification topics.
 Wraps GET /api/v2/notifications/availabletopics 
 
 Requires NO permissions: 
-
 
 
 
@@ -163,7 +161,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -225,7 +222,6 @@ The list of existing channels
 Wraps GET /api/v2/notifications/channels 
 
 Requires NO permissions: 
-
 
 
 
@@ -291,7 +287,6 @@ Add a list of subscriptions to the existing list of subscriptions
 Wraps POST /api/v2/notifications/channels/{channelId}/subscriptions 
 
 Requires NO permissions: 
-
 
 
 
@@ -362,7 +357,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -418,7 +412,6 @@ Replace the current list of subscriptions with a new list.
 Wraps PUT /api/v2/notifications/channels/{channelId}/subscriptions 
 
 Requires NO permissions: 
-
 
 
 

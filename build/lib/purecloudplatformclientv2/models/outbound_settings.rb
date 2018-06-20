@@ -35,6 +35,9 @@ module PureCloud
     # The maximum number of calls that can be placed per agent on any campaign
     attr_accessor :max_calls_per_agent
 
+    # The maximum number of calls that can be configured to be placed per agent on any campaign
+    attr_accessor :max_configurable_calls_per_agent
+
     # The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0]
     attr_accessor :max_line_utilization
 
@@ -63,6 +66,8 @@ module PureCloud
         
         :'max_calls_per_agent' => :'maxCallsPerAgent',
         
+        :'max_configurable_calls_per_agent' => :'maxConfigurableCallsPerAgent',
+        
         :'max_line_utilization' => :'maxLineUtilization',
         
         :'abandon_seconds' => :'abandonSeconds',
@@ -89,6 +94,8 @@ module PureCloud
         :'version' => :'Integer',
         
         :'max_calls_per_agent' => :'Integer',
+        
+        :'max_configurable_calls_per_agent' => :'Integer',
         
         :'max_line_utilization' => :'Float',
         
@@ -159,6 +166,15 @@ module PureCloud
         
         
         self.max_calls_per_agent = attributes[:'maxCallsPerAgent']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'maxConfigurableCallsPerAgent')
+        
+        
+        self.max_configurable_calls_per_agent = attributes[:'maxConfigurableCallsPerAgent']
         
       
       end
@@ -249,6 +265,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["ALL_CALLS", "CALLS_THAT_REACHED_QUEUE"]
       if @compliance_abandon_rate_denominator && !allowed_values.include?(@compliance_abandon_rate_denominator)
         return false
@@ -262,6 +282,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -333,6 +358,7 @@ module PureCloud
           date_modified == o.date_modified &&
           version == o.version &&
           max_calls_per_agent == o.max_calls_per_agent &&
+          max_configurable_calls_per_agent == o.max_configurable_calls_per_agent &&
           max_line_utilization == o.max_line_utilization &&
           abandon_seconds == o.abandon_seconds &&
           compliance_abandon_rate_denominator == o.compliance_abandon_rate_denominator &&
@@ -348,7 +374,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, max_calls_per_agent, max_line_utilization, abandon_seconds, compliance_abandon_rate_denominator, self_uri].hash
+      [id, name, date_created, date_modified, version, max_calls_per_agent, max_configurable_calls_per_agent, max_line_utilization, abandon_seconds, compliance_abandon_rate_denominator, self_uri].hash
     end
 
     # build the object from hash

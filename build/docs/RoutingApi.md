@@ -33,6 +33,7 @@ Method | Description
 [**get_routing_queue_users**](RoutingApi.html#get_routing_queue_users) | Get the members of this queue
 [**get_routing_queue_wrapupcodes**](RoutingApi.html#get_routing_queue_wrapupcodes) | Get the wrap-up codes for a queue
 [**get_routing_queues**](RoutingApi.html#get_routing_queues) | Get list of queues.
+[**get_routing_queues_search**](RoutingApi.html#get_routing_queues_search) | Search for queues by name
 [**get_routing_skill**](RoutingApi.html#get_routing_skill) | Get Routing Skill
 [**get_routing_skills**](RoutingApi.html#get_routing_skills) | Get the list of routing skills.
 [**get_routing_sms_availablephonenumbers**](RoutingApi.html#get_routing_sms_availablephonenumbers) | Get a list of available phone numbers for SMS provisioning.
@@ -665,7 +666,8 @@ Wraps DELETE /api/v2/users/{userId}/routinglanguages/{languageId}
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example
@@ -732,7 +734,8 @@ Wraps DELETE /api/v2/users/{userId}/routingskills/{skillId}
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example
@@ -1746,6 +1749,84 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_routing_queues_search"></a>
+
+## -[**QueueEntityListing**](QueueEntityListing.html) get_routing_queues_search(opts)
+
+
+
+Search for queues by name
+
+
+
+Wraps GET /api/v2/routing/queues/search 
+
+Requires ANY permissions: 
+
+* routing:queue:search
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  sort_by: "name", # String | Sort by
+  sort_order: "asc", # String | Sort order
+  name: "name_example", # String | Name
+  id: ["id_example"], # Array<String> | Queue ID(s)
+  division_id: ["division_id_example"] # Array<String> | Division ID(s)
+}
+
+begin
+  #Search for queues by name
+  result = api_instance.get_routing_queues_search(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->get_routing_queues_search: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc, score |
+ **name** | **String**| Name | [optional]  |
+ **id** | [**Array&lt;String&gt;**](String.html)| Queue ID(s) | [optional]  |
+ **division_id** | [**Array&lt;String&gt;**](String.html)| Division ID(s) | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**QueueEntityListing**](QueueEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_routing_skill"></a>
 
 ## -[**RoutingSkill**](RoutingSkill.html) get_routing_skill(skill_id)
@@ -2114,7 +2195,8 @@ Wraps GET /api/v2/routing/utilization
 
 Requires ANY permissions: 
 
-* routing:utilization:manage* routing:utilization:view
+* routing:utilization:manage
+* routing:utilization:view
 
 
 ### Example
@@ -2312,7 +2394,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2382,7 +2463,6 @@ List routing skills for user
 Wraps GET /api/v2/users/{userId}/routingskills 
 
 Requires NO permissions: 
-
 
 
 
@@ -2595,7 +2675,8 @@ Wraps PATCH /api/v2/users/{userId}/routinglanguages/{languageId}
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example
@@ -3394,7 +3475,8 @@ Wraps POST /api/v2/users/{userId}/routinglanguages
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example
@@ -3462,7 +3544,8 @@ Wraps POST /api/v2/users/{userId}/routingskills
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example
@@ -3938,7 +4021,8 @@ Wraps PUT /api/v2/users/{userId}/routingskills/{skillId}
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 
 ### Example

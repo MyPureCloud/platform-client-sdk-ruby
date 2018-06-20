@@ -24,6 +24,9 @@ module PureCloud
     # The flow name
     attr_accessor :name
 
+    # The division to which this entity belongs.
+    attr_accessor :division
+
     attr_accessor :type
 
     # The URI for this object
@@ -36,6 +39,8 @@ module PureCloud
         :'id' => :'id',
         
         :'name' => :'name',
+        
+        :'division' => :'division',
         
         :'type' => :'type',
         
@@ -51,6 +56,8 @@ module PureCloud
         :'id' => :'String',
         
         :'name' => :'String',
+        
+        :'division' => :'Division',
         
         :'type' => :'String',
         
@@ -81,6 +88,15 @@ module PureCloud
         
         
         self.name = attributes[:'name']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'division')
+        
+        
+        self.division = attributes[:'division']
         
       
       end
@@ -134,6 +150,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["INBOUNDCALL", "INBOUNDEMAIL", "INBOUNDSHORTMESSAGE", "INQUEUECALL", "OUTBOUNDCALL", "SECURECALL", "SPEECH", "SURVEYINVITE", "WORKFLOW"]
       if @type && !allowed_values.include?(@type)
         return false
@@ -147,6 +167,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -184,6 +209,7 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
+          division == o.division &&
           type == o.type &&
           self_uri == o.self_uri
     end
@@ -197,7 +223,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, type, self_uri].hash
+      [id, name, division, type, self_uri].hash
     end
 
     # build the object from hash

@@ -28,7 +28,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -83,7 +82,6 @@ Fetch information about the current token
 Wraps GET /api/v2/tokens/me 
 
 Requires NO permissions: 
-
 
 
 

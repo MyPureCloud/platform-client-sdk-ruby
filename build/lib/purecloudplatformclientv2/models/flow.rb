@@ -107,7 +107,7 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'division' => :'UriReference',
+        :'division' => :'Division',
         
         :'description' => :'String',
         

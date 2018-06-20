@@ -30,7 +30,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -98,7 +97,6 @@ Suggest resources using the q64 value returned from a previous suggest query.
 Wraps GET /api/v2/search/suggest 
 
 Requires NO permissions: 
-
 
 
 
@@ -172,7 +170,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -238,7 +235,6 @@ Suggest resources.
 Wraps POST /api/v2/search/suggest 
 
 Requires NO permissions: 
-
 
 
 

@@ -32,7 +32,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -93,7 +92,6 @@ Get a user recording.
 Wraps GET /api/v2/userrecordings/{recordingId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -165,7 +163,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -231,7 +228,6 @@ Get a list of user recordings.
 Wraps GET /api/v2/userrecordings 
 
 Requires NO permissions: 
-
 
 
 
@@ -304,7 +300,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -360,7 +355,6 @@ Update a user recording.
 Wraps PUT /api/v2/userrecordings/{recordingId} 
 
 Requires NO permissions: 
-
 
 
 

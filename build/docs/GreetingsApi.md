@@ -42,7 +42,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -103,7 +102,6 @@ Get a Greeting with the given GreetingId
 Wraps GET /api/v2/greetings/{greetingId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -168,7 +166,6 @@ Get media playback URI for this greeting
 Wraps GET /api/v2/greetings/{greetingId}/media 
 
 Requires NO permissions: 
-
 
 
 
@@ -240,7 +237,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -308,7 +304,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -364,7 +359,6 @@ Get a list of the Group's Greetings
 Wraps GET /api/v2/groups/{groupId}/greetings 
 
 Requires NO permissions: 
-
 
 
 
@@ -438,7 +432,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -500,7 +493,6 @@ Get a list of the User's Greetings
 Wraps GET /api/v2/users/{userId}/greetings 
 
 Requires NO permissions: 
-
 
 
 
@@ -574,7 +566,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -639,7 +630,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -701,7 +691,6 @@ Creates a Greeting for a Group
 Wraps POST /api/v2/groups/{groupId}/greetings 
 
 Requires NO permissions: 
-
 
 
 
@@ -772,7 +761,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -837,7 +825,6 @@ Updates the Greeting with the given GreetingId
 Wraps PUT /api/v2/greetings/{greetingId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -908,7 +895,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -970,7 +956,6 @@ Updates the DefaultGreetingList of the specified Group
 Wraps PUT /api/v2/groups/{groupId}/greetings/defaults 
 
 Requires NO permissions: 
-
 
 
 
@@ -1038,7 +1023,6 @@ Updates the DefaultGreetingList of the specified User
 Wraps PUT /api/v2/users/{userId}/greetings/defaults 
 
 Requires NO permissions: 
-
 
 
 

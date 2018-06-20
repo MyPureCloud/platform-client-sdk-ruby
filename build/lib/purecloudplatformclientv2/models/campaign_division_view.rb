@@ -52,7 +52,7 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'division' => :'UriReference',
+        :'division' => :'Division',
         
         :'self_uri' => :'String'
         

@@ -101,7 +101,21 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/activitycodes
 
 Requires ANY permissions: 
 
-* wfm:activityCode:administer* wfm:agent:administer* wfm:agentSchedule:view* wfm:historicalAdherence:view* wfm:intraday:view* wfm:managementUnit:administer* wfm:publishedSchedule:view* wfm:realtimeAdherence:view* wfm:schedule:administer* wfm:schedule:generate* wfm:serviceGoalGroup:administer* wfm:shortTermForecast:administer* wfm:agentTimeOffRequest:submit* wfm:timeOffRequest:administer* wfm:workPlan:administer
+* wfm:activityCode:administer
+* wfm:agent:administer
+* wfm:agentSchedule:view
+* wfm:historicalAdherence:view
+* wfm:intraday:view
+* wfm:managementUnit:administer
+* wfm:publishedSchedule:view
+* wfm:realtimeAdherence:view
+* wfm:schedule:administer
+* wfm:schedule:generate
+* wfm:serviceGoalGroup:administer
+* wfm:shortTermForecast:administer
+* wfm:agentTimeOffRequest:submit
+* wfm:timeOffRequest:administer
+* wfm:workPlan:administer
 
 
 ### Example
@@ -378,6 +392,9 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/users
 Requires ANY permissions: 
 
 * wfm:agent:administer
+* wfm:timeOffRequest:administer
+* wfm:realtimeAdherence:view
+* wfm:historicalAdherence:view
 
 
 ### Example
@@ -444,7 +461,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -465,7 +481,9 @@ api_instance = PureCloud::WorkforceManagementApi.new
 opts = { 
   page_size: 56, # Integer | 
   page_number: 56, # Integer | 
-  expand: "expand_example" # String | 
+  expand: "expand_example", # String | 
+  feature: "feature_example", # String | 
+  division_id: "division_id_example" # String | 
 }
 
 begin
@@ -484,6 +502,8 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**|  | [optional]  |
  **page_number** | **Integer**|  | [optional]  |
  **expand** | **String**|  | [optional] <br />**Values**: details |
+ **feature** | **String**|  | [optional] <br />**Values**: Agents, ActivityCodes, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ShortTermForecasts, TimeOffRequests, WorkPlans |
+ **division_id** | **String**|  | [optional]  |
 {: class="table table-striped"}
 
 
@@ -794,7 +814,8 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/schedules/search
 
 Requires ANY permissions: 
 
-* wfm:schedule:administer* wfm:publishedSchedule:view
+* wfm:schedule:administer
+* wfm:publishedSchedule:view
 
 
 ### Example

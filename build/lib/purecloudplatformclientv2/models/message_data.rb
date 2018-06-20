@@ -50,6 +50,9 @@ module PureCloud
     # The media details associated to a message.
     attr_accessor :media
 
+    # The sticker details associated to a message.
+    attr_accessor :stickers
+
     # User who sent this message.
     attr_accessor :created_by
 
@@ -81,6 +84,8 @@ module PureCloud
         :'status' => :'status',
         
         :'media' => :'media',
+        
+        :'stickers' => :'stickers',
         
         :'created_by' => :'createdBy',
         
@@ -114,6 +119,8 @@ module PureCloud
         :'status' => :'String',
         
         :'media' => :'Array<MessageMedia>',
+        
+        :'stickers' => :'Array<MessageSticker>',
         
         :'created_by' => :'User',
         
@@ -225,6 +232,17 @@ module PureCloud
         
         if (value = attributes[:'media']).is_a?(Array)
           self.media = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'stickers')
+        
+        if (value = attributes[:'stickers']).is_a?(Array)
+          self.stickers = value
         end
         
         
@@ -347,6 +365,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -442,6 +464,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -458,6 +485,7 @@ module PureCloud
           text_body == o.text_body &&
           status == o.status &&
           media == o.media &&
+          stickers == o.stickers &&
           created_by == o.created_by &&
           self_uri == o.self_uri
     end
@@ -471,7 +499,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, provider_message_id, timestamp, from_address, to_address, direction, messenger_type, text_body, status, media, created_by, self_uri].hash
+      [id, name, provider_message_id, timestamp, from_address, to_address, direction, messenger_type, text_body, status, media, stickers, created_by, self_uri].hash
     end
 
     # build the object from hash

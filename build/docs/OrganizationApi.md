@@ -30,7 +30,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -92,7 +91,6 @@ Get organization.
 Wraps GET /api/v2/organizations/me 
 
 Requires NO permissions: 
-
 
 
 

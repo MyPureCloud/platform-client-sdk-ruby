@@ -165,7 +165,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -356,7 +355,6 @@ Gets user unread count of interaction stats alerts.
 Wraps GET /api/v2/alerting/interactionstats/alerts/unread 
 
 Requires NO permissions: 
-
 
 
 

@@ -76,7 +76,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -141,7 +140,6 @@ Delete an evaluation
 Wraps DELETE /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -408,7 +406,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -472,7 +469,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -533,7 +529,6 @@ Including the number of evaluations and average evaluation score
 Wraps GET /api/v2/quality/agents/activity 
 
 Requires NO permissions: 
-
 
 
 
@@ -624,7 +619,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -692,7 +686,6 @@ Get the list of calibrations
 Wraps GET /api/v2/quality/calibrations 
 
 Requires NO permissions: 
-
 
 
 
@@ -780,7 +773,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -863,7 +855,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -932,7 +923,6 @@ Query params must include one of conversationId, evaluatorUserId, or agentUserId
 Wraps GET /api/v2/quality/evaluations/query 
 
 Requires NO permissions: 
-
 
 
 
@@ -1032,7 +1022,6 @@ Get an evaluator activity
 Wraps GET /api/v2/quality/evaluators/activity 
 
 Requires NO permissions: 
-
 
 
 
@@ -1763,7 +1752,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1825,7 +1813,6 @@ Get the list of keyword sets
 Wraps GET /api/v2/quality/keywordsets 
 
 Requires NO permissions: 
-
 
 
 
@@ -2450,7 +2437,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2516,7 +2502,6 @@ Create an evaluation
 Wraps POST /api/v2/quality/conversations/{conversationId}/evaluations 
 
 Requires NO permissions: 
-
 
 
 
@@ -2588,7 +2573,6 @@ Score evaluation
 Wraps POST /api/v2/quality/evaluations/scoring 
 
 Requires NO permissions: 
-
 
 
 
@@ -2848,7 +2832,6 @@ Create a Keyword Set
 Wraps POST /api/v2/quality/keywordsets 
 
 Requires NO permissions: 
-
 
 
 
@@ -3115,7 +3098,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3178,7 +3160,6 @@ Update a calibration to the specified calibration via PUT.  Editable fields incl
 Wraps PUT /api/v2/quality/calibrations/{calibrationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -3246,7 +3227,6 @@ Update an evaluation
 Wraps PUT /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -3525,7 +3505,6 @@ Update a keywordSet to the specified keywordSet via PUT.
 Wraps PUT /api/v2/quality/keywordsets/{keywordSetId} 
 
 Requires NO permissions: 
-
 
 
 

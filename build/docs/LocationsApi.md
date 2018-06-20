@@ -95,7 +95,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -165,7 +164,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -231,7 +229,6 @@ Search locations
 Wraps POST /api/v2/locations/search 
 
 Requires NO permissions: 
-
 
 
 

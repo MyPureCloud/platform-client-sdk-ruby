@@ -29,7 +29,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -85,7 +84,6 @@ Get time zones list
 Wraps GET /api/v2/timezones 
 
 Requires NO permissions: 
-
 
 
 
@@ -153,7 +151,6 @@ Returns the information about an X509 PEM encoded certificate or certificate cha
 Wraps POST /api/v2/certificate/details 
 
 Requires NO permissions: 
-
 
 
 

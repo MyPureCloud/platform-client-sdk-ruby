@@ -301,7 +301,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -357,7 +356,6 @@ Get the builtin translation for a language
 Wraps GET /api/v2/languages/translations/builtin 
 
 Requires NO permissions: 
-
 
 
 
@@ -425,7 +423,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -487,7 +484,6 @@ Get effective language translation for a user
 Wraps GET /api/v2/languages/translations/users/{userId} 
 
 Requires NO permissions: 
-
 
 
 

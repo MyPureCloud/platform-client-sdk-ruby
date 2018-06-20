@@ -31,7 +31,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -92,7 +91,6 @@ Get device
 Wraps GET /api/v2/mobiledevices/{deviceId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -157,7 +155,6 @@ Get a list of all devices.
 Wraps GET /api/v2/mobiledevices 
 
 Requires NO permissions: 
-
 
 
 
@@ -230,7 +227,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -292,7 +288,6 @@ Update device
 Wraps PUT /api/v2/mobiledevices/{deviceId} 
 
 Requires NO permissions: 
-
 
 
 

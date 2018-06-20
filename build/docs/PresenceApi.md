@@ -98,7 +98,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -164,7 +163,6 @@ Get an Organization's list of Presence Definitions
 Wraps GET /api/v2/presencedefinitions 
 
 Requires NO permissions: 
-
 
 
 
@@ -239,7 +237,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -295,7 +292,6 @@ Get a user's Presence
 Wraps GET /api/v2/users/{userId}/presences/{sourceId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -363,7 +359,6 @@ The presence object can be patched one of three ways. Option 1: Set the 'primary
 Wraps PATCH /api/v2/users/{userId}/presences/{sourceId} 
 
 Requires NO permissions: 
-
 
 
 

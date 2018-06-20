@@ -2337,7 +2337,8 @@ Wraps GET /api/v2/outbound/contactlists/{contactListId}/export
 
 Requires ALL permissions: 
 
-* outbound:contact:view* outbound:contactList:view
+* outbound:contact:view
+* outbound:contactList:view
 
 
 ### Example
@@ -2767,7 +2768,8 @@ Wraps GET /api/v2/outbound/dnclists/{dncListId}/export
 
 Requires ALL permissions: 
 
-* outbound:dnc:view* outbound:dncList:view
+* outbound:dnc:view
+* outbound:dncList:view
 
 
 ### Example
@@ -4110,7 +4112,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -4515,7 +4516,8 @@ Wraps POST /api/v2/outbound/contactlists/{contactListId}/export
 
 Requires ALL permissions: 
 
-* outbound:contact:view* outbound:contactList:view
+* outbound:contact:view
+* outbound:contactList:view
 
 
 ### Example
@@ -4839,7 +4841,8 @@ Wraps POST /api/v2/outbound/dnclists/{dncListId}/export
 
 Requires ALL permissions: 
 
-* outbound:dnc:view* outbound:dncList:view
+* outbound:dnc:view
+* outbound:dncList:view
 
 
 ### Example
@@ -5437,7 +5440,6 @@ New agent state.
 Wraps PUT /api/v2/outbound/campaigns/{campaignId}/agents/{userId} 
 
 Requires NO permissions: 
-
 
 
 

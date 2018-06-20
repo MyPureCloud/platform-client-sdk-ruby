@@ -40,7 +40,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -102,7 +101,6 @@ Search groups using the q64 value returned from a previous search
 Wraps GET /api/v2/groups/search 
 
 Requires NO permissions: 
-
 
 
 
@@ -174,7 +172,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -240,7 +237,6 @@ Search using the q64 value returned from a previous search.
 Wraps GET /api/v2/search 
 
 Requires NO permissions: 
-
 
 
 
@@ -314,7 +310,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -382,7 +377,6 @@ Search users using the q64 value returned from a previous search
 Wraps GET /api/v2/users/search 
 
 Requires NO permissions: 
-
 
 
 
@@ -454,7 +448,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -523,7 +516,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -585,7 +577,6 @@ Search groups
 Wraps POST /api/v2/groups/search 
 
 Requires NO permissions: 
-
 
 
 
@@ -653,7 +644,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -715,7 +705,6 @@ Search resources.
 Wraps POST /api/v2/search 
 
 Requires NO permissions: 
-
 
 
 
@@ -787,7 +776,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -856,7 +844,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -918,7 +905,6 @@ Search voicemails
 Wraps POST /api/v2/voicemail/search 
 
 Requires NO permissions: 
-
 
 
 

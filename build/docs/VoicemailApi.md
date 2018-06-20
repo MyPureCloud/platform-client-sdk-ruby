@@ -50,7 +50,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -114,7 +113,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -169,7 +167,6 @@ Get the group's mailbox information
 Wraps GET /api/v2/voicemail/groups/{groupId}/mailbox 
 
 Requires NO permissions: 
-
 
 
 
@@ -234,7 +231,6 @@ List voicemail messages
 Wraps GET /api/v2/voicemail/groups/{groupId}/messages 
 
 Requires NO permissions: 
-
 
 
 
@@ -306,7 +302,10 @@ Wraps GET /api/v2/voicemail/groups/{groupId}/policy
 
 Requires ANY permissions: 
 
-* directory:group:add* directory:group:edit* group_administration* group_creation
+* directory:group:add
+* directory:group:edit
+* group_administration
+* group_creation
 
 
 ### Example
@@ -373,7 +372,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -432,7 +430,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -488,7 +485,6 @@ List voicemail messages
 Wraps GET /api/v2/voicemail/me/messages 
 
 Requires NO permissions: 
-
 
 
 
@@ -559,7 +555,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -615,7 +610,6 @@ Get a voicemail message
 Wraps GET /api/v2/voicemail/messages/{messageId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -687,7 +681,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -753,7 +746,6 @@ List voicemail messages
 Wraps GET /api/v2/voicemail/messages 
 
 Requires NO permissions: 
-
 
 
 
@@ -954,7 +946,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1023,7 +1014,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1086,7 +1076,10 @@ Wraps PATCH /api/v2/voicemail/groups/{groupId}/policy
 
 Requires ANY permissions: 
 
-* directory:group:add* directory:group:edit* group_administration* group_creation
+* directory:group:add
+* directory:group:edit
+* group_administration
+* group_creation
 
 
 ### Example
@@ -1156,7 +1149,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1218,7 +1210,6 @@ A user voicemail can only be modified by its associated user. A group voicemail 
 Wraps PATCH /api/v2/voicemail/messages/{messageId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -1289,7 +1280,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1354,7 +1344,6 @@ Copy a voicemail message to a user or group
 Wraps POST /api/v2/voicemail/messages 
 
 Requires NO permissions: 
-
 
 
 
@@ -1423,7 +1412,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1485,7 +1473,6 @@ A user voicemail can only be modified by its associated user. A group voicemail 
 Wraps PUT /api/v2/voicemail/messages/{messageId} 
 
 Requires NO permissions: 
-
 
 
 

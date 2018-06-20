@@ -32,7 +32,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -93,7 +92,6 @@ Get a document.
 Wraps GET /api/v2/fax/documents/{documentId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -161,7 +159,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -223,7 +220,6 @@ Get a list of fax documents.
 Wraps GET /api/v2/fax/documents 
 
 Requires NO permissions: 
-
 
 
 
@@ -294,7 +290,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -350,7 +345,6 @@ Update a fax document.
 Wraps PUT /api/v2/fax/documents/{documentId} 
 
 Requires NO permissions: 
-
 
 
 

@@ -44,6 +44,7 @@ Method | Description
 [**get_conversations_email_participant_wrapupcodes**](ConversationsApi.html#get_conversations_email_participant_wrapupcodes) | Get list of wrapup codes for this conversation participant
 [**get_conversations_emails**](ConversationsApi.html#get_conversations_emails) | Get active email conversations for the logged in user
 [**get_conversations_message**](ConversationsApi.html#get_conversations_message) | Get message conversation
+[**get_conversations_message_communication_messages_media_media_id**](ConversationsApi.html#get_conversations_message_communication_messages_media_media_id) | Get media
 [**get_conversations_message_message**](ConversationsApi.html#get_conversations_message_message) | Get message
 [**get_conversations_message_participant_wrapup**](ConversationsApi.html#get_conversations_message_participant_wrapup) | Get the wrap-up for this conversation participant. 
 [**get_conversations_message_participant_wrapupcodes**](ConversationsApi.html#get_conversations_message_participant_wrapupcodes) | Get list of wrapup codes for this conversation participant
@@ -100,6 +101,7 @@ Method | Description
 [**post_conversations_emails**](ConversationsApi.html#post_conversations_emails) | Create an email conversation
 [**post_conversations_faxes**](ConversationsApi.html#post_conversations_faxes) | Create Fax Conversation
 [**post_conversations_message_communication_messages**](ConversationsApi.html#post_conversations_message_communication_messages) | Send message
+[**post_conversations_message_communication_messages_media**](ConversationsApi.html#post_conversations_message_communication_messages_media) | Create media
 [**post_conversations_message_messages_bulk**](ConversationsApi.html#post_conversations_message_messages_bulk) | Get messages in batch
 [**post_conversations_message_participant_replace**](ConversationsApi.html#post_conversations_message_participant_replace) | Replace this participant with the specified user and/or address
 [**put_conversations_call_participant_communication_uuidata**](ConversationsApi.html#put_conversations_call_participant_communication_uuidata) | Set uuiData to be sent on future commands.
@@ -119,7 +121,6 @@ Delete a code used to add a communication to this participant
 Wraps DELETE /api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode} 
 
 Requires NO permissions: 
-
 
 
 
@@ -192,7 +193,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -256,7 +256,6 @@ Delete attachment from draft
 Wraps DELETE /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -456,7 +455,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -527,7 +525,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -592,7 +589,6 @@ Get the wrap-up for this conversation participant.
 Wraps GET /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup 
 
 Requires NO permissions: 
-
 
 
 
@@ -667,7 +663,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -732,7 +727,6 @@ Get active conversations for the logged in user
 Wraps GET /api/v2/conversations 
 
 Requires NO permissions: 
-
 
 
 
@@ -801,7 +795,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -863,7 +856,6 @@ Get the wrap-up for this conversation participant.
 Wraps GET /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup 
 
 Requires NO permissions: 
-
 
 
 
@@ -938,7 +930,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1006,7 +997,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1068,7 +1058,6 @@ Get the wrap-up for this conversation participant.
 Wraps GET /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup 
 
 Requires NO permissions: 
-
 
 
 
@@ -1143,7 +1132,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1211,7 +1199,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1270,7 +1257,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1326,7 +1312,6 @@ Get call history
 Wraps GET /api/v2/conversations/calls/history 
 
 Requires NO permissions: 
-
 
 
 
@@ -1401,7 +1386,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1457,7 +1441,6 @@ Get chat conversation
 Wraps GET /api/v2/conversations/chats/{conversationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -1522,7 +1505,6 @@ Get the wrap-up for this conversation participant.
 Wraps GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup 
 
 Requires NO permissions: 
-
 
 
 
@@ -1597,7 +1579,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1665,7 +1646,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1721,7 +1701,6 @@ Get cobrowse conversation
 Wraps GET /api/v2/conversations/cobrowsesessions/{conversationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -1786,7 +1765,6 @@ Get the wrap-up for this conversation participant.
 Wraps GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup 
 
 Requires NO permissions: 
-
 
 
 
@@ -1861,7 +1839,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1929,7 +1906,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1985,7 +1961,6 @@ Get email conversation
 Wraps GET /api/v2/conversations/emails/{conversationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -2050,7 +2025,6 @@ Get conversation message
 Wraps GET /api/v2/conversations/emails/{conversationId}/messages/{messageId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -2121,7 +2095,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2186,7 +2159,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2248,7 +2220,6 @@ Get the wrap-up for this conversation participant.
 Wraps GET /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup 
 
 Requires NO permissions: 
-
 
 
 
@@ -2323,7 +2294,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2391,7 +2361,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2450,7 +2419,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2491,6 +2459,77 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**MessageConversation**](MessageConversation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_message_communication_messages_media_media_id"></a>
+
+## -[**MessageMediaData**](MessageMediaData.html) get_conversations_message_communication_messages_media_media_id(conversation_id, communication_id, media_id)
+
+
+
+Get media
+
+
+
+Wraps GET /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId} 
+
+Requires ANY permissions: 
+
+* conversation:message:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+communication_id = "communication_id_example" # String | communicationId
+
+media_id = "media_id_example" # String | mediaId
+
+
+begin
+  #Get media
+  result = api_instance.get_conversations_message_communication_messages_media_media_id(conversation_id, communication_id, media_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->get_conversations_message_communication_messages_media_media_id: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **communication_id** | **String**| communicationId |  |
+ **media_id** | **String**| mediaId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessageMediaData**](MessageMediaData.html)
 
 ### HTTP request headers
 
@@ -2583,7 +2622,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2655,7 +2693,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2723,7 +2760,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2779,7 +2815,6 @@ Update conversation participant.
 Wraps PATCH /api/v2/conversations/{conversationId}/participants/{participantId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -2849,7 +2884,6 @@ Update the attributes on a conversation participant.
 Wraps PATCH /api/v2/conversations/{conversationId}/participants/{participantId}/attributes 
 
 Requires NO permissions: 
-
 
 
 
@@ -2990,7 +3024,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3060,7 +3093,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3127,7 +3159,6 @@ Update conversation participant's communication by disconnecting it.
 Wraps PATCH /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -3201,7 +3232,6 @@ Change who can speak
 Wraps PATCH /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult 
 
 Requires NO permissions: 
-
 
 
 
@@ -3343,7 +3373,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3413,7 +3442,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3480,7 +3508,6 @@ Update conversation participant's communication by disconnecting it.
 Wraps PATCH /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -3625,7 +3652,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3695,7 +3721,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3762,7 +3787,6 @@ Update conversation participant's communication by disconnecting it.
 Wraps PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -3907,7 +3931,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -3978,7 +4001,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -4046,7 +4068,6 @@ Update conversation participant's communication by disconnecting it.
 Wraps PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -4191,7 +4212,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -4261,7 +4281,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -4328,7 +4347,6 @@ Update conversation participant's communication by disconnecting it.
 Wraps PATCH /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -4473,7 +4491,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -4544,7 +4561,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -4612,7 +4628,6 @@ Update conversation participant's communication by disconnecting it.
 Wraps PATCH /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -5023,7 +5038,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -5094,7 +5108,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -5161,7 +5174,6 @@ Create secure IVR session. Only a participant in the conversation can invoke a s
 Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions 
 
 Requires NO permissions: 
-
 
 
 
@@ -5236,7 +5248,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -5301,7 +5312,6 @@ Initiate and update consult transfer
 Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult 
 
 Requires NO permissions: 
-
 
 
 
@@ -5442,7 +5452,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -5512,7 +5521,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -5577,7 +5585,6 @@ Replace this participant with the specified user and/or address
 Wraps POST /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace 
 
 Requires NO permissions: 
-
 
 
 
@@ -5780,7 +5787,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -5915,7 +5921,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -5986,7 +5991,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -6054,7 +6058,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -6119,7 +6122,6 @@ Replace this participant with the specified user and/or address
 Wraps POST /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace 
 
 Requires NO permissions: 
-
 
 
 
@@ -6257,7 +6259,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -6377,6 +6378,74 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_conversations_message_communication_messages_media"></a>
+
+## -[**MessageMediaData**](MessageMediaData.html) post_conversations_message_communication_messages_media(conversation_id, communication_id)
+
+
+
+Create media
+
+
+
+Wraps POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media 
+
+Requires ANY permissions: 
+
+* conversation:message:create
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+communication_id = "communication_id_example" # String | communicationId
+
+
+begin
+  #Create media
+  result = api_instance.post_conversations_message_communication_messages_media(conversation_id, communication_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversations_message_communication_messages_media: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **communication_id** | **String**| communicationId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessageMediaData**](MessageMediaData.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_conversations_message_messages_bulk"></a>
 
 ## -[**TextMessageListing**](TextMessageListing.html) post_conversations_message_messages_bulk(conversation_id, opts)
@@ -6462,7 +6531,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -6529,7 +6597,6 @@ Set uuiData to be sent on future commands.
 Wraps PUT /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata 
 
 Requires NO permissions: 
-
 
 
 
@@ -6603,7 +6670,6 @@ Update conversation draft reply
 Wraps PUT /api/v2/conversations/emails/{conversationId}/messages/draft 
 
 Requires NO permissions: 
-
 
 
 

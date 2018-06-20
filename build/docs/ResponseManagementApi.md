@@ -37,7 +37,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -101,7 +100,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -162,7 +160,6 @@ Gets a list of existing response libraries.
 Wraps GET /api/v2/responsemanagement/libraries 
 
 Requires NO permissions: 
-
 
 
 
@@ -233,7 +230,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -295,7 +291,6 @@ Get details about an existing response.
 Wraps GET /api/v2/responsemanagement/responses/{responseId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -364,7 +359,6 @@ Gets a list of existing responses.
 Wraps GET /api/v2/responsemanagement/responses 
 
 Requires NO permissions: 
-
 
 
 
@@ -440,7 +434,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -502,7 +495,6 @@ Create a response.
 Wraps POST /api/v2/responsemanagement/responses 
 
 Requires NO permissions: 
-
 
 
 
@@ -574,7 +566,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -636,7 +627,6 @@ Fields that can be updated: name. The most recent version is required for update
 Wraps PUT /api/v2/responsemanagement/libraries/{libraryId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -704,7 +694,6 @@ Fields that can be updated: name, libraries, and texts. The most recent version 
 Wraps PUT /api/v2/responsemanagement/responses/{responseId} 
 
 Requires NO permissions: 
-
 
 
 

@@ -50,7 +50,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -238,7 +237,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -305,7 +303,6 @@ Get a reporting metadata.
 Wraps GET /api/v2/analytics/reporting/{reportId}/metadata 
 
 Requires NO permissions: 
-
 
 
 
@@ -377,7 +374,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -433,7 +429,6 @@ Get a scheduled report job.
 Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -498,7 +493,6 @@ Get list of completed scheduled report jobs.
 Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history 
 
 Requires NO permissions: 
-
 
 
 
@@ -572,7 +566,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -634,7 +627,6 @@ A completed scheduled report job.
 Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -705,7 +697,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -770,7 +761,6 @@ Get a list of report time periods.
 Wraps GET /api/v2/analytics/reporting/timeperiods 
 
 Requires NO permissions: 
-
 
 
 
@@ -1225,7 +1215,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1287,7 +1276,6 @@ Create a scheduled report job.
 Wraps POST /api/v2/analytics/reporting/schedules 
 
 Requires NO permissions: 
-
 
 
 
@@ -1547,7 +1535,6 @@ Update a scheduled report job.
 Wraps PUT /api/v2/analytics/reporting/schedules/{scheduleId} 
 
 Requires NO permissions: 
-
 
 
 

@@ -21,11 +21,21 @@ module PureCloud
     # The body of the text message.
     attr_accessor :text_body
 
+    # The media ids associated with the text message.
+    attr_accessor :media_ids
+
+    # The sticker ids associated with the text message.
+    attr_accessor :sticker_ids
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'text_body' => :'textBody'
+        :'text_body' => :'textBody',
+        
+        :'media_ids' => :'mediaIds',
+        
+        :'sticker_ids' => :'stickerIds'
         
       }
     end
@@ -34,7 +44,11 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'text_body' => :'String'
+        :'text_body' => :'String',
+        
+        :'media_ids' => :'Array<String>',
+        
+        :'sticker_ids' => :'Array<String>'
         
       }
     end
@@ -52,6 +66,28 @@ module PureCloud
         
         
         self.text_body = attributes[:'textBody']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'mediaIds')
+        
+        if (value = attributes[:'mediaIds']).is_a?(Array)
+          self.media_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'stickerIds')
+        
+        if (value = attributes[:'stickerIds']).is_a?(Array)
+          self.sticker_ids = value
+        end
+        
         
       
       end
@@ -81,8 +117,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -94,7 +148,9 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          text_body == o.text_body
+          text_body == o.text_body &&
+          media_ids == o.media_ids &&
+          sticker_ids == o.sticker_ids
     end
 
     # @see the `==` method
@@ -106,7 +162,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [text_body].hash
+      [text_body, media_ids, sticker_ids].hash
     end
 
     # build the object from hash

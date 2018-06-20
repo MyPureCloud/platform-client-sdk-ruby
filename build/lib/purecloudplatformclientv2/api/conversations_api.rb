@@ -2580,6 +2580,91 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get media
+    # 
+    # @param conversation_id conversationId
+    # @param communication_id communicationId
+    # @param media_id mediaId
+    # @param [Hash] opts the optional parameters
+    # @return [MessageMediaData]
+    def get_conversations_message_communication_messages_media_media_id(conversation_id, communication_id, media_id, opts = {})
+      data, _status_code, _headers = get_conversations_message_communication_messages_media_media_id_with_http_info(conversation_id, communication_id, media_id, opts)
+      return data
+    end
+
+    # Get media
+    # 
+    # @param conversation_id conversationId
+    # @param communication_id communicationId
+    # @param media_id mediaId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(MessageMediaData, Fixnum, Hash)>] MessageMediaData data, response status code and response headers
+    def get_conversations_message_communication_messages_media_media_id_with_http_info(conversation_id, communication_id, media_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_message_communication_messages_media_media_id ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_message_communication_messages_media_media_id" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'communication_id' is set
+      fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.get_conversations_message_communication_messages_media_media_id" if communication_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'media_id' is set
+      fail ArgumentError, "Missing the required parameter 'media_id' when calling ConversationsApi.get_conversations_message_communication_messages_media_media_id" if media_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s).sub('{' + 'mediaId' + '}', media_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessageMediaData')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_message_communication_messages_media_media_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get message
     # 
     # @param conversation_id conversationId
@@ -7026,6 +7111,81 @@ module PureCloud
         :return_type => 'MessageData')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_message_communication_messages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create media
+    # 
+    # @param conversation_id conversationId
+    # @param communication_id communicationId
+    # @param [Hash] opts the optional parameters
+    # @return [MessageMediaData]
+    def post_conversations_message_communication_messages_media(conversation_id, communication_id, opts = {})
+      data, _status_code, _headers = post_conversations_message_communication_messages_media_with_http_info(conversation_id, communication_id, opts)
+      return data
+    end
+
+    # Create media
+    # 
+    # @param conversation_id conversationId
+    # @param communication_id communicationId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(MessageMediaData, Fixnum, Hash)>] MessageMediaData data, response status code and response headers
+    def post_conversations_message_communication_messages_media_with_http_info(conversation_id, communication_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_message_communication_messages_media ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_message_communication_messages_media" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'communication_id' is set
+      fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.post_conversations_message_communication_messages_media" if communication_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessageMediaData')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_message_communication_messages_media\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

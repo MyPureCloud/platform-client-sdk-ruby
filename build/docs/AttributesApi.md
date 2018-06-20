@@ -32,7 +32,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -93,7 +92,6 @@ Get details about an existing attribute.
 Wraps GET /api/v2/attributes/{attributeId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -158,7 +156,6 @@ Gets a list of existing attributes.
 Wraps GET /api/v2/attributes 
 
 Requires NO permissions: 
-
 
 
 
@@ -229,7 +226,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -294,7 +290,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -356,7 +351,6 @@ Fields that can be updated: name, description. The most recent version is requir
 Wraps PUT /api/v2/attributes/{attributeId} 
 
 Requires NO permissions: 
-
 
 
 

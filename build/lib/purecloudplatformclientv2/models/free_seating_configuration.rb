@@ -18,8 +18,8 @@ require 'date'
 
 module PureCloud
   class FreeSeatingConfiguration
-    # Whether or not free-seating is enabled for the organization
-    attr_accessor :enabled
+    # The FreeSeatingState for FreeSeatingConfiguration. Can be ON, OFF, or PARTIAL. ON meaning disassociate the user after the ttl expires, OFF meaning never disassociate the user, and PARTIAL meaning only disassociate when a user explicitly clicks log out.
+    attr_accessor :free_seating_state
 
     # The amount of time in minutes until an offline user is disassociated from their station
     attr_accessor :ttl_minutes
@@ -28,7 +28,7 @@ module PureCloud
     def self.attribute_map
       {
         
-        :'enabled' => :'enabled',
+        :'free_seating_state' => :'freeSeatingState',
         
         :'ttl_minutes' => :'ttlMinutes'
         
@@ -39,7 +39,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'enabled' => :'BOOLEAN',
+        :'free_seating_state' => :'String',
         
         :'ttl_minutes' => :'Integer'
         
@@ -55,10 +55,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'enabled')
+      if attributes.has_key?(:'freeSeatingState')
         
         
-        self.enabled = attributes[:'enabled']
+        self.free_seating_state = attributes[:'freeSeatingState']
         
       
       end
@@ -90,6 +90,11 @@ module PureCloud
       
       
       
+      allowed_values = ["ON", "OFF", "PARTIAL"]
+      if @free_seating_state && !allowed_values.include?(@free_seating_state)
+        return false
+      end
+      
       
       
       
@@ -100,7 +105,16 @@ module PureCloud
 
     
     
-    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] free_seating_state Object to be assigned
+    def free_seating_state=(free_seating_state)
+      allowed_values = ["ON", "OFF", "PARTIAL"]
+      if free_seating_state && !allowed_values.include?(free_seating_state)
+        fail ArgumentError, "invalid value for 'free_seating_state', must be one of #{allowed_values}."
+      end
+      @free_seating_state = free_seating_state
+    end
+
     
     
     
@@ -114,7 +128,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          enabled == o.enabled &&
+          free_seating_state == o.free_seating_state &&
           ttl_minutes == o.ttl_minutes
     end
 
@@ -127,7 +141,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [enabled, ttl_minutes].hash
+      [free_seating_state, ttl_minutes].hash
     end
 
     # build the object from hash

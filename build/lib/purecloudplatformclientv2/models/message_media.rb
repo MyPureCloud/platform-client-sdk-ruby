@@ -24,13 +24,28 @@ module PureCloud
     # The optional internet media type of the the media object.  If null then the media type should be dictated by the url
     attr_accessor :media_type
 
+    # The optional content length of the the media object, in bytes.
+    attr_accessor :content_length_bytes
+
+    # The optional name of the the media object.
+    attr_accessor :name
+
+    # The optional id of the the media object.
+    attr_accessor :id
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'url' => :'url',
         
-        :'media_type' => :'mediaType'
+        :'media_type' => :'mediaType',
+        
+        :'content_length_bytes' => :'contentLengthBytes',
+        
+        :'name' => :'name',
+        
+        :'id' => :'id'
         
       }
     end
@@ -41,7 +56,13 @@ module PureCloud
         
         :'url' => :'String',
         
-        :'media_type' => :'String'
+        :'media_type' => :'String',
+        
+        :'content_length_bytes' => :'Integer',
+        
+        :'name' => :'String',
+        
+        :'id' => :'String'
         
       }
     end
@@ -73,6 +94,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'contentLengthBytes')
+        
+        
+        self.content_length_bytes = attributes[:'contentLengthBytes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'name')
+        
+        
+        self.name = attributes[:'name']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'id')
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -96,8 +144,35 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -115,7 +190,10 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           url == o.url &&
-          media_type == o.media_type
+          media_type == o.media_type &&
+          content_length_bytes == o.content_length_bytes &&
+          name == o.name &&
+          id == o.id
     end
 
     # @see the `==` method
@@ -127,7 +205,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [url, media_type].hash
+      [url, media_type, content_length_bytes, name, id].hash
     end
 
     # build the object from hash

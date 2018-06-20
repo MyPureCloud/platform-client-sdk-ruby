@@ -30,7 +30,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -86,7 +85,6 @@ Get a user's Geolocation
 Wraps GET /api/v2/users/{userId}/geolocations/{clientId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -219,7 +217,6 @@ The geolocation object can be patched one of three ways. Option 1: Set the 'prim
 Wraps PATCH /api/v2/users/{userId}/geolocations/{clientId} 
 
 Requires NO permissions: 
-
 
 
 

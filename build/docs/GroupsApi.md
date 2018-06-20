@@ -104,7 +104,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -172,7 +171,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -234,7 +232,6 @@ Get group
 Wraps GET /api/v2/groups/{groupId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -302,7 +299,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -364,7 +360,6 @@ Get group members, includes individuals, owners, and dynamically included people
 Wraps GET /api/v2/groups/{groupId}/members 
 
 Requires NO permissions: 
-
 
 
 
@@ -442,7 +437,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -508,7 +502,6 @@ Get a group list
 Wraps GET /api/v2/groups 
 
 Requires NO permissions: 
-
 
 
 
@@ -583,7 +576,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -649,7 +641,6 @@ Get group profile listing
 Wraps GET /api/v2/profiles/groups 
 
 Requires NO permissions: 
-
 
 
 
@@ -724,7 +715,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -790,7 +780,8 @@ Wraps POST /api/v2/groups
 
 Requires ANY permissions: 
 
-* group_administration* group_creation
+* group_administration
+* group_creation
 
 
 ### Example
@@ -854,7 +845,6 @@ Search groups
 Wraps POST /api/v2/groups/search 
 
 Requires NO permissions: 
-
 
 
 

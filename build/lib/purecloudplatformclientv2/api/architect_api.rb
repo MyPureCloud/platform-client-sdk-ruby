@@ -4661,25 +4661,27 @@ module PureCloud
 
     # Creates a new emergency group
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [EmergencyGroup] :body 
     # @return [EmergencyGroup]
-    def post_architect_emergencygroups(opts = {})
-      data, _status_code, _headers = post_architect_emergencygroups_with_http_info(opts)
+    def post_architect_emergencygroups(body, opts = {})
+      data, _status_code, _headers = post_architect_emergencygroups_with_http_info(body, opts)
       return data
     end
 
     # Creates a new emergency group
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [EmergencyGroup] :body 
     # @return [Array<(EmergencyGroup, Fixnum, Hash)>] EmergencyGroup data, response status code and response headers
-    def post_architect_emergencygroups_with_http_info(opts = {})
+    def post_architect_emergencygroups_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_emergencygroups ..."
       end
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.post_architect_emergencygroups" if body.nil?
       
       
       
@@ -4706,7 +4708,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -4724,25 +4726,27 @@ module PureCloud
 
     # Create IVR config.
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [IVR] :body 
     # @return [IVR]
-    def post_architect_ivrs(opts = {})
-      data, _status_code, _headers = post_architect_ivrs_with_http_info(opts)
+    def post_architect_ivrs(body, opts = {})
+      data, _status_code, _headers = post_architect_ivrs_with_http_info(body, opts)
       return data
     end
 
     # Create IVR config.
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [IVR] :body 
     # @return [Array<(IVR, Fixnum, Hash)>] IVR data, response status code and response headers
-    def post_architect_ivrs_with_http_info(opts = {})
+    def post_architect_ivrs_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_ivrs ..."
       end
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.post_architect_ivrs" if body.nil?
       
       
       
@@ -4769,7 +4773,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -4853,21 +4857,21 @@ module PureCloud
     # Create a new user prompt resource
     # 
     # @param prompt_id Prompt ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [PromptAssetCreate] :body 
     # @return [PromptAsset]
-    def post_architect_prompt_resources(prompt_id, opts = {})
-      data, _status_code, _headers = post_architect_prompt_resources_with_http_info(prompt_id, opts)
+    def post_architect_prompt_resources(prompt_id, body, opts = {})
+      data, _status_code, _headers = post_architect_prompt_resources_with_http_info(prompt_id, body, opts)
       return data
     end
 
     # Create a new user prompt resource
     # 
     # @param prompt_id Prompt ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [PromptAssetCreate] :body 
     # @return [Array<(PromptAsset, Fixnum, Hash)>] PromptAsset data, response status code and response headers
-    def post_architect_prompt_resources_with_http_info(prompt_id, opts = {})
+    def post_architect_prompt_resources_with_http_info(prompt_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_prompt_resources ..."
       end
@@ -4881,6 +4885,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.post_architect_prompt_resources" if body.nil?
       
       
       
@@ -4907,7 +4913,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -4925,25 +4931,27 @@ module PureCloud
 
     # Create a new user prompt
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Prompt] :body 
     # @return [Prompt]
-    def post_architect_prompts(opts = {})
-      data, _status_code, _headers = post_architect_prompts_with_http_info(opts)
+    def post_architect_prompts(body, opts = {})
+      data, _status_code, _headers = post_architect_prompts_with_http_info(body, opts)
       return data
     end
 
     # Create a new user prompt
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Prompt] :body 
     # @return [Array<(Prompt, Fixnum, Hash)>] Prompt data, response status code and response headers
-    def post_architect_prompts_with_http_info(opts = {})
+    def post_architect_prompts_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_prompts ..."
       end
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.post_architect_prompts" if body.nil?
       
       
       
@@ -4970,7 +4978,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -4988,25 +4996,27 @@ module PureCloud
 
     # Creates a new schedule group
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [ScheduleGroup] :body 
     # @return [ScheduleGroup]
-    def post_architect_schedulegroups(opts = {})
-      data, _status_code, _headers = post_architect_schedulegroups_with_http_info(opts)
+    def post_architect_schedulegroups(body, opts = {})
+      data, _status_code, _headers = post_architect_schedulegroups_with_http_info(body, opts)
       return data
     end
 
     # Creates a new schedule group
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [ScheduleGroup] :body 
     # @return [Array<(ScheduleGroup, Fixnum, Hash)>] ScheduleGroup data, response status code and response headers
-    def post_architect_schedulegroups_with_http_info(opts = {})
+    def post_architect_schedulegroups_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_schedulegroups ..."
       end
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.post_architect_schedulegroups" if body.nil?
       
       
       
@@ -5033,7 +5043,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -5051,25 +5061,27 @@ module PureCloud
 
     # Create a new schedule.
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Schedule] :body 
     # @return [Schedule]
-    def post_architect_schedules(opts = {})
-      data, _status_code, _headers = post_architect_schedules_with_http_info(opts)
+    def post_architect_schedules(body, opts = {})
+      data, _status_code, _headers = post_architect_schedules_with_http_info(body, opts)
       return data
     end
 
     # Create a new schedule.
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Schedule] :body 
     # @return [Array<(Schedule, Fixnum, Hash)>] Schedule data, response status code and response headers
-    def post_architect_schedules_with_http_info(opts = {})
+    def post_architect_schedules_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_schedules ..."
       end
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.post_architect_schedules" if body.nil?
       
       
       
@@ -5096,7 +5108,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -5180,21 +5192,21 @@ module PureCloud
     # Create system prompt resource override.
     # 
     # @param prompt_id Prompt ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [SystemPromptAsset] :body 
     # @return [SystemPromptAsset]
-    def post_architect_systemprompt_resources(prompt_id, opts = {})
-      data, _status_code, _headers = post_architect_systemprompt_resources_with_http_info(prompt_id, opts)
+    def post_architect_systemprompt_resources(prompt_id, body, opts = {})
+      data, _status_code, _headers = post_architect_systemprompt_resources_with_http_info(prompt_id, body, opts)
       return data
     end
 
     # Create system prompt resource override.
     # 
     # @param prompt_id Prompt ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [SystemPromptAsset] :body 
     # @return [Array<(SystemPromptAsset, Fixnum, Hash)>] SystemPromptAsset data, response status code and response headers
-    def post_architect_systemprompt_resources_with_http_info(prompt_id, opts = {})
+    def post_architect_systemprompt_resources_with_http_info(prompt_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_architect_systemprompt_resources ..."
       end
@@ -5208,6 +5220,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.post_architect_systemprompt_resources" if body.nil?
       
       
       
@@ -5234,7 +5248,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -5253,21 +5267,21 @@ module PureCloud
     # Create flow version
     # 
     # @param flow_id Flow ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Object] :body 
     # @return [FlowVersion]
-    def post_flow_versions(flow_id, opts = {})
-      data, _status_code, _headers = post_flow_versions_with_http_info(flow_id, opts)
+    def post_flow_versions(flow_id, body, opts = {})
+      data, _status_code, _headers = post_flow_versions_with_http_info(flow_id, body, opts)
       return data
     end
 
     # Create flow version
     # 
     # @param flow_id Flow ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Object] :body 
     # @return [Array<(FlowVersion, Fixnum, Hash)>] FlowVersion data, response status code and response headers
-    def post_flow_versions_with_http_info(flow_id, opts = {})
+    def post_flow_versions_with_http_info(flow_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_flow_versions ..."
       end
@@ -5281,6 +5295,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.post_flow_versions" if body.nil?
       
       
       
@@ -5307,7 +5323,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -5325,25 +5341,27 @@ module PureCloud
 
     # Create flow
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Flow] :body 
     # @return [Flow]
-    def post_flows(opts = {})
-      data, _status_code, _headers = post_flows_with_http_info(opts)
+    def post_flows(body, opts = {})
+      data, _status_code, _headers = post_flows_with_http_info(body, opts)
       return data
     end
 
     # Create flow
     # 
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Flow] :body 
     # @return [Array<(Flow, Fixnum, Hash)>] Flow data, response status code and response headers
-    def post_flows_with_http_info(opts = {})
+    def post_flows_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows ..."
       end
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.post_flows" if body.nil?
       
       
       
@@ -5370,7 +5388,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -5934,21 +5952,21 @@ module PureCloud
     # Updates a emergency group by ID
     # 
     # @param emergency_group_id Emergency group ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [EmergencyGroup] :body 
     # @return [EmergencyGroup]
-    def put_architect_emergencygroup(emergency_group_id, opts = {})
-      data, _status_code, _headers = put_architect_emergencygroup_with_http_info(emergency_group_id, opts)
+    def put_architect_emergencygroup(emergency_group_id, body, opts = {})
+      data, _status_code, _headers = put_architect_emergencygroup_with_http_info(emergency_group_id, body, opts)
       return data
     end
 
     # Updates a emergency group by ID
     # 
     # @param emergency_group_id Emergency group ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [EmergencyGroup] :body 
     # @return [Array<(EmergencyGroup, Fixnum, Hash)>] EmergencyGroup data, response status code and response headers
-    def put_architect_emergencygroup_with_http_info(emergency_group_id, opts = {})
+    def put_architect_emergencygroup_with_http_info(emergency_group_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_emergencygroup ..."
       end
@@ -5962,6 +5980,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.put_architect_emergencygroup" if body.nil?
       
       
       
@@ -5988,7 +6008,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -6007,21 +6027,21 @@ module PureCloud
     # Update an IVR Config.
     # 
     # @param ivr_id IVR id
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [IVR] :body 
     # @return [IVR]
-    def put_architect_ivr(ivr_id, opts = {})
-      data, _status_code, _headers = put_architect_ivr_with_http_info(ivr_id, opts)
+    def put_architect_ivr(ivr_id, body, opts = {})
+      data, _status_code, _headers = put_architect_ivr_with_http_info(ivr_id, body, opts)
       return data
     end
 
     # Update an IVR Config.
     # 
     # @param ivr_id IVR id
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [IVR] :body 
     # @return [Array<(IVR, Fixnum, Hash)>] IVR data, response status code and response headers
-    def put_architect_ivr_with_http_info(ivr_id, opts = {})
+    def put_architect_ivr_with_http_info(ivr_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_ivr ..."
       end
@@ -6035,6 +6055,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.put_architect_ivr" if body.nil?
       
       
       
@@ -6061,7 +6083,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -6080,21 +6102,21 @@ module PureCloud
     # Update specified user prompt
     # 
     # @param prompt_id Prompt ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Prompt] :body 
     # @return [Prompt]
-    def put_architect_prompt(prompt_id, opts = {})
-      data, _status_code, _headers = put_architect_prompt_with_http_info(prompt_id, opts)
+    def put_architect_prompt(prompt_id, body, opts = {})
+      data, _status_code, _headers = put_architect_prompt_with_http_info(prompt_id, body, opts)
       return data
     end
 
     # Update specified user prompt
     # 
     # @param prompt_id Prompt ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Prompt] :body 
     # @return [Array<(Prompt, Fixnum, Hash)>] Prompt data, response status code and response headers
-    def put_architect_prompt_with_http_info(prompt_id, opts = {})
+    def put_architect_prompt_with_http_info(prompt_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_prompt ..."
       end
@@ -6108,6 +6130,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.put_architect_prompt" if body.nil?
       
       
       
@@ -6134,7 +6158,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -6154,11 +6178,11 @@ module PureCloud
     # 
     # @param prompt_id Prompt ID
     # @param language_code Language
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [PromptAsset] :body 
     # @return [PromptAsset]
-    def put_architect_prompt_resource(prompt_id, language_code, opts = {})
-      data, _status_code, _headers = put_architect_prompt_resource_with_http_info(prompt_id, language_code, opts)
+    def put_architect_prompt_resource(prompt_id, language_code, body, opts = {})
+      data, _status_code, _headers = put_architect_prompt_resource_with_http_info(prompt_id, language_code, body, opts)
       return data
     end
 
@@ -6166,10 +6190,10 @@ module PureCloud
     # 
     # @param prompt_id Prompt ID
     # @param language_code Language
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [PromptAsset] :body 
     # @return [Array<(PromptAsset, Fixnum, Hash)>] PromptAsset data, response status code and response headers
-    def put_architect_prompt_resource_with_http_info(prompt_id, language_code, opts = {})
+    def put_architect_prompt_resource_with_http_info(prompt_id, language_code, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_prompt_resource ..."
       end
@@ -6191,6 +6215,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.put_architect_prompt_resource" if body.nil?
       
       
       
@@ -6217,7 +6243,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -6236,21 +6262,21 @@ module PureCloud
     # Update schedule by ID
     # 
     # @param schedule_id Schedule ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Schedule] :body 
     # @return [Schedule]
-    def put_architect_schedule(schedule_id, opts = {})
-      data, _status_code, _headers = put_architect_schedule_with_http_info(schedule_id, opts)
+    def put_architect_schedule(schedule_id, body, opts = {})
+      data, _status_code, _headers = put_architect_schedule_with_http_info(schedule_id, body, opts)
       return data
     end
 
     # Update schedule by ID
     # 
     # @param schedule_id Schedule ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Schedule] :body 
     # @return [Array<(Schedule, Fixnum, Hash)>] Schedule data, response status code and response headers
-    def put_architect_schedule_with_http_info(schedule_id, opts = {})
+    def put_architect_schedule_with_http_info(schedule_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_schedule ..."
       end
@@ -6264,6 +6290,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.put_architect_schedule" if body.nil?
       
       
       
@@ -6290,7 +6318,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -6309,21 +6337,21 @@ module PureCloud
     # Updates a schedule group by ID
     # 
     # @param schedule_group_id Schedule group ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [ScheduleGroup] :body 
     # @return [ScheduleGroup]
-    def put_architect_schedulegroup(schedule_group_id, opts = {})
-      data, _status_code, _headers = put_architect_schedulegroup_with_http_info(schedule_group_id, opts)
+    def put_architect_schedulegroup(schedule_group_id, body, opts = {})
+      data, _status_code, _headers = put_architect_schedulegroup_with_http_info(schedule_group_id, body, opts)
       return data
     end
 
     # Updates a schedule group by ID
     # 
     # @param schedule_group_id Schedule group ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [ScheduleGroup] :body 
     # @return [Array<(ScheduleGroup, Fixnum, Hash)>] ScheduleGroup data, response status code and response headers
-    def put_architect_schedulegroup_with_http_info(schedule_group_id, opts = {})
+    def put_architect_schedulegroup_with_http_info(schedule_group_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_schedulegroup ..."
       end
@@ -6337,6 +6365,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.put_architect_schedulegroup" if body.nil?
       
       
       
@@ -6363,7 +6393,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -6383,11 +6413,11 @@ module PureCloud
     # 
     # @param prompt_id Prompt ID
     # @param language_code Language
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [SystemPromptAsset] :body 
     # @return [SystemPromptAsset]
-    def put_architect_systemprompt_resource(prompt_id, language_code, opts = {})
-      data, _status_code, _headers = put_architect_systemprompt_resource_with_http_info(prompt_id, language_code, opts)
+    def put_architect_systemprompt_resource(prompt_id, language_code, body, opts = {})
+      data, _status_code, _headers = put_architect_systemprompt_resource_with_http_info(prompt_id, language_code, body, opts)
       return data
     end
 
@@ -6395,10 +6425,10 @@ module PureCloud
     # 
     # @param prompt_id Prompt ID
     # @param language_code Language
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [SystemPromptAsset] :body 
     # @return [Array<(SystemPromptAsset, Fixnum, Hash)>] SystemPromptAsset data, response status code and response headers
-    def put_architect_systemprompt_resource_with_http_info(prompt_id, language_code, opts = {})
+    def put_architect_systemprompt_resource_with_http_info(prompt_id, language_code, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_architect_systemprompt_resource ..."
       end
@@ -6420,6 +6450,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.put_architect_systemprompt_resource" if body.nil?
       
       
       
@@ -6446,7 +6478,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -6465,21 +6497,21 @@ module PureCloud
     # Update flow
     # 
     # @param flow_id Flow ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Flow] :body 
     # @return [Flow]
-    def put_flow(flow_id, opts = {})
-      data, _status_code, _headers = put_flow_with_http_info(flow_id, opts)
+    def put_flow(flow_id, body, opts = {})
+      data, _status_code, _headers = put_flow_with_http_info(flow_id, body, opts)
       return data
     end
 
     # Update flow
     # 
     # @param flow_id Flow ID
+    # @param body 
     # @param [Hash] opts the optional parameters
-    # @option opts [Flow] :body 
     # @return [Array<(Flow, Fixnum, Hash)>] Flow data, response status code and response headers
-    def put_flow_with_http_info(flow_id, opts = {})
+    def put_flow_with_http_info(flow_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.put_flow ..."
       end
@@ -6493,6 +6525,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.put_flow" if body.nil?
       
       
       
@@ -6519,7 +6553,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,

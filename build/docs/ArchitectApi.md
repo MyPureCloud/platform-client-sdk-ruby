@@ -233,7 +233,8 @@ Wraps DELETE /api/v2/architect/prompts/{promptId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -301,7 +302,8 @@ Wraps DELETE /api/v2/architect/prompts/{promptId}/resources/{languageCode}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -368,7 +370,8 @@ Wraps DELETE /api/v2/architect/prompts
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -561,7 +564,8 @@ Wraps DELETE /api/v2/architect/systemprompts/{promptId}/resources/{languageCode}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -628,7 +632,8 @@ Wraps DELETE /api/v2/flows/{flowId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -692,7 +697,8 @@ Wraps DELETE /api/v2/flows
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -892,7 +898,9 @@ Wraps GET /api/v2/architect/dependencytracking
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -973,7 +981,9 @@ Wraps GET /api/v2/architect/dependencytracking/build
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -1032,7 +1042,9 @@ Wraps GET /api/v2/architect/dependencytracking/consumedresources
 
 Requires ANY permissions: 
 
-* admin* editor* readonly
+* admin
+* editor
+* readonly
 
 
 ### Example
@@ -1107,7 +1119,9 @@ Wraps GET /api/v2/architect/dependencytracking/consumingresources
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -1179,7 +1193,9 @@ Wraps GET /api/v2/architect/dependencytracking/deletedresourceconsumers
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -1257,7 +1273,9 @@ Wraps GET /api/v2/architect/dependencytracking/object
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -1336,7 +1354,9 @@ Wraps GET /api/v2/architect/dependencytracking/types/{typeId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -1401,7 +1421,9 @@ Wraps GET /api/v2/architect/dependencytracking/types
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -1469,7 +1491,9 @@ Wraps GET /api/v2/architect/dependencytracking/updatedresourceconsumers
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -1823,7 +1847,9 @@ Wraps GET /api/v2/architect/prompts/{promptId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -1888,7 +1914,9 @@ Wraps GET /api/v2/architect/prompts/{promptId}/history/{historyId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -1968,7 +1996,9 @@ Wraps GET /api/v2/architect/prompts/{promptId}/resources/{languageCode}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -2036,7 +2066,9 @@ Wraps GET /api/v2/architect/prompts/{promptId}/resources
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -2107,7 +2139,9 @@ Wraps GET /api/v2/architect/prompts
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -2463,7 +2497,9 @@ Wraps GET /api/v2/architect/systemprompts/{promptId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -2528,7 +2564,9 @@ Wraps GET /api/v2/architect/systemprompts/{promptId}/history/{historyId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -2608,7 +2646,9 @@ Wraps GET /api/v2/architect/systemprompts/{promptId}/resources/{languageCode}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -2676,7 +2716,9 @@ Wraps GET /api/v2/architect/systemprompts/{promptId}/resources
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -2751,7 +2793,9 @@ Wraps GET /api/v2/architect/systemprompts
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -2829,7 +2873,9 @@ Wraps GET /api/v2/flows/{flowId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -2898,7 +2944,9 @@ Wraps GET /api/v2/flows/{flowId}/history/{historyId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -2978,7 +3026,9 @@ Wraps GET /api/v2/flows/{flowId}/latestconfiguration
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -3047,7 +3097,9 @@ Wraps GET /api/v2/flows/{flowId}/versions/{versionId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -3119,7 +3171,9 @@ Wraps GET /api/v2/flows/{flowId}/versions/{versionId}/configuration
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -3191,7 +3245,9 @@ Wraps GET /api/v2/flows/{flowId}/versions
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -3264,7 +3320,9 @@ Wraps GET /api/v2/flows
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -3786,7 +3844,7 @@ nil (empty response body)
 
 <a name="post_architect_emergencygroups"></a>
 
-## -[**EmergencyGroup**](EmergencyGroup.html) post_architect_emergencygroups(opts)
+## -[**EmergencyGroup**](EmergencyGroup.html) post_architect_emergencygroups(body)
 
 
 
@@ -3818,13 +3876,12 @@ end
 
 api_instance = PureCloud::ArchitectApi.new
 
-opts = { 
-  body: PureCloud::EmergencyGroup.new # EmergencyGroup | 
-}
+body = PureCloud::EmergencyGroup.new # EmergencyGroup | 
+
 
 begin
   #Creates a new emergency group
-  result = api_instance.post_architect_emergencygroups(opts)
+  result = api_instance.post_architect_emergencygroups(body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_emergencygroups: #{e}"
@@ -3835,7 +3892,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**EmergencyGroup**](EmergencyGroup.html)|  | [optional]  |
+ **body** | [**EmergencyGroup**](EmergencyGroup.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -3852,7 +3909,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_ivrs"></a>
 
-## -[**IVR**](IVR.html) post_architect_ivrs(opts)
+## -[**IVR**](IVR.html) post_architect_ivrs(body)
 
 
 
@@ -3884,13 +3941,12 @@ end
 
 api_instance = PureCloud::ArchitectApi.new
 
-opts = { 
-  body: PureCloud::IVR.new # IVR | 
-}
+body = PureCloud::IVR.new # IVR | 
+
 
 begin
   #Create IVR config.
-  result = api_instance.post_architect_ivrs(opts)
+  result = api_instance.post_architect_ivrs(body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_ivrs: #{e}"
@@ -3901,7 +3957,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**IVR**](IVR.html)|  | [optional]  |
+ **body** | [**IVR**](IVR.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -3930,7 +3986,9 @@ Wraps POST /api/v2/architect/prompts/{promptId}/history
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -3983,7 +4041,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_prompt_resources"></a>
 
-## -[**PromptAsset**](PromptAsset.html) post_architect_prompt_resources(prompt_id, opts)
+## -[**PromptAsset**](PromptAsset.html) post_architect_prompt_resources(prompt_id, body)
 
 
 
@@ -3995,7 +4053,8 @@ Wraps POST /api/v2/architect/prompts/{promptId}/resources
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -4017,13 +4076,12 @@ api_instance = PureCloud::ArchitectApi.new
 
 prompt_id = "prompt_id_example" # String | Prompt ID
 
-opts = { 
-  body: PureCloud::PromptAssetCreate.new # PromptAssetCreate | 
-}
+body = PureCloud::PromptAssetCreate.new # PromptAssetCreate | 
+
 
 begin
   #Create a new user prompt resource
-  result = api_instance.post_architect_prompt_resources(prompt_id, opts)
+  result = api_instance.post_architect_prompt_resources(prompt_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_prompt_resources: #{e}"
@@ -4035,7 +4093,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **prompt_id** | **String**| Prompt ID |  |
- **body** | [**PromptAssetCreate**](PromptAssetCreate.html)|  | [optional]  |
+ **body** | [**PromptAssetCreate**](PromptAssetCreate.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -4052,7 +4110,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_prompts"></a>
 
-## -[**Prompt**](Prompt.html) post_architect_prompts(opts)
+## -[**Prompt**](Prompt.html) post_architect_prompts(body)
 
 
 
@@ -4064,7 +4122,8 @@ Wraps POST /api/v2/architect/prompts
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -4084,13 +4143,12 @@ end
 
 api_instance = PureCloud::ArchitectApi.new
 
-opts = { 
-  body: PureCloud::Prompt.new # Prompt | 
-}
+body = PureCloud::Prompt.new # Prompt | 
+
 
 begin
   #Create a new user prompt
-  result = api_instance.post_architect_prompts(opts)
+  result = api_instance.post_architect_prompts(body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_prompts: #{e}"
@@ -4101,7 +4159,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Prompt**](Prompt.html)|  | [optional]  |
+ **body** | [**Prompt**](Prompt.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -4118,7 +4176,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_schedulegroups"></a>
 
-## -[**ScheduleGroup**](ScheduleGroup.html) post_architect_schedulegroups(opts)
+## -[**ScheduleGroup**](ScheduleGroup.html) post_architect_schedulegroups(body)
 
 
 
@@ -4150,13 +4208,12 @@ end
 
 api_instance = PureCloud::ArchitectApi.new
 
-opts = { 
-  body: PureCloud::ScheduleGroup.new # ScheduleGroup | 
-}
+body = PureCloud::ScheduleGroup.new # ScheduleGroup | 
+
 
 begin
   #Creates a new schedule group
-  result = api_instance.post_architect_schedulegroups(opts)
+  result = api_instance.post_architect_schedulegroups(body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_schedulegroups: #{e}"
@@ -4167,7 +4224,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ScheduleGroup**](ScheduleGroup.html)|  | [optional]  |
+ **body** | [**ScheduleGroup**](ScheduleGroup.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -4184,7 +4241,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_schedules"></a>
 
-## -[**Schedule**](Schedule.html) post_architect_schedules(opts)
+## -[**Schedule**](Schedule.html) post_architect_schedules(body)
 
 
 
@@ -4216,13 +4273,12 @@ end
 
 api_instance = PureCloud::ArchitectApi.new
 
-opts = { 
-  body: PureCloud::Schedule.new # Schedule | 
-}
+body = PureCloud::Schedule.new # Schedule | 
+
 
 begin
   #Create a new schedule.
-  result = api_instance.post_architect_schedules(opts)
+  result = api_instance.post_architect_schedules(body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_schedules: #{e}"
@@ -4233,7 +4289,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Schedule**](Schedule.html)|  | [optional]  |
+ **body** | [**Schedule**](Schedule.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -4262,7 +4318,9 @@ Wraps POST /api/v2/architect/systemprompts/{promptId}/history
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -4315,7 +4373,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_systemprompt_resources"></a>
 
-## -[**SystemPromptAsset**](SystemPromptAsset.html) post_architect_systemprompt_resources(prompt_id, opts)
+## -[**SystemPromptAsset**](SystemPromptAsset.html) post_architect_systemprompt_resources(prompt_id, body)
 
 
 
@@ -4327,7 +4385,8 @@ Wraps POST /api/v2/architect/systemprompts/{promptId}/resources
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -4349,13 +4408,12 @@ api_instance = PureCloud::ArchitectApi.new
 
 prompt_id = "prompt_id_example" # String | Prompt ID
 
-opts = { 
-  body: PureCloud::SystemPromptAsset.new # SystemPromptAsset | 
-}
+body = PureCloud::SystemPromptAsset.new # SystemPromptAsset | 
+
 
 begin
   #Create system prompt resource override.
-  result = api_instance.post_architect_systemprompt_resources(prompt_id, opts)
+  result = api_instance.post_architect_systemprompt_resources(prompt_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_systemprompt_resources: #{e}"
@@ -4367,7 +4425,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **prompt_id** | **String**| Prompt ID |  |
- **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  | [optional]  |
+ **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -4384,7 +4442,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flow_versions"></a>
 
-## -[**FlowVersion**](FlowVersion.html) post_flow_versions(flow_id, opts)
+## -[**FlowVersion**](FlowVersion.html) post_flow_versions(flow_id, body)
 
 
 
@@ -4396,7 +4454,8 @@ Wraps POST /api/v2/flows/{flowId}/versions
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -4418,13 +4477,12 @@ api_instance = PureCloud::ArchitectApi.new
 
 flow_id = "flow_id_example" # String | Flow ID
 
-opts = { 
-  body: nil # Object | 
-}
+body = nil # Object | 
+
 
 begin
   #Create flow version
-  result = api_instance.post_flow_versions(flow_id, opts)
+  result = api_instance.post_flow_versions(flow_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flow_versions: #{e}"
@@ -4436,7 +4494,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **flow_id** | **String**| Flow ID |  |
- **body** | **Object**|  | [optional]  |
+ **body** | **Object**|  |  |
 {: class="table table-striped"}
 
 
@@ -4453,7 +4511,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flows"></a>
 
-## -[**Flow**](Flow.html) post_flows(opts)
+## -[**Flow**](Flow.html) post_flows(body)
 
 
 
@@ -4465,7 +4523,9 @@ Wraps POST /api/v2/flows
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 
 ### Example
@@ -4485,13 +4545,12 @@ end
 
 api_instance = PureCloud::ArchitectApi.new
 
-opts = { 
-  body: PureCloud::Flow.new # Flow | 
-}
+body = PureCloud::Flow.new # Flow | 
+
 
 begin
   #Create flow
-  result = api_instance.post_flows(opts)
+  result = api_instance.post_flows(body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flows: #{e}"
@@ -4502,7 +4561,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Flow**](Flow.html)|  | [optional]  |
+ **body** | [**Flow**](Flow.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -4531,7 +4590,8 @@ Wraps POST /api/v2/flows/actions/checkin
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -4596,7 +4656,8 @@ Wraps POST /api/v2/flows/actions/checkout
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -4661,7 +4722,8 @@ Wraps POST /api/v2/flows/actions/deactivate
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -4726,7 +4788,8 @@ Wraps POST /api/v2/flows/actions/publish
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -4795,7 +4858,8 @@ Wraps POST /api/v2/flows/actions/revert
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -5046,7 +5110,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_emergencygroup"></a>
 
-## -[**EmergencyGroup**](EmergencyGroup.html) put_architect_emergencygroup(emergency_group_id, opts)
+## -[**EmergencyGroup**](EmergencyGroup.html) put_architect_emergencygroup(emergency_group_id, body)
 
 
 
@@ -5080,13 +5144,12 @@ api_instance = PureCloud::ArchitectApi.new
 
 emergency_group_id = "emergency_group_id_example" # String | Emergency group ID
 
-opts = { 
-  body: PureCloud::EmergencyGroup.new # EmergencyGroup | 
-}
+body = PureCloud::EmergencyGroup.new # EmergencyGroup | 
+
 
 begin
   #Updates a emergency group by ID
-  result = api_instance.put_architect_emergencygroup(emergency_group_id, opts)
+  result = api_instance.put_architect_emergencygroup(emergency_group_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_emergencygroup: #{e}"
@@ -5098,7 +5161,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **emergency_group_id** | **String**| Emergency group ID |  |
- **body** | [**EmergencyGroup**](EmergencyGroup.html)|  | [optional]  |
+ **body** | [**EmergencyGroup**](EmergencyGroup.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -5115,7 +5178,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_ivr"></a>
 
-## -[**IVR**](IVR.html) put_architect_ivr(ivr_id, opts)
+## -[**IVR**](IVR.html) put_architect_ivr(ivr_id, body)
 
 
 
@@ -5149,13 +5212,12 @@ api_instance = PureCloud::ArchitectApi.new
 
 ivr_id = "ivr_id_example" # String | IVR id
 
-opts = { 
-  body: PureCloud::IVR.new # IVR | 
-}
+body = PureCloud::IVR.new # IVR | 
+
 
 begin
   #Update an IVR Config.
-  result = api_instance.put_architect_ivr(ivr_id, opts)
+  result = api_instance.put_architect_ivr(ivr_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_ivr: #{e}"
@@ -5167,7 +5229,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ivr_id** | **String**| IVR id |  |
- **body** | [**IVR**](IVR.html)|  | [optional]  |
+ **body** | [**IVR**](IVR.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -5184,7 +5246,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_prompt"></a>
 
-## -[**Prompt**](Prompt.html) put_architect_prompt(prompt_id, opts)
+## -[**Prompt**](Prompt.html) put_architect_prompt(prompt_id, body)
 
 
 
@@ -5196,7 +5258,8 @@ Wraps PUT /api/v2/architect/prompts/{promptId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -5218,13 +5281,12 @@ api_instance = PureCloud::ArchitectApi.new
 
 prompt_id = "prompt_id_example" # String | Prompt ID
 
-opts = { 
-  body: PureCloud::Prompt.new # Prompt | 
-}
+body = PureCloud::Prompt.new # Prompt | 
+
 
 begin
   #Update specified user prompt
-  result = api_instance.put_architect_prompt(prompt_id, opts)
+  result = api_instance.put_architect_prompt(prompt_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_prompt: #{e}"
@@ -5236,7 +5298,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **prompt_id** | **String**| Prompt ID |  |
- **body** | [**Prompt**](Prompt.html)|  | [optional]  |
+ **body** | [**Prompt**](Prompt.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -5253,7 +5315,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_prompt_resource"></a>
 
-## -[**PromptAsset**](PromptAsset.html) put_architect_prompt_resource(prompt_id, language_code, opts)
+## -[**PromptAsset**](PromptAsset.html) put_architect_prompt_resource(prompt_id, language_code, body)
 
 
 
@@ -5265,7 +5327,8 @@ Wraps PUT /api/v2/architect/prompts/{promptId}/resources/{languageCode}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -5289,13 +5352,12 @@ prompt_id = "prompt_id_example" # String | Prompt ID
 
 language_code = "language_code_example" # String | Language
 
-opts = { 
-  body: PureCloud::PromptAsset.new # PromptAsset | 
-}
+body = PureCloud::PromptAsset.new # PromptAsset | 
+
 
 begin
   #Update specified user prompt resource
-  result = api_instance.put_architect_prompt_resource(prompt_id, language_code, opts)
+  result = api_instance.put_architect_prompt_resource(prompt_id, language_code, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_prompt_resource: #{e}"
@@ -5308,7 +5370,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **prompt_id** | **String**| Prompt ID |  |
  **language_code** | **String**| Language |  |
- **body** | [**PromptAsset**](PromptAsset.html)|  | [optional]  |
+ **body** | [**PromptAsset**](PromptAsset.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -5325,7 +5387,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_schedule"></a>
 
-## -[**Schedule**](Schedule.html) put_architect_schedule(schedule_id, opts)
+## -[**Schedule**](Schedule.html) put_architect_schedule(schedule_id, body)
 
 
 
@@ -5359,13 +5421,12 @@ api_instance = PureCloud::ArchitectApi.new
 
 schedule_id = "schedule_id_example" # String | Schedule ID
 
-opts = { 
-  body: PureCloud::Schedule.new # Schedule | 
-}
+body = PureCloud::Schedule.new # Schedule | 
+
 
 begin
   #Update schedule by ID
-  result = api_instance.put_architect_schedule(schedule_id, opts)
+  result = api_instance.put_architect_schedule(schedule_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_schedule: #{e}"
@@ -5377,7 +5438,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **schedule_id** | **String**| Schedule ID |  |
- **body** | [**Schedule**](Schedule.html)|  | [optional]  |
+ **body** | [**Schedule**](Schedule.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -5394,7 +5455,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_schedulegroup"></a>
 
-## -[**ScheduleGroup**](ScheduleGroup.html) put_architect_schedulegroup(schedule_group_id, opts)
+## -[**ScheduleGroup**](ScheduleGroup.html) put_architect_schedulegroup(schedule_group_id, body)
 
 
 
@@ -5428,13 +5489,12 @@ api_instance = PureCloud::ArchitectApi.new
 
 schedule_group_id = "schedule_group_id_example" # String | Schedule group ID
 
-opts = { 
-  body: PureCloud::ScheduleGroup.new # ScheduleGroup | 
-}
+body = PureCloud::ScheduleGroup.new # ScheduleGroup | 
+
 
 begin
   #Updates a schedule group by ID
-  result = api_instance.put_architect_schedulegroup(schedule_group_id, opts)
+  result = api_instance.put_architect_schedulegroup(schedule_group_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_schedulegroup: #{e}"
@@ -5446,7 +5506,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **schedule_group_id** | **String**| Schedule group ID |  |
- **body** | [**ScheduleGroup**](ScheduleGroup.html)|  | [optional]  |
+ **body** | [**ScheduleGroup**](ScheduleGroup.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -5463,7 +5523,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_systemprompt_resource"></a>
 
-## -[**SystemPromptAsset**](SystemPromptAsset.html) put_architect_systemprompt_resource(prompt_id, language_code, opts)
+## -[**SystemPromptAsset**](SystemPromptAsset.html) put_architect_systemprompt_resource(prompt_id, language_code, body)
 
 
 
@@ -5475,7 +5535,8 @@ Wraps PUT /api/v2/architect/systemprompts/{promptId}/resources/{languageCode}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -5499,13 +5560,12 @@ prompt_id = "prompt_id_example" # String | Prompt ID
 
 language_code = "language_code_example" # String | Language
 
-opts = { 
-  body: PureCloud::SystemPromptAsset.new # SystemPromptAsset | 
-}
+body = PureCloud::SystemPromptAsset.new # SystemPromptAsset | 
+
 
 begin
   #Updates a system prompt resource override.
-  result = api_instance.put_architect_systemprompt_resource(prompt_id, language_code, opts)
+  result = api_instance.put_architect_systemprompt_resource(prompt_id, language_code, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_systemprompt_resource: #{e}"
@@ -5518,7 +5578,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **prompt_id** | **String**| Prompt ID |  |
  **language_code** | **String**| Language |  |
- **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  | [optional]  |
+ **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  |  |
 {: class="table table-striped"}
 
 
@@ -5535,7 +5595,7 @@ Name | Type | Description  | Notes
 
 <a name="put_flow"></a>
 
-## -[**Flow**](Flow.html) put_flow(flow_id, opts)
+## -[**Flow**](Flow.html) put_flow(flow_id, body)
 
 
 
@@ -5547,7 +5607,8 @@ Wraps PUT /api/v2/flows/{flowId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 
 ### Example
@@ -5569,13 +5630,12 @@ api_instance = PureCloud::ArchitectApi.new
 
 flow_id = "flow_id_example" # String | Flow ID
 
-opts = { 
-  body: PureCloud::Flow.new # Flow | 
-}
+body = PureCloud::Flow.new # Flow | 
+
 
 begin
   #Update flow
-  result = api_instance.put_flow(flow_id, opts)
+  result = api_instance.put_flow(flow_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_flow: #{e}"
@@ -5587,7 +5647,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **flow_id** | **String**| Flow ID |  |
- **body** | [**Flow**](Flow.html)|  | [optional]  |
+ **body** | [**Flow**](Flow.html)|  |  |
 {: class="table table-striped"}
 
 

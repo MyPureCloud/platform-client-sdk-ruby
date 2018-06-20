@@ -63,7 +63,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -326,7 +325,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -402,7 +400,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -473,7 +470,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -541,7 +537,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -603,7 +598,6 @@ Get metadata for a specific recording. Does not return playable media.
 Wraps GET /api/v2/conversations/{conversationId}/recordingmetadata/{recordingId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -671,7 +665,6 @@ Get all of a Conversation's Recordings.
 Wraps GET /api/v2/conversations/{conversationId}/recordings 
 
 Requires NO permissions: 
-
 
 
 
@@ -807,7 +800,6 @@ A 202 response means the orphaned media is currently transcoding and will be ava
 Wraps GET /api/v2/orphanrecordings/{orphanId}/media 
 
 Requires NO permissions: 
-
 
 
 
@@ -960,7 +952,6 @@ Get the status and results for a batch request job, only the user that submitted
 Wraps GET /api/v2/recording/batchrequests/{jobId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -1428,7 +1419,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1491,7 +1481,6 @@ Retrieves a paged listing of screen recording sessions
 Wraps GET /api/v2/recordings/screensessions 
 
 Requires NO permissions: 
-
 
 
 
@@ -1630,7 +1619,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -1695,7 +1683,6 @@ Create annotation
 Wraps POST /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations 
 
 Requires NO permissions: 
-
 
 
 
@@ -1766,7 +1753,6 @@ Submit a batch download request for recordings. Recordings in response will be i
 Wraps POST /api/v2/recording/batchrequests 
 
 Requires NO permissions: 
-
 
 
 
@@ -2088,7 +2074,6 @@ Requires NO permissions:
 
 
 
-
 ### Example
 ~~~ruby
 # load the gem
@@ -2156,7 +2141,6 @@ Update annotation
 Wraps PUT /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} 
 
 Requires NO permissions: 
-
 
 
 
@@ -2500,7 +2484,6 @@ Update the Recording Settings for the Organization
 Wraps PUT /api/v2/recording/settings 
 
 Requires NO permissions: 
-
 
 
 

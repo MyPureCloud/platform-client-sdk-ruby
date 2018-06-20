@@ -471,6 +471,8 @@ module PureCloud
     # @option opts [Integer] :page_size 
     # @option opts [Integer] :page_number 
     # @option opts [String] :expand 
+    # @option opts [String] :feature 
+    # @option opts [String] :division_id 
     # @return [ManagementUnitListing]
     def get_workforcemanagement_managementunits(opts = {})
       data, _status_code, _headers = get_workforcemanagement_managementunits_with_http_info(opts)
@@ -483,6 +485,8 @@ module PureCloud
     # @option opts [Integer] :page_size 
     # @option opts [Integer] :page_number 
     # @option opts [String] :expand 
+    # @option opts [String] :feature 
+    # @option opts [String] :division_id 
     # @return [Array<(ManagementUnitListing, Fixnum, Hash)>] ManagementUnitListing data, response status code and response headers
     def get_workforcemanagement_managementunits_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -511,6 +515,22 @@ module PureCloud
       
       
       
+      
+      
+      
+      if opts[:'feature'] && !['Agents', 'ActivityCodes', 'HistoricalAdherence', 'IntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'ServiceGoalGroups', 'ShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
+        fail ArgumentError, 'invalid value for "feature", must be one of Agents, ActivityCodes, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ShortTermForecasts, TimeOffRequests, WorkPlans'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits".sub('{format}','json')
 
@@ -519,6 +539,8 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
+      query_params[:'feature'] = opts[:'feature'] if opts[:'feature']
+      query_params[:'divisionId'] = opts[:'division_id'] if opts[:'division_id']
 
       # header parameters
       header_params = {}
