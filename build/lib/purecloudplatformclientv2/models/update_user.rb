@@ -58,6 +58,9 @@ module PureCloud
     # The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field.
     attr_accessor :state
 
+    # The value that denotes if acdAutoAnswer is set on the user
+    attr_accessor :acd_auto_answer
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -96,6 +99,8 @@ module PureCloud
         :'groups' => :'groups',
         
         :'state' => :'state',
+        
+        :'acd_auto_answer' => :'acdAutoAnswer',
         
         :'self_uri' => :'selfUri'
         
@@ -137,6 +142,8 @@ module PureCloud
         :'groups' => :'Array<Group>',
         
         :'state' => :'String',
+        
+        :'acd_auto_answer' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -308,6 +315,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'acdAutoAnswer')
+        
+        
+        self.acd_auto_answer = attributes[:'acdAutoAnswer']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -403,6 +419,10 @@ module PureCloud
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -507,6 +527,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -528,6 +553,7 @@ module PureCloud
           locations == o.locations &&
           groups == o.groups &&
           state == o.state &&
+          acd_auto_answer == o.acd_auto_answer &&
           self_uri == o.self_uri
     end
 
@@ -540,7 +566,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, chat, department, email, primary_contact_info, addresses, title, username, manager, images, version, profile_skills, locations, groups, state, self_uri].hash
+      [id, name, chat, department, email, primary_contact_info, addresses, title, username, manager, images, version, profile_skills, locations, groups, state, acd_auto_answer, self_uri].hash
     end
 
     # build the object from hash

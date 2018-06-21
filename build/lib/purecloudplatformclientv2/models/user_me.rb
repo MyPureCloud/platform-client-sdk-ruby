@@ -79,6 +79,9 @@ module PureCloud
     # The groups the user is a member of
     attr_accessor :groups
 
+    # acd auto answer
+    attr_accessor :acd_auto_answer
+
     # The PureCloud system date time.
     attr_accessor :date
 
@@ -174,6 +177,8 @@ module PureCloud
         
         :'groups' => :'groups',
         
+        :'acd_auto_answer' => :'acdAutoAnswer',
+        
         :'date' => :'date',
         
         :'geolocation_settings' => :'geolocationSettings',
@@ -256,6 +261,8 @@ module PureCloud
         :'locations' => :'Array<Location>',
         
         :'groups' => :'Array<Group>',
+        
+        :'acd_auto_answer' => :'BOOLEAN',
         
         :'date' => :'ServerDate',
         
@@ -513,6 +520,15 @@ module PureCloud
           self.groups = value
         end
         
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'acdAutoAnswer')
+        
+        
+        self.acd_auto_answer = attributes[:'acdAutoAnswer']
         
       
       end
@@ -846,6 +862,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -1048,6 +1068,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1076,6 +1101,7 @@ module PureCloud
           profile_skills == o.profile_skills &&
           locations == o.locations &&
           groups == o.groups &&
+          acd_auto_answer == o.acd_auto_answer &&
           date == o.date &&
           geolocation_settings == o.geolocation_settings &&
           organization == o.organization &&
@@ -1102,7 +1128,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, date, geolocation_settings, organization, presence_definitions, location_definitions, org_authorization, favorites, superiors, direct_reports, adjacents, routing_skills, field_configs, token, trustors, self_uri].hash
+      [id, name, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, acd_auto_answer, date, geolocation_settings, organization, presence_definitions, location_definitions, org_authorization, favorites, superiors, direct_reports, adjacents, routing_skills, field_configs, token, trustors, self_uri].hash
     end
 
     # build the object from hash

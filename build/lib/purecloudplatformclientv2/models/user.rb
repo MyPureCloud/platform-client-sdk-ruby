@@ -79,6 +79,9 @@ module PureCloud
     # The groups the user is a member of
     attr_accessor :groups
 
+    # acd auto answer
+    attr_accessor :acd_auto_answer
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -131,6 +134,8 @@ module PureCloud
         :'locations' => :'locations',
         
         :'groups' => :'groups',
+        
+        :'acd_auto_answer' => :'acdAutoAnswer',
         
         :'self_uri' => :'selfUri'
         
@@ -186,6 +191,8 @@ module PureCloud
         :'locations' => :'Array<Location>',
         
         :'groups' => :'Array<Group>',
+        
+        :'acd_auto_answer' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -420,6 +427,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'acdAutoAnswer')
+        
+        
+        self.acd_auto_answer = attributes[:'acdAutoAnswer']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -502,6 +518,10 @@ module PureCloud
         return false
       end
 
+      
+      
+      
+      
       
       
       
@@ -682,6 +702,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -710,6 +735,7 @@ module PureCloud
           profile_skills == o.profile_skills &&
           locations == o.locations &&
           groups == o.groups &&
+          acd_auto_answer == o.acd_auto_answer &&
           self_uri == o.self_uri
     end
 
@@ -722,7 +748,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, self_uri].hash
+      [id, name, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, acd_auto_answer, self_uri].hash
     end
 
     # build the object from hash

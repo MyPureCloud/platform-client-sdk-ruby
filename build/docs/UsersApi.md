@@ -42,6 +42,7 @@ Method | Description
 [**patch_user_queue**](UsersApi.html#patch_user_queue) | Join or unjoin a queue for a user
 [**patch_user_queues**](UsersApi.html#patch_user_queues) | Join or unjoin a set of queues for a user
 [**patch_user_routinglanguage**](UsersApi.html#patch_user_routinglanguage) | Update routing language proficiency or state.
+[**patch_users_bulk**](UsersApi.html#patch_users_bulk) | Update bulk acd autoanswer on users
 [**post_analytics_users_aggregates_query**](UsersApi.html#post_analytics_users_aggregates_query) | Query for user aggregates
 [**post_analytics_users_details_query**](UsersApi.html#post_analytics_users_details_query) | Query for user details
 [**post_analytics_users_observations_query**](UsersApi.html#post_analytics_users_observations_query) | Query for user observations
@@ -2375,6 +2376,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserRoutingLanguage**](UserRoutingLanguage.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_users_bulk"></a>
+
+## -[**UserEntityListing**](UserEntityListing.html) patch_users_bulk(body)
+
+
+
+Update bulk acd autoanswer on users
+
+
+
+Wraps PATCH /api/v2/users/bulk 
+
+Requires ANY permissions: 
+
+* directory:user:add
+* user_manager
+* user_administration
+* directory:user:edit
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+body = [PureCloud::PatchUser.new] # Array<PatchUser> | Users
+
+
+begin
+  #Update bulk acd autoanswer on users
+  result = api_instance.patch_users_bulk(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->patch_users_bulk: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Array&lt;PatchUser&gt;**](PatchUser.html)| Users |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserEntityListing**](UserEntityListing.html)
 
 ### HTTP request headers
 

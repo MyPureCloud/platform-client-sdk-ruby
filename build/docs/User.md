@@ -30,6 +30,7 @@ title: User
 | **profile_skills** | **Array&lt;String&gt;** | Skills possessed by the user | [optional] |
 | **locations** | [**Array&lt;Location&gt;**](Location.html) | The user placement at each site location. | [optional] |
 | **groups** | [**Array&lt;Group&gt;**](Group.html) | The groups the user is a member of | [optional] |
+| **acd_auto_answer** | **BOOLEAN** | acd auto answer | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

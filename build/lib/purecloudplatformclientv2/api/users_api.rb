@@ -2696,6 +2696,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Update bulk acd autoanswer on users
+    # 
+    # @param body Users
+    # @param [Hash] opts the optional parameters
+    # @return [UserEntityListing]
+    def patch_users_bulk(body, opts = {})
+      data, _status_code, _headers = patch_users_bulk_with_http_info(body, opts)
+      return data
+    end
+
+    # Update bulk acd autoanswer on users
+    # 
+    # @param body Users
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UserEntityListing, Fixnum, Hash)>] UserEntityListing data, response status code and response headers
+    def patch_users_bulk_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.patch_users_bulk ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.patch_users_bulk" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/bulk".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#patch_users_bulk\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Query for user aggregates
     # 
     # @param body query
