@@ -36,6 +36,9 @@ module PureCloud
     # Unique Id for all versions of this form
     attr_accessor :context_id
 
+    # Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW
+    attr_accessor :language
+
     # Id of the header image appearing at the top of the form.
     attr_accessor :header_image_id
 
@@ -73,6 +76,8 @@ module PureCloud
         
         :'context_id' => :'contextId',
         
+        :'language' => :'language',
+        
         :'header_image_id' => :'headerImageId',
         
         :'header_image_url' => :'headerImageUrl',
@@ -105,6 +110,8 @@ module PureCloud
         :'disabled' => :'BOOLEAN',
         
         :'context_id' => :'String',
+        
+        :'language' => :'String',
         
         :'header_image_id' => :'String',
         
@@ -181,6 +188,15 @@ module PureCloud
         
         
         self.context_id = attributes[:'contextId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'language')
+        
+        
+        self.language = attributes[:'language']
         
       
       end
@@ -301,6 +317,15 @@ module PureCloud
       
       
       
+      if @language.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       
       
       
@@ -401,6 +426,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -412,6 +442,7 @@ module PureCloud
           published == o.published &&
           disabled == o.disabled &&
           context_id == o.context_id &&
+          language == o.language &&
           header_image_id == o.header_image_id &&
           header_image_url == o.header_image_url &&
           header == o.header &&
@@ -430,7 +461,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, modified_date, published, disabled, context_id, header_image_id, header_image_url, header, footer, question_groups, published_versions, self_uri].hash
+      [id, name, modified_date, published, disabled, context_id, language, header_image_id, header_image_url, header, footer, question_groups, published_versions, self_uri].hash
     end
 
     # build the object from hash

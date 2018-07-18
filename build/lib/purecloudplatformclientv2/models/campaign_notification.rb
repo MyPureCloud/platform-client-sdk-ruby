@@ -80,6 +80,8 @@ module PureCloud
 
     attr_accessor :contact_list_filters
 
+    attr_accessor :division
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -147,6 +149,8 @@ module PureCloud
         :'priority' => :'priority',
         
         :'contact_list_filters' => :'contactListFilters',
+        
+        :'division' => :'division',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -218,6 +222,8 @@ module PureCloud
         :'priority' => :'Integer',
         
         :'contact_list_filters' => :'Array<CampaignNotificationUriReference>',
+        
+        :'division' => :'CampaignNotificationUriReference',
         
         :'additional_properties' => :'Object'
         
@@ -524,6 +530,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'division')
+        
+        
+        self.division = attributes[:'division']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -603,6 +618,10 @@ module PureCloud
       if @campaign_status && !allowed_values.include?(@campaign_status)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -867,6 +886,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -903,6 +927,7 @@ module PureCloud
           call_analysis_language == o.call_analysis_language &&
           priority == o.priority &&
           contact_list_filters == o.contact_list_filters &&
+          division == o.division &&
           additional_properties == o.additional_properties
     end
 
@@ -915,7 +940,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, contact_list, queue, dialing_mode, script, edge_group, site, campaign_status, phone_columns, abandon_rate, dnc_lists, callable_time_set, call_analysis_response_set, caller_name, caller_address, outbound_line_count, errors, rule_sets, skip_preview_disabled, preview_time_out_seconds, single_number_preview, contact_sort, contact_sorts, no_answer_timeout, call_analysis_language, priority, contact_list_filters, additional_properties].hash
+      [id, name, date_created, date_modified, version, contact_list, queue, dialing_mode, script, edge_group, site, campaign_status, phone_columns, abandon_rate, dnc_lists, callable_time_set, call_analysis_response_set, caller_name, caller_address, outbound_line_count, errors, rule_sets, skip_preview_disabled, preview_time_out_seconds, single_number_preview, contact_sort, contact_sorts, no_answer_timeout, call_analysis_language, priority, contact_list_filters, division, additional_properties].hash
     end
 
     # build the object from hash

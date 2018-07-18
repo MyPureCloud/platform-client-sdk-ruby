@@ -24,6 +24,534 @@ module PureCloud
       @api_client = api_client
     end
 
+    # Delete management unit
+    # 
+    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_workforcemanagement_managementunit(mu_id, opts = {})
+      delete_workforcemanagement_managementunit_with_http_info(mu_id, opts)
+      return nil
+    end
+
+    # Delete management unit
+    # 
+    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_workforcemanagement_managementunit_with_http_info(mu_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.delete_workforcemanagement_managementunit ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit" if mu_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#delete_workforcemanagement_managementunit\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Deletes an activity code
+    # 
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param ac_id The ID of the activity code to delete
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_workforcemanagement_managementunit_activitycode(mu_id, ac_id, opts = {})
+      delete_workforcemanagement_managementunit_activitycode_with_http_info(mu_id, ac_id, opts)
+      return nil
+    end
+
+    # Deletes an activity code
+    # 
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param ac_id The ID of the activity code to delete
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_workforcemanagement_managementunit_activitycode_with_http_info(mu_id, ac_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.delete_workforcemanagement_managementunit_activitycode ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_activitycode" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'ac_id' is set
+      fail ArgumentError, "Missing the required parameter 'ac_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_activitycode" if ac_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId}".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s).sub('{' + 'acId' + '}', ac_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#delete_workforcemanagement_managementunit_activitycode\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Cancel a schedule run
+    # 
+    # @param management_unit_id The ID of the management unit.
+    # @param run_id The ID of the schedule run
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id, opts = {})
+      delete_workforcemanagement_managementunit_scheduling_run_with_http_info(management_unit_id, run_id, opts)
+      return nil
+    end
+
+    # Cancel a schedule run
+    # 
+    # @param management_unit_id The ID of the management unit.
+    # @param run_id The ID of the schedule run
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_workforcemanagement_managementunit_scheduling_run_with_http_info(management_unit_id, run_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.delete_workforcemanagement_managementunit_scheduling_run ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_scheduling_run" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'run_id' is set
+      fail ArgumentError, "Missing the required parameter 'run_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_scheduling_run" if run_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'runId' + '}', run_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#delete_workforcemanagement_managementunit_scheduling_run\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Delete a service goal group
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param service_goal_group_id The ID of the service goal group to delete
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id, opts = {})
+      delete_workforcemanagement_managementunit_servicegoalgroup_with_http_info(management_unit_id, service_goal_group_id, opts)
+      return nil
+    end
+
+    # Delete a service goal group
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param service_goal_group_id The ID of the service goal group to delete
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_workforcemanagement_managementunit_servicegoalgroup_with_http_info(management_unit_id, service_goal_group_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.delete_workforcemanagement_managementunit_servicegoalgroup ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_servicegoalgroup" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'service_goal_group_id' is set
+      fail ArgumentError, "Missing the required parameter 'service_goal_group_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_servicegoalgroup" if service_goal_group_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'serviceGoalGroupId' + '}', service_goal_group_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#delete_workforcemanagement_managementunit_servicegoalgroup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Delete a schedule
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of theschedule to delete
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id, opts = {})
+      delete_workforcemanagement_managementunit_week_schedule_with_http_info(management_unit_id, week_id, schedule_id, opts)
+      return nil
+    end
+
+    # Delete a schedule
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of theschedule to delete
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_workforcemanagement_managementunit_week_schedule_with_http_info(management_unit_id, week_id, schedule_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.delete_workforcemanagement_managementunit_week_schedule ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_week_schedule" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_week_schedule" if week_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'schedule_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_week_schedule" if schedule_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekId' + '}', week_id.to_s).sub('{' + 'scheduleId' + '}', schedule_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#delete_workforcemanagement_managementunit_week_schedule\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Delete a short term forecast
+    # Must not be tied to any schedules
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param forecast_id The ID of the forecast
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_workforcemanagement_managementunit_week_shorttermforecast(management_unit_id, week_date_id, forecast_id, opts = {})
+      delete_workforcemanagement_managementunit_week_shorttermforecast_with_http_info(management_unit_id, week_date_id, forecast_id, opts)
+      return nil
+    end
+
+    # Delete a short term forecast
+    # Must not be tied to any schedules
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param forecast_id The ID of the forecast
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_workforcemanagement_managementunit_week_shorttermforecast_with_http_info(management_unit_id, week_date_id, forecast_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.delete_workforcemanagement_managementunit_week_shorttermforecast ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_week_shorttermforecast" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_date_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_date_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_week_shorttermforecast" if week_date_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'forecast_id' is set
+      fail ArgumentError, "Missing the required parameter 'forecast_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_week_shorttermforecast" if forecast_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekDateId' + '}', week_date_id.to_s).sub('{' + 'forecastId' + '}', forecast_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#delete_workforcemanagement_managementunit_week_shorttermforecast\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Delete a work plan
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param work_plan_id The ID of the work plan to delete
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_workforcemanagement_managementunit_workplan(management_unit_id, work_plan_id, opts = {})
+      delete_workforcemanagement_managementunit_workplan_with_http_info(management_unit_id, work_plan_id, opts)
+      return nil
+    end
+
+    # Delete a work plan
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param work_plan_id The ID of the work plan to delete
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_workforcemanagement_managementunit_workplan_with_http_info(management_unit_id, work_plan_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.delete_workforcemanagement_managementunit_workplan ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_workplan" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'work_plan_id' is set
+      fail ArgumentError, "Missing the required parameter 'work_plan_id' when calling WorkforceManagementApi.delete_workforcemanagement_managementunit_workplan" if work_plan_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'workPlanId' + '}', work_plan_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#delete_workforcemanagement_managementunit_workplan\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a list of UserScheduleAdherence records for the requested users
     # 
     # @param user_id User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request
@@ -86,6 +614,159 @@ module PureCloud
         :return_type => 'Array<UserScheduleAdherence>')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_adherence\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get management unit
+    # 
+    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :expand 
+    # @return [ManagementUnit]
+    def get_workforcemanagement_managementunit(mu_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_with_http_info(mu_id, opts)
+      return data
+    end
+
+    # Get management unit
+    # 
+    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :expand 
+    # @return [Array<(ManagementUnit, Fixnum, Hash)>] ManagementUnit data, response status code and response headers
+    def get_workforcemanagement_managementunit_with_http_info(mu_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'expand'] && !['settings'].include?(opts[:'expand'])
+        fail ArgumentError, 'invalid value for "expand", must be one of settings'
+      end
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ManagementUnit')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get an activity code
+    # 
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param ac_id The ID of the activity code to fetch
+    # @param [Hash] opts the optional parameters
+    # @return [ActivityCode]
+    def get_workforcemanagement_managementunit_activitycode(mu_id, ac_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_activitycode_with_http_info(mu_id, ac_id, opts)
+      return data
+    end
+
+    # Get an activity code
+    # 
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param ac_id The ID of the activity code to fetch
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ActivityCode, Fixnum, Hash)>] ActivityCode data, response status code and response headers
+    def get_workforcemanagement_managementunit_activitycode_with_http_info(mu_id, ac_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_activitycode ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_activitycode" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'ac_id' is set
+      fail ArgumentError, "Missing the required parameter 'ac_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_activitycode" if ac_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId}".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s).sub('{' + 'acId' + '}', ac_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ActivityCode')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_activitycode\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -155,10 +836,85 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get data for agent in the management unit
+    # 
+    # @param management_unit_id The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param agent_id The agent id
+    # @param [Hash] opts the optional parameters
+    # @return [WfmAgent]
+    def get_workforcemanagement_managementunit_agent(management_unit_id, agent_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_agent_with_http_info(management_unit_id, agent_id, opts)
+      return data
+    end
+
+    # Get data for agent in the management unit
+    # 
+    # @param management_unit_id The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param agent_id The agent id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WfmAgent, Fixnum, Hash)>] WfmAgent data, response status code and response headers
+    def get_workforcemanagement_managementunit_agent_with_http_info(management_unit_id, agent_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_agent ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_agent" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'agent_id' is set
+      fail ArgumentError, "Missing the required parameter 'agent_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_agent" if agent_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'agentId' + '}', agent_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WfmAgent')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_agent\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get intraday queues for the given date
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
-    # @param date ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23
+    # @param mu_id The management unit ID of the management unit
+    # @param date yyyy-MM-dd date string interpreted in the configured management unit time zone
     # @param [Hash] opts the optional parameters
     # @return [WfmIntradayQueueListing]
     def get_workforcemanagement_managementunit_intraday_queues(mu_id, date, opts = {})
@@ -168,8 +924,8 @@ module PureCloud
 
     # Get intraday queues for the given date
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
-    # @param date ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23
+    # @param mu_id The management unit ID of the management unit
+    # @param date yyyy-MM-dd date string interpreted in the configured management unit time zone
     # @param [Hash] opts the optional parameters
     # @return [Array<(WfmIntradayQueueListing, Fixnum, Hash)>] WfmIntradayQueueListing data, response status code and response headers
     def get_workforcemanagement_managementunit_intraday_queues_with_http_info(mu_id, date, opts = {})
@@ -227,6 +983,276 @@ module PureCloud
         :return_type => 'WfmIntradayQueueListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_intraday_queues\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the status of all the ongoing schedule runs
+    # 
+    # @param management_unit_id The ID of the management unit.
+    # @param [Hash] opts the optional parameters
+    # @return [SchedulingRunListResponse]
+    def get_workforcemanagement_managementunit_scheduling_runs(management_unit_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_scheduling_runs_with_http_info(management_unit_id, opts)
+      return data
+    end
+
+    # Get the status of all the ongoing schedule runs
+    # 
+    # @param management_unit_id The ID of the management unit.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SchedulingRunListResponse, Fixnum, Hash)>] SchedulingRunListResponse data, response status code and response headers
+    def get_workforcemanagement_managementunit_scheduling_runs_with_http_info(management_unit_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_scheduling_runs ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_scheduling_runs" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SchedulingRunListResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_scheduling_runs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a service goal group
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param service_goal_group_id The ID of the service goal group to fetch
+    # @param [Hash] opts the optional parameters
+    # @return [ServiceGoalGroup]
+    def get_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_servicegoalgroup_with_http_info(management_unit_id, service_goal_group_id, opts)
+      return data
+    end
+
+    # Get a service goal group
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param service_goal_group_id The ID of the service goal group to fetch
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ServiceGoalGroup, Fixnum, Hash)>] ServiceGoalGroup data, response status code and response headers
+    def get_workforcemanagement_managementunit_servicegoalgroup_with_http_info(management_unit_id, service_goal_group_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_servicegoalgroup ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_servicegoalgroup" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'service_goal_group_id' is set
+      fail ArgumentError, "Missing the required parameter 'service_goal_group_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_servicegoalgroup" if service_goal_group_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'serviceGoalGroupId' + '}', service_goal_group_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ServiceGoalGroup')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_servicegoalgroup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get service goal groups
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @return [ServiceGoalGroupList]
+    def get_workforcemanagement_managementunit_servicegoalgroups(management_unit_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_servicegoalgroups_with_http_info(management_unit_id, opts)
+      return data
+    end
+
+    # Get service goal groups
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ServiceGoalGroupList, Fixnum, Hash)>] ServiceGoalGroupList data, response status code and response headers
+    def get_workforcemanagement_managementunit_servicegoalgroups_with_http_info(management_unit_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_servicegoalgroups ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_servicegoalgroups" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ServiceGoalGroupList')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_servicegoalgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the settings for the requested management unit
+    # 
+    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @return [ManagementUnitSettings]
+    def get_workforcemanagement_managementunit_settings(mu_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_settings_with_http_info(mu_id, opts)
+      return data
+    end
+
+    # Get the settings for the requested management unit
+    # 
+    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ManagementUnitSettings, Fixnum, Hash)>] ManagementUnitSettings data, response status code and response headers
+    def get_workforcemanagement_managementunit_settings_with_http_info(mu_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_settings ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_settings" if mu_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/settings".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ManagementUnitSettings')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_settings\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -400,7 +1426,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get agents in the management unit
+    # Get users in the management unit
     # 
     # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
@@ -410,7 +1436,7 @@ module PureCloud
       return data
     end
 
-    # Get agents in the management unit
+    # Get users in the management unit
     # 
     # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
@@ -461,6 +1487,595 @@ module PureCloud
         :return_type => 'WfmUserEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a week schedule
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of the schedule to fetch
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :expand Which fields, if any, to expand
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
+    # @return [WeekScheduleResponse]
+    def get_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_week_schedule_with_http_info(management_unit_id, week_id, schedule_id, opts)
+      return data
+    end
+
+    # Get a week schedule
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of the schedule to fetch
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :expand Which fields, if any, to expand
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
+    # @return [Array<(WeekScheduleResponse, Fixnum, Hash)>] WeekScheduleResponse data, response status code and response headers
+    def get_workforcemanagement_managementunit_week_schedule_with_http_info(management_unit_id, week_id, schedule_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_week_schedule ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_schedule" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_schedule" if week_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'schedule_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_schedule" if schedule_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'expand'] && !['generationResults', 'headcountForecast'].include?(opts[:'expand'])
+        fail ArgumentError, 'invalid value for "expand", must be one of generationResults, headcountForecast'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekId' + '}', week_id.to_s).sub('{' + 'scheduleId' + '}', schedule_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
+      query_params[:'forceDownloadService'] = opts[:'force_download_service'] if opts[:'force_download_service']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WeekScheduleResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_week_schedule\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get week schedule generation results
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of the schedule to fetch generation results
+    # @param [Hash] opts the optional parameters
+    # @return [WeekScheduleGenerationResult]
+    def get_workforcemanagement_managementunit_week_schedule_generationresults(management_unit_id, week_id, schedule_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_week_schedule_generationresults_with_http_info(management_unit_id, week_id, schedule_id, opts)
+      return data
+    end
+
+    # Get week schedule generation results
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of the schedule to fetch generation results
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WeekScheduleGenerationResult, Fixnum, Hash)>] WeekScheduleGenerationResult data, response status code and response headers
+    def get_workforcemanagement_managementunit_week_schedule_generationresults_with_http_info(management_unit_id, week_id, schedule_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_week_schedule_generationresults ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_schedule_generationresults" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_schedule_generationresults" if week_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'schedule_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_schedule_generationresults" if schedule_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekId' + '}', week_id.to_s).sub('{' + 'scheduleId' + '}', schedule_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WeekScheduleGenerationResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_week_schedule_generationresults\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the list of schedules in a week in management unit
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param [Hash] opts the optional parameters
+    # @return [WeekScheduleListResponse]
+    def get_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_week_schedules_with_http_info(management_unit_id, week_id, opts)
+      return data
+    end
+
+    # Get the list of schedules in a week in management unit
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WeekScheduleListResponse, Fixnum, Hash)>] WeekScheduleListResponse data, response status code and response headers
+    def get_workforcemanagement_managementunit_week_schedules_with_http_info(management_unit_id, week_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_week_schedules ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_schedules" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_schedules" if week_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekId' + '}', week_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WeekScheduleListResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_week_schedules\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the final result of a short term forecast calculation with modifications applied
+    # 
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param forecast_id The ID of the forecast
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
+    # @return [ForecastResultResponse]
+    def get_workforcemanagement_managementunit_week_shorttermforecast_final(management_unit_id, week_date_id, forecast_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_week_shorttermforecast_final_with_http_info(management_unit_id, week_date_id, forecast_id, opts)
+      return data
+    end
+
+    # Get the final result of a short term forecast calculation with modifications applied
+    # 
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param forecast_id The ID of the forecast
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
+    # @return [Array<(ForecastResultResponse, Fixnum, Hash)>] ForecastResultResponse data, response status code and response headers
+    def get_workforcemanagement_managementunit_week_shorttermforecast_final_with_http_info(management_unit_id, week_date_id, forecast_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_week_shorttermforecast_final ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_shorttermforecast_final" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_date_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_date_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_shorttermforecast_final" if week_date_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'forecast_id' is set
+      fail ArgumentError, "Missing the required parameter 'forecast_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_shorttermforecast_final" if forecast_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/final".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekDateId' + '}', week_date_id.to_s).sub('{' + 'forecastId' + '}', forecast_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'forceDownloadService'] = opts[:'force_download_service'] if opts[:'force_download_service']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ForecastResultResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_week_shorttermforecast_final\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get short term forecasts
+    # Use \"recent\" for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param [Hash] opts the optional parameters
+    # @return [ShortTermForecastListResponse]
+    def get_workforcemanagement_managementunit_week_shorttermforecasts(management_unit_id, week_date_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_week_shorttermforecasts_with_http_info(management_unit_id, week_date_id, opts)
+      return data
+    end
+
+    # Get short term forecasts
+    # Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ShortTermForecastListResponse, Fixnum, Hash)>] ShortTermForecastListResponse data, response status code and response headers
+    def get_workforcemanagement_managementunit_week_shorttermforecasts_with_http_info(management_unit_id, week_date_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_week_shorttermforecasts ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_shorttermforecasts" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_date_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_date_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_week_shorttermforecasts" if week_date_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekDateId' + '}', week_date_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ShortTermForecastListResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_week_shorttermforecasts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a work plan
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param work_plan_id The ID of the work plan to fetch
+    # @param [Hash] opts the optional parameters
+    # @return [WorkPlan]
+    def get_workforcemanagement_managementunit_workplan(management_unit_id, work_plan_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_workplan_with_http_info(management_unit_id, work_plan_id, opts)
+      return data
+    end
+
+    # Get a work plan
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param work_plan_id The ID of the work plan to fetch
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WorkPlan, Fixnum, Hash)>] WorkPlan data, response status code and response headers
+    def get_workforcemanagement_managementunit_workplan_with_http_info(management_unit_id, work_plan_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_workplan ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_workplan" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'work_plan_id' is set
+      fail ArgumentError, "Missing the required parameter 'work_plan_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_workplan" if work_plan_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'workPlanId' + '}', work_plan_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WorkPlan')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_workplan\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get work plans
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :expand 
+    # @return [WorkPlanListResponse]
+    def get_workforcemanagement_managementunit_workplans(management_unit_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_workplans_with_http_info(management_unit_id, opts)
+      return data
+    end
+
+    # Get work plans
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :expand 
+    # @return [Array<(WorkPlanListResponse, Fixnum, Hash)>] WorkPlanListResponse data, response status code and response headers
+    def get_workforcemanagement_managementunit_workplans_with_http_info(management_unit_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_workplans ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_workplans" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'expand'] && !['agentCount'].include?(opts[:'expand'])
+        fail ArgumentError, 'invalid value for "expand", must be one of agentCount'
+      end
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WorkPlanListResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_workplans\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -518,8 +2133,8 @@ module PureCloud
       
       
       
-      if opts[:'feature'] && !['Agents', 'ActivityCodes', 'HistoricalAdherence', 'IntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'ServiceGoalGroups', 'ShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
-        fail ArgumentError, 'invalid value for "feature", must be one of Agents, ActivityCodes, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ShortTermForecasts, TimeOffRequests, WorkPlans'
+      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'ActivityCodes', 'Agents', 'HistoricalAdherence', 'IntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'ServiceGoalGroups', 'ShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
+        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ShortTermForecasts, TimeOffRequests, WorkPlans'
       end
       
       
@@ -569,6 +2184,374 @@ module PureCloud
         :return_type => 'ManagementUnitListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunits\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a time off request for the current user
+    # 
+    # @param time_off_request_id Time Off Request Id
+    # @param [Hash] opts the optional parameters
+    # @return [TimeOffRequestResponse]
+    def get_workforcemanagement_timeoffrequest(time_off_request_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_timeoffrequest_with_http_info(time_off_request_id, opts)
+      return data
+    end
+
+    # Get a time off request for the current user
+    # 
+    # @param time_off_request_id Time Off Request Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TimeOffRequestResponse, Fixnum, Hash)>] TimeOffRequestResponse data, response status code and response headers
+    def get_workforcemanagement_timeoffrequest_with_http_info(time_off_request_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_timeoffrequest ..."
+      end
+      
+      
+      # verify the required parameter 'time_off_request_id' is set
+      fail ArgumentError, "Missing the required parameter 'time_off_request_id' when calling WorkforceManagementApi.get_workforcemanagement_timeoffrequest" if time_off_request_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}".sub('{format}','json').sub('{' + 'timeOffRequestId' + '}', time_off_request_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TimeOffRequestResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_timeoffrequest\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of time off requests for the current user
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :recently_reviewed Limit results to requests that have been reviewed within the preceding 30 days (default to false)
+    # @return [TimeOffRequestList]
+    def get_workforcemanagement_timeoffrequests(opts = {})
+      data, _status_code, _headers = get_workforcemanagement_timeoffrequests_with_http_info(opts)
+      return data
+    end
+
+    # Get a list of time off requests for the current user
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :recently_reviewed Limit results to requests that have been reviewed within the preceding 30 days
+    # @return [Array<(TimeOffRequestList, Fixnum, Hash)>] TimeOffRequestList data, response status code and response headers
+    def get_workforcemanagement_timeoffrequests_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_timeoffrequests ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/timeoffrequests".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'recentlyReviewed'] = opts[:'recently_reviewed'] if opts[:'recently_reviewed']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TimeOffRequestList')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_timeoffrequests\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update an activity code
+    # 
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param ac_id The ID of the activity code to update
+    # @param [Hash] opts the optional parameters
+    # @option opts [UpdateActivityCodeRequest] :body body
+    # @return [ActivityCode]
+    def patch_workforcemanagement_managementunit_activitycode(mu_id, ac_id, opts = {})
+      data, _status_code, _headers = patch_workforcemanagement_managementunit_activitycode_with_http_info(mu_id, ac_id, opts)
+      return data
+    end
+
+    # Update an activity code
+    # 
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param ac_id The ID of the activity code to update
+    # @param [Hash] opts the optional parameters
+    # @option opts [UpdateActivityCodeRequest] :body body
+    # @return [Array<(ActivityCode, Fixnum, Hash)>] ActivityCode data, response status code and response headers
+    def patch_workforcemanagement_managementunit_activitycode_with_http_info(mu_id, ac_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.patch_workforcemanagement_managementunit_activitycode ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_activitycode" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'ac_id' is set
+      fail ArgumentError, "Missing the required parameter 'ac_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_activitycode" if ac_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId}".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s).sub('{' + 'acId' + '}', ac_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ActivityCode')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#patch_workforcemanagement_managementunit_activitycode\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a service goal group
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param service_goal_group_id The ID of the service goal group to update
+    # @param [Hash] opts the optional parameters
+    # @option opts [ServiceGoalGroup] :body body
+    # @return [ServiceGoalGroup]
+    def patch_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id, opts = {})
+      data, _status_code, _headers = patch_workforcemanagement_managementunit_servicegoalgroup_with_http_info(management_unit_id, service_goal_group_id, opts)
+      return data
+    end
+
+    # Update a service goal group
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param service_goal_group_id The ID of the service goal group to update
+    # @param [Hash] opts the optional parameters
+    # @option opts [ServiceGoalGroup] :body body
+    # @return [Array<(ServiceGoalGroup, Fixnum, Hash)>] ServiceGoalGroup data, response status code and response headers
+    def patch_workforcemanagement_managementunit_servicegoalgroup_with_http_info(management_unit_id, service_goal_group_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.patch_workforcemanagement_managementunit_servicegoalgroup ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_servicegoalgroup" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'service_goal_group_id' is set
+      fail ArgumentError, "Missing the required parameter 'service_goal_group_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_servicegoalgroup" if service_goal_group_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'serviceGoalGroupId' + '}', service_goal_group_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ServiceGoalGroup')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#patch_workforcemanagement_managementunit_servicegoalgroup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Patch the settings for the requested management unit
+    # 
+    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [ManagementUnitSettings] :body config
+    # @return [ManagementUnitSettings]
+    def patch_workforcemanagement_managementunit_settings(mu_id, opts = {})
+      data, _status_code, _headers = patch_workforcemanagement_managementunit_settings_with_http_info(mu_id, opts)
+      return data
+    end
+
+    # Patch the settings for the requested management unit
+    # 
+    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [ManagementUnitSettings] :body config
+    # @return [Array<(ManagementUnitSettings, Fixnum, Hash)>] ManagementUnitSettings data, response status code and response headers
+    def patch_workforcemanagement_managementunit_settings_with_http_info(mu_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.patch_workforcemanagement_managementunit_settings ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_settings" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/settings".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ManagementUnitSettings')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#patch_workforcemanagement_managementunit_settings\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -666,6 +2649,336 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Update a week schedule
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
+    # @option opts [UpdateWeekScheduleRequest] :body body
+    # @return [AsyncWeekScheduleResponse]
+    def patch_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id, opts = {})
+      data, _status_code, _headers = patch_workforcemanagement_managementunit_week_schedule_with_http_info(management_unit_id, week_id, schedule_id, opts)
+      return data
+    end
+
+    # Update a week schedule
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
+    # @option opts [UpdateWeekScheduleRequest] :body body
+    # @return [Array<(AsyncWeekScheduleResponse, Fixnum, Hash)>] AsyncWeekScheduleResponse data, response status code and response headers
+    def patch_workforcemanagement_managementunit_week_schedule_with_http_info(management_unit_id, week_id, schedule_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.patch_workforcemanagement_managementunit_week_schedule ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_week_schedule" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_week_schedule" if week_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'schedule_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_week_schedule" if schedule_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekId' + '}', week_id.to_s).sub('{' + 'scheduleId' + '}', schedule_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'forceAsync'] = opts[:'force_async'] if opts[:'force_async']
+      query_params[:'forceDownloadService'] = opts[:'force_download_service'] if opts[:'force_download_service']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AsyncWeekScheduleResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#patch_workforcemanagement_managementunit_week_schedule\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a work plan
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param work_plan_id The ID of the work plan to update
+    # @param [Hash] opts the optional parameters
+    # @option opts [WorkPlan] :body body
+    # @return [WorkPlan]
+    def patch_workforcemanagement_managementunit_workplan(management_unit_id, work_plan_id, opts = {})
+      data, _status_code, _headers = patch_workforcemanagement_managementunit_workplan_with_http_info(management_unit_id, work_plan_id, opts)
+      return data
+    end
+
+    # Update a work plan
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param work_plan_id The ID of the work plan to update
+    # @param [Hash] opts the optional parameters
+    # @option opts [WorkPlan] :body body
+    # @return [Array<(WorkPlan, Fixnum, Hash)>] WorkPlan data, response status code and response headers
+    def patch_workforcemanagement_managementunit_workplan_with_http_info(management_unit_id, work_plan_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.patch_workforcemanagement_managementunit_workplan ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_workplan" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'work_plan_id' is set
+      fail ArgumentError, "Missing the required parameter 'work_plan_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_workplan" if work_plan_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'workPlanId' + '}', work_plan_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WorkPlan')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#patch_workforcemanagement_managementunit_workplan\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a time off request for the current user
+    # 
+    # @param time_off_request_id Time Off Request Id
+    # @param [Hash] opts the optional parameters
+    # @option opts [AgentTimeOffRequestPatch] :body body
+    # @return [TimeOffRequestResponse]
+    def patch_workforcemanagement_timeoffrequest(time_off_request_id, opts = {})
+      data, _status_code, _headers = patch_workforcemanagement_timeoffrequest_with_http_info(time_off_request_id, opts)
+      return data
+    end
+
+    # Update a time off request for the current user
+    # 
+    # @param time_off_request_id Time Off Request Id
+    # @param [Hash] opts the optional parameters
+    # @option opts [AgentTimeOffRequestPatch] :body body
+    # @return [Array<(TimeOffRequestResponse, Fixnum, Hash)>] TimeOffRequestResponse data, response status code and response headers
+    def patch_workforcemanagement_timeoffrequest_with_http_info(time_off_request_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.patch_workforcemanagement_timeoffrequest ..."
+      end
+      
+      
+      # verify the required parameter 'time_off_request_id' is set
+      fail ArgumentError, "Missing the required parameter 'time_off_request_id' when calling WorkforceManagementApi.patch_workforcemanagement_timeoffrequest" if time_off_request_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}".sub('{format}','json').sub('{' + 'timeOffRequestId' + '}', time_off_request_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TimeOffRequestResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#patch_workforcemanagement_timeoffrequest\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Request a historical adherence report for users across management units
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [WfmHistoricalAdherenceQueryForUsers] :body body
+    # @return [WfmHistoricalAdherenceResponse]
+    def post_workforcemanagement_adherence_historical(opts = {})
+      data, _status_code, _headers = post_workforcemanagement_adherence_historical_with_http_info(opts)
+      return data
+    end
+
+    # Request a historical adherence report for users across management units
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [WfmHistoricalAdherenceQueryForUsers] :body body
+    # @return [Array<(WfmHistoricalAdherenceResponse, Fixnum, Hash)>] WfmHistoricalAdherenceResponse data, response status code and response headers
+    def post_workforcemanagement_adherence_historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_adherence_historical ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/adherence/historical".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WfmHistoricalAdherenceResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_adherence_historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create a new activity code
     # 
     # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
@@ -740,8 +3053,8 @@ module PureCloud
     end
 
     # Request a historical adherence report
-    # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
+    # @param mu_id The management unit ID of the management unit
     # @param [Hash] opts the optional parameters
     # @option opts [WfmHistoricalAdherenceQuery] :body body
     # @return [WfmHistoricalAdherenceResponse]
@@ -751,8 +3064,8 @@ module PureCloud
     end
 
     # Request a historical adherence report
-    # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
+    # @param mu_id The management unit ID of the management unit
     # @param [Hash] opts the optional parameters
     # @option opts [WfmHistoricalAdherenceQuery] :body body
     # @return [Array<(WfmHistoricalAdherenceResponse, Fixnum, Hash)>] WfmHistoricalAdherenceResponse data, response status code and response headers
@@ -814,7 +3127,7 @@ module PureCloud
 
     # Get intraday data for the given date for the requested queueIds
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The management unit ID of the management unit
     # @param [Hash] opts the optional parameters
     # @option opts [IntradayQueryDataCommand] :body body
     # @return [IntradayResponse]
@@ -825,7 +3138,7 @@ module PureCloud
 
     # Get intraday data for the given date for the requested queueIds
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The management unit ID of the management unit
     # @param [Hash] opts the optional parameters
     # @option opts [IntradayQueryDataCommand] :body body
     # @return [Array<(IntradayResponse, Fixnum, Hash)>] IntradayResponse data, response status code and response headers
@@ -954,6 +3267,1398 @@ module PureCloud
         :return_type => 'UserScheduleContainer')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_schedules_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a new service goal group
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateServiceGoalGroupRequest] :body body
+    # @return [ServiceGoalGroup]
+    def post_workforcemanagement_managementunit_servicegoalgroups(management_unit_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_servicegoalgroups_with_http_info(management_unit_id, opts)
+      return data
+    end
+
+    # Create a new service goal group
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateServiceGoalGroupRequest] :body body
+    # @return [Array<(ServiceGoalGroup, Fixnum, Hash)>] ServiceGoalGroup data, response status code and response headers
+    def post_workforcemanagement_managementunit_servicegoalgroups_with_http_info(management_unit_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_servicegoalgroups ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_servicegoalgroups" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ServiceGoalGroup')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_servicegoalgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a new time off request
+    # 
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateAdminTimeOffRequest] :body body
+    # @return [TimeOffRequestList]
+    def post_workforcemanagement_managementunit_timeoffrequests(mu_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_timeoffrequests_with_http_info(mu_id, opts)
+      return data
+    end
+
+    # Create a new time off request
+    # 
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateAdminTimeOffRequest] :body body
+    # @return [Array<(TimeOffRequestList, Fixnum, Hash)>] TimeOffRequestList data, response status code and response headers
+    def post_workforcemanagement_managementunit_timeoffrequests_with_http_info(mu_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_timeoffrequests ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_timeoffrequests" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TimeOffRequestList')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_timeoffrequests\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Gets a list of time off requests from lookup ids
+    # 
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [TimeOffRequestLookupList] :body body
+    # @return [TimeOffRequestEntityList]
+    def post_workforcemanagement_managementunit_timeoffrequests_fetchdetails(mu_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_timeoffrequests_fetchdetails_with_http_info(mu_id, opts)
+      return data
+    end
+
+    # Gets a list of time off requests from lookup ids
+    # 
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [TimeOffRequestLookupList] :body body
+    # @return [Array<(TimeOffRequestEntityList, Fixnum, Hash)>] TimeOffRequestEntityList data, response status code and response headers
+    def post_workforcemanagement_managementunit_timeoffrequests_fetchdetails_with_http_info(mu_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_timeoffrequests_fetchdetails ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_timeoffrequests_fetchdetails" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/fetchdetails".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TimeOffRequestEntityList')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_timeoffrequests_fetchdetails\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Gets the lookup ids to fetch the specified set of requests
+    # 
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [TimeOffRequestQueryBody] :body body
+    # @return [TimeOffRequestLookupList]
+    def post_workforcemanagement_managementunit_timeoffrequests_query(mu_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_timeoffrequests_query_with_http_info(mu_id, opts)
+      return data
+    end
+
+    # Gets the lookup ids to fetch the specified set of requests
+    # 
+    # @param mu_id The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [TimeOffRequestQueryBody] :body body
+    # @return [Array<(TimeOffRequestLookupList, Fixnum, Hash)>] TimeOffRequestLookupList data, response status code and response headers
+    def post_workforcemanagement_managementunit_timeoffrequests_query_with_http_info(mu_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_timeoffrequests_query ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_timeoffrequests_query" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/query".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TimeOffRequestLookupList')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_timeoffrequests_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Copy a week schedule
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of the schedule to copy from
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
+    # @option opts [CopyWeekScheduleRequest] :body body
+    # @return [AsyncWeekScheduleResponse]
+    def post_workforcemanagement_managementunit_week_schedule_copy(management_unit_id, week_id, schedule_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_week_schedule_copy_with_http_info(management_unit_id, week_id, schedule_id, opts)
+      return data
+    end
+
+    # Copy a week schedule
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of the schedule to copy from
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
+    # @option opts [CopyWeekScheduleRequest] :body body
+    # @return [Array<(AsyncWeekScheduleResponse, Fixnum, Hash)>] AsyncWeekScheduleResponse data, response status code and response headers
+    def post_workforcemanagement_managementunit_week_schedule_copy_with_http_info(management_unit_id, week_id, schedule_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedule_copy ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedule_copy" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedule_copy" if week_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'schedule_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedule_copy" if schedule_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekId' + '}', week_id.to_s).sub('{' + 'scheduleId' + '}', schedule_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'forceAsync'] = opts[:'force_async'] if opts[:'force_async']
+      query_params[:'forceDownloadService'] = opts[:'force_download_service'] if opts[:'force_download_service']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AsyncWeekScheduleResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_week_schedule_copy\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
+    # @option opts [ImportWeekScheduleRequest] :body body
+    # @return [AsyncWeekScheduleResponse]
+    def post_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_week_schedules_with_http_info(management_unit_id, week_id, opts)
+      return data
+    end
+
+    # Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
+    # @option opts [ImportWeekScheduleRequest] :body body
+    # @return [Array<(AsyncWeekScheduleResponse, Fixnum, Hash)>] AsyncWeekScheduleResponse data, response status code and response headers
+    def post_workforcemanagement_managementunit_week_schedules_with_http_info(management_unit_id, week_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedules ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedules" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedules" if week_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekId' + '}', week_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'forceAsync'] = opts[:'force_async'] if opts[:'force_async']
+      query_params[:'forceDownloadService'] = opts[:'force_download_service'] if opts[:'force_download_service']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AsyncWeekScheduleResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_week_schedules\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Generate a week schedule
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param [Hash] opts the optional parameters
+    # @option opts [GenerateWeekScheduleRequest] :body body
+    # @return [GenerateWeekScheduleResponse]
+    def post_workforcemanagement_managementunit_week_schedules_generate(management_unit_id, week_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_week_schedules_generate_with_http_info(management_unit_id, week_id, opts)
+      return data
+    end
+
+    # Generate a week schedule
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param [Hash] opts the optional parameters
+    # @option opts [GenerateWeekScheduleRequest] :body body
+    # @return [Array<(GenerateWeekScheduleResponse, Fixnum, Hash)>] GenerateWeekScheduleResponse data, response status code and response headers
+    def post_workforcemanagement_managementunit_week_schedules_generate_with_http_info(management_unit_id, week_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedules_generate ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedules_generate" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedules_generate" if week_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/generate".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekId' + '}', week_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'GenerateWeekScheduleResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_week_schedules_generate\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Partial upload of user schedules where activity count is greater than 17500
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param [Hash] opts the optional parameters
+    # @option opts [UserSchedulesPartialUploadRequest] :body body
+    # @return [PartialUploadResponse]
+    def post_workforcemanagement_managementunit_week_schedules_partialupload(management_unit_id, week_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_week_schedules_partialupload_with_http_info(management_unit_id, week_id, opts)
+      return data
+    end
+
+    # Partial upload of user schedules where activity count is greater than 17500
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param [Hash] opts the optional parameters
+    # @option opts [UserSchedulesPartialUploadRequest] :body body
+    # @return [Array<(PartialUploadResponse, Fixnum, Hash)>] PartialUploadResponse data, response status code and response headers
+    def post_workforcemanagement_managementunit_week_schedules_partialupload_with_http_info(management_unit_id, week_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedules_partialupload ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedules_partialupload" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedules_partialupload" if week_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/partialupload".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekId' + '}', week_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PartialUploadResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_week_schedules_partialupload\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Copy a short term forecast
+    # 
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param forecast_id The ID of the forecast to copy
+    # @param body body
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @return [ShortTermForecastResponse]
+    def post_workforcemanagement_managementunit_week_shorttermforecast_copy(management_unit_id, week_date_id, forecast_id, body, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_week_shorttermforecast_copy_with_http_info(management_unit_id, week_date_id, forecast_id, body, opts)
+      return data
+    end
+
+    # Copy a short term forecast
+    # 
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param forecast_id The ID of the forecast to copy
+    # @param body body
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @return [Array<(ShortTermForecastResponse, Fixnum, Hash)>] ShortTermForecastResponse data, response status code and response headers
+    def post_workforcemanagement_managementunit_week_shorttermforecast_copy_with_http_info(management_unit_id, week_date_id, forecast_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecast_copy ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecast_copy" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_date_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_date_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecast_copy" if week_date_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'forecast_id' is set
+      fail ArgumentError, "Missing the required parameter 'forecast_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecast_copy" if forecast_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecast_copy" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekDateId' + '}', week_date_id.to_s).sub('{' + 'forecastId' + '}', forecast_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'forceAsync'] = opts[:'force_async'] if opts[:'force_async']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ShortTermForecastResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_week_shorttermforecast_copy\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Import a short term forecast
+    # 
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param body body
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @return [ShortTermForecastResponse]
+    def post_workforcemanagement_managementunit_week_shorttermforecasts(management_unit_id, week_date_id, body, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_week_shorttermforecasts_with_http_info(management_unit_id, week_date_id, body, opts)
+      return data
+    end
+
+    # Import a short term forecast
+    # 
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param body body
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @return [Array<(ShortTermForecastResponse, Fixnum, Hash)>] ShortTermForecastResponse data, response status code and response headers
+    def post_workforcemanagement_managementunit_week_shorttermforecasts_with_http_info(management_unit_id, week_date_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_date_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_date_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts" if week_date_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekDateId' + '}', week_date_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'forceAsync'] = opts[:'force_async'] if opts[:'force_async']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ShortTermForecastResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_week_shorttermforecasts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Generate a short term forecast
+    # 
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @return [GenerateShortTermForecastResponse]
+    def post_workforcemanagement_managementunit_week_shorttermforecasts_generate(management_unit_id, week_date_id, body, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_week_shorttermforecasts_generate_with_http_info(management_unit_id, week_date_id, body, opts)
+      return data
+    end
+
+    # Generate a short term forecast
+    # 
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @return [Array<(GenerateShortTermForecastResponse, Fixnum, Hash)>] GenerateShortTermForecastResponse data, response status code and response headers
+    def post_workforcemanagement_managementunit_week_shorttermforecasts_generate_with_http_info(management_unit_id, week_date_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts_generate ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts_generate" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_date_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_date_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts_generate" if week_date_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts_generate" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/generate".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekDateId' + '}', week_date_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'forceAsync'] = opts[:'force_async'] if opts[:'force_async']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'GenerateShortTermForecastResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_week_shorttermforecasts_generate\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Import a short term forecast
+    # 
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param body body
+    # @param [Hash] opts the optional parameters
+    # @return [PartialUploadResponse]
+    def post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload(management_unit_id, week_date_id, body, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload_with_http_info(management_unit_id, week_date_id, body, opts)
+      return data
+    end
+
+    # Import a short term forecast
+    # 
+    # @param management_unit_id The management unit ID of the management unit to which the forecast belongs
+    # @param week_date_id The week start date of the forecast in yyyy-MM-dd format
+    # @param body body
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(PartialUploadResponse, Fixnum, Hash)>] PartialUploadResponse data, response status code and response headers
+    def post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload_with_http_info(management_unit_id, week_date_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_date_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_date_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload" if week_date_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/partialupload".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekDateId' + '}', week_date_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PartialUploadResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a copy of work plan
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param work_plan_id The ID of the work plan to create a copy
+    # @param [Hash] opts the optional parameters
+    # @option opts [CopyWorkPlan] :body body
+    # @return [WorkPlan]
+    def post_workforcemanagement_managementunit_workplan_copy(management_unit_id, work_plan_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_workplan_copy_with_http_info(management_unit_id, work_plan_id, opts)
+      return data
+    end
+
+    # Create a copy of work plan
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param work_plan_id The ID of the work plan to create a copy
+    # @param [Hash] opts the optional parameters
+    # @option opts [CopyWorkPlan] :body body
+    # @return [Array<(WorkPlan, Fixnum, Hash)>] WorkPlan data, response status code and response headers
+    def post_workforcemanagement_managementunit_workplan_copy_with_http_info(management_unit_id, work_plan_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_workplan_copy ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_workplan_copy" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'work_plan_id' is set
+      fail ArgumentError, "Missing the required parameter 'work_plan_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_workplan_copy" if work_plan_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/copy".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'workPlanId' + '}', work_plan_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WorkPlan')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_workplan_copy\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a new work plan
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateWorkPlan] :body body
+    # @return [WorkPlan]
+    def post_workforcemanagement_managementunit_workplans(management_unit_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_workplans_with_http_info(management_unit_id, opts)
+      return data
+    end
+
+    # Create a new work plan
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateWorkPlan] :body body
+    # @return [Array<(WorkPlan, Fixnum, Hash)>] WorkPlan data, response status code and response headers
+    def post_workforcemanagement_managementunit_workplans_with_http_info(management_unit_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_workplans ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_workplans" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WorkPlan')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_workplans\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Add a management unit
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateManagementUnitApiRequest] :body body
+    # @return [ManagementUnit]
+    def post_workforcemanagement_managementunits(opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunits_with_http_info(opts)
+      return data
+    end
+
+    # Add a management unit
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateManagementUnitApiRequest] :body body
+    # @return [Array<(ManagementUnit, Fixnum, Hash)>] ManagementUnit data, response status code and response headers
+    def post_workforcemanagement_managementunits_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunits ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ManagementUnit')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunits\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get published schedule for the current user
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [CurrentUserScheduleRequestBody] :body body
+    # @return [UserScheduleContainer]
+    def post_workforcemanagement_schedules(opts = {})
+      data, _status_code, _headers = post_workforcemanagement_schedules_with_http_info(opts)
+      return data
+    end
+
+    # Get published schedule for the current user
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [CurrentUserScheduleRequestBody] :body body
+    # @return [Array<(UserScheduleContainer, Fixnum, Hash)>] UserScheduleContainer data, response status code and response headers
+    def post_workforcemanagement_schedules_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_schedules ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/schedules".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserScheduleContainer')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_schedules\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a time off request for the current user
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateAgentTimeOffRequest] :body body
+    # @return [TimeOffRequestResponse]
+    def post_workforcemanagement_timeoffrequests(opts = {})
+      data, _status_code, _headers = post_workforcemanagement_timeoffrequests_with_http_info(opts)
+      return data
+    end
+
+    # Create a time off request for the current user
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [CreateAgentTimeOffRequest] :body body
+    # @return [Array<(TimeOffRequestResponse, Fixnum, Hash)>] TimeOffRequestResponse data, response status code and response headers
+    def post_workforcemanagement_timeoffrequests_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_timeoffrequests ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/timeoffrequests".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TimeOffRequestResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_timeoffrequests\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

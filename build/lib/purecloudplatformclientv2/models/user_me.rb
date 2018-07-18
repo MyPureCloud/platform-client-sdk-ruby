@@ -23,6 +23,9 @@ module PureCloud
 
     attr_accessor :name
 
+    # The division to which this entity belongs.
+    attr_accessor :division
+
     attr_accessor :chat
 
     attr_accessor :department
@@ -135,6 +138,8 @@ module PureCloud
         
         :'name' => :'name',
         
+        :'division' => :'division',
+        
         :'chat' => :'chat',
         
         :'department' => :'department',
@@ -219,6 +224,8 @@ module PureCloud
         :'id' => :'String',
         
         :'name' => :'String',
+        
+        :'division' => :'Division',
         
         :'chat' => :'Chat',
         
@@ -319,6 +326,15 @@ module PureCloud
         
         
         self.name = attributes[:'name']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'division')
+        
+        
+        self.division = attributes[:'division']
         
       
       end
@@ -730,6 +746,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["active", "inactive", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
@@ -868,6 +888,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -1080,6 +1105,7 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
+          division == o.division &&
           chat == o.chat &&
           department == o.department &&
           email == o.email &&
@@ -1128,7 +1154,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, acd_auto_answer, date, geolocation_settings, organization, presence_definitions, location_definitions, org_authorization, favorites, superiors, direct_reports, adjacents, routing_skills, field_configs, token, trustors, self_uri].hash
+      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, acd_auto_answer, date, geolocation_settings, organization, presence_definitions, location_definitions, org_authorization, favorites, superiors, direct_reports, adjacents, routing_skills, field_configs, token, trustors, self_uri].hash
     end
 
     # build the object from hash

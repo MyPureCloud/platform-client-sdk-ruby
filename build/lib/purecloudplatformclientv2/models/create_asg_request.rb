@@ -87,7 +87,7 @@ module PureCloud
         
         :'asg_logical_iam_instance_profile' => :'String',
         
-        :'asg_ami' => :'BOOLEAN',
+        :'asg_ami' => :'String',
         
         :'asg_type' => :'String',
         

@@ -1904,7 +1904,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Search for queues by name
+    # Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size (default to 25)
@@ -1915,12 +1915,12 @@ module PureCloud
     # @option opts [Array<String>] :id Queue ID(s)
     # @option opts [Array<String>] :division_id Division ID(s)
     # @return [QueueEntityListing]
-    def get_routing_queues_search(opts = {})
-      data, _status_code, _headers = get_routing_queues_search_with_http_info(opts)
+    def get_routing_queues_divisionviews(opts = {})
+      data, _status_code, _headers = get_routing_queues_divisionviews_with_http_info(opts)
       return data
     end
 
-    # Search for queues by name
+    # Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size
@@ -1931,9 +1931,9 @@ module PureCloud
     # @option opts [Array<String>] :id Queue ID(s)
     # @option opts [Array<String>] :division_id Division ID(s)
     # @return [Array<(QueueEntityListing, Fixnum, Hash)>] QueueEntityListing data, response status code and response headers
-    def get_routing_queues_search_with_http_info(opts = {})
+    def get_routing_queues_divisionviews_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_queues_search ..."
+        @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_queues_divisionviews ..."
       end
       
       
@@ -1983,7 +1983,7 @@ module PureCloud
       
       
       # resource path
-      local_var_path = "/api/v2/routing/queues/search".sub('{format}','json')
+      local_var_path = "/api/v2/routing/queues/divisionviews".sub('{format}','json')
 
       # query parameters
       query_params = {}
@@ -2021,7 +2021,7 @@ module PureCloud
         :auth_names => auth_names,
         :return_type => 'QueueEntityListing')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RoutingApi#get_routing_queues_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RoutingApi#get_routing_queues_divisionviews\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

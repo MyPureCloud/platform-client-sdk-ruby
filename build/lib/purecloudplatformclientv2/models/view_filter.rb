@@ -93,6 +93,18 @@ module PureCloud
     # The message media types used to filter the view
     attr_accessor :message_types
 
+    # The divison Ids used to filter the view
+    attr_accessor :division_ids
+
+    # The survey form ids used to filter the view
+    attr_accessor :survey_form_ids
+
+    # The survey total score used to filter the view
+    attr_accessor :survey_total_score
+
+    # The survey NPS score used to filter the view
+    attr_accessor :survey_nps_score
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -145,7 +157,15 @@ module PureCloud
         
         :'abandoned' => :'abandoned',
         
-        :'message_types' => :'messageTypes'
+        :'message_types' => :'messageTypes',
+        
+        :'division_ids' => :'divisionIds',
+        
+        :'survey_form_ids' => :'surveyFormIds',
+        
+        :'survey_total_score' => :'surveyTotalScore',
+        
+        :'survey_nps_score' => :'surveyNpsScore'
         
       }
     end
@@ -202,7 +222,15 @@ module PureCloud
         
         :'abandoned' => :'BOOLEAN',
         
-        :'message_types' => :'Array<String>'
+        :'message_types' => :'Array<String>',
+        
+        :'division_ids' => :'Array<String>',
+        
+        :'survey_form_ids' => :'Array<String>',
+        
+        :'survey_total_score' => :'NumericRange',
+        
+        :'survey_nps_score' => :'NumericRange'
         
       }
     end
@@ -483,6 +511,46 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'divisionIds')
+        
+        if (value = attributes[:'divisionIds']).is_a?(Array)
+          self.division_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'surveyFormIds')
+        
+        if (value = attributes[:'surveyFormIds']).is_a?(Array)
+          self.survey_form_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'surveyTotalScore')
+        
+        
+        self.survey_total_score = attributes[:'surveyTotalScore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'surveyNpsScore')
+        
+        
+        self.survey_nps_score = attributes[:'surveyNpsScore']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -598,8 +666,44 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -755,7 +859,11 @@ module PureCloud
           evaluator_ids == o.evaluator_ids &&
           transferred == o.transferred &&
           abandoned == o.abandoned &&
-          message_types == o.message_types
+          message_types == o.message_types &&
+          division_ids == o.division_ids &&
+          survey_form_ids == o.survey_form_ids &&
+          survey_total_score == o.survey_total_score &&
+          survey_nps_score == o.survey_nps_score
     end
 
     # @see the `==` method
@@ -767,7 +875,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score].hash
     end
 
     # build the object from hash

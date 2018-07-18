@@ -39,6 +39,7 @@ Wraps DELETE /api/v2/groups/{groupId}
 Requires ANY permissions: 
 
 * group_administration
+* admin
 
 
 ### Example
@@ -911,6 +912,7 @@ Wraps PUT /api/v2/groups/{groupId}
 Requires ANY permissions: 
 
 * group_administration
+* admin
 
 
 ### Example

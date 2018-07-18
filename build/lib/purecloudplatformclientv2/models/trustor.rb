@@ -33,6 +33,9 @@ module PureCloud
     # Organization associated with this trust.
     attr_accessor :organization
 
+    # Authorization for the trustee user has in this trustor organization
+    attr_accessor :authorization
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -49,6 +52,8 @@ module PureCloud
         :'created_by' => :'createdBy',
         
         :'organization' => :'organization',
+        
+        :'authorization' => :'authorization',
         
         :'self_uri' => :'selfUri'
         
@@ -68,6 +73,8 @@ module PureCloud
         :'created_by' => :'OrgUser',
         
         :'organization' => :'Organization',
+        
+        :'authorization' => :'TrusteeAuthorization',
         
         :'self_uri' => :'String'
         
@@ -128,6 +135,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'authorization')
+        
+        
+        self.authorization = attributes[:'authorization']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -181,8 +197,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -224,6 +249,7 @@ module PureCloud
           date_created == o.date_created &&
           created_by == o.created_by &&
           organization == o.organization &&
+          authorization == o.authorization &&
           self_uri == o.self_uri
     end
 
@@ -236,7 +262,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, enabled, date_created, created_by, organization, self_uri].hash
+      [id, enabled, date_created, created_by, organization, authorization, self_uri].hash
     end
 
     # build the object from hash

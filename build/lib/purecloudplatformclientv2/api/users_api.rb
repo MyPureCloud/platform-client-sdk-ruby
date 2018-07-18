@@ -3600,21 +3600,21 @@ module PureCloud
     # Update profile skills for a user
     # 
     # @param user_id User ID
+    # @param body Skills
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :body Skills
     # @return [Array<String>]
-    def put_user_profileskills(user_id, opts = {})
-      data, _status_code, _headers = put_user_profileskills_with_http_info(user_id, opts)
+    def put_user_profileskills(user_id, body, opts = {})
+      data, _status_code, _headers = put_user_profileskills_with_http_info(user_id, body, opts)
       return data
     end
 
     # Update profile skills for a user
     # 
     # @param user_id User ID
+    # @param body Skills
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :body Skills
     # @return [Array<(Array<String>, Fixnum, Hash)>] Array<String> data, response status code and response headers
-    def put_user_profileskills_with_http_info(user_id, opts = {})
+    def put_user_profileskills_with_http_info(user_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.put_user_profileskills ..."
       end
@@ -3628,6 +3628,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.put_user_profileskills" if body.nil?
       
       
       
@@ -3654,7 +3656,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud Auth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,

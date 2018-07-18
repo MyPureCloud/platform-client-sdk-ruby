@@ -2137,6 +2137,7 @@ module PureCloud
     # @option opts [String] :distribution_queue_id Distribution queue ID
     # @option opts [String] :edge_group_id Edge group ID
     # @option opts [String] :call_analysis_response_set_id Call analysis response set ID
+    # @option opts [Array<String>] :division_id Division ID(s)
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order (default to a)
     # @return [CampaignEntityListing]
@@ -2158,6 +2159,7 @@ module PureCloud
     # @option opts [String] :distribution_queue_id Distribution queue ID
     # @option opts [String] :edge_group_id Edge group ID
     # @option opts [String] :call_analysis_response_set_id Call analysis response set ID
+    # @option opts [Array<String>] :division_id Division ID(s)
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order
     # @return [Array<(CampaignEntityListing, Fixnum, Hash)>] CampaignEntityListing data, response status code and response headers
@@ -2239,6 +2241,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
@@ -2261,6 +2269,7 @@ module PureCloud
       query_params[:'distributionQueueId'] = opts[:'distribution_queue_id'] if opts[:'distribution_queue_id']
       query_params[:'edgeGroupId'] = opts[:'edge_group_id'] if opts[:'edge_group_id']
       query_params[:'callAnalysisResponseSetId'] = opts[:'call_analysis_response_set_id'] if opts[:'call_analysis_response_set_id']
+      query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
 
@@ -2295,6 +2304,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get a basic Campaign information object
+    # This returns a simplified version of a Campaign, consisting of name and division.
+    # @param campaign_id Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [CampaignDivisionView]
+    def get_outbound_campaigns_divisionview(campaign_id, opts = {})
+      data, _status_code, _headers = get_outbound_campaigns_divisionview_with_http_info(campaign_id, opts)
+      return data
+    end
+
+    # Get a basic Campaign information object
+    # This returns a simplified version of a Campaign, consisting of name and division.
+    # @param campaign_id Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CampaignDivisionView, Fixnum, Hash)>] CampaignDivisionView data, response status code and response headers
+    def get_outbound_campaigns_divisionview_with_http_info(campaign_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaigns_divisionview ..."
+      end
+      
+      
+      # verify the required parameter 'campaign_id' is set
+      fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.get_outbound_campaigns_divisionview" if campaign_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/campaigns/divisionviews/{campaignId}".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CampaignDivisionView')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_campaigns_divisionview\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Query a list of basic Campaign information objects
     # This returns a simplified version of a Campaign, consisting of name and division.
     # @param [Hash] opts the optional parameters
@@ -2302,6 +2376,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
+    # @option opts [Array<String>] :id id
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order (default to a)
     # @return [CampaignDivisionViewListing]
@@ -2317,6 +2392,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
+    # @option opts [Array<String>] :id id
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order
     # @return [Array<(CampaignDivisionViewListing, Fixnum, Hash)>] CampaignDivisionViewListing data, response status code and response headers
@@ -2362,6 +2438,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
@@ -2378,6 +2460,7 @@ module PureCloud
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
 

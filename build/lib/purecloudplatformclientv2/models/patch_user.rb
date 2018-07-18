@@ -21,8 +21,6 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
-    attr_accessor :name
-
     # The value that denotes if acdAutoAnswer is set on the user
     attr_accessor :acd_auto_answer
 
@@ -34,8 +32,6 @@ module PureCloud
       {
         
         :'id' => :'id',
-        
-        :'name' => :'name',
         
         :'acd_auto_answer' => :'acdAutoAnswer',
         
@@ -49,8 +45,6 @@ module PureCloud
       {
         
         :'id' => :'String',
-        
-        :'name' => :'String',
         
         :'acd_auto_answer' => :'BOOLEAN',
         
@@ -72,15 +66,6 @@ module PureCloud
         
         
         self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
         
       
       end
@@ -131,17 +116,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -164,7 +140,6 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          name == o.name &&
           acd_auto_answer == o.acd_auto_answer &&
           self_uri == o.self_uri
     end
@@ -178,7 +153,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, acd_auto_answer, self_uri].hash
+      [id, acd_auto_answer, self_uri].hash
     end
 
     # build the object from hash

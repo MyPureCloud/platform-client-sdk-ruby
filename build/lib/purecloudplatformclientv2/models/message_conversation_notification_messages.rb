@@ -28,6 +28,8 @@ module PureCloud
 
     attr_accessor :media
 
+    attr_accessor :stickers
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -40,7 +42,9 @@ module PureCloud
         
         :'message_status' => :'messageStatus',
         
-        :'media' => :'media'
+        :'media' => :'media',
+        
+        :'stickers' => :'stickers'
         
       }
     end
@@ -57,7 +61,9 @@ module PureCloud
         
         :'message_status' => :'String',
         
-        :'media' => :'Array<ConversationNotificationMedia>'
+        :'media' => :'Array<ConversationNotificationMedia>',
+        
+        :'stickers' => :'Array<ConversationNotificationStickers>'
         
       }
     end
@@ -118,6 +124,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'stickers')
+        
+        if (value = attributes[:'stickers']).is_a?(Array)
+          self.stickers = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -151,6 +168,10 @@ module PureCloud
       if @message_status && !allowed_values.include?(@message_status)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -195,6 +216,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -204,7 +230,8 @@ module PureCloud
           message_time == o.message_time &&
           message_segment_count == o.message_segment_count &&
           message_status == o.message_status &&
-          media == o.media
+          media == o.media &&
+          stickers == o.stickers
     end
 
     # @see the `==` method
@@ -216,7 +243,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [message, message_time, message_segment_count, message_status, media].hash
+      [message, message_time, message_segment_count, message_status, media, stickers].hash
     end
 
     # build the object from hash

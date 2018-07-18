@@ -33,7 +33,7 @@ Method | Description
 [**get_routing_queue_users**](RoutingApi.html#get_routing_queue_users) | Get the members of this queue
 [**get_routing_queue_wrapupcodes**](RoutingApi.html#get_routing_queue_wrapupcodes) | Get the wrap-up codes for a queue
 [**get_routing_queues**](RoutingApi.html#get_routing_queues) | Get list of queues.
-[**get_routing_queues_search**](RoutingApi.html#get_routing_queues_search) | Search for queues by name
+[**get_routing_queues_divisionviews**](RoutingApi.html#get_routing_queues_divisionviews) | Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
 [**get_routing_skill**](RoutingApi.html#get_routing_skill) | Get Routing Skill
 [**get_routing_skills**](RoutingApi.html#get_routing_skills) | Get the list of routing skills.
 [**get_routing_sms_availablephonenumbers**](RoutingApi.html#get_routing_sms_availablephonenumbers) | Get a list of available phone numbers for SMS provisioning.
@@ -1749,17 +1749,17 @@ Name | Type | Description  | Notes
 
 
 
-<a name="get_routing_queues_search"></a>
+<a name="get_routing_queues_divisionviews"></a>
 
-## -[**QueueEntityListing**](QueueEntityListing.html) get_routing_queues_search(opts)
-
-
-
-Search for queues by name
+## -[**QueueEntityListing**](QueueEntityListing.html) get_routing_queues_divisionviews(opts)
 
 
 
-Wraps GET /api/v2/routing/queues/search 
+Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
+
+
+
+Wraps GET /api/v2/routing/queues/divisionviews 
 
 Requires ANY permissions: 
 
@@ -1794,11 +1794,11 @@ opts = {
 }
 
 begin
-  #Search for queues by name
-  result = api_instance.get_routing_queues_search(opts)
+  #Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
+  result = api_instance.get_routing_queues_divisionviews(opts)
   p result
 rescue PureCloud::ApiError => e
-  puts "Exception when calling RoutingApi->get_routing_queues_search: #{e}"
+  puts "Exception when calling RoutingApi->get_routing_queues_divisionviews: #{e}"
 end
 ~~~
 

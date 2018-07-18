@@ -27,6 +27,12 @@ module PureCloud
     # An ISO 8601 repeated interval consisting of the number of repetitions, the start datetime, and the interval (e.g. R2/2018-03-01T13:00:00Z/P1M10DT2H30M). Total duration must not exceed 90 days.
     attr_accessor :invite_time_interval
 
+    # User together with sendingDomain used to send email, null to use no-reply
+    attr_accessor :sending_user
+
+    # Validated email domain, required
+    attr_accessor :sending_domain
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -35,7 +41,11 @@ module PureCloud
         
         :'flow' => :'flow',
         
-        :'invite_time_interval' => :'inviteTimeInterval'
+        :'invite_time_interval' => :'inviteTimeInterval',
+        
+        :'sending_user' => :'sendingUser',
+        
+        :'sending_domain' => :'sendingDomain'
         
       }
     end
@@ -44,11 +54,15 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'survey_form' => :'SurveyFormUriReference',
+        :'survey_form' => :'PublishedSurveyFormReference',
         
         :'flow' => :'UriReference',
         
-        :'invite_time_interval' => :'String'
+        :'invite_time_interval' => :'String',
+        
+        :'sending_user' => :'String',
+        
+        :'sending_domain' => :'String'
         
       }
     end
@@ -89,6 +103,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'sendingUser')
+        
+        
+        self.sending_user = attributes[:'sendingUser']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'sendingDomain')
+        
+        
+        self.sending_domain = attributes[:'sendingDomain']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -116,8 +148,31 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      if @sending_domain.nil?
+        return false
+      end
+
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -141,7 +196,9 @@ module PureCloud
       self.class == o.class &&
           survey_form == o.survey_form &&
           flow == o.flow &&
-          invite_time_interval == o.invite_time_interval
+          invite_time_interval == o.invite_time_interval &&
+          sending_user == o.sending_user &&
+          sending_domain == o.sending_domain
     end
 
     # @see the `==` method
@@ -153,7 +210,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [survey_form, flow, invite_time_interval].hash
+      [survey_form, flow, invite_time_interval, sending_user, sending_domain].hash
     end
 
     # build the object from hash

@@ -29,6 +29,8 @@ module PureCloud
     # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :timestamp
 
+    attr_accessor :id
+
     attr_accessor :message_text
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -44,6 +46,8 @@ module PureCloud
         :'to' => :'to',
         
         :'timestamp' => :'timestamp',
+        
+        :'id' => :'id',
         
         :'message_text' => :'messageText'
         
@@ -63,6 +67,8 @@ module PureCloud
         :'to' => :'String',
         
         :'timestamp' => :'DateTime',
+        
+        :'id' => :'String',
         
         :'message_text' => :'String'
         
@@ -123,6 +129,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'id')
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'messageText')
         
         
@@ -171,8 +186,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -214,6 +238,7 @@ module PureCloud
           from_external_contact == o.from_external_contact &&
           to == o.to &&
           timestamp == o.timestamp &&
+          id == o.id &&
           message_text == o.message_text
     end
 
@@ -226,7 +251,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [from, from_user, from_external_contact, to, timestamp, message_text].hash
+      [from, from_user, from_external_contact, to, timestamp, id, message_text].hash
     end
 
     # build the object from hash

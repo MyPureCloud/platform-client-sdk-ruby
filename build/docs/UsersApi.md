@@ -3251,7 +3251,7 @@ Name | Type | Description  | Notes
 
 <a name="put_user_profileskills"></a>
 
-## -Array&lt;String&gt;** put_user_profileskills(user_id, opts)
+## -Array&lt;String&gt;** put_user_profileskills(user_id, body)
 
 
 
@@ -3288,13 +3288,12 @@ api_instance = PureCloud::UsersApi.new
 
 user_id = "user_id_example" # String | User ID
 
-opts = { 
-  body: [PureCloud::Array<String>.new] # Array<String> | Skills
-}
+body = [PureCloud::Array<String>.new] # Array<String> | Skills
+
 
 begin
   #Update profile skills for a user
-  result = api_instance.put_user_profileskills(user_id, opts)
+  result = api_instance.put_user_profileskills(user_id, body)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->put_user_profileskills: #{e}"
@@ -3306,7 +3305,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| User ID |  |
- **body** | **Array&lt;String&gt;**| Skills | [optional]  |
+ **body** | **Array&lt;String&gt;**| Skills |  |
 {: class="table table-striped"}
 
 

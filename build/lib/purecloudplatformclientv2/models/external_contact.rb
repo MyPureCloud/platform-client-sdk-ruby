@@ -51,6 +51,10 @@ module PureCloud
 
     attr_accessor :twitter_id
 
+    attr_accessor :line_id
+
+    attr_accessor :facebook_id
+
     # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :modify_date
 
@@ -61,7 +65,7 @@ module PureCloud
 
     attr_accessor :survey_opt_out
 
-    # A string that identifies an external system-of-record resource that may have more detailed information on the organization. It should be a valid URL (including the HTTP protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace.
+    # A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace.
     attr_accessor :external_system_url
 
     # Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
@@ -103,6 +107,10 @@ module PureCloud
         :'address' => :'address',
         
         :'twitter_id' => :'twitterId',
+        
+        :'line_id' => :'lineId',
+        
+        :'facebook_id' => :'facebookId',
         
         :'modify_date' => :'modifyDate',
         
@@ -154,6 +162,10 @@ module PureCloud
         :'address' => :'ContactAddress',
         
         :'twitter_id' => :'TwitterId',
+        
+        :'line_id' => :'LineId',
+        
+        :'facebook_id' => :'FacebookId',
         
         :'modify_date' => :'DateTime',
         
@@ -311,6 +323,24 @@ module PureCloud
         
         
         self.twitter_id = attributes[:'twitterId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'lineId')
+        
+        
+        self.line_id = attributes[:'lineId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'facebookId')
+        
+        
+        self.facebook_id = attributes[:'facebookId']
         
       
       end
@@ -494,8 +524,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -627,6 +675,8 @@ module PureCloud
           other_email == o.other_email &&
           address == o.address &&
           twitter_id == o.twitter_id &&
+          line_id == o.line_id &&
+          facebook_id == o.facebook_id &&
           modify_date == o.modify_date &&
           create_date == o.create_date &&
           external_organization == o.external_organization &&
@@ -645,7 +695,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, first_name, middle_name, last_name, salutation, title, work_phone, cell_phone, home_phone, other_phone, work_email, personal_email, other_email, address, twitter_id, modify_date, create_date, external_organization, survey_opt_out, external_system_url, external_data_sources, self_uri].hash
+      [id, first_name, middle_name, last_name, salutation, title, work_phone, cell_phone, home_phone, other_phone, work_email, personal_email, other_email, address, twitter_id, line_id, facebook_id, modify_date, create_date, external_organization, survey_opt_out, external_system_url, external_data_sources, self_uri].hash
     end
 
     # build the object from hash

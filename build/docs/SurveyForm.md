@@ -13,6 +13,7 @@ title: SurveyForm
 | **published** | **BOOLEAN** | Is this form published | [optional] |
 | **disabled** | **BOOLEAN** | Is this form disabled | [optional] |
 | **context_id** | **String** | Unique Id for all versions of this form | |
+| **language** | **String** | Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW | |
 | **header_image_id** | **String** | Id of the header image appearing at the top of the form. | [optional] |
 | **header_image_url** | **String** | Temporary URL for accessing header image | [optional] |
 | **header** | **String** | Markdown text for the top of the form. | [optional] |

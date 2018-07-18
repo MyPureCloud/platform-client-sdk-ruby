@@ -26,6 +26,8 @@ module PureCloud
 
     attr_accessor :wrapup_codes
 
+    attr_accessor :languages
+
     attr_accessor :time_allowed
 
     attr_accessor :duration
@@ -41,6 +43,8 @@ module PureCloud
         :'for_queues' => :'forQueues',
         
         :'wrapup_codes' => :'wrapupCodes',
+        
+        :'languages' => :'languages',
         
         :'time_allowed' => :'timeAllowed',
         
@@ -60,6 +64,8 @@ module PureCloud
         :'for_queues' => :'Array<Queue>',
         
         :'wrapup_codes' => :'Array<WrapupCode>',
+        
+        :'languages' => :'Array<Language>',
         
         :'time_allowed' => :'TimeAllowed',
         
@@ -114,6 +120,17 @@ module PureCloud
         
         if (value = attributes[:'wrapupCodes']).is_a?(Array)
           self.wrapup_codes = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'languages')
+        
+        if (value = attributes[:'languages']).is_a?(Array)
+          self.languages = value
         end
         
         
@@ -178,8 +195,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -220,6 +246,7 @@ module PureCloud
           date_ranges == o.date_ranges &&
           for_queues == o.for_queues &&
           wrapup_codes == o.wrapup_codes &&
+          languages == o.languages &&
           time_allowed == o.time_allowed &&
           duration == o.duration
     end
@@ -233,7 +260,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [for_users, date_ranges, for_queues, wrapup_codes, time_allowed, duration].hash
+      [for_users, date_ranges, for_queues, wrapup_codes, languages, time_allowed, duration].hash
     end
 
     # build the object from hash

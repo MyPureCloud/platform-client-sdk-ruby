@@ -38,6 +38,7 @@ Method | Description
 [**get_outbound_campaignrule**](OutboundApi.html#get_outbound_campaignrule) | Get Campaign Rule
 [**get_outbound_campaignrules**](OutboundApi.html#get_outbound_campaignrules) | Query Campaign Rule list
 [**get_outbound_campaigns**](OutboundApi.html#get_outbound_campaigns) | Query a list of dialer campaigns.
+[**get_outbound_campaigns_divisionview**](OutboundApi.html#get_outbound_campaigns_divisionview) | Get a basic Campaign information object
 [**get_outbound_campaigns_divisionviews**](OutboundApi.html#get_outbound_campaigns_divisionviews) | Query a list of basic Campaign information objects
 [**get_outbound_contactlist**](OutboundApi.html#get_outbound_contactlist) | Get a dialer contact list.
 [**get_outbound_contactlist_contact**](OutboundApi.html#get_outbound_contactlist_contact) | Get a contact.
@@ -2065,6 +2066,7 @@ opts = {
   distribution_queue_id: "distribution_queue_id_example", # String | Distribution queue ID
   edge_group_id: "edge_group_id_example", # String | Edge group ID
   call_analysis_response_set_id: "call_analysis_response_set_id_example", # String | Call analysis response set ID
+  division_id: ["division_id_example"], # Array<String> | Division ID(s)
   sort_by: "sort_by_example", # String | Sort by
   sort_order: "a" # String | Sort order
 }
@@ -2092,6 +2094,7 @@ Name | Type | Description  | Notes
  **distribution_queue_id** | **String**| Distribution queue ID | [optional]  |
  **edge_group_id** | **String**| Edge group ID | [optional]  |
  **call_analysis_response_set_id** | **String**| Call analysis response set ID | [optional]  |
+ **division_id** | [**Array&lt;String&gt;**](String.html)| Division ID(s) | [optional]  |
  **sort_by** | **String**| Sort by | [optional]  |
  **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
@@ -2100,6 +2103,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CampaignEntityListing**](CampaignEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_outbound_campaigns_divisionview"></a>
+
+## -[**CampaignDivisionView**](CampaignDivisionView.html) get_outbound_campaigns_divisionview(campaign_id)
+
+
+
+Get a basic Campaign information object
+
+This returns a simplified version of a Campaign, consisting of name and division.
+
+Wraps GET /api/v2/outbound/campaigns/divisionviews/{campaignId} 
+
+Requires ANY permissions: 
+
+* outbound:campaign:search
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+campaign_id = "campaign_id_example" # String | Campaign ID
+
+
+begin
+  #Get a basic Campaign information object
+  result = api_instance.get_outbound_campaigns_divisionview(campaign_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_campaigns_divisionview: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaign_id** | **String**| Campaign ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CampaignDivisionView**](CampaignDivisionView.html)
 
 ### HTTP request headers
 
@@ -2147,6 +2215,7 @@ opts = {
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
+  id: ["id_example"], # Array<String> | id
   sort_by: "sort_by_example", # String | Sort by
   sort_order: "a" # String | Sort order
 }
@@ -2168,6 +2237,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
  **sort_by** | **String**| Sort by | [optional]  |
  **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}

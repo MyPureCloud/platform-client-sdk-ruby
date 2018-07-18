@@ -28,7 +28,7 @@ module PureCloud
     # The time zone to use for returned results in olson format. If it is not set, the management unit time zone will be used to compute adherence
     attr_accessor :time_zone
 
-    # The userIds to report on. If it is not set, adherence will be computed for all the users in management unit
+    # The userIds to report on. If null or not set, adherence will be computed for all the users in management unit
     attr_accessor :user_ids
 
     # Whether user exceptions should be returned as part of the results

@@ -17,15 +17,40 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class SurveyFormUriReference
+  # Week schedule information
+  class WeekSchedule
+    # The globally unique identifier for the object.
     attr_accessor :id
 
-    attr_accessor :name
+    # First day of this week schedule in week in yyyy-MM-dd format
+    attr_accessor :week_date
 
+    # Description of the week schedule
+    attr_accessor :description
+
+    # Whether the week schedule is published
+    attr_accessor :published
+
+    # Summary of the results from the schedule run
+    attr_accessor :generation_results
+
+    # Short term forecast associated with this schedule
+    attr_accessor :short_term_forecast
+
+    # Version metadata for this work plan
+    attr_accessor :metadata
+
+    # User schedules in the week
+    attr_accessor :user_schedules
+
+    # Headcount information for the week schedule
+    attr_accessor :headcount_forecast
+
+    # Version of agent schedules in the week schedule
+    attr_accessor :agent_schedules_version
+
+    # The URI for this object
     attr_accessor :self_uri
-
-    # The context id of this form.
-    attr_accessor :context_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -33,11 +58,25 @@ module PureCloud
         
         :'id' => :'id',
         
-        :'name' => :'name',
+        :'week_date' => :'weekDate',
         
-        :'self_uri' => :'selfUri',
+        :'description' => :'description',
         
-        :'context_id' => :'contextId'
+        :'published' => :'published',
+        
+        :'generation_results' => :'generationResults',
+        
+        :'short_term_forecast' => :'shortTermForecast',
+        
+        :'metadata' => :'metadata',
+        
+        :'user_schedules' => :'userSchedules',
+        
+        :'headcount_forecast' => :'headcountForecast',
+        
+        :'agent_schedules_version' => :'agentSchedulesVersion',
+        
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -48,11 +87,25 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'name' => :'String',
+        :'week_date' => :'String',
         
-        :'self_uri' => :'String',
+        :'description' => :'String',
         
-        :'context_id' => :'String'
+        :'published' => :'BOOLEAN',
+        
+        :'generation_results' => :'WeekScheduleGenerationResult',
+        
+        :'short_term_forecast' => :'ShortTermForecastReference',
+        
+        :'metadata' => :'WfmVersionedEntityMetadata',
+        
+        :'user_schedules' => :'Hash<String, UserSchedule>',
+        
+        :'headcount_forecast' => :'HeadcountForecastResponse',
+        
+        :'agent_schedules_version' => :'Integer',
+        
+        :'self_uri' => :'String'
         
       }
     end
@@ -75,10 +128,84 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'name')
+      if attributes.has_key?(:'weekDate')
         
         
-        self.name = attributes[:'name']
+        self.week_date = attributes[:'weekDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'description')
+        
+        
+        self.description = attributes[:'description']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'published')
+        
+        
+        self.published = attributes[:'published']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'generationResults')
+        
+        
+        self.generation_results = attributes[:'generationResults']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'shortTermForecast')
+        
+        
+        self.short_term_forecast = attributes[:'shortTermForecast']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'metadata')
+        
+        
+        self.metadata = attributes[:'metadata']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'userSchedules')
+        
+        if (value = attributes[:'userSchedules']).is_a?(Array)
+          self.user_schedules = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'headcountForecast')
+        
+        
+        self.headcount_forecast = attributes[:'headcountForecast']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'agentSchedulesVersion')
+        
+        
+        self.agent_schedules_version = attributes[:'agentSchedulesVersion']
         
       
       end
@@ -88,15 +215,6 @@ module PureCloud
         
         
         self.self_uri = attributes[:'selfUri']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'contextId')
-        
-        
-        self.context_id = attributes[:'contextId']
         
       
       end
@@ -133,8 +251,71 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -162,9 +343,16 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          name == o.name &&
-          self_uri == o.self_uri &&
-          context_id == o.context_id
+          week_date == o.week_date &&
+          description == o.description &&
+          published == o.published &&
+          generation_results == o.generation_results &&
+          short_term_forecast == o.short_term_forecast &&
+          metadata == o.metadata &&
+          user_schedules == o.user_schedules &&
+          headcount_forecast == o.headcount_forecast &&
+          agent_schedules_version == o.agent_schedules_version &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -176,7 +364,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, self_uri, context_id].hash
+      [id, week_date, description, published, generation_results, short_term_forecast, metadata, user_schedules, headcount_forecast, agent_schedules_version, self_uri].hash
     end
 
     # build the object from hash

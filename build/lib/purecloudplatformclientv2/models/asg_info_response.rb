@@ -18,13 +18,13 @@ require 'date'
 
 module PureCloud
   class AsgInfoResponse
-    # The globally unique identifier for the object.
+    # The full id of the asg <orgId>-<siteId>-ASG-<asgVersion>
     attr_accessor :id
 
     # The site that the asg belongs to.
     attr_accessor :site
 
-    # The ami ami of the asg.
+    # The version of the asg, ex '003'
     attr_accessor :ami
 
     # The software ami of the edges in the asg.
