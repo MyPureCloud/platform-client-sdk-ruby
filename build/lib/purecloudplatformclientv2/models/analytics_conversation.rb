@@ -33,6 +33,9 @@ module PureCloud
     # Evaluations tied to this conversation
     attr_accessor :evaluations
 
+    # Surveys tied to this conversation
+    attr_accessor :surveys
+
     # Identifiers of divisions associated with this conversation
     attr_accessor :division_ids
 
@@ -49,6 +52,8 @@ module PureCloud
         :'participants' => :'participants',
         
         :'evaluations' => :'evaluations',
+        
+        :'surveys' => :'surveys',
         
         :'division_ids' => :'divisionIds'
         
@@ -68,6 +73,8 @@ module PureCloud
         :'participants' => :'Array<AnalyticsParticipant>',
         
         :'evaluations' => :'Array<AnalyticsEvaluation>',
+        
+        :'surveys' => :'Array<AnalyticsSurvey>',
         
         :'division_ids' => :'Array<String>'
         
@@ -132,6 +139,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'surveys')
+        
+        if (value = attributes[:'surveys']).is_a?(Array)
+          self.surveys = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'divisionIds')
         
         if (value = attributes[:'divisionIds']).is_a?(Array)
@@ -182,8 +200,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -225,6 +252,7 @@ module PureCloud
           conversation_end == o.conversation_end &&
           participants == o.participants &&
           evaluations == o.evaluations &&
+          surveys == o.surveys &&
           division_ids == o.division_ids
     end
 
@@ -237,7 +265,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [conversation_id, conversation_start, conversation_end, participants, evaluations, division_ids].hash
+      [conversation_id, conversation_start, conversation_end, participants, evaluations, surveys, division_ids].hash
     end
 
     # build the object from hash

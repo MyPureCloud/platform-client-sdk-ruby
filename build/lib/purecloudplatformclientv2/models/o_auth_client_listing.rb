@@ -50,6 +50,9 @@ module PureCloud
     # User that last modified this client
     attr_accessor :modified_by
 
+    # The scope requested by this client
+    attr_accessor :scope
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -78,6 +81,8 @@ module PureCloud
         :'created_by' => :'createdBy',
         
         :'modified_by' => :'modifiedBy',
+        
+        :'scope' => :'scope',
         
         :'self_uri' => :'selfUri'
         
@@ -109,6 +114,8 @@ module PureCloud
         :'created_by' => :'UriReference',
         
         :'modified_by' => :'UriReference',
+        
+        :'scope' => :'Array<String>',
         
         :'self_uri' => :'String'
         
@@ -227,6 +234,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'scope')
+        
+        if (value = attributes[:'scope']).is_a?(Array)
+          self.scope = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -301,11 +319,25 @@ module PureCloud
       
       
       
+      if @scope.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       
       
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -383,6 +415,7 @@ module PureCloud
           date_modified == o.date_modified &&
           created_by == o.created_by &&
           modified_by == o.modified_by &&
+          scope == o.scope &&
           self_uri == o.self_uri
     end
 
@@ -395,7 +428,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, access_token_validity_seconds, description, registered_redirect_uri, secret, role_ids, date_created, date_modified, created_by, modified_by, self_uri].hash
+      [id, name, access_token_validity_seconds, description, registered_redirect_uri, secret, role_ids, date_created, date_modified, created_by, modified_by, scope, self_uri].hash
     end
 
     # build the object from hash

@@ -1773,6 +1773,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:administer
+* wfm:schedule:generate
 
 
 ### Example

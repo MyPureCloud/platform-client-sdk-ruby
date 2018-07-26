@@ -99,7 +99,7 @@ module PureCloud
       
       
       
-      allowed_values = ["AutoRegressiveIntegratedMovingAverage", "SimpleMovingAverage", "SingleExponentialSmoothing", "SameValueForecast", "DecompositionUsingAdditiveSeasonality", "DecompositionUsingMultiplicativeSeasonality", "HoltWintersAdditiveSeasonality", "HoltWintersAdditiveSeasonalityWithDampedTrend", "HoltWintersMultiplicativeSeasonality", "HoltWintersMultiplicativeSeasonalityWithDampedTrend", "DampedLinearExponentialSmoothing", "DoubleExponentialSmoothing", "DoubleMovingAverage", "LinearExponentialSmoothing", "LinearWeightedMovingAverage", "PointEstimateUsingDampedLinearExponentialSmoothing", "PointEstimateUsingDoubleExponentialSmoothing", "PointEstimateUsingLinearExponentialSmoothing", "Other"]
+      allowed_values = ["AutoRegressiveIntegratedMovingAverage", "MovingAverage", "SingleExponentialSmoothing", "RandomWalk", "DecompositionUsingAdditiveSeasonality", "DecompositionUsingMultiplicativeSeasonality", "HoltWintersAdditiveSeasonality", "HoltWintersAdditiveSeasonalityWithDampedTrend", "HoltWintersMultiplicativeSeasonality", "HoltWintersMultiplicativeSeasonalityWithDampedTrend", "DampedLinearExponentialSmoothing", "DoubleExponentialSmoothing", "DoubleMovingAverage", "LinearExponentialSmoothing", "LinearWeightedMovingAverage", "PointEstimateUsingDampedLinearExponentialSmoothing", "PointEstimateUsingDoubleExponentialSmoothing", "PointEstimateUsingLinearExponentialSmoothing", "CurveFit", "MultiLinearRegression", "Other"]
       if @forecasting_method && !allowed_values.include?(@forecasting_method)
         return false
       end
@@ -127,7 +127,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] forecasting_method Object to be assigned
     def forecasting_method=(forecasting_method)
-      allowed_values = ["AutoRegressiveIntegratedMovingAverage", "SimpleMovingAverage", "SingleExponentialSmoothing", "SameValueForecast", "DecompositionUsingAdditiveSeasonality", "DecompositionUsingMultiplicativeSeasonality", "HoltWintersAdditiveSeasonality", "HoltWintersAdditiveSeasonalityWithDampedTrend", "HoltWintersMultiplicativeSeasonality", "HoltWintersMultiplicativeSeasonalityWithDampedTrend", "DampedLinearExponentialSmoothing", "DoubleExponentialSmoothing", "DoubleMovingAverage", "LinearExponentialSmoothing", "LinearWeightedMovingAverage", "PointEstimateUsingDampedLinearExponentialSmoothing", "PointEstimateUsingDoubleExponentialSmoothing", "PointEstimateUsingLinearExponentialSmoothing", "Other"]
+      allowed_values = ["AutoRegressiveIntegratedMovingAverage", "MovingAverage", "SingleExponentialSmoothing", "RandomWalk", "DecompositionUsingAdditiveSeasonality", "DecompositionUsingMultiplicativeSeasonality", "HoltWintersAdditiveSeasonality", "HoltWintersAdditiveSeasonalityWithDampedTrend", "HoltWintersMultiplicativeSeasonality", "HoltWintersMultiplicativeSeasonalityWithDampedTrend", "DampedLinearExponentialSmoothing", "DoubleExponentialSmoothing", "DoubleMovingAverage", "LinearExponentialSmoothing", "LinearWeightedMovingAverage", "PointEstimateUsingDampedLinearExponentialSmoothing", "PointEstimateUsingDoubleExponentialSmoothing", "PointEstimateUsingLinearExponentialSmoothing", "CurveFit", "MultiLinearRegression", "Other"]
       if forecasting_method && !allowed_values.include?(forecasting_method)
         fail ArgumentError, "invalid value for 'forecasting_method', must be one of #{allowed_values}."
       end

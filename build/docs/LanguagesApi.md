@@ -547,9 +547,8 @@ Get language
 
 Wraps GET /api/v2/routing/languages/{languageId} 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* routing:skill:manage
 
 
 ### Example

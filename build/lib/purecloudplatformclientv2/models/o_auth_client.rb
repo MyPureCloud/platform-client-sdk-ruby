@@ -53,6 +53,9 @@ module PureCloud
     # The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. 
     attr_accessor :authorized_grant_type
 
+    # The scope requested by this client
+    attr_accessor :scope
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -83,6 +86,8 @@ module PureCloud
         :'modified_by' => :'modifiedBy',
         
         :'authorized_grant_type' => :'authorizedGrantType',
+        
+        :'scope' => :'scope',
         
         :'self_uri' => :'selfUri'
         
@@ -116,6 +121,8 @@ module PureCloud
         :'modified_by' => :'UriReference',
         
         :'authorized_grant_type' => :'String',
+        
+        :'scope' => :'Array<String>',
         
         :'self_uri' => :'String'
         
@@ -243,6 +250,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'scope')
+        
+        if (value = attributes[:'scope']).is_a?(Array)
+          self.scope = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -331,6 +349,15 @@ module PureCloud
       
       
       
+      if @scope.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       
       
       
@@ -411,6 +438,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -428,6 +460,7 @@ module PureCloud
           created_by == o.created_by &&
           modified_by == o.modified_by &&
           authorized_grant_type == o.authorized_grant_type &&
+          scope == o.scope &&
           self_uri == o.self_uri
     end
 
@@ -440,7 +473,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, access_token_validity_seconds, description, registered_redirect_uri, secret, role_ids, date_created, date_modified, created_by, modified_by, authorized_grant_type, self_uri].hash
+      [id, name, access_token_validity_seconds, description, registered_redirect_uri, secret, role_ids, date_created, date_modified, created_by, modified_by, authorized_grant_type, scope, self_uri].hash
     end
 
     # build the object from hash
