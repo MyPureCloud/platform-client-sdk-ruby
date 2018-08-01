@@ -24,18 +24,13 @@ module PureCloud
     # The value that denotes if acdAutoAnswer is set on the user
     attr_accessor :acd_auto_answer
 
-    # The URI for this object
-    attr_accessor :self_uri
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'id' => :'id',
         
-        :'acd_auto_answer' => :'acdAutoAnswer',
-        
-        :'self_uri' => :'selfUri'
+        :'acd_auto_answer' => :'acdAutoAnswer'
         
       }
     end
@@ -46,9 +41,7 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'acd_auto_answer' => :'BOOLEAN',
-        
-        :'self_uri' => :'String'
+        :'acd_auto_answer' => :'BOOLEAN'
         
       }
     end
@@ -80,15 +73,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'selfUri')
-        
-        
-        self.self_uri = attributes[:'selfUri']
-        
-      
-      end
-
-      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -112,17 +96,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -140,8 +115,7 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          acd_auto_answer == o.acd_auto_answer &&
-          self_uri == o.self_uri
+          acd_auto_answer == o.acd_auto_answer
     end
 
     # @see the `==` method
@@ -153,7 +127,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, acd_auto_answer, self_uri].hash
+      [id, acd_auto_answer].hash
     end
 
     # build the object from hash

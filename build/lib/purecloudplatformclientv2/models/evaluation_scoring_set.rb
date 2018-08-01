@@ -57,7 +57,7 @@ module PureCloud
         
         :'total_critical_score' => :'Float',
         
-        :'question_group_scores' => :'Array<QuestionGroupScore>',
+        :'question_group_scores' => :'Array<EvaluationQuestionGroupScore>',
         
         :'any_failed_kill_questions' => :'BOOLEAN',
         

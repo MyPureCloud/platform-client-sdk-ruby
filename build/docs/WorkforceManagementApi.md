@@ -84,6 +84,7 @@ Wraps DELETE /api/v2/workforcemanagement/managementunits/{muId}
 Requires ANY permissions: 
 
 * wfm:managementUnit:administer
+* wfm:managementUnit:delete
 
 
 ### Example
@@ -148,6 +149,7 @@ Wraps DELETE /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{a
 Requires ANY permissions: 
 
 * wfm:activityCode:administer
+* wfm:activityCode:delete
 
 
 ### Example
@@ -282,6 +284,7 @@ Wraps DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/serv
 Requires ANY permissions: 
 
 * wfm:serviceGoalGroup:administer
+* wfm:serviceGoalGroup:delete
 
 
 ### Example
@@ -349,6 +352,7 @@ Wraps DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/week
 Requires ANY permissions: 
 
 * wfm:schedule:administer
+* wfm:schedule:delete
 
 
 ### Example
@@ -419,6 +423,7 @@ Wraps DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/week
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:administer
+* wfm:shortTermForecast:delete
 
 
 ### Example
@@ -489,6 +494,7 @@ Wraps DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/work
 Requires ANY permissions: 
 
 * wfm:workPlan:administer
+* wfm:workPlan:delete
 
 
 ### Example
@@ -620,21 +626,50 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{muId}
 
 Requires ANY permissions: 
 
+* wfm:activityCode:add
 * wfm:activityCode:administer
+* wfm:activityCode:delete
+* wfm:activityCode:edit
+* wfm:activityCode:view
 * wfm:agent:administer
+* wfm:agent:edit
 * wfm:agentSchedule:view
+* wfm:agentTimeOffRequest:submit
+* wfm:agent:view
 * wfm:historicalAdherence:view
 * wfm:intraday:view
+* wfm:managementUnit:add
 * wfm:managementUnit:administer
+* wfm:managementUnit:delete
+* wfm:managementUnit:edit
+* wfm:managementUnit:view
 * wfm:publishedSchedule:view
 * wfm:realtimeAdherence:view
+* wfm:schedule:add
 * wfm:schedule:administer
+* wfm:schedule:delete
+* wfm:schedule:edit
 * wfm:schedule:generate
+* wfm:schedule:view
+* wfm:serviceGoalGroup:add
 * wfm:serviceGoalGroup:administer
+* wfm:serviceGoalGroup:delete
+* wfm:serviceGoalGroup:edit
+* wfm:serviceGoalGroup:view
+* wfm:shortTermForecast:add
 * wfm:shortTermForecast:administer
-* wfm:agentTimeOffRequest:submit
+* wfm:shortTermForecast:delete
+* wfm:shortTermForecast:edit
+* wfm:shortTermForecast:view
+* wfm:timeOffRequest:add
 * wfm:timeOffRequest:administer
+* wfm:timeOffRequest:edit
+* wfm:timeOffRequest:view
+* wfm:workPlan:add
 * wfm:workPlan:administer
+* wfm:workPlan:delete
+* wfm:workPlan:edit
+* wfm:workPlan:view
 
 
 ### Example
@@ -704,20 +739,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId
 Requires ANY permissions: 
 
 * wfm:activityCode:administer
-* wfm:agent:administer
-* wfm:agentSchedule:view
-* wfm:historicalAdherence:view
-* wfm:intraday:view
-* wfm:managementUnit:administer
-* wfm:publishedSchedule:view
-* wfm:realtimeAdherence:view
-* wfm:schedule:administer
-* wfm:schedule:generate
-* wfm:serviceGoalGroup:administer
-* wfm:shortTermForecast:administer
-* wfm:agentTimeOffRequest:submit
-* wfm:timeOffRequest:administer
-* wfm:workPlan:administer
+* wfm:activityCode:view
 
 
 ### Example
@@ -785,21 +807,50 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/activitycodes
 
 Requires ANY permissions: 
 
+* wfm:activityCode:add
 * wfm:activityCode:administer
+* wfm:activityCode:delete
+* wfm:activityCode:edit
+* wfm:activityCode:view
 * wfm:agent:administer
+* wfm:agent:edit
 * wfm:agentSchedule:view
+* wfm:agentTimeOffRequest:submit
+* wfm:agent:view
 * wfm:historicalAdherence:view
 * wfm:intraday:view
+* wfm:managementUnit:add
 * wfm:managementUnit:administer
+* wfm:managementUnit:delete
+* wfm:managementUnit:edit
+* wfm:managementUnit:view
 * wfm:publishedSchedule:view
 * wfm:realtimeAdherence:view
+* wfm:schedule:add
 * wfm:schedule:administer
+* wfm:schedule:delete
+* wfm:schedule:edit
 * wfm:schedule:generate
+* wfm:schedule:view
+* wfm:serviceGoalGroup:add
 * wfm:serviceGoalGroup:administer
+* wfm:serviceGoalGroup:delete
+* wfm:serviceGoalGroup:edit
+* wfm:serviceGoalGroup:view
+* wfm:shortTermForecast:add
 * wfm:shortTermForecast:administer
-* wfm:agentTimeOffRequest:submit
+* wfm:shortTermForecast:delete
+* wfm:shortTermForecast:edit
+* wfm:shortTermForecast:view
+* wfm:timeOffRequest:add
 * wfm:timeOffRequest:administer
+* wfm:timeOffRequest:edit
+* wfm:timeOffRequest:view
+* wfm:workPlan:add
 * wfm:workPlan:administer
+* wfm:workPlan:delete
+* wfm:workPlan:edit
+* wfm:workPlan:view
 
 
 ### Example
@@ -865,6 +916,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/
 Requires ANY permissions: 
 
 * wfm:agent:administer
+* wfm:agent:view
 
 
 ### Example
@@ -1066,6 +1118,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/service
 Requires ANY permissions: 
 
 * wfm:serviceGoalGroup:administer
+* wfm:serviceGoalGroup:view
 
 
 ### Example
@@ -1134,7 +1187,9 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/service
 Requires ANY permissions: 
 
 * wfm:serviceGoalGroup:administer
+* wfm:serviceGoalGroup:view
 * wfm:shortTermForecast:administer
+* wfm:shortTermForecast:view
 
 
 ### Example
@@ -1200,6 +1255,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/settings
 Requires ANY permissions: 
 
 * wfm:managementUnit:administer
+* wfm:managementUnit:view
 
 
 ### Example
@@ -1265,6 +1321,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/time
 Requires ANY permissions: 
 
 * wfm:timeOffRequest:administer
+* wfm:timeOffRequest:view
 
 
 ### Example
@@ -1336,6 +1393,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/time
 Requires ANY permissions: 
 
 * wfm:timeOffRequest:administer
+* wfm:timeOffRequest:view
 
 
 ### Example
@@ -1408,12 +1466,16 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/users
 Requires ANY permissions: 
 
 * wfm:agent:administer
+* wfm:agent:view
 * wfm:historicalAdherence:view
 * wfm:publishedSchedule:view
 * wfm:realtimeAdherence:view
 * wfm:schedule:administer
+* wfm:schedule:view
 * wfm:timeOffRequest:administer
+* wfm:timeOffRequest:view
 * wfm:workPlan:administer
+* wfm:workPlan:view
 
 
 ### Example
@@ -1478,8 +1540,9 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{
 
 Requires ANY permissions: 
 
-* wfm:schedule:administer
 * wfm:publishedSchedule:view
+* wfm:schedule:administer
+* wfm:schedule:view
 
 
 ### Example
@@ -1556,8 +1619,9 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{
 
 Requires ANY permissions: 
 
-* wfm:schedule:administer
 * wfm:publishedSchedule:view
+* wfm:schedule:administer
+* wfm:schedule:view
 
 
 ### Example
@@ -1628,8 +1692,9 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{
 
 Requires ANY permissions: 
 
-* wfm:schedule:administer
 * wfm:publishedSchedule:view
+* wfm:schedule:administer
+* wfm:schedule:view
 
 
 ### Example
@@ -1698,6 +1763,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{
 Requires ANY permissions: 
 
 * wfm:shortTermForecast:administer
+* wfm:shortTermForecast:view
 
 
 ### Example
@@ -1772,8 +1838,9 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{
 
 Requires ANY permissions: 
 
-* wfm:shortTermForecast:administer
 * wfm:schedule:generate
+* wfm:shortTermForecast:administer
+* wfm:shortTermForecast:view
 
 
 ### Example
@@ -1842,6 +1909,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/workpla
 Requires ANY permissions: 
 
 * wfm:workPlan:administer
+* wfm:workPlan:view
 
 
 ### Example
@@ -1911,8 +1979,11 @@ Requires ANY permissions:
 
 * wfm:workPlan:administer
 * wfm:agent:administer
-* wfm:schedule:administer
+* wfm:agent:view
 * wfm:publishedSchedule:view
+* wfm:schedule:administer
+* wfm:schedule:view
+* wfm:workPlan:view
 
 
 ### Example
@@ -2188,6 +2259,7 @@ Wraps PATCH /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{ac
 Requires ANY permissions: 
 
 * wfm:activityCode:administer
+* wfm:activityCode:edit
 
 
 ### Example
@@ -2260,6 +2332,7 @@ Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/servi
 Requires ANY permissions: 
 
 * wfm:serviceGoalGroup:administer
+* wfm:serviceGoalGroup:edit
 
 
 ### Example
@@ -2332,6 +2405,7 @@ Wraps PATCH /api/v2/workforcemanagement/managementunits/{muId}/settings
 Requires ANY permissions: 
 
 * wfm:managementUnit:administer
+* wfm:managementUnit:edit
 
 
 ### Example
@@ -2401,6 +2475,7 @@ Wraps PATCH /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/ti
 Requires ANY permissions: 
 
 * wfm:timeOffRequest:administer
+* wfm:timeOffRequest:edit
 
 
 ### Example
@@ -2476,6 +2551,7 @@ Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks
 Requires ANY permissions: 
 
 * wfm:schedule:administer
+* wfm:schedule:edit
 
 
 ### Example
@@ -2555,6 +2631,7 @@ Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/workp
 Requires ANY permissions: 
 
 * wfm:workPlan:administer
+* wfm:workPlan:edit
 
 
 ### Example
@@ -2762,6 +2839,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/activitycodes
 
 Requires ANY permissions: 
 
+* wfm:activityCode:add
 * wfm:activityCode:administer
 
 
@@ -2969,8 +3047,9 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/schedules/search
 
 Requires ANY permissions: 
 
-* wfm:schedule:administer
 * wfm:publishedSchedule:view
+* wfm:schedule:administer
+* wfm:schedule:view
 
 
 ### Example
@@ -3039,6 +3118,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/servic
 
 Requires ANY permissions: 
 
+* wfm:serviceGoalGroup:add
 * wfm:serviceGoalGroup:administer
 
 
@@ -3109,6 +3189,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests
 Requires ANY permissions: 
 
 * wfm:timeOffRequest:administer
+* wfm:timeOffRequest:add
 
 
 ### Example
@@ -3178,6 +3259,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/fe
 Requires ANY permissions: 
 
 * wfm:timeOffRequest:administer
+* wfm:timeOffRequest:view
 
 
 ### Example
@@ -3247,6 +3329,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/qu
 Requires ANY permissions: 
 
 * wfm:timeOffRequest:administer
+* wfm:timeOffRequest:view
 
 
 ### Example
@@ -3315,6 +3398,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/
 
 Requires ANY permissions: 
 
+* wfm:schedule:add
 * wfm:schedule:administer
 
 
@@ -3394,6 +3478,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/
 
 Requires ANY permissions: 
 
+* wfm:schedule:add
 * wfm:schedule:administer
 
 
@@ -3542,7 +3627,9 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/
 
 Requires ANY permissions: 
 
+* wfm:schedule:add
 * wfm:schedule:administer
+* wfm:schedule:edit
 
 
 ### Example
@@ -3614,6 +3701,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/
 
 Requires ANY permissions: 
 
+* wfm:shortTermForecast:add
 * wfm:shortTermForecast:administer
 
 
@@ -3692,6 +3780,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/
 
 Requires ANY permissions: 
 
+* wfm:shortTermForecast:add
 * wfm:shortTermForecast:administer
 
 
@@ -3767,6 +3856,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/
 
 Requires ANY permissions: 
 
+* wfm:shortTermForecast:add
 * wfm:shortTermForecast:administer
 
 
@@ -3842,6 +3932,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/
 
 Requires ANY permissions: 
 
+* wfm:shortTermForecast:add
 * wfm:shortTermForecast:administer
 
 
@@ -3913,6 +4004,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/workpl
 
 Requires ANY permissions: 
 
+* wfm:workPlan:add
 * wfm:workPlan:administer
 
 
@@ -3985,6 +4077,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/workpl
 
 Requires ANY permissions: 
 
+* wfm:workPlan:add
 * wfm:workPlan:administer
 
 
@@ -4055,6 +4148,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits
 Requires ANY permissions: 
 
 * wfm:managementUnit:administer
+* wfm:managementUnit:add
 
 
 ### Example
@@ -4121,8 +4215,8 @@ Wraps POST /api/v2/workforcemanagement/schedules
 Requires ANY permissions: 
 
 * wfm:agentSchedule:view
-* wfm:schedule:administer
 * wfm:publishedSchedule:view
+* wfm:schedule:administer
 
 
 ### Example
