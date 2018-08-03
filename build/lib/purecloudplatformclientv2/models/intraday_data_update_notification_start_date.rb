@@ -20,11 +20,11 @@ module PureCloud
   class IntradayDataUpdateNotificationStartDate
     attr_accessor :i_millis
 
+    attr_accessor :before_now
+
     attr_accessor :after_now
 
     attr_accessor :equal_now
-
-    attr_accessor :before_now
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -32,11 +32,11 @@ module PureCloud
         
         :'i_millis' => :'iMillis',
         
+        :'before_now' => :'beforeNow',
+        
         :'after_now' => :'afterNow',
         
-        :'equal_now' => :'equalNow',
-        
-        :'before_now' => :'beforeNow'
+        :'equal_now' => :'equalNow'
         
       }
     end
@@ -47,11 +47,11 @@ module PureCloud
         
         :'i_millis' => :'Integer',
         
+        :'before_now' => :'BOOLEAN',
+        
         :'after_now' => :'BOOLEAN',
         
-        :'equal_now' => :'BOOLEAN',
-        
-        :'before_now' => :'BOOLEAN'
+        :'equal_now' => :'BOOLEAN'
         
       }
     end
@@ -74,6 +74,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'beforeNow')
+        
+        
+        self.before_now = attributes[:'beforeNow']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'afterNow')
         
         
@@ -87,15 +96,6 @@ module PureCloud
         
         
         self.equal_now = attributes[:'equalNow']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'beforeNow')
-        
-        
-        self.before_now = attributes[:'beforeNow']
         
       
       end
@@ -161,9 +161,9 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           i_millis == o.i_millis &&
+          before_now == o.before_now &&
           after_now == o.after_now &&
-          equal_now == o.equal_now &&
-          before_now == o.before_now
+          equal_now == o.equal_now
     end
 
     # @see the `==` method
@@ -175,7 +175,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [i_millis, after_now, equal_now, before_now].hash
+      [i_millis, before_now, after_now, equal_now].hash
     end
 
     # build the object from hash

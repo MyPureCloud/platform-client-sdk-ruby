@@ -32,19 +32,17 @@ module PureCloud
 
     attr_accessor :float
 
-    attr_accessor :value_node
-
     attr_accessor :container_node
 
     attr_accessor :missing_node
 
-    attr_accessor :binary
+    attr_accessor :value_node
 
     attr_accessor :pojo
 
-    attr_accessor :floating_point_number
-
     attr_accessor :integral_number
+
+    attr_accessor :floating_point_number
 
     attr_accessor :short
 
@@ -59,6 +57,8 @@ module PureCloud
     attr_accessor :big_integer
 
     attr_accessor :textual
+
+    attr_accessor :binary
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -78,19 +78,17 @@ module PureCloud
         
         :'float' => :'float',
         
-        :'value_node' => :'valueNode',
-        
         :'container_node' => :'containerNode',
         
         :'missing_node' => :'missingNode',
         
-        :'binary' => :'binary',
+        :'value_node' => :'valueNode',
         
         :'pojo' => :'pojo',
         
-        :'floating_point_number' => :'floatingPointNumber',
-        
         :'integral_number' => :'integralNumber',
+        
+        :'floating_point_number' => :'floatingPointNumber',
         
         :'short' => :'short',
         
@@ -104,7 +102,9 @@ module PureCloud
         
         :'big_integer' => :'bigInteger',
         
-        :'textual' => :'textual'
+        :'textual' => :'textual',
+        
+        :'binary' => :'binary'
         
       }
     end
@@ -127,19 +127,17 @@ module PureCloud
         
         :'float' => :'BOOLEAN',
         
-        :'value_node' => :'BOOLEAN',
-        
         :'container_node' => :'BOOLEAN',
         
         :'missing_node' => :'BOOLEAN',
         
-        :'binary' => :'BOOLEAN',
+        :'value_node' => :'BOOLEAN',
         
         :'pojo' => :'BOOLEAN',
         
-        :'floating_point_number' => :'BOOLEAN',
-        
         :'integral_number' => :'BOOLEAN',
+        
+        :'floating_point_number' => :'BOOLEAN',
         
         :'short' => :'BOOLEAN',
         
@@ -153,7 +151,9 @@ module PureCloud
         
         :'big_integer' => :'BOOLEAN',
         
-        :'textual' => :'BOOLEAN'
+        :'textual' => :'BOOLEAN',
+        
+        :'binary' => :'BOOLEAN'
         
       }
     end
@@ -230,15 +230,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'valueNode')
-        
-        
-        self.value_node = attributes[:'valueNode']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'containerNode')
         
         
@@ -257,10 +248,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'binary')
+      if attributes.has_key?(:'valueNode')
         
         
-        self.binary = attributes[:'binary']
+        self.value_node = attributes[:'valueNode']
         
       
       end
@@ -275,19 +266,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'floatingPointNumber')
+      if attributes.has_key?(:'integralNumber')
         
         
-        self.floating_point_number = attributes[:'floatingPointNumber']
+        self.integral_number = attributes[:'integralNumber']
         
       
       end
 
       
-      if attributes.has_key?(:'integralNumber')
+      if attributes.has_key?(:'floatingPointNumber')
         
         
-        self.integral_number = attributes[:'integralNumber']
+        self.floating_point_number = attributes[:'floatingPointNumber']
         
       
       end
@@ -351,6 +342,15 @@ module PureCloud
         
         
         self.textual = attributes[:'textual']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'binary')
+        
+        
+        self.binary = attributes[:'binary']
         
       
       end
@@ -589,20 +589,20 @@ module PureCloud
           boolean == o.boolean &&
           number == o.number &&
           float == o.float &&
-          value_node == o.value_node &&
           container_node == o.container_node &&
           missing_node == o.missing_node &&
-          binary == o.binary &&
+          value_node == o.value_node &&
           pojo == o.pojo &&
-          floating_point_number == o.floating_point_number &&
           integral_number == o.integral_number &&
+          floating_point_number == o.floating_point_number &&
           short == o.short &&
           int == o.int &&
           long == o.long &&
           double == o.double &&
           big_decimal == o.big_decimal &&
           big_integer == o.big_integer &&
-          textual == o.textual
+          textual == o.textual &&
+          binary == o.binary
     end
 
     # @see the `==` method
@@ -614,7 +614,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [array, null, node_type, object, boolean, number, float, value_node, container_node, missing_node, binary, pojo, floating_point_number, integral_number, short, int, long, double, big_decimal, big_integer, textual].hash
+      [array, null, node_type, object, boolean, number, float, container_node, missing_node, value_node, pojo, integral_number, floating_point_number, short, int, long, double, big_decimal, big_integer, textual, binary].hash
     end
 
     # build the object from hash
