@@ -1470,7 +1470,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Lookup contacts and externalOrganizations based on an attribute
+    # Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
     # 
     # @param lookup_val User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)
     # @param [Hash] opts the optional parameters
@@ -1481,7 +1481,7 @@ module PureCloud
       return data
     end
 
-    # Lookup contacts and externalOrganizations based on an attribute
+    # Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
     # 
     # @param lookup_val User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)
     # @param [Hash] opts the optional parameters

@@ -25,7 +25,7 @@ Method | Description
 [**get_externalcontacts_organization_relationships**](ExternalContactsApi.html#get_externalcontacts_organization_relationships) | Fetch a relationship for an external organization
 [**get_externalcontacts_organizations**](ExternalContactsApi.html#get_externalcontacts_organizations) | Search for external organizations
 [**get_externalcontacts_relationship**](ExternalContactsApi.html#get_externalcontacts_relationship) | Fetch a relationship
-[**get_externalcontacts_reversewhitepageslookup**](ExternalContactsApi.html#get_externalcontacts_reversewhitepageslookup) | Lookup contacts and externalOrganizations based on an attribute
+[**get_externalcontacts_reversewhitepageslookup**](ExternalContactsApi.html#get_externalcontacts_reversewhitepageslookup) | Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
 [**post_externalcontacts_contact_notes**](ExternalContactsApi.html#post_externalcontacts_contact_notes) | Create a note for an external contact
 [**post_externalcontacts_contacts**](ExternalContactsApi.html#post_externalcontacts_contacts) | Create an external contact
 [**post_externalcontacts_organization_notes**](ExternalContactsApi.html#post_externalcontacts_organization_notes) | Create a note for an external organization
@@ -1243,7 +1243,7 @@ Name | Type | Description  | Notes
 
 
 
-Lookup contacts and externalOrganizations based on an attribute
+Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
 
 
 
@@ -1278,7 +1278,7 @@ opts = {
 }
 
 begin
-  #Lookup contacts and externalOrganizations based on an attribute
+  #Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
   result = api_instance.get_externalcontacts_reversewhitepageslookup(lookup_val, opts)
   p result
 rescue PureCloud::ApiError => e

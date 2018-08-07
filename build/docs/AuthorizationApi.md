@@ -14,6 +14,7 @@ Method | Description
 [**get_authorization_products**](AuthorizationApi.html#get_authorization_products) | Get the list of enabled products
 [**get_authorization_role**](AuthorizationApi.html#get_authorization_role) | Get a single organization role.
 [**get_authorization_role_comparedefault_right_role_id**](AuthorizationApi.html#get_authorization_role_comparedefault_right_role_id) | Get an org role to default role comparison comparison
+[**get_authorization_role_subjectgrants**](AuthorizationApi.html#get_authorization_role_subjectgrants) | Get the subjects&#39; granted divisions in the specified role.
 [**get_authorization_roles**](AuthorizationApi.html#get_authorization_roles) | Retrieve a list of all roles defined for the organization
 [**get_user_roles**](AuthorizationApi.html#get_user_roles) | Returns a listing of roles and permissions for a user.
 [**patch_authorization_role**](AuthorizationApi.html#patch_authorization_role) | Patch Organization Role for needsUpdate Field
@@ -409,6 +410,85 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_role_subjectgrants"></a>
+
+## -[**SubjectDivisionGrantsEntityListing**](SubjectDivisionGrantsEntityListing.html) get_authorization_role_subjectgrants(role_id, opts)
+
+
+
+Get the subjects' granted divisions in the specified role.
+
+Includes the divisions for which the subject has a grant.
+
+Wraps GET /api/v2/authorization/roles/{roleId}/subjectgrants 
+
+Requires ANY permissions: 
+
+* authorization:role:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+role_id = "role_id_example" # String | Role ID
+
+opts = { 
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example" # String | Previous page token
+}
+
+begin
+  #Get the subjects' granted divisions in the specified role.
+  result = api_instance.get_authorization_role_subjectgrants(role_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_role_subjectgrants: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role_id** | **String**| Role ID |  |
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SubjectDivisionGrantsEntityListing**](SubjectDivisionGrantsEntityListing.html)
 
 ### HTTP request headers
 

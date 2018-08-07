@@ -420,6 +420,125 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the subjects' granted divisions in the specified role.
+    # Includes the divisions for which the subject has a grant.
+    # @param role_id Role ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested (default to 25)
+    # @option opts [Integer] :page_number The page number requested (default to 1)
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [SubjectDivisionGrantsEntityListing]
+    def get_authorization_role_subjectgrants(role_id, opts = {})
+      data, _status_code, _headers = get_authorization_role_subjectgrants_with_http_info(role_id, opts)
+      return data
+    end
+
+    # Get the subjects&#39; granted divisions in the specified role.
+    # Includes the divisions for which the subject has a grant.
+    # @param role_id Role ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested
+    # @option opts [Integer] :page_number The page number requested
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @return [Array<(SubjectDivisionGrantsEntityListing, Fixnum, Hash)>] SubjectDivisionGrantsEntityListing data, response status code and response headers
+    def get_authorization_role_subjectgrants_with_http_info(role_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_role_subjectgrants ..."
+      end
+      
+      
+      # verify the required parameter 'role_id' is set
+      fail ArgumentError, "Missing the required parameter 'role_id' when calling AuthorizationApi.get_authorization_role_subjectgrants" if role_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/roles/{roleId}/subjectgrants".sub('{format}','json').sub('{' + 'roleId' + '}', role_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
+      query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SubjectDivisionGrantsEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#get_authorization_role_subjectgrants\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Retrieve a list of all roles defined for the organization
     # 
     # @param [Hash] opts the optional parameters

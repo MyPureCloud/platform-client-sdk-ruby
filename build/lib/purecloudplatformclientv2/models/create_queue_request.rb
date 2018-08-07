@@ -160,7 +160,7 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'division' => :'Division',
+        :'division' => :'WritableDivision',
         
         :'description' => :'String',
         

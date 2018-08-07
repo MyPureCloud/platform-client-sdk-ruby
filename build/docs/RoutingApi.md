@@ -53,7 +53,7 @@ Method | Description
 [**post_routing_languages**](RoutingApi.html#post_routing_languages) | Create Language
 [**post_routing_queue_users**](RoutingApi.html#post_routing_queue_users) | Bulk add or delete up to 100 queue members
 [**post_routing_queue_wrapupcodes**](RoutingApi.html#post_routing_queue_wrapupcodes) | Add up to 100 wrap-up codes to a queue
-[**post_routing_queues**](RoutingApi.html#post_routing_queues) | Create queue
+[**post_routing_queues**](RoutingApi.html#post_routing_queues) | Create a queue
 [**post_routing_skills**](RoutingApi.html#post_routing_skills) | Create Skill
 [**post_routing_sms_addresses**](RoutingApi.html#post_routing_sms_addresses) | Provision an Address for SMS
 [**post_routing_sms_phonenumbers**](RoutingApi.html#post_routing_sms_phonenumbers) | Provision a phone number for SMS
@@ -3139,7 +3139,7 @@ Name | Type | Description  | Notes
 
 
 
-Create queue
+Create a queue
 
 
 
@@ -3171,7 +3171,7 @@ body = PureCloud::CreateQueueRequest.new # CreateQueueRequest | Queue
 
 
 begin
-  #Create queue
+  #Create a queue
   result = api_instance.post_routing_queues(body)
   p result
 rescue PureCloud::ApiError => e
@@ -3771,7 +3771,7 @@ api_instance = PureCloud::RoutingApi.new
 
 queue_id = "queue_id_example" # String | Queue ID
 
-body = PureCloud::Queue.new # Queue | Queue
+body = PureCloud::QueueRequest.new # QueueRequest | Queue
 
 
 begin
@@ -3788,7 +3788,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **queue_id** | **String**| Queue ID |  |
- **body** | [**Queue**](Queue.html)| Queue |  |
+ **body** | [**QueueRequest**](QueueRequest.html)| Queue |  |
 {: class="table table-striped"}
 
 

@@ -71,9 +71,6 @@ module PureCloud
     # The prompt used for whisper on the queue, if configured.
     attr_accessor :whisper_prompt
 
-    # Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.
-    attr_accessor :auto_answer_only
-
     # The name to use for caller identification for outbound calls from this queue.
     attr_accessor :calling_party_name
 
@@ -132,8 +129,6 @@ module PureCloud
         
         :'whisper_prompt' => :'whisperPrompt',
         
-        :'auto_answer_only' => :'autoAnswerOnly',
-        
         :'calling_party_name' => :'callingPartyName',
         
         :'calling_party_number' => :'callingPartyNumber',
@@ -190,8 +185,6 @@ module PureCloud
         :'queue_flow' => :'UriReference',
         
         :'whisper_prompt' => :'UriReference',
-        
-        :'auto_answer_only' => :'BOOLEAN',
         
         :'calling_party_name' => :'String',
         
@@ -378,15 +371,6 @@ module PureCloud
         
         
         self.whisper_prompt = attributes[:'whisperPrompt']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'autoAnswerOnly')
-        
-        
-        self.auto_answer_only = attributes[:'autoAnswerOnly']
         
       
       end
@@ -597,10 +581,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
     
@@ -747,11 +727,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -775,7 +750,6 @@ module PureCloud
           skill_evaluation_method == o.skill_evaluation_method &&
           queue_flow == o.queue_flow &&
           whisper_prompt == o.whisper_prompt &&
-          auto_answer_only == o.auto_answer_only &&
           calling_party_name == o.calling_party_name &&
           calling_party_number == o.calling_party_number &&
           default_scripts == o.default_scripts &&
@@ -794,7 +768,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_email_address, joined, member_count, self_uri].hash
+      [id, name, division, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, calling_party_name, calling_party_number, default_scripts, outbound_email_address, joined, member_count, self_uri].hash
     end
 
     # build the object from hash

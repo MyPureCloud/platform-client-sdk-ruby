@@ -3554,7 +3554,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Create queue
+    # Create a queue
     # 
     # @param body Queue
     # @param [Hash] opts the optional parameters
@@ -3564,7 +3564,7 @@ module PureCloud
       return data
     end
 
-    # Create queue
+    # Create a queue
     # 
     # @param body Queue
     # @param [Hash] opts the optional parameters
