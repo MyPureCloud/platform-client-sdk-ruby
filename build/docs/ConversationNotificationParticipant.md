@@ -24,6 +24,7 @@ title: ConversationNotificationParticipant
 | **wrapup_prompt** | **String** |  | [optional] |
 | **wrapup_timeout_ms** | **Integer** |  | [optional] |
 | **wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
+| **alerting_timeout_ms** | **Integer** |  | [optional] |
 | **monitored_participant_id** | **String** |  | [optional] |
 | **screen_recording_state** | **String** |  | [optional] |
 | **flagged_reason** | **String** |  | [optional] |

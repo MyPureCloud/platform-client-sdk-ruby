@@ -2062,7 +2062,7 @@ opts = {
   name: "name_example", # String | Name
   id: ["id_example"], # Array<String> | id
   contact_list_id: "contact_list_id_example", # String | Contact List ID
-  dnc_list_id: "dnc_list_id_example", # String | DNC list ID
+  dnc_list_ids: "dnc_list_ids_example", # String | DNC list ID
   distribution_queue_id: "distribution_queue_id_example", # String | Distribution queue ID
   edge_group_id: "edge_group_id_example", # String | Edge group ID
   call_analysis_response_set_id: "call_analysis_response_set_id_example", # String | Call analysis response set ID
@@ -2090,7 +2090,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Name | [optional]  |
  **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
  **contact_list_id** | **String**| Contact List ID | [optional]  |
- **dnc_list_id** | **String**| DNC list ID | [optional]  |
+ **dnc_list_ids** | **String**| DNC list ID | [optional]  |
  **distribution_queue_id** | **String**| Distribution queue ID | [optional]  |
  **edge_group_id** | **String**| Edge group ID | [optional]  |
  **call_analysis_response_set_id** | **String**| Call analysis response set ID | [optional]  |

@@ -28,6 +28,7 @@ title: EmailConversationNotificationParticipants
 | **script** | [**EmailConversationNotificationUriReference**](EmailConversationNotificationUriReference.html) |  | [optional] |
 | **wrapup_timeout_ms** | **Integer** |  | [optional] |
 | **wrapup_skipped** | **BOOLEAN** |  | [optional] |
+| **alerting_timeout_ms** | **Integer** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **external_contact** | [**EmailConversationNotificationUriReference**](EmailConversationNotificationUriReference.html) |  | [optional] |
 | **external_organization** | [**EmailConversationNotificationUriReference**](EmailConversationNotificationUriReference.html) |  | [optional] |

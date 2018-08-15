@@ -28,6 +28,7 @@ title: VideoConversationNotificationVideoMediaParticipant
 | **script** | [**VideoConversationNotificationUriReference**](VideoConversationNotificationUriReference.html) |  | [optional] |
 | **wrapup_timeout_ms** | **Integer** |  | [optional] |
 | **wrapup_skipped** | **BOOLEAN** |  | [optional] |
+| **alerting_timeout_ms** | **Integer** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **external_contact** | [**VideoConversationNotificationUriReference**](VideoConversationNotificationUriReference.html) |  | [optional] |
 | **external_organization** | [**VideoConversationNotificationUriReference**](VideoConversationNotificationUriReference.html) |  | [optional] |

@@ -28,6 +28,7 @@ title: SocialConversationNotificationParticipants
 | **script** | [**SocialConversationNotificationUriReference**](SocialConversationNotificationUriReference.html) |  | [optional] |
 | **wrapup_timeout_ms** | **Integer** |  | [optional] |
 | **wrapup_skipped** | **BOOLEAN** |  | [optional] |
+| **alerting_timeout_ms** | **Integer** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **external_contact** | [**SocialConversationNotificationUriReference**](SocialConversationNotificationUriReference.html) |  | [optional] |
 | **external_organization** | [**SocialConversationNotificationUriReference**](SocialConversationNotificationUriReference.html) |  | [optional] |

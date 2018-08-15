@@ -52,6 +52,8 @@ module PureCloud
 
     attr_accessor :wrapup
 
+    attr_accessor :alerting_timeout_ms
+
     attr_accessor :monitored_participant_id
 
     attr_accessor :screen_recording_state
@@ -117,6 +119,8 @@ module PureCloud
         :'wrapup_timeout_ms' => :'wrapupTimeoutMs',
         
         :'wrapup' => :'wrapup',
+        
+        :'alerting_timeout_ms' => :'alertingTimeoutMs',
         
         :'monitored_participant_id' => :'monitoredParticipantId',
         
@@ -186,6 +190,8 @@ module PureCloud
         :'wrapup_timeout_ms' => :'Integer',
         
         :'wrapup' => :'ConversationNotificationWrapup',
+        
+        :'alerting_timeout_ms' => :'Integer',
         
         :'monitored_participant_id' => :'String',
         
@@ -375,6 +381,15 @@ module PureCloud
         
         
         self.wrapup = attributes[:'wrapup']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'alertingTimeoutMs')
+        
+        
+        self.alerting_timeout_ms = attributes[:'alertingTimeoutMs']
         
       
       end
@@ -615,6 +630,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["REQUESTED", "ACTIVE", "PAUSED", "STOPPED", "ERROR", "TIMEOUT"]
       if @screen_recording_state && !allowed_values.include?(@screen_recording_state)
         return false
@@ -672,6 +691,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -859,6 +883,7 @@ module PureCloud
           wrapup_prompt == o.wrapup_prompt &&
           wrapup_timeout_ms == o.wrapup_timeout_ms &&
           wrapup == o.wrapup &&
+          alerting_timeout_ms == o.alerting_timeout_ms &&
           monitored_participant_id == o.monitored_participant_id &&
           screen_recording_state == o.screen_recording_state &&
           flagged_reason == o.flagged_reason &&
@@ -884,7 +909,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, connected_time, end_time, user_id, external_contact_id, external_organization_id, name, queue_id, group_id, purpose, consult_participant_id, address, wrapup_required, wrapup_expected, wrapup_prompt, wrapup_timeout_ms, wrapup, monitored_participant_id, screen_recording_state, flagged_reason, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, additional_properties].hash
+      [id, connected_time, end_time, user_id, external_contact_id, external_organization_id, name, queue_id, group_id, purpose, consult_participant_id, address, wrapup_required, wrapup_expected, wrapup_prompt, wrapup_timeout_ms, wrapup, alerting_timeout_ms, monitored_participant_id, screen_recording_state, flagged_reason, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, additional_properties].hash
     end
 
     # build the object from hash

@@ -28,6 +28,7 @@ title: CallbackConversationNotificationCallbackMediaParticipant
 | **script** | [**CallbackConversationNotificationUriReference**](CallbackConversationNotificationUriReference.html) |  | [optional] |
 | **wrapup_timeout_ms** | **Integer** |  | [optional] |
 | **wrapup_skipped** | **BOOLEAN** |  | [optional] |
+| **alerting_timeout_ms** | **Integer** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **external_contact** | [**CallbackConversationNotificationUriReference**](CallbackConversationNotificationUriReference.html) |  | [optional] |
 | **external_organization** | [**CallbackConversationNotificationUriReference**](CallbackConversationNotificationUriReference.html) |  | [optional] |

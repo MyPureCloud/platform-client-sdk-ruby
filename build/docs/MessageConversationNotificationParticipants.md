@@ -28,6 +28,7 @@ title: MessageConversationNotificationParticipants
 | **script** | [**MessageConversationNotificationUriReference**](MessageConversationNotificationUriReference.html) |  | [optional] |
 | **wrapup_timeout_ms** | **Integer** |  | [optional] |
 | **wrapup_skipped** | **BOOLEAN** |  | [optional] |
+| **alerting_timeout_ms** | **Integer** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **external_contact** | [**MessageConversationNotificationUriReference**](MessageConversationNotificationUriReference.html) |  | [optional] |
 | **external_organization** | [**MessageConversationNotificationUriReference**](MessageConversationNotificationUriReference.html) |  | [optional] |

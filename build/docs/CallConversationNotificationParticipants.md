@@ -28,6 +28,7 @@ title: CallConversationNotificationParticipants
 | **script** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **wrapup_timeout_ms** | **Integer** |  | [optional] |
 | **wrapup_skipped** | **BOOLEAN** |  | [optional] |
+| **alerting_timeout_ms** | **Integer** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **external_contact** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **external_organization** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |

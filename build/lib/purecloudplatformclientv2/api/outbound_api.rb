@@ -2133,7 +2133,7 @@ module PureCloud
     # @option opts [String] :name Name
     # @option opts [Array<String>] :id id
     # @option opts [String] :contact_list_id Contact List ID
-    # @option opts [String] :dnc_list_id DNC list ID
+    # @option opts [String] :dnc_list_ids DNC list ID
     # @option opts [String] :distribution_queue_id Distribution queue ID
     # @option opts [String] :edge_group_id Edge group ID
     # @option opts [String] :call_analysis_response_set_id Call analysis response set ID
@@ -2155,7 +2155,7 @@ module PureCloud
     # @option opts [String] :name Name
     # @option opts [Array<String>] :id id
     # @option opts [String] :contact_list_id Contact List ID
-    # @option opts [String] :dnc_list_id DNC list ID
+    # @option opts [String] :dnc_list_ids DNC list ID
     # @option opts [String] :distribution_queue_id Distribution queue ID
     # @option opts [String] :edge_group_id Edge group ID
     # @option opts [String] :call_analysis_response_set_id Call analysis response set ID
@@ -2265,7 +2265,7 @@ module PureCloud
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
       query_params[:'contactListId'] = opts[:'contact_list_id'] if opts[:'contact_list_id']
-      query_params[:'dncListId'] = opts[:'dnc_list_id'] if opts[:'dnc_list_id']
+      query_params[:'dncListIds'] = opts[:'dnc_list_ids'] if opts[:'dnc_list_ids']
       query_params[:'distributionQueueId'] = opts[:'distribution_queue_id'] if opts[:'distribution_queue_id']
       query_params[:'edgeGroupId'] = opts[:'edge_group_id'] if opts[:'edge_group_id']
       query_params[:'callAnalysisResponseSetId'] = opts[:'call_analysis_response_set_id'] if opts[:'call_analysis_response_set_id']

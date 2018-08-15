@@ -242,7 +242,7 @@ module PureCloud
       
       
       
-      allowed_values = ["RUNNING", "COMPLETED", "COMPLETED_WITH_ERRORS", "FAILED", "FAILED_TIMEOUT", "FAILED_DATALIMIT"]
+      allowed_values = ["RUNNING", "COMPLETED", "COMPLETED_WITH_ERRORS", "FAILED", "FAILED_TIMEOUT", "FAILED_DATALIMIT", "UNABLE_TO_COMPLETE"]
       if @run_status && !allowed_values.include?(@run_status)
         return false
       end
@@ -300,7 +300,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] run_status Object to be assigned
     def run_status=(run_status)
-      allowed_values = ["RUNNING", "COMPLETED", "COMPLETED_WITH_ERRORS", "FAILED", "FAILED_TIMEOUT", "FAILED_DATALIMIT"]
+      allowed_values = ["RUNNING", "COMPLETED", "COMPLETED_WITH_ERRORS", "FAILED", "FAILED_TIMEOUT", "FAILED_DATALIMIT", "UNABLE_TO_COMPLETE"]
       if run_status && !allowed_values.include?(run_status)
         fail ArgumentError, "invalid value for 'run_status', must be one of #{allowed_values}."
       end
