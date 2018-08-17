@@ -76,7 +76,6 @@ Method | Description
 [**get_telephony_providers_edges_phones_template**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_phones_template) | Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
 [**get_telephony_providers_edges_physicalinterfaces**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_physicalinterfaces) | Get physical interfaces for edges.
 [**get_telephony_providers_edges_site**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site) | Get a Site by ID.
-[**get_telephony_providers_edges_site_autoscalinggroups**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site_autoscalinggroups) | Gets the basic information about an asg in a specified site
 [**get_telephony_providers_edges_site_numberplan**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site_numberplan) | Get a Number Plan by ID.
 [**get_telephony_providers_edges_site_numberplans**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site_numberplans) | Get the list of Number Plans for this Site.
 [**get_telephony_providers_edges_site_numberplans_classifications**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_site_numberplans_classifications) | Get a list of Classifications for this Site
@@ -112,7 +111,6 @@ Method | Description
 [**post_telephony_providers_edges_phonebasesettings**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_phonebasesettings) | Create a new Phone Base Settings object
 [**post_telephony_providers_edges_phones**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_phones) | Create a new Phone
 [**post_telephony_providers_edges_phones_reboot**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_phones_reboot) | Reboot Multiple Phones
-[**post_telephony_providers_edges_site_autoscalinggroups**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_site_autoscalinggroups) | Creates an ASG for the specified site
 [**post_telephony_providers_edges_site_outboundroutes**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_site_outboundroutes) | Create outbound route
 [**post_telephony_providers_edges_site_rebalance**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_site_rebalance) | Triggers the rebalance operation.
 [**post_telephony_providers_edges_sites**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_sites) | Create a Site.
@@ -4742,71 +4740,6 @@ Name | Type | Description  | Notes
 
 
 
-<a name="get_telephony_providers_edges_site_autoscalinggroups"></a>
-
-## -[**AsgInfoResponse**](AsgInfoResponse.html) get_telephony_providers_edges_site_autoscalinggroups(site_id)
-
-
-
-Gets the basic information about an asg in a specified site
-
-
-
-Wraps GET /api/v2/telephony/providers/edges/sites/{siteId}/autoscalinggroups 
-
-Requires ANY permissions: 
-
-* managed:all:all
-
-
-### Example
-~~~ruby
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::TelephonyProvidersEdgeApi.new
-
-site_id = "site_id_example" # String | Site id associated with the asg
-
-
-begin
-  #Gets the basic information about an asg in a specified site
-  result = api_instance.get_telephony_providers_edges_site_autoscalinggroups(site_id)
-  p result
-rescue PureCloud::ApiError => e
-  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_site_autoscalinggroups: #{e}"
-end
-~~~
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site id associated with the asg |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-[**AsgInfoResponse**](AsgInfoResponse.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
 <a name="get_telephony_providers_edges_site_numberplan"></a>
 
 ## -[**NumberPlan**](NumberPlan.html) get_telephony_providers_edges_site_numberplan(site_id, number_plan_id)
@@ -7167,74 +7100,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-<a name="post_telephony_providers_edges_site_autoscalinggroups"></a>
-
-## -String** post_telephony_providers_edges_site_autoscalinggroups(site_id, body)
-
-
-
-Creates an ASG for the specified site
-
-
-
-Wraps POST /api/v2/telephony/providers/edges/sites/{siteId}/autoscalinggroups 
-
-Requires ANY permissions: 
-
-* managed:all:all
-
-
-### Example
-~~~ruby
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::TelephonyProvidersEdgeApi.new
-
-site_id = "site_id_example" # String | Site that will be associated with the asg
-
-body = PureCloud::CreateAsgRequest.new # CreateAsgRequest | CreateAsgRequest
-
-
-begin
-  #Creates an ASG for the specified site
-  result = api_instance.post_telephony_providers_edges_site_autoscalinggroups(site_id, body)
-  p result
-rescue PureCloud::ApiError => e
-  puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_site_autoscalinggroups: #{e}"
-end
-~~~
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **site_id** | **String**| Site that will be associated with the asg |  |
- **body** | [**CreateAsgRequest**](CreateAsgRequest.html)| CreateAsgRequest |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-**String**
 
 ### HTTP request headers
 
