@@ -24,6 +24,72 @@ module PureCloud
       @api_client = api_client
     end
 
+    # Search gkn documentation using the q64 value returned from a previous search
+    # 
+    # @param q64 q64
+    # @param [Hash] opts the optional parameters
+    # @return [GKNDocumentationSearchResponse]
+    def get_documentation_gkn_search(q64, opts = {})
+      data, _status_code, _headers = get_documentation_gkn_search_with_http_info(q64, opts)
+      return data
+    end
+
+    # Search gkn documentation using the q64 value returned from a previous search
+    # 
+    # @param q64 q64
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(GKNDocumentationSearchResponse, Fixnum, Hash)>] GKNDocumentationSearchResponse data, response status code and response headers
+    def get_documentation_gkn_search_with_http_info(q64, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SearchApi.get_documentation_gkn_search ..."
+      end
+      
+      
+      # verify the required parameter 'q64' is set
+      fail ArgumentError, "Missing the required parameter 'q64' when calling SearchApi.get_documentation_gkn_search" if q64.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/documentation/gkn/search".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'q64'] = q64
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'GKNDocumentationSearchResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SearchApi#get_documentation_gkn_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Search documentation using the q64 value returned from a previous search
     # 
     # @param q64 q64
@@ -554,6 +620,71 @@ module PureCloud
         :return_type => 'VoicemailsSearchResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: SearchApi#get_voicemail_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Search gkn documentation
+    # 
+    # @param body Search request options
+    # @param [Hash] opts the optional parameters
+    # @return [GKNDocumentationSearchResponse]
+    def post_documentation_gkn_search(body, opts = {})
+      data, _status_code, _headers = post_documentation_gkn_search_with_http_info(body, opts)
+      return data
+    end
+
+    # Search gkn documentation
+    # 
+    # @param body Search request options
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(GKNDocumentationSearchResponse, Fixnum, Hash)>] GKNDocumentationSearchResponse data, response status code and response headers
+    def post_documentation_gkn_search_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SearchApi.post_documentation_gkn_search ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling SearchApi.post_documentation_gkn_search" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/documentation/gkn/search".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'GKNDocumentationSearchResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SearchApi#post_documentation_gkn_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

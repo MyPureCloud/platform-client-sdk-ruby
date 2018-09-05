@@ -17,6 +17,7 @@ title: AnalyticsSurvey
 | **queue_id** | **String** | Unique identifier for the queue the conversation was on | [optional] |
 | **status** | **String** | Survey status | [optional] |
 | **created_date** | **DateTime** | Creation date of survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **geto_survey_total_score** | **Integer** | The total score for the survey | [optional] |
 {: class="table table-striped"}
 
 

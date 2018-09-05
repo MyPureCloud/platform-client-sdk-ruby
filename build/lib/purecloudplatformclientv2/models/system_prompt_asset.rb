@@ -34,6 +34,8 @@ module PureCloud
 
     attr_accessor :tts_string
 
+    attr_accessor :text
+
     attr_accessor :upload_uri
 
     attr_accessor :upload_status
@@ -64,6 +66,8 @@ module PureCloud
         :'media_uri' => :'mediaUri',
         
         :'tts_string' => :'ttsString',
+        
+        :'text' => :'text',
         
         :'upload_uri' => :'uploadUri',
         
@@ -97,6 +101,8 @@ module PureCloud
         :'media_uri' => :'String',
         
         :'tts_string' => :'String',
+        
+        :'text' => :'String',
         
         :'upload_uri' => :'String',
         
@@ -180,6 +186,15 @@ module PureCloud
         
         
         self.tts_string = attributes[:'ttsString']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'text')
+        
+        
+        self.text = attributes[:'text']
         
       
       end
@@ -295,6 +310,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["created", "uploaded", "transcoded"]
       if @upload_status && !allowed_values.include?(@upload_status)
         return false
@@ -320,6 +339,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -407,6 +431,7 @@ module PureCloud
           duration_seconds == o.duration_seconds &&
           media_uri == o.media_uri &&
           tts_string == o.tts_string &&
+          text == o.text &&
           upload_uri == o.upload_uri &&
           upload_status == o.upload_status &&
           has_default == o.has_default &&
@@ -424,7 +449,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, prompt_id, language, duration_seconds, media_uri, tts_string, upload_uri, upload_status, has_default, language_default, tags, self_uri].hash
+      [id, name, prompt_id, language, duration_seconds, media_uri, tts_string, text, upload_uri, upload_status, has_default, language_default, tags, self_uri].hash
     end
 
     # build the object from hash

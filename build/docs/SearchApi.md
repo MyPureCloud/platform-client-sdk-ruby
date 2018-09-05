@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
+[**get_documentation_gkn_search**](SearchApi.html#get_documentation_gkn_search) | Search gkn documentation using the q64 value returned from a previous search
 [**get_documentation_search**](SearchApi.html#get_documentation_search) | Search documentation using the q64 value returned from a previous search
 [**get_groups_search**](SearchApi.html#get_groups_search) | Search groups using the q64 value returned from a previous search
 [**get_locations_search**](SearchApi.html#get_locations_search) | Search locations using the q64 value returned from a previous search
@@ -15,6 +16,7 @@ Method | Description
 [**get_search_suggest**](SearchApi.html#get_search_suggest) | Suggest resources using the q64 value returned from a previous suggest query.
 [**get_users_search**](SearchApi.html#get_users_search) | Search users using the q64 value returned from a previous search
 [**get_voicemail_search**](SearchApi.html#get_voicemail_search) | Search voicemails using the q64 value returned from a previous search
+[**post_documentation_gkn_search**](SearchApi.html#post_documentation_gkn_search) | Search gkn documentation
 [**post_documentation_search**](SearchApi.html#post_documentation_search) | Search documentation
 [**post_groups_search**](SearchApi.html#post_groups_search) | Search groups
 [**post_locations_search**](SearchApi.html#post_locations_search) | Search locations
@@ -23,6 +25,70 @@ Method | Description
 [**post_users_search**](SearchApi.html#post_users_search) | Search users
 [**post_voicemail_search**](SearchApi.html#post_voicemail_search) | Search voicemails
 {: class="table table-striped"}
+
+<a name="get_documentation_gkn_search"></a>
+
+## -[**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html) get_documentation_gkn_search(q64)
+
+
+
+Search gkn documentation using the q64 value returned from a previous search
+
+
+
+Wraps GET /api/v2/documentation/gkn/search 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::SearchApi.new
+
+q64 = "q64_example" # String | q64
+
+
+begin
+  #Search gkn documentation using the q64 value returned from a previous search
+  result = api_instance.get_documentation_gkn_search(q64)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SearchApi->get_documentation_gkn_search: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **q64** | **String**| q64 |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 <a name="get_documentation_search"></a>
 
@@ -278,7 +344,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **q64** | **String**| q64 |  |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
  **profile** | **BOOLEAN**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -348,7 +414,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **q64** | **String**| q64 |  |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
  **profile** | **BOOLEAN**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -492,6 +558,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_documentation_gkn_search"></a>
+
+## -[**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html) post_documentation_gkn_search(body)
+
+
+
+Search gkn documentation
+
+
+
+Wraps POST /api/v2/documentation/gkn/search 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::SearchApi.new
+
+body = PureCloud::GKNDocumentationSearchRequest.new # GKNDocumentationSearchRequest | Search request options
+
+
+begin
+  #Search gkn documentation
+  result = api_instance.post_documentation_gkn_search(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SearchApi->post_documentation_gkn_search: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**GKNDocumentationSearchRequest**](GKNDocumentationSearchRequest.html)| Search request options |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html)
 
 ### HTTP request headers
 

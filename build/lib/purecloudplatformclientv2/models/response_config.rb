@@ -22,6 +22,9 @@ module PureCloud
     # Map 'attribute name' and 'JSON path' pairs used to extract data from REST response.
     attr_accessor :translation_map
 
+    # Map 'attribute name' and 'default value' pairs used as fallback values if JSON path extraction fails for specified key.
+    attr_accessor :translation_map_defaults
+
     # Velocity template to build response to return from Action.
     attr_accessor :success_template
 
@@ -33,6 +36,8 @@ module PureCloud
       {
         
         :'translation_map' => :'translationMap',
+        
+        :'translation_map_defaults' => :'translationMapDefaults',
         
         :'success_template' => :'successTemplate',
         
@@ -46,6 +51,8 @@ module PureCloud
       {
         
         :'translation_map' => :'Hash<String, String>',
+        
+        :'translation_map_defaults' => :'Hash<String, String>',
         
         :'success_template' => :'String',
         
@@ -67,6 +74,17 @@ module PureCloud
         
         if (value = attributes[:'translationMap']).is_a?(Array)
           self.translation_map = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'translationMapDefaults')
+        
+        if (value = attributes[:'translationMapDefaults']).is_a?(Array)
+          self.translation_map_defaults = value
         end
         
         
@@ -119,8 +137,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -143,6 +170,7 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           translation_map == o.translation_map &&
+          translation_map_defaults == o.translation_map_defaults &&
           success_template == o.success_template &&
           success_template_uri == o.success_template_uri
     end
@@ -156,7 +184,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [translation_map, success_template, success_template_uri].hash
+      [translation_map, translation_map_defaults, success_template, success_template_uri].hash
     end
 
     # build the object from hash

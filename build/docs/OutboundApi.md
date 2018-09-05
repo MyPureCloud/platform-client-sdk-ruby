@@ -4464,7 +4464,7 @@ api_instance = PureCloud::OutboundApi.new
 
 contact_list_id = "contact_list_id_example" # String | Contact List ID
 
-body = [PureCloud::DialerContact.new] # Array<DialerContact> | Contact
+body = [PureCloud::WritableDialerContact.new] # Array<WritableDialerContact> | Contact
 
 opts = { 
   priority: true, # BOOLEAN | Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue.
@@ -4486,7 +4486,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact_list_id** | **String**| Contact List ID |  |
- **body** | [**Array&lt;DialerContact&gt;**](DialerContact.html)| Contact |  |
+ **body** | [**Array&lt;WritableDialerContact&gt;**](WritableDialerContact.html)| Contact |  |
  **priority** | **BOOLEAN**| Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. | [optional]  |
  **clear_system_data** | **BOOLEAN**| Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. | [optional]  |
  **do_not_queue** | **BOOLEAN**| Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. | [optional]  |

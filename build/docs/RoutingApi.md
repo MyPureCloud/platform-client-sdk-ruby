@@ -47,6 +47,8 @@ Method | Description
 [**patch_routing_queue_user**](RoutingApi.html#patch_routing_queue_user) | Update the ring number of joined status for a User in a Queue
 [**patch_routing_queue_users**](RoutingApi.html#patch_routing_queue_users) | Join or unjoin a set of users for a queue
 [**patch_user_routinglanguage**](RoutingApi.html#patch_user_routinglanguage) | Update routing language proficiency or state.
+[**patch_user_routinglanguages_bulk**](RoutingApi.html#patch_user_routinglanguages_bulk) | Add bulk routing language to user. Max limit 50 languages
+[**patch_user_routingskills_bulk**](RoutingApi.html#patch_user_routingskills_bulk) | Add bulk routing skills to user
 [**post_analytics_queues_observations_query**](RoutingApi.html#post_analytics_queues_observations_query) | Query for queue observations
 [**post_routing_email_domain_routes**](RoutingApi.html#post_routing_email_domain_routes) | Create a route
 [**post_routing_email_domains**](RoutingApi.html#post_routing_email_domains) | Create a domain
@@ -1585,7 +1587,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **sort_by** | **String**| Sort by | [optional] [default to name] |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, orgproducts, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
  **joined** | **BOOLEAN**| Filter by joined status | [optional]  |
  **name** | **String**| Filter by queue member name | [optional]  |
  **profile_skills** | [**Array&lt;String&gt;**](String.html)| Filter by profile skill | [optional]  |
@@ -2340,8 +2342,8 @@ api_instance = PureCloud::RoutingApi.new
 opts = { 
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
-  name: "name_example", # String | Name
-  sort_by: "name" # String | Sort by
+  sort_by: "name", # String | Sort by
+  name: "name_example" # String | Name
 }
 
 begin
@@ -2359,8 +2361,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to name]<br />**Values**: name, id |
  **name** | **String**| Name | [optional]  |
- **sort_by** | **String**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 
 
@@ -2722,6 +2724,144 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserRoutingLanguage**](UserRoutingLanguage.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_user_routinglanguages_bulk"></a>
+
+## -[**UserLanguageEntityListing**](UserLanguageEntityListing.html) patch_user_routinglanguages_bulk(user_id, body)
+
+
+
+Add bulk routing language to user. Max limit 50 languages
+
+
+
+Wraps PATCH /api/v2/users/{userId}/routinglanguages/bulk 
+
+Requires ANY permissions: 
+
+* routing:skill:assign
+* admin
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+body = [PureCloud::UserRoutingLanguagePost.new] # Array<UserRoutingLanguagePost> | Language
+
+
+begin
+  #Add bulk routing language to user. Max limit 50 languages
+  result = api_instance.patch_user_routinglanguages_bulk(user_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->patch_user_routinglanguages_bulk: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **body** | [**Array&lt;UserRoutingLanguagePost&gt;**](UserRoutingLanguagePost.html)| Language |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserLanguageEntityListing**](UserLanguageEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_user_routingskills_bulk"></a>
+
+## -[**UserSkillEntityListing**](UserSkillEntityListing.html) patch_user_routingskills_bulk(user_id, body)
+
+
+
+Add bulk routing skills to user
+
+
+
+Wraps PATCH /api/v2/users/{userId}/routingskills/bulk 
+
+Requires ANY permissions: 
+
+* routing:skill:assign
+* admin
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+body = [PureCloud::UserRoutingSkillPost.new] # Array<UserRoutingSkillPost> | Skill
+
+
+begin
+  #Add bulk routing skills to user
+  result = api_instance.patch_user_routingskills_bulk(user_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->patch_user_routingskills_bulk: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **body** | [**Array&lt;UserRoutingSkillPost&gt;**](UserRoutingSkillPost.html)| Skill |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserSkillEntityListing**](UserSkillEntityListing.html)
 
 ### HTTP request headers
 

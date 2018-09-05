@@ -74,13 +74,27 @@ module PureCloud
       
       
       
+      allowed_values = ["basic", "modern-caret-skin"]
+      if @web_chat_skin && !allowed_values.include?(@web_chat_skin)
+        return false
+      end
+      
       
       
     end
 
     
     
-    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] web_chat_skin Object to be assigned
+    def web_chat_skin=(web_chat_skin)
+      allowed_values = ["basic", "modern-caret-skin"]
+      if web_chat_skin && !allowed_values.include?(web_chat_skin)
+        fail ArgumentError, "invalid value for 'web_chat_skin', must be one of #{allowed_values}."
+      end
+      @web_chat_skin = web_chat_skin
+    end
+
     
     
     

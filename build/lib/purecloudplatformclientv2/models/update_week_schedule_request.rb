@@ -36,6 +36,9 @@ module PureCloud
     # Version of agent schedules in the week schedule
     attr_accessor :agent_schedules_version
 
+    # The condition to notify agents about schedule updates. Applicable to only published schedule
+    attr_accessor :agent_update_filter
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -50,7 +53,9 @@ module PureCloud
         
         :'metadata' => :'metadata',
         
-        :'agent_schedules_version' => :'agentSchedulesVersion'
+        :'agent_schedules_version' => :'agentSchedulesVersion',
+        
+        :'agent_update_filter' => :'agentUpdateFilter'
         
       }
     end
@@ -69,7 +74,9 @@ module PureCloud
         
         :'metadata' => :'WfmVersionedEntityMetadata',
         
-        :'agent_schedules_version' => :'Integer'
+        :'agent_schedules_version' => :'Integer',
+        
+        :'agent_update_filter' => :'String'
         
       }
     end
@@ -141,6 +148,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'agentUpdateFilter')
+        
+        
+        self.agent_update_filter = attributes[:'agentUpdateFilter']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -190,6 +206,15 @@ module PureCloud
       
       
       
+      
+      
+      allowed_values = ["All", "ShiftTimeChange", "None"]
+      if @agent_update_filter && !allowed_values.include?(@agent_update_filter)
+        return false
+      end
+      
+      
+      
     end
 
     
@@ -220,6 +245,20 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] agent_update_filter Object to be assigned
+    def agent_update_filter=(agent_update_filter)
+      allowed_values = ["All", "ShiftTimeChange", "None"]
+      if agent_update_filter && !allowed_values.include?(agent_update_filter)
+        fail ArgumentError, "invalid value for 'agent_update_filter', must be one of #{allowed_values}."
+      end
+      @agent_update_filter = agent_update_filter
+    end
+
     
     
     
@@ -233,7 +272,8 @@ module PureCloud
           user_schedules == o.user_schedules &&
           partial_upload_ids == o.partial_upload_ids &&
           metadata == o.metadata &&
-          agent_schedules_version == o.agent_schedules_version
+          agent_schedules_version == o.agent_schedules_version &&
+          agent_update_filter == o.agent_update_filter
     end
 
     # @see the `==` method
@@ -245,7 +285,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [description, published, user_schedules, partial_upload_ids, metadata, agent_schedules_version].hash
+      [description, published, user_schedules, partial_upload_ids, metadata, agent_schedules_version, agent_update_filter].hash
     end
 
     # build the object from hash

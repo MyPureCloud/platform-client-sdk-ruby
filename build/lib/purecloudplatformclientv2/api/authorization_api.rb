@@ -24,6 +24,70 @@ module PureCloud
       @api_client = api_client
     end
 
+    # Delete a division.
+    # 
+    # @param division_id Division ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_authorization_division(division_id, opts = {})
+      delete_authorization_division_with_http_info(division_id, opts)
+      return nil
+    end
+
+    # Delete a division.
+    # 
+    # @param division_id Division ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_authorization_division_with_http_info(division_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.delete_authorization_division ..."
+      end
+      
+      
+      # verify the required parameter 'division_id' is set
+      fail ArgumentError, "Missing the required parameter 'division_id' when calling AuthorizationApi.delete_authorization_division" if division_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisions/{divisionId}".sub('{format}','json').sub('{' + 'divisionId' + '}', division_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#delete_authorization_division\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete an organization role.
     # 
     # @param role_id Role ID
@@ -88,6 +152,90 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete a grant of a role in a division
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param division_id the id of the division of the grant
+    # @param role_id the id of the role of the grant
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_authorization_subject_division_role(subject_id, division_id, role_id, opts = {})
+      delete_authorization_subject_division_role_with_http_info(subject_id, division_id, role_id, opts)
+      return nil
+    end
+
+    # Delete a grant of a role in a division
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param division_id the id of the division of the grant
+    # @param role_id the id of the role of the grant
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_authorization_subject_division_role_with_http_info(subject_id, division_id, role_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.delete_authorization_subject_division_role ..."
+      end
+      
+      
+      # verify the required parameter 'subject_id' is set
+      fail ArgumentError, "Missing the required parameter 'subject_id' when calling AuthorizationApi.delete_authorization_subject_division_role" if subject_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'division_id' is set
+      fail ArgumentError, "Missing the required parameter 'division_id' when calling AuthorizationApi.delete_authorization_subject_division_role" if division_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'role_id' is set
+      fail ArgumentError, "Missing the required parameter 'role_id' when calling AuthorizationApi.delete_authorization_subject_division_role" if role_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}".sub('{format}','json').sub('{' + 'subjectId' + '}', subject_id.to_s).sub('{' + 'divisionId' + '}', division_id.to_s).sub('{' + 'roleId' + '}', role_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#delete_authorization_subject_division_role\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Removes all the roles from the user.
     # 
     # @param user_id User ID
@@ -148,6 +296,486 @@ module PureCloud
         :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AuthorizationApi#delete_user_roles\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns an authorization division.
+    # 
+    # @param division_id Division ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :object_count Get count of objects in this division, grouped by type (default to false)
+    # @return [AuthzDivision]
+    def get_authorization_division(division_id, opts = {})
+      data, _status_code, _headers = get_authorization_division_with_http_info(division_id, opts)
+      return data
+    end
+
+    # Returns an authorization division.
+    # 
+    # @param division_id Division ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :object_count Get count of objects in this division, grouped by type
+    # @return [Array<(AuthzDivision, Fixnum, Hash)>] AuthzDivision data, response status code and response headers
+    def get_authorization_division_with_http_info(division_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_division ..."
+      end
+      
+      
+      # verify the required parameter 'division_id' is set
+      fail ArgumentError, "Missing the required parameter 'division_id' when calling AuthorizationApi.get_authorization_division" if division_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisions/{divisionId}".sub('{format}','json').sub('{' + 'divisionId' + '}', division_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'objectCount'] = opts[:'object_count'] if opts[:'object_count']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AuthzDivision')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#get_authorization_division\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Retrieve a list of all divisions defined for the organization
+    # Request specific divisions by id using a query param \"id\", e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&id=72e9fb25-c484-488d-9312-7acba82435b3
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested (default to 25)
+    # @option opts [Integer] :page_number The page number requested (default to 1)
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @option opts [BOOLEAN] :object_count Include the count of objects contained in the division (default to false)
+    # @option opts [Array<String>] :id Optionally request specific divisions by their IDs
+    # @option opts [String] :name Search term to filter by division name
+    # @return [AuthzDivisionEntityListing]
+    def get_authorization_divisions(opts = {})
+      data, _status_code, _headers = get_authorization_divisions_with_http_info(opts)
+      return data
+    end
+
+    # Retrieve a list of all divisions defined for the organization
+    # Request specific divisions by id using a query param \&quot;id\&quot;, e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&amp;id=72e9fb25-c484-488d-9312-7acba82435b3
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size The total page size requested
+    # @option opts [Integer] :page_number The page number requested
+    # @option opts [String] :sort_by variable name requested to sort by
+    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [String] :next_page next page token
+    # @option opts [String] :previous_page Previous page token
+    # @option opts [BOOLEAN] :object_count Include the count of objects contained in the division
+    # @option opts [Array<String>] :id Optionally request specific divisions by their IDs
+    # @option opts [String] :name Search term to filter by division name
+    # @return [Array<(AuthzDivisionEntityListing, Fixnum, Hash)>] AuthzDivisionEntityListing data, response status code and response headers
+    def get_authorization_divisions_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_divisions ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisions".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
+      query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+      query_params[:'objectCount'] = opts[:'object_count'] if opts[:'object_count']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AuthzDivisionEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#get_authorization_divisions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Retrieve the home division for the organization.
+    # Will not include object counts.
+    # @param [Hash] opts the optional parameters
+    # @return [AuthzDivision]
+    def get_authorization_divisions_home(opts = {})
+      data, _status_code, _headers = get_authorization_divisions_home_with_http_info(opts)
+      return data
+    end
+
+    # Retrieve the home division for the organization.
+    # Will not include object counts.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AuthzDivision, Fixnum, Hash)>] AuthzDivision data, response status code and response headers
+    def get_authorization_divisions_home_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_divisions_home ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisions/home".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AuthzDivision')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#get_authorization_divisions_home\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns the maximum allowed number of divisions.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Integer]
+    def get_authorization_divisions_limit(opts = {})
+      data, _status_code, _headers = get_authorization_divisions_limit_with_http_info(opts)
+      return data
+    end
+
+    # Returns the maximum allowed number of divisions.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Integer, Fixnum, Hash)>] Integer data, response status code and response headers
+    def get_authorization_divisions_limit_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_divisions_limit ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisions/limit".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Integer')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#get_authorization_divisions_limit\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns whether or not current user can perform the specified action(s).
+    # 
+    # @param permission The permission string, including the object to access, e.g. routing:queue:view
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :name Search term to filter by division name
+    # @return [Array<AuthzDivision>]
+    def get_authorization_divisionspermitted_me(permission, opts = {})
+      data, _status_code, _headers = get_authorization_divisionspermitted_me_with_http_info(permission, opts)
+      return data
+    end
+
+    # Returns whether or not current user can perform the specified action(s).
+    # 
+    # @param permission The permission string, including the object to access, e.g. routing:queue:view
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :name Search term to filter by division name
+    # @return [Array<(Array<AuthzDivision>, Fixnum, Hash)>] Array<AuthzDivision> data, response status code and response headers
+    def get_authorization_divisionspermitted_me_with_http_info(permission, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_divisionspermitted_me ..."
+      end
+      
+      
+      # verify the required parameter 'permission' is set
+      fail ArgumentError, "Missing the required parameter 'permission' when calling AuthorizationApi.get_authorization_divisionspermitted_me" if permission.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisionspermitted/me".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'permission'] = permission
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<AuthzDivision>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#get_authorization_divisionspermitted_me\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns whether or not specified user can perform the specified action(s).
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param permission The permission string, including the object to access, e.g. routing:queue:view
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :name Search term to filter by division name
+    # @return [Array<AuthzDivision>]
+    def get_authorization_divisionspermitted_subject_id(subject_id, permission, opts = {})
+      data, _status_code, _headers = get_authorization_divisionspermitted_subject_id_with_http_info(subject_id, permission, opts)
+      return data
+    end
+
+    # Returns whether or not specified user can perform the specified action(s).
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param permission The permission string, including the object to access, e.g. routing:queue:view
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :name Search term to filter by division name
+    # @return [Array<(Array<AuthzDivision>, Fixnum, Hash)>] Array<AuthzDivision> data, response status code and response headers
+    def get_authorization_divisionspermitted_subject_id_with_http_info(subject_id, permission, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_divisionspermitted_subject_id ..."
+      end
+      
+      
+      # verify the required parameter 'subject_id' is set
+      fail ArgumentError, "Missing the required parameter 'subject_id' when calling AuthorizationApi.get_authorization_divisionspermitted_subject_id" if subject_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'permission' is set
+      fail ArgumentError, "Missing the required parameter 'permission' when calling AuthorizationApi.get_authorization_divisionspermitted_subject_id" if permission.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisionspermitted/{subjectId}".sub('{format}','json').sub('{' + 'subjectId' + '}', subject_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'permission'] = permission
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<AuthzDivision>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#get_authorization_divisionspermitted_subject_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -539,6 +1167,89 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get a list of the users in a specified role.
+    # Get an array of the UUIDs of the users in the specified role.
+    # @param role_id Role ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @return [UserEntityListing]
+    def get_authorization_role_users(role_id, opts = {})
+      data, _status_code, _headers = get_authorization_role_users_with_http_info(role_id, opts)
+      return data
+    end
+
+    # Get a list of the users in a specified role.
+    # Get an array of the UUIDs of the users in the specified role.
+    # @param role_id Role ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @return [Array<(UserEntityListing, Fixnum, Hash)>] UserEntityListing data, response status code and response headers
+    def get_authorization_role_users_with_http_info(role_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_role_users ..."
+      end
+      
+      
+      # verify the required parameter 'role_id' is set
+      fail ArgumentError, "Missing the required parameter 'role_id' when calling AuthorizationApi.get_authorization_role_users" if role_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/roles/{roleId}/users".sub('{format}','json').sub('{' + 'roleId' + '}', role_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#get_authorization_role_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Retrieve a list of all roles defined for the organization
     # 
     # @param [Hash] opts the optional parameters
@@ -695,6 +1406,126 @@ module PureCloud
 
     # Returns a listing of roles and permissions for a user.
     # 
+    # @param subject_id Subject ID (user or group)
+    # @param [Hash] opts the optional parameters
+    # @return [AuthzSubject]
+    def get_authorization_subject(subject_id, opts = {})
+      data, _status_code, _headers = get_authorization_subject_with_http_info(subject_id, opts)
+      return data
+    end
+
+    # Returns a listing of roles and permissions for a user.
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AuthzSubject, Fixnum, Hash)>] AuthzSubject data, response status code and response headers
+    def get_authorization_subject_with_http_info(subject_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_subject ..."
+      end
+      
+      
+      # verify the required parameter 'subject_id' is set
+      fail ArgumentError, "Missing the required parameter 'subject_id' when calling AuthorizationApi.get_authorization_subject" if subject_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/subjects/{subjectId}".sub('{format}','json').sub('{' + 'subjectId' + '}', subject_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AuthzSubject')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#get_authorization_subject\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns a listing of roles and permissions for the currently authenticated user.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [AuthzSubject]
+    def get_authorization_subjects_me(opts = {})
+      data, _status_code, _headers = get_authorization_subjects_me_with_http_info(opts)
+      return data
+    end
+
+    # Returns a listing of roles and permissions for the currently authenticated user.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AuthzSubject, Fixnum, Hash)>] AuthzSubject data, response status code and response headers
+    def get_authorization_subjects_me_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_subjects_me ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/subjects/me".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AuthzSubject')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#get_authorization_subjects_me\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns a listing of roles and permissions for a user.
+    # 
     # @param user_id User ID
     # @param [Hash] opts the optional parameters
     # @return [UserAuthorization]
@@ -829,6 +1660,234 @@ module PureCloud
         :return_type => 'DomainOrganizationRole')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AuthorizationApi#patch_authorization_role\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Assign a list of objects to a division
+    # Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\"206ce31f-61ec-40ed-a8b1-be6f06303998\",\"250a754e-f5e4-4f51-800f-a92f09d3bf8c\"]
+    # @param division_id Division ID
+    # @param object_type The type of the objects. Must be one of the valid object types
+    # @param body Object Id List
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def post_authorization_division_object(division_id, object_type, body, opts = {})
+      post_authorization_division_object_with_http_info(division_id, object_type, body, opts)
+      return nil
+    end
+
+    # Assign a list of objects to a division
+    # Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\&quot;206ce31f-61ec-40ed-a8b1-be6f06303998\&quot;,\&quot;250a754e-f5e4-4f51-800f-a92f09d3bf8c\&quot;]
+    # @param division_id Division ID
+    # @param object_type The type of the objects. Must be one of the valid object types
+    # @param body Object Id List
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def post_authorization_division_object_with_http_info(division_id, object_type, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.post_authorization_division_object ..."
+      end
+      
+      
+      # verify the required parameter 'division_id' is set
+      fail ArgumentError, "Missing the required parameter 'division_id' when calling AuthorizationApi.post_authorization_division_object" if division_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'object_type' is set
+      fail ArgumentError, "Missing the required parameter 'object_type' when calling AuthorizationApi.post_authorization_division_object" if object_type.nil?
+      
+      # verify enum value
+      unless ['QUEUE', 'CAMPAIGN', 'CONTACTLIST', 'DNCLIST', 'MANAGEMENTUNIT', 'FLOW', 'USER'].include?(object_type)
+        fail ArgumentError, "invalid value for 'object_type', must be one of QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, USER"
+      end
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.post_authorization_division_object" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisions/{divisionId}/objects/{objectType}".sub('{format}','json').sub('{' + 'divisionId' + '}', division_id.to_s).sub('{' + 'objectType' + '}', object_type.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#post_authorization_division_object\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a division.
+    # 
+    # @param body Division
+    # @param [Hash] opts the optional parameters
+    # @return [AuthzDivision]
+    def post_authorization_divisions(body, opts = {})
+      data, _status_code, _headers = post_authorization_divisions_with_http_info(body, opts)
+      return data
+    end
+
+    # Create a division.
+    # 
+    # @param body Division
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AuthzDivision, Fixnum, Hash)>] AuthzDivision data, response status code and response headers
+    def post_authorization_divisions_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.post_authorization_divisions ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.post_authorization_divisions" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisions".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AuthzDivision')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#post_authorization_divisions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Bulk-grant subjects and divisions with an organization role.
+    # 
+    # @param role_id Role ID
+    # @param body Subjects and Divisions
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def post_authorization_role(role_id, body, opts = {})
+      post_authorization_role_with_http_info(role_id, body, opts)
+      return nil
+    end
+
+    # Bulk-grant subjects and divisions with an organization role.
+    # 
+    # @param role_id Role ID
+    # @param body Subjects and Divisions
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def post_authorization_role_with_http_info(role_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.post_authorization_role ..."
+      end
+      
+      
+      # verify the required parameter 'role_id' is set
+      fail ArgumentError, "Missing the required parameter 'role_id' when calling AuthorizationApi.post_authorization_role" if role_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.post_authorization_role" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/roles/{roleId}".sub('{format}','json').sub('{' + 'roleId' + '}', role_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#post_authorization_role\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1043,6 +2102,174 @@ module PureCloud
         :return_type => 'OrganizationRoleEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AuthorizationApi#post_authorization_roles_default\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Make a grant of a role in a division
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param division_id the id of the division to which to make the grant
+    # @param role_id the id of the role to grant
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :subject_type what the type of the subject is, PC_GROUP or PC_USER (default to PC_USER)
+    # @return [nil]
+    def post_authorization_subject_division_role(subject_id, division_id, role_id, opts = {})
+      post_authorization_subject_division_role_with_http_info(subject_id, division_id, role_id, opts)
+      return nil
+    end
+
+    # Make a grant of a role in a division
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param division_id the id of the division to which to make the grant
+    # @param role_id the id of the role to grant
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :subject_type what the type of the subject is, PC_GROUP or PC_USER
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def post_authorization_subject_division_role_with_http_info(subject_id, division_id, role_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.post_authorization_subject_division_role ..."
+      end
+      
+      
+      # verify the required parameter 'subject_id' is set
+      fail ArgumentError, "Missing the required parameter 'subject_id' when calling AuthorizationApi.post_authorization_subject_division_role" if subject_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'division_id' is set
+      fail ArgumentError, "Missing the required parameter 'division_id' when calling AuthorizationApi.post_authorization_subject_division_role" if division_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'role_id' is set
+      fail ArgumentError, "Missing the required parameter 'role_id' when calling AuthorizationApi.post_authorization_subject_division_role" if role_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}".sub('{format}','json').sub('{' + 'subjectId' + '}', subject_id.to_s).sub('{' + 'divisionId' + '}', division_id.to_s).sub('{' + 'roleId' + '}', role_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'subjectType'] = opts[:'subject_type'] if opts[:'subject_type']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#post_authorization_subject_division_role\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a division.
+    # 
+    # @param division_id Division ID
+    # @param body Updated division data
+    # @param [Hash] opts the optional parameters
+    # @return [AuthzDivision]
+    def put_authorization_division(division_id, body, opts = {})
+      data, _status_code, _headers = put_authorization_division_with_http_info(division_id, body, opts)
+      return data
+    end
+
+    # Update a division.
+    # 
+    # @param division_id Division ID
+    # @param body Updated division data
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AuthzDivision, Fixnum, Hash)>] AuthzDivision data, response status code and response headers
+    def put_authorization_division_with_http_info(division_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.put_authorization_division ..."
+      end
+      
+      
+      # verify the required parameter 'division_id' is set
+      fail ArgumentError, "Missing the required parameter 'division_id' when calling AuthorizationApi.put_authorization_division" if division_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.put_authorization_division" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisions/{divisionId}".sub('{format}','json').sub('{' + 'divisionId' + '}', division_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AuthzDivision')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#put_authorization_division\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

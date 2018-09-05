@@ -607,5 +607,70 @@ module PureCloud
       end
       return data, status_code, headers
     end
+
+    # Update bulk user Presences
+    # 
+    # @param body List of User presences
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UserPresence>]
+    def put_users_presences_bulk(body, opts = {})
+      data, _status_code, _headers = put_users_presences_bulk_with_http_info(body, opts)
+      return data
+    end
+
+    # Update bulk user Presences
+    # 
+    # @param body List of User presences
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UserPresence>, Fixnum, Hash)>] Array<UserPresence> data, response status code and response headers
+    def put_users_presences_bulk_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PresenceApi.put_users_presences_bulk ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling PresenceApi.put_users_presences_bulk" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/presences/bulk".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<UserPresence>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PresenceApi#put_users_presences_bulk\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
   end
 end

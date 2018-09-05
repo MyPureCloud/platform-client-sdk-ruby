@@ -32,6 +32,8 @@ module PureCloud
 
     attr_accessor :tts_string
 
+    attr_accessor :text
+
     attr_accessor :upload_status
 
     attr_accessor :upload_uri
@@ -60,6 +62,8 @@ module PureCloud
         :'media_uri' => :'mediaUri',
         
         :'tts_string' => :'ttsString',
+        
+        :'text' => :'text',
         
         :'upload_status' => :'uploadStatus',
         
@@ -91,6 +95,8 @@ module PureCloud
         :'media_uri' => :'String',
         
         :'tts_string' => :'String',
+        
+        :'text' => :'String',
         
         :'upload_status' => :'String',
         
@@ -165,6 +171,15 @@ module PureCloud
         
         
         self.tts_string = attributes[:'ttsString']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'text')
+        
+        
+        self.text = attributes[:'text']
         
       
       end
@@ -294,8 +309,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -368,6 +392,7 @@ module PureCloud
           language == o.language &&
           media_uri == o.media_uri &&
           tts_string == o.tts_string &&
+          text == o.text &&
           upload_status == o.upload_status &&
           upload_uri == o.upload_uri &&
           language_default == o.language_default &&
@@ -385,7 +410,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, prompt_id, language, media_uri, tts_string, upload_status, upload_uri, language_default, tags, duration_seconds, self_uri].hash
+      [id, name, prompt_id, language, media_uri, tts_string, text, upload_status, upload_uri, language_default, tags, duration_seconds, self_uri].hash
     end
 
     # build the object from hash

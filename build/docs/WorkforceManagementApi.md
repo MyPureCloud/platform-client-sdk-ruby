@@ -36,6 +36,7 @@ Method | Description
 [**get_workforcemanagement_managementunit_workplan**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_workplan) | Get a work plan
 [**get_workforcemanagement_managementunit_workplans**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_workplans) | Get work plans
 [**get_workforcemanagement_managementunits**](WorkforceManagementApi.html#get_workforcemanagement_managementunits) | Get management units
+[**get_workforcemanagement_managementunits_divisionviews**](WorkforceManagementApi.html#get_workforcemanagement_managementunits_divisionviews) | Get management units across divisions
 [**get_workforcemanagement_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequest) | Get a time off request for the current user
 [**get_workforcemanagement_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequests) | Get a list of time off requests for the current user
 [**patch_workforcemanagement_managementunit_activitycode**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_activitycode) | Update an activity code
@@ -2099,6 +2100,72 @@ Name | Type | Description  | Notes
  **expand** | **String**|  | [optional] <br />**Values**: details |
  **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ShortTermForecasts, TimeOffRequests, WorkPlans |
  **division_id** | **String**|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ManagementUnitListing**](ManagementUnitListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_workforcemanagement_managementunits_divisionviews"></a>
+
+## -[**ManagementUnitListing**](ManagementUnitListing.html) get_workforcemanagement_managementunits_divisionviews(opts)
+
+
+
+Get management units across divisions
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/divisionviews 
+
+Requires ANY permissions: 
+
+* wfm:managementUnit:search
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+opts = { 
+  division_id: ["division_id_example"] # Array<String> | The divisionIds to filter by. If omitted, will return all divisions
+}
+
+begin
+  #Get management units across divisions
+  result = api_instance.get_workforcemanagement_managementunits_divisionviews(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunits_divisionviews: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **division_id** | [**Array&lt;String&gt;**](String.html)| The divisionIds to filter by. If omitted, will return all divisions | [optional]  |
 {: class="table table-striped"}
 
 

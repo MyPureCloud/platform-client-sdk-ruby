@@ -8,12 +8,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
+[**delete_authorization_subject_division_role**](UsersApi.html#delete_authorization_subject_division_role) | Delete a grant of a role in a division
 [**delete_user**](UsersApi.html#delete_user) | Delete user
 [**delete_user_roles**](UsersApi.html#delete_user_roles) | Removes all the roles from the user.
 [**delete_user_routinglanguage**](UsersApi.html#delete_user_routinglanguage) | Remove routing language from user
 [**delete_user_routingskill**](UsersApi.html#delete_user_routingskill) | Remove routing skill from user
 [**delete_user_station_associatedstation**](UsersApi.html#delete_user_station_associatedstation) | Clear associated station
 [**delete_user_station_defaultstation**](UsersApi.html#delete_user_station_defaultstation) | Clear default station
+[**get_authorization_divisionspermitted_me**](UsersApi.html#get_authorization_divisionspermitted_me) | Returns whether or not current user can perform the specified action(s).
+[**get_authorization_divisionspermitted_subject_id**](UsersApi.html#get_authorization_divisionspermitted_subject_id) | Returns whether or not specified user can perform the specified action(s).
+[**get_authorization_subject**](UsersApi.html#get_authorization_subject) | Returns a listing of roles and permissions for a user.
+[**get_authorization_subjects_me**](UsersApi.html#get_authorization_subjects_me) | Returns a listing of roles and permissions for the currently authenticated user.
 [**get_fieldconfig**](UsersApi.html#get_fieldconfig) | Fetch field config for an entity type
 [**get_profiles_users**](UsersApi.html#get_profiles_users) | Get a user profile listing
 [**get_user**](UsersApi.html#get_user) | Get user.
@@ -42,10 +47,13 @@ Method | Description
 [**patch_user_queue**](UsersApi.html#patch_user_queue) | Join or unjoin a queue for a user
 [**patch_user_queues**](UsersApi.html#patch_user_queues) | Join or unjoin a set of queues for a user
 [**patch_user_routinglanguage**](UsersApi.html#patch_user_routinglanguage) | Update routing language proficiency or state.
+[**patch_user_routinglanguages_bulk**](UsersApi.html#patch_user_routinglanguages_bulk) | Add bulk routing language to user. Max limit 50 languages
+[**patch_user_routingskills_bulk**](UsersApi.html#patch_user_routingskills_bulk) | Add bulk routing skills to user
 [**patch_users_bulk**](UsersApi.html#patch_users_bulk) | Update bulk acd autoanswer on users
 [**post_analytics_users_aggregates_query**](UsersApi.html#post_analytics_users_aggregates_query) | Query for user aggregates
 [**post_analytics_users_details_query**](UsersApi.html#post_analytics_users_details_query) | Query for user details
 [**post_analytics_users_observations_query**](UsersApi.html#post_analytics_users_observations_query) | Query for user observations
+[**post_authorization_subject_division_role**](UsersApi.html#post_authorization_subject_division_role) | Make a grant of a role in a division
 [**post_user_invite**](UsersApi.html#post_user_invite) | Send an activation email to the user
 [**post_user_password**](UsersApi.html#post_user_password) | Change a users password
 [**post_user_routinglanguages**](UsersApi.html#post_user_routinglanguages) | Add routing language to user
@@ -62,6 +70,76 @@ Method | Description
 [**put_user_station_associatedstation_station_id**](UsersApi.html#put_user_station_associatedstation_station_id) | Set associated station
 [**put_user_station_defaultstation_station_id**](UsersApi.html#put_user_station_defaultstation_station_id) | Set default station
 {: class="table table-striped"}
+
+<a name="delete_authorization_subject_division_role"></a>
+
+## - delete_authorization_subject_division_role(subject_id, division_id, role_id)
+
+
+
+Delete a grant of a role in a division
+
+
+
+Wraps DELETE /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} 
+
+Requires ANY permissions: 
+
+* authorization:grant:delete
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+subject_id = "subject_id_example" # String | Subject ID (user or group)
+
+division_id = "division_id_example" # String | the id of the division of the grant
+
+role_id = "role_id_example" # String | the id of the role of the grant
+
+
+begin
+  #Delete a grant of a role in a division
+  api_instance.delete_authorization_subject_division_role(subject_id, division_id, role_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->delete_authorization_subject_division_role: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject_id** | **String**| Subject ID (user or group) |  |
+ **division_id** | **String**| the id of the division of the grant |  |
+ **role_id** | **String**| the id of the role of the grant |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 <a name="delete_user"></a>
 
@@ -460,6 +538,268 @@ nil (empty response body)
 
 
 
+<a name="get_authorization_divisionspermitted_me"></a>
+
+## -[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_me(permission, opts)
+
+
+
+Returns whether or not current user can perform the specified action(s).
+
+
+
+Wraps GET /api/v2/authorization/divisionspermitted/me 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+permission = "permission_example" # String | The permission string, including the object to access, e.g. routing:queue:view
+
+opts = { 
+  name: "name_example" # String | Search term to filter by division name
+}
+
+begin
+  #Returns whether or not current user can perform the specified action(s).
+  result = api_instance.get_authorization_divisionspermitted_me(permission, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->get_authorization_divisionspermitted_me: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view |  |
+ **name** | **String**| Search term to filter by division name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_divisionspermitted_subject_id"></a>
+
+## -[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
+
+
+
+Returns whether or not specified user can perform the specified action(s).
+
+
+
+Wraps GET /api/v2/authorization/divisionspermitted/{subjectId} 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+subject_id = "subject_id_example" # String | Subject ID (user or group)
+
+permission = "permission_example" # String | The permission string, including the object to access, e.g. routing:queue:view
+
+opts = { 
+  name: "name_example" # String | Search term to filter by division name
+}
+
+begin
+  #Returns whether or not specified user can perform the specified action(s).
+  result = api_instance.get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->get_authorization_divisionspermitted_subject_id: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject_id** | **String**| Subject ID (user or group) |  |
+ **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view |  |
+ **name** | **String**| Search term to filter by division name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_subject"></a>
+
+## -[**AuthzSubject**](AuthzSubject.html) get_authorization_subject(subject_id)
+
+
+
+Returns a listing of roles and permissions for a user.
+
+
+
+Wraps GET /api/v2/authorization/subjects/{subjectId} 
+
+Requires ANY permissions: 
+
+* authorization:grant:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+subject_id = "subject_id_example" # String | Subject ID (user or group)
+
+
+begin
+  #Returns a listing of roles and permissions for a user.
+  result = api_instance.get_authorization_subject(subject_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->get_authorization_subject: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject_id** | **String**| Subject ID (user or group) |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AuthzSubject**](AuthzSubject.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_subjects_me"></a>
+
+## -[**AuthzSubject**](AuthzSubject.html) get_authorization_subjects_me
+
+
+
+Returns a listing of roles and permissions for the currently authenticated user.
+
+
+
+Wraps GET /api/v2/authorization/subjects/me 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+begin
+  #Returns a listing of roles and permissions for the currently authenticated user.
+  result = api_instance.get_authorization_subjects_me
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->get_authorization_subjects_me: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AuthzSubject**](AuthzSubject.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_fieldconfig"></a>
 
 ## -[**FieldConfig**](FieldConfig.html) get_fieldconfig(type)
@@ -655,7 +995,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| User ID |  |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
  **state** | **String**| Search for a user with this state | [optional] [default to active]<br />**Values**: active, deleted |
 {: class="table table-striped"}
 
@@ -724,7 +1064,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| User ID |  |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 {: class="table table-striped"}
 
 
@@ -856,7 +1196,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| User ID |  |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 {: class="table table-striped"}
 
 
@@ -930,7 +1270,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **sort_order** | **String**| Sort order | [optional] [default to ASC] |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 {: class="table table-striped"}
 
 
@@ -1129,7 +1469,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| userId |  |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 {: class="table table-striped"}
 
 
@@ -1674,7 +2014,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| User ID |  |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
 {: class="table table-striped"}
 
 
@@ -1819,7 +2159,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
  **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
  **state** | **String**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted |
 {: class="table table-striped"}
 
@@ -1885,7 +2225,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, orgproducts, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, orgproducts, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors |
 {: class="table table-striped"}
 
 
@@ -2390,6 +2730,144 @@ Name | Type | Description  | Notes
 
 
 
+<a name="patch_user_routinglanguages_bulk"></a>
+
+## -[**UserLanguageEntityListing**](UserLanguageEntityListing.html) patch_user_routinglanguages_bulk(user_id, body)
+
+
+
+Add bulk routing language to user. Max limit 50 languages
+
+
+
+Wraps PATCH /api/v2/users/{userId}/routinglanguages/bulk 
+
+Requires ANY permissions: 
+
+* routing:skill:assign
+* admin
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+user_id = "user_id_example" # String | User ID
+
+body = [PureCloud::UserRoutingLanguagePost.new] # Array<UserRoutingLanguagePost> | Language
+
+
+begin
+  #Add bulk routing language to user. Max limit 50 languages
+  result = api_instance.patch_user_routinglanguages_bulk(user_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->patch_user_routinglanguages_bulk: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **body** | [**Array&lt;UserRoutingLanguagePost&gt;**](UserRoutingLanguagePost.html)| Language |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserLanguageEntityListing**](UserLanguageEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_user_routingskills_bulk"></a>
+
+## -[**UserSkillEntityListing**](UserSkillEntityListing.html) patch_user_routingskills_bulk(user_id, body)
+
+
+
+Add bulk routing skills to user
+
+
+
+Wraps PATCH /api/v2/users/{userId}/routingskills/bulk 
+
+Requires ANY permissions: 
+
+* routing:skill:assign
+* admin
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+user_id = "user_id_example" # String | User ID
+
+body = [PureCloud::UserRoutingSkillPost.new] # Array<UserRoutingSkillPost> | Skill
+
+
+begin
+  #Add bulk routing skills to user
+  result = api_instance.patch_user_routingskills_bulk(user_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->patch_user_routingskills_bulk: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **body** | [**Array&lt;UserRoutingSkillPost&gt;**](UserRoutingSkillPost.html)| Skill |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserSkillEntityListing**](UserSkillEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="patch_users_bulk"></a>
 
 ## -[**UserEntityListing**](UserEntityListing.html) patch_users_bulk(body)
@@ -2645,6 +3123,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ObservationQueryResponse**](ObservationQueryResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_authorization_subject_division_role"></a>
+
+## - post_authorization_subject_division_role(subject_id, division_id, role_id, opts)
+
+
+
+Make a grant of a role in a division
+
+
+
+Wraps POST /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} 
+
+Requires ANY permissions: 
+
+* authorization:grant:add
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+subject_id = "subject_id_example" # String | Subject ID (user or group)
+
+division_id = "division_id_example" # String | the id of the division to which to make the grant
+
+role_id = "role_id_example" # String | the id of the role to grant
+
+opts = { 
+  subject_type: "PC_USER" # String | what the type of the subject is, PC_GROUP or PC_USER
+}
+
+begin
+  #Make a grant of a role in a division
+  api_instance.post_authorization_subject_division_role(subject_id, division_id, role_id, opts)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->post_authorization_subject_division_role: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject_id** | **String**| Subject ID (user or group) |  |
+ **division_id** | **String**| the id of the division to which to make the grant |  |
+ **role_id** | **String**| the id of the role to grant |  |
+ **subject_type** | **String**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 

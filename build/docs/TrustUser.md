@@ -28,9 +28,11 @@ title: TrustUser
 | **geolocation** | [**Geolocation**](Geolocation.html) | Current geolocation position | [optional] |
 | **station** | [**UserStations**](UserStations.html) | Effective, default, and last station information | [optional] |
 | **authorization** | [**UserAuthorization**](UserAuthorization.html) | Roles and permissions assigned to the user | [optional] |
-| **profile_skills** | **Array&lt;String&gt;** | Skills possessed by the user | [optional] |
+| **profile_skills** | **Array&lt;String&gt;** | Profile skills possessed by the user | [optional] |
 | **locations** | [**Array&lt;Location&gt;**](Location.html) | The user placement at each site location. | [optional] |
 | **groups** | [**Array&lt;Group&gt;**](Group.html) | The groups the user is a member of | [optional] |
+| **skills** | [**Array&lt;UserRoutingSkill&gt;**](UserRoutingSkill.html) | Routing (ACD) skills possessed by the user | [optional] |
+| **languages** | [**Array&lt;UserRoutingLanguage&gt;**](UserRoutingLanguage.html) | Routing (ACD) languages possessed by the user | [optional] |
 | **acd_auto_answer** | **BOOLEAN** | acd auto answer | [optional] |
 | **trust_user_details** | [**TrustUserDetails**](TrustUserDetails.html) |  | [optional] |
 {: class="table table-striped"}

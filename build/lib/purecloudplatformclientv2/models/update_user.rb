@@ -46,7 +46,7 @@ module PureCloud
     # This value should be the current version of the user. The current version can be obtained with a GET on the user before doing a PATCH.
     attr_accessor :version
 
-    # Skills possessed by the user
+    # Profile skills possessed by the user
     attr_accessor :profile_skills
 
     # The user placement at each site location.

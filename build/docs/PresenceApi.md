@@ -16,6 +16,7 @@ Method | Description
 [**patch_user_presence**](PresenceApi.html#patch_user_presence) | Patch a user&#39;s Presence
 [**post_presencedefinitions**](PresenceApi.html#post_presencedefinitions) | Create a Presence Definition
 [**put_presencedefinition**](PresenceApi.html#put_presencedefinition) | Update a Presence Definition
+[**put_users_presences_bulk**](PresenceApi.html#put_users_presences_bulk) | Update bulk user Presences
 {: class="table table-striped"}
 
 <a name="delete_presencedefinition"></a>
@@ -541,6 +542,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OrganizationPresence**](OrganizationPresence.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_users_presences_bulk"></a>
+
+## -[**Array&lt;UserPresence&gt;**](UserPresence.html) put_users_presences_bulk(body)
+
+
+
+Update bulk user Presences
+
+
+
+Wraps PUT /api/v2/users/presences/bulk 
+
+Requires ANY permissions: 
+
+* user_administration
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::PresenceApi.new
+
+body = [PureCloud::UserPresence.new] # Array<UserPresence> | List of User presences
+
+
+begin
+  #Update bulk user Presences
+  result = api_instance.put_users_presences_bulk(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling PresenceApi->put_users_presences_bulk: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Array&lt;UserPresence&gt;**](UserPresence.html)| List of User presences |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;UserPresence&gt;**](UserPresence.html)
 
 ### HTTP request headers
 

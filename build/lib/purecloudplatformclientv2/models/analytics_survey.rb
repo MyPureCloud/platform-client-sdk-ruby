@@ -48,6 +48,9 @@ module PureCloud
     # Creation date of survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :created_date
 
+    # The total score for the survey
+    attr_accessor :geto_survey_total_score
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -70,7 +73,9 @@ module PureCloud
         
         :'status' => :'status',
         
-        :'created_date' => :'createdDate'
+        :'created_date' => :'createdDate',
+        
+        :'geto_survey_total_score' => :'getoSurveyTotalScore'
         
       }
     end
@@ -97,7 +102,9 @@ module PureCloud
         
         :'status' => :'String',
         
-        :'created_date' => :'DateTime'
+        :'created_date' => :'DateTime',
+        
+        :'geto_survey_total_score' => :'Integer'
         
       }
     end
@@ -201,6 +208,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'getoSurveyTotalScore')
+        
+        
+        self.geto_survey_total_score = attributes[:'getoSurveyTotalScore']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -256,8 +272,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -323,7 +348,8 @@ module PureCloud
           user_id == o.user_id &&
           queue_id == o.queue_id &&
           status == o.status &&
-          created_date == o.created_date
+          created_date == o.created_date &&
+          geto_survey_total_score == o.geto_survey_total_score
     end
 
     # @see the `==` method
@@ -335,7 +361,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [survey_id, survey_form_id, survey_form_context_id, participant_id, external_contact_id, customer_address, user_id, queue_id, status, created_date].hash
+      [survey_id, survey_form_id, survey_form_context_id, participant_id, external_contact_id, customer_address, user_id, queue_id, status, created_date, geto_survey_total_score].hash
     end
 
     # build the object from hash

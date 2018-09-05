@@ -18,21 +18,13 @@ require 'date'
 
 module PureCloud
   class ChatBadgeNotificationEntity
-    attr_accessor :id
-
-    attr_accessor :type
-
-    attr_accessor :jid
+    attr_accessor :jabber_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
-        
-        :'type' => :'type',
-        
-        :'jid' => :'jid'
+        :'jabber_id' => :'jabberId'
         
       }
     end
@@ -41,11 +33,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
-        
-        :'type' => :'String',
-        
-        :'jid' => :'String'
+        :'jabber_id' => :'String'
         
       }
     end
@@ -59,28 +47,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'jabberId')
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'type')
-        
-        
-        self.type = attributes[:'type']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'jid')
-        
-        
-        self.jid = attributes[:'jid']
+        self.jabber_id = attributes[:'jabberId']
         
       
       end
@@ -105,40 +75,8 @@ module PureCloud
       
       
       
-      
-      
-      allowed_values = ["user", "group", "adhoc"]
-      if @type && !allowed_values.include?(@type)
-        return false
-      end
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] type Object to be assigned
-    def type=(type)
-      allowed_values = ["user", "group", "adhoc"]
-      if type && !allowed_values.include?(type)
-        fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
-      end
-      @type = type
-    end
-
-    
-    
     
     
     
@@ -150,9 +88,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          type == o.type &&
-          jid == o.jid
+          jabber_id == o.jabber_id
     end
 
     # @see the `==` method
@@ -164,7 +100,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, type, jid].hash
+      [jabber_id].hash
     end
 
     # build the object from hash

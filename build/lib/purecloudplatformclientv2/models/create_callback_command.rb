@@ -39,6 +39,9 @@ module PureCloud
     # The country code to be associated with the callback numbers.
     attr_accessor :country_code
 
+    # Whether or not to validate the callback numbers for phone number format.
+    attr_accessor :validate_callback_numbers
+
     # A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \"notes\": \"ready to close the deal!\", \"customerPreferredName\": \"Doc\" }
     attr_accessor :data
 
@@ -59,6 +62,8 @@ module PureCloud
         :'callback_scheduled_time' => :'callbackScheduledTime',
         
         :'country_code' => :'countryCode',
+        
+        :'validate_callback_numbers' => :'validateCallbackNumbers',
         
         :'data' => :'data'
         
@@ -82,6 +87,8 @@ module PureCloud
         :'callback_scheduled_time' => :'DateTime',
         
         :'country_code' => :'String',
+        
+        :'validate_callback_numbers' => :'BOOLEAN',
         
         :'data' => :'Hash<String, String>'
         
@@ -162,6 +169,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'validateCallbackNumbers')
+        
+        
+        self.validate_callback_numbers = attributes[:'validateCallbackNumbers']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'data')
         
         if (value = attributes[:'data']).is_a?(Array)
@@ -225,8 +241,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -280,6 +305,7 @@ module PureCloud
           callback_numbers == o.callback_numbers &&
           callback_scheduled_time == o.callback_scheduled_time &&
           country_code == o.country_code &&
+          validate_callback_numbers == o.validate_callback_numbers &&
           data == o.data
     end
 
@@ -292,7 +318,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [script_id, queue_id, routing_data, callback_user_name, callback_numbers, callback_scheduled_time, country_code, data].hash
+      [script_id, queue_id, routing_data, callback_user_name, callback_numbers, callback_scheduled_time, country_code, validate_callback_numbers, data].hash
     end
 
     # build the object from hash

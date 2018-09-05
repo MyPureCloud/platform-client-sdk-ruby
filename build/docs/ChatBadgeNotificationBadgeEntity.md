@@ -7,9 +7,7 @@ title: ChatBadgeNotificationBadgeEntity
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **id** | **String** |  | [optional] |
-| **type** | **String** |  | [optional] |
-| **jid** | **String** |  | [optional] |
+| **jabber_id** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

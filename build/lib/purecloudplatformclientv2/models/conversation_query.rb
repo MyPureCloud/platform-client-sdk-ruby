@@ -27,6 +27,9 @@ module PureCloud
     # Filters that target quality management evaluation-level data
     attr_accessor :evaluation_filters
 
+    # Filters that target quality management survey-level data
+    attr_accessor :survey_filters
+
     # Filters that target individual segments within a conversation
     attr_accessor :segment_filters
 
@@ -52,6 +55,8 @@ module PureCloud
         
         :'evaluation_filters' => :'evaluationFilters',
         
+        :'survey_filters' => :'surveyFilters',
+        
         :'segment_filters' => :'segmentFilters',
         
         :'aggregations' => :'aggregations',
@@ -74,6 +79,8 @@ module PureCloud
         :'conversation_filters' => :'Array<AnalyticsQueryFilter>',
         
         :'evaluation_filters' => :'Array<AnalyticsQueryFilter>',
+        
+        :'survey_filters' => :'Array<AnalyticsQueryFilter>',
         
         :'segment_filters' => :'Array<AnalyticsQueryFilter>',
         
@@ -121,6 +128,17 @@ module PureCloud
         
         if (value = attributes[:'evaluationFilters']).is_a?(Array)
           self.evaluation_filters = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'surveyFilters')
+        
+        if (value = attributes[:'surveyFilters']).is_a?(Array)
+          self.survey_filters = value
         end
         
         
@@ -218,6 +236,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["asc", "desc"]
       if @order && !allowed_values.include?(@order)
         return false
@@ -236,6 +258,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -303,6 +330,7 @@ module PureCloud
           interval == o.interval &&
           conversation_filters == o.conversation_filters &&
           evaluation_filters == o.evaluation_filters &&
+          survey_filters == o.survey_filters &&
           segment_filters == o.segment_filters &&
           aggregations == o.aggregations &&
           paging == o.paging &&
@@ -319,7 +347,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [interval, conversation_filters, evaluation_filters, segment_filters, aggregations, paging, order, order_by].hash
+      [interval, conversation_filters, evaluation_filters, survey_filters, segment_filters, aggregations, paging, order, order_by].hash
     end
 
     # build the object from hash

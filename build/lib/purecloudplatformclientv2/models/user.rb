@@ -73,7 +73,7 @@ module PureCloud
     # Roles and permissions assigned to the user
     attr_accessor :authorization
 
-    # Skills possessed by the user
+    # Profile skills possessed by the user
     attr_accessor :profile_skills
 
     # The user placement at each site location.
@@ -81,6 +81,12 @@ module PureCloud
 
     # The groups the user is a member of
     attr_accessor :groups
+
+    # Routing (ACD) skills possessed by the user
+    attr_accessor :skills
+
+    # Routing (ACD) languages possessed by the user
+    attr_accessor :languages
 
     # acd auto answer
     attr_accessor :acd_auto_answer
@@ -140,6 +146,10 @@ module PureCloud
         
         :'groups' => :'groups',
         
+        :'skills' => :'skills',
+        
+        :'languages' => :'languages',
+        
         :'acd_auto_answer' => :'acdAutoAnswer',
         
         :'self_uri' => :'selfUri'
@@ -198,6 +208,10 @@ module PureCloud
         :'locations' => :'Array<Location>',
         
         :'groups' => :'Array<Group>',
+        
+        :'skills' => :'Array<UserRoutingSkill>',
+        
+        :'languages' => :'Array<UserRoutingLanguage>',
         
         :'acd_auto_answer' => :'BOOLEAN',
         
@@ -443,6 +457,28 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'skills')
+        
+        if (value = attributes[:'skills']).is_a?(Array)
+          self.skills = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'languages')
+        
+        if (value = attributes[:'languages']).is_a?(Array)
+          self.languages = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'acdAutoAnswer')
         
         
@@ -538,6 +574,14 @@ module PureCloud
         return false
       end
 
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -732,6 +776,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -761,6 +815,8 @@ module PureCloud
           profile_skills == o.profile_skills &&
           locations == o.locations &&
           groups == o.groups &&
+          skills == o.skills &&
+          languages == o.languages &&
           acd_auto_answer == o.acd_auto_answer &&
           self_uri == o.self_uri
     end
@@ -774,7 +830,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, acd_auto_answer, self_uri].hash
+      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, skills, languages, acd_auto_answer, self_uri].hash
     end
 
     # build the object from hash

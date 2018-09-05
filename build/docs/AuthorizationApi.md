@@ -8,25 +8,105 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
+[**delete_authorization_division**](AuthorizationApi.html#delete_authorization_division) | Delete a division.
 [**delete_authorization_role**](AuthorizationApi.html#delete_authorization_role) | Delete an organization role.
+[**delete_authorization_subject_division_role**](AuthorizationApi.html#delete_authorization_subject_division_role) | Delete a grant of a role in a division
 [**delete_user_roles**](AuthorizationApi.html#delete_user_roles) | Removes all the roles from the user.
+[**get_authorization_division**](AuthorizationApi.html#get_authorization_division) | Returns an authorization division.
+[**get_authorization_divisions**](AuthorizationApi.html#get_authorization_divisions) | Retrieve a list of all divisions defined for the organization
+[**get_authorization_divisions_home**](AuthorizationApi.html#get_authorization_divisions_home) | Retrieve the home division for the organization.
+[**get_authorization_divisions_limit**](AuthorizationApi.html#get_authorization_divisions_limit) | Returns the maximum allowed number of divisions.
+[**get_authorization_divisionspermitted_me**](AuthorizationApi.html#get_authorization_divisionspermitted_me) | Returns whether or not current user can perform the specified action(s).
+[**get_authorization_divisionspermitted_subject_id**](AuthorizationApi.html#get_authorization_divisionspermitted_subject_id) | Returns whether or not specified user can perform the specified action(s).
 [**get_authorization_permissions**](AuthorizationApi.html#get_authorization_permissions) | Get all permissions.
 [**get_authorization_products**](AuthorizationApi.html#get_authorization_products) | Get the list of enabled products
 [**get_authorization_role**](AuthorizationApi.html#get_authorization_role) | Get a single organization role.
 [**get_authorization_role_comparedefault_right_role_id**](AuthorizationApi.html#get_authorization_role_comparedefault_right_role_id) | Get an org role to default role comparison comparison
 [**get_authorization_role_subjectgrants**](AuthorizationApi.html#get_authorization_role_subjectgrants) | Get the subjects&#39; granted divisions in the specified role.
+[**get_authorization_role_users**](AuthorizationApi.html#get_authorization_role_users) | Get a list of the users in a specified role.
 [**get_authorization_roles**](AuthorizationApi.html#get_authorization_roles) | Retrieve a list of all roles defined for the organization
+[**get_authorization_subject**](AuthorizationApi.html#get_authorization_subject) | Returns a listing of roles and permissions for a user.
+[**get_authorization_subjects_me**](AuthorizationApi.html#get_authorization_subjects_me) | Returns a listing of roles and permissions for the currently authenticated user.
 [**get_user_roles**](AuthorizationApi.html#get_user_roles) | Returns a listing of roles and permissions for a user.
 [**patch_authorization_role**](AuthorizationApi.html#patch_authorization_role) | Patch Organization Role for needsUpdate Field
+[**post_authorization_division_object**](AuthorizationApi.html#post_authorization_division_object) | Assign a list of objects to a division
+[**post_authorization_divisions**](AuthorizationApi.html#post_authorization_divisions) | Create a division.
+[**post_authorization_role**](AuthorizationApi.html#post_authorization_role) | Bulk-grant subjects and divisions with an organization role.
 [**post_authorization_role_comparedefault_right_role_id**](AuthorizationApi.html#post_authorization_role_comparedefault_right_role_id) | Get an unsaved org role to default role comparison
 [**post_authorization_roles**](AuthorizationApi.html#post_authorization_roles) | Create an organization role.
 [**post_authorization_roles_default**](AuthorizationApi.html#post_authorization_roles_default) | Restores all default roles
+[**post_authorization_subject_division_role**](AuthorizationApi.html#post_authorization_subject_division_role) | Make a grant of a role in a division
+[**put_authorization_division**](AuthorizationApi.html#put_authorization_division) | Update a division.
 [**put_authorization_role**](AuthorizationApi.html#put_authorization_role) | Update an organization role.
 [**put_authorization_role_users_add**](AuthorizationApi.html#put_authorization_role_users_add) | Sets the users for the role
 [**put_authorization_role_users_remove**](AuthorizationApi.html#put_authorization_role_users_remove) | Removes the users from the role
 [**put_authorization_roles_default**](AuthorizationApi.html#put_authorization_roles_default) | Restore specified default roles
 [**put_user_roles**](AuthorizationApi.html#put_user_roles) | Sets the user&#39;s roles
 {: class="table table-striped"}
+
+<a name="delete_authorization_division"></a>
+
+## - delete_authorization_division(division_id)
+
+
+
+Delete a division.
+
+
+
+Wraps DELETE /api/v2/authorization/divisions/{divisionId} 
+
+Requires ANY permissions: 
+
+* authorization:division:delete
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+division_id = "division_id_example" # String | Division ID
+
+
+begin
+  #Delete a division.
+  api_instance.delete_authorization_division(division_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->delete_authorization_division: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **division_id** | **String**| Division ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 <a name="delete_authorization_role"></a>
 
@@ -80,6 +160,76 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role_id** | **String**| Role ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_authorization_subject_division_role"></a>
+
+## - delete_authorization_subject_division_role(subject_id, division_id, role_id)
+
+
+
+Delete a grant of a role in a division
+
+
+
+Wraps DELETE /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} 
+
+Requires ANY permissions: 
+
+* authorization:grant:delete
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+subject_id = "subject_id_example" # String | Subject ID (user or group)
+
+division_id = "division_id_example" # String | the id of the division of the grant
+
+role_id = "role_id_example" # String | the id of the role of the grant
+
+
+begin
+  #Delete a grant of a role in a division
+  api_instance.delete_authorization_subject_division_role(subject_id, division_id, role_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->delete_authorization_subject_division_role: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject_id** | **String**| Subject ID (user or group) |  |
+ **division_id** | **String**| the id of the division of the grant |  |
+ **role_id** | **String**| the id of the role of the grant |  |
 {: class="table table-striped"}
 
 
@@ -152,6 +302,412 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_division"></a>
+
+## -[**AuthzDivision**](AuthzDivision.html) get_authorization_division(division_id, opts)
+
+
+
+Returns an authorization division.
+
+
+
+Wraps GET /api/v2/authorization/divisions/{divisionId} 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+division_id = "division_id_example" # String | Division ID
+
+opts = { 
+  object_count: false # BOOLEAN | Get count of objects in this division, grouped by type
+}
+
+begin
+  #Returns an authorization division.
+  result = api_instance.get_authorization_division(division_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_division: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **division_id** | **String**| Division ID |  |
+ **object_count** | **BOOLEAN**| Get count of objects in this division, grouped by type | [optional] [default to false] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_divisions"></a>
+
+## -[**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html) get_authorization_divisions(opts)
+
+
+
+Retrieve a list of all divisions defined for the organization
+
+Request specific divisions by id using a query param \"id\", e.g.  ?id=5f777167-63be-4c24-ad41-374155d9e28b&id=72e9fb25-c484-488d-9312-7acba82435b3
+
+Wraps GET /api/v2/authorization/divisions 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+opts = { 
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example", # String | Previous page token
+  object_count: false, # BOOLEAN | Include the count of objects contained in the division
+  id: ["id_example"], # Array<String> | Optionally request specific divisions by their IDs
+  name: "name_example" # String | Search term to filter by division name
+}
+
+begin
+  #Retrieve a list of all divisions defined for the organization
+  result = api_instance.get_authorization_divisions(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_divisions: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **object_count** | **BOOLEAN**| Include the count of objects contained in the division | [optional] [default to false] |
+ **id** | [**Array&lt;String&gt;**](String.html)| Optionally request specific divisions by their IDs | [optional]  |
+ **name** | **String**| Search term to filter by division name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_divisions_home"></a>
+
+## -[**AuthzDivision**](AuthzDivision.html) get_authorization_divisions_home
+
+
+
+Retrieve the home division for the organization.
+
+Will not include object counts.
+
+Wraps GET /api/v2/authorization/divisions/home 
+
+Requires ANY permissions: 
+
+* authorization:division:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+begin
+  #Retrieve the home division for the organization.
+  result = api_instance.get_authorization_divisions_home
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_divisions_home: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_divisions_limit"></a>
+
+## -Integer** get_authorization_divisions_limit
+
+
+
+Returns the maximum allowed number of divisions.
+
+
+
+Wraps GET /api/v2/authorization/divisions/limit 
+
+Requires ANY permissions: 
+
+* authorization:division:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+begin
+  #Returns the maximum allowed number of divisions.
+  result = api_instance.get_authorization_divisions_limit
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_divisions_limit: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+**Integer**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_divisionspermitted_me"></a>
+
+## -[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_me(permission, opts)
+
+
+
+Returns whether or not current user can perform the specified action(s).
+
+
+
+Wraps GET /api/v2/authorization/divisionspermitted/me 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+permission = "permission_example" # String | The permission string, including the object to access, e.g. routing:queue:view
+
+opts = { 
+  name: "name_example" # String | Search term to filter by division name
+}
+
+begin
+  #Returns whether or not current user can perform the specified action(s).
+  result = api_instance.get_authorization_divisionspermitted_me(permission, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_divisionspermitted_me: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view |  |
+ **name** | **String**| Search term to filter by division name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_divisionspermitted_subject_id"></a>
+
+## -[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
+
+
+
+Returns whether or not specified user can perform the specified action(s).
+
+
+
+Wraps GET /api/v2/authorization/divisionspermitted/{subjectId} 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+subject_id = "subject_id_example" # String | Subject ID (user or group)
+
+permission = "permission_example" # String | The permission string, including the object to access, e.g. routing:queue:view
+
+opts = { 
+  name: "name_example" # String | Search term to filter by division name
+}
+
+begin
+  #Returns whether or not specified user can perform the specified action(s).
+  result = api_instance.get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_divisionspermitted_subject_id: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject_id** | **String**| Subject ID (user or group) |  |
+ **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view |  |
+ **name** | **String**| Search term to filter by division name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html)
 
 ### HTTP request headers
 
@@ -497,6 +1053,76 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_authorization_role_users"></a>
+
+## -[**UserEntityListing**](UserEntityListing.html) get_authorization_role_users(role_id, opts)
+
+
+
+Get a list of the users in a specified role.
+
+Get an array of the UUIDs of the users in the specified role.
+
+Wraps GET /api/v2/authorization/roles/{roleId}/users 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+role_id = "role_id_example" # String | Role ID
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Get a list of the users in a specified role.
+  result = api_instance.get_authorization_role_users(role_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_role_users: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role_id** | **String**| Role ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserEntityListing**](UserEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_authorization_roles"></a>
 
 ## -[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) get_authorization_roles(opts)
@@ -575,6 +1201,129 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_subject"></a>
+
+## -[**AuthzSubject**](AuthzSubject.html) get_authorization_subject(subject_id)
+
+
+
+Returns a listing of roles and permissions for a user.
+
+
+
+Wraps GET /api/v2/authorization/subjects/{subjectId} 
+
+Requires ANY permissions: 
+
+* authorization:grant:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+subject_id = "subject_id_example" # String | Subject ID (user or group)
+
+
+begin
+  #Returns a listing of roles and permissions for a user.
+  result = api_instance.get_authorization_subject(subject_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_subject: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject_id** | **String**| Subject ID (user or group) |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AuthzSubject**](AuthzSubject.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_subjects_me"></a>
+
+## -[**AuthzSubject**](AuthzSubject.html) get_authorization_subjects_me
+
+
+
+Returns a listing of roles and permissions for the currently authenticated user.
+
+
+
+Wraps GET /api/v2/authorization/subjects/me 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+begin
+  #Returns a listing of roles and permissions for the currently authenticated user.
+  result = api_instance.get_authorization_subjects_me
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_subjects_me: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AuthzSubject**](AuthzSubject.html)
 
 ### HTTP request headers
 
@@ -710,6 +1459,208 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DomainOrganizationRole**](DomainOrganizationRole.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_authorization_division_object"></a>
+
+## - post_authorization_division_object(division_id, object_type, body)
+
+
+
+Assign a list of objects to a division
+
+Set the division of a specified list of objects. The objects must all be of the same type, one of:  CAMPAIGN, MANAGEMENTUNIT, FLOW, QUEUE, or USER.  The body of the request is a list of object IDs, which are expected to be  GUIDs, e.g. [\"206ce31f-61ec-40ed-a8b1-be6f06303998\",\"250a754e-f5e4-4f51-800f-a92f09d3bf8c\"]
+
+Wraps POST /api/v2/authorization/divisions/{divisionId}/objects/{objectType} 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+division_id = "division_id_example" # String | Division ID
+
+object_type = "object_type_example" # String | The type of the objects. Must be one of the valid object types
+
+body = [PureCloud::Array<String>.new] # Array<String> | Object Id List
+
+
+begin
+  #Assign a list of objects to a division
+  api_instance.post_authorization_division_object(division_id, object_type, body)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->post_authorization_division_object: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **division_id** | **String**| Division ID |  |
+ **object_type** | **String**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, USER |
+ **body** | **Array&lt;String&gt;**| Object Id List |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_authorization_divisions"></a>
+
+## -[**AuthzDivision**](AuthzDivision.html) post_authorization_divisions(body)
+
+
+
+Create a division.
+
+
+
+Wraps POST /api/v2/authorization/divisions 
+
+Requires ALL permissions: 
+
+* authorization:division:add
+* authorization:grant:add
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+body = PureCloud::AuthzDivision.new # AuthzDivision | Division
+
+
+begin
+  #Create a division.
+  result = api_instance.post_authorization_divisions(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->post_authorization_divisions: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AuthzDivision**](AuthzDivision.html)| Division |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_authorization_role"></a>
+
+## - post_authorization_role(role_id, body)
+
+
+
+Bulk-grant subjects and divisions with an organization role.
+
+
+
+Wraps POST /api/v2/authorization/roles/{roleId} 
+
+Requires ANY permissions: 
+
+* authorization:grant:add
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+role_id = "role_id_example" # String | Role ID
+
+body = PureCloud::SubjectDivisions.new # SubjectDivisions | Subjects and Divisions
+
+
+begin
+  #Bulk-grant subjects and divisions with an organization role.
+  api_instance.post_authorization_role(role_id, body)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->post_authorization_role: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role_id** | **String**| Role ID |  |
+ **body** | [**SubjectDivisions**](SubjectDivisions.html)| Subjects and Divisions |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -912,6 +1863,148 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_authorization_subject_division_role"></a>
+
+## - post_authorization_subject_division_role(subject_id, division_id, role_id, opts)
+
+
+
+Make a grant of a role in a division
+
+
+
+Wraps POST /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} 
+
+Requires ANY permissions: 
+
+* authorization:grant:add
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+subject_id = "subject_id_example" # String | Subject ID (user or group)
+
+division_id = "division_id_example" # String | the id of the division to which to make the grant
+
+role_id = "role_id_example" # String | the id of the role to grant
+
+opts = { 
+  subject_type: "PC_USER" # String | what the type of the subject is, PC_GROUP or PC_USER
+}
+
+begin
+  #Make a grant of a role in a division
+  api_instance.post_authorization_subject_division_role(subject_id, division_id, role_id, opts)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->post_authorization_subject_division_role: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject_id** | **String**| Subject ID (user or group) |  |
+ **division_id** | **String**| the id of the division to which to make the grant |  |
+ **role_id** | **String**| the id of the role to grant |  |
+ **subject_type** | **String**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_authorization_division"></a>
+
+## -[**AuthzDivision**](AuthzDivision.html) put_authorization_division(division_id, body)
+
+
+
+Update a division.
+
+
+
+Wraps PUT /api/v2/authorization/divisions/{divisionId} 
+
+Requires ANY permissions: 
+
+* authorization:division:edit
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+division_id = "division_id_example" # String | Division ID
+
+body = PureCloud::AuthzDivision.new # AuthzDivision | Updated division data
+
+
+begin
+  #Update a division.
+  result = api_instance.put_authorization_division(division_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->put_authorization_division: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **division_id** | **String**| Division ID |  |
+ **body** | [**AuthzDivision**](AuthzDivision.html)| Updated division data |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
 
 ### HTTP request headers
 
