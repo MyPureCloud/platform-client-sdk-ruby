@@ -1232,7 +1232,7 @@ end
 api_instance = PureCloud::OutboundApi.new
 
 opts = { 
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
@@ -1253,7 +1253,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
@@ -1373,7 +1373,7 @@ end
 api_instance = PureCloud::OutboundApi.new
 
 opts = { 
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
@@ -1394,7 +1394,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
@@ -1514,7 +1514,7 @@ end
 api_instance = PureCloud::OutboundApi.new
 
 opts = { 
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
@@ -1535,7 +1535,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
@@ -1980,7 +1980,7 @@ end
 api_instance = PureCloud::OutboundApi.new
 
 opts = { 
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
@@ -2001,7 +2001,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
@@ -2056,7 +2056,7 @@ end
 api_instance = PureCloud::OutboundApi.new
 
 opts = { 
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
@@ -2084,7 +2084,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
@@ -2211,7 +2211,7 @@ end
 api_instance = PureCloud::OutboundApi.new
 
 opts = { 
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
@@ -2233,7 +2233,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
@@ -2628,7 +2628,7 @@ end
 api_instance = PureCloud::OutboundApi.new
 
 opts = { 
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
@@ -2650,7 +2650,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
@@ -2708,7 +2708,7 @@ api_instance = PureCloud::OutboundApi.new
 opts = { 
   include_import_status: false, # BOOLEAN | Include import status
   include_size: false, # BOOLEAN | Include size
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
@@ -2732,7 +2732,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **include_import_status** | **BOOLEAN**| Include import status | [optional] [default to false] |
  **include_size** | **BOOLEAN**| Include size | [optional] [default to false] |
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
@@ -2996,7 +2996,7 @@ api_instance = PureCloud::OutboundApi.new
 opts = { 
   include_import_status: false, # BOOLEAN | Import status
   include_size: false, # BOOLEAN | Include size
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
@@ -3019,7 +3019,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **include_import_status** | **BOOLEAN**| Import status | [optional] [default to false] |
  **include_size** | **BOOLEAN**| Include size | [optional] [default to false] |
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
@@ -3282,7 +3282,7 @@ end
 api_instance = PureCloud::OutboundApi.new
 
 opts = { 
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
@@ -3303,7 +3303,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
@@ -3671,7 +3671,7 @@ end
 api_instance = PureCloud::OutboundApi.new
 
 opts = { 
-  page_size: 25, # Integer | Page size
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
@@ -3692,7 +3692,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |

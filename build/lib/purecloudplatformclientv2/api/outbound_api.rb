@@ -1139,7 +1139,7 @@ module PureCloud
     # Query attempt limits list
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
@@ -1154,7 +1154,7 @@ module PureCloud
     # Query attempt limits list
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
@@ -1321,7 +1321,7 @@ module PureCloud
     # Query callable time set list
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
@@ -1336,7 +1336,7 @@ module PureCloud
     # Query callable time set list
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
@@ -1503,7 +1503,7 @@ module PureCloud
     # Query a list of dialer call analysis response sets.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
@@ -1518,7 +1518,7 @@ module PureCloud
     # Query a list of dialer call analysis response sets.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
@@ -2010,7 +2010,7 @@ module PureCloud
     # Query Campaign Rule list
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
@@ -2025,7 +2025,7 @@ module PureCloud
     # Query Campaign Rule list
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
@@ -2127,7 +2127,7 @@ module PureCloud
     # Query a list of dialer campaigns.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
@@ -2149,7 +2149,7 @@ module PureCloud
     # Query a list of dialer campaigns.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
@@ -2372,7 +2372,7 @@ module PureCloud
     # Query a list of basic Campaign information objects
     # This returns a simplified version of a Campaign, consisting of name and division.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
@@ -2388,7 +2388,7 @@ module PureCloud
     # Query a list of basic Campaign information objects
     # This returns a simplified version of a Campaign, consisting of name and division.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
@@ -2860,7 +2860,7 @@ module PureCloud
     # Query Contact list filters
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
@@ -2876,7 +2876,7 @@ module PureCloud
     # Query Contact list filters
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
@@ -2988,7 +2988,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :include_import_status Include import status (default to false)
     # @option opts [BOOLEAN] :include_size Include size (default to false)
-    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
@@ -3006,7 +3006,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :include_import_status Include import status
     # @option opts [BOOLEAN] :include_size Include size
-    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
@@ -3354,7 +3354,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :include_import_status Import status (default to false)
     # @option opts [BOOLEAN] :include_size Include size (default to false)
-    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
@@ -3371,7 +3371,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :include_import_status Import status
     # @option opts [BOOLEAN] :include_size Include size
-    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
@@ -3743,7 +3743,7 @@ module PureCloud
     # Query a list of Rule Sets.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
@@ -3758,7 +3758,7 @@ module PureCloud
     # Query a list of Rule Sets.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
@@ -4165,7 +4165,7 @@ module PureCloud
     # Query a list of dialer campaign sequences.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
@@ -4180,7 +4180,7 @@ module PureCloud
     # Query a list of dialer campaign sequences.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name

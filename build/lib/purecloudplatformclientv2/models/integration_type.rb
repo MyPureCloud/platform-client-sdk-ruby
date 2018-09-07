@@ -45,6 +45,9 @@ module PureCloud
     # URI of a page with more information about the integration type
     attr_accessor :help_uri
 
+    # URI of a page with terms and conditions for the integration type
+    attr_accessor :terms_of_service_uri
+
     # Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration.
     attr_accessor :credentials
 
@@ -82,6 +85,8 @@ module PureCloud
         
         :'help_uri' => :'helpUri',
         
+        :'terms_of_service_uri' => :'termsOfServiceUri',
+        
         :'credentials' => :'credentials',
         
         :'non_installable' => :'nonInstallable',
@@ -116,6 +121,8 @@ module PureCloud
         :'config_advanced_schema_uri' => :'String',
         
         :'help_uri' => :'String',
+        
+        :'terms_of_service_uri' => :'String',
         
         :'credentials' => :'Hash<String, CredentialSpecification>',
         
@@ -217,6 +224,15 @@ module PureCloud
         
         
         self.help_uri = attributes[:'helpUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'termsOfServiceUri')
+        
+        
+        self.terms_of_service_uri = attributes[:'termsOfServiceUri']
         
       
       end
@@ -347,8 +363,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -434,6 +459,7 @@ module PureCloud
           config_properties_schema_uri == o.config_properties_schema_uri &&
           config_advanced_schema_uri == o.config_advanced_schema_uri &&
           help_uri == o.help_uri &&
+          terms_of_service_uri == o.terms_of_service_uri &&
           credentials == o.credentials &&
           non_installable == o.non_installable &&
           max_instances == o.max_instances &&
@@ -450,7 +476,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, provider, category, images, config_properties_schema_uri, config_advanced_schema_uri, help_uri, credentials, non_installable, max_instances, user_permissions, self_uri].hash
+      [id, name, description, provider, category, images, config_properties_schema_uri, config_advanced_schema_uri, help_uri, terms_of_service_uri, credentials, non_installable, max_instances, user_permissions, self_uri].hash
     end
 
     # build the object from hash
