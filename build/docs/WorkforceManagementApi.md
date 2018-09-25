@@ -21,6 +21,8 @@ Method | Description
 [**get_workforcemanagement_managementunit_activitycodes**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_activitycodes) | Get activity codes
 [**get_workforcemanagement_managementunit_agent**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_agent) | Get data for agent in the management unit
 [**get_workforcemanagement_managementunit_intraday_queues**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_intraday_queues) | Get intraday queues for the given date
+[**get_workforcemanagement_managementunit_scheduling_run**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_scheduling_run) | Gets the status for a specific scheduling run
+[**get_workforcemanagement_managementunit_scheduling_run_result**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_scheduling_run_result) | Gets the result of a specific scheduling run
 [**get_workforcemanagement_managementunit_scheduling_runs**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_scheduling_runs) | Get the status of all the ongoing schedule runs
 [**get_workforcemanagement_managementunit_servicegoalgroup**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_servicegoalgroup) | Get a service goal group
 [**get_workforcemanagement_managementunit_servicegoalgroups**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_servicegoalgroups) | Get service goal groups
@@ -40,6 +42,7 @@ Method | Description
 [**get_workforcemanagement_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequest) | Get a time off request for the current user
 [**get_workforcemanagement_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequests) | Get a list of time off requests for the current user
 [**patch_workforcemanagement_managementunit_activitycode**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_activitycode) | Update an activity code
+[**patch_workforcemanagement_managementunit_scheduling_run**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_scheduling_run) | Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
 [**patch_workforcemanagement_managementunit_servicegoalgroup**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_servicegoalgroup) | Update a service goal group
 [**patch_workforcemanagement_managementunit_settings**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_settings) | Patch the settings for the requested management unit
 [**patch_workforcemanagement_managementunit_user_timeoffrequest**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_user_timeoffrequest) | Update a time off request
@@ -56,6 +59,7 @@ Method | Description
 [**post_workforcemanagement_managementunit_timeoffrequests_fetchdetails**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_timeoffrequests_fetchdetails) | Gets a list of time off requests from lookup ids
 [**post_workforcemanagement_managementunit_timeoffrequests_query**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_timeoffrequests_query) | Gets the lookup ids to fetch the specified set of requests
 [**post_workforcemanagement_managementunit_week_schedule_copy**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_schedule_copy) | Copy a week schedule
+[**post_workforcemanagement_managementunit_week_schedule_reschedule**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_schedule_reschedule) | Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
 [**post_workforcemanagement_managementunit_week_schedules**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_schedules) | Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
 [**post_workforcemanagement_managementunit_week_schedules_generate**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_schedules_generate) | Generate a week schedule
 [**post_workforcemanagement_managementunit_week_schedules_partialupload**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_schedules_partialupload) | Partial upload of user schedules where activity count is greater than 17500
@@ -1031,6 +1035,142 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WfmIntradayQueueListing**](WfmIntradayQueueListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_workforcemanagement_managementunit_scheduling_run"></a>
+
+## -[**SchedulingRunResponse**](SchedulingRunResponse.html) get_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id)
+
+
+
+Gets the status for a specific scheduling run
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} 
+
+Requires ANY permissions: 
+
+* wfm:schedule:generate
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The ID of the management unit.
+
+run_id = "run_id_example" # String | The ID of the schedule run
+
+
+begin
+  #Gets the status for a specific scheduling run
+  result = api_instance.get_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_scheduling_run: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The ID of the management unit. |  |
+ **run_id** | **String**| The ID of the schedule run |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SchedulingRunResponse**](SchedulingRunResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_workforcemanagement_managementunit_scheduling_run_result"></a>
+
+## -[**RescheduleResult**](RescheduleResult.html) get_workforcemanagement_managementunit_scheduling_run_result(management_unit_id, run_id)
+
+
+
+Gets the result of a specific scheduling run
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}/result 
+
+Requires ANY permissions: 
+
+* wfm:schedule:generate
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The ID of the management unit.
+
+run_id = "run_id_example" # String | The ID of the schedule run
+
+
+begin
+  #Gets the result of a specific scheduling run
+  result = api_instance.get_workforcemanagement_managementunit_scheduling_run_result(management_unit_id, run_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_scheduling_run_result: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The ID of the management unit. |  |
+ **run_id** | **String**| The ID of the schedule run |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**RescheduleResult**](RescheduleResult.html)
 
 ### HTTP request headers
 
@@ -2386,6 +2526,78 @@ Name | Type | Description  | Notes
 
 
 
+<a name="patch_workforcemanagement_managementunit_scheduling_run"></a>
+
+## -[**RescheduleResult**](RescheduleResult.html) patch_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id, opts)
+
+
+
+Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId} 
+
+Requires ANY permissions: 
+
+* wfm:schedule:generate
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The ID of the management unit.
+
+run_id = "run_id_example" # String | The ID of the schedule run
+
+opts = { 
+  body: PureCloud::UpdateSchedulingRunRequest.new # UpdateSchedulingRunRequest | body
+}
+
+begin
+  #Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+  result = api_instance.patch_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_managementunit_scheduling_run: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The ID of the management unit. |  |
+ **run_id** | **String**| The ID of the schedule run |  |
+ **body** | [**UpdateSchedulingRunRequest**](UpdateSchedulingRunRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**RescheduleResult**](RescheduleResult.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="patch_workforcemanagement_managementunit_servicegoalgroup"></a>
 
 ## -[**ServiceGoalGroup**](ServiceGoalGroup.html) patch_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id, opts)
@@ -3518,6 +3730,82 @@ Name | Type | Description  | Notes
  **force_async** | **BOOLEAN**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
  **force_download_service** | **BOOLEAN**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
  **body** | [**CopyWeekScheduleRequest**](CopyWeekScheduleRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_workforcemanagement_managementunit_week_schedule_reschedule"></a>
+
+## -[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedule_reschedule(management_unit_id, week_id, schedule_id, opts)
+
+
+
+Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule 
+
+Requires ANY permissions: 
+
+* wfm:schedule:administer
+* wfm:schedule:edit
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+
+week_id = "week_id_example" # String | First day of schedule week in yyyy-MM-dd format.
+
+schedule_id = "schedule_id_example" # String | The ID of the schedule to re-optimize
+
+opts = { 
+  body: PureCloud::RescheduleRequest.new # RescheduleRequest | body
+}
+
+begin
+  #Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+  result = api_instance.post_workforcemanagement_managementunit_week_schedule_reschedule(management_unit_id, week_id, schedule_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_schedule_reschedule: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **week_id** | **String**| First day of schedule week in yyyy-MM-dd format. |  |
+ **schedule_id** | **String**| The ID of the schedule to re-optimize |  |
+ **body** | [**RescheduleRequest**](RescheduleRequest.html)| body | [optional]  |
 {: class="table table-striped"}
 
 

@@ -18,20 +18,20 @@ require 'date'
 
 module PureCloud
   # Headcount interval information for schedule
-  class HeadcountIntervalResponse
-    # The start date-time for this headcount interval in ISO-8601 format.
-    attr_accessor :interval
+  class HeadcountForecast
+    # Headcount information with shrinkage
+    attr_accessor :required
 
-    # Headcount value for this interval
-    attr_accessor :value
+    # Headcount information without shrinkage
+    attr_accessor :required_without_shrinkage
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'interval' => :'interval',
+        :'required' => :'required',
         
-        :'value' => :'value'
+        :'required_without_shrinkage' => :'requiredWithoutShrinkage'
         
       }
     end
@@ -40,9 +40,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'interval' => :'DateTime',
+        :'required' => :'Array<HeadcountInterval>',
         
-        :'value' => :'Float'
+        :'required_without_shrinkage' => :'Array<HeadcountInterval>'
         
       }
     end
@@ -56,19 +56,23 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'interval')
+      if attributes.has_key?(:'required')
         
+        if (value = attributes[:'required']).is_a?(Array)
+          self.required = value
+        end
         
-        self.interval = attributes[:'interval']
         
       
       end
 
       
-      if attributes.has_key?(:'value')
+      if attributes.has_key?(:'requiredWithoutShrinkage')
         
+        if (value = attributes[:'requiredWithoutShrinkage']).is_a?(Array)
+          self.required_without_shrinkage = value
+        end
         
-        self.value = attributes[:'value']
         
       
       end
@@ -90,9 +94,19 @@ module PureCloud
     def valid?
       
       
+      if @required.nil?
+        return false
+      end
+
       
       
       
+      
+      
+      if @required_without_shrinkage.nil?
+        return false
+      end
+
       
       
       
@@ -115,8 +129,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          interval == o.interval &&
-          value == o.value
+          required == o.required &&
+          required_without_shrinkage == o.required_without_shrinkage
     end
 
     # @see the `==` method
@@ -128,7 +142,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [interval, value].hash
+      [required, required_without_shrinkage].hash
     end
 
     # build the object from hash

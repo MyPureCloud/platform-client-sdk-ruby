@@ -1282,6 +1282,7 @@ module PureCloud
     # Get recipients
     # 
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :messenger_type Messenger Type
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @return [RecipientListing]
@@ -1293,6 +1294,7 @@ module PureCloud
     # Get recipients
     # 
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :messenger_type Messenger Type
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
     # @return [Array<(RecipientListing, Fixnum, Hash)>] RecipientListing data, response status code and response headers
@@ -1300,6 +1302,16 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_message_recipients ..."
       end
+      
+      
+      
+      
+      if opts[:'messenger_type'] && !['sms', 'facebook', 'twitter', 'line', 'whatsapp', 'telegram', 'kakao'].include?(opts[:'messenger_type'])
+        fail ArgumentError, 'invalid value for "messenger_type", must be one of sms, facebook, twitter, line, whatsapp, telegram, kakao'
+      end
+      
+      
+      
       
       
       
@@ -1318,6 +1330,7 @@ module PureCloud
 
       # query parameters
       query_params = {}
+      query_params[:'messengerType'] = opts[:'messenger_type'] if opts[:'messenger_type']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
 

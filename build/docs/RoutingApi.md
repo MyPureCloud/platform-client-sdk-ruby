@@ -1285,6 +1285,7 @@ end
 api_instance = PureCloud::RoutingApi.new
 
 opts = { 
+  messenger_type: "messenger_type_example", # String | Messenger Type
   page_size: 25, # Integer | Page size
   page_number: 1 # Integer | Page number
 }
@@ -1302,6 +1303,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **messenger_type** | **String**| Messenger Type | [optional] <br />**Values**: sms, facebook, twitter, line, whatsapp, telegram, kakao |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}

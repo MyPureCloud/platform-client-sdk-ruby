@@ -1,7 +1,7 @@
 ---
-title: JsonNode
+title: ArrayNode
 ---
-## PureCloud::JsonNode
+## PureCloud::ArrayNode
 
 ## Properties
 

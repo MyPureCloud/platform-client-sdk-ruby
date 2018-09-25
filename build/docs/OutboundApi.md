@@ -38,12 +38,12 @@ Method | Description
 [**get_outbound_campaignrule**](OutboundApi.html#get_outbound_campaignrule) | Get Campaign Rule
 [**get_outbound_campaignrules**](OutboundApi.html#get_outbound_campaignrules) | Query Campaign Rule list
 [**get_outbound_campaigns**](OutboundApi.html#get_outbound_campaigns) | Query a list of dialer campaigns.
-[**get_outbound_campaigns_divisionview**](OutboundApi.html#get_outbound_campaigns_divisionview) | Get a basic Campaign information object
 [**get_outbound_campaigns_divisionviews**](OutboundApi.html#get_outbound_campaigns_divisionviews) | Query a list of basic Campaign information objects
 [**get_outbound_contactlist**](OutboundApi.html#get_outbound_contactlist) | Get a dialer contact list.
 [**get_outbound_contactlist_contact**](OutboundApi.html#get_outbound_contactlist_contact) | Get a contact.
 [**get_outbound_contactlist_export**](OutboundApi.html#get_outbound_contactlist_export) | Get the URI of a contact list export.
 [**get_outbound_contactlist_importstatus**](OutboundApi.html#get_outbound_contactlist_importstatus) | Get dialer contactList import status.
+[**get_outbound_contactlist_timezonemappingpreview**](OutboundApi.html#get_outbound_contactlist_timezonemappingpreview) | Preview the result of applying Automatic Time Zone Mapping to a contact list
 [**get_outbound_contactlistfilter**](OutboundApi.html#get_outbound_contactlistfilter) | Get Contact list filter
 [**get_outbound_contactlistfilters**](OutboundApi.html#get_outbound_contactlistfilters) | Query Contact list filters
 [**get_outbound_contactlists**](OutboundApi.html#get_outbound_contactlists) | Query a list of contact lists.
@@ -2111,71 +2111,6 @@ Name | Type | Description  | Notes
 
 
 
-<a name="get_outbound_campaigns_divisionview"></a>
-
-## -[**CampaignDivisionView**](CampaignDivisionView.html) get_outbound_campaigns_divisionview(campaign_id)
-
-
-
-Get a basic Campaign information object
-
-This returns a simplified version of a Campaign, consisting of name and division.
-
-Wraps GET /api/v2/outbound/campaigns/divisionviews/{campaignId} 
-
-Requires ANY permissions: 
-
-* outbound:campaign:search
-
-
-### Example
-~~~ruby
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::OutboundApi.new
-
-campaign_id = "campaign_id_example" # String | Campaign ID
-
-
-begin
-  #Get a basic Campaign information object
-  result = api_instance.get_outbound_campaigns_divisionview(campaign_id)
-  p result
-rescue PureCloud::ApiError => e
-  puts "Exception when calling OutboundApi->get_outbound_campaigns_divisionview: #{e}"
-end
-~~~
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **campaign_id** | **String**| Campaign ID |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-[**CampaignDivisionView**](CampaignDivisionView.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
 <a name="get_outbound_campaigns_divisionviews"></a>
 
 ## -[**CampaignDivisionViewListing**](CampaignDivisionViewListing.html) get_outbound_campaigns_divisionviews(opts)
@@ -2520,6 +2455,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ImportStatus**](ImportStatus.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_outbound_contactlist_timezonemappingpreview"></a>
+
+## -[**TimeZoneMappingPreview**](TimeZoneMappingPreview.html) get_outbound_contactlist_timezonemappingpreview(contact_list_id)
+
+
+
+Preview the result of applying Automatic Time Zone Mapping to a contact list
+
+
+
+Wraps GET /api/v2/outbound/contactlists/{contactListId}/timezonemappingpreview 
+
+Requires ANY permissions: 
+
+* outbound:contactList:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+contact_list_id = "contact_list_id_example" # String | ContactList ID
+
+
+begin
+  #Preview the result of applying Automatic Time Zone Mapping to a contact list
+  result = api_instance.get_outbound_contactlist_timezonemappingpreview(contact_list_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_contactlist_timezonemappingpreview: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contact_list_id** | **String**| ContactList ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TimeZoneMappingPreview**](TimeZoneMappingPreview.html)
 
 ### HTTP request headers
 

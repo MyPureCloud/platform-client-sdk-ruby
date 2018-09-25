@@ -84,6 +84,9 @@ module PureCloud
     # The default script Ids for the communication types.
     attr_accessor :default_scripts
 
+    # The messaging addresses for the queue.
+    attr_accessor :outbound_messaging_addresses
+
     attr_accessor :outbound_email_address
 
     attr_accessor :member_count
@@ -138,6 +141,8 @@ module PureCloud
         :'calling_party_number' => :'callingPartyNumber',
         
         :'default_scripts' => :'defaultScripts',
+        
+        :'outbound_messaging_addresses' => :'outboundMessagingAddresses',
         
         :'outbound_email_address' => :'outboundEmailAddress',
         
@@ -195,6 +200,8 @@ module PureCloud
         :'calling_party_number' => :'String',
         
         :'default_scripts' => :'Hash<String, Script>',
+        
+        :'outbound_messaging_addresses' => :'QueueMessagingAddresses',
         
         :'outbound_email_address' => :'QueueEmailAddress',
         
@@ -416,6 +423,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'outboundMessagingAddresses')
+        
+        
+        self.outbound_messaging_addresses = attributes[:'outboundMessagingAddresses']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'outboundEmailAddress')
         
         
@@ -549,6 +565,10 @@ module PureCloud
       if @skill_evaluation_method && !allowed_values.include?(@skill_evaluation_method)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -734,6 +754,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -761,6 +786,7 @@ module PureCloud
           calling_party_name == o.calling_party_name &&
           calling_party_number == o.calling_party_number &&
           default_scripts == o.default_scripts &&
+          outbound_messaging_addresses == o.outbound_messaging_addresses &&
           outbound_email_address == o.outbound_email_address &&
           member_count == o.member_count &&
           self_uri == o.self_uri
@@ -775,7 +801,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_email_address, member_count, self_uri].hash
+      [id, name, division, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_messaging_addresses, outbound_email_address, member_count, self_uri].hash
     end
 
     # build the object from hash

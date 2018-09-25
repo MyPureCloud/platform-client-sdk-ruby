@@ -1985,7 +1985,8 @@ api_instance = PureCloud::QualityApi.new
 opts = { 
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
-  name: "name_example" # String | Name
+  name: "name_example", # String | Name
+  only_latest_per_context: false # BOOLEAN | onlyLatestPerContext
 }
 
 begin
@@ -2004,6 +2005,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **name** | **String**| Name | [optional]  |
+ **only_latest_per_context** | **BOOLEAN**| onlyLatestPerContext | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -2120,7 +2122,8 @@ api_instance = PureCloud::QualityApi.new
 opts = { 
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
-  name: "name_example" # String | Name
+  name: "name_example", # String | Name
+  only_latest_per_context: false # BOOLEAN | onlyLatestPerContext
 }
 
 begin
@@ -2139,6 +2142,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **name** | **String**| Name | [optional]  |
+ **only_latest_per_context** | **BOOLEAN**| onlyLatestPerContext | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -2255,7 +2259,8 @@ api_instance = PureCloud::QualityApi.new
 opts = { 
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
-  name: "name_example" # String | Name
+  name: "name_example", # String | Name
+  only_latest_enabled_per_context: false # BOOLEAN | onlyLatestEnabledPerContext
 }
 
 begin
@@ -2274,6 +2279,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **name** | **String**| Name | [optional]  |
+ **only_latest_enabled_per_context** | **BOOLEAN**| onlyLatestEnabledPerContext | [optional] [default to false] |
 {: class="table table-striped"}
 
 

@@ -16,6 +16,8 @@ title: ViewFilter
 | **directions** | **Array&lt;String&gt;** | The directions are used to filter the view | [optional] |
 | **wrap_up_codes** | **Array&lt;String&gt;** | The wrap up codes are used to filter the view | [optional] |
 | **dnis_list** | **Array&lt;String&gt;** | The dnis list is used to filter the view | [optional] |
+| **filter_queues_by_user_ids** | **Array&lt;String&gt;** | The user ids are used to fetch associated queues for the view | [optional] |
+| **filter_users_by_queue_ids** | **Array&lt;String&gt;** | The queue ids are used to fetch associated users for the view | [optional] |
 | **user_ids** | **Array&lt;String&gt;** | The user ids are used to filter the view | [optional] |
 | **address_tos** | **Array&lt;String&gt;** | The address To values are used to filter the view | [optional] |
 | **address_froms** | **Array&lt;String&gt;** | The address from values are used to filter the view | [optional] |

@@ -22,6 +22,12 @@ module PureCloud
     # ID of the schedule run
     attr_accessor :run_id
 
+    # The runId from scheduler service.  Useful for debugging schedule errors
+    attr_accessor :scheduler_run_id
+
+    # Whether this is the result of a rescheduling request
+    attr_accessor :intraday_rescheduling
+
     # Status of the schedule run
     attr_accessor :state
 
@@ -31,10 +37,10 @@ module PureCloud
     # The start date of the week for which the scheduling is done in yyyy-MM-dd format
     attr_accessor :target_week
 
-    # ID of the schedule
+    # ID of the schedule. Does not apply to reschedule, see reschedulingOptions.existingScheduleId
     attr_accessor :schedule_id
 
-    # Description of the schedule run
+    # Description of the schedule
     attr_accessor :schedule_description
 
     # Start time of the schedule run. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -49,11 +55,27 @@ module PureCloud
     # Time at which the scheduling run was completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :scheduling_completed_time
 
+    # The selected options for the reschedule request. Will always be null if intradayRescheduling is false
+    attr_accessor :rescheduling_options
+
+    # When the rescheduling result data will expire. Results are kept temporarily as they should be applied as soon as possible after the run finishes.  Will always be null if intradayRescheduling is false. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :rescheduling_result_expiration
+
+    # Whether the rescheduling run has been marked applied
+    attr_accessor :applied
+
+    # Agents that were not scheduled in the rescheduling operation. Will always be null if intradayRescheduling is false
+    attr_accessor :unscheduled_agents
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'run_id' => :'runId',
+        
+        :'scheduler_run_id' => :'schedulerRunId',
+        
+        :'intraday_rescheduling' => :'intradayRescheduling',
         
         :'state' => :'state',
         
@@ -71,7 +93,15 @@ module PureCloud
         
         :'scheduling_canceled_by' => :'schedulingCanceledBy',
         
-        :'scheduling_completed_time' => :'schedulingCompletedTime'
+        :'scheduling_completed_time' => :'schedulingCompletedTime',
+        
+        :'rescheduling_options' => :'reschedulingOptions',
+        
+        :'rescheduling_result_expiration' => :'reschedulingResultExpiration',
+        
+        :'applied' => :'applied',
+        
+        :'unscheduled_agents' => :'unscheduledAgents'
         
       }
     end
@@ -81,6 +111,10 @@ module PureCloud
       {
         
         :'run_id' => :'String',
+        
+        :'scheduler_run_id' => :'String',
+        
+        :'intraday_rescheduling' => :'BOOLEAN',
         
         :'state' => :'String',
         
@@ -98,7 +132,15 @@ module PureCloud
         
         :'scheduling_canceled_by' => :'UserReference',
         
-        :'scheduling_completed_time' => :'DateTime'
+        :'scheduling_completed_time' => :'DateTime',
+        
+        :'rescheduling_options' => :'ReschedulingOptionsResponse',
+        
+        :'rescheduling_result_expiration' => :'DateTime',
+        
+        :'applied' => :'BOOLEAN',
+        
+        :'unscheduled_agents' => :'Array<UnscheduledAgentWarning>'
         
       }
     end
@@ -116,6 +158,24 @@ module PureCloud
         
         
         self.run_id = attributes[:'runId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'schedulerRunId')
+        
+        
+        self.scheduler_run_id = attributes[:'schedulerRunId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'intradayRescheduling')
+        
+        
+        self.intraday_rescheduling = attributes[:'intradayRescheduling']
         
       
       end
@@ -202,6 +262,44 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'reschedulingOptions')
+        
+        
+        self.rescheduling_options = attributes[:'reschedulingOptions']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'reschedulingResultExpiration')
+        
+        
+        self.rescheduling_result_expiration = attributes[:'reschedulingResultExpiration']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'applied')
+        
+        
+        self.applied = attributes[:'applied']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'unscheduledAgents')
+        
+        if (value = attributes[:'unscheduledAgents']).is_a?(Array)
+          self.unscheduled_agents = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -216,6 +314,14 @@ module PureCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -262,8 +368,34 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -324,12 +456,34 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
           run_id == o.run_id &&
+          scheduler_run_id == o.scheduler_run_id &&
+          intraday_rescheduling == o.intraday_rescheduling &&
           state == o.state &&
           percent_complete == o.percent_complete &&
           target_week == o.target_week &&
@@ -338,7 +492,11 @@ module PureCloud
           scheduling_start_time == o.scheduling_start_time &&
           scheduling_started_by == o.scheduling_started_by &&
           scheduling_canceled_by == o.scheduling_canceled_by &&
-          scheduling_completed_time == o.scheduling_completed_time
+          scheduling_completed_time == o.scheduling_completed_time &&
+          rescheduling_options == o.rescheduling_options &&
+          rescheduling_result_expiration == o.rescheduling_result_expiration &&
+          applied == o.applied &&
+          unscheduled_agents == o.unscheduled_agents
     end
 
     # @see the `==` method
@@ -350,7 +508,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [run_id, state, percent_complete, target_week, schedule_id, schedule_description, scheduling_start_time, scheduling_started_by, scheduling_canceled_by, scheduling_completed_time].hash
+      [run_id, scheduler_run_id, intraday_rescheduling, state, percent_complete, target_week, schedule_id, schedule_description, scheduling_start_time, scheduling_started_by, scheduling_canceled_by, scheduling_completed_time, rescheduling_options, rescheduling_result_expiration, applied, unscheduled_agents].hash
     end
 
     # build the object from hash

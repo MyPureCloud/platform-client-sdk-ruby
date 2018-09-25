@@ -17,21 +17,15 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  # Headcount interval information for schedule
-  class HeadcountForecastResponse
-    # Headcount information with shrinkage
-    attr_accessor :required
-
-    # Headcount information without shrinkage
-    attr_accessor :required_without_shrinkage
+  class UpdateSchedulingRunRequest
+    # Mark the run as applied.  Request will be rejected if the value != true. Note: To discard a run without applying, you still need to mark it as applied so that other reschedule runs can be done
+    attr_accessor :applied
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'required' => :'required',
-        
-        :'required_without_shrinkage' => :'requiredWithoutShrinkage'
+        :'applied' => :'applied'
         
       }
     end
@@ -40,9 +34,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'required' => :'Array<HeadcountIntervalResponse>',
-        
-        :'required_without_shrinkage' => :'Array<HeadcountIntervalResponse>'
+        :'applied' => :'BOOLEAN'
         
       }
     end
@@ -56,23 +48,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'required')
-        
-        if (value = attributes[:'required']).is_a?(Array)
-          self.required = value
-        end
+      if attributes.has_key?(:'applied')
         
         
-      
-      end
-
-      
-      if attributes.has_key?(:'requiredWithoutShrinkage')
-        
-        if (value = attributes[:'requiredWithoutShrinkage']).is_a?(Array)
-          self.required_without_shrinkage = value
-        end
-        
+        self.applied = attributes[:'applied']
         
       
       end
@@ -97,17 +76,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -119,8 +89,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          required == o.required &&
-          required_without_shrinkage == o.required_without_shrinkage
+          applied == o.applied
     end
 
     # @see the `==` method
@@ -132,7 +101,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [required, required_without_shrinkage].hash
+      [applied].hash
     end
 
     # build the object from hash

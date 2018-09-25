@@ -17,7 +17,7 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class JsonNode
+  class ArrayNode
     attr_accessor :node_type
 
     attr_accessor :object

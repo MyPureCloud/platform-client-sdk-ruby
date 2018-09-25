@@ -24,13 +24,13 @@ module PureCloud
     # The name of the Facebook Integration
     attr_accessor :name
 
-    # The Page Access Token of a facebook page
+    # The long-lived Page Access Token of a facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required.
     attr_accessor :page_access_token
 
-    # The User Access Token of the facebook user logged into the facebook app
+    # The short-lived User Access Token of the facebook user logged into the facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required.
     attr_accessor :user_access_token
 
-    # The page Id of a facebook page
+    # The page Id of a facebook page. The pageId is required when userAccessToken is provided.
     attr_accessor :page_id
 
     # The app Id of a facebook app

@@ -33,9 +33,6 @@ module PureCloud
     # The Switcher Secret from LINE messenger. Some line official accounts are switcher functionality enabled. If the LINE account used for this integration is switcher enabled, then switcher secret is a required field. This secret can be found in your create documentation provided by LINE
     attr_accessor :switcher_secret
 
-    # The Channel Access Token from LINE messenger
-    attr_accessor :channel_access_token
-
     # The URI for this object
     attr_accessor :self_uri
 
@@ -52,8 +49,6 @@ module PureCloud
         :'channel_secret' => :'channelSecret',
         
         :'switcher_secret' => :'switcherSecret',
-        
-        :'channel_access_token' => :'channelAccessToken',
         
         :'self_uri' => :'selfUri'
         
@@ -73,8 +68,6 @@ module PureCloud
         :'channel_secret' => :'String',
         
         :'switcher_secret' => :'String',
-        
-        :'channel_access_token' => :'String',
         
         :'self_uri' => :'String'
         
@@ -135,15 +128,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'channelAccessToken')
-        
-        
-        self.channel_access_token = attributes[:'channelAccessToken']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'selfUri')
         
         
@@ -197,17 +181,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -249,7 +224,6 @@ module PureCloud
           channel_id == o.channel_id &&
           channel_secret == o.channel_secret &&
           switcher_secret == o.switcher_secret &&
-          channel_access_token == o.channel_access_token &&
           self_uri == o.self_uri
     end
 
@@ -262,7 +236,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, channel_id, channel_secret, switcher_secret, channel_access_token, self_uri].hash
+      [id, name, channel_id, channel_secret, switcher_secret, self_uri].hash
     end
 
     # build the object from hash

@@ -45,6 +45,12 @@ module PureCloud
     # The dnis list is used to filter the view
     attr_accessor :dnis_list
 
+    # The user ids are used to fetch associated queues for the view
+    attr_accessor :filter_queues_by_user_ids
+
+    # The queue ids are used to fetch associated users for the view
+    attr_accessor :filter_users_by_queue_ids
+
     # The user ids are used to filter the view
     attr_accessor :user_ids
 
@@ -127,6 +133,10 @@ module PureCloud
         
         :'dnis_list' => :'dnisList',
         
+        :'filter_queues_by_user_ids' => :'filterQueuesByUserIds',
+        
+        :'filter_users_by_queue_ids' => :'filterUsersByQueueIds',
+        
         :'user_ids' => :'userIds',
         
         :'address_tos' => :'addressTos',
@@ -191,6 +201,10 @@ module PureCloud
         :'wrap_up_codes' => :'Array<String>',
         
         :'dnis_list' => :'Array<String>',
+        
+        :'filter_queues_by_user_ids' => :'Array<String>',
+        
+        :'filter_users_by_queue_ids' => :'Array<String>',
         
         :'user_ids' => :'Array<String>',
         
@@ -336,6 +350,28 @@ module PureCloud
         
         if (value = attributes[:'dnisList']).is_a?(Array)
           self.dnis_list = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'filterQueuesByUserIds')
+        
+        if (value = attributes[:'filterQueuesByUserIds']).is_a?(Array)
+          self.filter_queues_by_user_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'filterUsersByQueueIds')
+        
+        if (value = attributes[:'filterUsersByQueueIds']).is_a?(Array)
+          self.filter_users_by_queue_ids = value
         end
         
         
@@ -682,8 +718,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -844,6 +898,8 @@ module PureCloud
           directions == o.directions &&
           wrap_up_codes == o.wrap_up_codes &&
           dnis_list == o.dnis_list &&
+          filter_queues_by_user_ids == o.filter_queues_by_user_ids &&
+          filter_users_by_queue_ids == o.filter_users_by_queue_ids &&
           user_ids == o.user_ids &&
           address_tos == o.address_tos &&
           address_froms == o.address_froms &&
@@ -875,7 +931,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score].hash
     end
 
     # build the object from hash

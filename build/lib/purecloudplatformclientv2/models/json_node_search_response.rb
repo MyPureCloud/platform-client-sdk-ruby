@@ -94,9 +94,9 @@ module PureCloud
         
         :'types' => :'Array<String>',
         
-        :'results' => :'JsonNode',
+        :'results' => :'ArrayNode',
         
-        :'aggregations' => :'JsonNode'
+        :'aggregations' => :'ArrayNode'
         
       }
     end

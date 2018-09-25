@@ -36,7 +36,13 @@ module PureCloud
     # Version of agent schedules in the week schedule
     attr_accessor :agent_schedules_version
 
-    # The condition to notify agents about schedule updates. Applicable to only published schedule
+    # Reference to optionally point the schedule at a new short term forecast
+    attr_accessor :short_term_forecast
+
+    # The headcount forecast associated with the schedule.  If not null, existing values will be irrecoverably replaced
+    attr_accessor :headcount_forecast
+
+    # For a published schedule, this determines whether a notification will be shown to agents in the default PureCloud user interface.  The CPC notification will always be sent and the value specified here affects what data is returned in the 'updates' property.  In the default PureCloud UI, \"None\" means that agents will not be notified, \"ShiftTimesOnly\" means agents will only be notified for changes to shift start and end times,  and \"All\" means that agents will be notified for any change to a shift or activity (except for full day off activities).  When building a custom client, use this property to specify the level of detail you need. Defaults to \"ShiftTimesOnly\".
     attr_accessor :agent_update_filter
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -54,6 +60,10 @@ module PureCloud
         :'metadata' => :'metadata',
         
         :'agent_schedules_version' => :'agentSchedulesVersion',
+        
+        :'short_term_forecast' => :'shortTermForecast',
+        
+        :'headcount_forecast' => :'headcountForecast',
         
         :'agent_update_filter' => :'agentUpdateFilter'
         
@@ -75,6 +85,10 @@ module PureCloud
         :'metadata' => :'WfmVersionedEntityMetadata',
         
         :'agent_schedules_version' => :'Integer',
+        
+        :'short_term_forecast' => :'ShortTermForecastReference',
+        
+        :'headcount_forecast' => :'HeadcountForecast',
         
         :'agent_update_filter' => :'String'
         
@@ -148,6 +162,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'shortTermForecast')
+        
+        
+        self.short_term_forecast = attributes[:'shortTermForecast']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'headcountForecast')
+        
+        
+        self.headcount_forecast = attributes[:'headcountForecast']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'agentUpdateFilter')
         
         
@@ -208,6 +240,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["All", "ShiftTimeChange", "None"]
       if @agent_update_filter && !allowed_values.include?(@agent_update_filter)
         return false
@@ -217,6 +257,16 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -273,6 +323,8 @@ module PureCloud
           partial_upload_ids == o.partial_upload_ids &&
           metadata == o.metadata &&
           agent_schedules_version == o.agent_schedules_version &&
+          short_term_forecast == o.short_term_forecast &&
+          headcount_forecast == o.headcount_forecast &&
           agent_update_filter == o.agent_update_filter
     end
 
@@ -285,7 +337,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [description, published, user_schedules, partial_upload_ids, metadata, agent_schedules_version, agent_update_filter].hash
+      [description, published, user_schedules, partial_upload_ids, metadata, agent_schedules_version, short_term_forecast, headcount_forecast, agent_update_filter].hash
     end
 
     # build the object from hash

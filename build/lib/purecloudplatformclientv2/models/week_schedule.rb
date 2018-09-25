@@ -101,7 +101,7 @@ module PureCloud
         
         :'user_schedules' => :'Hash<String, UserSchedule>',
         
-        :'headcount_forecast' => :'HeadcountForecastResponse',
+        :'headcount_forecast' => :'HeadcountForecast',
         
         :'agent_schedules_version' => :'Integer',
         

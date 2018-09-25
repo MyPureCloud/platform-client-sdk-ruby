@@ -2573,6 +2573,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :name Name
+    # @option opts [BOOLEAN] :only_latest_per_context onlyLatestPerContext (default to false)
     # @return [EvaluationFormEntityListing]
     def get_quality_publishedforms(opts = {})
       data, _status_code, _headers = get_quality_publishedforms_with_http_info(opts)
@@ -2585,11 +2586,18 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :name Name
+    # @option opts [BOOLEAN] :only_latest_per_context onlyLatestPerContext
     # @return [Array<(EvaluationFormEntityListing, Fixnum, Hash)>] EvaluationFormEntityListing data, response status code and response headers
     def get_quality_publishedforms_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_publishedforms ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2617,6 +2625,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'onlyLatestPerContext'] = opts[:'only_latest_per_context'] if opts[:'only_latest_per_context']
 
       # header parameters
       header_params = {}
@@ -2720,6 +2729,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :name Name
+    # @option opts [BOOLEAN] :only_latest_per_context onlyLatestPerContext (default to false)
     # @return [EvaluationFormEntityListing]
     def get_quality_publishedforms_evaluations(opts = {})
       data, _status_code, _headers = get_quality_publishedforms_evaluations_with_http_info(opts)
@@ -2732,11 +2742,18 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :name Name
+    # @option opts [BOOLEAN] :only_latest_per_context onlyLatestPerContext
     # @return [Array<(EvaluationFormEntityListing, Fixnum, Hash)>] EvaluationFormEntityListing data, response status code and response headers
     def get_quality_publishedforms_evaluations_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_publishedforms_evaluations ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2764,6 +2781,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'onlyLatestPerContext'] = opts[:'only_latest_per_context'] if opts[:'only_latest_per_context']
 
       # header parameters
       header_params = {}
@@ -2867,6 +2885,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :name Name
+    # @option opts [BOOLEAN] :only_latest_enabled_per_context onlyLatestEnabledPerContext (default to false)
     # @return [SurveyFormEntityListing]
     def get_quality_publishedforms_surveys(opts = {})
       data, _status_code, _headers = get_quality_publishedforms_surveys_with_http_info(opts)
@@ -2879,11 +2898,18 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :name Name
+    # @option opts [BOOLEAN] :only_latest_enabled_per_context onlyLatestEnabledPerContext
     # @return [Array<(SurveyFormEntityListing, Fixnum, Hash)>] SurveyFormEntityListing data, response status code and response headers
     def get_quality_publishedforms_surveys_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_publishedforms_surveys ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2911,6 +2937,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'onlyLatestEnabledPerContext'] = opts[:'only_latest_enabled_per_context'] if opts[:'only_latest_enabled_per_context']
 
       # header parameters
       header_params = {}

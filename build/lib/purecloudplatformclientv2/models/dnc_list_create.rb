@@ -21,7 +21,7 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
-    # The name of the list.
+    # The name of the DncList.
     attr_accessor :name
 
     # Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -33,22 +33,22 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
-    # the status of the import process
+    # The status of the import process
     attr_accessor :import_status
 
-    # the number of phone numbers in the do not call list
+    # The total number of phone numbers in the DncList.
     attr_accessor :size
 
-    # the type of dnc list being created, rds (csv file), gryphon, or dnc.com
+    # The type of the DncList.
     attr_accessor :dnc_source_type
 
-    # the loginId if the dncSourceType is dnc.com
+    # A dnc.com loginId. Required if the dncSourceType is dnc.com.
     attr_accessor :login_id
 
-    # the list of dnc.com codes to be treated as DNC
+    # The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com.
     attr_accessor :dnc_codes
 
-    # the license number if the dncSourceType is gryphon
+    # A gryphon license number. Required if the dncSourceType is gryphon.
     attr_accessor :license_id
 
     # The URI for this object
@@ -283,6 +283,11 @@ module PureCloud
       
       
       
+      
+      if @dnc_source_type.nil?
+        return false
+      end
+
       
       
       allowed_values = ["rds", "dnc.com", "gryphon"]

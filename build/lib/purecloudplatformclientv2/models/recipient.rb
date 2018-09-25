@@ -38,6 +38,9 @@ module PureCloud
     # User that modified this recipient
     attr_accessor :modified_by
 
+    # The messenger type for this recipient
+    attr_accessor :messenger_type
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -58,6 +61,8 @@ module PureCloud
         :'created_by' => :'createdBy',
         
         :'modified_by' => :'modifiedBy',
+        
+        :'messenger_type' => :'messengerType',
         
         :'self_uri' => :'selfUri'
         
@@ -81,6 +86,8 @@ module PureCloud
         :'created_by' => :'User',
         
         :'modified_by' => :'User',
+        
+        :'messenger_type' => :'String',
         
         :'self_uri' => :'String'
         
@@ -159,6 +166,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'messengerType')
+        
+        
+        self.messenger_type = attributes[:'messengerType']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -213,6 +229,15 @@ module PureCloud
       
       
       
+      allowed_values = ["sms", "facebook", "twitter", "line", "whatsapp", "telegram", "kakao"]
+      if @messenger_type && !allowed_values.include?(@messenger_type)
+        return false
+      end
+      
+      
+      
+      
+      
       
       
     end
@@ -250,6 +275,20 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] messenger_type Object to be assigned
+    def messenger_type=(messenger_type)
+      allowed_values = ["sms", "facebook", "twitter", "line", "whatsapp", "telegram", "kakao"]
+      if messenger_type && !allowed_values.include?(messenger_type)
+        fail ArgumentError, "invalid value for 'messenger_type', must be one of #{allowed_values}."
+      end
+      @messenger_type = messenger_type
+    end
+
     
     
     
@@ -270,6 +309,7 @@ module PureCloud
           date_modified == o.date_modified &&
           created_by == o.created_by &&
           modified_by == o.modified_by &&
+          messenger_type == o.messenger_type &&
           self_uri == o.self_uri
     end
 
@@ -282,7 +322,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, flow, date_created, date_modified, created_by, modified_by, self_uri].hash
+      [id, name, flow, date_created, date_modified, created_by, modified_by, messenger_type, self_uri].hash
     end
 
     # build the object from hash

@@ -20,7 +20,6 @@ Method | Description
 [**get_messaging_sticker**](MessagingApi.html#get_messaging_sticker) | Get a list of Messaging Stickers
 [**post_messaging_integrations_facebook**](MessagingApi.html#post_messaging_integrations_facebook) | Create a Facebook Integration
 [**post_messaging_integrations_line**](MessagingApi.html#post_messaging_integrations_line) | Create a LINE messenger Integration
-[**post_messaging_integrations_line_webhook_integration_id**](MessagingApi.html#post_messaging_integrations_line_webhook_integration_id) | Webhook redirect for LINE messenger Integration
 [**post_messaging_integrations_twitter**](MessagingApi.html#post_messaging_integrations_twitter) | Create a Twitter Integration
 [**put_messaging_integrations_line_integration_id**](MessagingApi.html#put_messaging_integrations_line_integration_id) | Update a LINE messenger integration
 {: class="table table-striped"}
@@ -809,69 +808,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LineIntegration**](LineIntegration.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-<a name="post_messaging_integrations_line_webhook_integration_id"></a>
-
-## - post_messaging_integrations_line_webhook_integration_id(integration_id)
-
-
-
-Webhook redirect for LINE messenger Integration
-
-
-
-Wraps POST /api/v2/messaging/integrations/line/webhook/{integrationId} 
-
-Requires NO permissions: 
-
-
-
-### Example
-~~~ruby
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::MessagingApi.new
-
-integration_id = "integration_id_example" # String | Integration ID
-
-
-begin
-  #Webhook redirect for LINE messenger Integration
-  api_instance.post_messaging_integrations_line_webhook_integration_id(integration_id)
-rescue PureCloud::ApiError => e
-  puts "Exception when calling MessagingApi->post_messaging_integrations_line_webhook_integration_id: #{e}"
-end
-~~~
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **integration_id** | **String**| Integration ID |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-nil (empty response body)
 
 ### HTTP request headers
 

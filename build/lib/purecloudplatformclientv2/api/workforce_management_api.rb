@@ -987,6 +987,156 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Gets the status for a specific scheduling run
+    # 
+    # @param management_unit_id The ID of the management unit.
+    # @param run_id The ID of the schedule run
+    # @param [Hash] opts the optional parameters
+    # @return [SchedulingRunResponse]
+    def get_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_scheduling_run_with_http_info(management_unit_id, run_id, opts)
+      return data
+    end
+
+    # Gets the status for a specific scheduling run
+    # 
+    # @param management_unit_id The ID of the management unit.
+    # @param run_id The ID of the schedule run
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SchedulingRunResponse, Fixnum, Hash)>] SchedulingRunResponse data, response status code and response headers
+    def get_workforcemanagement_managementunit_scheduling_run_with_http_info(management_unit_id, run_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_scheduling_run ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_scheduling_run" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'run_id' is set
+      fail ArgumentError, "Missing the required parameter 'run_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_scheduling_run" if run_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'runId' + '}', run_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SchedulingRunResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_scheduling_run\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Gets the result of a specific scheduling run
+    # 
+    # @param management_unit_id The ID of the management unit.
+    # @param run_id The ID of the schedule run
+    # @param [Hash] opts the optional parameters
+    # @return [RescheduleResult]
+    def get_workforcemanagement_managementunit_scheduling_run_result(management_unit_id, run_id, opts = {})
+      data, _status_code, _headers = get_workforcemanagement_managementunit_scheduling_run_result_with_http_info(management_unit_id, run_id, opts)
+      return data
+    end
+
+    # Gets the result of a specific scheduling run
+    # 
+    # @param management_unit_id The ID of the management unit.
+    # @param run_id The ID of the schedule run
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(RescheduleResult, Fixnum, Hash)>] RescheduleResult data, response status code and response headers
+    def get_workforcemanagement_managementunit_scheduling_run_result_with_http_info(management_unit_id, run_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_scheduling_run_result ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_scheduling_run_result" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'run_id' is set
+      fail ArgumentError, "Missing the required parameter 'run_id' when calling WorkforceManagementApi.get_workforcemanagement_managementunit_scheduling_run_result" if run_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}/result".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'runId' + '}', run_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'RescheduleResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_scheduling_run_result\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get the status of all the ongoing schedule runs
     # 
     # @param management_unit_id The ID of the management unit.
@@ -2464,6 +2614,89 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+    # 
+    # @param management_unit_id The ID of the management unit.
+    # @param run_id The ID of the schedule run
+    # @param [Hash] opts the optional parameters
+    # @option opts [UpdateSchedulingRunRequest] :body body
+    # @return [RescheduleResult]
+    def patch_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id, opts = {})
+      data, _status_code, _headers = patch_workforcemanagement_managementunit_scheduling_run_with_http_info(management_unit_id, run_id, opts)
+      return data
+    end
+
+    # Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+    # 
+    # @param management_unit_id The ID of the management unit.
+    # @param run_id The ID of the schedule run
+    # @param [Hash] opts the optional parameters
+    # @option opts [UpdateSchedulingRunRequest] :body body
+    # @return [Array<(RescheduleResult, Fixnum, Hash)>] RescheduleResult data, response status code and response headers
+    def patch_workforcemanagement_managementunit_scheduling_run_with_http_info(management_unit_id, run_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.patch_workforcemanagement_managementunit_scheduling_run ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_scheduling_run" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'run_id' is set
+      fail ArgumentError, "Missing the required parameter 'run_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit_scheduling_run" if run_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'runId' + '}', run_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'RescheduleResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#patch_workforcemanagement_managementunit_scheduling_run\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Update a service goal group
     # 
     # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
@@ -3734,6 +3967,99 @@ module PureCloud
         :return_type => 'AsyncWeekScheduleResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_week_schedule_copy\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of the schedule to re-optimize
+    # @param [Hash] opts the optional parameters
+    # @option opts [RescheduleRequest] :body body
+    # @return [AsyncWeekScheduleResponse]
+    def post_workforcemanagement_managementunit_week_schedule_reschedule(management_unit_id, week_id, schedule_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_week_schedule_reschedule_with_http_info(management_unit_id, week_id, schedule_id, opts)
+      return data
+    end
+
+    # Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+    # 
+    # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param week_id First day of schedule week in yyyy-MM-dd format.
+    # @param schedule_id The ID of the schedule to re-optimize
+    # @param [Hash] opts the optional parameters
+    # @option opts [RescheduleRequest] :body body
+    # @return [Array<(AsyncWeekScheduleResponse, Fixnum, Hash)>] AsyncWeekScheduleResponse data, response status code and response headers
+    def post_workforcemanagement_managementunit_week_schedule_reschedule_with_http_info(management_unit_id, week_id, schedule_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedule_reschedule ..."
+      end
+      
+      
+      # verify the required parameter 'management_unit_id' is set
+      fail ArgumentError, "Missing the required parameter 'management_unit_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedule_reschedule" if management_unit_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'week_id' is set
+      fail ArgumentError, "Missing the required parameter 'week_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedule_reschedule" if week_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'schedule_id' is set
+      fail ArgumentError, "Missing the required parameter 'schedule_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_week_schedule_reschedule" if schedule_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekId' + '}', week_id.to_s).sub('{' + 'scheduleId' + '}', schedule_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AsyncWeekScheduleResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_week_schedule_reschedule\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -34,6 +34,9 @@ module PureCloud
     # User's password
     attr_accessor :password
 
+    # The division to which this user will belong
+    attr_accessor :division_id
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -48,7 +51,9 @@ module PureCloud
         
         :'title' => :'title',
         
-        :'password' => :'password'
+        :'password' => :'password',
+        
+        :'division_id' => :'divisionId'
         
       }
     end
@@ -67,7 +72,9 @@ module PureCloud
         
         :'title' => :'String',
         
-        :'password' => :'String'
+        :'password' => :'String',
+        
+        :'division_id' => :'String'
         
       }
     end
@@ -137,6 +144,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'divisionId')
+        
+        
+        self.division_id = attributes[:'divisionId']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -191,8 +207,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -234,7 +259,8 @@ module PureCloud
           email == o.email &&
           addresses == o.addresses &&
           title == o.title &&
-          password == o.password
+          password == o.password &&
+          division_id == o.division_id
     end
 
     # @see the `==` method
@@ -246,7 +272,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, department, email, addresses, title, password].hash
+      [name, department, email, addresses, title, password, division_id].hash
     end
 
     # build the object from hash
