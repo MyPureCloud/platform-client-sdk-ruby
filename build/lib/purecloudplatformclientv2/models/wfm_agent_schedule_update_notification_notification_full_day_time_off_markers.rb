@@ -17,26 +17,38 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class IntradayDataUpdateNotificationStartDate
-    attr_accessor :i_millis
+  class WfmAgentScheduleUpdateNotificationNotificationFullDayTimeOffMarkers
+    attr_accessor :time_off_request_id
 
-    attr_accessor :before_now
+    attr_accessor :management_unit_date
 
-    attr_accessor :after_now
+    attr_accessor :activity_code_id
 
-    attr_accessor :equal_now
+    attr_accessor :is_paid
+
+    attr_accessor :length_in_minutes
+
+    attr_accessor :description
+
+    attr_accessor :paid
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'i_millis' => :'iMillis',
+        :'time_off_request_id' => :'timeOffRequestId',
         
-        :'before_now' => :'beforeNow',
+        :'management_unit_date' => :'managementUnitDate',
         
-        :'after_now' => :'afterNow',
+        :'activity_code_id' => :'activityCodeId',
         
-        :'equal_now' => :'equalNow'
+        :'is_paid' => :'isPaid',
+        
+        :'length_in_minutes' => :'lengthInMinutes',
+        
+        :'description' => :'description',
+        
+        :'paid' => :'paid'
         
       }
     end
@@ -45,13 +57,19 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'i_millis' => :'Integer',
+        :'time_off_request_id' => :'String',
         
-        :'before_now' => :'BOOLEAN',
+        :'management_unit_date' => :'String',
         
-        :'after_now' => :'BOOLEAN',
+        :'activity_code_id' => :'String',
         
-        :'equal_now' => :'BOOLEAN'
+        :'is_paid' => :'BOOLEAN',
+        
+        :'length_in_minutes' => :'Integer',
+        
+        :'description' => :'String',
+        
+        :'paid' => :'BOOLEAN'
         
       }
     end
@@ -65,37 +83,64 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'iMillis')
+      if attributes.has_key?(:'timeOffRequestId')
         
         
-        self.i_millis = attributes[:'iMillis']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'beforeNow')
-        
-        
-        self.before_now = attributes[:'beforeNow']
+        self.time_off_request_id = attributes[:'timeOffRequestId']
         
       
       end
 
       
-      if attributes.has_key?(:'afterNow')
+      if attributes.has_key?(:'managementUnitDate')
         
         
-        self.after_now = attributes[:'afterNow']
+        self.management_unit_date = attributes[:'managementUnitDate']
         
       
       end
 
       
-      if attributes.has_key?(:'equalNow')
+      if attributes.has_key?(:'activityCodeId')
         
         
-        self.equal_now = attributes[:'equalNow']
+        self.activity_code_id = attributes[:'activityCodeId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isPaid')
+        
+        
+        self.is_paid = attributes[:'isPaid']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'lengthInMinutes')
+        
+        
+        self.length_in_minutes = attributes[:'lengthInMinutes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'description')
+        
+        
+        self.description = attributes[:'description']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'paid')
+        
+        
+        self.paid = attributes[:'paid']
         
       
       end
@@ -132,8 +177,35 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -160,10 +232,13 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          i_millis == o.i_millis &&
-          before_now == o.before_now &&
-          after_now == o.after_now &&
-          equal_now == o.equal_now
+          time_off_request_id == o.time_off_request_id &&
+          management_unit_date == o.management_unit_date &&
+          activity_code_id == o.activity_code_id &&
+          is_paid == o.is_paid &&
+          length_in_minutes == o.length_in_minutes &&
+          description == o.description &&
+          paid == o.paid
     end
 
     # @see the `==` method
@@ -175,7 +250,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [i_millis, before_now, after_now, equal_now].hash
+      [time_off_request_id, management_unit_date, activity_code_id, is_paid, length_in_minutes, description, paid].hash
     end
 
     # build the object from hash

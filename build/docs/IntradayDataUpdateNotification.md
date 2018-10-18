@@ -7,8 +7,8 @@ title: IntradayDataUpdateNotification
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **start_date** | [**IntradayDataUpdateNotificationStartDate**](IntradayDataUpdateNotificationStartDate.html) |  | [optional] |
-| **end_date** | [**IntradayDataUpdateNotificationDateTime**](IntradayDataUpdateNotificationDateTime.html) |  | [optional] |
+| **start_date** | **DateTime** |  | [optional] |
+| **end_date** | **DateTime** |  | [optional] |
 | **interval_length_minutes** | **Integer** |  | [optional] |
 | **number_of_intervals** | **Integer** |  | [optional] |
 | **metrics** | [**Array&lt;IntradayDataUpdateNotificationMetrics&gt;**](IntradayDataUpdateNotificationMetrics.html) |  | [optional] |

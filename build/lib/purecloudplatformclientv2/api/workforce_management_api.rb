@@ -2156,7 +2156,7 @@ module PureCloud
     # 
     # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :expand 
+    # @option opts [Array<String>] :expand 
     # @return [WorkPlanListResponse]
     def get_workforcemanagement_managementunit_workplans(management_unit_id, opts = {})
       data, _status_code, _headers = get_workforcemanagement_managementunit_workplans_with_http_info(management_unit_id, opts)
@@ -2167,7 +2167,7 @@ module PureCloud
     # 
     # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :expand 
+    # @option opts [Array<String>] :expand 
     # @return [Array<(WorkPlanListResponse, Fixnum, Hash)>] WorkPlanListResponse data, response status code and response headers
     def get_workforcemanagement_managementunit_workplans_with_http_info(management_unit_id, opts = {})
       if @api_client.config.debugging
@@ -2185,10 +2185,6 @@ module PureCloud
       
       
       
-      if opts[:'expand'] && !['agentCount'].include?(opts[:'expand'])
-        fail ArgumentError, 'invalid value for "expand", must be one of agentCount'
-      end
-      
       
       
       
@@ -2197,7 +2193,7 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
 
       # header parameters
       header_params = {}

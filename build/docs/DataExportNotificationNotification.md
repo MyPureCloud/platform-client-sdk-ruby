@@ -17,6 +17,7 @@ title: DataExportNotificationNotification
 | **read** | **BOOLEAN** |  | [optional] |
 | **created_date_time** | **DateTime** |  | [optional] |
 | **modified_date_time** | **DateTime** |  | [optional] |
+| **percentage_complete** | **Float** |  | [optional] |
 {: class="table table-striped"}
 
 

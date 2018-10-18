@@ -17,26 +17,14 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class UserScheduleAdherenceUpdateNotificationDateTime
-    attr_accessor :i_millis
-
-    attr_accessor :before_now
-
-    attr_accessor :after_now
-
-    attr_accessor :equal_now
+  class WfmAgentScheduleUpdateNotificationNotificationUserReference
+    attr_accessor :id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'i_millis' => :'iMillis',
-        
-        :'before_now' => :'beforeNow',
-        
-        :'after_now' => :'afterNow',
-        
-        :'equal_now' => :'equalNow'
+        :'id' => :'id'
         
       }
     end
@@ -45,13 +33,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'i_millis' => :'Integer',
-        
-        :'before_now' => :'BOOLEAN',
-        
-        :'after_now' => :'BOOLEAN',
-        
-        :'equal_now' => :'BOOLEAN'
+        :'id' => :'String'
         
       }
     end
@@ -65,37 +47,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'iMillis')
+      if attributes.has_key?(:'id')
         
         
-        self.i_millis = attributes[:'iMillis']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'beforeNow')
-        
-        
-        self.before_now = attributes[:'beforeNow']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'afterNow')
-        
-        
-        self.after_now = attributes[:'afterNow']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'equalNow')
-        
-        
-        self.equal_now = attributes[:'equalNow']
+        self.id = attributes[:'id']
         
       
       end
@@ -120,35 +75,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -160,10 +88,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          i_millis == o.i_millis &&
-          before_now == o.before_now &&
-          after_now == o.after_now &&
-          equal_now == o.equal_now
+          id == o.id
     end
 
     # @see the `==` method
@@ -175,7 +100,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [i_millis, before_now, after_now, equal_now].hash
+      [id].hash
     end
 
     # build the object from hash

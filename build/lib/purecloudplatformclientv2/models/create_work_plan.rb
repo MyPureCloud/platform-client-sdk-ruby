@@ -40,6 +40,12 @@ module PureCloud
     # Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true
     attr_accessor :weekly_maximum_paid_minutes
 
+    # Whether paid time granularity should be constrained for this workplan
+    attr_accessor :constrain_paid_time_granularity
+
+    # Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true
+    attr_accessor :paid_time_granularity_minutes
+
     # Whether the minimum time between shifts constraint is enabled for this work plan
     attr_accessor :constrain_minimum_time_between_shifts
 
@@ -79,6 +85,10 @@ module PureCloud
         
         :'weekly_maximum_paid_minutes' => :'weeklyMaximumPaidMinutes',
         
+        :'constrain_paid_time_granularity' => :'constrainPaidTimeGranularity',
+        
+        :'paid_time_granularity_minutes' => :'paidTimeGranularityMinutes',
+        
         :'constrain_minimum_time_between_shifts' => :'constrainMinimumTimeBetweenShifts',
         
         :'minimum_time_between_shifts_minutes' => :'minimumTimeBetweenShiftsMinutes',
@@ -113,6 +123,10 @@ module PureCloud
         :'weekly_minimum_paid_minutes' => :'Integer',
         
         :'weekly_maximum_paid_minutes' => :'Integer',
+        
+        :'constrain_paid_time_granularity' => :'BOOLEAN',
+        
+        :'paid_time_granularity_minutes' => :'Integer',
         
         :'constrain_minimum_time_between_shifts' => :'BOOLEAN',
         
@@ -198,6 +212,24 @@ module PureCloud
         
         
         self.weekly_maximum_paid_minutes = attributes[:'weeklyMaximumPaidMinutes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'constrainPaidTimeGranularity')
+        
+        
+        self.constrain_paid_time_granularity = attributes[:'constrainPaidTimeGranularity']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'paidTimeGranularityMinutes')
+        
+        
+        self.paid_time_granularity_minutes = attributes[:'paidTimeGranularityMinutes']
         
       
       end
@@ -346,8 +378,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -431,6 +481,8 @@ module PureCloud
           weekly_exact_paid_minutes == o.weekly_exact_paid_minutes &&
           weekly_minimum_paid_minutes == o.weekly_minimum_paid_minutes &&
           weekly_maximum_paid_minutes == o.weekly_maximum_paid_minutes &&
+          constrain_paid_time_granularity == o.constrain_paid_time_granularity &&
+          paid_time_granularity_minutes == o.paid_time_granularity_minutes &&
           constrain_minimum_time_between_shifts == o.constrain_minimum_time_between_shifts &&
           minimum_time_between_shifts_minutes == o.minimum_time_between_shifts_minutes &&
           maximum_days == o.maximum_days &&
@@ -449,7 +501,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, enabled, constrain_weekly_paid_time, flexible_weekly_paid_time, weekly_exact_paid_minutes, weekly_minimum_paid_minutes, weekly_maximum_paid_minutes, constrain_minimum_time_between_shifts, minimum_time_between_shifts_minutes, maximum_days, optional_days, shift_start_variances, shifts, agents].hash
+      [name, enabled, constrain_weekly_paid_time, flexible_weekly_paid_time, weekly_exact_paid_minutes, weekly_minimum_paid_minutes, weekly_maximum_paid_minutes, constrain_paid_time_granularity, paid_time_granularity_minutes, constrain_minimum_time_between_shifts, minimum_time_between_shifts_minutes, maximum_days, optional_days, shift_start_variances, shifts, agents].hash
     end
 
     # build the object from hash

@@ -17,26 +17,34 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
-  class IntradayDataUpdateNotificationDateTime
-    attr_accessor :i_millis
+  class WfmAgentScheduleUpdateNotificationNotification
+    attr_accessor :user
 
-    attr_accessor :before_now
+    attr_accessor :start_date
 
-    attr_accessor :after_now
+    attr_accessor :end_date
 
-    attr_accessor :equal_now
+    attr_accessor :shifts
+
+    attr_accessor :full_day_time_off_markers
+
+    attr_accessor :updates
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'i_millis' => :'iMillis',
+        :'user' => :'user',
         
-        :'before_now' => :'beforeNow',
+        :'start_date' => :'startDate',
         
-        :'after_now' => :'afterNow',
+        :'end_date' => :'endDate',
         
-        :'equal_now' => :'equalNow'
+        :'shifts' => :'shifts',
+        
+        :'full_day_time_off_markers' => :'fullDayTimeOffMarkers',
+        
+        :'updates' => :'updates'
         
       }
     end
@@ -45,13 +53,17 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'i_millis' => :'Integer',
+        :'user' => :'DocumentDataV2NotificationWorkspace',
         
-        :'before_now' => :'BOOLEAN',
+        :'start_date' => :'DateTime',
         
-        :'after_now' => :'BOOLEAN',
+        :'end_date' => :'DateTime',
         
-        :'equal_now' => :'BOOLEAN'
+        :'shifts' => :'Array<WfmAgentScheduleUpdateNotificationNotificationShifts>',
+        
+        :'full_day_time_off_markers' => :'Array<WfmAgentScheduleUpdateNotificationNotificationFullDayTimeOffMarkers>',
+        
+        :'updates' => :'Array<WfmAgentScheduleUpdateNotificationNotificationUpdates>'
         
       }
     end
@@ -65,37 +77,61 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'iMillis')
+      if attributes.has_key?(:'user')
         
         
-        self.i_millis = attributes[:'iMillis']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'beforeNow')
-        
-        
-        self.before_now = attributes[:'beforeNow']
+        self.user = attributes[:'user']
         
       
       end
 
       
-      if attributes.has_key?(:'afterNow')
+      if attributes.has_key?(:'startDate')
         
         
-        self.after_now = attributes[:'afterNow']
+        self.start_date = attributes[:'startDate']
         
       
       end
 
       
-      if attributes.has_key?(:'equalNow')
+      if attributes.has_key?(:'endDate')
         
         
-        self.equal_now = attributes[:'equalNow']
+        self.end_date = attributes[:'endDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'shifts')
+        
+        if (value = attributes[:'shifts']).is_a?(Array)
+          self.shifts = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'fullDayTimeOffMarkers')
+        
+        if (value = attributes[:'fullDayTimeOffMarkers']).is_a?(Array)
+          self.full_day_time_off_markers = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'updates')
+        
+        if (value = attributes[:'updates']).is_a?(Array)
+          self.updates = value
+        end
+        
         
       
       end
@@ -132,8 +168,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -160,10 +214,12 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          i_millis == o.i_millis &&
-          before_now == o.before_now &&
-          after_now == o.after_now &&
-          equal_now == o.equal_now
+          user == o.user &&
+          start_date == o.start_date &&
+          end_date == o.end_date &&
+          shifts == o.shifts &&
+          full_day_time_off_markers == o.full_day_time_off_markers &&
+          updates == o.updates
     end
 
     # @see the `==` method
@@ -175,7 +231,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [i_millis, before_now, after_now, equal_now].hash
+      [user, start_date, end_date, shifts, full_day_time_off_markers, updates].hash
     end
 
     # build the object from hash

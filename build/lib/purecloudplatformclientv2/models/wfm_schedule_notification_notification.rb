@@ -24,6 +24,8 @@ module PureCloud
 
     attr_accessor :download_url
 
+    attr_accessor :percent_complete
+
     attr_accessor :event_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -35,6 +37,8 @@ module PureCloud
         :'operation_id' => :'operationId',
         
         :'download_url' => :'downloadUrl',
+        
+        :'percent_complete' => :'percentComplete',
         
         :'event_type' => :'eventType'
         
@@ -50,6 +54,8 @@ module PureCloud
         :'operation_id' => :'String',
         
         :'download_url' => :'String',
+        
+        :'percent_complete' => :'Integer',
         
         :'event_type' => :'String'
         
@@ -87,6 +93,15 @@ module PureCloud
         
         
         self.download_url = attributes[:'downloadUrl']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'percentComplete')
+        
+        
+        self.percent_complete = attributes[:'percentComplete']
         
       
       end
@@ -135,7 +150,11 @@ module PureCloud
       
       
       
-      allowed_values = ["Update", "Import", "Copy", "Generate"]
+      
+      
+      
+      
+      allowed_values = ["Update", "Import", "Copy", "Generate", "Reschedule"]
       if @event_type && !allowed_values.include?(@event_type)
         return false
       end
@@ -170,10 +189,15 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] event_type Object to be assigned
     def event_type=(event_type)
-      allowed_values = ["Update", "Import", "Copy", "Generate"]
+      allowed_values = ["Update", "Import", "Copy", "Generate", "Reschedule"]
       if event_type && !allowed_values.include?(event_type)
         fail ArgumentError, "invalid value for 'event_type', must be one of #{allowed_values}."
       end
@@ -191,6 +215,7 @@ module PureCloud
           status == o.status &&
           operation_id == o.operation_id &&
           download_url == o.download_url &&
+          percent_complete == o.percent_complete &&
           event_type == o.event_type
     end
 
@@ -203,7 +228,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [status, operation_id, download_url, event_type].hash
+      [status, operation_id, download_url, percent_complete, event_type].hash
     end
 
     # build the object from hash

@@ -62,6 +62,9 @@ module PureCloud
     # The locale use for localization of the exported data, i.e. en-us, es-mx  
     attr_accessor :locale
 
+    # The percentage of the job that has completed processing
+    attr_accessor :percentage_complete
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -98,6 +101,8 @@ module PureCloud
         :'modified_date_time' => :'modifiedDateTime',
         
         :'locale' => :'locale',
+        
+        :'percentage_complete' => :'percentageComplete',
         
         :'self_uri' => :'selfUri'
         
@@ -137,6 +142,8 @@ module PureCloud
         :'modified_date_time' => :'DateTime',
         
         :'locale' => :'String',
+        
+        :'percentage_complete' => :'Float',
         
         :'self_uri' => :'String'
         
@@ -287,6 +294,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'percentageComplete')
+        
+        
+        self.percentage_complete = attributes[:'percentageComplete']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -326,7 +342,7 @@ module PureCloud
 
       
       
-      allowed_values = ["SUBMITTED", "RUNNING", "COMPLETED", "FAILED"]
+      allowed_values = ["SUBMITTED", "RUNNING", "CANCELLING", "CANCELLED", "COMPLETED", "FAILED"]
       if @status && !allowed_values.include?(@status)
         return false
       end
@@ -437,6 +453,15 @@ module PureCloud
       
       
       
+      if @percentage_complete.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       
       
       
@@ -457,7 +482,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status Object to be assigned
     def status=(status)
-      allowed_values = ["SUBMITTED", "RUNNING", "COMPLETED", "FAILED"]
+      allowed_values = ["SUBMITTED", "RUNNING", "CANCELLING", "CANCELLED", "COMPLETED", "FAILED"]
       if status && !allowed_values.include?(status)
         fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
       end
@@ -559,6 +584,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -579,6 +609,7 @@ module PureCloud
           created_date_time == o.created_date_time &&
           modified_date_time == o.modified_date_time &&
           locale == o.locale &&
+          percentage_complete == o.percentage_complete &&
           self_uri == o.self_uri
     end
 
@@ -591,7 +622,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, self_uri].hash
+      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, self_uri].hash
     end
 
     # build the object from hash

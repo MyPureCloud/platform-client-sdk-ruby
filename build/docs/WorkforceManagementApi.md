@@ -2149,7 +2149,7 @@ api_instance = PureCloud::WorkforceManagementApi.new
 management_unit_id = "management_unit_id_example" # String | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 opts = { 
-  expand: "expand_example" # String | 
+  expand: ["expand_example"] # Array<String> | 
 }
 
 begin
@@ -2166,7 +2166,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **management_unit_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
- **expand** | **String**|  | [optional] <br />**Values**: agentCount |
+ **expand** | [**Array&lt;String&gt;**](String.html)|  | [optional] <br />**Values**: agentCount, details |
 {: class="table table-striped"}
 
 

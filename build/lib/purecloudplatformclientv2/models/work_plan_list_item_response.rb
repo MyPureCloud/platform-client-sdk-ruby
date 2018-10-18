@@ -24,23 +24,56 @@ module PureCloud
 
     attr_accessor :name
 
-    # Number of agents in this work plan
-    attr_accessor :agent_count
-
-    # Minimum weekly paid time in minutes defined in this work plan
-    attr_accessor :weekly_minimum_paid_minutes
-
-    # Maximum weekly paid time in minutes defined in this work plan
-    attr_accessor :weekly_maximum_paid_minutes
-
-    # Maximum number of days in a week that can be scheduled using this work plan
-    attr_accessor :maximum_days
-
     # Whether the work plan is enabled for scheduling
     attr_accessor :enabled
 
+    # Whether the weekly paid time constraint is enabled for this work plan
+    attr_accessor :constrain_weekly_paid_time
+
+    # Whether the weekly paid time constraint is flexible for this work plan
+    attr_accessor :flexible_weekly_paid_time
+
+    # Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false
+    attr_accessor :weekly_exact_paid_minutes
+
+    # Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true
+    attr_accessor :weekly_minimum_paid_minutes
+
+    # Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true
+    attr_accessor :weekly_maximum_paid_minutes
+
+    # Whether paid time granularity is constrained for this workplan
+    attr_accessor :constrain_paid_time_granularity
+
+    # Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true
+    attr_accessor :paid_time_granularity_minutes
+
+    # Whether the minimum time between shifts constraint is enabled for this work plan
+    attr_accessor :constrain_minimum_time_between_shifts
+
+    # Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts == true
+    attr_accessor :minimum_time_between_shifts_minutes
+
+    # Maximum number days in a week allowed to be scheduled for this work plan
+    attr_accessor :maximum_days
+
+    # Optional days to schedule for this work plan. Populate with expand=details
+    attr_accessor :optional_days
+
+    # Variance in minutes among start times of shifts in this work plan. Populate with expand=details
+    attr_accessor :shift_start_variances
+
+    # Shifts in this work plan. Populate with expand=details (defaults to empty list)
+    attr_accessor :shifts
+
+    # Agents in this work plan. Populate with expand=details (defaults to empty list)
+    attr_accessor :agents
+
     # Version metadata for this work plan
     attr_accessor :metadata
+
+    # Number of agents in this work plan.  Populate with expand=agentCount
+    attr_accessor :agent_count
 
     # The URI for this object
     attr_accessor :self_uri
@@ -53,17 +86,39 @@ module PureCloud
         
         :'name' => :'name',
         
-        :'agent_count' => :'agentCount',
+        :'enabled' => :'enabled',
+        
+        :'constrain_weekly_paid_time' => :'constrainWeeklyPaidTime',
+        
+        :'flexible_weekly_paid_time' => :'flexibleWeeklyPaidTime',
+        
+        :'weekly_exact_paid_minutes' => :'weeklyExactPaidMinutes',
         
         :'weekly_minimum_paid_minutes' => :'weeklyMinimumPaidMinutes',
         
         :'weekly_maximum_paid_minutes' => :'weeklyMaximumPaidMinutes',
         
+        :'constrain_paid_time_granularity' => :'constrainPaidTimeGranularity',
+        
+        :'paid_time_granularity_minutes' => :'paidTimeGranularityMinutes',
+        
+        :'constrain_minimum_time_between_shifts' => :'constrainMinimumTimeBetweenShifts',
+        
+        :'minimum_time_between_shifts_minutes' => :'minimumTimeBetweenShiftsMinutes',
+        
         :'maximum_days' => :'maximumDays',
         
-        :'enabled' => :'enabled',
+        :'optional_days' => :'optionalDays',
+        
+        :'shift_start_variances' => :'shiftStartVariances',
+        
+        :'shifts' => :'shifts',
+        
+        :'agents' => :'agents',
         
         :'metadata' => :'metadata',
+        
+        :'agent_count' => :'agentCount',
         
         :'self_uri' => :'selfUri'
         
@@ -78,17 +133,39 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'agent_count' => :'Integer',
+        :'enabled' => :'BOOLEAN',
+        
+        :'constrain_weekly_paid_time' => :'BOOLEAN',
+        
+        :'flexible_weekly_paid_time' => :'BOOLEAN',
+        
+        :'weekly_exact_paid_minutes' => :'Integer',
         
         :'weekly_minimum_paid_minutes' => :'Integer',
         
         :'weekly_maximum_paid_minutes' => :'Integer',
         
+        :'constrain_paid_time_granularity' => :'BOOLEAN',
+        
+        :'paid_time_granularity_minutes' => :'Integer',
+        
+        :'constrain_minimum_time_between_shifts' => :'BOOLEAN',
+        
+        :'minimum_time_between_shifts_minutes' => :'Integer',
+        
         :'maximum_days' => :'Integer',
         
-        :'enabled' => :'BOOLEAN',
+        :'optional_days' => :'SetWrapperDayOfWeek',
+        
+        :'shift_start_variances' => :'ListWrapperShiftStartVariance',
+        
+        :'shifts' => :'Array<WorkPlanShift>',
+        
+        :'agents' => :'Array<DeletableUserReference>',
         
         :'metadata' => :'WfmVersionedEntityMetadata',
+        
+        :'agent_count' => :'Integer',
         
         :'self_uri' => :'String'
         
@@ -122,10 +199,37 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'agentCount')
+      if attributes.has_key?(:'enabled')
         
         
-        self.agent_count = attributes[:'agentCount']
+        self.enabled = attributes[:'enabled']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'constrainWeeklyPaidTime')
+        
+        
+        self.constrain_weekly_paid_time = attributes[:'constrainWeeklyPaidTime']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'flexibleWeeklyPaidTime')
+        
+        
+        self.flexible_weekly_paid_time = attributes[:'flexibleWeeklyPaidTime']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'weeklyExactPaidMinutes')
+        
+        
+        self.weekly_exact_paid_minutes = attributes[:'weeklyExactPaidMinutes']
         
       
       end
@@ -149,6 +253,42 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'constrainPaidTimeGranularity')
+        
+        
+        self.constrain_paid_time_granularity = attributes[:'constrainPaidTimeGranularity']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'paidTimeGranularityMinutes')
+        
+        
+        self.paid_time_granularity_minutes = attributes[:'paidTimeGranularityMinutes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'constrainMinimumTimeBetweenShifts')
+        
+        
+        self.constrain_minimum_time_between_shifts = attributes[:'constrainMinimumTimeBetweenShifts']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'minimumTimeBetweenShiftsMinutes')
+        
+        
+        self.minimum_time_between_shifts_minutes = attributes[:'minimumTimeBetweenShiftsMinutes']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'maximumDays')
         
         
@@ -158,10 +298,41 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'enabled')
+      if attributes.has_key?(:'optionalDays')
         
         
-        self.enabled = attributes[:'enabled']
+        self.optional_days = attributes[:'optionalDays']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'shiftStartVariances')
+        
+        
+        self.shift_start_variances = attributes[:'shiftStartVariances']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'shifts')
+        
+        if (value = attributes[:'shifts']).is_a?(Array)
+          self.shifts = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'agents')
+        
+        if (value = attributes[:'agents']).is_a?(Array)
+          self.agents = value
+        end
+        
         
       
       end
@@ -171,6 +342,15 @@ module PureCloud
         
         
         self.metadata = attributes[:'metadata']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'agentCount')
+        
+        
+        self.agent_count = attributes[:'agentCount']
         
       
       end
@@ -236,8 +416,112 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if @metadata.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -291,12 +575,23 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
-          agent_count == o.agent_count &&
+          enabled == o.enabled &&
+          constrain_weekly_paid_time == o.constrain_weekly_paid_time &&
+          flexible_weekly_paid_time == o.flexible_weekly_paid_time &&
+          weekly_exact_paid_minutes == o.weekly_exact_paid_minutes &&
           weekly_minimum_paid_minutes == o.weekly_minimum_paid_minutes &&
           weekly_maximum_paid_minutes == o.weekly_maximum_paid_minutes &&
+          constrain_paid_time_granularity == o.constrain_paid_time_granularity &&
+          paid_time_granularity_minutes == o.paid_time_granularity_minutes &&
+          constrain_minimum_time_between_shifts == o.constrain_minimum_time_between_shifts &&
+          minimum_time_between_shifts_minutes == o.minimum_time_between_shifts_minutes &&
           maximum_days == o.maximum_days &&
-          enabled == o.enabled &&
+          optional_days == o.optional_days &&
+          shift_start_variances == o.shift_start_variances &&
+          shifts == o.shifts &&
+          agents == o.agents &&
           metadata == o.metadata &&
+          agent_count == o.agent_count &&
           self_uri == o.self_uri
     end
 
@@ -309,7 +604,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, agent_count, weekly_minimum_paid_minutes, weekly_maximum_paid_minutes, maximum_days, enabled, metadata, self_uri].hash
+      [id, name, enabled, constrain_weekly_paid_time, flexible_weekly_paid_time, weekly_exact_paid_minutes, weekly_minimum_paid_minutes, weekly_maximum_paid_minutes, constrain_paid_time_granularity, paid_time_granularity_minutes, constrain_minimum_time_between_shifts, minimum_time_between_shifts_minutes, maximum_days, optional_days, shift_start_variances, shifts, agents, metadata, agent_count, self_uri].hash
     end
 
     # build the object from hash

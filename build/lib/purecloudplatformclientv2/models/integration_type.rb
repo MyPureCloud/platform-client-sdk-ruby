@@ -48,6 +48,30 @@ module PureCloud
     # URI of a page with terms and conditions for the integration type
     attr_accessor :terms_of_service_uri
 
+    # Name of the vendor of this integration type
+    attr_accessor :vendor_name
+
+    # URI of the vendor's website
+    attr_accessor :vendor_website_uri
+
+    # URI of the marketplace listing for this integration type
+    attr_accessor :marketplace_uri
+
+    # URI of frequently asked questions about the integration type
+    attr_accessor :faq_uri
+
+    # URI of a privacy policy for users of the integration type
+    attr_accessor :privacy_policy_uri
+
+    # URI for vendor support
+    attr_accessor :support_contact_uri
+
+    # URI for vendor sales information
+    attr_accessor :sales_contact_uri
+
+    # List of links to additional help resources
+    attr_accessor :help_links
+
     # Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration.
     attr_accessor :credentials
 
@@ -87,6 +111,22 @@ module PureCloud
         
         :'terms_of_service_uri' => :'termsOfServiceUri',
         
+        :'vendor_name' => :'vendorName',
+        
+        :'vendor_website_uri' => :'vendorWebsiteUri',
+        
+        :'marketplace_uri' => :'marketplaceUri',
+        
+        :'faq_uri' => :'faqUri',
+        
+        :'privacy_policy_uri' => :'privacyPolicyUri',
+        
+        :'support_contact_uri' => :'supportContactUri',
+        
+        :'sales_contact_uri' => :'salesContactUri',
+        
+        :'help_links' => :'helpLinks',
+        
         :'credentials' => :'credentials',
         
         :'non_installable' => :'nonInstallable',
@@ -123,6 +163,22 @@ module PureCloud
         :'help_uri' => :'String',
         
         :'terms_of_service_uri' => :'String',
+        
+        :'vendor_name' => :'String',
+        
+        :'vendor_website_uri' => :'String',
+        
+        :'marketplace_uri' => :'String',
+        
+        :'faq_uri' => :'String',
+        
+        :'privacy_policy_uri' => :'String',
+        
+        :'support_contact_uri' => :'String',
+        
+        :'sales_contact_uri' => :'String',
+        
+        :'help_links' => :'Array<HelpLink>',
         
         :'credentials' => :'Hash<String, CredentialSpecification>',
         
@@ -233,6 +289,80 @@ module PureCloud
         
         
         self.terms_of_service_uri = attributes[:'termsOfServiceUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'vendorName')
+        
+        
+        self.vendor_name = attributes[:'vendorName']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'vendorWebsiteUri')
+        
+        
+        self.vendor_website_uri = attributes[:'vendorWebsiteUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'marketplaceUri')
+        
+        
+        self.marketplace_uri = attributes[:'marketplaceUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'faqUri')
+        
+        
+        self.faq_uri = attributes[:'faqUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'privacyPolicyUri')
+        
+        
+        self.privacy_policy_uri = attributes[:'privacyPolicyUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'supportContactUri')
+        
+        
+        self.support_contact_uri = attributes[:'supportContactUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'salesContactUri')
+        
+        
+        self.sales_contact_uri = attributes[:'salesContactUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'helpLinks')
+        
+        if (value = attributes[:'helpLinks']).is_a?(Array)
+          self.help_links = value
+        end
+        
         
       
       end
@@ -367,8 +497,80 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -460,6 +662,14 @@ module PureCloud
           config_advanced_schema_uri == o.config_advanced_schema_uri &&
           help_uri == o.help_uri &&
           terms_of_service_uri == o.terms_of_service_uri &&
+          vendor_name == o.vendor_name &&
+          vendor_website_uri == o.vendor_website_uri &&
+          marketplace_uri == o.marketplace_uri &&
+          faq_uri == o.faq_uri &&
+          privacy_policy_uri == o.privacy_policy_uri &&
+          support_contact_uri == o.support_contact_uri &&
+          sales_contact_uri == o.sales_contact_uri &&
+          help_links == o.help_links &&
           credentials == o.credentials &&
           non_installable == o.non_installable &&
           max_instances == o.max_instances &&
@@ -476,7 +686,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, provider, category, images, config_properties_schema_uri, config_advanced_schema_uri, help_uri, terms_of_service_uri, credentials, non_installable, max_instances, user_permissions, self_uri].hash
+      [id, name, description, provider, category, images, config_properties_schema_uri, config_advanced_schema_uri, help_uri, terms_of_service_uri, vendor_name, vendor_website_uri, marketplace_uri, faq_uri, privacy_policy_uri, support_contact_uri, sales_contact_uri, help_links, credentials, non_installable, max_instances, user_permissions, self_uri].hash
     end
 
     # build the object from hash

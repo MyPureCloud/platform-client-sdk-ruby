@@ -38,6 +38,8 @@ module PureCloud
 
     attr_accessor :modified_date_time
 
+    attr_accessor :percentage_complete
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -60,7 +62,9 @@ module PureCloud
         
         :'created_date_time' => :'createdDateTime',
         
-        :'modified_date_time' => :'modifiedDateTime'
+        :'modified_date_time' => :'modifiedDateTime',
+        
+        :'percentage_complete' => :'percentageComplete'
         
       }
     end
@@ -87,7 +91,9 @@ module PureCloud
         
         :'created_date_time' => :'DateTime',
         
-        :'modified_date_time' => :'DateTime'
+        :'modified_date_time' => :'DateTime',
+        
+        :'percentage_complete' => :'Float'
         
       }
     end
@@ -191,6 +197,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'percentageComplete')
+        
+        
+        self.percentage_complete = attributes[:'percentageComplete']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -216,7 +231,7 @@ module PureCloud
       
       
       
-      allowed_values = ["SUBMITTED", "RUNNING", "COMPLETED", "FAILED"]
+      allowed_values = ["SUBMITTED", "RUNNING", "CANCELLING", "CANCELLED", "COMPLETED", "FAILED"]
       if @status && !allowed_values.include?(@status)
         return false
       end
@@ -266,6 +281,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -283,7 +302,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status Object to be assigned
     def status=(status)
-      allowed_values = ["SUBMITTED", "RUNNING", "COMPLETED", "FAILED"]
+      allowed_values = ["SUBMITTED", "RUNNING", "CANCELLING", "CANCELLED", "COMPLETED", "FAILED"]
       if status && !allowed_values.include?(status)
         fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
       end
@@ -355,6 +374,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -369,7 +393,8 @@ module PureCloud
           export_error_messages_type == o.export_error_messages_type &&
           read == o.read &&
           created_date_time == o.created_date_time &&
-          modified_date_time == o.modified_date_time
+          modified_date_time == o.modified_date_time &&
+          percentage_complete == o.percentage_complete
     end
 
     # @see the `==` method
@@ -381,7 +406,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, status, export_format, download_url, view_type, export_error_messages_type, read, created_date_time, modified_date_time].hash
+      [id, name, status, export_format, download_url, view_type, export_error_messages_type, read, created_date_time, modified_date_time, percentage_complete].hash
     end
 
     # build the object from hash

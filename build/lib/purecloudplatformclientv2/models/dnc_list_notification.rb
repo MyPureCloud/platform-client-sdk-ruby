@@ -40,6 +40,8 @@ module PureCloud
 
     attr_accessor :license_id
 
+    attr_accessor :division
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -67,6 +69,8 @@ module PureCloud
         :'dnc_codes' => :'dncCodes',
         
         :'license_id' => :'licenseId',
+        
+        :'division' => :'division',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -98,6 +102,8 @@ module PureCloud
         :'dnc_codes' => :'Array<String>',
         
         :'license_id' => :'String',
+        
+        :'division' => :'DocumentDataV2NotificationCreatedBy',
         
         :'additional_properties' => :'Object'
         
@@ -214,6 +220,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'division')
+        
+        
+        self.division = attributes[:'division']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -272,6 +287,10 @@ module PureCloud
       if @dnc_source_type && !allowed_values.include?(@dnc_source_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -363,6 +382,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -379,6 +403,7 @@ module PureCloud
           login_id == o.login_id &&
           dnc_codes == o.dnc_codes &&
           license_id == o.license_id &&
+          division == o.division &&
           additional_properties == o.additional_properties
     end
 
@@ -391,7 +416,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, import_status, size, dnc_source_type, login_id, dnc_codes, license_id, additional_properties].hash
+      [id, name, date_created, date_modified, version, import_status, size, dnc_source_type, login_id, dnc_codes, license_id, division, additional_properties].hash
     end
 
     # build the object from hash

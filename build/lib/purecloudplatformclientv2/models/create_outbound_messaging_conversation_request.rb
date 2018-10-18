@@ -21,7 +21,7 @@ module PureCloud
     # The ID of the queue to be associated with the message. This will determine the fromAddress of the message.
     attr_accessor :queue_id
 
-    # The messaging address of the recipient of the message.
+    # The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234
     attr_accessor :to_address
 
     # The messaging address messenger type.

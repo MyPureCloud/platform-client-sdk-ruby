@@ -31,6 +31,7 @@ Method | Description
 [**get_quality_forms_survey**](QualityApi.html#get_quality_forms_survey) | Get a survey form
 [**get_quality_forms_survey_versions**](QualityApi.html#get_quality_forms_survey_versions) | Gets all the revisions for a specific survey.
 [**get_quality_forms_surveys**](QualityApi.html#get_quality_forms_surveys) | Get the list of survey forms
+[**get_quality_forms_surveys_bulk**](QualityApi.html#get_quality_forms_surveys_bulk) | Retrieve a list of survey forms by their ids
 [**get_quality_keywordset**](QualityApi.html#get_quality_keywordset) | Get a keywordSet by id.
 [**get_quality_keywordsets**](QualityApi.html#get_quality_keywordsets) | Get the list of keyword sets
 [**get_quality_publishedform**](QualityApi.html#get_quality_publishedform) | Get the published evaluation forms.
@@ -1722,6 +1723,71 @@ Name | Type | Description  | Notes
  **previous_page** | **String**| Previous page token | [optional]  |
  **expand** | **String**| Expand | [optional]  |
  **name** | **String**| Name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_forms_surveys_bulk"></a>
+
+## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_surveys_bulk(ids)
+
+
+
+Retrieve a list of survey forms by their ids
+
+
+
+Wraps GET /api/v2/quality/forms/surveys/bulk 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+ids = ["ids_example"] # Array<String> | A comma-delimited list of valid survey form ids
+
+
+begin
+  #Retrieve a list of survey forms by their ids
+  result = api_instance.get_quality_forms_surveys_bulk(ids)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_forms_surveys_bulk: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ids** | [**Array&lt;String&gt;**](String.html)| A comma-delimited list of valid survey form ids |  |
 {: class="table table-striped"}
 
 

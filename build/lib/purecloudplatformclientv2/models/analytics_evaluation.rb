@@ -27,7 +27,7 @@ module PureCloud
     # Unique identifier for the user being evaluated
     attr_accessor :user_id
 
-    # Specifies when an evaluation occurred
+    # Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :event_time
 
     # Unique identifier for the queue the conversation was on
@@ -85,7 +85,7 @@ module PureCloud
         
         :'user_id' => :'String',
         
-        :'event_time' => :'String',
+        :'event_time' => :'DateTime',
         
         :'queue_id' => :'String',
         

@@ -91,9 +91,9 @@ module PureCloud
         
         :'impact' => :'String',
         
-        :'adherence_change_time' => :'IntradayDataUpdateNotificationStartDate',
+        :'adherence_change_time' => :'DateTime',
         
-        :'presence_update_time' => :'UserScheduleAdherenceUpdateNotificationDateTime'
+        :'presence_update_time' => :'DateTime'
         
       }
     end

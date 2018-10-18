@@ -27,6 +27,9 @@ module PureCloud
     # Unique identifier for the survey form, regardless of version
     attr_accessor :survey_form_context_id
 
+    # Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :event_time
+
     # A unique identifier of the PureCloud user
     attr_accessor :user_id
 
@@ -42,8 +45,8 @@ module PureCloud
     # NPS score of the survey
     attr_accessor :survey_promoter_score
 
-    # Completion time of the survey, in ms since the epoch, 1970-01-01T00:00:00.000Z
-    attr_accessor :survey_completed_time
+    # Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :getsurvey_completed_date
 
     # Media types associated with the conversation
     attr_accessor :media_types
@@ -64,6 +67,8 @@ module PureCloud
         
         :'survey_form_context_id' => :'surveyFormContextId',
         
+        :'event_time' => :'eventTime',
+        
         :'user_id' => :'userId',
         
         :'queue_id' => :'queueId',
@@ -74,7 +79,7 @@ module PureCloud
         
         :'survey_promoter_score' => :'surveyPromoterScore',
         
-        :'survey_completed_time' => :'surveyCompletedTime',
+        :'getsurvey_completed_date' => :'getsurveyCompletedDate',
         
         :'media_types' => :'mediaTypes',
         
@@ -95,6 +100,8 @@ module PureCloud
         
         :'survey_form_context_id' => :'String',
         
+        :'event_time' => :'DateTime',
+        
         :'user_id' => :'String',
         
         :'queue_id' => :'String',
@@ -105,7 +112,7 @@ module PureCloud
         
         :'survey_promoter_score' => :'Integer',
         
-        :'survey_completed_time' => :'Integer',
+        :'getsurvey_completed_date' => :'DateTime',
         
         :'media_types' => :'Array<String>',
         
@@ -147,6 +154,15 @@ module PureCloud
         
         
         self.survey_form_context_id = attributes[:'surveyFormContextId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'eventTime')
+        
+        
+        self.event_time = attributes[:'eventTime']
         
       
       end
@@ -197,10 +213,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'surveyCompletedTime')
+      if attributes.has_key?(:'getsurveyCompletedDate')
         
         
-        self.survey_completed_time = attributes[:'surveyCompletedTime']
+        self.getsurvey_completed_date = attributes[:'getsurveyCompletedDate']
         
       
       end
@@ -302,8 +318,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -373,12 +398,13 @@ module PureCloud
           survey_id == o.survey_id &&
           survey_form_id == o.survey_form_id &&
           survey_form_context_id == o.survey_form_context_id &&
+          event_time == o.event_time &&
           user_id == o.user_id &&
           queue_id == o.queue_id &&
           status == o.status &&
           geto_survey_total_score == o.geto_survey_total_score &&
           survey_promoter_score == o.survey_promoter_score &&
-          survey_completed_time == o.survey_completed_time &&
+          getsurvey_completed_date == o.getsurvey_completed_date &&
           media_types == o.media_types &&
           language_ids == o.language_ids &&
           skill_ids == o.skill_ids
@@ -393,7 +419,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [survey_id, survey_form_id, survey_form_context_id, user_id, queue_id, status, geto_survey_total_score, survey_promoter_score, survey_completed_time, media_types, language_ids, skill_ids].hash
+      [survey_id, survey_form_id, survey_form_context_id, event_time, user_id, queue_id, status, geto_survey_total_score, survey_promoter_score, getsurvey_completed_date, media_types, language_ids, skill_ids].hash
     end
 
     # build the object from hash

@@ -15,6 +15,8 @@ title: WorkPlan
 | **weekly_exact_paid_minutes** | **Integer** | Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false | [optional] |
 | **weekly_minimum_paid_minutes** | **Integer** | Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true | [optional] |
 | **weekly_maximum_paid_minutes** | **Integer** | Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true | [optional] |
+| **constrain_paid_time_granularity** | **BOOLEAN** | Whether paid time granularity is constrained for this workplan | [optional] |
+| **paid_time_granularity_minutes** | **Integer** | Granularity in minutes allowed for shift paid time in this work plan. Used if constrainPaidTimeGranularity == true | [optional] |
 | **constrain_minimum_time_between_shifts** | **BOOLEAN** | Whether the minimum time between shifts constraint is enabled for this work plan | [optional] |
 | **minimum_time_between_shifts_minutes** | **Integer** | Minimum time between shifts in minutes defined in this work plan. Used if constrainMinimumTimeBetweenShifts == true | [optional] |
 | **maximum_days** | **Integer** | Maximum number days in a week allowed to be scheduled for this work plan | [optional] |

@@ -34,6 +34,7 @@ Method | Description
 [**get_routing_queue_wrapupcodes**](RoutingApi.html#get_routing_queue_wrapupcodes) | Get the wrap-up codes for a queue
 [**get_routing_queues**](RoutingApi.html#get_routing_queues) | Get list of queues.
 [**get_routing_queues_divisionviews**](RoutingApi.html#get_routing_queues_divisionviews) | Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
+[**get_routing_queues_me**](RoutingApi.html#get_routing_queues_me) | Get a paged listing of queues the user is a member of.
 [**get_routing_skill**](RoutingApi.html#get_routing_skill) | Get Routing Skill
 [**get_routing_skills**](RoutingApi.html#get_routing_skills) | Get the list of routing skills.
 [**get_routing_sms_availablephonenumbers**](RoutingApi.html#get_routing_sms_availablephonenumbers) | Get a list of available phone numbers for SMS provisioning.
@@ -1822,6 +1823,79 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**QueueEntityListing**](QueueEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_routing_queues_me"></a>
+
+## -[**UserQueueEntityListing**](UserQueueEntityListing.html) get_routing_queues_me(opts)
+
+
+
+Get a paged listing of queues the user is a member of.
+
+
+
+Wraps GET /api/v2/routing/queues/me 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+opts = { 
+  joined: true, # BOOLEAN | Joined
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  sort_by: "name", # String | Sort by
+  sort_order: "asc" # String | Sort order
+}
+
+begin
+  #Get a paged listing of queues the user is a member of.
+  result = api_instance.get_routing_queues_me(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->get_routing_queues_me: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **joined** | **BOOLEAN**| Joined | [optional]  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **sort_order** | **String**| Sort order | [optional] [default to asc] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserQueueEntityListing**](UserQueueEntityListing.html)
 
 ### HTTP request headers
 

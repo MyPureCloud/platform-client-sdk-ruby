@@ -17,6 +17,14 @@ title: IntegrationType
 | **config_advanced_schema_uri** | **String** | URI of the schema describing the advanced JSON document needed to configure an integration of this type. | [optional] |
 | **help_uri** | **String** | URI of a page with more information about the integration type | [optional] |
 | **terms_of_service_uri** | **String** | URI of a page with terms and conditions for the integration type | [optional] |
+| **vendor_name** | **String** | Name of the vendor of this integration type | [optional] |
+| **vendor_website_uri** | **String** | URI of the vendor&#39;s website | [optional] |
+| **marketplace_uri** | **String** | URI of the marketplace listing for this integration type | [optional] |
+| **faq_uri** | **String** | URI of frequently asked questions about the integration type | [optional] |
+| **privacy_policy_uri** | **String** | URI of a privacy policy for users of the integration type | [optional] |
+| **support_contact_uri** | **String** | URI for vendor support | [optional] |
+| **sales_contact_uri** | **String** | URI for vendor sales information | [optional] |
+| **help_links** | [**Array&lt;HelpLink&gt;**](HelpLink.html) | List of links to additional help resources | [optional] |
 | **credentials** | [**Hash&lt;String, CredentialSpecification&gt;**](CredentialSpecification.html) | Map of credentials for integrations of this type. The key is the name of a credential that can be provided in the credentials property of the integration configuration. | [optional] |
 | **non_installable** | **BOOLEAN** | Indicates if the integration type is installable or not. | [optional] |
 | **max_instances** | **Integer** | The maximum number of integration instances allowable for this integration type | [optional] |
