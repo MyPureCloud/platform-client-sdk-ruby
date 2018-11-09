@@ -1152,7 +1152,8 @@ opts = {
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
   sort_order: "ASC", # String | Ascending or descending sort order
-  name: "name_example" # String | Name
+  name: "name_example", # String | Name
+  id: ["id_example"] # Array<String> | id
 }
 
 begin
@@ -1172,6 +1173,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
  **name** | **String**| Name | [optional]  |
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2004,7 +2006,8 @@ api_instance = PureCloud::RoutingApi.new
 opts = { 
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
-  name: "name_example" # String | Filter for results that start with this value
+  name: "name_example", # String | Filter for results that start with this value
+  id: ["id_example"] # Array<String> | id
 }
 
 begin
@@ -2023,6 +2026,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **name** | **String**| Filter for results that start with this value | [optional]  |
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
 {: class="table table-striped"}
 
 

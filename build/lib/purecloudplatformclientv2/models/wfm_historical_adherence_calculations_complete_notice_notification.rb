@@ -111,7 +111,7 @@ module PureCloud
       
       
       
-      allowed_values = ["Processing", "Complete", "Error"]
+      allowed_values = ["Processing", "Complete", "Canceled", "Error"]
       if @query_state && !allowed_values.include?(@query_state)
         return false
       end
@@ -135,7 +135,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] query_state Object to be assigned
     def query_state=(query_state)
-      allowed_values = ["Processing", "Complete", "Error"]
+      allowed_values = ["Processing", "Complete", "Canceled", "Error"]
       if query_state && !allowed_values.include?(query_state)
         fail ArgumentError, "invalid value for 'query_state', must be one of #{allowed_values}."
       end

@@ -3252,7 +3252,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flows"></a>
 
-## -[**FlowEntityListing**](FlowEntityListing.html) get_flows(type, opts)
+## -[**FlowEntityListing**](FlowEntityListing.html) get_flows(opts)
 
 
 
@@ -3284,9 +3284,8 @@ end
 
 api_instance = PureCloud::ArchitectApi.new
 
-type = "type_example" # String | Type
-
 opts = { 
+  type: ["type_example"], # Array<String> | Type
   page_number: 1, # Integer | Page number
   page_size: 25, # Integer | Page size
   sort_by: "id", # String | Sort by
@@ -3308,7 +3307,7 @@ opts = {
 
 begin
   #Get a pageable list of flows, filtered by query parameters
-  result = api_instance.get_flows(type, opts)
+  result = api_instance.get_flows(opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flows: #{e}"
@@ -3319,7 +3318,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type** | **String**| Type | <br />**Values**: inboundcall, inboundemail, inboundshortmessage, outboundcall, inqueuecall, speech, securecall, surveyinvite, workflow |
+ **type** | [**Array&lt;String&gt;**](String.html)| Type | [optional] <br />**Values**: inboundcall, inboundemail, inboundshortmessage, outboundcall, inqueuecall, speech, securecall, surveyinvite, workflow |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **sort_by** | **String**| Sort by | [optional] [default to id] |
@@ -3641,7 +3640,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flows_divisionviews"></a>
 
-## -[**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html) get_flows_divisionviews(type, opts)
+## -[**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html) get_flows_divisionviews(opts)
 
 
 
@@ -3673,9 +3672,8 @@ end
 
 api_instance = PureCloud::ArchitectApi.new
 
-type = "type_example" # String | Type
-
 opts = { 
+  type: ["type_example"], # Array<String> | Type
   page_number: 1, # Integer | Page number
   page_size: 25, # Integer | Page size
   sort_by: "id", # String | Sort by
@@ -3690,7 +3688,7 @@ opts = {
 
 begin
   #Get a pageable list of basic flow information objects filterable by query parameters.
-  result = api_instance.get_flows_divisionviews(type, opts)
+  result = api_instance.get_flows_divisionviews(opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flows_divisionviews: #{e}"
@@ -3701,7 +3699,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type** | **String**| Type | <br />**Values**: inboundcall, inboundemail, inboundshortmessage, outboundcall, inqueuecall, speech, securecall, surveyinvite, workflow |
+ **type** | [**Array&lt;String&gt;**](String.html)| Type | [optional] <br />**Values**: inboundcall, inboundemail, inboundshortmessage, outboundcall, inqueuecall, speech, securecall, surveyinvite, workflow |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **sort_by** | **String**| Sort by | [optional] [default to id] |

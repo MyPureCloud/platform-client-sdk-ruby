@@ -33,6 +33,10 @@ module PureCloud
 
     attr_accessor :message_text
 
+    attr_accessor :message_media_attachments
+
+    attr_accessor :message_sticker_attachments
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -49,7 +53,11 @@ module PureCloud
         
         :'id' => :'id',
         
-        :'message_text' => :'messageText'
+        :'message_text' => :'messageText',
+        
+        :'message_media_attachments' => :'messageMediaAttachments',
+        
+        :'message_sticker_attachments' => :'messageStickerAttachments'
         
       }
     end
@@ -70,7 +78,11 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'message_text' => :'String'
+        :'message_text' => :'String',
+        
+        :'message_media_attachments' => :'Array<MessageMediaAttachment>',
+        
+        :'message_sticker_attachments' => :'Array<MessageStickerAttachment>'
         
       }
     end
@@ -147,6 +159,28 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'messageMediaAttachments')
+        
+        if (value = attributes[:'messageMediaAttachments']).is_a?(Array)
+          self.message_media_attachments = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'messageStickerAttachments')
+        
+        if (value = attributes[:'messageStickerAttachments']).is_a?(Array)
+          self.message_sticker_attachments = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -190,8 +224,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -239,7 +291,9 @@ module PureCloud
           to == o.to &&
           timestamp == o.timestamp &&
           id == o.id &&
-          message_text == o.message_text
+          message_text == o.message_text &&
+          message_media_attachments == o.message_media_attachments &&
+          message_sticker_attachments == o.message_sticker_attachments
     end
 
     # @see the `==` method
@@ -251,7 +305,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [from, from_user, from_external_contact, to, timestamp, id, message_text].hash
+      [from, from_user, from_external_contact, to, timestamp, id, message_text, message_media_attachments, message_sticker_attachments].hash
     end
 
     # build the object from hash

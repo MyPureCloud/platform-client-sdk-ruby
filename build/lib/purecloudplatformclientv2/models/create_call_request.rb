@@ -51,6 +51,9 @@ module PureCloud
     # The list of participants to call to create a new ad-hoc conference.
     attr_accessor :participants
 
+    # User to User Information (UUI) data managed by SIP session application.
+    attr_accessor :uui_data
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -75,7 +78,9 @@ module PureCloud
         
         :'conversation_ids' => :'conversationIds',
         
-        :'participants' => :'participants'
+        :'participants' => :'participants',
+        
+        :'uui_data' => :'uuiData'
         
       }
     end
@@ -104,7 +109,9 @@ module PureCloud
         
         :'conversation_ids' => :'Array<String>',
         
-        :'participants' => :'Array<Destination>'
+        :'participants' => :'Array<Destination>',
+        
+        :'uui_data' => :'String'
         
       }
     end
@@ -223,6 +230,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'uuiData')
+        
+        
+        self.uui_data = attributes[:'uuiData']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -282,8 +298,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -355,7 +380,8 @@ module PureCloud
           language_id == o.language_id &&
           routing_skills_ids == o.routing_skills_ids &&
           conversation_ids == o.conversation_ids &&
-          participants == o.participants
+          participants == o.participants &&
+          uui_data == o.uui_data
     end
 
     # @see the `==` method
@@ -367,7 +393,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [phone_number, caller_id, caller_id_name, call_from_queue_id, call_queue_id, call_user_id, priority, language_id, routing_skills_ids, conversation_ids, participants].hash
+      [phone_number, caller_id, caller_id_name, call_from_queue_id, call_queue_id, call_user_id, priority, language_id, routing_skills_ids, conversation_ids, participants, uui_data].hash
     end
 
     # build the object from hash

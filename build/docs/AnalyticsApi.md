@@ -10,6 +10,7 @@ Method | Description
 ------------- | ------------- | -------------
 [**delete_analytics_reporting_schedule**](AnalyticsApi.html#delete_analytics_reporting_schedule) | Delete a scheduled report job.
 [**get_analytics_conversation_details**](AnalyticsApi.html#get_analytics_conversation_details) | Get a conversation by id
+[**get_analytics_conversations_details**](AnalyticsApi.html#get_analytics_conversations_details) | Gets multiple conversations by id
 [**get_analytics_reporting_exports**](AnalyticsApi.html#get_analytics_reporting_exports) | Get all view export requests for a user
 [**get_analytics_reporting_metadata**](AnalyticsApi.html#get_analytics_reporting_metadata) | Get list of reporting metadata.
 [**get_analytics_reporting_report_id_metadata**](AnalyticsApi.html#get_analytics_reporting_report_id_metadata) | Get a reporting metadata.
@@ -149,6 +150,72 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_id** | **String**| conversationId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AnalyticsConversation**](AnalyticsConversation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_analytics_conversations_details"></a>
+
+## -[**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversations_details(opts)
+
+
+
+Gets multiple conversations by id
+
+
+
+Wraps GET /api/v2/analytics/conversations/details 
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+opts = { 
+  id: ["id_example"] # Array<String> | Comma-separated conversation ids
+}
+
+begin
+  #Gets multiple conversations by id
+  result = api_instance.get_analytics_conversations_details(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->get_analytics_conversations_details: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Array&lt;String&gt;**](String.html)| Comma-separated conversation ids | [optional]  |
 {: class="table table-striped"}
 
 

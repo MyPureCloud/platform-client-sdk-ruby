@@ -125,6 +125,9 @@ module PureCloud
     # IVR flow execution associated with this session
     attr_accessor :flow
 
+    # Flag determining if an audio recording was started or not
+    attr_accessor :recording
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -203,7 +206,9 @@ module PureCloud
         
         :'metrics' => :'metrics',
         
-        :'flow' => :'flow'
+        :'flow' => :'flow',
+        
+        :'recording' => :'recording'
         
       }
     end
@@ -286,7 +291,9 @@ module PureCloud
         
         :'metrics' => :'Array<AnalyticsSessionMetric>',
         
-        :'flow' => :'AnalyticsFlow'
+        :'flow' => :'AnalyticsFlow',
+        
+        :'recording' => :'BOOLEAN'
         
       }
     end
@@ -648,6 +655,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'recording')
+        
+        
+        self.recording = attributes[:'recording']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -711,6 +727,10 @@ module PureCloud
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -1050,6 +1070,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1092,7 +1117,8 @@ module PureCloud
           video_address_self == o.video_address_self &&
           segments == o.segments &&
           metrics == o.metrics &&
-          flow == o.flow
+          flow == o.flow &&
+          recording == o.recording
     end
 
     # @see the `==` method
@@ -1104,7 +1130,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow].hash
+      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, recording].hash
     end
 
     # build the object from hash

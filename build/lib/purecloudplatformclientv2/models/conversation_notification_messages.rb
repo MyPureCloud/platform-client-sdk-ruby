@@ -160,7 +160,7 @@ module PureCloud
       
       
       
-      allowed_values = ["QUEUED", "SENT", "FAILED", "RECEIVED"]
+      allowed_values = ["QUEUED", "SENT", "FAILED", "RECEIVED", "DELIVERY_SUCCESS", "DELIVERY_FAILED", "READ"]
       if @message_status && !allowed_values.include?(@message_status)
         return false
       end
@@ -196,7 +196,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] message_status Object to be assigned
     def message_status=(message_status)
-      allowed_values = ["QUEUED", "SENT", "FAILED", "RECEIVED"]
+      allowed_values = ["QUEUED", "SENT", "FAILED", "RECEIVED", "DELIVERY_SUCCESS", "DELIVERY_FAILED", "READ"]
       if message_status && !allowed_values.include?(message_status)
         fail ArgumentError, "invalid value for 'message_status', must be one of #{allowed_values}."
       end

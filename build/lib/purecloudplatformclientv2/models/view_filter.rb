@@ -111,6 +111,27 @@ module PureCloud
     # The survey NPS score used to filter the view
     attr_accessor :survey_nps_score
 
+    # Indicates if the Secondary Status should be shown
+    attr_accessor :show_secondary_status
+
+    # Provides the agent duration sort order
+    attr_accessor :agent_duration_sort_order
+
+    # Provides the waiting duration sort order
+    attr_accessor :waiting_duration_sort_order
+
+    # Provides the interacting duration sort order
+    attr_accessor :interacting_duration_sort_order
+
+    # Displays the Agent name as provided by the user
+    attr_accessor :agent_name
+
+    # The list of skill strings as free form text
+    attr_accessor :skills_list
+
+    # The list of language strings as free form text
+    attr_accessor :language_list
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -175,7 +196,21 @@ module PureCloud
         
         :'survey_total_score' => :'surveyTotalScore',
         
-        :'survey_nps_score' => :'surveyNpsScore'
+        :'survey_nps_score' => :'surveyNpsScore',
+        
+        :'show_secondary_status' => :'showSecondaryStatus',
+        
+        :'agent_duration_sort_order' => :'agentDurationSortOrder',
+        
+        :'waiting_duration_sort_order' => :'waitingDurationSortOrder',
+        
+        :'interacting_duration_sort_order' => :'interactingDurationSortOrder',
+        
+        :'agent_name' => :'agentName',
+        
+        :'skills_list' => :'skillsList',
+        
+        :'language_list' => :'languageList'
         
       }
     end
@@ -244,7 +279,21 @@ module PureCloud
         
         :'survey_total_score' => :'NumericRange',
         
-        :'survey_nps_score' => :'NumericRange'
+        :'survey_nps_score' => :'NumericRange',
+        
+        :'show_secondary_status' => :'BOOLEAN',
+        
+        :'agent_duration_sort_order' => :'String',
+        
+        :'waiting_duration_sort_order' => :'String',
+        
+        :'interacting_duration_sort_order' => :'String',
+        
+        :'agent_name' => :'String',
+        
+        :'skills_list' => :'Array<String>',
+        
+        :'language_list' => :'Array<String>'
         
       }
     end
@@ -587,6 +636,73 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'showSecondaryStatus')
+        
+        
+        self.show_secondary_status = attributes[:'showSecondaryStatus']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'agentDurationSortOrder')
+        
+        
+        self.agent_duration_sort_order = attributes[:'agentDurationSortOrder']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'waitingDurationSortOrder')
+        
+        
+        self.waiting_duration_sort_order = attributes[:'waitingDurationSortOrder']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'interactingDurationSortOrder')
+        
+        
+        self.interacting_duration_sort_order = attributes[:'interactingDurationSortOrder']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'agentName')
+        
+        
+        self.agent_name = attributes[:'agentName']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'skillsList')
+        
+        if (value = attributes[:'skillsList']).is_a?(Array)
+          self.skills_list = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'languageList')
+        
+        if (value = attributes[:'languageList']).is_a?(Array)
+          self.language_list = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -726,6 +842,49 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      allowed_values = ["ascending", "descending"]
+      if @agent_duration_sort_order && !allowed_values.include?(@agent_duration_sort_order)
+        return false
+      end
+      
+      
+      
+      
+      
+      allowed_values = ["ascending", "descending"]
+      if @waiting_duration_sort_order && !allowed_values.include?(@waiting_duration_sort_order)
+        return false
+      end
+      
+      
+      
+      
+      
+      allowed_values = ["ascending", "descending"]
+      if @interacting_duration_sort_order && !allowed_values.include?(@interacting_duration_sort_order)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -866,6 +1025,68 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] agent_duration_sort_order Object to be assigned
+    def agent_duration_sort_order=(agent_duration_sort_order)
+      allowed_values = ["ascending", "descending"]
+      if agent_duration_sort_order && !allowed_values.include?(agent_duration_sort_order)
+        fail ArgumentError, "invalid value for 'agent_duration_sort_order', must be one of #{allowed_values}."
+      end
+      @agent_duration_sort_order = agent_duration_sort_order
+    end
+
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] waiting_duration_sort_order Object to be assigned
+    def waiting_duration_sort_order=(waiting_duration_sort_order)
+      allowed_values = ["ascending", "descending"]
+      if waiting_duration_sort_order && !allowed_values.include?(waiting_duration_sort_order)
+        fail ArgumentError, "invalid value for 'waiting_duration_sort_order', must be one of #{allowed_values}."
+      end
+      @waiting_duration_sort_order = waiting_duration_sort_order
+    end
+
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] interacting_duration_sort_order Object to be assigned
+    def interacting_duration_sort_order=(interacting_duration_sort_order)
+      allowed_values = ["ascending", "descending"]
+      if interacting_duration_sort_order && !allowed_values.include?(interacting_duration_sort_order)
+        fail ArgumentError, "invalid value for 'interacting_duration_sort_order', must be one of #{allowed_values}."
+      end
+      @interacting_duration_sort_order = interacting_duration_sort_order
+    end
+
     
     
     
@@ -919,7 +1140,14 @@ module PureCloud
           division_ids == o.division_ids &&
           survey_form_ids == o.survey_form_ids &&
           survey_total_score == o.survey_total_score &&
-          survey_nps_score == o.survey_nps_score
+          survey_nps_score == o.survey_nps_score &&
+          show_secondary_status == o.show_secondary_status &&
+          agent_duration_sort_order == o.agent_duration_sort_order &&
+          waiting_duration_sort_order == o.waiting_duration_sort_order &&
+          interacting_duration_sort_order == o.interacting_duration_sort_order &&
+          agent_name == o.agent_name &&
+          skills_list == o.skills_list &&
+          language_list == o.language_list
     end
 
     # @see the `==` method
@@ -931,7 +1159,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list].hash
     end
 
     # build the object from hash

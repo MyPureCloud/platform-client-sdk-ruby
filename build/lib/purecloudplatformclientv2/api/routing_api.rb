@@ -1126,6 +1126,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :sort_order Ascending or descending sort order (default to ASC)
     # @option opts [String] :name Name
+    # @option opts [Array<String>] :id id
     # @return [LanguageEntityListing]
     def get_routing_languages(opts = {})
       data, _status_code, _headers = get_routing_languages_with_http_info(opts)
@@ -1139,6 +1140,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :sort_order Ascending or descending sort order
     # @option opts [String] :name Name
+    # @option opts [Array<String>] :id id
     # @return [Array<(LanguageEntityListing, Fixnum, Hash)>] LanguageEntityListing data, response status code and response headers
     def get_routing_languages_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1173,6 +1175,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/languages".sub('{format}','json')
 
@@ -1182,6 +1190,7 @@ module PureCloud
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
 
       # header parameters
       header_params = {}
@@ -2210,6 +2219,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :name Filter for results that start with this value
+    # @option opts [Array<String>] :id id
     # @return [SkillEntityListing]
     def get_routing_skills(opts = {})
       data, _status_code, _headers = get_routing_skills_with_http_info(opts)
@@ -2222,11 +2232,18 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :name Filter for results that start with this value
+    # @option opts [Array<String>] :id id
     # @return [Array<(SkillEntityListing, Fixnum, Hash)>] SkillEntityListing data, response status code and response headers
     def get_routing_skills_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_skills ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2254,6 +2271,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
 
       # header parameters
       header_params = {}

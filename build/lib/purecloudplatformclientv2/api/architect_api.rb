@@ -3856,8 +3856,8 @@ module PureCloud
 
     # Get a pageable list of flows, filtered by query parameters
     # Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
-    # @param type Type
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :type Type
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [String] :sort_by Sort by (default to id)
@@ -3876,15 +3876,15 @@ module PureCloud
     # @option opts [String] :published_before Published before
     # @option opts [Array<String>] :division_id division ID(s)
     # @return [FlowEntityListing]
-    def get_flows(type, opts = {})
-      data, _status_code, _headers = get_flows_with_http_info(type, opts)
+    def get_flows(opts = {})
+      data, _status_code, _headers = get_flows_with_http_info(opts)
       return data
     end
 
     # Get a pageable list of flows, filtered by query parameters
     # Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
-    # @param type Type
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :type Type
     # @option opts [Integer] :page_number Page number
     # @option opts [Integer] :page_size Page size
     # @option opts [String] :sort_by Sort by
@@ -3903,19 +3903,12 @@ module PureCloud
     # @option opts [String] :published_before Published before
     # @option opts [Array<String>] :division_id division ID(s)
     # @return [Array<(FlowEntityListing, Fixnum, Hash)>] FlowEntityListing data, response status code and response headers
-    def get_flows_with_http_info(type, opts = {})
+    def get_flows_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows ..."
       end
       
       
-      # verify the required parameter 'type' is set
-      fail ArgumentError, "Missing the required parameter 'type' when calling ArchitectApi.get_flows" if type.nil?
-      
-      # verify enum value
-      unless ['inboundcall', 'inboundemail', 'inboundshortmessage', 'outboundcall', 'inqueuecall', 'speech', 'securecall', 'surveyinvite', 'workflow'].include?(type)
-        fail ArgumentError, "invalid value for 'type', must be one of inboundcall, inboundemail, inboundshortmessage, outboundcall, inqueuecall, speech, securecall, surveyinvite, workflow"
-      end
       
       
       
@@ -4032,7 +4025,7 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'type'] = type
+      query_params[:'type'] = @api_client.build_collection_param(opts[:'type'], :multi) if opts[:'type']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
@@ -4446,8 +4439,8 @@ module PureCloud
 
     # Get a pageable list of basic flow information objects filterable by query parameters.
     # This returns a simplified version of /flow consisting of name and type.
-    # @param type Type
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :type Type
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [String] :sort_by Sort by (default to id)
@@ -4459,15 +4452,15 @@ module PureCloud
     # @option opts [String] :published_before Published before
     # @option opts [Array<String>] :division_id division ID(s)
     # @return [FlowDivisionViewEntityListing]
-    def get_flows_divisionviews(type, opts = {})
-      data, _status_code, _headers = get_flows_divisionviews_with_http_info(type, opts)
+    def get_flows_divisionviews(opts = {})
+      data, _status_code, _headers = get_flows_divisionviews_with_http_info(opts)
       return data
     end
 
     # Get a pageable list of basic flow information objects filterable by query parameters.
     # This returns a simplified version of /flow consisting of name and type.
-    # @param type Type
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :type Type
     # @option opts [Integer] :page_number Page number
     # @option opts [Integer] :page_size Page size
     # @option opts [String] :sort_by Sort by
@@ -4479,19 +4472,12 @@ module PureCloud
     # @option opts [String] :published_before Published before
     # @option opts [Array<String>] :division_id division ID(s)
     # @return [Array<(FlowDivisionViewEntityListing, Fixnum, Hash)>] FlowDivisionViewEntityListing data, response status code and response headers
-    def get_flows_divisionviews_with_http_info(type, opts = {})
+    def get_flows_divisionviews_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_divisionviews ..."
       end
       
       
-      # verify the required parameter 'type' is set
-      fail ArgumentError, "Missing the required parameter 'type' when calling ArchitectApi.get_flows_divisionviews" if type.nil?
-      
-      # verify enum value
-      unless ['inboundcall', 'inboundemail', 'inboundshortmessage', 'outboundcall', 'inqueuecall', 'speech', 'securecall', 'surveyinvite', 'workflow'].include?(type)
-        fail ArgumentError, "invalid value for 'type', must be one of inboundcall, inboundemail, inboundshortmessage, outboundcall, inqueuecall, speech, securecall, surveyinvite, workflow"
-      end
       
       
       
@@ -4562,7 +4548,7 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'type'] = type
+      query_params[:'type'] = @api_client.build_collection_param(opts[:'type'], :multi) if opts[:'type']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']

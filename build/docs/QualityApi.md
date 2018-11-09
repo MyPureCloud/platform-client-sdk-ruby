@@ -32,6 +32,7 @@ Method | Description
 [**get_quality_forms_survey_versions**](QualityApi.html#get_quality_forms_survey_versions) | Gets all the revisions for a specific survey.
 [**get_quality_forms_surveys**](QualityApi.html#get_quality_forms_surveys) | Get the list of survey forms
 [**get_quality_forms_surveys_bulk**](QualityApi.html#get_quality_forms_surveys_bulk) | Retrieve a list of survey forms by their ids
+[**get_quality_forms_surveys_bulk_contexts**](QualityApi.html#get_quality_forms_surveys_bulk_contexts) | Retrieve a list of the latest form versions by context ids
 [**get_quality_keywordset**](QualityApi.html#get_quality_keywordset) | Get a keywordSet by id.
 [**get_quality_keywordsets**](QualityApi.html#get_quality_keywordsets) | Get the list of keyword sets
 [**get_quality_publishedform**](QualityApi.html#get_quality_publishedform) | Get the published evaluation forms.
@@ -1272,7 +1273,8 @@ opts = {
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   expand: "expand_example", # String | Expand
-  name: "name_example" # String | Name
+  name: "name_example", # String | Name
+  sort_order: "sort_order_example" # String | Order to sort results, either asc or desc
 }
 
 begin
@@ -1295,6 +1297,7 @@ Name | Type | Description  | Notes
  **previous_page** | **String**| Previous page token | [optional]  |
  **expand** | **String**| Expand | [optional]  |
  **name** | **String**| Name | [optional]  |
+ **sort_order** | **String**| Order to sort results, either asc or desc | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1486,7 +1489,8 @@ opts = {
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   expand: "expand_example", # String | Expand
-  name: "name_example" # String | Name
+  name: "name_example", # String | Name
+  sort_order: "sort_order_example" # String | Order to sort results, either asc or desc
 }
 
 begin
@@ -1509,6 +1513,7 @@ Name | Type | Description  | Notes
  **previous_page** | **String**| Previous page token | [optional]  |
  **expand** | **String**| Expand | [optional]  |
  **name** | **String**| Name | [optional]  |
+ **sort_order** | **String**| Order to sort results, either asc or desc | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1700,7 +1705,8 @@ opts = {
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   expand: "expand_example", # String | Expand
-  name: "name_example" # String | Name
+  name: "name_example", # String | Name
+  sort_order: "sort_order_example" # String | Order to sort results, either asc or desc
 }
 
 begin
@@ -1723,6 +1729,7 @@ Name | Type | Description  | Notes
  **previous_page** | **String**| Previous page token | [optional]  |
  **expand** | **String**| Expand | [optional]  |
  **name** | **String**| Name | [optional]  |
+ **sort_order** | **String**| Order to sort results, either asc or desc | [optional]  |
 {: class="table table-striped"}
 
 
@@ -1739,7 +1746,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_forms_surveys_bulk"></a>
 
-## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_surveys_bulk(ids)
+## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_surveys_bulk(id)
 
 
 
@@ -1771,12 +1778,12 @@ end
 
 api_instance = PureCloud::QualityApi.new
 
-ids = ["ids_example"] # Array<String> | A comma-delimited list of valid survey form ids
+id = ["id_example"] # Array<String> | A comma-delimited list of valid survey form ids
 
 
 begin
   #Retrieve a list of survey forms by their ids
-  result = api_instance.get_quality_forms_surveys_bulk(ids)
+  result = api_instance.get_quality_forms_surveys_bulk(id)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_forms_surveys_bulk: #{e}"
@@ -1787,7 +1794,76 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ids** | [**Array&lt;String&gt;**](String.html)| A comma-delimited list of valid survey form ids |  |
+ **id** | [**Array&lt;String&gt;**](String.html)| A comma-delimited list of valid survey form ids |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_forms_surveys_bulk_contexts"></a>
+
+## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_surveys_bulk_contexts(context_id, opts)
+
+
+
+Retrieve a list of the latest form versions by context ids
+
+
+
+Wraps GET /api/v2/quality/forms/surveys/bulk/contexts 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+context_id = ["context_id_example"] # Array<String> | A comma-delimited list of valid survey form context ids
+
+opts = { 
+  published: true # BOOLEAN | If true, the latest published version will be included. If false, only the unpublished version will be included.
+}
+
+begin
+  #Retrieve a list of the latest form versions by context ids
+  result = api_instance.get_quality_forms_surveys_bulk_contexts(context_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_forms_surveys_bulk_contexts: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **context_id** | [**Array&lt;String&gt;**](String.html)| A comma-delimited list of valid survey form context ids |  |
+ **published** | **BOOLEAN**| If true, the latest published version will be included. If false, only the unpublished version will be included. | [optional] [default to true] |
 {: class="table table-striped"}
 
 
