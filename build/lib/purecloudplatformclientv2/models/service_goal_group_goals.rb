@@ -25,13 +25,18 @@ module PureCloud
     # Average speed of answer targets for this service goal group
     attr_accessor :average_speed_of_answer
 
+    # Abandon rate targets for this service goal group
+    attr_accessor :abandon_rate
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'service_level' => :'serviceLevel',
         
-        :'average_speed_of_answer' => :'averageSpeedOfAnswer'
+        :'average_speed_of_answer' => :'averageSpeedOfAnswer',
+        
+        :'abandon_rate' => :'abandonRate'
         
       }
     end
@@ -42,7 +47,9 @@ module PureCloud
         
         :'service_level' => :'WfmServiceLevel',
         
-        :'average_speed_of_answer' => :'WfmAverageSpeedOfAnswer'
+        :'average_speed_of_answer' => :'WfmAverageSpeedOfAnswer',
+        
+        :'abandon_rate' => :'WfmAbandonRate'
         
       }
     end
@@ -69,6 +76,15 @@ module PureCloud
         
         
         self.average_speed_of_answer = attributes[:'averageSpeedOfAnswer']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'abandonRate')
+        
+        
+        self.abandon_rate = attributes[:'abandonRate']
         
       
       end
@@ -107,8 +123,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -126,7 +151,8 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           service_level == o.service_level &&
-          average_speed_of_answer == o.average_speed_of_answer
+          average_speed_of_answer == o.average_speed_of_answer &&
+          abandon_rate == o.abandon_rate
     end
 
     # @see the `==` method
@@ -138,7 +164,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [service_level, average_speed_of_answer].hash
+      [service_level, average_speed_of_answer, abandon_rate].hash
     end
 
     # build the object from hash
