@@ -2993,6 +2993,7 @@ module PureCloud
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
     # @option opts [Array<String>] :id id
+    # @option opts [Array<String>] :division_id Division ID(s)
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order (default to a)
     # @return [ContactListEntityListing]
@@ -3011,6 +3012,7 @@ module PureCloud
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
     # @option opts [Array<String>] :id id
+    # @option opts [Array<String>] :division_id Division ID(s)
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order
     # @return [Array<(ContactListEntityListing, Fixnum, Hash)>] ContactListEntityListing data, response status code and response headers
@@ -3074,6 +3076,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
         fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
       end
@@ -3093,6 +3101,7 @@ module PureCloud
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
+      query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
 
@@ -5500,6 +5509,70 @@ module PureCloud
         :return_type => 'Array<CampaignProgress>')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#post_outbound_campaigns_progress\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
+    # 
+    # @param contact_list_id Contact List ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def post_outbound_contactlist_clear(contact_list_id, opts = {})
+      post_outbound_contactlist_clear_with_http_info(contact_list_id, opts)
+      return nil
+    end
+
+    # Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
+    # 
+    # @param contact_list_id Contact List ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def post_outbound_contactlist_clear_with_http_info(contact_list_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_contactlist_clear ..."
+      end
+      
+      
+      # verify the required parameter 'contact_list_id' is set
+      fail ArgumentError, "Missing the required parameter 'contact_list_id' when calling OutboundApi.post_outbound_contactlist_clear" if contact_list_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/contactlists/{contactListId}/clear".sub('{format}','json').sub('{' + 'contactListId' + '}', contact_list_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#post_outbound_contactlist_clear\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

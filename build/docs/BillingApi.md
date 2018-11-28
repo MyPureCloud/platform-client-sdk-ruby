@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 Method | Description
 ------------- | ------------- | -------------
 [**get_billing_reports_billableusage**](BillingApi.html#get_billing_reports_billableusage) | Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+[**get_billing_trusteebillingoverview_trustor_org_id**](BillingApi.html#get_billing_trusteebillingoverview_trustor_org_id) | Get the billing overview for an organization that is managed by a partner.
 {: class="table table-striped"}
 
 <a name="get_billing_reports_billableusage"></a>
@@ -74,6 +75,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BillingUsageReport**](BillingUsageReport.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_billing_trusteebillingoverview_trustor_org_id"></a>
+
+## -[**TrusteeBillingOverview**](TrusteeBillingOverview.html) get_billing_trusteebillingoverview_trustor_org_id(trustor_org_id, opts)
+
+
+
+Get the billing overview for an organization that is managed by a partner.
+
+Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+
+Wraps GET /api/v2/billing/trusteebillingoverview/{trustorOrgId} 
+
+Requires ANY permissions: 
+
+* affiliateOrganization:clientBilling:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::BillingApi.new
+
+trustor_org_id = "trustor_org_id_example" # String | The organization ID of the trustor (customer) organization.
+
+opts = { 
+  billing_period_index: 0 # Integer | Billing Period Index
+}
+
+begin
+  #Get the billing overview for an organization that is managed by a partner.
+  result = api_instance.get_billing_trusteebillingoverview_trustor_org_id(trustor_org_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling BillingApi->get_billing_trusteebillingoverview_trustor_org_id: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **trustor_org_id** | **String**| The organization ID of the trustor (customer) organization. |  |
+ **billing_period_index** | **Integer**| Billing Period Index | [optional] [default to 0] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TrusteeBillingOverview**](TrusteeBillingOverview.html)
 
 ### HTTP request headers
 

@@ -121,7 +121,7 @@ module PureCloud
         
         :'footer' => :'String',
         
-        :'question_groups' => :'Array<QuestionGroup>',
+        :'question_groups' => :'Array<SurveyQuestionGroup>',
         
         :'published_versions' => :'DomainEntityListingSurveyForm',
         

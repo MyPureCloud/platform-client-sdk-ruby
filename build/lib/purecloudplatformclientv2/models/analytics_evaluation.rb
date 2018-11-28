@@ -42,11 +42,9 @@ module PureCloud
     # Name of the evaluation form
     attr_accessor :form_name
 
-    # The total evaluation for interactions
-    attr_accessor :geto_total_score
+    attr_accessor :o_total_score
 
-    # The score for critical evaluation questions
-    attr_accessor :geto_total_critical_score
+    attr_accessor :o_total_critical_score
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -68,9 +66,9 @@ module PureCloud
         
         :'form_name' => :'formName',
         
-        :'geto_total_score' => :'getoTotalScore',
+        :'o_total_score' => :'oTotalScore',
         
-        :'geto_total_critical_score' => :'getoTotalCriticalScore'
+        :'o_total_critical_score' => :'oTotalCriticalScore'
         
       }
     end
@@ -95,9 +93,9 @@ module PureCloud
         
         :'form_name' => :'String',
         
-        :'geto_total_score' => :'Integer',
+        :'o_total_score' => :'Integer',
         
-        :'geto_total_critical_score' => :'Integer'
+        :'o_total_critical_score' => :'Integer'
         
       }
     end
@@ -183,19 +181,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'getoTotalScore')
+      if attributes.has_key?(:'oTotalScore')
         
         
-        self.geto_total_score = attributes[:'getoTotalScore']
+        self.o_total_score = attributes[:'oTotalScore']
         
       
       end
 
       
-      if attributes.has_key?(:'getoTotalCriticalScore')
+      if attributes.has_key?(:'oTotalCriticalScore')
         
         
-        self.geto_total_critical_score = attributes[:'getoTotalCriticalScore']
+        self.o_total_critical_score = attributes[:'oTotalCriticalScore']
         
       
       end
@@ -322,8 +320,8 @@ module PureCloud
           form_id == o.form_id &&
           context_id == o.context_id &&
           form_name == o.form_name &&
-          geto_total_score == o.geto_total_score &&
-          geto_total_critical_score == o.geto_total_critical_score
+          o_total_score == o.o_total_score &&
+          o_total_critical_score == o.o_total_critical_score
     end
 
     # @see the `==` method
@@ -335,7 +333,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [evaluation_id, evaluator_id, user_id, event_time, queue_id, form_id, context_id, form_name, geto_total_score, geto_total_critical_score].hash
+      [evaluation_id, evaluator_id, user_id, event_time, queue_id, form_id, context_id, form_name, o_total_score, o_total_critical_score].hash
     end
 
     # build the object from hash

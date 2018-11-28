@@ -40,7 +40,7 @@ module PureCloud
         
         :'group' => :'Hash<String, String>',
         
-        :'data' => :'Array<AggregateMetricData>'
+        :'data' => :'Array<ObservationMetricData>'
         
       }
     end

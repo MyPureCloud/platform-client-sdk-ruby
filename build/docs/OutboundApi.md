@@ -76,6 +76,7 @@ Method | Description
 [**post_outbound_campaignrules**](OutboundApi.html#post_outbound_campaignrules) | Create Campaign Rule
 [**post_outbound_campaigns**](OutboundApi.html#post_outbound_campaigns) | Create a campaign.
 [**post_outbound_campaigns_progress**](OutboundApi.html#post_outbound_campaigns_progress) | Get progress for a list of campaigns
+[**post_outbound_contactlist_clear**](OutboundApi.html#post_outbound_contactlist_clear) | Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
 [**post_outbound_contactlist_contacts**](OutboundApi.html#post_outbound_contactlist_contacts) | Add contacts to a contact list.
 [**post_outbound_contactlist_contacts_bulk**](OutboundApi.html#post_outbound_contactlist_contacts_bulk) | Get contacts from a contact list.
 [**post_outbound_contactlist_export**](OutboundApi.html#post_outbound_contactlist_export) | Initiate the export of a contact list.
@@ -2717,6 +2718,7 @@ opts = {
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
   id: ["id_example"], # Array<String> | id
+  division_id: ["division_id_example"], # Array<String> | Division ID(s)
   sort_by: "sort_by_example", # String | Sort by
   sort_order: "a" # String | Sort order
 }
@@ -2741,6 +2743,7 @@ Name | Type | Description  | Notes
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
  **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
+ **division_id** | [**Array&lt;String&gt;**](String.html)| Division ID(s) | [optional]  |
  **sort_by** | **String**| Sort by | [optional]  |
  **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
@@ -4734,6 +4737,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Array&lt;CampaignProgress&gt;**](CampaignProgress.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_outbound_contactlist_clear"></a>
+
+## - post_outbound_contactlist_clear(contact_list_id)
+
+
+
+Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
+
+
+
+Wraps POST /api/v2/outbound/contactlists/{contactListId}/clear 
+
+Requires ANY permissions: 
+
+* outbound:contact:delete
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+contact_list_id = "contact_list_id_example" # String | Contact List ID
+
+
+begin
+  #Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
+  api_instance.post_outbound_contactlist_clear(contact_list_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->post_outbound_contactlist_clear: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contact_list_id** | **String**| Contact List ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 

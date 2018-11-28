@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class Prompt
-    # The globally unique identifier for the object.
+    # The prompt identifier
     attr_accessor :id
 
     # The prompt name.

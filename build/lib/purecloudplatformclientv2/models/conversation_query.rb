@@ -30,6 +30,9 @@ module PureCloud
     # Filters that target quality management survey-level data
     attr_accessor :survey_filters
 
+    # Filters that target call quality of service data
+    attr_accessor :media_endpoint_stat_filters
+
     # Filters that target individual segments within a conversation
     attr_accessor :segment_filters
 
@@ -57,6 +60,8 @@ module PureCloud
         
         :'survey_filters' => :'surveyFilters',
         
+        :'media_endpoint_stat_filters' => :'mediaEndpointStatFilters',
+        
         :'segment_filters' => :'segmentFilters',
         
         :'aggregations' => :'aggregations',
@@ -81,6 +86,8 @@ module PureCloud
         :'evaluation_filters' => :'Array<AnalyticsQueryFilter>',
         
         :'survey_filters' => :'Array<AnalyticsQueryFilter>',
+        
+        :'media_endpoint_stat_filters' => :'Array<AnalyticsQueryFilter>',
         
         :'segment_filters' => :'Array<AnalyticsQueryFilter>',
         
@@ -139,6 +146,17 @@ module PureCloud
         
         if (value = attributes[:'surveyFilters']).is_a?(Array)
           self.survey_filters = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'mediaEndpointStatFilters')
+        
+        if (value = attributes[:'mediaEndpointStatFilters']).is_a?(Array)
+          self.media_endpoint_stat_filters = value
         end
         
         
@@ -240,6 +258,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["asc", "desc"]
       if @order && !allowed_values.include?(@order)
         return false
@@ -258,6 +280,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -331,6 +358,7 @@ module PureCloud
           conversation_filters == o.conversation_filters &&
           evaluation_filters == o.evaluation_filters &&
           survey_filters == o.survey_filters &&
+          media_endpoint_stat_filters == o.media_endpoint_stat_filters &&
           segment_filters == o.segment_filters &&
           aggregations == o.aggregations &&
           paging == o.paging &&
@@ -347,7 +375,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [interval, conversation_filters, evaluation_filters, survey_filters, segment_filters, aggregations, paging, order, order_by].hash
+      [interval, conversation_filters, evaluation_filters, survey_filters, media_endpoint_stat_filters, segment_filters, aggregations, paging, order, order_by].hash
     end
 
     # build the object from hash

@@ -15,8 +15,8 @@ title: AnalyticsEvaluation
 | **form_id** | **String** | Unique identifier for the form used to evaluate the conversation/agent | [optional] |
 | **context_id** | **String** | A unique identifier for an evaluation form, regardless of version | [optional] |
 | **form_name** | **String** | Name of the evaluation form | [optional] |
-| **geto_total_score** | **Integer** | The total evaluation for interactions | [optional] |
-| **geto_total_critical_score** | **Integer** | The score for critical evaluation questions | [optional] |
+| **o_total_score** | **Integer** |  | [optional] |
+| **o_total_critical_score** | **Integer** |  | [optional] |
 {: class="table table-striped"}
 
 

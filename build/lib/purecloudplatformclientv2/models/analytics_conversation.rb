@@ -27,6 +27,12 @@ module PureCloud
     # Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :conversation_end
 
+    # The lowest estimated average MOS among all the audio streams belonging to this conversation
+    attr_accessor :media_stats_min_conversation_mos
+
+    # The lowest R-factor value among all of the audio streams belonging to this conversation
+    attr_accessor :media_stats_min_conversation_r_factor
+
     # Participants in the conversation
     attr_accessor :participants
 
@@ -49,6 +55,10 @@ module PureCloud
         
         :'conversation_end' => :'conversationEnd',
         
+        :'media_stats_min_conversation_mos' => :'mediaStatsMinConversationMos',
+        
+        :'media_stats_min_conversation_r_factor' => :'mediaStatsMinConversationRFactor',
+        
         :'participants' => :'participants',
         
         :'evaluations' => :'evaluations',
@@ -69,6 +79,10 @@ module PureCloud
         :'conversation_start' => :'DateTime',
         
         :'conversation_end' => :'DateTime',
+        
+        :'media_stats_min_conversation_mos' => :'Float',
+        
+        :'media_stats_min_conversation_r_factor' => :'Float',
         
         :'participants' => :'Array<AnalyticsParticipant>',
         
@@ -112,6 +126,24 @@ module PureCloud
         
         
         self.conversation_end = attributes[:'conversationEnd']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'mediaStatsMinConversationMos')
+        
+        
+        self.media_stats_min_conversation_mos = attributes[:'mediaStatsMinConversationMos']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'mediaStatsMinConversationRFactor')
+        
+        
+        self.media_stats_min_conversation_r_factor = attributes[:'mediaStatsMinConversationRFactor']
         
       
       end
@@ -204,8 +236,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -250,6 +300,8 @@ module PureCloud
           conversation_id == o.conversation_id &&
           conversation_start == o.conversation_start &&
           conversation_end == o.conversation_end &&
+          media_stats_min_conversation_mos == o.media_stats_min_conversation_mos &&
+          media_stats_min_conversation_r_factor == o.media_stats_min_conversation_r_factor &&
           participants == o.participants &&
           evaluations == o.evaluations &&
           surveys == o.surveys &&
@@ -265,7 +317,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [conversation_id, conversation_start, conversation_end, participants, evaluations, surveys, division_ids].hash
+      [conversation_id, conversation_start, conversation_end, media_stats_min_conversation_mos, media_stats_min_conversation_r_factor, participants, evaluations, surveys, division_ids].hash
     end
 
     # build the object from hash

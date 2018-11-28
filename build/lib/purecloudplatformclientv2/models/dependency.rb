@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class Dependency
-    # The globally unique identifier for the object.
+    # The dependency identifier
     attr_accessor :id
 
     attr_accessor :name

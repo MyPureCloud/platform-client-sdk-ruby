@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class FlowDivisionView
-    # The globally unique identifier for the object.
+    # The flow identifier
     attr_accessor :id
 
     # The flow name

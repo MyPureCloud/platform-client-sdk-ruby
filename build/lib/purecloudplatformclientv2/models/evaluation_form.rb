@@ -76,7 +76,7 @@ module PureCloud
         
         :'context_id' => :'String',
         
-        :'question_groups' => :'Array<QuestionGroup>',
+        :'question_groups' => :'Array<EvaluationQuestionGroup>',
         
         :'published_versions' => :'DomainEntityListingEvaluationForm',
         

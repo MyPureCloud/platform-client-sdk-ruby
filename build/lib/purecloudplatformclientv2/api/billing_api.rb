@@ -100,5 +100,79 @@ module PureCloud
       end
       return data, status_code, headers
     end
+
+    # Get the billing overview for an organization that is managed by a partner.
+    # Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+    # @param trustor_org_id The organization ID of the trustor (customer) organization.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :billing_period_index Billing Period Index (default to 0)
+    # @return [TrusteeBillingOverview]
+    def get_billing_trusteebillingoverview_trustor_org_id(trustor_org_id, opts = {})
+      data, _status_code, _headers = get_billing_trusteebillingoverview_trustor_org_id_with_http_info(trustor_org_id, opts)
+      return data
+    end
+
+    # Get the billing overview for an organization that is managed by a partner.
+    # Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
+    # @param trustor_org_id The organization ID of the trustor (customer) organization.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :billing_period_index Billing Period Index
+    # @return [Array<(TrusteeBillingOverview, Fixnum, Hash)>] TrusteeBillingOverview data, response status code and response headers
+    def get_billing_trusteebillingoverview_trustor_org_id_with_http_info(trustor_org_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: BillingApi.get_billing_trusteebillingoverview_trustor_org_id ..."
+      end
+      
+      
+      # verify the required parameter 'trustor_org_id' is set
+      fail ArgumentError, "Missing the required parameter 'trustor_org_id' when calling BillingApi.get_billing_trusteebillingoverview_trustor_org_id" if trustor_org_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/billing/trusteebillingoverview/{trustorOrgId}".sub('{format}','json').sub('{' + 'trustorOrgId' + '}', trustor_org_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'billingPeriodIndex'] = opts[:'billing_period_index'] if opts[:'billing_period_index']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud Auth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TrusteeBillingOverview')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: BillingApi#get_billing_trusteebillingoverview_trustor_org_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
   end
 end

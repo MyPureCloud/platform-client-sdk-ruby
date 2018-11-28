@@ -132,6 +132,15 @@ module PureCloud
     # The list of language strings as free form text
     attr_accessor :language_list
 
+    # The desired range for mos values
+    attr_accessor :mos
+
+    # The survey question group score used to filter the view
+    attr_accessor :survey_question_group_score
+
+    # The survey promoter score used to filter the view
+    attr_accessor :survey_promoter_score
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -210,7 +219,13 @@ module PureCloud
         
         :'skills_list' => :'skillsList',
         
-        :'language_list' => :'languageList'
+        :'language_list' => :'languageList',
+        
+        :'mos' => :'mos',
+        
+        :'survey_question_group_score' => :'surveyQuestionGroupScore',
+        
+        :'survey_promoter_score' => :'surveyPromoterScore'
         
       }
     end
@@ -293,7 +308,13 @@ module PureCloud
         
         :'skills_list' => :'Array<String>',
         
-        :'language_list' => :'Array<String>'
+        :'language_list' => :'Array<String>',
+        
+        :'mos' => :'NumericRange',
+        
+        :'survey_question_group_score' => :'NumericRange',
+        
+        :'survey_promoter_score' => :'NumericRange'
         
       }
     end
@@ -703,6 +724,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'mos')
+        
+        
+        self.mos = attributes[:'mos']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'surveyQuestionGroupScore')
+        
+        
+        self.survey_question_group_score = attributes[:'surveyQuestionGroupScore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'surveyPromoterScore')
+        
+        
+        self.survey_promoter_score = attributes[:'surveyPromoterScore']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -870,6 +918,18 @@ module PureCloud
       if @interacting_duration_sort_order && !allowed_values.include?(@interacting_duration_sort_order)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1105,6 +1165,21 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1147,7 +1222,10 @@ module PureCloud
           interacting_duration_sort_order == o.interacting_duration_sort_order &&
           agent_name == o.agent_name &&
           skills_list == o.skills_list &&
-          language_list == o.language_list
+          language_list == o.language_list &&
+          mos == o.mos &&
+          survey_question_group_score == o.survey_question_group_score &&
+          survey_promoter_score == o.survey_promoter_score
     end
 
     # @see the `==` method
@@ -1159,7 +1237,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score].hash
     end
 
     # build the object from hash

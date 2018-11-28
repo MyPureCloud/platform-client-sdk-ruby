@@ -24,10 +24,13 @@ module PureCloud
     # Unique identifier for the survey form
     attr_accessor :survey_form_id
 
+    # Name of the survey form
+    attr_accessor :survey_form_name
+
     # Unique identifier for the survey form, regardless of version
     attr_accessor :survey_form_context_id
 
-    # Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :event_time
 
     # A unique identifier of the PureCloud user
@@ -37,25 +40,15 @@ module PureCloud
     attr_accessor :queue_id
 
     # Survey status
-    attr_accessor :status
+    attr_accessor :survey_status
 
-    # Creation date of survey
-    attr_accessor :geto_survey_total_score
-
-    # NPS score of the survey
+    # Promoter score of the survey
     attr_accessor :survey_promoter_score
 
     # Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-    attr_accessor :getsurvey_completed_date
+    attr_accessor :survey_completed_date
 
-    # Media types associated with the conversation
-    attr_accessor :media_types
-
-    # Language IDs associated with the conversation
-    attr_accessor :language_ids
-
-    # Skill IDs associated with the conversation
-    attr_accessor :skill_ids
+    attr_accessor :o_survey_total_score
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -65,6 +58,8 @@ module PureCloud
         
         :'survey_form_id' => :'surveyFormId',
         
+        :'survey_form_name' => :'surveyFormName',
+        
         :'survey_form_context_id' => :'surveyFormContextId',
         
         :'event_time' => :'eventTime',
@@ -73,19 +68,13 @@ module PureCloud
         
         :'queue_id' => :'queueId',
         
-        :'status' => :'status',
-        
-        :'geto_survey_total_score' => :'getoSurveyTotalScore',
+        :'survey_status' => :'surveyStatus',
         
         :'survey_promoter_score' => :'surveyPromoterScore',
         
-        :'getsurvey_completed_date' => :'getsurveyCompletedDate',
+        :'survey_completed_date' => :'surveyCompletedDate',
         
-        :'media_types' => :'mediaTypes',
-        
-        :'language_ids' => :'languageIds',
-        
-        :'skill_ids' => :'skillIds'
+        :'o_survey_total_score' => :'oSurveyTotalScore'
         
       }
     end
@@ -98,6 +87,8 @@ module PureCloud
         
         :'survey_form_id' => :'String',
         
+        :'survey_form_name' => :'String',
+        
         :'survey_form_context_id' => :'String',
         
         :'event_time' => :'DateTime',
@@ -106,19 +97,13 @@ module PureCloud
         
         :'queue_id' => :'String',
         
-        :'status' => :'String',
-        
-        :'geto_survey_total_score' => :'Integer',
+        :'survey_status' => :'String',
         
         :'survey_promoter_score' => :'Integer',
         
-        :'getsurvey_completed_date' => :'DateTime',
+        :'survey_completed_date' => :'DateTime',
         
-        :'media_types' => :'Array<String>',
-        
-        :'language_ids' => :'Array<String>',
-        
-        :'skill_ids' => :'Array<String>'
+        :'o_survey_total_score' => :'Integer'
         
       }
     end
@@ -145,6 +130,15 @@ module PureCloud
         
         
         self.survey_form_id = attributes[:'surveyFormId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'surveyFormName')
+        
+        
+        self.survey_form_name = attributes[:'surveyFormName']
         
       
       end
@@ -186,19 +180,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'status')
+      if attributes.has_key?(:'surveyStatus')
         
         
-        self.status = attributes[:'status']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'getoSurveyTotalScore')
-        
-        
-        self.geto_survey_total_score = attributes[:'getoSurveyTotalScore']
+        self.survey_status = attributes[:'surveyStatus']
         
       
       end
@@ -213,43 +198,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'getsurveyCompletedDate')
+      if attributes.has_key?(:'surveyCompletedDate')
         
         
-        self.getsurvey_completed_date = attributes[:'getsurveyCompletedDate']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'mediaTypes')
-        
-        if (value = attributes[:'mediaTypes']).is_a?(Array)
-          self.media_types = value
-        end
-        
+        self.survey_completed_date = attributes[:'surveyCompletedDate']
         
       
       end
 
       
-      if attributes.has_key?(:'languageIds')
-        
-        if (value = attributes[:'languageIds']).is_a?(Array)
-          self.language_ids = value
-        end
+      if attributes.has_key?(:'oSurveyTotalScore')
         
         
-      
-      end
-
-      
-      if attributes.has_key?(:'skillIds')
-        
-        if (value = attributes[:'skillIds']).is_a?(Array)
-          self.skill_ids = value
-        end
-        
+        self.o_survey_total_score = attributes[:'oSurveyTotalScore']
         
       
       end
@@ -314,26 +275,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -397,17 +340,15 @@ module PureCloud
       self.class == o.class &&
           survey_id == o.survey_id &&
           survey_form_id == o.survey_form_id &&
+          survey_form_name == o.survey_form_name &&
           survey_form_context_id == o.survey_form_context_id &&
           event_time == o.event_time &&
           user_id == o.user_id &&
           queue_id == o.queue_id &&
-          status == o.status &&
-          geto_survey_total_score == o.geto_survey_total_score &&
+          survey_status == o.survey_status &&
           survey_promoter_score == o.survey_promoter_score &&
-          getsurvey_completed_date == o.getsurvey_completed_date &&
-          media_types == o.media_types &&
-          language_ids == o.language_ids &&
-          skill_ids == o.skill_ids
+          survey_completed_date == o.survey_completed_date &&
+          o_survey_total_score == o.o_survey_total_score
     end
 
     # @see the `==` method
@@ -419,7 +360,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [survey_id, survey_form_id, survey_form_context_id, event_time, user_id, queue_id, status, geto_survey_total_score, survey_promoter_score, getsurvey_completed_date, media_types, language_ids, skill_ids].hash
+      [survey_id, survey_form_id, survey_form_name, survey_form_context_id, event_time, user_id, queue_id, survey_status, survey_promoter_score, survey_completed_date, o_survey_total_score].hash
     end
 
     # build the object from hash

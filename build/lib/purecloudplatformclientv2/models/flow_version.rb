@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class FlowVersion
-    # The globally unique identifier for the object.
+    # The flow version identifier
     attr_accessor :id
 
     attr_accessor :name
