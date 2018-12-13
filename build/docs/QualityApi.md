@@ -20,6 +20,7 @@ Method | Description
 [**get_quality_calibrations**](QualityApi.html#get_quality_calibrations) | Get the list of calibrations
 [**get_quality_conversation_audits**](QualityApi.html#get_quality_conversation_audits) | Get audits for conversation or recording
 [**get_quality_conversation_evaluation**](QualityApi.html#get_quality_conversation_evaluation) | Get an evaluation
+[**get_quality_conversation_surveys**](QualityApi.html#get_quality_conversation_surveys) | Get the surveys for a conversation
 [**get_quality_evaluations_query**](QualityApi.html#get_quality_evaluations_query) | Queries Evaluations and returns a paged list
 [**get_quality_evaluators_activity**](QualityApi.html#get_quality_evaluators_activity) | Get an evaluator activity
 [**get_quality_form**](QualityApi.html#get_quality_form) | Get an evaluation form
@@ -41,8 +42,11 @@ Method | Description
 [**get_quality_publishedforms_evaluations**](QualityApi.html#get_quality_publishedforms_evaluations) | Get the published evaluation forms.
 [**get_quality_publishedforms_survey**](QualityApi.html#get_quality_publishedforms_survey) | Get the most recent published version of a survey form.
 [**get_quality_publishedforms_surveys**](QualityApi.html#get_quality_publishedforms_surveys) | Get the published survey forms.
+[**get_quality_survey**](QualityApi.html#get_quality_survey) | Get a survey for a conversation
+[**get_quality_surveys_scorable**](QualityApi.html#get_quality_surveys_scorable) | Get a survey as an end-customer, for the purposes of scoring it.
 [**patch_quality_forms_survey**](QualityApi.html#patch_quality_forms_survey) | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
 [**post_analytics_evaluations_aggregates_query**](QualityApi.html#post_analytics_evaluations_aggregates_query) | Query for evaluation aggregates
+[**post_analytics_surveys_aggregates_query**](QualityApi.html#post_analytics_surveys_aggregates_query) | Query for survey aggregates
 [**post_quality_calibrations**](QualityApi.html#post_quality_calibrations) | Create a calibration
 [**post_quality_conversation_evaluations**](QualityApi.html#post_quality_conversation_evaluations) | Create an evaluation
 [**post_quality_evaluations_scoring**](QualityApi.html#post_quality_evaluations_scoring) | Score evaluation
@@ -54,12 +58,14 @@ Method | Description
 [**post_quality_publishedforms_evaluations**](QualityApi.html#post_quality_publishedforms_evaluations) | Publish an evaluation form.
 [**post_quality_publishedforms_surveys**](QualityApi.html#post_quality_publishedforms_surveys) | Publish a survey form.
 [**post_quality_spotability**](QualityApi.html#post_quality_spotability) | Retrieve the spotability statistic
+[**post_quality_surveys_scoring**](QualityApi.html#post_quality_surveys_scoring) | Score survey
 [**put_quality_calibration**](QualityApi.html#put_quality_calibration) | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
 [**put_quality_conversation_evaluation**](QualityApi.html#put_quality_conversation_evaluation) | Update an evaluation
 [**put_quality_form**](QualityApi.html#put_quality_form) | Update an evaluation form.
 [**put_quality_forms_evaluation**](QualityApi.html#put_quality_forms_evaluation) | Update an evaluation form.
 [**put_quality_forms_survey**](QualityApi.html#put_quality_forms_survey) | Update a survey form.
 [**put_quality_keywordset**](QualityApi.html#put_quality_keywordset) | Update a keywordSet to the specified keywordSet via PUT.
+[**put_quality_surveys_scorable**](QualityApi.html#put_quality_surveys_scorable) | Update a survey as an end-customer, for the purposes of scoring it.
 {: class="table table-striped"}
 
 <a name="delete_quality_calibration"></a>
@@ -904,6 +910,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Evaluation**](Evaluation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_conversation_surveys"></a>
+
+## -[**Array&lt;Survey&gt;**](Survey.html) get_quality_conversation_surveys(conversation_id)
+
+
+
+Get the surveys for a conversation
+
+
+
+Wraps GET /api/v2/quality/conversations/{conversationId}/surveys 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+
+begin
+  #Get the surveys for a conversation
+  result = api_instance.get_quality_conversation_surveys(conversation_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_conversation_surveys: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;Survey&gt;**](Survey.html)
 
 ### HTTP request headers
 
@@ -2436,6 +2506,125 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_quality_survey"></a>
+
+## -[**Survey**](Survey.html) get_quality_survey(survey_id)
+
+
+
+Get a survey for a conversation
+
+
+
+Wraps GET /api/v2/quality/surveys/{surveyId} 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+survey_id = "survey_id_example" # String | surveyId
+
+
+begin
+  #Get a survey for a conversation
+  result = api_instance.get_quality_survey(survey_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_survey: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **survey_id** | **String**| surveyId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Survey**](Survey.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_quality_surveys_scorable"></a>
+
+## -[**ScorableSurvey**](ScorableSurvey.html) get_quality_surveys_scorable(opts)
+
+
+
+Get a survey as an end-customer, for the purposes of scoring it.
+
+
+
+Wraps GET /api/v2/quality/surveys/scorable 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+
+api_instance = PureCloud::QualityApi.new
+
+opts = { 
+  customer_survey_url: "customer_survey_url_example" # String | customerSurveyUrl
+}
+
+begin
+  #Get a survey as an end-customer, for the purposes of scoring it.
+  result = api_instance.get_quality_surveys_scorable(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->get_quality_surveys_scorable: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_survey_url** | **String**| customerSurveyUrl | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScorableSurvey**](ScorableSurvey.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="patch_quality_forms_survey"></a>
 
 ## -[**SurveyForm**](SurveyForm.html) patch_quality_forms_survey(form_id, body)
@@ -2547,6 +2736,71 @@ begin
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_analytics_evaluations_aggregates_query: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AggregateQueryResponse**](AggregateQueryResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_analytics_surveys_aggregates_query"></a>
+
+## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_surveys_aggregates_query(body)
+
+
+
+Query for survey aggregates
+
+
+
+Wraps POST /api/v2/analytics/surveys/aggregates/query 
+
+Requires ANY permissions: 
+
+* analytics:surveyAggregate:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+body = PureCloud::AggregationQuery.new # AggregationQuery | query
+
+
+begin
+  #Query for survey aggregates
+  result = api_instance.post_analytics_surveys_aggregates_query(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->post_analytics_surveys_aggregates_query: #{e}"
 end
 ~~~
 
@@ -3295,6 +3549,70 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_quality_surveys_scoring"></a>
+
+## -[**SurveyScoringSet**](SurveyScoringSet.html) post_quality_surveys_scoring(body)
+
+
+
+Score survey
+
+
+
+Wraps POST /api/v2/quality/surveys/scoring 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::QualityApi.new
+
+body = PureCloud::SurveyFormAndScoringSet.new # SurveyFormAndScoringSet | surveyAndScoringSet
+
+
+begin
+  #Score survey
+  result = api_instance.post_quality_surveys_scoring(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->post_quality_surveys_scoring: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**SurveyFormAndScoringSet**](SurveyFormAndScoringSet.html)| surveyAndScoringSet |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SurveyScoringSet**](SurveyScoringSet.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="put_quality_calibration"></a>
 
 ## -[**Calibration**](Calibration.html) put_quality_calibration(calibration_id, body)
@@ -3699,6 +4017,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**KeywordSet**](KeywordSet.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_quality_surveys_scorable"></a>
+
+## -[**ScorableSurvey**](ScorableSurvey.html) put_quality_surveys_scorable(body, opts)
+
+
+
+Update a survey as an end-customer, for the purposes of scoring it.
+
+
+
+Wraps PUT /api/v2/quality/surveys/scorable 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+
+api_instance = PureCloud::QualityApi.new
+
+body = PureCloud::ScorableSurvey.new # ScorableSurvey | survey
+
+opts = { 
+  customer_survey_url: "customer_survey_url_example" # String | customerSurveyUrl
+}
+
+begin
+  #Update a survey as an end-customer, for the purposes of scoring it.
+  result = api_instance.put_quality_surveys_scorable(body, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling QualityApi->put_quality_surveys_scorable: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ScorableSurvey**](ScorableSurvey.html)| survey |  |
+ **customer_survey_url** | **String**| customerSurveyUrl | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScorableSurvey**](ScorableSurvey.html)
 
 ### HTTP request headers
 

@@ -135,7 +135,7 @@ module PureCloud
     end
 
     def base_url
-      url = "#{scheme}://#{[host, base_path].join('/').gsub(/\/+/, '/')}".sub(/\/+\z/, '')
+      url = "https://#{[host, base_path].join('/').gsub(/\/+/, '/')}".sub(/\/+\z/, '')
       URI.encode(url)
     end
 
@@ -157,9 +157,16 @@ module PureCloud
     # Returns Auth Settings hash for api client.
     def auth_settings
       {
-        'PureCloud Auth' =>
+        'PureCloud OAuth' =>
           {
             type: 'oauth2',
+            in: 'header',
+            key: 'Authorization',
+            value: "Bearer #{access_token}"
+          },
+        'Guest Chat JWT' =>
+          {
+            type: 'api_key',
             in: 'header',
             key: 'Authorization',
             value: "Bearer #{access_token}"

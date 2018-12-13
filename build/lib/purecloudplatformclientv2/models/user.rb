@@ -91,6 +91,9 @@ module PureCloud
     # acd auto answer
     attr_accessor :acd_auto_answer
 
+    # preferred language by the user
+    attr_accessor :language_preference
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -151,6 +154,8 @@ module PureCloud
         :'languages' => :'languages',
         
         :'acd_auto_answer' => :'acdAutoAnswer',
+        
+        :'language_preference' => :'languagePreference',
         
         :'self_uri' => :'selfUri'
         
@@ -214,6 +219,8 @@ module PureCloud
         :'languages' => :'Array<UserRoutingLanguage>',
         
         :'acd_auto_answer' => :'BOOLEAN',
+        
+        :'language_preference' => :'String',
         
         :'self_uri' => :'String'
         
@@ -488,6 +495,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'languagePreference')
+        
+        
+        self.language_preference = attributes[:'languagePreference']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -574,6 +590,10 @@ module PureCloud
         return false
       end
 
+      
+      
+      
+      
       
       
       
@@ -786,6 +806,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -818,6 +843,7 @@ module PureCloud
           skills == o.skills &&
           languages == o.languages &&
           acd_auto_answer == o.acd_auto_answer &&
+          language_preference == o.language_preference &&
           self_uri == o.self_uri
     end
 
@@ -830,7 +856,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, skills, languages, acd_auto_answer, self_uri].hash
+      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, skills, languages, acd_auto_answer, language_preference, self_uri].hash
     end
 
     # build the object from hash

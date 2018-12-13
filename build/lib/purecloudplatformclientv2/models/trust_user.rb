@@ -91,6 +91,9 @@ module PureCloud
     # acd auto answer
     attr_accessor :acd_auto_answer
 
+    # preferred language by the user
+    attr_accessor :language_preference
+
     attr_accessor :trust_user_details
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -150,6 +153,8 @@ module PureCloud
         :'languages' => :'languages',
         
         :'acd_auto_answer' => :'acdAutoAnswer',
+        
+        :'language_preference' => :'languagePreference',
         
         :'trust_user_details' => :'trustUserDetails'
         
@@ -213,6 +218,8 @@ module PureCloud
         :'languages' => :'Array<UserRoutingLanguage>',
         
         :'acd_auto_answer' => :'BOOLEAN',
+        
+        :'language_preference' => :'String',
         
         :'trust_user_details' => :'TrustUserDetails'
         
@@ -487,6 +494,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'languagePreference')
+        
+        
+        self.language_preference = attributes[:'languagePreference']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'trustUserDetails')
         
         
@@ -573,6 +589,10 @@ module PureCloud
         return false
       end
 
+      
+      
+      
+      
       
       
       
@@ -785,6 +805,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -817,6 +842,7 @@ module PureCloud
           skills == o.skills &&
           languages == o.languages &&
           acd_auto_answer == o.acd_auto_answer &&
+          language_preference == o.language_preference &&
           trust_user_details == o.trust_user_details
     end
 
@@ -829,7 +855,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, skills, languages, acd_auto_answer, trust_user_details].hash
+      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, skills, languages, acd_auto_answer, language_preference, trust_user_details].hash
     end
 
     # build the object from hash

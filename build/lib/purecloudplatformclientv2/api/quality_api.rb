@@ -86,7 +86,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -170,7 +170,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -235,7 +235,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -299,7 +299,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -363,7 +363,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -427,7 +427,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -492,7 +492,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -654,7 +654,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -737,7 +737,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -884,7 +884,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1021,7 +1021,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1105,7 +1105,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1115,6 +1115,71 @@ module PureCloud
         :return_type => 'Evaluation')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: QualityApi#get_quality_conversation_evaluation\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the surveys for a conversation
+    # 
+    # @param conversation_id conversationId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<Survey>]
+    def get_quality_conversation_surveys(conversation_id, opts = {})
+      data, _status_code, _headers = get_quality_conversation_surveys_with_http_info(conversation_id, opts)
+      return data
+    end
+
+    # Get the surveys for a conversation
+    # 
+    # @param conversation_id conversationId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<Survey>, Fixnum, Hash)>] Array<Survey> data, response status code and response headers
+    def get_quality_conversation_surveys_with_http_info(conversation_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_conversation_surveys ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling QualityApi.get_quality_conversation_surveys" if conversation_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/conversations/{conversationId}/surveys".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<Survey>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_conversation_surveys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1322,7 +1387,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1476,7 +1541,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1541,7 +1606,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1624,7 +1689,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1751,7 +1816,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1816,7 +1881,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1899,7 +1964,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2026,7 +2091,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2091,7 +2156,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2174,7 +2239,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2301,7 +2366,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2367,7 +2432,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2442,7 +2507,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2507,7 +2572,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2656,7 +2721,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2721,7 +2786,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2812,7 +2877,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2877,7 +2942,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2968,7 +3033,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3033,7 +3098,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3124,7 +3189,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3134,6 +3199,135 @@ module PureCloud
         :return_type => 'SurveyFormEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: QualityApi#get_quality_publishedforms_surveys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a survey for a conversation
+    # 
+    # @param survey_id surveyId
+    # @param [Hash] opts the optional parameters
+    # @return [Survey]
+    def get_quality_survey(survey_id, opts = {})
+      data, _status_code, _headers = get_quality_survey_with_http_info(survey_id, opts)
+      return data
+    end
+
+    # Get a survey for a conversation
+    # 
+    # @param survey_id surveyId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Survey, Fixnum, Hash)>] Survey data, response status code and response headers
+    def get_quality_survey_with_http_info(survey_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_survey ..."
+      end
+      
+      
+      # verify the required parameter 'survey_id' is set
+      fail ArgumentError, "Missing the required parameter 'survey_id' when calling QualityApi.get_quality_survey" if survey_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/surveys/{surveyId}".sub('{format}','json').sub('{' + 'surveyId' + '}', survey_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Survey')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_survey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a survey as an end-customer, for the purposes of scoring it.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :customer_survey_url customerSurveyUrl
+    # @return [ScorableSurvey]
+    def get_quality_surveys_scorable(opts = {})
+      data, _status_code, _headers = get_quality_surveys_scorable_with_http_info(opts)
+      return data
+    end
+
+    # Get a survey as an end-customer, for the purposes of scoring it.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :customer_survey_url customerSurveyUrl
+    # @return [Array<(ScorableSurvey, Fixnum, Hash)>] ScorableSurvey data, response status code and response headers
+    def get_quality_surveys_scorable_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.get_quality_surveys_scorable ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/surveys/scorable".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'customerSurveyUrl'] = opts[:'customer_survey_url'] if opts[:'customer_survey_url']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScorableSurvey')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#get_quality_surveys_scorable\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3199,7 +3393,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3264,7 +3458,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3274,6 +3468,71 @@ module PureCloud
         :return_type => 'AggregateQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: QualityApi#post_analytics_evaluations_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Query for survey aggregates
+    # 
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @return [AggregateQueryResponse]
+    def post_analytics_surveys_aggregates_query(body, opts = {})
+      data, _status_code, _headers = post_analytics_surveys_aggregates_query_with_http_info(body, opts)
+      return data
+    end
+
+    # Query for survey aggregates
+    # 
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AggregateQueryResponse, Fixnum, Hash)>] AggregateQueryResponse data, response status code and response headers
+    def post_analytics_surveys_aggregates_query_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.post_analytics_surveys_aggregates_query ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_analytics_surveys_aggregates_query" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/analytics/surveys/aggregates/query".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AggregateQueryResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#post_analytics_surveys_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3338,7 +3597,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3422,7 +3681,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3487,7 +3746,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3552,7 +3811,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3617,7 +3876,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3682,7 +3941,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3756,7 +4015,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3821,7 +4080,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3886,7 +4145,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -3951,7 +4210,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4014,7 +4273,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4024,6 +4283,71 @@ module PureCloud
         :return_type => 'KeywordSet')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: QualityApi#post_quality_spotability\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Score survey
+    # 
+    # @param body surveyAndScoringSet
+    # @param [Hash] opts the optional parameters
+    # @return [SurveyScoringSet]
+    def post_quality_surveys_scoring(body, opts = {})
+      data, _status_code, _headers = post_quality_surveys_scoring_with_http_info(body, opts)
+      return data
+    end
+
+    # Score survey
+    # 
+    # @param body surveyAndScoringSet
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SurveyScoringSet, Fixnum, Hash)>] SurveyScoringSet data, response status code and response headers
+    def post_quality_surveys_scoring_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.post_quality_surveys_scoring ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.post_quality_surveys_scoring" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/surveys/scoring".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SurveyScoringSet')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#post_quality_surveys_scoring\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4089,7 +4413,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4183,7 +4507,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4258,7 +4582,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4333,7 +4657,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4408,7 +4732,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4483,7 +4807,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -4493,6 +4817,80 @@ module PureCloud
         :return_type => 'KeywordSet')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: QualityApi#put_quality_keywordset\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a survey as an end-customer, for the purposes of scoring it.
+    # 
+    # @param body survey
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :customer_survey_url customerSurveyUrl
+    # @return [ScorableSurvey]
+    def put_quality_surveys_scorable(body, opts = {})
+      data, _status_code, _headers = put_quality_surveys_scorable_with_http_info(body, opts)
+      return data
+    end
+
+    # Update a survey as an end-customer, for the purposes of scoring it.
+    # 
+    # @param body survey
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :customer_survey_url customerSurveyUrl
+    # @return [Array<(ScorableSurvey, Fixnum, Hash)>] ScorableSurvey data, response status code and response headers
+    def put_quality_surveys_scorable_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: QualityApi.put_quality_surveys_scorable ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling QualityApi.put_quality_surveys_scorable" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/quality/surveys/scorable".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'customerSurveyUrl'] = opts[:'customer_survey_url'] if opts[:'customer_survey_url']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScorableSurvey')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: QualityApi#put_quality_surveys_scorable\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

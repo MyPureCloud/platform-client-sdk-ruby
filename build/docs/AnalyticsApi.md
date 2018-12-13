@@ -30,6 +30,7 @@ Method | Description
 [**post_analytics_reporting_exports**](AnalyticsApi.html#post_analytics_reporting_exports) | Generate a view export request
 [**post_analytics_reporting_schedule_runreport**](AnalyticsApi.html#post_analytics_reporting_schedule_runreport) | Place a scheduled report immediately into the reporting queue
 [**post_analytics_reporting_schedules**](AnalyticsApi.html#post_analytics_reporting_schedules) | Create a scheduled report job
+[**post_analytics_surveys_aggregates_query**](AnalyticsApi.html#post_analytics_surveys_aggregates_query) | Query for survey aggregates
 [**post_analytics_users_aggregates_query**](AnalyticsApi.html#post_analytics_users_aggregates_query) | Query for user aggregates
 [**post_analytics_users_details_query**](AnalyticsApi.html#post_analytics_users_details_query) | Query for user details
 [**post_analytics_users_observations_query**](AnalyticsApi.html#post_analytics_users_observations_query) | Query for user observations
@@ -1452,6 +1453,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ReportSchedule**](ReportSchedule.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_analytics_surveys_aggregates_query"></a>
+
+## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_surveys_aggregates_query(body)
+
+
+
+Query for survey aggregates
+
+
+
+Wraps POST /api/v2/analytics/surveys/aggregates/query 
+
+Requires ANY permissions: 
+
+* analytics:surveyAggregate:view
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+body = PureCloud::AggregationQuery.new # AggregationQuery | query
+
+
+begin
+  #Query for survey aggregates
+  result = api_instance.post_analytics_surveys_aggregates_query(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->post_analytics_surveys_aggregates_query: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AggregateQueryResponse**](AggregateQueryResponse.html)
 
 ### HTTP request headers
 

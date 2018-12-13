@@ -33,7 +33,8 @@ Method | Description
 [**get_routing_queue_users**](RoutingApi.html#get_routing_queue_users) | Get the members of this queue
 [**get_routing_queue_wrapupcodes**](RoutingApi.html#get_routing_queue_wrapupcodes) | Get the wrap-up codes for a queue
 [**get_routing_queues**](RoutingApi.html#get_routing_queues) | Get list of queues.
-[**get_routing_queues_divisionviews**](RoutingApi.html#get_routing_queues_divisionviews) | Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
+[**get_routing_queues_divisionviews**](RoutingApi.html#get_routing_queues_divisionviews) | Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
+[**get_routing_queues_divisionviews_all**](RoutingApi.html#get_routing_queues_divisionviews_all) | Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
 [**get_routing_queues_me**](RoutingApi.html#get_routing_queues_me) | Get a paged listing of queues the user is a member of.
 [**get_routing_skill**](RoutingApi.html#get_routing_skill) | Get Routing Skill
 [**get_routing_skills**](RoutingApi.html#get_routing_skills) | Get the list of routing skills.
@@ -45,7 +46,7 @@ Method | Description
 [**get_routing_wrapupcodes**](RoutingApi.html#get_routing_wrapupcodes) | Get list of wrapup codes.
 [**get_user_routinglanguages**](RoutingApi.html#get_user_routinglanguages) | List routing language for user
 [**get_user_routingskills**](RoutingApi.html#get_user_routingskills) | List routing skills for user
-[**patch_routing_queue_user**](RoutingApi.html#patch_routing_queue_user) | Update the ring number of joined status for a User in a Queue
+[**patch_routing_queue_user**](RoutingApi.html#patch_routing_queue_user) | Update the ring number or joined status for a User in a Queue
 [**patch_routing_queue_users**](RoutingApi.html#patch_routing_queue_users) | Join or unjoin a set of users for a queue
 [**patch_user_routinglanguage**](RoutingApi.html#patch_user_routinglanguage) | Update routing language proficiency or state.
 [**patch_user_routinglanguages_bulk**](RoutingApi.html#patch_user_routinglanguages_bulk) | Add bulk routing language to user. Max limit 50 languages
@@ -1592,7 +1593,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **sort_by** | **String**| Sort by | [optional] [default to name] |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, languagePreference |
  **joined** | **BOOLEAN**| Filter by joined status | [optional]  |
  **name** | **String**| Filter by queue member name | [optional]  |
  **profile_skills** | [**Array&lt;String&gt;**](String.html)| Filter by profile skill | [optional]  |
@@ -1761,7 +1762,7 @@ Name | Type | Description  | Notes
 
 
 
-Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
+Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
 
 
 
@@ -1790,8 +1791,8 @@ end
 api_instance = PureCloud::RoutingApi.new
 
 opts = { 
-  page_size: 25, # Integer | Page size
-  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size [max value is 100]
+  page_number: 1, # Integer | Page number [max value is 5]
   sort_by: "name", # String | Sort by
   sort_order: "asc", # String | Sort order
   name: "name_example", # String | Name
@@ -1800,7 +1801,7 @@ opts = {
 }
 
 begin
-  #Get a page of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
+  #Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
   result = api_instance.get_routing_queues_divisionviews(opts)
   p result
 rescue PureCloud::ApiError => e
@@ -1812,13 +1813,85 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
- **page_number** | **Integer**| Page number | [optional] [default to 1] |
- **sort_by** | **String**| Sort by | [optional] [default to name] |
+ **page_size** | **Integer**| Page size [max value is 100] | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number [max value is 5] | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to name]<br />**Values**: name, id, divisionId |
  **sort_order** | **String**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc, score |
  **name** | **String**| Name | [optional]  |
  **id** | [**Array&lt;String&gt;**](String.html)| Queue ID(s) | [optional]  |
  **division_id** | [**Array&lt;String&gt;**](String.html)| Division ID(s) | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**QueueEntityListing**](QueueEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_routing_queues_divisionviews_all"></a>
+
+## -[**QueueEntityListing**](QueueEntityListing.html) get_routing_queues_divisionviews_all(opts)
+
+
+
+Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+
+
+
+Wraps GET /api/v2/routing/queues/divisionviews/all 
+
+Requires ANY permissions: 
+
+* routing:queue:search
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size [max value is 500]
+  page_number: 1, # Integer | Page number
+  sort_by: "name", # String | Sort by
+  sort_order: "asc" # String | Sort order
+}
+
+begin
+  #Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+  result = api_instance.get_routing_queues_divisionviews_all(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->get_routing_queues_divisionviews_all: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size [max value is 500] | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to name]<br />**Values**: name, id, divisionId |
+ **sort_order** | **String**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc, score |
 {: class="table table-striped"}
 
 
@@ -2607,7 +2680,7 @@ Name | Type | Description  | Notes
 
 
 
-Update the ring number of joined status for a User in a Queue
+Update the ring number or joined status for a User in a Queue
 
 
 
@@ -2643,7 +2716,7 @@ body = PureCloud::QueueMember.new # QueueMember | Queue Member
 
 
 begin
-  #Update the ring number of joined status for a User in a Queue
+  #Update the ring number or joined status for a User in a Queue
   result = api_instance.patch_routing_queue_user(queue_id, member_id, body)
   p result
 rescue PureCloud::ApiError => e

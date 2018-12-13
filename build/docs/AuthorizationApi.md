@@ -21,7 +21,7 @@ Method | Description
 [**get_authorization_permissions**](AuthorizationApi.html#get_authorization_permissions) | Get all permissions.
 [**get_authorization_products**](AuthorizationApi.html#get_authorization_products) | Get the list of enabled products
 [**get_authorization_role**](AuthorizationApi.html#get_authorization_role) | Get a single organization role.
-[**get_authorization_role_comparedefault_right_role_id**](AuthorizationApi.html#get_authorization_role_comparedefault_right_role_id) | Get an org role to default role comparison comparison
+[**get_authorization_role_comparedefault_right_role_id**](AuthorizationApi.html#get_authorization_role_comparedefault_right_role_id) | Get an org role to default role comparison
 [**get_authorization_role_subjectgrants**](AuthorizationApi.html#get_authorization_role_subjectgrants) | Get the subjects&#39; granted divisions in the specified role.
 [**get_authorization_role_users**](AuthorizationApi.html#get_authorization_role_users) | Get a list of the users in a specified role.
 [**get_authorization_roles**](AuthorizationApi.html#get_authorization_roles) | Retrieve a list of all roles defined for the organization
@@ -911,7 +911,7 @@ Name | Type | Description  | Notes
 
 
 
-Get an org role to default role comparison comparison
+Get an org role to default role comparison
 
 Compares any organization role to a default role id and show differences
 
@@ -945,7 +945,7 @@ right_role_id = "right_role_id_example" # String | Right Role id
 
 
 begin
-  #Get an org role to default role comparison comparison
+  #Get an org role to default role comparison
   result = api_instance.get_authorization_role_comparedefault_right_role_id(left_role_id, right_role_id)
   p result
 rescue PureCloud::ApiError => e
@@ -1603,7 +1603,7 @@ Name | Type | Description  | Notes
 
 <a name="post_authorization_role"></a>
 
-## - post_authorization_role(role_id, body)
+## - post_authorization_role(role_id, body, opts)
 
 
 
@@ -1639,10 +1639,13 @@ role_id = "role_id_example" # String | Role ID
 
 body = PureCloud::SubjectDivisions.new # SubjectDivisions | Subjects and Divisions
 
+opts = { 
+  subject_type: "PC_USER" # String | what the type of the subject is, PC_GROUP or PC_USER
+}
 
 begin
   #Bulk-grant subjects and divisions with an organization role.
-  api_instance.post_authorization_role(role_id, body)
+  api_instance.post_authorization_role(role_id, body, opts)
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->post_authorization_role: #{e}"
 end
@@ -1654,6 +1657,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role_id** | **String**| Role ID |  |
  **body** | [**SubjectDivisions**](SubjectDivisions.html)| Subjects and Divisions |  |
+ **subject_type** | **String**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
 {: class="table table-striped"}
 
 

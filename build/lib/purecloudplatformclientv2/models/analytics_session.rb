@@ -81,7 +81,7 @@ module PureCloud
     # Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :callback_scheduled_time
 
-    # Scheduled callback date/time, Date time is represented as an ISO-8601 string. 
+    # A unique identifier for a script
     attr_accessor :script_id
 
     # A unique identifier for a peer

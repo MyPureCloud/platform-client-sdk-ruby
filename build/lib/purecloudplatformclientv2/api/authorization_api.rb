@@ -75,7 +75,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -139,7 +139,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -223,7 +223,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -287,7 +287,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -360,7 +360,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -496,7 +496,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -551,7 +551,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -606,7 +606,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -681,7 +681,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -766,7 +766,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -839,7 +839,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -894,7 +894,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -959,7 +959,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -973,7 +973,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get an org role to default role comparison comparison
+    # Get an org role to default role comparison
     # Compares any organization role to a default role id and show differences
     # @param left_role_id Left Role ID
     # @param right_role_id Right Role id
@@ -984,7 +984,7 @@ module PureCloud
       return data
     end
 
-    # Get an org role to default role comparison comparison
+    # Get an org role to default role comparison
     # Compares any organization role to a default role id and show differences
     # @param left_role_id Left Role ID
     # @param right_role_id Right Role id
@@ -1034,7 +1034,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1153,7 +1153,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1236,7 +1236,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1390,7 +1390,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1455,7 +1455,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1510,7 +1510,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1575,7 +1575,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1650,7 +1650,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1740,7 +1740,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1804,7 +1804,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1823,6 +1823,7 @@ module PureCloud
     # @param role_id Role ID
     # @param body Subjects and Divisions
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :subject_type what the type of the subject is, PC_GROUP or PC_USER (default to PC_USER)
     # @return [nil]
     def post_authorization_role(role_id, body, opts = {})
       post_authorization_role_with_http_info(role_id, body, opts)
@@ -1834,6 +1835,7 @@ module PureCloud
     # @param role_id Role ID
     # @param body Subjects and Divisions
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :subject_type what the type of the subject is, PC_GROUP or PC_USER
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def post_authorization_role_with_http_info(role_id, body, opts = {})
       if @api_client.config.debugging
@@ -1856,11 +1858,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/{roleId}".sub('{format}','json').sub('{' + 'roleId' + '}', role_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'subjectType'] = opts[:'subject_type'] if opts[:'subject_type']
 
       # header parameters
       header_params = {}
@@ -1879,7 +1888,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1963,7 +1972,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2028,7 +2037,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2092,7 +2101,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2186,7 +2195,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2260,7 +2269,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2335,7 +2344,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2410,7 +2419,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2485,7 +2494,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2550,7 +2559,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -2625,7 +2634,7 @@ module PureCloud
       # http body (model)
       post_body = @api_client.object_to_http_body(body)
       
-      auth_names = ['PureCloud Auth']
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,

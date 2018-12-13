@@ -141,6 +141,45 @@ module PureCloud
     # The survey promoter score used to filter the view
     attr_accessor :survey_promoter_score
 
+    # The list of survey form context ids used to filter the view
+    attr_accessor :survey_form_context_ids
+
+    # The list of conversation ids used to filter the view
+    attr_accessor :conversation_ids
+
+    # Indicates filtering for ended
+    attr_accessor :is_ended
+
+    # Indicates filtering for survey
+    attr_accessor :is_surveyed
+
+    # The list of survey score ranges used to filter the view
+    attr_accessor :survey_scores
+
+    # The list of promoter score ranges used to filter the view
+    attr_accessor :promoter_scores
+
+    # Indicates filtering for campaign
+    attr_accessor :is_campaign
+
+    # The list of survey statuses used to filter the view
+    attr_accessor :survey_statuses
+
+    # A grouping of conversation level filters
+    attr_accessor :conversation_properties
+
+    # Indicates filtering for blind transferred
+    attr_accessor :is_blind_transferred
+
+    # Indicates filtering for consulted
+    attr_accessor :is_consulted
+
+    # Indicates filtering for consult transferred
+    attr_accessor :is_consult_transferred
+
+    # The list of remote participants used to filter the view
+    attr_accessor :remote_participants
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -225,7 +264,33 @@ module PureCloud
         
         :'survey_question_group_score' => :'surveyQuestionGroupScore',
         
-        :'survey_promoter_score' => :'surveyPromoterScore'
+        :'survey_promoter_score' => :'surveyPromoterScore',
+        
+        :'survey_form_context_ids' => :'surveyFormContextIds',
+        
+        :'conversation_ids' => :'conversationIds',
+        
+        :'is_ended' => :'isEnded',
+        
+        :'is_surveyed' => :'isSurveyed',
+        
+        :'survey_scores' => :'surveyScores',
+        
+        :'promoter_scores' => :'promoterScores',
+        
+        :'is_campaign' => :'isCampaign',
+        
+        :'survey_statuses' => :'surveyStatuses',
+        
+        :'conversation_properties' => :'conversationProperties',
+        
+        :'is_blind_transferred' => :'isBlindTransferred',
+        
+        :'is_consulted' => :'isConsulted',
+        
+        :'is_consult_transferred' => :'isConsultTransferred',
+        
+        :'remote_participants' => :'remoteParticipants'
         
       }
     end
@@ -314,7 +379,33 @@ module PureCloud
         
         :'survey_question_group_score' => :'NumericRange',
         
-        :'survey_promoter_score' => :'NumericRange'
+        :'survey_promoter_score' => :'NumericRange',
+        
+        :'survey_form_context_ids' => :'Array<String>',
+        
+        :'conversation_ids' => :'Array<String>',
+        
+        :'is_ended' => :'BOOLEAN',
+        
+        :'is_surveyed' => :'BOOLEAN',
+        
+        :'survey_scores' => :'Array<NumericRange>',
+        
+        :'promoter_scores' => :'Array<NumericRange>',
+        
+        :'is_campaign' => :'BOOLEAN',
+        
+        :'survey_statuses' => :'Array<String>',
+        
+        :'conversation_properties' => :'ConversationProperties',
+        
+        :'is_blind_transferred' => :'BOOLEAN',
+        
+        :'is_consulted' => :'BOOLEAN',
+        
+        :'is_consult_transferred' => :'BOOLEAN',
+        
+        :'remote_participants' => :'Array<String>'
         
       }
     end
@@ -751,6 +842,135 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'surveyFormContextIds')
+        
+        if (value = attributes[:'surveyFormContextIds']).is_a?(Array)
+          self.survey_form_context_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'conversationIds')
+        
+        if (value = attributes[:'conversationIds']).is_a?(Array)
+          self.conversation_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isEnded')
+        
+        
+        self.is_ended = attributes[:'isEnded']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isSurveyed')
+        
+        
+        self.is_surveyed = attributes[:'isSurveyed']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'surveyScores')
+        
+        if (value = attributes[:'surveyScores']).is_a?(Array)
+          self.survey_scores = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'promoterScores')
+        
+        if (value = attributes[:'promoterScores']).is_a?(Array)
+          self.promoter_scores = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isCampaign')
+        
+        
+        self.is_campaign = attributes[:'isCampaign']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'surveyStatuses')
+        
+        if (value = attributes[:'surveyStatuses']).is_a?(Array)
+          self.survey_statuses = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'conversationProperties')
+        
+        
+        self.conversation_properties = attributes[:'conversationProperties']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isBlindTransferred')
+        
+        
+        self.is_blind_transferred = attributes[:'isBlindTransferred']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isConsulted')
+        
+        
+        self.is_consulted = attributes[:'isConsulted']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isConsultTransferred')
+        
+        
+        self.is_consult_transferred = attributes[:'isConsultTransferred']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'remoteParticipants')
+        
+        if (value = attributes[:'remoteParticipants']).is_a?(Array)
+          self.remote_participants = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -918,6 +1138,58 @@ module PureCloud
       if @interacting_duration_sort_order && !allowed_values.include?(@interacting_duration_sort_order)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1180,6 +1452,71 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1225,7 +1562,20 @@ module PureCloud
           language_list == o.language_list &&
           mos == o.mos &&
           survey_question_group_score == o.survey_question_group_score &&
-          survey_promoter_score == o.survey_promoter_score
+          survey_promoter_score == o.survey_promoter_score &&
+          survey_form_context_ids == o.survey_form_context_ids &&
+          conversation_ids == o.conversation_ids &&
+          is_ended == o.is_ended &&
+          is_surveyed == o.is_surveyed &&
+          survey_scores == o.survey_scores &&
+          promoter_scores == o.promoter_scores &&
+          is_campaign == o.is_campaign &&
+          survey_statuses == o.survey_statuses &&
+          conversation_properties == o.conversation_properties &&
+          is_blind_transferred == o.is_blind_transferred &&
+          is_consulted == o.is_consulted &&
+          is_consult_transferred == o.is_consult_transferred &&
+          remote_participants == o.remote_participants
     end
 
     # @see the `==` method
@@ -1237,7 +1587,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants].hash
     end
 
     # build the object from hash
