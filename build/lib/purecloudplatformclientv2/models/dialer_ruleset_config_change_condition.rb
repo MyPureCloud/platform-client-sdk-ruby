@@ -36,6 +36,18 @@ module PureCloud
 
     attr_accessor :property
 
+    attr_accessor :contact_id_field
+
+    attr_accessor :call_analysis_result_field
+
+    attr_accessor :agent_wrapup_field
+
+    attr_accessor :contact_column_to_data_action_field_mappings
+
+    attr_accessor :predicates
+
+    attr_accessor :data_action
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -59,6 +71,18 @@ module PureCloud
         :'property_type' => :'propertyType',
         
         :'property' => :'property',
+        
+        :'contact_id_field' => :'contactIdField',
+        
+        :'call_analysis_result_field' => :'callAnalysisResultField',
+        
+        :'agent_wrapup_field' => :'agentWrapupField',
+        
+        :'contact_column_to_data_action_field_mappings' => :'contactColumnToDataActionFieldMappings',
+        
+        :'predicates' => :'predicates',
+        
+        :'data_action' => :'dataAction',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -86,6 +110,18 @@ module PureCloud
         :'property_type' => :'String',
         
         :'property' => :'String',
+        
+        :'contact_id_field' => :'String',
+        
+        :'call_analysis_result_field' => :'String',
+        
+        :'agent_wrapup_field' => :'String',
+        
+        :'contact_column_to_data_action_field_mappings' => :'Array<DialerRulesetConfigChangeContactColumnToDataActionFieldMapping>',
+        
+        :'predicates' => :'Array<DialerRulesetConfigChangeDataActionConditionPredicate>',
+        
+        :'data_action' => :'DialerRulesetConfigChangeUriReference',
         
         :'additional_properties' => :'Object'
         
@@ -184,6 +220,64 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'contactIdField')
+        
+        
+        self.contact_id_field = attributes[:'contactIdField']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'callAnalysisResultField')
+        
+        
+        self.call_analysis_result_field = attributes[:'callAnalysisResultField']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'agentWrapupField')
+        
+        
+        self.agent_wrapup_field = attributes[:'agentWrapupField']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'contactColumnToDataActionFieldMappings')
+        
+        if (value = attributes[:'contactColumnToDataActionFieldMappings']).is_a?(Array)
+          self.contact_column_to_data_action_field_mappings = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'predicates')
+        
+        if (value = attributes[:'predicates']).is_a?(Array)
+          self.predicates = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'dataAction')
+        
+        
+        self.data_action = attributes[:'dataAction']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -252,6 +346,30 @@ module PureCloud
       if @property_type && !allowed_values.include?(@property_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -343,6 +461,36 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -357,6 +505,12 @@ module PureCloud
           codes == o.codes &&
           property_type == o.property_type &&
           property == o.property &&
+          contact_id_field == o.contact_id_field &&
+          call_analysis_result_field == o.call_analysis_result_field &&
+          agent_wrapup_field == o.agent_wrapup_field &&
+          contact_column_to_data_action_field_mappings == o.contact_column_to_data_action_field_mappings &&
+          predicates == o.predicates &&
+          data_action == o.data_action &&
           additional_properties == o.additional_properties
     end
 
@@ -369,7 +523,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, inverted, attribute_name, value, value_type, operator, codes, property_type, property, additional_properties].hash
+      [type, inverted, attribute_name, value, value_type, operator, codes, property_type, property, contact_id_field, call_analysis_result_field, agent_wrapup_field, contact_column_to_data_action_field_mappings, predicates, data_action, additional_properties].hash
     end
 
     # build the object from hash

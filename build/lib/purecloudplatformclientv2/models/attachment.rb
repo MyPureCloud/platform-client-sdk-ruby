@@ -33,6 +33,9 @@ module PureCloud
     # The length of the attachment file.
     attr_accessor :content_length
 
+    # Whether or not the attachment was attached inline.,
+    attr_accessor :inline_image
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -45,7 +48,9 @@ module PureCloud
         
         :'content_type' => :'contentType',
         
-        :'content_length' => :'contentLength'
+        :'content_length' => :'contentLength',
+        
+        :'inline_image' => :'inlineImage'
         
       }
     end
@@ -62,7 +67,9 @@ module PureCloud
         
         :'content_type' => :'String',
         
-        :'content_length' => :'Integer'
+        :'content_length' => :'Integer',
+        
+        :'inline_image' => :'BOOLEAN'
         
       }
     end
@@ -121,6 +128,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'inlineImage')
+        
+        
+        self.inline_image = attributes[:'inlineImage']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -156,8 +172,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -193,7 +218,8 @@ module PureCloud
           name == o.name &&
           content_uri == o.content_uri &&
           content_type == o.content_type &&
-          content_length == o.content_length
+          content_length == o.content_length &&
+          inline_image == o.inline_image
     end
 
     # @see the `==` method
@@ -205,7 +231,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [attachment_id, name, content_uri, content_type, content_length].hash
+      [attachment_id, name, content_uri, content_type, content_length, inline_image].hash
     end
 
     # build the object from hash

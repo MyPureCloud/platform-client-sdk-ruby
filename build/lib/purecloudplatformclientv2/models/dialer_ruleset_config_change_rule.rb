@@ -26,9 +26,9 @@ module PureCloud
 
     attr_accessor :category
 
-    attr_accessor :conditions
-
     attr_accessor :actions
+
+    attr_accessor :conditions
 
     attr_accessor :additional_properties
 
@@ -44,9 +44,9 @@ module PureCloud
         
         :'category' => :'category',
         
-        :'conditions' => :'conditions',
-        
         :'actions' => :'actions',
+        
+        :'conditions' => :'conditions',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -65,9 +65,9 @@ module PureCloud
         
         :'category' => :'String',
         
-        :'conditions' => :'Array<DialerRulesetConfigChangeCondition>',
-        
         :'actions' => :'Array<DialerRulesetConfigChangeAction>',
+        
+        :'conditions' => :'Array<DialerRulesetConfigChangeCondition>',
         
         :'additional_properties' => :'Object'
         
@@ -119,10 +119,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'conditions')
+      if attributes.has_key?(:'actions')
         
-        if (value = attributes[:'conditions']).is_a?(Array)
-          self.conditions = value
+        if (value = attributes[:'actions']).is_a?(Array)
+          self.actions = value
         end
         
         
@@ -130,10 +130,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'actions')
+      if attributes.has_key?(:'conditions')
         
-        if (value = attributes[:'actions']).is_a?(Array)
-          self.actions = value
+        if (value = attributes[:'conditions']).is_a?(Array)
+          self.conditions = value
         end
         
         
@@ -254,8 +254,8 @@ module PureCloud
           name == o.name &&
           order == o.order &&
           category == o.category &&
-          conditions == o.conditions &&
           actions == o.actions &&
+          conditions == o.conditions &&
           additional_properties == o.additional_properties
     end
 
@@ -268,7 +268,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, order, category, conditions, actions, additional_properties].hash
+      [id, name, order, category, actions, conditions, additional_properties].hash
     end
 
     # build the object from hash
