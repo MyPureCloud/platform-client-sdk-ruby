@@ -33,6 +33,9 @@ module PureCloud
     # The lowest R-factor value among all of the audio streams belonging to this conversation
     attr_accessor :media_stats_min_conversation_r_factor
 
+    # The original direction of the conversation
+    attr_accessor :originating_direction
+
     # Participants in the conversation
     attr_accessor :participants
 
@@ -59,6 +62,8 @@ module PureCloud
         
         :'media_stats_min_conversation_r_factor' => :'mediaStatsMinConversationRFactor',
         
+        :'originating_direction' => :'originatingDirection',
+        
         :'participants' => :'participants',
         
         :'evaluations' => :'evaluations',
@@ -83,6 +88,8 @@ module PureCloud
         :'media_stats_min_conversation_mos' => :'Float',
         
         :'media_stats_min_conversation_r_factor' => :'Float',
+        
+        :'originating_direction' => :'String',
         
         :'participants' => :'Array<AnalyticsParticipant>',
         
@@ -144,6 +151,15 @@ module PureCloud
         
         
         self.media_stats_min_conversation_r_factor = attributes[:'mediaStatsMinConversationRFactor']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'originatingDirection')
+        
+        
+        self.originating_direction = attributes[:'originatingDirection']
         
       
       end
@@ -230,6 +246,15 @@ module PureCloud
       
       
       
+      allowed_values = ["inbound", "outbound"]
+      if @originating_direction && !allowed_values.include?(@originating_direction)
+        return false
+      end
+      
+      
+      
+      
+      
       
       
       
@@ -269,6 +294,20 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] originating_direction Object to be assigned
+    def originating_direction=(originating_direction)
+      allowed_values = ["inbound", "outbound"]
+      if originating_direction && !allowed_values.include?(originating_direction)
+        fail ArgumentError, "invalid value for 'originating_direction', must be one of #{allowed_values}."
+      end
+      @originating_direction = originating_direction
+    end
+
     
     
     
@@ -302,6 +341,7 @@ module PureCloud
           conversation_end == o.conversation_end &&
           media_stats_min_conversation_mos == o.media_stats_min_conversation_mos &&
           media_stats_min_conversation_r_factor == o.media_stats_min_conversation_r_factor &&
+          originating_direction == o.originating_direction &&
           participants == o.participants &&
           evaluations == o.evaluations &&
           surveys == o.surveys &&
@@ -317,7 +357,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [conversation_id, conversation_start, conversation_end, media_stats_min_conversation_mos, media_stats_min_conversation_r_factor, participants, evaluations, surveys, division_ids].hash
+      [conversation_id, conversation_start, conversation_end, media_stats_min_conversation_mos, media_stats_min_conversation_r_factor, originating_direction, participants, evaluations, surveys, division_ids].hash
     end
 
     # build the object from hash

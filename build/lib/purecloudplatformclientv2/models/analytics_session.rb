@@ -41,8 +41,11 @@ module PureCloud
     # Direction
     attr_accessor :direction
 
-    # Automatic Number Identification (caller's number)
+    # Dialed number identification service (number dialed by the calling party)
     attr_accessor :dnis
+
+    # Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred
+    attr_accessor :session_dnis
 
     # (Dialer) Unique identifier of the outbound campaign
     attr_accessor :outbound_campaign_id
@@ -155,6 +158,8 @@ module PureCloud
         
         :'dnis' => :'dnis',
         
+        :'session_dnis' => :'sessionDnis',
+        
         :'outbound_campaign_id' => :'outboundCampaignId',
         
         :'outbound_contact_id' => :'outboundContactId',
@@ -241,6 +246,8 @@ module PureCloud
         :'direction' => :'String',
         
         :'dnis' => :'String',
+        
+        :'session_dnis' => :'String',
         
         :'outbound_campaign_id' => :'String',
         
@@ -399,6 +406,15 @@ module PureCloud
         
         
         self.dnis = attributes[:'dnis']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'sessionDnis')
+        
+        
+        self.session_dnis = attributes[:'sessionDnis']
         
       
       end
@@ -872,6 +888,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -1102,6 +1122,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1117,6 +1142,7 @@ module PureCloud
           ani == o.ani &&
           direction == o.direction &&
           dnis == o.dnis &&
+          session_dnis == o.session_dnis &&
           outbound_campaign_id == o.outbound_campaign_id &&
           outbound_contact_id == o.outbound_contact_id &&
           outbound_contact_list_id == o.outbound_contact_list_id &&
@@ -1158,7 +1184,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording].hash
+      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, session_dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording].hash
     end
 
     # build the object from hash

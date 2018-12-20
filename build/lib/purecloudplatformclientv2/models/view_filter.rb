@@ -180,6 +180,9 @@ module PureCloud
     # The list of remote participants used to filter the view
     attr_accessor :remote_participants
 
+    # A list of status for the configuration view
+    attr_accessor :status_list
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -290,7 +293,9 @@ module PureCloud
         
         :'is_consult_transferred' => :'isConsultTransferred',
         
-        :'remote_participants' => :'remoteParticipants'
+        :'remote_participants' => :'remoteParticipants',
+        
+        :'status_list' => :'statusList'
         
       }
     end
@@ -405,7 +410,9 @@ module PureCloud
         
         :'is_consult_transferred' => :'BOOLEAN',
         
-        :'remote_participants' => :'Array<String>'
+        :'remote_participants' => :'Array<String>',
+        
+        :'status_list' => :'Array<String>'
         
       }
     end
@@ -971,6 +978,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'statusList')
+        
+        if (value = attributes[:'statusList']).is_a?(Array)
+          self.status_list = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -1138,6 +1156,10 @@ module PureCloud
       if @interacting_duration_sort_order && !allowed_values.include?(@interacting_duration_sort_order)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -1517,6 +1539,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1575,7 +1602,8 @@ module PureCloud
           is_blind_transferred == o.is_blind_transferred &&
           is_consulted == o.is_consulted &&
           is_consult_transferred == o.is_consult_transferred &&
-          remote_participants == o.remote_participants
+          remote_participants == o.remote_participants &&
+          status_list == o.status_list
     end
 
     # @see the `==` method
@@ -1587,7 +1615,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list].hash
     end
 
     # build the object from hash

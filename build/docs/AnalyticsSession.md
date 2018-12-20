@@ -16,7 +16,8 @@ title: AnalyticsSession
 | **message_type** | **String** | Message type for messaging services such as sms | [optional] |
 | **ani** | **String** | Automatic Number Identification (caller&#39;s number) | [optional] |
 | **direction** | **String** | Direction | [optional] |
-| **dnis** | **String** | Automatic Number Identification (caller&#39;s number) | [optional] |
+| **dnis** | **String** | Dialed number identification service (number dialed by the calling party) | [optional] |
+| **session_dnis** | **String** | Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred | [optional] |
 | **outbound_campaign_id** | **String** | (Dialer) Unique identifier of the outbound campaign | [optional] |
 | **outbound_contact_id** | **String** | (Dialer) Unique identifier of the contact | [optional] |
 | **outbound_contact_list_id** | **String** | (Dialer) Unique identifier of the contact list that this contact belongs to | [optional] |

@@ -12,6 +12,7 @@ title: AnalyticsConversation
 | **conversation_end** | **DateTime** | Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **media_stats_min_conversation_mos** | **Float** | The lowest estimated average MOS among all the audio streams belonging to this conversation | [optional] |
 | **media_stats_min_conversation_r_factor** | **Float** | The lowest R-factor value among all of the audio streams belonging to this conversation | [optional] |
+| **originating_direction** | **String** | The original direction of the conversation | [optional] |
 | **participants** | [**Array&lt;AnalyticsParticipant&gt;**](AnalyticsParticipant.html) | Participants in the conversation | [optional] |
 | **evaluations** | [**Array&lt;AnalyticsEvaluation&gt;**](AnalyticsEvaluation.html) | Evaluations tied to this conversation | [optional] |
 | **surveys** | [**Array&lt;AnalyticsSurvey&gt;**](AnalyticsSurvey.html) | Surveys tied to this conversation | [optional] |

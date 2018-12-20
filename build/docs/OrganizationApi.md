@@ -10,8 +10,10 @@ Method | Description
 ------------- | ------------- | -------------
 [**get_fieldconfig**](OrganizationApi.html#get_fieldconfig) | Fetch field config for an entity type
 [**get_organizations_me**](OrganizationApi.html#get_organizations_me) | Get organization.
+[**get_organizations_whitelist**](OrganizationApi.html#get_organizations_whitelist) | Get organization whitelist settings
 [**patch_organizations_feature**](OrganizationApi.html#patch_organizations_feature) | Update organization
 [**put_organizations_me**](OrganizationApi.html#put_organizations_me) | Update organization.
+[**put_organizations_whitelist**](OrganizationApi.html#put_organizations_whitelist) | Update organization whitelist settings
 {: class="table table-striped"}
 
 <a name="get_fieldconfig"></a>
@@ -128,6 +130,64 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**Organization**](Organization.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_organizations_whitelist"></a>
+
+## -[**OrgWhitelistSettings**](OrgWhitelistSettings.html) get_organizations_whitelist
+
+
+
+Get organization whitelist settings
+
+
+
+Wraps GET /api/v2/organizations/whitelist 
+
+Requires NO permissions: 
+
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OrganizationApi.new
+
+begin
+  #Get organization whitelist settings
+  result = api_instance.get_organizations_whitelist
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OrganizationApi->get_organizations_whitelist: #{e}"
+end
+~~~
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OrgWhitelistSettings**](OrgWhitelistSettings.html)
 
 ### HTTP request headers
 
@@ -262,6 +322,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Organization**](Organization.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_organizations_whitelist"></a>
+
+## -[**OrgWhitelistSettings**](OrgWhitelistSettings.html) put_organizations_whitelist(body)
+
+
+
+Update organization whitelist settings
+
+
+
+Wraps PUT /api/v2/organizations/whitelist 
+
+Requires ANY permissions: 
+
+* admin
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OrganizationApi.new
+
+body = PureCloud::OrgWhitelistSettings.new # OrgWhitelistSettings | Whitelist settings
+
+
+begin
+  #Update organization whitelist settings
+  result = api_instance.put_organizations_whitelist(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OrganizationApi->put_organizations_whitelist: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**OrgWhitelistSettings**](OrgWhitelistSettings.html)| Whitelist settings |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OrgWhitelistSettings**](OrgWhitelistSettings.html)
 
 ### HTTP request headers
 
