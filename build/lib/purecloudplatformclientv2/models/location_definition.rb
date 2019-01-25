@@ -21,6 +21,7 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
+    # The name of the Location.
     attr_accessor :name
 
     attr_accessor :address
@@ -200,6 +201,11 @@ module PureCloud
       
       
       
+      
+      if @name.nil?
+        return false
+      end
+
       
       
       

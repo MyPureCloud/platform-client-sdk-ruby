@@ -24,6 +24,70 @@ module PureCloud
       @api_client = api_client
     end
 
+    # Delete a location
+    # 
+    # @param location_id Location ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_location(location_id, opts = {})
+      delete_location_with_http_info(location_id, opts)
+      return nil
+    end
+
+    # Delete a location
+    # 
+    # @param location_id Location ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_location_with_http_info(location_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: LocationsApi.delete_location ..."
+      end
+      
+      
+      # verify the required parameter 'location_id' is set
+      fail ArgumentError, "Missing the required parameter 'location_id' when calling LocationsApi.delete_location" if location_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/locations/{locationId}".sub('{format}','json').sub('{' + 'locationId' + '}', location_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: LocationsApi#delete_location\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get Location by ID.
     # 
     # @param location_id Location ID
@@ -94,6 +158,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Array<String>] :id id
     # @option opts [String] :sort_order Sort order
     # @return [LocationEntityListing]
     def get_locations(opts = {})
@@ -106,12 +171,19 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
+    # @option opts [Array<String>] :id id
     # @option opts [String] :sort_order Sort order
     # @return [Array<(LocationEntityListing, Fixnum, Hash)>] LocationEntityListing data, response status code and response headers
     def get_locations_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LocationsApi.get_locations ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -142,6 +214,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
 
       # header parameters
@@ -246,6 +319,146 @@ module PureCloud
         :return_type => 'LocationsSearchResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: LocationsApi#get_locations_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a location
+    # 
+    # @param location_id Location ID
+    # @param body Location
+    # @param [Hash] opts the optional parameters
+    # @return [LocationDefinition]
+    def patch_location(location_id, body, opts = {})
+      data, _status_code, _headers = patch_location_with_http_info(location_id, body, opts)
+      return data
+    end
+
+    # Update a location
+    # 
+    # @param location_id Location ID
+    # @param body Location
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(LocationDefinition, Fixnum, Hash)>] LocationDefinition data, response status code and response headers
+    def patch_location_with_http_info(location_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: LocationsApi.patch_location ..."
+      end
+      
+      
+      # verify the required parameter 'location_id' is set
+      fail ArgumentError, "Missing the required parameter 'location_id' when calling LocationsApi.patch_location" if location_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling LocationsApi.patch_location" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/locations/{locationId}".sub('{format}','json').sub('{' + 'locationId' + '}', location_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LocationDefinition')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: LocationsApi#patch_location\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a location
+    # 
+    # @param body Location
+    # @param [Hash] opts the optional parameters
+    # @return [LocationDefinition]
+    def post_locations(body, opts = {})
+      data, _status_code, _headers = post_locations_with_http_info(body, opts)
+      return data
+    end
+
+    # Create a location
+    # 
+    # @param body Location
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(LocationDefinition, Fixnum, Hash)>] LocationDefinition data, response status code and response headers
+    def post_locations_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: LocationsApi.post_locations ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling LocationsApi.post_locations" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/locations".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LocationDefinition')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: LocationsApi#post_locations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -42,6 +42,9 @@ module PureCloud
     # The scope requested by this client
     attr_accessor :scope
 
+    # Set of roles and their corresponding divisions associated with this client
+    attr_accessor :role_divisions
+
     # The  oauth client's organization.
     attr_accessor :organization
 
@@ -64,6 +67,8 @@ module PureCloud
         :'authorized_grant_type' => :'authorizedGrantType',
         
         :'scope' => :'scope',
+        
+        :'role_divisions' => :'roleDivisions',
         
         :'organization' => :'organization'
         
@@ -89,6 +94,8 @@ module PureCloud
         :'authorized_grant_type' => :'String',
         
         :'scope' => :'Array<String>',
+        
+        :'role_divisions' => :'Array<RoleDivision>',
         
         :'organization' => :'NamedEntity'
         
@@ -178,6 +185,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'roleDivisions')
+        
+        if (value = attributes[:'roleDivisions']).is_a?(Array)
+          self.role_divisions = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'organization')
         
         
@@ -258,6 +276,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -315,6 +337,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -328,6 +355,7 @@ module PureCloud
           modified_by == o.modified_by &&
           authorized_grant_type == o.authorized_grant_type &&
           scope == o.scope &&
+          role_divisions == o.role_divisions &&
           organization == o.organization
     end
 
@@ -340,7 +368,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, created_by, modified_by, authorized_grant_type, scope, organization].hash
+      [id, name, date_created, date_modified, created_by, modified_by, authorized_grant_type, scope, role_divisions, organization].hash
     end
 
     # build the object from hash

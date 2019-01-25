@@ -183,6 +183,33 @@ module PureCloud
     # A list of status for the configuration view
     attr_accessor :status_list
 
+    # The list of flow Ids
+    attr_accessor :flow_ids
+
+    # A list of outcome ids of the flow
+    attr_accessor :flow_outcome_ids
+
+    # A list of outcome values of the flow
+    attr_accessor :flow_outcome_values
+
+    # The list of destination types of the flow
+    attr_accessor :flow_destination_types
+
+    # The list of reasons for the flow to disconnect
+    attr_accessor :flow_disconnect_reasons
+
+    # A list of types of the flow
+    attr_accessor :flow_types
+
+    # A list of types of the flow entry
+    attr_accessor :flow_entry_types
+
+    # A list of reasons of flow entry
+    attr_accessor :flow_entry_reasons
+
+    # A list of directory group ids
+    attr_accessor :group_ids
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -295,7 +322,25 @@ module PureCloud
         
         :'remote_participants' => :'remoteParticipants',
         
-        :'status_list' => :'statusList'
+        :'status_list' => :'statusList',
+        
+        :'flow_ids' => :'flowIds',
+        
+        :'flow_outcome_ids' => :'flowOutcomeIds',
+        
+        :'flow_outcome_values' => :'flowOutcomeValues',
+        
+        :'flow_destination_types' => :'flowDestinationTypes',
+        
+        :'flow_disconnect_reasons' => :'flowDisconnectReasons',
+        
+        :'flow_types' => :'flowTypes',
+        
+        :'flow_entry_types' => :'flowEntryTypes',
+        
+        :'flow_entry_reasons' => :'flowEntryReasons',
+        
+        :'group_ids' => :'groupIds'
         
       }
     end
@@ -412,7 +457,25 @@ module PureCloud
         
         :'remote_participants' => :'Array<String>',
         
-        :'status_list' => :'Array<String>'
+        :'status_list' => :'Array<String>',
+        
+        :'flow_ids' => :'Array<String>',
+        
+        :'flow_outcome_ids' => :'Array<String>',
+        
+        :'flow_outcome_values' => :'Array<String>',
+        
+        :'flow_destination_types' => :'Array<String>',
+        
+        :'flow_disconnect_reasons' => :'Array<String>',
+        
+        :'flow_types' => :'Array<String>',
+        
+        :'flow_entry_types' => :'Array<String>',
+        
+        :'flow_entry_reasons' => :'Array<String>',
+        
+        :'group_ids' => :'Array<String>'
         
       }
     end
@@ -989,6 +1052,105 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'flowIds')
+        
+        if (value = attributes[:'flowIds']).is_a?(Array)
+          self.flow_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'flowOutcomeIds')
+        
+        if (value = attributes[:'flowOutcomeIds']).is_a?(Array)
+          self.flow_outcome_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'flowOutcomeValues')
+        
+        if (value = attributes[:'flowOutcomeValues']).is_a?(Array)
+          self.flow_outcome_values = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'flowDestinationTypes')
+        
+        if (value = attributes[:'flowDestinationTypes']).is_a?(Array)
+          self.flow_destination_types = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'flowDisconnectReasons')
+        
+        if (value = attributes[:'flowDisconnectReasons']).is_a?(Array)
+          self.flow_disconnect_reasons = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'flowTypes')
+        
+        if (value = attributes[:'flowTypes']).is_a?(Array)
+          self.flow_types = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'flowEntryTypes')
+        
+        if (value = attributes[:'flowEntryTypes']).is_a?(Array)
+          self.flow_entry_types = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'flowEntryReasons')
+        
+        if (value = attributes[:'flowEntryReasons']).is_a?(Array)
+          self.flow_entry_reasons = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'groupIds')
+        
+        if (value = attributes[:'groupIds']).is_a?(Array)
+          self.group_ids = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -1156,6 +1318,42 @@ module PureCloud
       if @interacting_duration_sort_order && !allowed_values.include?(@interacting_duration_sort_order)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1544,6 +1742,51 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1603,7 +1846,16 @@ module PureCloud
           is_consulted == o.is_consulted &&
           is_consult_transferred == o.is_consult_transferred &&
           remote_participants == o.remote_participants &&
-          status_list == o.status_list
+          status_list == o.status_list &&
+          flow_ids == o.flow_ids &&
+          flow_outcome_ids == o.flow_outcome_ids &&
+          flow_outcome_values == o.flow_outcome_values &&
+          flow_destination_types == o.flow_destination_types &&
+          flow_disconnect_reasons == o.flow_disconnect_reasons &&
+          flow_types == o.flow_types &&
+          flow_entry_types == o.flow_entry_types &&
+          flow_entry_reasons == o.flow_entry_reasons &&
+          group_ids == o.group_ids
     end
 
     # @see the `==` method
@@ -1615,7 +1867,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, group_ids].hash
     end
 
     # build the object from hash

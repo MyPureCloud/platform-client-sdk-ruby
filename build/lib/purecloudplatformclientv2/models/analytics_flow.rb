@@ -33,6 +33,12 @@ module PureCloud
     # The exit reason for this flow, e.g. DISCONNECT
     attr_accessor :exit_reason
 
+    # The particular entry reason for this flow, e.g. an address, userId, or flowId
+    attr_accessor :entry_reason
+
+    # The entry type for this flow
+    attr_accessor :entry_type
+
     # The type of transfer for flows that ended with a transfer
     attr_accessor :transfer_type
 
@@ -68,6 +74,10 @@ module PureCloud
         
         :'exit_reason' => :'exitReason',
         
+        :'entry_reason' => :'entryReason',
+        
+        :'entry_type' => :'entryType',
+        
         :'transfer_type' => :'transferType',
         
         :'transfer_target_name' => :'transferTargetName',
@@ -98,6 +108,10 @@ module PureCloud
         :'flow_type' => :'String',
         
         :'exit_reason' => :'String',
+        
+        :'entry_reason' => :'String',
+        
+        :'entry_type' => :'String',
         
         :'transfer_type' => :'String',
         
@@ -165,6 +179,24 @@ module PureCloud
         
         
         self.exit_reason = attributes[:'exitReason']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'entryReason')
+        
+        
+        self.entry_reason = attributes[:'entryReason']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'entryType')
+        
+        
+        self.entry_type = attributes[:'entryType']
         
       
       end
@@ -281,6 +313,19 @@ module PureCloud
       
       
       
+      allowed_values = ["dnis", "direct", "flow", "agent", "outbound"]
+      if @entry_type && !allowed_values.include?(@entry_type)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -346,6 +391,25 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] entry_type Object to be assigned
+    def entry_type=(entry_type)
+      allowed_values = ["dnis", "direct", "flow", "agent", "outbound"]
+      if entry_type && !allowed_values.include?(entry_type)
+        fail ArgumentError, "invalid value for 'entry_type', must be one of #{allowed_values}."
+      end
+      @entry_type = entry_type
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -385,6 +449,8 @@ module PureCloud
           flow_version == o.flow_version &&
           flow_type == o.flow_type &&
           exit_reason == o.exit_reason &&
+          entry_reason == o.entry_reason &&
+          entry_type == o.entry_type &&
           transfer_type == o.transfer_type &&
           transfer_target_name == o.transfer_target_name &&
           transfer_target_address == o.transfer_target_address &&
@@ -403,7 +469,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [flow_id, flow_name, flow_version, flow_type, exit_reason, transfer_type, transfer_target_name, transfer_target_address, issued_callback, starting_language, ending_language, outcomes].hash
+      [flow_id, flow_name, flow_version, flow_type, exit_reason, entry_reason, entry_type, transfer_type, transfer_target_name, transfer_target_address, issued_callback, starting_language, ending_language, outcomes].hash
     end
 
     # build the object from hash

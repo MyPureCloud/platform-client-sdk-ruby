@@ -53,6 +53,8 @@ module PureCloud
 
     attr_accessor :line_id
 
+    attr_accessor :whats_app_id
+
     attr_accessor :facebook_id
 
     # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -110,6 +112,8 @@ module PureCloud
         
         :'line_id' => :'lineId',
         
+        :'whats_app_id' => :'whatsAppId',
+        
         :'facebook_id' => :'facebookId',
         
         :'modify_date' => :'modifyDate',
@@ -164,6 +168,8 @@ module PureCloud
         :'twitter_id' => :'TwitterId',
         
         :'line_id' => :'LineId',
+        
+        :'whats_app_id' => :'WhatsAppId',
         
         :'facebook_id' => :'FacebookId',
         
@@ -332,6 +338,15 @@ module PureCloud
         
         
         self.line_id = attributes[:'lineId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'whatsAppId')
+        
+        
+        self.whats_app_id = attributes[:'whatsAppId']
         
       
       end
@@ -532,8 +547,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -676,6 +700,7 @@ module PureCloud
           address == o.address &&
           twitter_id == o.twitter_id &&
           line_id == o.line_id &&
+          whats_app_id == o.whats_app_id &&
           facebook_id == o.facebook_id &&
           modify_date == o.modify_date &&
           create_date == o.create_date &&
@@ -695,7 +720,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, first_name, middle_name, last_name, salutation, title, work_phone, cell_phone, home_phone, other_phone, work_email, personal_email, other_email, address, twitter_id, line_id, facebook_id, modify_date, create_date, external_organization, survey_opt_out, external_system_url, external_data_sources, self_uri].hash
+      [id, first_name, middle_name, last_name, salutation, title, work_phone, cell_phone, home_phone, other_phone, work_email, personal_email, other_email, address, twitter_id, line_id, whats_app_id, facebook_id, modify_date, create_date, external_organization, survey_opt_out, external_system_url, external_data_sources, self_uri].hash
     end
 
     # build the object from hash

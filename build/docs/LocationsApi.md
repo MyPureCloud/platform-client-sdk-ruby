@@ -8,11 +8,78 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
+[**delete_location**](LocationsApi.html#delete_location) | Delete a location
 [**get_location**](LocationsApi.html#get_location) | Get Location by ID.
 [**get_locations**](LocationsApi.html#get_locations) | Get a list of all locations.
 [**get_locations_search**](LocationsApi.html#get_locations_search) | Search locations using the q64 value returned from a previous search
+[**patch_location**](LocationsApi.html#patch_location) | Update a location
+[**post_locations**](LocationsApi.html#post_locations) | Create a location
 [**post_locations_search**](LocationsApi.html#post_locations_search) | Search locations
 {: class="table table-striped"}
+
+<a name="delete_location"></a>
+
+## - delete_location(location_id)
+
+
+
+Delete a location
+
+
+
+Wraps DELETE /api/v2/locations/{locationId} 
+
+Requires ANY permissions: 
+
+* directory:location:delete
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::LocationsApi.new
+
+location_id = "location_id_example" # String | Location ID
+
+
+begin
+  #Delete a location
+  api_instance.delete_location(location_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling LocationsApi->delete_location: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **location_id** | **String**| Location ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 <a name="get_location"></a>
 
@@ -115,6 +182,7 @@ api_instance = PureCloud::LocationsApi.new
 opts = { 
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
+  id: ["id_example"], # Array<String> | id
   sort_order: "sort_order_example" # String | Sort order
 }
 
@@ -133,6 +201,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
  **sort_order** | **String**| Sort order | [optional] <br />**Values**: asc, desc |
 {: class="table table-striped"}
 
@@ -208,6 +277,139 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LocationsSearchResponse**](LocationsSearchResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_location"></a>
+
+## -[**LocationDefinition**](LocationDefinition.html) patch_location(location_id, body)
+
+
+
+Update a location
+
+
+
+Wraps PATCH /api/v2/locations/{locationId} 
+
+Requires ANY permissions: 
+
+* directory:location:edit
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::LocationsApi.new
+
+location_id = "location_id_example" # String | Location ID
+
+body = PureCloud::LocationUpdateDefinition.new # LocationUpdateDefinition | Location
+
+
+begin
+  #Update a location
+  result = api_instance.patch_location(location_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling LocationsApi->patch_location: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **location_id** | **String**| Location ID |  |
+ **body** | [**LocationUpdateDefinition**](LocationUpdateDefinition.html)| Location |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LocationDefinition**](LocationDefinition.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_locations"></a>
+
+## -[**LocationDefinition**](LocationDefinition.html) post_locations(body)
+
+
+
+Create a location
+
+
+
+Wraps POST /api/v2/locations 
+
+Requires ANY permissions: 
+
+* directory:location:add
+
+
+### Example
+~~~ruby
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::LocationsApi.new
+
+body = PureCloud::LocationDefinition.new # LocationDefinition | Location
+
+
+begin
+  #Create a location
+  result = api_instance.post_locations(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling LocationsApi->post_locations: #{e}"
+end
+~~~
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**LocationDefinition**](LocationDefinition.html)| Location |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LocationDefinition**](LocationDefinition.html)
 
 ### HTTP request headers
 

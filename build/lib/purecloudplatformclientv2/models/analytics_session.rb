@@ -134,6 +134,27 @@ module PureCloud
     # Flag determining if an audio recording was started or not
     attr_accessor :recording
 
+    # ID of the journey customer
+    attr_accessor :journey_customer_id
+
+    # Type of the journey customer ID
+    attr_accessor :journey_customer_id_type
+
+    # ID of the journey customer session
+    attr_accessor :journey_customer_session_id
+
+    # Type of the journey customer session ID
+    attr_accessor :journey_customer_session_id_type
+
+    # Journey action ID
+    attr_accessor :journey_action_id
+
+    # Journey action map ID
+    attr_accessor :journey_action_map_id
+
+    # Journey action map version
+    attr_accessor :journey_action_map_version
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -218,7 +239,21 @@ module PureCloud
         
         :'media_endpoint_stats' => :'mediaEndpointStats',
         
-        :'recording' => :'recording'
+        :'recording' => :'recording',
+        
+        :'journey_customer_id' => :'journeyCustomerId',
+        
+        :'journey_customer_id_type' => :'journeyCustomerIdType',
+        
+        :'journey_customer_session_id' => :'journeyCustomerSessionId',
+        
+        :'journey_customer_session_id_type' => :'journeyCustomerSessionIdType',
+        
+        :'journey_action_id' => :'journeyActionId',
+        
+        :'journey_action_map_id' => :'journeyActionMapId',
+        
+        :'journey_action_map_version' => :'journeyActionMapVersion'
         
       }
     end
@@ -307,7 +342,21 @@ module PureCloud
         
         :'media_endpoint_stats' => :'Array<AnalyticsMediaEndpointStat>',
         
-        :'recording' => :'BOOLEAN'
+        :'recording' => :'BOOLEAN',
+        
+        :'journey_customer_id' => :'String',
+        
+        :'journey_customer_id_type' => :'String',
+        
+        :'journey_customer_session_id' => :'String',
+        
+        :'journey_customer_session_id_type' => :'String',
+        
+        :'journey_action_id' => :'String',
+        
+        :'journey_action_map_id' => :'String',
+        
+        :'journey_action_map_version' => :'String'
         
       }
     end
@@ -698,6 +747,69 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'journeyCustomerId')
+        
+        
+        self.journey_customer_id = attributes[:'journeyCustomerId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'journeyCustomerIdType')
+        
+        
+        self.journey_customer_id_type = attributes[:'journeyCustomerIdType']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'journeyCustomerSessionId')
+        
+        
+        self.journey_customer_session_id = attributes[:'journeyCustomerSessionId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'journeyCustomerSessionIdType')
+        
+        
+        self.journey_customer_session_id_type = attributes[:'journeyCustomerSessionIdType']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'journeyActionId')
+        
+        
+        self.journey_action_id = attributes[:'journeyActionId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'journeyActionMapId')
+        
+        
+        self.journey_action_map_id = attributes[:'journeyActionMapId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'journeyActionMapVersion')
+        
+        
+        self.journey_action_map_version = attributes[:'journeyActionMapVersion']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -761,6 +873,34 @@ module PureCloud
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1127,6 +1267,41 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1172,7 +1347,14 @@ module PureCloud
           metrics == o.metrics &&
           flow == o.flow &&
           media_endpoint_stats == o.media_endpoint_stats &&
-          recording == o.recording
+          recording == o.recording &&
+          journey_customer_id == o.journey_customer_id &&
+          journey_customer_id_type == o.journey_customer_id_type &&
+          journey_customer_session_id == o.journey_customer_session_id &&
+          journey_customer_session_id_type == o.journey_customer_session_id_type &&
+          journey_action_id == o.journey_action_id &&
+          journey_action_map_id == o.journey_action_map_id &&
+          journey_action_map_version == o.journey_action_map_version
     end
 
     # @see the `==` method
@@ -1184,7 +1366,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, session_dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording].hash
+      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, session_dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording, journey_customer_id, journey_customer_id_type, journey_customer_session_id, journey_customer_session_id_type, journey_action_id, journey_action_map_id, journey_action_map_version].hash
     end
 
     # build the object from hash

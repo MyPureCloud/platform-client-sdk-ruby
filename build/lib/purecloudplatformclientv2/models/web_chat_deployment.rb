@@ -34,6 +34,8 @@ module PureCloud
 
     attr_accessor :web_chat_config
 
+    attr_accessor :allowed_domains
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -54,6 +56,8 @@ module PureCloud
         :'disabled' => :'disabled',
         
         :'web_chat_config' => :'webChatConfig',
+        
+        :'allowed_domains' => :'allowedDomains',
         
         :'self_uri' => :'selfUri'
         
@@ -77,6 +81,8 @@ module PureCloud
         :'disabled' => :'BOOLEAN',
         
         :'web_chat_config' => :'WebChatConfig',
+        
+        :'allowed_domains' => :'Array<String>',
         
         :'self_uri' => :'String'
         
@@ -155,6 +161,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'allowedDomains')
+        
+        if (value = attributes[:'allowedDomains']).is_a?(Array)
+          self.allowed_domains = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -211,8 +228,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -266,6 +292,7 @@ module PureCloud
           authentication_url == o.authentication_url &&
           disabled == o.disabled &&
           web_chat_config == o.web_chat_config &&
+          allowed_domains == o.allowed_domains &&
           self_uri == o.self_uri
     end
 
@@ -278,7 +305,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, authentication_required, authentication_url, disabled, web_chat_config, self_uri].hash
+      [id, name, description, authentication_required, authentication_url, disabled, web_chat_config, allowed_domains, self_uri].hash
     end
 
     # build the object from hash
