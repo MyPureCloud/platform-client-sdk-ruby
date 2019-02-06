@@ -40,7 +40,7 @@ Method | Description
 
 <a name="delete_identityproviders_adfs"></a>
 
-## -[**Empty**](Empty.html) delete_identityproviders_adfs
+## [**Empty**](Empty.html) delete_identityproviders_adfs
 
 
 
@@ -56,7 +56,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -79,7 +79,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->delete_identityproviders_adfs: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -99,7 +99,7 @@ This endpoint does not need any parameter.
 
 <a name="delete_identityproviders_cic"></a>
 
-## -[**Empty**](Empty.html) delete_identityproviders_cic
+## [**Empty**](Empty.html) delete_identityproviders_cic
 
 
 
@@ -115,7 +115,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -138,7 +138,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->delete_identityproviders_cic: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -158,7 +158,7 @@ This endpoint does not need any parameter.
 
 <a name="delete_identityproviders_gsuite"></a>
 
-## -[**Empty**](Empty.html) delete_identityproviders_gsuite
+## [**Empty**](Empty.html) delete_identityproviders_gsuite
 
 
 
@@ -174,7 +174,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -197,7 +197,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->delete_identityproviders_gsuite: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -217,7 +217,7 @@ This endpoint does not need any parameter.
 
 <a name="delete_identityproviders_identitynow"></a>
 
-## -[**Empty**](Empty.html) delete_identityproviders_identitynow
+## [**Empty**](Empty.html) delete_identityproviders_identitynow
 
 
 
@@ -233,7 +233,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -256,7 +256,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->delete_identityproviders_identitynow: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -276,7 +276,7 @@ This endpoint does not need any parameter.
 
 <a name="delete_identityproviders_okta"></a>
 
-## -[**Empty**](Empty.html) delete_identityproviders_okta
+## [**Empty**](Empty.html) delete_identityproviders_okta
 
 
 
@@ -292,7 +292,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -315,7 +315,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->delete_identityproviders_okta: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -335,7 +335,7 @@ This endpoint does not need any parameter.
 
 <a name="delete_identityproviders_onelogin"></a>
 
-## -[**Empty**](Empty.html) delete_identityproviders_onelogin
+## [**Empty**](Empty.html) delete_identityproviders_onelogin
 
 
 
@@ -351,7 +351,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -374,7 +374,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->delete_identityproviders_onelogin: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -394,7 +394,7 @@ This endpoint does not need any parameter.
 
 <a name="delete_identityproviders_ping"></a>
 
-## -[**Empty**](Empty.html) delete_identityproviders_ping
+## [**Empty**](Empty.html) delete_identityproviders_ping
 
 
 
@@ -410,7 +410,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -433,7 +433,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->delete_identityproviders_ping: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -453,7 +453,7 @@ This endpoint does not need any parameter.
 
 <a name="delete_identityproviders_purecloud"></a>
 
-## -[**Empty**](Empty.html) delete_identityproviders_purecloud
+## [**Empty**](Empty.html) delete_identityproviders_purecloud
 
 
 
@@ -469,7 +469,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -492,7 +492,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->delete_identityproviders_purecloud: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -512,7 +512,7 @@ This endpoint does not need any parameter.
 
 <a name="delete_identityproviders_salesforce"></a>
 
-## -[**Empty**](Empty.html) delete_identityproviders_salesforce
+## [**Empty**](Empty.html) delete_identityproviders_salesforce
 
 
 
@@ -528,7 +528,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -551,7 +551,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->delete_identityproviders_salesforce: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -571,7 +571,7 @@ This endpoint does not need any parameter.
 
 <a name="get_identityproviders"></a>
 
-## -[**OAuthProviderEntityListing**](OAuthProviderEntityListing.html) get_identityproviders
+## [**OAuthProviderEntityListing**](OAuthProviderEntityListing.html) get_identityproviders
 
 
 
@@ -587,7 +587,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -610,7 +610,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->get_identityproviders: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -630,7 +630,7 @@ This endpoint does not need any parameter.
 
 <a name="get_identityproviders_adfs"></a>
 
-## -[**ADFS**](ADFS.html) get_identityproviders_adfs
+## [**ADFS**](ADFS.html) get_identityproviders_adfs
 
 
 
@@ -646,7 +646,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -669,7 +669,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->get_identityproviders_adfs: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -689,7 +689,7 @@ This endpoint does not need any parameter.
 
 <a name="get_identityproviders_cic"></a>
 
-## -[**CustomerInteractionCenter**](CustomerInteractionCenter.html) get_identityproviders_cic
+## [**CustomerInteractionCenter**](CustomerInteractionCenter.html) get_identityproviders_cic
 
 
 
@@ -705,7 +705,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -728,7 +728,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->get_identityproviders_cic: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -748,7 +748,7 @@ This endpoint does not need any parameter.
 
 <a name="get_identityproviders_gsuite"></a>
 
-## -[**GSuite**](GSuite.html) get_identityproviders_gsuite
+## [**GSuite**](GSuite.html) get_identityproviders_gsuite
 
 
 
@@ -764,7 +764,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -787,7 +787,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->get_identityproviders_gsuite: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -807,7 +807,7 @@ This endpoint does not need any parameter.
 
 <a name="get_identityproviders_identitynow"></a>
 
-## -[**IdentityNow**](IdentityNow.html) get_identityproviders_identitynow
+## [**IdentityNow**](IdentityNow.html) get_identityproviders_identitynow
 
 
 
@@ -823,7 +823,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -846,7 +846,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->get_identityproviders_identitynow: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -866,7 +866,7 @@ This endpoint does not need any parameter.
 
 <a name="get_identityproviders_okta"></a>
 
-## -[**Okta**](Okta.html) get_identityproviders_okta
+## [**Okta**](Okta.html) get_identityproviders_okta
 
 
 
@@ -882,7 +882,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -905,7 +905,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->get_identityproviders_okta: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -925,7 +925,7 @@ This endpoint does not need any parameter.
 
 <a name="get_identityproviders_onelogin"></a>
 
-## -[**OneLogin**](OneLogin.html) get_identityproviders_onelogin
+## [**OneLogin**](OneLogin.html) get_identityproviders_onelogin
 
 
 
@@ -941,7 +941,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -964,7 +964,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->get_identityproviders_onelogin: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -984,7 +984,7 @@ This endpoint does not need any parameter.
 
 <a name="get_identityproviders_ping"></a>
 
-## -[**PingIdentity**](PingIdentity.html) get_identityproviders_ping
+## [**PingIdentity**](PingIdentity.html) get_identityproviders_ping
 
 
 
@@ -1000,7 +1000,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1023,7 +1023,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->get_identityproviders_ping: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1043,7 +1043,7 @@ This endpoint does not need any parameter.
 
 <a name="get_identityproviders_purecloud"></a>
 
-## -[**PureCloud**](PureCloud.html) get_identityproviders_purecloud
+## [**PureCloud**](PureCloud.html) get_identityproviders_purecloud
 
 
 
@@ -1059,7 +1059,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1082,7 +1082,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->get_identityproviders_purecloud: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1102,7 +1102,7 @@ This endpoint does not need any parameter.
 
 <a name="get_identityproviders_salesforce"></a>
 
-## -[**Salesforce**](Salesforce.html) get_identityproviders_salesforce
+## [**Salesforce**](Salesforce.html) get_identityproviders_salesforce
 
 
 
@@ -1118,7 +1118,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1141,7 +1141,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->get_identityproviders_salesforce: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1161,7 +1161,7 @@ This endpoint does not need any parameter.
 
 <a name="put_identityproviders_adfs"></a>
 
-## -[**OAuthProvider**](OAuthProvider.html) put_identityproviders_adfs(body)
+## [**OAuthProvider**](OAuthProvider.html) put_identityproviders_adfs(body)
 
 
 
@@ -1178,7 +1178,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1204,7 +1204,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->put_identityproviders_adfs: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1227,7 +1227,7 @@ Name | Type | Description  | Notes
 
 <a name="put_identityproviders_cic"></a>
 
-## -[**OAuthProvider**](OAuthProvider.html) put_identityproviders_cic(body)
+## [**OAuthProvider**](OAuthProvider.html) put_identityproviders_cic(body)
 
 
 
@@ -1244,7 +1244,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1270,7 +1270,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->put_identityproviders_cic: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1293,7 +1293,7 @@ Name | Type | Description  | Notes
 
 <a name="put_identityproviders_gsuite"></a>
 
-## -[**OAuthProvider**](OAuthProvider.html) put_identityproviders_gsuite(body)
+## [**OAuthProvider**](OAuthProvider.html) put_identityproviders_gsuite(body)
 
 
 
@@ -1310,7 +1310,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1336,7 +1336,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->put_identityproviders_gsuite: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1359,7 +1359,7 @@ Name | Type | Description  | Notes
 
 <a name="put_identityproviders_identitynow"></a>
 
-## -[**IdentityNow**](IdentityNow.html) put_identityproviders_identitynow(body)
+## [**IdentityNow**](IdentityNow.html) put_identityproviders_identitynow(body)
 
 
 
@@ -1376,7 +1376,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1402,7 +1402,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->put_identityproviders_identitynow: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1425,7 +1425,7 @@ Name | Type | Description  | Notes
 
 <a name="put_identityproviders_okta"></a>
 
-## -[**OAuthProvider**](OAuthProvider.html) put_identityproviders_okta(body)
+## [**OAuthProvider**](OAuthProvider.html) put_identityproviders_okta(body)
 
 
 
@@ -1442,7 +1442,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1468,7 +1468,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->put_identityproviders_okta: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1491,7 +1491,7 @@ Name | Type | Description  | Notes
 
 <a name="put_identityproviders_onelogin"></a>
 
-## -[**OAuthProvider**](OAuthProvider.html) put_identityproviders_onelogin(body)
+## [**OAuthProvider**](OAuthProvider.html) put_identityproviders_onelogin(body)
 
 
 
@@ -1508,7 +1508,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1534,7 +1534,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->put_identityproviders_onelogin: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1557,7 +1557,7 @@ Name | Type | Description  | Notes
 
 <a name="put_identityproviders_ping"></a>
 
-## -[**OAuthProvider**](OAuthProvider.html) put_identityproviders_ping(body)
+## [**OAuthProvider**](OAuthProvider.html) put_identityproviders_ping(body)
 
 
 
@@ -1574,7 +1574,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1600,7 +1600,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->put_identityproviders_ping: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1623,7 +1623,7 @@ Name | Type | Description  | Notes
 
 <a name="put_identityproviders_purecloud"></a>
 
-## -[**OAuthProvider**](OAuthProvider.html) put_identityproviders_purecloud(body)
+## [**OAuthProvider**](OAuthProvider.html) put_identityproviders_purecloud(body)
 
 
 
@@ -1640,7 +1640,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1666,7 +1666,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->put_identityproviders_purecloud: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1689,7 +1689,7 @@ Name | Type | Description  | Notes
 
 <a name="put_identityproviders_salesforce"></a>
 
-## -[**OAuthProvider**](OAuthProvider.html) put_identityproviders_salesforce(body)
+## [**OAuthProvider**](OAuthProvider.html) put_identityproviders_salesforce(body)
 
 
 
@@ -1706,7 +1706,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1732,7 +1732,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->put_identityproviders_salesforce: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

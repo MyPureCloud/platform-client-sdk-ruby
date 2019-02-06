@@ -42,7 +42,7 @@ Method | Description
 
 <a name="delete_externalcontacts_contact"></a>
 
-## - delete_externalcontacts_contact(contact_id)
+##  delete_externalcontacts_contact(contact_id)
 
 
 
@@ -58,7 +58,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -83,7 +83,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->delete_externalcontacts_contact: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -106,7 +106,7 @@ nil (empty response body)
 
 <a name="delete_externalcontacts_contact_note"></a>
 
-## - delete_externalcontacts_contact_note(contact_id, note_id)
+##  delete_externalcontacts_contact_note(contact_id, note_id)
 
 
 
@@ -122,7 +122,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -149,7 +149,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->delete_externalcontacts_contact_note: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -173,7 +173,7 @@ nil (empty response body)
 
 <a name="delete_externalcontacts_organization"></a>
 
-## - delete_externalcontacts_organization(external_organization_id)
+##  delete_externalcontacts_organization(external_organization_id)
 
 
 
@@ -189,7 +189,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -214,7 +214,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->delete_externalcontacts_organization: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -237,7 +237,7 @@ nil (empty response body)
 
 <a name="delete_externalcontacts_organization_note"></a>
 
-## - delete_externalcontacts_organization_note(external_organization_id, note_id)
+##  delete_externalcontacts_organization_note(external_organization_id, note_id)
 
 
 
@@ -253,7 +253,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -280,7 +280,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->delete_externalcontacts_organization_note: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -304,7 +304,7 @@ nil (empty response body)
 
 <a name="delete_externalcontacts_organization_trustor"></a>
 
-## - delete_externalcontacts_organization_trustor(external_organization_id)
+##  delete_externalcontacts_organization_trustor(external_organization_id)
 
 
 
@@ -320,7 +320,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -345,7 +345,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->delete_externalcontacts_organization_trustor: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -368,7 +368,7 @@ nil (empty response body)
 
 <a name="delete_externalcontacts_relationship"></a>
 
-## - delete_externalcontacts_relationship(relationship_id)
+##  delete_externalcontacts_relationship(relationship_id)
 
 
 
@@ -384,7 +384,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -409,7 +409,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->delete_externalcontacts_relationship: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -432,7 +432,7 @@ nil (empty response body)
 
 <a name="get_externalcontacts_contact"></a>
 
-## -[**ExternalContact**](ExternalContact.html) get_externalcontacts_contact(contact_id, opts)
+## [**ExternalContact**](ExternalContact.html) get_externalcontacts_contact(contact_id, opts)
 
 
 
@@ -448,7 +448,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -477,7 +477,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_contact: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -501,7 +501,7 @@ Name | Type | Description  | Notes
 
 <a name="get_externalcontacts_contact_note"></a>
 
-## -[**Note**](Note.html) get_externalcontacts_contact_note(contact_id, note_id, opts)
+## [**Note**](Note.html) get_externalcontacts_contact_note(contact_id, note_id, opts)
 
 
 
@@ -517,7 +517,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -548,7 +548,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_contact_note: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -573,7 +573,7 @@ Name | Type | Description  | Notes
 
 <a name="get_externalcontacts_contact_notes"></a>
 
-## -[**NoteListing**](NoteListing.html) get_externalcontacts_contact_notes(contact_id, opts)
+## [**NoteListing**](NoteListing.html) get_externalcontacts_contact_notes(contact_id, opts)
 
 
 
@@ -589,7 +589,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -621,7 +621,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_contact_notes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -648,7 +648,7 @@ Name | Type | Description  | Notes
 
 <a name="get_externalcontacts_contacts"></a>
 
-## -[**ContactListing**](ContactListing.html) get_externalcontacts_contacts(opts)
+## [**ContactListing**](ContactListing.html) get_externalcontacts_contacts(opts)
 
 
 
@@ -664,7 +664,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -695,7 +695,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_contacts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
 
 <a name="get_externalcontacts_organization"></a>
 
-## -[**ExternalOrganization**](ExternalOrganization.html) get_externalcontacts_organization(external_organization_id, opts)
+## [**ExternalOrganization**](ExternalOrganization.html) get_externalcontacts_organization(external_organization_id, opts)
 
 
 
@@ -738,7 +738,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -768,7 +768,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_organization: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -793,7 +793,7 @@ Name | Type | Description  | Notes
 
 <a name="get_externalcontacts_organization_contacts"></a>
 
-## -[**ContactListing**](ContactListing.html) get_externalcontacts_organization_contacts(external_organization_id, opts)
+## [**ContactListing**](ContactListing.html) get_externalcontacts_organization_contacts(external_organization_id, opts)
 
 
 
@@ -809,7 +809,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -842,7 +842,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_organization_contacts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -870,7 +870,7 @@ Name | Type | Description  | Notes
 
 <a name="get_externalcontacts_organization_note"></a>
 
-## -[**Note**](Note.html) get_externalcontacts_organization_note(external_organization_id, note_id, opts)
+## [**Note**](Note.html) get_externalcontacts_organization_note(external_organization_id, note_id, opts)
 
 
 
@@ -886,7 +886,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -917,7 +917,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_organization_note: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -942,7 +942,7 @@ Name | Type | Description  | Notes
 
 <a name="get_externalcontacts_organization_notes"></a>
 
-## -[**NoteListing**](NoteListing.html) get_externalcontacts_organization_notes(external_organization_id, opts)
+## [**NoteListing**](NoteListing.html) get_externalcontacts_organization_notes(external_organization_id, opts)
 
 
 
@@ -958,7 +958,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -990,7 +990,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_organization_notes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1017,7 +1017,7 @@ Name | Type | Description  | Notes
 
 <a name="get_externalcontacts_organization_relationships"></a>
 
-## -[**RelationshipListing**](RelationshipListing.html) get_externalcontacts_organization_relationships(external_organization_id, opts)
+## [**RelationshipListing**](RelationshipListing.html) get_externalcontacts_organization_relationships(external_organization_id, opts)
 
 
 
@@ -1033,7 +1033,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1065,7 +1065,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_organization_relationships: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1092,7 +1092,7 @@ Name | Type | Description  | Notes
 
 <a name="get_externalcontacts_organizations"></a>
 
-## -[**ExternalOrganizationListing**](ExternalOrganizationListing.html) get_externalcontacts_organizations(opts)
+## [**ExternalOrganizationListing**](ExternalOrganizationListing.html) get_externalcontacts_organizations(opts)
 
 
 
@@ -1108,7 +1108,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1141,7 +1141,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_organizations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1170,7 +1170,7 @@ Name | Type | Description  | Notes
 
 <a name="get_externalcontacts_relationship"></a>
 
-## -[**Relationship**](Relationship.html) get_externalcontacts_relationship(relationship_id, opts)
+## [**Relationship**](Relationship.html) get_externalcontacts_relationship(relationship_id, opts)
 
 
 
@@ -1186,7 +1186,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1215,7 +1215,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_relationship: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1239,7 +1239,7 @@ Name | Type | Description  | Notes
 
 <a name="get_externalcontacts_reversewhitepageslookup"></a>
 
-## -[**ReverseWhitepagesLookupResult**](ReverseWhitepagesLookupResult.html) get_externalcontacts_reversewhitepageslookup(lookup_val, opts)
+## [**ReverseWhitepagesLookupResult**](ReverseWhitepagesLookupResult.html) get_externalcontacts_reversewhitepageslookup(lookup_val, opts)
 
 
 
@@ -1255,7 +1255,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1284,7 +1284,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->get_externalcontacts_reversewhitepageslookup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1308,7 +1308,7 @@ Name | Type | Description  | Notes
 
 <a name="post_externalcontacts_contact_notes"></a>
 
-## -[**Note**](Note.html) post_externalcontacts_contact_notes(contact_id, body)
+## [**Note**](Note.html) post_externalcontacts_contact_notes(contact_id, body)
 
 
 
@@ -1324,7 +1324,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1352,7 +1352,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->post_externalcontacts_contact_notes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1376,7 +1376,7 @@ Name | Type | Description  | Notes
 
 <a name="post_externalcontacts_contacts"></a>
 
-## -[**ExternalContact**](ExternalContact.html) post_externalcontacts_contacts(body)
+## [**ExternalContact**](ExternalContact.html) post_externalcontacts_contacts(body)
 
 
 
@@ -1392,7 +1392,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1418,7 +1418,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->post_externalcontacts_contacts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1441,7 +1441,7 @@ Name | Type | Description  | Notes
 
 <a name="post_externalcontacts_organization_notes"></a>
 
-## -[**Note**](Note.html) post_externalcontacts_organization_notes(external_organization_id, body)
+## [**Note**](Note.html) post_externalcontacts_organization_notes(external_organization_id, body)
 
 
 
@@ -1457,7 +1457,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1485,7 +1485,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->post_externalcontacts_organization_notes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1509,7 +1509,7 @@ Name | Type | Description  | Notes
 
 <a name="post_externalcontacts_organizations"></a>
 
-## -[**ExternalOrganization**](ExternalOrganization.html) post_externalcontacts_organizations(body)
+## [**ExternalOrganization**](ExternalOrganization.html) post_externalcontacts_organizations(body)
 
 
 
@@ -1525,7 +1525,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1551,7 +1551,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->post_externalcontacts_organizations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1574,7 +1574,7 @@ Name | Type | Description  | Notes
 
 <a name="post_externalcontacts_relationships"></a>
 
-## -[**Relationship**](Relationship.html) post_externalcontacts_relationships(body)
+## [**Relationship**](Relationship.html) post_externalcontacts_relationships(body)
 
 
 
@@ -1590,7 +1590,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1616,7 +1616,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->post_externalcontacts_relationships: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1639,7 +1639,7 @@ Name | Type | Description  | Notes
 
 <a name="put_externalcontacts_contact"></a>
 
-## -[**ExternalContact**](ExternalContact.html) put_externalcontacts_contact(contact_id, body)
+## [**ExternalContact**](ExternalContact.html) put_externalcontacts_contact(contact_id, body)
 
 
 
@@ -1655,7 +1655,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1683,7 +1683,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->put_externalcontacts_contact: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1707,7 +1707,7 @@ Name | Type | Description  | Notes
 
 <a name="put_externalcontacts_contact_note"></a>
 
-## -[**Note**](Note.html) put_externalcontacts_contact_note(contact_id, note_id, body)
+## [**Note**](Note.html) put_externalcontacts_contact_note(contact_id, note_id, body)
 
 
 
@@ -1723,7 +1723,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1753,7 +1753,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->put_externalcontacts_contact_note: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1778,7 +1778,7 @@ Name | Type | Description  | Notes
 
 <a name="put_externalcontacts_conversation"></a>
 
-## - put_externalcontacts_conversation(conversation_id, body)
+##  put_externalcontacts_conversation(conversation_id, body)
 
 
 
@@ -1794,7 +1794,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1821,7 +1821,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->put_externalcontacts_conversation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1845,7 +1845,7 @@ nil (empty response body)
 
 <a name="put_externalcontacts_organization"></a>
 
-## -[**ExternalOrganization**](ExternalOrganization.html) put_externalcontacts_organization(external_organization_id, body)
+## [**ExternalOrganization**](ExternalOrganization.html) put_externalcontacts_organization(external_organization_id, body)
 
 
 
@@ -1861,7 +1861,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1889,7 +1889,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->put_externalcontacts_organization: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1913,7 +1913,7 @@ Name | Type | Description  | Notes
 
 <a name="put_externalcontacts_organization_note"></a>
 
-## -[**Note**](Note.html) put_externalcontacts_organization_note(external_organization_id, note_id, body)
+## [**Note**](Note.html) put_externalcontacts_organization_note(external_organization_id, note_id, body)
 
 
 
@@ -1929,7 +1929,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1959,7 +1959,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->put_externalcontacts_organization_note: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1984,7 +1984,7 @@ Name | Type | Description  | Notes
 
 <a name="put_externalcontacts_organization_trustor_trustor_id"></a>
 
-## -[**ExternalOrganization**](ExternalOrganization.html) put_externalcontacts_organization_trustor_trustor_id(external_organization_id, trustor_id)
+## [**ExternalOrganization**](ExternalOrganization.html) put_externalcontacts_organization_trustor_trustor_id(external_organization_id, trustor_id)
 
 
 
@@ -2000,7 +2000,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2028,7 +2028,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->put_externalcontacts_organization_trustor_trustor_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2052,7 +2052,7 @@ Name | Type | Description  | Notes
 
 <a name="put_externalcontacts_relationship"></a>
 
-## -[**Relationship**](Relationship.html) put_externalcontacts_relationship(relationship_id, body)
+## [**Relationship**](Relationship.html) put_externalcontacts_relationship(relationship_id, body)
 
 
 
@@ -2068,7 +2068,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2096,7 +2096,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->put_externalcontacts_relationship: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

@@ -20,7 +20,7 @@ Method | Description
 
 <a name="delete_webchat_deployment"></a>
 
-## - delete_webchat_deployment(deployment_id)
+##  delete_webchat_deployment(deployment_id)
 
 
 
@@ -36,7 +36,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -61,7 +61,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WebChatApi->delete_webchat_deployment: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -84,7 +84,7 @@ nil (empty response body)
 
 <a name="delete_webchat_settings"></a>
 
-## - delete_webchat_settings
+##  delete_webchat_settings
 
 
 
@@ -100,7 +100,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -122,7 +122,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WebChatApi->delete_webchat_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -142,7 +142,7 @@ nil (empty response body)
 
 <a name="get_webchat_deployment"></a>
 
-## -[**WebChatDeployment**](WebChatDeployment.html) get_webchat_deployment(deployment_id)
+## [**WebChatDeployment**](WebChatDeployment.html) get_webchat_deployment(deployment_id)
 
 
 
@@ -158,7 +158,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -184,7 +184,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WebChatApi->get_webchat_deployment: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 <a name="get_webchat_deployments"></a>
 
-## -[**WebChatDeploymentEntityListing**](WebChatDeploymentEntityListing.html) get_webchat_deployments
+## [**WebChatDeploymentEntityListing**](WebChatDeploymentEntityListing.html) get_webchat_deployments
 
 
 
@@ -223,7 +223,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -246,7 +246,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WebChatApi->get_webchat_deployments: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -266,7 +266,7 @@ This endpoint does not need any parameter.
 
 <a name="get_webchat_settings"></a>
 
-## -[**WebChatSettings**](WebChatSettings.html) get_webchat_settings
+## [**WebChatSettings**](WebChatSettings.html) get_webchat_settings
 
 
 
@@ -282,7 +282,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -305,7 +305,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WebChatApi->get_webchat_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -325,7 +325,7 @@ This endpoint does not need any parameter.
 
 <a name="post_webchat_deployments"></a>
 
-## -[**WebChatDeployment**](WebChatDeployment.html) post_webchat_deployments(body)
+## [**WebChatDeployment**](WebChatDeployment.html) post_webchat_deployments(body)
 
 
 
@@ -341,7 +341,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -367,7 +367,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WebChatApi->post_webchat_deployments: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 
 <a name="put_webchat_deployment"></a>
 
-## -[**WebChatDeployment**](WebChatDeployment.html) put_webchat_deployment(deployment_id, body)
+## [**WebChatDeployment**](WebChatDeployment.html) put_webchat_deployment(deployment_id, body)
 
 
 
@@ -406,7 +406,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -434,7 +434,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WebChatApi->put_webchat_deployment: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
 
 <a name="put_webchat_settings"></a>
 
-## -[**WebChatSettings**](WebChatSettings.html) put_webchat_settings(body)
+## [**WebChatSettings**](WebChatSettings.html) put_webchat_settings(body)
 
 
 
@@ -474,7 +474,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -500,7 +500,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WebChatApi->put_webchat_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

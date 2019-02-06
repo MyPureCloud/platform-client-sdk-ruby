@@ -23,7 +23,7 @@ Method | Description
 
 <a name="get_script"></a>
 
-## -[**Script**](Script.html) get_script(script_id)
+## [**Script**](Script.html) get_script(script_id)
 
 
 
@@ -39,7 +39,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -65,7 +65,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_script: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 <a name="get_script_page"></a>
 
-## -[**Page**](Page.html) get_script_page(script_id, page_id, opts)
+## [**Page**](Page.html) get_script_page(script_id, page_id, opts)
 
 
 
@@ -104,7 +104,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -135,7 +135,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_script_page: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 <a name="get_script_pages"></a>
 
-## -[**Array&lt;Page&gt;**](Page.html) get_script_pages(script_id, opts)
+## [**Array&lt;Page&gt;**](Page.html) get_script_pages(script_id, opts)
 
 
 
@@ -176,7 +176,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -205,7 +205,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_script_pages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts"></a>
 
-## -[**ScriptEntityListing**](ScriptEntityListing.html) get_scripts(opts)
+## [**ScriptEntityListing**](ScriptEntityListing.html) get_scripts(opts)
 
 
 
@@ -245,7 +245,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -280,7 +280,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts_published"></a>
 
-## -[**ScriptEntityListing**](ScriptEntityListing.html) get_scripts_published(script_id, opts)
+## [**ScriptEntityListing**](ScriptEntityListing.html) get_scripts_published(script_id, opts)
 
 
 
@@ -327,7 +327,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -362,7 +362,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts_published: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts_published_script_id"></a>
 
-## -[**Script**](Script.html) get_scripts_published_script_id(script_id, opts)
+## [**Script**](Script.html) get_scripts_published_script_id(script_id, opts)
 
 
 
@@ -408,7 +408,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -437,7 +437,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts_published_script_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts_published_script_id_page"></a>
 
-## -[**Page**](Page.html) get_scripts_published_script_id_page(script_id, page_id, opts)
+## [**Page**](Page.html) get_scripts_published_script_id_page(script_id, page_id, opts)
 
 
 
@@ -477,7 +477,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -508,7 +508,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts_published_script_id_page: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -533,7 +533,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts_published_script_id_pages"></a>
 
-## -[**Array&lt;Page&gt;**](Page.html) get_scripts_published_script_id_pages(script_id, opts)
+## [**Array&lt;Page&gt;**](Page.html) get_scripts_published_script_id_pages(script_id, opts)
 
 
 
@@ -549,7 +549,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -578,7 +578,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts_published_script_id_pages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -602,7 +602,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts_published_script_id_variables"></a>
 
-## -Object** get_scripts_published_script_id_variables(script_id, opts)
+## Object** get_scripts_published_script_id_variables(script_id, opts)
 
 
 
@@ -618,7 +618,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -650,7 +650,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts_published_script_id_variables: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -677,7 +677,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts_upload_status"></a>
 
-## -[**ImportScriptStatusResponse**](ImportScriptStatusResponse.html) get_scripts_upload_status(upload_id, opts)
+## [**ImportScriptStatusResponse**](ImportScriptStatusResponse.html) get_scripts_upload_status(upload_id, opts)
 
 
 
@@ -693,7 +693,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -722,7 +722,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts_upload_status: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -746,7 +746,7 @@ Name | Type | Description  | Notes
 
 <a name="post_script_export"></a>
 
-## -[**ExportScriptResponse**](ExportScriptResponse.html) post_script_export(script_id, opts)
+## [**ExportScriptResponse**](ExportScriptResponse.html) post_script_export(script_id, opts)
 
 
 
@@ -762,7 +762,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -791,7 +791,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->post_script_export: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

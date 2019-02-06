@@ -28,7 +28,7 @@ Method | Description
 
 <a name="get_documentation_gkn_search"></a>
 
-## -[**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html) get_documentation_gkn_search(q64)
+## [**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html) get_documentation_gkn_search(q64)
 
 
 
@@ -43,7 +43,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 
@@ -59,7 +59,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->get_documentation_gkn_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 <a name="get_documentation_search"></a>
 
-## -[**DocumentationSearchResponse**](DocumentationSearchResponse.html) get_documentation_search(q64)
+## [**DocumentationSearchResponse**](DocumentationSearchResponse.html) get_documentation_search(q64)
 
 
 
@@ -97,7 +97,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 
@@ -113,7 +113,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->get_documentation_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 <a name="get_groups_search"></a>
 
-## -[**GroupsSearchResponse**](GroupsSearchResponse.html) get_groups_search(q64, opts)
+## [**GroupsSearchResponse**](GroupsSearchResponse.html) get_groups_search(q64, opts)
 
 
 
@@ -151,7 +151,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -180,7 +180,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->get_groups_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 <a name="get_locations_search"></a>
 
-## -[**LocationsSearchResponse**](LocationsSearchResponse.html) get_locations_search(q64, opts)
+## [**LocationsSearchResponse**](LocationsSearchResponse.html) get_locations_search(q64, opts)
 
 
 
@@ -219,7 +219,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -248,7 +248,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->get_locations_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 
 <a name="get_search"></a>
 
-## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) get_search(q64, opts)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) get_search(q64, opts)
 
 
 
@@ -287,7 +287,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -317,7 +317,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->get_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 
 <a name="get_search_suggest"></a>
 
-## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) get_search_suggest(q64, opts)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) get_search_suggest(q64, opts)
 
 
 
@@ -357,7 +357,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -387,7 +387,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->get_search_suggest: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 <a name="get_users_search"></a>
 
-## -[**UsersSearchResponse**](UsersSearchResponse.html) get_users_search(q64, opts)
+## [**UsersSearchResponse**](UsersSearchResponse.html) get_users_search(q64, opts)
 
 
 
@@ -427,7 +427,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -456,7 +456,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->get_users_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -480,7 +480,7 @@ Name | Type | Description  | Notes
 
 <a name="get_voicemail_search"></a>
 
-## -[**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) get_voicemail_search(q64, opts)
+## [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) get_voicemail_search(q64, opts)
 
 
 
@@ -495,7 +495,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -524,7 +524,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->get_voicemail_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 <a name="post_documentation_gkn_search"></a>
 
-## -[**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html) post_documentation_gkn_search(body)
+## [**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse.html) post_documentation_gkn_search(body)
 
 
 
@@ -563,7 +563,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 
@@ -579,7 +579,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->post_documentation_gkn_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -602,7 +602,7 @@ Name | Type | Description  | Notes
 
 <a name="post_documentation_search"></a>
 
-## -[**DocumentationSearchResponse**](DocumentationSearchResponse.html) post_documentation_search(body)
+## [**DocumentationSearchResponse**](DocumentationSearchResponse.html) post_documentation_search(body)
 
 
 
@@ -617,7 +617,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 
@@ -633,7 +633,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->post_documentation_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -656,7 +656,7 @@ Name | Type | Description  | Notes
 
 <a name="post_groups_search"></a>
 
-## -[**GroupsSearchResponse**](GroupsSearchResponse.html) post_groups_search(body)
+## [**GroupsSearchResponse**](GroupsSearchResponse.html) post_groups_search(body)
 
 
 
@@ -671,7 +671,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -697,7 +697,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->post_groups_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -720,7 +720,7 @@ Name | Type | Description  | Notes
 
 <a name="post_locations_search"></a>
 
-## -[**LocationsSearchResponse**](LocationsSearchResponse.html) post_locations_search(body)
+## [**LocationsSearchResponse**](LocationsSearchResponse.html) post_locations_search(body)
 
 
 
@@ -735,7 +735,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -761,7 +761,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->post_locations_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -784,7 +784,7 @@ Name | Type | Description  | Notes
 
 <a name="post_search"></a>
 
-## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) post_search(body, opts)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) post_search(body, opts)
 
 
 
@@ -799,7 +799,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -828,7 +828,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->post_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -852,7 +852,7 @@ Name | Type | Description  | Notes
 
 <a name="post_search_suggest"></a>
 
-## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) post_search_suggest(body, opts)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) post_search_suggest(body, opts)
 
 
 
@@ -867,7 +867,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -896,7 +896,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->post_search_suggest: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -920,7 +920,7 @@ Name | Type | Description  | Notes
 
 <a name="post_users_search"></a>
 
-## -[**UsersSearchResponse**](UsersSearchResponse.html) post_users_search(body)
+## [**UsersSearchResponse**](UsersSearchResponse.html) post_users_search(body)
 
 
 
@@ -935,7 +935,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -961,7 +961,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->post_users_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -984,7 +984,7 @@ Name | Type | Description  | Notes
 
 <a name="post_voicemail_search"></a>
 
-## -[**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) post_voicemail_search(body)
+## [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) post_voicemail_search(body)
 
 
 
@@ -999,7 +999,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1025,7 +1025,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SearchApi->post_voicemail_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

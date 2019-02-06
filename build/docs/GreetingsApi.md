@@ -28,7 +28,7 @@ Method | Description
 
 <a name="delete_greeting"></a>
 
-## - delete_greeting(greeting_id)
+##  delete_greeting(greeting_id)
 
 
 
@@ -43,7 +43,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -68,7 +68,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->delete_greeting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -91,7 +91,7 @@ nil (empty response body)
 
 <a name="get_greeting"></a>
 
-## -[**Greeting**](Greeting.html) get_greeting(greeting_id)
+## [**Greeting**](Greeting.html) get_greeting(greeting_id)
 
 
 
@@ -106,7 +106,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -132,7 +132,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->get_greeting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 <a name="get_greeting_media"></a>
 
-## -[**GreetingMediaInfo**](GreetingMediaInfo.html) get_greeting_media(greeting_id, opts)
+## [**GreetingMediaInfo**](GreetingMediaInfo.html) get_greeting_media(greeting_id, opts)
 
 
 
@@ -170,7 +170,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -199,7 +199,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->get_greeting_media: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 <a name="get_greetings"></a>
 
-## -[**DomainEntityListing**](DomainEntityListing.html) get_greetings(opts)
+## [**DomainEntityListing**](DomainEntityListing.html) get_greetings(opts)
 
 
 
@@ -238,7 +238,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -266,7 +266,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->get_greetings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 <a name="get_greetings_defaults"></a>
 
-## -[**DefaultGreetingList**](DefaultGreetingList.html) get_greetings_defaults
+## [**DefaultGreetingList**](DefaultGreetingList.html) get_greetings_defaults
 
 
 
@@ -305,7 +305,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -328,7 +328,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->get_greetings_defaults: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -348,7 +348,7 @@ This endpoint does not need any parameter.
 
 <a name="get_group_greetings"></a>
 
-## -[**GreetingListing**](GreetingListing.html) get_group_greetings(group_id, opts)
+## [**GreetingListing**](GreetingListing.html) get_group_greetings(group_id, opts)
 
 
 
@@ -363,7 +363,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -393,7 +393,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->get_group_greetings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 
 <a name="get_group_greetings_defaults"></a>
 
-## -[**DefaultGreetingList**](DefaultGreetingList.html) get_group_greetings_defaults(group_id)
+## [**DefaultGreetingList**](DefaultGreetingList.html) get_group_greetings_defaults(group_id)
 
 
 
@@ -433,7 +433,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -459,7 +459,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->get_group_greetings_defaults: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -482,7 +482,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_greetings"></a>
 
-## -[**DomainEntityListing**](DomainEntityListing.html) get_user_greetings(user_id, opts)
+## [**DomainEntityListing**](DomainEntityListing.html) get_user_greetings(user_id, opts)
 
 
 
@@ -497,7 +497,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -527,7 +527,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->get_user_greetings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_greetings_defaults"></a>
 
-## -[**DefaultGreetingList**](DefaultGreetingList.html) get_user_greetings_defaults(user_id)
+## [**DefaultGreetingList**](DefaultGreetingList.html) get_user_greetings_defaults(user_id)
 
 
 
@@ -567,7 +567,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -593,7 +593,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->get_user_greetings_defaults: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -616,7 +616,7 @@ Name | Type | Description  | Notes
 
 <a name="post_greetings"></a>
 
-## -[**Greeting**](Greeting.html) post_greetings(body)
+## [**Greeting**](Greeting.html) post_greetings(body)
 
 
 
@@ -631,7 +631,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -657,7 +657,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->post_greetings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -680,7 +680,7 @@ Name | Type | Description  | Notes
 
 <a name="post_group_greetings"></a>
 
-## -[**Greeting**](Greeting.html) post_group_greetings(group_id, body)
+## [**Greeting**](Greeting.html) post_group_greetings(group_id, body)
 
 
 
@@ -695,7 +695,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -723,7 +723,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->post_group_greetings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -747,7 +747,7 @@ Name | Type | Description  | Notes
 
 <a name="post_user_greetings"></a>
 
-## -[**Greeting**](Greeting.html) post_user_greetings(user_id, body)
+## [**Greeting**](Greeting.html) post_user_greetings(user_id, body)
 
 
 
@@ -762,7 +762,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -790,7 +790,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->post_user_greetings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -814,7 +814,7 @@ Name | Type | Description  | Notes
 
 <a name="put_greeting"></a>
 
-## -[**Greeting**](Greeting.html) put_greeting(greeting_id, body)
+## [**Greeting**](Greeting.html) put_greeting(greeting_id, body)
 
 
 
@@ -829,7 +829,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -857,7 +857,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->put_greeting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -881,7 +881,7 @@ Name | Type | Description  | Notes
 
 <a name="put_greetings_defaults"></a>
 
-## -[**DefaultGreetingList**](DefaultGreetingList.html) put_greetings_defaults(body)
+## [**DefaultGreetingList**](DefaultGreetingList.html) put_greetings_defaults(body)
 
 
 
@@ -896,7 +896,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -922,7 +922,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->put_greetings_defaults: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -945,7 +945,7 @@ Name | Type | Description  | Notes
 
 <a name="put_group_greetings_defaults"></a>
 
-## -[**DefaultGreetingList**](DefaultGreetingList.html) put_group_greetings_defaults(group_id, body)
+## [**DefaultGreetingList**](DefaultGreetingList.html) put_group_greetings_defaults(group_id, body)
 
 
 
@@ -960,7 +960,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -988,7 +988,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->put_group_greetings_defaults: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1012,7 +1012,7 @@ Name | Type | Description  | Notes
 
 <a name="put_user_greetings_defaults"></a>
 
-## -[**DefaultGreetingList**](DefaultGreetingList.html) put_user_greetings_defaults(user_id, body)
+## [**DefaultGreetingList**](DefaultGreetingList.html) put_user_greetings_defaults(user_id, body)
 
 
 
@@ -1027,7 +1027,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1055,7 +1055,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GreetingsApi->put_user_greetings_defaults: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

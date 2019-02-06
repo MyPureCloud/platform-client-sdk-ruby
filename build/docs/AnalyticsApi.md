@@ -39,7 +39,7 @@ Method | Description
 
 <a name="delete_analytics_reporting_schedule"></a>
 
-## - delete_analytics_reporting_schedule(schedule_id)
+##  delete_analytics_reporting_schedule(schedule_id)
 
 
 
@@ -54,7 +54,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -79,7 +79,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->delete_analytics_reporting_schedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -102,7 +102,7 @@ nil (empty response body)
 
 <a name="get_analytics_conversation_details"></a>
 
-## -[**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversation_details(conversation_id)
+## [**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversation_details(conversation_id)
 
 
 
@@ -118,7 +118,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -144,7 +144,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_conversation_details: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_conversations_details"></a>
 
-## -[**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversations_details(opts)
+## [**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversations_details(opts)
 
 
 
@@ -183,7 +183,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -210,7 +210,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_conversations_details: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_reporting_exports"></a>
 
-## -[**ReportingExportJobListing**](ReportingExportJobListing.html) get_analytics_reporting_exports
+## [**ReportingExportJobListing**](ReportingExportJobListing.html) get_analytics_reporting_exports
 
 
 
@@ -249,7 +249,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -272,7 +272,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_reporting_exports: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -292,7 +292,7 @@ This endpoint does not need any parameter.
 
 <a name="get_analytics_reporting_metadata"></a>
 
-## -[**ReportMetaDataEntityListing**](ReportMetaDataEntityListing.html) get_analytics_reporting_metadata(opts)
+## [**ReportMetaDataEntityListing**](ReportMetaDataEntityListing.html) get_analytics_reporting_metadata(opts)
 
 
 
@@ -307,7 +307,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -336,7 +336,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_reporting_metadata: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_reporting_report_id_metadata"></a>
 
-## -[**ReportMetaData**](ReportMetaData.html) get_analytics_reporting_report_id_metadata(report_id, opts)
+## [**ReportMetaData**](ReportMetaData.html) get_analytics_reporting_report_id_metadata(report_id, opts)
 
 
 
@@ -376,7 +376,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -405,7 +405,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_reporting_report_id_metadata: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_reporting_reportformats"></a>
 
-## -Array&lt;String&gt;** get_analytics_reporting_reportformats
+## Array&lt;String&gt;** get_analytics_reporting_reportformats
 
 
 
@@ -444,7 +444,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -467,7 +467,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_reporting_reportformats: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -487,7 +487,7 @@ This endpoint does not need any parameter.
 
 <a name="get_analytics_reporting_schedule"></a>
 
-## -[**ReportSchedule**](ReportSchedule.html) get_analytics_reporting_schedule(schedule_id)
+## [**ReportSchedule**](ReportSchedule.html) get_analytics_reporting_schedule(schedule_id)
 
 
 
@@ -502,7 +502,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -528,7 +528,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_reporting_schedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -551,7 +551,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_reporting_schedule_history"></a>
 
-## -[**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html) get_analytics_reporting_schedule_history(schedule_id, opts)
+## [**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html) get_analytics_reporting_schedule_history(schedule_id, opts)
 
 
 
@@ -566,7 +566,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -596,7 +596,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_reporting_schedule_history: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -621,7 +621,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_reporting_schedule_history_latest"></a>
 
-## -[**ReportRunEntry**](ReportRunEntry.html) get_analytics_reporting_schedule_history_latest(schedule_id)
+## [**ReportRunEntry**](ReportRunEntry.html) get_analytics_reporting_schedule_history_latest(schedule_id)
 
 
 
@@ -636,7 +636,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -662,7 +662,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_reporting_schedule_history_latest: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -685,7 +685,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_reporting_schedule_history_run_id"></a>
 
-## -[**ReportRunEntry**](ReportRunEntry.html) get_analytics_reporting_schedule_history_run_id(run_id, schedule_id)
+## [**ReportRunEntry**](ReportRunEntry.html) get_analytics_reporting_schedule_history_run_id(run_id, schedule_id)
 
 
 
@@ -700,7 +700,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -728,7 +728,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_reporting_schedule_history_run_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -752,7 +752,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_reporting_schedules"></a>
 
-## -[**ReportScheduleEntityListing**](ReportScheduleEntityListing.html) get_analytics_reporting_schedules(opts)
+## [**ReportScheduleEntityListing**](ReportScheduleEntityListing.html) get_analytics_reporting_schedules(opts)
 
 
 
@@ -767,7 +767,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -795,7 +795,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_reporting_schedules: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -819,7 +819,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_reporting_timeperiods"></a>
 
-## -Array&lt;String&gt;** get_analytics_reporting_timeperiods
+## Array&lt;String&gt;** get_analytics_reporting_timeperiods
 
 
 
@@ -834,7 +834,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -857,7 +857,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_reporting_timeperiods: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -877,7 +877,7 @@ This endpoint does not need any parameter.
 
 <a name="post_analytics_conversation_details_properties"></a>
 
-## -[**PropertyIndexRequest**](PropertyIndexRequest.html) post_analytics_conversation_details_properties(conversation_id, body)
+## [**PropertyIndexRequest**](PropertyIndexRequest.html) post_analytics_conversation_details_properties(conversation_id, body)
 
 
 
@@ -893,7 +893,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -921,7 +921,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_conversation_details_properties: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -945,7 +945,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_conversations_aggregates_query"></a>
 
-## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_conversations_aggregates_query(body)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_conversations_aggregates_query(body)
 
 
 
@@ -961,7 +961,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -987,7 +987,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_conversations_aggregates_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1010,7 +1010,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_conversations_details_query"></a>
 
-## -[**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) post_analytics_conversations_details_query(body)
+## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) post_analytics_conversations_details_query(body)
 
 
 
@@ -1026,7 +1026,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1052,7 +1052,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_conversations_details_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1075,7 +1075,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_evaluations_aggregates_query"></a>
 
-## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_evaluations_aggregates_query(body)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_evaluations_aggregates_query(body)
 
 
 
@@ -1091,7 +1091,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1117,7 +1117,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_evaluations_aggregates_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1140,7 +1140,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_flows_aggregates_query"></a>
 
-## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_flows_aggregates_query(body)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_flows_aggregates_query(body)
 
 
 
@@ -1156,7 +1156,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1182,7 +1182,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_flows_aggregates_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1205,7 +1205,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_queues_observations_query"></a>
 
-## -[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) post_analytics_queues_observations_query(body)
+## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) post_analytics_queues_observations_query(body)
 
 
 
@@ -1221,7 +1221,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1247,7 +1247,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_queues_observations_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1270,7 +1270,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_reporting_exports"></a>
 
-## -[**ReportingExportJobResponse**](ReportingExportJobResponse.html) post_analytics_reporting_exports(body)
+## [**ReportingExportJobResponse**](ReportingExportJobResponse.html) post_analytics_reporting_exports(body)
 
 
 
@@ -1286,7 +1286,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1312,7 +1312,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_reporting_exports: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1335,7 +1335,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_reporting_schedule_runreport"></a>
 
-## -[**RunNowResponse**](RunNowResponse.html) post_analytics_reporting_schedule_runreport(schedule_id)
+## [**RunNowResponse**](RunNowResponse.html) post_analytics_reporting_schedule_runreport(schedule_id)
 
 
 
@@ -1350,7 +1350,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1376,7 +1376,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_reporting_schedule_runreport: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1399,7 +1399,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_reporting_schedules"></a>
 
-## -[**ReportSchedule**](ReportSchedule.html) post_analytics_reporting_schedules(body)
+## [**ReportSchedule**](ReportSchedule.html) post_analytics_reporting_schedules(body)
 
 
 
@@ -1414,7 +1414,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1440,7 +1440,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_reporting_schedules: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1463,7 +1463,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_surveys_aggregates_query"></a>
 
-## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_surveys_aggregates_query(body)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_surveys_aggregates_query(body)
 
 
 
@@ -1479,7 +1479,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1505,7 +1505,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_surveys_aggregates_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1528,7 +1528,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_users_aggregates_query"></a>
 
-## -[**PresenceQueryResponse**](PresenceQueryResponse.html) post_analytics_users_aggregates_query(body)
+## [**PresenceQueryResponse**](PresenceQueryResponse.html) post_analytics_users_aggregates_query(body)
 
 
 
@@ -1544,7 +1544,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1570,7 +1570,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_users_aggregates_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1593,7 +1593,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_users_details_query"></a>
 
-## -[**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html) post_analytics_users_details_query(body)
+## [**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html) post_analytics_users_details_query(body)
 
 
 
@@ -1609,7 +1609,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1635,7 +1635,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_users_details_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1658,7 +1658,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_users_observations_query"></a>
 
-## -[**ObservationQueryResponse**](ObservationQueryResponse.html) post_analytics_users_observations_query(body)
+## [**ObservationQueryResponse**](ObservationQueryResponse.html) post_analytics_users_observations_query(body)
 
 
 
@@ -1674,7 +1674,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1700,7 +1700,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->post_analytics_users_observations_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1723,7 +1723,7 @@ Name | Type | Description  | Notes
 
 <a name="put_analytics_reporting_schedule"></a>
 
-## -[**ReportSchedule**](ReportSchedule.html) put_analytics_reporting_schedule(schedule_id, body)
+## [**ReportSchedule**](ReportSchedule.html) put_analytics_reporting_schedule(schedule_id, body)
 
 
 
@@ -1738,7 +1738,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1766,7 +1766,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->put_analytics_reporting_schedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

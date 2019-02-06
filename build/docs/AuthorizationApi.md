@@ -46,7 +46,7 @@ Method | Description
 
 <a name="delete_authorization_division"></a>
 
-## - delete_authorization_division(division_id)
+##  delete_authorization_division(division_id)
 
 
 
@@ -62,7 +62,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -87,7 +87,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->delete_authorization_division: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -110,7 +110,7 @@ nil (empty response body)
 
 <a name="delete_authorization_role"></a>
 
-## - delete_authorization_role(role_id)
+##  delete_authorization_role(role_id)
 
 
 
@@ -128,7 +128,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -153,7 +153,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->delete_authorization_role: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -176,7 +176,7 @@ nil (empty response body)
 
 <a name="delete_authorization_subject_division_role"></a>
 
-## - delete_authorization_subject_division_role(subject_id, division_id, role_id)
+##  delete_authorization_subject_division_role(subject_id, division_id, role_id)
 
 
 
@@ -192,7 +192,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -221,7 +221,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->delete_authorization_subject_division_role: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -246,7 +246,7 @@ nil (empty response body)
 
 <a name="delete_user_roles"></a>
 
-## - delete_user_roles(user_id)
+##  delete_user_roles(user_id)
 
 
 
@@ -264,7 +264,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -289,7 +289,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->delete_user_roles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -312,7 +312,7 @@ nil (empty response body)
 
 <a name="get_authorization_division"></a>
 
-## -[**AuthzDivision**](AuthzDivision.html) get_authorization_division(division_id, opts)
+## [**AuthzDivision**](AuthzDivision.html) get_authorization_division(division_id, opts)
 
 
 
@@ -327,7 +327,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -356,7 +356,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_division: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -380,7 +380,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_divisions"></a>
 
-## -[**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html) get_authorization_divisions(opts)
+## [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html) get_authorization_divisions(opts)
 
 
 
@@ -395,7 +395,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -430,7 +430,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_divisions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_divisions_home"></a>
 
-## -[**AuthzDivision**](AuthzDivision.html) get_authorization_divisions_home
+## [**AuthzDivision**](AuthzDivision.html) get_authorization_divisions_home
 
 
 
@@ -476,7 +476,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -499,7 +499,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_divisions_home: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -519,7 +519,7 @@ This endpoint does not need any parameter.
 
 <a name="get_authorization_divisions_limit"></a>
 
-## -Integer** get_authorization_divisions_limit
+## Integer** get_authorization_divisions_limit
 
 
 
@@ -534,7 +534,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -557,7 +557,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_divisions_limit: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -577,7 +577,7 @@ This endpoint does not need any parameter.
 
 <a name="get_authorization_divisionspermitted_me"></a>
 
-## -[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_me(permission, opts)
+## [**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_me(permission, opts)
 
 
 
@@ -592,7 +592,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -621,7 +621,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_divisionspermitted_me: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -645,7 +645,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_divisionspermitted_subject_id"></a>
 
-## -[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
+## [**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
 
 
 
@@ -660,7 +660,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -691,7 +691,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_divisionspermitted_subject_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -716,7 +716,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_permissions"></a>
 
-## -[**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.html) get_authorization_permissions(opts)
+## [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.html) get_authorization_permissions(opts)
 
 
 
@@ -731,7 +731,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -759,7 +759,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_permissions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -783,7 +783,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_products"></a>
 
-## -[**OrganizationProductEntityListing**](OrganizationProductEntityListing.html) get_authorization_products
+## [**OrganizationProductEntityListing**](OrganizationProductEntityListing.html) get_authorization_products
 
 
 
@@ -798,7 +798,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -821,7 +821,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_products: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -841,7 +841,7 @@ This endpoint does not need any parameter.
 
 <a name="get_authorization_role"></a>
 
-## -[**DomainOrganizationRole**](DomainOrganizationRole.html) get_authorization_role(role_id)
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) get_authorization_role(role_id)
 
 
 
@@ -857,7 +857,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -883,7 +883,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_role: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -906,7 +906,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_role_comparedefault_right_role_id"></a>
 
-## -[**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) get_authorization_role_comparedefault_right_role_id(left_role_id, right_role_id)
+## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) get_authorization_role_comparedefault_right_role_id(left_role_id, right_role_id)
 
 
 
@@ -922,7 +922,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -950,7 +950,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_role_comparedefault_right_role_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -974,7 +974,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_role_subjectgrants"></a>
 
-## -[**SubjectDivisionGrantsEntityListing**](SubjectDivisionGrantsEntityListing.html) get_authorization_role_subjectgrants(role_id, opts)
+## [**SubjectDivisionGrantsEntityListing**](SubjectDivisionGrantsEntityListing.html) get_authorization_role_subjectgrants(role_id, opts)
 
 
 
@@ -990,7 +990,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1024,7 +1024,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_role_subjectgrants: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1053,7 +1053,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_role_users"></a>
 
-## -[**UserEntityListing**](UserEntityListing.html) get_authorization_role_users(role_id, opts)
+## [**UserEntityListing**](UserEntityListing.html) get_authorization_role_users(role_id, opts)
 
 
 
@@ -1068,7 +1068,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1098,7 +1098,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_role_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1123,7 +1123,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_roles"></a>
 
-## -[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) get_authorization_roles(opts)
+## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) get_authorization_roles(opts)
 
 
 
@@ -1139,7 +1139,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1176,7 +1176,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_roles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1209,7 +1209,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_subject"></a>
 
-## -[**AuthzSubject**](AuthzSubject.html) get_authorization_subject(subject_id)
+## [**AuthzSubject**](AuthzSubject.html) get_authorization_subject(subject_id)
 
 
 
@@ -1225,7 +1225,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1251,7 +1251,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_subject: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1274,7 +1274,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_subjects_me"></a>
 
-## -[**AuthzSubject**](AuthzSubject.html) get_authorization_subjects_me
+## [**AuthzSubject**](AuthzSubject.html) get_authorization_subjects_me
 
 
 
@@ -1289,7 +1289,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1312,7 +1312,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_subjects_me: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1332,7 +1332,7 @@ This endpoint does not need any parameter.
 
 <a name="get_user_roles"></a>
 
-## -[**UserAuthorization**](UserAuthorization.html) get_user_roles(user_id)
+## [**UserAuthorization**](UserAuthorization.html) get_user_roles(user_id)
 
 
 
@@ -1348,7 +1348,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1374,7 +1374,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_user_roles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1397,7 +1397,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_authorization_role"></a>
 
-## -[**DomainOrganizationRole**](DomainOrganizationRole.html) patch_authorization_role(role_id, body)
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) patch_authorization_role(role_id, body)
 
 
 
@@ -1415,7 +1415,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1443,7 +1443,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->patch_authorization_role: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1467,7 +1467,7 @@ Name | Type | Description  | Notes
 
 <a name="post_authorization_division_object"></a>
 
-## - post_authorization_division_object(division_id, object_type, body)
+##  post_authorization_division_object(division_id, object_type, body)
 
 
 
@@ -1482,7 +1482,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1511,7 +1511,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->post_authorization_division_object: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1536,7 +1536,7 @@ nil (empty response body)
 
 <a name="post_authorization_divisions"></a>
 
-## -[**AuthzDivision**](AuthzDivision.html) post_authorization_divisions(body)
+## [**AuthzDivision**](AuthzDivision.html) post_authorization_divisions(body)
 
 
 
@@ -1553,7 +1553,7 @@ Requires ALL permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1579,7 +1579,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->post_authorization_divisions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1602,7 +1602,7 @@ Name | Type | Description  | Notes
 
 <a name="post_authorization_role"></a>
 
-## - post_authorization_role(role_id, body, opts)
+##  post_authorization_role(role_id, body, opts)
 
 
 
@@ -1618,7 +1618,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1648,7 +1648,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->post_authorization_role: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1673,7 +1673,7 @@ nil (empty response body)
 
 <a name="post_authorization_role_comparedefault_right_role_id"></a>
 
-## -[**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) post_authorization_role_comparedefault_right_role_id(left_role_id, right_role_id, body)
+## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) post_authorization_role_comparedefault_right_role_id(left_role_id, right_role_id, body)
 
 
 
@@ -1689,7 +1689,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1719,7 +1719,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->post_authorization_role_comparedefault_right_role_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1744,7 +1744,7 @@ Name | Type | Description  | Notes
 
 <a name="post_authorization_roles"></a>
 
-## -[**DomainOrganizationRole**](DomainOrganizationRole.html) post_authorization_roles(body)
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) post_authorization_roles(body)
 
 
 
@@ -1760,7 +1760,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1786,7 +1786,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->post_authorization_roles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1809,7 +1809,7 @@ Name | Type | Description  | Notes
 
 <a name="post_authorization_roles_default"></a>
 
-## -[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) post_authorization_roles_default(opts)
+## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) post_authorization_roles_default(opts)
 
 
 
@@ -1825,7 +1825,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1852,7 +1852,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->post_authorization_roles_default: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1875,7 +1875,7 @@ Name | Type | Description  | Notes
 
 <a name="post_authorization_subject_division_role"></a>
 
-## - post_authorization_subject_division_role(subject_id, division_id, role_id, opts)
+##  post_authorization_subject_division_role(subject_id, division_id, role_id, opts)
 
 
 
@@ -1891,7 +1891,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1923,7 +1923,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->post_authorization_subject_division_role: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1949,7 +1949,7 @@ nil (empty response body)
 
 <a name="put_authorization_division"></a>
 
-## -[**AuthzDivision**](AuthzDivision.html) put_authorization_division(division_id, body)
+## [**AuthzDivision**](AuthzDivision.html) put_authorization_division(division_id, body)
 
 
 
@@ -1965,7 +1965,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1993,7 +1993,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->put_authorization_division: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2017,7 +2017,7 @@ Name | Type | Description  | Notes
 
 <a name="put_authorization_role"></a>
 
-## -[**DomainOrganizationRole**](DomainOrganizationRole.html) put_authorization_role(role_id, body)
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) put_authorization_role(role_id, body)
 
 
 
@@ -2035,7 +2035,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2063,7 +2063,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->put_authorization_role: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2087,7 +2087,7 @@ Name | Type | Description  | Notes
 
 <a name="put_authorization_role_users_add"></a>
 
-## -Array&lt;String&gt;** put_authorization_role_users_add(role_id, body)
+## Array&lt;String&gt;** put_authorization_role_users_add(role_id, body)
 
 
 
@@ -2103,7 +2103,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2131,7 +2131,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->put_authorization_role_users_add: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2155,7 +2155,7 @@ Name | Type | Description  | Notes
 
 <a name="put_authorization_role_users_remove"></a>
 
-## -Array&lt;String&gt;** put_authorization_role_users_remove(role_id, body)
+## Array&lt;String&gt;** put_authorization_role_users_remove(role_id, body)
 
 
 
@@ -2171,7 +2171,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2199,7 +2199,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->put_authorization_role_users_remove: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2223,7 +2223,7 @@ Name | Type | Description  | Notes
 
 <a name="put_authorization_roles_default"></a>
 
-## -[**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) put_authorization_roles_default(body)
+## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) put_authorization_roles_default(body)
 
 
 
@@ -2239,7 +2239,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2265,7 +2265,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->put_authorization_roles_default: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2288,7 +2288,7 @@ Name | Type | Description  | Notes
 
 <a name="put_user_roles"></a>
 
-## -[**UserAuthorization**](UserAuthorization.html) put_user_roles(user_id, body)
+## [**UserAuthorization**](UserAuthorization.html) put_user_roles(user_id, body)
 
 
 
@@ -2306,7 +2306,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2334,7 +2334,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->put_user_roles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

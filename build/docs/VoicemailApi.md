@@ -36,7 +36,7 @@ Method | Description
 
 <a name="delete_voicemail_message"></a>
 
-## - delete_voicemail_message(message_id)
+##  delete_voicemail_message(message_id)
 
 
 
@@ -51,7 +51,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -76,7 +76,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->delete_voicemail_message: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -99,7 +99,7 @@ nil (empty response body)
 
 <a name="delete_voicemail_messages"></a>
 
-## - delete_voicemail_messages
+##  delete_voicemail_messages
 
 
 
@@ -114,7 +114,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -136,7 +136,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->delete_voicemail_messages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -156,7 +156,7 @@ nil (empty response body)
 
 <a name="get_voicemail_group_mailbox"></a>
 
-## -[**VoicemailMailboxInfo**](VoicemailMailboxInfo.html) get_voicemail_group_mailbox(group_id)
+## [**VoicemailMailboxInfo**](VoicemailMailboxInfo.html) get_voicemail_group_mailbox(group_id)
 
 
 
@@ -171,7 +171,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -197,7 +197,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_group_mailbox: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 <a name="get_voicemail_group_messages"></a>
 
-## -[**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) get_voicemail_group_messages(group_id, opts)
+## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) get_voicemail_group_messages(group_id, opts)
 
 
 
@@ -235,7 +235,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -265,7 +265,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_group_messages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 <a name="get_voicemail_group_policy"></a>
 
-## -[**VoicemailGroupPolicy**](VoicemailGroupPolicy.html) get_voicemail_group_policy(group_id)
+## [**VoicemailGroupPolicy**](VoicemailGroupPolicy.html) get_voicemail_group_policy(group_id)
 
 
 
@@ -309,7 +309,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -335,7 +335,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_group_policy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 <a name="get_voicemail_mailbox"></a>
 
-## -[**VoicemailMailboxInfo**](VoicemailMailboxInfo.html) get_voicemail_mailbox
+## [**VoicemailMailboxInfo**](VoicemailMailboxInfo.html) get_voicemail_mailbox
 
 
 
@@ -373,7 +373,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -396,7 +396,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_mailbox: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -416,7 +416,7 @@ This endpoint does not need any parameter.
 
 <a name="get_voicemail_me_mailbox"></a>
 
-## -[**VoicemailMailboxInfo**](VoicemailMailboxInfo.html) get_voicemail_me_mailbox
+## [**VoicemailMailboxInfo**](VoicemailMailboxInfo.html) get_voicemail_me_mailbox
 
 
 
@@ -431,7 +431,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -454,7 +454,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_me_mailbox: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -474,7 +474,7 @@ This endpoint does not need any parameter.
 
 <a name="get_voicemail_me_messages"></a>
 
-## -[**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) get_voicemail_me_messages(opts)
+## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) get_voicemail_me_messages(opts)
 
 
 
@@ -489,7 +489,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -517,7 +517,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_me_messages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 
 <a name="get_voicemail_me_policy"></a>
 
-## -[**VoicemailUserPolicy**](VoicemailUserPolicy.html) get_voicemail_me_policy
+## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) get_voicemail_me_policy
 
 
 
@@ -556,7 +556,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -579,7 +579,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_me_policy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -599,7 +599,7 @@ This endpoint does not need any parameter.
 
 <a name="get_voicemail_message"></a>
 
-## -[**VoicemailMessage**](VoicemailMessage.html) get_voicemail_message(message_id, opts)
+## [**VoicemailMessage**](VoicemailMessage.html) get_voicemail_message(message_id, opts)
 
 
 
@@ -614,7 +614,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -643,7 +643,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_message: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -667,7 +667,7 @@ Name | Type | Description  | Notes
 
 <a name="get_voicemail_message_media"></a>
 
-## -[**VoicemailMediaInfo**](VoicemailMediaInfo.html) get_voicemail_message_media(message_id, opts)
+## [**VoicemailMediaInfo**](VoicemailMediaInfo.html) get_voicemail_message_media(message_id, opts)
 
 
 
@@ -682,7 +682,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -711,7 +711,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_message_media: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -735,7 +735,7 @@ Name | Type | Description  | Notes
 
 <a name="get_voicemail_messages"></a>
 
-## -[**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) get_voicemail_messages(opts)
+## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) get_voicemail_messages(opts)
 
 
 
@@ -750,7 +750,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -778,7 +778,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_messages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -802,7 +802,7 @@ Name | Type | Description  | Notes
 
 <a name="get_voicemail_policy"></a>
 
-## -[**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) get_voicemail_policy
+## [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) get_voicemail_policy
 
 
 
@@ -818,7 +818,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -841,7 +841,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_policy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -861,7 +861,7 @@ This endpoint does not need any parameter.
 
 <a name="get_voicemail_queue_messages"></a>
 
-## -[**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) get_voicemail_queue_messages(queue_id, opts)
+## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) get_voicemail_queue_messages(queue_id, opts)
 
 
 
@@ -877,7 +877,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -907,7 +907,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_queue_messages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -932,7 +932,7 @@ Name | Type | Description  | Notes
 
 <a name="get_voicemail_search"></a>
 
-## -[**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) get_voicemail_search(q64, opts)
+## [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) get_voicemail_search(q64, opts)
 
 
 
@@ -947,7 +947,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -976,7 +976,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1000,7 +1000,7 @@ Name | Type | Description  | Notes
 
 <a name="get_voicemail_userpolicy"></a>
 
-## -[**VoicemailUserPolicy**](VoicemailUserPolicy.html) get_voicemail_userpolicy(user_id)
+## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) get_voicemail_userpolicy(user_id)
 
 
 
@@ -1015,7 +1015,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1041,7 +1041,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->get_voicemail_userpolicy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1064,7 +1064,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_voicemail_group_policy"></a>
 
-## -[**VoicemailGroupPolicy**](VoicemailGroupPolicy.html) patch_voicemail_group_policy(group_id, body)
+## [**VoicemailGroupPolicy**](VoicemailGroupPolicy.html) patch_voicemail_group_policy(group_id, body)
 
 
 
@@ -1083,7 +1083,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1111,7 +1111,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->patch_voicemail_group_policy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1135,7 +1135,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_voicemail_me_policy"></a>
 
-## -[**VoicemailUserPolicy**](VoicemailUserPolicy.html) patch_voicemail_me_policy(body)
+## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) patch_voicemail_me_policy(body)
 
 
 
@@ -1150,7 +1150,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1176,7 +1176,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->patch_voicemail_me_policy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1199,7 +1199,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_voicemail_message"></a>
 
-## -[**VoicemailMessage**](VoicemailMessage.html) patch_voicemail_message(message_id, body)
+## [**VoicemailMessage**](VoicemailMessage.html) patch_voicemail_message(message_id, body)
 
 
 
@@ -1214,7 +1214,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1242,7 +1242,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->patch_voicemail_message: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1266,7 +1266,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_voicemail_userpolicy"></a>
 
-## -[**VoicemailUserPolicy**](VoicemailUserPolicy.html) patch_voicemail_userpolicy(user_id, body)
+## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) patch_voicemail_userpolicy(user_id, body)
 
 
 
@@ -1281,7 +1281,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1309,7 +1309,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->patch_voicemail_userpolicy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1333,7 +1333,7 @@ Name | Type | Description  | Notes
 
 <a name="post_voicemail_messages"></a>
 
-## -[**VoicemailMessage**](VoicemailMessage.html) post_voicemail_messages(opts)
+## [**VoicemailMessage**](VoicemailMessage.html) post_voicemail_messages(opts)
 
 
 
@@ -1348,7 +1348,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1375,7 +1375,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->post_voicemail_messages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1398,7 +1398,7 @@ Name | Type | Description  | Notes
 
 <a name="post_voicemail_search"></a>
 
-## -[**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) post_voicemail_search(body)
+## [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) post_voicemail_search(body)
 
 
 
@@ -1413,7 +1413,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1439,7 +1439,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->post_voicemail_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1462,7 +1462,7 @@ Name | Type | Description  | Notes
 
 <a name="put_voicemail_message"></a>
 
-## -[**VoicemailMessage**](VoicemailMessage.html) put_voicemail_message(message_id, body)
+## [**VoicemailMessage**](VoicemailMessage.html) put_voicemail_message(message_id, body)
 
 
 
@@ -1477,7 +1477,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1505,7 +1505,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->put_voicemail_message: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1529,7 +1529,7 @@ Name | Type | Description  | Notes
 
 <a name="put_voicemail_policy"></a>
 
-## -[**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) put_voicemail_policy(body)
+## [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) put_voicemail_policy(body)
 
 
 
@@ -1545,7 +1545,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1571,7 +1571,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling VoicemailApi->put_voicemail_policy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

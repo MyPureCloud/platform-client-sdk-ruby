@@ -17,7 +17,7 @@ Method | Description
 
 <a name="delete_station_associateduser"></a>
 
-## - delete_station_associateduser(station_id)
+##  delete_station_associateduser(station_id)
 
 
 
@@ -32,7 +32,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -57,7 +57,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling StationsApi->delete_station_associateduser: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -80,7 +80,7 @@ nil (empty response body)
 
 <a name="get_station"></a>
 
-## -[**Station**](Station.html) get_station(station_id)
+## [**Station**](Station.html) get_station(station_id)
 
 
 
@@ -95,7 +95,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -121,7 +121,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling StationsApi->get_station: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 <a name="get_stations"></a>
 
-## -[**StationEntityListing**](StationEntityListing.html) get_stations(opts)
+## [**StationEntityListing**](StationEntityListing.html) get_stations(opts)
 
 
 
@@ -159,7 +159,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -193,7 +193,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling StationsApi->get_stations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 <a name="get_stations_settings"></a>
 
-## -[**StationSettings**](StationSettings.html) get_stations_settings
+## [**StationSettings**](StationSettings.html) get_stations_settings
 
 
 
@@ -239,7 +239,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -262,7 +262,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling StationsApi->get_stations_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -282,7 +282,7 @@ This endpoint does not need any parameter.
 
 <a name="patch_stations_settings"></a>
 
-## -[**StationSettings**](StationSettings.html) patch_stations_settings(body)
+## [**StationSettings**](StationSettings.html) patch_stations_settings(body)
 
 
 
@@ -298,7 +298,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -324,7 +324,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling StationsApi->patch_stations_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

@@ -20,7 +20,7 @@ Method | Description
 
 <a name="delete_authorization_division"></a>
 
-## - delete_authorization_division(division_id)
+##  delete_authorization_division(division_id)
 
 
 
@@ -36,7 +36,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -61,7 +61,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ObjectsApi->delete_authorization_division: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -84,7 +84,7 @@ nil (empty response body)
 
 <a name="get_authorization_division"></a>
 
-## -[**AuthzDivision**](AuthzDivision.html) get_authorization_division(division_id, opts)
+## [**AuthzDivision**](AuthzDivision.html) get_authorization_division(division_id, opts)
 
 
 
@@ -99,7 +99,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -128,7 +128,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ObjectsApi->get_authorization_division: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_divisions"></a>
 
-## -[**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html) get_authorization_divisions(opts)
+## [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html) get_authorization_divisions(opts)
 
 
 
@@ -167,7 +167,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -202,7 +202,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ObjectsApi->get_authorization_divisions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_divisions_home"></a>
 
-## -[**AuthzDivision**](AuthzDivision.html) get_authorization_divisions_home
+## [**AuthzDivision**](AuthzDivision.html) get_authorization_divisions_home
 
 
 
@@ -248,7 +248,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -271,7 +271,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ObjectsApi->get_authorization_divisions_home: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -291,7 +291,7 @@ This endpoint does not need any parameter.
 
 <a name="get_authorization_divisions_limit"></a>
 
-## -Integer** get_authorization_divisions_limit
+## Integer** get_authorization_divisions_limit
 
 
 
@@ -306,7 +306,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -329,7 +329,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ObjectsApi->get_authorization_divisions_limit: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -349,7 +349,7 @@ This endpoint does not need any parameter.
 
 <a name="post_authorization_division_object"></a>
 
-## - post_authorization_division_object(division_id, object_type, body)
+##  post_authorization_division_object(division_id, object_type, body)
 
 
 
@@ -364,7 +364,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -393,7 +393,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ObjectsApi->post_authorization_division_object: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -418,7 +418,7 @@ nil (empty response body)
 
 <a name="post_authorization_divisions"></a>
 
-## -[**AuthzDivision**](AuthzDivision.html) post_authorization_divisions(body)
+## [**AuthzDivision**](AuthzDivision.html) post_authorization_divisions(body)
 
 
 
@@ -435,7 +435,7 @@ Requires ALL permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -461,7 +461,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ObjectsApi->post_authorization_divisions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 <a name="put_authorization_division"></a>
 
-## -[**AuthzDivision**](AuthzDivision.html) put_authorization_division(division_id, body)
+## [**AuthzDivision**](AuthzDivision.html) put_authorization_division(division_id, body)
 
 
 
@@ -500,7 +500,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -528,7 +528,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ObjectsApi->put_authorization_division: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

@@ -16,7 +16,7 @@ Method | Description
 
 <a name="get_date"></a>
 
-## -[**ServerDate**](ServerDate.html) get_date
+## [**ServerDate**](ServerDate.html) get_date
 
 
 
@@ -31,7 +31,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -54,7 +54,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UtilitiesApi->get_date: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -74,7 +74,7 @@ This endpoint does not need any parameter.
 
 <a name="get_timezones"></a>
 
-## -[**TimeZoneEntityListing**](TimeZoneEntityListing.html) get_timezones(opts)
+## [**TimeZoneEntityListing**](TimeZoneEntityListing.html) get_timezones(opts)
 
 
 
@@ -89,7 +89,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -117,7 +117,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UtilitiesApi->get_timezones: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 <a name="post_certificate_details"></a>
 
-## -[**ParsedCertificate**](ParsedCertificate.html) post_certificate_details(body)
+## [**ParsedCertificate**](ParsedCertificate.html) post_certificate_details(body)
 
 
 
@@ -156,7 +156,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -182,7 +182,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UtilitiesApi->post_certificate_details: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 <a name="post_gmsc_tokens"></a>
 
-## -[**Token**](Token.html) post_gmsc_tokens
+## [**Token**](Token.html) post_gmsc_tokens
 
 
 
@@ -220,7 +220,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -243,7 +243,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UtilitiesApi->post_gmsc_tokens: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.

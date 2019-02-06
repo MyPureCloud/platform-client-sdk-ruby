@@ -108,7 +108,7 @@ Method | Description
 
 <a name="delete_outbound_attemptlimit"></a>
 
-## - delete_outbound_attemptlimit(attempt_limits_id)
+##  delete_outbound_attemptlimit(attempt_limits_id)
 
 
 
@@ -124,7 +124,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -149,7 +149,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_attemptlimit: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -172,7 +172,7 @@ nil (empty response body)
 
 <a name="delete_outbound_callabletimeset"></a>
 
-## - delete_outbound_callabletimeset(callable_time_set_id)
+##  delete_outbound_callabletimeset(callable_time_set_id)
 
 
 
@@ -188,7 +188,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -213,7 +213,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_callabletimeset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -236,7 +236,7 @@ nil (empty response body)
 
 <a name="delete_outbound_callanalysisresponseset"></a>
 
-## - delete_outbound_callanalysisresponseset(call_analysis_set_id)
+##  delete_outbound_callanalysisresponseset(call_analysis_set_id)
 
 
 
@@ -252,7 +252,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -277,7 +277,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_callanalysisresponseset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -300,7 +300,7 @@ nil (empty response body)
 
 <a name="delete_outbound_campaign"></a>
 
-## -[**Campaign**](Campaign.html) delete_outbound_campaign(campaign_id)
+## [**Campaign**](Campaign.html) delete_outbound_campaign(campaign_id)
 
 
 
@@ -316,7 +316,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -342,7 +342,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_campaign: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_outbound_campaign_progress"></a>
 
-## - delete_outbound_campaign_progress(campaign_id)
+##  delete_outbound_campaign_progress(campaign_id)
 
 
 
@@ -381,7 +381,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -406,7 +406,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_campaign_progress: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -429,7 +429,7 @@ nil (empty response body)
 
 <a name="delete_outbound_campaignrule"></a>
 
-## - delete_outbound_campaignrule(campaign_rule_id)
+##  delete_outbound_campaignrule(campaign_rule_id)
 
 
 
@@ -445,7 +445,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -470,7 +470,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_campaignrule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -493,7 +493,7 @@ nil (empty response body)
 
 <a name="delete_outbound_contactlist"></a>
 
-## - delete_outbound_contactlist(contact_list_id)
+##  delete_outbound_contactlist(contact_list_id)
 
 
 
@@ -509,7 +509,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -534,7 +534,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_contactlist: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -557,7 +557,7 @@ nil (empty response body)
 
 <a name="delete_outbound_contactlist_contact"></a>
 
-## - delete_outbound_contactlist_contact(contact_list_id, contact_id)
+##  delete_outbound_contactlist_contact(contact_list_id, contact_id)
 
 
 
@@ -573,7 +573,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -600,7 +600,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_contactlist_contact: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -624,7 +624,7 @@ nil (empty response body)
 
 <a name="delete_outbound_contactlist_contacts"></a>
 
-## - delete_outbound_contactlist_contacts(contact_list_id, contact_ids)
+##  delete_outbound_contactlist_contacts(contact_list_id, contact_ids)
 
 
 
@@ -640,7 +640,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -667,7 +667,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_contactlist_contacts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -691,7 +691,7 @@ nil (empty response body)
 
 <a name="delete_outbound_contactlistfilter"></a>
 
-## - delete_outbound_contactlistfilter(contact_list_filter_id)
+##  delete_outbound_contactlistfilter(contact_list_filter_id)
 
 
 
@@ -707,7 +707,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -732,7 +732,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_contactlistfilter: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -755,7 +755,7 @@ nil (empty response body)
 
 <a name="delete_outbound_contactlists"></a>
 
-## - delete_outbound_contactlists(id)
+##  delete_outbound_contactlists(id)
 
 
 
@@ -771,7 +771,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -796,7 +796,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_contactlists: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -819,7 +819,7 @@ nil (empty response body)
 
 <a name="delete_outbound_dnclist"></a>
 
-## - delete_outbound_dnclist(dnc_list_id)
+##  delete_outbound_dnclist(dnc_list_id)
 
 
 
@@ -835,7 +835,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -860,7 +860,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_dnclist: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -883,7 +883,7 @@ nil (empty response body)
 
 <a name="delete_outbound_ruleset"></a>
 
-## - delete_outbound_ruleset(rule_set_id)
+##  delete_outbound_ruleset(rule_set_id)
 
 
 
@@ -899,7 +899,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -924,7 +924,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_ruleset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -947,7 +947,7 @@ nil (empty response body)
 
 <a name="delete_outbound_schedules_campaign"></a>
 
-## - delete_outbound_schedules_campaign(campaign_id)
+##  delete_outbound_schedules_campaign(campaign_id)
 
 
 
@@ -963,7 +963,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -988,7 +988,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_schedules_campaign: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1011,7 +1011,7 @@ nil (empty response body)
 
 <a name="delete_outbound_schedules_sequence"></a>
 
-## - delete_outbound_schedules_sequence(sequence_id)
+##  delete_outbound_schedules_sequence(sequence_id)
 
 
 
@@ -1027,7 +1027,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1052,7 +1052,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_schedules_sequence: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1075,7 +1075,7 @@ nil (empty response body)
 
 <a name="delete_outbound_sequence"></a>
 
-## - delete_outbound_sequence(sequence_id)
+##  delete_outbound_sequence(sequence_id)
 
 
 
@@ -1091,7 +1091,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1116,7 +1116,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->delete_outbound_sequence: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1139,7 +1139,7 @@ nil (empty response body)
 
 <a name="get_outbound_attemptlimit"></a>
 
-## -[**AttemptLimits**](AttemptLimits.html) get_outbound_attemptlimit(attempt_limits_id)
+## [**AttemptLimits**](AttemptLimits.html) get_outbound_attemptlimit(attempt_limits_id)
 
 
 
@@ -1155,7 +1155,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1181,7 +1181,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_attemptlimit: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1204,7 +1204,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_attemptlimits"></a>
 
-## -[**AttemptLimitsEntityListing**](AttemptLimitsEntityListing.html) get_outbound_attemptlimits(opts)
+## [**AttemptLimitsEntityListing**](AttemptLimitsEntityListing.html) get_outbound_attemptlimits(opts)
 
 
 
@@ -1220,7 +1220,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1252,7 +1252,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_attemptlimits: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1280,7 +1280,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_callabletimeset"></a>
 
-## -[**CallableTimeSet**](CallableTimeSet.html) get_outbound_callabletimeset(callable_time_set_id)
+## [**CallableTimeSet**](CallableTimeSet.html) get_outbound_callabletimeset(callable_time_set_id)
 
 
 
@@ -1296,7 +1296,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1322,7 +1322,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_callabletimeset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1345,7 +1345,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_callabletimesets"></a>
 
-## -[**CallableTimeSetEntityListing**](CallableTimeSetEntityListing.html) get_outbound_callabletimesets(opts)
+## [**CallableTimeSetEntityListing**](CallableTimeSetEntityListing.html) get_outbound_callabletimesets(opts)
 
 
 
@@ -1361,7 +1361,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1393,7 +1393,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_callabletimesets: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1421,7 +1421,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_callanalysisresponseset"></a>
 
-## -[**ResponseSet**](ResponseSet.html) get_outbound_callanalysisresponseset(call_analysis_set_id)
+## [**ResponseSet**](ResponseSet.html) get_outbound_callanalysisresponseset(call_analysis_set_id)
 
 
 
@@ -1437,7 +1437,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1463,7 +1463,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_callanalysisresponseset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1486,7 +1486,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_callanalysisresponsesets"></a>
 
-## -[**ResponseSetEntityListing**](ResponseSetEntityListing.html) get_outbound_callanalysisresponsesets(opts)
+## [**ResponseSetEntityListing**](ResponseSetEntityListing.html) get_outbound_callanalysisresponsesets(opts)
 
 
 
@@ -1502,7 +1502,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1534,7 +1534,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_callanalysisresponsesets: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1562,7 +1562,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_campaign"></a>
 
-## -[**Campaign**](Campaign.html) get_outbound_campaign(campaign_id)
+## [**Campaign**](Campaign.html) get_outbound_campaign(campaign_id)
 
 
 
@@ -1578,7 +1578,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1604,7 +1604,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_campaign: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1627,7 +1627,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_campaign_diagnostics"></a>
 
-## -[**CampaignDiagnostics**](CampaignDiagnostics.html) get_outbound_campaign_diagnostics(campaign_id)
+## [**CampaignDiagnostics**](CampaignDiagnostics.html) get_outbound_campaign_diagnostics(campaign_id)
 
 
 
@@ -1643,7 +1643,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1669,7 +1669,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_campaign_diagnostics: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1692,7 +1692,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_campaign_interactions"></a>
 
-## -[**CampaignInteractions**](CampaignInteractions.html) get_outbound_campaign_interactions(campaign_id)
+## [**CampaignInteractions**](CampaignInteractions.html) get_outbound_campaign_interactions(campaign_id)
 
 
 
@@ -1708,7 +1708,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1734,7 +1734,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_campaign_interactions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1757,7 +1757,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_campaign_progress"></a>
 
-## -[**CampaignProgress**](CampaignProgress.html) get_outbound_campaign_progress(campaign_id)
+## [**CampaignProgress**](CampaignProgress.html) get_outbound_campaign_progress(campaign_id)
 
 
 
@@ -1773,7 +1773,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1799,7 +1799,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_campaign_progress: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1822,7 +1822,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_campaign_stats"></a>
 
-## -[**CampaignStats**](CampaignStats.html) get_outbound_campaign_stats(campaign_id)
+## [**CampaignStats**](CampaignStats.html) get_outbound_campaign_stats(campaign_id)
 
 
 
@@ -1838,7 +1838,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1864,7 +1864,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_campaign_stats: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1887,7 +1887,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_campaignrule"></a>
 
-## -[**CampaignRule**](CampaignRule.html) get_outbound_campaignrule(campaign_rule_id)
+## [**CampaignRule**](CampaignRule.html) get_outbound_campaignrule(campaign_rule_id)
 
 
 
@@ -1903,7 +1903,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1929,7 +1929,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_campaignrule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1952,7 +1952,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_campaignrules"></a>
 
-## -[**CampaignRuleEntityListing**](CampaignRuleEntityListing.html) get_outbound_campaignrules(opts)
+## [**CampaignRuleEntityListing**](CampaignRuleEntityListing.html) get_outbound_campaignrules(opts)
 
 
 
@@ -1968,7 +1968,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2000,7 +2000,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_campaignrules: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2028,7 +2028,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_campaigns"></a>
 
-## -[**CampaignEntityListing**](CampaignEntityListing.html) get_outbound_campaigns(opts)
+## [**CampaignEntityListing**](CampaignEntityListing.html) get_outbound_campaigns(opts)
 
 
 
@@ -2044,7 +2044,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2083,7 +2083,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_campaigns: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2118,7 +2118,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_campaigns_divisionviews"></a>
 
-## -[**CampaignDivisionViewListing**](CampaignDivisionViewListing.html) get_outbound_campaigns_divisionviews(opts)
+## [**CampaignDivisionViewListing**](CampaignDivisionViewListing.html) get_outbound_campaigns_divisionviews(opts)
 
 
 
@@ -2134,7 +2134,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2167,7 +2167,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_campaigns_divisionviews: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2196,7 +2196,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_contactlist"></a>
 
-## -[**ContactList**](ContactList.html) get_outbound_contactlist(contact_list_id, opts)
+## [**ContactList**](ContactList.html) get_outbound_contactlist(contact_list_id, opts)
 
 
 
@@ -2212,7 +2212,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2242,7 +2242,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_contactlist: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2267,7 +2267,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_contactlist_contact"></a>
 
-## -[**DialerContact**](DialerContact.html) get_outbound_contactlist_contact(contact_list_id, contact_id)
+## [**DialerContact**](DialerContact.html) get_outbound_contactlist_contact(contact_list_id, contact_id)
 
 
 
@@ -2283,7 +2283,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2311,7 +2311,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_contactlist_contact: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2335,7 +2335,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_contactlist_export"></a>
 
-## -[**ExportUri**](ExportUri.html) get_outbound_contactlist_export(contact_list_id, opts)
+## [**ExportUri**](ExportUri.html) get_outbound_contactlist_export(contact_list_id, opts)
 
 
 
@@ -2352,7 +2352,7 @@ Requires ALL permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2381,7 +2381,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_contactlist_export: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2405,7 +2405,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_contactlist_importstatus"></a>
 
-## -[**ImportStatus**](ImportStatus.html) get_outbound_contactlist_importstatus(contact_list_id)
+## [**ImportStatus**](ImportStatus.html) get_outbound_contactlist_importstatus(contact_list_id)
 
 
 
@@ -2421,7 +2421,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2447,7 +2447,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_contactlist_importstatus: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2470,7 +2470,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_contactlist_timezonemappingpreview"></a>
 
-## -[**TimeZoneMappingPreview**](TimeZoneMappingPreview.html) get_outbound_contactlist_timezonemappingpreview(contact_list_id)
+## [**TimeZoneMappingPreview**](TimeZoneMappingPreview.html) get_outbound_contactlist_timezonemappingpreview(contact_list_id)
 
 
 
@@ -2486,7 +2486,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2512,7 +2512,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_contactlist_timezonemappingpreview: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2535,7 +2535,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_contactlistfilter"></a>
 
-## -[**ContactListFilter**](ContactListFilter.html) get_outbound_contactlistfilter(contact_list_filter_id)
+## [**ContactListFilter**](ContactListFilter.html) get_outbound_contactlistfilter(contact_list_filter_id)
 
 
 
@@ -2551,7 +2551,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2577,7 +2577,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_contactlistfilter: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2600,7 +2600,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_contactlistfilters"></a>
 
-## -[**ContactListFilterEntityListing**](ContactListFilterEntityListing.html) get_outbound_contactlistfilters(opts)
+## [**ContactListFilterEntityListing**](ContactListFilterEntityListing.html) get_outbound_contactlistfilters(opts)
 
 
 
@@ -2616,7 +2616,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2649,7 +2649,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_contactlistfilters: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2678,7 +2678,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_contactlists"></a>
 
-## -[**ContactListEntityListing**](ContactListEntityListing.html) get_outbound_contactlists(opts)
+## [**ContactListEntityListing**](ContactListEntityListing.html) get_outbound_contactlists(opts)
 
 
 
@@ -2694,7 +2694,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2730,7 +2730,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_contactlists: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2762,7 +2762,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_contactlists_divisionview"></a>
 
-## -[**ContactListDivisionView**](ContactListDivisionView.html) get_outbound_contactlists_divisionview(contact_list_id, opts)
+## [**ContactListDivisionView**](ContactListDivisionView.html) get_outbound_contactlists_divisionview(contact_list_id, opts)
 
 
 
@@ -2778,7 +2778,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2808,7 +2808,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_contactlists_divisionview: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2833,7 +2833,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_contactlists_divisionviews"></a>
 
-## -[**ContactListDivisionViewListing**](ContactListDivisionViewListing.html) get_outbound_contactlists_divisionviews(opts)
+## [**ContactListDivisionViewListing**](ContactListDivisionViewListing.html) get_outbound_contactlists_divisionviews(opts)
 
 
 
@@ -2849,7 +2849,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2884,7 +2884,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_contactlists_divisionviews: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2915,7 +2915,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_dnclist"></a>
 
-## -[**DncList**](DncList.html) get_outbound_dnclist(dnc_list_id, opts)
+## [**DncList**](DncList.html) get_outbound_dnclist(dnc_list_id, opts)
 
 
 
@@ -2931,7 +2931,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2961,7 +2961,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_dnclist: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2986,7 +2986,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_dnclist_export"></a>
 
-## -[**ExportUri**](ExportUri.html) get_outbound_dnclist_export(dnc_list_id, opts)
+## [**ExportUri**](ExportUri.html) get_outbound_dnclist_export(dnc_list_id, opts)
 
 
 
@@ -3003,7 +3003,7 @@ Requires ALL permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3032,7 +3032,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_dnclist_export: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3056,7 +3056,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_dnclist_importstatus"></a>
 
-## -[**ImportStatus**](ImportStatus.html) get_outbound_dnclist_importstatus(dnc_list_id)
+## [**ImportStatus**](ImportStatus.html) get_outbound_dnclist_importstatus(dnc_list_id)
 
 
 
@@ -3072,7 +3072,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3098,7 +3098,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_dnclist_importstatus: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3121,7 +3121,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_dnclists"></a>
 
-## -[**DncListEntityListing**](DncListEntityListing.html) get_outbound_dnclists(opts)
+## [**DncListEntityListing**](DncListEntityListing.html) get_outbound_dnclists(opts)
 
 
 
@@ -3137,7 +3137,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3173,7 +3173,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_dnclists: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3205,7 +3205,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_dnclists_divisionview"></a>
 
-## -[**DncListDivisionView**](DncListDivisionView.html) get_outbound_dnclists_divisionview(dnc_list_id, opts)
+## [**DncListDivisionView**](DncListDivisionView.html) get_outbound_dnclists_divisionview(dnc_list_id, opts)
 
 
 
@@ -3221,7 +3221,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3251,7 +3251,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_dnclists_divisionview: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3276,7 +3276,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_dnclists_divisionviews"></a>
 
-## -[**DncListDivisionViewListing**](DncListDivisionViewListing.html) get_outbound_dnclists_divisionviews(opts)
+## [**DncListDivisionViewListing**](DncListDivisionViewListing.html) get_outbound_dnclists_divisionviews(opts)
 
 
 
@@ -3292,7 +3292,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3327,7 +3327,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_dnclists_divisionviews: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3358,7 +3358,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_event"></a>
 
-## -[**EventLog**](EventLog.html) get_outbound_event(event_id)
+## [**EventLog**](EventLog.html) get_outbound_event(event_id)
 
 
 
@@ -3374,7 +3374,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3400,7 +3400,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_event: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3423,7 +3423,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_events"></a>
 
-## -[**DialerEventEntityListing**](DialerEventEntityListing.html) get_outbound_events(opts)
+## [**DialerEventEntityListing**](DialerEventEntityListing.html) get_outbound_events(opts)
 
 
 
@@ -3439,7 +3439,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3472,7 +3472,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_events: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3501,7 +3501,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_ruleset"></a>
 
-## -[**RuleSet**](RuleSet.html) get_outbound_ruleset(rule_set_id)
+## [**RuleSet**](RuleSet.html) get_outbound_ruleset(rule_set_id)
 
 
 
@@ -3517,7 +3517,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3543,7 +3543,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_ruleset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3566,7 +3566,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_rulesets"></a>
 
-## -[**RuleSetEntityListing**](RuleSetEntityListing.html) get_outbound_rulesets(opts)
+## [**RuleSetEntityListing**](RuleSetEntityListing.html) get_outbound_rulesets(opts)
 
 
 
@@ -3582,7 +3582,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3614,7 +3614,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_rulesets: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3642,7 +3642,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_schedules_campaign"></a>
 
-## -[**CampaignSchedule**](CampaignSchedule.html) get_outbound_schedules_campaign(campaign_id)
+## [**CampaignSchedule**](CampaignSchedule.html) get_outbound_schedules_campaign(campaign_id)
 
 
 
@@ -3658,7 +3658,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3684,7 +3684,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_schedules_campaign: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3707,7 +3707,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_schedules_campaigns"></a>
 
-## -[**Array&lt;CampaignSchedule&gt;**](CampaignSchedule.html) get_outbound_schedules_campaigns
+## [**Array&lt;CampaignSchedule&gt;**](CampaignSchedule.html) get_outbound_schedules_campaigns
 
 
 
@@ -3723,7 +3723,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3746,7 +3746,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_schedules_campaigns: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -3766,7 +3766,7 @@ This endpoint does not need any parameter.
 
 <a name="get_outbound_schedules_sequence"></a>
 
-## -[**SequenceSchedule**](SequenceSchedule.html) get_outbound_schedules_sequence(sequence_id)
+## [**SequenceSchedule**](SequenceSchedule.html) get_outbound_schedules_sequence(sequence_id)
 
 
 
@@ -3782,7 +3782,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3808,7 +3808,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_schedules_sequence: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3831,7 +3831,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_schedules_sequences"></a>
 
-## -[**Array&lt;SequenceSchedule&gt;**](SequenceSchedule.html) get_outbound_schedules_sequences
+## [**Array&lt;SequenceSchedule&gt;**](SequenceSchedule.html) get_outbound_schedules_sequences
 
 
 
@@ -3847,7 +3847,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3870,7 +3870,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_schedules_sequences: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -3890,7 +3890,7 @@ This endpoint does not need any parameter.
 
 <a name="get_outbound_sequence"></a>
 
-## -[**CampaignSequence**](CampaignSequence.html) get_outbound_sequence(sequence_id)
+## [**CampaignSequence**](CampaignSequence.html) get_outbound_sequence(sequence_id)
 
 
 
@@ -3906,7 +3906,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3932,7 +3932,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_sequence: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3955,7 +3955,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_sequences"></a>
 
-## -[**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.html) get_outbound_sequences(opts)
+## [**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.html) get_outbound_sequences(opts)
 
 
 
@@ -3971,7 +3971,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4003,7 +4003,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_sequences: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4031,7 +4031,7 @@ Name | Type | Description  | Notes
 
 <a name="get_outbound_settings"></a>
 
-## -[**OutboundSettings**](OutboundSettings.html) get_outbound_settings
+## [**OutboundSettings**](OutboundSettings.html) get_outbound_settings
 
 
 
@@ -4047,7 +4047,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4070,7 +4070,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -4090,7 +4090,7 @@ This endpoint does not need any parameter.
 
 <a name="get_outbound_wrapupcodemappings"></a>
 
-## -[**WrapUpCodeMapping**](WrapUpCodeMapping.html) get_outbound_wrapupcodemappings
+## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) get_outbound_wrapupcodemappings
 
 
 
@@ -4106,7 +4106,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4129,7 +4129,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->get_outbound_wrapupcodemappings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -4149,7 +4149,7 @@ This endpoint does not need any parameter.
 
 <a name="patch_outbound_settings"></a>
 
-## - patch_outbound_settings(body)
+##  patch_outbound_settings(body)
 
 
 
@@ -4165,7 +4165,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4190,7 +4190,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->patch_outbound_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4213,7 +4213,7 @@ nil (empty response body)
 
 <a name="post_outbound_attemptlimits"></a>
 
-## -[**AttemptLimits**](AttemptLimits.html) post_outbound_attemptlimits(body)
+## [**AttemptLimits**](AttemptLimits.html) post_outbound_attemptlimits(body)
 
 
 
@@ -4229,7 +4229,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4255,7 +4255,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_attemptlimits: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4278,7 +4278,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_audits"></a>
 
-## -[**AuditSearchResult**](AuditSearchResult.html) post_outbound_audits(body, opts)
+## [**AuditSearchResult**](AuditSearchResult.html) post_outbound_audits(body, opts)
 
 
 
@@ -4294,7 +4294,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4327,7 +4327,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_audits: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4355,7 +4355,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_callabletimesets"></a>
 
-## -[**CallableTimeSet**](CallableTimeSet.html) post_outbound_callabletimesets(body)
+## [**CallableTimeSet**](CallableTimeSet.html) post_outbound_callabletimesets(body)
 
 
 
@@ -4371,7 +4371,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4397,7 +4397,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_callabletimesets: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4420,7 +4420,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_callanalysisresponsesets"></a>
 
-## -[**ResponseSet**](ResponseSet.html) post_outbound_callanalysisresponsesets(body)
+## [**ResponseSet**](ResponseSet.html) post_outbound_callanalysisresponsesets(body)
 
 
 
@@ -4436,7 +4436,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4462,7 +4462,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_callanalysisresponsesets: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4485,7 +4485,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_campaign_callback_schedule"></a>
 
-## -[**ContactCallbackRequest**](ContactCallbackRequest.html) post_outbound_campaign_callback_schedule(campaign_id, body)
+## [**ContactCallbackRequest**](ContactCallbackRequest.html) post_outbound_campaign_callback_schedule(campaign_id, body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -4500,7 +4500,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4528,7 +4528,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_campaign_callback_schedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4552,7 +4552,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_campaignrules"></a>
 
-## -[**CampaignRule**](CampaignRule.html) post_outbound_campaignrules(body)
+## [**CampaignRule**](CampaignRule.html) post_outbound_campaignrules(body)
 
 
 
@@ -4568,7 +4568,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4594,7 +4594,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_campaignrules: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4617,7 +4617,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_campaigns"></a>
 
-## -[**Campaign**](Campaign.html) post_outbound_campaigns(body)
+## [**Campaign**](Campaign.html) post_outbound_campaigns(body)
 
 
 
@@ -4633,7 +4633,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4659,7 +4659,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_campaigns: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4682,7 +4682,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_campaigns_progress"></a>
 
-## -[**Array&lt;CampaignProgress&gt;**](CampaignProgress.html) post_outbound_campaigns_progress(body)
+## [**Array&lt;CampaignProgress&gt;**](CampaignProgress.html) post_outbound_campaigns_progress(body)
 
 
 
@@ -4698,7 +4698,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4724,7 +4724,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_campaigns_progress: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4747,7 +4747,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_contactlist_clear"></a>
 
-## - post_outbound_contactlist_clear(contact_list_id)
+##  post_outbound_contactlist_clear(contact_list_id)
 
 
 
@@ -4763,7 +4763,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4788,7 +4788,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_contactlist_clear: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4811,7 +4811,7 @@ nil (empty response body)
 
 <a name="post_outbound_contactlist_contacts"></a>
 
-## -[**Array&lt;DialerContact&gt;**](DialerContact.html) post_outbound_contactlist_contacts(contact_list_id, body, opts)
+## [**Array&lt;DialerContact&gt;**](DialerContact.html) post_outbound_contactlist_contacts(contact_list_id, body, opts)
 
 
 
@@ -4827,7 +4827,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4860,7 +4860,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_contactlist_contacts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4887,7 +4887,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_contactlist_contacts_bulk"></a>
 
-## -[**Array&lt;DialerContact&gt;**](DialerContact.html) post_outbound_contactlist_contacts_bulk(contact_list_id, body)
+## [**Array&lt;DialerContact&gt;**](DialerContact.html) post_outbound_contactlist_contacts_bulk(contact_list_id, body)
 
 
 
@@ -4903,7 +4903,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4931,7 +4931,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_contactlist_contacts_bulk: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4955,7 +4955,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_contactlist_export"></a>
 
-## -[**UriReference**](UriReference.html) post_outbound_contactlist_export(contact_list_id)
+## [**UriReference**](UriReference.html) post_outbound_contactlist_export(contact_list_id)
 
 
 
@@ -4972,7 +4972,7 @@ Requires ALL permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4998,7 +4998,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_contactlist_export: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5021,7 +5021,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_contactlistfilters"></a>
 
-## -[**ContactListFilter**](ContactListFilter.html) post_outbound_contactlistfilters(body)
+## [**ContactListFilter**](ContactListFilter.html) post_outbound_contactlistfilters(body)
 
 
 
@@ -5037,7 +5037,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5063,7 +5063,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_contactlistfilters: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5086,7 +5086,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_contactlistfilters_preview"></a>
 
-## -[**FilterPreviewResponse**](FilterPreviewResponse.html) post_outbound_contactlistfilters_preview(body)
+## [**FilterPreviewResponse**](FilterPreviewResponse.html) post_outbound_contactlistfilters_preview(body)
 
 
 
@@ -5102,7 +5102,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5128,7 +5128,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_contactlistfilters_preview: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5151,7 +5151,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_contactlists"></a>
 
-## -[**ContactList**](ContactList.html) post_outbound_contactlists(body)
+## [**ContactList**](ContactList.html) post_outbound_contactlists(body)
 
 
 
@@ -5167,7 +5167,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5193,7 +5193,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_contactlists: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5216,7 +5216,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_conversation_dnc"></a>
 
-## - post_outbound_conversation_dnc(conversation_id)
+##  post_outbound_conversation_dnc(conversation_id)
 
 
 
@@ -5232,7 +5232,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5257,7 +5257,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_conversation_dnc: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5280,7 +5280,7 @@ nil (empty response body)
 
 <a name="post_outbound_dnclist_export"></a>
 
-## -[**UriReference**](UriReference.html) post_outbound_dnclist_export(dnc_list_id)
+## [**UriReference**](UriReference.html) post_outbound_dnclist_export(dnc_list_id)
 
 
 
@@ -5297,7 +5297,7 @@ Requires ALL permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5323,7 +5323,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_dnclist_export: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5346,7 +5346,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_dnclist_phonenumbers"></a>
 
-## - post_outbound_dnclist_phonenumbers(dnc_list_id, body)
+##  post_outbound_dnclist_phonenumbers(dnc_list_id, body)
 
 
 
@@ -5362,7 +5362,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5389,7 +5389,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_dnclist_phonenumbers: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5413,7 +5413,7 @@ nil (empty response body)
 
 <a name="post_outbound_dnclists"></a>
 
-## -[**DncList**](DncList.html) post_outbound_dnclists(body)
+## [**DncList**](DncList.html) post_outbound_dnclists(body)
 
 
 
@@ -5429,7 +5429,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5455,7 +5455,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_dnclists: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5478,7 +5478,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_rulesets"></a>
 
-## -[**RuleSet**](RuleSet.html) post_outbound_rulesets(body)
+## [**RuleSet**](RuleSet.html) post_outbound_rulesets(body)
 
 
 
@@ -5494,7 +5494,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5520,7 +5520,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_rulesets: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5543,7 +5543,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_sequences"></a>
 
-## -[**CampaignSequence**](CampaignSequence.html) post_outbound_sequences(body)
+## [**CampaignSequence**](CampaignSequence.html) post_outbound_sequences(body)
 
 
 
@@ -5559,7 +5559,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5585,7 +5585,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->post_outbound_sequences: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5608,7 +5608,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_attemptlimit"></a>
 
-## -[**AttemptLimits**](AttemptLimits.html) put_outbound_attemptlimit(attempt_limits_id, body)
+## [**AttemptLimits**](AttemptLimits.html) put_outbound_attemptlimit(attempt_limits_id, body)
 
 
 
@@ -5624,7 +5624,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5652,7 +5652,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_attemptlimit: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5676,7 +5676,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_callabletimeset"></a>
 
-## -[**CallableTimeSet**](CallableTimeSet.html) put_outbound_callabletimeset(callable_time_set_id, body)
+## [**CallableTimeSet**](CallableTimeSet.html) put_outbound_callabletimeset(callable_time_set_id, body)
 
 
 
@@ -5692,7 +5692,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5720,7 +5720,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_callabletimeset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5744,7 +5744,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_callanalysisresponseset"></a>
 
-## -[**ResponseSet**](ResponseSet.html) put_outbound_callanalysisresponseset(call_analysis_set_id, body)
+## [**ResponseSet**](ResponseSet.html) put_outbound_callanalysisresponseset(call_analysis_set_id, body)
 
 
 
@@ -5760,7 +5760,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5788,7 +5788,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_callanalysisresponseset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5812,7 +5812,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_campaign"></a>
 
-## -[**Campaign**](Campaign.html) put_outbound_campaign(campaign_id, body)
+## [**Campaign**](Campaign.html) put_outbound_campaign(campaign_id, body)
 
 
 
@@ -5828,7 +5828,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5856,7 +5856,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_campaign: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5880,7 +5880,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_campaign_agent"></a>
 
-## -String** put_outbound_campaign_agent(campaign_id, user_id, body)
+## String** put_outbound_campaign_agent(campaign_id, user_id, body)
 
 
 
@@ -5895,7 +5895,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5925,7 +5925,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_campaign_agent: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5950,7 +5950,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_campaignrule"></a>
 
-## -[**CampaignRule**](CampaignRule.html) put_outbound_campaignrule(campaign_rule_id, body)
+## [**CampaignRule**](CampaignRule.html) put_outbound_campaignrule(campaign_rule_id, body)
 
 
 
@@ -5966,7 +5966,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5994,7 +5994,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_campaignrule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6018,7 +6018,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_contactlist"></a>
 
-## -[**ContactList**](ContactList.html) put_outbound_contactlist(contact_list_id, body)
+## [**ContactList**](ContactList.html) put_outbound_contactlist(contact_list_id, body)
 
 
 
@@ -6034,7 +6034,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6062,7 +6062,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_contactlist: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6086,7 +6086,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_contactlist_contact"></a>
 
-## -[**DialerContact**](DialerContact.html) put_outbound_contactlist_contact(contact_list_id, contact_id, body)
+## [**DialerContact**](DialerContact.html) put_outbound_contactlist_contact(contact_list_id, contact_id, body)
 
 
 
@@ -6102,7 +6102,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6132,7 +6132,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_contactlist_contact: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6157,7 +6157,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_contactlistfilter"></a>
 
-## -[**ContactListFilter**](ContactListFilter.html) put_outbound_contactlistfilter(contact_list_filter_id, body)
+## [**ContactListFilter**](ContactListFilter.html) put_outbound_contactlistfilter(contact_list_filter_id, body)
 
 
 
@@ -6173,7 +6173,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6201,7 +6201,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_contactlistfilter: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6225,7 +6225,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_dnclist"></a>
 
-## -[**DncList**](DncList.html) put_outbound_dnclist(dnc_list_id, body)
+## [**DncList**](DncList.html) put_outbound_dnclist(dnc_list_id, body)
 
 
 
@@ -6241,7 +6241,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6269,7 +6269,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_dnclist: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6293,7 +6293,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_ruleset"></a>
 
-## -[**RuleSet**](RuleSet.html) put_outbound_ruleset(rule_set_id, body)
+## [**RuleSet**](RuleSet.html) put_outbound_ruleset(rule_set_id, body)
 
 
 
@@ -6309,7 +6309,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6337,7 +6337,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_ruleset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6361,7 +6361,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_schedules_campaign"></a>
 
-## -[**CampaignSchedule**](CampaignSchedule.html) put_outbound_schedules_campaign(campaign_id, body)
+## [**CampaignSchedule**](CampaignSchedule.html) put_outbound_schedules_campaign(campaign_id, body)
 
 
 
@@ -6377,7 +6377,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6405,7 +6405,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_schedules_campaign: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6429,7 +6429,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_schedules_sequence"></a>
 
-## -[**SequenceSchedule**](SequenceSchedule.html) put_outbound_schedules_sequence(sequence_id, body)
+## [**SequenceSchedule**](SequenceSchedule.html) put_outbound_schedules_sequence(sequence_id, body)
 
 
 
@@ -6445,7 +6445,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6473,7 +6473,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_schedules_sequence: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6497,7 +6497,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_sequence"></a>
 
-## -[**CampaignSequence**](CampaignSequence.html) put_outbound_sequence(sequence_id, body)
+## [**CampaignSequence**](CampaignSequence.html) put_outbound_sequence(sequence_id, body)
 
 
 
@@ -6513,7 +6513,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6541,7 +6541,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_sequence: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6565,7 +6565,7 @@ Name | Type | Description  | Notes
 
 <a name="put_outbound_wrapupcodemappings"></a>
 
-## -[**WrapUpCodeMapping**](WrapUpCodeMapping.html) put_outbound_wrapupcodemappings(body)
+## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) put_outbound_wrapupcodemappings(body)
 
 
 
@@ -6581,7 +6581,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6607,7 +6607,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OutboundApi->put_outbound_wrapupcodemappings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

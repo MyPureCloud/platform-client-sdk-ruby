@@ -1,7 +1,7 @@
 ---
 title: PureCloud Ruby Gem
 ---
-![](http://ruby-gem-downloads-badge.herokuapp.com/purecloudplatformclientv2?label=49.0.0)
+![](http://ruby-gem-downloads-badge.herokuapp.com/purecloudplatformclientv2?label=49.0.1)
 
 Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/ruby/](https://developer.mypurecloud.com/api/rest/client-libraries/ruby/)
 
@@ -9,21 +9,21 @@ Documentation can be found at [https://developer.mypurecloud.com/api/rest/client
 
 ### from rubygems.org
 
-~~~ ruby
-gem install 'purecloudplatformclientv2', '~> 49.0.0'
-~~~
+```{"language":"ruby"}
+gem install 'purecloudplatformclientv2', '~> 49.0.1'
+```
 
 ### Install from Git
 
-~~~ ruby
+```{"language":"ruby"}
 gem install 'purecloudplatformclientv2', :git => 'https://github.com/MyPureCloud/platform-client-sdk-ruby.git'
-~~~
+```
 
 ## Getting Started
 
 Please follow the [installation](#installation) procedure and then run the following code:
 
-~~~ ruby
+```{"language":"ruby"}
 # Load the gem
 require 'purecloudplatformclientv2'
 
@@ -45,7 +45,7 @@ rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->delete_alerting_interactionstats_alert: #{e}"
 end
 
-~~~
+```
 
 ## SDK Source Code Generation
 

@@ -50,7 +50,7 @@ Method | Description
 
 <a name="delete_contentmanagement_document"></a>
 
-## - delete_contentmanagement_document(document_id, opts)
+##  delete_contentmanagement_document(document_id, opts)
 
 
 
@@ -65,7 +65,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -93,7 +93,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->delete_contentmanagement_document: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -117,7 +117,7 @@ nil (empty response body)
 
 <a name="delete_contentmanagement_share"></a>
 
-## - delete_contentmanagement_share(share_id)
+##  delete_contentmanagement_share(share_id)
 
 
 
@@ -132,7 +132,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -157,7 +157,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->delete_contentmanagement_share: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -180,7 +180,7 @@ nil (empty response body)
 
 <a name="delete_contentmanagement_status_status_id"></a>
 
-## - delete_contentmanagement_status_status_id(status_id)
+##  delete_contentmanagement_status_status_id(status_id)
 
 
 
@@ -195,7 +195,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -220,7 +220,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->delete_contentmanagement_status_status_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -243,7 +243,7 @@ nil (empty response body)
 
 <a name="delete_contentmanagement_workspace"></a>
 
-## - delete_contentmanagement_workspace(workspace_id, opts)
+##  delete_contentmanagement_workspace(workspace_id, opts)
 
 
 
@@ -258,7 +258,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -286,7 +286,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->delete_contentmanagement_workspace: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -310,7 +310,7 @@ nil (empty response body)
 
 <a name="delete_contentmanagement_workspace_member"></a>
 
-## - delete_contentmanagement_workspace_member(workspace_id, member_id)
+##  delete_contentmanagement_workspace_member(workspace_id, member_id)
 
 
 
@@ -325,7 +325,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -352,7 +352,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->delete_contentmanagement_workspace_member: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -376,7 +376,7 @@ nil (empty response body)
 
 <a name="delete_contentmanagement_workspace_tagvalue"></a>
 
-## - delete_contentmanagement_workspace_tagvalue(workspace_id, tag_id)
+##  delete_contentmanagement_workspace_tagvalue(workspace_id, tag_id)
 
 
 
@@ -391,7 +391,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -418,7 +418,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->delete_contentmanagement_workspace_tagvalue: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -442,7 +442,7 @@ nil (empty response body)
 
 <a name="get_contentmanagement_document"></a>
 
-## -[**Document**](Document.html) get_contentmanagement_document(document_id, opts)
+## [**Document**](Document.html) get_contentmanagement_document(document_id, opts)
 
 
 
@@ -457,7 +457,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -486,7 +486,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_document: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_document_audits"></a>
 
-## -[**DocumentAuditEntityListing**](DocumentAuditEntityListing.html) get_contentmanagement_document_audits(document_id, opts)
+## [**DocumentAuditEntityListing**](DocumentAuditEntityListing.html) get_contentmanagement_document_audits(document_id, opts)
 
 
 
@@ -525,7 +525,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -559,7 +559,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_document_audits: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -588,7 +588,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_document_content"></a>
 
-## -[**DownloadResponse**](DownloadResponse.html) get_contentmanagement_document_content(document_id, opts)
+## [**DownloadResponse**](DownloadResponse.html) get_contentmanagement_document_content(document_id, opts)
 
 
 
@@ -603,7 +603,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -633,7 +633,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_document_content: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -658,7 +658,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_documents"></a>
 
-## -[**DocumentEntityListing**](DocumentEntityListing.html) get_contentmanagement_documents(workspace_id, opts)
+## [**DocumentEntityListing**](DocumentEntityListing.html) get_contentmanagement_documents(workspace_id, opts)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -673,7 +673,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -707,7 +707,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_documents: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -736,7 +736,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_query"></a>
 
-## -[**QueryResults**](QueryResults.html) get_contentmanagement_query(query_phrase, opts)
+## [**QueryResults**](QueryResults.html) get_contentmanagement_query(query_phrase, opts)
 
 
 
@@ -751,7 +751,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -784,7 +784,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -812,7 +812,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_securityprofile"></a>
 
-## -[**SecurityProfile**](SecurityProfile.html) get_contentmanagement_securityprofile(security_profile_id)
+## [**SecurityProfile**](SecurityProfile.html) get_contentmanagement_securityprofile(security_profile_id)
 
 
 
@@ -827,7 +827,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -853,7 +853,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_securityprofile: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -876,7 +876,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_securityprofiles"></a>
 
-## -[**SecurityProfileEntityListing**](SecurityProfileEntityListing.html) get_contentmanagement_securityprofiles
+## [**SecurityProfileEntityListing**](SecurityProfileEntityListing.html) get_contentmanagement_securityprofiles
 
 
 
@@ -891,7 +891,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -914,7 +914,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_securityprofiles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -934,7 +934,7 @@ This endpoint does not need any parameter.
 
 <a name="get_contentmanagement_share"></a>
 
-## -[**Share**](Share.html) get_contentmanagement_share(share_id, opts)
+## [**Share**](Share.html) get_contentmanagement_share(share_id, opts)
 
 
 
@@ -949,7 +949,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -978,7 +978,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_share: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1002,7 +1002,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_shared_shared_id"></a>
 
-## -[**SharedResponse**](SharedResponse.html) get_contentmanagement_shared_shared_id(shared_id, opts)
+## [**SharedResponse**](SharedResponse.html) get_contentmanagement_shared_shared_id(shared_id, opts)
 
 
 
@@ -1017,7 +1017,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1049,7 +1049,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_shared_shared_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1076,7 +1076,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_shares"></a>
 
-## -[**ShareEntityListing**](ShareEntityListing.html) get_contentmanagement_shares(opts)
+## [**ShareEntityListing**](ShareEntityListing.html) get_contentmanagement_shares(opts)
 
 
 
@@ -1091,7 +1091,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1121,7 +1121,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_shares: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1147,7 +1147,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_status"></a>
 
-## -[**CommandStatusEntityListing**](CommandStatusEntityListing.html) get_contentmanagement_status(opts)
+## [**CommandStatusEntityListing**](CommandStatusEntityListing.html) get_contentmanagement_status(opts)
 
 
 
@@ -1162,7 +1162,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1190,7 +1190,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_status: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1214,7 +1214,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_status_status_id"></a>
 
-## -[**CommandStatus**](CommandStatus.html) get_contentmanagement_status_status_id(status_id)
+## [**CommandStatus**](CommandStatus.html) get_contentmanagement_status_status_id(status_id)
 
 
 
@@ -1229,7 +1229,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1255,7 +1255,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_status_status_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1278,7 +1278,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_usage"></a>
 
-## -[**Usage**](Usage.html) get_contentmanagement_usage
+## [**Usage**](Usage.html) get_contentmanagement_usage
 
 
 
@@ -1293,7 +1293,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1316,7 +1316,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_usage: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1336,7 +1336,7 @@ This endpoint does not need any parameter.
 
 <a name="get_contentmanagement_workspace"></a>
 
-## -[**Workspace**](Workspace.html) get_contentmanagement_workspace(workspace_id, opts)
+## [**Workspace**](Workspace.html) get_contentmanagement_workspace(workspace_id, opts)
 
 
 
@@ -1351,7 +1351,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1380,7 +1380,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_workspace: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1404,7 +1404,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_workspace_documents"></a>
 
-## -[**DocumentEntityListing**](DocumentEntityListing.html) get_contentmanagement_workspace_documents(workspace_id, opts)
+## [**DocumentEntityListing**](DocumentEntityListing.html) get_contentmanagement_workspace_documents(workspace_id, opts)
 
 
 
@@ -1419,7 +1419,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1452,7 +1452,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_workspace_documents: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1480,7 +1480,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_workspace_member"></a>
 
-## -[**WorkspaceMember**](WorkspaceMember.html) get_contentmanagement_workspace_member(workspace_id, member_id, opts)
+## [**WorkspaceMember**](WorkspaceMember.html) get_contentmanagement_workspace_member(workspace_id, member_id, opts)
 
 
 
@@ -1495,7 +1495,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1526,7 +1526,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_workspace_member: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1551,7 +1551,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_workspace_members"></a>
 
-## -[**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing.html) get_contentmanagement_workspace_members(workspace_id, opts)
+## [**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing.html) get_contentmanagement_workspace_members(workspace_id, opts)
 
 
 
@@ -1566,7 +1566,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1597,7 +1597,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_workspace_members: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1623,7 +1623,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_workspace_tagvalue"></a>
 
-## -[**TagValue**](TagValue.html) get_contentmanagement_workspace_tagvalue(workspace_id, tag_id, opts)
+## [**TagValue**](TagValue.html) get_contentmanagement_workspace_tagvalue(workspace_id, tag_id, opts)
 
 
 
@@ -1638,7 +1638,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1669,7 +1669,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_workspace_tagvalue: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1694,7 +1694,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_workspace_tagvalues"></a>
 
-## -[**TagValueEntityListing**](TagValueEntityListing.html) get_contentmanagement_workspace_tagvalues(workspace_id, opts)
+## [**TagValueEntityListing**](TagValueEntityListing.html) get_contentmanagement_workspace_tagvalues(workspace_id, opts)
 
 
 
@@ -1709,7 +1709,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1741,7 +1741,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_workspace_tagvalues: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1768,7 +1768,7 @@ Name | Type | Description  | Notes
 
 <a name="get_contentmanagement_workspaces"></a>
 
-## -[**WorkspaceEntityListing**](WorkspaceEntityListing.html) get_contentmanagement_workspaces(opts)
+## [**WorkspaceEntityListing**](WorkspaceEntityListing.html) get_contentmanagement_workspaces(opts)
 
 
 
@@ -1783,7 +1783,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1813,7 +1813,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->get_contentmanagement_workspaces: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1839,7 +1839,7 @@ Name | Type | Description  | Notes
 
 <a name="post_contentmanagement_auditquery"></a>
 
-## -[**QueryResults**](QueryResults.html) post_contentmanagement_auditquery(body)
+## [**QueryResults**](QueryResults.html) post_contentmanagement_auditquery(body)
 
 
 
@@ -1854,7 +1854,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1880,7 +1880,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->post_contentmanagement_auditquery: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1903,7 +1903,7 @@ Name | Type | Description  | Notes
 
 <a name="post_contentmanagement_document"></a>
 
-## -[**Document**](Document.html) post_contentmanagement_document(document_id, body, opts)
+## [**Document**](Document.html) post_contentmanagement_document(document_id, body, opts)
 
 
 
@@ -1918,7 +1918,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1950,7 +1950,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->post_contentmanagement_document: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1976,7 +1976,7 @@ Name | Type | Description  | Notes
 
 <a name="post_contentmanagement_document_content"></a>
 
-## -[**ReplaceResponse**](ReplaceResponse.html) post_contentmanagement_document_content(document_id, body, opts)
+## [**ReplaceResponse**](ReplaceResponse.html) post_contentmanagement_document_content(document_id, body, opts)
 
 
 
@@ -1991,7 +1991,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2022,7 +2022,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->post_contentmanagement_document_content: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2047,7 +2047,7 @@ Name | Type | Description  | Notes
 
 <a name="post_contentmanagement_documents"></a>
 
-## -[**Document**](Document.html) post_contentmanagement_documents(body, opts)
+## [**Document**](Document.html) post_contentmanagement_documents(body, opts)
 
 
 
@@ -2062,7 +2062,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2093,7 +2093,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->post_contentmanagement_documents: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2119,7 +2119,7 @@ Name | Type | Description  | Notes
 
 <a name="post_contentmanagement_query"></a>
 
-## -[**QueryResults**](QueryResults.html) post_contentmanagement_query(body, opts)
+## [**QueryResults**](QueryResults.html) post_contentmanagement_query(body, opts)
 
 
 
@@ -2134,7 +2134,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2163,7 +2163,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->post_contentmanagement_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2187,7 +2187,7 @@ Name | Type | Description  | Notes
 
 <a name="post_contentmanagement_shares"></a>
 
-## -[**CreateShareResponse**](CreateShareResponse.html) post_contentmanagement_shares(body)
+## [**CreateShareResponse**](CreateShareResponse.html) post_contentmanagement_shares(body)
 
 
 
@@ -2202,7 +2202,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2228,7 +2228,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->post_contentmanagement_shares: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2251,7 +2251,7 @@ Name | Type | Description  | Notes
 
 <a name="post_contentmanagement_workspace_tagvalues"></a>
 
-## -[**TagValue**](TagValue.html) post_contentmanagement_workspace_tagvalues(workspace_id, body)
+## [**TagValue**](TagValue.html) post_contentmanagement_workspace_tagvalues(workspace_id, body)
 
 
 
@@ -2266,7 +2266,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2294,7 +2294,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->post_contentmanagement_workspace_tagvalues: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2318,7 +2318,7 @@ Name | Type | Description  | Notes
 
 <a name="post_contentmanagement_workspace_tagvalues_query"></a>
 
-## -[**TagValueEntityListing**](TagValueEntityListing.html) post_contentmanagement_workspace_tagvalues_query(workspace_id, body, opts)
+## [**TagValueEntityListing**](TagValueEntityListing.html) post_contentmanagement_workspace_tagvalues_query(workspace_id, body, opts)
 
 
 
@@ -2333,7 +2333,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2364,7 +2364,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->post_contentmanagement_workspace_tagvalues_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2389,7 +2389,7 @@ Name | Type | Description  | Notes
 
 <a name="post_contentmanagement_workspaces"></a>
 
-## -[**Workspace**](Workspace.html) post_contentmanagement_workspaces(body)
+## [**Workspace**](Workspace.html) post_contentmanagement_workspaces(body)
 
 
 
@@ -2404,7 +2404,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2430,7 +2430,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->post_contentmanagement_workspaces: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2453,7 +2453,7 @@ Name | Type | Description  | Notes
 
 <a name="put_contentmanagement_workspace"></a>
 
-## -[**Workspace**](Workspace.html) put_contentmanagement_workspace(workspace_id, body)
+## [**Workspace**](Workspace.html) put_contentmanagement_workspace(workspace_id, body)
 
 
 
@@ -2468,7 +2468,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2496,7 +2496,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->put_contentmanagement_workspace: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2520,7 +2520,7 @@ Name | Type | Description  | Notes
 
 <a name="put_contentmanagement_workspace_member"></a>
 
-## -[**WorkspaceMember**](WorkspaceMember.html) put_contentmanagement_workspace_member(workspace_id, member_id, body)
+## [**WorkspaceMember**](WorkspaceMember.html) put_contentmanagement_workspace_member(workspace_id, member_id, body)
 
 
 
@@ -2535,7 +2535,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2565,7 +2565,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->put_contentmanagement_workspace_member: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2590,7 +2590,7 @@ Name | Type | Description  | Notes
 
 <a name="put_contentmanagement_workspace_tagvalue"></a>
 
-## -[**TagValue**](TagValue.html) put_contentmanagement_workspace_tagvalue(workspace_id, tag_id, body)
+## [**TagValue**](TagValue.html) put_contentmanagement_workspace_tagvalue(workspace_id, tag_id, body)
 
 
 
@@ -2605,7 +2605,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2635,7 +2635,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ContentManagementApi->put_contentmanagement_workspace_tagvalue: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

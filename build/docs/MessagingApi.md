@@ -26,7 +26,7 @@ Method | Description
 
 <a name="delete_messaging_integrations_facebook_integration_id"></a>
 
-## - delete_messaging_integrations_facebook_integration_id(integration_id)
+##  delete_messaging_integrations_facebook_integration_id(integration_id)
 
 
 
@@ -42,7 +42,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -67,7 +67,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->delete_messaging_integrations_facebook_integration_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -90,7 +90,7 @@ nil (empty response body)
 
 <a name="delete_messaging_integrations_line_integration_id"></a>
 
-## - delete_messaging_integrations_line_integration_id(integration_id)
+##  delete_messaging_integrations_line_integration_id(integration_id)
 
 
 
@@ -106,7 +106,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -131,7 +131,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->delete_messaging_integrations_line_integration_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -154,7 +154,7 @@ nil (empty response body)
 
 <a name="delete_messaging_integrations_twitter_integration_id"></a>
 
-## - delete_messaging_integrations_twitter_integration_id(integration_id)
+##  delete_messaging_integrations_twitter_integration_id(integration_id)
 
 
 
@@ -170,7 +170,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -195,7 +195,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->delete_messaging_integrations_twitter_integration_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -218,7 +218,7 @@ nil (empty response body)
 
 <a name="get_messaging_integrations_facebook"></a>
 
-## -[**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html) get_messaging_integrations_facebook(opts)
+## [**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html) get_messaging_integrations_facebook(opts)
 
 
 
@@ -234,7 +234,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -262,7 +262,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->get_messaging_integrations_facebook: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 <a name="get_messaging_integrations_facebook_integration_id"></a>
 
-## -[**FacebookIntegration**](FacebookIntegration.html) get_messaging_integrations_facebook_integration_id(integration_id)
+## [**FacebookIntegration**](FacebookIntegration.html) get_messaging_integrations_facebook_integration_id(integration_id)
 
 
 
@@ -302,7 +302,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -328,7 +328,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->get_messaging_integrations_facebook_integration_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 
 <a name="get_messaging_integrations_line"></a>
 
-## -[**LineIntegrationEntityListing**](LineIntegrationEntityListing.html) get_messaging_integrations_line(opts)
+## [**LineIntegrationEntityListing**](LineIntegrationEntityListing.html) get_messaging_integrations_line(opts)
 
 
 
@@ -367,7 +367,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -395,7 +395,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->get_messaging_integrations_line: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -419,7 +419,7 @@ Name | Type | Description  | Notes
 
 <a name="get_messaging_integrations_line_integration_id"></a>
 
-## -[**LineIntegration**](LineIntegration.html) get_messaging_integrations_line_integration_id(integration_id)
+## [**LineIntegration**](LineIntegration.html) get_messaging_integrations_line_integration_id(integration_id)
 
 
 
@@ -435,7 +435,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -461,7 +461,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->get_messaging_integrations_line_integration_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 <a name="get_messaging_integrations_twitter"></a>
 
-## -[**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html) get_messaging_integrations_twitter(opts)
+## [**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html) get_messaging_integrations_twitter(opts)
 
 
 
@@ -500,7 +500,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -528,7 +528,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->get_messaging_integrations_twitter: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 <a name="get_messaging_integrations_twitter_integration_id"></a>
 
-## -[**TwitterIntegration**](TwitterIntegration.html) get_messaging_integrations_twitter_integration_id(integration_id)
+## [**TwitterIntegration**](TwitterIntegration.html) get_messaging_integrations_twitter_integration_id(integration_id)
 
 
 
@@ -568,7 +568,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -594,7 +594,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->get_messaging_integrations_twitter_integration_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -617,7 +617,7 @@ Name | Type | Description  | Notes
 
 <a name="get_messaging_sticker"></a>
 
-## -[**MessagingStickerEntityListing**](MessagingStickerEntityListing.html) get_messaging_sticker(messenger_type, opts)
+## [**MessagingStickerEntityListing**](MessagingStickerEntityListing.html) get_messaging_sticker(messenger_type, opts)
 
 
 
@@ -633,7 +633,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -663,7 +663,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->get_messaging_sticker: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -688,7 +688,7 @@ Name | Type | Description  | Notes
 
 <a name="post_messaging_integrations_facebook"></a>
 
-## -[**FacebookIntegration**](FacebookIntegration.html) post_messaging_integrations_facebook(body)
+## [**FacebookIntegration**](FacebookIntegration.html) post_messaging_integrations_facebook(body)
 
 
 
@@ -704,7 +704,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -730,7 +730,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->post_messaging_integrations_facebook: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -753,7 +753,7 @@ Name | Type | Description  | Notes
 
 <a name="post_messaging_integrations_line"></a>
 
-## -[**LineIntegration**](LineIntegration.html) post_messaging_integrations_line(body)
+## [**LineIntegration**](LineIntegration.html) post_messaging_integrations_line(body)
 
 
 
@@ -769,7 +769,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -795,7 +795,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->post_messaging_integrations_line: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -818,7 +818,7 @@ Name | Type | Description  | Notes
 
 <a name="post_messaging_integrations_twitter"></a>
 
-## -[**TwitterIntegration**](TwitterIntegration.html) post_messaging_integrations_twitter(body)
+## [**TwitterIntegration**](TwitterIntegration.html) post_messaging_integrations_twitter(body)
 
 
 
@@ -834,7 +834,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -860,7 +860,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->post_messaging_integrations_twitter: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -883,7 +883,7 @@ Name | Type | Description  | Notes
 
 <a name="put_messaging_integrations_line_integration_id"></a>
 
-## -[**LineIntegration**](LineIntegration.html) put_messaging_integrations_line_integration_id(integration_id, body)
+## [**LineIntegration**](LineIntegration.html) put_messaging_integrations_line_integration_id(integration_id, body)
 
 
 
@@ -899,7 +899,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -927,7 +927,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MessagingApi->put_messaging_integrations_line_integration_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

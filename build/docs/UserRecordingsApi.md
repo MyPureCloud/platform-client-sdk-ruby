@@ -18,7 +18,7 @@ Method | Description
 
 <a name="delete_userrecording"></a>
 
-## - delete_userrecording(recording_id)
+##  delete_userrecording(recording_id)
 
 
 
@@ -33,7 +33,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -58,7 +58,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UserRecordingsApi->delete_userrecording: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -81,7 +81,7 @@ nil (empty response body)
 
 <a name="get_userrecording"></a>
 
-## -[**UserRecording**](UserRecording.html) get_userrecording(recording_id, opts)
+## [**UserRecording**](UserRecording.html) get_userrecording(recording_id, opts)
 
 
 
@@ -96,7 +96,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -125,7 +125,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UserRecordingsApi->get_userrecording: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 <a name="get_userrecording_media"></a>
 
-## -[**DownloadResponse**](DownloadResponse.html) get_userrecording_media(recording_id, opts)
+## [**DownloadResponse**](DownloadResponse.html) get_userrecording_media(recording_id, opts)
 
 
 
@@ -164,7 +164,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -193,7 +193,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UserRecordingsApi->get_userrecording_media: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 <a name="get_userrecordings"></a>
 
-## -[**UserRecordingEntityListing**](UserRecordingEntityListing.html) get_userrecordings(opts)
+## [**UserRecordingEntityListing**](UserRecordingEntityListing.html) get_userrecordings(opts)
 
 
 
@@ -232,7 +232,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -261,7 +261,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UserRecordingsApi->get_userrecordings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 <a name="get_userrecordings_summary"></a>
 
-## -[**FaxSummary**](FaxSummary.html) get_userrecordings_summary
+## [**FaxSummary**](FaxSummary.html) get_userrecordings_summary
 
 
 
@@ -301,7 +301,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -324,7 +324,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UserRecordingsApi->get_userrecordings_summary: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -344,7 +344,7 @@ This endpoint does not need any parameter.
 
 <a name="put_userrecording"></a>
 
-## -[**UserRecording**](UserRecording.html) put_userrecording(recording_id, body, opts)
+## [**UserRecording**](UserRecording.html) put_userrecording(recording_id, body, opts)
 
 
 
@@ -359,7 +359,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -390,7 +390,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UserRecordingsApi->put_userrecording: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

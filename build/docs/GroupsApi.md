@@ -26,7 +26,7 @@ Method | Description
 
 <a name="delete_group"></a>
 
-## - delete_group(group_id)
+##  delete_group(group_id)
 
 
 
@@ -43,7 +43,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -68,7 +68,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->delete_group: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -91,7 +91,7 @@ nil (empty response body)
 
 <a name="delete_group_members"></a>
 
-## -[**Empty**](Empty.html) delete_group_members(group_id, ids)
+## [**Empty**](Empty.html) delete_group_members(group_id, ids)
 
 
 
@@ -106,7 +106,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -134,7 +134,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->delete_group_members: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 <a name="get_fieldconfig"></a>
 
-## -[**FieldConfig**](FieldConfig.html) get_fieldconfig(type)
+## [**FieldConfig**](FieldConfig.html) get_fieldconfig(type)
 
 
 
@@ -173,7 +173,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -199,7 +199,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->get_fieldconfig: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 <a name="get_group"></a>
 
-## -[**Group**](Group.html) get_group(group_id)
+## [**Group**](Group.html) get_group(group_id)
 
 
 
@@ -237,7 +237,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -263,7 +263,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->get_group: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 <a name="get_group_individuals"></a>
 
-## -[**UserEntityListing**](UserEntityListing.html) get_group_individuals(group_id)
+## [**UserEntityListing**](UserEntityListing.html) get_group_individuals(group_id)
 
 
 
@@ -301,7 +301,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -327,7 +327,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->get_group_individuals: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 <a name="get_group_members"></a>
 
-## -[**UserEntityListing**](UserEntityListing.html) get_group_members(group_id, opts)
+## [**UserEntityListing**](UserEntityListing.html) get_group_members(group_id, opts)
 
 
 
@@ -365,7 +365,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -397,7 +397,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->get_group_members: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 <a name="get_group_profile"></a>
 
-## -[**GroupProfile**](GroupProfile.html) get_group_profile(group_id, opts)
+## [**GroupProfile**](GroupProfile.html) get_group_profile(group_id, opts)
 
 
 
@@ -439,7 +439,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -468,7 +468,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->get_group_profile: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -492,7 +492,7 @@ Name | Type | Description  | Notes
 
 <a name="get_groups"></a>
 
-## -[**GroupEntityListing**](GroupEntityListing.html) get_groups(opts)
+## [**GroupEntityListing**](GroupEntityListing.html) get_groups(opts)
 
 
 
@@ -507,7 +507,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -537,7 +537,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->get_groups: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -563,7 +563,7 @@ Name | Type | Description  | Notes
 
 <a name="get_groups_search"></a>
 
-## -[**GroupsSearchResponse**](GroupsSearchResponse.html) get_groups_search(q64, opts)
+## [**GroupsSearchResponse**](GroupsSearchResponse.html) get_groups_search(q64, opts)
 
 
 
@@ -578,7 +578,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -607,7 +607,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->get_groups_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -631,7 +631,7 @@ Name | Type | Description  | Notes
 
 <a name="get_profiles_groups"></a>
 
-## -[**GroupProfileEntityListing**](GroupProfileEntityListing.html) get_profiles_groups(opts)
+## [**GroupProfileEntityListing**](GroupProfileEntityListing.html) get_profiles_groups(opts)
 
 
 
@@ -646,7 +646,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -676,7 +676,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->get_profiles_groups: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -702,7 +702,7 @@ Name | Type | Description  | Notes
 
 <a name="post_group_members"></a>
 
-## -[**Empty**](Empty.html) post_group_members(group_id, body)
+## [**Empty**](Empty.html) post_group_members(group_id, body)
 
 
 
@@ -717,7 +717,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -745,7 +745,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->post_group_members: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -769,7 +769,7 @@ Name | Type | Description  | Notes
 
 <a name="post_groups"></a>
 
-## -[**Group**](Group.html) post_groups(body)
+## [**Group**](Group.html) post_groups(body)
 
 
 
@@ -786,7 +786,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -812,7 +812,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->post_groups: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -835,7 +835,7 @@ Name | Type | Description  | Notes
 
 <a name="post_groups_search"></a>
 
-## -[**GroupsSearchResponse**](GroupsSearchResponse.html) post_groups_search(body)
+## [**GroupsSearchResponse**](GroupsSearchResponse.html) post_groups_search(body)
 
 
 
@@ -850,7 +850,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -876,7 +876,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->post_groups_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -899,7 +899,7 @@ Name | Type | Description  | Notes
 
 <a name="put_group"></a>
 
-## -[**Group**](Group.html) put_group(group_id, opts)
+## [**Group**](Group.html) put_group(group_id, opts)
 
 
 
@@ -916,7 +916,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -945,7 +945,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GroupsApi->put_group: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

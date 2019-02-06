@@ -35,7 +35,7 @@ Method | Description
 
 <a name="delete_orgauthorization_trustee"></a>
 
-## - delete_orgauthorization_trustee(trustee_org_id)
+##  delete_orgauthorization_trustee(trustee_org_id)
 
 
 
@@ -51,7 +51,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -76,7 +76,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->delete_orgauthorization_trustee: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -99,7 +99,7 @@ nil (empty response body)
 
 <a name="delete_orgauthorization_trustee_user"></a>
 
-## - delete_orgauthorization_trustee_user(trustee_org_id, trustee_user_id)
+##  delete_orgauthorization_trustee_user(trustee_org_id, trustee_user_id)
 
 
 
@@ -117,7 +117,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -144,7 +144,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->delete_orgauthorization_trustee_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -168,7 +168,7 @@ nil (empty response body)
 
 <a name="delete_orgauthorization_trustee_user_roles"></a>
 
-## - delete_orgauthorization_trustee_user_roles(trustee_org_id, trustee_user_id)
+##  delete_orgauthorization_trustee_user_roles(trustee_org_id, trustee_user_id)
 
 
 
@@ -186,7 +186,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -213,7 +213,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->delete_orgauthorization_trustee_user_roles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -237,7 +237,7 @@ nil (empty response body)
 
 <a name="delete_orgauthorization_trustor"></a>
 
-## - delete_orgauthorization_trustor(trustor_org_id)
+##  delete_orgauthorization_trustor(trustor_org_id)
 
 
 
@@ -253,7 +253,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -278,7 +278,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->delete_orgauthorization_trustor: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -301,7 +301,7 @@ nil (empty response body)
 
 <a name="delete_orgauthorization_trustor_user"></a>
 
-## - delete_orgauthorization_trustor_user(trustor_org_id, trustee_user_id)
+##  delete_orgauthorization_trustor_user(trustor_org_id, trustee_user_id)
 
 
 
@@ -317,7 +317,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -344,7 +344,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->delete_orgauthorization_trustor_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -368,7 +368,7 @@ nil (empty response body)
 
 <a name="get_orgauthorization_pairing"></a>
 
-## -[**TrustRequest**](TrustRequest.html) get_orgauthorization_pairing(pairing_id)
+## [**TrustRequest**](TrustRequest.html) get_orgauthorization_pairing(pairing_id)
 
 
 
@@ -385,7 +385,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -411,7 +411,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->get_orgauthorization_pairing: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orgauthorization_trustee"></a>
 
-## -[**Trustee**](Trustee.html) get_orgauthorization_trustee(trustee_org_id)
+## [**Trustee**](Trustee.html) get_orgauthorization_trustee(trustee_org_id)
 
 
 
@@ -450,7 +450,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -476,7 +476,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->get_orgauthorization_trustee: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orgauthorization_trustee_user"></a>
 
-## -[**TrustUser**](TrustUser.html) get_orgauthorization_trustee_user(trustee_org_id, trustee_user_id)
+## [**TrustUser**](TrustUser.html) get_orgauthorization_trustee_user(trustee_org_id, trustee_user_id)
 
 
 
@@ -515,7 +515,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -543,7 +543,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->get_orgauthorization_trustee_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -567,7 +567,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orgauthorization_trustee_user_roles"></a>
 
-## -[**UserAuthorization**](UserAuthorization.html) get_orgauthorization_trustee_user_roles(trustee_org_id, trustee_user_id)
+## [**UserAuthorization**](UserAuthorization.html) get_orgauthorization_trustee_user_roles(trustee_org_id, trustee_user_id)
 
 
 
@@ -583,7 +583,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -611,7 +611,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->get_orgauthorization_trustee_user_roles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -635,7 +635,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orgauthorization_trustee_users"></a>
 
-## -[**TrustUserEntityListing**](TrustUserEntityListing.html) get_orgauthorization_trustee_users(trustee_org_id, opts)
+## [**TrustUserEntityListing**](TrustUserEntityListing.html) get_orgauthorization_trustee_users(trustee_org_id, opts)
 
 
 
@@ -651,7 +651,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -681,7 +681,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->get_orgauthorization_trustee_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -706,7 +706,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orgauthorization_trustees"></a>
 
-## -[**TrustEntityListing**](TrustEntityListing.html) get_orgauthorization_trustees(opts)
+## [**TrustEntityListing**](TrustEntityListing.html) get_orgauthorization_trustees(opts)
 
 
 
@@ -722,7 +722,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -750,7 +750,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->get_orgauthorization_trustees: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -774,7 +774,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orgauthorization_trustor"></a>
 
-## -[**Trustor**](Trustor.html) get_orgauthorization_trustor(trustor_org_id)
+## [**Trustor**](Trustor.html) get_orgauthorization_trustor(trustor_org_id)
 
 
 
@@ -790,7 +790,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -816,7 +816,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->get_orgauthorization_trustor: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -839,7 +839,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orgauthorization_trustor_user"></a>
 
-## -[**TrustUser**](TrustUser.html) get_orgauthorization_trustor_user(trustor_org_id, trustee_user_id)
+## [**TrustUser**](TrustUser.html) get_orgauthorization_trustor_user(trustor_org_id, trustee_user_id)
 
 
 
@@ -855,7 +855,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -883,7 +883,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->get_orgauthorization_trustor_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -907,7 +907,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orgauthorization_trustor_users"></a>
 
-## -[**TrustUserEntityListing**](TrustUserEntityListing.html) get_orgauthorization_trustor_users(trustor_org_id, opts)
+## [**TrustUserEntityListing**](TrustUserEntityListing.html) get_orgauthorization_trustor_users(trustor_org_id, opts)
 
 
 
@@ -923,7 +923,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -953,7 +953,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->get_orgauthorization_trustor_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -978,7 +978,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orgauthorization_trustors"></a>
 
-## -[**TrustorEntityListing**](TrustorEntityListing.html) get_orgauthorization_trustors(opts)
+## [**TrustorEntityListing**](TrustorEntityListing.html) get_orgauthorization_trustors(opts)
 
 
 
@@ -994,7 +994,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1022,7 +1022,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->get_orgauthorization_trustors: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1046,7 +1046,7 @@ Name | Type | Description  | Notes
 
 <a name="post_orgauthorization_pairings"></a>
 
-## -[**TrustRequest**](TrustRequest.html) post_orgauthorization_pairings(body)
+## [**TrustRequest**](TrustRequest.html) post_orgauthorization_pairings(body)
 
 
 
@@ -1062,7 +1062,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1088,7 +1088,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->post_orgauthorization_pairings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1111,7 +1111,7 @@ Name | Type | Description  | Notes
 
 <a name="post_orgauthorization_trustee_users"></a>
 
-## -[**TrustUser**](TrustUser.html) post_orgauthorization_trustee_users(trustee_org_id, body)
+## [**TrustUser**](TrustUser.html) post_orgauthorization_trustee_users(trustee_org_id, body)
 
 
 
@@ -1129,7 +1129,7 @@ Requires ALL permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1157,7 +1157,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->post_orgauthorization_trustee_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1181,7 +1181,7 @@ Name | Type | Description  | Notes
 
 <a name="post_orgauthorization_trustees"></a>
 
-## -[**Trustee**](Trustee.html) post_orgauthorization_trustees(body)
+## [**Trustee**](Trustee.html) post_orgauthorization_trustees(body)
 
 
 
@@ -1198,7 +1198,7 @@ Requires ALL permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1224,7 +1224,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->post_orgauthorization_trustees: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1247,7 +1247,7 @@ Name | Type | Description  | Notes
 
 <a name="post_orgauthorization_trustees_audits"></a>
 
-## -[**AuditQueryResponse**](AuditQueryResponse.html) post_orgauthorization_trustees_audits(body, opts)
+## [**AuditQueryResponse**](AuditQueryResponse.html) post_orgauthorization_trustees_audits(body, opts)
 
 
 
@@ -1263,7 +1263,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1295,7 +1295,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->post_orgauthorization_trustees_audits: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1322,7 +1322,7 @@ Name | Type | Description  | Notes
 
 <a name="post_orgauthorization_trustor_audits"></a>
 
-## -[**AuditQueryResponse**](AuditQueryResponse.html) post_orgauthorization_trustor_audits(body, opts)
+## [**AuditQueryResponse**](AuditQueryResponse.html) post_orgauthorization_trustor_audits(body, opts)
 
 
 
@@ -1338,7 +1338,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1370,7 +1370,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->post_orgauthorization_trustor_audits: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1397,7 +1397,7 @@ Name | Type | Description  | Notes
 
 <a name="put_orgauthorization_trustee"></a>
 
-## -[**Trustee**](Trustee.html) put_orgauthorization_trustee(trustee_org_id, body)
+## [**Trustee**](Trustee.html) put_orgauthorization_trustee(trustee_org_id, body)
 
 
 
@@ -1413,7 +1413,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1441,7 +1441,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->put_orgauthorization_trustee: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1465,7 +1465,7 @@ Name | Type | Description  | Notes
 
 <a name="put_orgauthorization_trustee_user_roles"></a>
 
-## -[**UserAuthorization**](UserAuthorization.html) put_orgauthorization_trustee_user_roles(trustee_org_id, trustee_user_id, body)
+## [**UserAuthorization**](UserAuthorization.html) put_orgauthorization_trustee_user_roles(trustee_org_id, trustee_user_id, body)
 
 
 
@@ -1483,7 +1483,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1513,7 +1513,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->put_orgauthorization_trustee_user_roles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1538,7 +1538,7 @@ Name | Type | Description  | Notes
 
 <a name="put_orgauthorization_trustor_user"></a>
 
-## -[**TrustUser**](TrustUser.html) put_orgauthorization_trustor_user(trustor_org_id, trustee_user_id)
+## [**TrustUser**](TrustUser.html) put_orgauthorization_trustor_user(trustor_org_id, trustee_user_id)
 
 
 
@@ -1554,7 +1554,7 @@ Requires ALL permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1582,7 +1582,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationAuthorizationApi->put_orgauthorization_trustor_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

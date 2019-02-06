@@ -16,7 +16,7 @@ Method | Description
 
 <a name="get_gdpr_request"></a>
 
-## -[**GDPRRequest**](GDPRRequest.html) get_gdpr_request(request_id)
+## [**GDPRRequest**](GDPRRequest.html) get_gdpr_request(request_id)
 
 
 
@@ -32,7 +32,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -58,7 +58,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GeneralDataProtectionRegulationApi->get_gdpr_request: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 <a name="get_gdpr_requests"></a>
 
-## -[**GDPRRequestEntityListing**](GDPRRequestEntityListing.html) get_gdpr_requests(opts)
+## [**GDPRRequestEntityListing**](GDPRRequestEntityListing.html) get_gdpr_requests(opts)
 
 
 
@@ -97,7 +97,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -125,7 +125,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GeneralDataProtectionRegulationApi->get_gdpr_requests: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 <a name="get_gdpr_subjects"></a>
 
-## -[**GDPRSubjectEntityListing**](GDPRSubjectEntityListing.html) get_gdpr_subjects(search_type, search_value)
+## [**GDPRSubjectEntityListing**](GDPRSubjectEntityListing.html) get_gdpr_subjects(search_type, search_value)
 
 
 
@@ -165,7 +165,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -193,7 +193,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GeneralDataProtectionRegulationApi->get_gdpr_subjects: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 <a name="post_gdpr_requests"></a>
 
-## -[**GDPRRequest**](GDPRRequest.html) post_gdpr_requests(body, opts)
+## [**GDPRRequest**](GDPRRequest.html) post_gdpr_requests(body, opts)
 
 
 
@@ -233,7 +233,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -262,7 +262,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GeneralDataProtectionRegulationApi->post_gdpr_requests: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

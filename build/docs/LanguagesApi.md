@@ -22,7 +22,7 @@ Method | Description
 
 <a name="delete_language"></a>
 
-## - delete_language(language_id)
+##  delete_language(language_id)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -38,7 +38,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -63,7 +63,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LanguagesApi->delete_language: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -86,7 +86,7 @@ nil (empty response body)
 
 <a name="delete_routing_language"></a>
 
-## - delete_routing_language(language_id)
+##  delete_routing_language(language_id)
 
 
 
@@ -102,7 +102,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -127,7 +127,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LanguagesApi->delete_routing_language: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -150,7 +150,7 @@ nil (empty response body)
 
 <a name="get_language"></a>
 
-## -[**Language**](Language.html) get_language(language_id)
+## [**Language**](Language.html) get_language(language_id)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -166,7 +166,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -192,7 +192,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LanguagesApi->get_language: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 <a name="get_languages"></a>
 
-## -[**LanguageEntityListing**](LanguageEntityListing.html) get_languages(opts)
+## [**LanguageEntityListing**](LanguageEntityListing.html) get_languages(opts)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -231,7 +231,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -261,7 +261,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LanguagesApi->get_languages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 <a name="get_languages_translations"></a>
 
-## -[**AvailableTranslations**](AvailableTranslations.html) get_languages_translations
+## [**AvailableTranslations**](AvailableTranslations.html) get_languages_translations
 
 
 
@@ -302,7 +302,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -325,7 +325,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LanguagesApi->get_languages_translations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -345,7 +345,7 @@ This endpoint does not need any parameter.
 
 <a name="get_languages_translations_builtin"></a>
 
-## -Hash&lt;String, Object&gt;** get_languages_translations_builtin(language)
+## Hash&lt;String, Object&gt;** get_languages_translations_builtin(language)
 
 
 
@@ -360,7 +360,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -386,7 +386,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LanguagesApi->get_languages_translations_builtin: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 
 <a name="get_languages_translations_organization"></a>
 
-## -Hash&lt;String, Object&gt;** get_languages_translations_organization(language)
+## Hash&lt;String, Object&gt;** get_languages_translations_organization(language)
 
 
 
@@ -424,7 +424,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -450,7 +450,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LanguagesApi->get_languages_translations_organization: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -473,7 +473,7 @@ Name | Type | Description  | Notes
 
 <a name="get_languages_translations_user"></a>
 
-## -Hash&lt;String, Object&gt;** get_languages_translations_user(user_id)
+## Hash&lt;String, Object&gt;** get_languages_translations_user(user_id)
 
 
 
@@ -488,7 +488,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -514,7 +514,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LanguagesApi->get_languages_translations_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -537,7 +537,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_language"></a>
 
-## -[**Language**](Language.html) get_routing_language(language_id)
+## [**Language**](Language.html) get_routing_language(language_id)
 
 
 
@@ -552,7 +552,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -578,7 +578,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LanguagesApi->get_routing_language: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -601,7 +601,7 @@ Name | Type | Description  | Notes
 
 <a name="post_languages"></a>
 
-## -[**Language**](Language.html) post_languages(body)
+## [**Language**](Language.html) post_languages(body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -617,7 +617,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -643,7 +643,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LanguagesApi->post_languages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

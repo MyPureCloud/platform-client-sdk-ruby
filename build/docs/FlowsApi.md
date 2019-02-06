@@ -13,7 +13,7 @@ Method | Description
 
 <a name="post_analytics_flows_aggregates_query"></a>
 
-## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_flows_aggregates_query(body)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_flows_aggregates_query(body)
 
 
 
@@ -29,7 +29,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -55,7 +55,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling FlowsApi->post_analytics_flows_aggregates_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

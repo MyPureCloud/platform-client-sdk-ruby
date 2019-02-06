@@ -21,7 +21,7 @@ Method | Description
 
 <a name="delete_presencedefinition"></a>
 
-## - delete_presencedefinition(presence_id)
+##  delete_presencedefinition(presence_id)
 
 
 
@@ -37,7 +37,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -62,7 +62,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling PresenceApi->delete_presencedefinition: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -85,7 +85,7 @@ nil (empty response body)
 
 <a name="get_presencedefinition"></a>
 
-## -[**OrganizationPresence**](OrganizationPresence.html) get_presencedefinition(presence_id, opts)
+## [**OrganizationPresence**](OrganizationPresence.html) get_presencedefinition(presence_id, opts)
 
 
 
@@ -100,7 +100,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -129,7 +129,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling PresenceApi->get_presencedefinition: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 <a name="get_presencedefinitions"></a>
 
-## -[**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) get_presencedefinitions(opts)
+## [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) get_presencedefinitions(opts)
 
 
 
@@ -168,7 +168,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -198,7 +198,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling PresenceApi->get_presencedefinitions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 <a name="get_systempresences"></a>
 
-## -[**Array&lt;SystemPresence&gt;**](SystemPresence.html) get_systempresences
+## [**Array&lt;SystemPresence&gt;**](SystemPresence.html) get_systempresences
 
 
 
@@ -239,7 +239,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -262,7 +262,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling PresenceApi->get_systempresences: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -282,7 +282,7 @@ This endpoint does not need any parameter.
 
 <a name="get_user_presence"></a>
 
-## -[**UserPresence**](UserPresence.html) get_user_presence(user_id, source_id)
+## [**UserPresence**](UserPresence.html) get_user_presence(user_id, source_id)
 
 
 
@@ -297,7 +297,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -325,7 +325,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling PresenceApi->get_user_presence: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_presence"></a>
 
-## -[**UserPresence**](UserPresence.html) patch_user_presence(user_id, source_id, body)
+## [**UserPresence**](UserPresence.html) patch_user_presence(user_id, source_id, body)
 
 
 
@@ -364,7 +364,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -394,7 +394,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling PresenceApi->patch_user_presence: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -419,7 +419,7 @@ Name | Type | Description  | Notes
 
 <a name="post_presencedefinitions"></a>
 
-## -[**OrganizationPresence**](OrganizationPresence.html) post_presencedefinitions(body)
+## [**OrganizationPresence**](OrganizationPresence.html) post_presencedefinitions(body)
 
 
 
@@ -435,7 +435,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -461,7 +461,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling PresenceApi->post_presencedefinitions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 <a name="put_presencedefinition"></a>
 
-## -[**OrganizationPresence**](OrganizationPresence.html) put_presencedefinition(presence_id, body)
+## [**OrganizationPresence**](OrganizationPresence.html) put_presencedefinition(presence_id, body)
 
 
 
@@ -500,7 +500,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -528,7 +528,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling PresenceApi->put_presencedefinition: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 <a name="put_users_presences_bulk"></a>
 
-## -[**Array&lt;UserPresence&gt;**](UserPresence.html) put_users_presences_bulk(body)
+## [**Array&lt;UserPresence&gt;**](UserPresence.html) put_users_presences_bulk(body)
 
 
 
@@ -568,7 +568,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -594,7 +594,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling PresenceApi->put_users_presences_bulk: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

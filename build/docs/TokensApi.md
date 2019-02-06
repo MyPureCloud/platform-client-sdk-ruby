@@ -14,7 +14,7 @@ Method | Description
 
 <a name="delete_tokens_me"></a>
 
-## - delete_tokens_me
+##  delete_tokens_me
 
 
 
@@ -29,7 +29,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -51,7 +51,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TokensApi->delete_tokens_me: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -71,7 +71,7 @@ nil (empty response body)
 
 <a name="get_tokens_me"></a>
 
-## -[**TokenInfo**](TokenInfo.html) get_tokens_me
+## [**TokenInfo**](TokenInfo.html) get_tokens_me
 
 
 
@@ -86,7 +86,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -109,7 +109,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TokensApi->get_tokens_me: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.

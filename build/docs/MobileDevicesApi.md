@@ -17,7 +17,7 @@ Method | Description
 
 <a name="delete_mobiledevice"></a>
 
-## - delete_mobiledevice(device_id)
+##  delete_mobiledevice(device_id)
 
 
 
@@ -32,7 +32,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -57,7 +57,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MobileDevicesApi->delete_mobiledevice: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -80,7 +80,7 @@ nil (empty response body)
 
 <a name="get_mobiledevice"></a>
 
-## -[**UserDevice**](UserDevice.html) get_mobiledevice(device_id)
+## [**UserDevice**](UserDevice.html) get_mobiledevice(device_id)
 
 
 
@@ -95,7 +95,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -121,7 +121,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MobileDevicesApi->get_mobiledevice: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 <a name="get_mobiledevices"></a>
 
-## -[**DirectoryUserDevicesListing**](DirectoryUserDevicesListing.html) get_mobiledevices(opts)
+## [**DirectoryUserDevicesListing**](DirectoryUserDevicesListing.html) get_mobiledevices(opts)
 
 
 
@@ -159,7 +159,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -188,7 +188,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MobileDevicesApi->get_mobiledevices: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 <a name="post_mobiledevices"></a>
 
-## -[**UserDevice**](UserDevice.html) post_mobiledevices(body)
+## [**UserDevice**](UserDevice.html) post_mobiledevices(body)
 
 
 
@@ -228,7 +228,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -254,7 +254,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MobileDevicesApi->post_mobiledevices: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 
 <a name="put_mobiledevice"></a>
 
-## -[**UserDevice**](UserDevice.html) put_mobiledevice(device_id, opts)
+## [**UserDevice**](UserDevice.html) put_mobiledevice(device_id, opts)
 
 
 
@@ -292,7 +292,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -321,7 +321,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling MobileDevicesApi->put_mobiledevice: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

@@ -16,7 +16,7 @@ Method | Description
 
 <a name="get_search"></a>
 
-## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) get_search(q64, opts)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) get_search(q64, opts)
 
 
 
@@ -31,7 +31,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -61,7 +61,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SuggestApi->get_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 <a name="get_search_suggest"></a>
 
-## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) get_search_suggest(q64, opts)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) get_search_suggest(q64, opts)
 
 
 
@@ -101,7 +101,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -131,7 +131,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SuggestApi->get_search_suggest: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 <a name="post_search"></a>
 
-## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) post_search(body, opts)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) post_search(body, opts)
 
 
 
@@ -171,7 +171,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -200,7 +200,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SuggestApi->post_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 <a name="post_search_suggest"></a>
 
-## -[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) post_search_suggest(body, opts)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) post_search_suggest(body, opts)
 
 
 
@@ -239,7 +239,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -268,7 +268,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling SuggestApi->post_search_suggest: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

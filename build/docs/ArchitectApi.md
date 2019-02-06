@@ -93,7 +93,7 @@ Method | Description
 
 <a name="delete_architect_emergencygroup"></a>
 
-## - delete_architect_emergencygroup(emergency_group_id)
+##  delete_architect_emergencygroup(emergency_group_id)
 
 
 
@@ -109,7 +109,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -134,7 +134,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_architect_emergencygroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -157,7 +157,7 @@ nil (empty response body)
 
 <a name="delete_architect_ivr"></a>
 
-## - delete_architect_ivr(ivr_id)
+##  delete_architect_ivr(ivr_id)
 
 
 
@@ -173,7 +173,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -198,7 +198,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_architect_ivr: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -221,7 +221,7 @@ nil (empty response body)
 
 <a name="delete_architect_prompt"></a>
 
-## - delete_architect_prompt(prompt_id, opts)
+##  delete_architect_prompt(prompt_id, opts)
 
 
 
@@ -237,7 +237,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -265,7 +265,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_architect_prompt: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -289,7 +289,7 @@ nil (empty response body)
 
 <a name="delete_architect_prompt_resource"></a>
 
-## - delete_architect_prompt_resource(prompt_id, language_code)
+##  delete_architect_prompt_resource(prompt_id, language_code)
 
 
 
@@ -305,7 +305,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -332,7 +332,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_architect_prompt_resource: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -356,7 +356,7 @@ nil (empty response body)
 
 <a name="delete_architect_prompts"></a>
 
-## -[**Operation**](Operation.html) delete_architect_prompts(id)
+## [**Operation**](Operation.html) delete_architect_prompts(id)
 
 
 
@@ -372,7 +372,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -398,7 +398,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_architect_prompts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_architect_schedule"></a>
 
-## - delete_architect_schedule(schedule_id)
+##  delete_architect_schedule(schedule_id)
 
 
 
@@ -437,7 +437,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -462,7 +462,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_architect_schedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -485,7 +485,7 @@ nil (empty response body)
 
 <a name="delete_architect_schedulegroup"></a>
 
-## - delete_architect_schedulegroup(schedule_group_id)
+##  delete_architect_schedulegroup(schedule_group_id)
 
 
 
@@ -501,7 +501,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -526,7 +526,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_architect_schedulegroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -549,7 +549,7 @@ nil (empty response body)
 
 <a name="delete_architect_systemprompt_resource"></a>
 
-## - delete_architect_systemprompt_resource(prompt_id, language_code)
+##  delete_architect_systemprompt_resource(prompt_id, language_code)
 
 
 
@@ -565,7 +565,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -592,7 +592,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_architect_systemprompt_resource: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -616,7 +616,7 @@ nil (empty response body)
 
 <a name="delete_flow"></a>
 
-## - delete_flow(flow_id)
+##  delete_flow(flow_id)
 
 
 
@@ -632,7 +632,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -657,7 +657,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_flow: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -680,7 +680,7 @@ nil (empty response body)
 
 <a name="delete_flows"></a>
 
-## -[**Operation**](Operation.html) delete_flows(id)
+## [**Operation**](Operation.html) delete_flows(id)
 
 
 
@@ -696,7 +696,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -722,7 +722,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_flows: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -745,7 +745,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_flows_datatable"></a>
 
-## - delete_flows_datatable(datatable_id, opts)
+##  delete_flows_datatable(datatable_id, opts)
 
 
 
@@ -761,7 +761,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -789,7 +789,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_flows_datatable: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -813,7 +813,7 @@ nil (empty response body)
 
 <a name="delete_flows_datatable_row"></a>
 
-## - delete_flows_datatable_row(datatable_id, row_id)
+##  delete_flows_datatable_row(datatable_id, row_id)
 
 
 
@@ -829,7 +829,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -856,7 +856,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->delete_flows_datatable_row: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -880,7 +880,7 @@ nil (empty response body)
 
 <a name="get_architect_dependencytracking"></a>
 
-## -[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) get_architect_dependencytracking(name, opts)
+## [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) get_architect_dependencytracking(name, opts)
 
 
 
@@ -896,7 +896,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -931,7 +931,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_dependencytracking: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -961,7 +961,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_dependencytracking_build"></a>
 
-## -[**DependencyStatus**](DependencyStatus.html) get_architect_dependencytracking_build
+## [**DependencyStatus**](DependencyStatus.html) get_architect_dependencytracking_build
 
 
 
@@ -977,7 +977,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1000,7 +1000,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_dependencytracking_build: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1020,7 +1020,7 @@ This endpoint does not need any parameter.
 
 <a name="get_architect_dependencytracking_consumedresources"></a>
 
-## -[**ConsumedResourcesEntityListing**](ConsumedResourcesEntityListing.html) get_architect_dependencytracking_consumedresources(id, version, object_type, opts)
+## [**ConsumedResourcesEntityListing**](ConsumedResourcesEntityListing.html) get_architect_dependencytracking_consumedresources(id, version, object_type, opts)
 
 
 
@@ -1036,7 +1036,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1069,7 +1069,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_dependencytracking_consumedresources: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1095,7 +1095,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_dependencytracking_consumingresources"></a>
 
-## -[**ConsumingResourcesEntityListing**](ConsumingResourcesEntityListing.html) get_architect_dependencytracking_consumingresources(id, object_type, opts)
+## [**ConsumingResourcesEntityListing**](ConsumingResourcesEntityListing.html) get_architect_dependencytracking_consumingresources(id, object_type, opts)
 
 
 
@@ -1111,7 +1111,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1142,7 +1142,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_dependencytracking_consumingresources: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1167,7 +1167,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_dependencytracking_deletedresourceconsumers"></a>
 
-## -[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) get_architect_dependencytracking_deletedresourceconsumers(opts)
+## [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) get_architect_dependencytracking_deletedresourceconsumers(opts)
 
 
 
@@ -1183,7 +1183,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1216,7 +1216,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_dependencytracking_deletedresourceconsumers: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1245,7 +1245,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_dependencytracking_object"></a>
 
-## -[**DependencyObject**](DependencyObject.html) get_architect_dependencytracking_object(id, opts)
+## [**DependencyObject**](DependencyObject.html) get_architect_dependencytracking_object(id, opts)
 
 
 
@@ -1261,7 +1261,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1295,7 +1295,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_dependencytracking_object: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1324,7 +1324,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_dependencytracking_type"></a>
 
-## -[**DependencyType**](DependencyType.html) get_architect_dependencytracking_type(type_id)
+## [**DependencyType**](DependencyType.html) get_architect_dependencytracking_type(type_id)
 
 
 
@@ -1340,7 +1340,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1366,7 +1366,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_dependencytracking_type: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1389,7 +1389,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_dependencytracking_types"></a>
 
-## -[**DependencyTypeEntityListing**](DependencyTypeEntityListing.html) get_architect_dependencytracking_types(opts)
+## [**DependencyTypeEntityListing**](DependencyTypeEntityListing.html) get_architect_dependencytracking_types(opts)
 
 
 
@@ -1405,7 +1405,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1433,7 +1433,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_dependencytracking_types: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1457,7 +1457,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_dependencytracking_updatedresourceconsumers"></a>
 
-## -[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) get_architect_dependencytracking_updatedresourceconsumers(opts)
+## [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) get_architect_dependencytracking_updatedresourceconsumers(opts)
 
 
 
@@ -1473,7 +1473,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1505,7 +1505,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_dependencytracking_updatedresourceconsumers: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1533,7 +1533,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_emergencygroup"></a>
 
-## -[**EmergencyGroup**](EmergencyGroup.html) get_architect_emergencygroup(emergency_group_id)
+## [**EmergencyGroup**](EmergencyGroup.html) get_architect_emergencygroup(emergency_group_id)
 
 
 
@@ -1549,7 +1549,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1575,7 +1575,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_emergencygroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1598,7 +1598,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_emergencygroups"></a>
 
-## -[**EmergencyGroupListing**](EmergencyGroupListing.html) get_architect_emergencygroups(opts)
+## [**EmergencyGroupListing**](EmergencyGroupListing.html) get_architect_emergencygroups(opts)
 
 
 
@@ -1614,7 +1614,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1645,7 +1645,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_emergencygroups: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1672,7 +1672,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_ivr"></a>
 
-## -[**IVR**](IVR.html) get_architect_ivr(ivr_id)
+## [**IVR**](IVR.html) get_architect_ivr(ivr_id)
 
 
 
@@ -1688,7 +1688,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1714,7 +1714,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_ivr: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1737,7 +1737,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_ivrs"></a>
 
-## -[**IVREntityListing**](IVREntityListing.html) get_architect_ivrs(opts)
+## [**IVREntityListing**](IVREntityListing.html) get_architect_ivrs(opts)
 
 
 
@@ -1753,7 +1753,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1784,7 +1784,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_ivrs: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1811,7 +1811,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_prompt"></a>
 
-## -[**Prompt**](Prompt.html) get_architect_prompt(prompt_id)
+## [**Prompt**](Prompt.html) get_architect_prompt(prompt_id)
 
 
 
@@ -1827,7 +1827,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1853,7 +1853,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_prompt: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1876,7 +1876,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_prompt_history_history_id"></a>
 
-## -[**HistoryListing**](HistoryListing.html) get_architect_prompt_history_history_id(prompt_id, history_id, opts)
+## [**HistoryListing**](HistoryListing.html) get_architect_prompt_history_history_id(prompt_id, history_id, opts)
 
 
 
@@ -1892,7 +1892,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1927,7 +1927,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_prompt_history_history_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1956,7 +1956,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_prompt_resource"></a>
 
-## -[**PromptAsset**](PromptAsset.html) get_architect_prompt_resource(prompt_id, language_code)
+## [**PromptAsset**](PromptAsset.html) get_architect_prompt_resource(prompt_id, language_code)
 
 
 
@@ -1972,7 +1972,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2000,7 +2000,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_prompt_resource: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2024,7 +2024,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_prompt_resources"></a>
 
-## -[**PromptAssetEntityListing**](PromptAssetEntityListing.html) get_architect_prompt_resources(prompt_id, opts)
+## [**PromptAssetEntityListing**](PromptAssetEntityListing.html) get_architect_prompt_resources(prompt_id, opts)
 
 
 
@@ -2040,7 +2040,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2070,7 +2070,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_prompt_resources: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2095,7 +2095,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_prompts"></a>
 
-## -[**PromptEntityListing**](PromptEntityListing.html) get_architect_prompts(opts)
+## [**PromptEntityListing**](PromptEntityListing.html) get_architect_prompts(opts)
 
 
 
@@ -2111,7 +2111,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2144,7 +2144,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_prompts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2173,7 +2173,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_schedule"></a>
 
-## -[**Schedule**](Schedule.html) get_architect_schedule(schedule_id)
+## [**Schedule**](Schedule.html) get_architect_schedule(schedule_id)
 
 
 
@@ -2189,7 +2189,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2215,7 +2215,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_schedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2238,7 +2238,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_schedulegroup"></a>
 
-## -[**ScheduleGroup**](ScheduleGroup.html) get_architect_schedulegroup(schedule_group_id)
+## [**ScheduleGroup**](ScheduleGroup.html) get_architect_schedulegroup(schedule_group_id)
 
 
 
@@ -2254,7 +2254,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2280,7 +2280,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_schedulegroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2303,7 +2303,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_schedulegroups"></a>
 
-## -[**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html) get_architect_schedulegroups(opts)
+## [**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html) get_architect_schedulegroups(opts)
 
 
 
@@ -2319,7 +2319,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2350,7 +2350,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_schedulegroups: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2377,7 +2377,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_schedules"></a>
 
-## -[**ScheduleEntityListing**](ScheduleEntityListing.html) get_architect_schedules(opts)
+## [**ScheduleEntityListing**](ScheduleEntityListing.html) get_architect_schedules(opts)
 
 
 
@@ -2393,7 +2393,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2424,7 +2424,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_schedules: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2451,7 +2451,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_systemprompt"></a>
 
-## -[**SystemPrompt**](SystemPrompt.html) get_architect_systemprompt(prompt_id)
+## [**SystemPrompt**](SystemPrompt.html) get_architect_systemprompt(prompt_id)
 
 
 
@@ -2467,7 +2467,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2493,7 +2493,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_systemprompt: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2516,7 +2516,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_systemprompt_history_history_id"></a>
 
-## -[**HistoryListing**](HistoryListing.html) get_architect_systemprompt_history_history_id(prompt_id, history_id, opts)
+## [**HistoryListing**](HistoryListing.html) get_architect_systemprompt_history_history_id(prompt_id, history_id, opts)
 
 
 
@@ -2532,7 +2532,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2567,7 +2567,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_systemprompt_history_history_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2596,7 +2596,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_systemprompt_resource"></a>
 
-## -[**SystemPromptAsset**](SystemPromptAsset.html) get_architect_systemprompt_resource(prompt_id, language_code)
+## [**SystemPromptAsset**](SystemPromptAsset.html) get_architect_systemprompt_resource(prompt_id, language_code)
 
 
 
@@ -2612,7 +2612,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2640,7 +2640,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_systemprompt_resource: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2664,7 +2664,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_systemprompt_resources"></a>
 
-## -[**SystemPromptAssetEntityListing**](SystemPromptAssetEntityListing.html) get_architect_systemprompt_resources(prompt_id, opts)
+## [**SystemPromptAssetEntityListing**](SystemPromptAssetEntityListing.html) get_architect_systemprompt_resources(prompt_id, opts)
 
 
 
@@ -2680,7 +2680,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2712,7 +2712,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_systemprompt_resources: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2739,7 +2739,7 @@ Name | Type | Description  | Notes
 
 <a name="get_architect_systemprompts"></a>
 
-## -[**SystemPromptEntityListing**](SystemPromptEntityListing.html) get_architect_systemprompts(opts)
+## [**SystemPromptEntityListing**](SystemPromptEntityListing.html) get_architect_systemprompts(opts)
 
 
 
@@ -2755,7 +2755,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2788,7 +2788,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_architect_systemprompts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2817,7 +2817,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flow"></a>
 
-## -[**Flow**](Flow.html) get_flow(flow_id, opts)
+## [**Flow**](Flow.html) get_flow(flow_id, opts)
 
 
 
@@ -2833,7 +2833,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2862,7 +2862,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flow: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2886,7 +2886,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flow_history_history_id"></a>
 
-## -[**HistoryListing**](HistoryListing.html) get_flow_history_history_id(flow_id, history_id, opts)
+## [**HistoryListing**](HistoryListing.html) get_flow_history_history_id(flow_id, history_id, opts)
 
 
 
@@ -2902,7 +2902,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2937,7 +2937,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flow_history_history_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2966,7 +2966,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flow_latestconfiguration"></a>
 
-## -Object** get_flow_latestconfiguration(flow_id, opts)
+## Object** get_flow_latestconfiguration(flow_id, opts)
 
 
 
@@ -2982,7 +2982,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3011,7 +3011,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flow_latestconfiguration: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3035,7 +3035,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flow_version"></a>
 
-## -[**FlowVersion**](FlowVersion.html) get_flow_version(flow_id, version_id, opts)
+## [**FlowVersion**](FlowVersion.html) get_flow_version(flow_id, version_id, opts)
 
 
 
@@ -3051,7 +3051,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3082,7 +3082,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flow_version: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3107,7 +3107,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flow_version_configuration"></a>
 
-## -Object** get_flow_version_configuration(flow_id, version_id, opts)
+## Object** get_flow_version_configuration(flow_id, version_id, opts)
 
 
 
@@ -3123,7 +3123,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3154,7 +3154,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flow_version_configuration: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3179,7 +3179,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flow_versions"></a>
 
-## -[**FlowVersionEntityListing**](FlowVersionEntityListing.html) get_flow_versions(flow_id, opts)
+## [**FlowVersionEntityListing**](FlowVersionEntityListing.html) get_flow_versions(flow_id, opts)
 
 
 
@@ -3195,7 +3195,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3226,7 +3226,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flow_versions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3252,7 +3252,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flows"></a>
 
-## -[**FlowEntityListing**](FlowEntityListing.html) get_flows(opts)
+## [**FlowEntityListing**](FlowEntityListing.html) get_flows(opts)
 
 
 
@@ -3268,7 +3268,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3312,7 +3312,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flows: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3352,7 +3352,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flows_datatable"></a>
 
-## -[**DataTable**](DataTable.html) get_flows_datatable(datatable_id, opts)
+## [**DataTable**](DataTable.html) get_flows_datatable(datatable_id, opts)
 
 
 
@@ -3368,7 +3368,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3397,7 +3397,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flows_datatable: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3421,7 +3421,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flows_datatable_row"></a>
 
-## -Hash&lt;String, Object&gt;** get_flows_datatable_row(datatable_id, row_id, opts)
+## Hash&lt;String, Object&gt;** get_flows_datatable_row(datatable_id, row_id, opts)
 
 
 
@@ -3437,7 +3437,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3468,7 +3468,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flows_datatable_row: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3493,7 +3493,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flows_datatable_rows"></a>
 
-## -[**DataTableRowEntityListing**](DataTableRowEntityListing.html) get_flows_datatable_rows(datatable_id, opts)
+## [**DataTableRowEntityListing**](DataTableRowEntityListing.html) get_flows_datatable_rows(datatable_id, opts)
 
 
 
@@ -3509,7 +3509,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3540,7 +3540,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flows_datatable_rows: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3566,7 +3566,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flows_datatables"></a>
 
-## -[**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html) get_flows_datatables(opts)
+## [**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html) get_flows_datatables(opts)
 
 
 
@@ -3582,7 +3582,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3613,7 +3613,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flows_datatables: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3640,7 +3640,7 @@ Name | Type | Description  | Notes
 
 <a name="get_flows_divisionviews"></a>
 
-## -[**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html) get_flows_divisionviews(opts)
+## [**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html) get_flows_divisionviews(opts)
 
 
 
@@ -3656,7 +3656,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3693,7 +3693,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->get_flows_divisionviews: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3726,7 +3726,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_dependencytracking_build"></a>
 
-## - post_architect_dependencytracking_build
+##  post_architect_dependencytracking_build
 
 
 
@@ -3742,7 +3742,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3764,7 +3764,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_dependencytracking_build: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -3784,7 +3784,7 @@ nil (empty response body)
 
 <a name="post_architect_emergencygroups"></a>
 
-## -[**EmergencyGroup**](EmergencyGroup.html) post_architect_emergencygroups(body)
+## [**EmergencyGroup**](EmergencyGroup.html) post_architect_emergencygroups(body)
 
 
 
@@ -3800,7 +3800,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3826,7 +3826,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_emergencygroups: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3849,7 +3849,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_ivrs"></a>
 
-## -[**IVR**](IVR.html) post_architect_ivrs(body)
+## [**IVR**](IVR.html) post_architect_ivrs(body)
 
 
 
@@ -3865,7 +3865,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3891,7 +3891,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_ivrs: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3914,7 +3914,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_prompt_history"></a>
 
-## -[**Operation**](Operation.html) post_architect_prompt_history(prompt_id)
+## [**Operation**](Operation.html) post_architect_prompt_history(prompt_id)
 
 
 
@@ -3930,7 +3930,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3956,7 +3956,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_prompt_history: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3979,7 +3979,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_prompt_resources"></a>
 
-## -[**PromptAsset**](PromptAsset.html) post_architect_prompt_resources(prompt_id, body)
+## [**PromptAsset**](PromptAsset.html) post_architect_prompt_resources(prompt_id, body)
 
 
 
@@ -3995,7 +3995,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4023,7 +4023,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_prompt_resources: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4047,7 +4047,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_prompts"></a>
 
-## -[**Prompt**](Prompt.html) post_architect_prompts(body)
+## [**Prompt**](Prompt.html) post_architect_prompts(body)
 
 
 
@@ -4063,7 +4063,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4089,7 +4089,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_prompts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4112,7 +4112,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_schedulegroups"></a>
 
-## -[**ScheduleGroup**](ScheduleGroup.html) post_architect_schedulegroups(body)
+## [**ScheduleGroup**](ScheduleGroup.html) post_architect_schedulegroups(body)
 
 
 
@@ -4128,7 +4128,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4154,7 +4154,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_schedulegroups: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4177,7 +4177,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_schedules"></a>
 
-## -[**Schedule**](Schedule.html) post_architect_schedules(body)
+## [**Schedule**](Schedule.html) post_architect_schedules(body)
 
 
 
@@ -4193,7 +4193,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4219,7 +4219,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_schedules: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4242,7 +4242,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_systemprompt_history"></a>
 
-## -[**Operation**](Operation.html) post_architect_systemprompt_history(prompt_id)
+## [**Operation**](Operation.html) post_architect_systemprompt_history(prompt_id)
 
 
 
@@ -4258,7 +4258,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4284,7 +4284,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_systemprompt_history: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4307,7 +4307,7 @@ Name | Type | Description  | Notes
 
 <a name="post_architect_systemprompt_resources"></a>
 
-## -[**SystemPromptAsset**](SystemPromptAsset.html) post_architect_systemprompt_resources(prompt_id, body)
+## [**SystemPromptAsset**](SystemPromptAsset.html) post_architect_systemprompt_resources(prompt_id, body)
 
 
 
@@ -4323,7 +4323,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4351,7 +4351,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_architect_systemprompt_resources: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4375,7 +4375,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flow_versions"></a>
 
-## -[**FlowVersion**](FlowVersion.html) post_flow_versions(flow_id, body)
+## [**FlowVersion**](FlowVersion.html) post_flow_versions(flow_id, body)
 
 
 
@@ -4391,7 +4391,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4419,7 +4419,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flow_versions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4443,7 +4443,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flows"></a>
 
-## -[**Flow**](Flow.html) post_flows(body)
+## [**Flow**](Flow.html) post_flows(body)
 
 
 
@@ -4459,7 +4459,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4485,7 +4485,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flows: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4508,7 +4508,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flows_actions_checkin"></a>
 
-## -[**Flow**](Flow.html) post_flows_actions_checkin(flow)
+## [**Flow**](Flow.html) post_flows_actions_checkin(flow)
 
 
 
@@ -4525,7 +4525,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4551,7 +4551,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flows_actions_checkin: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4574,7 +4574,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flows_actions_checkout"></a>
 
-## -[**Flow**](Flow.html) post_flows_actions_checkout(flow)
+## [**Flow**](Flow.html) post_flows_actions_checkout(flow)
 
 
 
@@ -4590,7 +4590,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4616,7 +4616,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flows_actions_checkout: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4639,7 +4639,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flows_actions_deactivate"></a>
 
-## -[**Flow**](Flow.html) post_flows_actions_deactivate(flow)
+## [**Flow**](Flow.html) post_flows_actions_deactivate(flow)
 
 
 
@@ -4655,7 +4655,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4681,7 +4681,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flows_actions_deactivate: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4704,7 +4704,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flows_actions_publish"></a>
 
-## -[**Operation**](Operation.html) post_flows_actions_publish(flow, opts)
+## [**Operation**](Operation.html) post_flows_actions_publish(flow, opts)
 
 
 
@@ -4721,7 +4721,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4750,7 +4750,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flows_actions_publish: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4774,7 +4774,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flows_actions_revert"></a>
 
-## -[**Flow**](Flow.html) post_flows_actions_revert(flow)
+## [**Flow**](Flow.html) post_flows_actions_revert(flow)
 
 
 
@@ -4790,7 +4790,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4816,7 +4816,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flows_actions_revert: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4839,7 +4839,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flows_actions_unlock"></a>
 
-## -[**Flow**](Flow.html) post_flows_actions_unlock(flow)
+## [**Flow**](Flow.html) post_flows_actions_unlock(flow)
 
 
 
@@ -4855,7 +4855,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4881,7 +4881,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flows_actions_unlock: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4904,7 +4904,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flows_datatable_rows"></a>
 
-## -Hash&lt;String, Object&gt;** post_flows_datatable_rows(datatable_id, data_table_row)
+## Hash&lt;String, Object&gt;** post_flows_datatable_rows(datatable_id, data_table_row)
 
 
 
@@ -4920,7 +4920,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4948,7 +4948,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flows_datatable_rows: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4972,7 +4972,7 @@ Name | Type | Description  | Notes
 
 <a name="post_flows_datatables"></a>
 
-## -[**DataTable**](DataTable.html) post_flows_datatables(body)
+## [**DataTable**](DataTable.html) post_flows_datatables(body)
 
 
 
@@ -4988,7 +4988,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5014,7 +5014,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->post_flows_datatables: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5037,7 +5037,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_emergencygroup"></a>
 
-## -[**EmergencyGroup**](EmergencyGroup.html) put_architect_emergencygroup(emergency_group_id, body)
+## [**EmergencyGroup**](EmergencyGroup.html) put_architect_emergencygroup(emergency_group_id, body)
 
 
 
@@ -5053,7 +5053,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5081,7 +5081,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_emergencygroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5105,7 +5105,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_ivr"></a>
 
-## -[**IVR**](IVR.html) put_architect_ivr(ivr_id, body)
+## [**IVR**](IVR.html) put_architect_ivr(ivr_id, body)
 
 
 
@@ -5121,7 +5121,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5149,7 +5149,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_ivr: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5173,7 +5173,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_prompt"></a>
 
-## -[**Prompt**](Prompt.html) put_architect_prompt(prompt_id, body)
+## [**Prompt**](Prompt.html) put_architect_prompt(prompt_id, body)
 
 
 
@@ -5189,7 +5189,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5217,7 +5217,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_prompt: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5241,7 +5241,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_prompt_resource"></a>
 
-## -[**PromptAsset**](PromptAsset.html) put_architect_prompt_resource(prompt_id, language_code, body)
+## [**PromptAsset**](PromptAsset.html) put_architect_prompt_resource(prompt_id, language_code, body)
 
 
 
@@ -5257,7 +5257,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5287,7 +5287,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_prompt_resource: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5312,7 +5312,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_schedule"></a>
 
-## -[**Schedule**](Schedule.html) put_architect_schedule(schedule_id, body)
+## [**Schedule**](Schedule.html) put_architect_schedule(schedule_id, body)
 
 
 
@@ -5328,7 +5328,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5356,7 +5356,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_schedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5380,7 +5380,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_schedulegroup"></a>
 
-## -[**ScheduleGroup**](ScheduleGroup.html) put_architect_schedulegroup(schedule_group_id, body)
+## [**ScheduleGroup**](ScheduleGroup.html) put_architect_schedulegroup(schedule_group_id, body)
 
 
 
@@ -5396,7 +5396,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5424,7 +5424,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_schedulegroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5448,7 +5448,7 @@ Name | Type | Description  | Notes
 
 <a name="put_architect_systemprompt_resource"></a>
 
-## -[**SystemPromptAsset**](SystemPromptAsset.html) put_architect_systemprompt_resource(prompt_id, language_code, body)
+## [**SystemPromptAsset**](SystemPromptAsset.html) put_architect_systemprompt_resource(prompt_id, language_code, body)
 
 
 
@@ -5464,7 +5464,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5494,7 +5494,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_architect_systemprompt_resource: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5519,7 +5519,7 @@ Name | Type | Description  | Notes
 
 <a name="put_flow"></a>
 
-## -[**Flow**](Flow.html) put_flow(flow_id, body)
+## [**Flow**](Flow.html) put_flow(flow_id, body)
 
 
 
@@ -5535,7 +5535,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5563,7 +5563,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_flow: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5587,7 +5587,7 @@ Name | Type | Description  | Notes
 
 <a name="put_flows_datatable"></a>
 
-## -[**DataTable**](DataTable.html) put_flows_datatable(datatable_id, opts)
+## [**DataTable**](DataTable.html) put_flows_datatable(datatable_id, opts)
 
 
 
@@ -5603,7 +5603,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5633,7 +5633,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_flows_datatable: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5658,7 +5658,7 @@ Name | Type | Description  | Notes
 
 <a name="put_flows_datatable_row"></a>
 
-## -Hash&lt;String, Object&gt;** put_flows_datatable_row(datatable_id, row_id, opts)
+## Hash&lt;String, Object&gt;** put_flows_datatable_row(datatable_id, row_id, opts)
 
 
 
@@ -5674,7 +5674,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5705,7 +5705,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ArchitectApi->put_flows_datatable_row: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

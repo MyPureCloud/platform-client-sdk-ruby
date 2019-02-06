@@ -75,7 +75,7 @@ Method | Description
 
 <a name="delete_routing_email_domain"></a>
 
-## - delete_routing_email_domain(domain_id)
+##  delete_routing_email_domain(domain_id)
 
 
 
@@ -91,7 +91,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -116,7 +116,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_email_domain: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -139,7 +139,7 @@ nil (empty response body)
 
 <a name="delete_routing_email_domain_route"></a>
 
-## - delete_routing_email_domain_route(domain_name, route_id)
+##  delete_routing_email_domain_route(domain_name, route_id)
 
 
 
@@ -155,7 +155,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -182,7 +182,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_email_domain_route: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -206,7 +206,7 @@ nil (empty response body)
 
 <a name="delete_routing_queue"></a>
 
-## - delete_routing_queue(queue_id, opts)
+##  delete_routing_queue(queue_id, opts)
 
 
 
@@ -222,7 +222,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -250,7 +250,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_queue: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -274,7 +274,7 @@ nil (empty response body)
 
 <a name="delete_routing_queue_user"></a>
 
-## - delete_routing_queue_user(queue_id, member_id)
+##  delete_routing_queue_user(queue_id, member_id)
 
 
 
@@ -290,7 +290,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -317,7 +317,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_queue_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -341,7 +341,7 @@ nil (empty response body)
 
 <a name="delete_routing_queue_wrapupcode"></a>
 
-## - delete_routing_queue_wrapupcode(queue_id, code_id)
+##  delete_routing_queue_wrapupcode(queue_id, code_id)
 
 
 
@@ -357,7 +357,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -384,7 +384,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_queue_wrapupcode: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -408,7 +408,7 @@ nil (empty response body)
 
 <a name="delete_routing_skill"></a>
 
-## - delete_routing_skill(skill_id)
+##  delete_routing_skill(skill_id)
 
 
 
@@ -424,7 +424,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -449,7 +449,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_skill: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -472,7 +472,7 @@ nil (empty response body)
 
 <a name="delete_routing_sms_phonenumber"></a>
 
-## - delete_routing_sms_phonenumber(address_id)
+##  delete_routing_sms_phonenumber(address_id)
 
 
 
@@ -488,7 +488,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -513,7 +513,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_sms_phonenumber: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -536,7 +536,7 @@ nil (empty response body)
 
 <a name="delete_routing_utilization"></a>
 
-## - delete_routing_utilization
+##  delete_routing_utilization
 
 
 
@@ -552,7 +552,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -574,7 +574,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_utilization: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -594,7 +594,7 @@ nil (empty response body)
 
 <a name="delete_routing_wrapupcode"></a>
 
-## - delete_routing_wrapupcode(code_id)
+##  delete_routing_wrapupcode(code_id)
 
 
 
@@ -610,7 +610,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -635,7 +635,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_wrapupcode: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -658,7 +658,7 @@ nil (empty response body)
 
 <a name="delete_user_routinglanguage"></a>
 
-## - delete_user_routinglanguage(user_id, language_id)
+##  delete_user_routinglanguage(user_id, language_id)
 
 
 
@@ -675,7 +675,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -702,7 +702,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_user_routinglanguage: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -726,7 +726,7 @@ nil (empty response body)
 
 <a name="delete_user_routingskill"></a>
 
-## - delete_user_routingskill(user_id, skill_id)
+##  delete_user_routingskill(user_id, skill_id)
 
 
 
@@ -743,7 +743,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -770,7 +770,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_user_routingskill: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -794,7 +794,7 @@ nil (empty response body)
 
 <a name="get_routing_email_domain"></a>
 
-## -[**InboundDomain**](InboundDomain.html) get_routing_email_domain(domain_id)
+## [**InboundDomain**](InboundDomain.html) get_routing_email_domain(domain_id)
 
 
 
@@ -810,7 +810,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -836,7 +836,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_email_domain: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -859,7 +859,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_email_domain_route"></a>
 
-## -[**InboundRoute**](InboundRoute.html) get_routing_email_domain_route(domain_name, route_id)
+## [**InboundRoute**](InboundRoute.html) get_routing_email_domain_route(domain_name, route_id)
 
 
 
@@ -875,7 +875,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -903,7 +903,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_email_domain_route: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -927,7 +927,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_email_domain_routes"></a>
 
-## -[**InboundRouteEntityListing**](InboundRouteEntityListing.html) get_routing_email_domain_routes(domain_name, opts)
+## [**InboundRouteEntityListing**](InboundRouteEntityListing.html) get_routing_email_domain_routes(domain_name, opts)
 
 
 
@@ -943,7 +943,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -974,7 +974,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_email_domain_routes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1000,7 +1000,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_email_domains"></a>
 
-## -[**InboundDomainEntityListing**](InboundDomainEntityListing.html) get_routing_email_domains
+## [**InboundDomainEntityListing**](InboundDomainEntityListing.html) get_routing_email_domains
 
 
 
@@ -1016,7 +1016,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1039,7 +1039,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_email_domains: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1059,7 +1059,7 @@ This endpoint does not need any parameter.
 
 <a name="get_routing_email_setup"></a>
 
-## -[**EmailSetup**](EmailSetup.html) get_routing_email_setup
+## [**EmailSetup**](EmailSetup.html) get_routing_email_setup
 
 
 
@@ -1075,7 +1075,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1098,7 +1098,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_email_setup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1118,7 +1118,7 @@ This endpoint does not need any parameter.
 
 <a name="get_routing_languages"></a>
 
-## -[**LanguageEntityListing**](LanguageEntityListing.html) get_routing_languages(opts)
+## [**LanguageEntityListing**](LanguageEntityListing.html) get_routing_languages(opts)
 
 
 
@@ -1133,7 +1133,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1164,7 +1164,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_languages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1191,7 +1191,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_message_recipient"></a>
 
-## -[**Recipient**](Recipient.html) get_routing_message_recipient(recipient_id)
+## [**Recipient**](Recipient.html) get_routing_message_recipient(recipient_id)
 
 
 
@@ -1207,7 +1207,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1233,7 +1233,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_message_recipient: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1256,7 +1256,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_message_recipients"></a>
 
-## -[**RecipientListing**](RecipientListing.html) get_routing_message_recipients(opts)
+## [**RecipientListing**](RecipientListing.html) get_routing_message_recipients(opts)
 
 
 
@@ -1272,7 +1272,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1301,7 +1301,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_message_recipients: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1326,7 +1326,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_queue"></a>
 
-## -[**Queue**](Queue.html) get_routing_queue(queue_id)
+## [**Queue**](Queue.html) get_routing_queue(queue_id)
 
 
 
@@ -1342,7 +1342,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1368,7 +1368,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_queue: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1391,7 +1391,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_queue_estimatedwaittime"></a>
 
-## -[**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html) get_routing_queue_estimatedwaittime(queue_id, opts)
+## [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html) get_routing_queue_estimatedwaittime(queue_id, opts)
 
 
 
@@ -1407,7 +1407,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1436,7 +1436,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_queue_estimatedwaittime: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1460,7 +1460,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_queue_mediatype_estimatedwaittime"></a>
 
-## -[**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html) get_routing_queue_mediatype_estimatedwaittime(queue_id, media_type)
+## [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html) get_routing_queue_mediatype_estimatedwaittime(queue_id, media_type)
 
 
 
@@ -1476,7 +1476,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1504,7 +1504,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_queue_mediatype_estimatedwaittime: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1528,7 +1528,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_queue_users"></a>
 
-## -[**QueueMemberEntityListing**](QueueMemberEntityListing.html) get_routing_queue_users(queue_id, opts)
+## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) get_routing_queue_users(queue_id, opts)
 
 
 
@@ -1544,7 +1544,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1583,7 +1583,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_queue_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1617,7 +1617,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_queue_wrapupcodes"></a>
 
-## -[**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) get_routing_queue_wrapupcodes(queue_id)
+## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) get_routing_queue_wrapupcodes(queue_id)
 
 
 
@@ -1633,7 +1633,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1659,7 +1659,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_queue_wrapupcodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1682,7 +1682,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_queues"></a>
 
-## -[**QueueEntityListing**](QueueEntityListing.html) get_routing_queues(opts)
+## [**QueueEntityListing**](QueueEntityListing.html) get_routing_queues(opts)
 
 
 
@@ -1698,7 +1698,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1730,7 +1730,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_queues: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1758,7 +1758,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_queues_divisionviews"></a>
 
-## -[**QueueEntityListing**](QueueEntityListing.html) get_routing_queues_divisionviews(opts)
+## [**QueueEntityListing**](QueueEntityListing.html) get_routing_queues_divisionviews(opts)
 
 
 
@@ -1774,7 +1774,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1807,7 +1807,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_queues_divisionviews: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1836,7 +1836,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_queues_divisionviews_all"></a>
 
-## -[**QueueEntityListing**](QueueEntityListing.html) get_routing_queues_divisionviews_all(opts)
+## [**QueueEntityListing**](QueueEntityListing.html) get_routing_queues_divisionviews_all(opts)
 
 
 
@@ -1852,7 +1852,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1882,7 +1882,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_queues_divisionviews_all: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1908,7 +1908,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_queues_me"></a>
 
-## -[**UserQueueEntityListing**](UserQueueEntityListing.html) get_routing_queues_me(opts)
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) get_routing_queues_me(opts)
 
 
 
@@ -1923,7 +1923,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1954,7 +1954,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_queues_me: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1981,7 +1981,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_skill"></a>
 
-## -[**RoutingSkill**](RoutingSkill.html) get_routing_skill(skill_id)
+## [**RoutingSkill**](RoutingSkill.html) get_routing_skill(skill_id)
 
 
 
@@ -1996,7 +1996,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2022,7 +2022,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_skill: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2045,7 +2045,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_skills"></a>
 
-## -[**SkillEntityListing**](SkillEntityListing.html) get_routing_skills(opts)
+## [**SkillEntityListing**](SkillEntityListing.html) get_routing_skills(opts)
 
 
 
@@ -2060,7 +2060,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2090,7 +2090,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_skills: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2116,7 +2116,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_sms_availablephonenumbers"></a>
 
-## -[**SMSAvailablePhoneNumberEntityListing**](SMSAvailablePhoneNumberEntityListing.html) get_routing_sms_availablephonenumbers(country_code, phone_number_type, opts)
+## [**SMSAvailablePhoneNumberEntityListing**](SMSAvailablePhoneNumberEntityListing.html) get_routing_sms_availablephonenumbers(country_code, phone_number_type, opts)
 
 
 
@@ -2132,7 +2132,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2167,7 +2167,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_sms_availablephonenumbers: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2196,7 +2196,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_sms_phonenumber"></a>
 
-## -[**SmsPhoneNumber**](SmsPhoneNumber.html) get_routing_sms_phonenumber(address_id)
+## [**SmsPhoneNumber**](SmsPhoneNumber.html) get_routing_sms_phonenumber(address_id)
 
 
 
@@ -2212,7 +2212,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2238,7 +2238,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_sms_phonenumber: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2261,7 +2261,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_sms_phonenumbers"></a>
 
-## -[**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing.html) get_routing_sms_phonenumbers(opts)
+## [**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing.html) get_routing_sms_phonenumbers(opts)
 
 
 
@@ -2277,7 +2277,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2308,7 +2308,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_sms_phonenumbers: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2335,7 +2335,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_utilization"></a>
 
-## -[**Utilization**](Utilization.html) get_routing_utilization
+## [**Utilization**](Utilization.html) get_routing_utilization
 
 
 
@@ -2352,7 +2352,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2375,7 +2375,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_utilization: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -2395,7 +2395,7 @@ This endpoint does not need any parameter.
 
 <a name="get_routing_wrapupcode"></a>
 
-## -[**WrapupCode**](WrapupCode.html) get_routing_wrapupcode(code_id)
+## [**WrapupCode**](WrapupCode.html) get_routing_wrapupcode(code_id)
 
 
 
@@ -2411,7 +2411,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2437,7 +2437,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_wrapupcode: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2460,7 +2460,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_wrapupcodes"></a>
 
-## -[**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) get_routing_wrapupcodes(opts)
+## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) get_routing_wrapupcodes(opts)
 
 
 
@@ -2476,7 +2476,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2506,7 +2506,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_wrapupcodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2532,7 +2532,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_routinglanguages"></a>
 
-## -[**UserLanguageEntityListing**](UserLanguageEntityListing.html) get_user_routinglanguages(user_id, opts)
+## [**UserLanguageEntityListing**](UserLanguageEntityListing.html) get_user_routinglanguages(user_id, opts)
 
 
 
@@ -2547,7 +2547,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2578,7 +2578,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_user_routinglanguages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2604,7 +2604,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_routingskills"></a>
 
-## -[**UserSkillEntityListing**](UserSkillEntityListing.html) get_user_routingskills(user_id, opts)
+## [**UserSkillEntityListing**](UserSkillEntityListing.html) get_user_routingskills(user_id, opts)
 
 
 
@@ -2619,7 +2619,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2650,7 +2650,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_user_routingskills: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2676,7 +2676,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_routing_queue_user"></a>
 
-## -[**QueueMember**](QueueMember.html) patch_routing_queue_user(queue_id, member_id, body)
+## [**QueueMember**](QueueMember.html) patch_routing_queue_user(queue_id, member_id, body)
 
 
 
@@ -2692,7 +2692,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2722,7 +2722,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->patch_routing_queue_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2747,7 +2747,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_routing_queue_users"></a>
 
-## -[**QueueMemberEntityListing**](QueueMemberEntityListing.html) patch_routing_queue_users(queue_id, body)
+## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) patch_routing_queue_users(queue_id, body)
 
 
 
@@ -2763,7 +2763,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2791,7 +2791,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->patch_routing_queue_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2815,7 +2815,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_routinglanguage"></a>
 
-## -[**UserRoutingLanguage**](UserRoutingLanguage.html) patch_user_routinglanguage(user_id, language_id, body)
+## [**UserRoutingLanguage**](UserRoutingLanguage.html) patch_user_routinglanguage(user_id, language_id, body)
 
 
 
@@ -2832,7 +2832,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2862,7 +2862,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->patch_user_routinglanguage: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2887,7 +2887,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_routinglanguages_bulk"></a>
 
-## -[**UserLanguageEntityListing**](UserLanguageEntityListing.html) patch_user_routinglanguages_bulk(user_id, body)
+## [**UserLanguageEntityListing**](UserLanguageEntityListing.html) patch_user_routinglanguages_bulk(user_id, body)
 
 
 
@@ -2904,7 +2904,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2932,7 +2932,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->patch_user_routinglanguages_bulk: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2956,7 +2956,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_routingskills_bulk"></a>
 
-## -[**UserSkillEntityListing**](UserSkillEntityListing.html) patch_user_routingskills_bulk(user_id, body)
+## [**UserSkillEntityListing**](UserSkillEntityListing.html) patch_user_routingskills_bulk(user_id, body)
 
 
 
@@ -2973,7 +2973,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3001,7 +3001,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->patch_user_routingskills_bulk: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3025,7 +3025,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_queues_observations_query"></a>
 
-## -[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) post_analytics_queues_observations_query(body)
+## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) post_analytics_queues_observations_query(body)
 
 
 
@@ -3041,7 +3041,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3067,7 +3067,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_analytics_queues_observations_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3090,7 +3090,7 @@ Name | Type | Description  | Notes
 
 <a name="post_routing_email_domain_routes"></a>
 
-## -[**InboundRoute**](InboundRoute.html) post_routing_email_domain_routes(domain_name, body)
+## [**InboundRoute**](InboundRoute.html) post_routing_email_domain_routes(domain_name, body)
 
 
 
@@ -3106,7 +3106,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3134,7 +3134,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_routing_email_domain_routes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3158,7 +3158,7 @@ Name | Type | Description  | Notes
 
 <a name="post_routing_email_domains"></a>
 
-## -[**InboundDomain**](InboundDomain.html) post_routing_email_domains(body)
+## [**InboundDomain**](InboundDomain.html) post_routing_email_domains(body)
 
 
 
@@ -3174,7 +3174,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3200,7 +3200,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_routing_email_domains: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3223,7 +3223,7 @@ Name | Type | Description  | Notes
 
 <a name="post_routing_languages"></a>
 
-## -[**Language**](Language.html) post_routing_languages(body)
+## [**Language**](Language.html) post_routing_languages(body)
 
 
 
@@ -3239,7 +3239,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3265,7 +3265,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_routing_languages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3288,7 +3288,7 @@ Name | Type | Description  | Notes
 
 <a name="post_routing_queue_users"></a>
 
-## -String** post_routing_queue_users(queue_id, body, opts)
+## String** post_routing_queue_users(queue_id, body, opts)
 
 
 
@@ -3304,7 +3304,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3335,7 +3335,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_routing_queue_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3360,7 +3360,7 @@ Name | Type | Description  | Notes
 
 <a name="post_routing_queue_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) post_routing_queue_wrapupcodes(queue_id, body)
+## [**Array&lt;WrapupCode&gt;**](WrapupCode.html) post_routing_queue_wrapupcodes(queue_id, body)
 
 
 
@@ -3376,7 +3376,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3404,7 +3404,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_routing_queue_wrapupcodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3428,7 +3428,7 @@ Name | Type | Description  | Notes
 
 <a name="post_routing_queues"></a>
 
-## -[**Queue**](Queue.html) post_routing_queues(body)
+## [**Queue**](Queue.html) post_routing_queues(body)
 
 
 
@@ -3444,7 +3444,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3470,7 +3470,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_routing_queues: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3493,7 +3493,7 @@ Name | Type | Description  | Notes
 
 <a name="post_routing_skills"></a>
 
-## -[**RoutingSkill**](RoutingSkill.html) post_routing_skills(body)
+## [**RoutingSkill**](RoutingSkill.html) post_routing_skills(body)
 
 
 
@@ -3509,7 +3509,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3535,7 +3535,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_routing_skills: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3558,7 +3558,7 @@ Name | Type | Description  | Notes
 
 <a name="post_routing_sms_addresses"></a>
 
-## -[**SmsPhoneNumber**](SmsPhoneNumber.html) post_routing_sms_addresses(body)
+## [**SmsPhoneNumber**](SmsPhoneNumber.html) post_routing_sms_addresses(body)
 
 
 
@@ -3574,7 +3574,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3600,7 +3600,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_routing_sms_addresses: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3623,7 +3623,7 @@ Name | Type | Description  | Notes
 
 <a name="post_routing_sms_phonenumbers"></a>
 
-## -[**SmsPhoneNumber**](SmsPhoneNumber.html) post_routing_sms_phonenumbers(body)
+## [**SmsPhoneNumber**](SmsPhoneNumber.html) post_routing_sms_phonenumbers(body)
 
 
 
@@ -3639,7 +3639,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3665,7 +3665,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_routing_sms_phonenumbers: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3688,7 +3688,7 @@ Name | Type | Description  | Notes
 
 <a name="post_routing_wrapupcodes"></a>
 
-## -[**WrapupCode**](WrapupCode.html) post_routing_wrapupcodes(body)
+## [**WrapupCode**](WrapupCode.html) post_routing_wrapupcodes(body)
 
 
 
@@ -3704,7 +3704,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3730,7 +3730,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_routing_wrapupcodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3753,7 +3753,7 @@ Name | Type | Description  | Notes
 
 <a name="post_user_routinglanguages"></a>
 
-## -[**UserRoutingLanguage**](UserRoutingLanguage.html) post_user_routinglanguages(user_id, body)
+## [**UserRoutingLanguage**](UserRoutingLanguage.html) post_user_routinglanguages(user_id, body)
 
 
 
@@ -3770,7 +3770,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3798,7 +3798,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_user_routinglanguages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3822,7 +3822,7 @@ Name | Type | Description  | Notes
 
 <a name="post_user_routingskills"></a>
 
-## -[**UserRoutingSkill**](UserRoutingSkill.html) post_user_routingskills(user_id, body)
+## [**UserRoutingSkill**](UserRoutingSkill.html) post_user_routingskills(user_id, body)
 
 
 
@@ -3839,7 +3839,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3867,7 +3867,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->post_user_routingskills: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3891,7 +3891,7 @@ Name | Type | Description  | Notes
 
 <a name="put_routing_email_domain_route"></a>
 
-## -[**InboundRoute**](InboundRoute.html) put_routing_email_domain_route(domain_name, route_id, body)
+## [**InboundRoute**](InboundRoute.html) put_routing_email_domain_route(domain_name, route_id, body)
 
 
 
@@ -3907,7 +3907,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3937,7 +3937,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->put_routing_email_domain_route: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3962,7 +3962,7 @@ Name | Type | Description  | Notes
 
 <a name="put_routing_message_recipient"></a>
 
-## -[**Recipient**](Recipient.html) put_routing_message_recipient(recipient_id, body)
+## [**Recipient**](Recipient.html) put_routing_message_recipient(recipient_id, body)
 
 
 
@@ -3978,7 +3978,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4006,7 +4006,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->put_routing_message_recipient: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4030,7 +4030,7 @@ Name | Type | Description  | Notes
 
 <a name="put_routing_queue"></a>
 
-## -[**Queue**](Queue.html) put_routing_queue(queue_id, body)
+## [**Queue**](Queue.html) put_routing_queue(queue_id, body)
 
 
 
@@ -4046,7 +4046,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4074,7 +4074,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->put_routing_queue: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4098,7 +4098,7 @@ Name | Type | Description  | Notes
 
 <a name="put_routing_sms_phonenumber"></a>
 
-## -[**SmsPhoneNumber**](SmsPhoneNumber.html) put_routing_sms_phonenumber(address_id, body)
+## [**SmsPhoneNumber**](SmsPhoneNumber.html) put_routing_sms_phonenumber(address_id, body)
 
 
 
@@ -4114,7 +4114,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4142,7 +4142,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->put_routing_sms_phonenumber: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4166,7 +4166,7 @@ Name | Type | Description  | Notes
 
 <a name="put_routing_utilization"></a>
 
-## -[**Utilization**](Utilization.html) put_routing_utilization(body)
+## [**Utilization**](Utilization.html) put_routing_utilization(body)
 
 
 
@@ -4182,7 +4182,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4208,7 +4208,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->put_routing_utilization: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4231,7 +4231,7 @@ Name | Type | Description  | Notes
 
 <a name="put_routing_wrapupcode"></a>
 
-## -[**WrapupCode**](WrapupCode.html) put_routing_wrapupcode(code_id, body)
+## [**WrapupCode**](WrapupCode.html) put_routing_wrapupcode(code_id, body)
 
 
 
@@ -4247,7 +4247,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4275,7 +4275,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->put_routing_wrapupcode: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4299,7 +4299,7 @@ Name | Type | Description  | Notes
 
 <a name="put_user_routingskill"></a>
 
-## -[**UserRoutingSkill**](UserRoutingSkill.html) put_user_routingskill(user_id, skill_id, body)
+## [**UserRoutingSkill**](UserRoutingSkill.html) put_user_routingskill(user_id, skill_id, body)
 
 
 
@@ -4316,7 +4316,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4346,7 +4346,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->put_user_routingskill: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

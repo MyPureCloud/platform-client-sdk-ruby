@@ -76,7 +76,7 @@ Method | Description
 
 <a name="delete_workforcemanagement_managementunit"></a>
 
-## - delete_workforcemanagement_managementunit(mu_id)
+##  delete_workforcemanagement_managementunit(mu_id)
 
 
 
@@ -93,7 +93,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -118,7 +118,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->delete_workforcemanagement_managementunit: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -141,7 +141,7 @@ nil (empty response body)
 
 <a name="delete_workforcemanagement_managementunit_activitycode"></a>
 
-## - delete_workforcemanagement_managementunit_activitycode(mu_id, ac_id)
+##  delete_workforcemanagement_managementunit_activitycode(mu_id, ac_id)
 
 
 
@@ -158,7 +158,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -185,7 +185,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->delete_workforcemanagement_managementunit_activitycode: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -209,7 +209,7 @@ nil (empty response body)
 
 <a name="delete_workforcemanagement_managementunit_scheduling_run"></a>
 
-## - delete_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id)
+##  delete_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id)
 
 
 
@@ -225,7 +225,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -252,7 +252,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->delete_workforcemanagement_managementunit_scheduling_run: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -276,7 +276,7 @@ nil (empty response body)
 
 <a name="delete_workforcemanagement_managementunit_servicegoalgroup"></a>
 
-## - delete_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id)
+##  delete_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id)
 
 
 
@@ -293,7 +293,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -320,7 +320,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->delete_workforcemanagement_managementunit_servicegoalgroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -344,7 +344,7 @@ nil (empty response body)
 
 <a name="delete_workforcemanagement_managementunit_week_schedule"></a>
 
-## - delete_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id)
+##  delete_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id)
 
 
 
@@ -361,7 +361,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -390,7 +390,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->delete_workforcemanagement_managementunit_week_schedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -415,7 +415,7 @@ nil (empty response body)
 
 <a name="delete_workforcemanagement_managementunit_week_shorttermforecast"></a>
 
-## - delete_workforcemanagement_managementunit_week_shorttermforecast(management_unit_id, week_date_id, forecast_id)
+##  delete_workforcemanagement_managementunit_week_shorttermforecast(management_unit_id, week_date_id, forecast_id)
 
 
 
@@ -432,7 +432,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -461,7 +461,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->delete_workforcemanagement_managementunit_week_shorttermforecast: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -486,7 +486,7 @@ nil (empty response body)
 
 <a name="delete_workforcemanagement_managementunit_workplan"></a>
 
-## - delete_workforcemanagement_managementunit_workplan(management_unit_id, work_plan_id)
+##  delete_workforcemanagement_managementunit_workplan(management_unit_id, work_plan_id)
 
 
 
@@ -503,7 +503,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -530,7 +530,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->delete_workforcemanagement_managementunit_workplan: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -554,7 +554,7 @@ nil (empty response body)
 
 <a name="get_workforcemanagement_adherence"></a>
 
-## -[**Array&lt;UserScheduleAdherence&gt;**](UserScheduleAdherence.html) get_workforcemanagement_adherence(user_id)
+## [**Array&lt;UserScheduleAdherence&gt;**](UserScheduleAdherence.html) get_workforcemanagement_adherence(user_id)
 
 
 
@@ -570,7 +570,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -596,7 +596,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_adherence: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit"></a>
 
-## -[**ManagementUnit**](ManagementUnit.html) get_workforcemanagement_managementunit(mu_id, opts)
+## [**ManagementUnit**](ManagementUnit.html) get_workforcemanagement_managementunit(mu_id, opts)
 
 
 
@@ -678,7 +678,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -707,7 +707,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -731,7 +731,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_activitycode"></a>
 
-## -[**ActivityCode**](ActivityCode.html) get_workforcemanagement_managementunit_activitycode(mu_id, ac_id)
+## [**ActivityCode**](ActivityCode.html) get_workforcemanagement_managementunit_activitycode(mu_id, ac_id)
 
 
 
@@ -748,7 +748,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -776,7 +776,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_activitycode: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -800,7 +800,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_activitycodes"></a>
 
-## -[**ActivityCodeContainer**](ActivityCodeContainer.html) get_workforcemanagement_managementunit_activitycodes(mu_id)
+## [**ActivityCodeContainer**](ActivityCodeContainer.html) get_workforcemanagement_managementunit_activitycodes(mu_id)
 
 
 
@@ -859,7 +859,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -885,7 +885,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_activitycodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -908,7 +908,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_agent"></a>
 
-## -[**WfmAgent**](WfmAgent.html) get_workforcemanagement_managementunit_agent(management_unit_id, agent_id)
+## [**WfmAgent**](WfmAgent.html) get_workforcemanagement_managementunit_agent(management_unit_id, agent_id)
 
 
 
@@ -925,7 +925,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -953,7 +953,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_agent: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -977,7 +977,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_intraday_queues"></a>
 
-## -[**WfmIntradayQueueListing**](WfmIntradayQueueListing.html) get_workforcemanagement_managementunit_intraday_queues(mu_id, date)
+## [**WfmIntradayQueueListing**](WfmIntradayQueueListing.html) get_workforcemanagement_managementunit_intraday_queues(mu_id, date)
 
 
 
@@ -993,7 +993,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1021,7 +1021,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_intraday_queues: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1045,7 +1045,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_scheduling_run"></a>
 
-## -[**SchedulingRunResponse**](SchedulingRunResponse.html) get_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id)
+## [**SchedulingRunResponse**](SchedulingRunResponse.html) get_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id)
 
 
 
@@ -1061,7 +1061,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1089,7 +1089,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_scheduling_run: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1113,7 +1113,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_scheduling_run_result"></a>
 
-## -[**RescheduleResult**](RescheduleResult.html) get_workforcemanagement_managementunit_scheduling_run_result(management_unit_id, run_id)
+## [**RescheduleResult**](RescheduleResult.html) get_workforcemanagement_managementunit_scheduling_run_result(management_unit_id, run_id)
 
 
 
@@ -1129,7 +1129,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1157,7 +1157,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_scheduling_run_result: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1181,7 +1181,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_scheduling_runs"></a>
 
-## -[**SchedulingRunListResponse**](SchedulingRunListResponse.html) get_workforcemanagement_managementunit_scheduling_runs(management_unit_id)
+## [**SchedulingRunListResponse**](SchedulingRunListResponse.html) get_workforcemanagement_managementunit_scheduling_runs(management_unit_id)
 
 
 
@@ -1197,7 +1197,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1223,7 +1223,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_scheduling_runs: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1246,7 +1246,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_servicegoalgroup"></a>
 
-## -[**ServiceGoalGroup**](ServiceGoalGroup.html) get_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id)
+## [**ServiceGoalGroup**](ServiceGoalGroup.html) get_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id)
 
 
 
@@ -1263,7 +1263,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1291,7 +1291,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_servicegoalgroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1315,7 +1315,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_servicegoalgroups"></a>
 
-## -[**ServiceGoalGroupList**](ServiceGoalGroupList.html) get_workforcemanagement_managementunit_servicegoalgroups(management_unit_id)
+## [**ServiceGoalGroupList**](ServiceGoalGroupList.html) get_workforcemanagement_managementunit_servicegoalgroups(management_unit_id)
 
 
 
@@ -1334,7 +1334,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1360,7 +1360,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_servicegoalgroups: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1383,7 +1383,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_settings"></a>
 
-## -[**ManagementUnitSettings**](ManagementUnitSettings.html) get_workforcemanagement_managementunit_settings(mu_id)
+## [**ManagementUnitSettings**](ManagementUnitSettings.html) get_workforcemanagement_managementunit_settings(mu_id)
 
 
 
@@ -1400,7 +1400,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1426,7 +1426,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1449,7 +1449,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_user_timeoffrequest"></a>
 
-## -[**TimeOffRequestResponse**](TimeOffRequestResponse.html) get_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id)
+## [**TimeOffRequestResponse**](TimeOffRequestResponse.html) get_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id)
 
 
 
@@ -1466,7 +1466,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1496,7 +1496,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_user_timeoffrequest: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1521,7 +1521,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_user_timeoffrequests"></a>
 
-## -[**TimeOffRequestList**](TimeOffRequestList.html) get_workforcemanagement_managementunit_user_timeoffrequests(mu_id, user_id, opts)
+## [**TimeOffRequestList**](TimeOffRequestList.html) get_workforcemanagement_managementunit_user_timeoffrequests(mu_id, user_id, opts)
 
 
 
@@ -1538,7 +1538,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1569,7 +1569,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_user_timeoffrequests: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1594,7 +1594,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_users"></a>
 
-## -[**WfmUserEntityListing**](WfmUserEntityListing.html) get_workforcemanagement_managementunit_users(mu_id)
+## [**WfmUserEntityListing**](WfmUserEntityListing.html) get_workforcemanagement_managementunit_users(mu_id)
 
 
 
@@ -1620,7 +1620,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1646,7 +1646,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1669,7 +1669,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_week_schedule"></a>
 
-## -[**WeekScheduleResponse**](WeekScheduleResponse.html) get_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id, opts)
+## [**WeekScheduleResponse**](WeekScheduleResponse.html) get_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id, opts)
 
 
 
@@ -1687,7 +1687,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1721,7 +1721,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_week_schedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1748,7 +1748,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_week_schedule_generationresults"></a>
 
-## -[**WeekScheduleGenerationResult**](WeekScheduleGenerationResult.html) get_workforcemanagement_managementunit_week_schedule_generationresults(management_unit_id, week_id, schedule_id)
+## [**WeekScheduleGenerationResult**](WeekScheduleGenerationResult.html) get_workforcemanagement_managementunit_week_schedule_generationresults(management_unit_id, week_id, schedule_id)
 
 
 
@@ -1766,7 +1766,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1796,7 +1796,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_week_schedule_generationresults: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1821,7 +1821,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_week_schedules"></a>
 
-## -[**WeekScheduleListResponse**](WeekScheduleListResponse.html) get_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id)
+## [**WeekScheduleListResponse**](WeekScheduleListResponse.html) get_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id)
 
 
 
@@ -1839,7 +1839,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1867,7 +1867,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_week_schedules: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1891,7 +1891,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_week_shorttermforecast_final"></a>
 
-## -[**ForecastResultResponse**](ForecastResultResponse.html) get_workforcemanagement_managementunit_week_shorttermforecast_final(management_unit_id, week_date_id, forecast_id, opts)
+## [**ForecastResultResponse**](ForecastResultResponse.html) get_workforcemanagement_managementunit_week_shorttermforecast_final(management_unit_id, week_date_id, forecast_id, opts)
 
 
 
@@ -1908,7 +1908,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1941,7 +1941,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_week_shorttermforecast_final: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1967,7 +1967,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_week_shorttermforecasts"></a>
 
-## -[**ShortTermForecastListResponse**](ShortTermForecastListResponse.html) get_workforcemanagement_managementunit_week_shorttermforecasts(management_unit_id, week_date_id)
+## [**ShortTermForecastListResponse**](ShortTermForecastListResponse.html) get_workforcemanagement_managementunit_week_shorttermforecasts(management_unit_id, week_date_id)
 
 
 
@@ -1985,7 +1985,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2013,7 +2013,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_week_shorttermforecasts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2037,7 +2037,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_workplan"></a>
 
-## -[**WorkPlan**](WorkPlan.html) get_workforcemanagement_managementunit_workplan(management_unit_id, work_plan_id)
+## [**WorkPlan**](WorkPlan.html) get_workforcemanagement_managementunit_workplan(management_unit_id, work_plan_id)
 
 
 
@@ -2056,7 +2056,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2084,7 +2084,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_workplan: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2108,7 +2108,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_workplans"></a>
 
-## -[**WorkPlanListResponse**](WorkPlanListResponse.html) get_workforcemanagement_managementunit_workplans(management_unit_id, opts)
+## [**WorkPlanListResponse**](WorkPlanListResponse.html) get_workforcemanagement_managementunit_workplans(management_unit_id, opts)
 
 
 
@@ -2130,7 +2130,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2159,7 +2159,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_workplans: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2183,7 +2183,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunits"></a>
 
-## -[**ManagementUnitListing**](ManagementUnitListing.html) get_workforcemanagement_managementunits(opts)
+## [**ManagementUnitListing**](ManagementUnitListing.html) get_workforcemanagement_managementunits(opts)
 
 
 
@@ -2198,7 +2198,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2229,7 +2229,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunits: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2256,7 +2256,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunits_divisionviews"></a>
 
-## -[**ManagementUnitListing**](ManagementUnitListing.html) get_workforcemanagement_managementunits_divisionviews(opts)
+## [**ManagementUnitListing**](ManagementUnitListing.html) get_workforcemanagement_managementunits_divisionviews(opts)
 
 
 
@@ -2272,7 +2272,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2299,7 +2299,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunits_divisionviews: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2322,7 +2322,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_timeoffrequest"></a>
 
-## -[**TimeOffRequestResponse**](TimeOffRequestResponse.html) get_workforcemanagement_timeoffrequest(time_off_request_id)
+## [**TimeOffRequestResponse**](TimeOffRequestResponse.html) get_workforcemanagement_timeoffrequest(time_off_request_id)
 
 
 
@@ -2339,7 +2339,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2365,7 +2365,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_timeoffrequest: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2388,7 +2388,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_timeoffrequests"></a>
 
-## -[**TimeOffRequestList**](TimeOffRequestList.html) get_workforcemanagement_timeoffrequests(opts)
+## [**TimeOffRequestList**](TimeOffRequestList.html) get_workforcemanagement_timeoffrequests(opts)
 
 
 
@@ -2405,7 +2405,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2432,7 +2432,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_timeoffrequests: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2455,7 +2455,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_workforcemanagement_managementunit_activitycode"></a>
 
-## -[**ActivityCode**](ActivityCode.html) patch_workforcemanagement_managementunit_activitycode(mu_id, ac_id, opts)
+## [**ActivityCode**](ActivityCode.html) patch_workforcemanagement_managementunit_activitycode(mu_id, ac_id, opts)
 
 
 
@@ -2472,7 +2472,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2503,7 +2503,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_managementunit_activitycode: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2528,7 +2528,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_workforcemanagement_managementunit_scheduling_run"></a>
 
-## -[**RescheduleResult**](RescheduleResult.html) patch_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id, opts)
+## [**RescheduleResult**](RescheduleResult.html) patch_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id, opts)
 
 
 
@@ -2544,7 +2544,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2575,7 +2575,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_managementunit_scheduling_run: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2600,7 +2600,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_workforcemanagement_managementunit_servicegoalgroup"></a>
 
-## -[**ServiceGoalGroup**](ServiceGoalGroup.html) patch_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id, opts)
+## [**ServiceGoalGroup**](ServiceGoalGroup.html) patch_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id, opts)
 
 
 
@@ -2617,7 +2617,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2648,7 +2648,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_managementunit_servicegoalgroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2673,7 +2673,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_workforcemanagement_managementunit_settings"></a>
 
-## -[**ManagementUnitSettings**](ManagementUnitSettings.html) patch_workforcemanagement_managementunit_settings(mu_id, opts)
+## [**ManagementUnitSettings**](ManagementUnitSettings.html) patch_workforcemanagement_managementunit_settings(mu_id, opts)
 
 
 
@@ -2690,7 +2690,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2719,7 +2719,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_managementunit_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2743,7 +2743,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_workforcemanagement_managementunit_user_timeoffrequest"></a>
 
-## -[**TimeOffRequestResponse**](TimeOffRequestResponse.html) patch_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id, opts)
+## [**TimeOffRequestResponse**](TimeOffRequestResponse.html) patch_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id, opts)
 
 
 
@@ -2760,7 +2760,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2793,7 +2793,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_managementunit_user_timeoffrequest: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2819,7 +2819,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_workforcemanagement_managementunit_week_schedule"></a>
 
-## -[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) patch_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id, opts)
+## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) patch_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id, opts)
 
 
 
@@ -2836,7 +2836,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2871,7 +2871,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_managementunit_week_schedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2899,7 +2899,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_workforcemanagement_managementunit_workplan"></a>
 
-## -[**WorkPlan**](WorkPlan.html) patch_workforcemanagement_managementunit_workplan(management_unit_id, work_plan_id, opts)
+## [**WorkPlan**](WorkPlan.html) patch_workforcemanagement_managementunit_workplan(management_unit_id, work_plan_id, opts)
 
 
 
@@ -2916,7 +2916,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2947,7 +2947,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_managementunit_workplan: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2972,7 +2972,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_workforcemanagement_timeoffrequest"></a>
 
-## -[**TimeOffRequestResponse**](TimeOffRequestResponse.html) patch_workforcemanagement_timeoffrequest(time_off_request_id, opts)
+## [**TimeOffRequestResponse**](TimeOffRequestResponse.html) patch_workforcemanagement_timeoffrequest(time_off_request_id, opts)
 
 
 
@@ -2988,7 +2988,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3017,7 +3017,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_timeoffrequest: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3041,7 +3041,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_adherence_historical"></a>
 
-## -[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html) post_workforcemanagement_adherence_historical(opts)
+## [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html) post_workforcemanagement_adherence_historical(opts)
 
 
 
@@ -3057,7 +3057,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3084,7 +3084,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_adherence_historical: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3107,7 +3107,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_activitycodes"></a>
 
-## -[**ActivityCode**](ActivityCode.html) post_workforcemanagement_managementunit_activitycodes(mu_id, opts)
+## [**ActivityCode**](ActivityCode.html) post_workforcemanagement_managementunit_activitycodes(mu_id, opts)
 
 
 
@@ -3124,7 +3124,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3153,7 +3153,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_activitycodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3177,7 +3177,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_historicaladherencequery"></a>
 
-## -[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html) post_workforcemanagement_managementunit_historicaladherencequery(mu_id, opts)
+## [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html) post_workforcemanagement_managementunit_historicaladherencequery(mu_id, opts)
 
 
 
@@ -3193,7 +3193,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3222,7 +3222,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_historicaladherencequery: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3246,7 +3246,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_intraday"></a>
 
-## -[**IntradayResponse**](IntradayResponse.html) post_workforcemanagement_managementunit_intraday(mu_id, opts)
+## [**IntradayResponse**](IntradayResponse.html) post_workforcemanagement_managementunit_intraday(mu_id, opts)
 
 
 
@@ -3262,7 +3262,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3291,7 +3291,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_intraday: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3315,7 +3315,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_schedules_search"></a>
 
-## -[**UserScheduleContainer**](UserScheduleContainer.html) post_workforcemanagement_managementunit_schedules_search(mu_id, opts)
+## [**UserScheduleContainer**](UserScheduleContainer.html) post_workforcemanagement_managementunit_schedules_search(mu_id, opts)
 
 
 
@@ -3333,7 +3333,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3362,7 +3362,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_schedules_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3386,7 +3386,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_servicegoalgroups"></a>
 
-## -[**ServiceGoalGroup**](ServiceGoalGroup.html) post_workforcemanagement_managementunit_servicegoalgroups(management_unit_id, opts)
+## [**ServiceGoalGroup**](ServiceGoalGroup.html) post_workforcemanagement_managementunit_servicegoalgroups(management_unit_id, opts)
 
 
 
@@ -3403,7 +3403,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3432,7 +3432,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_servicegoalgroups: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3456,7 +3456,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_timeoffrequests"></a>
 
-## -[**TimeOffRequestList**](TimeOffRequestList.html) post_workforcemanagement_managementunit_timeoffrequests(mu_id, opts)
+## [**TimeOffRequestList**](TimeOffRequestList.html) post_workforcemanagement_managementunit_timeoffrequests(mu_id, opts)
 
 
 
@@ -3473,7 +3473,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3502,7 +3502,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_timeoffrequests: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3526,7 +3526,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_timeoffrequests_fetchdetails"></a>
 
-## -[**TimeOffRequestEntityList**](TimeOffRequestEntityList.html) post_workforcemanagement_managementunit_timeoffrequests_fetchdetails(mu_id, opts)
+## [**TimeOffRequestEntityList**](TimeOffRequestEntityList.html) post_workforcemanagement_managementunit_timeoffrequests_fetchdetails(mu_id, opts)
 
 
 
@@ -3543,7 +3543,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3572,7 +3572,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_timeoffrequests_fetchdetails: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3596,7 +3596,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_timeoffrequests_query"></a>
 
-## -[**TimeOffRequestLookupList**](TimeOffRequestLookupList.html) post_workforcemanagement_managementunit_timeoffrequests_query(mu_id, opts)
+## [**TimeOffRequestLookupList**](TimeOffRequestLookupList.html) post_workforcemanagement_managementunit_timeoffrequests_query(mu_id, opts)
 
 
 
@@ -3613,7 +3613,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3642,7 +3642,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_timeoffrequests_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3666,7 +3666,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_week_schedule_copy"></a>
 
-## -[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedule_copy(management_unit_id, week_id, schedule_id, opts)
+## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedule_copy(management_unit_id, week_id, schedule_id, opts)
 
 
 
@@ -3683,7 +3683,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3718,7 +3718,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_schedule_copy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3746,7 +3746,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_week_schedule_reschedule"></a>
 
-## -[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedule_reschedule(management_unit_id, week_id, schedule_id, opts)
+## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedule_reschedule(management_unit_id, week_id, schedule_id, opts)
 
 
 
@@ -3763,7 +3763,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3796,7 +3796,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_schedule_reschedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3822,7 +3822,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_week_schedules"></a>
 
-## -[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id, opts)
+## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id, opts)
 
 
 
@@ -3839,7 +3839,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3872,7 +3872,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_schedules: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3899,7 +3899,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_week_schedules_generate"></a>
 
-## -[**GenerateWeekScheduleResponse**](GenerateWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedules_generate(management_unit_id, week_id, opts)
+## [**GenerateWeekScheduleResponse**](GenerateWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedules_generate(management_unit_id, week_id, opts)
 
 
 
@@ -3915,7 +3915,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3946,7 +3946,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_schedules_generate: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3971,7 +3971,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_week_schedules_partialupload"></a>
 
-## -[**PartialUploadResponse**](PartialUploadResponse.html) post_workforcemanagement_managementunit_week_schedules_partialupload(management_unit_id, week_id, opts)
+## [**PartialUploadResponse**](PartialUploadResponse.html) post_workforcemanagement_managementunit_week_schedules_partialupload(management_unit_id, week_id, opts)
 
 
 
@@ -3989,7 +3989,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4020,7 +4020,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_schedules_partialupload: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4045,7 +4045,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_week_shorttermforecast_copy"></a>
 
-## -[**ShortTermForecastResponse**](ShortTermForecastResponse.html) post_workforcemanagement_managementunit_week_shorttermforecast_copy(management_unit_id, week_date_id, forecast_id, body, opts)
+## [**ShortTermForecastResponse**](ShortTermForecastResponse.html) post_workforcemanagement_managementunit_week_shorttermforecast_copy(management_unit_id, week_date_id, forecast_id, body, opts)
 
 
 
@@ -4062,7 +4062,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4097,7 +4097,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_shorttermforecast_copy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4124,7 +4124,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_week_shorttermforecasts"></a>
 
-## -[**ShortTermForecastResponse**](ShortTermForecastResponse.html) post_workforcemanagement_managementunit_week_shorttermforecasts(management_unit_id, week_date_id, body, opts)
+## [**ShortTermForecastResponse**](ShortTermForecastResponse.html) post_workforcemanagement_managementunit_week_shorttermforecasts(management_unit_id, week_date_id, body, opts)
 
 
 
@@ -4141,7 +4141,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4174,7 +4174,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_shorttermforecasts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4200,7 +4200,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_week_shorttermforecasts_generate"></a>
 
-## -[**GenerateShortTermForecastResponse**](GenerateShortTermForecastResponse.html) post_workforcemanagement_managementunit_week_shorttermforecasts_generate(management_unit_id, week_date_id, body, opts)
+## [**GenerateShortTermForecastResponse**](GenerateShortTermForecastResponse.html) post_workforcemanagement_managementunit_week_shorttermforecasts_generate(management_unit_id, week_date_id, body, opts)
 
 
 
@@ -4217,7 +4217,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4250,7 +4250,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_shorttermforecasts_generate: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4276,7 +4276,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload"></a>
 
-## -[**PartialUploadResponse**](PartialUploadResponse.html) post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload(management_unit_id, week_date_id, body)
+## [**PartialUploadResponse**](PartialUploadResponse.html) post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload(management_unit_id, week_date_id, body)
 
 
 
@@ -4293,7 +4293,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4323,7 +4323,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4348,7 +4348,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_workplan_copy"></a>
 
-## -[**WorkPlan**](WorkPlan.html) post_workforcemanagement_managementunit_workplan_copy(management_unit_id, work_plan_id, opts)
+## [**WorkPlan**](WorkPlan.html) post_workforcemanagement_managementunit_workplan_copy(management_unit_id, work_plan_id, opts)
 
 
 
@@ -4365,7 +4365,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4396,7 +4396,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_workplan_copy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4421,7 +4421,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_workplans"></a>
 
-## -[**WorkPlan**](WorkPlan.html) post_workforcemanagement_managementunit_workplans(management_unit_id, opts)
+## [**WorkPlan**](WorkPlan.html) post_workforcemanagement_managementunit_workplans(management_unit_id, opts)
 
 
 
@@ -4438,7 +4438,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4467,7 +4467,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_workplans: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4491,7 +4491,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunits"></a>
 
-## -[**ManagementUnit**](ManagementUnit.html) post_workforcemanagement_managementunits(opts)
+## [**ManagementUnit**](ManagementUnit.html) post_workforcemanagement_managementunits(opts)
 
 
 
@@ -4508,7 +4508,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4535,7 +4535,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunits: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4558,7 +4558,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_schedules"></a>
 
-## -[**UserScheduleContainer**](UserScheduleContainer.html) post_workforcemanagement_schedules(opts)
+## [**UserScheduleContainer**](UserScheduleContainer.html) post_workforcemanagement_schedules(opts)
 
 
 
@@ -4576,7 +4576,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4603,7 +4603,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_schedules: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4626,7 +4626,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_timeoffrequests"></a>
 
-## -[**TimeOffRequestResponse**](TimeOffRequestResponse.html) post_workforcemanagement_timeoffrequests(opts)
+## [**TimeOffRequestResponse**](TimeOffRequestResponse.html) post_workforcemanagement_timeoffrequests(opts)
 
 
 
@@ -4642,7 +4642,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4669,7 +4669,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_timeoffrequests: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

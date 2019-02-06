@@ -73,7 +73,7 @@ Method | Description
 
 <a name="delete_authorization_subject_division_role"></a>
 
-## - delete_authorization_subject_division_role(subject_id, division_id, role_id)
+##  delete_authorization_subject_division_role(subject_id, division_id, role_id)
 
 
 
@@ -89,7 +89,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -118,7 +118,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->delete_authorization_subject_division_role: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -143,7 +143,7 @@ nil (empty response body)
 
 <a name="delete_user"></a>
 
-## -[**Empty**](Empty.html) delete_user(user_id)
+## [**Empty**](Empty.html) delete_user(user_id)
 
 
 
@@ -161,7 +161,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -187,7 +187,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->delete_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_user_roles"></a>
 
-## - delete_user_roles(user_id)
+##  delete_user_roles(user_id)
 
 
 
@@ -228,7 +228,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -253,7 +253,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->delete_user_roles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -276,7 +276,7 @@ nil (empty response body)
 
 <a name="delete_user_routinglanguage"></a>
 
-## - delete_user_routinglanguage(user_id, language_id)
+##  delete_user_routinglanguage(user_id, language_id)
 
 
 
@@ -293,7 +293,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -320,7 +320,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->delete_user_routinglanguage: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -344,7 +344,7 @@ nil (empty response body)
 
 <a name="delete_user_routingskill"></a>
 
-## - delete_user_routingskill(user_id, skill_id)
+##  delete_user_routingskill(user_id, skill_id)
 
 
 
@@ -361,7 +361,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -388,7 +388,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->delete_user_routingskill: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -412,7 +412,7 @@ nil (empty response body)
 
 <a name="delete_user_station_associatedstation"></a>
 
-## - delete_user_station_associatedstation(user_id)
+##  delete_user_station_associatedstation(user_id)
 
 
 
@@ -427,7 +427,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -452,7 +452,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->delete_user_station_associatedstation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -475,7 +475,7 @@ nil (empty response body)
 
 <a name="delete_user_station_defaultstation"></a>
 
-## - delete_user_station_defaultstation(user_id)
+##  delete_user_station_defaultstation(user_id)
 
 
 
@@ -492,7 +492,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -517,7 +517,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->delete_user_station_defaultstation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -540,7 +540,7 @@ nil (empty response body)
 
 <a name="get_authorization_divisionspermitted_me"></a>
 
-## -[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_me(permission, opts)
+## [**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_me(permission, opts)
 
 
 
@@ -555,7 +555,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -584,7 +584,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_authorization_divisionspermitted_me: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_divisionspermitted_subject_id"></a>
 
-## -[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
+## [**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
 
 
 
@@ -623,7 +623,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -654,7 +654,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_authorization_divisionspermitted_subject_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -679,7 +679,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_subject"></a>
 
-## -[**AuthzSubject**](AuthzSubject.html) get_authorization_subject(subject_id)
+## [**AuthzSubject**](AuthzSubject.html) get_authorization_subject(subject_id)
 
 
 
@@ -695,7 +695,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -721,7 +721,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_authorization_subject: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -744,7 +744,7 @@ Name | Type | Description  | Notes
 
 <a name="get_authorization_subjects_me"></a>
 
-## -[**AuthzSubject**](AuthzSubject.html) get_authorization_subjects_me
+## [**AuthzSubject**](AuthzSubject.html) get_authorization_subjects_me
 
 
 
@@ -759,7 +759,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -782,7 +782,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_authorization_subjects_me: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -802,7 +802,7 @@ This endpoint does not need any parameter.
 
 <a name="get_fieldconfig"></a>
 
-## -[**FieldConfig**](FieldConfig.html) get_fieldconfig(type)
+## [**FieldConfig**](FieldConfig.html) get_fieldconfig(type)
 
 
 
@@ -817,7 +817,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -843,7 +843,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_fieldconfig: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -866,7 +866,7 @@ Name | Type | Description  | Notes
 
 <a name="get_profiles_users"></a>
 
-## -[**UserProfileEntityListing**](UserProfileEntityListing.html) get_profiles_users(opts)
+## [**UserProfileEntityListing**](UserProfileEntityListing.html) get_profiles_users(opts)
 
 
 
@@ -881,7 +881,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -914,7 +914,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_profiles_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -943,7 +943,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user"></a>
 
-## -[**User**](User.html) get_user(user_id, opts)
+## [**User**](User.html) get_user(user_id, opts)
 
 
 
@@ -958,7 +958,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -988,7 +988,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1013,7 +1013,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_adjacents"></a>
 
-## -[**Adjacents**](Adjacents.html) get_user_adjacents(user_id, opts)
+## [**Adjacents**](Adjacents.html) get_user_adjacents(user_id, opts)
 
 
 
@@ -1028,7 +1028,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1057,7 +1057,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_adjacents: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1081,7 +1081,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_callforwarding"></a>
 
-## -[**CallForwarding**](CallForwarding.html) get_user_callforwarding(user_id)
+## [**CallForwarding**](CallForwarding.html) get_user_callforwarding(user_id)
 
 
 
@@ -1096,7 +1096,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1122,7 +1122,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_callforwarding: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1145,7 +1145,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_directreports"></a>
 
-## -[**Array&lt;User&gt;**](User.html) get_user_directreports(user_id, opts)
+## [**Array&lt;User&gt;**](User.html) get_user_directreports(user_id, opts)
 
 
 
@@ -1160,7 +1160,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1189,7 +1189,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_directreports: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1213,7 +1213,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_favorites"></a>
 
-## -[**UserEntityListing**](UserEntityListing.html) get_user_favorites(user_id, opts)
+## [**UserEntityListing**](UserEntityListing.html) get_user_favorites(user_id, opts)
 
 
 
@@ -1228,7 +1228,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1260,7 +1260,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_favorites: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1287,7 +1287,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_geolocation"></a>
 
-## -[**Geolocation**](Geolocation.html) get_user_geolocation(user_id, client_id)
+## [**Geolocation**](Geolocation.html) get_user_geolocation(user_id, client_id)
 
 
 
@@ -1302,7 +1302,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1330,7 +1330,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_geolocation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1354,7 +1354,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_outofoffice"></a>
 
-## -[**OutOfOffice**](OutOfOffice.html) get_user_outofoffice(user_id)
+## [**OutOfOffice**](OutOfOffice.html) get_user_outofoffice(user_id)
 
 
 
@@ -1369,7 +1369,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1395,7 +1395,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_outofoffice: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1418,7 +1418,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_profile"></a>
 
-## -[**UserProfile**](UserProfile.html) get_user_profile(user_id, opts)
+## [**UserProfile**](UserProfile.html) get_user_profile(user_id, opts)
 
 
 
@@ -1433,7 +1433,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1462,7 +1462,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_profile: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1486,7 +1486,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_profileskills"></a>
 
-## -Array&lt;String&gt;** get_user_profileskills(user_id)
+## Array&lt;String&gt;** get_user_profileskills(user_id)
 
 
 
@@ -1502,7 +1502,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1528,7 +1528,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_profileskills: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1551,7 +1551,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_queues"></a>
 
-## -[**UserQueueEntityListing**](UserQueueEntityListing.html) get_user_queues(user_id, opts)
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) get_user_queues(user_id, opts)
 
 
 
@@ -1567,7 +1567,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1599,7 +1599,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_queues: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1626,7 +1626,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_roles"></a>
 
-## -[**UserAuthorization**](UserAuthorization.html) get_user_roles(user_id)
+## [**UserAuthorization**](UserAuthorization.html) get_user_roles(user_id)
 
 
 
@@ -1642,7 +1642,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1668,7 +1668,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_roles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1691,7 +1691,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_routinglanguages"></a>
 
-## -[**UserLanguageEntityListing**](UserLanguageEntityListing.html) get_user_routinglanguages(user_id, opts)
+## [**UserLanguageEntityListing**](UserLanguageEntityListing.html) get_user_routinglanguages(user_id, opts)
 
 
 
@@ -1706,7 +1706,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1737,7 +1737,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_routinglanguages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1763,7 +1763,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_routingskills"></a>
 
-## -[**UserSkillEntityListing**](UserSkillEntityListing.html) get_user_routingskills(user_id, opts)
+## [**UserSkillEntityListing**](UserSkillEntityListing.html) get_user_routingskills(user_id, opts)
 
 
 
@@ -1778,7 +1778,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1809,7 +1809,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_routingskills: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1835,7 +1835,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_routingstatus"></a>
 
-## -[**RoutingStatus**](RoutingStatus.html) get_user_routingstatus(user_id)
+## [**RoutingStatus**](RoutingStatus.html) get_user_routingstatus(user_id)
 
 
 
@@ -1850,7 +1850,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1876,7 +1876,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_routingstatus: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1899,7 +1899,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_station"></a>
 
-## -[**UserStations**](UserStations.html) get_user_station(user_id)
+## [**UserStations**](UserStations.html) get_user_station(user_id)
 
 
 
@@ -1914,7 +1914,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1940,7 +1940,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_station: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1963,7 +1963,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_superiors"></a>
 
-## -[**Array&lt;User&gt;**](User.html) get_user_superiors(user_id, opts)
+## [**Array&lt;User&gt;**](User.html) get_user_superiors(user_id, opts)
 
 
 
@@ -1978,7 +1978,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2007,7 +2007,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_superiors: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2031,7 +2031,7 @@ Name | Type | Description  | Notes
 
 <a name="get_user_trustors"></a>
 
-## -[**TrustorEntityListing**](TrustorEntityListing.html) get_user_trustors(user_id, opts)
+## [**TrustorEntityListing**](TrustorEntityListing.html) get_user_trustors(user_id, opts)
 
 
 
@@ -2047,7 +2047,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2077,7 +2077,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_user_trustors: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2102,7 +2102,7 @@ Name | Type | Description  | Notes
 
 <a name="get_users"></a>
 
-## -[**UserEntityListing**](UserEntityListing.html) get_users(opts)
+## [**UserEntityListing**](UserEntityListing.html) get_users(opts)
 
 
 
@@ -2117,7 +2117,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2149,7 +2149,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2177,7 +2177,7 @@ Name | Type | Description  | Notes
 
 <a name="get_users_me"></a>
 
-## -[**UserMe**](UserMe.html) get_users_me(opts)
+## [**UserMe**](UserMe.html) get_users_me(opts)
 
 
 
@@ -2192,7 +2192,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2219,7 +2219,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_users_me: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2242,7 +2242,7 @@ Name | Type | Description  | Notes
 
 <a name="get_users_search"></a>
 
-## -[**UsersSearchResponse**](UsersSearchResponse.html) get_users_search(q64, opts)
+## [**UsersSearchResponse**](UsersSearchResponse.html) get_users_search(q64, opts)
 
 
 
@@ -2257,7 +2257,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2286,7 +2286,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->get_users_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2310,7 +2310,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user"></a>
 
-## -[**User**](User.html) patch_user(user_id, body)
+## [**User**](User.html) patch_user(user_id, body)
 
 
 
@@ -2328,7 +2328,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2356,7 +2356,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->patch_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2380,7 +2380,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_callforwarding"></a>
 
-## -[**CallForwarding**](CallForwarding.html) patch_user_callforwarding(user_id, body)
+## [**CallForwarding**](CallForwarding.html) patch_user_callforwarding(user_id, body)
 
 
 
@@ -2395,7 +2395,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2423,7 +2423,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->patch_user_callforwarding: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2447,7 +2447,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_geolocation"></a>
 
-## -[**Geolocation**](Geolocation.html) patch_user_geolocation(user_id, client_id, body)
+## [**Geolocation**](Geolocation.html) patch_user_geolocation(user_id, client_id, body)
 
 
 
@@ -2462,7 +2462,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2492,7 +2492,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->patch_user_geolocation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2517,7 +2517,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_queue"></a>
 
-## -[**UserQueue**](UserQueue.html) patch_user_queue(queue_id, user_id, body)
+## [**UserQueue**](UserQueue.html) patch_user_queue(queue_id, user_id, body)
 
 
 
@@ -2533,7 +2533,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2563,7 +2563,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->patch_user_queue: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2588,7 +2588,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_queues"></a>
 
-## -[**UserQueueEntityListing**](UserQueueEntityListing.html) patch_user_queues(user_id, body, opts)
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) patch_user_queues(user_id, body, opts)
 
 
 
@@ -2604,7 +2604,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2635,7 +2635,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->patch_user_queues: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2660,7 +2660,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_routinglanguage"></a>
 
-## -[**UserRoutingLanguage**](UserRoutingLanguage.html) patch_user_routinglanguage(user_id, language_id, body)
+## [**UserRoutingLanguage**](UserRoutingLanguage.html) patch_user_routinglanguage(user_id, language_id, body)
 
 
 
@@ -2677,7 +2677,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2707,7 +2707,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->patch_user_routinglanguage: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2732,7 +2732,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_routinglanguages_bulk"></a>
 
-## -[**UserLanguageEntityListing**](UserLanguageEntityListing.html) patch_user_routinglanguages_bulk(user_id, body)
+## [**UserLanguageEntityListing**](UserLanguageEntityListing.html) patch_user_routinglanguages_bulk(user_id, body)
 
 
 
@@ -2749,7 +2749,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2777,7 +2777,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->patch_user_routinglanguages_bulk: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2801,7 +2801,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_routingskills_bulk"></a>
 
-## -[**UserSkillEntityListing**](UserSkillEntityListing.html) patch_user_routingskills_bulk(user_id, body)
+## [**UserSkillEntityListing**](UserSkillEntityListing.html) patch_user_routingskills_bulk(user_id, body)
 
 
 
@@ -2818,7 +2818,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2846,7 +2846,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->patch_user_routingskills_bulk: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2870,7 +2870,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_users_bulk"></a>
 
-## -[**UserEntityListing**](UserEntityListing.html) patch_users_bulk(body)
+## [**UserEntityListing**](UserEntityListing.html) patch_users_bulk(body)
 
 
 
@@ -2889,7 +2889,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2915,7 +2915,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->patch_users_bulk: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2938,7 +2938,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_users_aggregates_query"></a>
 
-## -[**PresenceQueryResponse**](PresenceQueryResponse.html) post_analytics_users_aggregates_query(body)
+## [**PresenceQueryResponse**](PresenceQueryResponse.html) post_analytics_users_aggregates_query(body)
 
 
 
@@ -2954,7 +2954,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2980,7 +2980,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->post_analytics_users_aggregates_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3003,7 +3003,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_users_details_query"></a>
 
-## -[**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html) post_analytics_users_details_query(body)
+## [**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html) post_analytics_users_details_query(body)
 
 
 
@@ -3019,7 +3019,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3045,7 +3045,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->post_analytics_users_details_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3068,7 +3068,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_users_observations_query"></a>
 
-## -[**ObservationQueryResponse**](ObservationQueryResponse.html) post_analytics_users_observations_query(body)
+## [**ObservationQueryResponse**](ObservationQueryResponse.html) post_analytics_users_observations_query(body)
 
 
 
@@ -3084,7 +3084,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3110,7 +3110,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->post_analytics_users_observations_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3133,7 +3133,7 @@ Name | Type | Description  | Notes
 
 <a name="post_authorization_subject_division_role"></a>
 
-## - post_authorization_subject_division_role(subject_id, division_id, role_id, opts)
+##  post_authorization_subject_division_role(subject_id, division_id, role_id, opts)
 
 
 
@@ -3149,7 +3149,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3181,7 +3181,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->post_authorization_subject_division_role: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3207,7 +3207,7 @@ nil (empty response body)
 
 <a name="post_user_invite"></a>
 
-## - post_user_invite(user_id, opts)
+##  post_user_invite(user_id, opts)
 
 
 
@@ -3225,7 +3225,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3253,7 +3253,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->post_user_invite: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3277,7 +3277,7 @@ nil (empty response body)
 
 <a name="post_user_password"></a>
 
-## - post_user_password(user_id, body)
+##  post_user_password(user_id, body)
 
 
 
@@ -3294,7 +3294,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3321,7 +3321,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->post_user_password: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3345,7 +3345,7 @@ nil (empty response body)
 
 <a name="post_user_routinglanguages"></a>
 
-## -[**UserRoutingLanguage**](UserRoutingLanguage.html) post_user_routinglanguages(user_id, body)
+## [**UserRoutingLanguage**](UserRoutingLanguage.html) post_user_routinglanguages(user_id, body)
 
 
 
@@ -3362,7 +3362,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3390,7 +3390,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->post_user_routinglanguages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3414,7 +3414,7 @@ Name | Type | Description  | Notes
 
 <a name="post_user_routingskills"></a>
 
-## -[**UserRoutingSkill**](UserRoutingSkill.html) post_user_routingskills(user_id, body)
+## [**UserRoutingSkill**](UserRoutingSkill.html) post_user_routingskills(user_id, body)
 
 
 
@@ -3431,7 +3431,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3459,7 +3459,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->post_user_routingskills: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3483,7 +3483,7 @@ Name | Type | Description  | Notes
 
 <a name="post_users"></a>
 
-## -[**User**](User.html) post_users(body)
+## [**User**](User.html) post_users(body)
 
 
 
@@ -3499,7 +3499,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3525,7 +3525,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->post_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3548,7 +3548,7 @@ Name | Type | Description  | Notes
 
 <a name="post_users_me_password"></a>
 
-## - post_users_me_password(body)
+##  post_users_me_password(body)
 
 
 
@@ -3563,7 +3563,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3588,7 +3588,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->post_users_me_password: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3611,7 +3611,7 @@ nil (empty response body)
 
 <a name="post_users_search"></a>
 
-## -[**UsersSearchResponse**](UsersSearchResponse.html) post_users_search(body)
+## [**UsersSearchResponse**](UsersSearchResponse.html) post_users_search(body)
 
 
 
@@ -3626,7 +3626,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3652,7 +3652,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->post_users_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3675,7 +3675,7 @@ Name | Type | Description  | Notes
 
 <a name="put_user_callforwarding"></a>
 
-## -[**CallForwarding**](CallForwarding.html) put_user_callforwarding(user_id, body)
+## [**CallForwarding**](CallForwarding.html) put_user_callforwarding(user_id, body)
 
 
 
@@ -3690,7 +3690,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3718,7 +3718,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->put_user_callforwarding: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3742,7 +3742,7 @@ Name | Type | Description  | Notes
 
 <a name="put_user_outofoffice"></a>
 
-## -[**OutOfOffice**](OutOfOffice.html) put_user_outofoffice(user_id, body)
+## [**OutOfOffice**](OutOfOffice.html) put_user_outofoffice(user_id, body)
 
 
 
@@ -3757,7 +3757,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3785,7 +3785,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->put_user_outofoffice: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3809,7 +3809,7 @@ Name | Type | Description  | Notes
 
 <a name="put_user_profileskills"></a>
 
-## -Array&lt;String&gt;** put_user_profileskills(user_id, body)
+## Array&lt;String&gt;** put_user_profileskills(user_id, body)
 
 
 
@@ -3828,7 +3828,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3856,7 +3856,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->put_user_profileskills: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3880,7 +3880,7 @@ Name | Type | Description  | Notes
 
 <a name="put_user_roles"></a>
 
-## -[**UserAuthorization**](UserAuthorization.html) put_user_roles(user_id, body)
+## [**UserAuthorization**](UserAuthorization.html) put_user_roles(user_id, body)
 
 
 
@@ -3898,7 +3898,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3926,7 +3926,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->put_user_roles: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3950,7 +3950,7 @@ Name | Type | Description  | Notes
 
 <a name="put_user_routingskill"></a>
 
-## -[**UserRoutingSkill**](UserRoutingSkill.html) put_user_routingskill(user_id, skill_id, body)
+## [**UserRoutingSkill**](UserRoutingSkill.html) put_user_routingskill(user_id, skill_id, body)
 
 
 
@@ -3967,7 +3967,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3997,7 +3997,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->put_user_routingskill: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4022,7 +4022,7 @@ Name | Type | Description  | Notes
 
 <a name="put_user_routingstatus"></a>
 
-## -[**RoutingStatus**](RoutingStatus.html) put_user_routingstatus(user_id, body)
+## [**RoutingStatus**](RoutingStatus.html) put_user_routingstatus(user_id, body)
 
 
 
@@ -4037,7 +4037,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4065,7 +4065,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->put_user_routingstatus: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4089,7 +4089,7 @@ Name | Type | Description  | Notes
 
 <a name="put_user_station_associatedstation_station_id"></a>
 
-## - put_user_station_associatedstation_station_id(user_id, station_id)
+##  put_user_station_associatedstation_station_id(user_id, station_id)
 
 
 
@@ -4104,7 +4104,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4131,7 +4131,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->put_user_station_associatedstation_station_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4155,7 +4155,7 @@ nil (empty response body)
 
 <a name="put_user_station_defaultstation_station_id"></a>
 
-## - put_user_station_defaultstation_station_id(user_id, station_id)
+##  put_user_station_defaultstation_station_id(user_id, station_id)
 
 
 
@@ -4172,7 +4172,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4199,7 +4199,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling UsersApi->put_user_station_defaultstation_station_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

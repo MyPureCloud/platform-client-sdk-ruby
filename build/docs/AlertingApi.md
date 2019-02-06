@@ -23,7 +23,7 @@ Method | Description
 
 <a name="delete_alerting_interactionstats_alert"></a>
 
-## - delete_alerting_interactionstats_alert(alert_id)
+##  delete_alerting_interactionstats_alert(alert_id)
 
 
 
@@ -39,7 +39,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -64,7 +64,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->delete_alerting_interactionstats_alert: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -87,7 +87,7 @@ nil (empty response body)
 
 <a name="delete_alerting_interactionstats_rule"></a>
 
-## - delete_alerting_interactionstats_rule(rule_id)
+##  delete_alerting_interactionstats_rule(rule_id)
 
 
 
@@ -103,7 +103,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -128,7 +128,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->delete_alerting_interactionstats_rule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -151,7 +151,7 @@ nil (empty response body)
 
 <a name="get_alerting_alerts_active"></a>
 
-## -[**ActiveAlertCount**](ActiveAlertCount.html) get_alerting_alerts_active
+## [**ActiveAlertCount**](ActiveAlertCount.html) get_alerting_alerts_active
 
 
 
@@ -166,7 +166,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -189,7 +189,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->get_alerting_alerts_active: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -209,7 +209,7 @@ This endpoint does not need any parameter.
 
 <a name="get_alerting_interactionstats_alert"></a>
 
-## -[**InteractionStatsAlert**](InteractionStatsAlert.html) get_alerting_interactionstats_alert(alert_id, opts)
+## [**InteractionStatsAlert**](InteractionStatsAlert.html) get_alerting_interactionstats_alert(alert_id, opts)
 
 
 
@@ -225,7 +225,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -254,7 +254,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->get_alerting_interactionstats_alert: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 <a name="get_alerting_interactionstats_alerts"></a>
 
-## -[**InteractionStatsAlertContainer**](InteractionStatsAlertContainer.html) get_alerting_interactionstats_alerts(opts)
+## [**InteractionStatsAlertContainer**](InteractionStatsAlertContainer.html) get_alerting_interactionstats_alerts(opts)
 
 
 
@@ -294,7 +294,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -321,7 +321,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->get_alerting_interactionstats_alerts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 
 <a name="get_alerting_interactionstats_alerts_unread"></a>
 
-## -[**UnreadMetric**](UnreadMetric.html) get_alerting_interactionstats_alerts_unread
+## [**UnreadMetric**](UnreadMetric.html) get_alerting_interactionstats_alerts_unread
 
 
 
@@ -359,7 +359,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -382,7 +382,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->get_alerting_interactionstats_alerts_unread: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -402,7 +402,7 @@ This endpoint does not need any parameter.
 
 <a name="get_alerting_interactionstats_rule"></a>
 
-## -[**InteractionStatsRule**](InteractionStatsRule.html) get_alerting_interactionstats_rule(rule_id, opts)
+## [**InteractionStatsRule**](InteractionStatsRule.html) get_alerting_interactionstats_rule(rule_id, opts)
 
 
 
@@ -418,7 +418,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -447,7 +447,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->get_alerting_interactionstats_rule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 
 <a name="get_alerting_interactionstats_rules"></a>
 
-## -[**InteractionStatsRuleContainer**](InteractionStatsRuleContainer.html) get_alerting_interactionstats_rules(opts)
+## [**InteractionStatsRuleContainer**](InteractionStatsRuleContainer.html) get_alerting_interactionstats_rules(opts)
 
 
 
@@ -487,7 +487,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -514,7 +514,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->get_alerting_interactionstats_rules: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -537,7 +537,7 @@ Name | Type | Description  | Notes
 
 <a name="post_alerting_interactionstats_rules"></a>
 
-## -[**InteractionStatsRule**](InteractionStatsRule.html) post_alerting_interactionstats_rules(body, opts)
+## [**InteractionStatsRule**](InteractionStatsRule.html) post_alerting_interactionstats_rules(body, opts)
 
 
 
@@ -553,7 +553,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -582,7 +582,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->post_alerting_interactionstats_rules: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -606,7 +606,7 @@ Name | Type | Description  | Notes
 
 <a name="put_alerting_interactionstats_alert"></a>
 
-## -[**UnreadStatus**](UnreadStatus.html) put_alerting_interactionstats_alert(alert_id, body, opts)
+## [**UnreadStatus**](UnreadStatus.html) put_alerting_interactionstats_alert(alert_id, body, opts)
 
 
 
@@ -622,7 +622,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -653,7 +653,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->put_alerting_interactionstats_alert: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -678,7 +678,7 @@ Name | Type | Description  | Notes
 
 <a name="put_alerting_interactionstats_rule"></a>
 
-## -[**InteractionStatsRule**](InteractionStatsRule.html) put_alerting_interactionstats_rule(rule_id, body, opts)
+## [**InteractionStatsRule**](InteractionStatsRule.html) put_alerting_interactionstats_rule(rule_id, body, opts)
 
 
 
@@ -694,7 +694,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -725,7 +725,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling AlertingApi->put_alerting_interactionstats_rule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

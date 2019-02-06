@@ -53,7 +53,7 @@ Method | Description
 
 <a name="delete_integration"></a>
 
-## -[**Integration**](Integration.html) delete_integration(integration_id)
+## [**Integration**](Integration.html) delete_integration(integration_id)
 
 
 
@@ -68,7 +68,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -94,7 +94,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->delete_integration: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_integrations_action"></a>
 
-## - delete_integrations_action(action_id)
+##  delete_integrations_action(action_id)
 
 
 
@@ -133,7 +133,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -158,7 +158,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->delete_integrations_action: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -181,7 +181,7 @@ nil (empty response body)
 
 <a name="delete_integrations_action_draft"></a>
 
-## - delete_integrations_action_draft(action_id)
+##  delete_integrations_action_draft(action_id)
 
 
 
@@ -197,7 +197,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -222,7 +222,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->delete_integrations_action_draft: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -245,7 +245,7 @@ nil (empty response body)
 
 <a name="delete_integrations_credential"></a>
 
-## - delete_integrations_credential(credential_id)
+##  delete_integrations_credential(credential_id)
 
 
 
@@ -260,7 +260,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -285,7 +285,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->delete_integrations_credential: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -308,7 +308,7 @@ nil (empty response body)
 
 <a name="get_integration"></a>
 
-## -[**Integration**](Integration.html) get_integration(integration_id, opts)
+## [**Integration**](Integration.html) get_integration(integration_id, opts)
 
 
 
@@ -323,7 +323,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -357,7 +357,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integration: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integration_config_current"></a>
 
-## -[**IntegrationConfiguration**](IntegrationConfiguration.html) get_integration_config_current(integration_id)
+## [**IntegrationConfiguration**](IntegrationConfiguration.html) get_integration_config_current(integration_id)
 
 
 
@@ -401,7 +401,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -427,7 +427,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integration_config_current: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -450,7 +450,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations"></a>
 
-## -[**IntegrationEntityListing**](IntegrationEntityListing.html) get_integrations(opts)
+## [**IntegrationEntityListing**](IntegrationEntityListing.html) get_integrations(opts)
 
 
 
@@ -465,7 +465,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -497,7 +497,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_action"></a>
 
-## -[**Action**](Action.html) get_integrations_action(action_id, opts)
+## [**Action**](Action.html) get_integrations_action(action_id, opts)
 
 
 
@@ -542,7 +542,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -572,7 +572,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_action: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -597,7 +597,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_action_draft"></a>
 
-## -[**Action**](Action.html) get_integrations_action_draft(action_id, opts)
+## [**Action**](Action.html) get_integrations_action_draft(action_id, opts)
 
 
 
@@ -614,7 +614,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -644,7 +644,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_action_draft: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -669,7 +669,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_action_draft_schema"></a>
 
-## -[**JsonSchemaDocument**](JsonSchemaDocument.html) get_integrations_action_draft_schema(action_id, file_name)
+## [**JsonSchemaDocument**](JsonSchemaDocument.html) get_integrations_action_draft_schema(action_id, file_name)
 
 
 
@@ -686,7 +686,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -714,7 +714,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_action_draft_schema: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -738,7 +738,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_action_draft_template"></a>
 
-## -String** get_integrations_action_draft_template(action_id, file_name)
+## String** get_integrations_action_draft_template(action_id, file_name)
 
 
 
@@ -755,7 +755,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -783,7 +783,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_action_draft_template: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -807,7 +807,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_action_draft_validation"></a>
 
-## -[**DraftValidationResult**](DraftValidationResult.html) get_integrations_action_draft_validation(action_id)
+## [**DraftValidationResult**](DraftValidationResult.html) get_integrations_action_draft_validation(action_id)
 
 
 
@@ -823,7 +823,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -849,7 +849,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_action_draft_validation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -872,7 +872,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_action_schema"></a>
 
-## -[**JsonSchemaDocument**](JsonSchemaDocument.html) get_integrations_action_schema(action_id, file_name)
+## [**JsonSchemaDocument**](JsonSchemaDocument.html) get_integrations_action_schema(action_id, file_name)
 
 
 
@@ -889,7 +889,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -917,7 +917,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_action_schema: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -941,7 +941,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_action_template"></a>
 
-## -String** get_integrations_action_template(action_id, file_name)
+## String** get_integrations_action_template(action_id, file_name)
 
 
 
@@ -958,7 +958,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -986,7 +986,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_action_template: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1010,7 +1010,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_actions"></a>
 
-## -[**ActionEntityListing**](ActionEntityListing.html) get_integrations_actions(opts)
+## [**ActionEntityListing**](ActionEntityListing.html) get_integrations_actions(opts)
 
 
 
@@ -1027,7 +1027,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1062,7 +1062,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_actions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1093,7 +1093,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_actions_categories"></a>
 
-## -[**CategoryEntityListing**](CategoryEntityListing.html) get_integrations_actions_categories(opts)
+## [**CategoryEntityListing**](CategoryEntityListing.html) get_integrations_actions_categories(opts)
 
 
 
@@ -1110,7 +1110,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1143,7 +1143,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_actions_categories: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1172,7 +1172,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_actions_drafts"></a>
 
-## -[**ActionEntityListing**](ActionEntityListing.html) get_integrations_actions_drafts(opts)
+## [**ActionEntityListing**](ActionEntityListing.html) get_integrations_actions_drafts(opts)
 
 
 
@@ -1189,7 +1189,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1224,7 +1224,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_actions_drafts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1255,7 +1255,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_clientapps"></a>
 
-## -[**ClientAppEntityListing**](ClientAppEntityListing.html) get_integrations_clientapps(opts)
+## [**ClientAppEntityListing**](ClientAppEntityListing.html) get_integrations_clientapps(opts)
 
 
 
@@ -1270,7 +1270,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1302,7 +1302,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_clientapps: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1330,7 +1330,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_credential"></a>
 
-## -[**Credential**](Credential.html) get_integrations_credential(credential_id)
+## [**Credential**](Credential.html) get_integrations_credential(credential_id)
 
 
 
@@ -1345,7 +1345,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1371,7 +1371,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_credential: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1394,7 +1394,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_credentials"></a>
 
-## -[**CredentialInfoListing**](CredentialInfoListing.html) get_integrations_credentials(opts)
+## [**CredentialInfoListing**](CredentialInfoListing.html) get_integrations_credentials(opts)
 
 
 
@@ -1409,7 +1409,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1437,7 +1437,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_credentials: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1461,7 +1461,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_credentials_types"></a>
 
-## -[**CredentialTypeListing**](CredentialTypeListing.html) get_integrations_credentials_types
+## [**CredentialTypeListing**](CredentialTypeListing.html) get_integrations_credentials_types
 
 
 
@@ -1476,7 +1476,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1499,7 +1499,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_credentials_types: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1519,7 +1519,7 @@ This endpoint does not need any parameter.
 
 <a name="get_integrations_eventlog"></a>
 
-## -[**IntegrationEventEntityListing**](IntegrationEventEntityListing.html) get_integrations_eventlog(opts)
+## [**IntegrationEventEntityListing**](IntegrationEventEntityListing.html) get_integrations_eventlog(opts)
 
 
 
@@ -1536,7 +1536,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1567,7 +1567,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_eventlog: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1594,7 +1594,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_eventlog_event_id"></a>
 
-## -[**IntegrationEvent**](IntegrationEvent.html) get_integrations_eventlog_event_id(event_id)
+## [**IntegrationEvent**](IntegrationEvent.html) get_integrations_eventlog_event_id(event_id)
 
 
 
@@ -1611,7 +1611,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1637,7 +1637,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_eventlog_event_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1660,7 +1660,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_type"></a>
 
-## -[**IntegrationType**](IntegrationType.html) get_integrations_type(type_id)
+## [**IntegrationType**](IntegrationType.html) get_integrations_type(type_id)
 
 
 
@@ -1675,7 +1675,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1701,7 +1701,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_type: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1724,7 +1724,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_type_configschema"></a>
 
-## -[**JsonSchemaDocument**](JsonSchemaDocument.html) get_integrations_type_configschema(type_id, config_type)
+## [**JsonSchemaDocument**](JsonSchemaDocument.html) get_integrations_type_configschema(type_id, config_type)
 
 
 
@@ -1739,7 +1739,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1767,7 +1767,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_type_configschema: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1791,7 +1791,7 @@ Name | Type | Description  | Notes
 
 <a name="get_integrations_types"></a>
 
-## -[**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html) get_integrations_types(opts)
+## [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html) get_integrations_types(opts)
 
 
 
@@ -1806,7 +1806,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1838,7 +1838,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->get_integrations_types: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1866,7 +1866,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_integration"></a>
 
-## -[**Integration**](Integration.html) patch_integration(integration_id, opts)
+## [**Integration**](Integration.html) patch_integration(integration_id, opts)
 
 
 
@@ -1881,7 +1881,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1916,7 +1916,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->patch_integration: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1946,7 +1946,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_integrations_action"></a>
 
-## -[**Action**](Action.html) patch_integrations_action(action_id, body)
+## [**Action**](Action.html) patch_integrations_action(action_id, body)
 
 
 
@@ -1962,7 +1962,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1990,7 +1990,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->patch_integrations_action: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2014,7 +2014,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_integrations_action_draft"></a>
 
-## -[**Action**](Action.html) patch_integrations_action_draft(action_id, body)
+## [**Action**](Action.html) patch_integrations_action_draft(action_id, body)
 
 
 
@@ -2030,7 +2030,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2058,7 +2058,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->patch_integrations_action_draft: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2082,7 +2082,7 @@ Name | Type | Description  | Notes
 
 <a name="post_integrations"></a>
 
-## -[**Integration**](Integration.html) post_integrations(opts)
+## [**Integration**](Integration.html) post_integrations(opts)
 
 
 
@@ -2097,7 +2097,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2124,7 +2124,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->post_integrations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2147,7 +2147,7 @@ Name | Type | Description  | Notes
 
 <a name="post_integrations_action_draft"></a>
 
-## -[**Action**](Action.html) post_integrations_action_draft(action_id)
+## [**Action**](Action.html) post_integrations_action_draft(action_id)
 
 
 
@@ -2163,7 +2163,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2189,7 +2189,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->post_integrations_action_draft: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2212,7 +2212,7 @@ Name | Type | Description  | Notes
 
 <a name="post_integrations_action_draft_publish"></a>
 
-## -[**Action**](Action.html) post_integrations_action_draft_publish(action_id, body)
+## [**Action**](Action.html) post_integrations_action_draft_publish(action_id, body)
 
 
 
@@ -2228,7 +2228,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2256,7 +2256,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->post_integrations_action_draft_publish: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2280,7 +2280,7 @@ Name | Type | Description  | Notes
 
 <a name="post_integrations_action_draft_test"></a>
 
-## -[**TestExecutionResult**](TestExecutionResult.html) post_integrations_action_draft_test(action_id, body)
+## [**TestExecutionResult**](TestExecutionResult.html) post_integrations_action_draft_test(action_id, body)
 
 
 
@@ -2296,7 +2296,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2324,7 +2324,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->post_integrations_action_draft_test: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2348,7 +2348,7 @@ Name | Type | Description  | Notes
 
 <a name="post_integrations_action_execute"></a>
 
-## -Object** post_integrations_action_execute(action_id, body)
+## Object** post_integrations_action_execute(action_id, body)
 
 
 
@@ -2365,7 +2365,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2393,7 +2393,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->post_integrations_action_execute: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2417,7 +2417,7 @@ Name | Type | Description  | Notes
 
 <a name="post_integrations_action_test"></a>
 
-## -[**TestExecutionResult**](TestExecutionResult.html) post_integrations_action_test(action_id, body)
+## [**TestExecutionResult**](TestExecutionResult.html) post_integrations_action_test(action_id, body)
 
 
 
@@ -2434,7 +2434,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2462,7 +2462,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->post_integrations_action_test: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2486,7 +2486,7 @@ Name | Type | Description  | Notes
 
 <a name="post_integrations_actions"></a>
 
-## -[**Action**](Action.html) post_integrations_actions(body)
+## [**Action**](Action.html) post_integrations_actions(body)
 
 
 
@@ -2502,7 +2502,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2528,7 +2528,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->post_integrations_actions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2551,7 +2551,7 @@ Name | Type | Description  | Notes
 
 <a name="post_integrations_actions_drafts"></a>
 
-## -[**Action**](Action.html) post_integrations_actions_drafts(body)
+## [**Action**](Action.html) post_integrations_actions_drafts(body)
 
 
 
@@ -2567,7 +2567,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2593,7 +2593,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->post_integrations_actions_drafts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2616,7 +2616,7 @@ Name | Type | Description  | Notes
 
 <a name="post_integrations_credentials"></a>
 
-## -[**CredentialInfo**](CredentialInfo.html) post_integrations_credentials(opts)
+## [**CredentialInfo**](CredentialInfo.html) post_integrations_credentials(opts)
 
 
 
@@ -2631,7 +2631,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2658,7 +2658,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->post_integrations_credentials: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2681,7 +2681,7 @@ Name | Type | Description  | Notes
 
 <a name="post_integrations_workforcemanagement_vendorconnection"></a>
 
-## -[**UserActionCategoryEntityListing**](UserActionCategoryEntityListing.html) post_integrations_workforcemanagement_vendorconnection(opts)
+## [**UserActionCategoryEntityListing**](UserActionCategoryEntityListing.html) post_integrations_workforcemanagement_vendorconnection(opts)
 
 
 
@@ -2696,7 +2696,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2723,7 +2723,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->post_integrations_workforcemanagement_vendorconnection: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2746,7 +2746,7 @@ Name | Type | Description  | Notes
 
 <a name="put_integration_config_current"></a>
 
-## -[**IntegrationConfiguration**](IntegrationConfiguration.html) put_integration_config_current(integration_id, opts)
+## [**IntegrationConfiguration**](IntegrationConfiguration.html) put_integration_config_current(integration_id, opts)
 
 
 
@@ -2761,7 +2761,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2790,7 +2790,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->put_integration_config_current: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2814,7 +2814,7 @@ Name | Type | Description  | Notes
 
 <a name="put_integrations_credential"></a>
 
-## -[**CredentialInfo**](CredentialInfo.html) put_integrations_credential(credential_id, opts)
+## [**CredentialInfo**](CredentialInfo.html) put_integrations_credential(credential_id, opts)
 
 
 
@@ -2829,7 +2829,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2858,7 +2858,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling IntegrationsApi->put_integrations_credential: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

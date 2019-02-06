@@ -18,7 +18,7 @@ Method | Description
 
 <a name="delete_fax_document"></a>
 
-## - delete_fax_document(document_id)
+##  delete_fax_document(document_id)
 
 
 
@@ -33,7 +33,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -58,7 +58,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling FaxApi->delete_fax_document: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -81,7 +81,7 @@ nil (empty response body)
 
 <a name="get_fax_document"></a>
 
-## -[**FaxDocument**](FaxDocument.html) get_fax_document(document_id)
+## [**FaxDocument**](FaxDocument.html) get_fax_document(document_id)
 
 
 
@@ -96,7 +96,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -122,7 +122,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling FaxApi->get_fax_document: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 <a name="get_fax_document_content"></a>
 
-## -[**DownloadResponse**](DownloadResponse.html) get_fax_document_content(document_id)
+## [**DownloadResponse**](DownloadResponse.html) get_fax_document_content(document_id)
 
 
 
@@ -160,7 +160,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -186,7 +186,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling FaxApi->get_fax_document_content: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 <a name="get_fax_documents"></a>
 
-## -[**FaxDocumentEntityListing**](FaxDocumentEntityListing.html) get_fax_documents(opts)
+## [**FaxDocumentEntityListing**](FaxDocumentEntityListing.html) get_fax_documents(opts)
 
 
 
@@ -224,7 +224,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -252,7 +252,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling FaxApi->get_fax_documents: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 <a name="get_fax_summary"></a>
 
-## -[**FaxSummary**](FaxSummary.html) get_fax_summary
+## [**FaxSummary**](FaxSummary.html) get_fax_summary
 
 
 
@@ -291,7 +291,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -314,7 +314,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling FaxApi->get_fax_summary: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -334,7 +334,7 @@ This endpoint does not need any parameter.
 
 <a name="put_fax_document"></a>
 
-## -[**FaxDocument**](FaxDocument.html) put_fax_document(document_id, body)
+## [**FaxDocument**](FaxDocument.html) put_fax_document(document_id, body)
 
 
 
@@ -349,7 +349,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -377,7 +377,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling FaxApi->put_fax_document: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

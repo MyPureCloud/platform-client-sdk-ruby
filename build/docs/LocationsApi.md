@@ -19,7 +19,7 @@ Method | Description
 
 <a name="delete_location"></a>
 
-## - delete_location(location_id)
+##  delete_location(location_id)
 
 
 
@@ -35,7 +35,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -60,7 +60,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LocationsApi->delete_location: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -83,7 +83,7 @@ nil (empty response body)
 
 <a name="get_location"></a>
 
-## -[**LocationDefinition**](LocationDefinition.html) get_location(location_id)
+## [**LocationDefinition**](LocationDefinition.html) get_location(location_id)
 
 
 
@@ -99,7 +99,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -125,7 +125,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LocationsApi->get_location: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 <a name="get_locations"></a>
 
-## -[**LocationEntityListing**](LocationEntityListing.html) get_locations(opts)
+## [**LocationEntityListing**](LocationEntityListing.html) get_locations(opts)
 
 
 
@@ -163,7 +163,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -193,7 +193,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LocationsApi->get_locations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 <a name="get_locations_search"></a>
 
-## -[**LocationsSearchResponse**](LocationsSearchResponse.html) get_locations_search(q64, opts)
+## [**LocationsSearchResponse**](LocationsSearchResponse.html) get_locations_search(q64, opts)
 
 
 
@@ -234,7 +234,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -263,7 +263,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LocationsApi->get_locations_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_location"></a>
 
-## -[**LocationDefinition**](LocationDefinition.html) patch_location(location_id, body)
+## [**LocationDefinition**](LocationDefinition.html) patch_location(location_id, body)
 
 
 
@@ -303,7 +303,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -331,7 +331,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LocationsApi->patch_location: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 
 <a name="post_locations"></a>
 
-## -[**LocationDefinition**](LocationDefinition.html) post_locations(body)
+## [**LocationDefinition**](LocationDefinition.html) post_locations(body)
 
 
 
@@ -371,7 +371,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -397,7 +397,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LocationsApi->post_locations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 
 <a name="post_locations_search"></a>
 
-## -[**LocationsSearchResponse**](LocationsSearchResponse.html) post_locations_search(body)
+## [**LocationsSearchResponse**](LocationsSearchResponse.html) post_locations_search(body)
 
 
 
@@ -435,7 +435,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -461,7 +461,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LocationsApi->post_locations_search: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

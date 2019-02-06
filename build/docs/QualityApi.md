@@ -70,7 +70,7 @@ Method | Description
 
 <a name="delete_quality_calibration"></a>
 
-## -[**Calibration**](Calibration.html) delete_quality_calibration(calibration_id, calibrator_id)
+## [**Calibration**](Calibration.html) delete_quality_calibration(calibration_id, calibrator_id)
 
 
 
@@ -85,7 +85,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -113,7 +113,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->delete_quality_calibration: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_quality_conversation_evaluation"></a>
 
-## -[**Evaluation**](Evaluation.html) delete_quality_conversation_evaluation(conversation_id, evaluation_id, opts)
+## [**Evaluation**](Evaluation.html) delete_quality_conversation_evaluation(conversation_id, evaluation_id, opts)
 
 
 
@@ -152,7 +152,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -183,7 +183,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->delete_quality_conversation_evaluation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_quality_form"></a>
 
-## - delete_quality_form(form_id)
+##  delete_quality_form(form_id)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -224,7 +224,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -249,7 +249,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->delete_quality_form: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -272,7 +272,7 @@ nil (empty response body)
 
 <a name="delete_quality_forms_evaluation"></a>
 
-## - delete_quality_forms_evaluation(form_id)
+##  delete_quality_forms_evaluation(form_id)
 
 
 
@@ -288,7 +288,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -313,7 +313,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->delete_quality_forms_evaluation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -336,7 +336,7 @@ nil (empty response body)
 
 <a name="delete_quality_forms_survey"></a>
 
-## - delete_quality_forms_survey(form_id)
+##  delete_quality_forms_survey(form_id)
 
 
 
@@ -352,7 +352,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -377,7 +377,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->delete_quality_forms_survey: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -400,7 +400,7 @@ nil (empty response body)
 
 <a name="delete_quality_keywordset"></a>
 
-## - delete_quality_keywordset(keyword_set_id)
+##  delete_quality_keywordset(keyword_set_id)
 
 
 
@@ -415,7 +415,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -440,7 +440,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->delete_quality_keywordset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -463,7 +463,7 @@ nil (empty response body)
 
 <a name="delete_quality_keywordsets"></a>
 
-## - delete_quality_keywordsets(ids)
+##  delete_quality_keywordsets(ids)
 
 
 
@@ -478,7 +478,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -503,7 +503,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->delete_quality_keywordsets: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -526,7 +526,7 @@ nil (empty response body)
 
 <a name="get_quality_agents_activity"></a>
 
-## -[**AgentActivityEntityListing**](AgentActivityEntityListing.html) get_quality_agents_activity(opts)
+## [**AgentActivityEntityListing**](AgentActivityEntityListing.html) get_quality_agents_activity(opts)
 
 
 
@@ -541,7 +541,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -579,7 +579,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_agents_activity: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -613,7 +613,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_calibration"></a>
 
-## -[**Calibration**](Calibration.html) get_quality_calibration(calibration_id, opts)
+## [**Calibration**](Calibration.html) get_quality_calibration(calibration_id, opts)
 
 
 
@@ -628,7 +628,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -658,7 +658,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_calibration: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -683,7 +683,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_calibrations"></a>
 
-## -[**CalibrationEntityListing**](CalibrationEntityListing.html) get_quality_calibrations(calibrator_id, opts)
+## [**CalibrationEntityListing**](CalibrationEntityListing.html) get_quality_calibrations(calibrator_id, opts)
 
 
 
@@ -698,7 +698,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -735,7 +735,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_calibrations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -767,7 +767,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_conversation_audits"></a>
 
-## -[**QualityAuditPage**](QualityAuditPage.html) get_quality_conversation_audits(conversation_id, opts)
+## [**QualityAuditPage**](QualityAuditPage.html) get_quality_conversation_audits(conversation_id, opts)
 
 
 
@@ -782,7 +782,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -818,7 +818,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_conversation_audits: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -849,7 +849,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_conversation_evaluation"></a>
 
-## -[**Evaluation**](Evaluation.html) get_quality_conversation_evaluation(conversation_id, evaluation_id, opts)
+## [**Evaluation**](Evaluation.html) get_quality_conversation_evaluation(conversation_id, evaluation_id, opts)
 
 
 
@@ -864,7 +864,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -895,7 +895,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_conversation_evaluation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -920,7 +920,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_conversation_surveys"></a>
 
-## -[**Array&lt;Survey&gt;**](Survey.html) get_quality_conversation_surveys(conversation_id)
+## [**Array&lt;Survey&gt;**](Survey.html) get_quality_conversation_surveys(conversation_id)
 
 
 
@@ -935,7 +935,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -961,7 +961,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_conversation_surveys: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -984,7 +984,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_evaluations_query"></a>
 
-## -[**EvaluationEntityListing**](EvaluationEntityListing.html) get_quality_evaluations_query(opts)
+## [**EvaluationEntityListing**](EvaluationEntityListing.html) get_quality_evaluations_query(opts)
 
 
 
@@ -999,7 +999,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1043,7 +1043,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_evaluations_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1083,7 +1083,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_evaluators_activity"></a>
 
-## -[**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html) get_quality_evaluators_activity(opts)
+## [**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html) get_quality_evaluators_activity(opts)
 
 
 
@@ -1098,7 +1098,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1135,7 +1135,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_evaluators_activity: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1168,7 +1168,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_form"></a>
 
-## -[**EvaluationForm**](EvaluationForm.html) get_quality_form(form_id)
+## [**EvaluationForm**](EvaluationForm.html) get_quality_form(form_id)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1184,7 +1184,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1210,7 +1210,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_form: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1233,7 +1233,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_form_versions"></a>
 
-## -[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_form_versions(form_id, opts)
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_form_versions(form_id, opts)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1249,7 +1249,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1279,7 +1279,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_form_versions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1304,7 +1304,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_forms"></a>
 
-## -[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_forms(opts)
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_forms(opts)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1320,7 +1320,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1354,7 +1354,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_forms: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1384,7 +1384,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_forms_evaluation"></a>
 
-## -[**EvaluationForm**](EvaluationForm.html) get_quality_forms_evaluation(form_id)
+## [**EvaluationForm**](EvaluationForm.html) get_quality_forms_evaluation(form_id)
 
 
 
@@ -1400,7 +1400,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1426,7 +1426,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_forms_evaluation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1449,7 +1449,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_forms_evaluation_versions"></a>
 
-## -[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_forms_evaluation_versions(form_id, opts)
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_forms_evaluation_versions(form_id, opts)
 
 
 
@@ -1465,7 +1465,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1495,7 +1495,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_forms_evaluation_versions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1520,7 +1520,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_forms_evaluations"></a>
 
-## -[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_forms_evaluations(opts)
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_forms_evaluations(opts)
 
 
 
@@ -1536,7 +1536,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1570,7 +1570,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_forms_evaluations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1600,7 +1600,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_forms_survey"></a>
 
-## -[**SurveyForm**](SurveyForm.html) get_quality_forms_survey(form_id)
+## [**SurveyForm**](SurveyForm.html) get_quality_forms_survey(form_id)
 
 
 
@@ -1616,7 +1616,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1642,7 +1642,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_forms_survey: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1665,7 +1665,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_forms_survey_versions"></a>
 
-## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_survey_versions(form_id, opts)
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_survey_versions(form_id, opts)
 
 
 
@@ -1681,7 +1681,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1711,7 +1711,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_forms_survey_versions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1736,7 +1736,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_forms_surveys"></a>
 
-## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_surveys(opts)
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_surveys(opts)
 
 
 
@@ -1752,7 +1752,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1786,7 +1786,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_forms_surveys: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1816,7 +1816,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_forms_surveys_bulk"></a>
 
-## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_surveys_bulk(id)
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_surveys_bulk(id)
 
 
 
@@ -1832,7 +1832,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1858,7 +1858,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_forms_surveys_bulk: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1881,7 +1881,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_forms_surveys_bulk_contexts"></a>
 
-## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_surveys_bulk_contexts(context_id, opts)
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_forms_surveys_bulk_contexts(context_id, opts)
 
 
 
@@ -1897,7 +1897,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1926,7 +1926,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_forms_surveys_bulk_contexts: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1950,7 +1950,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_keywordset"></a>
 
-## -[**KeywordSet**](KeywordSet.html) get_quality_keywordset(keyword_set_id)
+## [**KeywordSet**](KeywordSet.html) get_quality_keywordset(keyword_set_id)
 
 
 
@@ -1965,7 +1965,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1991,7 +1991,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_keywordset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2014,7 +2014,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_keywordsets"></a>
 
-## -[**KeywordSetEntityListing**](KeywordSetEntityListing.html) get_quality_keywordsets(opts)
+## [**KeywordSetEntityListing**](KeywordSetEntityListing.html) get_quality_keywordsets(opts)
 
 
 
@@ -2029,7 +2029,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2065,7 +2065,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_keywordsets: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2097,7 +2097,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_publishedform"></a>
 
-## -[**EvaluationForm**](EvaluationForm.html) get_quality_publishedform(form_id)
+## [**EvaluationForm**](EvaluationForm.html) get_quality_publishedform(form_id)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -2113,7 +2113,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2139,7 +2139,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_publishedform: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2162,7 +2162,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_publishedforms"></a>
 
-## -[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_publishedforms(opts)
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_publishedforms(opts)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -2178,7 +2178,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2208,7 +2208,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_publishedforms: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2234,7 +2234,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_publishedforms_evaluation"></a>
 
-## -[**EvaluationForm**](EvaluationForm.html) get_quality_publishedforms_evaluation(form_id)
+## [**EvaluationForm**](EvaluationForm.html) get_quality_publishedforms_evaluation(form_id)
 
 
 
@@ -2250,7 +2250,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2276,7 +2276,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_publishedforms_evaluation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2299,7 +2299,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_publishedforms_evaluations"></a>
 
-## -[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_publishedforms_evaluations(opts)
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) get_quality_publishedforms_evaluations(opts)
 
 
 
@@ -2315,7 +2315,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2345,7 +2345,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_publishedforms_evaluations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2371,7 +2371,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_publishedforms_survey"></a>
 
-## -[**SurveyForm**](SurveyForm.html) get_quality_publishedforms_survey(form_id)
+## [**SurveyForm**](SurveyForm.html) get_quality_publishedforms_survey(form_id)
 
 
 
@@ -2387,7 +2387,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2413,7 +2413,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_publishedforms_survey: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2436,7 +2436,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_publishedforms_surveys"></a>
 
-## -[**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_publishedforms_surveys(opts)
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) get_quality_publishedforms_surveys(opts)
 
 
 
@@ -2452,7 +2452,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2482,7 +2482,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_publishedforms_surveys: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2508,7 +2508,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_survey"></a>
 
-## -[**Survey**](Survey.html) get_quality_survey(survey_id)
+## [**Survey**](Survey.html) get_quality_survey(survey_id)
 
 
 
@@ -2523,7 +2523,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2549,7 +2549,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_survey: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2572,7 +2572,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_surveys_scorable"></a>
 
-## -[**ScorableSurvey**](ScorableSurvey.html) get_quality_surveys_scorable(opts)
+## [**ScorableSurvey**](ScorableSurvey.html) get_quality_surveys_scorable(opts)
 
 
 
@@ -2587,7 +2587,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 
@@ -2604,7 +2604,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_surveys_scorable: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2627,7 +2627,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_quality_forms_survey"></a>
 
-## -[**SurveyForm**](SurveyForm.html) patch_quality_forms_survey(form_id, body)
+## [**SurveyForm**](SurveyForm.html) patch_quality_forms_survey(form_id, body)
 
 
 
@@ -2643,7 +2643,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2671,7 +2671,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->patch_quality_forms_survey: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2695,7 +2695,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_evaluations_aggregates_query"></a>
 
-## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_evaluations_aggregates_query(body)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_evaluations_aggregates_query(body)
 
 
 
@@ -2711,7 +2711,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2737,7 +2737,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_analytics_evaluations_aggregates_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2760,7 +2760,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_surveys_aggregates_query"></a>
 
-## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_surveys_aggregates_query(body)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_surveys_aggregates_query(body)
 
 
 
@@ -2776,7 +2776,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2802,7 +2802,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_analytics_surveys_aggregates_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2825,7 +2825,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_calibrations"></a>
 
-## -[**Calibration**](Calibration.html) post_quality_calibrations(body, opts)
+## [**Calibration**](Calibration.html) post_quality_calibrations(body, opts)
 
 
 
@@ -2840,7 +2840,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2869,7 +2869,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_calibrations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2893,7 +2893,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_conversation_evaluations"></a>
 
-## -[**Evaluation**](Evaluation.html) post_quality_conversation_evaluations(conversation_id, body, opts)
+## [**Evaluation**](Evaluation.html) post_quality_conversation_evaluations(conversation_id, body, opts)
 
 
 
@@ -2908,7 +2908,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2939,7 +2939,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_conversation_evaluations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2964,7 +2964,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_evaluations_scoring"></a>
 
-## -[**EvaluationScoringSet**](EvaluationScoringSet.html) post_quality_evaluations_scoring(body)
+## [**EvaluationScoringSet**](EvaluationScoringSet.html) post_quality_evaluations_scoring(body)
 
 
 
@@ -2979,7 +2979,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3005,7 +3005,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_evaluations_scoring: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3028,7 +3028,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_forms"></a>
 
-## -[**EvaluationForm**](EvaluationForm.html) post_quality_forms(body)
+## [**EvaluationForm**](EvaluationForm.html) post_quality_forms(body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -3044,7 +3044,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3070,7 +3070,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_forms: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3093,7 +3093,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_forms_evaluations"></a>
 
-## -[**EvaluationForm**](EvaluationForm.html) post_quality_forms_evaluations(body)
+## [**EvaluationForm**](EvaluationForm.html) post_quality_forms_evaluations(body)
 
 
 
@@ -3109,7 +3109,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3135,7 +3135,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_forms_evaluations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3158,7 +3158,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_forms_surveys"></a>
 
-## -[**SurveyForm**](SurveyForm.html) post_quality_forms_surveys(body)
+## [**SurveyForm**](SurveyForm.html) post_quality_forms_surveys(body)
 
 
 
@@ -3174,7 +3174,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3200,7 +3200,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_forms_surveys: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3223,7 +3223,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_keywordsets"></a>
 
-## -[**KeywordSet**](KeywordSet.html) post_quality_keywordsets(body, opts)
+## [**KeywordSet**](KeywordSet.html) post_quality_keywordsets(body, opts)
 
 
 
@@ -3238,7 +3238,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3267,7 +3267,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_keywordsets: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3291,7 +3291,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_publishedforms"></a>
 
-## -[**EvaluationForm**](EvaluationForm.html) post_quality_publishedforms(body)
+## [**EvaluationForm**](EvaluationForm.html) post_quality_publishedforms(body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -3307,7 +3307,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3333,7 +3333,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_publishedforms: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3356,7 +3356,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_publishedforms_evaluations"></a>
 
-## -[**EvaluationForm**](EvaluationForm.html) post_quality_publishedforms_evaluations(body)
+## [**EvaluationForm**](EvaluationForm.html) post_quality_publishedforms_evaluations(body)
 
 
 
@@ -3372,7 +3372,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3398,7 +3398,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_publishedforms_evaluations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3421,7 +3421,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_publishedforms_surveys"></a>
 
-## -[**SurveyForm**](SurveyForm.html) post_quality_publishedforms_surveys(body)
+## [**SurveyForm**](SurveyForm.html) post_quality_publishedforms_surveys(body)
 
 
 
@@ -3437,7 +3437,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3463,7 +3463,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_publishedforms_surveys: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3486,7 +3486,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_spotability"></a>
 
-## -[**KeywordSet**](KeywordSet.html) post_quality_spotability(opts)
+## [**KeywordSet**](KeywordSet.html) post_quality_spotability(opts)
 
 
 
@@ -3501,7 +3501,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3528,7 +3528,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_spotability: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3551,7 +3551,7 @@ Name | Type | Description  | Notes
 
 <a name="post_quality_surveys_scoring"></a>
 
-## -[**SurveyScoringSet**](SurveyScoringSet.html) post_quality_surveys_scoring(body)
+## [**SurveyScoringSet**](SurveyScoringSet.html) post_quality_surveys_scoring(body)
 
 
 
@@ -3566,7 +3566,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3592,7 +3592,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->post_quality_surveys_scoring: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3615,7 +3615,7 @@ Name | Type | Description  | Notes
 
 <a name="put_quality_calibration"></a>
 
-## -[**Calibration**](Calibration.html) put_quality_calibration(calibration_id, body)
+## [**Calibration**](Calibration.html) put_quality_calibration(calibration_id, body)
 
 
 
@@ -3630,7 +3630,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3658,7 +3658,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->put_quality_calibration: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3682,7 +3682,7 @@ Name | Type | Description  | Notes
 
 <a name="put_quality_conversation_evaluation"></a>
 
-## -[**Evaluation**](Evaluation.html) put_quality_conversation_evaluation(conversation_id, evaluation_id, body, opts)
+## [**Evaluation**](Evaluation.html) put_quality_conversation_evaluation(conversation_id, evaluation_id, body, opts)
 
 
 
@@ -3697,7 +3697,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3730,7 +3730,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->put_quality_conversation_evaluation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3756,7 +3756,7 @@ Name | Type | Description  | Notes
 
 <a name="put_quality_form"></a>
 
-## -[**EvaluationForm**](EvaluationForm.html) put_quality_form(form_id, body)
+## [**EvaluationForm**](EvaluationForm.html) put_quality_form(form_id, body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -3772,7 +3772,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3800,7 +3800,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->put_quality_form: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3824,7 +3824,7 @@ Name | Type | Description  | Notes
 
 <a name="put_quality_forms_evaluation"></a>
 
-## -[**EvaluationForm**](EvaluationForm.html) put_quality_forms_evaluation(form_id, body)
+## [**EvaluationForm**](EvaluationForm.html) put_quality_forms_evaluation(form_id, body)
 
 
 
@@ -3840,7 +3840,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3868,7 +3868,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->put_quality_forms_evaluation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3892,7 +3892,7 @@ Name | Type | Description  | Notes
 
 <a name="put_quality_forms_survey"></a>
 
-## -[**SurveyForm**](SurveyForm.html) put_quality_forms_survey(form_id, body)
+## [**SurveyForm**](SurveyForm.html) put_quality_forms_survey(form_id, body)
 
 
 
@@ -3908,7 +3908,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3936,7 +3936,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->put_quality_forms_survey: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3960,7 +3960,7 @@ Name | Type | Description  | Notes
 
 <a name="put_quality_keywordset"></a>
 
-## -[**KeywordSet**](KeywordSet.html) put_quality_keywordset(keyword_set_id, body)
+## [**KeywordSet**](KeywordSet.html) put_quality_keywordset(keyword_set_id, body)
 
 
 
@@ -3975,7 +3975,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4003,7 +4003,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->put_quality_keywordset: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4027,7 +4027,7 @@ Name | Type | Description  | Notes
 
 <a name="put_quality_surveys_scorable"></a>
 
-## -[**ScorableSurvey**](ScorableSurvey.html) put_quality_surveys_scorable(body, opts)
+## [**ScorableSurvey**](ScorableSurvey.html) put_quality_surveys_scorable(body, opts)
 
 
 
@@ -4042,7 +4042,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 
@@ -4061,7 +4061,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->put_quality_surveys_scorable: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

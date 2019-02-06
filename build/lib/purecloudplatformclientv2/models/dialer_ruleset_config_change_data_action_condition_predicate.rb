@@ -24,6 +24,10 @@ module PureCloud
 
     attr_accessor :comparison_value
 
+    attr_accessor :output_field_missing_resolution
+
+    attr_accessor :inverted
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -35,6 +39,10 @@ module PureCloud
         :'output_operator' => :'outputOperator',
         
         :'comparison_value' => :'comparisonValue',
+        
+        :'output_field_missing_resolution' => :'outputFieldMissingResolution',
+        
+        :'inverted' => :'inverted',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -50,6 +58,10 @@ module PureCloud
         :'output_operator' => :'String',
         
         :'comparison_value' => :'String',
+        
+        :'output_field_missing_resolution' => :'BOOLEAN',
+        
+        :'inverted' => :'BOOLEAN',
         
         :'additional_properties' => :'Object'
         
@@ -87,6 +99,24 @@ module PureCloud
         
         
         self.comparison_value = attributes[:'comparisonValue']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'outputFieldMissingResolution')
+        
+        
+        self.output_field_missing_resolution = attributes[:'outputFieldMissingResolution']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'inverted')
+        
+        
+        self.inverted = attributes[:'inverted']
         
       
       end
@@ -137,6 +167,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -169,6 +207,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -177,6 +225,8 @@ module PureCloud
           output_field == o.output_field &&
           output_operator == o.output_operator &&
           comparison_value == o.comparison_value &&
+          output_field_missing_resolution == o.output_field_missing_resolution &&
+          inverted == o.inverted &&
           additional_properties == o.additional_properties
     end
 
@@ -189,7 +239,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [output_field, output_operator, comparison_value, additional_properties].hash
+      [output_field, output_operator, comparison_value, output_field_missing_resolution, inverted, additional_properties].hash
     end
 
     # build the object from hash

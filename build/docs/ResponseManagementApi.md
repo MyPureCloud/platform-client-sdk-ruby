@@ -23,7 +23,7 @@ Method | Description
 
 <a name="delete_responsemanagement_library"></a>
 
-## - delete_responsemanagement_library(library_id)
+##  delete_responsemanagement_library(library_id)
 
 
 
@@ -38,7 +38,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -63,7 +63,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ResponseManagementApi->delete_responsemanagement_library: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -86,7 +86,7 @@ nil (empty response body)
 
 <a name="delete_responsemanagement_response"></a>
 
-## - delete_responsemanagement_response(response_id)
+##  delete_responsemanagement_response(response_id)
 
 
 
@@ -101,7 +101,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -126,7 +126,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ResponseManagementApi->delete_responsemanagement_response: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -149,7 +149,7 @@ nil (empty response body)
 
 <a name="get_responsemanagement_libraries"></a>
 
-## -[**LibraryEntityListing**](LibraryEntityListing.html) get_responsemanagement_libraries(opts)
+## [**LibraryEntityListing**](LibraryEntityListing.html) get_responsemanagement_libraries(opts)
 
 
 
@@ -164,7 +164,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -192,7 +192,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ResponseManagementApi->get_responsemanagement_libraries: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 <a name="get_responsemanagement_library"></a>
 
-## -[**Library**](Library.html) get_responsemanagement_library(library_id)
+## [**Library**](Library.html) get_responsemanagement_library(library_id)
 
 
 
@@ -231,7 +231,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -257,7 +257,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ResponseManagementApi->get_responsemanagement_library: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 
 <a name="get_responsemanagement_response"></a>
 
-## -[**Response**](Response.html) get_responsemanagement_response(response_id, opts)
+## [**Response**](Response.html) get_responsemanagement_response(response_id, opts)
 
 
 
@@ -295,7 +295,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -324,7 +324,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ResponseManagementApi->get_responsemanagement_response: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 <a name="get_responsemanagement_responses"></a>
 
-## -[**ResponseEntityListing**](ResponseEntityListing.html) get_responsemanagement_responses(library_id, opts)
+## [**ResponseEntityListing**](ResponseEntityListing.html) get_responsemanagement_responses(library_id, opts)
 
 
 
@@ -363,7 +363,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -394,7 +394,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ResponseManagementApi->get_responsemanagement_responses: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 
 <a name="post_responsemanagement_libraries"></a>
 
-## -[**Library**](Library.html) post_responsemanagement_libraries(body)
+## [**Library**](Library.html) post_responsemanagement_libraries(body)
 
 
 
@@ -435,7 +435,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -461,7 +461,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ResponseManagementApi->post_responsemanagement_libraries: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 <a name="post_responsemanagement_responses"></a>
 
-## -[**Response**](Response.html) post_responsemanagement_responses(body, opts)
+## [**Response**](Response.html) post_responsemanagement_responses(body, opts)
 
 
 
@@ -499,7 +499,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -528,7 +528,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ResponseManagementApi->post_responsemanagement_responses: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 <a name="post_responsemanagement_responses_query"></a>
 
-## -[**ResponseQueryResults**](ResponseQueryResults.html) post_responsemanagement_responses_query(body)
+## [**ResponseQueryResults**](ResponseQueryResults.html) post_responsemanagement_responses_query(body)
 
 
 
@@ -567,7 +567,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -593,7 +593,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ResponseManagementApi->post_responsemanagement_responses_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -616,7 +616,7 @@ Name | Type | Description  | Notes
 
 <a name="put_responsemanagement_library"></a>
 
-## -[**Library**](Library.html) put_responsemanagement_library(library_id, body)
+## [**Library**](Library.html) put_responsemanagement_library(library_id, body)
 
 
 
@@ -631,7 +631,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -659,7 +659,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ResponseManagementApi->put_responsemanagement_library: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -683,7 +683,7 @@ Name | Type | Description  | Notes
 
 <a name="put_responsemanagement_response"></a>
 
-## -[**Response**](Response.html) put_responsemanagement_response(response_id, body, opts)
+## [**Response**](Response.html) put_responsemanagement_response(response_id, body, opts)
 
 
 
@@ -698,7 +698,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -729,7 +729,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ResponseManagementApi->put_responsemanagement_response: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

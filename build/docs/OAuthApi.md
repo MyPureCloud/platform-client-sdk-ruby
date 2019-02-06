@@ -18,7 +18,7 @@ Method | Description
 
 <a name="delete_oauth_client"></a>
 
-## - delete_oauth_client(client_id)
+##  delete_oauth_client(client_id)
 
 
 
@@ -34,7 +34,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -59,7 +59,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OAuthApi->delete_oauth_client: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -82,7 +82,7 @@ nil (empty response body)
 
 <a name="get_oauth_client"></a>
 
-## -[**OAuthClient**](OAuthClient.html) get_oauth_client(client_id)
+## [**OAuthClient**](OAuthClient.html) get_oauth_client(client_id)
 
 
 
@@ -98,7 +98,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -124,7 +124,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OAuthApi->get_oauth_client: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 <a name="get_oauth_clients"></a>
 
-## -[**OAuthClientEntityListing**](OAuthClientEntityListing.html) get_oauth_clients
+## [**OAuthClientEntityListing**](OAuthClientEntityListing.html) get_oauth_clients
 
 
 
@@ -163,7 +163,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -186,7 +186,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OAuthApi->get_oauth_clients: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 
 <a name="post_oauth_client_secret"></a>
 
-## -[**OAuthClient**](OAuthClient.html) post_oauth_client_secret(client_id)
+## [**OAuthClient**](OAuthClient.html) post_oauth_client_secret(client_id)
 
 
 
@@ -222,7 +222,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -248,7 +248,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OAuthApi->post_oauth_client_secret: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 <a name="post_oauth_clients"></a>
 
-## -[**OAuthClient**](OAuthClient.html) post_oauth_clients(body)
+## [**OAuthClient**](OAuthClient.html) post_oauth_clients(body)
 
 
 
@@ -287,7 +287,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -313,7 +313,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OAuthApi->post_oauth_clients: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 <a name="put_oauth_client"></a>
 
-## -[**OAuthClient**](OAuthClient.html) put_oauth_client(client_id, body)
+## [**OAuthClient**](OAuthClient.html) put_oauth_client(client_id, body)
 
 
 
@@ -352,7 +352,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -380,7 +380,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OAuthApi->put_oauth_client: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

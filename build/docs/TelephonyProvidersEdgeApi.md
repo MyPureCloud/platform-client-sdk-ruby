@@ -137,7 +137,7 @@ Method | Description
 
 <a name="delete_telephony_providers_edge"></a>
 
-## - delete_telephony_providers_edge(edge_id)
+##  delete_telephony_providers_edge(edge_id)
 
 
 
@@ -153,7 +153,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -178,7 +178,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edge: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -201,7 +201,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edge_logicalinterface"></a>
 
-## - delete_telephony_providers_edge_logicalinterface(edge_id, interface_id)
+##  delete_telephony_providers_edge_logicalinterface(edge_id, interface_id)
 
 
 
@@ -217,7 +217,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -244,7 +244,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edge_logicalinterface: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -268,7 +268,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edge_softwareupdate"></a>
 
-## - delete_telephony_providers_edge_softwareupdate(edge_id)
+##  delete_telephony_providers_edge_softwareupdate(edge_id)
 
 
 
@@ -283,7 +283,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -308,7 +308,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edge_softwareupdate: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -331,7 +331,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edges_certificateauthority"></a>
 
-## - delete_telephony_providers_edges_certificateauthority(certificate_id)
+##  delete_telephony_providers_edges_certificateauthority(certificate_id)
 
 
 
@@ -347,7 +347,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -372,7 +372,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_certificateauthority: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -395,7 +395,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edges_didpool"></a>
 
-## - delete_telephony_providers_edges_didpool(did_pool_id)
+##  delete_telephony_providers_edges_didpool(did_pool_id)
 
 
 
@@ -411,7 +411,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -436,7 +436,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_didpool: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -459,7 +459,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edges_edgegroup"></a>
 
-## - delete_telephony_providers_edges_edgegroup(edge_group_id)
+##  delete_telephony_providers_edges_edgegroup(edge_group_id)
 
 
 
@@ -475,7 +475,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -500,7 +500,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_edgegroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -523,7 +523,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edges_endpoint"></a>
 
-## - delete_telephony_providers_edges_endpoint(endpoint_id)
+##  delete_telephony_providers_edges_endpoint(endpoint_id)
 
 
 
@@ -539,7 +539,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -564,7 +564,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_endpoint: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -587,7 +587,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edges_extensionpool"></a>
 
-## - delete_telephony_providers_edges_extensionpool(extension_pool_id)
+##  delete_telephony_providers_edges_extensionpool(extension_pool_id)
 
 
 
@@ -603,7 +603,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -628,7 +628,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_extensionpool: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -651,7 +651,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edges_outboundroute"></a>
 
-## - delete_telephony_providers_edges_outboundroute(outbound_route_id)
+##  delete_telephony_providers_edges_outboundroute(outbound_route_id)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -667,7 +667,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -692,7 +692,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_outboundroute: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -715,7 +715,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edges_phone"></a>
 
-## - delete_telephony_providers_edges_phone(phone_id)
+##  delete_telephony_providers_edges_phone(phone_id)
 
 
 
@@ -731,7 +731,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -756,7 +756,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_phone: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -779,7 +779,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edges_phonebasesetting"></a>
 
-## - delete_telephony_providers_edges_phonebasesetting(phone_base_id)
+##  delete_telephony_providers_edges_phonebasesetting(phone_base_id)
 
 
 
@@ -795,7 +795,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -820,7 +820,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_phonebasesetting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -843,7 +843,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edges_site"></a>
 
-## - delete_telephony_providers_edges_site(site_id)
+##  delete_telephony_providers_edges_site(site_id)
 
 
 
@@ -859,7 +859,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -884,7 +884,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_site: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -907,7 +907,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edges_site_outboundroute"></a>
 
-## - delete_telephony_providers_edges_site_outboundroute(site_id, outbound_route_id)
+##  delete_telephony_providers_edges_site_outboundroute(site_id, outbound_route_id)
 
 
 
@@ -923,7 +923,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -950,7 +950,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_site_outboundroute: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -974,7 +974,7 @@ nil (empty response body)
 
 <a name="delete_telephony_providers_edges_trunkbasesetting"></a>
 
-## - delete_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id)
+##  delete_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id)
 
 
 
@@ -990,7 +990,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1015,7 +1015,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_trunkbasesetting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1038,7 +1038,7 @@ nil (empty response body)
 
 <a name="get_configuration_schemas_edges_vnext"></a>
 
-## -[**SchemaCategoryEntityListing**](SchemaCategoryEntityListing.html) get_configuration_schemas_edges_vnext(opts)
+## [**SchemaCategoryEntityListing**](SchemaCategoryEntityListing.html) get_configuration_schemas_edges_vnext(opts)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1053,7 +1053,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1081,7 +1081,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_configuration_schemas_edges_vnext: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1105,7 +1105,7 @@ Name | Type | Description  | Notes
 
 <a name="get_configuration_schemas_edges_vnext_schema_category"></a>
 
-## -[**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) get_configuration_schemas_edges_vnext_schema_category(schema_category, opts)
+## [**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) get_configuration_schemas_edges_vnext_schema_category(schema_category, opts)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1120,7 +1120,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1150,7 +1150,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_configuration_schemas_edges_vnext_schema_category: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1175,7 +1175,7 @@ Name | Type | Description  | Notes
 
 <a name="get_configuration_schemas_edges_vnext_schema_category_schema_type"></a>
 
-## -[**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) get_configuration_schemas_edges_vnext_schema_category_schema_type(schema_category, schema_type, opts)
+## [**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) get_configuration_schemas_edges_vnext_schema_category_schema_type(schema_category, schema_type, opts)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1190,7 +1190,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1222,7 +1222,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_configuration_schemas_edges_vnext_schema_category_schema_type: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1248,7 +1248,7 @@ Name | Type | Description  | Notes
 
 <a name="get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id"></a>
 
-## -[**Organization**](Organization.html) get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id(schema_category, schema_type, schema_id)
+## [**Organization**](Organization.html) get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id(schema_category, schema_type, schema_id)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1263,7 +1263,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1293,7 +1293,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1318,7 +1318,7 @@ Name | Type | Description  | Notes
 
 <a name="get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id"></a>
 
-## -[**Organization**](Organization.html) get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id(schema_category, schema_type, schema_id, extension_type, metadata_id, opts)
+## [**Organization**](Organization.html) get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id(schema_category, schema_type, schema_id, extension_type, metadata_id, opts)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1333,7 +1333,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1370,7 +1370,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1398,7 +1398,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge"></a>
 
-## -[**Edge**](Edge.html) get_telephony_providers_edge(edge_id, opts)
+## [**Edge**](Edge.html) get_telephony_providers_edge(edge_id, opts)
 
 
 
@@ -1414,7 +1414,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1443,7 +1443,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1467,7 +1467,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_line"></a>
 
-## -[**EdgeLine**](EdgeLine.html) get_telephony_providers_edge_line(edge_id, line_id)
+## [**EdgeLine**](EdgeLine.html) get_telephony_providers_edge_line(edge_id, line_id)
 
 
 
@@ -1483,7 +1483,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1511,7 +1511,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_line: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1535,7 +1535,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_lines"></a>
 
-## -[**EdgeLineEntityListing**](EdgeLineEntityListing.html) get_telephony_providers_edge_lines(edge_id, opts)
+## [**EdgeLineEntityListing**](EdgeLineEntityListing.html) get_telephony_providers_edge_lines(edge_id, opts)
 
 
 
@@ -1551,7 +1551,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1581,7 +1581,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_lines: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1606,7 +1606,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_logicalinterface"></a>
 
-## -[**DomainLogicalInterface**](DomainLogicalInterface.html) get_telephony_providers_edge_logicalinterface(edge_id, interface_id, opts)
+## [**DomainLogicalInterface**](DomainLogicalInterface.html) get_telephony_providers_edge_logicalinterface(edge_id, interface_id, opts)
 
 
 
@@ -1622,7 +1622,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1653,7 +1653,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_logicalinterface: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1678,7 +1678,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_logicalinterfaces"></a>
 
-## -[**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html) get_telephony_providers_edge_logicalinterfaces(edge_id, opts)
+## [**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html) get_telephony_providers_edge_logicalinterfaces(edge_id, opts)
 
 
 
@@ -1694,7 +1694,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1723,7 +1723,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_logicalinterfaces: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1747,7 +1747,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_logs_job"></a>
 
-## -[**EdgeLogsJob**](EdgeLogsJob.html) get_telephony_providers_edge_logs_job(edge_id, job_id)
+## [**EdgeLogsJob**](EdgeLogsJob.html) get_telephony_providers_edge_logs_job(edge_id, job_id)
 
 
 
@@ -1763,7 +1763,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1791,7 +1791,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_logs_job: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1815,7 +1815,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_metrics"></a>
 
-## -[**EdgeMetrics**](EdgeMetrics.html) get_telephony_providers_edge_metrics(edge_id)
+## [**EdgeMetrics**](EdgeMetrics.html) get_telephony_providers_edge_metrics(edge_id)
 
 
 
@@ -1831,7 +1831,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1857,7 +1857,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_metrics: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1880,7 +1880,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_physicalinterface"></a>
 
-## -[**DomainPhysicalInterface**](DomainPhysicalInterface.html) get_telephony_providers_edge_physicalinterface(edge_id, interface_id)
+## [**DomainPhysicalInterface**](DomainPhysicalInterface.html) get_telephony_providers_edge_physicalinterface(edge_id, interface_id)
 
 
 
@@ -1896,7 +1896,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1924,7 +1924,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_physicalinterface: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1948,7 +1948,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_physicalinterfaces"></a>
 
-## -[**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html) get_telephony_providers_edge_physicalinterfaces(edge_id)
+## [**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html) get_telephony_providers_edge_physicalinterfaces(edge_id)
 
 
 
@@ -1964,7 +1964,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1990,7 +1990,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_physicalinterfaces: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2013,7 +2013,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_setuppackage"></a>
 
-## -[**VmPairingInfo**](VmPairingInfo.html) get_telephony_providers_edge_setuppackage(edge_id)
+## [**VmPairingInfo**](VmPairingInfo.html) get_telephony_providers_edge_setuppackage(edge_id)
 
 
 
@@ -2029,7 +2029,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2055,7 +2055,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_setuppackage: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2078,7 +2078,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_softwareupdate"></a>
 
-## -[**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) get_telephony_providers_edge_softwareupdate(edge_id)
+## [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) get_telephony_providers_edge_softwareupdate(edge_id)
 
 
 
@@ -2093,7 +2093,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2119,7 +2119,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_softwareupdate: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2142,7 +2142,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_softwareversions"></a>
 
-## -[**DomainEdgeSoftwareVersionDtoEntityListing**](DomainEdgeSoftwareVersionDtoEntityListing.html) get_telephony_providers_edge_softwareversions(edge_id)
+## [**DomainEdgeSoftwareVersionDtoEntityListing**](DomainEdgeSoftwareVersionDtoEntityListing.html) get_telephony_providers_edge_softwareversions(edge_id)
 
 
 
@@ -2157,7 +2157,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2183,7 +2183,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_softwareversions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2206,7 +2206,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edge_trunks"></a>
 
-## -[**TrunkEntityListing**](TrunkEntityListing.html) get_telephony_providers_edge_trunks(edge_id, opts)
+## [**TrunkEntityListing**](TrunkEntityListing.html) get_telephony_providers_edge_trunks(edge_id, opts)
 
 
 
@@ -2222,7 +2222,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2256,7 +2256,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_trunks: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2285,7 +2285,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges"></a>
 
-## -[**EdgeEntityListing**](EdgeEntityListing.html) get_telephony_providers_edges(opts)
+## [**EdgeEntityListing**](EdgeEntityListing.html) get_telephony_providers_edges(opts)
 
 
 
@@ -2301,7 +2301,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2334,7 +2334,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2363,7 +2363,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_availablelanguages"></a>
 
-## -[**AvailableLanguageList**](AvailableLanguageList.html) get_telephony_providers_edges_availablelanguages
+## [**AvailableLanguageList**](AvailableLanguageList.html) get_telephony_providers_edges_availablelanguages
 
 
 
@@ -2378,7 +2378,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2401,7 +2401,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_availablelanguages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -2421,7 +2421,7 @@ This endpoint does not need any parameter.
 
 <a name="get_telephony_providers_edges_certificateauthorities"></a>
 
-## -[**CertificateAuthorityEntityListing**](CertificateAuthorityEntityListing.html) get_telephony_providers_edges_certificateauthorities
+## [**CertificateAuthorityEntityListing**](CertificateAuthorityEntityListing.html) get_telephony_providers_edges_certificateauthorities
 
 
 
@@ -2437,7 +2437,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2460,7 +2460,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_certificateauthorities: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -2480,7 +2480,7 @@ This endpoint does not need any parameter.
 
 <a name="get_telephony_providers_edges_certificateauthority"></a>
 
-## -[**DomainCertificateAuthority**](DomainCertificateAuthority.html) get_telephony_providers_edges_certificateauthority(certificate_id)
+## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) get_telephony_providers_edges_certificateauthority(certificate_id)
 
 
 
@@ -2496,7 +2496,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2522,7 +2522,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_certificateauthority: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2545,7 +2545,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_did"></a>
 
-## -[**DID**](DID.html) get_telephony_providers_edges_did(did_id)
+## [**DID**](DID.html) get_telephony_providers_edges_did(did_id)
 
 
 
@@ -2561,7 +2561,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2587,7 +2587,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_did: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2610,7 +2610,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_didpool"></a>
 
-## -[**DIDPool**](DIDPool.html) get_telephony_providers_edges_didpool(did_pool_id)
+## [**DIDPool**](DIDPool.html) get_telephony_providers_edges_didpool(did_pool_id)
 
 
 
@@ -2626,7 +2626,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2652,7 +2652,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_didpool: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2675,7 +2675,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_didpools"></a>
 
-## -[**DIDPoolEntityListing**](DIDPoolEntityListing.html) get_telephony_providers_edges_didpools(opts)
+## [**DIDPoolEntityListing**](DIDPoolEntityListing.html) get_telephony_providers_edges_didpools(opts)
 
 
 
@@ -2691,7 +2691,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2720,7 +2720,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_didpools: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2745,7 +2745,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_dids"></a>
 
-## -[**DIDEntityListing**](DIDEntityListing.html) get_telephony_providers_edges_dids(opts)
+## [**DIDEntityListing**](DIDEntityListing.html) get_telephony_providers_edges_dids(opts)
 
 
 
@@ -2761,7 +2761,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2792,7 +2792,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_dids: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2819,7 +2819,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_edgegroup"></a>
 
-## -[**EdgeGroup**](EdgeGroup.html) get_telephony_providers_edges_edgegroup(edge_group_id, opts)
+## [**EdgeGroup**](EdgeGroup.html) get_telephony_providers_edges_edgegroup(edge_group_id, opts)
 
 
 
@@ -2835,7 +2835,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2864,7 +2864,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_edgegroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2888,7 +2888,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_edgegroup_edgetrunkbase"></a>
 
-## -[**EdgeTrunkBase**](EdgeTrunkBase.html) get_telephony_providers_edges_edgegroup_edgetrunkbase(edgegroup_id, edgetrunkbase_id)
+## [**EdgeTrunkBase**](EdgeTrunkBase.html) get_telephony_providers_edges_edgegroup_edgetrunkbase(edgegroup_id, edgetrunkbase_id)
 
 
 
@@ -2904,7 +2904,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2932,7 +2932,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_edgegroup_edgetrunkbase: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2956,7 +2956,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_edgegroups"></a>
 
-## -[**EdgeGroupEntityListing**](EdgeGroupEntityListing.html) get_telephony_providers_edges_edgegroups(opts)
+## [**EdgeGroupEntityListing**](EdgeGroupEntityListing.html) get_telephony_providers_edges_edgegroups(opts)
 
 
 
@@ -2972,7 +2972,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3003,7 +3003,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_edgegroups: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3030,7 +3030,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_edgeversionreport"></a>
 
-## -[**EdgeVersionReport**](EdgeVersionReport.html) get_telephony_providers_edges_edgeversionreport
+## [**EdgeVersionReport**](EdgeVersionReport.html) get_telephony_providers_edges_edgeversionreport
 
 
 
@@ -3045,7 +3045,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3068,7 +3068,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_edgeversionreport: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -3088,7 +3088,7 @@ This endpoint does not need any parameter.
 
 <a name="get_telephony_providers_edges_endpoint"></a>
 
-## -[**Endpoint**](Endpoint.html) get_telephony_providers_edges_endpoint(endpoint_id)
+## [**Endpoint**](Endpoint.html) get_telephony_providers_edges_endpoint(endpoint_id)
 
 
 
@@ -3104,7 +3104,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3130,7 +3130,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_endpoint: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3153,7 +3153,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_endpoints"></a>
 
-## -[**EndpointEntityListing**](EndpointEntityListing.html) get_telephony_providers_edges_endpoints(opts)
+## [**EndpointEntityListing**](EndpointEntityListing.html) get_telephony_providers_edges_endpoints(opts)
 
 
 
@@ -3169,7 +3169,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3199,7 +3199,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_endpoints: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3225,7 +3225,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_extension"></a>
 
-## -[**Extension**](Extension.html) get_telephony_providers_edges_extension(extension_id)
+## [**Extension**](Extension.html) get_telephony_providers_edges_extension(extension_id)
 
 
 
@@ -3241,7 +3241,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3267,7 +3267,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_extension: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3290,7 +3290,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_extensionpool"></a>
 
-## -[**ExtensionPool**](ExtensionPool.html) get_telephony_providers_edges_extensionpool(extension_pool_id)
+## [**ExtensionPool**](ExtensionPool.html) get_telephony_providers_edges_extensionpool(extension_pool_id)
 
 
 
@@ -3306,7 +3306,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3332,7 +3332,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_extensionpool: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3355,7 +3355,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_extensionpools"></a>
 
-## -[**ExtensionPoolEntityListing**](ExtensionPoolEntityListing.html) get_telephony_providers_edges_extensionpools(opts)
+## [**ExtensionPoolEntityListing**](ExtensionPoolEntityListing.html) get_telephony_providers_edges_extensionpools(opts)
 
 
 
@@ -3371,7 +3371,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3401,7 +3401,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_extensionpools: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3427,7 +3427,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_extensions"></a>
 
-## -[**ExtensionEntityListing**](ExtensionEntityListing.html) get_telephony_providers_edges_extensions(opts)
+## [**ExtensionEntityListing**](ExtensionEntityListing.html) get_telephony_providers_edges_extensions(opts)
 
 
 
@@ -3443,7 +3443,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3474,7 +3474,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_extensions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3501,7 +3501,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_line"></a>
 
-## -[**Line**](Line.html) get_telephony_providers_edges_line(line_id)
+## [**Line**](Line.html) get_telephony_providers_edges_line(line_id)
 
 
 
@@ -3517,7 +3517,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3543,7 +3543,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_line: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3566,7 +3566,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_linebasesetting"></a>
 
-## -[**LineBase**](LineBase.html) get_telephony_providers_edges_linebasesetting(line_base_id)
+## [**LineBase**](LineBase.html) get_telephony_providers_edges_linebasesetting(line_base_id)
 
 
 
@@ -3582,7 +3582,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3608,7 +3608,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_linebasesetting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3631,7 +3631,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_linebasesettings"></a>
 
-## -[**LineBaseEntityListing**](LineBaseEntityListing.html) get_telephony_providers_edges_linebasesettings(opts)
+## [**LineBaseEntityListing**](LineBaseEntityListing.html) get_telephony_providers_edges_linebasesettings(opts)
 
 
 
@@ -3647,7 +3647,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3677,7 +3677,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_linebasesettings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3703,7 +3703,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_lines"></a>
 
-## -[**LineEntityListing**](LineEntityListing.html) get_telephony_providers_edges_lines(opts)
+## [**LineEntityListing**](LineEntityListing.html) get_telephony_providers_edges_lines(opts)
 
 
 
@@ -3719,7 +3719,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3750,7 +3750,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_lines: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3777,7 +3777,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_lines_template"></a>
 
-## -[**Line**](Line.html) get_telephony_providers_edges_lines_template(line_base_settings_id)
+## [**Line**](Line.html) get_telephony_providers_edges_lines_template(line_base_settings_id)
 
 
 
@@ -3793,7 +3793,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3819,7 +3819,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_lines_template: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3842,7 +3842,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_logicalinterfaces"></a>
 
-## -[**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html) get_telephony_providers_edges_logicalinterfaces(edge_ids, opts)
+## [**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html) get_telephony_providers_edges_logicalinterfaces(edge_ids, opts)
 
 
 
@@ -3858,7 +3858,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3887,7 +3887,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_logicalinterfaces: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3911,7 +3911,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_metrics"></a>
 
-## -[**Array&lt;EdgeMetrics&gt;**](EdgeMetrics.html) get_telephony_providers_edges_metrics(edge_ids)
+## [**Array&lt;EdgeMetrics&gt;**](EdgeMetrics.html) get_telephony_providers_edges_metrics(edge_ids)
 
 
 
@@ -3927,7 +3927,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3953,7 +3953,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_metrics: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3976,7 +3976,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_outboundroute"></a>
 
-## -[**OutboundRoute**](OutboundRoute.html) get_telephony_providers_edges_outboundroute(outbound_route_id)
+## [**OutboundRoute**](OutboundRoute.html) get_telephony_providers_edges_outboundroute(outbound_route_id)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -3992,7 +3992,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4018,7 +4018,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_outboundroute: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4041,7 +4041,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_outboundroutes"></a>
 
-## -[**OutboundRouteEntityListing**](OutboundRouteEntityListing.html) get_telephony_providers_edges_outboundroutes(opts)
+## [**OutboundRouteEntityListing**](OutboundRouteEntityListing.html) get_telephony_providers_edges_outboundroutes(opts)
 
 
 
@@ -4057,7 +4057,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4088,7 +4088,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_outboundroutes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4115,7 +4115,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_phone"></a>
 
-## -[**Phone**](Phone.html) get_telephony_providers_edges_phone(phone_id)
+## [**Phone**](Phone.html) get_telephony_providers_edges_phone(phone_id)
 
 
 
@@ -4131,7 +4131,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4157,7 +4157,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_phone: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4180,7 +4180,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_phonebasesetting"></a>
 
-## -[**PhoneBase**](PhoneBase.html) get_telephony_providers_edges_phonebasesetting(phone_base_id)
+## [**PhoneBase**](PhoneBase.html) get_telephony_providers_edges_phonebasesetting(phone_base_id)
 
 
 
@@ -4196,7 +4196,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4222,7 +4222,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_phonebasesetting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4245,7 +4245,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_phonebasesettings"></a>
 
-## -[**PhoneBaseEntityListing**](PhoneBaseEntityListing.html) get_telephony_providers_edges_phonebasesettings(opts)
+## [**PhoneBaseEntityListing**](PhoneBaseEntityListing.html) get_telephony_providers_edges_phonebasesettings(opts)
 
 
 
@@ -4261,7 +4261,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4293,7 +4293,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_phonebasesettings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4321,7 +4321,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_phonebasesettings_availablemetabases"></a>
 
-## -[**PhoneMetaBaseEntityListing**](PhoneMetaBaseEntityListing.html) get_telephony_providers_edges_phonebasesettings_availablemetabases(opts)
+## [**PhoneMetaBaseEntityListing**](PhoneMetaBaseEntityListing.html) get_telephony_providers_edges_phonebasesettings_availablemetabases(opts)
 
 
 
@@ -4337,7 +4337,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4365,7 +4365,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_phonebasesettings_availablemetabases: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4389,7 +4389,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_phonebasesettings_template"></a>
 
-## -[**PhoneBase**](PhoneBase.html) get_telephony_providers_edges_phonebasesettings_template(phone_metabase_id)
+## [**PhoneBase**](PhoneBase.html) get_telephony_providers_edges_phonebasesettings_template(phone_metabase_id)
 
 
 
@@ -4405,7 +4405,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4431,7 +4431,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_phonebasesettings_template: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4454,7 +4454,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_phones"></a>
 
-## -[**PhoneEntityListing**](PhoneEntityListing.html) get_telephony_providers_edges_phones(opts)
+## [**PhoneEntityListing**](PhoneEntityListing.html) get_telephony_providers_edges_phones(opts)
 
 
 
@@ -4470,7 +4470,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4510,7 +4510,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_phones: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4546,7 +4546,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_phones_template"></a>
 
-## -[**Phone**](Phone.html) get_telephony_providers_edges_phones_template(phone_base_settings_id)
+## [**Phone**](Phone.html) get_telephony_providers_edges_phones_template(phone_base_settings_id)
 
 
 
@@ -4562,7 +4562,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4588,7 +4588,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_phones_template: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4611,7 +4611,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_physicalinterfaces"></a>
 
-## -[**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html) get_telephony_providers_edges_physicalinterfaces(edge_ids)
+## [**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html) get_telephony_providers_edges_physicalinterfaces(edge_ids)
 
 
 
@@ -4627,7 +4627,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4653,7 +4653,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_physicalinterfaces: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4676,7 +4676,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_site"></a>
 
-## -[**Site**](Site.html) get_telephony_providers_edges_site(site_id)
+## [**Site**](Site.html) get_telephony_providers_edges_site(site_id)
 
 
 
@@ -4693,7 +4693,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4719,7 +4719,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_site: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4742,7 +4742,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_site_numberplan"></a>
 
-## -[**NumberPlan**](NumberPlan.html) get_telephony_providers_edges_site_numberplan(site_id, number_plan_id)
+## [**NumberPlan**](NumberPlan.html) get_telephony_providers_edges_site_numberplan(site_id, number_plan_id)
 
 
 
@@ -4758,7 +4758,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4786,7 +4786,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_site_numberplan: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4810,7 +4810,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_site_numberplans"></a>
 
-## -[**Array&lt;NumberPlan&gt;**](NumberPlan.html) get_telephony_providers_edges_site_numberplans(site_id)
+## [**Array&lt;NumberPlan&gt;**](NumberPlan.html) get_telephony_providers_edges_site_numberplans(site_id)
 
 
 
@@ -4826,7 +4826,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4852,7 +4852,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_site_numberplans: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4875,7 +4875,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_site_numberplans_classifications"></a>
 
-## -Array&lt;String&gt;** get_telephony_providers_edges_site_numberplans_classifications(site_id, opts)
+## Array&lt;String&gt;** get_telephony_providers_edges_site_numberplans_classifications(site_id, opts)
 
 
 
@@ -4891,7 +4891,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4920,7 +4920,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_site_numberplans_classifications: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4944,7 +4944,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_site_outboundroute"></a>
 
-## -[**OutboundRouteBase**](OutboundRouteBase.html) get_telephony_providers_edges_site_outboundroute(site_id, outbound_route_id)
+## [**OutboundRouteBase**](OutboundRouteBase.html) get_telephony_providers_edges_site_outboundroute(site_id, outbound_route_id)
 
 
 
@@ -4960,7 +4960,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4988,7 +4988,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_site_outboundroute: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5012,7 +5012,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_site_outboundroutes"></a>
 
-## -[**OutboundRouteBaseEntityListing**](OutboundRouteBaseEntityListing.html) get_telephony_providers_edges_site_outboundroutes(site_id, opts)
+## [**OutboundRouteBaseEntityListing**](OutboundRouteBaseEntityListing.html) get_telephony_providers_edges_site_outboundroutes(site_id, opts)
 
 
 
@@ -5028,7 +5028,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5060,7 +5060,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_site_outboundroutes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5087,7 +5087,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_sites"></a>
 
-## -[**SiteEntityListing**](SiteEntityListing.html) get_telephony_providers_edges_sites(opts)
+## [**SiteEntityListing**](SiteEntityListing.html) get_telephony_providers_edges_sites(opts)
 
 
 
@@ -5102,7 +5102,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5135,7 +5135,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_sites: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5164,7 +5164,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_timezones"></a>
 
-## -[**TimeZoneEntityListing**](TimeZoneEntityListing.html) get_telephony_providers_edges_timezones(opts)
+## [**TimeZoneEntityListing**](TimeZoneEntityListing.html) get_telephony_providers_edges_timezones(opts)
 
 
 
@@ -5179,7 +5179,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5207,7 +5207,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_timezones: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5231,7 +5231,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_trunk"></a>
 
-## -[**Trunk**](Trunk.html) get_telephony_providers_edges_trunk(trunk_id)
+## [**Trunk**](Trunk.html) get_telephony_providers_edges_trunk(trunk_id)
 
 
 
@@ -5247,7 +5247,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5273,7 +5273,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_trunk: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5296,7 +5296,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_trunk_metrics"></a>
 
-## -[**TrunkMetrics**](TrunkMetrics.html) get_telephony_providers_edges_trunk_metrics(trunk_id)
+## [**TrunkMetrics**](TrunkMetrics.html) get_telephony_providers_edges_trunk_metrics(trunk_id)
 
 
 
@@ -5312,7 +5312,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5338,7 +5338,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_trunk_metrics: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5361,7 +5361,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_trunkbasesetting"></a>
 
-## -[**TrunkBase**](TrunkBase.html) get_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id, opts)
+## [**TrunkBase**](TrunkBase.html) get_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id, opts)
 
 
 
@@ -5377,7 +5377,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5406,7 +5406,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_trunkbasesetting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5430,7 +5430,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_trunkbasesettings"></a>
 
-## -[**TrunkBaseEntityListing**](TrunkBaseEntityListing.html) get_telephony_providers_edges_trunkbasesettings(opts)
+## [**TrunkBaseEntityListing**](TrunkBaseEntityListing.html) get_telephony_providers_edges_trunkbasesettings(opts)
 
 
 
@@ -5446,7 +5446,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5481,7 +5481,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_trunkbasesettings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5512,7 +5512,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_trunkbasesettings_availablemetabases"></a>
 
-## -[**TrunkMetabaseEntityListing**](TrunkMetabaseEntityListing.html) get_telephony_providers_edges_trunkbasesettings_availablemetabases(opts)
+## [**TrunkMetabaseEntityListing**](TrunkMetabaseEntityListing.html) get_telephony_providers_edges_trunkbasesettings_availablemetabases(opts)
 
 
 
@@ -5528,7 +5528,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5557,7 +5557,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_trunkbasesettings_availablemetabases: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5582,7 +5582,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_trunkbasesettings_template"></a>
 
-## -[**TrunkBase**](TrunkBase.html) get_telephony_providers_edges_trunkbasesettings_template(trunk_metabase_id)
+## [**TrunkBase**](TrunkBase.html) get_telephony_providers_edges_trunkbasesettings_template(trunk_metabase_id)
 
 
 
@@ -5598,7 +5598,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5624,7 +5624,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_trunkbasesettings_template: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5647,7 +5647,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_trunks"></a>
 
-## -[**TrunkEntityListing**](TrunkEntityListing.html) get_telephony_providers_edges_trunks(opts)
+## [**TrunkEntityListing**](TrunkEntityListing.html) get_telephony_providers_edges_trunks(opts)
 
 
 
@@ -5663,7 +5663,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5696,7 +5696,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_trunks: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5725,7 +5725,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_trunks_metrics"></a>
 
-## -[**Array&lt;TrunkMetrics&gt;**](TrunkMetrics.html) get_telephony_providers_edges_trunks_metrics(trunk_ids)
+## [**Array&lt;TrunkMetrics&gt;**](TrunkMetrics.html) get_telephony_providers_edges_trunks_metrics(trunk_ids)
 
 
 
@@ -5741,7 +5741,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5767,7 +5767,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_trunks_metrics: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5790,7 +5790,7 @@ Name | Type | Description  | Notes
 
 <a name="get_telephony_providers_edges_trunkswithrecording"></a>
 
-## -[**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount.html) get_telephony_providers_edges_trunkswithrecording(opts)
+## [**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount.html) get_telephony_providers_edges_trunkswithrecording(opts)
 
 
 
@@ -5807,7 +5807,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5834,7 +5834,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_trunkswithrecording: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5857,7 +5857,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edge_logicalinterfaces"></a>
 
-## -[**DomainLogicalInterface**](DomainLogicalInterface.html) post_telephony_providers_edge_logicalinterfaces(edge_id, body)
+## [**DomainLogicalInterface**](DomainLogicalInterface.html) post_telephony_providers_edge_logicalinterfaces(edge_id, body)
 
 
 
@@ -5873,7 +5873,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5901,7 +5901,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edge_logicalinterfaces: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5925,7 +5925,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edge_logs_job_upload"></a>
 
-## - post_telephony_providers_edge_logs_job_upload(edge_id, job_id, body)
+##  post_telephony_providers_edge_logs_job_upload(edge_id, job_id, body)
 
 
 
@@ -5941,7 +5941,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5970,7 +5970,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edge_logs_job_upload: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5995,7 +5995,7 @@ nil (empty response body)
 
 <a name="post_telephony_providers_edge_logs_jobs"></a>
 
-## -[**EdgeLogsJobResponse**](EdgeLogsJobResponse.html) post_telephony_providers_edge_logs_jobs(edge_id, body)
+## [**EdgeLogsJobResponse**](EdgeLogsJobResponse.html) post_telephony_providers_edge_logs_jobs(edge_id, body)
 
 
 
@@ -6011,7 +6011,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6039,7 +6039,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edge_logs_jobs: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6063,7 +6063,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edge_reboot"></a>
 
-## -String** post_telephony_providers_edge_reboot(edge_id, opts)
+## String** post_telephony_providers_edge_reboot(edge_id, opts)
 
 
 
@@ -6079,7 +6079,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6108,7 +6108,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edge_reboot: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6132,7 +6132,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edge_softwareupdate"></a>
 
-## -[**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) post_telephony_providers_edge_softwareupdate(edge_id, body)
+## [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) post_telephony_providers_edge_softwareupdate(edge_id, body)
 
 
 
@@ -6147,7 +6147,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6175,7 +6175,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edge_softwareupdate: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6199,7 +6199,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edge_statuscode"></a>
 
-## -String** post_telephony_providers_edge_statuscode(edge_id, opts)
+## String** post_telephony_providers_edge_statuscode(edge_id, opts)
 
 
 
@@ -6215,7 +6215,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6244,7 +6244,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edge_statuscode: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6268,7 +6268,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edge_unpair"></a>
 
-## -String** post_telephony_providers_edge_unpair(edge_id)
+## String** post_telephony_providers_edge_unpair(edge_id)
 
 
 
@@ -6284,7 +6284,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6310,7 +6310,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edge_unpair: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6333,7 +6333,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges"></a>
 
-## -[**Edge**](Edge.html) post_telephony_providers_edges(body)
+## [**Edge**](Edge.html) post_telephony_providers_edges(body)
 
 
 
@@ -6349,7 +6349,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6375,7 +6375,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6398,7 +6398,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_addressvalidation"></a>
 
-## -[**ValidateAddressResponse**](ValidateAddressResponse.html) post_telephony_providers_edges_addressvalidation(body)
+## [**ValidateAddressResponse**](ValidateAddressResponse.html) post_telephony_providers_edges_addressvalidation(body)
 
 
 
@@ -6413,7 +6413,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6439,7 +6439,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_addressvalidation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6462,7 +6462,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_certificateauthorities"></a>
 
-## -[**DomainCertificateAuthority**](DomainCertificateAuthority.html) post_telephony_providers_edges_certificateauthorities(body)
+## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) post_telephony_providers_edges_certificateauthorities(body)
 
 
 
@@ -6478,7 +6478,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6504,7 +6504,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_certificateauthorities: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6527,7 +6527,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_didpools"></a>
 
-## -[**DIDPool**](DIDPool.html) post_telephony_providers_edges_didpools(body)
+## [**DIDPool**](DIDPool.html) post_telephony_providers_edges_didpools(body)
 
 
 
@@ -6543,7 +6543,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6569,7 +6569,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_didpools: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6592,7 +6592,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_edgegroups"></a>
 
-## -[**EdgeGroup**](EdgeGroup.html) post_telephony_providers_edges_edgegroups(body)
+## [**EdgeGroup**](EdgeGroup.html) post_telephony_providers_edges_edgegroups(body)
 
 
 
@@ -6608,7 +6608,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6634,7 +6634,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_edgegroups: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6657,7 +6657,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_endpoints"></a>
 
-## -[**Endpoint**](Endpoint.html) post_telephony_providers_edges_endpoints(body)
+## [**Endpoint**](Endpoint.html) post_telephony_providers_edges_endpoints(body)
 
 
 
@@ -6673,7 +6673,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6699,7 +6699,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_endpoints: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6722,7 +6722,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_extensionpools"></a>
 
-## -[**ExtensionPool**](ExtensionPool.html) post_telephony_providers_edges_extensionpools(body)
+## [**ExtensionPool**](ExtensionPool.html) post_telephony_providers_edges_extensionpools(body)
 
 
 
@@ -6738,7 +6738,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6764,7 +6764,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_extensionpools: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6787,7 +6787,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_outboundroutes"></a>
 
-## -[**OutboundRoute**](OutboundRoute.html) post_telephony_providers_edges_outboundroutes(body)
+## [**OutboundRoute**](OutboundRoute.html) post_telephony_providers_edges_outboundroutes(body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -6803,7 +6803,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6829,7 +6829,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_outboundroutes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6852,7 +6852,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_phone_reboot"></a>
 
-## - post_telephony_providers_edges_phone_reboot(phone_id)
+##  post_telephony_providers_edges_phone_reboot(phone_id)
 
 
 
@@ -6868,7 +6868,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6893,7 +6893,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_phone_reboot: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6916,7 +6916,7 @@ nil (empty response body)
 
 <a name="post_telephony_providers_edges_phonebasesettings"></a>
 
-## -[**PhoneBase**](PhoneBase.html) post_telephony_providers_edges_phonebasesettings(body)
+## [**PhoneBase**](PhoneBase.html) post_telephony_providers_edges_phonebasesettings(body)
 
 
 
@@ -6932,7 +6932,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6958,7 +6958,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_phonebasesettings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6981,7 +6981,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_phones"></a>
 
-## -[**Phone**](Phone.html) post_telephony_providers_edges_phones(body)
+## [**Phone**](Phone.html) post_telephony_providers_edges_phones(body)
 
 
 
@@ -6997,7 +6997,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7023,7 +7023,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_phones: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7046,7 +7046,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_phones_reboot"></a>
 
-## - post_telephony_providers_edges_phones_reboot(body)
+##  post_telephony_providers_edges_phones_reboot(body)
 
 
 
@@ -7062,7 +7062,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7087,7 +7087,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_phones_reboot: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7110,7 +7110,7 @@ nil (empty response body)
 
 <a name="post_telephony_providers_edges_site_outboundroutes"></a>
 
-## -[**OutboundRouteBase**](OutboundRouteBase.html) post_telephony_providers_edges_site_outboundroutes(site_id, body)
+## [**OutboundRouteBase**](OutboundRouteBase.html) post_telephony_providers_edges_site_outboundroutes(site_id, body)
 
 
 
@@ -7126,7 +7126,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7154,7 +7154,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_site_outboundroutes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7178,7 +7178,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_site_rebalance"></a>
 
-## - post_telephony_providers_edges_site_rebalance(site_id)
+##  post_telephony_providers_edges_site_rebalance(site_id)
 
 
 
@@ -7194,7 +7194,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7219,7 +7219,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_site_rebalance: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7242,7 +7242,7 @@ nil (empty response body)
 
 <a name="post_telephony_providers_edges_sites"></a>
 
-## -[**Site**](Site.html) post_telephony_providers_edges_sites(body)
+## [**Site**](Site.html) post_telephony_providers_edges_sites(body)
 
 
 
@@ -7258,7 +7258,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7284,7 +7284,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_sites: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7307,7 +7307,7 @@ Name | Type | Description  | Notes
 
 <a name="post_telephony_providers_edges_trunkbasesettings"></a>
 
-## -[**TrunkBase**](TrunkBase.html) post_telephony_providers_edges_trunkbasesettings(body)
+## [**TrunkBase**](TrunkBase.html) post_telephony_providers_edges_trunkbasesettings(body)
 
 
 
@@ -7323,7 +7323,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7349,7 +7349,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_trunkbasesettings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7372,7 +7372,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edge"></a>
 
-## -[**Edge**](Edge.html) put_telephony_providers_edge(edge_id, body)
+## [**Edge**](Edge.html) put_telephony_providers_edge(edge_id, body)
 
 
 
@@ -7388,7 +7388,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7416,7 +7416,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edge: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7440,7 +7440,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edge_line"></a>
 
-## -[**EdgeLine**](EdgeLine.html) put_telephony_providers_edge_line(edge_id, line_id, body)
+## [**EdgeLine**](EdgeLine.html) put_telephony_providers_edge_line(edge_id, line_id, body)
 
 
 
@@ -7456,7 +7456,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7486,7 +7486,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edge_line: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7511,7 +7511,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edge_logicalinterface"></a>
 
-## -[**DomainLogicalInterface**](DomainLogicalInterface.html) put_telephony_providers_edge_logicalinterface(edge_id, interface_id, body)
+## [**DomainLogicalInterface**](DomainLogicalInterface.html) put_telephony_providers_edge_logicalinterface(edge_id, interface_id, body)
 
 
 
@@ -7527,7 +7527,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7557,7 +7557,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edge_logicalinterface: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7582,7 +7582,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_certificateauthority"></a>
 
-## -[**DomainCertificateAuthority**](DomainCertificateAuthority.html) put_telephony_providers_edges_certificateauthority(certificate_id, body)
+## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) put_telephony_providers_edges_certificateauthority(certificate_id, body)
 
 
 
@@ -7598,7 +7598,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7626,7 +7626,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_certificateauthority: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7650,7 +7650,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_did"></a>
 
-## -[**DID**](DID.html) put_telephony_providers_edges_did(did_id, body)
+## [**DID**](DID.html) put_telephony_providers_edges_did(did_id, body)
 
 
 
@@ -7666,7 +7666,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7694,7 +7694,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_did: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7718,7 +7718,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_didpool"></a>
 
-## -[**DIDPool**](DIDPool.html) put_telephony_providers_edges_didpool(did_pool_id, body)
+## [**DIDPool**](DIDPool.html) put_telephony_providers_edges_didpool(did_pool_id, body)
 
 
 
@@ -7734,7 +7734,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7762,7 +7762,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_didpool: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7786,7 +7786,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_edgegroup"></a>
 
-## -[**EdgeGroup**](EdgeGroup.html) put_telephony_providers_edges_edgegroup(edge_group_id, body)
+## [**EdgeGroup**](EdgeGroup.html) put_telephony_providers_edges_edgegroup(edge_group_id, body)
 
 
 
@@ -7802,7 +7802,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7830,7 +7830,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_edgegroup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7854,7 +7854,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_edgegroup_edgetrunkbase"></a>
 
-## -[**EdgeTrunkBase**](EdgeTrunkBase.html) put_telephony_providers_edges_edgegroup_edgetrunkbase(edgegroup_id, edgetrunkbase_id, body)
+## [**EdgeTrunkBase**](EdgeTrunkBase.html) put_telephony_providers_edges_edgegroup_edgetrunkbase(edgegroup_id, edgetrunkbase_id, body)
 
 
 
@@ -7870,7 +7870,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7900,7 +7900,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_edgegroup_edgetrunkbase: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7925,7 +7925,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_endpoint"></a>
 
-## -[**Endpoint**](Endpoint.html) put_telephony_providers_edges_endpoint(endpoint_id, body)
+## [**Endpoint**](Endpoint.html) put_telephony_providers_edges_endpoint(endpoint_id, body)
 
 
 
@@ -7941,7 +7941,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -7969,7 +7969,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_endpoint: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -7993,7 +7993,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_extension"></a>
 
-## -[**Extension**](Extension.html) put_telephony_providers_edges_extension(extension_id, body)
+## [**Extension**](Extension.html) put_telephony_providers_edges_extension(extension_id, body)
 
 
 
@@ -8009,7 +8009,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -8037,7 +8037,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_extension: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -8061,7 +8061,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_extensionpool"></a>
 
-## -[**ExtensionPool**](ExtensionPool.html) put_telephony_providers_edges_extensionpool(extension_pool_id, body)
+## [**ExtensionPool**](ExtensionPool.html) put_telephony_providers_edges_extensionpool(extension_pool_id, body)
 
 
 
@@ -8077,7 +8077,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -8105,7 +8105,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_extensionpool: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -8129,7 +8129,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_outboundroute"></a>
 
-## -[**OutboundRoute**](OutboundRoute.html) put_telephony_providers_edges_outboundroute(outbound_route_id, body)
+## [**OutboundRoute**](OutboundRoute.html) put_telephony_providers_edges_outboundroute(outbound_route_id, body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -8145,7 +8145,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -8173,7 +8173,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_outboundroute: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -8197,7 +8197,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_phone"></a>
 
-## -[**Phone**](Phone.html) put_telephony_providers_edges_phone(phone_id, body)
+## [**Phone**](Phone.html) put_telephony_providers_edges_phone(phone_id, body)
 
 
 
@@ -8213,7 +8213,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -8241,7 +8241,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_phone: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -8265,7 +8265,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_phonebasesetting"></a>
 
-## -[**PhoneBase**](PhoneBase.html) put_telephony_providers_edges_phonebasesetting(phone_base_id, body)
+## [**PhoneBase**](PhoneBase.html) put_telephony_providers_edges_phonebasesetting(phone_base_id, body)
 
 
 
@@ -8281,7 +8281,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -8309,7 +8309,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_phonebasesetting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -8333,7 +8333,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_site"></a>
 
-## -[**Site**](Site.html) put_telephony_providers_edges_site(site_id, body)
+## [**Site**](Site.html) put_telephony_providers_edges_site(site_id, body)
 
 
 
@@ -8349,7 +8349,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -8377,7 +8377,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_site: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -8401,7 +8401,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_site_numberplans"></a>
 
-## -[**Array&lt;NumberPlan&gt;**](NumberPlan.html) put_telephony_providers_edges_site_numberplans(site_id, body)
+## [**Array&lt;NumberPlan&gt;**](NumberPlan.html) put_telephony_providers_edges_site_numberplans(site_id, body)
 
 
 
@@ -8417,7 +8417,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -8445,7 +8445,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_site_numberplans: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -8469,7 +8469,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_site_outboundroute"></a>
 
-## -[**OutboundRouteBase**](OutboundRouteBase.html) put_telephony_providers_edges_site_outboundroute(site_id, outbound_route_id, body)
+## [**OutboundRouteBase**](OutboundRouteBase.html) put_telephony_providers_edges_site_outboundroute(site_id, outbound_route_id, body)
 
 
 
@@ -8485,7 +8485,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -8515,7 +8515,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_site_outboundroute: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -8540,7 +8540,7 @@ Name | Type | Description  | Notes
 
 <a name="put_telephony_providers_edges_trunkbasesetting"></a>
 
-## -[**TrunkBase**](TrunkBase.html) put_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id, body)
+## [**TrunkBase**](TrunkBase.html) put_telephony_providers_edges_trunkbasesetting(trunk_base_settings_id, body)
 
 
 
@@ -8556,7 +8556,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -8584,7 +8584,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_trunkbasesetting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

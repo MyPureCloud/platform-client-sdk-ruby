@@ -16,7 +16,7 @@ Method | Description
 
 <a name="get_geolocations_settings"></a>
 
-## -[**GeolocationSettings**](GeolocationSettings.html) get_geolocations_settings
+## [**GeolocationSettings**](GeolocationSettings.html) get_geolocations_settings
 
 
 
@@ -31,7 +31,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -54,7 +54,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GeolocationApi->get_geolocations_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -74,7 +74,7 @@ This endpoint does not need any parameter.
 
 <a name="get_user_geolocation"></a>
 
-## -[**Geolocation**](Geolocation.html) get_user_geolocation(user_id, client_id)
+## [**Geolocation**](Geolocation.html) get_user_geolocation(user_id, client_id)
 
 
 
@@ -89,7 +89,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -117,7 +117,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GeolocationApi->get_user_geolocation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_geolocations_settings"></a>
 
-## -[**GeolocationSettings**](GeolocationSettings.html) patch_geolocations_settings(body)
+## [**GeolocationSettings**](GeolocationSettings.html) patch_geolocations_settings(body)
 
 
 
@@ -157,7 +157,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -183,7 +183,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GeolocationApi->patch_geolocations_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_user_geolocation"></a>
 
-## -[**Geolocation**](Geolocation.html) patch_user_geolocation(user_id, client_id, body)
+## [**Geolocation**](Geolocation.html) patch_user_geolocation(user_id, client_id, body)
 
 
 
@@ -221,7 +221,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -251,7 +251,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling GeolocationApi->patch_user_geolocation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

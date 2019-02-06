@@ -18,7 +18,7 @@ Method | Description
 
 <a name="get_fieldconfig"></a>
 
-## -[**FieldConfig**](FieldConfig.html) get_fieldconfig(type)
+## [**FieldConfig**](FieldConfig.html) get_fieldconfig(type)
 
 
 
@@ -33,7 +33,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -59,7 +59,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationApi->get_fieldconfig: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 <a name="get_organizations_me"></a>
 
-## -[**Organization**](Organization.html) get_organizations_me
+## [**Organization**](Organization.html) get_organizations_me
 
 
 
@@ -97,7 +97,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -120,7 +120,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationApi->get_organizations_me: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -140,7 +140,7 @@ This endpoint does not need any parameter.
 
 <a name="get_organizations_whitelist"></a>
 
-## -[**OrgWhitelistSettings**](OrgWhitelistSettings.html) get_organizations_whitelist
+## [**OrgWhitelistSettings**](OrgWhitelistSettings.html) get_organizations_whitelist
 
 
 
@@ -155,7 +155,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -178,7 +178,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationApi->get_organizations_whitelist: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -198,7 +198,7 @@ This endpoint does not need any parameter.
 
 <a name="patch_organizations_feature"></a>
 
-## -[**OrganizationFeatures**](OrganizationFeatures.html) patch_organizations_feature(feature_name, enabled)
+## [**OrganizationFeatures**](OrganizationFeatures.html) patch_organizations_feature(feature_name, enabled)
 
 
 
@@ -214,7 +214,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -242,7 +242,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationApi->patch_organizations_feature: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 
 <a name="put_organizations_me"></a>
 
-## -[**Organization**](Organization.html) put_organizations_me(opts)
+## [**Organization**](Organization.html) put_organizations_me(opts)
 
 
 
@@ -282,7 +282,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -309,7 +309,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationApi->put_organizations_me: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 
 <a name="put_organizations_whitelist"></a>
 
-## -[**OrgWhitelistSettings**](OrgWhitelistSettings.html) put_organizations_whitelist(body)
+## [**OrgWhitelistSettings**](OrgWhitelistSettings.html) put_organizations_whitelist(body)
 
 
 
@@ -348,7 +348,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -374,7 +374,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling OrganizationApi->put_organizations_whitelist: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

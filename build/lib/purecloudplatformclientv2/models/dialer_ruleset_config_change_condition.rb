@@ -36,6 +36,8 @@ module PureCloud
 
     attr_accessor :property
 
+    attr_accessor :data_not_found_resolution
+
     attr_accessor :contact_id_field
 
     attr_accessor :call_analysis_result_field
@@ -71,6 +73,8 @@ module PureCloud
         :'property_type' => :'propertyType',
         
         :'property' => :'property',
+        
+        :'data_not_found_resolution' => :'dataNotFoundResolution',
         
         :'contact_id_field' => :'contactIdField',
         
@@ -110,6 +114,8 @@ module PureCloud
         :'property_type' => :'String',
         
         :'property' => :'String',
+        
+        :'data_not_found_resolution' => :'BOOLEAN',
         
         :'contact_id_field' => :'String',
         
@@ -215,6 +221,15 @@ module PureCloud
         
         
         self.property = attributes[:'property']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'dataNotFoundResolution')
+        
+        
+        self.data_not_found_resolution = attributes[:'dataNotFoundResolution']
         
       
       end
@@ -381,6 +396,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -491,6 +510,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -505,6 +529,7 @@ module PureCloud
           codes == o.codes &&
           property_type == o.property_type &&
           property == o.property &&
+          data_not_found_resolution == o.data_not_found_resolution &&
           contact_id_field == o.contact_id_field &&
           call_analysis_result_field == o.call_analysis_result_field &&
           agent_wrapup_field == o.agent_wrapup_field &&
@@ -523,7 +548,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, inverted, attribute_name, value, value_type, operator, codes, property_type, property, contact_id_field, call_analysis_result_field, agent_wrapup_field, contact_column_to_data_action_field_mappings, predicates, data_action, additional_properties].hash
+      [type, inverted, attribute_name, value, value_type, operator, codes, property_type, property, data_not_found_resolution, contact_id_field, call_analysis_result_field, agent_wrapup_field, contact_column_to_data_action_field_mappings, predicates, data_action, additional_properties].hash
     end
 
     # build the object from hash

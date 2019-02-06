@@ -14,7 +14,7 @@ Method | Description
 
 <a name="get_billing_reports_billableusage"></a>
 
-## -[**BillingUsageReport**](BillingUsageReport.html) get_billing_reports_billableusage(start_date, end_date)
+## [**BillingUsageReport**](BillingUsageReport.html) get_billing_reports_billableusage(start_date, end_date)
 
 
 
@@ -33,7 +33,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -61,7 +61,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling BillingApi->get_billing_reports_billableusage: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 <a name="get_billing_trusteebillingoverview_trustor_org_id"></a>
 
-## -[**TrusteeBillingOverview**](TrusteeBillingOverview.html) get_billing_trusteebillingoverview_trustor_org_id(trustor_org_id, opts)
+## [**TrusteeBillingOverview**](TrusteeBillingOverview.html) get_billing_trusteebillingoverview_trustor_org_id(trustor_org_id, opts)
 
 
 
@@ -101,7 +101,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -130,7 +130,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling BillingApi->get_billing_trusteebillingoverview_trustor_org_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

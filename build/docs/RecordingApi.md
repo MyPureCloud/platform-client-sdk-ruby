@@ -49,7 +49,7 @@ Method | Description
 
 <a name="delete_conversation_recording_annotation"></a>
 
-## - delete_conversation_recording_annotation(conversation_id, recording_id, annotation_id)
+##  delete_conversation_recording_annotation(conversation_id, recording_id, annotation_id)
 
 
 
@@ -64,7 +64,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -93,7 +93,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->delete_conversation_recording_annotation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -118,7 +118,7 @@ nil (empty response body)
 
 <a name="delete_orphanrecording"></a>
 
-## -[**OrphanRecording**](OrphanRecording.html) delete_orphanrecording(orphan_id)
+## [**OrphanRecording**](OrphanRecording.html) delete_orphanrecording(orphan_id)
 
 
 
@@ -134,7 +134,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -160,7 +160,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->delete_orphanrecording: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 <a name="delete_recording_mediaretentionpolicies"></a>
 
-## - delete_recording_mediaretentionpolicies(ids)
+##  delete_recording_mediaretentionpolicies(ids)
 
 
 
@@ -199,7 +199,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -224,7 +224,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->delete_recording_mediaretentionpolicies: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -247,7 +247,7 @@ nil (empty response body)
 
 <a name="delete_recording_mediaretentionpolicy"></a>
 
-## - delete_recording_mediaretentionpolicy(policy_id)
+##  delete_recording_mediaretentionpolicy(policy_id)
 
 
 
@@ -263,7 +263,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -288,7 +288,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->delete_recording_mediaretentionpolicy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -311,7 +311,7 @@ nil (empty response body)
 
 <a name="get_conversation_recording"></a>
 
-## -[**Recording**](Recording.html) get_conversation_recording(conversation_id, recording_id, opts)
+## [**Recording**](Recording.html) get_conversation_recording(conversation_id, recording_id, opts)
 
 
 
@@ -326,7 +326,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -359,7 +359,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_conversation_recording: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation_recording_annotation"></a>
 
-## -[**Annotation**](Annotation.html) get_conversation_recording_annotation(conversation_id, recording_id, annotation_id)
+## [**Annotation**](Annotation.html) get_conversation_recording_annotation(conversation_id, recording_id, annotation_id)
 
 
 
@@ -401,7 +401,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -431,7 +431,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_conversation_recording_annotation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation_recording_annotations"></a>
 
-## -[**Array&lt;Annotation&gt;**](Annotation.html) get_conversation_recording_annotations(conversation_id, recording_id)
+## [**Array&lt;Annotation&gt;**](Annotation.html) get_conversation_recording_annotations(conversation_id, recording_id)
 
 
 
@@ -471,7 +471,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -499,7 +499,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_conversation_recording_annotations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -523,7 +523,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation_recordingmetadata"></a>
 
-## -[**Array&lt;Recording&gt;**](Recording.html) get_conversation_recordingmetadata(conversation_id)
+## [**Array&lt;Recording&gt;**](Recording.html) get_conversation_recordingmetadata(conversation_id)
 
 
 
@@ -538,7 +538,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -564,7 +564,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_conversation_recordingmetadata: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -587,7 +587,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation_recordingmetadata_recording_id"></a>
 
-## -[**Recording**](Recording.html) get_conversation_recordingmetadata_recording_id(conversation_id, recording_id)
+## [**Recording**](Recording.html) get_conversation_recordingmetadata_recording_id(conversation_id, recording_id)
 
 
 
@@ -602,7 +602,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -630,7 +630,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_conversation_recordingmetadata_recording_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -654,7 +654,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation_recordings"></a>
 
-## -[**Array&lt;Recording&gt;**](Recording.html) get_conversation_recordings(conversation_id, opts)
+## [**Array&lt;Recording&gt;**](Recording.html) get_conversation_recordings(conversation_id, opts)
 
 
 
@@ -669,7 +669,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -699,7 +699,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_conversation_recordings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -724,7 +724,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orphanrecording"></a>
 
-## -[**OrphanRecording**](OrphanRecording.html) get_orphanrecording(orphan_id)
+## [**OrphanRecording**](OrphanRecording.html) get_orphanrecording(orphan_id)
 
 
 
@@ -740,7 +740,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -766,7 +766,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_orphanrecording: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -789,7 +789,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orphanrecording_media"></a>
 
-## -[**Recording**](Recording.html) get_orphanrecording_media(orphan_id, opts)
+## [**Recording**](Recording.html) get_orphanrecording_media(orphan_id, opts)
 
 
 
@@ -804,7 +804,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -835,7 +835,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_orphanrecording_media: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -861,7 +861,7 @@ Name | Type | Description  | Notes
 
 <a name="get_orphanrecordings"></a>
 
-## -[**OrphanRecordingListing**](OrphanRecordingListing.html) get_orphanrecordings(opts)
+## [**OrphanRecordingListing**](OrphanRecordingListing.html) get_orphanrecordings(opts)
 
 
 
@@ -877,7 +877,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -911,7 +911,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_orphanrecordings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -941,7 +941,7 @@ Name | Type | Description  | Notes
 
 <a name="get_recording_batchrequest"></a>
 
-## -[**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult.html) get_recording_batchrequest(job_id)
+## [**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult.html) get_recording_batchrequest(job_id)
 
 
 
@@ -956,7 +956,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -982,7 +982,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_recording_batchrequest: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1005,7 +1005,7 @@ Name | Type | Description  | Notes
 
 <a name="get_recording_localkeys_setting"></a>
 
-## -[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) get_recording_localkeys_setting(settings_id)
+## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) get_recording_localkeys_setting(settings_id)
 
 
 
@@ -1021,7 +1021,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1047,7 +1047,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_recording_localkeys_setting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1070,7 +1070,7 @@ Name | Type | Description  | Notes
 
 <a name="get_recording_localkeys_settings"></a>
 
-## -[**LocalEncryptionConfigurationListing**](LocalEncryptionConfigurationListing.html) get_recording_localkeys_settings
+## [**LocalEncryptionConfigurationListing**](LocalEncryptionConfigurationListing.html) get_recording_localkeys_settings
 
 
 
@@ -1086,7 +1086,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1109,7 +1109,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_recording_localkeys_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1129,7 +1129,7 @@ This endpoint does not need any parameter.
 
 <a name="get_recording_mediaretentionpolicies"></a>
 
-## -[**PolicyEntityListing**](PolicyEntityListing.html) get_recording_mediaretentionpolicies(opts)
+## [**PolicyEntityListing**](PolicyEntityListing.html) get_recording_mediaretentionpolicies(opts)
 
 
 
@@ -1145,7 +1145,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1181,7 +1181,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_recording_mediaretentionpolicies: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1213,7 +1213,7 @@ Name | Type | Description  | Notes
 
 <a name="get_recording_mediaretentionpolicy"></a>
 
-## -[**Policy**](Policy.html) get_recording_mediaretentionpolicy(policy_id)
+## [**Policy**](Policy.html) get_recording_mediaretentionpolicy(policy_id)
 
 
 
@@ -1229,7 +1229,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1255,7 +1255,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_recording_mediaretentionpolicy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1278,7 +1278,7 @@ Name | Type | Description  | Notes
 
 <a name="get_recording_recordingkeys"></a>
 
-## -[**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.html) get_recording_recordingkeys(opts)
+## [**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.html) get_recording_recordingkeys(opts)
 
 
 
@@ -1294,7 +1294,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1322,7 +1322,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_recording_recordingkeys: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1346,7 +1346,7 @@ Name | Type | Description  | Notes
 
 <a name="get_recording_recordingkeys_rotationschedule"></a>
 
-## -[**KeyRotationSchedule**](KeyRotationSchedule.html) get_recording_recordingkeys_rotationschedule
+## [**KeyRotationSchedule**](KeyRotationSchedule.html) get_recording_recordingkeys_rotationschedule
 
 
 
@@ -1362,7 +1362,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1385,7 +1385,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_recording_recordingkeys_rotationschedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1405,7 +1405,7 @@ This endpoint does not need any parameter.
 
 <a name="get_recording_settings"></a>
 
-## -[**RecordingSettings**](RecordingSettings.html) get_recording_settings(opts)
+## [**RecordingSettings**](RecordingSettings.html) get_recording_settings(opts)
 
 
 
@@ -1420,7 +1420,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1447,7 +1447,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_recording_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1470,7 +1470,7 @@ Name | Type | Description  | Notes
 
 <a name="get_recordings_screensessions"></a>
 
-## -[**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html) get_recordings_screensessions(opts)
+## [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html) get_recordings_screensessions(opts)
 
 
 
@@ -1485,7 +1485,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1513,7 +1513,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->get_recordings_screensessions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1537,7 +1537,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_recording_mediaretentionpolicy"></a>
 
-## -[**Policy**](Policy.html) patch_recording_mediaretentionpolicy(policy_id, body)
+## [**Policy**](Policy.html) patch_recording_mediaretentionpolicy(policy_id, body)
 
 
 
@@ -1553,7 +1553,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1581,7 +1581,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->patch_recording_mediaretentionpolicy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1605,7 +1605,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_recordings_screensession"></a>
 
-## - patch_recordings_screensession(recording_session_id, opts)
+##  patch_recordings_screensession(recording_session_id, opts)
 
 
 
@@ -1620,7 +1620,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1648,7 +1648,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->patch_recordings_screensession: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1672,7 +1672,7 @@ nil (empty response body)
 
 <a name="post_conversation_recording_annotations"></a>
 
-## -[**Annotation**](Annotation.html) post_conversation_recording_annotations(conversation_id, recording_id, body)
+## [**Annotation**](Annotation.html) post_conversation_recording_annotations(conversation_id, recording_id, body)
 
 
 
@@ -1687,7 +1687,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1717,7 +1717,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->post_conversation_recording_annotations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1742,7 +1742,7 @@ Name | Type | Description  | Notes
 
 <a name="post_recording_batchrequests"></a>
 
-## -[**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html) post_recording_batchrequests(body)
+## [**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html) post_recording_batchrequests(body)
 
 
 
@@ -1757,7 +1757,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1783,7 +1783,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->post_recording_batchrequests: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1806,7 +1806,7 @@ Name | Type | Description  | Notes
 
 <a name="post_recording_localkeys"></a>
 
-## -[**EncryptionKey**](EncryptionKey.html) post_recording_localkeys(body)
+## [**EncryptionKey**](EncryptionKey.html) post_recording_localkeys(body)
 
 
 
@@ -1822,7 +1822,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1848,7 +1848,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->post_recording_localkeys: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1871,7 +1871,7 @@ Name | Type | Description  | Notes
 
 <a name="post_recording_localkeys_settings"></a>
 
-## -[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) post_recording_localkeys_settings(body)
+## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) post_recording_localkeys_settings(body)
 
 
 
@@ -1887,7 +1887,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1913,7 +1913,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->post_recording_localkeys_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1936,7 +1936,7 @@ Name | Type | Description  | Notes
 
 <a name="post_recording_mediaretentionpolicies"></a>
 
-## -[**Policy**](Policy.html) post_recording_mediaretentionpolicies(body)
+## [**Policy**](Policy.html) post_recording_mediaretentionpolicies(body)
 
 
 
@@ -1952,7 +1952,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1978,7 +1978,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->post_recording_mediaretentionpolicies: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2001,7 +2001,7 @@ Name | Type | Description  | Notes
 
 <a name="post_recording_recordingkeys"></a>
 
-## -[**EncryptionKey**](EncryptionKey.html) post_recording_recordingkeys
+## [**EncryptionKey**](EncryptionKey.html) post_recording_recordingkeys
 
 
 
@@ -2017,7 +2017,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2040,7 +2040,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->post_recording_recordingkeys: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -2060,7 +2060,7 @@ This endpoint does not need any parameter.
 
 <a name="put_conversation_recording"></a>
 
-## -[**Recording**](Recording.html) put_conversation_recording(conversation_id, recording_id, body)
+## [**Recording**](Recording.html) put_conversation_recording(conversation_id, recording_id, body)
 
 
 
@@ -2075,7 +2075,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2105,7 +2105,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->put_conversation_recording: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2130,7 +2130,7 @@ Name | Type | Description  | Notes
 
 <a name="put_conversation_recording_annotation"></a>
 
-## -[**Annotation**](Annotation.html) put_conversation_recording_annotation(conversation_id, recording_id, annotation_id, body)
+## [**Annotation**](Annotation.html) put_conversation_recording_annotation(conversation_id, recording_id, annotation_id, body)
 
 
 
@@ -2145,7 +2145,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2177,7 +2177,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->put_conversation_recording_annotation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2203,7 +2203,7 @@ Name | Type | Description  | Notes
 
 <a name="put_orphanrecording"></a>
 
-## -[**Recording**](Recording.html) put_orphanrecording(orphan_id, opts)
+## [**Recording**](Recording.html) put_orphanrecording(orphan_id, opts)
 
 
 
@@ -2219,7 +2219,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2248,7 +2248,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->put_orphanrecording: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2272,7 +2272,7 @@ Name | Type | Description  | Notes
 
 <a name="put_recording_localkeys_setting"></a>
 
-## -[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) put_recording_localkeys_setting(settings_id, body)
+## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) put_recording_localkeys_setting(settings_id, body)
 
 
 
@@ -2288,7 +2288,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2316,7 +2316,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->put_recording_localkeys_setting: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2340,7 +2340,7 @@ Name | Type | Description  | Notes
 
 <a name="put_recording_mediaretentionpolicy"></a>
 
-## -[**Policy**](Policy.html) put_recording_mediaretentionpolicy(policy_id, body)
+## [**Policy**](Policy.html) put_recording_mediaretentionpolicy(policy_id, body)
 
 
 
@@ -2356,7 +2356,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2384,7 +2384,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->put_recording_mediaretentionpolicy: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2408,7 +2408,7 @@ Name | Type | Description  | Notes
 
 <a name="put_recording_recordingkeys_rotationschedule"></a>
 
-## -[**KeyRotationSchedule**](KeyRotationSchedule.html) put_recording_recordingkeys_rotationschedule(body)
+## [**KeyRotationSchedule**](KeyRotationSchedule.html) put_recording_recordingkeys_rotationschedule(body)
 
 
 
@@ -2424,7 +2424,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2450,7 +2450,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->put_recording_recordingkeys_rotationschedule: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2473,7 +2473,7 @@ Name | Type | Description  | Notes
 
 <a name="put_recording_settings"></a>
 
-## -[**RecordingSettings**](RecordingSettings.html) put_recording_settings(body)
+## [**RecordingSettings**](RecordingSettings.html) put_recording_settings(body)
 
 
 
@@ -2488,7 +2488,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2514,7 +2514,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling RecordingApi->put_recording_settings: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

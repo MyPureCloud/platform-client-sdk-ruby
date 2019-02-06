@@ -19,7 +19,7 @@ Method | Description
 
 <a name="delete_notifications_channel_subscriptions"></a>
 
-## - delete_notifications_channel_subscriptions(channel_id)
+##  delete_notifications_channel_subscriptions(channel_id)
 
 
 
@@ -34,7 +34,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -59,7 +59,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling NotificationsApi->delete_notifications_channel_subscriptions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -82,7 +82,7 @@ nil (empty response body)
 
 <a name="get_notifications_availabletopics"></a>
 
-## -[**AvailableTopicEntityListing**](AvailableTopicEntityListing.html) get_notifications_availabletopics(opts)
+## [**AvailableTopicEntityListing**](AvailableTopicEntityListing.html) get_notifications_availabletopics(opts)
 
 
 
@@ -97,7 +97,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -124,7 +124,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling NotificationsApi->get_notifications_availabletopics: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 <a name="get_notifications_channel_subscriptions"></a>
 
-## -[**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) get_notifications_channel_subscriptions(channel_id)
+## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) get_notifications_channel_subscriptions(channel_id)
 
 
 
@@ -162,7 +162,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -188,7 +188,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling NotificationsApi->get_notifications_channel_subscriptions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 <a name="get_notifications_channels"></a>
 
-## -[**ChannelEntityListing**](ChannelEntityListing.html) get_notifications_channels(opts)
+## [**ChannelEntityListing**](ChannelEntityListing.html) get_notifications_channels(opts)
 
 
 
@@ -226,7 +226,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -253,7 +253,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling NotificationsApi->get_notifications_channels: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 <a name="post_notifications_channel_subscriptions"></a>
 
-## -[**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) post_notifications_channel_subscriptions(channel_id, body)
+## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) post_notifications_channel_subscriptions(channel_id, body)
 
 
 
@@ -291,7 +291,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -319,7 +319,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling NotificationsApi->post_notifications_channel_subscriptions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 
 <a name="post_notifications_channels"></a>
 
-## -[**Channel**](Channel.html) post_notifications_channels
+## [**Channel**](Channel.html) post_notifications_channels
 
 
 
@@ -358,7 +358,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -381,7 +381,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling NotificationsApi->post_notifications_channels: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -401,7 +401,7 @@ This endpoint does not need any parameter.
 
 <a name="put_notifications_channel_subscriptions"></a>
 
-## -[**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) put_notifications_channel_subscriptions(channel_id, body)
+## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) put_notifications_channel_subscriptions(channel_id, body)
 
 
 
@@ -416,7 +416,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -444,7 +444,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling NotificationsApi->put_notifications_channel_subscriptions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

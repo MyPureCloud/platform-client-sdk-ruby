@@ -112,7 +112,7 @@ Method | Description
 
 <a name="delete_conversation_participant_code"></a>
 
-## - delete_conversation_participant_code(conversation_id, participant_id, add_communication_code)
+##  delete_conversation_participant_code(conversation_id, participant_id, add_communication_code)
 
 
 
@@ -127,7 +127,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -156,7 +156,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->delete_conversation_participant_code: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -181,7 +181,7 @@ nil (empty response body)
 
 <a name="delete_conversations_call_participant_consult"></a>
 
-## - delete_conversations_call_participant_consult(conversation_id, participant_id)
+##  delete_conversations_call_participant_consult(conversation_id, participant_id)
 
 
 
@@ -196,7 +196,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -223,7 +223,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->delete_conversations_call_participant_consult: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -247,7 +247,7 @@ nil (empty response body)
 
 <a name="delete_conversations_email_messages_draft_attachment"></a>
 
-## - delete_conversations_email_messages_draft_attachment(conversation_id, attachment_id)
+##  delete_conversations_email_messages_draft_attachment(conversation_id, attachment_id)
 
 
 
@@ -262,7 +262,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -289,7 +289,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->delete_conversations_email_messages_draft_attachment: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -313,7 +313,7 @@ nil (empty response body)
 
 <a name="get_analytics_conversation_details"></a>
 
-## -[**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversation_details(conversation_id)
+## [**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversation_details(conversation_id)
 
 
 
@@ -329,7 +329,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -355,7 +355,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_analytics_conversation_details: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_conversations_details"></a>
 
-## -[**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversations_details(opts)
+## [**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversations_details(opts)
 
 
 
@@ -394,7 +394,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -421,7 +421,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_analytics_conversations_details: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation"></a>
 
-## -[**Conversation**](Conversation.html) get_conversation(conversation_id)
+## [**Conversation**](Conversation.html) get_conversation(conversation_id)
 
 
 
@@ -460,7 +460,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -486,7 +486,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversation: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -509,7 +509,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation_participant_secureivrsession"></a>
 
-## -[**SecureSession**](SecureSession.html) get_conversation_participant_secureivrsession(conversation_id, participant_id, secure_session_id)
+## [**SecureSession**](SecureSession.html) get_conversation_participant_secureivrsession(conversation_id, participant_id, secure_session_id)
 
 
 
@@ -524,7 +524,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -554,7 +554,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversation_participant_secureivrsession: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -579,7 +579,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation_participant_secureivrsessions"></a>
 
-## -[**SecureSessionEntityListing**](SecureSessionEntityListing.html) get_conversation_participant_secureivrsessions(conversation_id, participant_id)
+## [**SecureSessionEntityListing**](SecureSessionEntityListing.html) get_conversation_participant_secureivrsessions(conversation_id, participant_id)
 
 
 
@@ -594,7 +594,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -622,7 +622,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversation_participant_secureivrsessions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -646,7 +646,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation_participant_wrapup"></a>
 
-## -[**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversation_participant_wrapup(conversation_id, participant_id, opts)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversation_participant_wrapup(conversation_id, participant_id, opts)
 
 
 
@@ -661,7 +661,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -692,7 +692,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversation_participant_wrapup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -717,7 +717,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversation_participant_wrapupcodes(conversation_id, participant_id)
+## [**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversation_participant_wrapupcodes(conversation_id, participant_id)
 
 
 
@@ -732,7 +732,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -760,7 +760,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversation_participant_wrapupcodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -784,7 +784,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations"></a>
 
-## -[**ConversationEntityListing**](ConversationEntityListing.html) get_conversations(opts)
+## [**ConversationEntityListing**](ConversationEntityListing.html) get_conversations(opts)
 
 
 
@@ -799,7 +799,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -826,7 +826,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -849,7 +849,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_call"></a>
 
-## -[**CallConversation**](CallConversation.html) get_conversations_call(conversation_id)
+## [**CallConversation**](CallConversation.html) get_conversations_call(conversation_id)
 
 
 
@@ -864,7 +864,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -890,7 +890,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_call: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -913,7 +913,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_call_participant_wrapup"></a>
 
-## -[**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_call_participant_wrapup(conversation_id, participant_id, opts)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_call_participant_wrapup(conversation_id, participant_id, opts)
 
 
 
@@ -928,7 +928,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -959,7 +959,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_call_participant_wrapup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -984,7 +984,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_call_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_call_participant_wrapupcodes(conversation_id, participant_id)
+## [**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_call_participant_wrapupcodes(conversation_id, participant_id)
 
 
 
@@ -999,7 +999,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1027,7 +1027,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_call_participant_wrapupcodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1051,7 +1051,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_callback"></a>
 
-## -[**CallbackConversation**](CallbackConversation.html) get_conversations_callback(conversation_id)
+## [**CallbackConversation**](CallbackConversation.html) get_conversations_callback(conversation_id)
 
 
 
@@ -1066,7 +1066,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1092,7 +1092,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_callback: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1115,7 +1115,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_callback_participant_wrapup"></a>
 
-## -[**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_callback_participant_wrapup(conversation_id, participant_id, opts)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_callback_participant_wrapup(conversation_id, participant_id, opts)
 
 
 
@@ -1130,7 +1130,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1161,7 +1161,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_callback_participant_wrapup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1186,7 +1186,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_callback_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_callback_participant_wrapupcodes(conversation_id, participant_id)
+## [**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_callback_participant_wrapupcodes(conversation_id, participant_id)
 
 
 
@@ -1201,7 +1201,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1229,7 +1229,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_callback_participant_wrapupcodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1253,7 +1253,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_callbacks"></a>
 
-## -[**CallbackConversationEntityListing**](CallbackConversationEntityListing.html) get_conversations_callbacks
+## [**CallbackConversationEntityListing**](CallbackConversationEntityListing.html) get_conversations_callbacks
 
 
 
@@ -1268,7 +1268,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1291,7 +1291,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_callbacks: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1311,7 +1311,7 @@ This endpoint does not need any parameter.
 
 <a name="get_conversations_calls"></a>
 
-## -[**CallConversationEntityListing**](CallConversationEntityListing.html) get_conversations_calls
+## [**CallConversationEntityListing**](CallConversationEntityListing.html) get_conversations_calls
 
 
 
@@ -1326,7 +1326,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1349,7 +1349,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_calls: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1369,7 +1369,7 @@ This endpoint does not need any parameter.
 
 <a name="get_conversations_calls_history"></a>
 
-## -[**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing.html) get_conversations_calls_history(opts)
+## [**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing.html) get_conversations_calls_history(opts)
 
 
 
@@ -1384,7 +1384,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1414,7 +1414,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_calls_history: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1440,7 +1440,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_calls_maximumconferenceparties"></a>
 
-## -[**MaxParticipants**](MaxParticipants.html) get_conversations_calls_maximumconferenceparties
+## [**MaxParticipants**](MaxParticipants.html) get_conversations_calls_maximumconferenceparties
 
 
 
@@ -1455,7 +1455,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1478,7 +1478,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_calls_maximumconferenceparties: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1498,7 +1498,7 @@ This endpoint does not need any parameter.
 
 <a name="get_conversations_chat"></a>
 
-## -[**ChatConversation**](ChatConversation.html) get_conversations_chat(conversation_id)
+## [**ChatConversation**](ChatConversation.html) get_conversations_chat(conversation_id)
 
 
 
@@ -1513,7 +1513,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1539,7 +1539,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_chat: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1562,7 +1562,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_chat_participant_wrapup"></a>
 
-## -[**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_chat_participant_wrapup(conversation_id, participant_id, opts)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_chat_participant_wrapup(conversation_id, participant_id, opts)
 
 
 
@@ -1577,7 +1577,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1608,7 +1608,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_chat_participant_wrapup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1633,7 +1633,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_chat_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_chat_participant_wrapupcodes(conversation_id, participant_id)
+## [**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_chat_participant_wrapupcodes(conversation_id, participant_id)
 
 
 
@@ -1648,7 +1648,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1676,7 +1676,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_chat_participant_wrapupcodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1700,7 +1700,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_chats"></a>
 
-## -[**ChatConversationEntityListing**](ChatConversationEntityListing.html) get_conversations_chats
+## [**ChatConversationEntityListing**](ChatConversationEntityListing.html) get_conversations_chats
 
 
 
@@ -1715,7 +1715,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1738,7 +1738,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_chats: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1758,7 +1758,7 @@ This endpoint does not need any parameter.
 
 <a name="get_conversations_cobrowsesession"></a>
 
-## -[**CobrowseConversation**](CobrowseConversation.html) get_conversations_cobrowsesession(conversation_id)
+## [**CobrowseConversation**](CobrowseConversation.html) get_conversations_cobrowsesession(conversation_id)
 
 
 
@@ -1773,7 +1773,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1799,7 +1799,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_cobrowsesession: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1822,7 +1822,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_cobrowsesession_participant_wrapup"></a>
 
-## -[**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_cobrowsesession_participant_wrapup(conversation_id, participant_id, opts)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_cobrowsesession_participant_wrapup(conversation_id, participant_id, opts)
 
 
 
@@ -1837,7 +1837,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1868,7 +1868,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_cobrowsesession_participant_wrapup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1893,7 +1893,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_cobrowsesession_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_cobrowsesession_participant_wrapupcodes(conversation_id, participant_id)
+## [**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_cobrowsesession_participant_wrapupcodes(conversation_id, participant_id)
 
 
 
@@ -1908,7 +1908,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1936,7 +1936,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_cobrowsesession_participant_wrapupcodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -1960,7 +1960,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_cobrowsesessions"></a>
 
-## -[**CobrowseConversationEntityListing**](CobrowseConversationEntityListing.html) get_conversations_cobrowsesessions
+## [**CobrowseConversationEntityListing**](CobrowseConversationEntityListing.html) get_conversations_cobrowsesessions
 
 
 
@@ -1975,7 +1975,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -1998,7 +1998,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_cobrowsesessions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -2018,7 +2018,7 @@ This endpoint does not need any parameter.
 
 <a name="get_conversations_email"></a>
 
-## -[**EmailConversation**](EmailConversation.html) get_conversations_email(conversation_id)
+## [**EmailConversation**](EmailConversation.html) get_conversations_email(conversation_id)
 
 
 
@@ -2033,7 +2033,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2059,7 +2059,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2082,7 +2082,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_email_message"></a>
 
-## -[**EmailMessage**](EmailMessage.html) get_conversations_email_message(conversation_id, message_id)
+## [**EmailMessage**](EmailMessage.html) get_conversations_email_message(conversation_id, message_id)
 
 
 
@@ -2097,7 +2097,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2125,7 +2125,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email_message: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2149,7 +2149,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_email_messages"></a>
 
-## -[**EmailMessageListing**](EmailMessageListing.html) get_conversations_email_messages(conversation_id)
+## [**EmailMessageListing**](EmailMessageListing.html) get_conversations_email_messages(conversation_id)
 
 
 
@@ -2164,7 +2164,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2190,7 +2190,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email_messages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2213,7 +2213,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_email_messages_draft"></a>
 
-## -[**EmailMessage**](EmailMessage.html) get_conversations_email_messages_draft(conversation_id)
+## [**EmailMessage**](EmailMessage.html) get_conversations_email_messages_draft(conversation_id)
 
 
 
@@ -2228,7 +2228,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2254,7 +2254,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email_messages_draft: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2277,7 +2277,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_email_participant_wrapup"></a>
 
-## -[**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_email_participant_wrapup(conversation_id, participant_id, opts)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_email_participant_wrapup(conversation_id, participant_id, opts)
 
 
 
@@ -2292,7 +2292,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2323,7 +2323,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email_participant_wrapup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2348,7 +2348,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_email_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_email_participant_wrapupcodes(conversation_id, participant_id)
+## [**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_email_participant_wrapupcodes(conversation_id, participant_id)
 
 
 
@@ -2363,7 +2363,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2391,7 +2391,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_email_participant_wrapupcodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2415,7 +2415,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_emails"></a>
 
-## -[**EmailConversationEntityListing**](EmailConversationEntityListing.html) get_conversations_emails
+## [**EmailConversationEntityListing**](EmailConversationEntityListing.html) get_conversations_emails
 
 
 
@@ -2430,7 +2430,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2453,7 +2453,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_emails: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -2473,7 +2473,7 @@ This endpoint does not need any parameter.
 
 <a name="get_conversations_message"></a>
 
-## -[**MessageConversation**](MessageConversation.html) get_conversations_message(conversation_id)
+## [**MessageConversation**](MessageConversation.html) get_conversations_message(conversation_id)
 
 
 
@@ -2488,7 +2488,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2514,7 +2514,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_message: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2537,7 +2537,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_message_communication_messages_media_media_id"></a>
 
-## -[**MessageMediaData**](MessageMediaData.html) get_conversations_message_communication_messages_media_media_id(conversation_id, communication_id, media_id)
+## [**MessageMediaData**](MessageMediaData.html) get_conversations_message_communication_messages_media_media_id(conversation_id, communication_id, media_id)
 
 
 
@@ -2553,7 +2553,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2583,7 +2583,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_message_communication_messages_media_media_id: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2608,7 +2608,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_message_message"></a>
 
-## -[**MessageData**](MessageData.html) get_conversations_message_message(conversation_id, message_id)
+## [**MessageData**](MessageData.html) get_conversations_message_message(conversation_id, message_id)
 
 
 
@@ -2624,7 +2624,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2652,7 +2652,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_message_message: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2676,7 +2676,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_message_participant_wrapup"></a>
 
-## -[**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_message_participant_wrapup(conversation_id, participant_id, opts)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) get_conversations_message_participant_wrapup(conversation_id, participant_id, opts)
 
 
 
@@ -2691,7 +2691,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2722,7 +2722,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_message_participant_wrapup: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2747,7 +2747,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_message_participant_wrapupcodes"></a>
 
-## -[**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_message_participant_wrapupcodes(conversation_id, participant_id)
+## [**Array&lt;WrapupCode&gt;**](WrapupCode.html) get_conversations_message_participant_wrapupcodes(conversation_id, participant_id)
 
 
 
@@ -2762,7 +2762,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2790,7 +2790,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_message_participant_wrapupcodes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2814,7 +2814,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversations_messages"></a>
 
-## -[**MessageConversationEntityListing**](MessageConversationEntityListing.html) get_conversations_messages
+## [**MessageConversationEntityListing**](MessageConversationEntityListing.html) get_conversations_messages
 
 
 
@@ -2829,7 +2829,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2852,7 +2852,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->get_conversations_messages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -2872,7 +2872,7 @@ This endpoint does not need any parameter.
 
 <a name="patch_conversation_participant"></a>
 
-## - patch_conversation_participant(conversation_id, participant_id, body)
+##  patch_conversation_participant(conversation_id, participant_id, body)
 
 
 
@@ -2887,7 +2887,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2916,7 +2916,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversation_participant: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -2941,7 +2941,7 @@ nil (empty response body)
 
 <a name="patch_conversation_participant_attributes"></a>
 
-## - patch_conversation_participant_attributes(conversation_id, participant_id, body)
+##  patch_conversation_participant_attributes(conversation_id, participant_id, body)
 
 
 
@@ -2956,7 +2956,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -2985,7 +2985,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversation_participant_attributes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3010,7 +3010,7 @@ nil (empty response body)
 
 <a name="patch_conversations_call"></a>
 
-## -[**Conversation**](Conversation.html) patch_conversations_call(conversation_id, body)
+## [**Conversation**](Conversation.html) patch_conversations_call(conversation_id, body)
 
 
 
@@ -3026,7 +3026,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3054,7 +3054,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_call: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3078,7 +3078,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_call_participant"></a>
 
-## - patch_conversations_call_participant(conversation_id, participant_id, body)
+##  patch_conversations_call_participant(conversation_id, participant_id, body)
 
 
 
@@ -3093,7 +3093,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3122,7 +3122,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_call_participant: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3147,7 +3147,7 @@ nil (empty response body)
 
 <a name="patch_conversations_call_participant_attributes"></a>
 
-## - patch_conversations_call_participant_attributes(conversation_id, participant_id, body)
+##  patch_conversations_call_participant_attributes(conversation_id, participant_id, body)
 
 
 
@@ -3162,7 +3162,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3191,7 +3191,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_call_participant_attributes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3216,7 +3216,7 @@ nil (empty response body)
 
 <a name="patch_conversations_call_participant_communication"></a>
 
-## -[**Empty**](Empty.html) patch_conversations_call_participant_communication(conversation_id, participant_id, communication_id, body)
+## [**Empty**](Empty.html) patch_conversations_call_participant_communication(conversation_id, participant_id, communication_id, body)
 
 
 
@@ -3231,7 +3231,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3263,7 +3263,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_call_participant_communication: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3289,7 +3289,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_call_participant_consult"></a>
 
-## -[**ConsultTransferResponse**](ConsultTransferResponse.html) patch_conversations_call_participant_consult(conversation_id, participant_id, body)
+## [**ConsultTransferResponse**](ConsultTransferResponse.html) patch_conversations_call_participant_consult(conversation_id, participant_id, body)
 
 
 
@@ -3304,7 +3304,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3334,7 +3334,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_call_participant_consult: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3359,7 +3359,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_callback"></a>
 
-## -[**Conversation**](Conversation.html) patch_conversations_callback(conversation_id, body)
+## [**Conversation**](Conversation.html) patch_conversations_callback(conversation_id, body)
 
 
 
@@ -3375,7 +3375,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3403,7 +3403,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_callback: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3427,7 +3427,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_callback_participant"></a>
 
-## - patch_conversations_callback_participant(conversation_id, participant_id, body)
+##  patch_conversations_callback_participant(conversation_id, participant_id, body)
 
 
 
@@ -3442,7 +3442,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3471,7 +3471,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_callback_participant: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3496,7 +3496,7 @@ nil (empty response body)
 
 <a name="patch_conversations_callback_participant_attributes"></a>
 
-## - patch_conversations_callback_participant_attributes(conversation_id, participant_id, body)
+##  patch_conversations_callback_participant_attributes(conversation_id, participant_id, body)
 
 
 
@@ -3511,7 +3511,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3540,7 +3540,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_callback_participant_attributes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3565,7 +3565,7 @@ nil (empty response body)
 
 <a name="patch_conversations_callback_participant_communication"></a>
 
-## -[**Empty**](Empty.html) patch_conversations_callback_participant_communication(conversation_id, participant_id, communication_id, body)
+## [**Empty**](Empty.html) patch_conversations_callback_participant_communication(conversation_id, participant_id, communication_id, body)
 
 
 
@@ -3580,7 +3580,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3612,7 +3612,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_callback_participant_communication: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3638,7 +3638,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_chat"></a>
 
-## -[**Conversation**](Conversation.html) patch_conversations_chat(conversation_id, body)
+## [**Conversation**](Conversation.html) patch_conversations_chat(conversation_id, body)
 
 
 
@@ -3654,7 +3654,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3682,7 +3682,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_chat: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3706,7 +3706,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_chat_participant"></a>
 
-## - patch_conversations_chat_participant(conversation_id, participant_id, body)
+##  patch_conversations_chat_participant(conversation_id, participant_id, body)
 
 
 
@@ -3721,7 +3721,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3750,7 +3750,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_chat_participant: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3775,7 +3775,7 @@ nil (empty response body)
 
 <a name="patch_conversations_chat_participant_attributes"></a>
 
-## - patch_conversations_chat_participant_attributes(conversation_id, participant_id, body)
+##  patch_conversations_chat_participant_attributes(conversation_id, participant_id, body)
 
 
 
@@ -3790,7 +3790,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3819,7 +3819,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_chat_participant_attributes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3844,7 +3844,7 @@ nil (empty response body)
 
 <a name="patch_conversations_chat_participant_communication"></a>
 
-## -[**Empty**](Empty.html) patch_conversations_chat_participant_communication(conversation_id, participant_id, communication_id, body)
+## [**Empty**](Empty.html) patch_conversations_chat_participant_communication(conversation_id, participant_id, communication_id, body)
 
 
 
@@ -3859,7 +3859,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3891,7 +3891,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_chat_participant_communication: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3917,7 +3917,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_cobrowsesession"></a>
 
-## -[**Conversation**](Conversation.html) patch_conversations_cobrowsesession(conversation_id, body)
+## [**Conversation**](Conversation.html) patch_conversations_cobrowsesession(conversation_id, body)
 
 
 
@@ -3933,7 +3933,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -3961,7 +3961,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_cobrowsesession: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -3985,7 +3985,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_cobrowsesession_participant"></a>
 
-## - patch_conversations_cobrowsesession_participant(conversation_id, participant_id, opts)
+##  patch_conversations_cobrowsesession_participant(conversation_id, participant_id, opts)
 
 
 
@@ -4000,7 +4000,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4030,7 +4030,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_cobrowsesession_participant: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4055,7 +4055,7 @@ nil (empty response body)
 
 <a name="patch_conversations_cobrowsesession_participant_attributes"></a>
 
-## - patch_conversations_cobrowsesession_participant_attributes(conversation_id, participant_id, opts)
+##  patch_conversations_cobrowsesession_participant_attributes(conversation_id, participant_id, opts)
 
 
 
@@ -4070,7 +4070,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4100,7 +4100,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_cobrowsesession_participant_attributes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4125,7 +4125,7 @@ nil (empty response body)
 
 <a name="patch_conversations_cobrowsesession_participant_communication"></a>
 
-## -[**Empty**](Empty.html) patch_conversations_cobrowsesession_participant_communication(conversation_id, participant_id, communication_id, body)
+## [**Empty**](Empty.html) patch_conversations_cobrowsesession_participant_communication(conversation_id, participant_id, communication_id, body)
 
 
 
@@ -4140,7 +4140,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4172,7 +4172,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_cobrowsesession_participant_communication: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4198,7 +4198,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_email"></a>
 
-## -[**Conversation**](Conversation.html) patch_conversations_email(conversation_id, body)
+## [**Conversation**](Conversation.html) patch_conversations_email(conversation_id, body)
 
 
 
@@ -4214,7 +4214,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4242,7 +4242,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_email: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4266,7 +4266,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_email_participant"></a>
 
-## - patch_conversations_email_participant(conversation_id, participant_id, body)
+##  patch_conversations_email_participant(conversation_id, participant_id, body)
 
 
 
@@ -4281,7 +4281,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4310,7 +4310,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_email_participant: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4335,7 +4335,7 @@ nil (empty response body)
 
 <a name="patch_conversations_email_participant_attributes"></a>
 
-## - patch_conversations_email_participant_attributes(conversation_id, participant_id, body)
+##  patch_conversations_email_participant_attributes(conversation_id, participant_id, body)
 
 
 
@@ -4350,7 +4350,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4379,7 +4379,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_email_participant_attributes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4404,7 +4404,7 @@ nil (empty response body)
 
 <a name="patch_conversations_email_participant_communication"></a>
 
-## -[**Empty**](Empty.html) patch_conversations_email_participant_communication(conversation_id, participant_id, communication_id, body)
+## [**Empty**](Empty.html) patch_conversations_email_participant_communication(conversation_id, participant_id, communication_id, body)
 
 
 
@@ -4419,7 +4419,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4451,7 +4451,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_email_participant_communication: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4477,7 +4477,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_message"></a>
 
-## -[**Conversation**](Conversation.html) patch_conversations_message(conversation_id, body)
+## [**Conversation**](Conversation.html) patch_conversations_message(conversation_id, body)
 
 
 
@@ -4493,7 +4493,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4521,7 +4521,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_message: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4545,7 +4545,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_conversations_message_participant"></a>
 
-## - patch_conversations_message_participant(conversation_id, participant_id, opts)
+##  patch_conversations_message_participant(conversation_id, participant_id, opts)
 
 
 
@@ -4560,7 +4560,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4590,7 +4590,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_message_participant: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4615,7 +4615,7 @@ nil (empty response body)
 
 <a name="patch_conversations_message_participant_attributes"></a>
 
-## - patch_conversations_message_participant_attributes(conversation_id, participant_id, opts)
+##  patch_conversations_message_participant_attributes(conversation_id, participant_id, opts)
 
 
 
@@ -4630,7 +4630,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4660,7 +4660,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_message_participant_attributes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4685,7 +4685,7 @@ nil (empty response body)
 
 <a name="patch_conversations_message_participant_communication"></a>
 
-## -[**Empty**](Empty.html) patch_conversations_message_participant_communication(conversation_id, participant_id, communication_id, body)
+## [**Empty**](Empty.html) patch_conversations_message_participant_communication(conversation_id, participant_id, communication_id, body)
 
 
 
@@ -4700,7 +4700,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4732,7 +4732,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->patch_conversations_message_participant_communication: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4758,7 +4758,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_conversation_details_properties"></a>
 
-## -[**PropertyIndexRequest**](PropertyIndexRequest.html) post_analytics_conversation_details_properties(conversation_id, body)
+## [**PropertyIndexRequest**](PropertyIndexRequest.html) post_analytics_conversation_details_properties(conversation_id, body)
 
 
 
@@ -4774,7 +4774,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4802,7 +4802,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_analytics_conversation_details_properties: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4826,7 +4826,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_conversations_aggregates_query"></a>
 
-## -[**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_conversations_aggregates_query(body)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_conversations_aggregates_query(body)
 
 
 
@@ -4842,7 +4842,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4868,7 +4868,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_analytics_conversations_aggregates_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4891,7 +4891,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_conversations_details_query"></a>
 
-## -[**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) post_analytics_conversations_details_query(body)
+## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) post_analytics_conversations_details_query(body)
 
 
 
@@ -4907,7 +4907,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4933,7 +4933,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_analytics_conversations_details_query: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -4956,7 +4956,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversation_disconnect"></a>
 
-## -String** post_conversation_disconnect(conversation_id)
+## String** post_conversation_disconnect(conversation_id)
 
 
 
@@ -4972,7 +4972,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -4998,7 +4998,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversation_disconnect: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5021,7 +5021,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversation_participant_callbacks"></a>
 
-## - post_conversation_participant_callbacks(conversation_id, participant_id, opts)
+##  post_conversation_participant_callbacks(conversation_id, participant_id, opts)
 
 
 
@@ -5037,7 +5037,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5067,7 +5067,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversation_participant_callbacks: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5092,7 +5092,7 @@ nil (empty response body)
 
 <a name="post_conversation_participant_digits"></a>
 
-## - post_conversation_participant_digits(conversation_id, participant_id, opts)
+##  post_conversation_participant_digits(conversation_id, participant_id, opts)
 
 
 
@@ -5107,7 +5107,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5137,7 +5137,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversation_participant_digits: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5162,7 +5162,7 @@ nil (empty response body)
 
 <a name="post_conversation_participant_replace"></a>
 
-## - post_conversation_participant_replace(conversation_id, participant_id, body)
+##  post_conversation_participant_replace(conversation_id, participant_id, body)
 
 
 
@@ -5177,7 +5177,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5206,7 +5206,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversation_participant_replace: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5231,7 +5231,7 @@ nil (empty response body)
 
 <a name="post_conversation_participant_secureivrsessions"></a>
 
-## -[**SecureSession**](SecureSession.html) post_conversation_participant_secureivrsessions(conversation_id, participant_id, opts)
+## [**SecureSession**](SecureSession.html) post_conversation_participant_secureivrsessions(conversation_id, participant_id, opts)
 
 
 
@@ -5246,7 +5246,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5277,7 +5277,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversation_participant_secureivrsessions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5302,7 +5302,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_call"></a>
 
-## -[**Conversation**](Conversation.html) post_conversations_call(conversation_id, body)
+## [**Conversation**](Conversation.html) post_conversations_call(conversation_id, body)
 
 
 
@@ -5317,7 +5317,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5345,7 +5345,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_call: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5369,7 +5369,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_call_participant_consult"></a>
 
-## -[**ConsultTransferResponse**](ConsultTransferResponse.html) post_conversations_call_participant_consult(conversation_id, participant_id, body)
+## [**ConsultTransferResponse**](ConsultTransferResponse.html) post_conversations_call_participant_consult(conversation_id, participant_id, body)
 
 
 
@@ -5384,7 +5384,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5414,7 +5414,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_call_participant_consult: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5439,7 +5439,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_call_participant_monitor"></a>
 
-## - post_conversations_call_participant_monitor(conversation_id, participant_id)
+##  post_conversations_call_participant_monitor(conversation_id, participant_id)
 
 
 
@@ -5455,7 +5455,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5482,7 +5482,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_call_participant_monitor: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5506,7 +5506,7 @@ nil (empty response body)
 
 <a name="post_conversations_call_participant_replace"></a>
 
-## - post_conversations_call_participant_replace(conversation_id, participant_id, body)
+##  post_conversations_call_participant_replace(conversation_id, participant_id, body)
 
 
 
@@ -5521,7 +5521,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5550,7 +5550,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_call_participant_replace: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5575,7 +5575,7 @@ nil (empty response body)
 
 <a name="post_conversations_call_participants"></a>
 
-## -[**Conversation**](Conversation.html) post_conversations_call_participants(conversation_id, body)
+## [**Conversation**](Conversation.html) post_conversations_call_participants(conversation_id, body)
 
 
 
@@ -5590,7 +5590,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5618,7 +5618,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_call_participants: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5642,7 +5642,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_callback_participant_replace"></a>
 
-## - post_conversations_callback_participant_replace(conversation_id, participant_id, body)
+##  post_conversations_callback_participant_replace(conversation_id, participant_id, body)
 
 
 
@@ -5657,7 +5657,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5686,7 +5686,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_callback_participant_replace: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5711,7 +5711,7 @@ nil (empty response body)
 
 <a name="post_conversations_callbacks"></a>
 
-## -[**CreateCallbackResponse**](CreateCallbackResponse.html) post_conversations_callbacks(body)
+## [**CreateCallbackResponse**](CreateCallbackResponse.html) post_conversations_callbacks(body)
 
 
 
@@ -5727,7 +5727,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5753,7 +5753,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_callbacks: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5776,7 +5776,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_calls"></a>
 
-## -[**CreateCallResponse**](CreateCallResponse.html) post_conversations_calls(body)
+## [**CreateCallResponse**](CreateCallResponse.html) post_conversations_calls(body)
 
 
 
@@ -5792,7 +5792,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5818,7 +5818,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_calls: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5841,7 +5841,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_chat_participant_replace"></a>
 
-## - post_conversations_chat_participant_replace(conversation_id, participant_id, body)
+##  post_conversations_chat_participant_replace(conversation_id, participant_id, body)
 
 
 
@@ -5856,7 +5856,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5885,7 +5885,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_chat_participant_replace: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5910,7 +5910,7 @@ nil (empty response body)
 
 <a name="post_conversations_chats"></a>
 
-## -[**ChatConversation**](ChatConversation.html) post_conversations_chats(body)
+## [**ChatConversation**](ChatConversation.html) post_conversations_chats(body)
 
 
 
@@ -5926,7 +5926,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -5952,7 +5952,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_chats: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -5975,7 +5975,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_cobrowsesession_participant_replace"></a>
 
-## - post_conversations_cobrowsesession_participant_replace(conversation_id, participant_id, opts)
+##  post_conversations_cobrowsesession_participant_replace(conversation_id, participant_id, opts)
 
 
 
@@ -5990,7 +5990,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6020,7 +6020,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_cobrowsesession_participant_replace: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6045,7 +6045,7 @@ nil (empty response body)
 
 <a name="post_conversations_email_inboundmessages"></a>
 
-## -[**EmailConversation**](EmailConversation.html) post_conversations_email_inboundmessages(conversation_id, body)
+## [**EmailConversation**](EmailConversation.html) post_conversations_email_inboundmessages(conversation_id, body)
 
 
 
@@ -6060,7 +6060,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6088,7 +6088,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_email_inboundmessages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6112,7 +6112,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_email_messages"></a>
 
-## -[**EmailMessage**](EmailMessage.html) post_conversations_email_messages(conversation_id, body)
+## [**EmailMessage**](EmailMessage.html) post_conversations_email_messages(conversation_id, body)
 
 
 
@@ -6127,7 +6127,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6155,7 +6155,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_email_messages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6179,7 +6179,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_email_participant_replace"></a>
 
-## - post_conversations_email_participant_replace(conversation_id, participant_id, body)
+##  post_conversations_email_participant_replace(conversation_id, participant_id, body)
 
 
 
@@ -6194,7 +6194,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6223,7 +6223,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_email_participant_replace: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6248,7 +6248,7 @@ nil (empty response body)
 
 <a name="post_conversations_emails"></a>
 
-## -[**EmailConversation**](EmailConversation.html) post_conversations_emails(body)
+## [**EmailConversation**](EmailConversation.html) post_conversations_emails(body)
 
 
 
@@ -6264,7 +6264,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6290,7 +6290,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_emails: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6313,7 +6313,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_faxes"></a>
 
-## -[**FaxSendResponse**](FaxSendResponse.html) post_conversations_faxes(body)
+## [**FaxSendResponse**](FaxSendResponse.html) post_conversations_faxes(body)
 
 
 
@@ -6328,7 +6328,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6354,7 +6354,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_faxes: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6377,7 +6377,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_message_communication_messages"></a>
 
-## -[**MessageData**](MessageData.html) post_conversations_message_communication_messages(conversation_id, communication_id, body)
+## [**MessageData**](MessageData.html) post_conversations_message_communication_messages(conversation_id, communication_id, body)
 
 
 
@@ -6393,7 +6393,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6423,7 +6423,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_message_communication_messages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6448,7 +6448,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_message_communication_messages_media"></a>
 
-## -[**MessageMediaData**](MessageMediaData.html) post_conversations_message_communication_messages_media(conversation_id, communication_id)
+## [**MessageMediaData**](MessageMediaData.html) post_conversations_message_communication_messages_media(conversation_id, communication_id)
 
 
 
@@ -6464,7 +6464,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6492,7 +6492,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_message_communication_messages_media: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6516,7 +6516,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_message_messages_bulk"></a>
 
-## -[**TextMessageListing**](TextMessageListing.html) post_conversations_message_messages_bulk(conversation_id, opts)
+## [**TextMessageListing**](TextMessageListing.html) post_conversations_message_messages_bulk(conversation_id, opts)
 
 
 
@@ -6532,7 +6532,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6561,7 +6561,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_message_messages_bulk: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6585,7 +6585,7 @@ Name | Type | Description  | Notes
 
 <a name="post_conversations_message_participant_replace"></a>
 
-## - post_conversations_message_participant_replace(conversation_id, participant_id, body)
+##  post_conversations_message_participant_replace(conversation_id, participant_id, body)
 
 
 
@@ -6600,7 +6600,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6629,7 +6629,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_message_participant_replace: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6654,7 +6654,7 @@ nil (empty response body)
 
 <a name="post_conversations_messages"></a>
 
-## -[**MessageConversation**](MessageConversation.html) post_conversations_messages(body)
+## [**MessageConversation**](MessageConversation.html) post_conversations_messages(body)
 
 
 
@@ -6670,7 +6670,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6696,7 +6696,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->post_conversations_messages: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6719,7 +6719,7 @@ Name | Type | Description  | Notes
 
 <a name="put_conversations_call_participant_communication_uuidata"></a>
 
-## -[**Empty**](Empty.html) put_conversations_call_participant_communication_uuidata(conversation_id, participant_id, communication_id, body)
+## [**Empty**](Empty.html) put_conversations_call_participant_communication_uuidata(conversation_id, participant_id, communication_id, body)
 
 
 
@@ -6734,7 +6734,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6766,7 +6766,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->put_conversations_call_participant_communication_uuidata: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -6792,7 +6792,7 @@ Name | Type | Description  | Notes
 
 <a name="put_conversations_email_messages_draft"></a>
 
-## -[**EmailMessage**](EmailMessage.html) put_conversations_email_messages_draft(conversation_id, body)
+## [**EmailMessage**](EmailMessage.html) put_conversations_email_messages_draft(conversation_id, body)
 
 
 
@@ -6807,7 +6807,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -6835,7 +6835,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling ConversationsApi->put_conversations_email_messages_draft: #{e}"
 end
-~~~
+```
 
 ### Parameters
 

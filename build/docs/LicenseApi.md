@@ -20,7 +20,7 @@ Method | Description
 
 <a name="get_license_definition"></a>
 
-## -[**LicenseDefinition**](LicenseDefinition.html) get_license_definition(license_id)
+## [**LicenseDefinition**](LicenseDefinition.html) get_license_definition(license_id)
 
 
 
@@ -38,7 +38,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -64,7 +64,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LicenseApi->get_license_definition: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 <a name="get_license_definitions"></a>
 
-## -[**Array&lt;LicenseDefinition&gt;**](LicenseDefinition.html) get_license_definitions
+## [**Array&lt;LicenseDefinition&gt;**](LicenseDefinition.html) get_license_definitions
 
 
 
@@ -105,7 +105,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -128,7 +128,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LicenseApi->get_license_definitions: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -148,7 +148,7 @@ This endpoint does not need any parameter.
 
 <a name="get_license_organization"></a>
 
-## -[**LicenseOrganization**](LicenseOrganization.html) get_license_organization
+## [**LicenseOrganization**](LicenseOrganization.html) get_license_organization
 
 
 
@@ -166,7 +166,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -189,7 +189,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LicenseApi->get_license_organization: #{e}"
 end
-~~~
+```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -209,7 +209,7 @@ This endpoint does not need any parameter.
 
 <a name="get_license_toggle"></a>
 
-## -[**LicenseOrgToggle**](LicenseOrgToggle.html) get_license_toggle(feature_name)
+## [**LicenseOrgToggle**](LicenseOrgToggle.html) get_license_toggle(feature_name)
 
 
 
@@ -227,7 +227,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -253,7 +253,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LicenseApi->get_license_toggle: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 <a name="get_license_user"></a>
 
-## -[**LicenseUser**](LicenseUser.html) get_license_user(user_id)
+## [**LicenseUser**](LicenseUser.html) get_license_user(user_id)
 
 
 
@@ -294,7 +294,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -320,7 +320,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LicenseApi->get_license_user: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 
 <a name="post_license_organization"></a>
 
-## -[**Array&lt;LicenseUpdateStatus&gt;**](LicenseUpdateStatus.html) post_license_organization(opts)
+## [**Array&lt;LicenseUpdateStatus&gt;**](LicenseUpdateStatus.html) post_license_organization(opts)
 
 
 
@@ -361,7 +361,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -388,7 +388,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LicenseApi->post_license_organization: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 
 <a name="post_license_toggle"></a>
 
-## -[**LicenseOrgToggle**](LicenseOrgToggle.html) post_license_toggle(feature_name)
+## [**LicenseOrgToggle**](LicenseOrgToggle.html) post_license_toggle(feature_name)
 
 
 
@@ -429,7 +429,7 @@ Requires ANY permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -455,7 +455,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LicenseApi->post_license_toggle: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
@@ -478,7 +478,7 @@ Name | Type | Description  | Notes
 
 <a name="post_license_users"></a>
 
-## -Hash&lt;String, Object&gt;** post_license_users(opts)
+## Hash&lt;String, Object&gt;** post_license_users(opts)
 
 
 
@@ -493,7 +493,7 @@ Requires NO permissions:
 
 
 ### Example
-~~~ruby
+```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
 # setup authorization
@@ -520,7 +520,7 @@ begin
 rescue PureCloud::ApiError => e
   puts "Exception when calling LicenseApi->post_license_users: #{e}"
 end
-~~~
+```
 
 ### Parameters
 
