@@ -39,11 +39,17 @@ module PureCloud
     # The directions are used to filter the view
     attr_accessor :directions
 
+    # The list of orginating directions used to filter the view
+    attr_accessor :originating_directions
+
     # The wrap up codes are used to filter the view
     attr_accessor :wrap_up_codes
 
     # The dnis list is used to filter the view
     attr_accessor :dnis_list
+
+    # The list of session dnis used to filter the view
+    attr_accessor :session_dnis_list
 
     # The user ids are used to fetch associated queues for the view
     attr_accessor :filter_queues_by_user_ids
@@ -207,8 +213,20 @@ module PureCloud
     # A list of reasons of flow entry
     attr_accessor :flow_entry_reasons
 
+    # A list of versions of a flow
+    attr_accessor :flow_versions
+
     # A list of directory group ids
     attr_accessor :group_ids
+
+    # Indicates filtering for journey customer id
+    attr_accessor :has_journey_customer_id
+
+    # Indicates filtering for Journey action map id
+    attr_accessor :has_journey_action_map_id
+
+    # Indicates filtering for Journey visit id
+    attr_accessor :has_journey_visit_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -228,9 +246,13 @@ module PureCloud
         
         :'directions' => :'directions',
         
+        :'originating_directions' => :'originatingDirections',
+        
         :'wrap_up_codes' => :'wrapUpCodes',
         
         :'dnis_list' => :'dnisList',
+        
+        :'session_dnis_list' => :'sessionDnisList',
         
         :'filter_queues_by_user_ids' => :'filterQueuesByUserIds',
         
@@ -340,7 +362,15 @@ module PureCloud
         
         :'flow_entry_reasons' => :'flowEntryReasons',
         
-        :'group_ids' => :'groupIds'
+        :'flow_versions' => :'flowVersions',
+        
+        :'group_ids' => :'groupIds',
+        
+        :'has_journey_customer_id' => :'hasJourneyCustomerId',
+        
+        :'has_journey_action_map_id' => :'hasJourneyActionMapId',
+        
+        :'has_journey_visit_id' => :'hasJourneyVisitId'
         
       }
     end
@@ -363,9 +393,13 @@ module PureCloud
         
         :'directions' => :'Array<String>',
         
+        :'originating_directions' => :'Array<String>',
+        
         :'wrap_up_codes' => :'Array<String>',
         
         :'dnis_list' => :'Array<String>',
+        
+        :'session_dnis_list' => :'Array<String>',
         
         :'filter_queues_by_user_ids' => :'Array<String>',
         
@@ -475,7 +509,15 @@ module PureCloud
         
         :'flow_entry_reasons' => :'Array<String>',
         
-        :'group_ids' => :'Array<String>'
+        :'flow_versions' => :'Array<String>',
+        
+        :'group_ids' => :'Array<String>',
+        
+        :'has_journey_customer_id' => :'BOOLEAN',
+        
+        :'has_journey_action_map_id' => :'BOOLEAN',
+        
+        :'has_journey_visit_id' => :'BOOLEAN'
         
       }
     end
@@ -566,6 +608,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'originatingDirections')
+        
+        if (value = attributes[:'originatingDirections']).is_a?(Array)
+          self.originating_directions = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'wrapUpCodes')
         
         if (value = attributes[:'wrapUpCodes']).is_a?(Array)
@@ -581,6 +634,17 @@ module PureCloud
         
         if (value = attributes[:'dnisList']).is_a?(Array)
           self.dnis_list = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'sessionDnisList')
+        
+        if (value = attributes[:'sessionDnisList']).is_a?(Array)
+          self.session_dnis_list = value
         end
         
         
@@ -1140,12 +1204,50 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'flowVersions')
+        
+        if (value = attributes[:'flowVersions']).is_a?(Array)
+          self.flow_versions = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'groupIds')
         
         if (value = attributes[:'groupIds']).is_a?(Array)
           self.group_ids = value
         end
         
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'hasJourneyCustomerId')
+        
+        
+        self.has_journey_customer_id = attributes[:'hasJourneyCustomerId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'hasJourneyActionMapId')
+        
+        
+        self.has_journey_action_map_id = attributes[:'hasJourneyActionMapId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'hasJourneyVisitId')
+        
+        
+        self.has_journey_visit_id = attributes[:'hasJourneyVisitId']
         
       
       end
@@ -1165,6 +1267,14 @@ module PureCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1437,8 +1547,34 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -1787,6 +1923,26 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1799,8 +1955,10 @@ module PureCloud
           language_ids == o.language_ids &&
           language_groups == o.language_groups &&
           directions == o.directions &&
+          originating_directions == o.originating_directions &&
           wrap_up_codes == o.wrap_up_codes &&
           dnis_list == o.dnis_list &&
+          session_dnis_list == o.session_dnis_list &&
           filter_queues_by_user_ids == o.filter_queues_by_user_ids &&
           filter_users_by_queue_ids == o.filter_users_by_queue_ids &&
           user_ids == o.user_ids &&
@@ -1855,7 +2013,11 @@ module PureCloud
           flow_types == o.flow_types &&
           flow_entry_types == o.flow_entry_types &&
           flow_entry_reasons == o.flow_entry_reasons &&
-          group_ids == o.group_ids
+          flow_versions == o.flow_versions &&
+          group_ids == o.group_ids &&
+          has_journey_customer_id == o.has_journey_customer_id &&
+          has_journey_action_map_id == o.has_journey_action_map_id &&
+          has_journey_visit_id == o.has_journey_visit_id
     end
 
     # @see the `==` method
@@ -1867,7 +2029,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, wrap_up_codes, dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, group_ids].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, originating_directions, wrap_up_codes, dnis_list, session_dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, flow_versions, group_ids, has_journey_customer_id, has_journey_action_map_id, has_journey_visit_id].hash
     end
 
     # build the object from hash

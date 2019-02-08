@@ -1617,7 +1617,7 @@ Name | Type | Description  | Notes
 
 <a name="get_routing_queue_wrapupcodes"></a>
 
-## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) get_routing_queue_wrapupcodes(queue_id)
+## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) get_routing_queue_wrapupcodes(queue_id, opts)
 
 
 
@@ -1651,10 +1651,14 @@ api_instance = PureCloud::RoutingApi.new
 
 queue_id = "queue_id_example" # String | Queue ID
 
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
 
 begin
   #Get the wrap-up codes for a queue
-  result = api_instance.get_routing_queue_wrapupcodes(queue_id)
+  result = api_instance.get_routing_queue_wrapupcodes(queue_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->get_routing_queue_wrapupcodes: #{e}"
@@ -1666,6 +1670,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **queue_id** | **String**| Queue ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
 
 

@@ -1524,6 +1524,70 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the count of roles granted to a list of subjects
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :id id
+    # @return [Hash<String, Object>]
+    def get_authorization_subjects_rolecounts(opts = {})
+      data, _status_code, _headers = get_authorization_subjects_rolecounts_with_http_info(opts)
+      return data
+    end
+
+    # Get the count of roles granted to a list of subjects
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :id id
+    # @return [Array<(Hash<String, Object>, Fixnum, Hash)>] Hash<String, Object> data, response status code and response headers
+    def get_authorization_subjects_rolecounts_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.get_authorization_subjects_rolecounts ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/subjects/rolecounts".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Hash<String, Object>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#get_authorization_subjects_rolecounts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Returns a listing of roles and permissions for a user.
     # 
     # @param user_id User ID

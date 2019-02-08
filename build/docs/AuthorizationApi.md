@@ -27,6 +27,7 @@ Method | Description
 [**get_authorization_roles**](AuthorizationApi.html#get_authorization_roles) | Retrieve a list of all roles defined for the organization
 [**get_authorization_subject**](AuthorizationApi.html#get_authorization_subject) | Returns a listing of roles and permissions for a user.
 [**get_authorization_subjects_me**](AuthorizationApi.html#get_authorization_subjects_me) | Returns a listing of roles and permissions for the currently authenticated user.
+[**get_authorization_subjects_rolecounts**](AuthorizationApi.html#get_authorization_subjects_rolecounts) | Get the count of roles granted to a list of subjects
 [**get_user_roles**](AuthorizationApi.html#get_user_roles) | Returns a listing of roles and permissions for a user.
 [**patch_authorization_role**](AuthorizationApi.html#patch_authorization_role) | Patch Organization Role for needsUpdate Field
 [**post_authorization_division_object**](AuthorizationApi.html#post_authorization_division_object) | Assign a list of objects to a division
@@ -1322,6 +1323,72 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**AuthzSubject**](AuthzSubject.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_subjects_rolecounts"></a>
+
+## Hash&lt;String, Object&gt;** get_authorization_subjects_rolecounts(opts)
+
+
+
+Get the count of roles granted to a list of subjects
+
+
+
+Wraps GET /api/v2/authorization/subjects/rolecounts 
+
+Requires ANY permissions: 
+
+* authorization:grant:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+opts = { 
+  id: ["id_example"] # Array<String> | id
+}
+
+begin
+  #Get the count of roles granted to a list of subjects
+  result = api_instance.get_authorization_subjects_rolecounts(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_subjects_rolecounts: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+**Hash&lt;String, Object&gt;**
 
 ### HTTP request headers
 

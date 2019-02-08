@@ -2320,7 +2320,8 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
-    # @option opts [Array<String>] :id id
+    # @option opts [Array<String>] :id A list of user IDs to fetch by bulk
+    # @option opts [Array<String>] :jabber_id A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter)
     # @option opts [String] :sort_order Ascending or descending sort order (default to ASC)
     # @option opts [Array<String>] :expand Which fields, if any, to expand
     # @option opts [String] :state Only list users of this state (default to active)
@@ -2335,7 +2336,8 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
-    # @option opts [Array<String>] :id id
+    # @option opts [Array<String>] :id A list of user IDs to fetch by bulk
+    # @option opts [Array<String>] :jabber_id A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter)
     # @option opts [String] :sort_order Ascending or descending sort order
     # @option opts [Array<String>] :expand Which fields, if any, to expand
     # @option opts [String] :state Only list users of this state
@@ -2344,6 +2346,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.get_users ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2397,6 +2405,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
+      query_params[:'jabberId'] = @api_client.build_collection_param(opts[:'jabber_id'], :multi) if opts[:'jabber_id']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
       query_params[:'state'] = opts[:'state'] if opts[:'state']

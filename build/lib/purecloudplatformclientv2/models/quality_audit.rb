@@ -25,11 +25,11 @@ module PureCloud
 
     attr_accessor :user
 
-    attr_accessor :timestamp
-
     attr_accessor :level
 
     attr_accessor :entity
+
+    attr_accessor :timestamp
 
     attr_accessor :action
 
@@ -52,11 +52,11 @@ module PureCloud
         
         :'user' => :'user',
         
-        :'timestamp' => :'timestamp',
-        
         :'level' => :'level',
         
         :'entity' => :'entity',
+        
+        :'timestamp' => :'timestamp',
         
         :'action' => :'action',
         
@@ -81,11 +81,11 @@ module PureCloud
         
         :'user' => :'User',
         
-        :'timestamp' => :'String',
-        
         :'level' => :'String',
         
         :'entity' => :'AuditEntity',
+        
+        :'timestamp' => :'String',
         
         :'action' => :'String',
         
@@ -136,15 +136,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'timestamp')
-        
-        
-        self.timestamp = attributes[:'timestamp']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'level')
         
         
@@ -158,6 +149,15 @@ module PureCloud
         
         
         self.entity = attributes[:'entity']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'timestamp')
+        
+        
+        self.timestamp = attributes[:'timestamp']
         
       
       end
@@ -335,9 +335,9 @@ module PureCloud
           id == o.id &&
           name == o.name &&
           user == o.user &&
-          timestamp == o.timestamp &&
           level == o.level &&
           entity == o.entity &&
+          timestamp == o.timestamp &&
           action == o.action &&
           status == o.status &&
           changes == o.changes &&
@@ -354,7 +354,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, user, timestamp, level, entity, action, status, changes, entity_type, self_uri].hash
+      [id, name, user, level, entity, timestamp, action, status, changes, entity_type, self_uri].hash
     end
 
     # build the object from hash

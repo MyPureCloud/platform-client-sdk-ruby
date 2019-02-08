@@ -94,7 +94,7 @@ module PureCloud
       
       
       
-      allowed_values = ["pending", "complete", "failed", "timeout"]
+      allowed_values = ["pending", "complete", "failed", "timeout", "none"]
       if @upload_status && !allowed_values.include?(@upload_status)
         return false
       end
@@ -113,7 +113,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] upload_status Object to be assigned
     def upload_status=(upload_status)
-      allowed_values = ["pending", "complete", "failed", "timeout"]
+      allowed_values = ["pending", "complete", "failed", "timeout", "none"]
       if upload_status && !allowed_values.include?(upload_status)
         fail ArgumentError, "invalid value for 'upload_status', must be one of #{allowed_values}."
       end

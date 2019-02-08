@@ -42,6 +42,9 @@ module PureCloud
     # Name of the evaluation form
     attr_accessor :form_name
 
+    # The calibration id used for the purpose of training evaluators
+    attr_accessor :calibration_id
+
     attr_accessor :o_total_score
 
     attr_accessor :o_total_critical_score
@@ -65,6 +68,8 @@ module PureCloud
         :'context_id' => :'contextId',
         
         :'form_name' => :'formName',
+        
+        :'calibration_id' => :'calibrationId',
         
         :'o_total_score' => :'oTotalScore',
         
@@ -92,6 +97,8 @@ module PureCloud
         :'context_id' => :'String',
         
         :'form_name' => :'String',
+        
+        :'calibration_id' => :'String',
         
         :'o_total_score' => :'Integer',
         
@@ -181,6 +188,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'calibrationId')
+        
+        
+        self.calibration_id = attributes[:'calibrationId']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'oTotalScore')
         
         
@@ -254,8 +270,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -320,6 +345,7 @@ module PureCloud
           form_id == o.form_id &&
           context_id == o.context_id &&
           form_name == o.form_name &&
+          calibration_id == o.calibration_id &&
           o_total_score == o.o_total_score &&
           o_total_critical_score == o.o_total_critical_score
     end
@@ -333,7 +359,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [evaluation_id, evaluator_id, user_id, event_time, queue_id, form_id, context_id, form_name, o_total_score, o_total_critical_score].hash
+      [evaluation_id, evaluator_id, user_id, event_time, queue_id, form_id, context_id, form_name, calibration_id, o_total_score, o_total_critical_score].hash
     end
 
     # build the object from hash

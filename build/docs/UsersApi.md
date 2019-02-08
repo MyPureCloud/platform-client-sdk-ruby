@@ -2136,7 +2136,8 @@ api_instance = PureCloud::UsersApi.new
 opts = { 
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
-  id: ["id_example"], # Array<String> | id
+  id: ["id_example"], # Array<String> | A list of user IDs to fetch by bulk
+  jabber_id: ["jabber_id_example"], # Array<String> | A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter)
   sort_order: "ASC", # String | Ascending or descending sort order
   expand: ["expand_example"], # Array<String> | Which fields, if any, to expand
   state: "active" # String | Only list users of this state
@@ -2157,7 +2158,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
- **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
+ **id** | [**Array&lt;String&gt;**](String.html)| A list of user IDs to fetch by bulk | [optional]  |
+ **jabber_id** | [**Array&lt;String&gt;**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional]  |
  **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
  **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, languagePreference |
  **state** | **String**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted |

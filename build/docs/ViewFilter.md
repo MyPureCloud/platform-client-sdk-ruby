@@ -14,8 +14,10 @@ title: ViewFilter
 | **language_ids** | **Array&lt;String&gt;** | The language ids are used to filter the view | [optional] |
 | **language_groups** | **Array&lt;String&gt;** | The language groups used to filter the view | [optional] |
 | **directions** | **Array&lt;String&gt;** | The directions are used to filter the view | [optional] |
+| **originating_directions** | **Array&lt;String&gt;** | The list of orginating directions used to filter the view | [optional] |
 | **wrap_up_codes** | **Array&lt;String&gt;** | The wrap up codes are used to filter the view | [optional] |
 | **dnis_list** | **Array&lt;String&gt;** | The dnis list is used to filter the view | [optional] |
+| **session_dnis_list** | **Array&lt;String&gt;** | The list of session dnis used to filter the view | [optional] |
 | **filter_queues_by_user_ids** | **Array&lt;String&gt;** | The user ids are used to fetch associated queues for the view | [optional] |
 | **filter_users_by_queue_ids** | **Array&lt;String&gt;** | The queue ids are used to fetch associated users for the view | [optional] |
 | **user_ids** | **Array&lt;String&gt;** | The user ids are used to filter the view | [optional] |
@@ -70,7 +72,11 @@ title: ViewFilter
 | **flow_types** | **Array&lt;String&gt;** | A list of types of the flow | [optional] |
 | **flow_entry_types** | **Array&lt;String&gt;** | A list of types of the flow entry | [optional] |
 | **flow_entry_reasons** | **Array&lt;String&gt;** | A list of reasons of flow entry | [optional] |
+| **flow_versions** | **Array&lt;String&gt;** | A list of versions of a flow | [optional] |
 | **group_ids** | **Array&lt;String&gt;** | A list of directory group ids | [optional] |
+| **has_journey_customer_id** | **BOOLEAN** | Indicates filtering for journey customer id | [optional] |
+| **has_journey_action_map_id** | **BOOLEAN** | Indicates filtering for Journey action map id | [optional] |
+| **has_journey_visit_id** | **BOOLEAN** | Indicates filtering for Journey visit id | [optional] |
 {: class="table table-striped"}
 
 

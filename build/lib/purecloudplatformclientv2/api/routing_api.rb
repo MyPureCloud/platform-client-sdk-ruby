@@ -1756,6 +1756,8 @@ module PureCloud
     # 
     # @param queue_id Queue ID
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
     # @return [WrapupCodeEntityListing]
     def get_routing_queue_wrapupcodes(queue_id, opts = {})
       data, _status_code, _headers = get_routing_queue_wrapupcodes_with_http_info(queue_id, opts)
@@ -1766,6 +1768,8 @@ module PureCloud
     # 
     # @param queue_id Queue ID
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
     # @return [Array<(WrapupCodeEntityListing, Fixnum, Hash)>] WrapupCodeEntityListing data, response status code and response headers
     def get_routing_queue_wrapupcodes_with_http_info(queue_id, opts = {})
       if @api_client.config.debugging
@@ -1780,11 +1784,25 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/routing/queues/{queueId}/wrapupcodes".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
 
       # header parameters
       header_params = {}

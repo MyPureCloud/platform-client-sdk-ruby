@@ -561,8 +561,8 @@ api_instance = PureCloud::IntegrationsApi.new
 action_id = "action_id_example" # String | actionId
 
 opts = { 
-  expand: "expand_example", # String | Indicates fields of the response which should be expanded.
-  include_config: false # BOOLEAN | Show config when available
+  expand: "expand_example", # String | Indicates a field in the response which should be expanded.
+  include_config: false # BOOLEAN | Return config in response.
 }
 
 begin
@@ -579,8 +579,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **action_id** | **String**| actionId |  |
- **expand** | **String**| Indicates fields of the response which should be expanded. | [optional] <br />**Values**: contract |
- **include_config** | **BOOLEAN**| Show config when available | [optional] [default to false] |
+ **expand** | **String**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
+ **include_config** | **BOOLEAN**| Return config in response. | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -633,8 +633,8 @@ api_instance = PureCloud::IntegrationsApi.new
 action_id = "action_id_example" # String | actionId
 
 opts = { 
-  expand: "expand_example", # String | Indicates fields of the response which should be expanded.
-  include_config: false # BOOLEAN | Show config when available
+  expand: "expand_example", # String | Indicates a field in the response which should be expanded.
+  include_config: false # BOOLEAN | Return config in response.
 }
 
 begin
@@ -651,8 +651,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **action_id** | **String**| actionId |  |
- **expand** | **String**| Indicates fields of the response which should be expanded. | [optional] <br />**Values**: contract |
- **include_config** | **BOOLEAN**| Show config when available | [optional] [default to false] |
+ **expand** | **String**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
+ **include_config** | **BOOLEAN**| Return config in response. | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -1044,15 +1044,16 @@ end
 api_instance = PureCloud::IntegrationsApi.new
 
 opts = { 
-  category: "category_example", # String | Filter by category name
-  secure: "secure_example", # String | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
-  include_auth_actions: "include_auth_actions_example", # String | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
-  sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
-  previous_page: "previous_page_example" # String | Previous page token
+  previous_page: "previous_page_example", # String | Previous page token
+  sort_by: "sort_by_example", # String | Root level field name to sort on.
+  sort_order: "asc", # String | Direction to sort 'sortBy' field.
+  category: "category_example", # String | Filter by category name
+  name: "name_example", # String | Filter by action name. Provide full or just the first part of name.
+  secure: "secure_example", # String | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+  include_auth_actions: "false" # String | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
 }
 
 begin
@@ -1068,15 +1069,16 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category** | **String**| Filter by category name | [optional]  |
- **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
- **include_auth_actions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] <br />**Values**: true, false |
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
- **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
+ **sort_by** | **String**| Root level field name to sort on. | [optional]  |
+ **sort_order** | **String**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: ASC, DESC |
+ **category** | **String**| Filter by category name | [optional]  |
+ **name** | **String**| Filter by action name. Provide full or just the first part of name. | [optional]  |
+ **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
+ **include_auth_actions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: true, false |
 {: class="table table-striped"}
 
 
@@ -1127,13 +1129,13 @@ end
 api_instance = PureCloud::IntegrationsApi.new
 
 opts = { 
-  secure: "secure_example", # String | Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions.
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
-  sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
-  previous_page: "previous_page_example" # String | Previous page token
+  previous_page: "previous_page_example", # String | Previous page token
+  sort_by: "sort_by_example", # String | Root level field name to sort on.
+  sort_order: "asc", # String | Direction to sort 'sortBy' field.
+  secure: "secure_example" # String | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
 }
 
 begin
@@ -1149,13 +1151,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **secure** | **String**| Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions. | [optional] <br />**Values**: true, false |
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
- **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
+ **sort_by** | **String**| Root level field name to sort on. | [optional]  |
+ **sort_order** | **String**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: ASC, DESC |
+ **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
 {: class="table table-striped"}
 
 
@@ -1206,15 +1208,16 @@ end
 api_instance = PureCloud::IntegrationsApi.new
 
 opts = { 
-  category: "category_example", # String | Filter by category name
-  secure: "secure_example", # String | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
-  include_auth_actions: "include_auth_actions_example", # String | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
-  sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
-  previous_page: "previous_page_example" # String | Previous page token
+  previous_page: "previous_page_example", # String | Previous page token
+  sort_by: "sort_by_example", # String | Root level field name to sort on.
+  sort_order: "asc", # String | Direction to sort 'sortBy' field.
+  category: "category_example", # String | Filter by category name
+  name: "name_example", # String | Filter by action name. Provide full or just the first part of name.
+  secure: "secure_example", # String | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+  include_auth_actions: "false" # String | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
 }
 
 begin
@@ -1230,15 +1233,16 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category** | **String**| Filter by category name | [optional]  |
- **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
- **include_auth_actions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] <br />**Values**: true, false |
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
- **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
+ **sort_by** | **String**| Root level field name to sort on. | [optional]  |
+ **sort_order** | **String**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: ASC, DESC |
+ **category** | **String**| Filter by category name | [optional]  |
+ **name** | **String**| Filter by action name. Provide full or just the first part of name. | [optional]  |
+ **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
+ **include_auth_actions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: true, false |
 {: class="table table-striped"}
 
 

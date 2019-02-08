@@ -578,8 +578,8 @@ module PureCloud
     # 
     # @param action_id actionId
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :expand Indicates fields of the response which should be expanded.
-    # @option opts [BOOLEAN] :include_config Show config when available (default to false)
+    # @option opts [String] :expand Indicates a field in the response which should be expanded.
+    # @option opts [BOOLEAN] :include_config Return config in response. (default to false)
     # @return [Action]
     def get_integrations_action(action_id, opts = {})
       data, _status_code, _headers = get_integrations_action_with_http_info(action_id, opts)
@@ -590,8 +590,8 @@ module PureCloud
     # 
     # @param action_id actionId
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :expand Indicates fields of the response which should be expanded.
-    # @option opts [BOOLEAN] :include_config Show config when available
+    # @option opts [String] :expand Indicates a field in the response which should be expanded.
+    # @option opts [BOOLEAN] :include_config Return config in response.
     # @return [Array<(Action, Fixnum, Hash)>] Action data, response status code and response headers
     def get_integrations_action_with_http_info(action_id, opts = {})
       if @api_client.config.debugging
@@ -665,8 +665,8 @@ module PureCloud
     # 
     # @param action_id actionId
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :expand Indicates fields of the response which should be expanded.
-    # @option opts [BOOLEAN] :include_config Show config when available (default to false)
+    # @option opts [String] :expand Indicates a field in the response which should be expanded.
+    # @option opts [BOOLEAN] :include_config Return config in response. (default to false)
     # @return [Action]
     def get_integrations_action_draft(action_id, opts = {})
       data, _status_code, _headers = get_integrations_action_draft_with_http_info(action_id, opts)
@@ -677,8 +677,8 @@ module PureCloud
     # 
     # @param action_id actionId
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :expand Indicates fields of the response which should be expanded.
-    # @option opts [BOOLEAN] :include_config Show config when available
+    # @option opts [String] :expand Indicates a field in the response which should be expanded.
+    # @option opts [BOOLEAN] :include_config Return config in response.
     # @return [Array<(Action, Fixnum, Hash)>] Action data, response status code and response headers
     def get_integrations_action_draft_with_http_info(action_id, opts = {})
       if @api_client.config.debugging
@@ -1116,15 +1116,16 @@ module PureCloud
     # Retrieves all actions associated with filters passed in via query param.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :category Filter by category name
-    # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
-    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
-    # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :sort_by Root level field name to sort on.
+    # @option opts [String] :sort_order Direction to sort &#39;sortBy&#39; field. (default to asc)
+    # @option opts [String] :category Filter by category name
+    # @option opts [String] :name Filter by action name. Provide full or just the first part of name.
+    # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (default to false)
     # @return [ActionEntityListing]
     def get_integrations_actions(opts = {})
       data, _status_code, _headers = get_integrations_actions_with_http_info(opts)
@@ -1134,20 +1135,67 @@ module PureCloud
     # Retrieves all actions associated with filters passed in via query param.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :category Filter by category name
-    # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
-    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
-    # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :sort_by Root level field name to sort on.
+    # @option opts [String] :sort_order Direction to sort &#39;sortBy&#39; field.
+    # @option opts [String] :category Filter by category name
+    # @option opts [String] :name Filter by action name. Provide full or just the first part of name.
+    # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
     # @return [Array<(ActionEntityListing, Fixnum, Hash)>] ActionEntityListing data, response status code and response headers
     def get_integrations_actions_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_actions ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_order'] && !['ASC', 'DESC'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ASC, DESC'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1175,56 +1223,21 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       # resource path
       local_var_path = "/api/v2/integrations/actions".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'category'] = opts[:'category'] if opts[:'category']
-      query_params[:'secure'] = opts[:'secure'] if opts[:'secure']
-      query_params[:'includeAuthActions'] = opts[:'include_auth_actions'] if opts[:'include_auth_actions']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
-      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
-      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
       query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
       query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'category'] = opts[:'category'] if opts[:'category']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'secure'] = opts[:'secure'] if opts[:'secure']
+      query_params[:'includeAuthActions'] = opts[:'include_auth_actions'] if opts[:'include_auth_actions']
 
       # header parameters
       header_params = {}
@@ -1260,13 +1273,13 @@ module PureCloud
     # Retrieves all categories of available Actions
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :secure Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions.
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
-    # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :sort_by Root level field name to sort on.
+    # @option opts [String] :sort_order Direction to sort &#39;sortBy&#39; field. (default to asc)
+    # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
     # @return [CategoryEntityListing]
     def get_integrations_actions_categories(opts = {})
       data, _status_code, _headers = get_integrations_actions_categories_with_http_info(opts)
@@ -1276,18 +1289,58 @@ module PureCloud
     # Retrieves all categories of available Actions
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :secure Filter to only include/exclude Action categories based on if they are considered secure. True will only include categories with Actions marked secured. False will only include categories of unsecured Actions.
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
-    # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :sort_by Root level field name to sort on.
+    # @option opts [String] :sort_order Direction to sort &#39;sortBy&#39; field.
+    # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
     # @return [Array<(CategoryEntityListing, Fixnum, Hash)>] CategoryEntityListing data, response status code and response headers
     def get_integrations_actions_categories_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_actions_categories ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_order'] && !['ASC', 'DESC'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ASC, DESC'
+      end
+      
+      
+      
       
       
       
@@ -1299,54 +1352,18 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       # resource path
       local_var_path = "/api/v2/integrations/actions/categories".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'secure'] = opts[:'secure'] if opts[:'secure']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
-      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
-      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
       query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
       query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'secure'] = opts[:'secure'] if opts[:'secure']
 
       # header parameters
       header_params = {}
@@ -1382,15 +1399,16 @@ module PureCloud
     # Retrieves all action drafts associated with the filters passed in via query param.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :category Filter by category name
-    # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
-    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
-    # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :sort_by Root level field name to sort on.
+    # @option opts [String] :sort_order Direction to sort &#39;sortBy&#39; field. (default to asc)
+    # @option opts [String] :category Filter by category name
+    # @option opts [String] :name Filter by action name. Provide full or just the first part of name.
+    # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (default to false)
     # @return [ActionEntityListing]
     def get_integrations_actions_drafts(opts = {})
       data, _status_code, _headers = get_integrations_actions_drafts_with_http_info(opts)
@@ -1400,20 +1418,67 @@ module PureCloud
     # Retrieves all action drafts associated with the filters passed in via query param.
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :category Filter by category name
-    # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
-    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
-    # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
+    # @option opts [String] :sort_by Root level field name to sort on.
+    # @option opts [String] :sort_order Direction to sort &#39;sortBy&#39; field.
+    # @option opts [String] :category Filter by category name
+    # @option opts [String] :name Filter by action name. Provide full or just the first part of name.
+    # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+    # @option opts [String] :include_auth_actions Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
     # @return [Array<(ActionEntityListing, Fixnum, Hash)>] ActionEntityListing data, response status code and response headers
     def get_integrations_actions_drafts_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_actions_drafts ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_order'] && !['ASC', 'DESC'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ASC, DESC'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1441,56 +1506,21 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       # resource path
       local_var_path = "/api/v2/integrations/actions/drafts".sub('{format}','json')
 
       # query parameters
       query_params = {}
-      query_params[:'category'] = opts[:'category'] if opts[:'category']
-      query_params[:'secure'] = opts[:'secure'] if opts[:'secure']
-      query_params[:'includeAuthActions'] = opts[:'include_auth_actions'] if opts[:'include_auth_actions']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
-      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
-      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
       query_params[:'nextPage'] = opts[:'next_page'] if opts[:'next_page']
       query_params[:'previousPage'] = opts[:'previous_page'] if opts[:'previous_page']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'category'] = opts[:'category'] if opts[:'category']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'secure'] = opts[:'secure'] if opts[:'secure']
+      query_params[:'includeAuthActions'] = opts[:'include_auth_actions'] if opts[:'include_auth_actions']
 
       # header parameters
       header_params = {}
