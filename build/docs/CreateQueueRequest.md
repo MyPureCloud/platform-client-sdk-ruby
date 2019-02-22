@@ -11,18 +11,15 @@ title: CreateQueueRequest
 | **name** | **String** | The queue name | |
 | **division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
 | **description** | **String** | The queue description. | [optional] |
-| **version** | **Integer** | The current version of the queue. | [optional] |
 | **date_created** | **DateTime** | The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **date_modified** | **DateTime** | The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **modified_by** | **String** | The ID of the user that last modified the queue. | [optional] |
 | **created_by** | **String** | The ID of the user that created the queue. | [optional] |
-| **state** | **String** | Indicates if the queue is active, inactive, or deleted. | [optional] |
-| **modified_by_app** | **String** | The application that last modified the queue. | [optional] |
-| **created_by_app** | **String** | The application that created the queue. | [optional] |
-| **media_settings** | [**Hash&lt;String, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION | |
+| **member_count** | **Integer** | The number of users in the queue. | [optional] |
+| **media_settings** | [**Hash&lt;String, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM | [optional] |
 | **bullseye** | [**Bullseye**](Bullseye.html) | The bulls-eye settings for the queue. | [optional] |
-| **acw_settings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | |
-| **skill_evaluation_method** | **String** | The skill evaluation method to use when routing conversations. | |
+| **acw_settings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | [optional] |
+| **skill_evaluation_method** | **String** | The skill evaluation method to use when routing conversations. | [optional] |
 | **queue_flow** | [**UriReference**](UriReference.html) | The in-queue flow to use for conversations waiting in queue. | [optional] |
 | **whisper_prompt** | [**UriReference**](UriReference.html) | The prompt used for whisper on the queue, if configured. | [optional] |
 | **auto_answer_only** | **BOOLEAN** | Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered. | [optional] |
@@ -32,7 +29,6 @@ title: CreateQueueRequest
 | **outbound_messaging_addresses** | [**QueueMessagingAddresses**](QueueMessagingAddresses.html) | The messaging addresses for the queue. | [optional] |
 | **outbound_email_address** | [**QueueEmailAddress**](QueueEmailAddress.html) |  | [optional] |
 | **source_queue_id** | **String** | The id of an existing queue to copy the settings from when creating a new queue. | [optional] |
-| **member_count** | **Integer** |  | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

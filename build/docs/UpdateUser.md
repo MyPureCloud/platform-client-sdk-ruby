@@ -24,6 +24,9 @@ title: UpdateUser
 | **groups** | [**Array&lt;Group&gt;**](Group.html) | The groups the user is a member of | [optional] |
 | **state** | **String** | The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field. | [optional] |
 | **acd_auto_answer** | **BOOLEAN** | The value that denotes if acdAutoAnswer is set on the user | [optional] |
+| **certifications** | **Array&lt;String&gt;** |  | [optional] |
+| **biography** | [**Biography**](Biography.html) |  | [optional] |
+| **employer_info** | [**EmployerInfo**](EmployerInfo.html) |  | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -60,6 +60,9 @@ module PureCloud
     # The id of the peer communication corresponding to a matching leg for this communication.
     attr_accessor :peer_id
 
+    # A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context).
+    attr_accessor :journey_context
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -90,7 +93,9 @@ module PureCloud
         
         :'script_id' => :'scriptId',
         
-        :'peer_id' => :'peerId'
+        :'peer_id' => :'peerId',
+        
+        :'journey_context' => :'journeyContext'
         
       }
     end
@@ -125,7 +130,9 @@ module PureCloud
         
         :'script_id' => :'String',
         
-        :'peer_id' => :'String'
+        :'peer_id' => :'String',
+        
+        :'journey_context' => :'JourneyContext'
         
       }
     end
@@ -267,6 +274,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'journeyContext')
+        
+        
+        self.journey_context = attributes[:'journeyContext']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -326,6 +342,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -453,6 +473,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -471,7 +496,8 @@ module PureCloud
           disconnected_time == o.disconnected_time &&
           provider == o.provider &&
           script_id == o.script_id &&
-          peer_id == o.peer_id
+          peer_id == o.peer_id &&
+          journey_context == o.journey_context
     end
 
     # @see the `==` method
@@ -483,7 +509,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, connected_time, disconnected_time, provider, script_id, peer_id].hash
+      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, connected_time, disconnected_time, provider, script_id, peer_id, journey_context].hash
     end
 
     # build the object from hash

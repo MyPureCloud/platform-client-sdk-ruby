@@ -52,6 +52,12 @@ module PureCloud
     # Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH.
     attr_accessor :version
 
+    attr_accessor :certifications
+
+    attr_accessor :biography
+
+    attr_accessor :employer_info
+
     # ACD routing status
     attr_accessor :routing_status
 
@@ -129,6 +135,12 @@ module PureCloud
         
         :'version' => :'version',
         
+        :'certifications' => :'certifications',
+        
+        :'biography' => :'biography',
+        
+        :'employer_info' => :'employerInfo',
+        
         :'routing_status' => :'routingStatus',
         
         :'presence' => :'presence',
@@ -193,6 +205,12 @@ module PureCloud
         :'images' => :'Array<UserImage>',
         
         :'version' => :'Integer',
+        
+        :'certifications' => :'Array<String>',
+        
+        :'biography' => :'Biography',
+        
+        :'employer_info' => :'EmployerInfo',
         
         :'routing_status' => :'RoutingStatus',
         
@@ -363,6 +381,35 @@ module PureCloud
         
         
         self.version = attributes[:'version']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'certifications')
+        
+        if (value = attributes[:'certifications']).is_a?(Array)
+          self.certifications = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'biography')
+        
+        
+        self.biography = attributes[:'biography']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'employerInfo')
+        
+        
+        self.employer_info = attributes[:'employerInfo']
         
       
       end
@@ -654,6 +701,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -811,6 +870,21 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -830,6 +904,9 @@ module PureCloud
           manager == o.manager &&
           images == o.images &&
           version == o.version &&
+          certifications == o.certifications &&
+          biography == o.biography &&
+          employer_info == o.employer_info &&
           routing_status == o.routing_status &&
           presence == o.presence &&
           conversation_summary == o.conversation_summary &&
@@ -856,7 +933,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, skills, languages, acd_auto_answer, language_preference, self_uri].hash
+      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, certifications, biography, employer_info, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, skills, languages, acd_auto_answer, language_preference, self_uri].hash
     end
 
     # build the object from hash

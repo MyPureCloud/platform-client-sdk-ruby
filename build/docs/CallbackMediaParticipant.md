@@ -35,6 +35,7 @@ title: CallbackMediaParticipant
 | **wrapup** | [**Wrapup**](Wrapup.html) | Wrapup for this participant, if it has been applied. | [optional] |
 | **peer** | **String** | The peer communication corresponding to a matching leg for this communication. | [optional] |
 | **flagged_reason** | **String** | The reason specifying why participant flagged the conversation. | [optional] |
+| **journey_context** | [**JourneyContext**](JourneyContext.html) | Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context. | [optional] |
 | **outbound_preview** | [**DialerPreview**](DialerPreview.html) | The outbound preview associated with this callback. | [optional] |
 | **voicemail** | [**Voicemail**](Voicemail.html) | The voicemail associated with this callback. | [optional] |
 | **callback_numbers** | **Array&lt;String&gt;** | The list of phone number to use for this callback. | [optional] |

@@ -21,6 +21,9 @@ title: OrgUser
 | **manager** | [**User**](User.html) |  | [optional] |
 | **images** | [**Array&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
 | **version** | **Integer** | Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH. | |
+| **certifications** | **Array&lt;String&gt;** |  | [optional] |
+| **biography** | [**Biography**](Biography.html) |  | [optional] |
+| **employer_info** | [**EmployerInfo**](EmployerInfo.html) |  | [optional] |
 | **routing_status** | [**RoutingStatus**](RoutingStatus.html) | ACD routing status | [optional] |
 | **presence** | [**UserPresence**](UserPresence.html) | Active presence | [optional] |
 | **conversation_summary** | [**UserConversationSummary**](UserConversationSummary.html) | Summary of conversion statistics for conversation types. | [optional] |

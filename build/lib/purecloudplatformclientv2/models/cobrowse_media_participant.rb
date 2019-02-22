@@ -102,6 +102,9 @@ module PureCloud
     # The reason specifying why participant flagged the conversation.
     attr_accessor :flagged_reason
 
+    # Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context.
+    attr_accessor :journey_context
+
     # The co-browse session ID.
     attr_accessor :cobrowse_session_id
 
@@ -177,6 +180,8 @@ module PureCloud
         
         :'flagged_reason' => :'flaggedReason',
         
+        :'journey_context' => :'journeyContext',
+        
         :'cobrowse_session_id' => :'cobrowseSessionId',
         
         :'cobrowse_role' => :'cobrowseRole',
@@ -249,6 +254,8 @@ module PureCloud
         :'peer' => :'String',
         
         :'flagged_reason' => :'String',
+        
+        :'journey_context' => :'JourneyContext',
         
         :'cobrowse_session_id' => :'String',
         
@@ -526,6 +533,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'journeyContext')
+        
+        
+        self.journey_context = attributes[:'journeyContext']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'cobrowseSessionId')
         
         
@@ -717,6 +733,10 @@ module PureCloud
       if @flagged_reason && !allowed_values.include?(@flagged_reason)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -944,6 +964,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -977,6 +1002,7 @@ module PureCloud
           wrapup == o.wrapup &&
           peer == o.peer &&
           flagged_reason == o.flagged_reason &&
+          journey_context == o.journey_context &&
           cobrowse_session_id == o.cobrowse_session_id &&
           cobrowse_role == o.cobrowse_role &&
           controlling == o.controlling &&
@@ -993,7 +1019,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, peer, flagged_reason, cobrowse_session_id, cobrowse_role, controlling, viewer_url, provider_event_time].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, peer, flagged_reason, journey_context, cobrowse_session_id, cobrowse_role, controlling, viewer_url, provider_event_time].hash
     end
 
     # build the object from hash

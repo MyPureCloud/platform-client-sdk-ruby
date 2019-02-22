@@ -105,7 +105,7 @@ module PureCloud
     # Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
     # @param trustor_org_id The organization ID of the trustor (customer) organization.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :billing_period_index Billing Period Index (default to 0)
+    # @option opts [Integer] :billing_period_index 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (default to 0)
     # @return [TrusteeBillingOverview]
     def get_billing_trusteebillingoverview_trustor_org_id(trustor_org_id, opts = {})
       data, _status_code, _headers = get_billing_trusteebillingoverview_trustor_org_id_with_http_info(trustor_org_id, opts)
@@ -116,7 +116,7 @@ module PureCloud
     # Tax Disclaimer: Prices returned by this API do not include applicable taxes. It is the responsibility of the customer to pay all taxes that are appropriate in their jurisdiction. See the PureCloud API Documentation in the Developer Center for more information about this API: https://developer.mypurecloud.com/api/rest/v2/
     # @param trustor_org_id The organization ID of the trustor (customer) organization.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :billing_period_index Billing Period Index
+    # @option opts [Integer] :billing_period_index 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on.
     # @return [Array<(TrusteeBillingOverview, Fixnum, Hash)>] TrusteeBillingOverview data, response status code and response headers
     def get_billing_trusteebillingoverview_trustor_org_id_with_http_info(trustor_org_id, opts = {})
       if @api_client.config.debugging

@@ -61,6 +61,12 @@ module PureCloud
     # The value that denotes if acdAutoAnswer is set on the user
     attr_accessor :acd_auto_answer
 
+    attr_accessor :certifications
+
+    attr_accessor :biography
+
+    attr_accessor :employer_info
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -101,6 +107,12 @@ module PureCloud
         :'state' => :'state',
         
         :'acd_auto_answer' => :'acdAutoAnswer',
+        
+        :'certifications' => :'certifications',
+        
+        :'biography' => :'biography',
+        
+        :'employer_info' => :'employerInfo',
         
         :'self_uri' => :'selfUri'
         
@@ -144,6 +156,12 @@ module PureCloud
         :'state' => :'String',
         
         :'acd_auto_answer' => :'BOOLEAN',
+        
+        :'certifications' => :'Array<String>',
+        
+        :'biography' => :'Biography',
+        
+        :'employer_info' => :'EmployerInfo',
         
         :'self_uri' => :'String'
         
@@ -324,6 +342,35 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'certifications')
+        
+        if (value = attributes[:'certifications']).is_a?(Array)
+          self.certifications = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'biography')
+        
+        
+        self.biography = attributes[:'biography']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'employerInfo')
+        
+        
+        self.employer_info = attributes[:'employerInfo']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -419,6 +466,18 @@ module PureCloud
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -532,6 +591,21 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -554,6 +628,9 @@ module PureCloud
           groups == o.groups &&
           state == o.state &&
           acd_auto_answer == o.acd_auto_answer &&
+          certifications == o.certifications &&
+          biography == o.biography &&
+          employer_info == o.employer_info &&
           self_uri == o.self_uri
     end
 
@@ -566,7 +643,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, chat, department, email, primary_contact_info, addresses, title, username, manager, images, version, profile_skills, locations, groups, state, acd_auto_answer, self_uri].hash
+      [id, name, chat, department, email, primary_contact_info, addresses, title, username, manager, images, version, profile_skills, locations, groups, state, acd_auto_answer, certifications, biography, employer_info, self_uri].hash
     end
 
     # build the object from hash

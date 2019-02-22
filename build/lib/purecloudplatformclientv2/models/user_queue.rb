@@ -29,9 +29,6 @@ module PureCloud
     # The queue description.
     attr_accessor :description
 
-    # The current version of the queue.
-    attr_accessor :version
-
     # The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_created
 
@@ -44,16 +41,10 @@ module PureCloud
     # The ID of the user that created the queue.
     attr_accessor :created_by
 
-    # Indicates if the queue is active, inactive, or deleted.
-    attr_accessor :state
+    # The number of users in the queue.
+    attr_accessor :member_count
 
-    # The application that last modified the queue.
-    attr_accessor :modified_by_app
-
-    # The application that created the queue.
-    attr_accessor :created_by_app
-
-    # The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION
+    # The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM
     attr_accessor :media_settings
 
     # The bulls-eye settings for the queue.
@@ -87,8 +78,6 @@ module PureCloud
 
     attr_accessor :joined
 
-    attr_accessor :member_count
-
     # The URI for this object
     attr_accessor :self_uri
 
@@ -104,8 +93,6 @@ module PureCloud
         
         :'description' => :'description',
         
-        :'version' => :'version',
-        
         :'date_created' => :'dateCreated',
         
         :'date_modified' => :'dateModified',
@@ -114,11 +101,7 @@ module PureCloud
         
         :'created_by' => :'createdBy',
         
-        :'state' => :'state',
-        
-        :'modified_by_app' => :'modifiedByApp',
-        
-        :'created_by_app' => :'createdByApp',
+        :'member_count' => :'memberCount',
         
         :'media_settings' => :'mediaSettings',
         
@@ -144,8 +127,6 @@ module PureCloud
         
         :'joined' => :'joined',
         
-        :'member_count' => :'memberCount',
-        
         :'self_uri' => :'selfUri'
         
       }
@@ -163,8 +144,6 @@ module PureCloud
         
         :'description' => :'String',
         
-        :'version' => :'Integer',
-        
         :'date_created' => :'DateTime',
         
         :'date_modified' => :'DateTime',
@@ -173,11 +152,7 @@ module PureCloud
         
         :'created_by' => :'String',
         
-        :'state' => :'String',
-        
-        :'modified_by_app' => :'String',
-        
-        :'created_by_app' => :'String',
+        :'member_count' => :'Integer',
         
         :'media_settings' => :'Hash<String, MediaSetting>',
         
@@ -202,8 +177,6 @@ module PureCloud
         :'outbound_email_address' => :'QueueEmailAddress',
         
         :'joined' => :'BOOLEAN',
-        
-        :'member_count' => :'Integer',
         
         :'self_uri' => :'String'
         
@@ -255,15 +228,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'version')
-        
-        
-        self.version = attributes[:'version']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'dateCreated')
         
         
@@ -300,28 +264,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'state')
+      if attributes.has_key?(:'memberCount')
         
         
-        self.state = attributes[:'state']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'modifiedByApp')
-        
-        
-        self.modified_by_app = attributes[:'modifiedByApp']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'createdByApp')
-        
-        
-        self.created_by_app = attributes[:'createdByApp']
+        self.member_count = attributes[:'memberCount']
         
       
       end
@@ -439,15 +385,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'memberCount')
-        
-        
-        self.member_count = attributes[:'memberCount']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'selfUri')
         
         
@@ -510,10 +447,6 @@ module PureCloud
       
       
       
-      allowed_values = ["active", "inactive", "deleted"]
-      if @state && !allowed_values.include?(@state)
-        return false
-      end
       
       
       
@@ -524,34 +457,6 @@ module PureCloud
       
       
       
-      
-      
-      if @media_settings.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      if @acw_settings.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @skill_evaluation_method.nil?
-        return false
-      end
-
       
       
       allowed_values = ["NONE", "BEST", "ALL"]
@@ -597,10 +502,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
     
@@ -636,30 +537,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] state Object to be assigned
-    def state=(state)
-      allowed_values = ["active", "inactive", "deleted"]
-      if state && !allowed_values.include?(state)
-        fail ArgumentError, "invalid value for 'state', must be one of #{allowed_values}."
-      end
-      @state = state
-    end
-
     
     
     
@@ -747,11 +624,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -761,14 +633,11 @@ module PureCloud
           name == o.name &&
           division == o.division &&
           description == o.description &&
-          version == o.version &&
           date_created == o.date_created &&
           date_modified == o.date_modified &&
           modified_by == o.modified_by &&
           created_by == o.created_by &&
-          state == o.state &&
-          modified_by_app == o.modified_by_app &&
-          created_by_app == o.created_by_app &&
+          member_count == o.member_count &&
           media_settings == o.media_settings &&
           bullseye == o.bullseye &&
           acw_settings == o.acw_settings &&
@@ -781,7 +650,6 @@ module PureCloud
           outbound_messaging_addresses == o.outbound_messaging_addresses &&
           outbound_email_address == o.outbound_email_address &&
           joined == o.joined &&
-          member_count == o.member_count &&
           self_uri == o.self_uri
     end
 
@@ -794,7 +662,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, calling_party_name, calling_party_number, default_scripts, outbound_messaging_addresses, outbound_email_address, joined, member_count, self_uri].hash
+      [id, name, division, description, date_created, date_modified, modified_by, created_by, member_count, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, calling_party_name, calling_party_number, default_scripts, outbound_messaging_addresses, outbound_email_address, joined, self_uri].hash
     end
 
     # build the object from hash

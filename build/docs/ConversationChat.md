@@ -21,6 +21,7 @@ title: ConversationChat
 | **provider** | **String** | The source provider for the email. | [optional] |
 | **script_id** | **String** | The UUID of the script to use. | [optional] |
 | **peer_id** | **String** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
+| **journey_context** | [**JourneyContext**](JourneyContext.html) | A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context). | [optional] |
 {: class="table table-striped"}
 
 

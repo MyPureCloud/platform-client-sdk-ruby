@@ -3136,7 +3136,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update the ring number or joined status for a User in a Queue
+    # Update the ring number OR joined status for a User in a Queue
     # 
     # @param queue_id Queue ID
     # @param member_id Member ID
@@ -3148,7 +3148,7 @@ module PureCloud
       return data
     end
 
-    # Update the ring number or joined status for a User in a Queue
+    # Update the ring number OR joined status for a User in a Queue
     # 
     # @param queue_id Queue ID
     # @param member_id Member ID

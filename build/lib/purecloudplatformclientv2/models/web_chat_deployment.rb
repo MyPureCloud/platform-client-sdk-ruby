@@ -36,6 +36,9 @@ module PureCloud
 
     attr_accessor :allowed_domains
 
+    # The URI of the Inbound Chat Flow to run when new chats are initiated under this Deployment.
+    attr_accessor :flow
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -58,6 +61,8 @@ module PureCloud
         :'web_chat_config' => :'webChatConfig',
         
         :'allowed_domains' => :'allowedDomains',
+        
+        :'flow' => :'flow',
         
         :'self_uri' => :'selfUri'
         
@@ -83,6 +88,8 @@ module PureCloud
         :'web_chat_config' => :'WebChatConfig',
         
         :'allowed_domains' => :'Array<String>',
+        
+        :'flow' => :'UriReference',
         
         :'self_uri' => :'String'
         
@@ -172,6 +179,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'flow')
+        
+        
+        self.flow = attributes[:'flow']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -232,8 +248,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -293,6 +318,7 @@ module PureCloud
           disabled == o.disabled &&
           web_chat_config == o.web_chat_config &&
           allowed_domains == o.allowed_domains &&
+          flow == o.flow &&
           self_uri == o.self_uri
     end
 
@@ -305,7 +331,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, authentication_required, authentication_url, disabled, web_chat_config, allowed_domains, self_uri].hash
+      [id, name, description, authentication_required, authentication_url, disabled, web_chat_config, allowed_domains, flow, self_uri].hash
     end
 
     # build the object from hash

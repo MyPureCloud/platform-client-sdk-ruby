@@ -120,7 +120,7 @@ api_instance = PureCloud::BillingApi.new
 trustor_org_id = "trustor_org_id_example" # String | The organization ID of the trustor (customer) organization.
 
 opts = { 
-  billing_period_index: 0 # Integer | Billing Period Index
+  billing_period_index: 0 # Integer | 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on.
 }
 
 begin
@@ -137,7 +137,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **trustor_org_id** | **String**| The organization ID of the trustor (customer) organization. |  |
- **billing_period_index** | **Integer**| Billing Period Index | [optional] [default to 0] |
+ **billing_period_index** | **Integer**| 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. | [optional] [default to 0] |
 {: class="table table-striped"}
 
 

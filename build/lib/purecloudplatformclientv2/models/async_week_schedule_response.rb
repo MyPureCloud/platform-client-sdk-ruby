@@ -17,30 +17,31 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
+  # Response for query for week schedule for a given week in management unit
   class AsyncWeekScheduleResponse
-    # The status of the request
-    attr_accessor :status
-
     # Week schedule result. The value will be null if the data is sent through notification or if response is large.
     attr_accessor :result
 
+    # The url to fetch the result for large responses. The value is null if result contains the data
+    attr_accessor :download_url
+
+    # The status of the request
+    attr_accessor :status
+
     # The operation id to watch for on the notification topic if status == Processing
     attr_accessor :operation_id
-
-    # The url to fetch the result for large responses. The value will be null if result contains the data
-    attr_accessor :download_url
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'status' => :'status',
-        
         :'result' => :'result',
         
-        :'operation_id' => :'operationId',
+        :'download_url' => :'downloadUrl',
         
-        :'download_url' => :'downloadUrl'
+        :'status' => :'status',
+        
+        :'operation_id' => :'operationId'
         
       }
     end
@@ -49,13 +50,13 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'status' => :'String',
-        
         :'result' => :'WeekSchedule',
         
-        :'operation_id' => :'String',
+        :'download_url' => :'String',
         
-        :'download_url' => :'String'
+        :'status' => :'String',
+        
+        :'operation_id' => :'String'
         
       }
     end
@@ -69,15 +70,6 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'status')
-        
-        
-        self.status = attributes[:'status']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'result')
         
         
@@ -87,19 +79,28 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'operationId')
+      if attributes.has_key?(:'downloadUrl')
         
         
-        self.operation_id = attributes[:'operationId']
+        self.download_url = attributes[:'downloadUrl']
         
       
       end
 
       
-      if attributes.has_key?(:'downloadUrl')
+      if attributes.has_key?(:'status')
         
         
-        self.download_url = attributes[:'downloadUrl']
+        self.status = attributes[:'status']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'operationId')
+        
+        
+        self.operation_id = attributes[:'operationId']
         
       
       end
@@ -122,6 +123,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["Processing", "Complete", "Canceled", "Error"]
       if @status && !allowed_values.include?(@status)
         return false
@@ -133,16 +142,18 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     # Custom attribute writer method checking allowed values (enum).
@@ -163,25 +174,15 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          status == o.status &&
           result == o.result &&
-          operation_id == o.operation_id &&
-          download_url == o.download_url
+          download_url == o.download_url &&
+          status == o.status &&
+          operation_id == o.operation_id
     end
 
     # @see the `==` method
@@ -193,7 +194,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [status, result, operation_id, download_url].hash
+      [result, download_url, status, operation_id].hash
     end
 
     # build the object from hash

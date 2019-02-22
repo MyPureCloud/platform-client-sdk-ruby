@@ -24,13 +24,25 @@ module PureCloud
     # The value that denotes if acdAutoAnswer is set on the user
     attr_accessor :acd_auto_answer
 
+    attr_accessor :certifications
+
+    attr_accessor :biography
+
+    attr_accessor :employer_info
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'id' => :'id',
         
-        :'acd_auto_answer' => :'acdAutoAnswer'
+        :'acd_auto_answer' => :'acdAutoAnswer',
+        
+        :'certifications' => :'certifications',
+        
+        :'biography' => :'biography',
+        
+        :'employer_info' => :'employerInfo'
         
       }
     end
@@ -41,7 +53,13 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'acd_auto_answer' => :'BOOLEAN'
+        :'acd_auto_answer' => :'BOOLEAN',
+        
+        :'certifications' => :'Array<String>',
+        
+        :'biography' => :'Biography',
+        
+        :'employer_info' => :'EmployerInfo'
         
       }
     end
@@ -73,6 +91,35 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'certifications')
+        
+        if (value = attributes[:'certifications']).is_a?(Array)
+          self.certifications = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'biography')
+        
+        
+        self.biography = attributes[:'biography']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'employerInfo')
+        
+        
+        self.employer_info = attributes[:'employerInfo']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -96,8 +143,35 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -115,7 +189,10 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          acd_auto_answer == o.acd_auto_answer
+          acd_auto_answer == o.acd_auto_answer &&
+          certifications == o.certifications &&
+          biography == o.biography &&
+          employer_info == o.employer_info
     end
 
     # @see the `==` method
@@ -127,7 +204,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, acd_auto_answer].hash
+      [id, acd_auto_answer, certifications, biography, employer_info].hash
     end
 
     # build the object from hash

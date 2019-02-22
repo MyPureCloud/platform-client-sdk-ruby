@@ -17,25 +17,26 @@ Terms of Service: https://developer.mypurecloud.com/tos
 require 'date'
 
 module PureCloud
+  # Response for query for week schedule for a given week in management unit
   class GenerateWeekScheduleResponse
+    # The url to fetch the result for large responses. The value is null if result contains the data
+    attr_accessor :download_url
+
     # The status of the request
     attr_accessor :status
 
     # The operation id to watch for on the notification topic if status == Processing
     attr_accessor :operation_id
 
-    # The url to fetch the result for large responses. The value will be null if result contains the data
-    attr_accessor :download_url
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'download_url' => :'downloadUrl',
+        
         :'status' => :'status',
         
-        :'operation_id' => :'operationId',
-        
-        :'download_url' => :'downloadUrl'
+        :'operation_id' => :'operationId'
         
       }
     end
@@ -44,11 +45,11 @@ module PureCloud
     def self.swagger_types
       {
         
+        :'download_url' => :'String',
+        
         :'status' => :'String',
         
-        :'operation_id' => :'String',
-        
-        :'download_url' => :'String'
+        :'operation_id' => :'String'
         
       }
     end
@@ -60,6 +61,15 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes.has_key?(:'downloadUrl')
+        
+        
+        self.download_url = attributes[:'downloadUrl']
+        
+      
+      end
 
       
       if attributes.has_key?(:'status')
@@ -75,15 +85,6 @@ module PureCloud
         
         
         self.operation_id = attributes[:'operationId']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'downloadUrl')
-        
-        
-        self.download_url = attributes[:'downloadUrl']
         
       
       end
@@ -106,6 +107,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["Processing", "Complete", "Canceled", "Error"]
       if @status && !allowed_values.include?(@status)
         return false
@@ -117,12 +122,13 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
+    
+    
+    
+    
+    
     
     
     # Custom attribute writer method checking allowed values (enum).
@@ -143,19 +149,14 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          download_url == o.download_url &&
           status == o.status &&
-          operation_id == o.operation_id &&
-          download_url == o.download_url
+          operation_id == o.operation_id
     end
 
     # @see the `==` method
@@ -167,7 +168,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [status, operation_id, download_url].hash
+      [download_url, status, operation_id].hash
     end
 
     # build the object from hash

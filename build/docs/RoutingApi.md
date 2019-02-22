@@ -46,7 +46,7 @@ Method | Description
 [**get_routing_wrapupcodes**](RoutingApi.html#get_routing_wrapupcodes) | Get list of wrapup codes.
 [**get_user_routinglanguages**](RoutingApi.html#get_user_routinglanguages) | List routing language for user
 [**get_user_routingskills**](RoutingApi.html#get_user_routingskills) | List routing skills for user
-[**patch_routing_queue_user**](RoutingApi.html#patch_routing_queue_user) | Update the ring number or joined status for a User in a Queue
+[**patch_routing_queue_user**](RoutingApi.html#patch_routing_queue_user) | Update the ring number OR joined status for a User in a Queue
 [**patch_routing_queue_users**](RoutingApi.html#patch_routing_queue_users) | Join or unjoin a set of users for a queue
 [**patch_user_routinglanguage**](RoutingApi.html#patch_user_routinglanguage) | Update routing language proficiency or state.
 [**patch_user_routinglanguages_bulk**](RoutingApi.html#patch_user_routinglanguages_bulk) | Add bulk routing language to user. Max limit 50 languages
@@ -1593,7 +1593,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **sort_by** | **String**| Sort by | [optional] [default to name] |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, skills, languages, languagePreference |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
  **joined** | **BOOLEAN**| Filter by joined status | [optional]  |
  **name** | **String**| Filter by queue member name | [optional]  |
  **profile_skills** | [**Array&lt;String&gt;**](String.html)| Filter by profile skill | [optional]  |
@@ -2686,7 +2686,7 @@ Name | Type | Description  | Notes
 
 
 
-Update the ring number or joined status for a User in a Queue
+Update the ring number OR joined status for a User in a Queue
 
 
 
@@ -2722,7 +2722,7 @@ body = PureCloud::QueueMember.new # QueueMember | Queue Member
 
 
 begin
-  #Update the ring number or joined status for a User in a Queue
+  #Update the ring number OR joined status for a User in a Queue
   result = api_instance.patch_routing_queue_user(queue_id, member_id, body)
   p result
 rescue PureCloud::ApiError => e
