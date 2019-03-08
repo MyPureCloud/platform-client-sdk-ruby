@@ -14,7 +14,6 @@ Method | Description
 [**delete_telephony_providers_edges_certificateauthority**](TelephonyProvidersEdgeApi.html#delete_telephony_providers_edges_certificateauthority) | Delete a certificate authority.
 [**delete_telephony_providers_edges_didpool**](TelephonyProvidersEdgeApi.html#delete_telephony_providers_edges_didpool) | Delete a DID Pool by ID.
 [**delete_telephony_providers_edges_edgegroup**](TelephonyProvidersEdgeApi.html#delete_telephony_providers_edges_edgegroup) | Delete an edge group.
-[**delete_telephony_providers_edges_endpoint**](TelephonyProvidersEdgeApi.html#delete_telephony_providers_edges_endpoint) | Delete endpoint
 [**delete_telephony_providers_edges_extensionpool**](TelephonyProvidersEdgeApi.html#delete_telephony_providers_edges_extensionpool) | Delete an extension pool by ID
 [**delete_telephony_providers_edges_outboundroute**](TelephonyProvidersEdgeApi.html#delete_telephony_providers_edges_outboundroute) | Delete Outbound Route
 [**delete_telephony_providers_edges_phone**](TelephonyProvidersEdgeApi.html#delete_telephony_providers_edges_phone) | Delete a Phone by ID
@@ -52,8 +51,6 @@ Method | Description
 [**get_telephony_providers_edges_edgegroup_edgetrunkbase**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_edgegroup_edgetrunkbase) | Gets the edge trunk base associated with the edge group
 [**get_telephony_providers_edges_edgegroups**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_edgegroups) | Get the list of edge groups.
 [**get_telephony_providers_edges_edgeversionreport**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_edgeversionreport) | Get the edge version report.
-[**get_telephony_providers_edges_endpoint**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_endpoint) | Get endpoint
-[**get_telephony_providers_edges_endpoints**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_endpoints) | Get endpoints
 [**get_telephony_providers_edges_extension**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_extension) | Get an extension by ID.
 [**get_telephony_providers_edges_extensionpool**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_extensionpool) | Get an extension pool by ID
 [**get_telephony_providers_edges_extensionpools**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_extensionpools) | Get a listing of extension pools
@@ -104,7 +101,6 @@ Method | Description
 [**post_telephony_providers_edges_certificateauthorities**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_certificateauthorities) | Create a certificate authority.
 [**post_telephony_providers_edges_didpools**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_didpools) | Create a new DID pool
 [**post_telephony_providers_edges_edgegroups**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_edgegroups) | Create an edge group.
-[**post_telephony_providers_edges_endpoints**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_endpoints) | Create endpoint
 [**post_telephony_providers_edges_extensionpools**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_extensionpools) | Create a new extension pool
 [**post_telephony_providers_edges_outboundroutes**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_outboundroutes) | Create outbound rule
 [**post_telephony_providers_edges_phone_reboot**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edges_phone_reboot) | Reboot a Phone
@@ -123,7 +119,6 @@ Method | Description
 [**put_telephony_providers_edges_didpool**](TelephonyProvidersEdgeApi.html#put_telephony_providers_edges_didpool) | Update a DID Pool by ID.
 [**put_telephony_providers_edges_edgegroup**](TelephonyProvidersEdgeApi.html#put_telephony_providers_edges_edgegroup) | Update an edge group.
 [**put_telephony_providers_edges_edgegroup_edgetrunkbase**](TelephonyProvidersEdgeApi.html#put_telephony_providers_edges_edgegroup_edgetrunkbase) | Update the edge trunk base associated with the edge group
-[**put_telephony_providers_edges_endpoint**](TelephonyProvidersEdgeApi.html#put_telephony_providers_edges_endpoint) | Update endpoint
 [**put_telephony_providers_edges_extension**](TelephonyProvidersEdgeApi.html#put_telephony_providers_edges_extension) | Update an extension by ID.
 [**put_telephony_providers_edges_extensionpool**](TelephonyProvidersEdgeApi.html#put_telephony_providers_edges_extensionpool) | Update an extension pool by ID
 [**put_telephony_providers_edges_outboundroute**](TelephonyProvidersEdgeApi.html#put_telephony_providers_edges_outboundroute) | Update outbound route
@@ -507,70 +502,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **edge_group_id** | **String**| Edge group ID |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-nil (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-<a name="delete_telephony_providers_edges_endpoint"></a>
-
-##  delete_telephony_providers_edges_endpoint(endpoint_id)
-
-
-
-Delete endpoint
-
-
-
-Wraps DELETE /api/v2/telephony/providers/edges/endpoints/{endpointId} 
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-
-### Example
-```{"language":"ruby"}
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::TelephonyProvidersEdgeApi.new
-
-endpoint_id = "endpoint_id_example" # String | Endpoint ID
-
-
-begin
-  #Delete endpoint
-  api_instance.delete_telephony_providers_edges_endpoint(endpoint_id)
-rescue PureCloud::ApiError => e
-  puts "Exception when calling TelephonyProvidersEdgeApi->delete_telephony_providers_edges_endpoint: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **endpoint_id** | **String**| Endpoint ID |  |
 {: class="table table-striped"}
 
 
@@ -3078,143 +3009,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**EdgeVersionReport**](EdgeVersionReport.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-<a name="get_telephony_providers_edges_endpoint"></a>
-
-## [**Endpoint**](Endpoint.html) get_telephony_providers_edges_endpoint(endpoint_id)
-
-
-
-Get endpoint
-
-
-
-Wraps GET /api/v2/telephony/providers/edges/endpoints/{endpointId} 
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-
-### Example
-```{"language":"ruby"}
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::TelephonyProvidersEdgeApi.new
-
-endpoint_id = "endpoint_id_example" # String | Endpoint ID
-
-
-begin
-  #Get endpoint
-  result = api_instance.get_telephony_providers_edges_endpoint(endpoint_id)
-  p result
-rescue PureCloud::ApiError => e
-  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_endpoint: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **endpoint_id** | **String**| Endpoint ID |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-[**Endpoint**](Endpoint.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-<a name="get_telephony_providers_edges_endpoints"></a>
-
-## [**EndpointEntityListing**](EndpointEntityListing.html) get_telephony_providers_edges_endpoints(opts)
-
-
-
-Get endpoints
-
-
-
-Wraps GET /api/v2/telephony/providers/edges/endpoints 
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-
-### Example
-```{"language":"ruby"}
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::TelephonyProvidersEdgeApi.new
-
-opts = { 
-  page_size: 25, # Integer | Page size
-  page_number: 1, # Integer | Page number
-  name: "name_example", # String | Name
-  sort_by: "name" # String | Sort by
-}
-
-begin
-  #Get endpoints
-  result = api_instance.get_telephony_providers_edges_endpoints(opts)
-  p result
-rescue PureCloud::ApiError => e
-  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edges_endpoints: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page_size** | **Integer**| Page size | [optional] [default to 25] |
- **page_number** | **Integer**| Page number | [optional] [default to 1] |
- **name** | **String**| Name | [optional]  |
- **sort_by** | **String**| Sort by | [optional] [default to name] |
-{: class="table table-striped"}
-
-
-### Return type
-
-[**EndpointEntityListing**](EndpointEntityListing.html)
 
 ### HTTP request headers
 
@@ -6655,71 +6449,6 @@ Name | Type | Description  | Notes
 
 
 
-<a name="post_telephony_providers_edges_endpoints"></a>
-
-## [**Endpoint**](Endpoint.html) post_telephony_providers_edges_endpoints(body)
-
-
-
-Create endpoint
-
-
-
-Wraps POST /api/v2/telephony/providers/edges/endpoints 
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-
-### Example
-```{"language":"ruby"}
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::TelephonyProvidersEdgeApi.new
-
-body = PureCloud::Endpoint.new # Endpoint | EndpointTemplate
-
-
-begin
-  #Create endpoint
-  result = api_instance.post_telephony_providers_edges_endpoints(body)
-  p result
-rescue PureCloud::ApiError => e
-  puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edges_endpoints: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-[**Endpoint**](Endpoint.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
 <a name="post_telephony_providers_edges_extensionpools"></a>
 
 ## [**ExtensionPool**](ExtensionPool.html) post_telephony_providers_edges_extensionpools(body)
@@ -7915,74 +7644,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EdgeTrunkBase**](EdgeTrunkBase.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-<a name="put_telephony_providers_edges_endpoint"></a>
-
-## [**Endpoint**](Endpoint.html) put_telephony_providers_edges_endpoint(endpoint_id, body)
-
-
-
-Update endpoint
-
-
-
-Wraps PUT /api/v2/telephony/providers/edges/endpoints/{endpointId} 
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-
-### Example
-```{"language":"ruby"}
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::TelephonyProvidersEdgeApi.new
-
-endpoint_id = "endpoint_id_example" # String | Endpoint ID
-
-body = PureCloud::Endpoint.new # Endpoint | EndpointTemplate
-
-
-begin
-  #Update endpoint
-  result = api_instance.put_telephony_providers_edges_endpoint(endpoint_id, body)
-  p result
-rescue PureCloud::ApiError => e
-  puts "Exception when calling TelephonyProvidersEdgeApi->put_telephony_providers_edges_endpoint: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **endpoint_id** | **String**| Endpoint ID |  |
- **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-[**Endpoint**](Endpoint.html)
 
 ### HTTP request headers
 

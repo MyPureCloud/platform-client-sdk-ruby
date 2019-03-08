@@ -22,7 +22,7 @@ module PureCloud
     attr_accessor :id
 
     # The type of the customerId within the Journey System (e.g. cookie).
-    attr_accessor :type
+    attr_accessor :id_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -30,7 +30,7 @@ module PureCloud
         
         :'id' => :'id',
         
-        :'type' => :'type'
+        :'id_type' => :'idType'
         
       }
     end
@@ -41,7 +41,7 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'type' => :'String'
+        :'id_type' => :'String'
         
       }
     end
@@ -64,10 +64,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'type')
+      if attributes.has_key?(:'idType')
         
         
-        self.type = attributes[:'type']
+        self.id_type = attributes[:'idType']
         
       
       end
@@ -98,7 +98,7 @@ module PureCloud
       
       
       
-      if @type.nil?
+      if @id_type.nil?
         return false
       end
 
@@ -125,7 +125,7 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          type == o.type
+          id_type == o.id_type
     end
 
     # @see the `==` method
@@ -137,7 +137,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, type].hash
+      [id, id_type].hash
     end
 
     # build the object from hash

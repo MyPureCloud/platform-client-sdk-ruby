@@ -111,6 +111,9 @@ module PureCloud
     # Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied.
     attr_accessor :contact_list_filters
 
+    # The division this campaign belongs to.
+    attr_accessor :division
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -179,6 +182,8 @@ module PureCloud
         :'priority' => :'priority',
         
         :'contact_list_filters' => :'contactListFilters',
+        
+        :'division' => :'division',
         
         :'self_uri' => :'selfUri'
         
@@ -250,6 +255,8 @@ module PureCloud
         :'priority' => :'Integer',
         
         :'contact_list_filters' => :'Array<UriReference>',
+        
+        :'division' => :'UriReference',
         
         :'self_uri' => :'String'
         
@@ -556,6 +563,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'division')
+        
+        
+        self.division = attributes[:'division']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -696,6 +712,10 @@ module PureCloud
         return false
       end
 
+      
+      
+      
+      
       
       
       
@@ -929,6 +949,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -965,6 +990,7 @@ module PureCloud
           call_analysis_language == o.call_analysis_language &&
           priority == o.priority &&
           contact_list_filters == o.contact_list_filters &&
+          division == o.division &&
           self_uri == o.self_uri
     end
 
@@ -977,7 +1003,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, contact_list, queue, dialing_mode, script, edge_group, site, campaign_status, phone_columns, abandon_rate, dnc_lists, callable_time_set, call_analysis_response_set, errors, caller_name, caller_address, outbound_line_count, rule_sets, skip_preview_disabled, preview_time_out_seconds, always_running, contact_sort, contact_sorts, no_answer_timeout, call_analysis_language, priority, contact_list_filters, self_uri].hash
+      [id, name, date_created, date_modified, version, contact_list, queue, dialing_mode, script, edge_group, site, campaign_status, phone_columns, abandon_rate, dnc_lists, callable_time_set, call_analysis_response_set, errors, caller_name, caller_address, outbound_line_count, rule_sets, skip_preview_disabled, preview_time_out_seconds, always_running, contact_sort, contact_sorts, no_answer_timeout, call_analysis_language, priority, contact_list_filters, division, self_uri].hash
     end
 
     # build the object from hash

@@ -32,6 +32,9 @@ module PureCloud
     # Required for updates, must match the version number of the most recent update
     attr_accessor :version
 
+    # The division this entity belongs to.
+    attr_accessor :division
+
     # The names of the contact data columns.
     attr_accessor :column_names
 
@@ -76,6 +79,8 @@ module PureCloud
         
         :'version' => :'version',
         
+        :'division' => :'division',
+        
         :'column_names' => :'columnNames',
         
         :'phone_columns' => :'phoneColumns',
@@ -112,6 +117,8 @@ module PureCloud
         :'date_modified' => :'DateTime',
         
         :'version' => :'Integer',
+        
+        :'division' => :'UriReference',
         
         :'column_names' => :'Array<String>',
         
@@ -185,6 +192,15 @@ module PureCloud
         
         
         self.version = attributes[:'version']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'division')
+        
+        
+        self.division = attributes[:'division']
         
       
       end
@@ -300,6 +316,10 @@ module PureCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
       
       
       
@@ -449,6 +469,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -459,6 +484,7 @@ module PureCloud
           date_created == o.date_created &&
           date_modified == o.date_modified &&
           version == o.version &&
+          division == o.division &&
           column_names == o.column_names &&
           phone_columns == o.phone_columns &&
           import_status == o.import_status &&
@@ -480,7 +506,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, column_names, phone_columns, import_status, preview_mode_column_name, preview_mode_accepted_values, size, attempt_limits, automatic_time_zone_mapping, zip_code_column_name, self_uri].hash
+      [id, name, date_created, date_modified, version, division, column_names, phone_columns, import_status, preview_mode_column_name, preview_mode_accepted_values, size, attempt_limits, automatic_time_zone_mapping, zip_code_column_name, self_uri].hash
     end
 
     # build the object from hash

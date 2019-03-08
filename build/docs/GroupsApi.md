@@ -528,6 +528,7 @@ opts = {
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
   id: ["id_example"], # Array<String> | id
+  jabber_id: ["jabber_id_example"], # Array<String> | A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter)
   sort_order: "ASC" # String | Ascending or descending sort order
 }
 
@@ -547,6 +548,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
+ **jabber_id** | [**Array&lt;String&gt;**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional]  |
  **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 

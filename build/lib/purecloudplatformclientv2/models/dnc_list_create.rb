@@ -51,6 +51,9 @@ module PureCloud
     # A gryphon license number. Required if the dncSourceType is gryphon.
     attr_accessor :license_id
 
+    # The division this DncList belongs to.
+    attr_accessor :division
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -79,6 +82,8 @@ module PureCloud
         :'dnc_codes' => :'dncCodes',
         
         :'license_id' => :'licenseId',
+        
+        :'division' => :'division',
         
         :'self_uri' => :'selfUri'
         
@@ -110,6 +115,8 @@ module PureCloud
         :'dnc_codes' => :'Array<String>',
         
         :'license_id' => :'String',
+        
+        :'division' => :'UriReference',
         
         :'self_uri' => :'String'
         
@@ -226,6 +233,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'division')
+        
+        
+        self.division = attributes[:'division']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -294,6 +310,10 @@ module PureCloud
       if @dnc_source_type && !allowed_values.include?(@dnc_source_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -385,6 +405,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -401,6 +426,7 @@ module PureCloud
           login_id == o.login_id &&
           dnc_codes == o.dnc_codes &&
           license_id == o.license_id &&
+          division == o.division &&
           self_uri == o.self_uri
     end
 
@@ -413,7 +439,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, import_status, size, dnc_source_type, login_id, dnc_codes, license_id, self_uri].hash
+      [id, name, date_created, date_modified, version, import_status, size, dnc_source_type, login_id, dnc_codes, license_id, division, self_uri].hash
     end
 
     # build the object from hash

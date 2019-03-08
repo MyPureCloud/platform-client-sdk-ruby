@@ -2304,6 +2304,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get a basic Campaign information object
+    # This returns a simplified version of a Campaign, consisting of name and division.
+    # @param campaign_id Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [CampaignDivisionView]
+    def get_outbound_campaigns_divisionview(campaign_id, opts = {})
+      data, _status_code, _headers = get_outbound_campaigns_divisionview_with_http_info(campaign_id, opts)
+      return data
+    end
+
+    # Get a basic Campaign information object
+    # This returns a simplified version of a Campaign, consisting of name and division.
+    # @param campaign_id Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CampaignDivisionView, Fixnum, Hash)>] CampaignDivisionView data, response status code and response headers
+    def get_outbound_campaigns_divisionview_with_http_info(campaign_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaigns_divisionview ..."
+      end
+      
+      
+      # verify the required parameter 'campaign_id' is set
+      fail ArgumentError, "Missing the required parameter 'campaign_id' when calling OutboundApi.get_outbound_campaigns_divisionview" if campaign_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/campaigns/divisionviews/{campaignId}".sub('{format}','json').sub('{' + 'campaignId' + '}', campaign_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CampaignDivisionView')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_campaigns_divisionview\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Query a list of basic Campaign information objects
     # This returns a simplified version of a Campaign, consisting of name and division.
     # @param [Hash] opts the optional parameters

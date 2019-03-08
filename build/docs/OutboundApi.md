@@ -38,6 +38,7 @@ Method | Description
 [**get_outbound_campaignrule**](OutboundApi.html#get_outbound_campaignrule) | Get Campaign Rule
 [**get_outbound_campaignrules**](OutboundApi.html#get_outbound_campaignrules) | Query Campaign Rule list
 [**get_outbound_campaigns**](OutboundApi.html#get_outbound_campaigns) | Query a list of dialer campaigns.
+[**get_outbound_campaigns_divisionview**](OutboundApi.html#get_outbound_campaigns_divisionview) | Get a basic Campaign information object
 [**get_outbound_campaigns_divisionviews**](OutboundApi.html#get_outbound_campaigns_divisionviews) | Query a list of basic Campaign information objects
 [**get_outbound_contactlist**](OutboundApi.html#get_outbound_contactlist) | Get a dialer contact list.
 [**get_outbound_contactlist_contact**](OutboundApi.html#get_outbound_contactlist_contact) | Get a contact.
@@ -2108,6 +2109,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CampaignEntityListing**](CampaignEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_outbound_campaigns_divisionview"></a>
+
+## [**CampaignDivisionView**](CampaignDivisionView.html) get_outbound_campaigns_divisionview(campaign_id)
+
+
+
+Get a basic Campaign information object
+
+This returns a simplified version of a Campaign, consisting of name and division.
+
+Wraps GET /api/v2/outbound/campaigns/divisionviews/{campaignId} 
+
+Requires ANY permissions: 
+
+* outbound:campaign:search
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+campaign_id = "campaign_id_example" # String | Campaign ID
+
+
+begin
+  #Get a basic Campaign information object
+  result = api_instance.get_outbound_campaigns_divisionview(campaign_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_campaigns_divisionview: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaign_id** | **String**| Campaign ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CampaignDivisionView**](CampaignDivisionView.html)
 
 ### HTTP request headers
 

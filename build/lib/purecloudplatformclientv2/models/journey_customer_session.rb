@@ -21,7 +21,7 @@ module PureCloud
     # An ID of a Customer/User's session within the Journey System at a point-in-time
     attr_accessor :id
 
-    # The type of the Customer/User's session ID within the Journey System (e.g. web, app)
+    # The type of the Customer/User's session within the Journey System (e.g. web, app)
     attr_accessor :type
 
     # Attribute mapping from ruby-style variable name to JSON key.
