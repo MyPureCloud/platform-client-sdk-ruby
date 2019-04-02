@@ -36,6 +36,7 @@ title: ConversationVideoEventTopicVideoMediaParticipant
 | **peer** | **String** |  | [optional] |
 | **screen_recording_state** | **String** |  | [optional] |
 | **flagged_reason** | **String** |  | [optional] |
+| **journey_context** | [**ConversationVideoEventTopicJourneyContext**](ConversationVideoEventTopicJourneyContext.html) |  | [optional] |
 | **audio_muted** | **BOOLEAN** |  | [optional] |
 | **video_muted** | **BOOLEAN** |  | [optional] |
 | **sharing_screen** | **BOOLEAN** |  | [optional] |

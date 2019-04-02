@@ -36,6 +36,7 @@ title: ConversationMessageEventTopicMessageMediaParticipant
 | **peer** | **String** |  | [optional] |
 | **screen_recording_state** | **String** |  | [optional] |
 | **flagged_reason** | **String** |  | [optional] |
+| **journey_context** | [**ConversationMessageEventTopicJourneyContext**](ConversationMessageEventTopicJourneyContext.html) |  | [optional] |
 | **messages** | [**Array&lt;ConversationMessageEventTopicMessageDetails&gt;**](ConversationMessageEventTopicMessageDetails.html) |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **recipient_country** | **String** |  | [optional] |

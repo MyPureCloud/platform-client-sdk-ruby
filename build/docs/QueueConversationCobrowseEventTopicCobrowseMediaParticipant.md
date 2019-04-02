@@ -36,6 +36,7 @@ title: QueueConversationCobrowseEventTopicCobrowseMediaParticipant
 | **peer** | **String** |  | [optional] |
 | **screen_recording_state** | **String** |  | [optional] |
 | **flagged_reason** | **String** |  | [optional] |
+| **journey_context** | [**QueueConversationCobrowseEventTopicJourneyContext**](QueueConversationCobrowseEventTopicJourneyContext.html) |  | [optional] |
 | **cobrowse_session_id** | **String** |  | [optional] |
 | **cobrowse_role** | **String** |  | [optional] |
 | **viewer_url** | **String** |  | [optional] |

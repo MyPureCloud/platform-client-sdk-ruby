@@ -16,10 +16,12 @@ Method | Description
 [**delete_workforcemanagement_managementunit_week_shorttermforecast**](WorkforceManagementApi.html#delete_workforcemanagement_managementunit_week_shorttermforecast) | Delete a short term forecast
 [**delete_workforcemanagement_managementunit_workplan**](WorkforceManagementApi.html#delete_workforcemanagement_managementunit_workplan) | Delete a work plan
 [**get_workforcemanagement_adherence**](WorkforceManagementApi.html#get_workforcemanagement_adherence) | Get a list of UserScheduleAdherence records for the requested users
+[**get_workforcemanagement_adhocmodelingjob**](WorkforceManagementApi.html#get_workforcemanagement_adhocmodelingjob) | Get status of the modeling job
 [**get_workforcemanagement_managementunit**](WorkforceManagementApi.html#get_workforcemanagement_managementunit) | Get management unit
 [**get_workforcemanagement_managementunit_activitycode**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_activitycode) | Get an activity code
 [**get_workforcemanagement_managementunit_activitycodes**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_activitycodes) | Get activity codes
 [**get_workforcemanagement_managementunit_agent**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_agent) | Get data for agent in the management unit
+[**get_workforcemanagement_managementunit_agent_shifttrades**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_agent_shifttrades) | Gets all the shift trades for a given agent
 [**get_workforcemanagement_managementunit_intraday_queues**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_intraday_queues) | Get intraday queues for the given date
 [**get_workforcemanagement_managementunit_scheduling_run**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_scheduling_run) | Gets the status for a specific scheduling run
 [**get_workforcemanagement_managementunit_scheduling_run_result**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_scheduling_run_result) | Gets the result of a specific scheduling run
@@ -27,21 +29,28 @@ Method | Description
 [**get_workforcemanagement_managementunit_servicegoalgroup**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_servicegoalgroup) | Get a service goal group
 [**get_workforcemanagement_managementunit_servicegoalgroups**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_servicegoalgroups) | Get service goal groups
 [**get_workforcemanagement_managementunit_settings**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_settings) | Get the settings for the requested management unit
+[**get_workforcemanagement_managementunit_shifttrades_matched**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_shifttrades_matched) | Gets a summary of all shift trades in the matched state
+[**get_workforcemanagement_managementunit_shifttrades_users**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_shifttrades_users) | Gets list of users available for whom you can send direct shift trade requests
 [**get_workforcemanagement_managementunit_user_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_user_timeoffrequest) | Get a time off request
 [**get_workforcemanagement_managementunit_user_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_user_timeoffrequests) | Get a list of time off requests for a given user
 [**get_workforcemanagement_managementunit_users**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_users) | Get users in the management unit
 [**get_workforcemanagement_managementunit_week_schedule**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_week_schedule) | Get a week schedule
 [**get_workforcemanagement_managementunit_week_schedule_generationresults**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_week_schedule_generationresults) | Get week schedule generation results
 [**get_workforcemanagement_managementunit_week_schedules**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_week_schedules) | Get the list of schedules in a week in management unit
+[**get_workforcemanagement_managementunit_week_shifttrades**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_week_shifttrades) | Gets all the shift trades for a given week
 [**get_workforcemanagement_managementunit_week_shorttermforecast_final**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_week_shorttermforecast_final) | Get the final result of a short term forecast calculation with modifications applied
 [**get_workforcemanagement_managementunit_week_shorttermforecasts**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_week_shorttermforecasts) | Get short term forecasts
 [**get_workforcemanagement_managementunit_workplan**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_workplan) | Get a work plan
 [**get_workforcemanagement_managementunit_workplans**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_workplans) | Get work plans
 [**get_workforcemanagement_managementunits**](WorkforceManagementApi.html#get_workforcemanagement_managementunits) | Get management units
 [**get_workforcemanagement_managementunits_divisionviews**](WorkforceManagementApi.html#get_workforcemanagement_managementunits_divisionviews) | Get management units across divisions
+[**get_workforcemanagement_notifications**](WorkforceManagementApi.html#get_workforcemanagement_notifications) | Get a list of notifications for the current user
+[**get_workforcemanagement_schedulingjob**](WorkforceManagementApi.html#get_workforcemanagement_schedulingjob) | Get status of the scheduling job
+[**get_workforcemanagement_shifttrades**](WorkforceManagementApi.html#get_workforcemanagement_shifttrades) | Gets all of my shift trades
 [**get_workforcemanagement_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequest) | Get a time off request for the current user
 [**get_workforcemanagement_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequests) | Get a list of time off requests for the current user
 [**patch_workforcemanagement_managementunit_activitycode**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_activitycode) | Update an activity code
+[**patch_workforcemanagement_managementunit_agent**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_agent) | Update agent details
 [**patch_workforcemanagement_managementunit_scheduling_run**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_scheduling_run) | Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
 [**patch_workforcemanagement_managementunit_servicegoalgroup**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_servicegoalgroup) | Update a service goal group
 [**patch_workforcemanagement_managementunit_settings**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_settings) | Patch the settings for the requested management unit
@@ -63,6 +72,10 @@ Method | Description
 [**post_workforcemanagement_managementunit_week_schedules**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_schedules) | Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
 [**post_workforcemanagement_managementunit_week_schedules_generate**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_schedules_generate) | Generate a week schedule
 [**post_workforcemanagement_managementunit_week_schedules_partialupload**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_schedules_partialupload) | Partial upload of user schedules where activity count is greater than 17500
+[**post_workforcemanagement_managementunit_week_shifttrade_match**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_shifttrade_match) | Matches a shift trade. This route can only be called by the receiving agent
+[**post_workforcemanagement_managementunit_week_shifttrade_update**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_shifttrade_update) | Updates a shift trade. This route can only be called by the initiating agent
+[**post_workforcemanagement_managementunit_week_shifttrades**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_shifttrades) | Adds a shift trade
+[**post_workforcemanagement_managementunit_week_shifttrades_search**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_shifttrades_search) | Searches for potential shift trade matches for the current agent
 [**post_workforcemanagement_managementunit_week_shorttermforecast_copy**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_shorttermforecast_copy) | Copy a short term forecast
 [**post_workforcemanagement_managementunit_week_shorttermforecasts**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_shorttermforecasts) | Import a short term forecast
 [**post_workforcemanagement_managementunit_week_shorttermforecasts_generate**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_week_shorttermforecasts_generate) | Generate a short term forecast
@@ -70,8 +83,10 @@ Method | Description
 [**post_workforcemanagement_managementunit_workplan_copy**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_workplan_copy) | Create a copy of work plan
 [**post_workforcemanagement_managementunit_workplans**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_workplans) | Create a new work plan
 [**post_workforcemanagement_managementunits**](WorkforceManagementApi.html#post_workforcemanagement_managementunits) | Add a management unit
+[**post_workforcemanagement_notifications_update**](WorkforceManagementApi.html#post_workforcemanagement_notifications_update) | Mark a list of notifications as read or unread
 [**post_workforcemanagement_schedules**](WorkforceManagementApi.html#post_workforcemanagement_schedules) | Get published schedule for the current user
 [**post_workforcemanagement_timeoffrequests**](WorkforceManagementApi.html#post_workforcemanagement_timeoffrequests) | Create a time off request for the current user
+[**put_workforcemanagement_managementunit_week_shifttrade_state**](WorkforceManagementApi.html#put_workforcemanagement_managementunit_week_shifttrade_state) | Updates a shift trade state
 {: class="table table-striped"}
 
 <a name="delete_workforcemanagement_managementunit"></a>
@@ -617,6 +632,71 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_workforcemanagement_adhocmodelingjob"></a>
+
+## [**ModelingStatusResponse**](ModelingStatusResponse.html) get_workforcemanagement_adhocmodelingjob(job_id)
+
+
+
+Get status of the modeling job
+
+
+
+Wraps GET /api/v2/workforcemanagement/adhocmodelingjobs/{jobId} 
+
+Requires ANY permissions: 
+
+* wfm:adhocModel:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+job_id = "job_id_example" # String | The id of the modeling job
+
+
+begin
+  #Get status of the modeling job
+  result = api_instance.get_workforcemanagement_adhocmodelingjob(job_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_adhocmodelingjob: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| The id of the modeling job |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ModelingStatusResponse**](ModelingStatusResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_workforcemanagement_managementunit"></a>
 
 ## [**ManagementUnit**](ManagementUnit.html) get_workforcemanagement_managementunit(mu_id, opts)
@@ -967,6 +1047,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WfmAgent**](WfmAgent.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_workforcemanagement_managementunit_agent_shifttrades"></a>
+
+## [**ShiftTradeListResponse**](ShiftTradeListResponse.html) get_workforcemanagement_managementunit_agent_shifttrades(management_unit_id, agent_id)
+
+
+
+Gets all the shift trades for a given agent
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades 
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:edit
+* wfm:shiftTradeRequest:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The id of the management unit, or 'mine' for the management unit of the logged-in user.
+
+agent_id = "agent_id_example" # String | The agent id
+
+
+begin
+  #Gets all the shift trades for a given agent
+  result = api_instance.get_workforcemanagement_managementunit_agent_shifttrades(management_unit_id, agent_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_agent_shifttrades: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **agent_id** | **String**| The agent id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ShiftTradeListResponse**](ShiftTradeListResponse.html)
 
 ### HTTP request headers
 
@@ -1447,6 +1596,137 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_workforcemanagement_managementunit_shifttrades_matched"></a>
+
+## [**ShiftTradeMatchesSummaryResponse**](ShiftTradeMatchesSummaryResponse.html) get_workforcemanagement_managementunit_shifttrades_matched(mu_id)
+
+
+
+Gets a summary of all shift trades in the matched state
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/shifttrades/matched 
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:view
+* wfm:shiftTradeRequest:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+mu_id = "mu_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+
+
+begin
+  #Gets a summary of all shift trades in the matched state
+  result = api_instance.get_workforcemanagement_managementunit_shifttrades_matched(mu_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_shifttrades_matched: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mu_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ShiftTradeMatchesSummaryResponse**](ShiftTradeMatchesSummaryResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_workforcemanagement_managementunit_shifttrades_users"></a>
+
+## [**WfmUserEntityListing**](WfmUserEntityListing.html) get_workforcemanagement_managementunit_shifttrades_users(mu_id)
+
+
+
+Gets list of users available for whom you can send direct shift trade requests
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/shifttrades/users 
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+mu_id = "mu_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+
+
+begin
+  #Gets list of users available for whom you can send direct shift trade requests
+  result = api_instance.get_workforcemanagement_managementunit_shifttrades_users(mu_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_shifttrades_users: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mu_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**WfmUserEntityListing**](WfmUserEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_workforcemanagement_managementunit_user_timeoffrequest"></a>
 
 ## [**TimeOffRequestResponse**](TimeOffRequestResponse.html) get_workforcemanagement_managementunit_user_timeoffrequest(mu_id, user_id, time_off_request_id)
@@ -1889,6 +2169,79 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_workforcemanagement_managementunit_week_shifttrades"></a>
+
+## [**WeekShiftTradeListResponse**](WeekShiftTradeListResponse.html) get_workforcemanagement_managementunit_week_shifttrades(management_unit_id, week_date_id, opts)
+
+
+
+Gets all the shift trades for a given week
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades 
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:view
+* wfm:shiftTradeRequest:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+
+week_date_id = Date.parse("2013-10-20") # Date | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+opts = { 
+  evaluate_matches: true # BOOLEAN | Whether to evaluate the matches for violations
+}
+
+begin
+  #Gets all the shift trades for a given week
+  result = api_instance.get_workforcemanagement_managementunit_week_shifttrades(management_unit_id, week_date_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_week_shifttrades: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **week_date_id** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+ **evaluate_matches** | **BOOLEAN**| Whether to evaluate the matches for violations | [optional] [default to true] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**WeekShiftTradeListResponse**](WeekShiftTradeListResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_workforcemanagement_managementunit_week_shorttermforecast_final"></a>
 
 ## [**ForecastResultResponse**](ForecastResultResponse.html) get_workforcemanagement_managementunit_week_shorttermforecast_final(management_unit_id, week_date_id, forecast_id, opts)
@@ -2238,7 +2591,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**|  | [optional]  |
  **page_number** | **Integer**|  | [optional]  |
  **expand** | **String**|  | [optional] <br />**Values**: details |
- **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ShortTermForecasts, TimeOffRequests, WorkPlans |
+ **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans |
  **division_id** | **String**|  | [optional]  |
 {: class="table table-striped"}
 
@@ -2312,6 +2665,190 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ManagementUnitListing**](ManagementUnitListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_workforcemanagement_notifications"></a>
+
+## [**NotificationsResponse**](NotificationsResponse.html) get_workforcemanagement_notifications
+
+
+
+Get a list of notifications for the current user
+
+
+
+Wraps GET /api/v2/workforcemanagement/notifications 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+begin
+  #Get a list of notifications for the current user
+  result = api_instance.get_workforcemanagement_notifications
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_notifications: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**NotificationsResponse**](NotificationsResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_workforcemanagement_schedulingjob"></a>
+
+## [**SchedulingStatusResponse**](SchedulingStatusResponse.html) get_workforcemanagement_schedulingjob(job_id)
+
+
+
+Get status of the scheduling job
+
+
+
+Wraps GET /api/v2/workforcemanagement/schedulingjobs/{jobId} 
+
+Requires ANY permissions: 
+
+* wfm:schedulingrequest:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+job_id = "job_id_example" # String | The id of the scheduling job
+
+
+begin
+  #Get status of the scheduling job
+  result = api_instance.get_workforcemanagement_schedulingjob(job_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_schedulingjob: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| The id of the scheduling job |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SchedulingStatusResponse**](SchedulingStatusResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_workforcemanagement_shifttrades"></a>
+
+## [**ShiftTradeListResponse**](ShiftTradeListResponse.html) get_workforcemanagement_shifttrades
+
+
+
+Gets all of my shift trades
+
+
+
+Wraps GET /api/v2/workforcemanagement/shifttrades 
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:edit
+* wfm:shiftTradeRequest:view
+* wfm:agentShiftTradeRequest:participate
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+begin
+  #Gets all of my shift trades
+  result = api_instance.get_workforcemanagement_shifttrades
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_shifttrades: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ShiftTradeListResponse**](ShiftTradeListResponse.html)
 
 ### HTTP request headers
 
@@ -2518,6 +3055,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ActivityCode**](ActivityCode.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_workforcemanagement_managementunit_agent"></a>
+
+##  patch_workforcemanagement_managementunit_agent(management_unit_id, agent_id, body)
+
+
+
+Update agent details
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId} 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The id of the management unit, or 'mine' for the management unit of the logged-in user.
+
+agent_id = "agent_id_example" # String | The agent id
+
+body = PureCloud::UpdateAgentRequest.new # UpdateAgentRequest | The request body
+
+
+begin
+  #Update agent details
+  api_instance.patch_workforcemanagement_managementunit_agent(management_unit_id, agent_id, body)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_managementunit_agent: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **agent_id** | **String**| The agent id |  |
+ **body** | [**UpdateAgentRequest**](UpdateAgentRequest.html)| The request body |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -4043,6 +4649,296 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_workforcemanagement_managementunit_week_shifttrade_match"></a>
+
+## [**MatchShiftTradeResponse**](MatchShiftTradeResponse.html) post_workforcemanagement_managementunit_week_shifttrade_match(management_unit_id, week_date_id, body, trade_id)
+
+
+
+Matches a shift trade. This route can only be called by the receiving agent
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match 
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+
+week_date_id = Date.parse("2013-10-20") # Date | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+body = PureCloud::MatchShiftTradeRequest.new # MatchShiftTradeRequest | body
+
+trade_id = "trade_id_example" # String | The ID of the shift trade to update
+
+
+begin
+  #Matches a shift trade. This route can only be called by the receiving agent
+  result = api_instance.post_workforcemanagement_managementunit_week_shifttrade_match(management_unit_id, week_date_id, body, trade_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_shifttrade_match: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **week_date_id** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+ **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest.html)| body |  |
+ **trade_id** | **String**| The ID of the shift trade to update |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MatchShiftTradeResponse**](MatchShiftTradeResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_workforcemanagement_managementunit_week_shifttrade_update"></a>
+
+## [**ShiftTradeResponse**](ShiftTradeResponse.html) post_workforcemanagement_managementunit_week_shifttrade_update(management_unit_id, week_date_id, body, trade_id)
+
+
+
+Updates a shift trade. This route can only be called by the initiating agent
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/update 
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+
+week_date_id = Date.parse("2013-10-20") # Date | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+body = PureCloud::UpdateShiftTradeRequest.new # UpdateShiftTradeRequest | body
+
+trade_id = "trade_id_example" # String | The ID of the shift trade to update
+
+
+begin
+  #Updates a shift trade. This route can only be called by the initiating agent
+  result = api_instance.post_workforcemanagement_managementunit_week_shifttrade_update(management_unit_id, week_date_id, body, trade_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_shifttrade_update: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **week_date_id** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+ **body** | [**UpdateShiftTradeRequest**](UpdateShiftTradeRequest.html)| body |  |
+ **trade_id** | **String**| The ID of the shift trade to update |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ShiftTradeResponse**](ShiftTradeResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_workforcemanagement_managementunit_week_shifttrades"></a>
+
+## [**ShiftTradeResponse**](ShiftTradeResponse.html) post_workforcemanagement_managementunit_week_shifttrades(management_unit_id, week_date_id, body)
+
+
+
+Adds a shift trade
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades 
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+
+week_date_id = Date.parse("2013-10-20") # Date | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+body = PureCloud::AddShiftTradeRequest.new # AddShiftTradeRequest | body
+
+
+begin
+  #Adds a shift trade
+  result = api_instance.post_workforcemanagement_managementunit_week_shifttrades(management_unit_id, week_date_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_shifttrades: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **week_date_id** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+ **body** | [**AddShiftTradeRequest**](AddShiftTradeRequest.html)| body |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ShiftTradeResponse**](ShiftTradeResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_workforcemanagement_managementunit_week_shifttrades_search"></a>
+
+## [**SearchShiftTradesResponse**](SearchShiftTradesResponse.html) post_workforcemanagement_managementunit_week_shifttrades_search(management_unit_id, week_date_id, body)
+
+
+
+Searches for potential shift trade matches for the current agent
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search 
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+
+week_date_id = Date.parse("2013-10-20") # Date | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+body = PureCloud::SearchShiftTradesRequest.new # SearchShiftTradesRequest | body
+
+
+begin
+  #Searches for potential shift trade matches for the current agent
+  result = api_instance.post_workforcemanagement_managementunit_week_shifttrades_search(management_unit_id, week_date_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_week_shifttrades_search: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **week_date_id** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+ **body** | [**SearchShiftTradesRequest**](SearchShiftTradesRequest.html)| body |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SearchShiftTradesResponse**](SearchShiftTradesResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_workforcemanagement_managementunit_week_shorttermforecast_copy"></a>
 
 ## [**ShortTermForecastResponse**](ShortTermForecastResponse.html) post_workforcemanagement_managementunit_week_shorttermforecast_copy(management_unit_id, week_date_id, forecast_id, body, opts)
@@ -4556,6 +5452,71 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_workforcemanagement_notifications_update"></a>
+
+## [**UpdateNotificationsResponse**](UpdateNotificationsResponse.html) post_workforcemanagement_notifications_update(opts)
+
+
+
+Mark a list of notifications as read or unread
+
+
+
+Wraps POST /api/v2/workforcemanagement/notifications/update 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+opts = { 
+  body: PureCloud::UpdateNotificationsRequest.new # UpdateNotificationsRequest | body
+}
+
+begin
+  #Mark a list of notifications as read or unread
+  result = api_instance.post_workforcemanagement_notifications_update(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_notifications_update: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**UpdateNotificationsRequest**](UpdateNotificationsRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UpdateNotificationsResponse**](UpdateNotificationsResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_workforcemanagement_schedules"></a>
 
 ## [**UserScheduleContainer**](UserScheduleContainer.html) post_workforcemanagement_schedules(opts)
@@ -4682,6 +5643,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TimeOffRequestResponse**](TimeOffRequestResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_workforcemanagement_managementunit_week_shifttrade_state"></a>
+
+## [**ShiftTradeResponse**](ShiftTradeResponse.html) put_workforcemanagement_managementunit_week_shifttrade_state(management_unit_id, week_date_id, trade_id, body)
+
+
+
+Updates a shift trade state
+
+
+
+Wraps PUT /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/state 
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+* wfm:shiftTradeRequest:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+management_unit_id = "management_unit_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+
+week_date_id = Date.parse("2013-10-20") # Date | The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+trade_id = "trade_id_example" # String | The ID of the shift trade to update
+
+body = PureCloud::UpdateShiftTradeStateRequest.new # UpdateShiftTradeStateRequest | body
+
+
+begin
+  #Updates a shift trade state
+  result = api_instance.put_workforcemanagement_managementunit_week_shifttrade_state(management_unit_id, week_date_id, trade_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->put_workforcemanagement_managementunit_week_shifttrade_state: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **management_unit_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **week_date_id** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+ **trade_id** | **String**| The ID of the shift trade to update |  |
+ **body** | [**UpdateShiftTradeStateRequest**](UpdateShiftTradeStateRequest.html)| body |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ShiftTradeResponse**](ShiftTradeResponse.html)
 
 ### HTTP request headers
 

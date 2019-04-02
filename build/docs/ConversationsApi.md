@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_conversations_details"></a>
 
-## [**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversations_details(opts)
+## [**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html) get_analytics_conversations_details(opts)
 
 
 
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AnalyticsConversation**](AnalyticsConversation.html)
+[**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html)
 
 ### HTTP request headers
 

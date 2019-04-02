@@ -22,7 +22,7 @@ Method | Description
 
 ##  delete_webchat_deployment(deployment_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a WebChat deployment
 
@@ -144,7 +144,7 @@ nil (empty response body)
 
 ## [**WebChatDeployment**](WebChatDeployment.html) get_webchat_deployment(deployment_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a WebChat deployment
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ## [**WebChatDeploymentEntityListing**](WebChatDeploymentEntityListing.html) get_webchat_deployments
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 List WebChat deployments
 
@@ -327,7 +327,7 @@ This endpoint does not need any parameter.
 
 ## [**WebChatDeployment**](WebChatDeployment.html) post_webchat_deployments(body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create WebChat deployment
 
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 
 ## [**WebChatDeployment**](WebChatDeployment.html) put_webchat_deployment(deployment_id, body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update a WebChat deployment
 

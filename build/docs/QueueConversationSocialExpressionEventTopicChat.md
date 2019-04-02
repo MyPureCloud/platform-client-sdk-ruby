@@ -18,6 +18,7 @@ title: QueueConversationSocialExpressionEventTopicChat
 | **start_hold_time** | **DateTime** |  | [optional] |
 | **connected_time** | **DateTime** |  | [optional] |
 | **disconnected_time** | **DateTime** |  | [optional] |
+| **journey_context** | [**QueueConversationSocialExpressionEventTopicJourneyContext**](QueueConversationSocialExpressionEventTopicJourneyContext.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

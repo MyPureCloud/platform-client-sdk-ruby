@@ -36,6 +36,7 @@ title: ConversationCallEventTopicCallMediaParticipant
 | **peer** | **String** |  | [optional] |
 | **screen_recording_state** | **String** |  | [optional] |
 | **flagged_reason** | **String** |  | [optional] |
+| **journey_context** | [**ConversationCallEventTopicJourneyContext**](ConversationCallEventTopicJourneyContext.html) |  | [optional] |
 | **muted** | **BOOLEAN** |  | [optional] |
 | **confined** | **BOOLEAN** |  | [optional] |
 | **recording** | **BOOLEAN** |  | [optional] |

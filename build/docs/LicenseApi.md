@@ -13,6 +13,7 @@ Method | Description
 [**get_license_organization**](LicenseApi.html#get_license_organization) | Get license assignments for the organization.
 [**get_license_toggle**](LicenseApi.html#get_license_toggle) | Get PureCloud license feature toggle value.
 [**get_license_user**](LicenseApi.html#get_license_user) | Get licenses for specified user.
+[**get_license_users**](LicenseApi.html#get_license_users) | Get a page of users and their licenses
 [**post_license_organization**](LicenseApi.html#post_license_organization) | Update the organization&#39;s license assignments in a batch.
 [**post_license_toggle**](LicenseApi.html#post_license_toggle) | Switch PureCloud license feature toggle value.
 [**post_license_users**](LicenseApi.html#post_license_users) | Fetch user licenses in a batch.
@@ -333,6 +334,76 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LicenseUser**](LicenseUser.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_license_users"></a>
+
+## [**UserLicensesEntityListing**](UserLicensesEntityListing.html) get_license_users(opts)
+
+
+
+Get a page of users and their licenses
+
+Retrieve a page of users in an organization along with the licenses they possess.
+
+Wraps GET /api/v2/license/users 
+
+Requires ANY permissions: 
+
+* admin
+* role_manager
+* authorization:grant:add
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::LicenseApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Get a page of users and their licenses
+  result = api_instance.get_license_users(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling LicenseApi->get_license_users: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserLicensesEntityListing**](UserLicensesEntityListing.html)
 
 ### HTTP request headers
 
