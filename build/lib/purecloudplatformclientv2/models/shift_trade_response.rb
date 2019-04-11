@@ -146,7 +146,7 @@ module PureCloud
         
         :'one_sided' => :'BOOLEAN',
         
-        :'acceptable_intervals' => :'Array<ShiftTradeResponseAcceptableIntervals>',
+        :'acceptable_intervals' => :'Array<String>',
         
         :'reviewed_by' => :'UserReference',
         
