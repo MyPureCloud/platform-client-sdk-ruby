@@ -303,7 +303,7 @@ end
 
 api_instance = PureCloud::OAuthApi.new
 
-body = PureCloud::OAuthClient.new # OAuthClient | Client
+body = PureCloud::OAuthClientRequest.new # OAuthClientRequest | Client
 
 
 begin
@@ -319,7 +319,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OAuthClient**](OAuthClient.html)| Client |  |
+ **body** | [**OAuthClientRequest**](OAuthClientRequest.html)| Client |  |
 {: class="table table-striped"}
 
 
@@ -370,7 +370,7 @@ api_instance = PureCloud::OAuthApi.new
 
 client_id = "client_id_example" # String | Client ID
 
-body = PureCloud::OAuthClient.new # OAuthClient | Client
+body = PureCloud::OAuthClientRequest.new # OAuthClientRequest | Client
 
 
 begin
@@ -387,7 +387,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **client_id** | **String**| Client ID |  |
- **body** | [**OAuthClient**](OAuthClient.html)| Client |  |
+ **body** | [**OAuthClientRequest**](OAuthClientRequest.html)| Client |  |
 {: class="table table-striped"}
 
 

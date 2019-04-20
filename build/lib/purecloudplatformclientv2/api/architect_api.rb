@@ -1109,6 +1109,8 @@ module PureCloud
     # @param object_type Consuming object type.  Only versioned types are allowed here.
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :resource_type Types of consumed resources to show
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
     # @return [ConsumedResourcesEntityListing]
     def get_architect_dependencytracking_consumedresources(id, version, object_type, opts = {})
       data, _status_code, _headers = get_architect_dependencytracking_consumedresources_with_http_info(id, version, object_type, opts)
@@ -1122,6 +1124,8 @@ module PureCloud
     # @param object_type Consuming object type.  Only versioned types are allowed here.
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :resource_type Types of consumed resources to show
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
     # @return [Array<(ConsumedResourcesEntityListing, Fixnum, Hash)>] ConsumedResourcesEntityListing data, response status code and response headers
     def get_architect_dependencytracking_consumedresources_with_http_info(id, version, object_type, opts = {})
       if @api_client.config.debugging
@@ -1163,6 +1167,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/consumedresources".sub('{format}','json')
 
@@ -1172,6 +1188,8 @@ module PureCloud
       query_params[:'version'] = version
       query_params[:'objectType'] = object_type
       query_params[:'resourceType'] = @api_client.build_collection_param(opts[:'resource_type'], :multi) if opts[:'resource_type']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
 
       # header parameters
       header_params = {}
@@ -1210,6 +1228,8 @@ module PureCloud
     # @param object_type Consumed object type
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :resource_type Types of consuming resources to show.  Only versioned types are allowed here.
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
     # @return [ConsumingResourcesEntityListing]
     def get_architect_dependencytracking_consumingresources(id, object_type, opts = {})
       data, _status_code, _headers = get_architect_dependencytracking_consumingresources_with_http_info(id, object_type, opts)
@@ -1222,6 +1242,8 @@ module PureCloud
     # @param object_type Consumed object type
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :resource_type Types of consuming resources to show.  Only versioned types are allowed here.
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
     # @return [Array<(ConsumingResourcesEntityListing, Fixnum, Hash)>] ConsumingResourcesEntityListing data, response status code and response headers
     def get_architect_dependencytracking_consumingresources_with_http_info(id, object_type, opts = {})
       if @api_client.config.debugging
@@ -1255,6 +1277,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/consumingresources".sub('{format}','json')
 
@@ -1263,6 +1297,8 @@ module PureCloud
       query_params[:'id'] = id
       query_params[:'objectType'] = object_type
       query_params[:'resourceType'] = @api_client.build_collection_param(opts[:'resource_type'], :multi) if opts[:'resource_type']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
 
       # header parameters
       header_params = {}

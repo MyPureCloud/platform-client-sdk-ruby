@@ -464,6 +464,61 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete PureEngage Identity Provider
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Empty]
+    def delete_identityproviders_pureengage(opts = {})
+      data, _status_code, _headers = delete_identityproviders_pureengage_with_http_info(opts)
+      return data
+    end
+
+    # Delete PureEngage Identity Provider
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
+    def delete_identityproviders_pureengage_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IdentityProviderApi.delete_identityproviders_pureengage ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/identityproviders/pureengage".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Empty')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IdentityProviderApi#delete_identityproviders_pureengage\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete Salesforce Identity Provider
     # 
     # @param [Hash] opts the optional parameters
@@ -1010,6 +1065,61 @@ module PureCloud
         :return_type => 'PureCloud')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IdentityProviderApi#get_identityproviders_purecloud\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get PureEngage Identity Provider
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [PureEnage]
+    def get_identityproviders_pureengage(opts = {})
+      data, _status_code, _headers = get_identityproviders_pureengage_with_http_info(opts)
+      return data
+    end
+
+    # Get PureEngage Identity Provider
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(PureEnage, Fixnum, Hash)>] PureEnage data, response status code and response headers
+    def get_identityproviders_pureengage_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders_pureengage ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/identityproviders/pureengage".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PureEnage')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IdentityProviderApi#get_identityproviders_pureengage\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1585,6 +1695,71 @@ module PureCloud
         :return_type => 'OAuthProvider')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IdentityProviderApi#put_identityproviders_purecloud\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update/Create PureEngage Identity Provider
+    # 
+    # @param body Provider
+    # @param [Hash] opts the optional parameters
+    # @return [OAuthProvider]
+    def put_identityproviders_pureengage(body, opts = {})
+      data, _status_code, _headers = put_identityproviders_pureengage_with_http_info(body, opts)
+      return data
+    end
+
+    # Update/Create PureEngage Identity Provider
+    # 
+    # @param body Provider
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(OAuthProvider, Fixnum, Hash)>] OAuthProvider data, response status code and response headers
+    def put_identityproviders_pureengage_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IdentityProviderApi.put_identityproviders_pureengage ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling IdentityProviderApi.put_identityproviders_pureengage" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/identityproviders/pureengage".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'OAuthProvider')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IdentityProviderApi#put_identityproviders_pureengage\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

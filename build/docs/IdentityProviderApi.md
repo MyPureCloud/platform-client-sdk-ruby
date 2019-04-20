@@ -16,6 +16,7 @@ Method | Description
 [**delete_identityproviders_onelogin**](IdentityProviderApi.html#delete_identityproviders_onelogin) | Delete OneLogin Identity Provider
 [**delete_identityproviders_ping**](IdentityProviderApi.html#delete_identityproviders_ping) | Delete Ping Identity Provider
 [**delete_identityproviders_purecloud**](IdentityProviderApi.html#delete_identityproviders_purecloud) | Delete PureCloud Identity Provider
+[**delete_identityproviders_pureengage**](IdentityProviderApi.html#delete_identityproviders_pureengage) | Delete PureEngage Identity Provider
 [**delete_identityproviders_salesforce**](IdentityProviderApi.html#delete_identityproviders_salesforce) | Delete Salesforce Identity Provider
 [**get_identityproviders**](IdentityProviderApi.html#get_identityproviders) | The list of identity providers
 [**get_identityproviders_adfs**](IdentityProviderApi.html#get_identityproviders_adfs) | Get ADFS Identity Provider
@@ -26,6 +27,7 @@ Method | Description
 [**get_identityproviders_onelogin**](IdentityProviderApi.html#get_identityproviders_onelogin) | Get OneLogin Identity Provider
 [**get_identityproviders_ping**](IdentityProviderApi.html#get_identityproviders_ping) | Get Ping Identity Provider
 [**get_identityproviders_purecloud**](IdentityProviderApi.html#get_identityproviders_purecloud) | Get PureCloud Identity Provider
+[**get_identityproviders_pureengage**](IdentityProviderApi.html#get_identityproviders_pureengage) | Get PureEngage Identity Provider
 [**get_identityproviders_salesforce**](IdentityProviderApi.html#get_identityproviders_salesforce) | Get Salesforce Identity Provider
 [**put_identityproviders_adfs**](IdentityProviderApi.html#put_identityproviders_adfs) | Update/Create ADFS Identity Provider
 [**put_identityproviders_cic**](IdentityProviderApi.html#put_identityproviders_cic) | Update/Create Customer Interaction Center (CIC) Identity Provider
@@ -35,6 +37,7 @@ Method | Description
 [**put_identityproviders_onelogin**](IdentityProviderApi.html#put_identityproviders_onelogin) | Update/Create OneLogin Identity Provider
 [**put_identityproviders_ping**](IdentityProviderApi.html#put_identityproviders_ping) | Update/Create Ping Identity Provider
 [**put_identityproviders_purecloud**](IdentityProviderApi.html#put_identityproviders_purecloud) | Update/Create PureCloud Identity Provider
+[**put_identityproviders_pureengage**](IdentityProviderApi.html#put_identityproviders_pureengage) | Update/Create PureEngage Identity Provider
 [**put_identityproviders_salesforce**](IdentityProviderApi.html#put_identityproviders_salesforce) | Update/Create Salesforce Identity Provider
 {: class="table table-striped"}
 
@@ -491,6 +494,65 @@ begin
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->delete_identityproviders_purecloud: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Empty**](Empty.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_identityproviders_pureengage"></a>
+
+## [**Empty**](Empty.html) delete_identityproviders_pureengage
+
+
+
+Delete PureEngage Identity Provider
+
+
+
+Wraps DELETE /api/v2/identityproviders/pureengage 
+
+Requires ANY permissions: 
+
+* sso:provider:delete
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IdentityProviderApi.new
+
+begin
+  #Delete PureEngage Identity Provider
+  result = api_instance.delete_identityproviders_pureengage
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IdentityProviderApi->delete_identityproviders_pureengage: #{e}"
 end
 ```
 
@@ -1100,6 +1162,65 @@ This endpoint does not need any parameter.
 
 
 
+<a name="get_identityproviders_pureengage"></a>
+
+## [**PureEnage**](PureEnage.html) get_identityproviders_pureengage
+
+
+
+Get PureEngage Identity Provider
+
+
+
+Wraps GET /api/v2/identityproviders/pureengage 
+
+Requires ANY permissions: 
+
+* sso:provider:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IdentityProviderApi.new
+
+begin
+  #Get PureEngage Identity Provider
+  result = api_instance.get_identityproviders_pureengage
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IdentityProviderApi->get_identityproviders_pureengage: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**PureEnage**](PureEnage.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_identityproviders_salesforce"></a>
 
 ## [**Salesforce**](Salesforce.html) get_identityproviders_salesforce
@@ -1673,6 +1794,72 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**PureCloud**](PureCloud.html)| Provider |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OAuthProvider**](OAuthProvider.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_identityproviders_pureengage"></a>
+
+## [**OAuthProvider**](OAuthProvider.html) put_identityproviders_pureengage(body)
+
+
+
+Update/Create PureEngage Identity Provider
+
+
+
+Wraps PUT /api/v2/identityproviders/pureengage 
+
+Requires ANY permissions: 
+
+* sso:provider:add
+* sso:provider:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IdentityProviderApi.new
+
+body = PureCloud::PureEnage.new # PureEnage | Provider
+
+
+begin
+  #Update/Create PureEngage Identity Provider
+  result = api_instance.put_identityproviders_pureengage(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IdentityProviderApi->put_identityproviders_pureengage: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**PureEnage**](PureEnage.html)| Provider |  |
 {: class="table table-striped"}
 
 

@@ -5703,7 +5703,7 @@ module PureCloud
     end
 
     # Get a Trunk Base Settings object by ID
-    # Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+    # Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
     # @param trunk_base_settings_id Trunk Base ID
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :ignore_hidden Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only.
@@ -5714,7 +5714,7 @@ module PureCloud
     end
 
     # Get a Trunk Base Settings object by ID
-    # Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+    # Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
     # @param trunk_base_settings_id Trunk Base ID
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :ignore_hidden Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only.
@@ -5777,7 +5777,7 @@ module PureCloud
     end
 
     # Get Trunk Base Settings listing
-    # Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+    # Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [Integer] :page_size Page size (default to 25)
@@ -5795,7 +5795,7 @@ module PureCloud
     end
 
     # Get Trunk Base Settings listing
-    # Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+    # Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_number Page number
     # @option opts [Integer] :page_size Page size

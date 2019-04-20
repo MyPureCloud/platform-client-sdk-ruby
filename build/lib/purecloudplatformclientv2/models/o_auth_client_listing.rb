@@ -35,7 +35,7 @@ module PureCloud
     # System created secret assigned to this client. Secrets are required for code authorization and client credential grants.
     attr_accessor :secret
 
-    # Roles assigned to this client. Roles only apply to clients using the client_credential grant
+    # Deprecated. Use roleDivisions instead.
     attr_accessor :role_ids
 
     # Date this client was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -50,10 +50,10 @@ module PureCloud
     # User that last modified this client
     attr_accessor :modified_by
 
-    # The scope requested by this client
+    # The scope requested by this client. Scopes only apply to clients not using the client_credential grant
     attr_accessor :scope
 
-    # Set of roles and their corresponding divisions associated with this client
+    # Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant
     attr_accessor :role_divisions
 
     # The URI for this object
@@ -336,11 +336,6 @@ module PureCloud
       
       
       
-      
-      if @scope.nil?
-        return false
-      end
-
       
       
       

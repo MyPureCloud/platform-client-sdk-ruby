@@ -29,6 +29,12 @@ module PureCloud
     # The PureCloud data this schema extends.
     attr_accessor :applies_to
 
+    # The schema's current enabled/disabled status. A disabled schema cannot be assigned to any other objects, but the data on those objects from the schemas still exists
+    attr_accessor :enabled
+
+    # The schema's deleted status. A deleted schema can not be used by any records or updated. All records using a deleted schema will eventually have their schema-based data removed.
+    attr_accessor :deleted
+
     # The user that created this schema.
     attr_accessor :created_by
 
@@ -53,6 +59,10 @@ module PureCloud
         
         :'applies_to' => :'appliesTo',
         
+        :'enabled' => :'enabled',
+        
+        :'deleted' => :'deleted',
+        
         :'created_by' => :'createdBy',
         
         :'date_created' => :'dateCreated',
@@ -75,6 +85,10 @@ module PureCloud
         :'version' => :'Integer',
         
         :'applies_to' => :'Array<String>',
+        
+        :'enabled' => :'BOOLEAN',
+        
+        :'deleted' => :'BOOLEAN',
         
         :'created_by' => :'UriReference',
         
@@ -129,6 +143,24 @@ module PureCloud
           self.applies_to = value
         end
         
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'enabled')
+        
+        
+        self.enabled = attributes[:'enabled']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'deleted')
+        
+        
+        self.deleted = attributes[:'deleted']
         
       
       end
@@ -215,6 +247,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
       if @json_schema.nil?
         return false
       end
@@ -270,6 +310,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -279,6 +329,8 @@ module PureCloud
           name == o.name &&
           version == o.version &&
           applies_to == o.applies_to &&
+          enabled == o.enabled &&
+          deleted == o.deleted &&
           created_by == o.created_by &&
           date_created == o.date_created &&
           json_schema == o.json_schema &&
@@ -294,7 +346,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, version, applies_to, created_by, date_created, json_schema, self_uri].hash
+      [id, name, version, applies_to, enabled, deleted, created_by, date_created, json_schema, self_uri].hash
     end
 
     # build the object from hash
