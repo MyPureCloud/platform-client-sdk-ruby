@@ -48,7 +48,7 @@ Method | Description
 [**patch_user_queues**](UsersApi.html#patch_user_queues) | Join or unjoin a set of queues for a user
 [**patch_user_routinglanguage**](UsersApi.html#patch_user_routinglanguage) | Update routing language proficiency or state.
 [**patch_user_routinglanguages_bulk**](UsersApi.html#patch_user_routinglanguages_bulk) | Add bulk routing language to user. Max limit 50 languages
-[**patch_user_routingskills_bulk**](UsersApi.html#patch_user_routingskills_bulk) | Add bulk routing skills to user
+[**patch_user_routingskills_bulk**](UsersApi.html#patch_user_routingskills_bulk) | Bulk add routing skills to user
 [**patch_users_bulk**](UsersApi.html#patch_users_bulk) | Update bulk acd autoanswer on users
 [**post_analytics_users_aggregates_query**](UsersApi.html#post_analytics_users_aggregates_query) | Query for user aggregates
 [**post_analytics_users_details_query**](UsersApi.html#post_analytics_users_details_query) | Query for user details
@@ -66,6 +66,7 @@ Method | Description
 [**put_user_profileskills**](UsersApi.html#put_user_profileskills) | Update profile skills for a user
 [**put_user_roles**](UsersApi.html#put_user_roles) | Sets the user&#39;s roles
 [**put_user_routingskill**](UsersApi.html#put_user_routingskill) | Update routing skill proficiency or state.
+[**put_user_routingskills_bulk**](UsersApi.html#put_user_routingskills_bulk) | Replace all routing skills assigned to a user
 [**put_user_routingstatus**](UsersApi.html#put_user_routingstatus) | Update the routing status of a user
 [**put_user_station_associatedstation_station_id**](UsersApi.html#put_user_station_associatedstation_station_id) | Set associated station
 [**put_user_station_defaultstation_station_id**](UsersApi.html#put_user_station_defaultstation_station_id) | Set default station
@@ -2163,7 +2164,7 @@ Name | Type | Description  | Notes
  **jabber_id** | [**Array&lt;String&gt;**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional]  |
  **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
  **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
- **state** | **String**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted |
+ **state** | **String**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted, any |
 {: class="table table-striped"}
 
 
@@ -2808,7 +2809,7 @@ Name | Type | Description  | Notes
 
 
 
-Add bulk routing skills to user
+Bulk add routing skills to user
 
 
 
@@ -2843,7 +2844,7 @@ body = [PureCloud::UserRoutingSkillPost.new] # Array<UserRoutingSkillPost> | Ski
 
 
 begin
-  #Add bulk routing skills to user
+  #Bulk add routing skills to user
   result = api_instance.patch_user_routingskills_bulk(user_id, body)
   p result
 rescue PureCloud::ApiError => e
@@ -4015,6 +4016,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserRoutingSkill**](UserRoutingSkill.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_user_routingskills_bulk"></a>
+
+## [**UserSkillEntityListing**](UserSkillEntityListing.html) put_user_routingskills_bulk(user_id, body)
+
+
+
+Replace all routing skills assigned to a user
+
+
+
+Wraps PUT /api/v2/users/{userId}/routingskills/bulk 
+
+Requires ANY permissions: 
+
+* routing:skill:assign
+* admin
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+user_id = "user_id_example" # String | User ID
+
+body = [PureCloud::UserRoutingSkillPost.new] # Array<UserRoutingSkillPost> | Skill
+
+
+begin
+  #Replace all routing skills assigned to a user
+  result = api_instance.put_user_routingskills_bulk(user_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->put_user_routingskills_bulk: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **body** | [**Array&lt;UserRoutingSkillPost&gt;**](UserRoutingSkillPost.html)| Skill |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserSkillEntityListing**](UserSkillEntityListing.html)
 
 ### HTTP request headers
 

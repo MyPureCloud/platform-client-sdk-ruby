@@ -53,6 +53,18 @@ module PureCloud
     # Version number required for updates.
     attr_accessor :version
 
+    # Date this phone number was purchased, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :purchase_date
+
+    # Contract end date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :cancellation_date
+
+    # Contract renewal date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :renewal_date
+
+    # Renewal time period of this phone number, if the phoneNumberType is shortcode.
+    attr_accessor :auto_renewable
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -83,6 +95,14 @@ module PureCloud
         :'modified_by' => :'modifiedBy',
         
         :'version' => :'version',
+        
+        :'purchase_date' => :'purchaseDate',
+        
+        :'cancellation_date' => :'cancellationDate',
+        
+        :'renewal_date' => :'renewalDate',
+        
+        :'auto_renewable' => :'autoRenewable',
         
         :'self_uri' => :'selfUri'
         
@@ -116,6 +136,14 @@ module PureCloud
         :'modified_by' => :'User',
         
         :'version' => :'Integer',
+        
+        :'purchase_date' => :'DateTime',
+        
+        :'cancellation_date' => :'DateTime',
+        
+        :'renewal_date' => :'DateTime',
+        
+        :'auto_renewable' => :'String',
         
         :'self_uri' => :'String'
         
@@ -239,6 +267,42 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'purchaseDate')
+        
+        
+        self.purchase_date = attributes[:'purchaseDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'cancellationDate')
+        
+        
+        self.cancellation_date = attributes[:'cancellationDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'renewalDate')
+        
+        
+        self.renewal_date = attributes[:'renewalDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'autoRenewable')
+        
+        
+        self.auto_renewable = attributes[:'autoRenewable']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -295,7 +359,7 @@ module PureCloud
       
       
       
-      allowed_values = ["invalid", "active", "porting"]
+      allowed_values = ["INVALID", "ACTIVE", "PORTING", "PENDING", "PENDING_CANCELLATION"]
       if @phone_number_status && !allowed_values.include?(@phone_number_status)
         return false
       end
@@ -323,6 +387,27 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["Quarterly"]
+      if @auto_renewable && !allowed_values.include?(@auto_renewable)
+        return false
+      end
       
       
       
@@ -371,7 +456,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] phone_number_status Object to be assigned
     def phone_number_status=(phone_number_status)
-      allowed_values = ["invalid", "active", "porting"]
+      allowed_values = ["INVALID", "ACTIVE", "PORTING", "PENDING", "PENDING_CANCELLATION"]
       if phone_number_status && !allowed_values.include?(phone_number_status)
         fail ArgumentError, "invalid value for 'phone_number_status', must be one of #{allowed_values}."
       end
@@ -416,6 +501,35 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] auto_renewable Object to be assigned
+    def auto_renewable=(auto_renewable)
+      allowed_values = ["Quarterly"]
+      if auto_renewable && !allowed_values.include?(auto_renewable)
+        fail ArgumentError, "invalid value for 'auto_renewable', must be one of #{allowed_values}."
+      end
+      @auto_renewable = auto_renewable
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -433,6 +547,10 @@ module PureCloud
           created_by == o.created_by &&
           modified_by == o.modified_by &&
           version == o.version &&
+          purchase_date == o.purchase_date &&
+          cancellation_date == o.cancellation_date &&
+          renewal_date == o.renewal_date &&
+          auto_renewable == o.auto_renewable &&
           self_uri == o.self_uri
     end
 
@@ -445,7 +563,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, phone_number, phone_number_type, provisioned_through_pure_cloud, phone_number_status, country_code, date_created, date_modified, created_by, modified_by, version, self_uri].hash
+      [id, name, phone_number, phone_number_type, provisioned_through_pure_cloud, phone_number_status, country_code, date_created, date_modified, created_by, modified_by, version, purchase_date, cancellation_date, renewal_date, auto_renewable, self_uri].hash
     end
 
     # build the object from hash

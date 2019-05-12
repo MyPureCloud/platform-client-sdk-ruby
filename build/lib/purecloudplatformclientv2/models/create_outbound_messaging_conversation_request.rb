@@ -177,7 +177,7 @@ module PureCloud
 
       
       
-      allowed_values = ["sms", "facebook", "twitter", "line", "whatsapp", "telegram", "kakao"]
+      allowed_values = ["sms", "facebook", "twitter", "line", "whatsapp"]
       if @to_address_messenger_type && !allowed_values.include?(@to_address_messenger_type)
         return false
       end
@@ -213,7 +213,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] to_address_messenger_type Object to be assigned
     def to_address_messenger_type=(to_address_messenger_type)
-      allowed_values = ["sms", "facebook", "twitter", "line", "whatsapp", "telegram", "kakao"]
+      allowed_values = ["sms", "facebook", "twitter", "line", "whatsapp"]
       if to_address_messenger_type && !allowed_values.include?(to_address_messenger_type)
         fail ArgumentError, "invalid value for 'to_address_messenger_type', must be one of #{allowed_values}."
       end

@@ -2825,6 +2825,8 @@ module PureCloud
     # @option opts [String] :sort_by Sort by (default to number)
     # @option opts [String] :sort_order Sort order (default to ASC)
     # @option opts [String] :phone_number Filter by phoneNumber
+    # @option opts [String] :owner_id Filter by the owner of a phone number
+    # @option opts [String] :did_pool_id Filter by the DID Pool assignment
     # @return [DIDEntityListing]
     def get_telephony_providers_edges_dids(opts = {})
       data, _status_code, _headers = get_telephony_providers_edges_dids_with_http_info(opts)
@@ -2839,11 +2841,25 @@ module PureCloud
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :sort_order Sort order
     # @option opts [String] :phone_number Filter by phoneNumber
+    # @option opts [String] :owner_id Filter by the owner of a phone number
+    # @option opts [String] :did_pool_id Filter by the DID Pool assignment
     # @return [Array<(DIDEntityListing, Fixnum, Hash)>] DIDEntityListing data, response status code and response headers
     def get_telephony_providers_edges_dids_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_dids ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2885,6 +2901,8 @@ module PureCloud
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
       query_params[:'phoneNumber'] = opts[:'phone_number'] if opts[:'phone_number']
+      query_params[:'owner.id'] = opts[:'owner_id'] if opts[:'owner_id']
+      query_params[:'didPool.id'] = opts[:'did_pool_id'] if opts[:'did_pool_id']
 
       # header parameters
       header_params = {}

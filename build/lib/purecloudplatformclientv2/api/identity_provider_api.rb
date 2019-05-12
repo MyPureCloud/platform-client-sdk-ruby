@@ -1072,7 +1072,7 @@ module PureCloud
     # Get PureEngage Identity Provider
     # 
     # @param [Hash] opts the optional parameters
-    # @return [PureEnage]
+    # @return [PureEngage]
     def get_identityproviders_pureengage(opts = {})
       data, _status_code, _headers = get_identityproviders_pureengage_with_http_info(opts)
       return data
@@ -1081,7 +1081,7 @@ module PureCloud
     # Get PureEngage Identity Provider
     # 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(PureEnage, Fixnum, Hash)>] PureEnage data, response status code and response headers
+    # @return [Array<(PureEngage, Fixnum, Hash)>] PureEngage data, response status code and response headers
     def get_identityproviders_pureengage_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: IdentityProviderApi.get_identityproviders_pureengage ..."
@@ -1117,7 +1117,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PureEnage')
+        :return_type => 'PureEngage')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IdentityProviderApi#get_identityproviders_pureengage\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

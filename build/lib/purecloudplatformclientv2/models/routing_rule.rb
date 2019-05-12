@@ -17,44 +17,25 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class PureEnage
-    # The globally unique identifier for the object.
-    attr_accessor :id
+  class RoutingRule
+    # matching operator.  MEETS_THRESHOLD matches any agent with a score at or above the rule's threshold.  ANY matches all specified agents, regardless of score.
+    attr_accessor :operator
 
-    attr_accessor :name
+    # threshold required for routing attempt (generally an agent score).  may be null for operator ANY.
+    attr_accessor :threshold
 
-    attr_accessor :auto_provision_users
-
-    attr_accessor :certificate
-
-    attr_accessor :issuer_uri
-
-    attr_accessor :sso_target_uri
-
-    attr_accessor :disabled
-
-    # The URI for this object
-    attr_accessor :self_uri
+    # seconds to wait in this rule before moving to the next
+    attr_accessor :wait_seconds
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'operator' => :'operator',
         
-        :'name' => :'name',
+        :'threshold' => :'threshold',
         
-        :'auto_provision_users' => :'autoProvisionUsers',
-        
-        :'certificate' => :'certificate',
-        
-        :'issuer_uri' => :'issuerURI',
-        
-        :'sso_target_uri' => :'ssoTargetURI',
-        
-        :'disabled' => :'disabled',
-        
-        :'self_uri' => :'selfUri'
+        :'wait_seconds' => :'waitSeconds'
         
       }
     end
@@ -63,21 +44,11 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
+        :'operator' => :'String',
         
-        :'name' => :'String',
+        :'threshold' => :'Integer',
         
-        :'auto_provision_users' => :'BOOLEAN',
-        
-        :'certificate' => :'String',
-        
-        :'issuer_uri' => :'String',
-        
-        :'sso_target_uri' => :'String',
-        
-        :'disabled' => :'BOOLEAN',
-        
-        :'self_uri' => :'String'
+        :'wait_seconds' => :'Float'
         
       }
     end
@@ -91,73 +62,28 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'operator')
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
+        self.operator = attributes[:'operator']
         
       
       end
 
       
-      if attributes.has_key?(:'autoProvisionUsers')
+      if attributes.has_key?(:'threshold')
         
         
-        self.auto_provision_users = attributes[:'autoProvisionUsers']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'certificate')
-        
-        
-        self.certificate = attributes[:'certificate']
+        self.threshold = attributes[:'threshold']
         
       
       end
 
       
-      if attributes.has_key?(:'issuerURI')
+      if attributes.has_key?(:'waitSeconds')
         
         
-        self.issuer_uri = attributes[:'issuerURI']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'ssoTargetURI')
-        
-        
-        self.sso_target_uri = attributes[:'ssoTargetURI']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'disabled')
-        
-        
-        self.disabled = attributes[:'disabled']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'selfUri')
-        
-        
-        self.self_uri = attributes[:'selfUri']
+        self.wait_seconds = attributes[:'waitSeconds']
         
       
       end
@@ -180,25 +106,10 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      allowed_values = ["MEETS_THRESHOLD", "ANY"]
+      if @operator && !allowed_values.include?(@operator)
+        return false
+      end
       
       
       
@@ -214,32 +125,16 @@ module PureCloud
 
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] operator Object to be assigned
+    def operator=(operator)
+      allowed_values = ["MEETS_THRESHOLD", "ANY"]
+      if operator && !allowed_values.include?(operator)
+        fail ArgumentError, "invalid value for 'operator', must be one of #{allowed_values}."
+      end
+      @operator = operator
+    end
+
     
     
     
@@ -258,14 +153,9 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name &&
-          auto_provision_users == o.auto_provision_users &&
-          certificate == o.certificate &&
-          issuer_uri == o.issuer_uri &&
-          sso_target_uri == o.sso_target_uri &&
-          disabled == o.disabled &&
-          self_uri == o.self_uri
+          operator == o.operator &&
+          threshold == o.threshold &&
+          wait_seconds == o.wait_seconds
     end
 
     # @see the `==` method
@@ -277,7 +167,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, auto_provision_users, certificate, issuer_uri, sso_target_uri, disabled, self_uri].hash
+      [operator, threshold, wait_seconds].hash
     end
 
     # build the object from hash

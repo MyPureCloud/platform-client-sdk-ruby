@@ -19,6 +19,10 @@ title: SmsPhoneNumber
 | **created_by** | [**User**](User.html) | User that provisioned this phone number | [optional] |
 | **modified_by** | [**User**](User.html) | User that last modified this phone number | [optional] |
 | **version** | **Integer** | Version number required for updates. | [optional] |
+| **purchase_date** | **DateTime** | Date this phone number was purchased, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **cancellation_date** | **DateTime** | Contract end date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **renewal_date** | **DateTime** | Contract renewal date of this phone number, if the phoneNumberType is shortcode. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **auto_renewable** | **String** | Renewal time period of this phone number, if the phoneNumberType is shortcode. | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

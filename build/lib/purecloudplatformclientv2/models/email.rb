@@ -77,6 +77,9 @@ module PureCloud
     # A list of uploaded attachments on the email draft.
     attr_accessor :draft_attachments
 
+    # Indicates if the inbound email was marked as spam.
+    attr_accessor :spam
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -119,7 +122,9 @@ module PureCloud
         
         :'message_id' => :'messageId',
         
-        :'draft_attachments' => :'draftAttachments'
+        :'draft_attachments' => :'draftAttachments',
+        
+        :'spam' => :'spam'
         
       }
     end
@@ -166,7 +171,9 @@ module PureCloud
         
         :'message_id' => :'String',
         
-        :'draft_attachments' => :'Array<Attachment>'
+        :'draft_attachments' => :'Array<Attachment>',
+        
+        :'spam' => :'BOOLEAN'
         
       }
     end
@@ -364,6 +371,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'spam')
+        
+        
+        self.spam = attributes[:'spam']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -431,6 +447,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -604,6 +624,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -628,7 +653,8 @@ module PureCloud
           script_id == o.script_id &&
           peer_id == o.peer_id &&
           message_id == o.message_id &&
-          draft_attachments == o.draft_attachments
+          draft_attachments == o.draft_attachments &&
+          spam == o.spam
     end
 
     # @see the `==` method
@@ -640,7 +666,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, held, subject, messages_sent, segments, direction, recording_id, error_info, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, auto_generated, provider, script_id, peer_id, message_id, draft_attachments].hash
+      [state, id, held, subject, messages_sent, segments, direction, recording_id, error_info, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, auto_generated, provider, script_id, peer_id, message_id, draft_attachments, spam].hash
     end
 
     # build the object from hash

@@ -1164,7 +1164,7 @@ This endpoint does not need any parameter.
 
 <a name="get_identityproviders_pureengage"></a>
 
-## [**PureEnage**](PureEnage.html) get_identityproviders_pureengage
+## [**PureEngage**](PureEngage.html) get_identityproviders_pureengage
 
 
 
@@ -1212,7 +1212,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PureEnage**](PureEnage.html)
+[**PureEngage**](PureEngage.html)
 
 ### HTTP request headers
 
@@ -1843,7 +1843,7 @@ end
 
 api_instance = PureCloud::IdentityProviderApi.new
 
-body = PureCloud::PureEnage.new # PureEnage | Provider
+body = PureCloud::PureEngage.new # PureEngage | Provider
 
 
 begin
@@ -1859,7 +1859,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PureEnage**](PureEnage.html)| Provider |  |
+ **body** | [**PureEngage**](PureEngage.html)| Provider |  |
 {: class="table table-striped"}
 
 

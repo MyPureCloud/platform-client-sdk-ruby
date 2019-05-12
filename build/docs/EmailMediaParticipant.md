@@ -40,6 +40,7 @@ title: EmailMediaParticipant
 | **messages_sent** | **Integer** | The number of messages that have been sent in this email conversation. | [optional] |
 | **auto_generated** | **BOOLEAN** | Indicates that the email was auto-generated like an Out of Office reply. | [optional] |
 | **draft_attachments** | [**Array&lt;Attachment&gt;**](Attachment.html) | A list of uploaded attachments on the email draft. | [optional] |
+| **spam** | **BOOLEAN** | Indicates if the inbound email was marked as spam. | [optional] |
 {: class="table table-striped"}
 
 

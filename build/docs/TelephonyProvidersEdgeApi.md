@@ -2713,7 +2713,9 @@ opts = {
   page_number: 1, # Integer | Page number
   sort_by: "number", # String | Sort by
   sort_order: "ASC", # String | Sort order
-  phone_number: "phone_number_example" # String | Filter by phoneNumber
+  phone_number: "phone_number_example", # String | Filter by phoneNumber
+  owner_id: "owner_id_example", # String | Filter by the owner of a phone number
+  did_pool_id: "did_pool_id_example" # String | Filter by the DID Pool assignment
 }
 
 begin
@@ -2734,6 +2736,8 @@ Name | Type | Description  | Notes
  **sort_by** | **String**| Sort by | [optional] [default to number] |
  **sort_order** | **String**| Sort order | [optional] [default to ASC] |
  **phone_number** | **String**| Filter by phoneNumber | [optional]  |
+ **owner_id** | **String**| Filter by the owner of a phone number | [optional]  |
+ **did_pool_id** | **String**| Filter by the DID Pool assignment | [optional]  |
 {: class="table table-striped"}
 
 

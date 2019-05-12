@@ -151,7 +151,7 @@ module PureCloud
       
       
       
-      allowed_values = ["CHECKIN", "CHECKOUT", "CREATE", "DEACTIVATE", "DEBUG", "DELETE", "PUBLISH", "REVERT", "SAVE"]
+      allowed_values = ["CHECKIN", "CHECKOUT", "CREATE", "DEACTIVATE", "DEBUG", "DELETE", "PUBLISH", "REVERT", "SAVE", "TRANSCODE", "UPDATE", "UPLOAD"]
       if @action && !allowed_values.include?(@action)
         return false
       end
@@ -185,7 +185,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] action Object to be assigned
     def action=(action)
-      allowed_values = ["CHECKIN", "CHECKOUT", "CREATE", "DEACTIVATE", "DEBUG", "DELETE", "PUBLISH", "REVERT", "SAVE"]
+      allowed_values = ["CHECKIN", "CHECKOUT", "CREATE", "DEACTIVATE", "DEBUG", "DELETE", "PUBLISH", "REVERT", "SAVE", "TRANSCODE", "UPDATE", "UPLOAD"]
       if action && !allowed_values.include?(action)
         fail ArgumentError, "invalid value for 'action', must be one of #{allowed_values}."
       end

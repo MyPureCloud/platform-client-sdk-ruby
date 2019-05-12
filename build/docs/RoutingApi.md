@@ -50,7 +50,7 @@ Method | Description
 [**patch_routing_queue_users**](RoutingApi.html#patch_routing_queue_users) | Join or unjoin a set of users for a queue
 [**patch_user_routinglanguage**](RoutingApi.html#patch_user_routinglanguage) | Update routing language proficiency or state.
 [**patch_user_routinglanguages_bulk**](RoutingApi.html#patch_user_routinglanguages_bulk) | Add bulk routing language to user. Max limit 50 languages
-[**patch_user_routingskills_bulk**](RoutingApi.html#patch_user_routingskills_bulk) | Add bulk routing skills to user
+[**patch_user_routingskills_bulk**](RoutingApi.html#patch_user_routingskills_bulk) | Bulk add routing skills to user
 [**post_analytics_queues_observations_query**](RoutingApi.html#post_analytics_queues_observations_query) | Query for queue observations
 [**post_routing_email_domain_routes**](RoutingApi.html#post_routing_email_domain_routes) | Create a route
 [**post_routing_email_domains**](RoutingApi.html#post_routing_email_domains) | Create a domain
@@ -71,6 +71,7 @@ Method | Description
 [**put_routing_utilization**](RoutingApi.html#put_routing_utilization) | Update the utilization settings.
 [**put_routing_wrapupcode**](RoutingApi.html#put_routing_wrapupcode) | Update wrap-up code
 [**put_user_routingskill**](RoutingApi.html#put_user_routingskill) | Update routing skill proficiency or state.
+[**put_user_routingskills_bulk**](RoutingApi.html#put_user_routingskills_bulk) | Replace all routing skills assigned to a user
 {: class="table table-striped"}
 
 <a name="delete_routing_email_domain"></a>
@@ -1307,7 +1308,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **messenger_type** | **String**| Messenger Type | [optional] <br />**Values**: sms, facebook, twitter, line, whatsapp, telegram, kakao |
+ **messenger_type** | **String**| Messenger Type | [optional] <br />**Values**: sms, facebook, twitter, line, whatsapp |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
@@ -2966,7 +2967,7 @@ Name | Type | Description  | Notes
 
 
 
-Add bulk routing skills to user
+Bulk add routing skills to user
 
 
 
@@ -3001,7 +3002,7 @@ body = [PureCloud::UserRoutingSkillPost.new] # Array<UserRoutingSkillPost> | Ski
 
 
 begin
-  #Add bulk routing skills to user
+  #Bulk add routing skills to user
   result = api_instance.patch_user_routingskills_bulk(user_id, body)
   p result
 rescue PureCloud::ApiError => e
@@ -4367,6 +4368,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserRoutingSkill**](UserRoutingSkill.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_user_routingskills_bulk"></a>
+
+## [**UserSkillEntityListing**](UserSkillEntityListing.html) put_user_routingskills_bulk(user_id, body)
+
+
+
+Replace all routing skills assigned to a user
+
+
+
+Wraps PUT /api/v2/users/{userId}/routingskills/bulk 
+
+Requires ANY permissions: 
+
+* routing:skill:assign
+* admin
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+body = [PureCloud::UserRoutingSkillPost.new] # Array<UserRoutingSkillPost> | Skill
+
+
+begin
+  #Replace all routing skills assigned to a user
+  result = api_instance.put_user_routingskills_bulk(user_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->put_user_routingskills_bulk: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **body** | [**Array&lt;UserRoutingSkillPost&gt;**](UserRoutingSkillPost.html)| Skill |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserSkillEntityListing**](UserSkillEntityListing.html)
 
 ### HTTP request headers
 

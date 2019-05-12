@@ -36,6 +36,8 @@ module PureCloud
 
     attr_accessor :compliance_abandon_rate_denominator
 
+    attr_accessor :automatic_time_zone_mapping
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -56,7 +58,9 @@ module PureCloud
         
         :'abandon_seconds' => :'abandonSeconds',
         
-        :'compliance_abandon_rate_denominator' => :'complianceAbandonRateDenominator'
+        :'compliance_abandon_rate_denominator' => :'complianceAbandonRateDenominator',
+        
+        :'automatic_time_zone_mapping' => :'automaticTimeZoneMapping'
         
       }
     end
@@ -81,7 +85,9 @@ module PureCloud
         
         :'abandon_seconds' => :'Float',
         
-        :'compliance_abandon_rate_denominator' => :'String'
+        :'compliance_abandon_rate_denominator' => :'String',
+        
+        :'automatic_time_zone_mapping' => :'DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings'
         
       }
     end
@@ -176,6 +182,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'automaticTimeZoneMapping')
+        
+        
+        self.automatic_time_zone_mapping = attributes[:'automaticTimeZoneMapping']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -229,6 +244,10 @@ module PureCloud
       if @compliance_abandon_rate_denominator && !allowed_values.include?(@compliance_abandon_rate_denominator)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -289,6 +308,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -302,7 +326,8 @@ module PureCloud
           max_calls_per_agent == o.max_calls_per_agent &&
           max_line_utilization == o.max_line_utilization &&
           abandon_seconds == o.abandon_seconds &&
-          compliance_abandon_rate_denominator == o.compliance_abandon_rate_denominator
+          compliance_abandon_rate_denominator == o.compliance_abandon_rate_denominator &&
+          automatic_time_zone_mapping == o.automatic_time_zone_mapping
     end
 
     # @see the `==` method
@@ -314,7 +339,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, max_calls_per_agent, max_line_utilization, abandon_seconds, compliance_abandon_rate_denominator].hash
+      [id, name, date_created, date_modified, version, max_calls_per_agent, max_line_utilization, abandon_seconds, compliance_abandon_rate_denominator, automatic_time_zone_mapping].hash
     end
 
     # build the object from hash

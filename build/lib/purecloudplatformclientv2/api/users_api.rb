@@ -2390,8 +2390,8 @@ module PureCloud
       
       
       
-      if opts[:'state'] && !['active', 'inactive', 'deleted'].include?(opts[:'state'])
-        fail ArgumentError, 'invalid value for "state", must be one of active, inactive, deleted'
+      if opts[:'state'] && !['active', 'inactive', 'deleted', 'any'].include?(opts[:'state'])
+        fail ArgumentError, 'invalid value for "state", must be one of active, inactive, deleted, any'
       end
       
       
@@ -3144,7 +3144,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Add bulk routing skills to user
+    # Bulk add routing skills to user
     # 
     # @param user_id User ID
     # @param body Skill
@@ -3155,7 +3155,7 @@ module PureCloud
       return data
     end
 
-    # Add bulk routing skills to user
+    # Bulk add routing skills to user
     # 
     # @param user_id User ID
     # @param body Skill
@@ -4444,6 +4444,81 @@ module PureCloud
         :return_type => 'UserRoutingSkill')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#put_user_routingskill\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Replace all routing skills assigned to a user
+    # 
+    # @param user_id User ID
+    # @param body Skill
+    # @param [Hash] opts the optional parameters
+    # @return [UserSkillEntityListing]
+    def put_user_routingskills_bulk(user_id, body, opts = {})
+      data, _status_code, _headers = put_user_routingskills_bulk_with_http_info(user_id, body, opts)
+      return data
+    end
+
+    # Replace all routing skills assigned to a user
+    # 
+    # @param user_id User ID
+    # @param body Skill
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UserSkillEntityListing, Fixnum, Hash)>] UserSkillEntityListing data, response status code and response headers
+    def put_user_routingskills_bulk_with_http_info(user_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.put_user_routingskills_bulk ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.put_user_routingskills_bulk" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.put_user_routingskills_bulk" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/routingskills/bulk".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserSkillEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#put_user_routingskills_bulk\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -16,6 +16,7 @@ title: DialerOutboundSettingsConfigChangeOutboundSettings
 | **max_line_utilization** | **Float** |  | [optional] |
 | **abandon_seconds** | **Float** |  | [optional] |
 | **compliance_abandon_rate_denominator** | **String** |  | [optional] |
+| **automatic_time_zone_mapping** | [**DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings**](DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings.html) |  | [optional] |
 {: class="table table-striped"}
 
 
