@@ -247,7 +247,7 @@ module PureCloud
       
       
       
-      allowed_values = ["v1", "v2", "third-party"]
+      allowed_values = ["v1", "v2", "v1-http", "third-party"]
       if @client_type && !allowed_values.include?(@client_type)
         return false
       end
@@ -304,7 +304,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] client_type Object to be assigned
     def client_type=(client_type)
-      allowed_values = ["v1", "v2", "third-party"]
+      allowed_values = ["v1", "v2", "v1-http", "third-party"]
       if client_type && !allowed_values.include?(client_type)
         fail ArgumentError, "invalid value for 'client_type', must be one of #{allowed_values}."
       end

@@ -199,7 +199,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **search_type** | **String**| Search Type | <br />**Values**: NAME, ADDRESS, PHONE, EMAIL |
+ **search_type** | **String**| Search Type | <br />**Values**: NAME, ADDRESS, PHONE, EMAIL, TWITTER |
  **search_value** | **String**| Search Value |  |
 {: class="table table-striped"}
 

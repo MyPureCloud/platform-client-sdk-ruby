@@ -18,6 +18,10 @@ require 'date'
 
 module PureCloud
   class TimeInterval
+    attr_accessor :months
+
+    attr_accessor :weeks
+
     attr_accessor :days
 
     attr_accessor :hours
@@ -25,6 +29,10 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
+        :'months' => :'months',
+        
+        :'weeks' => :'weeks',
         
         :'days' => :'days',
         
@@ -36,6 +44,10 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        
+        :'months' => :'Integer',
+        
+        :'weeks' => :'Integer',
         
         :'days' => :'Integer',
         
@@ -51,6 +63,24 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes.has_key?(:'months')
+        
+        
+        self.months = attributes[:'months']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'weeks')
+        
+        
+        self.weeks = attributes[:'weeks']
+        
+      
+      end
 
       
       if attributes.has_key?(:'days')
@@ -94,8 +124,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -112,6 +160,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          months == o.months &&
+          weeks == o.weeks &&
           days == o.days &&
           hours == o.hours
     end
@@ -125,7 +175,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [days, hours].hash
+      [months, weeks, days, hours].hash
     end
 
     # build the object from hash

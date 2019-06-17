@@ -51,6 +51,15 @@ module PureCloud
 
     attr_accessor :queue
 
+    # List of different communication types used in conversation.
+    attr_accessor :media_type
+
+    # Is only true when evaluation is re-scored.
+    attr_accessor :rescore
+
+    # Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :conversation_date
+
     # Signifies if the evaluation is never to be released. This cannot be set true if release date is also set.
     attr_accessor :never_release
 
@@ -100,6 +109,12 @@ module PureCloud
         
         :'queue' => :'queue',
         
+        :'media_type' => :'mediaType',
+        
+        :'rescore' => :'rescore',
+        
+        :'conversation_date' => :'conversationDate',
+        
         :'never_release' => :'neverRelease',
         
         :'resource_id' => :'resourceId',
@@ -146,6 +161,12 @@ module PureCloud
         :'changed_date' => :'DateTime',
         
         :'queue' => :'Queue',
+        
+        :'media_type' => :'Array<String>',
+        
+        :'rescore' => :'BOOLEAN',
+        
+        :'conversation_date' => :'DateTime',
         
         :'never_release' => :'BOOLEAN',
         
@@ -297,6 +318,35 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'mediaType')
+        
+        if (value = attributes[:'mediaType']).is_a?(Array)
+          self.media_type = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'rescore')
+        
+        
+        self.rescore = attributes[:'rescore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'conversationDate')
+        
+        
+        self.conversation_date = attributes[:'conversationDate']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'neverRelease')
         
         
@@ -400,6 +450,18 @@ module PureCloud
       if @status && !allowed_values.include?(@status)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -549,6 +611,21 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] resource_type Object to be assigned
     def resource_type=(resource_type)
@@ -596,6 +673,9 @@ module PureCloud
           assigned_date == o.assigned_date &&
           changed_date == o.changed_date &&
           queue == o.queue &&
+          media_type == o.media_type &&
+          rescore == o.rescore &&
+          conversation_date == o.conversation_date &&
           never_release == o.never_release &&
           resource_id == o.resource_id &&
           resource_type == o.resource_type &&
@@ -613,7 +693,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, conversation, evaluation_form, evaluator, agent, calibration, status, answers, agent_has_read, release_date, assigned_date, changed_date, queue, never_release, resource_id, resource_type, redacted, is_scoring_index, self_uri].hash
+      [id, name, conversation, evaluation_form, evaluator, agent, calibration, status, answers, agent_has_read, release_date, assigned_date, changed_date, queue, media_type, rescore, conversation_date, never_release, resource_id, resource_type, redacted, is_scoring_index, self_uri].hash
     end
 
     # build the object from hash

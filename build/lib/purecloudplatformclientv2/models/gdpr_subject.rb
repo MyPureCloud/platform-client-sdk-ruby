@@ -26,6 +26,10 @@ module PureCloud
 
     attr_accessor :dialer_contact_id
 
+    attr_accessor :journey_customer
+
+    attr_accessor :social_handle
+
     attr_accessor :addresses
 
     attr_accessor :phone_numbers
@@ -43,6 +47,10 @@ module PureCloud
         :'external_contact_id' => :'externalContactId',
         
         :'dialer_contact_id' => :'dialerContactId',
+        
+        :'journey_customer' => :'journeyCustomer',
+        
+        :'social_handle' => :'socialHandle',
         
         :'addresses' => :'addresses',
         
@@ -64,6 +72,10 @@ module PureCloud
         :'external_contact_id' => :'String',
         
         :'dialer_contact_id' => :'DialerContactId',
+        
+        :'journey_customer' => :'GDPRJourneyCustomer',
+        
+        :'social_handle' => :'SocialHandle',
         
         :'addresses' => :'Array<String>',
         
@@ -114,6 +126,24 @@ module PureCloud
         
         
         self.dialer_contact_id = attributes[:'dialerContactId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'journeyCustomer')
+        
+        
+        self.journey_customer = attributes[:'journeyCustomer']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'socialHandle')
+        
+        
+        self.social_handle = attributes[:'socialHandle']
         
       
       end
@@ -195,8 +225,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -242,6 +290,8 @@ module PureCloud
           user_id == o.user_id &&
           external_contact_id == o.external_contact_id &&
           dialer_contact_id == o.dialer_contact_id &&
+          journey_customer == o.journey_customer &&
+          social_handle == o.social_handle &&
           addresses == o.addresses &&
           phone_numbers == o.phone_numbers &&
           email_addresses == o.email_addresses
@@ -256,7 +306,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, user_id, external_contact_id, dialer_contact_id, addresses, phone_numbers, email_addresses].hash
+      [name, user_id, external_contact_id, dialer_contact_id, journey_customer, social_handle, addresses, phone_numbers, email_addresses].hash
     end
 
     # build the object from hash

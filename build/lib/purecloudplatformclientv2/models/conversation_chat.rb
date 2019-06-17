@@ -63,6 +63,9 @@ module PureCloud
     # The id of the peer communication corresponding to a matching leg for this communication.
     attr_accessor :peer_id
 
+    # If available, the URI to the avatar image of this communication.
+    attr_accessor :avatar_image_url
+
     # A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context).
     attr_accessor :journey_context
 
@@ -99,6 +102,8 @@ module PureCloud
         :'script_id' => :'scriptId',
         
         :'peer_id' => :'peerId',
+        
+        :'avatar_image_url' => :'avatarImageUrl',
         
         :'journey_context' => :'journeyContext'
         
@@ -138,6 +143,8 @@ module PureCloud
         :'script_id' => :'String',
         
         :'peer_id' => :'String',
+        
+        :'avatar_image_url' => :'String',
         
         :'journey_context' => :'JourneyContext'
         
@@ -290,6 +297,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'avatarImageUrl')
+        
+        
+        self.avatar_image_url = attributes[:'avatarImageUrl']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'journeyContext')
         
         
@@ -358,6 +374,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -503,6 +523,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -523,6 +548,7 @@ module PureCloud
           provider == o.provider &&
           script_id == o.script_id &&
           peer_id == o.peer_id &&
+          avatar_image_url == o.avatar_image_url &&
           journey_context == o.journey_context
     end
 
@@ -535,7 +561,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, script_id, peer_id, journey_context].hash
+      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, script_id, peer_id, avatar_image_url, journey_context].hash
     end
 
     # build the object from hash

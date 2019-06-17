@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 Method | Description
 ------------- | ------------- | -------------
 [**delete_conversation_participant_code**](ConversationsApi.html#delete_conversation_participant_code) | Delete a code used to add a communication to this participant
+[**delete_conversation_participant_flaggedreason**](ConversationsApi.html#delete_conversation_participant_flaggedreason) | Remove flagged reason from conversation participant.
 [**delete_conversations_call_participant_consult**](ConversationsApi.html#delete_conversations_call_participant_consult) | Cancel the transfer
 [**delete_conversations_email_messages_draft_attachment**](ConversationsApi.html#delete_conversations_email_messages_draft_attachment) | Delete attachment from draft
 [**get_analytics_conversation_details**](ConversationsApi.html#get_analytics_conversation_details) | Get a conversation by id
@@ -106,6 +107,7 @@ Method | Description
 [**post_conversations_message_messages_bulk**](ConversationsApi.html#post_conversations_message_messages_bulk) | Get messages in batch
 [**post_conversations_message_participant_replace**](ConversationsApi.html#post_conversations_message_participant_replace) | Replace this participant with the specified user and/or address
 [**post_conversations_messages**](ConversationsApi.html#post_conversations_messages) | Create an outbound messaging conversation.
+[**put_conversation_participant_flaggedreason**](ConversationsApi.html#put_conversation_participant_flaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality.
 [**put_conversations_call_participant_communication_uuidata**](ConversationsApi.html#put_conversations_call_participant_communication_uuidata) | Set uuiData to be sent on future commands.
 [**put_conversations_email_messages_draft**](ConversationsApi.html#put_conversations_email_messages_draft) | Update conversation draft reply
 {: class="table table-striped"}
@@ -165,6 +167,72 @@ Name | Type | Description  | Notes
  **conversation_id** | **String**| conversation ID |  |
  **participant_id** | **String**| participant ID |  |
  **add_communication_code** | **String**| addCommunicationCode |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_conversation_participant_flaggedreason"></a>
+
+##  delete_conversation_participant_flaggedreason(conversation_id, participant_id)
+
+
+
+Remove flagged reason from conversation participant.
+
+
+
+Wraps DELETE /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversation ID
+
+participant_id = "participant_id_example" # String | participant ID
+
+
+begin
+  #Remove flagged reason from conversation participant.
+  api_instance.delete_conversation_participant_flaggedreason(conversation_id, participant_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->delete_conversation_participant_flaggedreason: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversation ID |  |
+ **participant_id** | **String**| participant ID |  |
 {: class="table table-striped"}
 
 
@@ -6709,6 +6777,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**MessageConversation**](MessageConversation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_conversation_participant_flaggedreason"></a>
+
+##  put_conversation_participant_flaggedreason(conversation_id, participant_id)
+
+
+
+Set flagged reason on conversation participant to indicate bad conversation quality.
+
+
+
+Wraps PUT /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversation ID
+
+participant_id = "participant_id_example" # String | participant ID
+
+
+begin
+  #Set flagged reason on conversation participant to indicate bad conversation quality.
+  api_instance.put_conversation_participant_flaggedreason(conversation_id, participant_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->put_conversation_participant_flaggedreason: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversation ID |  |
+ **participant_id** | **String**| participant ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 

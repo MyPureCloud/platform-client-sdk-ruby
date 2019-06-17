@@ -27,9 +27,9 @@ module PureCloud
 
     attr_accessor :certificate
 
-    attr_accessor :issuer_uri
-
     attr_accessor :sso_target_uri
+
+    attr_accessor :issuer_uri
 
     attr_accessor :disabled
 
@@ -48,9 +48,9 @@ module PureCloud
         
         :'certificate' => :'certificate',
         
-        :'issuer_uri' => :'issuerURI',
-        
         :'sso_target_uri' => :'ssoTargetURI',
+        
+        :'issuer_uri' => :'issuerURI',
         
         :'disabled' => :'disabled',
         
@@ -71,9 +71,9 @@ module PureCloud
         
         :'certificate' => :'String',
         
-        :'issuer_uri' => :'String',
-        
         :'sso_target_uri' => :'String',
+        
+        :'issuer_uri' => :'String',
         
         :'disabled' => :'BOOLEAN',
         
@@ -127,19 +127,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'issuerURI')
+      if attributes.has_key?(:'ssoTargetURI')
         
         
-        self.issuer_uri = attributes[:'issuerURI']
+        self.sso_target_uri = attributes[:'ssoTargetURI']
         
       
       end
 
       
-      if attributes.has_key?(:'ssoTargetURI')
+      if attributes.has_key?(:'issuerURI')
         
         
-        self.sso_target_uri = attributes[:'ssoTargetURI']
+        self.issuer_uri = attributes[:'issuerURI']
         
       
       end
@@ -262,8 +262,8 @@ module PureCloud
           name == o.name &&
           relying_party_identifier == o.relying_party_identifier &&
           certificate == o.certificate &&
-          issuer_uri == o.issuer_uri &&
           sso_target_uri == o.sso_target_uri &&
+          issuer_uri == o.issuer_uri &&
           disabled == o.disabled &&
           self_uri == o.self_uri
     end
@@ -277,7 +277,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, relying_party_identifier, certificate, issuer_uri, sso_target_uri, disabled, self_uri].hash
+      [id, name, relying_party_identifier, certificate, sso_target_uri, issuer_uri, disabled, self_uri].hash
     end
 
     # build the object from hash

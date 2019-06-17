@@ -22,9 +22,9 @@ module PureCloud
 
     attr_accessor :id
 
-    attr_accessor :dstsavings
-
     attr_accessor :raw_offset
+
+    attr_accessor :dstsavings
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -34,9 +34,9 @@ module PureCloud
         
         :'id' => :'id',
         
-        :'dstsavings' => :'dstsavings',
+        :'raw_offset' => :'rawOffset',
         
-        :'raw_offset' => :'rawOffset'
+        :'dstsavings' => :'dstsavings'
         
       }
     end
@@ -49,9 +49,9 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'dstsavings' => :'Integer',
+        :'raw_offset' => :'Integer',
         
-        :'raw_offset' => :'Integer'
+        :'dstsavings' => :'Integer'
         
       }
     end
@@ -83,19 +83,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'dstsavings')
+      if attributes.has_key?(:'rawOffset')
         
         
-        self.dstsavings = attributes[:'dstsavings']
+        self.raw_offset = attributes[:'rawOffset']
         
       
       end
 
       
-      if attributes.has_key?(:'rawOffset')
+      if attributes.has_key?(:'dstsavings')
         
         
-        self.raw_offset = attributes[:'rawOffset']
+        self.dstsavings = attributes[:'dstsavings']
         
       
       end
@@ -162,8 +162,8 @@ module PureCloud
       self.class == o.class &&
           display_name == o.display_name &&
           id == o.id &&
-          dstsavings == o.dstsavings &&
-          raw_offset == o.raw_offset
+          raw_offset == o.raw_offset &&
+          dstsavings == o.dstsavings
     end
 
     # @see the `==` method
@@ -175,7 +175,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [display_name, id, dstsavings, raw_offset].hash
+      [display_name, id, raw_offset, dstsavings].hash
     end
 
     # build the object from hash

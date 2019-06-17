@@ -387,6 +387,11 @@ module PureCloud
       
       
       
+      if @version.nil?
+        return false
+      end
+
+      
       
       
       

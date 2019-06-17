@@ -31,6 +31,8 @@ module PureCloud
 
     attr_accessor :assign_metered_evaluations
 
+    attr_accessor :assign_metered_assignment_by_agent
+
     attr_accessor :assign_calibrations
 
     attr_accessor :assign_surveys
@@ -54,6 +56,8 @@ module PureCloud
         :'assign_evaluations' => :'assignEvaluations',
         
         :'assign_metered_evaluations' => :'assignMeteredEvaluations',
+        
+        :'assign_metered_assignment_by_agent' => :'assignMeteredAssignmentByAgent',
         
         :'assign_calibrations' => :'assignCalibrations',
         
@@ -81,6 +85,8 @@ module PureCloud
         :'assign_evaluations' => :'Array<EvaluationAssignment>',
         
         :'assign_metered_evaluations' => :'Array<MeteredEvaluationAssignment>',
+        
+        :'assign_metered_assignment_by_agent' => :'Array<MeteredAssignmentByAgent>',
         
         :'assign_calibrations' => :'Array<CalibrationAssignment>',
         
@@ -146,6 +152,17 @@ module PureCloud
         
         if (value = attributes[:'assignMeteredEvaluations']).is_a?(Array)
           self.assign_metered_evaluations = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'assignMeteredAssignmentByAgent')
+        
+        if (value = attributes[:'assignMeteredAssignmentByAgent']).is_a?(Array)
+          self.assign_metered_assignment_by_agent = value
         end
         
         
@@ -259,8 +276,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -322,6 +348,7 @@ module PureCloud
           always_delete == o.always_delete &&
           assign_evaluations == o.assign_evaluations &&
           assign_metered_evaluations == o.assign_metered_evaluations &&
+          assign_metered_assignment_by_agent == o.assign_metered_assignment_by_agent &&
           assign_calibrations == o.assign_calibrations &&
           assign_surveys == o.assign_surveys &&
           retention_duration == o.retention_duration &&
@@ -338,7 +365,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [retain_recording, delete_recording, always_delete, assign_evaluations, assign_metered_evaluations, assign_calibrations, assign_surveys, retention_duration, initiate_screen_recording, media_transcriptions].hash
+      [retain_recording, delete_recording, always_delete, assign_evaluations, assign_metered_evaluations, assign_metered_assignment_by_agent, assign_calibrations, assign_surveys, retention_duration, initiate_screen_recording, media_transcriptions].hash
     end
 
     # build the object from hash

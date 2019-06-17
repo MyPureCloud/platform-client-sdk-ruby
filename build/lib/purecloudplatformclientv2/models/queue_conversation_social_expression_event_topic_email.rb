@@ -52,6 +52,8 @@ module PureCloud
 
     attr_accessor :draft_attachments
 
+    attr_accessor :spam
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -91,6 +93,8 @@ module PureCloud
         :'direction' => :'direction',
         
         :'draft_attachments' => :'draftAttachments',
+        
+        :'spam' => :'spam',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -134,6 +138,8 @@ module PureCloud
         :'direction' => :'String',
         
         :'draft_attachments' => :'Array<QueueConversationSocialExpressionEventTopicAttachment>',
+        
+        :'spam' => :'BOOLEAN',
         
         :'additional_properties' => :'Object'
         
@@ -304,6 +310,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'spam')
+        
+        
+        self.spam = attributes[:'spam']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -404,6 +419,10 @@ module PureCloud
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -535,6 +554,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -557,6 +581,7 @@ module PureCloud
           message_id == o.message_id &&
           direction == o.direction &&
           draft_attachments == o.draft_attachments &&
+          spam == o.spam &&
           additional_properties == o.additional_properties
     end
 
@@ -569,7 +594,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, held, auto_generated, subject, provider, script_id, peer_id, messages_sent, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, message_id, direction, draft_attachments, additional_properties].hash
+      [id, state, held, auto_generated, subject, provider, script_id, peer_id, messages_sent, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, message_id, direction, draft_attachments, spam, additional_properties].hash
     end
 
     # build the object from hash

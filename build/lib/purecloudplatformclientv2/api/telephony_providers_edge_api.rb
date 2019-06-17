@@ -4646,6 +4646,7 @@ module PureCloud
     # @option opts [String] :phone_hardware_id Filter by phone_hardwareId
     # @option opts [String] :lines_id Filter by lines.id
     # @option opts [String] :lines_name Filter by lines.name
+    # @option opts [String] :name Name of the Phone to filter by
     # @option opts [Array<String>] :expand Fields to expand in the response, comma-separated
     # @option opts [Array<String>] :fields Fields and properties to get, comma-separated
     # @return [PhoneEntityListing]
@@ -4669,6 +4670,7 @@ module PureCloud
     # @option opts [String] :phone_hardware_id Filter by phone_hardwareId
     # @option opts [String] :lines_id Filter by lines.id
     # @option opts [String] :lines_name Filter by lines.name
+    # @option opts [String] :name Name of the Phone to filter by
     # @option opts [Array<String>] :expand Fields to expand in the response, comma-separated
     # @option opts [Array<String>] :fields Fields and properties to get, comma-separated
     # @return [Array<(PhoneEntityListing, Fixnum, Hash)>] PhoneEntityListing data, response status code and response headers
@@ -4676,6 +4678,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_phones ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -4778,6 +4786,7 @@ module PureCloud
       query_params[:'phone_hardwareId'] = opts[:'phone_hardware_id'] if opts[:'phone_hardware_id']
       query_params[:'lines.id'] = opts[:'lines_id'] if opts[:'lines_id']
       query_params[:'lines.name'] = opts[:'lines_name'] if opts[:'lines_name']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
       query_params[:'fields'] = @api_client.build_collection_param(opts[:'fields'], :multi) if opts[:'fields']
 

@@ -4297,6 +4297,7 @@ opts = {
   phone_hardware_id: "phone_hardware_id_example", # String | Filter by phone_hardwareId
   lines_id: "lines_id_example", # String | Filter by lines.id
   lines_name: "lines_name_example", # String | Filter by lines.name
+  name: "name_example", # String | Name of the Phone to filter by
   expand: ["expand_example"], # Array<String> | Fields to expand in the response, comma-separated
   fields: ["fields_example"] # Array<String> | Fields and properties to get, comma-separated
 }
@@ -4326,6 +4327,7 @@ Name | Type | Description  | Notes
  **phone_hardware_id** | **String**| Filter by phone_hardwareId | [optional]  |
  **lines_id** | **String**| Filter by lines.id | [optional]  |
  **lines_name** | **String**| Filter by lines.name | [optional]  |
+ **name** | **String**| Name of the Phone to filter by | [optional]  |
  **expand** | [**Array&lt;String&gt;**](String.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties, site, status, status.primaryEdgesStatus, status.secondaryEdgesStatus, phoneBaseSettings, lines |
  **fields** | [**Array&lt;String&gt;**](String.html)| Fields and properties to get, comma-separated | [optional] <br />**Values**: webRtcUser, properties.*, lines.loggedInUser, lines.defaultForUser |
 {: class="table table-striped"}

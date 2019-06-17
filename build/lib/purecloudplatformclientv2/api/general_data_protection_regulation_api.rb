@@ -189,8 +189,8 @@ module PureCloud
       fail ArgumentError, "Missing the required parameter 'search_type' when calling GeneralDataProtectionRegulationApi.get_gdpr_subjects" if search_type.nil?
       
       # verify enum value
-      unless ['NAME', 'ADDRESS', 'PHONE', 'EMAIL'].include?(search_type)
-        fail ArgumentError, "invalid value for 'search_type', must be one of NAME, ADDRESS, PHONE, EMAIL"
+      unless ['NAME', 'ADDRESS', 'PHONE', 'EMAIL', 'TWITTER'].include?(search_type)
+        fail ArgumentError, "invalid value for 'search_type', must be one of NAME, ADDRESS, PHONE, EMAIL, TWITTER"
       end
       
       

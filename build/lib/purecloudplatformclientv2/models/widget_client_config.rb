@@ -22,6 +22,8 @@ module PureCloud
 
     attr_accessor :v2
 
+    attr_accessor :v1_http
+
     attr_accessor :third_party
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -31,6 +33,8 @@ module PureCloud
         :'v1' => :'v1',
         
         :'v2' => :'v2',
+        
+        :'v1_http' => :'v1-http',
         
         :'third_party' => :'third-party'
         
@@ -44,6 +48,8 @@ module PureCloud
         :'v1' => :'WidgetClientConfigV1',
         
         :'v2' => :'WidgetClientConfigV2',
+        
+        :'v1_http' => :'WidgetClientConfigV1Http',
         
         :'third_party' => :'WidgetClientConfigThirdParty'
         
@@ -72,6 +78,15 @@ module PureCloud
         
         
         self.v2 = attributes[:'v2']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'v1-http')
+        
+        
+        self.v1_http = attributes[:'v1-http']
         
       
       end
@@ -113,8 +128,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -138,6 +162,7 @@ module PureCloud
       self.class == o.class &&
           v1 == o.v1 &&
           v2 == o.v2 &&
+          v1_http == o.v1_http &&
           third_party == o.third_party
     end
 
@@ -150,7 +175,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [v1, v2, third_party].hash
+      [v1, v2, v1_http, third_party].hash
     end
 
     # build the object from hash

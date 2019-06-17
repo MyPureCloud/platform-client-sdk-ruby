@@ -108,6 +108,80 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Remove flagged reason from conversation participant.
+    # 
+    # @param conversation_id conversation ID
+    # @param participant_id participant ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_conversation_participant_flaggedreason(conversation_id, participant_id, opts = {})
+      delete_conversation_participant_flaggedreason_with_http_info(conversation_id, participant_id, opts)
+      return nil
+    end
+
+    # Remove flagged reason from conversation participant.
+    # 
+    # @param conversation_id conversation ID
+    # @param participant_id participant ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_conversation_participant_flaggedreason_with_http_info(conversation_id, participant_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.delete_conversation_participant_flaggedreason ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.delete_conversation_participant_flaggedreason" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.delete_conversation_participant_flaggedreason" if participant_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#delete_conversation_participant_flaggedreason\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Cancel the transfer
     # 
     # @param conversation_id conversationId
@@ -7472,6 +7546,80 @@ module PureCloud
         :return_type => 'MessageConversation')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_messages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Set flagged reason on conversation participant to indicate bad conversation quality.
+    # 
+    # @param conversation_id conversation ID
+    # @param participant_id participant ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def put_conversation_participant_flaggedreason(conversation_id, participant_id, opts = {})
+      put_conversation_participant_flaggedreason_with_http_info(conversation_id, participant_id, opts)
+      return nil
+    end
+
+    # Set flagged reason on conversation participant to indicate bad conversation quality.
+    # 
+    # @param conversation_id conversation ID
+    # @param participant_id participant ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def put_conversation_participant_flaggedreason_with_http_info(conversation_id, participant_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.put_conversation_participant_flaggedreason ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.put_conversation_participant_flaggedreason" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'participant_id' is set
+      fail ArgumentError, "Missing the required parameter 'participant_id' when calling ConversationsApi.put_conversation_participant_flaggedreason" if participant_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'participantId' + '}', participant_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#put_conversation_participant_flaggedreason\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

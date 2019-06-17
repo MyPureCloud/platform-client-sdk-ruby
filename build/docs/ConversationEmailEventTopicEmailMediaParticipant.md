@@ -42,6 +42,7 @@ title: ConversationEmailEventTopicEmailMediaParticipant
 | **auto_generated** | **BOOLEAN** |  | [optional] |
 | **message_id** | **String** |  | [optional] |
 | **draft_attachments** | [**Array&lt;ConversationEmailEventTopicAttachment&gt;**](ConversationEmailEventTopicAttachment.html) |  | [optional] |
+| **spam** | **BOOLEAN** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -33,6 +33,9 @@ module PureCloud
     # Unique identifier for the language requested for an interaction
     attr_accessor :requested_language_id
 
+    # Routing priority for the current interaction
+    attr_accessor :routing_priority
+
     # A human readable name identifying the participant
     attr_accessor :participant_name
 
@@ -74,6 +77,8 @@ module PureCloud
         
         :'requested_language_id' => :'requestedLanguageId',
         
+        :'routing_priority' => :'routingPriority',
+        
         :'participant_name' => :'participantName',
         
         :'user_id' => :'userId',
@@ -108,6 +113,8 @@ module PureCloud
         :'requested_routing_skill_ids' => :'Array<String>',
         
         :'requested_language_id' => :'String',
+        
+        :'routing_priority' => :'Integer',
         
         :'participant_name' => :'String',
         
@@ -181,6 +188,15 @@ module PureCloud
         
         
         self.requested_language_id = attributes[:'requestedLanguageId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'routingPriority')
+        
+        
+        self.routing_priority = attributes[:'routingPriority']
         
       
       end
@@ -317,6 +333,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["inbound", "outbound"]
       if @direction && !allowed_values.include?(@direction)
         return false
@@ -350,6 +370,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -440,6 +465,7 @@ module PureCloud
           session_id == o.session_id &&
           requested_routing_skill_ids == o.requested_routing_skill_ids &&
           requested_language_id == o.requested_language_id &&
+          routing_priority == o.routing_priority &&
           participant_name == o.participant_name &&
           user_id == o.user_id &&
           direction == o.direction &&
@@ -460,7 +486,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [observation_date, conversation_id, session_id, requested_routing_skill_ids, requested_language_id, participant_name, user_id, direction, converted_from, converted_to, address_from, address_to, ani, dnis].hash
+      [observation_date, conversation_id, session_id, requested_routing_skill_ids, requested_language_id, routing_priority, participant_name, user_id, direction, converted_from, converted_to, address_from, address_to, ani, dnis].hash
     end
 
     # build the object from hash
