@@ -96,7 +96,7 @@ module PureCloud
       
       if attributes.has_key?(:'data')
         
-        if (value = attributes[:'data']).is_a?(Array)
+        if (value = attributes[:'data']).is_a?(Hash)
           self.data = value
         end
         
