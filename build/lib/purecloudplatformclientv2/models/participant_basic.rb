@@ -93,6 +93,9 @@ module PureCloud
     # Call wrap up or disposition data.
     attr_accessor :wrapup
 
+    # Information on how a communication should be routed to an agent.
+    attr_accessor :conversation_routing_data
+
     # Specifies how long the agent has to answer an interaction before being marked as not responding.
     attr_accessor :alerting_timeout_ms
 
@@ -182,6 +185,8 @@ module PureCloud
         
         :'wrapup' => :'wrapup',
         
+        :'conversation_routing_data' => :'conversationRoutingData',
+        
         :'alerting_timeout_ms' => :'alertingTimeoutMs',
         
         :'monitored_participant_id' => :'monitoredParticipantId',
@@ -268,6 +273,8 @@ module PureCloud
         :'wrapup_skipped' => :'BOOLEAN',
         
         :'wrapup' => :'Wrapup',
+        
+        :'conversation_routing_data' => :'ConversationRoutingData',
         
         :'alerting_timeout_ms' => :'Integer',
         
@@ -531,6 +538,15 @@ module PureCloud
         
         
         self.wrapup = attributes[:'wrapup']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'conversationRoutingData')
+        
+        
+        self.conversation_routing_data = attributes[:'conversationRoutingData']
         
       
       end
@@ -867,6 +883,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["requested", "active", "paused", "stopped", "error", "timeout"]
       if @screen_recording_state && !allowed_values.include?(@screen_recording_state)
         return false
@@ -1086,6 +1106,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] screen_recording_state Object to be assigned
     def screen_recording_state=(screen_recording_state)
@@ -1143,6 +1168,7 @@ module PureCloud
           wrapup_timeout_ms == o.wrapup_timeout_ms &&
           wrapup_skipped == o.wrapup_skipped &&
           wrapup == o.wrapup &&
+          conversation_routing_data == o.conversation_routing_data &&
           alerting_timeout_ms == o.alerting_timeout_ms &&
           monitored_participant_id == o.monitored_participant_id &&
           attributes == o.attributes &&
@@ -1169,7 +1195,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, start_time, end_time, connected_time, name, user_uri, user_id, external_contact_id, external_organization_id, queue_id, group_id, queue_name, purpose, participant_type, consult_participant_id, address, ani, ani_name, dnis, locale, wrapup_required, wrapup_prompt, wrapup_timeout_ms, wrapup_skipped, wrapup, alerting_timeout_ms, monitored_participant_id, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, evaluations, screen_recording_state, flagged_reason].hash
+      [id, start_time, end_time, connected_time, name, user_uri, user_id, external_contact_id, external_organization_id, queue_id, group_id, queue_name, purpose, participant_type, consult_participant_id, address, ani, ani_name, dnis, locale, wrapup_required, wrapup_prompt, wrapup_timeout_ms, wrapup_skipped, wrapup, conversation_routing_data, alerting_timeout_ms, monitored_participant_id, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, evaluations, screen_recording_state, flagged_reason].hash
     end
 
     # build the object from hash

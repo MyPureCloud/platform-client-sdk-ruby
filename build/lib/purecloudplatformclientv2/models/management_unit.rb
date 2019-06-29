@@ -27,6 +27,9 @@ module PureCloud
     # The division to which this entity belongs.
     attr_accessor :division
 
+    # The business unit to which this management unit belongs
+    attr_accessor :business_unit
+
     # Start day of week for scheduling and forecasting purposes
     attr_accessor :start_day_of_week
 
@@ -61,6 +64,8 @@ module PureCloud
         
         :'division' => :'division',
         
+        :'business_unit' => :'businessUnit',
+        
         :'start_day_of_week' => :'startDayOfWeek',
         
         :'time_zone' => :'timeZone',
@@ -89,6 +94,8 @@ module PureCloud
         :'name' => :'String',
         
         :'division' => :'Division',
+        
+        :'business_unit' => :'BusinessUnitReference',
         
         :'start_day_of_week' => :'String',
         
@@ -140,6 +147,15 @@ module PureCloud
         
         
         self.division = attributes[:'division']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'businessUnit')
+        
+        
+        self.business_unit = attributes[:'businessUnit']
         
       
       end
@@ -246,6 +262,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
       if @start_day_of_week && !allowed_values.include?(@start_day_of_week)
         return false
@@ -293,6 +313,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -366,6 +391,7 @@ module PureCloud
           id == o.id &&
           name == o.name &&
           division == o.division &&
+          business_unit == o.business_unit &&
           start_day_of_week == o.start_day_of_week &&
           time_zone == o.time_zone &&
           settings == o.settings &&
@@ -385,7 +411,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, start_day_of_week, time_zone, settings, version, date_modified, modified_by, metadata, self_uri].hash
+      [id, name, division, business_unit, start_day_of_week, time_zone, settings, version, date_modified, modified_by, metadata, self_uri].hash
     end
 
     # build the object from hash

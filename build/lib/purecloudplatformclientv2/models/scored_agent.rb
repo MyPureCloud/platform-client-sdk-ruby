@@ -17,20 +17,20 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class AddressableEntityUser
-    # The globally unique identifier for the object.
-    attr_accessor :id
+  class ScoredAgent
+    # The agent
+    attr_accessor :agent
 
-    # The URI for this object
-    attr_accessor :self_uri
+    # Agent's score for the current conversation, from 0 - 100, higher being better
+    attr_accessor :score
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'agent' => :'agent',
         
-        :'self_uri' => :'selfUri'
+        :'score' => :'score'
         
       }
     end
@@ -39,9 +39,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
+        :'agent' => :'Agent',
         
-        :'self_uri' => :'String'
+        :'score' => :'Integer'
         
       }
     end
@@ -55,19 +55,19 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'agent')
         
         
-        self.id = attributes[:'id']
+        self.agent = attributes[:'agent']
         
       
       end
 
       
-      if attributes.has_key?(:'selfUri')
+      if attributes.has_key?(:'score')
         
         
-        self.self_uri = attributes[:'selfUri']
+        self.score = attributes[:'score']
         
       
       end
@@ -114,8 +114,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          self_uri == o.self_uri
+          agent == o.agent &&
+          score == o.score
     end
 
     # @see the `==` method
@@ -127,7 +127,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, self_uri].hash
+      [agent, score].hash
     end
 
     # build the object from hash

@@ -42,6 +42,12 @@ module PureCloud
     # Type of the message body (v2 chats only)
     attr_accessor :body_type
 
+    # Communication of sender (v2 chats only)
+    attr_accessor :sender_communication_id
+
+    # Participant purpose of sender (v2 chats only)
+    attr_accessor :participant_purpose
+
     # The user information for the sender (if available)
     attr_accessor :user
 
@@ -66,6 +72,10 @@ module PureCloud
         :'type' => :'type',
         
         :'body_type' => :'bodyType',
+        
+        :'sender_communication_id' => :'senderCommunicationId',
+        
+        :'participant_purpose' => :'participantPurpose',
         
         :'user' => :'user'
         
@@ -93,6 +103,10 @@ module PureCloud
         :'type' => :'String',
         
         :'body_type' => :'String',
+        
+        :'sender_communication_id' => :'String',
+        
+        :'participant_purpose' => :'String',
         
         :'user' => :'ChatMessageUser'
         
@@ -189,6 +203,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'senderCommunicationId')
+        
+        
+        self.sender_communication_id = attributes[:'senderCommunicationId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'participantPurpose')
+        
+        
+        self.participant_purpose = attributes[:'participantPurpose']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'user')
         
         
@@ -258,6 +290,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -320,6 +360,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -334,6 +384,8 @@ module PureCloud
           message == o.message &&
           type == o.type &&
           body_type == o.body_type &&
+          sender_communication_id == o.sender_communication_id &&
+          participant_purpose == o.participant_purpose &&
           user == o.user
     end
 
@@ -346,7 +398,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [body, id, to, from, utc, chat, message, type, body_type, user].hash
+      [body, id, to, from, utc, chat, message, type, body_type, sender_communication_id, participant_purpose, user].hash
     end
 
     # build the object from hash

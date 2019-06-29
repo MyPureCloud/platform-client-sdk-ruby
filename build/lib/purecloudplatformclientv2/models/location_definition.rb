@@ -37,6 +37,8 @@ module PureCloud
 
     attr_accessor :path
 
+    attr_accessor :notes
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -59,6 +61,8 @@ module PureCloud
         :'version' => :'version',
         
         :'path' => :'path',
+        
+        :'notes' => :'notes',
         
         :'self_uri' => :'selfUri'
         
@@ -84,6 +88,8 @@ module PureCloud
         :'version' => :'Integer',
         
         :'path' => :'Array<String>',
+        
+        :'notes' => :'String',
         
         :'self_uri' => :'String'
         
@@ -173,6 +179,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'notes')
+        
+        
+        self.notes = attributes[:'notes']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -228,6 +243,10 @@ module PureCloud
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -300,6 +319,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -313,6 +337,7 @@ module PureCloud
           state == o.state &&
           version == o.version &&
           path == o.path &&
+          notes == o.notes &&
           self_uri == o.self_uri
     end
 
@@ -325,7 +350,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, address_verified, emergency_number, state, version, path, self_uri].hash
+      [id, name, address, address_verified, emergency_number, state, version, path, notes, self_uri].hash
     end
 
     # build the object from hash

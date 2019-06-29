@@ -50,6 +50,8 @@ module PureCloud
     # A unique identifier for the language requested for an interaction.
     attr_accessor :requested_language_id
 
+    attr_accessor :scored_agents
+
     attr_accessor :properties
 
     attr_accessor :source_conversation_id
@@ -102,6 +104,8 @@ module PureCloud
         :'requested_routing_skill_ids' => :'requestedRoutingSkillIds',
         
         :'requested_language_id' => :'requestedLanguageId',
+        
+        :'scored_agents' => :'scoredAgents',
         
         :'properties' => :'properties',
         
@@ -157,6 +161,8 @@ module PureCloud
         :'requested_routing_skill_ids' => :'Array<String>',
         
         :'requested_language_id' => :'String',
+        
+        :'scored_agents' => :'Array<AnalyticsScoredAgent>',
         
         :'properties' => :'Array<AnalyticsProperty>',
         
@@ -303,6 +309,17 @@ module PureCloud
         
         
         self.requested_language_id = attributes[:'requestedLanguageId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'scoredAgents')
+        
+        if (value = attributes[:'scoredAgents']).is_a?(Array)
+          self.scored_agents = value
+        end
+        
         
       
       end
@@ -543,6 +560,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -684,6 +705,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -701,6 +727,7 @@ module PureCloud
           requested_routing_user_ids == o.requested_routing_user_ids &&
           requested_routing_skill_ids == o.requested_routing_skill_ids &&
           requested_language_id == o.requested_language_id &&
+          scored_agents == o.scored_agents &&
           properties == o.properties &&
           source_conversation_id == o.source_conversation_id &&
           destination_conversation_id == o.destination_conversation_id &&
@@ -724,7 +751,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [segment_start, segment_end, queue_id, wrap_up_code, wrap_up_note, wrap_up_tags, error_code, disconnect_type, segment_type, requested_routing_user_ids, requested_routing_skill_ids, requested_language_id, properties, source_conversation_id, destination_conversation_id, source_session_id, destination_session_id, sip_response_codes, q850_response_codes, conference, group_id, subject, audio_muted, video_muted].hash
+      [segment_start, segment_end, queue_id, wrap_up_code, wrap_up_note, wrap_up_tags, error_code, disconnect_type, segment_type, requested_routing_user_ids, requested_routing_skill_ids, requested_language_id, scored_agents, properties, source_conversation_id, destination_conversation_id, source_session_id, destination_session_id, sip_response_codes, q850_response_codes, conference, group_id, subject, audio_muted, video_muted].hash
     end
 
     # build the object from hash

@@ -105,6 +105,9 @@ module PureCloud
     # Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context.
     attr_accessor :journey_context
 
+    # Information on how a communication should be routed to an agent.
+    attr_accessor :conversation_routing_data
+
     # The ID of the chat room.
     attr_accessor :room_id
 
@@ -172,6 +175,8 @@ module PureCloud
         :'flagged_reason' => :'flaggedReason',
         
         :'journey_context' => :'journeyContext',
+        
+        :'conversation_routing_data' => :'conversationRoutingData',
         
         :'room_id' => :'roomId',
         
@@ -241,6 +246,8 @@ module PureCloud
         :'flagged_reason' => :'String',
         
         :'journey_context' => :'JourneyContext',
+        
+        :'conversation_routing_data' => :'ConversationRoutingData',
         
         :'room_id' => :'String',
         
@@ -521,6 +528,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'conversationRoutingData')
+        
+        
+        self.conversation_routing_data = attributes[:'conversationRoutingData']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'roomId')
         
         
@@ -683,6 +699,10 @@ module PureCloud
       if @flagged_reason && !allowed_values.include?(@flagged_reason)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -892,6 +912,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -926,6 +951,7 @@ module PureCloud
           peer == o.peer &&
           flagged_reason == o.flagged_reason &&
           journey_context == o.journey_context &&
+          conversation_routing_data == o.conversation_routing_data &&
           room_id == o.room_id &&
           avatar_image_url == o.avatar_image_url
     end
@@ -939,7 +965,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, peer, flagged_reason, journey_context, room_id, avatar_image_url].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, peer, flagged_reason, journey_context, conversation_routing_data, room_id, avatar_image_url].hash
     end
 
     # build the object from hash

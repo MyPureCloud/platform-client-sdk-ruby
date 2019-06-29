@@ -17,13 +17,13 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class LicenseOrganization
-    # The globally unique identifier for the object.
-    attr_accessor :id
+  # Defines a link between an External Identifier and Authority pair to a Entity Type and Entity Identifier pair. Represents the two way, one to one mapping of an External Authority or System of Record's identifier to a PureCloud entity. e.g. (ExternalId='05001',Authority='XyzCRM') to (entityType=user,entityId='8eb03b33-3acb-4bc1-a244-50b9b9f19495')
+  class UserExternalIdentifier
+    # Authority or System of Record which owns the External Identifier
+    attr_accessor :authority_name
 
-    attr_accessor :name
-
-    attr_accessor :licenses
+    # External Key
+    attr_accessor :external_key
 
     # The URI for this object
     attr_accessor :self_uri
@@ -32,11 +32,9 @@ module PureCloud
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'authority_name' => :'authorityName',
         
-        :'name' => :'name',
-        
-        :'licenses' => :'licenses',
+        :'external_key' => :'externalKey',
         
         :'self_uri' => :'selfUri'
         
@@ -47,11 +45,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
+        :'authority_name' => :'String',
         
-        :'name' => :'String',
-        
-        :'licenses' => :'Hash<String, Array<AddressableEntityUser>>',
+        :'external_key' => :'String',
         
         :'self_uri' => :'String'
         
@@ -67,30 +63,19 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'authorityName')
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
+        self.authority_name = attributes[:'authorityName']
         
       
       end
 
       
-      if attributes.has_key?(:'licenses')
+      if attributes.has_key?(:'externalKey')
         
-        if (value = attributes[:'licenses']).is_a?(Array)
-          self.licenses = value
-        end
         
+        self.external_key = attributes[:'externalKey']
         
       
       end
@@ -121,13 +106,19 @@ module PureCloud
     def valid?
       
       
+      if @authority_name.nil?
+        return false
+      end
+
       
       
       
       
       
-      
-      
+      if @external_key.nil?
+        return false
+      end
+
       
       
       
@@ -138,11 +129,6 @@ module PureCloud
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -164,9 +150,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name &&
-          licenses == o.licenses &&
+          authority_name == o.authority_name &&
+          external_key == o.external_key &&
           self_uri == o.self_uri
     end
 
@@ -179,7 +164,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, licenses, self_uri].hash
+      [authority_name, external_key, self_uri].hash
     end
 
     # build the object from hash

@@ -173,6 +173,90 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete the external identifier for user.
+    # 
+    # @param user_id User ID
+    # @param authority_name Authority Name
+    # @param external_key External Key
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_user_externalid_authority_name_external_key(user_id, authority_name, external_key, opts = {})
+      delete_user_externalid_authority_name_external_key_with_http_info(user_id, authority_name, external_key, opts)
+      return nil
+    end
+
+    # Delete the external identifier for user.
+    # 
+    # @param user_id User ID
+    # @param authority_name Authority Name
+    # @param external_key External Key
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_user_externalid_authority_name_external_key_with_http_info(user_id, authority_name, external_key, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.delete_user_externalid_authority_name_external_key ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.delete_user_externalid_authority_name_external_key" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'authority_name' is set
+      fail ArgumentError, "Missing the required parameter 'authority_name' when calling UsersApi.delete_user_externalid_authority_name_external_key" if authority_name.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'external_key' is set
+      fail ArgumentError, "Missing the required parameter 'external_key' when calling UsersApi.delete_user_externalid_authority_name_external_key" if external_key.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/externalid/{authorityName}/{externalKey}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'authorityName' + '}', authority_name.to_s).sub('{' + 'externalKey' + '}', external_key.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#delete_user_externalid_authority_name_external_key\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Removes all the roles from the user.
     # 
     # @param user_id User ID
@@ -1286,6 +1370,146 @@ module PureCloud
         :return_type => 'Array<User>')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#get_user_directreports\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the external identifiers for a user.
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UserExternalIdentifier>]
+    def get_user_externalid(user_id, opts = {})
+      data, _status_code, _headers = get_user_externalid_with_http_info(user_id, opts)
+      return data
+    end
+
+    # Get the external identifiers for a user.
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UserExternalIdentifier>, Fixnum, Hash)>] Array<UserExternalIdentifier> data, response status code and response headers
+    def get_user_externalid_with_http_info(user_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.get_user_externalid ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_externalid" if user_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/externalid".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<UserExternalIdentifier>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#get_user_externalid\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the external identifier of user for an authority.
+    # Authority name and external key are case sensitive.
+    # @param user_id User ID
+    # @param authority_name Authority Name
+    # @param [Hash] opts the optional parameters
+    # @return [UserExternalIdentifier]
+    def get_user_externalid_authority_name(user_id, authority_name, opts = {})
+      data, _status_code, _headers = get_user_externalid_authority_name_with_http_info(user_id, authority_name, opts)
+      return data
+    end
+
+    # Get the external identifier of user for an authority.
+    # Authority name and external key are case sensitive.
+    # @param user_id User ID
+    # @param authority_name Authority Name
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UserExternalIdentifier, Fixnum, Hash)>] UserExternalIdentifier data, response status code and response headers
+    def get_user_externalid_authority_name_with_http_info(user_id, authority_name, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.get_user_externalid_authority_name ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_user_externalid_authority_name" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'authority_name' is set
+      fail ArgumentError, "Missing the required parameter 'authority_name' when calling UsersApi.get_user_externalid_authority_name" if authority_name.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/externalid/{authorityName}".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s).sub('{' + 'authorityName' + '}', authority_name.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserExternalIdentifier')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#get_user_externalid_authority_name\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2441,6 +2665,90 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the user associated with external identifier.
+    # Authority name and external key are case sensitive.
+    # @param authority_name Authority Name
+    # @param external_key External Key
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @return [User]
+    def get_users_externalid_authority_name_external_key(authority_name, external_key, opts = {})
+      data, _status_code, _headers = get_users_externalid_authority_name_external_key_with_http_info(authority_name, external_key, opts)
+      return data
+    end
+
+    # Get the user associated with external identifier.
+    # Authority name and external key are case sensitive.
+    # @param authority_name Authority Name
+    # @param external_key External Key
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @return [Array<(User, Fixnum, Hash)>] User data, response status code and response headers
+    def get_users_externalid_authority_name_external_key_with_http_info(authority_name, external_key, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.get_users_externalid_authority_name_external_key ..."
+      end
+      
+      
+      # verify the required parameter 'authority_name' is set
+      fail ArgumentError, "Missing the required parameter 'authority_name' when calling UsersApi.get_users_externalid_authority_name_external_key" if authority_name.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'external_key' is set
+      fail ArgumentError, "Missing the required parameter 'external_key' when calling UsersApi.get_users_externalid_authority_name_external_key" if external_key.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/externalid/{authorityName}/{externalKey}".sub('{format}','json').sub('{' + 'authorityName' + '}', authority_name.to_s).sub('{' + 'externalKey' + '}', external_key.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'User')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#get_users_externalid_authority_name_external_key\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get current user details.
     # This request is not valid when using the Client Credentials OAuth grant.
     # @param [Hash] opts the optional parameters
@@ -3568,6 +3876,81 @@ module PureCloud
         :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#post_authorization_subject_division_role\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create mapping between external identifier and user. Limit 100 per entity.
+    # Authority Name and External key are case sensitive.
+    # @param user_id User ID
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UserExternalIdentifier>]
+    def post_user_externalid(user_id, body, opts = {})
+      data, _status_code, _headers = post_user_externalid_with_http_info(user_id, body, opts)
+      return data
+    end
+
+    # Create mapping between external identifier and user. Limit 100 per entity.
+    # Authority Name and External key are case sensitive.
+    # @param user_id User ID
+    # @param body 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<UserExternalIdentifier>, Fixnum, Hash)>] Array<UserExternalIdentifier> data, response status code and response headers
+    def post_user_externalid_with_http_info(user_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.post_user_externalid ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.post_user_externalid" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.post_user_externalid" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/externalid".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<UserExternalIdentifier>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#post_user_externalid\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

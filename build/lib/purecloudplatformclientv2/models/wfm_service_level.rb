@@ -17,15 +17,15 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Service level target configuration for a service goal group
+  # Service goal service level configuration
   class WfmServiceLevel
-    # Whether to include service level targets in the associated service goal group's configuration
+    # Whether to include service level targets in the associated configuration
     attr_accessor :include
 
-    # Service level target percent answered for the associated service goal group. Required if include == true
+    # Service level target percent answered. Required if include == true
     attr_accessor :percent
 
-    # Service level target answer time for the associated service goal group. Required if include == true
+    # Service level target answer time. Required if include == true
     attr_accessor :seconds
 
     # Attribute mapping from ruby-style variable name to JSON key.

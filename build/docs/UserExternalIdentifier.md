@@ -1,13 +1,14 @@
 ---
-title: AddressableEntityUser
+title: UserExternalIdentifier
 ---
-## PureCloud::AddressableEntityUser
+## PureCloud::UserExternalIdentifier
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **id** | **String** | The globally unique identifier for the object. | [optional] |
+| **authority_name** | **String** | Authority or System of Record which owns the External Identifier | |
+| **external_key** | **String** | External Key | |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -34,6 +34,8 @@ module PureCloud
 
     attr_accessor :path
 
+    attr_accessor :notes
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -50,7 +52,9 @@ module PureCloud
         
         :'version' => :'version',
         
-        :'path' => :'path'
+        :'path' => :'path',
+        
+        :'notes' => :'notes'
         
       }
     end
@@ -71,7 +75,9 @@ module PureCloud
         
         :'version' => :'Integer',
         
-        :'path' => :'Array<String>'
+        :'path' => :'Array<String>',
+        
+        :'notes' => :'String'
         
       }
     end
@@ -150,6 +156,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'notes')
+        
+        
+        self.notes = attributes[:'notes']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -187,6 +202,10 @@ module PureCloud
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -245,6 +264,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -256,7 +280,8 @@ module PureCloud
           emergency_number == o.emergency_number &&
           state == o.state &&
           version == o.version &&
-          path == o.path
+          path == o.path &&
+          notes == o.notes
     end
 
     # @see the `==` method
@@ -268,7 +293,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, address, address_verified, emergency_number, state, version, path].hash
+      [name, address, address_verified, emergency_number, state, version, path, notes].hash
     end
 
     # build the object from hash

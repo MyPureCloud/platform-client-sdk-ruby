@@ -17,9 +17,9 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Average speed of answer settings
+  # Service goal average speed of answer configuration
   class WfmAverageSpeedOfAnswer
-    # Whether to include average speed of answer (ASA) in this service goal group's configuration
+    # Whether to include average speed of answer (ASA) in the associated configuration
     attr_accessor :include
 
     # The target average speed of answer (ASA) in seconds. Required if include == true

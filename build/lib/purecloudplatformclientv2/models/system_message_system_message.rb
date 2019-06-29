@@ -81,7 +81,7 @@ module PureCloud
         
         :'message' => :'String',
         
-        :'data' => :'Hash<String, String>'
+        :'data' => :'Object'
         
       }
     end
@@ -169,10 +169,8 @@ module PureCloud
       
       if attributes.has_key?(:'data')
         
-        if (value = attributes[:'data']).is_a?(Array)
-          self.data = value
-        end
         
+        self.data = attributes[:'data']
         
       
       end
@@ -199,7 +197,7 @@ module PureCloud
       
       
       
-      allowed_values = ["no_longer_subscribed"]
+      allowed_values = ["no_longer_subscribed", "subscription_changed"]
       if @system_topic_type && !allowed_values.include?(@system_topic_type)
         return false
       end
@@ -251,7 +249,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] system_topic_type Object to be assigned
     def system_topic_type=(system_topic_type)
-      allowed_values = ["no_longer_subscribed"]
+      allowed_values = ["no_longer_subscribed", "subscription_changed"]
       if system_topic_type && !allowed_values.include?(system_topic_type)
         fail ArgumentError, "invalid value for 'system_topic_type', must be one of #{allowed_values}."
       end

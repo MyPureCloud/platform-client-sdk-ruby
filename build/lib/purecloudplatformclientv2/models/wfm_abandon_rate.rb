@@ -17,12 +17,12 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Abandon rate configuration for a service goal group
+  # Service goal abandon rate configuration
   class WfmAbandonRate
-    # Whether to include abandon rate in the associated service goal group's configuration
+    # Whether to include abandon rate in the associated configuration
     attr_accessor :include
 
-    # Abandon rate percent goal for the associated service goal group. Required if include == true
+    # Abandon rate percent goal. Required if include == true
     attr_accessor :percent
 
     # Attribute mapping from ruby-style variable name to JSON key.

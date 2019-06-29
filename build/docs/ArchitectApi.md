@@ -1206,7 +1206,8 @@ object_type = "object_type_example" # String | Consumed object type
 opts = { 
   resource_type: ["resource_type_example"], # Array<String> | Types of consuming resources to show.  Only versioned types are allowed here.
   page_number: 1, # Integer | Page number
-  page_size: 25 # Integer | Page size
+  page_size: 25, # Integer | Page size
+  flow_filter: "flow_filter_example" # String | Show only checkedIn or published flows
 }
 
 begin
@@ -1227,6 +1228,7 @@ Name | Type | Description  | Notes
  **resource_type** | [**Array&lt;String&gt;**](String.html)| Types of consuming resources to show.  Only versioned types are allowed here. | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGFLOWAGENT, EMAILROUTE, EMERGENCYGROUP, FLOWOUTCOME, GROUP, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, LEXBOT, LEXBOTALIAS, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, WORKFLOW |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **flow_filter** | **String**| Show only checkedIn or published flows | [optional] <br />**Values**: checkedIn, published |
 {: class="table table-striped"}
 
 
@@ -4330,7 +4332,7 @@ Wraps POST /api/v2/architect/systemprompts/{promptId}/history
 
 Requires ANY permissions: 
 
-* architect:systemPrompt:edit
+* architect:systemPrompt:view
 
 
 ### Example

@@ -14,6 +14,7 @@ title: LocationUpdateDefinition
 | **state** | **String** | Current activity status of the location. | [optional] |
 | **version** | **Integer** |  | [optional] |
 | **path** | **Array&lt;String&gt;** |  | [optional] |
+| **notes** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

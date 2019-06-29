@@ -36,6 +36,7 @@ title: CobrowseMediaParticipant
 | **peer** | **String** | The peer communication corresponding to a matching leg for this communication. | [optional] |
 | **flagged_reason** | **String** | The reason specifying why participant flagged the conversation. | [optional] |
 | **journey_context** | [**JourneyContext**](JourneyContext.html) | Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context. | [optional] |
+| **conversation_routing_data** | [**ConversationRoutingData**](ConversationRoutingData.html) | Information on how a communication should be routed to an agent. | [optional] |
 | **cobrowse_session_id** | **String** | The co-browse session ID. | [optional] |
 | **cobrowse_role** | **String** | This value identifies the role of the co-browse client within the co-browse session (a client is a sharer or a viewer). | [optional] |
 | **controlling** | **Array&lt;String&gt;** | ID of co-browse participants for which this client has been granted control (list is empty if this client cannot control any shared pages). | [optional] |

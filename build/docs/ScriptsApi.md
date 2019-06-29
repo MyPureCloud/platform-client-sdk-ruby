@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 <a name="get_scripts_published"></a>
 
-## [**ScriptEntityListing**](ScriptEntityListing.html) get_scripts_published(script_id, opts)
+## [**ScriptEntityListing**](ScriptEntityListing.html) get_scripts_published(opts)
 
 
 
@@ -343,8 +343,6 @@ end
 
 api_instance = PureCloud::ScriptsApi.new
 
-script_id = "script_id_example" # String | Script ID
-
 opts = { 
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
@@ -357,7 +355,7 @@ opts = {
 
 begin
   #Get the published scripts.
-  result = api_instance.get_scripts_published(script_id, opts)
+  result = api_instance.get_scripts_published(opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ScriptsApi->get_scripts_published: #{e}"
@@ -368,7 +366,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **script_id** | **String**| Script ID |  |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **expand** | **String**| Expand | [optional]  |

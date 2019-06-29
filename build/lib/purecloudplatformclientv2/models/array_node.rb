@@ -28,17 +28,15 @@ module PureCloud
 
     attr_accessor :boolean
 
-    attr_accessor :value_node
-
-    attr_accessor :binary
-
-    attr_accessor :pojo
-
-    attr_accessor :container_node
-
-    attr_accessor :missing_node
-
     attr_accessor :floating_point_number
+
+    attr_accessor :integral_number
+
+    attr_accessor :short
+
+    attr_accessor :int
+
+    attr_accessor :long
 
     attr_accessor :double
 
@@ -48,13 +46,15 @@ module PureCloud
 
     attr_accessor :textual
 
-    attr_accessor :int
+    attr_accessor :binary
 
-    attr_accessor :integral_number
+    attr_accessor :value_node
 
-    attr_accessor :short
+    attr_accessor :container_node
 
-    attr_accessor :long
+    attr_accessor :missing_node
+
+    attr_accessor :pojo
 
     attr_accessor :array
 
@@ -74,17 +74,15 @@ module PureCloud
         
         :'boolean' => :'boolean',
         
-        :'value_node' => :'valueNode',
-        
-        :'binary' => :'binary',
-        
-        :'pojo' => :'pojo',
-        
-        :'container_node' => :'containerNode',
-        
-        :'missing_node' => :'missingNode',
-        
         :'floating_point_number' => :'floatingPointNumber',
+        
+        :'integral_number' => :'integralNumber',
+        
+        :'short' => :'short',
+        
+        :'int' => :'int',
+        
+        :'long' => :'long',
         
         :'double' => :'double',
         
@@ -94,13 +92,15 @@ module PureCloud
         
         :'textual' => :'textual',
         
-        :'int' => :'int',
+        :'binary' => :'binary',
         
-        :'integral_number' => :'integralNumber',
+        :'value_node' => :'valueNode',
         
-        :'short' => :'short',
+        :'container_node' => :'containerNode',
         
-        :'long' => :'long',
+        :'missing_node' => :'missingNode',
+        
+        :'pojo' => :'pojo',
         
         :'array' => :'array',
         
@@ -123,17 +123,15 @@ module PureCloud
         
         :'boolean' => :'BOOLEAN',
         
-        :'value_node' => :'BOOLEAN',
-        
-        :'binary' => :'BOOLEAN',
-        
-        :'pojo' => :'BOOLEAN',
-        
-        :'container_node' => :'BOOLEAN',
-        
-        :'missing_node' => :'BOOLEAN',
-        
         :'floating_point_number' => :'BOOLEAN',
+        
+        :'integral_number' => :'BOOLEAN',
+        
+        :'short' => :'BOOLEAN',
+        
+        :'int' => :'BOOLEAN',
+        
+        :'long' => :'BOOLEAN',
         
         :'double' => :'BOOLEAN',
         
@@ -143,13 +141,15 @@ module PureCloud
         
         :'textual' => :'BOOLEAN',
         
-        :'int' => :'BOOLEAN',
+        :'binary' => :'BOOLEAN',
         
-        :'integral_number' => :'BOOLEAN',
+        :'value_node' => :'BOOLEAN',
         
-        :'short' => :'BOOLEAN',
+        :'container_node' => :'BOOLEAN',
         
-        :'long' => :'BOOLEAN',
+        :'missing_node' => :'BOOLEAN',
+        
+        :'pojo' => :'BOOLEAN',
         
         :'array' => :'BOOLEAN',
         
@@ -212,55 +212,46 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'valueNode')
-        
-        
-        self.value_node = attributes[:'valueNode']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'binary')
-        
-        
-        self.binary = attributes[:'binary']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'pojo')
-        
-        
-        self.pojo = attributes[:'pojo']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'containerNode')
-        
-        
-        self.container_node = attributes[:'containerNode']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'missingNode')
-        
-        
-        self.missing_node = attributes[:'missingNode']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'floatingPointNumber')
         
         
         self.floating_point_number = attributes[:'floatingPointNumber']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'integralNumber')
+        
+        
+        self.integral_number = attributes[:'integralNumber']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'short')
+        
+        
+        self.short = attributes[:'short']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'int')
+        
+        
+        self.int = attributes[:'int']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'long')
+        
+        
+        self.long = attributes[:'long']
         
       
       end
@@ -302,37 +293,46 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'int')
+      if attributes.has_key?(:'binary')
         
         
-        self.int = attributes[:'int']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'integralNumber')
-        
-        
-        self.integral_number = attributes[:'integralNumber']
+        self.binary = attributes[:'binary']
         
       
       end
 
       
-      if attributes.has_key?(:'short')
+      if attributes.has_key?(:'valueNode')
         
         
-        self.short = attributes[:'short']
+        self.value_node = attributes[:'valueNode']
         
       
       end
 
       
-      if attributes.has_key?(:'long')
+      if attributes.has_key?(:'containerNode')
         
         
-        self.long = attributes[:'long']
+        self.container_node = attributes[:'containerNode']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'missingNode')
+        
+        
+        self.missing_node = attributes[:'missingNode']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'pojo')
+        
+        
+        self.pojo = attributes[:'pojo']
         
       
       end
@@ -587,20 +587,20 @@ module PureCloud
           number == o.number &&
           object == o.object &&
           boolean == o.boolean &&
-          value_node == o.value_node &&
-          binary == o.binary &&
-          pojo == o.pojo &&
-          container_node == o.container_node &&
-          missing_node == o.missing_node &&
           floating_point_number == o.floating_point_number &&
+          integral_number == o.integral_number &&
+          short == o.short &&
+          int == o.int &&
+          long == o.long &&
           double == o.double &&
           big_decimal == o.big_decimal &&
           big_integer == o.big_integer &&
           textual == o.textual &&
-          int == o.int &&
-          integral_number == o.integral_number &&
-          short == o.short &&
-          long == o.long &&
+          binary == o.binary &&
+          value_node == o.value_node &&
+          container_node == o.container_node &&
+          missing_node == o.missing_node &&
+          pojo == o.pojo &&
           array == o.array &&
           null == o.null
     end
@@ -614,7 +614,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [node_type, float, number, object, boolean, value_node, binary, pojo, container_node, missing_node, floating_point_number, double, big_decimal, big_integer, textual, int, integral_number, short, long, array, null].hash
+      [node_type, float, number, object, boolean, floating_point_number, integral_number, short, int, long, double, big_decimal, big_integer, textual, binary, value_node, container_node, missing_node, pojo, array, null].hash
     end
 
     # build the object from hash

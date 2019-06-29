@@ -36,6 +36,7 @@ title: EmailMediaParticipant
 | **peer** | **String** | The peer communication corresponding to a matching leg for this communication. | [optional] |
 | **flagged_reason** | **String** | The reason specifying why participant flagged the conversation. | [optional] |
 | **journey_context** | [**JourneyContext**](JourneyContext.html) | Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context. | [optional] |
+| **conversation_routing_data** | [**ConversationRoutingData**](ConversationRoutingData.html) | Information on how a communication should be routed to an agent. | [optional] |
 | **subject** | **String** | The subject of the email. | [optional] |
 | **messages_sent** | **Integer** | The number of messages that have been sent in this email conversation. | [optional] |
 | **auto_generated** | **BOOLEAN** | Indicates that the email was auto-generated like an Out of Office reply. | [optional] |

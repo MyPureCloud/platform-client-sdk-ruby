@@ -63,6 +63,8 @@ module PureCloud
     # Dialed number identification service (number dialed by the calling party)
     attr_accessor :dnis
 
+    attr_accessor :scored_agents
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -95,7 +97,9 @@ module PureCloud
         
         :'ani' => :'ani',
         
-        :'dnis' => :'dnis'
+        :'dnis' => :'dnis',
+        
+        :'scored_agents' => :'scoredAgents'
         
       }
     end
@@ -132,7 +136,9 @@ module PureCloud
         
         :'ani' => :'String',
         
-        :'dnis' => :'String'
+        :'dnis' => :'String',
+        
+        :'scored_agents' => :'Array<AnalyticsScoredAgent>'
         
       }
     end
@@ -283,6 +289,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'scoredAgents')
+        
+        if (value = attributes[:'scoredAgents']).is_a?(Array)
+          self.scored_agents = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -341,6 +358,10 @@ module PureCloud
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -455,6 +476,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -474,7 +500,8 @@ module PureCloud
           address_from == o.address_from &&
           address_to == o.address_to &&
           ani == o.ani &&
-          dnis == o.dnis
+          dnis == o.dnis &&
+          scored_agents == o.scored_agents
     end
 
     # @see the `==` method
@@ -486,7 +513,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [observation_date, conversation_id, session_id, requested_routing_skill_ids, requested_language_id, routing_priority, participant_name, user_id, direction, converted_from, converted_to, address_from, address_to, ani, dnis].hash
+      [observation_date, conversation_id, session_id, requested_routing_skill_ids, requested_language_id, routing_priority, participant_name, user_id, direction, converted_from, converted_to, address_from, address_to, ani, dnis, scored_agents].hash
     end
 
     # build the object from hash

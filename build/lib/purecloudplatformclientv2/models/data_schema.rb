@@ -23,7 +23,7 @@ module PureCloud
 
     attr_accessor :name
 
-    # The schema's version. Required for updates.
+    # The schema's version, a positive integer. Required for updates.
     attr_accessor :version
 
     # The PureCloud data this schema extends.

@@ -39,6 +39,9 @@ module PureCloud
     # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :completed_date
 
+    # Additional information about what happened when the survey is in Error status.
+    attr_accessor :survey_error_details
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -63,6 +66,8 @@ module PureCloud
         :'answers' => :'answers',
         
         :'completed_date' => :'completedDate',
+        
+        :'survey_error_details' => :'surveyErrorDetails',
         
         :'self_uri' => :'selfUri'
         
@@ -90,6 +95,8 @@ module PureCloud
         :'answers' => :'SurveyScoringSet',
         
         :'completed_date' => :'DateTime',
+        
+        :'survey_error_details' => :'SurveyErrorDetails',
         
         :'self_uri' => :'String'
         
@@ -186,6 +193,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'surveyErrorDetails')
+        
+        
+        self.survey_error_details = attributes[:'surveyErrorDetails']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -236,6 +252,10 @@ module PureCloud
       if @status && !allowed_values.include?(@status)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -317,6 +337,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -331,6 +356,7 @@ module PureCloud
           queue == o.queue &&
           answers == o.answers &&
           completed_date == o.completed_date &&
+          survey_error_details == o.survey_error_details &&
           self_uri == o.self_uri
     end
 
@@ -343,7 +369,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, conversation, survey_form, agent, status, queue, answers, completed_date, self_uri].hash
+      [id, name, conversation, survey_form, agent, status, queue, answers, completed_date, survey_error_details, self_uri].hash
     end
 
     # build the object from hash

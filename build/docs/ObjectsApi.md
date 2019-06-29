@@ -400,7 +400,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **division_id** | **String**| Division ID |  |
- **object_type** | **String**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, USER |
+ **object_type** | **String**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, USER |
  **body** | **Array&lt;String&gt;**| Object Id List |  |
 {: class="table table-striped"}
 

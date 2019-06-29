@@ -2033,6 +2033,9 @@ module PureCloud
     # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param week_id First day of schedule week in yyyy-MM-dd format.
     # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :include_only_published Return only published schedules
+    # @option opts [String] :earliest_week_date The start date of the earliest week to query in yyyy-MM-dd format
+    # @option opts [String] :latest_week_date The start date of the latest week to query in yyyy-MM-dd format
     # @return [WeekScheduleListResponse]
     def get_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id, opts = {})
       data, _status_code, _headers = get_workforcemanagement_managementunit_week_schedules_with_http_info(management_unit_id, week_id, opts)
@@ -2044,6 +2047,9 @@ module PureCloud
     # @param management_unit_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param week_id First day of schedule week in yyyy-MM-dd format.
     # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :include_only_published Return only published schedules
+    # @option opts [String] :earliest_week_date The start date of the earliest week to query in yyyy-MM-dd format
+    # @option opts [String] :latest_week_date The start date of the latest week to query in yyyy-MM-dd format
     # @return [Array<(WeekScheduleListResponse, Fixnum, Hash)>] WeekScheduleListResponse data, response status code and response headers
     def get_workforcemanagement_managementunit_week_schedules_with_http_info(management_unit_id, week_id, opts = {})
       if @api_client.config.debugging
@@ -2066,11 +2072,32 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'weekId' + '}', week_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'includeOnlyPublished'] = opts[:'include_only_published'] if opts[:'include_only_published']
+      query_params[:'earliestWeekDate'] = opts[:'earliest_week_date'] if opts[:'earliest_week_date']
+      query_params[:'latestWeekDate'] = opts[:'latest_week_date'] if opts[:'latest_week_date']
 
       # header parameters
       header_params = {}
@@ -2474,8 +2501,8 @@ module PureCloud
       
       
       
-      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'ActivityCodes', 'Agents', 'HistoricalAdherence', 'IntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'ServiceGoalGroups', 'ShiftTrading', 'ShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
-        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans'
+      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'ActivityCodes', 'Agents', 'BusinessUnits', 'HistoricalAdherence', 'IntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'ServiceGoalGroups', 'ServiceGoalTemplates', 'ShiftTrading', 'ShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
+        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ServiceGoalTemplates, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans'
       end
       
       

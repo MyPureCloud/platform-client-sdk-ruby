@@ -393,7 +393,6 @@ module PureCloud
 
     # Get the published scripts.
     # 
-    # @param script_id Script ID
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
@@ -403,14 +402,13 @@ module PureCloud
     # @option opts [String] :flow_id Secure flow id filter
     # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [ScriptEntityListing]
-    def get_scripts_published(script_id, opts = {})
-      data, _status_code, _headers = get_scripts_published_with_http_info(script_id, opts)
+    def get_scripts_published(opts = {})
+      data, _status_code, _headers = get_scripts_published_with_http_info(opts)
       return data
     end
 
     # Get the published scripts.
     # 
-    # @param script_id Script ID
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
@@ -420,18 +418,10 @@ module PureCloud
     # @option opts [String] :flow_id Secure flow id filter
     # @option opts [String] :script_data_version Advanced usage - controls the data version of the script
     # @return [Array<(ScriptEntityListing, Fixnum, Hash)>] ScriptEntityListing data, response status code and response headers
-    def get_scripts_published_with_http_info(script_id, opts = {})
+    def get_scripts_published_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ScriptsApi.get_scripts_published ..."
       end
-      
-      
-      # verify the required parameter 'script_id' is set
-      fail ArgumentError, "Missing the required parameter 'script_id' when calling ScriptsApi.get_scripts_published" if script_id.nil?
-      
-      
-      
-      
       
       
       
@@ -476,7 +466,7 @@ module PureCloud
       
       
       # resource path
-      local_var_path = "/api/v2/scripts/published".sub('{format}','json').sub('{' + 'scriptId' + '}', script_id.to_s)
+      local_var_path = "/api/v2/scripts/published".sub('{format}','json')
 
       # query parameters
       query_params = {}

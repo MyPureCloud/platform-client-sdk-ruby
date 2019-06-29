@@ -72,6 +72,33 @@ module PureCloud
     # True if the Edge used by this trunk is in-service
     attr_accessor :enabled
 
+    # The Logical Interface on the Edge to which the trunk is assigned.
+    attr_accessor :logical_interface
+
+    # The connected status of the trunk
+    attr_accessor :connected_status
+
+    # The trunk optionsStatus
+    attr_accessor :options_status
+
+    # The trunk registersStatus
+    attr_accessor :registers_status
+
+    # The trunk ipStatus
+    attr_accessor :ip_status
+
+    # Returns Enabled when the trunk base supports the availability interval and it has a value greater than 0.
+    attr_accessor :options_enabled_status
+
+    # Returns Enabled when the trunk base supports the registration interval and it has a value greater than 0.
+    attr_accessor :registers_enabled_status
+
+    # The IP Network Family of the trunk
+    attr_accessor :family
+
+    # The list of proxy addresses (ports if provided) for the trunk
+    attr_accessor :proxy_address_list
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -114,6 +141,24 @@ module PureCloud
         :'in_service' => :'inService',
         
         :'enabled' => :'enabled',
+        
+        :'logical_interface' => :'logicalInterface',
+        
+        :'connected_status' => :'connectedStatus',
+        
+        :'options_status' => :'optionsStatus',
+        
+        :'registers_status' => :'registersStatus',
+        
+        :'ip_status' => :'ipStatus',
+        
+        :'options_enabled_status' => :'optionsEnabledStatus',
+        
+        :'registers_enabled_status' => :'registersEnabledStatus',
+        
+        :'family' => :'family',
+        
+        :'proxy_address_list' => :'proxyAddressList',
         
         :'self_uri' => :'selfUri'
         
@@ -159,6 +204,24 @@ module PureCloud
         :'in_service' => :'BOOLEAN',
         
         :'enabled' => :'BOOLEAN',
+        
+        :'logical_interface' => :'UriReference',
+        
+        :'connected_status' => :'TrunkConnectedStatus',
+        
+        :'options_status' => :'Array<TrunkMetricsOptions>',
+        
+        :'registers_status' => :'Array<TrunkMetricsRegisters>',
+        
+        :'ip_status' => :'TrunkMetricsNetworkTypeIp',
+        
+        :'options_enabled_status' => :'String',
+        
+        :'registers_enabled_status' => :'String',
+        
+        :'family' => :'Integer',
+        
+        :'proxy_address_list' => :'Array<String>',
         
         :'self_uri' => :'String'
         
@@ -336,6 +399,93 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'logicalInterface')
+        
+        
+        self.logical_interface = attributes[:'logicalInterface']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'connectedStatus')
+        
+        
+        self.connected_status = attributes[:'connectedStatus']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'optionsStatus')
+        
+        if (value = attributes[:'optionsStatus']).is_a?(Array)
+          self.options_status = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'registersStatus')
+        
+        if (value = attributes[:'registersStatus']).is_a?(Array)
+          self.registers_status = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'ipStatus')
+        
+        
+        self.ip_status = attributes[:'ipStatus']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'optionsEnabledStatus')
+        
+        
+        self.options_enabled_status = attributes[:'optionsEnabledStatus']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'registersEnabledStatus')
+        
+        
+        self.registers_enabled_status = attributes[:'registersEnabledStatus']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'family')
+        
+        
+        self.family = attributes[:'family']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'proxyAddressList')
+        
+        if (value = attributes[:'proxyAddressList']).is_a?(Array)
+          self.proxy_address_list = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -436,6 +586,52 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["ENABLED", "DISABLED", "NOT_SUPPORTED"]
+      if @options_enabled_status && !allowed_values.include?(@options_enabled_status)
+        return false
+      end
+      
+      
+      
+      
+      
+      allowed_values = ["ENABLED", "DISABLED", "NOT_SUPPORTED"]
+      if @registers_enabled_status && !allowed_values.include?(@registers_enabled_status)
+        return false
+      end
       
       
       
@@ -567,6 +763,69 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] options_enabled_status Object to be assigned
+    def options_enabled_status=(options_enabled_status)
+      allowed_values = ["ENABLED", "DISABLED", "NOT_SUPPORTED"]
+      if options_enabled_status && !allowed_values.include?(options_enabled_status)
+        fail ArgumentError, "invalid value for 'options_enabled_status', must be one of #{allowed_values}."
+      end
+      @options_enabled_status = options_enabled_status
+    end
+
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] registers_enabled_status Object to be assigned
+    def registers_enabled_status=(registers_enabled_status)
+      allowed_values = ["ENABLED", "DISABLED", "NOT_SUPPORTED"]
+      if registers_enabled_status && !allowed_values.include?(registers_enabled_status)
+        fail ArgumentError, "invalid value for 'registers_enabled_status', must be one of #{allowed_values}."
+      end
+      @registers_enabled_status = registers_enabled_status
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -590,6 +849,15 @@ module PureCloud
           edge_group == o.edge_group &&
           in_service == o.in_service &&
           enabled == o.enabled &&
+          logical_interface == o.logical_interface &&
+          connected_status == o.connected_status &&
+          options_status == o.options_status &&
+          registers_status == o.registers_status &&
+          ip_status == o.ip_status &&
+          options_enabled_status == o.options_enabled_status &&
+          registers_enabled_status == o.registers_enabled_status &&
+          family == o.family &&
+          proxy_address_list == o.proxy_address_list &&
           self_uri == o.self_uri
     end
 
@@ -602,7 +870,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, trunk_type, edge, trunk_base, trunk_metabase, edge_group, in_service, enabled, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, trunk_type, edge, trunk_base, trunk_metabase, edge_group, in_service, enabled, logical_interface, connected_status, options_status, registers_status, ip_status, options_enabled_status, registers_enabled_status, family, proxy_address_list, self_uri].hash
     end
 
     # build the object from hash

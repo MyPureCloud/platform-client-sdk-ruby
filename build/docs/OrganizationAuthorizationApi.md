@@ -112,8 +112,6 @@ Wraps DELETE /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUser
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:delete
-* admin
-* role_manager
 
 
 ### Example
@@ -181,8 +179,6 @@ Wraps DELETE /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUser
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:delete
-* admin
-* role_manager
 
 
 ### Example
@@ -1121,11 +1117,9 @@ Add a user to the trust.
 
 Wraps POST /api/v2/orgauthorization/trustees/{trusteeOrgId}/users 
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:add
-* admin
-* role_manager
 
 
 ### Example
@@ -1478,8 +1472,6 @@ Wraps PUT /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}
 Requires ANY permissions: 
 
 * authorization:orgTrusteeUser:edit
-* admin
-* role_manager
 
 
 ### Example

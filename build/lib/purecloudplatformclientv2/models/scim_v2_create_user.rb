@@ -46,6 +46,9 @@ module PureCloud
     # Photos
     attr_accessor :photos
 
+    # External ID
+    attr_accessor :external_id
+
     # Group References
     attr_accessor :groups
 
@@ -75,6 +78,8 @@ module PureCloud
         :'emails' => :'emails',
         
         :'photos' => :'photos',
+        
+        :'external_id' => :'externalId',
         
         :'groups' => :'groups',
         
@@ -106,6 +111,8 @@ module PureCloud
         :'emails' => :'Array<ScimEmail>',
         
         :'photos' => :'Array<Photo>',
+        
+        :'external_id' => :'String',
         
         :'groups' => :'Array<ScimV2GroupReference>',
         
@@ -214,6 +221,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'externalId')
+        
+        
+        self.external_id = attributes[:'externalId']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'groups')
         
         if (value = attributes[:'groups']).is_a?(Array)
@@ -316,8 +332,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -393,6 +418,7 @@ module PureCloud
           phone_numbers == o.phone_numbers &&
           emails == o.emails &&
           photos == o.photos &&
+          external_id == o.external_id &&
           groups == o.groups &&
           meta == o.meta &&
           urnietfparamsscimschemasextensionenterprise2_0_user == o.urnietfparamsscimschemasextensionenterprise2_0_user
@@ -407,7 +433,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [display_name, schemas, active, user_name, password, title, phone_numbers, emails, photos, groups, meta, urnietfparamsscimschemasextensionenterprise2_0_user].hash
+      [display_name, schemas, active, user_name, password, title, phone_numbers, emails, photos, external_id, groups, meta, urnietfparamsscimschemasextensionenterprise2_0_user].hash
     end
 
     # build the object from hash

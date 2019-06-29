@@ -1230,6 +1230,7 @@ module PureCloud
     # @option opts [Array<String>] :resource_type Types of consuming resources to show.  Only versioned types are allowed here.
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :flow_filter Show only checkedIn or published flows
     # @return [ConsumingResourcesEntityListing]
     def get_architect_dependencytracking_consumingresources(id, object_type, opts = {})
       data, _status_code, _headers = get_architect_dependencytracking_consumingresources_with_http_info(id, object_type, opts)
@@ -1244,6 +1245,7 @@ module PureCloud
     # @option opts [Array<String>] :resource_type Types of consuming resources to show.  Only versioned types are allowed here.
     # @option opts [Integer] :page_number Page number
     # @option opts [Integer] :page_size Page size
+    # @option opts [String] :flow_filter Show only checkedIn or published flows
     # @return [Array<(ConsumingResourcesEntityListing, Fixnum, Hash)>] ConsumingResourcesEntityListing data, response status code and response headers
     def get_architect_dependencytracking_consumingresources_with_http_info(id, object_type, opts = {})
       if @api_client.config.debugging
@@ -1289,6 +1291,16 @@ module PureCloud
       
       
       
+      
+      
+      
+      if opts[:'flow_filter'] && !['checkedIn', 'published'].include?(opts[:'flow_filter'])
+        fail ArgumentError, 'invalid value for "flow_filter", must be one of checkedIn, published'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/consumingresources".sub('{format}','json')
 
@@ -1299,6 +1311,7 @@ module PureCloud
       query_params[:'resourceType'] = @api_client.build_collection_param(opts[:'resource_type'], :multi) if opts[:'resource_type']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'flowFilter'] = opts[:'flow_filter'] if opts[:'flow_filter']
 
       # header parameters
       header_params = {}

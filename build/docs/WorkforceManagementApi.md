@@ -705,6 +705,10 @@ Requires ANY permissions:
 * wfm:agentSchedule:view
 * wfm:agentTimeOffRequest:submit
 * wfm:agent:view
+* wfm:businessUnit:add
+* wfm:businessUnit:delete
+* wfm:businessUnit:edit
+* wfm:businessUnit:view
 * wfm:historicalAdherence:view
 * wfm:intraday:view
 * wfm:managementUnit:add
@@ -722,6 +726,9 @@ Requires ANY permissions:
 * wfm:serviceGoalGroup:delete
 * wfm:serviceGoalGroup:edit
 * wfm:serviceGoalGroup:view
+* wfm:shiftTradeRequest:edit
+* wfm:shiftTradeRequest:view
+* wfm:agentShiftTradeRequest:participate
 * wfm:shortTermForecast:add
 * wfm:shortTermForecast:delete
 * wfm:shortTermForecast:edit
@@ -877,6 +884,10 @@ Requires ANY permissions:
 * wfm:agentSchedule:view
 * wfm:agentTimeOffRequest:submit
 * wfm:agent:view
+* wfm:businessUnit:add
+* wfm:businessUnit:delete
+* wfm:businessUnit:edit
+* wfm:businessUnit:view
 * wfm:historicalAdherence:view
 * wfm:intraday:view
 * wfm:managementUnit:add
@@ -1988,7 +1999,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_week_schedules"></a>
 
-## [**WeekScheduleListResponse**](WeekScheduleListResponse.html) get_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id)
+## [**WeekScheduleListResponse**](WeekScheduleListResponse.html) get_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id, opts)
 
 
 
@@ -2025,10 +2036,15 @@ management_unit_id = "management_unit_id_example" # String | The ID of the manag
 
 week_id = "week_id_example" # String | First day of schedule week in yyyy-MM-dd format.
 
+opts = { 
+  include_only_published: true, # BOOLEAN | Return only published schedules
+  earliest_week_date: "earliest_week_date_example", # String | The start date of the earliest week to query in yyyy-MM-dd format
+  latest_week_date: "latest_week_date_example" # String | The start date of the latest week to query in yyyy-MM-dd format
+}
 
 begin
   #Get the list of schedules in a week in management unit
-  result = api_instance.get_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id)
+  result = api_instance.get_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_week_schedules: #{e}"
@@ -2041,6 +2057,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **management_unit_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
  **week_id** | **String**| First day of schedule week in yyyy-MM-dd format. |  |
+ **include_only_published** | **BOOLEAN**| Return only published schedules | [optional]  |
+ **earliest_week_date** | **String**| The start date of the earliest week to query in yyyy-MM-dd format | [optional]  |
+ **latest_week_date** | **String**| The start date of the latest week to query in yyyy-MM-dd format | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2397,7 +2416,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**|  | [optional]  |
  **page_number** | **Integer**|  | [optional]  |
  **expand** | **String**|  | [optional] <br />**Values**: details |
- **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans |
+ **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ServiceGoalTemplates, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans |
  **division_id** | **String**|  | [optional]  |
 {: class="table table-striped"}
 

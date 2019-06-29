@@ -10,7 +10,6 @@ Method | Description
 ------------- | ------------- | -------------
 [**get_license_definition**](LicenseApi.html#get_license_definition) | Get PureCloud license definition.
 [**get_license_definitions**](LicenseApi.html#get_license_definitions) | Get all PureCloud license definitions available for the organization.
-[**get_license_organization**](LicenseApi.html#get_license_organization) | Get license assignments for the organization.
 [**get_license_toggle**](LicenseApi.html#get_license_toggle) | Get PureCloud license feature toggle value.
 [**get_license_user**](LicenseApi.html#get_license_user) | Get licenses for specified user.
 [**get_license_users**](LicenseApi.html#get_license_users) | Get a page of users and their licenses
@@ -33,8 +32,6 @@ Wraps GET /api/v2/license/definitions/{licenseId}
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 
@@ -100,8 +97,6 @@ Wraps GET /api/v2/license/definitions
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 
@@ -147,67 +142,6 @@ This endpoint does not need any parameter.
 
 
 
-<a name="get_license_organization"></a>
-
-## [**LicenseOrganization**](LicenseOrganization.html) get_license_organization
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get license assignments for the organization.
-
-
-
-Wraps GET /api/v2/license/organization 
-
-Requires ANY permissions: 
-
-* admin
-* role_manager
-* authorization:grant:add
-
-
-### Example
-```{"language":"ruby"}
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::LicenseApi.new
-
-begin
-  #Get license assignments for the organization.
-  result = api_instance.get_license_organization
-  p result
-rescue PureCloud::ApiError => e
-  puts "Exception when calling LicenseApi->get_license_organization: #{e}"
-end
-```
-
-### Parameters
-This endpoint does not need any parameter.
-{: class="table table-striped"}
-
-
-### Return type
-
-[**LicenseOrganization**](LicenseOrganization.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
 <a name="get_license_toggle"></a>
 
 ## [**LicenseOrgToggle**](LicenseOrgToggle.html) get_license_toggle(feature_name)
@@ -222,8 +156,6 @@ Wraps GET /api/v2/license/toggles/{featureName}
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 
@@ -289,8 +221,6 @@ Wraps GET /api/v2/license/users/{userId}
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 
@@ -354,11 +284,8 @@ Retrieve a page of users in an organization along with the licenses they possess
 
 Wraps GET /api/v2/license/users 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* admin
-* role_manager
-* authorization:grant:add
 
 
 ### Example
@@ -426,8 +353,6 @@ Wraps POST /api/v2/license/organization
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 
@@ -494,8 +419,6 @@ Wraps POST /api/v2/license/toggles/{featureName}
 
 Requires ANY permissions: 
 
-* admin
-* role_manager
 * authorization:grant:add
 
 

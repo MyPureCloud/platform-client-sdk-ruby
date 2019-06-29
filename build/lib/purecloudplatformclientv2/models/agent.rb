@@ -18,14 +18,17 @@ require 'date'
 
 module PureCloud
   class Agent
-    # The current stage for this agent
-    attr_accessor :stage
+    attr_accessor :id
+
+    attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'stage' => :'stage'
+        :'id' => :'id',
+        
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -34,7 +37,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'stage' => :'String'
+        :'id' => :'String',
+        
+        :'self_uri' => :'String'
         
       }
     end
@@ -48,10 +53,19 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'stage')
+      if attributes.has_key?(:'id')
         
         
-        self.stage = attributes[:'stage']
+        self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -76,8 +90,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -89,7 +112,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          stage == o.stage
+          id == o.id &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -101,7 +125,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [stage].hash
+      [id, self_uri].hash
     end
 
     # build the object from hash
