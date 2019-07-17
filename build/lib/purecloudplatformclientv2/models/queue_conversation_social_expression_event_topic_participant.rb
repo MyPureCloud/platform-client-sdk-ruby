@@ -52,6 +52,8 @@ module PureCloud
 
     attr_accessor :wrapup
 
+    attr_accessor :conversation_routing_data
+
     attr_accessor :alerting_timeout_ms
 
     attr_accessor :monitored_participant_id
@@ -119,6 +121,8 @@ module PureCloud
         :'wrapup_timeout_ms' => :'wrapupTimeoutMs',
         
         :'wrapup' => :'wrapup',
+        
+        :'conversation_routing_data' => :'conversationRoutingData',
         
         :'alerting_timeout_ms' => :'alertingTimeoutMs',
         
@@ -190,6 +194,8 @@ module PureCloud
         :'wrapup_timeout_ms' => :'Integer',
         
         :'wrapup' => :'QueueConversationSocialExpressionEventTopicWrapup',
+        
+        :'conversation_routing_data' => :'QueueConversationSocialExpressionEventTopicConversationRoutingData',
         
         :'alerting_timeout_ms' => :'Integer',
         
@@ -381,6 +387,15 @@ module PureCloud
         
         
         self.wrapup = attributes[:'wrapup']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'conversationRoutingData')
+        
+        
+        self.conversation_routing_data = attributes[:'conversationRoutingData']
         
       
       end
@@ -634,6 +649,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["REQUESTED", "ACTIVE", "PAUSED", "STOPPED", "ERROR", "TIMEOUT"]
       if @screen_recording_state && !allowed_values.include?(@screen_recording_state)
         return false
@@ -691,6 +710,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -883,6 +907,7 @@ module PureCloud
           wrapup_prompt == o.wrapup_prompt &&
           wrapup_timeout_ms == o.wrapup_timeout_ms &&
           wrapup == o.wrapup &&
+          conversation_routing_data == o.conversation_routing_data &&
           alerting_timeout_ms == o.alerting_timeout_ms &&
           monitored_participant_id == o.monitored_participant_id &&
           screen_recording_state == o.screen_recording_state &&
@@ -909,7 +934,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, connected_time, end_time, user_id, external_contact_id, external_organization_id, name, queue_id, group_id, purpose, consult_participant_id, address, wrapup_required, wrapup_expected, wrapup_prompt, wrapup_timeout_ms, wrapup, alerting_timeout_ms, monitored_participant_id, screen_recording_state, flagged_reason, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, additional_properties].hash
+      [id, connected_time, end_time, user_id, external_contact_id, external_organization_id, name, queue_id, group_id, purpose, consult_participant_id, address, wrapup_required, wrapup_expected, wrapup_prompt, wrapup_timeout_ms, wrapup, conversation_routing_data, alerting_timeout_ms, monitored_participant_id, screen_recording_state, flagged_reason, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, additional_properties].hash
     end
 
     # build the object from hash

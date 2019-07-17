@@ -70,6 +70,8 @@ module PureCloud
 
     attr_accessor :wrapup
 
+    attr_accessor :conversation_routing_data
+
     attr_accessor :peer
 
     attr_accessor :screen_recording_state
@@ -155,6 +157,8 @@ module PureCloud
         :'external_organization' => :'externalOrganization',
         
         :'wrapup' => :'wrapup',
+        
+        :'conversation_routing_data' => :'conversationRoutingData',
         
         :'peer' => :'peer',
         
@@ -244,6 +248,8 @@ module PureCloud
         :'external_organization' => :'ConversationCallEventTopicUriReference',
         
         :'wrapup' => :'ConversationCallEventTopicWrapup',
+        
+        :'conversation_routing_data' => :'ConversationCallEventTopicConversationRoutingData',
         
         :'peer' => :'String',
         
@@ -523,6 +529,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'conversationRoutingData')
+        
+        
+        self.conversation_routing_data = attributes[:'conversationRoutingData']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'peer')
         
         
@@ -729,6 +744,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -1033,6 +1052,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] flagged_reason Object to be assigned
     def flagged_reason=(flagged_reason)
@@ -1146,6 +1170,7 @@ module PureCloud
           external_contact == o.external_contact &&
           external_organization == o.external_organization &&
           wrapup == o.wrapup &&
+          conversation_routing_data == o.conversation_routing_data &&
           peer == o.peer &&
           screen_recording_state == o.screen_recording_state &&
           flagged_reason == o.flagged_reason &&
@@ -1172,7 +1197,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, peer, screen_recording_state, flagged_reason, journey_context, muted, confined, recording, recording_state, group, ani, dnis, document_id, monitored_participant_id, consult_participant_id, fax_status].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, conversation_routing_data, peer, screen_recording_state, flagged_reason, journey_context, muted, confined, recording, recording_state, group, ani, dnis, document_id, monitored_participant_id, consult_participant_id, fax_status].hash
     end
 
     # build the object from hash

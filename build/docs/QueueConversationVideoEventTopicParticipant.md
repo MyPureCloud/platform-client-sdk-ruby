@@ -24,6 +24,7 @@ title: QueueConversationVideoEventTopicParticipant
 | **wrapup_prompt** | **String** |  | [optional] |
 | **wrapup_timeout_ms** | **Integer** |  | [optional] |
 | **wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
+| **conversation_routing_data** | [**QueueConversationVideoEventTopicConversationRoutingData**](QueueConversationVideoEventTopicConversationRoutingData.html) |  | [optional] |
 | **alerting_timeout_ms** | **Integer** |  | [optional] |
 | **monitored_participant_id** | **String** |  | [optional] |
 | **screen_recording_state** | **String** |  | [optional] |
