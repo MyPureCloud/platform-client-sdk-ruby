@@ -31,6 +31,16 @@ Method | Description
 [**get_integrations_credentials_types**](IntegrationsApi.html#get_integrations_credentials_types) | List all credential types
 [**get_integrations_eventlog**](IntegrationsApi.html#get_integrations_eventlog) | List all events
 [**get_integrations_eventlog_event_id**](IntegrationsApi.html#get_integrations_eventlog_event_id) | Get a single event
+[**get_integrations_speech_dialogflow_agent**](IntegrationsApi.html#get_integrations_speech_dialogflow_agent) | Get details about a Dialogflow agent
+[**get_integrations_speech_dialogflow_agents**](IntegrationsApi.html#get_integrations_speech_dialogflow_agents) | Get a list of Dialogflow agents in the customers&#39; Google accounts
+[**get_integrations_speech_lex_bot_alias**](IntegrationsApi.html#get_integrations_speech_lex_bot_alias) | Get details about a Lex bot alias
+[**get_integrations_speech_lex_bot_bot_id_aliases**](IntegrationsApi.html#get_integrations_speech_lex_bot_bot_id_aliases) | Get a list of aliases for a bot in the customer&#39;s AWS accounts
+[**get_integrations_speech_lex_bots**](IntegrationsApi.html#get_integrations_speech_lex_bots) | Get a list of Lex bots in the customers&#39; AWS accounts
+[**get_integrations_speech_tts_engine**](IntegrationsApi.html#get_integrations_speech_tts_engine) | Get details about a TTS engine
+[**get_integrations_speech_tts_engine_voice**](IntegrationsApi.html#get_integrations_speech_tts_engine_voice) | Get details about a specific voice for a TTS engine
+[**get_integrations_speech_tts_engine_voices**](IntegrationsApi.html#get_integrations_speech_tts_engine_voices) | Get a list of voices for a TTS engine
+[**get_integrations_speech_tts_engines**](IntegrationsApi.html#get_integrations_speech_tts_engines) | Get a list of TTS engines enabled for org
+[**get_integrations_speech_tts_settings**](IntegrationsApi.html#get_integrations_speech_tts_settings) | Get TTS settings for an org
 [**get_integrations_type**](IntegrationsApi.html#get_integrations_type) | Get integration type.
 [**get_integrations_type_configschema**](IntegrationsApi.html#get_integrations_type_configschema) | Get properties config schema for an integration type.
 [**get_integrations_types**](IntegrationsApi.html#get_integrations_types) | List integration types
@@ -49,6 +59,7 @@ Method | Description
 [**post_integrations_workforcemanagement_vendorconnection**](IntegrationsApi.html#post_integrations_workforcemanagement_vendorconnection) | Add a vendor connection
 [**put_integration_config_current**](IntegrationsApi.html#put_integration_config_current) | Update integration configuration.
 [**put_integrations_credential**](IntegrationsApi.html#put_integrations_credential) | Update a set of credentials
+[**put_integrations_speech_tts_settings**](IntegrationsApi.html#put_integrations_speech_tts_settings) | Update TTS settings for an org
 {: class="table table-striped"}
 
 <a name="delete_integration"></a>
@@ -1662,6 +1673,692 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_integrations_speech_dialogflow_agent"></a>
+
+## [**DialogflowAgent**](DialogflowAgent.html) get_integrations_speech_dialogflow_agent(agent_id)
+
+
+
+Get details about a Dialogflow agent
+
+
+
+Wraps GET /api/v2/integrations/speech/dialogflow/agents/{agentId} 
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+agent_id = "agent_id_example" # String | The agent ID
+
+
+begin
+  #Get details about a Dialogflow agent
+  result = api_instance.get_integrations_speech_dialogflow_agent(agent_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_speech_dialogflow_agent: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **agent_id** | **String**| The agent ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DialogflowAgent**](DialogflowAgent.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_speech_dialogflow_agents"></a>
+
+## [**DialogflowAgentSummaryEntityListing**](DialogflowAgentSummaryEntityListing.html) get_integrations_speech_dialogflow_agents(opts)
+
+
+
+Get a list of Dialogflow agents in the customers' Google accounts
+
+
+
+Wraps GET /api/v2/integrations/speech/dialogflow/agents 
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  name: "name_example" # String | Filter on agent name
+}
+
+begin
+  #Get a list of Dialogflow agents in the customers' Google accounts
+  result = api_instance.get_integrations_speech_dialogflow_agents(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_speech_dialogflow_agents: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **name** | **String**| Filter on agent name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DialogflowAgentSummaryEntityListing**](DialogflowAgentSummaryEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_speech_lex_bot_alias"></a>
+
+## [**LexBotAlias**](LexBotAlias.html) get_integrations_speech_lex_bot_alias(alias_id)
+
+
+
+Get details about a Lex bot alias
+
+
+
+Wraps GET /api/v2/integrations/speech/lex/bot/alias/{aliasId} 
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+alias_id = "alias_id_example" # String | The alias ID
+
+
+begin
+  #Get details about a Lex bot alias
+  result = api_instance.get_integrations_speech_lex_bot_alias(alias_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_speech_lex_bot_alias: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **alias_id** | **String**| The alias ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LexBotAlias**](LexBotAlias.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_speech_lex_bot_bot_id_aliases"></a>
+
+## [**LexBotAliasEntityListing**](LexBotAliasEntityListing.html) get_integrations_speech_lex_bot_bot_id_aliases(bot_id, opts)
+
+
+
+Get a list of aliases for a bot in the customer's AWS accounts
+
+
+
+Wraps GET /api/v2/integrations/speech/lex/bot/{botId}/aliases 
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+bot_id = "bot_id_example" # String | The bot ID
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  status: "status_example", # String | Filter on alias status
+  name: "name_example" # String | Filter on alias name
+}
+
+begin
+  #Get a list of aliases for a bot in the customer's AWS accounts
+  result = api_instance.get_integrations_speech_lex_bot_bot_id_aliases(bot_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_speech_lex_bot_bot_id_aliases: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bot_id** | **String**| The bot ID |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **status** | **String**| Filter on alias status | [optional] <br />**Values**: READY, FAILED, BUILDING, NOT_BUILT |
+ **name** | **String**| Filter on alias name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LexBotAliasEntityListing**](LexBotAliasEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_speech_lex_bots"></a>
+
+## [**LexBotEntityListing**](LexBotEntityListing.html) get_integrations_speech_lex_bots(opts)
+
+
+
+Get a list of Lex bots in the customers' AWS accounts
+
+
+
+Wraps GET /api/v2/integrations/speech/lex/bots 
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  name: "name_example" # String | Filter on bot name
+}
+
+begin
+  #Get a list of Lex bots in the customers' AWS accounts
+  result = api_instance.get_integrations_speech_lex_bots(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_speech_lex_bots: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **name** | **String**| Filter on bot name | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LexBotEntityListing**](LexBotEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_speech_tts_engine"></a>
+
+## [**TtsEngineEntity**](TtsEngineEntity.html) get_integrations_speech_tts_engine(engine_id, opts)
+
+
+
+Get details about a TTS engine
+
+
+
+Wraps GET /api/v2/integrations/speech/tts/engines/{engineId} 
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+engine_id = "engine_id_example" # String | The engine ID
+
+opts = { 
+  include_voices: false # BOOLEAN | Include voices for the engine
+}
+
+begin
+  #Get details about a TTS engine
+  result = api_instance.get_integrations_speech_tts_engine(engine_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_speech_tts_engine: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_id** | **String**| The engine ID |  |
+ **include_voices** | **BOOLEAN**| Include voices for the engine | [optional] [default to false] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TtsEngineEntity**](TtsEngineEntity.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_speech_tts_engine_voice"></a>
+
+## [**TtsVoiceEntity**](TtsVoiceEntity.html) get_integrations_speech_tts_engine_voice(engine_id, voice_id)
+
+
+
+Get details about a specific voice for a TTS engine
+
+
+
+Wraps GET /api/v2/integrations/speech/tts/engines/{engineId}/voices/{voiceId} 
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+engine_id = "engine_id_example" # String | The engine ID
+
+voice_id = "voice_id_example" # String | The voice ID
+
+
+begin
+  #Get details about a specific voice for a TTS engine
+  result = api_instance.get_integrations_speech_tts_engine_voice(engine_id, voice_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_speech_tts_engine_voice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_id** | **String**| The engine ID |  |
+ **voice_id** | **String**| The voice ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TtsVoiceEntity**](TtsVoiceEntity.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_speech_tts_engine_voices"></a>
+
+## [**TtsVoiceEntityListing**](TtsVoiceEntityListing.html) get_integrations_speech_tts_engine_voices(engine_id, opts)
+
+
+
+Get a list of voices for a TTS engine
+
+
+
+Wraps GET /api/v2/integrations/speech/tts/engines/{engineId}/voices 
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+engine_id = "engine_id_example" # String | The engine ID
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25 # Integer | Page size
+}
+
+begin
+  #Get a list of voices for a TTS engine
+  result = api_instance.get_integrations_speech_tts_engine_voices(engine_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_speech_tts_engine_voices: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_id** | **String**| The engine ID |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TtsVoiceEntityListing**](TtsVoiceEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_speech_tts_engines"></a>
+
+## [**TtsEngineEntityListing**](TtsEngineEntityListing.html) get_integrations_speech_tts_engines(opts)
+
+
+
+Get a list of TTS engines enabled for org
+
+
+
+Wraps GET /api/v2/integrations/speech/tts/engines 
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25, # Integer | Page size
+  include_voices: false, # BOOLEAN | Include voices for the engine
+  name: "name_example", # String | Filter on engine name
+  language: "language_example" # String | Filter on supported language. If includeVoices=true then the voices are also filtered.
+}
+
+begin
+  #Get a list of TTS engines enabled for org
+  result = api_instance.get_integrations_speech_tts_engines(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_speech_tts_engines: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **include_voices** | **BOOLEAN**| Include voices for the engine | [optional] [default to false] |
+ **name** | **String**| Filter on engine name | [optional]  |
+ **language** | **String**| Filter on supported language. If includeVoices=true then the voices are also filtered. | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TtsEngineEntityListing**](TtsEngineEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_speech_tts_settings"></a>
+
+## [**TtsSettings**](TtsSettings.html) get_integrations_speech_tts_settings
+
+
+
+Get TTS settings for an org
+
+
+
+Wraps GET /api/v2/integrations/speech/tts/settings 
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+begin
+  #Get TTS settings for an org
+  result = api_instance.get_integrations_speech_tts_settings
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_speech_tts_settings: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TtsSettings**](TtsSettings.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_integrations_type"></a>
 
 ## [**IntegrationType**](IntegrationType.html) get_integrations_type(type_id)
@@ -2876,6 +3573,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CredentialInfo**](CredentialInfo.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_integrations_speech_tts_settings"></a>
+
+## [**TtsSettings**](TtsSettings.html) put_integrations_speech_tts_settings(body)
+
+
+
+Update TTS settings for an org
+
+
+
+Wraps PUT /api/v2/integrations/speech/tts/settings 
+
+Requires ANY permissions: 
+
+* integrations:integration:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+body = PureCloud::TtsSettings.new # TtsSettings | Updated TtsSettings
+
+
+begin
+  #Update TTS settings for an org
+  result = api_instance.put_integrations_speech_tts_settings(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->put_integrations_speech_tts_settings: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**TtsSettings**](TtsSettings.html)| Updated TtsSettings |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TtsSettings**](TtsSettings.html)
 
 ### HTTP request headers
 

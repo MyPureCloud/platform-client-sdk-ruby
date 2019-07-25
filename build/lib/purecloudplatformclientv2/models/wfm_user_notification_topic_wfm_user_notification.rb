@@ -28,6 +28,8 @@ module PureCloud
 
     attr_accessor :shift_trade
 
+    attr_accessor :time_off_request
+
     attr_accessor :agent_notification
 
     attr_accessor :other_notification_ids_in_group
@@ -45,6 +47,8 @@ module PureCloud
         :'type' => :'type',
         
         :'shift_trade' => :'shiftTrade',
+        
+        :'time_off_request' => :'timeOffRequest',
         
         :'agent_notification' => :'agentNotification',
         
@@ -66,6 +70,8 @@ module PureCloud
         :'type' => :'String',
         
         :'shift_trade' => :'WfmUserNotificationTopicShiftTradeNotification',
+        
+        :'time_off_request' => :'WfmUserNotificationTopicTimeOffRequestNotification',
         
         :'agent_notification' => :'BOOLEAN',
         
@@ -128,6 +134,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'timeOffRequest')
+        
+        
+        self.time_off_request = attributes[:'timeOffRequest']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'agentNotification')
         
         
@@ -177,10 +192,14 @@ module PureCloud
       
       
       
-      allowed_values = ["ShiftTrade"]
+      allowed_values = ["ShiftTrade", "TimeOffRequest"]
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -218,13 +237,18 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
-      allowed_values = ["ShiftTrade"]
+      allowed_values = ["ShiftTrade", "TimeOffRequest"]
       if type && !allowed_values.include?(type)
         fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
       end
       @type = type
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -253,6 +277,7 @@ module PureCloud
           timestamp == o.timestamp &&
           type == o.type &&
           shift_trade == o.shift_trade &&
+          time_off_request == o.time_off_request &&
           agent_notification == o.agent_notification &&
           other_notification_ids_in_group == o.other_notification_ids_in_group
     end
@@ -266,7 +291,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, mutable_group_id, timestamp, type, shift_trade, agent_notification, other_notification_ids_in_group].hash
+      [id, mutable_group_id, timestamp, type, shift_trade, time_off_request, agent_notification, other_notification_ids_in_group].hash
     end
 
     # build the object from hash

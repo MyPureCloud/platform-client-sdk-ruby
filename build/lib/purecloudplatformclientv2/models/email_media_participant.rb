@@ -123,6 +123,9 @@ module PureCloud
     # Indicates if the inbound email was marked as spam.
     attr_accessor :spam
 
+    # A globally unique identifier for the stored content of this communication.
+    attr_accessor :message_id
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -195,7 +198,9 @@ module PureCloud
         
         :'draft_attachments' => :'draftAttachments',
         
-        :'spam' => :'spam'
+        :'spam' => :'spam',
+        
+        :'message_id' => :'messageId'
         
       }
     end
@@ -272,7 +277,9 @@ module PureCloud
         
         :'draft_attachments' => :'Array<Attachment>',
         
-        :'spam' => :'BOOLEAN'
+        :'spam' => :'BOOLEAN',
+        
+        :'message_id' => :'String'
         
       }
     end
@@ -605,6 +612,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'messageId')
+        
+        
+        self.message_id = attributes[:'messageId']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -749,6 +765,10 @@ module PureCloud
       if @flagged_reason && !allowed_values.include?(@flagged_reason)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -994,6 +1014,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1033,7 +1058,8 @@ module PureCloud
           messages_sent == o.messages_sent &&
           auto_generated == o.auto_generated &&
           draft_attachments == o.draft_attachments &&
-          spam == o.spam
+          spam == o.spam &&
+          message_id == o.message_id
     end
 
     # @see the `==` method
@@ -1045,7 +1071,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, peer, flagged_reason, journey_context, conversation_routing_data, subject, messages_sent, auto_generated, draft_attachments, spam].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, peer, flagged_reason, journey_context, conversation_routing_data, subject, messages_sent, auto_generated, draft_attachments, spam, message_id].hash
     end
 
     # build the object from hash

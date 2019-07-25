@@ -8,9 +8,21 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
+[**delete_conversations_messaging_integrations_facebook_integration_id**](MessagingApi.html#delete_conversations_messaging_integrations_facebook_integration_id) | Delete a Facebook messaging integration
+[**delete_conversations_messaging_integrations_line_integration_id**](MessagingApi.html#delete_conversations_messaging_integrations_line_integration_id) | Delete a LINE messenger integration
+[**delete_conversations_messaging_integrations_twitter_integration_id**](MessagingApi.html#delete_conversations_messaging_integrations_twitter_integration_id) | Delete a Twitter messaging integration
 [**delete_messaging_integrations_facebook_integration_id**](MessagingApi.html#delete_messaging_integrations_facebook_integration_id) | Delete a Facebook messaging integration
 [**delete_messaging_integrations_line_integration_id**](MessagingApi.html#delete_messaging_integrations_line_integration_id) | Delete a LINE messenger integration
 [**delete_messaging_integrations_twitter_integration_id**](MessagingApi.html#delete_messaging_integrations_twitter_integration_id) | Delete a Twitter messaging integration
+[**get_conversations_messaging_integrations**](MessagingApi.html#get_conversations_messaging_integrations) | Get a list of Integrations
+[**get_conversations_messaging_integrations_facebook**](MessagingApi.html#get_conversations_messaging_integrations_facebook) | Get a list of Facebook Integrations
+[**get_conversations_messaging_integrations_facebook_integration_id**](MessagingApi.html#get_conversations_messaging_integrations_facebook_integration_id) | Get a Facebook messaging integration
+[**get_conversations_messaging_integrations_line**](MessagingApi.html#get_conversations_messaging_integrations_line) | Get a list of LINE messenger Integrations
+[**get_conversations_messaging_integrations_line_integration_id**](MessagingApi.html#get_conversations_messaging_integrations_line_integration_id) | Get a LINE messenger integration
+[**get_conversations_messaging_integrations_twitter**](MessagingApi.html#get_conversations_messaging_integrations_twitter) | Get a list of Twitter Integrations
+[**get_conversations_messaging_integrations_twitter_integration_id**](MessagingApi.html#get_conversations_messaging_integrations_twitter_integration_id) | Get a Twitter messaging integration
+[**get_conversations_messaging_sticker**](MessagingApi.html#get_conversations_messaging_sticker) | Get a list of Messaging Stickers
+[**get_messaging_integrations**](MessagingApi.html#get_messaging_integrations) | Get a list of Integrations
 [**get_messaging_integrations_facebook**](MessagingApi.html#get_messaging_integrations_facebook) | Get a list of Facebook Integrations
 [**get_messaging_integrations_facebook_integration_id**](MessagingApi.html#get_messaging_integrations_facebook_integration_id) | Get a Facebook messaging integration
 [**get_messaging_integrations_line**](MessagingApi.html#get_messaging_integrations_line) | Get a list of LINE messenger Integrations
@@ -18,17 +30,213 @@ Method | Description
 [**get_messaging_integrations_twitter**](MessagingApi.html#get_messaging_integrations_twitter) | Get a list of Twitter Integrations
 [**get_messaging_integrations_twitter_integration_id**](MessagingApi.html#get_messaging_integrations_twitter_integration_id) | Get a Twitter messaging integration
 [**get_messaging_sticker**](MessagingApi.html#get_messaging_sticker) | Get a list of Messaging Stickers
+[**post_conversations_messaging_integrations_facebook**](MessagingApi.html#post_conversations_messaging_integrations_facebook) | Create a Facebook Integration
+[**post_conversations_messaging_integrations_line**](MessagingApi.html#post_conversations_messaging_integrations_line) | Create a LINE messenger Integration
+[**post_conversations_messaging_integrations_twitter**](MessagingApi.html#post_conversations_messaging_integrations_twitter) | Create a Twitter Integration
 [**post_messaging_integrations_facebook**](MessagingApi.html#post_messaging_integrations_facebook) | Create a Facebook Integration
 [**post_messaging_integrations_line**](MessagingApi.html#post_messaging_integrations_line) | Create a LINE messenger Integration
 [**post_messaging_integrations_twitter**](MessagingApi.html#post_messaging_integrations_twitter) | Create a Twitter Integration
+[**put_conversations_messaging_integrations_line_integration_id**](MessagingApi.html#put_conversations_messaging_integrations_line_integration_id) | Update a LINE messenger integration
 [**put_messaging_integrations_line_integration_id**](MessagingApi.html#put_messaging_integrations_line_integration_id) | Update a LINE messenger integration
 {: class="table table-striped"}
+
+<a name="delete_conversations_messaging_integrations_facebook_integration_id"></a>
+
+##  delete_conversations_messaging_integrations_facebook_integration_id(integration_id)
+
+
+
+Delete a Facebook messaging integration
+
+
+
+Wraps DELETE /api/v2/conversations/messaging/integrations/facebook/{integrationId} 
+
+Requires ANY permissions: 
+
+* messaging:integration:delete
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+integration_id = "integration_id_example" # String | Integration ID
+
+
+begin
+  #Delete a Facebook messaging integration
+  api_instance.delete_conversations_messaging_integrations_facebook_integration_id(integration_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->delete_conversations_messaging_integrations_facebook_integration_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_conversations_messaging_integrations_line_integration_id"></a>
+
+##  delete_conversations_messaging_integrations_line_integration_id(integration_id)
+
+
+
+Delete a LINE messenger integration
+
+
+
+Wraps DELETE /api/v2/conversations/messaging/integrations/line/{integrationId} 
+
+Requires ANY permissions: 
+
+* messaging:integration:delete
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+integration_id = "integration_id_example" # String | Integration ID
+
+
+begin
+  #Delete a LINE messenger integration
+  api_instance.delete_conversations_messaging_integrations_line_integration_id(integration_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->delete_conversations_messaging_integrations_line_integration_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_conversations_messaging_integrations_twitter_integration_id"></a>
+
+##  delete_conversations_messaging_integrations_twitter_integration_id(integration_id)
+
+
+
+Delete a Twitter messaging integration
+
+
+
+Wraps DELETE /api/v2/conversations/messaging/integrations/twitter/{integrationId} 
+
+Requires ANY permissions: 
+
+* messaging:integration:delete
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+integration_id = "integration_id_example" # String | Integration ID
+
+
+begin
+  #Delete a Twitter messaging integration
+  api_instance.delete_conversations_messaging_integrations_twitter_integration_id(integration_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->delete_conversations_messaging_integrations_twitter_integration_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 <a name="delete_messaging_integrations_facebook_integration_id"></a>
 
 ##  delete_messaging_integrations_facebook_integration_id(integration_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a Facebook messaging integration
 
@@ -92,7 +300,7 @@ nil (empty response body)
 
 ##  delete_messaging_integrations_line_integration_id(integration_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a LINE messenger integration
 
@@ -156,7 +364,7 @@ nil (empty response body)
 
 ##  delete_messaging_integrations_twitter_integration_id(integration_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a Twitter messaging integration
 
@@ -216,11 +424,617 @@ nil (empty response body)
 
 
 
+<a name="get_conversations_messaging_integrations"></a>
+
+## [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html) get_conversations_messaging_integrations(opts)
+
+
+
+Get a list of Integrations
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations 
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Get a list of Integrations
+  result = api_instance.get_conversations_messaging_integrations(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->get_conversations_messaging_integrations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_messaging_integrations_facebook"></a>
+
+## [**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html) get_conversations_messaging_integrations_facebook(opts)
+
+
+
+Get a list of Facebook Integrations
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/facebook 
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Get a list of Facebook Integrations
+  result = api_instance.get_conversations_messaging_integrations_facebook(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->get_conversations_messaging_integrations_facebook: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_messaging_integrations_facebook_integration_id"></a>
+
+## [**FacebookIntegration**](FacebookIntegration.html) get_conversations_messaging_integrations_facebook_integration_id(integration_id)
+
+
+
+Get a Facebook messaging integration
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/facebook/{integrationId} 
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+integration_id = "integration_id_example" # String | Integration ID
+
+
+begin
+  #Get a Facebook messaging integration
+  result = api_instance.get_conversations_messaging_integrations_facebook_integration_id(integration_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->get_conversations_messaging_integrations_facebook_integration_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**FacebookIntegration**](FacebookIntegration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_messaging_integrations_line"></a>
+
+## [**LineIntegrationEntityListing**](LineIntegrationEntityListing.html) get_conversations_messaging_integrations_line(opts)
+
+
+
+Get a list of LINE messenger Integrations
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/line 
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Get a list of LINE messenger Integrations
+  result = api_instance.get_conversations_messaging_integrations_line(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->get_conversations_messaging_integrations_line: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LineIntegrationEntityListing**](LineIntegrationEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_messaging_integrations_line_integration_id"></a>
+
+## [**LineIntegration**](LineIntegration.html) get_conversations_messaging_integrations_line_integration_id(integration_id)
+
+
+
+Get a LINE messenger integration
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/line/{integrationId} 
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+integration_id = "integration_id_example" # String | Integration ID
+
+
+begin
+  #Get a LINE messenger integration
+  result = api_instance.get_conversations_messaging_integrations_line_integration_id(integration_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->get_conversations_messaging_integrations_line_integration_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LineIntegration**](LineIntegration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_messaging_integrations_twitter"></a>
+
+## [**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html) get_conversations_messaging_integrations_twitter(opts)
+
+
+
+Get a list of Twitter Integrations
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/twitter 
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Get a list of Twitter Integrations
+  result = api_instance.get_conversations_messaging_integrations_twitter(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->get_conversations_messaging_integrations_twitter: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_messaging_integrations_twitter_integration_id"></a>
+
+## [**TwitterIntegration**](TwitterIntegration.html) get_conversations_messaging_integrations_twitter_integration_id(integration_id)
+
+
+
+Get a Twitter messaging integration
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/twitter/{integrationId} 
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+integration_id = "integration_id_example" # String | Integration ID
+
+
+begin
+  #Get a Twitter messaging integration
+  result = api_instance.get_conversations_messaging_integrations_twitter_integration_id(integration_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->get_conversations_messaging_integrations_twitter_integration_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TwitterIntegration**](TwitterIntegration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_messaging_sticker"></a>
+
+## [**MessagingStickerEntityListing**](MessagingStickerEntityListing.html) get_conversations_messaging_sticker(messenger_type, opts)
+
+
+
+Get a list of Messaging Stickers
+
+
+
+Wraps GET /api/v2/conversations/messaging/stickers/{messengerType} 
+
+Requires ANY permissions: 
+
+* conversation:message:create
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+messenger_type = "messenger_type_example" # String | Messenger Type
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Get a list of Messaging Stickers
+  result = api_instance.get_conversations_messaging_sticker(messenger_type, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->get_conversations_messaging_sticker: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messenger_type** | **String**| Messenger Type |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessagingStickerEntityListing**](MessagingStickerEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_messaging_integrations"></a>
+
+## [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html) get_messaging_integrations(opts)
+
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
+Get a list of Integrations
+
+
+
+Wraps GET /api/v2/messaging/integrations 
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Get a list of Integrations
+  result = api_instance.get_messaging_integrations(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->get_messaging_integrations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_messaging_integrations_facebook"></a>
 
 ## [**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html) get_messaging_integrations_facebook(opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a list of Facebook Integrations
 
@@ -288,7 +1102,7 @@ Name | Type | Description  | Notes
 
 ## [**FacebookIntegration**](FacebookIntegration.html) get_messaging_integrations_facebook_integration_id(integration_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a Facebook messaging integration
 
@@ -353,7 +1167,7 @@ Name | Type | Description  | Notes
 
 ## [**LineIntegrationEntityListing**](LineIntegrationEntityListing.html) get_messaging_integrations_line(opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a list of LINE messenger Integrations
 
@@ -421,7 +1235,7 @@ Name | Type | Description  | Notes
 
 ## [**LineIntegration**](LineIntegration.html) get_messaging_integrations_line_integration_id(integration_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a LINE messenger integration
 
@@ -486,7 +1300,7 @@ Name | Type | Description  | Notes
 
 ## [**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html) get_messaging_integrations_twitter(opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a list of Twitter Integrations
 
@@ -554,7 +1368,7 @@ Name | Type | Description  | Notes
 
 ## [**TwitterIntegration**](TwitterIntegration.html) get_messaging_integrations_twitter_integration_id(integration_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a Twitter messaging integration
 
@@ -619,7 +1433,7 @@ Name | Type | Description  | Notes
 
 ## [**MessagingStickerEntityListing**](MessagingStickerEntityListing.html) get_messaging_sticker(messenger_type, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a list of Messaging Stickers
 
@@ -686,11 +1500,206 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_conversations_messaging_integrations_facebook"></a>
+
+## [**FacebookIntegration**](FacebookIntegration.html) post_conversations_messaging_integrations_facebook(body)
+
+
+
+Create a Facebook Integration
+
+
+
+Wraps POST /api/v2/conversations/messaging/integrations/facebook 
+
+Requires ANY permissions: 
+
+* messaging:integration:add
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+body = PureCloud::FacebookIntegrationRequest.new # FacebookIntegrationRequest | FacebookIntegrationRequest
+
+
+begin
+  #Create a Facebook Integration
+  result = api_instance.post_conversations_messaging_integrations_facebook(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->post_conversations_messaging_integrations_facebook: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**FacebookIntegrationRequest**](FacebookIntegrationRequest.html)| FacebookIntegrationRequest |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**FacebookIntegration**](FacebookIntegration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversations_messaging_integrations_line"></a>
+
+## [**LineIntegration**](LineIntegration.html) post_conversations_messaging_integrations_line(body)
+
+
+
+Create a LINE messenger Integration
+
+
+
+Wraps POST /api/v2/conversations/messaging/integrations/line 
+
+Requires ANY permissions: 
+
+* messaging:integration:add
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+body = PureCloud::LineIntegrationRequest.new # LineIntegrationRequest | LineIntegrationRequest
+
+
+begin
+  #Create a LINE messenger Integration
+  result = api_instance.post_conversations_messaging_integrations_line(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->post_conversations_messaging_integrations_line: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**LineIntegrationRequest**](LineIntegrationRequest.html)| LineIntegrationRequest |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LineIntegration**](LineIntegration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversations_messaging_integrations_twitter"></a>
+
+## [**TwitterIntegration**](TwitterIntegration.html) post_conversations_messaging_integrations_twitter(body)
+
+
+
+Create a Twitter Integration
+
+
+
+Wraps POST /api/v2/conversations/messaging/integrations/twitter 
+
+Requires ANY permissions: 
+
+* messaging:integration:add
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+body = PureCloud::TwitterIntegrationRequest.new # TwitterIntegrationRequest | TwitterIntegrationRequest
+
+
+begin
+  #Create a Twitter Integration
+  result = api_instance.post_conversations_messaging_integrations_twitter(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->post_conversations_messaging_integrations_twitter: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**TwitterIntegrationRequest**](TwitterIntegrationRequest.html)| TwitterIntegrationRequest |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TwitterIntegration**](TwitterIntegration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_messaging_integrations_facebook"></a>
 
 ## [**FacebookIntegration**](FacebookIntegration.html) post_messaging_integrations_facebook(body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create a Facebook Integration
 
@@ -755,7 +1764,7 @@ Name | Type | Description  | Notes
 
 ## [**LineIntegration**](LineIntegration.html) post_messaging_integrations_line(body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create a LINE messenger Integration
 
@@ -820,7 +1829,7 @@ Name | Type | Description  | Notes
 
 ## [**TwitterIntegration**](TwitterIntegration.html) post_messaging_integrations_twitter(body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create a Twitter Integration
 
@@ -881,11 +1890,79 @@ Name | Type | Description  | Notes
 
 
 
+<a name="put_conversations_messaging_integrations_line_integration_id"></a>
+
+## [**LineIntegration**](LineIntegration.html) put_conversations_messaging_integrations_line_integration_id(integration_id, body)
+
+
+
+Update a LINE messenger integration
+
+
+
+Wraps PUT /api/v2/conversations/messaging/integrations/line/{integrationId} 
+
+Requires ANY permissions: 
+
+* messaging:integration:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::MessagingApi.new
+
+integration_id = "integration_id_example" # String | Integration ID
+
+body = PureCloud::LineIntegrationRequest.new # LineIntegrationRequest | LineIntegrationRequest
+
+
+begin
+  #Update a LINE messenger integration
+  result = api_instance.put_conversations_messaging_integrations_line_integration_id(integration_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling MessagingApi->put_conversations_messaging_integrations_line_integration_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration ID |  |
+ **body** | [**LineIntegrationRequest**](LineIntegrationRequest.html)| LineIntegrationRequest |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LineIntegration**](LineIntegration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="put_messaging_integrations_line_integration_id"></a>
 
 ## [**LineIntegration**](LineIntegration.html) put_messaging_integrations_line_integration_id(integration_id, body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update a LINE messenger integration
 

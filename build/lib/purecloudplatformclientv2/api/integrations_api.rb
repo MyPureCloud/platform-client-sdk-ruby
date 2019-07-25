@@ -2020,6 +2020,792 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get details about a Dialogflow agent
+    # 
+    # @param agent_id The agent ID
+    # @param [Hash] opts the optional parameters
+    # @return [DialogflowAgent]
+    def get_integrations_speech_dialogflow_agent(agent_id, opts = {})
+      data, _status_code, _headers = get_integrations_speech_dialogflow_agent_with_http_info(agent_id, opts)
+      return data
+    end
+
+    # Get details about a Dialogflow agent
+    # 
+    # @param agent_id The agent ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DialogflowAgent, Fixnum, Hash)>] DialogflowAgent data, response status code and response headers
+    def get_integrations_speech_dialogflow_agent_with_http_info(agent_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_speech_dialogflow_agent ..."
+      end
+      
+      
+      # verify the required parameter 'agent_id' is set
+      fail ArgumentError, "Missing the required parameter 'agent_id' when calling IntegrationsApi.get_integrations_speech_dialogflow_agent" if agent_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/speech/dialogflow/agents/{agentId}".sub('{format}','json').sub('{' + 'agentId' + '}', agent_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DialogflowAgent')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_speech_dialogflow_agent\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of Dialogflow agents in the customers' Google accounts
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :name Filter on agent name
+    # @return [DialogflowAgentSummaryEntityListing]
+    def get_integrations_speech_dialogflow_agents(opts = {})
+      data, _status_code, _headers = get_integrations_speech_dialogflow_agents_with_http_info(opts)
+      return data
+    end
+
+    # Get a list of Dialogflow agents in the customers&#39; Google accounts
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :name Filter on agent name
+    # @return [Array<(DialogflowAgentSummaryEntityListing, Fixnum, Hash)>] DialogflowAgentSummaryEntityListing data, response status code and response headers
+    def get_integrations_speech_dialogflow_agents_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_speech_dialogflow_agents ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/speech/dialogflow/agents".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DialogflowAgentSummaryEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_speech_dialogflow_agents\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get details about a Lex bot alias
+    # 
+    # @param alias_id The alias ID
+    # @param [Hash] opts the optional parameters
+    # @return [LexBotAlias]
+    def get_integrations_speech_lex_bot_alias(alias_id, opts = {})
+      data, _status_code, _headers = get_integrations_speech_lex_bot_alias_with_http_info(alias_id, opts)
+      return data
+    end
+
+    # Get details about a Lex bot alias
+    # 
+    # @param alias_id The alias ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(LexBotAlias, Fixnum, Hash)>] LexBotAlias data, response status code and response headers
+    def get_integrations_speech_lex_bot_alias_with_http_info(alias_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_speech_lex_bot_alias ..."
+      end
+      
+      
+      # verify the required parameter 'alias_id' is set
+      fail ArgumentError, "Missing the required parameter 'alias_id' when calling IntegrationsApi.get_integrations_speech_lex_bot_alias" if alias_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/speech/lex/bot/alias/{aliasId}".sub('{format}','json').sub('{' + 'aliasId' + '}', alias_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LexBotAlias')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_speech_lex_bot_alias\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of aliases for a bot in the customer's AWS accounts
+    # 
+    # @param bot_id The bot ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :status Filter on alias status
+    # @option opts [String] :name Filter on alias name
+    # @return [LexBotAliasEntityListing]
+    def get_integrations_speech_lex_bot_bot_id_aliases(bot_id, opts = {})
+      data, _status_code, _headers = get_integrations_speech_lex_bot_bot_id_aliases_with_http_info(bot_id, opts)
+      return data
+    end
+
+    # Get a list of aliases for a bot in the customer&#39;s AWS accounts
+    # 
+    # @param bot_id The bot ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :status Filter on alias status
+    # @option opts [String] :name Filter on alias name
+    # @return [Array<(LexBotAliasEntityListing, Fixnum, Hash)>] LexBotAliasEntityListing data, response status code and response headers
+    def get_integrations_speech_lex_bot_bot_id_aliases_with_http_info(bot_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_speech_lex_bot_bot_id_aliases ..."
+      end
+      
+      
+      # verify the required parameter 'bot_id' is set
+      fail ArgumentError, "Missing the required parameter 'bot_id' when calling IntegrationsApi.get_integrations_speech_lex_bot_bot_id_aliases" if bot_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'status'] && !['READY', 'FAILED', 'BUILDING', 'NOT_BUILT'].include?(opts[:'status'])
+        fail ArgumentError, 'invalid value for "status", must be one of READY, FAILED, BUILDING, NOT_BUILT'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/speech/lex/bot/{botId}/aliases".sub('{format}','json').sub('{' + 'botId' + '}', bot_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'status'] = opts[:'status'] if opts[:'status']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LexBotAliasEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_speech_lex_bot_bot_id_aliases\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of Lex bots in the customers' AWS accounts
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :name Filter on bot name
+    # @return [LexBotEntityListing]
+    def get_integrations_speech_lex_bots(opts = {})
+      data, _status_code, _headers = get_integrations_speech_lex_bots_with_http_info(opts)
+      return data
+    end
+
+    # Get a list of Lex bots in the customers&#39; AWS accounts
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :name Filter on bot name
+    # @return [Array<(LexBotEntityListing, Fixnum, Hash)>] LexBotEntityListing data, response status code and response headers
+    def get_integrations_speech_lex_bots_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_speech_lex_bots ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/speech/lex/bots".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'LexBotEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_speech_lex_bots\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get details about a TTS engine
+    # 
+    # @param engine_id The engine ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :include_voices Include voices for the engine (default to false)
+    # @return [TtsEngineEntity]
+    def get_integrations_speech_tts_engine(engine_id, opts = {})
+      data, _status_code, _headers = get_integrations_speech_tts_engine_with_http_info(engine_id, opts)
+      return data
+    end
+
+    # Get details about a TTS engine
+    # 
+    # @param engine_id The engine ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :include_voices Include voices for the engine
+    # @return [Array<(TtsEngineEntity, Fixnum, Hash)>] TtsEngineEntity data, response status code and response headers
+    def get_integrations_speech_tts_engine_with_http_info(engine_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_speech_tts_engine ..."
+      end
+      
+      
+      # verify the required parameter 'engine_id' is set
+      fail ArgumentError, "Missing the required parameter 'engine_id' when calling IntegrationsApi.get_integrations_speech_tts_engine" if engine_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/speech/tts/engines/{engineId}".sub('{format}','json').sub('{' + 'engineId' + '}', engine_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'includeVoices'] = opts[:'include_voices'] if opts[:'include_voices']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TtsEngineEntity')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_speech_tts_engine\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get details about a specific voice for a TTS engine
+    # 
+    # @param engine_id The engine ID
+    # @param voice_id The voice ID
+    # @param [Hash] opts the optional parameters
+    # @return [TtsVoiceEntity]
+    def get_integrations_speech_tts_engine_voice(engine_id, voice_id, opts = {})
+      data, _status_code, _headers = get_integrations_speech_tts_engine_voice_with_http_info(engine_id, voice_id, opts)
+      return data
+    end
+
+    # Get details about a specific voice for a TTS engine
+    # 
+    # @param engine_id The engine ID
+    # @param voice_id The voice ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TtsVoiceEntity, Fixnum, Hash)>] TtsVoiceEntity data, response status code and response headers
+    def get_integrations_speech_tts_engine_voice_with_http_info(engine_id, voice_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_speech_tts_engine_voice ..."
+      end
+      
+      
+      # verify the required parameter 'engine_id' is set
+      fail ArgumentError, "Missing the required parameter 'engine_id' when calling IntegrationsApi.get_integrations_speech_tts_engine_voice" if engine_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'voice_id' is set
+      fail ArgumentError, "Missing the required parameter 'voice_id' when calling IntegrationsApi.get_integrations_speech_tts_engine_voice" if voice_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/speech/tts/engines/{engineId}/voices/{voiceId}".sub('{format}','json').sub('{' + 'engineId' + '}', engine_id.to_s).sub('{' + 'voiceId' + '}', voice_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TtsVoiceEntity')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_speech_tts_engine_voice\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of voices for a TTS engine
+    # 
+    # @param engine_id The engine ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @return [TtsVoiceEntityListing]
+    def get_integrations_speech_tts_engine_voices(engine_id, opts = {})
+      data, _status_code, _headers = get_integrations_speech_tts_engine_voices_with_http_info(engine_id, opts)
+      return data
+    end
+
+    # Get a list of voices for a TTS engine
+    # 
+    # @param engine_id The engine ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @return [Array<(TtsVoiceEntityListing, Fixnum, Hash)>] TtsVoiceEntityListing data, response status code and response headers
+    def get_integrations_speech_tts_engine_voices_with_http_info(engine_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_speech_tts_engine_voices ..."
+      end
+      
+      
+      # verify the required parameter 'engine_id' is set
+      fail ArgumentError, "Missing the required parameter 'engine_id' when calling IntegrationsApi.get_integrations_speech_tts_engine_voices" if engine_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/speech/tts/engines/{engineId}/voices".sub('{format}','json').sub('{' + 'engineId' + '}', engine_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TtsVoiceEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_speech_tts_engine_voices\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of TTS engines enabled for org
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [BOOLEAN] :include_voices Include voices for the engine (default to false)
+    # @option opts [String] :name Filter on engine name
+    # @option opts [String] :language Filter on supported language. If includeVoices=true then the voices are also filtered.
+    # @return [TtsEngineEntityListing]
+    def get_integrations_speech_tts_engines(opts = {})
+      data, _status_code, _headers = get_integrations_speech_tts_engines_with_http_info(opts)
+      return data
+    end
+
+    # Get a list of TTS engines enabled for org
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [BOOLEAN] :include_voices Include voices for the engine
+    # @option opts [String] :name Filter on engine name
+    # @option opts [String] :language Filter on supported language. If includeVoices=true then the voices are also filtered.
+    # @return [Array<(TtsEngineEntityListing, Fixnum, Hash)>] TtsEngineEntityListing data, response status code and response headers
+    def get_integrations_speech_tts_engines_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_speech_tts_engines ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/speech/tts/engines".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'includeVoices'] = opts[:'include_voices'] if opts[:'include_voices']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'language'] = opts[:'language'] if opts[:'language']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TtsEngineEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_speech_tts_engines\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get TTS settings for an org
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [TtsSettings]
+    def get_integrations_speech_tts_settings(opts = {})
+      data, _status_code, _headers = get_integrations_speech_tts_settings_with_http_info(opts)
+      return data
+    end
+
+    # Get TTS settings for an org
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TtsSettings, Fixnum, Hash)>] TtsSettings data, response status code and response headers
+    def get_integrations_speech_tts_settings_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.get_integrations_speech_tts_settings ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/speech/tts/settings".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TtsSettings')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#get_integrations_speech_tts_settings\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get integration type.
     # 
     # @param type_id Integration Type Id
@@ -3377,6 +4163,71 @@ module PureCloud
         :return_type => 'CredentialInfo')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: IntegrationsApi#put_integrations_credential\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update TTS settings for an org
+    # 
+    # @param body Updated TtsSettings
+    # @param [Hash] opts the optional parameters
+    # @return [TtsSettings]
+    def put_integrations_speech_tts_settings(body, opts = {})
+      data, _status_code, _headers = put_integrations_speech_tts_settings_with_http_info(body, opts)
+      return data
+    end
+
+    # Update TTS settings for an org
+    # 
+    # @param body Updated TtsSettings
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(TtsSettings, Fixnum, Hash)>] TtsSettings data, response status code and response headers
+    def put_integrations_speech_tts_settings_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationsApi.put_integrations_speech_tts_settings ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling IntegrationsApi.put_integrations_speech_tts_settings" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/integrations/speech/tts/settings".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TtsSettings')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationsApi#put_integrations_speech_tts_settings\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

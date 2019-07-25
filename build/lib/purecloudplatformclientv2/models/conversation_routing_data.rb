@@ -54,13 +54,13 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'queue' => :'Queue',
+        :'queue' => :'AddressableEntityRef',
         
-        :'language' => :'Language',
+        :'language' => :'AddressableEntityRef',
         
         :'priority' => :'Integer',
         
-        :'skills' => :'Array<Skill>',
+        :'skills' => :'Array<AddressableEntityRef>',
         
         :'scored_agents' => :'Array<ScoredAgent>'
         

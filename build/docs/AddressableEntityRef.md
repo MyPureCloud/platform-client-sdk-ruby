@@ -1,7 +1,7 @@
 ---
-title: Skill
+title: AddressableEntityRef
 ---
-## PureCloud::Skill
+## PureCloud::AddressableEntityRef
 
 ## Properties
 

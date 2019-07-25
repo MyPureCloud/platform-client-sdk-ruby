@@ -47,6 +47,9 @@ module PureCloud
     # The conversation's state
     attr_accessor :state
 
+    # Identifiers of divisions associated with this conversation
+    attr_accessor :divisions
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -73,6 +76,8 @@ module PureCloud
         :'recording_state' => :'recordingState',
         
         :'state' => :'state',
+        
+        :'divisions' => :'divisions',
         
         :'self_uri' => :'selfUri'
         
@@ -102,6 +107,8 @@ module PureCloud
         :'recording_state' => :'String',
         
         :'state' => :'String',
+        
+        :'divisions' => :'Array<ConversationDivisionMembership>',
         
         :'self_uri' => :'String'
         
@@ -211,6 +218,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'divisions')
+        
+        if (value = attributes[:'divisions']).is_a?(Array)
+          self.divisions = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -299,6 +317,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -375,6 +397,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -390,6 +417,7 @@ module PureCloud
           max_participants == o.max_participants &&
           recording_state == o.recording_state &&
           state == o.state &&
+          divisions == o.divisions &&
           self_uri == o.self_uri
     end
 
@@ -402,7 +430,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, start_time, end_time, address, participants, conversation_ids, max_participants, recording_state, state, self_uri].hash
+      [id, name, start_time, end_time, address, participants, conversation_ids, max_participants, recording_state, state, divisions, self_uri].hash
     end
 
     # build the object from hash

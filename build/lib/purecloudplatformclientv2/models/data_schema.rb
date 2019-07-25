@@ -26,22 +26,19 @@ module PureCloud
     # The schema's version, a positive integer. Required for updates.
     attr_accessor :version
 
-    # The PureCloud data this schema extends.
+    # One of \"CONTACT\" or \"EXTERNAL_ORGANIZATION\".  Indicates the built-in entity type to which this schema applies.
     attr_accessor :applies_to
 
-    # The schema's current enabled/disabled status. A disabled schema cannot be assigned to any other objects, but the data on those objects from the schemas still exists
+    # The schema's current enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists
     attr_accessor :enabled
 
-    # The schema's deleted status. A deleted schema can not be used by any records or updated. All records using a deleted schema will eventually have their schema-based data removed.
-    attr_accessor :deleted
-
-    # The user that created this schema.
+    # The URI of the user that created this schema.
     attr_accessor :created_by
 
     # The date and time this schema was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_created
 
-    # The JSON schema defining the data extension.
+    # The JSON schema defining the extension to the built-in entity type.
     attr_accessor :json_schema
 
     # The URI for this object
@@ -60,8 +57,6 @@ module PureCloud
         :'applies_to' => :'appliesTo',
         
         :'enabled' => :'enabled',
-        
-        :'deleted' => :'deleted',
         
         :'created_by' => :'createdBy',
         
@@ -87,8 +82,6 @@ module PureCloud
         :'applies_to' => :'Array<String>',
         
         :'enabled' => :'BOOLEAN',
-        
-        :'deleted' => :'BOOLEAN',
         
         :'created_by' => :'UriReference',
         
@@ -152,15 +145,6 @@ module PureCloud
         
         
         self.enabled = attributes[:'enabled']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'deleted')
-        
-        
-        self.deleted = attributes[:'deleted']
         
       
       end
@@ -251,10 +235,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
       if @json_schema.nil?
         return false
       end
@@ -315,11 +295,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -330,7 +305,6 @@ module PureCloud
           version == o.version &&
           applies_to == o.applies_to &&
           enabled == o.enabled &&
-          deleted == o.deleted &&
           created_by == o.created_by &&
           date_created == o.date_created &&
           json_schema == o.json_schema &&
@@ -346,7 +320,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, version, applies_to, enabled, deleted, created_by, date_created, json_schema, self_uri].hash
+      [id, name, version, applies_to, enabled, created_by, date_created, json_schema, self_uri].hash
     end
 
     # build the object from hash

@@ -30,6 +30,8 @@ module PureCloud
 
     attr_accessor :room_id
 
+    attr_accessor :avatar_image_url
+
     attr_accessor :held
 
     attr_accessor :disconnect_type
@@ -59,6 +61,8 @@ module PureCloud
         :'peer_id' => :'peerId',
         
         :'room_id' => :'roomId',
+        
+        :'avatar_image_url' => :'avatarImageUrl',
         
         :'held' => :'held',
         
@@ -92,6 +96,8 @@ module PureCloud
         :'peer_id' => :'String',
         
         :'room_id' => :'String',
+        
+        :'avatar_image_url' => :'String',
         
         :'held' => :'BOOLEAN',
         
@@ -168,6 +174,15 @@ module PureCloud
         
         
         self.room_id = attributes[:'roomId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'avatarImageUrl')
+        
+        
+        self.avatar_image_url = attributes[:'avatarImageUrl']
         
       
       end
@@ -286,6 +301,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["ENDPOINT", "CLIENT", "SYSTEM", "TIMEOUT", "TRANSFER", "TRANSFER_CONFERENCE", "TRANSFER_CONSULT", "TRANSFER_NOANSWER", "TRANSFER_NOTAVAILABLE", "TRANSFER_FORWARD", "TRANSPORT_FAILURE", "ERROR", "PEER", "OTHER", "SPAM", "UNCALLABLE"]
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
@@ -327,6 +346,11 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -410,6 +434,7 @@ module PureCloud
           script_id == o.script_id &&
           peer_id == o.peer_id &&
           room_id == o.room_id &&
+          avatar_image_url == o.avatar_image_url &&
           held == o.held &&
           disconnect_type == o.disconnect_type &&
           start_hold_time == o.start_hold_time &&
@@ -428,7 +453,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, provider, script_id, peer_id, room_id, held, disconnect_type, start_hold_time, connected_time, disconnected_time, journey_context, additional_properties].hash
+      [state, id, provider, script_id, peer_id, room_id, avatar_image_url, held, disconnect_type, start_hold_time, connected_time, disconnected_time, journey_context, additional_properties].hash
     end
 
     # build the object from hash

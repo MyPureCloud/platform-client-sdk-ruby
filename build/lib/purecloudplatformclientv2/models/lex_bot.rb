@@ -17,9 +17,16 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class Skill
+  class LexBot
+    # The globally unique identifier for the object.
     attr_accessor :id
 
+    attr_accessor :name
+
+    # A description of the Lex bot
+    attr_accessor :description
+
+    # The URI for this object
     attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -27,6 +34,10 @@ module PureCloud
       {
         
         :'id' => :'id',
+        
+        :'name' => :'name',
+        
+        :'description' => :'description',
         
         :'self_uri' => :'selfUri'
         
@@ -38,6 +49,10 @@ module PureCloud
       {
         
         :'id' => :'String',
+        
+        :'name' => :'String',
+        
+        :'description' => :'String',
         
         :'self_uri' => :'String'
         
@@ -57,6 +72,24 @@ module PureCloud
         
         
         self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'name')
+        
+        
+        self.name = attributes[:'name']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'description')
+        
+        
+        self.description = attributes[:'description']
         
       
       end
@@ -94,8 +127,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -113,6 +164,8 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
+          name == o.name &&
+          description == o.description &&
           self_uri == o.self_uri
     end
 
@@ -125,7 +178,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, self_uri].hash
+      [id, name, description, self_uri].hash
     end
 
     # build the object from hash

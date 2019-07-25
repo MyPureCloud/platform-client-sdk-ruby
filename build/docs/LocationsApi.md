@@ -83,7 +83,7 @@ nil (empty response body)
 
 <a name="get_location"></a>
 
-## [**LocationDefinition**](LocationDefinition.html) get_location(location_id)
+## [**LocationDefinition**](LocationDefinition.html) get_location(location_id, opts)
 
 
 
@@ -116,10 +116,13 @@ api_instance = PureCloud::LocationsApi.new
 
 location_id = "location_id_example" # String | Location ID
 
+opts = { 
+  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand
+}
 
 begin
   #Get Location by ID.
-  result = api_instance.get_location(location_id)
+  result = api_instance.get_location(location_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling LocationsApi->get_location: #{e}"
@@ -131,6 +134,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **location_id** | **String**| Location ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: images |
 {: class="table table-striped"}
 
 

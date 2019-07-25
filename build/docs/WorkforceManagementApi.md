@@ -27,7 +27,7 @@ Method | Description
 [**get_workforcemanagement_managementunit_scheduling_runs**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_scheduling_runs) | Get the status of all the ongoing schedule runs
 [**get_workforcemanagement_managementunit_servicegoalgroup**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_servicegoalgroup) | Get a service goal group
 [**get_workforcemanagement_managementunit_servicegoalgroups**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_servicegoalgroups) | Get service goal groups
-[**get_workforcemanagement_managementunit_settings**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_settings) | Get the settings for the requested management unit
+[**get_workforcemanagement_managementunit_settings**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_settings) | Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
 [**get_workforcemanagement_managementunit_shifttrades_matched**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_shifttrades_matched) | Gets a summary of all shift trades in the matched state
 [**get_workforcemanagement_managementunit_shifttrades_users**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_shifttrades_users) | Gets list of users available for whom you can send direct shift trade requests
 [**get_workforcemanagement_managementunit_user_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_managementunit_user_timeoffrequest) | Get a time off request
@@ -47,10 +47,11 @@ Method | Description
 [**get_workforcemanagement_shifttrades**](WorkforceManagementApi.html#get_workforcemanagement_shifttrades) | Gets all of my shift trades
 [**get_workforcemanagement_timeoffrequest**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequest) | Get a time off request for the current user
 [**get_workforcemanagement_timeoffrequests**](WorkforceManagementApi.html#get_workforcemanagement_timeoffrequests) | Get a list of time off requests for the current user
+[**patch_workforcemanagement_managementunit**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit) | Update the requested management unit
 [**patch_workforcemanagement_managementunit_activitycode**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_activitycode) | Update an activity code
 [**patch_workforcemanagement_managementunit_scheduling_run**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_scheduling_run) | Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
 [**patch_workforcemanagement_managementunit_servicegoalgroup**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_servicegoalgroup) | Update a service goal group
-[**patch_workforcemanagement_managementunit_settings**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_settings) | Patch the settings for the requested management unit
+[**patch_workforcemanagement_managementunit_settings**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_settings) | Update the settings for the requested management unit
 [**patch_workforcemanagement_managementunit_user_timeoffrequest**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_user_timeoffrequest) | Update a time off request
 [**patch_workforcemanagement_managementunit_week_schedule**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_week_schedule) | Update a week schedule
 [**patch_workforcemanagement_managementunit_workplan**](WorkforceManagementApi.html#patch_workforcemanagement_managementunit_workplan) | Update a work plan
@@ -59,6 +60,7 @@ Method | Description
 [**post_workforcemanagement_managementunit_activitycodes**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_activitycodes) | Create a new activity code
 [**post_workforcemanagement_managementunit_historicaladherencequery**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_historicaladherencequery) | Request a historical adherence report
 [**post_workforcemanagement_managementunit_intraday**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_intraday) | Get intraday data for the given date for the requested queueIds
+[**post_workforcemanagement_managementunit_move**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_move) | Move the requested management unit to a new business unit
 [**post_workforcemanagement_managementunit_schedules_search**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_schedules_search) | Query published schedules for given given time range for set of users
 [**post_workforcemanagement_managementunit_servicegoalgroups**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_servicegoalgroups) | Create a new service goal group
 [**post_workforcemanagement_managementunit_timeoffrequests**](WorkforceManagementApi.html#post_workforcemanagement_managementunit_timeoffrequests) | Create a new time off request
@@ -115,7 +117,7 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+mu_id = "mu_id_example" # String | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 
 begin
@@ -130,7 +132,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **mu_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 
@@ -759,10 +761,10 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+mu_id = "mu_id_example" # String | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 opts = { 
-  expand: "expand_example" # String | 
+  expand: ["expand_example"] # Array<String> | 
 }
 
 begin
@@ -778,8 +780,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
- **expand** | **String**|  | [optional] <br />**Values**: settings |
+ **mu_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)|  | [optional] <br />**Values**: settings, settings.adherence, settings.timeOff, settings.scheduling, settings.shortTermForecasting, settings.shiftTrading |
 {: class="table table-striped"}
 
 
@@ -1441,9 +1443,9 @@ Name | Type | Description  | Notes
 
 ## [**ManagementUnitSettings**](ManagementUnitSettings.html) get_workforcemanagement_managementunit_settings(mu_id)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Get the settings for the requested management unit
+Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
 
 
 
@@ -1471,11 +1473,11 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+mu_id = "mu_id_example" # String | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 
 begin
-  #Get the settings for the requested management unit
+  #Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
   result = api_instance.get_workforcemanagement_managementunit_settings(mu_id)
   p result
 rescue PureCloud::ApiError => e
@@ -1487,7 +1489,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **mu_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 
@@ -2416,7 +2418,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**|  | [optional]  |
  **page_number** | **Integer**|  | [optional]  |
  **expand** | **String**|  | [optional] <br />**Values**: details |
- **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ServiceGoalTemplates, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans |
+ **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnitActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ServiceGoalTemplates, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans |
  **division_id** | **String**|  | [optional]  |
 {: class="table table-striped"}
 
@@ -2815,6 +2817,75 @@ Name | Type | Description  | Notes
 
 
 
+<a name="patch_workforcemanagement_managementunit"></a>
+
+## [**ManagementUnit**](ManagementUnit.html) patch_workforcemanagement_managementunit(mu_id, opts)
+
+
+
+Update the requested management unit
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/managementunits/{muId} 
+
+Requires ANY permissions: 
+
+* wfm:managementUnit:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+mu_id = "mu_id_example" # String | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+
+opts = { 
+  body: PureCloud::UpdateManagementUnitRequest.new # UpdateManagementUnitRequest | body
+}
+
+begin
+  #Update the requested management unit
+  result = api_instance.patch_workforcemanagement_managementunit(mu_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->patch_workforcemanagement_managementunit: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mu_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ManagementUnit**](ManagementUnit.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="patch_workforcemanagement_managementunit_activitycode"></a>
 
 ## [**ActivityCode**](ActivityCode.html) patch_workforcemanagement_managementunit_activitycode(mu_id, ac_id, opts)
@@ -3037,7 +3108,7 @@ Name | Type | Description  | Notes
 
 
 
-Patch the settings for the requested management unit
+Update the settings for the requested management unit
 
 
 
@@ -3065,14 +3136,14 @@ end
 
 api_instance = PureCloud::WorkforceManagementApi.new
 
-mu_id = "mu_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+mu_id = "mu_id_example" # String | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 opts = { 
   body: PureCloud::ManagementUnitSettings.new # ManagementUnitSettings | config
 }
 
 begin
-  #Patch the settings for the requested management unit
+  #Update the settings for the requested management unit
   result = api_instance.patch_workforcemanagement_managementunit_settings(mu_id, opts)
   p result
 rescue PureCloud::ApiError => e
@@ -3084,7 +3155,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mu_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **mu_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
  **body** | [**ManagementUnitSettings**](ManagementUnitSettings.html)| config | [optional]  |
 {: class="table table-striped"}
 
@@ -3660,6 +3731,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**IntradayResponse**](IntradayResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_workforcemanagement_managementunit_move"></a>
+
+## [**MoveManagementUnitResponse**](MoveManagementUnitResponse.html) post_workforcemanagement_managementunit_move(mu_id, opts)
+
+
+
+Move the requested management unit to a new business unit
+
+Returns status 200 if the management unit is already in the requested business unit
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/move 
+
+Requires ANY permissions: 
+
+* wfm:managementUnit:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::WorkforceManagementApi.new
+
+mu_id = "mu_id_example" # String | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+
+opts = { 
+  body: PureCloud::MoveManagementUnitRequest.new # MoveManagementUnitRequest | body
+}
+
+begin
+  #Move the requested management unit to a new business unit
+  result = api_instance.post_workforcemanagement_managementunit_move(mu_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling WorkforceManagementApi->post_workforcemanagement_managementunit_move: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mu_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+ **body** | [**MoveManagementUnitRequest**](MoveManagementUnitRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MoveManagementUnitResponse**](MoveManagementUnitResponse.html)
 
 ### HTTP request headers
 

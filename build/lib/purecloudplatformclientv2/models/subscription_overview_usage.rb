@@ -45,6 +45,9 @@ module PureCloud
     # Notes about the usage/charge item
     attr_accessor :usage_notes
 
+    # Indicates whether the item is cancellable
+    attr_accessor :is_cancellable
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -65,7 +68,9 @@ module PureCloud
         
         :'prepay_price' => :'prepayPrice',
         
-        :'usage_notes' => :'usageNotes'
+        :'usage_notes' => :'usageNotes',
+        
+        :'is_cancellable' => :'isCancellable'
         
       }
     end
@@ -90,7 +95,9 @@ module PureCloud
         
         :'prepay_price' => :'String',
         
-        :'usage_notes' => :'String'
+        :'usage_notes' => :'String',
+        
+        :'is_cancellable' => :'BOOLEAN'
         
       }
     end
@@ -185,6 +192,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'isCancellable')
+        
+        
+        self.is_cancellable = attributes[:'isCancellable']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -266,8 +282,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -327,7 +352,8 @@ module PureCloud
           overage_price == o.overage_price &&
           prepay_quantity == o.prepay_quantity &&
           prepay_price == o.prepay_price &&
-          usage_notes == o.usage_notes
+          usage_notes == o.usage_notes &&
+          is_cancellable == o.is_cancellable
     end
 
     # @see the `==` method
@@ -339,7 +365,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, part_number, grouping, unit_of_measure_type, usage_quantity, overage_price, prepay_quantity, prepay_price, usage_notes].hash
+      [name, part_number, grouping, unit_of_measure_type, usage_quantity, overage_price, prepay_quantity, prepay_price, usage_notes, is_cancellable].hash
     end
 
     # build the object from hash

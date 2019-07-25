@@ -10,6 +10,7 @@ Method | Description
 ------------- | ------------- | -------------
 [**delete_conversation_recording_annotation**](RecordingApi.html#delete_conversation_recording_annotation) | Delete annotation
 [**delete_orphanrecording**](RecordingApi.html#delete_orphanrecording) | Deletes a single orphan recording
+[**delete_recording_job**](RecordingApi.html#delete_recording_job) | Delete the recording bulk job
 [**delete_recording_mediaretentionpolicies**](RecordingApi.html#delete_recording_mediaretentionpolicies) | Delete media retention policies
 [**delete_recording_mediaretentionpolicy**](RecordingApi.html#delete_recording_mediaretentionpolicy) | Delete a media retention policy
 [**get_conversation_recording**](RecordingApi.html#get_conversation_recording) | Gets a specific recording.
@@ -22,6 +23,8 @@ Method | Description
 [**get_orphanrecording_media**](RecordingApi.html#get_orphanrecording_media) | Gets the media of a single orphan recording
 [**get_orphanrecordings**](RecordingApi.html#get_orphanrecordings) | Gets all orphan recordings
 [**get_recording_batchrequest**](RecordingApi.html#get_recording_batchrequest) | Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+[**get_recording_job**](RecordingApi.html#get_recording_job) | Get the status of the job associated with the job id.
+[**get_recording_jobs**](RecordingApi.html#get_recording_jobs) | Get the status of all jobs within the user&#39;s organization
 [**get_recording_localkeys_setting**](RecordingApi.html#get_recording_localkeys_setting) | Get the local encryption settings
 [**get_recording_localkeys_settings**](RecordingApi.html#get_recording_localkeys_settings) | gets a list local key settings data
 [**get_recording_mediaretentionpolicies**](RecordingApi.html#get_recording_mediaretentionpolicies) | Gets media retention policy list with query options to filter on name and enabled.
@@ -34,6 +37,7 @@ Method | Description
 [**patch_recordings_screensession**](RecordingApi.html#patch_recordings_screensession) | Update a screen recording session
 [**post_conversation_recording_annotations**](RecordingApi.html#post_conversation_recording_annotations) | Create annotation
 [**post_recording_batchrequests**](RecordingApi.html#post_recording_batchrequests) | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
+[**post_recording_jobs**](RecordingApi.html#post_recording_jobs) | Create a recording bulk job
 [**post_recording_localkeys**](RecordingApi.html#post_recording_localkeys) | create a local recording key
 [**post_recording_localkeys_settings**](RecordingApi.html#post_recording_localkeys_settings) | create settings for local key creation
 [**post_recording_mediaretentionpolicies**](RecordingApi.html#post_recording_mediaretentionpolicies) | Create media retention policy
@@ -41,6 +45,7 @@ Method | Description
 [**put_conversation_recording**](RecordingApi.html#put_conversation_recording) | Updates the retention records on a recording.
 [**put_conversation_recording_annotation**](RecordingApi.html#put_conversation_recording_annotation) | Update annotation
 [**put_orphanrecording**](RecordingApi.html#put_orphanrecording) | Updates an orphan recording to a regular recording with retention values
+[**put_recording_job**](RecordingApi.html#put_recording_job) | Execute the recording bulk job
 [**put_recording_localkeys_setting**](RecordingApi.html#put_recording_localkeys_setting) | Update the local encryption settings
 [**put_recording_mediaretentionpolicy**](RecordingApi.html#put_recording_mediaretentionpolicy) | Update a media retention policy
 [**put_recording_recordingkeys_rotationschedule**](RecordingApi.html#put_recording_recordingkeys_rotationschedule) | Update key rotation schedule
@@ -173,6 +178,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OrphanRecording**](OrphanRecording.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_recording_job"></a>
+
+##  delete_recording_job(job_id)
+
+
+
+Delete the recording bulk job
+
+
+
+Wraps DELETE /api/v2/recording/jobs/{jobId} 
+
+Requires ANY permissions: 
+
+* recording:job:delete
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+job_id = "job_id_example" # String | jobId
+
+
+begin
+  #Delete the recording bulk job
+  api_instance.delete_recording_job(job_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->delete_recording_job: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| jobId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -1004,6 +1073,139 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_recording_job"></a>
+
+## [**RecordingJob**](RecordingJob.html) get_recording_job(job_id)
+
+
+
+Get the status of the job associated with the job id.
+
+
+
+Wraps GET /api/v2/recording/jobs/{jobId} 
+
+Requires ANY permissions: 
+
+* recording:job:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+job_id = "job_id_example" # String | jobId
+
+
+begin
+  #Get the status of the job associated with the job id.
+  result = api_instance.get_recording_job(job_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_recording_job: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| jobId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**RecordingJob**](RecordingJob.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_recording_jobs"></a>
+
+## [**RecordingJobEntityListing**](RecordingJobEntityListing.html) get_recording_jobs(opts)
+
+
+
+Get the status of all jobs within the user's organization
+
+
+
+Wraps GET /api/v2/recording/jobs 
+
+Requires ANY permissions: 
+
+* recording:job:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Get the status of all jobs within the user's organization
+  result = api_instance.get_recording_jobs(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->get_recording_jobs: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**RecordingJobEntityListing**](RecordingJobEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_recording_localkeys_setting"></a>
 
 ## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) get_recording_localkeys_setting(settings_id)
@@ -1805,6 +2007,71 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_recording_jobs"></a>
+
+## [**RecordingJob**](RecordingJob.html) post_recording_jobs(body)
+
+
+
+Create a recording bulk job
+
+
+
+Wraps POST /api/v2/recording/jobs 
+
+Requires ANY permissions: 
+
+* recording:job:add
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+body = PureCloud::RecordingJobsQuery.new # RecordingJobsQuery | query
+
+
+begin
+  #Create a recording bulk job
+  result = api_instance.post_recording_jobs(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->post_recording_jobs: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RecordingJobsQuery**](RecordingJobsQuery.html)| query |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**RecordingJob**](RecordingJob.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_recording_localkeys"></a>
 
 ## [**EncryptionKey**](EncryptionKey.html) post_recording_localkeys(body)
@@ -2263,6 +2530,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Recording**](Recording.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_recording_job"></a>
+
+## [**RecordingJob**](RecordingJob.html) put_recording_job(job_id, body)
+
+
+
+Execute the recording bulk job
+
+
+
+Wraps PUT /api/v2/recording/jobs/{jobId} 
+
+Requires ANY permissions: 
+
+* recording:job:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RecordingApi.new
+
+job_id = "job_id_example" # String | jobId
+
+body = PureCloud::ExecuteRecordingJobsQuery.new # ExecuteRecordingJobsQuery | query
+
+
+begin
+  #Execute the recording bulk job
+  result = api_instance.put_recording_job(job_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RecordingApi->put_recording_job: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| jobId |  |
+ **body** | [**ExecuteRecordingJobsQuery**](ExecuteRecordingJobsQuery.html)| query |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**RecordingJob**](RecordingJob.html)
 
 ### HTTP request headers
 

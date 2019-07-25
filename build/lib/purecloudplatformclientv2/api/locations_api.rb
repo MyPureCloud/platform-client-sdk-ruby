@@ -92,6 +92,7 @@ module PureCloud
     # 
     # @param location_id Location ID
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :expand Which fields, if any, to expand
     # @return [LocationDefinition]
     def get_location(location_id, opts = {})
       data, _status_code, _headers = get_location_with_http_info(location_id, opts)
@@ -102,6 +103,7 @@ module PureCloud
     # 
     # @param location_id Location ID
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :expand Which fields, if any, to expand
     # @return [Array<(LocationDefinition, Fixnum, Hash)>] LocationDefinition data, response status code and response headers
     def get_location_with_http_info(location_id, opts = {})
       if @api_client.config.debugging
@@ -116,11 +118,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/locations/{locationId}".sub('{format}','json').sub('{' + 'locationId' + '}', location_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
 
       # header parameters
       header_params = {}

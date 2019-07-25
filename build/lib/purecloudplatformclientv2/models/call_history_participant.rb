@@ -72,6 +72,9 @@ module PureCloud
     # The reason specifying why participant flagged the conversation.
     attr_accessor :flagged_reason
 
+    # The outbound campaign associated with the participant
+    attr_accessor :outbound_campaign
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -110,7 +113,9 @@ module PureCloud
         
         :'sip_response_codes' => :'sipResponseCodes',
         
-        :'flagged_reason' => :'flaggedReason'
+        :'flagged_reason' => :'flaggedReason',
+        
+        :'outbound_campaign' => :'outboundCampaign'
         
       }
     end
@@ -153,7 +158,9 @@ module PureCloud
         
         :'sip_response_codes' => :'Array<Integer>',
         
-        :'flagged_reason' => :'String'
+        :'flagged_reason' => :'String',
+        
+        :'outbound_campaign' => :'Campaign'
         
       }
     end
@@ -331,6 +338,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'outboundCampaign')
+        
+        
+        self.outbound_campaign = attributes[:'outboundCampaign']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -430,6 +446,10 @@ module PureCloud
       if @flagged_reason && !allowed_values.include?(@flagged_reason)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -553,6 +573,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -575,7 +600,8 @@ module PureCloud
           external_organization == o.external_organization &&
           did_interact == o.did_interact &&
           sip_response_codes == o.sip_response_codes &&
-          flagged_reason == o.flagged_reason
+          flagged_reason == o.flagged_reason &&
+          outbound_campaign == o.outbound_campaign
     end
 
     # @see the `==` method
@@ -587,7 +613,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, end_time, purpose, direction, ani, dnis, user, queue, group, disconnect_type, external_contact, external_organization, did_interact, sip_response_codes, flagged_reason].hash
+      [id, name, address, start_time, end_time, purpose, direction, ani, dnis, user, queue, group, disconnect_type, external_contact, external_organization, did_interact, sip_response_codes, flagged_reason, outbound_campaign].hash
     end
 
     # build the object from hash

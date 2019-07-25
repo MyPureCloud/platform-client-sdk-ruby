@@ -31,7 +31,7 @@ module PureCloud
     # The configuration for the management unit.  If omitted, reasonable defaults will be assigned
     attr_accessor :settings
 
-    # The division to which this management unit belongs.  Defaults to home division ID
+    # The id of the division to which this management unit belongs.  Defaults to home division ID
     attr_accessor :division_id
 
     # Attribute mapping from ruby-style variable name to JSON key.

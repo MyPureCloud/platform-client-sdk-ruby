@@ -50,6 +50,9 @@ module PureCloud
     # Did this conversation have a cobrowse session
     attr_accessor :had_cobrowse
 
+    # Was this conversation associated with an outbound campaign
+    attr_accessor :was_outbound_campaign
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -78,6 +81,8 @@ module PureCloud
         :'had_screen_share' => :'hadScreenShare',
         
         :'had_cobrowse' => :'hadCobrowse',
+        
+        :'was_outbound_campaign' => :'wasOutboundCampaign',
         
         :'self_uri' => :'selfUri'
         
@@ -109,6 +114,8 @@ module PureCloud
         :'had_screen_share' => :'BOOLEAN',
         
         :'had_cobrowse' => :'BOOLEAN',
+        
+        :'was_outbound_campaign' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -225,6 +232,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'wasOutboundCampaign')
+        
+        
+        self.was_outbound_campaign = attributes[:'wasOutboundCampaign']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -267,6 +283,10 @@ module PureCloud
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -374,6 +394,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -390,6 +415,7 @@ module PureCloud
           was_callback == o.was_callback &&
           had_screen_share == o.had_screen_share &&
           had_cobrowse == o.had_cobrowse &&
+          was_outbound_campaign == o.was_outbound_campaign &&
           self_uri == o.self_uri
     end
 
@@ -402,7 +428,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, participants, direction, went_to_voicemail, missed_call, start_time, was_conference, was_callback, had_screen_share, had_cobrowse, self_uri].hash
+      [id, name, participants, direction, went_to_voicemail, missed_call, start_time, was_conference, was_callback, had_screen_share, had_cobrowse, was_outbound_campaign, self_uri].hash
     end
 
     # build the object from hash

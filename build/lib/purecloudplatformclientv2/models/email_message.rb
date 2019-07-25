@@ -50,6 +50,9 @@ module PureCloud
     # The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :time
 
+    # Indicates whether the history of previous emails of the conversation is included within the email bodies of this message.
+    attr_accessor :history_included
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -78,6 +81,8 @@ module PureCloud
         :'html_body' => :'htmlBody',
         
         :'time' => :'time',
+        
+        :'history_included' => :'historyIncluded',
         
         :'self_uri' => :'selfUri'
         
@@ -109,6 +114,8 @@ module PureCloud
         :'html_body' => :'String',
         
         :'time' => :'DateTime',
+        
+        :'history_included' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -231,6 +238,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'historyIncluded')
+        
+        
+        self.history_included = attributes[:'historyIncluded']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -318,8 +334,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -397,6 +422,7 @@ module PureCloud
           text_body == o.text_body &&
           html_body == o.html_body &&
           time == o.time &&
+          history_included == o.history_included &&
           self_uri == o.self_uri
     end
 
@@ -409,7 +435,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, to, cc, bcc, from, subject, attachments, text_body, html_body, time, self_uri].hash
+      [id, name, to, cc, bcc, from, subject, attachments, text_body, html_body, time, history_included, self_uri].hash
     end
 
     # build the object from hash

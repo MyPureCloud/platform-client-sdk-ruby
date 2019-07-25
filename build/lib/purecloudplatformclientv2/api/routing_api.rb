@@ -2658,8 +2658,8 @@ module PureCloud
       
       
       
-      if opts[:'phone_number_type'] && !['local', 'mobile', 'tollfree'].include?(opts[:'phone_number_type'])
-        fail ArgumentError, 'invalid value for "phone_number_type", must be one of local, mobile, tollfree'
+      if opts[:'phone_number_type'] && !['local', 'mobile', 'tollfree', 'shortcode'].include?(opts[:'phone_number_type'])
+        fail ArgumentError, 'invalid value for "phone_number_type", must be one of local, mobile, tollfree, shortcode'
       end
       
       

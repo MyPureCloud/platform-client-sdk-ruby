@@ -208,6 +208,11 @@ module PureCloud
       
       
       
+      if @division_id.nil?
+        return false
+      end
+
+      
       
       
       

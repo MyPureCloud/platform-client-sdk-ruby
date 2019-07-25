@@ -25,6 +25,8 @@ module PureCloud
 
     attr_accessor :user
 
+    attr_accessor :job_id
+
     attr_accessor :level
 
     attr_accessor :entity
@@ -51,6 +53,8 @@ module PureCloud
         :'name' => :'name',
         
         :'user' => :'user',
+        
+        :'job_id' => :'jobId',
         
         :'level' => :'level',
         
@@ -80,6 +84,8 @@ module PureCloud
         :'name' => :'String',
         
         :'user' => :'User',
+        
+        :'job_id' => :'String',
         
         :'level' => :'String',
         
@@ -131,6 +137,15 @@ module PureCloud
         
         
         self.user = attributes[:'user']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'jobId')
+        
+        
+        self.job_id = attributes[:'jobId']
         
       
       end
@@ -269,8 +284,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -335,6 +359,7 @@ module PureCloud
           id == o.id &&
           name == o.name &&
           user == o.user &&
+          job_id == o.job_id &&
           level == o.level &&
           entity == o.entity &&
           timestamp == o.timestamp &&
@@ -354,7 +379,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, user, level, entity, timestamp, action, status, changes, entity_type, self_uri].hash
+      [id, name, user, job_id, level, entity, timestamp, action, status, changes, entity_type, self_uri].hash
     end
 
     # build the object from hash

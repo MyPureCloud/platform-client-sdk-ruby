@@ -39,6 +39,7 @@ title: QueueConversationChatEventTopicChatMediaParticipant
 | **flagged_reason** | **String** |  | [optional] |
 | **journey_context** | [**QueueConversationChatEventTopicJourneyContext**](QueueConversationChatEventTopicJourneyContext.html) |  | [optional] |
 | **room_id** | **String** |  | [optional] |
+| **avatar_image_url** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -27,29 +27,26 @@ module PureCloud
     # The division to which this entity belongs.
     attr_accessor :division
 
-    # The business unit to which this management unit belongs
-    attr_accessor :business_unit
-
     # Start day of week for scheduling and forecasting purposes
     attr_accessor :start_day_of_week
 
-    # The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database)
+    # The time zone for the management unit in standard Olson format
     attr_accessor :time_zone
 
     # The configuration settings for this management unit
     attr_accessor :settings
 
-    # The version of the underlying entity.  Deprecated, use metadata field instead
+    # Version info metadata for this management unit. Deprecated, use settings.metadata
+    attr_accessor :metadata
+
+    # The version of the underlying entity.  Deprecated, use field from settings.metadata instead
     attr_accessor :version
 
-    # The date and time at which this entity was last modified.  Deprecated, use metadata field instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The date and time at which this entity was last modified.  Deprecated, use field from settings.metadata instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_modified
 
-    # The user who last modified this entity.  Deprecated, use metadata field instead
+    # The user who last modified this entity.  Deprecated, use field from settings.metadata instead
     attr_accessor :modified_by
-
-    # Version info metadata for this management unit
-    attr_accessor :metadata
 
     # The URI for this object
     attr_accessor :self_uri
@@ -64,21 +61,19 @@ module PureCloud
         
         :'division' => :'division',
         
-        :'business_unit' => :'businessUnit',
-        
         :'start_day_of_week' => :'startDayOfWeek',
         
         :'time_zone' => :'timeZone',
         
         :'settings' => :'settings',
         
+        :'metadata' => :'metadata',
+        
         :'version' => :'version',
         
         :'date_modified' => :'dateModified',
         
         :'modified_by' => :'modifiedBy',
-        
-        :'metadata' => :'metadata',
         
         :'self_uri' => :'selfUri'
         
@@ -95,21 +90,19 @@ module PureCloud
         
         :'division' => :'Division',
         
-        :'business_unit' => :'BusinessUnitReference',
-        
         :'start_day_of_week' => :'String',
         
         :'time_zone' => :'String',
         
         :'settings' => :'ManagementUnitSettings',
         
+        :'metadata' => :'WfmVersionedEntityMetadata',
+        
         :'version' => :'Integer',
         
         :'date_modified' => :'DateTime',
         
         :'modified_by' => :'UserReference',
-        
-        :'metadata' => :'WfmVersionedEntityMetadata',
         
         :'self_uri' => :'String'
         
@@ -152,15 +145,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'businessUnit')
-        
-        
-        self.business_unit = attributes[:'businessUnit']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'startDayOfWeek')
         
         
@@ -188,6 +172,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'metadata')
+        
+        
+        self.metadata = attributes[:'metadata']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'version')
         
         
@@ -210,15 +203,6 @@ module PureCloud
         
         
         self.modified_by = attributes[:'modifiedBy']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'metadata')
-        
-        
-        self.metadata = attributes[:'metadata']
         
       
       end
@@ -262,10 +246,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
       allowed_values = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
       if @start_day_of_week && !allowed_values.include?(@start_day_of_week)
         return false
@@ -282,10 +262,6 @@ module PureCloud
       
       
       
-      if @version.nil?
-        return false
-      end
-
       
       
       
@@ -297,12 +273,6 @@ module PureCloud
       
       
       
-      
-      
-      if @metadata.nil?
-        return false
-      end
-
       
       
       
@@ -313,11 +283,6 @@ module PureCloud
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -391,14 +356,13 @@ module PureCloud
           id == o.id &&
           name == o.name &&
           division == o.division &&
-          business_unit == o.business_unit &&
           start_day_of_week == o.start_day_of_week &&
           time_zone == o.time_zone &&
           settings == o.settings &&
+          metadata == o.metadata &&
           version == o.version &&
           date_modified == o.date_modified &&
           modified_by == o.modified_by &&
-          metadata == o.metadata &&
           self_uri == o.self_uri
     end
 
@@ -411,7 +375,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, business_unit, start_day_of_week, time_zone, settings, version, date_modified, modified_by, metadata, self_uri].hash
+      [id, name, division, start_day_of_week, time_zone, settings, metadata, version, date_modified, modified_by, self_uri].hash
     end
 
     # build the object from hash

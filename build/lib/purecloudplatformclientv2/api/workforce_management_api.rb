@@ -26,7 +26,7 @@ module PureCloud
 
     # Delete management unit
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @return [nil]
     def delete_workforcemanagement_managementunit(mu_id, opts = {})
@@ -36,7 +36,7 @@ module PureCloud
 
     # Delete management unit
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_workforcemanagement_managementunit_with_http_info(mu_id, opts = {})
@@ -685,9 +685,9 @@ module PureCloud
 
     # Get management unit
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :expand 
+    # @option opts [Array<String>] :expand 
     # @return [ManagementUnit]
     def get_workforcemanagement_managementunit(mu_id, opts = {})
       data, _status_code, _headers = get_workforcemanagement_managementunit_with_http_info(mu_id, opts)
@@ -696,9 +696,9 @@ module PureCloud
 
     # Get management unit
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :expand 
+    # @option opts [Array<String>] :expand 
     # @return [Array<(ManagementUnit, Fixnum, Hash)>] ManagementUnit data, response status code and response headers
     def get_workforcemanagement_managementunit_with_http_info(mu_id, opts = {})
       if @api_client.config.debugging
@@ -716,10 +716,6 @@ module PureCloud
       
       
       
-      if opts[:'expand'] && !['settings'].include?(opts[:'expand'])
-        fail ArgumentError, 'invalid value for "expand", must be one of settings'
-      end
-      
       
       
       
@@ -728,7 +724,7 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'expand'] = opts[:'expand'] if opts[:'expand']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
 
       # header parameters
       header_params = {}
@@ -1407,9 +1403,9 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get the settings for the requested management unit
+    # Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @return [ManagementUnitSettings]
     def get_workforcemanagement_managementunit_settings(mu_id, opts = {})
@@ -1417,9 +1413,9 @@ module PureCloud
       return data
     end
 
-    # Get the settings for the requested management unit
+    # Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @return [Array<(ManagementUnitSettings, Fixnum, Hash)>] ManagementUnitSettings data, response status code and response headers
     def get_workforcemanagement_managementunit_settings_with_http_info(mu_id, opts = {})
@@ -2501,8 +2497,8 @@ module PureCloud
       
       
       
-      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'ActivityCodes', 'Agents', 'BusinessUnits', 'HistoricalAdherence', 'IntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'ServiceGoalGroups', 'ServiceGoalTemplates', 'ShiftTrading', 'ShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
-        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ServiceGoalTemplates, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans'
+      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'ActivityCodes', 'Agents', 'BusinessUnitActivityCodes', 'BusinessUnits', 'HistoricalAdherence', 'IntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'ServiceGoalGroups', 'ServiceGoalTemplates', 'ShiftTrading', 'ShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
+        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnitActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ServiceGoalTemplates, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans'
       end
       
       
@@ -2924,6 +2920,79 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Update the requested management unit
+    # 
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [UpdateManagementUnitRequest] :body body
+    # @return [ManagementUnit]
+    def patch_workforcemanagement_managementunit(mu_id, opts = {})
+      data, _status_code, _headers = patch_workforcemanagement_managementunit_with_http_info(mu_id, opts)
+      return data
+    end
+
+    # Update the requested management unit
+    # 
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [UpdateManagementUnitRequest] :body body
+    # @return [Array<(ManagementUnit, Fixnum, Hash)>] ManagementUnit data, response status code and response headers
+    def patch_workforcemanagement_managementunit_with_http_info(mu_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.patch_workforcemanagement_managementunit ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.patch_workforcemanagement_managementunit" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ManagementUnit')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#patch_workforcemanagement_managementunit\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Update an activity code
     # 
     # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
@@ -3173,9 +3242,9 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Patch the settings for the requested management unit
+    # Update the settings for the requested management unit
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @option opts [ManagementUnitSettings] :body config
     # @return [ManagementUnitSettings]
@@ -3184,9 +3253,9 @@ module PureCloud
       return data
     end
 
-    # Patch the settings for the requested management unit
+    # Update the settings for the requested management unit
     # 
-    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @option opts [ManagementUnitSettings] :body config
     # @return [Array<(ManagementUnitSettings, Fixnum, Hash)>] ManagementUnitSettings data, response status code and response headers
@@ -3884,6 +3953,79 @@ module PureCloud
         :return_type => 'IntradayResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_intraday\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Move the requested management unit to a new business unit
+    # Returns status 200 if the management unit is already in the requested business unit
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [MoveManagementUnitRequest] :body body
+    # @return [MoveManagementUnitResponse]
+    def post_workforcemanagement_managementunit_move(mu_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_move_with_http_info(mu_id, opts)
+      return data
+    end
+
+    # Move the requested management unit to a new business unit
+    # Returns status 200 if the management unit is already in the requested business unit
+    # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [MoveManagementUnitRequest] :body body
+    # @return [Array<(MoveManagementUnitResponse, Fixnum, Hash)>] MoveManagementUnitResponse data, response status code and response headers
+    def post_workforcemanagement_managementunit_move_with_http_info(mu_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_move ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_move" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/move".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MoveManagementUnitResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_move\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

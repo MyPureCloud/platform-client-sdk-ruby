@@ -12,6 +12,7 @@ title: WfmUserNotificationTopicWfmUserNotification
 | **timestamp** | **DateTime** |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **shift_trade** | [**WfmUserNotificationTopicShiftTradeNotification**](WfmUserNotificationTopicShiftTradeNotification.html) |  | [optional] |
+| **time_off_request** | [**WfmUserNotificationTopicTimeOffRequestNotification**](WfmUserNotificationTopicTimeOffRequestNotification.html) |  | [optional] |
 | **agent_notification** | **BOOLEAN** |  | [optional] |
 | **other_notification_ids_in_group** | **Array&lt;String&gt;** |  | [optional] |
 {: class="table table-striped"}

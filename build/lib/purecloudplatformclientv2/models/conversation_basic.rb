@@ -29,6 +29,9 @@ module PureCloud
     # The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :end_time
 
+    # Identifiers of divisions associated with this conversation
+    attr_accessor :divisions
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -45,6 +48,8 @@ module PureCloud
         :'start_time' => :'startTime',
         
         :'end_time' => :'endTime',
+        
+        :'divisions' => :'divisions',
         
         :'self_uri' => :'selfUri',
         
@@ -64,6 +69,8 @@ module PureCloud
         :'start_time' => :'DateTime',
         
         :'end_time' => :'DateTime',
+        
+        :'divisions' => :'Array<ConversationDivisionMembership>',
         
         :'self_uri' => :'String',
         
@@ -112,6 +119,17 @@ module PureCloud
         
         
         self.end_time = attributes[:'endTime']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'divisions')
+        
+        if (value = attributes[:'divisions']).is_a?(Array)
+          self.divisions = value
+        end
+        
         
       
       end
@@ -181,8 +199,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -223,6 +250,7 @@ module PureCloud
           name == o.name &&
           start_time == o.start_time &&
           end_time == o.end_time &&
+          divisions == o.divisions &&
           self_uri == o.self_uri &&
           participants == o.participants
     end
@@ -236,7 +264,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, start_time, end_time, self_uri, participants].hash
+      [id, name, start_time, end_time, divisions, self_uri, participants].hash
     end
 
     # build the object from hash

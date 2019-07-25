@@ -1153,8 +1153,8 @@ module PureCloud
       fail ArgumentError, "Missing the required parameter 'object_type' when calling ArchitectApi.get_architect_dependencytracking_consumedresources" if object_type.nil?
       
       # verify enum value
-      unless ['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'DATATABLE', 'DIALOGFLOWAGENT', 'EMAILROUTE', 'EMERGENCYGROUP', 'FLOWOUTCOME', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDCHATFLOW', 'INBOUNDEMAILFLOW', 'INBOUNDSHORTMESSAGEFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'LEXBOT', 'LEXBOTALIAS', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RECORDINGPOLICY', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'TTSENGINE', 'TTSVOICE', 'USER', 'USERPROMPT', 'WORKFLOW'].include?(object_type)
-        fail ArgumentError, "invalid value for 'object_type', must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGFLOWAGENT, EMAILROUTE, EMERGENCYGROUP, FLOWOUTCOME, GROUP, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, LEXBOT, LEXBOTALIAS, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, WORKFLOW"
+      unless ['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'DATATABLE', 'DIALOGFLOWAGENT', 'EMAILROUTE', 'EMERGENCYGROUP', 'FLOWOUTCOME', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDCHATFLOW', 'INBOUNDEMAILFLOW', 'INBOUNDSHORTMESSAGEFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'LEXBOT', 'LEXBOTALIAS', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RECORDINGPOLICY', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'TTSENGINE', 'TTSVOICE', 'USER', 'USERPROMPT', 'WIDGET', 'WORKFLOW'].include?(object_type)
+        fail ArgumentError, "invalid value for 'object_type', must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGFLOWAGENT, EMAILROUTE, EMERGENCYGROUP, FLOWOUTCOME, GROUP, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, LEXBOT, LEXBOTALIAS, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, WIDGET, WORKFLOW"
       end
       
       
@@ -1265,8 +1265,8 @@ module PureCloud
       fail ArgumentError, "Missing the required parameter 'object_type' when calling ArchitectApi.get_architect_dependencytracking_consumingresources" if object_type.nil?
       
       # verify enum value
-      unless ['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'DATATABLE', 'DIALOGFLOWAGENT', 'EMAILROUTE', 'EMERGENCYGROUP', 'FLOWOUTCOME', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDCHATFLOW', 'INBOUNDEMAILFLOW', 'INBOUNDSHORTMESSAGEFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'LEXBOT', 'LEXBOTALIAS', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RECORDINGPOLICY', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'TTSENGINE', 'TTSVOICE', 'USER', 'USERPROMPT', 'WORKFLOW'].include?(object_type)
-        fail ArgumentError, "invalid value for 'object_type', must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGFLOWAGENT, EMAILROUTE, EMERGENCYGROUP, FLOWOUTCOME, GROUP, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, LEXBOT, LEXBOTALIAS, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, WORKFLOW"
+      unless ['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'DATATABLE', 'DIALOGFLOWAGENT', 'EMAILROUTE', 'EMERGENCYGROUP', 'FLOWOUTCOME', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDCHATFLOW', 'INBOUNDEMAILFLOW', 'INBOUNDSHORTMESSAGEFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'LEXBOT', 'LEXBOTALIAS', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RECORDINGPOLICY', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'TTSENGINE', 'TTSVOICE', 'USER', 'USERPROMPT', 'WIDGET', 'WORKFLOW'].include?(object_type)
+        fail ArgumentError, "invalid value for 'object_type', must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGFLOWAGENT, EMAILROUTE, EMERGENCYGROUP, FLOWOUTCOME, GROUP, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, LEXBOT, LEXBOTALIAS, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, WIDGET, WORKFLOW"
       end
       
       
@@ -1515,8 +1515,8 @@ module PureCloud
       
       
       
-      if opts[:'object_type'] && !['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'DATATABLE', 'DIALOGFLOWAGENT', 'EMAILROUTE', 'EMERGENCYGROUP', 'FLOWOUTCOME', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDCHATFLOW', 'INBOUNDEMAILFLOW', 'INBOUNDSHORTMESSAGEFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'LEXBOT', 'LEXBOTALIAS', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RECORDINGPOLICY', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'TTSENGINE', 'TTSVOICE', 'USER', 'USERPROMPT', 'WORKFLOW'].include?(opts[:'object_type'])
-        fail ArgumentError, 'invalid value for "object_type", must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGFLOWAGENT, EMAILROUTE, EMERGENCYGROUP, FLOWOUTCOME, GROUP, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, LEXBOT, LEXBOTALIAS, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, WORKFLOW'
+      if opts[:'object_type'] && !['ACDLANGUAGE', 'ACDSKILL', 'ACDWRAPUPCODE', 'BRIDGEACTION', 'COMPOSERSCRIPT', 'CONTACTLIST', 'DATAACTION', 'DATATABLE', 'DIALOGFLOWAGENT', 'EMAILROUTE', 'EMERGENCYGROUP', 'FLOWOUTCOME', 'GROUP', 'INBOUNDCALLFLOW', 'INBOUNDCHATFLOW', 'INBOUNDEMAILFLOW', 'INBOUNDSHORTMESSAGEFLOW', 'INQUEUECALLFLOW', 'IVRCONFIGURATION', 'LANGUAGE', 'LEXBOT', 'LEXBOTALIAS', 'OUTBOUNDCALLFLOW', 'QUEUE', 'RECORDINGPOLICY', 'RESPONSE', 'SCHEDULE', 'SCHEDULEGROUP', 'SECUREACTION', 'SECURECALLFLOW', 'SURVEYINVITEFLOW', 'SYSTEMPROMPT', 'TTSENGINE', 'TTSVOICE', 'USER', 'USERPROMPT', 'WIDGET', 'WORKFLOW'].include?(opts[:'object_type'])
+        fail ArgumentError, 'invalid value for "object_type", must be one of ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGFLOWAGENT, EMAILROUTE, EMERGENCYGROUP, FLOWOUTCOME, GROUP, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, LEXBOT, LEXBOTALIAS, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, WIDGET, WORKFLOW'
       end
       
       
@@ -4714,6 +4714,198 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get a flow outcome
+    # Returns a specified flow outcome
+    # @param flow_outcome_id flow outcome ID
+    # @param [Hash] opts the optional parameters
+    # @return [FlowOutcome]
+    def get_flows_outcome(flow_outcome_id, opts = {})
+      data, _status_code, _headers = get_flows_outcome_with_http_info(flow_outcome_id, opts)
+      return data
+    end
+
+    # Get a flow outcome
+    # Returns a specified flow outcome
+    # @param flow_outcome_id flow outcome ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(FlowOutcome, Fixnum, Hash)>] FlowOutcome data, response status code and response headers
+    def get_flows_outcome_with_http_info(flow_outcome_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_outcome ..."
+      end
+      
+      
+      # verify the required parameter 'flow_outcome_id' is set
+      fail ArgumentError, "Missing the required parameter 'flow_outcome_id' when calling ArchitectApi.get_flows_outcome" if flow_outcome_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/outcomes/{flowOutcomeId}".sub('{format}','json').sub('{' + 'flowOutcomeId' + '}', flow_outcome_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FlowOutcome')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flows_outcome\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a pageable list of flow outcomes, filtered by query parameters
+    # Multiple IDs can be specified, in which case all matching flow outcomes will be returned, and no other parameters will be evaluated.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :sort_by Sort by (default to id)
+    # @option opts [String] :sort_order Sort order (default to asc)
+    # @option opts [Array<String>] :id ID
+    # @option opts [String] :name Name
+    # @option opts [String] :description Description
+    # @option opts [String] :name_or_description Name or description
+    # @return [FlowOutcomeListing]
+    def get_flows_outcomes(opts = {})
+      data, _status_code, _headers = get_flows_outcomes_with_http_info(opts)
+      return data
+    end
+
+    # Get a pageable list of flow outcomes, filtered by query parameters
+    # Multiple IDs can be specified, in which case all matching flow outcomes will be returned, and no other parameters will be evaluated.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :sort_order Sort order
+    # @option opts [Array<String>] :id ID
+    # @option opts [String] :name Name
+    # @option opts [String] :description Description
+    # @option opts [String] :name_or_description Name or description
+    # @return [Array<(FlowOutcomeListing, Fixnum, Hash)>] FlowOutcomeListing data, response status code and response headers
+    def get_flows_outcomes_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_outcomes ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/outcomes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'description'] = opts[:'description'] if opts[:'description']
+      query_params[:'nameOrDescription'] = opts[:'name_or_description'] if opts[:'name_or_description']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FlowOutcomeListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flows_outcomes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Rebuild Dependency Tracking data for an organization
     # Asynchronous.  Notification topic: v2.architect.dependencytracking.build
     # @param [Hash] opts the optional parameters
@@ -6058,6 +6250,69 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Create a flow outcome
+    # Asynchronous.  Notification topic: v2.flows.outcomes.{flowOutcomeId}
+    # @param [Hash] opts the optional parameters
+    # @option opts [FlowOutcome] :body 
+    # @return [FlowOutcome]
+    def post_flows_outcomes(opts = {})
+      data, _status_code, _headers = post_flows_outcomes_with_http_info(opts)
+      return data
+    end
+
+    # Create a flow outcome
+    # Asynchronous.  Notification topic: v2.flows.outcomes.{flowOutcomeId}
+    # @param [Hash] opts the optional parameters
+    # @option opts [FlowOutcome] :body 
+    # @return [Array<(FlowOutcome, Fixnum, Hash)>] FlowOutcome data, response status code and response headers
+    def post_flows_outcomes_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_outcomes ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/outcomes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FlowOutcome')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_flows_outcomes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Updates a emergency group by ID
     # 
     # @param emergency_group_id Emergency group ID
@@ -6843,6 +7098,79 @@ module PureCloud
         :return_type => 'Hash<String, Object>')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#put_flows_datatable_row\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Updates a flow outcome
+    # Updates a flow outcome.  Asynchronous.  Notification topic: v2.flowoutcomes.{flowoutcomeId}
+    # @param flow_outcome_id flow outcome ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [FlowOutcome] :body 
+    # @return [Operation]
+    def put_flows_outcome(flow_outcome_id, opts = {})
+      data, _status_code, _headers = put_flows_outcome_with_http_info(flow_outcome_id, opts)
+      return data
+    end
+
+    # Updates a flow outcome
+    # Updates a flow outcome.  Asynchronous.  Notification topic: v2.flowoutcomes.{flowoutcomeId}
+    # @param flow_outcome_id flow outcome ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [FlowOutcome] :body 
+    # @return [Array<(Operation, Fixnum, Hash)>] Operation data, response status code and response headers
+    def put_flows_outcome_with_http_info(flow_outcome_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.put_flows_outcome ..."
+      end
+      
+      
+      # verify the required parameter 'flow_outcome_id' is set
+      fail ArgumentError, "Missing the required parameter 'flow_outcome_id' when calling ArchitectApi.put_flows_outcome" if flow_outcome_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/outcomes/{flowOutcomeId}".sub('{format}','json').sub('{' + 'flowOutcomeId' + '}', flow_outcome_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Operation')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#put_flows_outcome\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

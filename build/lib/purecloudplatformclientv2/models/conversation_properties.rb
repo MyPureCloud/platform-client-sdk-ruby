@@ -27,6 +27,9 @@ module PureCloud
     # Indicates filtering for Acd
     attr_accessor :is_acd
 
+    # Indicates filtering for Preferred Agent Routing
+    attr_accessor :is_preferred
+
     # Indicates filtering for screenshare
     attr_accessor :is_screenshare
 
@@ -55,6 +58,8 @@ module PureCloud
         
         :'is_acd' => :'isAcd',
         
+        :'is_preferred' => :'isPreferred',
+        
         :'is_screenshare' => :'isScreenshare',
         
         :'is_cobrowse' => :'isCobrowse',
@@ -79,6 +84,8 @@ module PureCloud
         :'is_active' => :'BOOLEAN',
         
         :'is_acd' => :'BOOLEAN',
+        
+        :'is_preferred' => :'BOOLEAN',
         
         :'is_screenshare' => :'BOOLEAN',
         
@@ -126,6 +133,15 @@ module PureCloud
         
         
         self.is_acd = attributes[:'isAcd']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isPreferred')
+        
+        
+        self.is_preferred = attributes[:'isPreferred']
         
       
       end
@@ -236,8 +252,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -292,6 +317,7 @@ module PureCloud
           is_waiting == o.is_waiting &&
           is_active == o.is_active &&
           is_acd == o.is_acd &&
+          is_preferred == o.is_preferred &&
           is_screenshare == o.is_screenshare &&
           is_cobrowse == o.is_cobrowse &&
           is_voicemail == o.is_voicemail &&
@@ -309,7 +335,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [is_waiting, is_active, is_acd, is_screenshare, is_cobrowse, is_voicemail, is_flagged, filter_wrap_up_notes, match_all].hash
+      [is_waiting, is_active, is_acd, is_preferred, is_screenshare, is_cobrowse, is_voicemail, is_flagged, filter_wrap_up_notes, match_all].hash
     end
 
     # build the object from hash

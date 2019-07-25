@@ -39,7 +39,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'agent' => :'Agent',
+        :'agent' => :'AddressableEntityRef',
         
         :'score' => :'Integer'
         

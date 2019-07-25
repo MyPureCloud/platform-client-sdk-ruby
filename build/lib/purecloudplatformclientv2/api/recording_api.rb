@@ -173,6 +173,70 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete the recording bulk job
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_recording_job(job_id, opts = {})
+      delete_recording_job_with_http_info(job_id, opts)
+      return nil
+    end
+
+    # Delete the recording bulk job
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_recording_job_with_http_info(job_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RecordingApi.delete_recording_job ..."
+      end
+      
+      
+      # verify the required parameter 'job_id' is set
+      fail ArgumentError, "Missing the required parameter 'job_id' when calling RecordingApi.delete_recording_job" if job_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/recording/jobs/{jobId}".sub('{format}','json').sub('{' + 'jobId' + '}', job_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RecordingApi#delete_recording_job\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete media retention policies
     # Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
     # @param ids 
@@ -1152,6 +1216,144 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the status of the job associated with the job id.
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @return [RecordingJob]
+    def get_recording_job(job_id, opts = {})
+      data, _status_code, _headers = get_recording_job_with_http_info(job_id, opts)
+      return data
+    end
+
+    # Get the status of the job associated with the job id.
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(RecordingJob, Fixnum, Hash)>] RecordingJob data, response status code and response headers
+    def get_recording_job_with_http_info(job_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RecordingApi.get_recording_job ..."
+      end
+      
+      
+      # verify the required parameter 'job_id' is set
+      fail ArgumentError, "Missing the required parameter 'job_id' when calling RecordingApi.get_recording_job" if job_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/recording/jobs/{jobId}".sub('{format}','json').sub('{' + 'jobId' + '}', job_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'RecordingJob')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RecordingApi#get_recording_job\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the status of all jobs within the user's organization
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @return [RecordingJobEntityListing]
+    def get_recording_jobs(opts = {})
+      data, _status_code, _headers = get_recording_jobs_with_http_info(opts)
+      return data
+    end
+
+    # Get the status of all jobs within the user&#39;s organization
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @return [Array<(RecordingJobEntityListing, Fixnum, Hash)>] RecordingJobEntityListing data, response status code and response headers
+    def get_recording_jobs_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RecordingApi.get_recording_jobs ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/recording/jobs".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'RecordingJobEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RecordingApi#get_recording_jobs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get the local encryption settings
     # 
     # @param settings_id Settings Id
@@ -2044,6 +2246,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Create a recording bulk job
+    # 
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @return [RecordingJob]
+    def post_recording_jobs(body, opts = {})
+      data, _status_code, _headers = post_recording_jobs_with_http_info(body, opts)
+      return data
+    end
+
+    # Create a recording bulk job
+    # 
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(RecordingJob, Fixnum, Hash)>] RecordingJob data, response status code and response headers
+    def post_recording_jobs_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RecordingApi.post_recording_jobs ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.post_recording_jobs" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/recording/jobs".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'RecordingJob')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RecordingApi#post_recording_jobs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # create a local recording key
     # 
     # @param body Local Encryption body
@@ -2543,6 +2810,81 @@ module PureCloud
         :return_type => 'Recording')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RecordingApi#put_orphanrecording\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Execute the recording bulk job
+    # 
+    # @param job_id jobId
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @return [RecordingJob]
+    def put_recording_job(job_id, body, opts = {})
+      data, _status_code, _headers = put_recording_job_with_http_info(job_id, body, opts)
+      return data
+    end
+
+    # Execute the recording bulk job
+    # 
+    # @param job_id jobId
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(RecordingJob, Fixnum, Hash)>] RecordingJob data, response status code and response headers
+    def put_recording_job_with_http_info(job_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RecordingApi.put_recording_job ..."
+      end
+      
+      
+      # verify the required parameter 'job_id' is set
+      fail ArgumentError, "Missing the required parameter 'job_id' when calling RecordingApi.put_recording_job" if job_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling RecordingApi.put_recording_job" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/recording/jobs/{jobId}".sub('{format}','json').sub('{' + 'jobId' + '}', job_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'RecordingJob')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RecordingApi#put_recording_job\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

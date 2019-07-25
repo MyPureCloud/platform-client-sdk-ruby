@@ -24,22 +24,22 @@ module PureCloud
       @api_client = api_client
     end
 
-    # Soft delete user with specified ID
+    # Delete a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Empty]
     def delete_scim_user(user_id, opts = {})
       data, _status_code, _headers = delete_scim_user_with_http_info(user_id, opts)
       return data
     end
 
-    # Soft delete user with specified ID
+    # Delete a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
     def delete_scim_user_with_http_info(user_id, opts = {})
       if @api_client.config.debugging
@@ -98,22 +98,22 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Soft delete user with specified ID
+    # Delete a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/v2/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Empty]
     def delete_scim_v2_user(user_id, opts = {})
       data, _status_code, _headers = delete_scim_v2_user_with_http_info(user_id, opts)
       return data
     end
 
-    # Soft delete user with specified ID
+    # Delete a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/v2/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
     def delete_scim_v2_user_with_http_info(user_id, opts = {})
       if @api_client.config.debugging
@@ -172,22 +172,22 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Return Group with specified ID
+    # Get a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/groups.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_none_match If-None-Match for ETag version checking
+    # @option opts [String] :if_none_match The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified.
     # @return [ScimV2Group]
     def get_scim_group(group_id, opts = {})
       data, _status_code, _headers = get_scim_group_with_http_info(group_id, opts)
       return data
     end
 
-    # Return Group with specified ID
+    # Get a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/groups.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_none_match If-None-Match for ETag version checking
+    # @option opts [String] :if_none_match The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified.
     # @return [Array<(ScimV2Group, Fixnum, Hash)>] ScimV2Group data, response status code and response headers
     def get_scim_group_with_http_info(group_id, opts = {})
       if @api_client.config.debugging
@@ -246,24 +246,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Query Groups
+    # Get a list of groups
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_index Starting item of request. 1-based (default to 1)
-    # @option opts [Integer] :count The requested number of items per page. A value of 0 will return no results other than the totalResults count. (default to 25)
-    # @option opts [String] :filter filter parameter e.g. displayName eq groupName
+    # @option opts [Integer] :start_index The 1-based index of the first query result. (default to 1)
+    # @option opts [Integer] :count The requested number of items per page. A value of 0 returns totalResults. (default to 25)
+    # @option opts [String] :filter Filters results.
     # @return [ScimListResponse]
     def get_scim_groups(opts = {})
       data, _status_code, _headers = get_scim_groups_with_http_info(opts)
       return data
     end
 
-    # Query Groups
+    # Get a list of groups
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_index Starting item of request. 1-based
-    # @option opts [Integer] :count The requested number of items per page. A value of 0 will return no results other than the totalResults count.
-    # @option opts [String] :filter filter parameter e.g. displayName eq groupName
+    # @option opts [Integer] :start_index The 1-based index of the first query result.
+    # @option opts [Integer] :count The requested number of items per page. A value of 0 returns totalResults.
+    # @option opts [String] :filter Filters results.
     # @return [Array<(ScimListResponse, Fixnum, Hash)>] ScimListResponse data, response status code and response headers
     def get_scim_groups_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -328,22 +328,22 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Return user with specified ID (default version)
+    # Get a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_none_match If-None-Match for ETag version checking
+    # @option opts [String] :if_none_match The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified.
     # @return [ScimV2User]
     def get_scim_user(user_id, opts = {})
       data, _status_code, _headers = get_scim_user_with_http_info(user_id, opts)
       return data
     end
 
-    # Return user with specified ID (default version)
+    # Get a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_none_match If-None-Match for ETag version checking
+    # @option opts [String] :if_none_match The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified.
     # @return [Array<(ScimV2User, Fixnum, Hash)>] ScimV2User data, response status code and response headers
     def get_scim_user_with_http_info(user_id, opts = {})
       if @api_client.config.debugging
@@ -402,24 +402,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Query Users
+    # Get a list of users
     # 
-    # @param filter filter parameter e.g. userName eq search@sample.org
+    # @param filter Filters results.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_index Starting item of request. 1-based (default to 1)
-    # @option opts [Integer] :count The requested number of items per page. A value of 0 will return no results other than the totalResults count. (default to 25)
+    # @option opts [Integer] :start_index The 1-based index of the first query result. (default to 1)
+    # @option opts [Integer] :count The requested number of items per page. A value of 0 returns totalResults. (default to 25)
     # @return [ScimListResponse]
     def get_scim_users(filter, opts = {})
       data, _status_code, _headers = get_scim_users_with_http_info(filter, opts)
       return data
     end
 
-    # Query Users
+    # Get a list of users
     # 
-    # @param filter filter parameter e.g. userName eq search@sample.org
+    # @param filter Filters results.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_index Starting item of request. 1-based
-    # @option opts [Integer] :count The requested number of items per page. A value of 0 will return no results other than the totalResults count.
+    # @option opts [Integer] :start_index The 1-based index of the first query result.
+    # @option opts [Integer] :count The requested number of items per page. A value of 0 returns totalResults.
     # @return [Array<(ScimListResponse, Fixnum, Hash)>] ScimListResponse data, response status code and response headers
     def get_scim_users_with_http_info(filter, opts = {})
       if @api_client.config.debugging
@@ -486,22 +486,22 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Return Group with specified ID
+    # Get a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_none_match If-None-Match for ETag version checking
+    # @option opts [String] :if_none_match The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified.
     # @return [ScimV2Group]
     def get_scim_v2_group(group_id, opts = {})
       data, _status_code, _headers = get_scim_v2_group_with_http_info(group_id, opts)
       return data
     end
 
-    # Return Group with specified ID
+    # Get a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_none_match If-None-Match for ETag version checking
+    # @option opts [String] :if_none_match The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified.
     # @return [Array<(ScimV2Group, Fixnum, Hash)>] ScimV2Group data, response status code and response headers
     def get_scim_v2_group_with_http_info(group_id, opts = {})
       if @api_client.config.debugging
@@ -560,24 +560,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Query Groups
+    # Get a list of groups
     # 
-    # @param filter filter parameter e.g. displayName eq groupName
+    # @param filter Filters results.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_index Starting item of request. 1-based (default to 1)
-    # @option opts [Integer] :count The requested number of items per page. A value of 0 will return no results other than the totalResults count. (default to 25)
+    # @option opts [Integer] :start_index The 1-based index of the first query result. (default to 1)
+    # @option opts [Integer] :count The requested number of items per page. A value of 0 returns totalResults. (default to 25)
     # @return [ScimListResponse]
     def get_scim_v2_groups(filter, opts = {})
       data, _status_code, _headers = get_scim_v2_groups_with_http_info(filter, opts)
       return data
     end
 
-    # Query Groups
+    # Get a list of groups
     # 
-    # @param filter filter parameter e.g. displayName eq groupName
+    # @param filter Filters results.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_index Starting item of request. 1-based
-    # @option opts [Integer] :count The requested number of items per page. A value of 0 will return no results other than the totalResults count.
+    # @option opts [Integer] :start_index The 1-based index of the first query result.
+    # @option opts [Integer] :count The requested number of items per page. A value of 0 returns totalResults.
     # @return [Array<(ScimListResponse, Fixnum, Hash)>] ScimListResponse data, response status code and response headers
     def get_scim_v2_groups_with_http_info(filter, opts = {})
       if @api_client.config.debugging
@@ -644,20 +644,20 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get SCIM Configuration
+    # Get the SCIM configuration
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_none_match If-None-Match for ETag version checking
+    # @option opts [String] :if_none_match The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified.
     # @return [ScimServiceProviderConfig]
     def get_scim_v2_serviceproviderconfig(opts = {})
       data, _status_code, _headers = get_scim_v2_serviceproviderconfig_with_http_info(opts)
       return data
     end
 
-    # Get SCIM Configuration
+    # Get the SCIM configuration
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_none_match If-None-Match for ETag version checking
+    # @option opts [String] :if_none_match The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified.
     # @return [Array<(ScimServiceProviderConfig, Fixnum, Hash)>] ScimServiceProviderConfig data, response status code and response headers
     def get_scim_v2_serviceproviderconfig_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -708,22 +708,22 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Return User with specified ID
+    # Get a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/v2/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_none_match If-None-Match for ETag version checking
+    # @option opts [String] :if_none_match The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified.
     # @return [ScimV2User]
     def get_scim_v2_user(user_id, opts = {})
       data, _status_code, _headers = get_scim_v2_user_with_http_info(user_id, opts)
       return data
     end
 
-    # Return User with specified ID
+    # Get a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/v2/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_none_match If-None-Match for ETag version checking
+    # @option opts [String] :if_none_match The ETag of a resource. If no match is found, returns request. If match is found, returns 304 Not Modified.
     # @return [Array<(ScimV2User, Fixnum, Hash)>] ScimV2User data, response status code and response headers
     def get_scim_v2_user_with_http_info(user_id, opts = {})
       if @api_client.config.debugging
@@ -782,24 +782,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Query Users
+    # Get a list of users
     # 
-    # @param filter filter parameter e.g. userName eq search@sample.org
+    # @param filter Filters results.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_index Starting item of request. 1-based (default to 1)
-    # @option opts [Integer] :count The requested number of items per page. A value of 0 will return no results other than the totalResults count. (default to 25)
+    # @option opts [Integer] :start_index The 1-based index of the first query result. (default to 1)
+    # @option opts [Integer] :count The requested number of items per page. A value of 0 returns totalResults. (default to 25)
     # @return [ScimListResponse]
     def get_scim_v2_users(filter, opts = {})
       data, _status_code, _headers = get_scim_v2_users_with_http_info(filter, opts)
       return data
     end
 
-    # Query Users
+    # Get a list of users
     # 
-    # @param filter filter parameter e.g. userName eq search@sample.org
+    # @param filter Filters results.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_index Starting item of request. 1-based
-    # @option opts [Integer] :count The requested number of items per page. A value of 0 will return no results other than the totalResults count.
+    # @option opts [Integer] :start_index The 1-based index of the first query result.
+    # @option opts [Integer] :count The requested number of items per page. A value of 0 returns totalResults.
     # @return [Array<(ScimListResponse, Fixnum, Hash)>] ScimListResponse data, response status code and response headers
     def get_scim_v2_users_with_http_info(filter, opts = {})
       if @api_client.config.debugging
@@ -866,24 +866,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update Group with specified ID
+    # Modify a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/groups.
     # @param body Group
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [ScimV2Group]
     def patch_scim_group(group_id, body, opts = {})
       data, _status_code, _headers = patch_scim_group_with_http_info(group_id, body, opts)
       return data
     end
 
-    # Update Group with specified ID
+    # Modify a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/groups.
     # @param body Group
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Array<(ScimV2Group, Fixnum, Hash)>] ScimV2Group data, response status code and response headers
     def patch_scim_group_with_http_info(group_id, body, opts = {})
       if @api_client.config.debugging
@@ -950,24 +950,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Patch user with specified ID
+    # Modify a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
     # @param body SCIM Patch Request
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [ScimV2User]
     def patch_scim_user(user_id, body, opts = {})
       data, _status_code, _headers = patch_scim_user_with_http_info(user_id, body, opts)
       return data
     end
 
-    # Patch user with specified ID
+    # Modify a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
     # @param body SCIM Patch Request
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Array<(ScimV2User, Fixnum, Hash)>] ScimV2User data, response status code and response headers
     def patch_scim_user_with_http_info(user_id, body, opts = {})
       if @api_client.config.debugging
@@ -1034,24 +1034,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update Group with specified ID
+    # Modify a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
     # @param body Group
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [ScimV2Group]
     def patch_scim_v2_group(group_id, body, opts = {})
       data, _status_code, _headers = patch_scim_v2_group_with_http_info(group_id, body, opts)
       return data
     end
 
-    # Update Group with specified ID
+    # Modify a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
     # @param body Group
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Array<(ScimV2Group, Fixnum, Hash)>] ScimV2Group data, response status code and response headers
     def patch_scim_v2_group_with_http_info(group_id, body, opts = {})
       if @api_client.config.debugging
@@ -1118,24 +1118,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update user with specified ID
+    # Modify a user
     # 
-    # @param user_id User Id
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/v2/users.
     # @param body SCIM Patch Request
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [ScimV2User]
     def patch_scim_v2_user(user_id, body, opts = {})
       data, _status_code, _headers = patch_scim_v2_user_with_http_info(user_id, body, opts)
       return data
     end
 
-    # Update user with specified ID
+    # Modify a user
     # 
-    # @param user_id User Id
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/v2/users.
     # @param body SCIM Patch Request
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Array<(ScimV2User, Fixnum, Hash)>] ScimV2User data, response status code and response headers
     def patch_scim_v2_user_with_http_info(user_id, body, opts = {})
       if @api_client.config.debugging
@@ -1202,7 +1202,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Create user
+    # Create a user
     # 
     # @param body SCIM Create User
     # @param [Hash] opts the optional parameters
@@ -1212,7 +1212,7 @@ module PureCloud
       return data
     end
 
-    # Create user
+    # Create a user
     # 
     # @param body SCIM Create User
     # @param [Hash] opts the optional parameters
@@ -1267,7 +1267,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Create user
+    # Create a user
     # 
     # @param body SCIM Create User
     # @param [Hash] opts the optional parameters
@@ -1277,7 +1277,7 @@ module PureCloud
       return data
     end
 
-    # Create user
+    # Create a user
     # 
     # @param body SCIM Create User
     # @param [Hash] opts the optional parameters
@@ -1332,24 +1332,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update Group with specified ID
+    # Replace a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/groups.
     # @param body Group
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [ScimV2Group]
     def put_scim_group(group_id, body, opts = {})
       data, _status_code, _headers = put_scim_group_with_http_info(group_id, body, opts)
       return data
     end
 
-    # Update Group with specified ID
+    # Replace a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/groups.
     # @param body Group
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Array<(ScimV2Group, Fixnum, Hash)>] ScimV2Group data, response status code and response headers
     def put_scim_group_with_http_info(group_id, body, opts = {})
       if @api_client.config.debugging
@@ -1416,24 +1416,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update user with specified ID
+    # Replace a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
     # @param body User
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [ScimV2User]
     def put_scim_user(user_id, body, opts = {})
       data, _status_code, _headers = put_scim_user_with_http_info(user_id, body, opts)
       return data
     end
 
-    # Update user with specified ID
+    # Replace a user
     # 
-    # @param user_id 
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
     # @param body User
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Array<(ScimV2User, Fixnum, Hash)>] ScimV2User data, response status code and response headers
     def put_scim_user_with_http_info(user_id, body, opts = {})
       if @api_client.config.debugging
@@ -1500,24 +1500,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update Group with specified ID
+    # Replace a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
     # @param body Group
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [ScimV2Group]
     def put_scim_v2_group(group_id, body, opts = {})
       data, _status_code, _headers = put_scim_v2_group_with_http_info(group_id, body, opts)
       return data
     end
 
-    # Update Group with specified ID
+    # Replace a group
     # 
-    # @param group_id 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
     # @param body Group
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Array<(ScimV2Group, Fixnum, Hash)>] ScimV2Group data, response status code and response headers
     def put_scim_v2_group_with_http_info(group_id, body, opts = {})
       if @api_client.config.debugging
@@ -1584,24 +1584,24 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update user with specified ID
+    # Replace a user
     # 
-    # @param user_id User Id
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/v2/users.
     # @param body User
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [ScimV2User]
     def put_scim_v2_user(user_id, body, opts = {})
       data, _status_code, _headers = put_scim_v2_user_with_http_info(user_id, body, opts)
       return data
     end
 
-    # Update user with specified ID
+    # Replace a user
     # 
-    # @param user_id User Id
+    # @param user_id The ID of a user. Returned with GET /api/v2/scim/v2/users.
     # @param body User
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :if_match If-Match for ETag version checking
+    # @option opts [String] :if_match The ETag of a resource. If no match is found, returns 412 Precondition Failed. If match is found, performs request.
     # @return [Array<(ScimV2User, Fixnum, Hash)>] ScimV2User data, response status code and response headers
     def put_scim_v2_user_with_http_info(user_id, body, opts = {})
       if @api_client.config.debugging

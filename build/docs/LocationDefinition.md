@@ -16,6 +16,8 @@ title: LocationDefinition
 | **version** | **Integer** |  | [optional] |
 | **path** | **Array&lt;String&gt;** |  | [optional] |
 | **notes** | **String** |  | [optional] |
+| **profile_image** | [**Array&lt;LocationImage&gt;**](LocationImage.html) | Profile image set for the location | [optional] |
+| **floorplan_image** | [**Array&lt;LocationImage&gt;**](LocationImage.html) |  | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

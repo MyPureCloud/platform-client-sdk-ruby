@@ -18,6 +18,7 @@ title: CallHistoryConversation
 | **was_callback** | **BOOLEAN** | Was this conversation a callback | [optional] |
 | **had_screen_share** | **BOOLEAN** | Did this conversation have a screen share session | [optional] |
 | **had_cobrowse** | **BOOLEAN** | Did this conversation have a cobrowse session | [optional] |
+| **was_outbound_campaign** | **BOOLEAN** | Was this conversation associated with an outbound campaign | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

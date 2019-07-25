@@ -39,6 +39,11 @@ module PureCloud
 
     attr_accessor :notes
 
+    # Profile image set for the location
+    attr_accessor :profile_image
+
+    attr_accessor :floorplan_image
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -63,6 +68,10 @@ module PureCloud
         :'path' => :'path',
         
         :'notes' => :'notes',
+        
+        :'profile_image' => :'profileImage',
+        
+        :'floorplan_image' => :'floorplanImage',
         
         :'self_uri' => :'selfUri'
         
@@ -90,6 +99,10 @@ module PureCloud
         :'path' => :'Array<String>',
         
         :'notes' => :'String',
+        
+        :'profile_image' => :'Array<LocationImage>',
+        
+        :'floorplan_image' => :'Array<LocationImage>',
         
         :'self_uri' => :'String'
         
@@ -188,6 +201,28 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'profileImage')
+        
+        if (value = attributes[:'profileImage']).is_a?(Array)
+          self.profile_image = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'floorplanImage')
+        
+        if (value = attributes[:'floorplanImage']).is_a?(Array)
+          self.floorplan_image = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -243,6 +278,14 @@ module PureCloud
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -324,6 +367,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -338,6 +391,8 @@ module PureCloud
           version == o.version &&
           path == o.path &&
           notes == o.notes &&
+          profile_image == o.profile_image &&
+          floorplan_image == o.floorplan_image &&
           self_uri == o.self_uri
     end
 
@@ -350,7 +405,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, address_verified, emergency_number, state, version, path, notes, self_uri].hash
+      [id, name, address, address_verified, emergency_number, state, version, path, notes, profile_image, floorplan_image, self_uri].hash
     end
 
     # build the object from hash
