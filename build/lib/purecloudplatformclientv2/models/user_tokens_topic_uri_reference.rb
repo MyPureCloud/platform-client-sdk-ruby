@@ -17,32 +17,18 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class Meta
-    attr_accessor :resource_type
+  class UserTokensTopicUriReference
+    attr_accessor :id
 
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-    attr_accessor :created
-
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-    attr_accessor :last_modified
-
-    attr_accessor :location
-
-    attr_accessor :version
+    attr_accessor :name
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'resource_type' => :'resourceType',
+        :'id' => :'id',
         
-        :'created' => :'created',
-        
-        :'last_modified' => :'lastModified',
-        
-        :'location' => :'location',
-        
-        :'version' => :'version'
+        :'name' => :'name'
         
       }
     end
@@ -51,15 +37,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'resource_type' => :'String',
+        :'id' => :'String',
         
-        :'created' => :'DateTime',
-        
-        :'last_modified' => :'DateTime',
-        
-        :'location' => :'String',
-        
-        :'version' => :'String'
+        :'name' => :'String'
         
       }
     end
@@ -73,46 +53,19 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'resourceType')
+      if attributes.has_key?(:'id')
         
         
-        self.resource_type = attributes[:'resourceType']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'created')
-        
-        
-        self.created = attributes[:'created']
+        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes.has_key?(:'lastModified')
+      if attributes.has_key?(:'name')
         
         
-        self.last_modified = attributes[:'lastModified']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'location')
-        
-        
-        self.location = attributes[:'location']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'version')
-        
-        
-        self.version = attributes[:'version']
+        self.name = attributes[:'name']
         
       
       end
@@ -141,35 +94,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -186,11 +112,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          resource_type == o.resource_type &&
-          created == o.created &&
-          last_modified == o.last_modified &&
-          location == o.location &&
-          version == o.version
+          id == o.id &&
+          name == o.name
     end
 
     # @see the `==` method
@@ -202,7 +125,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [resource_type, created, last_modified, location, version].hash
+      [id, name].hash
     end
 
     # build the object from hash

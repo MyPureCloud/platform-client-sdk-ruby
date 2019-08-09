@@ -7,8 +7,7 @@ title: ScimV2GroupReference
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **display_name** | **String** | Display Name | [optional] |
-| **meta** | [**ScimMetadata**](ScimMetadata.html) |  | [optional] |
+| **meta** | [**ScimMetadata**](ScimMetadata.html) | Resource SCIM meta | [optional] |
 | **type** | **String** | SCIM Resource Type of member | [optional] |
 | **value** | **String** | Value of ID of group member. May be User or Group id | [optional] |
 | **ref** | **String** | Ref to entity | [optional] |

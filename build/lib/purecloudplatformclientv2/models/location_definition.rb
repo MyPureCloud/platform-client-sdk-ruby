@@ -24,20 +24,21 @@ module PureCloud
     # The name of the Location.
     attr_accessor :name
 
+    attr_accessor :emergency_number
+
     attr_accessor :address
 
     attr_accessor :address_verified
 
-    attr_accessor :emergency_number
-
     # Current activity status of the location.
     attr_accessor :state
 
+    attr_accessor :notes
+
     attr_accessor :version
 
+    # A list of ancestor IDs in order
     attr_accessor :path
-
-    attr_accessor :notes
 
     # Profile image set for the location
     attr_accessor :profile_image
@@ -55,19 +56,19 @@ module PureCloud
         
         :'name' => :'name',
         
+        :'emergency_number' => :'emergencyNumber',
+        
         :'address' => :'address',
         
         :'address_verified' => :'addressVerified',
         
-        :'emergency_number' => :'emergencyNumber',
-        
         :'state' => :'state',
+        
+        :'notes' => :'notes',
         
         :'version' => :'version',
         
         :'path' => :'path',
-        
-        :'notes' => :'notes',
         
         :'profile_image' => :'profileImage',
         
@@ -86,19 +87,19 @@ module PureCloud
         
         :'name' => :'String',
         
+        :'emergency_number' => :'LocationEmergencyNumber',
+        
         :'address' => :'LocationAddress',
         
         :'address_verified' => :'BOOLEAN',
         
-        :'emergency_number' => :'LocationEmergencyNumber',
-        
         :'state' => :'String',
+        
+        :'notes' => :'String',
         
         :'version' => :'Integer',
         
         :'path' => :'Array<String>',
-        
-        :'notes' => :'String',
         
         :'profile_image' => :'Array<LocationImage>',
         
@@ -136,6 +137,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'emergencyNumber')
+        
+        
+        self.emergency_number = attributes[:'emergencyNumber']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'address')
         
         
@@ -154,19 +164,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'emergencyNumber')
+      if attributes.has_key?(:'state')
         
         
-        self.emergency_number = attributes[:'emergencyNumber']
+        self.state = attributes[:'state']
         
       
       end
 
       
-      if attributes.has_key?(:'state')
+      if attributes.has_key?(:'notes')
         
         
-        self.state = attributes[:'state']
+        self.notes = attributes[:'notes']
         
       
       end
@@ -187,15 +197,6 @@ module PureCloud
           self.path = value
         end
         
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'notes')
-        
-        
-        self.notes = attributes[:'notes']
         
       
       end
@@ -384,13 +385,13 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
+          emergency_number == o.emergency_number &&
           address == o.address &&
           address_verified == o.address_verified &&
-          emergency_number == o.emergency_number &&
           state == o.state &&
+          notes == o.notes &&
           version == o.version &&
           path == o.path &&
-          notes == o.notes &&
           profile_image == o.profile_image &&
           floorplan_image == o.floorplan_image &&
           self_uri == o.self_uri
@@ -405,7 +406,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, address_verified, emergency_number, state, version, path, notes, profile_image, floorplan_image, self_uri].hash
+      [id, name, emergency_number, address, address_verified, state, notes, version, path, profile_image, floorplan_image, self_uri].hash
     end
 
     # build the object from hash

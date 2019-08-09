@@ -1,7 +1,7 @@
 ---
-title: ScimListResponse
+title: ScimGroupListResponse
 ---
-## PureCloud::ScimListResponse
+## PureCloud::ScimGroupListResponse
 
 ## Properties
 
@@ -10,7 +10,7 @@ title: ScimListResponse
 | **total_results** | **Integer** | Total Results | [optional] |
 | **start_index** | **Integer** | Start index | [optional] |
 | **items_per_page** | **Integer** | Items per Page | [optional] |
-| **resources** | [**Array&lt;ScimResource&gt;**](ScimResource.html) | Resources | [optional] |
+| **resources** | [**Array&lt;ScimV2Group&gt;**](ScimV2Group.html) | Resources | [optional] |
 | **schemas** | **Array&lt;String&gt;** | schemas supported | [optional] |
 {: class="table table-striped"}
 

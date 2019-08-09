@@ -662,7 +662,7 @@ module PureCloud
       
       
       
-      allowed_values = ["on", "stopping", "off", "complete", "invalid"]
+      allowed_values = ["on", "stopping", "off", "complete", "invalid", "forced_off", "forced_stopping"]
       if @campaign_status && !allowed_values.include?(@campaign_status)
         return false
       end
@@ -839,7 +839,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] campaign_status Object to be assigned
     def campaign_status=(campaign_status)
-      allowed_values = ["on", "stopping", "off", "complete", "invalid"]
+      allowed_values = ["on", "stopping", "off", "complete", "invalid", "forced_off", "forced_stopping"]
       if campaign_status && !allowed_values.include?(campaign_status)
         fail ArgumentError, "invalid value for 'campaign_status', must be one of #{allowed_values}."
       end

@@ -17,14 +17,12 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM Members of Group Resource
+  # SCIM Members of Group Reference
   class ScimV2MemberReference
     # SCIM Resource Type of member
     attr_accessor :type
 
-    # Display Name
-    attr_accessor :display_name
-
+    # Resource SCIM meta
     attr_accessor :meta
 
     # Value of ID of group member. May be User or Group id
@@ -38,8 +36,6 @@ module PureCloud
       {
         
         :'type' => :'type',
-        
-        :'display_name' => :'displayName',
         
         :'meta' => :'meta',
         
@@ -55,8 +51,6 @@ module PureCloud
       {
         
         :'type' => :'String',
-        
-        :'display_name' => :'String',
         
         :'meta' => :'ScimMetadata',
         
@@ -80,15 +74,6 @@ module PureCloud
         
         
         self.type = attributes[:'type']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'displayName')
-        
-        
-        self.display_name = attributes[:'displayName']
         
       
       end
@@ -157,10 +142,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
     
@@ -193,18 +174,12 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
           type == o.type &&
-          display_name == o.display_name &&
           meta == o.meta &&
           value == o.value &&
           ref == o.ref
@@ -219,7 +194,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, display_name, meta, value, ref].hash
+      [type, meta, value, ref].hash
     end
 
     # build the object from hash

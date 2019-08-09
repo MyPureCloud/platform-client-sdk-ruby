@@ -2497,8 +2497,8 @@ module PureCloud
       
       
       
-      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'ActivityCodes', 'Agents', 'BusinessUnitActivityCodes', 'BusinessUnits', 'HistoricalAdherence', 'IntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'ServiceGoalGroups', 'ServiceGoalTemplates', 'ShiftTrading', 'ShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
-        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnitActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ServiceGoalTemplates, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans'
+      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'ActivityCodes', 'Agents', 'BusinessUnitActivityCodes', 'BusinessUnits', 'HistoricalAdherence', 'IntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'ServiceGoalGroups', 'ServiceGoalTemplates', 'PlanningGroups', 'ShiftTrading', 'ShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
+        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BusinessUnitActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, TimeOffRequests, WorkPlans'
       end
       
       

@@ -957,7 +957,6 @@ module PureCloud
     # @option opts [Array<String>] :jid jid
     # @option opts [String] :sort_order Ascending or descending sort order (default to ASC)
     # @option opts [Array<String>] :expand Which fields, if any, to expand
-    # @option opts [String] :state Only list users of this state (default to active)
     # @return [UserProfileEntityListing]
     def get_profiles_users(opts = {})
       data, _status_code, _headers = get_profiles_users_with_http_info(opts)
@@ -973,7 +972,6 @@ module PureCloud
     # @option opts [Array<String>] :jid jid
     # @option opts [String] :sort_order Ascending or descending sort order
     # @option opts [Array<String>] :expand Which fields, if any, to expand
-    # @option opts [String] :state Only list users of this state
     # @return [Array<(UserProfileEntityListing, Fixnum, Hash)>] UserProfileEntityListing data, response status code and response headers
     def get_profiles_users_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1020,16 +1018,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      if opts[:'state'] && !['active', 'deleted'].include?(opts[:'state'])
-        fail ArgumentError, 'invalid value for "state", must be one of active, deleted'
-      end
-      
-      
-      
-      
       # resource path
       local_var_path = "/api/v2/profiles/users".sub('{format}','json')
 
@@ -1041,7 +1029,6 @@ module PureCloud
       query_params[:'jid'] = @api_client.build_collection_param(opts[:'jid'], :multi) if opts[:'jid']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
-      query_params[:'state'] = opts[:'state'] if opts[:'state']
 
       # header parameters
       header_params = {}

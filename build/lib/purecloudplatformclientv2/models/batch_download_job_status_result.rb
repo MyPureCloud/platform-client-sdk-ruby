@@ -21,8 +21,6 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
-    attr_accessor :name
-
     # JobId returned when job was initially submitted
     attr_accessor :job_id
 
@@ -47,8 +45,6 @@ module PureCloud
         
         :'id' => :'id',
         
-        :'name' => :'name',
-        
         :'job_id' => :'jobId',
         
         :'expected_result_count' => :'expectedResultCount',
@@ -69,8 +65,6 @@ module PureCloud
       {
         
         :'id' => :'String',
-        
-        :'name' => :'String',
         
         :'job_id' => :'String',
         
@@ -100,15 +94,6 @@ module PureCloud
         
         
         self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
         
       
       end
@@ -213,17 +198,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -266,7 +242,6 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          name == o.name &&
           job_id == o.job_id &&
           expected_result_count == o.expected_result_count &&
           result_count == o.result_count &&
@@ -284,7 +259,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, job_id, expected_result_count, result_count, error_count, results, self_uri].hash
+      [id, job_id, expected_result_count, result_count, error_count, results, self_uri].hash
     end
 
     # build the object from hash

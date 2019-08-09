@@ -17,15 +17,14 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Common attributes to all SCIM resources
-  class ScimResource
-    # SCIM Resource identifier
+  class BaseTopicEntitiy
+    # The globally unique identifier for the object.
     attr_accessor :id
 
-    # Display Name
-    attr_accessor :display_name
+    attr_accessor :name
 
-    attr_accessor :meta
+    # The URI for this object
+    attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -33,9 +32,9 @@ module PureCloud
         
         :'id' => :'id',
         
-        :'display_name' => :'displayName',
+        :'name' => :'name',
         
-        :'meta' => :'meta'
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -46,9 +45,9 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'display_name' => :'String',
+        :'name' => :'String',
         
-        :'meta' => :'ScimMetadata'
+        :'self_uri' => :'String'
         
       }
     end
@@ -71,19 +70,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'displayName')
+      if attributes.has_key?(:'name')
         
         
-        self.display_name = attributes[:'displayName']
+        self.name = attributes[:'name']
         
       
       end
 
       
-      if attributes.has_key?(:'meta')
+      if attributes.has_key?(:'selfUri')
         
         
-        self.meta = attributes[:'meta']
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -140,8 +139,8 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          display_name == o.display_name &&
-          meta == o.meta
+          name == o.name &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -153,7 +152,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, display_name, meta].hash
+      [id, name, self_uri].hash
     end
 
     # build the object from hash

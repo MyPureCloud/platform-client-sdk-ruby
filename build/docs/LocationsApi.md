@@ -10,6 +10,7 @@ Method | Description
 ------------- | ------------- | -------------
 [**delete_location**](LocationsApi.html#delete_location) | Delete a location
 [**get_location**](LocationsApi.html#get_location) | Get Location by ID.
+[**get_location_sublocations**](LocationsApi.html#get_location_sublocations) | Get sublocations for location ID.
 [**get_locations**](LocationsApi.html#get_locations) | Get a list of all locations.
 [**get_locations_search**](LocationsApi.html#get_locations_search) | Search locations using the q64 value returned from a previous search
 [**patch_location**](LocationsApi.html#patch_location) | Update a location
@@ -141,6 +142,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LocationDefinition**](LocationDefinition.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_location_sublocations"></a>
+
+## [**LocationEntityListing**](LocationEntityListing.html) get_location_sublocations(location_id)
+
+
+
+Get sublocations for location ID.
+
+
+
+Wraps GET /api/v2/locations/{locationId}/sublocations 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::LocationsApi.new
+
+location_id = "location_id_example" # String | Location ID
+
+
+begin
+  #Get sublocations for location ID.
+  result = api_instance.get_location_sublocations(location_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling LocationsApi->get_location_sublocations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **location_id** | **String**| Location ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**LocationEntityListing**](LocationEntityListing.html)
 
 ### HTTP request headers
 

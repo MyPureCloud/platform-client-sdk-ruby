@@ -76,7 +76,7 @@ module PureCloud
       http_method = http_method.to_sym.downcase
 
       header_params = @default_headers.merge(opts[:header_params] || {})
-      header_params['purecloud-sdk'] = '59.0.0'
+      header_params['purecloud-sdk'] = '60.0.0'
       query_params = opts[:query_params] || {}
       form_params = opts[:form_params] || {}
 

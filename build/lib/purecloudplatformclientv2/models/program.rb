@@ -17,30 +17,53 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class PatchRequest
-    attr_accessor :schemas
-
+  class Program
+    # The globally unique identifier for the object.
     attr_accessor :id
 
-    attr_accessor :external_id
+    attr_accessor :name
 
-    attr_accessor :operations
+    attr_accessor :description
 
-    attr_accessor :meta
+    attr_accessor :applied
+
+    attr_accessor :status
+
+    attr_accessor :topics
+
+    attr_accessor :tags
+
+    attr_accessor :modified_by
+
+    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :date_modified
+
+    # The URI for this object
+    attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'schemas' => :'schemas',
-        
         :'id' => :'id',
         
-        :'external_id' => :'externalId',
+        :'name' => :'name',
         
-        :'operations' => :'Operations',
+        :'description' => :'description',
         
-        :'meta' => :'meta'
+        :'applied' => :'applied',
+        
+        :'status' => :'status',
+        
+        :'topics' => :'topics',
+        
+        :'tags' => :'tags',
+        
+        :'modified_by' => :'modifiedBy',
+        
+        :'date_modified' => :'dateModified',
+        
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -49,15 +72,25 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'schemas' => :'Array<String>',
-        
         :'id' => :'String',
         
-        :'external_id' => :'String',
+        :'name' => :'String',
         
-        :'operations' => :'Array<PatchOperation>',
+        :'description' => :'String',
         
-        :'meta' => :'Meta'
+        :'applied' => :'BOOLEAN',
+        
+        :'status' => :'String',
+        
+        :'topics' => :'Array<BaseTopicEntitiy>',
+        
+        :'tags' => :'Array<String>',
+        
+        :'modified_by' => :'User',
+        
+        :'date_modified' => :'DateTime',
+        
+        :'self_uri' => :'String'
         
       }
     end
@@ -71,17 +104,6 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'schemas')
-        
-        if (value = attributes[:'schemas']).is_a?(Array)
-          self.schemas = value
-        end
-        
-        
-      
-      end
-
-      
       if attributes.has_key?(:'id')
         
         
@@ -91,19 +113,46 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'externalId')
+      if attributes.has_key?(:'name')
         
         
-        self.external_id = attributes[:'externalId']
+        self.name = attributes[:'name']
         
       
       end
 
       
-      if attributes.has_key?(:'Operations')
+      if attributes.has_key?(:'description')
         
-        if (value = attributes[:'Operations']).is_a?(Array)
-          self.operations = value
+        
+        self.description = attributes[:'description']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'applied')
+        
+        
+        self.applied = attributes[:'applied']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'status')
+        
+        
+        self.status = attributes[:'status']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'topics')
+        
+        if (value = attributes[:'topics']).is_a?(Array)
+          self.topics = value
         end
         
         
@@ -111,10 +160,39 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'meta')
+      if attributes.has_key?(:'tags')
+        
+        if (value = attributes[:'tags']).is_a?(Array)
+          self.tags = value
+        end
         
         
-        self.meta = attributes[:'meta']
+      
+      end
+
+      
+      if attributes.has_key?(:'modifiedBy')
+        
+        
+        self.modified_by = attributes[:'modifiedBy']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'dateModified')
+        
+        
+        self.date_modified = attributes[:'dateModified']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -148,10 +226,30 @@ module PureCloud
       
       
       
-      if @operations.nil?
+      
+      
+      
+      
+      
+      allowed_values = ["Active", "Inactive"]
+      if @status && !allowed_values.include?(@status)
         return false
       end
-
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -162,6 +260,40 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      allowed_values = ["Active", "Inactive"]
+      if status && !allowed_values.include?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
+      end
+      @status = status
+    end
+
+    
+    
     
     
     
@@ -193,11 +325,16 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          schemas == o.schemas &&
           id == o.id &&
-          external_id == o.external_id &&
-          operations == o.operations &&
-          meta == o.meta
+          name == o.name &&
+          description == o.description &&
+          applied == o.applied &&
+          status == o.status &&
+          topics == o.topics &&
+          tags == o.tags &&
+          modified_by == o.modified_by &&
+          date_modified == o.date_modified &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -209,7 +346,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [schemas, id, external_id, operations, meta].hash
+      [id, name, description, applied, status, topics, tags, modified_by, date_modified, self_uri].hash
     end
 
     # build the object from hash

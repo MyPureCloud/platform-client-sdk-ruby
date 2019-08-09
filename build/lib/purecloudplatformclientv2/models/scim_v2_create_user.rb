@@ -19,9 +19,6 @@ require 'date'
 module PureCloud
   # Represents a SCIM V2 Create User
   class ScimV2CreateUser
-    # Display Name
-    attr_accessor :display_name
-
     # schemas supported
     attr_accessor :schemas
 
@@ -30,6 +27,9 @@ module PureCloud
 
     # User Name (Must be Unique) maps to PureCloud e-mail address
     attr_accessor :user_name
+
+    # Display Name
+    attr_accessor :display_name
 
     # Password (updateOnly)
     attr_accessor :password
@@ -61,13 +61,13 @@ module PureCloud
     def self.attribute_map
       {
         
-        :'display_name' => :'displayName',
-        
         :'schemas' => :'schemas',
         
         :'active' => :'active',
         
         :'user_name' => :'userName',
+        
+        :'display_name' => :'displayName',
         
         :'password' => :'password',
         
@@ -94,13 +94,13 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'display_name' => :'String',
-        
         :'schemas' => :'Array<String>',
         
         :'active' => :'BOOLEAN',
         
         :'user_name' => :'String',
+        
+        :'display_name' => :'String',
         
         :'password' => :'String',
         
@@ -132,15 +132,6 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'displayName')
-        
-        
-        self.display_name = attributes[:'displayName']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'schemas')
         
         if (value = attributes[:'schemas']).is_a?(Array)
@@ -165,6 +156,15 @@ module PureCloud
         
         
         self.user_name = attributes[:'userName']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'displayName')
+        
+        
+        self.display_name = attributes[:'displayName']
         
       
       end
@@ -275,15 +275,6 @@ module PureCloud
     def valid?
       
       
-      if @display_name.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
       
       
       
@@ -293,6 +284,15 @@ module PureCloud
       
       
       if @user_name.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @display_name.nil?
         return false
       end
 
@@ -409,10 +409,10 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          display_name == o.display_name &&
           schemas == o.schemas &&
           active == o.active &&
           user_name == o.user_name &&
+          display_name == o.display_name &&
           password == o.password &&
           title == o.title &&
           phone_numbers == o.phone_numbers &&
@@ -433,7 +433,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [display_name, schemas, active, user_name, password, title, phone_numbers, emails, photos, external_id, groups, meta, urnietfparamsscimschemasextensionenterprise2_0_user].hash
+      [schemas, active, user_name, display_name, password, title, phone_numbers, emails, photos, external_id, groups, meta, urnietfparamsscimschemasextensionenterprise2_0_user].hash
     end
 
     # build the object from hash

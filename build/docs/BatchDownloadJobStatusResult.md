@@ -8,7 +8,6 @@ title: BatchDownloadJobStatusResult
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **id** | **String** | The globally unique identifier for the object. | [optional] |
-| **name** | **String** |  | [optional] |
 | **job_id** | **String** | JobId returned when job was initially submitted | [optional] |
 | **expected_result_count** | **Integer** | Number of results expected when job is completed | [optional] |
 | **result_count** | **Integer** | Current number of results available | [optional] |

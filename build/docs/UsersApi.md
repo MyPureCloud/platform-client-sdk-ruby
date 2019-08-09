@@ -361,6 +361,7 @@ Wraps DELETE /api/v2/users/{userId}/routinglanguages/{languageId}
 Requires ANY permissions: 
 
 * routing:skill:assign
+* routing:language:assign
 
 
 ### Example
@@ -973,8 +974,7 @@ opts = {
   id: ["id_example"], # Array<String> | id
   jid: ["jid_example"], # Array<String> | jid
   sort_order: "ASC", # String | Ascending or descending sort order
-  expand: ["expand_example"], # Array<String> | Which fields, if any, to expand
-  state: "active" # String | Only list users of this state
+  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand
 }
 
 begin
@@ -996,7 +996,6 @@ Name | Type | Description  | Notes
  **jid** | [**Array&lt;String&gt;**](String.html)| jid | [optional]  |
  **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
  **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization |
- **state** | **String**| Only list users of this state | [optional] [default to active]<br />**Values**: active, deleted |
 {: class="table table-striped"}
 
 
@@ -2946,6 +2945,7 @@ Wraps PATCH /api/v2/users/{userId}/routinglanguages/{languageId}
 Requires ANY permissions: 
 
 * routing:skill:assign
+* routing:language:assign
 
 
 ### Example
@@ -3017,6 +3017,7 @@ Wraps PATCH /api/v2/users/{userId}/routinglanguages/bulk
 Requires ANY permissions: 
 
 * routing:skill:assign
+* routing:language:assign
 
 
 ### Example
@@ -3691,6 +3692,7 @@ Wraps POST /api/v2/users/{userId}/routinglanguages
 Requires ANY permissions: 
 
 * routing:skill:assign
+* routing:language:assign
 
 
 ### Example

@@ -106,6 +106,14 @@ module PureCloud
     # Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \"inheritPhoneTrunkBases\" is true.
     attr_accessor :phone_trunk_base_assignments
 
+    attr_accessor :trace_enabled
+
+    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :start_date
+
+    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :end_date
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -176,6 +184,12 @@ module PureCloud
         :'external_trunk_base_assignments' => :'externalTrunkBaseAssignments',
         
         :'phone_trunk_base_assignments' => :'phoneTrunkBaseAssignments',
+        
+        :'trace_enabled' => :'traceEnabled',
+        
+        :'start_date' => :'startDate',
+        
+        :'end_date' => :'endDate',
         
         :'self_uri' => :'selfUri'
         
@@ -249,6 +263,12 @@ module PureCloud
         :'external_trunk_base_assignments' => :'Array<TrunkBaseAssignment>',
         
         :'phone_trunk_base_assignments' => :'Array<TrunkBaseAssignment>',
+        
+        :'trace_enabled' => :'BOOLEAN',
+        
+        :'start_date' => :'DateTime',
+        
+        :'end_date' => :'DateTime',
         
         :'self_uri' => :'String'
         
@@ -562,6 +582,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'traceEnabled')
+        
+        
+        self.trace_enabled = attributes[:'traceEnabled']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'startDate')
+        
+        
+        self.start_date = attributes[:'startDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'endDate')
+        
+        
+        self.end_date = attributes[:'endDate']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -714,6 +761,18 @@ module PureCloud
       if @current_state && !allowed_values.include?(@current_state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -948,6 +1007,21 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -985,6 +1059,9 @@ module PureCloud
           use_for_internal_edge_communication == o.use_for_internal_edge_communication &&
           external_trunk_base_assignments == o.external_trunk_base_assignments &&
           phone_trunk_base_assignments == o.phone_trunk_base_assignments &&
+          trace_enabled == o.trace_enabled &&
+          start_date == o.start_date &&
+          end_date == o.end_date &&
           self_uri == o.self_uri
     end
 
@@ -997,7 +1074,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, edge_uri, edge_assigned_id, friendly_name, vlan_tag_id, hardware_address, physical_adapter_id, if_status, interface_type, routes, addresses, ipv4_capabilities, ipv6_capabilities, current_state, last_modified_user_id, last_modified_correlation_id, command_responses, inherit_phone_trunk_bases_i_pv4, inherit_phone_trunk_bases_i_pv6, use_for_internal_edge_communication, external_trunk_base_assignments, phone_trunk_base_assignments, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, edge_uri, edge_assigned_id, friendly_name, vlan_tag_id, hardware_address, physical_adapter_id, if_status, interface_type, routes, addresses, ipv4_capabilities, ipv6_capabilities, current_state, last_modified_user_id, last_modified_correlation_id, command_responses, inherit_phone_trunk_bases_i_pv4, inherit_phone_trunk_bases_i_pv6, use_for_internal_edge_communication, external_trunk_base_assignments, phone_trunk_base_assignments, trace_enabled, start_date, end_date, self_uri].hash
     end
 
     # build the object from hash

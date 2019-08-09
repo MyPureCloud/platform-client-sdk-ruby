@@ -17,75 +17,17 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Represents a SCIM V2 Enterprise Manager
+  # User's Manager
   class Manager
-    # Display Name
-    attr_accessor :display_name
-
-    # Active flag
-    attr_accessor :active
-
-    # User Name (Must be Unique) maps to PureCloud e-mail address
-    attr_accessor :user_name
-
-    # Password (updateOnly)
-    attr_accessor :password
-
-    # Title
-    attr_accessor :title
-
-    # Phone numbers
-    attr_accessor :phone_numbers
-
-    # Emails
-    attr_accessor :emails
-
-    # Photos
-    attr_accessor :photos
-
-    # External ID
-    attr_accessor :external_id
-
-    # Group References
-    attr_accessor :groups
-
-    attr_accessor :meta
-
-    attr_accessor :urnietfparamsscimschemasextensionenterprise2_0_user
-
     # Identifier of the Manager
     attr_accessor :value
 
-    # Ref to entity
+    # URI for Manager User record.
     attr_accessor :ref
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        
-        :'display_name' => :'displayName',
-        
-        :'active' => :'active',
-        
-        :'user_name' => :'userName',
-        
-        :'password' => :'password',
-        
-        :'title' => :'title',
-        
-        :'phone_numbers' => :'phoneNumbers',
-        
-        :'emails' => :'emails',
-        
-        :'photos' => :'photos',
-        
-        :'external_id' => :'externalId',
-        
-        :'groups' => :'groups',
-        
-        :'meta' => :'meta',
-        
-        :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User',
         
         :'value' => :'value',
         
@@ -97,30 +39,6 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        
-        :'display_name' => :'String',
-        
-        :'active' => :'BOOLEAN',
-        
-        :'user_name' => :'String',
-        
-        :'password' => :'String',
-        
-        :'title' => :'String',
-        
-        :'phone_numbers' => :'Array<ScimPhoneNumber>',
-        
-        :'emails' => :'Array<ScimEmail>',
-        
-        :'photos' => :'Array<Photo>',
-        
-        :'external_id' => :'String',
-        
-        :'groups' => :'Array<ScimV2GroupReference>',
-        
-        :'meta' => :'ScimMetadata',
-        
-        :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'ScimV2EnterpriseUser',
         
         :'value' => :'String',
         
@@ -136,122 +54,6 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes.has_key?(:'displayName')
-        
-        
-        self.display_name = attributes[:'displayName']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'active')
-        
-        
-        self.active = attributes[:'active']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'userName')
-        
-        
-        self.user_name = attributes[:'userName']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'password')
-        
-        
-        self.password = attributes[:'password']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'title')
-        
-        
-        self.title = attributes[:'title']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'phoneNumbers')
-        
-        if (value = attributes[:'phoneNumbers']).is_a?(Array)
-          self.phone_numbers = value
-        end
-        
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'emails')
-        
-        if (value = attributes[:'emails']).is_a?(Array)
-          self.emails = value
-        end
-        
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'photos')
-        
-        if (value = attributes[:'photos']).is_a?(Array)
-          self.photos = value
-        end
-        
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'externalId')
-        
-        
-        self.external_id = attributes[:'externalId']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'groups')
-        
-        if (value = attributes[:'groups']).is_a?(Array)
-          self.groups = value
-        end
-        
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'meta')
-        
-        
-        self.meta = attributes[:'meta']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User')
-        
-        
-        self.urnietfparamsscimschemasextensionenterprise2_0_user = attributes[:'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User']
-        
-      
-      end
 
       
       if attributes.has_key?(:'value')
@@ -295,116 +97,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -421,18 +115,6 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          display_name == o.display_name &&
-          active == o.active &&
-          user_name == o.user_name &&
-          password == o.password &&
-          title == o.title &&
-          phone_numbers == o.phone_numbers &&
-          emails == o.emails &&
-          photos == o.photos &&
-          external_id == o.external_id &&
-          groups == o.groups &&
-          meta == o.meta &&
-          urnietfparamsscimschemasextensionenterprise2_0_user == o.urnietfparamsscimschemasextensionenterprise2_0_user &&
           value == o.value &&
           ref == o.ref
     end
@@ -446,7 +128,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [display_name, active, user_name, password, title, phone_numbers, emails, photos, external_id, groups, meta, urnietfparamsscimschemasextensionenterprise2_0_user, value, ref].hash
+      [value, ref].hash
     end
 
     # build the object from hash

@@ -231,6 +231,12 @@ module PureCloud
     # Indicates filtering for Journey visit id
     attr_accessor :has_journey_visit_id
 
+    # A list of OAuth client IDs
+    attr_accessor :oauth_client_ids
+
+    # A list of API operations (ex: [\"GET /api/v2/users/{userId}/queues\"])
+    attr_accessor :api_operations
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -375,7 +381,11 @@ module PureCloud
         
         :'has_journey_action_map_id' => :'hasJourneyActionMapId',
         
-        :'has_journey_visit_id' => :'hasJourneyVisitId'
+        :'has_journey_visit_id' => :'hasJourneyVisitId',
+        
+        :'oauth_client_ids' => :'oauthClientIds',
+        
+        :'api_operations' => :'apiOperations'
         
       }
     end
@@ -524,7 +534,11 @@ module PureCloud
         
         :'has_journey_action_map_id' => :'BOOLEAN',
         
-        :'has_journey_visit_id' => :'BOOLEAN'
+        :'has_journey_visit_id' => :'BOOLEAN',
+        
+        :'oauth_client_ids' => :'Array<String>',
+        
+        :'api_operations' => :'Array<String>'
         
       }
     end
@@ -1271,6 +1285,28 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'oauthClientIds')
+        
+        if (value = attributes[:'oauthClientIds']).is_a?(Array)
+          self.oauth_client_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'apiOperations')
+        
+        if (value = attributes[:'apiOperations']).is_a?(Array)
+          self.api_operations = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -1446,6 +1482,14 @@ module PureCloud
       if @interacting_duration_sort_order && !allowed_values.include?(@interacting_duration_sort_order)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1970,6 +2014,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -2045,7 +2099,9 @@ module PureCloud
           group_ids == o.group_ids &&
           has_journey_customer_id == o.has_journey_customer_id &&
           has_journey_action_map_id == o.has_journey_action_map_id &&
-          has_journey_visit_id == o.has_journey_visit_id
+          has_journey_visit_id == o.has_journey_visit_id &&
+          oauth_client_ids == o.oauth_client_ids &&
+          api_operations == o.api_operations
     end
 
     # @see the `==` method
@@ -2057,7 +2113,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, originating_directions, wrap_up_codes, dnis_list, session_dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, sip_call_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, flow_versions, group_ids, has_journey_customer_id, has_journey_action_map_id, has_journey_visit_id].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, originating_directions, wrap_up_codes, dnis_list, session_dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, sip_call_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, flow_versions, group_ids, has_journey_customer_id, has_journey_action_map_id, has_journey_visit_id, oauth_client_ids, api_operations].hash
     end
 
     # build the object from hash

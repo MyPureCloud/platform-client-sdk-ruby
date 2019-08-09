@@ -21,8 +21,6 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
-    attr_accessor :name
-
     # The current state of the job.
     attr_accessor :state
 
@@ -56,8 +54,6 @@ module PureCloud
         
         :'id' => :'id',
         
-        :'name' => :'name',
-        
         :'state' => :'state',
         
         :'recording_jobs_query' => :'recordingJobsQuery',
@@ -84,8 +80,6 @@ module PureCloud
       {
         
         :'id' => :'String',
-        
-        :'name' => :'String',
         
         :'state' => :'String',
         
@@ -121,15 +115,6 @@ module PureCloud
         
         
         self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
         
       
       end
@@ -236,10 +221,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
       if @state.nil?
         return false
       end
@@ -287,11 +268,6 @@ module PureCloud
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -358,7 +334,6 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          name == o.name &&
           state == o.state &&
           recording_jobs_query == o.recording_jobs_query &&
           date_created == o.date_created &&
@@ -379,7 +354,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, state, recording_jobs_query, date_created, total_conversations, total_recordings, total_processed_recordings, percent_progress, error_message, self_uri].hash
+      [id, state, recording_jobs_query, date_created, total_conversations, total_recordings, total_processed_recordings, percent_progress, error_message, self_uri].hash
     end
 
     # build the object from hash

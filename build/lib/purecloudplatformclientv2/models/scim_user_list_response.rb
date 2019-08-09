@@ -17,14 +17,36 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class PatchOperation
-    attr_accessor :path
+  # SCIM User List Response
+  class ScimUserListResponse
+    # Total Results
+    attr_accessor :total_results
+
+    # Start index
+    attr_accessor :start_index
+
+    # Items per Page
+    attr_accessor :items_per_page
+
+    # Resources
+    attr_accessor :resources
+
+    # schemas supported
+    attr_accessor :schemas
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'path' => :'path'
+        :'total_results' => :'totalResults',
+        
+        :'start_index' => :'startIndex',
+        
+        :'items_per_page' => :'itemsPerPage',
+        
+        :'resources' => :'Resources',
+        
+        :'schemas' => :'schemas'
         
       }
     end
@@ -33,7 +55,15 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'path' => :'Path'
+        :'total_results' => :'Integer',
+        
+        :'start_index' => :'Integer',
+        
+        :'items_per_page' => :'Integer',
+        
+        :'resources' => :'Array<ScimV2User>',
+        
+        :'schemas' => :'Array<String>'
         
       }
     end
@@ -47,10 +77,50 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'path')
+      if attributes.has_key?(:'totalResults')
         
         
-        self.path = attributes[:'path']
+        self.total_results = attributes[:'totalResults']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'startIndex')
+        
+        
+        self.start_index = attributes[:'startIndex']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'itemsPerPage')
+        
+        
+        self.items_per_page = attributes[:'itemsPerPage']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'Resources')
+        
+        if (value = attributes[:'Resources']).is_a?(Array)
+          self.resources = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'schemas')
+        
+        if (value = attributes[:'schemas']).is_a?(Array)
+          self.schemas = value
+        end
+        
         
       
       end
@@ -75,8 +145,44 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -88,7 +194,11 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          path == o.path
+          total_results == o.total_results &&
+          start_index == o.start_index &&
+          items_per_page == o.items_per_page &&
+          resources == o.resources &&
+          schemas == o.schemas
     end
 
     # @see the `==` method
@@ -100,7 +210,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [path].hash
+      [total_results, start_index, items_per_page, resources, schemas].hash
     end
 
     # build the object from hash

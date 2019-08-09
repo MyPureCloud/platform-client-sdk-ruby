@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Represents a SCIM V2 Enterprise User
+  # SCIM Enterprise User
   class ScimV2EnterpriseUser
     # User division name
     attr_accessor :division

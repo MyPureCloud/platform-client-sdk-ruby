@@ -17,36 +17,50 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Represents a SCIM V2 List Response
-  class ScimListResponse
-    # Total Results
-    attr_accessor :total_results
+  class CreateTopicRequest
+    # The topic name
+    attr_accessor :name
 
-    # Start index
-    attr_accessor :start_index
+    # The topic description
+    attr_accessor :description
 
-    # Items per Page
-    attr_accessor :items_per_page
+    # The topic strictness
+    attr_accessor :strictness
 
-    # Resources
-    attr_accessor :resources
+    # The ids of programs associated to the topic
+    attr_accessor :program_ids
 
-    # schemas supported
-    attr_accessor :schemas
+    # The topic tags
+    attr_accessor :tags
+
+    # The topic dialect
+    attr_accessor :dialect
+
+    # The topic participants
+    attr_accessor :participants
+
+    # The topic phrases
+    attr_accessor :phrases
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'total_results' => :'totalResults',
+        :'name' => :'name',
         
-        :'start_index' => :'startIndex',
+        :'description' => :'description',
         
-        :'items_per_page' => :'itemsPerPage',
+        :'strictness' => :'strictness',
         
-        :'resources' => :'Resources',
+        :'program_ids' => :'programIds',
         
-        :'schemas' => :'schemas'
+        :'tags' => :'tags',
+        
+        :'dialect' => :'dialect',
+        
+        :'participants' => :'participants',
+        
+        :'phrases' => :'phrases'
         
       }
     end
@@ -55,15 +69,21 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'total_results' => :'Integer',
+        :'name' => :'String',
         
-        :'start_index' => :'Integer',
+        :'description' => :'String',
         
-        :'items_per_page' => :'Integer',
+        :'strictness' => :'String',
         
-        :'resources' => :'Array<ScimResource>',
+        :'program_ids' => :'Array<String>',
         
-        :'schemas' => :'Array<String>'
+        :'tags' => :'Array<String>',
+        
+        :'dialect' => :'String',
+        
+        :'participants' => :'String',
+        
+        :'phrases' => :'Array<Phrase>'
         
       }
     end
@@ -77,37 +97,37 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'totalResults')
+      if attributes.has_key?(:'name')
         
         
-        self.total_results = attributes[:'totalResults']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'startIndex')
-        
-        
-        self.start_index = attributes[:'startIndex']
+        self.name = attributes[:'name']
         
       
       end
 
       
-      if attributes.has_key?(:'itemsPerPage')
+      if attributes.has_key?(:'description')
         
         
-        self.items_per_page = attributes[:'itemsPerPage']
+        self.description = attributes[:'description']
         
       
       end
 
       
-      if attributes.has_key?(:'Resources')
+      if attributes.has_key?(:'strictness')
         
-        if (value = attributes[:'Resources']).is_a?(Array)
-          self.resources = value
+        
+        self.strictness = attributes[:'strictness']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'programIds')
+        
+        if (value = attributes[:'programIds']).is_a?(Array)
+          self.program_ids = value
         end
         
         
@@ -115,10 +135,39 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'schemas')
+      if attributes.has_key?(:'tags')
         
-        if (value = attributes[:'schemas']).is_a?(Array)
-          self.schemas = value
+        if (value = attributes[:'tags']).is_a?(Array)
+          self.tags = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'dialect')
+        
+        
+        self.dialect = attributes[:'dialect']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'participants')
+        
+        
+        self.participants = attributes[:'participants']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'phrases')
+        
+        if (value = attributes[:'phrases']).is_a?(Array)
+          self.phrases = value
         end
         
         
@@ -142,6 +191,29 @@ module PureCloud
     def valid?
       
       
+      if @name.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if @strictness.nil?
+        return false
+      end
+
+      
+      
+      allowed_values = ["1", "55", "65", "72", "85", "90"]
+      if @strictness && !allowed_values.include?(@strictness)
+        return false
+      end
       
       
       
@@ -154,6 +226,25 @@ module PureCloud
       
       
       
+      if @dialect.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @participants.nil?
+        return false
+      end
+
+      
+      
+      allowed_values = ["CustomerSide", "AgentSide", "All"]
+      if @participants && !allowed_values.include?(@participants)
+        return false
+      end
       
       
       
@@ -175,12 +266,45 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] strictness Object to be assigned
+    def strictness=(strictness)
+      allowed_values = ["1", "55", "65", "72", "85", "90"]
+      if strictness && !allowed_values.include?(strictness)
+        fail ArgumentError, "invalid value for 'strictness', must be one of #{allowed_values}."
+      end
+      @strictness = strictness
+    end
+
     
     
     
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] participants Object to be assigned
+    def participants=(participants)
+      allowed_values = ["CustomerSide", "AgentSide", "All"]
+      if participants && !allowed_values.include?(participants)
+        fail ArgumentError, "invalid value for 'participants', must be one of #{allowed_values}."
+      end
+      @participants = participants
+    end
+
     
     
     
@@ -194,11 +318,14 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          total_results == o.total_results &&
-          start_index == o.start_index &&
-          items_per_page == o.items_per_page &&
-          resources == o.resources &&
-          schemas == o.schemas
+          name == o.name &&
+          description == o.description &&
+          strictness == o.strictness &&
+          program_ids == o.program_ids &&
+          tags == o.tags &&
+          dialect == o.dialect &&
+          participants == o.participants &&
+          phrases == o.phrases
     end
 
     # @see the `==` method
@@ -210,7 +337,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [total_results, start_index, items_per_page, resources, schemas].hash
+      [name, description, strictness, program_ids, tags, dialect, participants, phrases].hash
     end
 
     # build the object from hash

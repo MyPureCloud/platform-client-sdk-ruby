@@ -21,8 +21,6 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
-    attr_accessor :name
-
     # The URI for this object
     attr_accessor :self_uri
 
@@ -31,8 +29,6 @@ module PureCloud
       {
         
         :'id' => :'id',
-        
-        :'name' => :'name',
         
         :'self_uri' => :'selfUri'
         
@@ -44,8 +40,6 @@ module PureCloud
       {
         
         :'id' => :'String',
-        
-        :'name' => :'String',
         
         :'self_uri' => :'String'
         
@@ -65,15 +59,6 @@ module PureCloud
         
         
         self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
         
       
       end
@@ -111,17 +96,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -139,7 +115,6 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          name == o.name &&
           self_uri == o.self_uri
     end
 
@@ -152,7 +127,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, self_uri].hash
+      [id, self_uri].hash
     end
 
     # build the object from hash

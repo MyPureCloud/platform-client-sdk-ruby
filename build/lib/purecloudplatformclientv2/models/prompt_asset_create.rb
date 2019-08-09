@@ -23,21 +23,28 @@ module PureCloud
 
     attr_accessor :name
 
+    # Associated prompt ID
     attr_accessor :prompt_id
 
     # The prompt language.
     attr_accessor :language
 
+    # URI of the resource audio
     attr_accessor :media_uri
 
+    # Text to speech of the resource
     attr_accessor :tts_string
 
+    # Text of the resource
     attr_accessor :text
 
+    # Audio upload status
     attr_accessor :upload_status
 
+    # Upload URI for the resource audio
     attr_accessor :upload_uri
 
+    # Whether or not this resource locale is the default for the language
     attr_accessor :language_default
 
     attr_accessor :tags

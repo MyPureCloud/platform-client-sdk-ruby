@@ -47,6 +47,9 @@ module PureCloud
     # The default or configured value of persistent connection setting for the station. Empty if station type is not inin_webrtc_softphone.
     attr_accessor :web_rtc_persistent_enabled
 
+    # Whether the station is configured to require TURN for routing WebRTC calls. Empty if station type is not inin_webrtc_softphone.
+    attr_accessor :web_rtc_force_turn
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -77,6 +80,8 @@ module PureCloud
         :'web_rtc_media_dscp' => :'webRtcMediaDscp',
         
         :'web_rtc_persistent_enabled' => :'webRtcPersistentEnabled',
+        
+        :'web_rtc_force_turn' => :'webRtcForceTurn',
         
         :'self_uri' => :'selfUri'
         
@@ -110,6 +115,8 @@ module PureCloud
         :'web_rtc_media_dscp' => :'Integer',
         
         :'web_rtc_persistent_enabled' => :'BOOLEAN',
+        
+        :'web_rtc_force_turn' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -233,6 +240,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'webRtcForceTurn')
+        
+        
+        self.web_rtc_force_turn = attributes[:'webRtcForceTurn']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -275,6 +291,10 @@ module PureCloud
       if @status && !allowed_values.include?(@status)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -391,6 +411,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -408,6 +433,7 @@ module PureCloud
           line_appearance_id == o.line_appearance_id &&
           web_rtc_media_dscp == o.web_rtc_media_dscp &&
           web_rtc_persistent_enabled == o.web_rtc_persistent_enabled &&
+          web_rtc_force_turn == o.web_rtc_force_turn &&
           self_uri == o.self_uri
     end
 
@@ -420,7 +446,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, status, user_id, web_rtc_user_id, primary_edge, secondary_edge, type, line_appearance_id, web_rtc_media_dscp, web_rtc_persistent_enabled, self_uri].hash
+      [id, name, description, status, user_id, web_rtc_user_id, primary_edge, secondary_edge, type, line_appearance_id, web_rtc_media_dscp, web_rtc_persistent_enabled, web_rtc_force_turn, self_uri].hash
     end
 
     # build the object from hash

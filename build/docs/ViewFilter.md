@@ -78,6 +78,8 @@ title: ViewFilter
 | **has_journey_customer_id** | **BOOLEAN** | Indicates filtering for journey customer id | [optional] |
 | **has_journey_action_map_id** | **BOOLEAN** | Indicates filtering for Journey action map id | [optional] |
 | **has_journey_visit_id** | **BOOLEAN** | Indicates filtering for Journey visit id | [optional] |
+| **oauth_client_ids** | **Array&lt;String&gt;** | A list of OAuth client IDs | [optional] |
+| **api_operations** | **Array&lt;String&gt;** | A list of API operations (ex: [\&quot;GET /api/v2/users/{userId}/queues\&quot;]) | [optional] |
 {: class="table table-striped"}
 
 

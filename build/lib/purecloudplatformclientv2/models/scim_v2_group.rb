@@ -17,20 +17,21 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Common attributes to all SCIM resources
+  # SCIM version 2 Group
   class ScimV2Group
     # SCIM Resource identifier
     attr_accessor :id
 
-    # Display Name
-    attr_accessor :display_name
-
     # schemas supported
     attr_accessor :schemas
+
+    # Display Name
+    attr_accessor :display_name
 
     # Scim Group Members
     attr_accessor :members
 
+    # Resource SCIM meta
     attr_accessor :meta
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -39,9 +40,9 @@ module PureCloud
         
         :'id' => :'id',
         
-        :'display_name' => :'displayName',
-        
         :'schemas' => :'schemas',
+        
+        :'display_name' => :'displayName',
         
         :'members' => :'members',
         
@@ -56,9 +57,9 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'display_name' => :'String',
-        
         :'schemas' => :'Array<String>',
+        
+        :'display_name' => :'String',
         
         :'members' => :'Array<ScimV2MemberReference>',
         
@@ -85,21 +86,21 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'displayName')
-        
-        
-        self.display_name = attributes[:'displayName']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'schemas')
         
         if (value = attributes[:'schemas']).is_a?(Array)
           self.schemas = value
         end
         
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'displayName')
+        
+        
+        self.display_name = attributes[:'displayName']
         
       
       end
@@ -194,8 +195,8 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          display_name == o.display_name &&
           schemas == o.schemas &&
+          display_name == o.display_name &&
           members == o.members &&
           meta == o.meta
     end
@@ -209,7 +210,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, display_name, schemas, members, meta].hash
+      [id, schemas, display_name, members, meta].hash
     end
 
     # build the object from hash

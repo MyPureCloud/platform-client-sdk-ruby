@@ -19,9 +19,7 @@ require 'date'
 module PureCloud
   # SCIM Group Reference
   class ScimV2GroupReference
-    # Display Name
-    attr_accessor :display_name
-
+    # Resource SCIM meta
     attr_accessor :meta
 
     # SCIM Resource Type of member
@@ -37,8 +35,6 @@ module PureCloud
     def self.attribute_map
       {
         
-        :'display_name' => :'displayName',
-        
         :'meta' => :'meta',
         
         :'type' => :'type',
@@ -53,8 +49,6 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        
-        :'display_name' => :'String',
         
         :'meta' => :'ScimMetadata',
         
@@ -74,15 +68,6 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes.has_key?(:'displayName')
-        
-        
-        self.display_name = attributes[:'displayName']
-        
-      
-      end
 
       
       if attributes.has_key?(:'meta')
@@ -142,10 +127,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
       allowed_values = ["User", "Group", "ServiceProviderConfig"]
       if @type && !allowed_values.include?(@type)
         return false
@@ -163,11 +144,6 @@ module PureCloud
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -203,7 +179,6 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          display_name == o.display_name &&
           meta == o.meta &&
           type == o.type &&
           value == o.value &&
@@ -219,7 +194,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [display_name, meta, type, value, ref].hash
+      [meta, type, value, ref].hash
     end
 
     # build the object from hash
