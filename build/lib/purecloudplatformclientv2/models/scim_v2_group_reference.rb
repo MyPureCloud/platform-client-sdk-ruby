@@ -25,7 +25,7 @@ module PureCloud
     # SCIM Resource Type of member
     attr_accessor :type
 
-    # Value of ID of group member. May be User or Group id
+    # The ID of the group member. Can be userId or groupId.
     attr_accessor :value
 
     # Ref to entity

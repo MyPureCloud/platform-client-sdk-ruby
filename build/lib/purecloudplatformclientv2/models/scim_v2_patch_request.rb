@@ -19,7 +19,7 @@ require 'date'
 module PureCloud
   # Represents a SCIM V2 Patch Request (See RFC7644 for detailed usage)
   class ScimV2PatchRequest
-    # Schemas used in this patch request
+    # A list of schemas used in the patch request.
     attr_accessor :schemas
 
     attr_accessor :operations

@@ -252,7 +252,7 @@ module PureCloud
       
       
       
-      allowed_values = ["Active", "Inactive", "Error", "Starting", "Incomplete"]
+      allowed_values = ["Active", "Inactive", "Error", "Starting", "Incomplete", "Deleting", "DeletionFailed"]
       if @status && !allowed_values.include?(@status)
         return false
       end
@@ -323,7 +323,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status Object to be assigned
     def status=(status)
-      allowed_values = ["Active", "Inactive", "Error", "Starting", "Incomplete"]
+      allowed_values = ["Active", "Inactive", "Error", "Starting", "Incomplete", "Deleting", "DeletionFailed"]
       if status && !allowed_values.include?(status)
         fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
       end

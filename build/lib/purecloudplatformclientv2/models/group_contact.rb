@@ -21,6 +21,9 @@ module PureCloud
     # Phone number for this contact type
     attr_accessor :address
 
+    # Extension is set if the number is e164 valid
+    attr_accessor :extension
+
     # Formatted version of the address property
     attr_accessor :display
 
@@ -36,6 +39,8 @@ module PureCloud
         
         :'address' => :'address',
         
+        :'extension' => :'extension',
+        
         :'display' => :'display',
         
         :'type' => :'type',
@@ -50,6 +55,8 @@ module PureCloud
       {
         
         :'address' => :'String',
+        
+        :'extension' => :'String',
         
         :'display' => :'String',
         
@@ -73,6 +80,15 @@ module PureCloud
         
         
         self.address = attributes[:'address']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'extension')
+        
+        
+        self.extension = attributes[:'extension']
         
       
       end
@@ -134,6 +150,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       if @type.nil?
         return false
       end
@@ -163,6 +183,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -208,6 +233,7 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           address == o.address &&
+          extension == o.extension &&
           display == o.display &&
           type == o.type &&
           media_type == o.media_type
@@ -222,7 +248,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [address, display, type, media_type].hash
+      [address, extension, display, type, media_type].hash
     end
 
     # build the object from hash

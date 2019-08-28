@@ -17,50 +17,54 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class CreateTopicRequest
-    # The topic name
+  class SmsAddress
+    # The id of this address.
+    attr_accessor :id
+
     attr_accessor :name
 
-    # The topic description
-    attr_accessor :description
+    # The number and street address where this address is located.
+    attr_accessor :street
 
-    # The topic strictness
-    attr_accessor :strictness
+    # The city in which this address is in
+    attr_accessor :city
 
-    # The ids of programs associated to the topic
-    attr_accessor :program_ids
+    # The state or region this address is in
+    attr_accessor :region
 
-    # The topic tags
-    attr_accessor :tags
+    # The postal code this address is in
+    attr_accessor :postal_code
 
-    # The topic dialect
-    attr_accessor :dialect
+    # The ISO country code of this address
+    attr_accessor :country_code
 
-    # The topic participants
-    attr_accessor :participants
+    # In some countries, addresses are validated to comply with local regulation. In those countries, if the address you provide does not pass validation, it will not be accepted as an Address. This value will be true if the Address has been validated, or false for countries that don't require validation or if the Address is non-compliant.
+    attr_accessor :validated
 
-    # The topic phrases
-    attr_accessor :phrases
+    # The URI for this object
+    attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'id' => :'id',
+        
         :'name' => :'name',
         
-        :'description' => :'description',
+        :'street' => :'street',
         
-        :'strictness' => :'strictness',
+        :'city' => :'city',
         
-        :'program_ids' => :'programIds',
+        :'region' => :'region',
         
-        :'tags' => :'tags',
+        :'postal_code' => :'postalCode',
         
-        :'dialect' => :'dialect',
+        :'country_code' => :'countryCode',
         
-        :'participants' => :'participants',
+        :'validated' => :'validated',
         
-        :'phrases' => :'phrases'
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -69,21 +73,23 @@ module PureCloud
     def self.swagger_types
       {
         
+        :'id' => :'String',
+        
         :'name' => :'String',
         
-        :'description' => :'String',
+        :'street' => :'String',
         
-        :'strictness' => :'String',
+        :'city' => :'String',
         
-        :'program_ids' => :'Array<String>',
+        :'region' => :'String',
         
-        :'tags' => :'Array<String>',
+        :'postal_code' => :'String',
         
-        :'dialect' => :'String',
+        :'country_code' => :'String',
         
-        :'participants' => :'String',
+        :'validated' => :'BOOLEAN',
         
-        :'phrases' => :'Array<Phrase>'
+        :'self_uri' => :'String'
         
       }
     end
@@ -97,6 +103,15 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes.has_key?(:'id')
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'name')
         
         
@@ -106,70 +121,64 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'description')
+      if attributes.has_key?(:'street')
         
         
-        self.description = attributes[:'description']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'strictness')
-        
-        
-        self.strictness = attributes[:'strictness']
+        self.street = attributes[:'street']
         
       
       end
 
       
-      if attributes.has_key?(:'programIds')
+      if attributes.has_key?(:'city')
         
-        if (value = attributes[:'programIds']).is_a?(Array)
-          self.program_ids = value
-        end
         
+        self.city = attributes[:'city']
         
       
       end
 
       
-      if attributes.has_key?(:'tags')
+      if attributes.has_key?(:'region')
         
-        if (value = attributes[:'tags']).is_a?(Array)
-          self.tags = value
-        end
         
+        self.region = attributes[:'region']
         
       
       end
 
       
-      if attributes.has_key?(:'dialect')
+      if attributes.has_key?(:'postalCode')
         
         
-        self.dialect = attributes[:'dialect']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'participants')
-        
-        
-        self.participants = attributes[:'participants']
+        self.postal_code = attributes[:'postalCode']
         
       
       end
 
       
-      if attributes.has_key?(:'phrases')
+      if attributes.has_key?(:'countryCode')
         
-        if (value = attributes[:'phrases']).is_a?(Array)
-          self.phrases = value
-        end
         
+        self.country_code = attributes[:'countryCode']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'validated')
+        
+        
+        self.validated = attributes[:'validated']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -191,29 +200,6 @@ module PureCloud
     def valid?
       
       
-      if @name.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      if @strictness.nil?
-        return false
-      end
-
-      
-      
-      allowed_values = ["1", "55", "65", "72", "85", "90"]
-      if @strictness && !allowed_values.include?(@strictness)
-        return false
-      end
       
       
       
@@ -226,25 +212,22 @@ module PureCloud
       
       
       
-      if @dialect.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @participants.nil?
-        return false
-      end
-
       
       
-      allowed_values = ["CustomerSide", "AgentSide", "All"]
-      if @participants && !allowed_values.include?(@participants)
-        return false
-      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -266,16 +249,6 @@ module PureCloud
     
     
     
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] strictness Object to be assigned
-    def strictness=(strictness)
-      allowed_values = ["1", "55", "65", "72", "85", "90"]
-      if strictness && !allowed_values.include?(strictness)
-        fail ArgumentError, "invalid value for 'strictness', must be one of #{allowed_values}."
-      end
-      @strictness = strictness
-    end
-
     
     
     
@@ -295,16 +268,13 @@ module PureCloud
     
     
     
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] participants Object to be assigned
-    def participants=(participants)
-      allowed_values = ["CustomerSide", "AgentSide", "All"]
-      if participants && !allowed_values.include?(participants)
-        fail ArgumentError, "invalid value for 'participants', must be one of #{allowed_values}."
-      end
-      @participants = participants
-    end
-
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -318,14 +288,15 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id == o.id &&
           name == o.name &&
-          description == o.description &&
-          strictness == o.strictness &&
-          program_ids == o.program_ids &&
-          tags == o.tags &&
-          dialect == o.dialect &&
-          participants == o.participants &&
-          phrases == o.phrases
+          street == o.street &&
+          city == o.city &&
+          region == o.region &&
+          postal_code == o.postal_code &&
+          country_code == o.country_code &&
+          validated == o.validated &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -337,7 +308,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, description, strictness, program_ids, tags, dialect, participants, phrases].hash
+      [id, name, street, city, region, postal_code, country_code, validated, self_uri].hash
     end
 
     # build the object from hash

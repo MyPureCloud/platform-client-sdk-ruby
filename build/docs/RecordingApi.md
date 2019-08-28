@@ -1174,7 +1174,11 @@ api_instance = PureCloud::RecordingApi.new
 
 opts = { 
   page_size: 25, # Integer | Page size
-  page_number: 1 # Integer | Page number
+  page_number: 1, # Integer | Page number
+  sort_by: "userId", # String | Sort by
+  state: "state_example", # String | Filter by state
+  show_only_my_jobs: true, # BOOLEAN | Show only my jobs
+  job_type: "job_type_example" # String | Job Type (Can be left empty for both)
 }
 
 begin
@@ -1192,6 +1196,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| Sort by | [optional] [default to userId]<br />**Values**: userId, dateCreated |
+ **state** | **String**| Filter by state | [optional] <br />**Values**: FULFILLED, PENDING, READY, PROCESSING, CANCELLED, FAILED |
+ **show_only_my_jobs** | **BOOLEAN**| Show only my jobs | [optional]  |
+ **job_type** | **String**| Job Type (Can be left empty for both) | [optional] <br />**Values**: DELETE, EXPORT |
 {: class="table table-striped"}
 
 

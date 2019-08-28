@@ -25,10 +25,10 @@ module PureCloud
     # schemas supported
     attr_accessor :schemas
 
-    # Display Name
+    # The display name for the group.
     attr_accessor :display_name
 
-    # Scim Group Members
+    # A list of members in a SCIM group.
     attr_accessor :members
 
     # Resource SCIM meta

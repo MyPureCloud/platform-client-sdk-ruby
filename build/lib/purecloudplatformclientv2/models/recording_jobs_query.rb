@@ -24,6 +24,9 @@ module PureCloud
     # The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :action_date
 
+    # Integration ID
+    attr_accessor :integration_id
+
     # Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.
     attr_accessor :conversation_query
 
@@ -34,6 +37,8 @@ module PureCloud
         :'action' => :'action',
         
         :'action_date' => :'actionDate',
+        
+        :'integration_id' => :'integrationId',
         
         :'conversation_query' => :'conversationQuery'
         
@@ -47,6 +52,8 @@ module PureCloud
         :'action' => :'String',
         
         :'action_date' => :'DateTime',
+        
+        :'integration_id' => :'String',
         
         :'conversation_query' => :'AsyncConversationQuery'
         
@@ -75,6 +82,15 @@ module PureCloud
         
         
         self.action_date = attributes[:'actionDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'integrationId')
+        
+        
+        self.integration_id = attributes[:'integrationId']
         
       
       end
@@ -111,7 +127,7 @@ module PureCloud
 
       
       
-      allowed_values = ["DELETE"]
+      allowed_values = ["DELETE", "EXPORT"]
       if @action && !allowed_values.include?(@action)
         return false
       end
@@ -120,6 +136,15 @@ module PureCloud
       
       
       if @action_date.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
+      if @integration_id.nil?
         return false
       end
 
@@ -143,13 +168,18 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] action Object to be assigned
     def action=(action)
-      allowed_values = ["DELETE"]
+      allowed_values = ["DELETE", "EXPORT"]
       if action && !allowed_values.include?(action)
         fail ArgumentError, "invalid value for 'action', must be one of #{allowed_values}."
       end
       @action = action
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -170,6 +200,7 @@ module PureCloud
       self.class == o.class &&
           action == o.action &&
           action_date == o.action_date &&
+          integration_id == o.integration_id &&
           conversation_query == o.conversation_query
     end
 
@@ -182,7 +213,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [action, action_date, conversation_query].hash
+      [action, action_date, integration_id, conversation_query].hash
     end
 
     # build the object from hash

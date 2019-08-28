@@ -32,6 +32,9 @@ module PureCloud
     # The ISO 3166-1 alpha-2 country code of the country this phone number is associated with.
     attr_accessor :country_code
 
+    # The id of an address added on your account. Due to regulatory requirements in some countries, an address may be required when provisioning a sms number. In those cases you should provide the provisioned sms address id here
+    attr_accessor :address_id
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -48,6 +51,8 @@ module PureCloud
         :'phone_number_type' => :'phoneNumberType',
         
         :'country_code' => :'countryCode',
+        
+        :'address_id' => :'addressId',
         
         :'self_uri' => :'selfUri'
         
@@ -67,6 +72,8 @@ module PureCloud
         :'phone_number_type' => :'String',
         
         :'country_code' => :'String',
+        
+        :'address_id' => :'String',
         
         :'self_uri' => :'String'
         
@@ -122,6 +129,15 @@ module PureCloud
         
         
         self.country_code = attributes[:'countryCode']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'addressId')
+        
+        
+        self.address_id = attributes[:'addressId']
         
       
       end
@@ -195,6 +211,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -237,6 +257,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -247,6 +272,7 @@ module PureCloud
           phone_number == o.phone_number &&
           phone_number_type == o.phone_number_type &&
           country_code == o.country_code &&
+          address_id == o.address_id &&
           self_uri == o.self_uri
     end
 
@@ -259,7 +285,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, phone_number, phone_number_type, country_code, self_uri].hash
+      [id, name, phone_number, phone_number_type, country_code, address_id, self_uri].hash
     end
 
     # build the object from hash

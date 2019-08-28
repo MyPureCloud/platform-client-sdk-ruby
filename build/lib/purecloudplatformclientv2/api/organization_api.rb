@@ -95,6 +95,61 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the list of domains that will be allowed to embed PureCloud applications
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [EmbeddedIntegration]
+    def get_organizations_embeddedintegration(opts = {})
+      data, _status_code, _headers = get_organizations_embeddedintegration_with_http_info(opts)
+      return data
+    end
+
+    # Get the list of domains that will be allowed to embed PureCloud applications
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EmbeddedIntegration, Fixnum, Hash)>] EmbeddedIntegration data, response status code and response headers
+    def get_organizations_embeddedintegration_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OrganizationApi.get_organizations_embeddedintegration ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/organizations/embeddedintegration".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EmbeddedIntegration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OrganizationApi#get_organizations_embeddedintegration\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get organization.
     # 
     # @param [Hash] opts the optional parameters
@@ -150,7 +205,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get organization whitelist settings
+    # Use PUT /api/v2/organizations/embeddedintegration instead
     # 
     # @param [Hash] opts the optional parameters
     # @return [OrgWhitelistSettings]
@@ -159,7 +214,7 @@ module PureCloud
       return data
     end
 
-    # Get organization whitelist settings
+    # Use PUT /api/v2/organizations/embeddedintegration instead
     # 
     # @param [Hash] opts the optional parameters
     # @return [Array<(OrgWhitelistSettings, Fixnum, Hash)>] OrgWhitelistSettings data, response status code and response headers
@@ -285,6 +340,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Update the list of domains that will be allowed to embed PureCloud applications
+    # 
+    # @param body Whitelist settings
+    # @param [Hash] opts the optional parameters
+    # @return [EmbeddedIntegration]
+    def put_organizations_embeddedintegration(body, opts = {})
+      data, _status_code, _headers = put_organizations_embeddedintegration_with_http_info(body, opts)
+      return data
+    end
+
+    # Update the list of domains that will be allowed to embed PureCloud applications
+    # 
+    # @param body Whitelist settings
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EmbeddedIntegration, Fixnum, Hash)>] EmbeddedIntegration data, response status code and response headers
+    def put_organizations_embeddedintegration_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OrganizationApi.put_organizations_embeddedintegration ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling OrganizationApi.put_organizations_embeddedintegration" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/organizations/embeddedintegration".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EmbeddedIntegration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OrganizationApi#put_organizations_embeddedintegration\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Update organization.
     # 
     # @param [Hash] opts the optional parameters
@@ -348,7 +468,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update organization whitelist settings
+    # Use PUT /api/v2/organizations/embeddedintegration instead
     # 
     # @param body Whitelist settings
     # @param [Hash] opts the optional parameters
@@ -358,7 +478,7 @@ module PureCloud
       return data
     end
 
-    # Update organization whitelist settings
+    # Use PUT /api/v2/organizations/embeddedintegration instead
     # 
     # @param body Whitelist settings
     # @param [Hash] opts the optional parameters

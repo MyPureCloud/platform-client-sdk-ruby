@@ -38,7 +38,7 @@ module PureCloud
     # The date and time this schema was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_created
 
-    # The JSON schema defining the extension to the built-in entity type.
+    # A JSON schema defining the extension to the built-in entity type.
     attr_accessor :json_schema
 
     # The URI for this object

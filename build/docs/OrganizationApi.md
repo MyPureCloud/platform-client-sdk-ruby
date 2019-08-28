@@ -9,11 +9,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 Method | Description
 ------------- | ------------- | -------------
 [**get_fieldconfig**](OrganizationApi.html#get_fieldconfig) | Fetch field config for an entity type
+[**get_organizations_embeddedintegration**](OrganizationApi.html#get_organizations_embeddedintegration) | Get the list of domains that will be allowed to embed PureCloud applications
 [**get_organizations_me**](OrganizationApi.html#get_organizations_me) | Get organization.
-[**get_organizations_whitelist**](OrganizationApi.html#get_organizations_whitelist) | Get organization whitelist settings
+[**get_organizations_whitelist**](OrganizationApi.html#get_organizations_whitelist) | Use PUT /api/v2/organizations/embeddedintegration instead
 [**patch_organizations_feature**](OrganizationApi.html#patch_organizations_feature) | Update organization
+[**put_organizations_embeddedintegration**](OrganizationApi.html#put_organizations_embeddedintegration) | Update the list of domains that will be allowed to embed PureCloud applications
 [**put_organizations_me**](OrganizationApi.html#put_organizations_me) | Update organization.
-[**put_organizations_whitelist**](OrganizationApi.html#put_organizations_whitelist) | Update organization whitelist settings
+[**put_organizations_whitelist**](OrganizationApi.html#put_organizations_whitelist) | Use PUT /api/v2/organizations/embeddedintegration instead
 {: class="table table-striped"}
 
 <a name="get_fieldconfig"></a>
@@ -72,6 +74,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FieldConfig**](FieldConfig.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_organizations_embeddedintegration"></a>
+
+## [**EmbeddedIntegration**](EmbeddedIntegration.html) get_organizations_embeddedintegration
+
+
+
+Get the list of domains that will be allowed to embed PureCloud applications
+
+
+
+Wraps GET /api/v2/organizations/embeddedintegration 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OrganizationApi.new
+
+begin
+  #Get the list of domains that will be allowed to embed PureCloud applications
+  result = api_instance.get_organizations_embeddedintegration
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OrganizationApi->get_organizations_embeddedintegration: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EmbeddedIntegration**](EmbeddedIntegration.html)
 
 ### HTTP request headers
 
@@ -142,9 +202,9 @@ This endpoint does not need any parameter.
 
 ## [**OrgWhitelistSettings**](OrgWhitelistSettings.html) get_organizations_whitelist
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Get organization whitelist settings
+Use PUT /api/v2/organizations/embeddedintegration instead
 
 
 
@@ -172,7 +232,7 @@ end
 api_instance = PureCloud::OrganizationApi.new
 
 begin
-  #Get organization whitelist settings
+  #Use PUT /api/v2/organizations/embeddedintegration instead
   result = api_instance.get_organizations_whitelist
   p result
 rescue PureCloud::ApiError => e
@@ -264,6 +324,71 @@ Name | Type | Description  | Notes
 
 
 
+<a name="put_organizations_embeddedintegration"></a>
+
+## [**EmbeddedIntegration**](EmbeddedIntegration.html) put_organizations_embeddedintegration(body)
+
+
+
+Update the list of domains that will be allowed to embed PureCloud applications
+
+
+
+Wraps PUT /api/v2/organizations/embeddedintegration 
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OrganizationApi.new
+
+body = PureCloud::EmbeddedIntegration.new # EmbeddedIntegration | Whitelist settings
+
+
+begin
+  #Update the list of domains that will be allowed to embed PureCloud applications
+  result = api_instance.put_organizations_embeddedintegration(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OrganizationApi->put_organizations_embeddedintegration: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**EmbeddedIntegration**](EmbeddedIntegration.html)| Whitelist settings |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EmbeddedIntegration**](EmbeddedIntegration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="put_organizations_me"></a>
 
 ## [**Organization**](Organization.html) put_organizations_me(opts)
@@ -334,9 +459,9 @@ Name | Type | Description  | Notes
 
 ## [**OrgWhitelistSettings**](OrgWhitelistSettings.html) put_organizations_whitelist(body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Update organization whitelist settings
+Use PUT /api/v2/organizations/embeddedintegration instead
 
 
 
@@ -368,7 +493,7 @@ body = PureCloud::OrgWhitelistSettings.new # OrgWhitelistSettings | Whitelist se
 
 
 begin
-  #Update organization whitelist settings
+  #Use PUT /api/v2/organizations/embeddedintegration instead
   result = api_instance.put_organizations_whitelist(body)
   p result
 rescue PureCloud::ApiError => e

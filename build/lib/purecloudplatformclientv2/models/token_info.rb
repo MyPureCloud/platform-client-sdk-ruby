@@ -24,6 +24,9 @@ module PureCloud
     # The token's home organization
     attr_accessor :home_organization
 
+    # The list of scopes authorized for the OAuth client
+    attr_accessor :authorized_scope
+
     attr_accessor :o_auth_client
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -33,6 +36,8 @@ module PureCloud
         :'organization' => :'organization',
         
         :'home_organization' => :'homeOrganization',
+        
+        :'authorized_scope' => :'authorizedScope',
         
         :'o_auth_client' => :'OAuthClient'
         
@@ -46,6 +51,8 @@ module PureCloud
         :'organization' => :'NamedEntity',
         
         :'home_organization' => :'NamedEntity',
+        
+        :'authorized_scope' => :'Array<String>',
         
         :'o_auth_client' => :'OrgOAuthClient'
         
@@ -74,6 +81,17 @@ module PureCloud
         
         
         self.home_organization = attributes[:'homeOrganization']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'authorizedScope')
+        
+        if (value = attributes[:'authorizedScope']).is_a?(Array)
+          self.authorized_scope = value
+        end
+        
         
       
       end
@@ -115,8 +133,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -140,6 +167,7 @@ module PureCloud
       self.class == o.class &&
           organization == o.organization &&
           home_organization == o.home_organization &&
+          authorized_scope == o.authorized_scope &&
           o_auth_client == o.o_auth_client
     end
 
@@ -152,7 +180,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [organization, home_organization, o_auth_client].hash
+      [organization, home_organization, authorized_scope, o_auth_client].hash
     end
 
     # build the object from hash

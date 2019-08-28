@@ -19,13 +19,13 @@ require 'date'
 module PureCloud
   # SCIM Enterprise User
   class ScimV2EnterpriseUser
-    # User division name
+    # The division that the user belongs to.
     attr_accessor :division
 
-    # User department name
+    # The department that the user belongs to.
     attr_accessor :department
 
-    # Manager
+    # The user's manager.
     attr_accessor :manager
 
     # Attribute mapping from ruby-style variable name to JSON key.

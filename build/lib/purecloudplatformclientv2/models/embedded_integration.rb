@@ -17,24 +17,18 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class BaseTopicEntitiy
-    # The globally unique identifier for the object.
-    attr_accessor :id
+  class EmbeddedIntegration
+    attr_accessor :enable_whitelist
 
-    attr_accessor :name
-
-    # The URI for this object
-    attr_accessor :self_uri
+    attr_accessor :domain_whitelist
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'enable_whitelist' => :'enableWhitelist',
         
-        :'name' => :'name',
-        
-        :'self_uri' => :'selfUri'
+        :'domain_whitelist' => :'domainWhitelist'
         
       }
     end
@@ -43,11 +37,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
+        :'enable_whitelist' => :'BOOLEAN',
         
-        :'name' => :'String',
-        
-        :'self_uri' => :'String'
+        :'domain_whitelist' => :'Array<String>'
         
       }
     end
@@ -61,28 +53,21 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'enableWhitelist')
         
         
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
+        self.enable_whitelist = attributes[:'enableWhitelist']
         
       
       end
 
       
-      if attributes.has_key?(:'selfUri')
+      if attributes.has_key?(:'domainWhitelist')
         
+        if (value = attributes[:'domainWhitelist']).is_a?(Array)
+          self.domain_whitelist = value
+        end
         
-        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -111,17 +96,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -138,9 +114,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name &&
-          self_uri == o.self_uri
+          enable_whitelist == o.enable_whitelist &&
+          domain_whitelist == o.domain_whitelist
     end
 
     # @see the `==` method
@@ -152,7 +127,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, self_uri].hash
+      [enable_whitelist, domain_whitelist].hash
     end
 
     # build the object from hash

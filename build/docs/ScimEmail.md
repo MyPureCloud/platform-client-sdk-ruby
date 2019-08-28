@@ -7,9 +7,9 @@ title: ScimEmail
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **value** | **String** | Email address | [optional] |
-| **type** | **String** | Type of Email | [optional] |
-| **primary** | **BOOLEAN** | Primary flag | [optional] |
+| **value** | **String** | The email address. | [optional] |
+| **type** | **String** | The type of email address. | [optional] |
+| **primary** | **BOOLEAN** | Indicates whether the email address is the primary email address. | [optional] |
 {: class="table table-striped"}
 
 

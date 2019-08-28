@@ -3876,6 +3876,7 @@ opts = {
   page_number: 1, # Integer | Page number
   name: "name_example", # String | Name
   site_id: "site_id_example", # String | Filter by site.id
+  external_trunk_bases_ids: "external_trunk_bases_ids_example", # String | Filter by externalTrunkBases.ids
   sort_by: "name" # String | Sort by
 }
 
@@ -3896,6 +3897,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **name** | **String**| Name | [optional]  |
  **site_id** | **String**| Filter by site.id | [optional]  |
+ **external_trunk_bases_ids** | **String**| Filter by externalTrunkBases.ids | [optional]  |
  **sort_by** | **String**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 
@@ -4850,6 +4852,7 @@ opts = {
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
   name: "name_example", # String | Name
+  external_trunk_bases_ids: "external_trunk_bases_ids_example", # String | externalTrunkBases.ids
   sort_by: "name" # String | Sort by
 }
 
@@ -4870,6 +4873,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **name** | **String**| Name | [optional]  |
+ **external_trunk_bases_ids** | **String**| externalTrunkBases.ids | [optional]  |
  **sort_by** | **String**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 

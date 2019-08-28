@@ -17,18 +17,18 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM V2 Meta data
+  # The meta object of the SCIM V2 implementation.
   class ScimMetadata
-    # Resource type
+    # The type of the resource.
     attr_accessor :resource_type
 
-    # Last Modified ISO6501 (UTC). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The last time that the resource was modified. Time in ISO 6501 (UTC) format. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :last_modified
 
-    # URI location of resource
+    # The URI of the resource.
     attr_accessor :location
 
-    # ETag version of resource [RFC7232]
+    # The version of the resource. Matches the ETag HTTP response header.
     attr_accessor :version
 
     # Attribute mapping from ruby-style variable name to JSON key.

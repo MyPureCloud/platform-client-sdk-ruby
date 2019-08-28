@@ -25,35 +25,38 @@ module PureCloud
     # schemas supported
     attr_accessor :schemas
 
-    # Active flag
+    # Indicates whether the user's administrative status is active.
     attr_accessor :active
 
-    # User Name (Must be Unique) maps to PureCloud e-mail address
+    # The user's PureCloud email address. Must be unique.
     attr_accessor :user_name
 
-    # Display Name
+    # The display name for the user.
     attr_accessor :display_name
 
-    # Password (updateOnly)
+    # A new password for a PureCloud user. Does not return an existing password.
     attr_accessor :password
 
-    # Title
+    # The user's title.
     attr_accessor :title
 
-    # Phone numbers
+    # A list of the user's phone numbers.
     attr_accessor :phone_numbers
 
-    # Emails
+    # A list of the user's email addresses.
     attr_accessor :emails
 
-    # Photos
+    # A list of the user's photos.
     attr_accessor :photos
 
-    # External ID
+    # The external ID of the user. Set by the provisioning client. caseExact is set to true. mutability is set to readWrite.
     attr_accessor :external_id
 
-    # Group References
+    # A list of groups that the user is a member of.
     attr_accessor :groups
+
+    # Roles
+    attr_accessor :roles
 
     # Resource SCIM meta
     attr_accessor :meta
@@ -87,6 +90,8 @@ module PureCloud
         :'external_id' => :'externalId',
         
         :'groups' => :'groups',
+        
+        :'roles' => :'roles',
         
         :'meta' => :'meta',
         
@@ -122,6 +127,8 @@ module PureCloud
         :'external_id' => :'String',
         
         :'groups' => :'Array<ScimV2GroupReference>',
+        
+        :'roles' => :'Array<String>',
         
         :'meta' => :'ScimMetadata',
         
@@ -257,6 +264,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'roles')
+        
+        if (value = attributes[:'roles']).is_a?(Array)
+          self.roles = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'meta')
         
         
@@ -346,8 +364,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -436,6 +463,7 @@ module PureCloud
           photos == o.photos &&
           external_id == o.external_id &&
           groups == o.groups &&
+          roles == o.roles &&
           meta == o.meta &&
           urnietfparamsscimschemasextensionenterprise2_0_user == o.urnietfparamsscimschemasextensionenterprise2_0_user
     end
@@ -449,7 +477,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, schemas, active, user_name, display_name, password, title, phone_numbers, emails, photos, external_id, groups, meta, urnietfparamsscimschemasextensionenterprise2_0_user].hash
+      [id, schemas, active, user_name, display_name, password, title, phone_numbers, emails, photos, external_id, groups, roles, meta, urnietfparamsscimschemasextensionenterprise2_0_user].hash
     end
 
     # build the object from hash

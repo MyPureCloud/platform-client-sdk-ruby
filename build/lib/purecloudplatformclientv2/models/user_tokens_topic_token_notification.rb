@@ -26,6 +26,12 @@ module PureCloud
 
     attr_accessor :token_expiration_date
 
+    attr_accessor :session_id
+
+    attr_accessor :client_id
+
+    attr_accessor :token_hash
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -36,7 +42,13 @@ module PureCloud
         
         :'date_created' => :'dateCreated',
         
-        :'token_expiration_date' => :'tokenExpirationDate'
+        :'token_expiration_date' => :'tokenExpirationDate',
+        
+        :'session_id' => :'sessionId',
+        
+        :'client_id' => :'clientId',
+        
+        :'token_hash' => :'tokenHash'
         
       }
     end
@@ -51,7 +63,13 @@ module PureCloud
         
         :'date_created' => :'String',
         
-        :'token_expiration_date' => :'String'
+        :'token_expiration_date' => :'String',
+        
+        :'session_id' => :'String',
+        
+        :'client_id' => :'String',
+        
+        :'token_hash' => :'String'
         
       }
     end
@@ -101,6 +119,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'sessionId')
+        
+        
+        self.session_id = attributes[:'sessionId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'clientId')
+        
+        
+        self.client_id = attributes[:'clientId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'tokenHash')
+        
+        
+        self.token_hash = attributes[:'tokenHash']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -132,8 +177,35 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -163,7 +235,10 @@ module PureCloud
           user == o.user &&
           ip_address == o.ip_address &&
           date_created == o.date_created &&
-          token_expiration_date == o.token_expiration_date
+          token_expiration_date == o.token_expiration_date &&
+          session_id == o.session_id &&
+          client_id == o.client_id &&
+          token_hash == o.token_hash
     end
 
     # @see the `==` method
@@ -175,7 +250,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user, ip_address, date_created, token_expiration_date].hash
+      [user, ip_address, date_created, token_expiration_date, session_id, client_id, token_hash].hash
     end
 
     # build the object from hash

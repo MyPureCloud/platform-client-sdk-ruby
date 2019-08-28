@@ -19,10 +19,10 @@ require 'date'
 module PureCloud
   # SCIM V2 Photo
   class Photo
-    # URI of photo
+    # The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG. 
     attr_accessor :value
 
-    # Type of photo
+    # The type of photo.
     attr_accessor :type
 
     # Attribute mapping from ruby-style variable name to JSON key.

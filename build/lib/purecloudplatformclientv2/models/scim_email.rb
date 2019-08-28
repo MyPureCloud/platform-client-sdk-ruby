@@ -19,13 +19,13 @@ require 'date'
 module PureCloud
   # SCIM V2 ScimEmail
   class ScimEmail
-    # Email address
+    # The email address.
     attr_accessor :value
 
-    # Type of Email
+    # The type of email address.
     attr_accessor :type
 
-    # Primary flag
+    # Indicates whether the email address is the primary email address.
     attr_accessor :primary
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -17,53 +17,50 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class Program
-    # The globally unique identifier for the object.
-    attr_accessor :id
+  class SmsAddressEntityListing
+    attr_accessor :entities
 
-    attr_accessor :name
+    attr_accessor :page_size
 
-    attr_accessor :description
+    attr_accessor :page_number
 
-    attr_accessor :applied
+    attr_accessor :total
 
-    attr_accessor :status
+    attr_accessor :first_uri
 
-    attr_accessor :topics
-
-    attr_accessor :tags
-
-    attr_accessor :modified_by
-
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-    attr_accessor :date_modified
-
-    # The URI for this object
     attr_accessor :self_uri
+
+    attr_accessor :last_uri
+
+    attr_accessor :previous_uri
+
+    attr_accessor :next_uri
+
+    attr_accessor :page_count
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'entities' => :'entities',
         
-        :'name' => :'name',
+        :'page_size' => :'pageSize',
         
-        :'description' => :'description',
+        :'page_number' => :'pageNumber',
         
-        :'applied' => :'applied',
+        :'total' => :'total',
         
-        :'status' => :'status',
+        :'first_uri' => :'firstUri',
         
-        :'topics' => :'topics',
+        :'self_uri' => :'selfUri',
         
-        :'tags' => :'tags',
+        :'last_uri' => :'lastUri',
         
-        :'modified_by' => :'modifiedBy',
+        :'previous_uri' => :'previousUri',
         
-        :'date_modified' => :'dateModified',
+        :'next_uri' => :'nextUri',
         
-        :'self_uri' => :'selfUri'
+        :'page_count' => :'pageCount'
         
       }
     end
@@ -72,25 +69,25 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
+        :'entities' => :'Array<SmsAddress>',
         
-        :'name' => :'String',
+        :'page_size' => :'Integer',
         
-        :'description' => :'String',
+        :'page_number' => :'Integer',
         
-        :'applied' => :'BOOLEAN',
+        :'total' => :'Integer',
         
-        :'status' => :'String',
+        :'first_uri' => :'String',
         
-        :'topics' => :'Array<BaseTopicEntitiy>',
+        :'self_uri' => :'String',
         
-        :'tags' => :'Array<String>',
+        :'last_uri' => :'String',
         
-        :'modified_by' => :'User',
+        :'previous_uri' => :'String',
         
-        :'date_modified' => :'DateTime',
+        :'next_uri' => :'String',
         
-        :'self_uri' => :'String'
+        :'page_count' => :'Integer'
         
       }
     end
@@ -104,55 +101,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'entities')
         
-        
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'description')
-        
-        
-        self.description = attributes[:'description']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'applied')
-        
-        
-        self.applied = attributes[:'applied']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'status')
-        
-        
-        self.status = attributes[:'status']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'topics')
-        
-        if (value = attributes[:'topics']).is_a?(Array)
-          self.topics = value
+        if (value = attributes[:'entities']).is_a?(Array)
+          self.entities = value
         end
         
         
@@ -160,30 +112,37 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'tags')
+      if attributes.has_key?(:'pageSize')
         
-        if (value = attributes[:'tags']).is_a?(Array)
-          self.tags = value
-        end
         
+        self.page_size = attributes[:'pageSize']
         
       
       end
 
       
-      if attributes.has_key?(:'modifiedBy')
+      if attributes.has_key?(:'pageNumber')
         
         
-        self.modified_by = attributes[:'modifiedBy']
+        self.page_number = attributes[:'pageNumber']
         
       
       end
 
       
-      if attributes.has_key?(:'dateModified')
+      if attributes.has_key?(:'total')
         
         
-        self.date_modified = attributes[:'dateModified']
+        self.total = attributes[:'total']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'firstUri')
+        
+        
+        self.first_uri = attributes[:'firstUri']
         
       
       end
@@ -193,6 +152,42 @@ module PureCloud
         
         
         self.self_uri = attributes[:'selfUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'lastUri')
+        
+        
+        self.last_uri = attributes[:'lastUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'previousUri')
+        
+        
+        self.previous_uri = attributes[:'previousUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'nextUri')
+        
+        
+        self.next_uri = attributes[:'nextUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'pageCount')
+        
+        
+        self.page_count = attributes[:'pageCount']
         
       
       end
@@ -231,11 +226,6 @@ module PureCloud
       
       
       
-      allowed_values = ["Active", "Inactive"]
-      if @status && !allowed_values.include?(@status)
-        return false
-      end
-      
       
       
       
@@ -282,16 +272,7 @@ module PureCloud
     
     
     
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] status Object to be assigned
-    def status=(status)
-      allowed_values = ["Active", "Inactive"]
-      if status && !allowed_values.include?(status)
-        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
-      end
-      @status = status
-    end
-
+    
     
     
     
@@ -325,16 +306,16 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name &&
-          description == o.description &&
-          applied == o.applied &&
-          status == o.status &&
-          topics == o.topics &&
-          tags == o.tags &&
-          modified_by == o.modified_by &&
-          date_modified == o.date_modified &&
-          self_uri == o.self_uri
+          entities == o.entities &&
+          page_size == o.page_size &&
+          page_number == o.page_number &&
+          total == o.total &&
+          first_uri == o.first_uri &&
+          self_uri == o.self_uri &&
+          last_uri == o.last_uri &&
+          previous_uri == o.previous_uri &&
+          next_uri == o.next_uri &&
+          page_count == o.page_count
     end
 
     # @see the `==` method
@@ -346,7 +327,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, applied, status, topics, tags, modified_by, date_modified, self_uri].hash
+      [entities, page_size, page_number, total, first_uri, self_uri, last_uri, previous_uri, next_uri, page_count].hash
     end
 
     # build the object from hash

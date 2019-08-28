@@ -19,13 +19,13 @@ require 'date'
 module PureCloud
   # SCIM V2 ScimEmail
   class ScimPhoneNumber
-    # Phone number (e164)
+    # A phone number in E.164 format.
     attr_accessor :value
 
-    # Type of Phone number
+    # The type of phone number. 
     attr_accessor :type
 
-    # Primary phone number flag
+    # Indicates whether the phone number is the primary phone number.
     attr_accessor :primary
 
     # Attribute mapping from ruby-style variable name to JSON key.

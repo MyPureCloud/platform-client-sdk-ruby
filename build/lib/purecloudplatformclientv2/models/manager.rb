@@ -19,7 +19,7 @@ require 'date'
 module PureCloud
   # User's Manager
   class Manager
-    # Identifier of the Manager
+    # The ID of the manager.
     attr_accessor :value
 
     # URI for Manager User record.

@@ -1286,6 +1286,10 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [String] :sort_by Sort by (default to userId)
+    # @option opts [String] :state Filter by state
+    # @option opts [BOOLEAN] :show_only_my_jobs Show only my jobs
+    # @option opts [String] :job_type Job Type (Can be left empty for both)
     # @return [RecordingJobEntityListing]
     def get_recording_jobs(opts = {})
       data, _status_code, _headers = get_recording_jobs_with_http_info(opts)
@@ -1297,6 +1301,10 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
+    # @option opts [String] :sort_by Sort by
+    # @option opts [String] :state Filter by state
+    # @option opts [BOOLEAN] :show_only_my_jobs Show only my jobs
+    # @option opts [String] :job_type Job Type (Can be left empty for both)
     # @return [Array<(RecordingJobEntityListing, Fixnum, Hash)>] RecordingJobEntityListing data, response status code and response headers
     def get_recording_jobs_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1315,6 +1323,42 @@ module PureCloud
       
       
       
+      
+      
+      
+      if opts[:'sort_by'] && !['userId', 'dateCreated'].include?(opts[:'sort_by'])
+        fail ArgumentError, 'invalid value for "sort_by", must be one of userId, dateCreated'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'state'] && !['FULFILLED', 'PENDING', 'READY', 'PROCESSING', 'CANCELLED', 'FAILED'].include?(opts[:'state'])
+        fail ArgumentError, 'invalid value for "state", must be one of FULFILLED, PENDING, READY, PROCESSING, CANCELLED, FAILED'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'job_type'] && !['DELETE', 'EXPORT'].include?(opts[:'job_type'])
+        fail ArgumentError, 'invalid value for "job_type", must be one of DELETE, EXPORT'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/recording/jobs".sub('{format}','json')
 
@@ -1322,6 +1366,10 @@ module PureCloud
       query_params = {}
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'state'] = opts[:'state'] if opts[:'state']
+      query_params[:'showOnlyMyJobs'] = opts[:'show_only_my_jobs'] if opts[:'show_only_my_jobs']
+      query_params[:'jobType'] = opts[:'job_type'] if opts[:'job_type']
 
       # header parameters
       header_params = {}

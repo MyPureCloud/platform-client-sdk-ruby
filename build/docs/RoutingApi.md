@@ -38,6 +38,8 @@ Method | Description
 [**get_routing_queues_me**](RoutingApi.html#get_routing_queues_me) | Get a paged listing of queues the user is a member of.
 [**get_routing_skill**](RoutingApi.html#get_routing_skill) | Get Routing Skill
 [**get_routing_skills**](RoutingApi.html#get_routing_skills) | Get the list of routing skills.
+[**get_routing_sms_address**](RoutingApi.html#get_routing_sms_address) | Get an Address by Id for SMS
+[**get_routing_sms_addresses**](RoutingApi.html#get_routing_sms_addresses) | Get a list of Addresses for SMS
 [**get_routing_sms_availablephonenumbers**](RoutingApi.html#get_routing_sms_availablephonenumbers) | Get a list of available phone numbers for SMS provisioning.
 [**get_routing_sms_phonenumber**](RoutingApi.html#get_routing_sms_phonenumber) | Get a phone number provisioned for SMS.
 [**get_routing_sms_phonenumbers**](RoutingApi.html#get_routing_sms_phonenumbers) | Get a list of provisioned phone numbers.
@@ -2120,6 +2122,139 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_routing_sms_address"></a>
+
+## [**SmsAddress**](SmsAddress.html) get_routing_sms_address(address_id)
+
+
+
+Get an Address by Id for SMS
+
+
+
+Wraps GET /api/v2/routing/sms/addresses/{addressId} 
+
+Requires ANY permissions: 
+
+* sms:phoneNumber:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+address_id = "address_id_example" # String | Address ID
+
+
+begin
+  #Get an Address by Id for SMS
+  result = api_instance.get_routing_sms_address(address_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->get_routing_sms_address: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address_id** | **String**| Address ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SmsAddress**](SmsAddress.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_routing_sms_addresses"></a>
+
+## [**SmsAddressEntityListing**](SmsAddressEntityListing.html) get_routing_sms_addresses(opts)
+
+
+
+Get a list of Addresses for SMS
+
+
+
+Wraps GET /api/v2/routing/sms/addresses 
+
+Requires ANY permissions: 
+
+* sms:phoneNumber:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1 # Integer | Page number
+}
+
+begin
+  #Get a list of Addresses for SMS
+  result = api_instance.get_routing_sms_addresses(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->get_routing_sms_addresses: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SmsAddressEntityListing**](SmsAddressEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_routing_sms_availablephonenumbers"></a>
 
 ## [**SMSAvailablePhoneNumberEntityListing**](SMSAvailablePhoneNumberEntityListing.html) get_routing_sms_availablephonenumbers(country_code, phone_number_type, opts)
@@ -3563,7 +3698,7 @@ Name | Type | Description  | Notes
 
 <a name="post_routing_sms_addresses"></a>
 
-## [**SmsPhoneNumber**](SmsPhoneNumber.html) post_routing_sms_addresses(body)
+## [**SmsAddress**](SmsAddress.html) post_routing_sms_addresses(body)
 
 
 
@@ -3617,7 +3752,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SmsPhoneNumber**](SmsPhoneNumber.html)
+[**SmsAddress**](SmsAddress.html)
 
 ### HTTP request headers
 

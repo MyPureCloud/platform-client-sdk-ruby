@@ -4160,6 +4160,7 @@ module PureCloud
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :name Name
     # @option opts [String] :site_id Filter by site.id
+    # @option opts [String] :external_trunk_bases_ids Filter by externalTrunkBases.ids
     # @option opts [String] :sort_by Sort by (default to name)
     # @return [OutboundRouteEntityListing]
     def get_telephony_providers_edges_outboundroutes(opts = {})
@@ -4174,12 +4175,19 @@ module PureCloud
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :name Name
     # @option opts [String] :site_id Filter by site.id
+    # @option opts [String] :external_trunk_bases_ids Filter by externalTrunkBases.ids
     # @option opts [String] :sort_by Sort by
     # @return [Array<(OutboundRouteEntityListing, Fixnum, Hash)>] OutboundRouteEntityListing data, response status code and response headers
     def get_telephony_providers_edges_outboundroutes_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_outboundroutes ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -4220,6 +4228,7 @@ module PureCloud
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'site.id'] = opts[:'site_id'] if opts[:'site_id']
+      query_params[:'externalTrunkBases.ids'] = opts[:'external_trunk_bases_ids'] if opts[:'external_trunk_bases_ids']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
 
       # header parameters
@@ -5314,6 +5323,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :name Name
+    # @option opts [String] :external_trunk_bases_ids externalTrunkBases.ids
     # @option opts [String] :sort_by Sort by (default to name)
     # @return [OutboundRouteBaseEntityListing]
     def get_telephony_providers_edges_site_outboundroutes(site_id, opts = {})
@@ -5328,6 +5338,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :name Name
+    # @option opts [String] :external_trunk_bases_ids externalTrunkBases.ids
     # @option opts [String] :sort_by Sort by
     # @return [Array<(OutboundRouteBaseEntityListing, Fixnum, Hash)>] OutboundRouteBaseEntityListing data, response status code and response headers
     def get_telephony_providers_edges_site_outboundroutes_with_http_info(site_id, opts = {})
@@ -5367,6 +5378,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes".sub('{format}','json').sub('{' + 'siteId' + '}', site_id.to_s)
 
@@ -5375,6 +5392,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'externalTrunkBases.ids'] = opts[:'external_trunk_bases_ids'] if opts[:'external_trunk_bases_ids']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
 
       # header parameters

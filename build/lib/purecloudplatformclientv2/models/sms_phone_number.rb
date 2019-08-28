@@ -65,6 +65,9 @@ module PureCloud
     # Renewal time period of this phone number, if the phoneNumberType is shortcode.
     attr_accessor :auto_renewable
 
+    # The id of an address attached to this phone number.
+    attr_accessor :address_id
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -103,6 +106,8 @@ module PureCloud
         :'renewal_date' => :'renewalDate',
         
         :'auto_renewable' => :'autoRenewable',
+        
+        :'address_id' => :'addressId',
         
         :'self_uri' => :'selfUri'
         
@@ -144,6 +149,8 @@ module PureCloud
         :'renewal_date' => :'DateTime',
         
         :'auto_renewable' => :'String',
+        
+        :'address_id' => :'SmsAddress',
         
         :'self_uri' => :'String'
         
@@ -303,6 +310,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'addressId')
+        
+        
+        self.address_id = attributes[:'addressId']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -413,6 +429,10 @@ module PureCloud
       if @auto_renewable && !allowed_values.include?(@auto_renewable)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -535,6 +555,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -556,6 +581,7 @@ module PureCloud
           cancellation_date == o.cancellation_date &&
           renewal_date == o.renewal_date &&
           auto_renewable == o.auto_renewable &&
+          address_id == o.address_id &&
           self_uri == o.self_uri
     end
 
@@ -568,7 +594,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, phone_number, phone_number_type, provisioned_through_pure_cloud, phone_number_status, country_code, date_created, date_modified, created_by, modified_by, version, purchase_date, cancellation_date, renewal_date, auto_renewable, self_uri].hash
+      [id, name, phone_number, phone_number_type, provisioned_through_pure_cloud, phone_number_status, country_code, date_created, date_modified, created_by, modified_by, version, purchase_date, cancellation_date, renewal_date, auto_renewable, address_id, self_uri].hash
     end
 
     # build the object from hash
