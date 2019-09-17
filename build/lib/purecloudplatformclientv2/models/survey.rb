@@ -86,7 +86,7 @@ module PureCloud
         
         :'survey_form' => :'SurveyForm',
         
-        :'agent' => :'UriReference',
+        :'agent' => :'DomainEntityRef',
         
         :'status' => :'String',
         

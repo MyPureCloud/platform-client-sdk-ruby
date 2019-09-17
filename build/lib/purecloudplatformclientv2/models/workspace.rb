@@ -90,7 +90,7 @@ module PureCloud
         
         :'is_current_user_workspace' => :'BOOLEAN',
         
-        :'user' => :'UriReference',
+        :'user' => :'DomainEntityRef',
         
         :'bucket' => :'String',
         

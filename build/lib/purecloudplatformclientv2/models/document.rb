@@ -173,11 +173,11 @@ module PureCloud
         
         :'content_uri' => :'String',
         
-        :'workspace' => :'UriReference',
+        :'workspace' => :'DomainEntityRef',
         
-        :'created_by' => :'UriReference',
+        :'created_by' => :'DomainEntityRef',
         
-        :'uploaded_by' => :'UriReference',
+        :'uploaded_by' => :'DomainEntityRef',
         
         :'content_type' => :'String',
         
@@ -203,7 +203,7 @@ module PureCloud
         
         :'thumbnails' => :'Array<DocumentThumbnail>',
         
-        :'upload_status' => :'UriReference',
+        :'upload_status' => :'DomainEntityRef',
         
         :'upload_destination_uri' => :'String',
         

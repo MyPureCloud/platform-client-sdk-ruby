@@ -66,7 +66,7 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'flow' => :'UriReference',
+        :'flow' => :'DomainEntityRef',
         
         :'user_data' => :'String',
         

@@ -39,9 +39,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'campaigns' => :'Array<UriReference>',
+        :'campaigns' => :'Array<DomainEntityRef>',
         
-        :'sequences' => :'Array<UriReference>'
+        :'sequences' => :'Array<DomainEntityRef>'
         
       }
     end

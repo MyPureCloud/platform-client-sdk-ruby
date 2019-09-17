@@ -808,7 +808,7 @@ module PureCloud
       
       
       
-      allowed_values = ["NEW", "AWAITING_CONNECTION", "AWAITING_FINGERPRINT", "AWAITING_FINGERPRINT_VERIFICATION", "FINGERPRINT_VERIFIED", "AWAITING_BOOTSTRAP", "ACTIVE", "INACTIVE", "RMA", "UNPAIRING", "UNPAIRED"]
+      allowed_values = ["NEW", "AWAITING_CONNECTION", "AWAITING_FINGERPRINT", "AWAITING_FINGERPRINT_VERIFICATION", "FINGERPRINT_VERIFIED", "AWAITING_BOOTSTRAP", "ACTIVE", "INACTIVE", "RMA", "UNPAIRING", "UNPAIRED", "INITIALIZING"]
       if @status_code && !allowed_values.include?(@status_code)
         return false
       end
@@ -1032,7 +1032,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status_code Object to be assigned
     def status_code=(status_code)
-      allowed_values = ["NEW", "AWAITING_CONNECTION", "AWAITING_FINGERPRINT", "AWAITING_FINGERPRINT_VERIFICATION", "FINGERPRINT_VERIFIED", "AWAITING_BOOTSTRAP", "ACTIVE", "INACTIVE", "RMA", "UNPAIRING", "UNPAIRED"]
+      allowed_values = ["NEW", "AWAITING_CONNECTION", "AWAITING_FINGERPRINT", "AWAITING_FINGERPRINT_VERIFICATION", "FINGERPRINT_VERIFIED", "AWAITING_BOOTSTRAP", "ACTIVE", "INACTIVE", "RMA", "UNPAIRING", "UNPAIRED", "INITIALIZING"]
       if status_code && !allowed_values.include?(status_code)
         fail ArgumentError, "invalid value for 'status_code', must be one of #{allowed_values}."
       end

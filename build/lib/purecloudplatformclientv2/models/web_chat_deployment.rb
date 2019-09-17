@@ -89,7 +89,7 @@ module PureCloud
         
         :'allowed_domains' => :'Array<String>',
         
-        :'flow' => :'UriReference',
+        :'flow' => :'DomainEntityRef',
         
         :'self_uri' => :'String'
         

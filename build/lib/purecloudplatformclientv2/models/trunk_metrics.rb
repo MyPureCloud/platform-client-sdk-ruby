@@ -52,9 +52,9 @@ module PureCloud
         
         :'event_time' => :'DateTime',
         
-        :'logical_interface' => :'UriReference',
+        :'logical_interface' => :'DomainEntityRef',
         
-        :'trunk' => :'UriReference',
+        :'trunk' => :'DomainEntityRef',
         
         :'calls' => :'TrunkMetricsCalls',
         

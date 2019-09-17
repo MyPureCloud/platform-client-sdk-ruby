@@ -39,7 +39,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'rule_set' => :'UriReference',
+        :'rule_set' => :'DomainEntityRef',
         
         :'warnings' => :'Array<String>'
         

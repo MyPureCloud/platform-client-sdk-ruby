@@ -115,9 +115,9 @@ module PureCloud
         
         :'content_uri' => :'String',
         
-        :'workspace' => :'UriReference',
+        :'workspace' => :'DomainEntityRef',
         
-        :'created_by' => :'UriReference',
+        :'created_by' => :'DomainEntityRef',
         
         :'content_type' => :'String',
         

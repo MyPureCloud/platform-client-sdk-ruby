@@ -8,9 +8,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
+[**delete_analytics_conversations_details_job**](AnalyticsApi.html#delete_analytics_conversations_details_job) | Delete/cancel an async request
 [**delete_analytics_reporting_schedule**](AnalyticsApi.html#delete_analytics_reporting_schedule) | Delete a scheduled report job.
 [**get_analytics_conversation_details**](AnalyticsApi.html#get_analytics_conversation_details) | Get a conversation by id
 [**get_analytics_conversations_details**](AnalyticsApi.html#get_analytics_conversations_details) | Gets multiple conversations by id
+[**get_analytics_conversations_details_job**](AnalyticsApi.html#get_analytics_conversations_details_job) | Get status for async query for conversation details
+[**get_analytics_conversations_details_job_results**](AnalyticsApi.html#get_analytics_conversations_details_job_results) | Fetch a page of results for an async query
 [**get_analytics_reporting_exports**](AnalyticsApi.html#get_analytics_reporting_exports) | Get all view export requests for a user
 [**get_analytics_reporting_metadata**](AnalyticsApi.html#get_analytics_reporting_metadata) | Get list of reporting metadata.
 [**get_analytics_reporting_report_id_metadata**](AnalyticsApi.html#get_analytics_reporting_report_id_metadata) | Get a reporting metadata.
@@ -23,6 +26,7 @@ Method | Description
 [**get_analytics_reporting_timeperiods**](AnalyticsApi.html#get_analytics_reporting_timeperiods) | Get a list of report time periods.
 [**post_analytics_conversation_details_properties**](AnalyticsApi.html#post_analytics_conversation_details_properties) | Index conversation properties
 [**post_analytics_conversations_aggregates_query**](AnalyticsApi.html#post_analytics_conversations_aggregates_query) | Query for conversation aggregates
+[**post_analytics_conversations_details_jobs**](AnalyticsApi.html#post_analytics_conversations_details_jobs) | Query for conversation details asynchronously
 [**post_analytics_conversations_details_query**](AnalyticsApi.html#post_analytics_conversations_details_query) | Query for conversation details
 [**post_analytics_evaluations_aggregates_query**](AnalyticsApi.html#post_analytics_evaluations_aggregates_query) | Query for evaluation aggregates
 [**post_analytics_flows_aggregates_query**](AnalyticsApi.html#post_analytics_flows_aggregates_query) | Query for flow aggregates
@@ -37,6 +41,70 @@ Method | Description
 [**post_analytics_users_observations_query**](AnalyticsApi.html#post_analytics_users_observations_query) | Query for user observations
 [**put_analytics_reporting_schedule**](AnalyticsApi.html#put_analytics_reporting_schedule) | Update a scheduled report job.
 {: class="table table-striped"}
+
+<a name="delete_analytics_conversations_details_job"></a>
+
+##  delete_analytics_conversations_details_job(job_id)
+
+
+
+Delete/cancel an async request
+
+
+
+Wraps DELETE /api/v2/analytics/conversations/details/jobs/{jobId} 
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+job_id = "job_id_example" # String | jobId
+
+
+begin
+  #Delete/cancel an async request
+  api_instance.delete_analytics_conversations_details_job(job_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->delete_analytics_conversations_details_job: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| jobId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 <a name="delete_analytics_reporting_schedule"></a>
 
@@ -224,6 +292,140 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_analytics_conversations_details_job"></a>
+
+## [**AsyncQueryStatus**](AsyncQueryStatus.html) get_analytics_conversations_details_job(job_id)
+
+
+
+Get status for async query for conversation details
+
+
+
+Wraps GET /api/v2/analytics/conversations/details/jobs/{jobId} 
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+job_id = "job_id_example" # String | jobId
+
+
+begin
+  #Get status for async query for conversation details
+  result = api_instance.get_analytics_conversations_details_job(job_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->get_analytics_conversations_details_job: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| jobId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_analytics_conversations_details_job_results"></a>
+
+## [**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse.html) get_analytics_conversations_details_job_results(job_id, opts)
+
+
+
+Fetch a page of results for an async query
+
+
+
+Wraps GET /api/v2/analytics/conversations/details/jobs/{jobId}/results 
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+job_id = "job_id_example" # String | jobId
+
+opts = { 
+  cursor: "cursor_example" # String | Indicates where to resume query results (not required for first page)
+}
+
+begin
+  #Fetch a page of results for an async query
+  result = api_instance.get_analytics_conversations_details_job_results(job_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->get_analytics_conversations_details_job_results: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| jobId |  |
+ **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse.html)
 
 ### HTTP request headers
 
@@ -1001,6 +1203,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AggregateQueryResponse**](AggregateQueryResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_analytics_conversations_details_jobs"></a>
+
+## [**AsyncQueryResponse**](AsyncQueryResponse.html) post_analytics_conversations_details_jobs(body)
+
+
+
+Query for conversation details asynchronously
+
+
+
+Wraps POST /api/v2/analytics/conversations/details/jobs 
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+body = PureCloud::AsyncConversationQuery.new # AsyncConversationQuery | query
+
+
+begin
+  #Query for conversation details asynchronously
+  result = api_instance.post_analytics_conversations_details_jobs(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->post_analytics_conversations_details_jobs: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AsyncConversationQuery**](AsyncConversationQuery.html)| query |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse.html)
 
 ### HTTP request headers
 

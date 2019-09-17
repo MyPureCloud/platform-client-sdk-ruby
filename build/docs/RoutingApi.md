@@ -1595,7 +1595,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **sort_by** | **String**| Sort by | [optional] [default to name] |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, authorization.unusedRoles, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
  **joined** | **BOOLEAN**| Filter by joined status | [optional]  |
  **name** | **String**| Filter by queue member name | [optional]  |
  **profile_skills** | [**Array&lt;String&gt;**](String.html)| Filter by profile skill | [optional]  |
@@ -1728,6 +1728,7 @@ opts = {
   sort_by: "name", # String | Sort by
   name: "name_example", # String | Name
   active: true, # BOOLEAN | Active
+  id: ["id_example"], # Array<String> | ID(s)
   division_id: ["division_id_example"] # Array<String> | Division ID(s)
 }
 
@@ -1749,6 +1750,7 @@ Name | Type | Description  | Notes
  **sort_by** | **String**| Sort by | [optional] [default to name] |
  **name** | **String**| Name | [optional]  |
  **active** | **BOOLEAN**| Active | [optional]  |
+ **id** | [**Array&lt;String&gt;**](String.html)| ID(s) | [optional]  |
  **division_id** | [**Array&lt;String&gt;**](String.html)| Division ID(s) | [optional]  |
 {: class="table table-striped"}
 

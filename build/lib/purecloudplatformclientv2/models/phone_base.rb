@@ -129,7 +129,7 @@ module PureCloud
         
         :'created_by_app' => :'String',
         
-        :'phone_meta_base' => :'UriReference',
+        :'phone_meta_base' => :'DomainEntityRef',
         
         :'lines' => :'Array<LineBase>',
         

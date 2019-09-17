@@ -140,11 +140,11 @@ module PureCloud
         
         :'properties' => :'Hash<String, Object>',
         
-        :'schema' => :'UriReference',
+        :'schema' => :'DomainEntityRef',
         
         :'enabled' => :'BOOLEAN',
         
-        :'site' => :'UriReference',
+        :'site' => :'DomainEntityRef',
         
         :'dids' => :'Array<String>',
         

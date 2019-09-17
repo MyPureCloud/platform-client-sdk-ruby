@@ -54,9 +54,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'campaign' => :'UriReference',
+        :'campaign' => :'DomainEntityRef',
         
-        :'contact_list' => :'UriReference',
+        :'contact_list' => :'DomainEntityRef',
         
         :'number_of_contacts_called' => :'Integer',
         

@@ -40,9 +40,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'emergency_flow' => :'UriReference',
+        :'emergency_flow' => :'DomainEntityRef',
         
-        :'ivrs' => :'Array<UriReference>'
+        :'ivrs' => :'Array<DomainEntityRef>'
         
       }
     end

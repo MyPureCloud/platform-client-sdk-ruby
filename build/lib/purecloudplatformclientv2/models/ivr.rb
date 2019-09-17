@@ -139,13 +139,13 @@ module PureCloud
         
         :'dnis' => :'Array<String>',
         
-        :'open_hours_flow' => :'UriReference',
+        :'open_hours_flow' => :'DomainEntityRef',
         
-        :'closed_hours_flow' => :'UriReference',
+        :'closed_hours_flow' => :'DomainEntityRef',
         
-        :'holiday_hours_flow' => :'UriReference',
+        :'holiday_hours_flow' => :'DomainEntityRef',
         
-        :'schedule_group' => :'UriReference',
+        :'schedule_group' => :'DomainEntityRef',
         
         :'self_uri' => :'String'
         

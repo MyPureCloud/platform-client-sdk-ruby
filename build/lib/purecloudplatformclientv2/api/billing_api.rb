@@ -24,8 +24,8 @@ module PureCloud
       @api_client = api_client
     end
 
-    # Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
-    # 
+    # Get a report of the billable license usages
+    # Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
     # @param start_date The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     # @param end_date The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     # @param [Hash] opts the optional parameters
@@ -35,8 +35,8 @@ module PureCloud
       return data
     end
 
-    # Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
-    # 
+    # Get a report of the billable license usages
+    # Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response&#39;s status is InProgress, wait a few seconds, then try the same request again.
     # @param start_date The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     # @param end_date The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     # @param [Hash] opts the optional parameters

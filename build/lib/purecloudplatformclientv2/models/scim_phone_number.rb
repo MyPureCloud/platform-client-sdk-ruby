@@ -22,7 +22,7 @@ module PureCloud
     # A phone number in E.164 format.
     attr_accessor :value
 
-    # The type of phone number. 
+    # The type of phone number.
     attr_accessor :type
 
     # Indicates whether the phone number is the primary phone number.

@@ -5021,7 +5021,7 @@ Name | Type | Description  | Notes
 
 <a name="post_outbound_contactlist_export"></a>
 
-## [**UriReference**](UriReference.html) post_outbound_contactlist_export(contact_list_id)
+## [**DomainEntityRef**](DomainEntityRef.html) post_outbound_contactlist_export(contact_list_id)
 
 
 
@@ -5076,7 +5076,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UriReference**](UriReference.html)
+[**DomainEntityRef**](DomainEntityRef.html)
 
 ### HTTP request headers
 
@@ -5346,7 +5346,7 @@ nil (empty response body)
 
 <a name="post_outbound_dnclist_export"></a>
 
-## [**UriReference**](UriReference.html) post_outbound_dnclist_export(dnc_list_id)
+## [**DomainEntityRef**](DomainEntityRef.html) post_outbound_dnclist_export(dnc_list_id)
 
 
 
@@ -5401,7 +5401,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UriReference**](UriReference.html)
+[**DomainEntityRef**](DomainEntityRef.html)
 
 ### HTTP request headers
 

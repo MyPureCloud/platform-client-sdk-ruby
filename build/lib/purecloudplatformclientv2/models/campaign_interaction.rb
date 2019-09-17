@@ -125,11 +125,11 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'campaign' => :'UriReference',
+        :'campaign' => :'DomainEntityRef',
         
-        :'agent' => :'UriReference',
+        :'agent' => :'DomainEntityRef',
         
-        :'contact' => :'UriReference',
+        :'contact' => :'DomainEntityRef',
         
         :'destination_address' => :'String',
         
@@ -145,9 +145,9 @@ module PureCloud
         
         :'preview_connected_time' => :'DateTime',
         
-        :'queue' => :'UriReference',
+        :'queue' => :'DomainEntityRef',
         
-        :'script' => :'UriReference',
+        :'script' => :'DomainEntityRef',
         
         :'disposition' => :'String',
         
@@ -163,7 +163,7 @@ module PureCloud
         
         :'dialing_mode' => :'String',
         
-        :'skills' => :'Array<UriReference>'
+        :'skills' => :'Array<DomainEntityRef>'
         
       }
     end

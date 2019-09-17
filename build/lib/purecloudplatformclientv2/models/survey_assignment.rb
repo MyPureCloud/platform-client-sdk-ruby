@@ -56,7 +56,7 @@ module PureCloud
         
         :'survey_form' => :'PublishedSurveyFormReference',
         
-        :'flow' => :'UriReference',
+        :'flow' => :'DomainEntityRef',
         
         :'invite_time_interval' => :'String',
         

@@ -39,7 +39,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'conversation' => :'UriReference',
+        :'conversation' => :'DomainEntityRef',
         
         :'callback_identifiers' => :'Array<CallbackIdentifier>'
         

@@ -104,9 +104,9 @@ module PureCloud
         
         :'web_rtc_user_id' => :'String',
         
-        :'primary_edge' => :'UriReference',
+        :'primary_edge' => :'DomainEntityRef',
         
-        :'secondary_edge' => :'UriReference',
+        :'secondary_edge' => :'DomainEntityRef',
         
         :'type' => :'String',
         

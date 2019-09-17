@@ -84,7 +84,7 @@ module PureCloud
         
         :'version' => :'Integer',
         
-        :'contact_list' => :'UriReference',
+        :'contact_list' => :'DomainEntityRef',
         
         :'clauses' => :'Array<ContactListFilterClause>',
         

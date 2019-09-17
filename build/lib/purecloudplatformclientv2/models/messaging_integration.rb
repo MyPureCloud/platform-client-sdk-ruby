@@ -92,15 +92,15 @@ module PureCloud
         
         :'messenger_type' => :'String',
         
-        :'recipient' => :'UriReference',
+        :'recipient' => :'DomainEntityRef',
         
         :'date_created' => :'DateTime',
         
         :'date_modified' => :'DateTime',
         
-        :'created_by' => :'UriReference',
+        :'created_by' => :'DomainEntityRef',
         
-        :'modified_by' => :'UriReference',
+        :'modified_by' => :'DomainEntityRef',
         
         :'version' => :'Integer',
         

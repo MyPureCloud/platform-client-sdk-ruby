@@ -116,7 +116,7 @@ module PureCloud
         
         :'license_id' => :'String',
         
-        :'division' => :'UriReference',
+        :'division' => :'DomainEntityRef',
         
         :'self_uri' => :'String'
         

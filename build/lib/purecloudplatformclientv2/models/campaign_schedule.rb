@@ -87,7 +87,7 @@ module PureCloud
         
         :'time_zone' => :'String',
         
-        :'campaign' => :'UriReference',
+        :'campaign' => :'DomainEntityRef',
         
         :'self_uri' => :'String'
         

@@ -116,9 +116,9 @@ module PureCloud
         
         :'date_modified' => :'DateTime',
         
-        :'created_by' => :'UriReference',
+        :'created_by' => :'DomainEntityRef',
         
-        :'modified_by' => :'UriReference',
+        :'modified_by' => :'DomainEntityRef',
         
         :'scope' => :'Array<String>',
         

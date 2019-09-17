@@ -53,7 +53,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'campaign' => :'UriReference',
+        :'campaign' => :'DomainEntityRef',
         
         :'pending_interactions' => :'Array<CampaignInteraction>',
         

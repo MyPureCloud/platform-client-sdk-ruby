@@ -72,11 +72,11 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'workspace' => :'UriReference',
+        :'workspace' => :'DomainEntityRef',
         
         :'member_type' => :'String',
         
-        :'member' => :'UriReference',
+        :'member' => :'DomainEntityRef',
         
         :'user' => :'User',
         

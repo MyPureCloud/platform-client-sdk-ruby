@@ -154,9 +154,9 @@ module PureCloud
         
         :'created_by_app' => :'String',
         
-        :'primary_sites' => :'Array<UriReference>',
+        :'primary_sites' => :'Array<DomainEntityRef>',
         
-        :'secondary_sites' => :'Array<UriReference>',
+        :'secondary_sites' => :'Array<DomainEntityRef>',
         
         :'primary_edges' => :'Array<Edge>',
         

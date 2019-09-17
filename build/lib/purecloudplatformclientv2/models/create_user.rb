@@ -37,6 +37,9 @@ module PureCloud
     # The division to which this user will belong
     attr_accessor :division_id
 
+    # Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive.
+    attr_accessor :state
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -53,7 +56,9 @@ module PureCloud
         
         :'password' => :'password',
         
-        :'division_id' => :'divisionId'
+        :'division_id' => :'divisionId',
+        
+        :'state' => :'state'
         
       }
     end
@@ -74,7 +79,9 @@ module PureCloud
         
         :'password' => :'String',
         
-        :'division_id' => :'String'
+        :'division_id' => :'String',
+        
+        :'state' => :'String'
         
       }
     end
@@ -153,6 +160,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'state')
+        
+        
+        self.state = attributes[:'state']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -216,6 +232,15 @@ module PureCloud
       
       
       
+      
+      
+      allowed_values = ["active", "inactive", "deleted"]
+      if @state && !allowed_values.include?(@state)
+        return false
+      end
+      
+      
+      
     end
 
     
@@ -251,6 +276,20 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] state Object to be assigned
+    def state=(state)
+      allowed_values = ["active", "inactive", "deleted"]
+      if state && !allowed_values.include?(state)
+        fail ArgumentError, "invalid value for 'state', must be one of #{allowed_values}."
+      end
+      @state = state
+    end
+
     
     
     
@@ -265,7 +304,8 @@ module PureCloud
           addresses == o.addresses &&
           title == o.title &&
           password == o.password &&
-          division_id == o.division_id
+          division_id == o.division_id &&
+          state == o.state
     end
 
     # @see the `==` method
@@ -277,7 +317,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, department, email, addresses, title, password, division_id].hash
+      [name, department, email, addresses, title, password, division_id, state].hash
     end
 
     # build the object from hash

@@ -130,9 +130,9 @@ module PureCloud
         
         :'phone_number' => :'String',
         
-        :'did_pool' => :'UriReference',
+        :'did_pool' => :'DomainEntityRef',
         
-        :'owner' => :'UriReference',
+        :'owner' => :'DomainEntityRef',
         
         :'owner_type' => :'String',
         

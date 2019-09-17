@@ -18,8 +18,8 @@ title: Site
 | **state** | **String** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **modified_by_app** | **String** | The application that last modified the resource. | [optional] |
 | **created_by_app** | **String** | The application that created the resource. | [optional] |
-| **primary_sites** | [**Array&lt;UriReference&gt;**](UriReference.html) |  | [optional] |
-| **secondary_sites** | [**Array&lt;UriReference&gt;**](UriReference.html) |  | [optional] |
+| **primary_sites** | [**Array&lt;DomainEntityRef&gt;**](DomainEntityRef.html) |  | [optional] |
+| **secondary_sites** | [**Array&lt;DomainEntityRef&gt;**](DomainEntityRef.html) |  | [optional] |
 | **primary_edges** | [**Array&lt;Edge&gt;**](Edge.html) |  | [optional] |
 | **secondary_edges** | [**Array&lt;Edge&gt;**](Edge.html) |  | [optional] |
 | **addresses** | [**Array&lt;Contact&gt;**](Contact.html) |  | [optional] |

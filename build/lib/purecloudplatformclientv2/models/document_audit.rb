@@ -100,9 +100,9 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'user' => :'UriReference',
+        :'user' => :'DomainEntityRef',
         
-        :'workspace' => :'UriReference',
+        :'workspace' => :'DomainEntityRef',
         
         :'transaction_id' => :'String',
         

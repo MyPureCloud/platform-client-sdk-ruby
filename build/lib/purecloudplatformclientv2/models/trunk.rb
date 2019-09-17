@@ -193,19 +193,19 @@ module PureCloud
         
         :'trunk_type' => :'String',
         
-        :'edge' => :'UriReference',
+        :'edge' => :'DomainEntityRef',
         
-        :'trunk_base' => :'UriReference',
+        :'trunk_base' => :'DomainEntityRef',
         
-        :'trunk_metabase' => :'UriReference',
+        :'trunk_metabase' => :'DomainEntityRef',
         
-        :'edge_group' => :'UriReference',
+        :'edge_group' => :'DomainEntityRef',
         
         :'in_service' => :'BOOLEAN',
         
         :'enabled' => :'BOOLEAN',
         
-        :'logical_interface' => :'UriReference',
+        :'logical_interface' => :'DomainEntityRef',
         
         :'connected_status' => :'TrunkConnectedStatus',
         

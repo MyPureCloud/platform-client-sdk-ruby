@@ -20,6 +20,8 @@ module PureCloud
   class UserAuthorization
     attr_accessor :roles
 
+    attr_accessor :unused_roles
+
     # A collection of the permissions granted by all assigned roles
     attr_accessor :permissions
 
@@ -31,6 +33,8 @@ module PureCloud
       {
         
         :'roles' => :'roles',
+        
+        :'unused_roles' => :'unusedRoles',
         
         :'permissions' => :'permissions',
         
@@ -44,6 +48,8 @@ module PureCloud
       {
         
         :'roles' => :'Array<DomainRole>',
+        
+        :'unused_roles' => :'Array<DomainRole>',
         
         :'permissions' => :'Array<String>',
         
@@ -65,6 +71,17 @@ module PureCloud
         
         if (value = attributes[:'roles']).is_a?(Array)
           self.roles = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'unusedRoles')
+        
+        if (value = attributes[:'unusedRoles']).is_a?(Array)
+          self.unused_roles = value
         end
         
         
@@ -121,8 +138,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -145,6 +171,7 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           roles == o.roles &&
+          unused_roles == o.unused_roles &&
           permissions == o.permissions &&
           permission_policies == o.permission_policies
     end
@@ -158,7 +185,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [roles, permissions, permission_policies].hash
+      [roles, unused_roles, permissions, permission_policies].hash
     end
 
     # build the object from hash

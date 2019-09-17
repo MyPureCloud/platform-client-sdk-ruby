@@ -5823,7 +5823,7 @@ module PureCloud
     # Returns 200 if received OK.
     # @param contact_list_id ContactList ID
     # @param [Hash] opts the optional parameters
-    # @return [UriReference]
+    # @return [DomainEntityRef]
     def post_outbound_contactlist_export(contact_list_id, opts = {})
       data, _status_code, _headers = post_outbound_contactlist_export_with_http_info(contact_list_id, opts)
       return data
@@ -5833,7 +5833,7 @@ module PureCloud
     # Returns 200 if received OK.
     # @param contact_list_id ContactList ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(UriReference, Fixnum, Hash)>] UriReference data, response status code and response headers
+    # @return [Array<(DomainEntityRef, Fixnum, Hash)>] DomainEntityRef data, response status code and response headers
     def post_outbound_contactlist_export_with_http_info(contact_list_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_contactlist_export ..."
@@ -5877,7 +5877,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'UriReference')
+        :return_type => 'DomainEntityRef')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#post_outbound_contactlist_export\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -6147,7 +6147,7 @@ module PureCloud
     # Returns 200 if received OK.
     # @param dnc_list_id DncList ID
     # @param [Hash] opts the optional parameters
-    # @return [UriReference]
+    # @return [DomainEntityRef]
     def post_outbound_dnclist_export(dnc_list_id, opts = {})
       data, _status_code, _headers = post_outbound_dnclist_export_with_http_info(dnc_list_id, opts)
       return data
@@ -6157,7 +6157,7 @@ module PureCloud
     # Returns 200 if received OK.
     # @param dnc_list_id DncList ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(UriReference, Fixnum, Hash)>] UriReference data, response status code and response headers
+    # @return [Array<(DomainEntityRef, Fixnum, Hash)>] DomainEntityRef data, response status code and response headers
     def post_outbound_dnclist_export_with_http_info(dnc_list_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_dnclist_export ..."
@@ -6201,7 +6201,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'UriReference')
+        :return_type => 'DomainEntityRef')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#post_outbound_dnclist_export\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

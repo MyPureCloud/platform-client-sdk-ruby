@@ -14,9 +14,9 @@ title: Document
 | **date_modified** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **date_uploaded** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **content_uri** | **String** |  | [optional] |
-| **workspace** | [**UriReference**](UriReference.html) |  | [optional] |
-| **created_by** | [**UriReference**](UriReference.html) |  | [optional] |
-| **uploaded_by** | [**UriReference**](UriReference.html) |  | [optional] |
+| **workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **created_by** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **uploaded_by** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **content_type** | **String** |  | [optional] |
 | **content_length** | **Integer** |  | [optional] |
 | **system_type** | **String** |  | [optional] |
@@ -29,7 +29,7 @@ title: Document
 | **tag_values** | [**Array&lt;TagValue&gt;**](TagValue.html) |  | [optional] |
 | **attributes** | [**Array&lt;DocumentAttribute&gt;**](DocumentAttribute.html) |  | [optional] |
 | **thumbnails** | [**Array&lt;DocumentThumbnail&gt;**](DocumentThumbnail.html) |  | [optional] |
-| **upload_status** | [**UriReference**](UriReference.html) |  | [optional] |
+| **upload_status** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **upload_destination_uri** | **String** |  | [optional] |
 | **upload_method** | **String** |  | [optional] |
 | **lock_info** | [**LockInfo**](LockInfo.html) |  | [optional] |

@@ -33,7 +33,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'sms_address' => :'UriReference'
+        :'sms_address' => :'DomainEntityRef'
         
       }
     end

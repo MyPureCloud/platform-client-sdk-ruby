@@ -29,6 +29,9 @@ module PureCloud
     # The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :end_date
 
+    # Generation status of report
+    attr_accessor :status
+
     # The usages for the given period.
     attr_accessor :usages
 
@@ -46,6 +49,8 @@ module PureCloud
         :'start_date' => :'startDate',
         
         :'end_date' => :'endDate',
+        
+        :'status' => :'status',
         
         :'usages' => :'usages',
         
@@ -65,6 +70,8 @@ module PureCloud
         :'start_date' => :'DateTime',
         
         :'end_date' => :'DateTime',
+        
+        :'status' => :'String',
         
         :'usages' => :'Array<BillingUsage>',
         
@@ -113,6 +120,15 @@ module PureCloud
         
         
         self.end_date = attributes[:'endDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'status')
+        
+        
+        self.status = attributes[:'status']
         
       
       end
@@ -180,6 +196,15 @@ module PureCloud
       
       
       
+      
+      allowed_values = ["InProgress", "Complete"]
+      if @status && !allowed_values.include?(@status)
+        return false
+      end
+      
+      
+      
+      
       if @usages.nil?
         return false
       end
@@ -216,6 +241,20 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      allowed_values = ["InProgress", "Complete"]
+      if status && !allowed_values.include?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
+      end
+      @status = status
+    end
+
+    
+    
+    
+    
     
     
     
@@ -234,6 +273,7 @@ module PureCloud
           name == o.name &&
           start_date == o.start_date &&
           end_date == o.end_date &&
+          status == o.status &&
           usages == o.usages &&
           self_uri == o.self_uri
     end
@@ -247,7 +287,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, start_date, end_date, usages, self_uri].hash
+      [id, name, start_date, end_date, status, usages, self_uri].hash
     end
 
     # build the object from hash

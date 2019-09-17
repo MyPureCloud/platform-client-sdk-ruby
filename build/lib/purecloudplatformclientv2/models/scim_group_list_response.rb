@@ -19,19 +19,19 @@ require 'date'
 module PureCloud
   # SCIM Group List Response
   class ScimGroupListResponse
-    # Total Results
+    # The total number of results.
     attr_accessor :total_results
 
-    # Start index
+    # The 1-based index of the first result returned by this request. Add this to itemsPerPage when requesting the next page of results.
     attr_accessor :start_index
 
-    # Items per Page
+    # The number of resources returned per page.
     attr_accessor :items_per_page
 
     # Resources
     attr_accessor :resources
 
-    # schemas supported
+    # The list of supported schemas.
     attr_accessor :schemas
 
     # Attribute mapping from ruby-style variable name to JSON key.

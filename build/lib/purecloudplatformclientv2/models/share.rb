@@ -81,15 +81,15 @@ module PureCloud
         
         :'shared_entity_type' => :'String',
         
-        :'shared_entity' => :'UriReference',
+        :'shared_entity' => :'DomainEntityRef',
         
         :'member_type' => :'String',
         
-        :'member' => :'UriReference',
+        :'member' => :'DomainEntityRef',
         
-        :'shared_by' => :'UriReference',
+        :'shared_by' => :'DomainEntityRef',
         
-        :'workspace' => :'UriReference',
+        :'workspace' => :'DomainEntityRef',
         
         :'user' => :'User',
         

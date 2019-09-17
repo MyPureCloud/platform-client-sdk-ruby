@@ -17,12 +17,12 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # User's Manager
+  # The user's manager.
   class Manager
     # The ID of the manager.
     attr_accessor :value
 
-    # URI for Manager User record.
+    # The URI of the manager's user record.
     attr_accessor :ref
 
     # Attribute mapping from ruby-style variable name to JSON key.

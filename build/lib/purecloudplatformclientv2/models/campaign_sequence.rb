@@ -93,7 +93,7 @@ module PureCloud
         
         :'version' => :'Integer',
         
-        :'campaigns' => :'Array<UriReference>',
+        :'campaigns' => :'Array<DomainEntityRef>',
         
         :'current_campaign' => :'Integer',
         

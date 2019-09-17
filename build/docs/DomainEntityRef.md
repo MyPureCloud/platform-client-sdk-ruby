@@ -1,7 +1,7 @@
 ---
-title: UriReference
+title: DomainEntityRef
 ---
-## PureCloud::UriReference
+## PureCloud::DomainEntityRef
 
 ## Properties
 

@@ -204,17 +204,17 @@ module PureCloud
         
         :'version' => :'Integer',
         
-        :'contact_list' => :'UriReference',
+        :'contact_list' => :'DomainEntityRef',
         
-        :'queue' => :'UriReference',
+        :'queue' => :'DomainEntityRef',
         
         :'dialing_mode' => :'String',
         
-        :'script' => :'UriReference',
+        :'script' => :'DomainEntityRef',
         
-        :'edge_group' => :'UriReference',
+        :'edge_group' => :'DomainEntityRef',
         
-        :'site' => :'UriReference',
+        :'site' => :'DomainEntityRef',
         
         :'campaign_status' => :'String',
         
@@ -222,11 +222,11 @@ module PureCloud
         
         :'abandon_rate' => :'Float',
         
-        :'dnc_lists' => :'Array<UriReference>',
+        :'dnc_lists' => :'Array<DomainEntityRef>',
         
-        :'callable_time_set' => :'UriReference',
+        :'callable_time_set' => :'DomainEntityRef',
         
-        :'call_analysis_response_set' => :'UriReference',
+        :'call_analysis_response_set' => :'DomainEntityRef',
         
         :'errors' => :'Array<RestErrorDetail>',
         
@@ -236,7 +236,7 @@ module PureCloud
         
         :'outbound_line_count' => :'Integer',
         
-        :'rule_sets' => :'Array<UriReference>',
+        :'rule_sets' => :'Array<DomainEntityRef>',
         
         :'skip_preview_disabled' => :'BOOLEAN',
         
@@ -254,9 +254,9 @@ module PureCloud
         
         :'priority' => :'Integer',
         
-        :'contact_list_filters' => :'Array<UriReference>',
+        :'contact_list_filters' => :'Array<DomainEntityRef>',
         
-        :'division' => :'UriReference',
+        :'division' => :'DomainEntityRef',
         
         :'self_uri' => :'String'
         

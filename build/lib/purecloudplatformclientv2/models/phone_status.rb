@@ -94,7 +94,7 @@ module PureCloud
         
         :'phone_assignment_to_edge_type' => :'String',
         
-        :'edge' => :'UriReference',
+        :'edge' => :'DomainEntityRef',
         
         :'self_uri' => :'String'
         

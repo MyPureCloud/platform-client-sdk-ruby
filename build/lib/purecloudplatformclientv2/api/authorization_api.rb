@@ -912,6 +912,7 @@ module PureCloud
     # Get the organization role specified by its ID.
     # @param role_id Role ID
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :expand Which fields, if any, to expand.
     # @return [DomainOrganizationRole]
     def get_authorization_role(role_id, opts = {})
       data, _status_code, _headers = get_authorization_role_with_http_info(role_id, opts)
@@ -922,6 +923,7 @@ module PureCloud
     # Get the organization role specified by its ID.
     # @param role_id Role ID
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :expand Which fields, if any, to expand.
     # @return [Array<(DomainOrganizationRole, Fixnum, Hash)>] DomainOrganizationRole data, response status code and response headers
     def get_authorization_role_with_http_info(role_id, opts = {})
       if @api_client.config.debugging
@@ -936,11 +938,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/roles/{roleId}".sub('{format}','json').sub('{' + 'roleId' + '}', role_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
 
       # header parameters
       header_params = {}

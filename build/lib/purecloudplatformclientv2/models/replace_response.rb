@@ -59,7 +59,7 @@ module PureCloud
         
         :'change_number' => :'Integer',
         
-        :'upload_status' => :'UriReference',
+        :'upload_status' => :'DomainEntityRef',
         
         :'upload_destination_uri' => :'String',
         

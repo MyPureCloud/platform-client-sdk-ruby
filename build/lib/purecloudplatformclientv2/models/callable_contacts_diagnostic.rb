@@ -49,13 +49,13 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'attempt_limits' => :'UriReference',
+        :'attempt_limits' => :'DomainEntityRef',
         
-        :'dnc_lists' => :'Array<UriReference>',
+        :'dnc_lists' => :'Array<DomainEntityRef>',
         
-        :'callable_time_set' => :'UriReference',
+        :'callable_time_set' => :'DomainEntityRef',
         
-        :'rule_sets' => :'Array<UriReference>'
+        :'rule_sets' => :'Array<DomainEntityRef>'
         
       }
     end

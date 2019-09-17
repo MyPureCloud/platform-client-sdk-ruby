@@ -76,9 +76,9 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'error_entity' => :'UriReference',
+        :'error_entity' => :'DomainEntityRef',
         
-        :'related_entity' => :'UriReference',
+        :'related_entity' => :'DomainEntityRef',
         
         :'timestamp' => :'DateTime',
         

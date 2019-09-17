@@ -19,16 +19,13 @@ require 'date'
 module PureCloud
   # SCIM Members of Group Reference
   class ScimV2MemberReference
-    # SCIM Resource Type of member
+    # The SCIM resource type. Can be user or group.
     attr_accessor :type
-
-    # Resource SCIM meta
-    attr_accessor :meta
 
     # The ID of the group member. Can be userId or groupId.
     attr_accessor :value
 
-    # Ref to entity
+    # The reference URI of the SCIM resource.
     attr_accessor :ref
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -36,8 +33,6 @@ module PureCloud
       {
         
         :'type' => :'type',
-        
-        :'meta' => :'meta',
         
         :'value' => :'value',
         
@@ -51,8 +46,6 @@ module PureCloud
       {
         
         :'type' => :'String',
-        
-        :'meta' => :'ScimMetadata',
         
         :'value' => :'String',
         
@@ -74,15 +67,6 @@ module PureCloud
         
         
         self.type = attributes[:'type']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'meta')
-        
-        
-        self.meta = attributes[:'meta']
         
       
       end
@@ -138,10 +122,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
     
@@ -169,18 +149,12 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
           type == o.type &&
-          meta == o.meta &&
           value == o.value &&
           ref == o.ref
     end
@@ -194,7 +168,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, meta, value, ref].hash
+      [type, value, ref].hash
     end
 
     # build the object from hash

@@ -119,7 +119,7 @@ module PureCloud
         
         :'created_by_app' => :'String',
         
-        :'line_meta_base' => :'UriReference',
+        :'line_meta_base' => :'DomainEntityRef',
         
         :'properties' => :'Hash<String, Object>',
         

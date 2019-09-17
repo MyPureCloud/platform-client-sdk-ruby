@@ -19,23 +19,18 @@ require 'date'
 module PureCloud
   # SCIM Group Reference
   class ScimV2GroupReference
-    # Resource SCIM meta
-    attr_accessor :meta
-
-    # SCIM Resource Type of member
+    # The SCIM resource type. Can be user or group.
     attr_accessor :type
 
     # The ID of the group member. Can be userId or groupId.
     attr_accessor :value
 
-    # Ref to entity
+    # The reference URI of the SCIM resource.
     attr_accessor :ref
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        
-        :'meta' => :'meta',
         
         :'type' => :'type',
         
@@ -49,8 +44,6 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        
-        :'meta' => :'ScimMetadata',
         
         :'type' => :'String',
         
@@ -68,15 +61,6 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes.has_key?(:'meta')
-        
-        
-        self.meta = attributes[:'meta']
-        
-      
-      end
 
       
       if attributes.has_key?(:'type')
@@ -123,10 +107,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
       allowed_values = ["User", "Group", "ServiceProviderConfig"]
       if @type && !allowed_values.include?(@type)
         return false
@@ -144,11 +124,6 @@ module PureCloud
       
     end
 
-    
-    
-    
-    
-    
     
     
     # Custom attribute writer method checking allowed values (enum).
@@ -179,7 +154,6 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          meta == o.meta &&
           type == o.type &&
           value == o.value &&
           ref == o.ref
@@ -194,7 +168,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [meta, type, value, ref].hash
+      [type, value, ref].hash
     end
 
     # build the object from hash

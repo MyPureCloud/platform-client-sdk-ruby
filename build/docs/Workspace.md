@@ -11,7 +11,7 @@ title: Workspace
 | **name** | **String** | The current name of the workspace. | |
 | **type** | **String** |  | [optional] |
 | **is_current_user_workspace** | **BOOLEAN** |  | [optional] |
-| **user** | [**UriReference**](UriReference.html) |  | [optional] |
+| **user** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **bucket** | **String** |  | [optional] |
 | **date_created** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **date_modified** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

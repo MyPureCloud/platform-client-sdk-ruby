@@ -18,7 +18,7 @@ title: PhoneBase
 | **state** | **String** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **modified_by_app** | **String** | The application that last modified the resource. | [optional] |
 | **created_by_app** | **String** | The application that created the resource. | [optional] |
-| **phone_meta_base** | [**UriReference**](UriReference.html) | A phone metabase is essentially a database for storing phone configuration settings, which simplifies the configuration process. | |
+| **phone_meta_base** | [**DomainEntityRef**](DomainEntityRef.html) | A phone metabase is essentially a database for storing phone configuration settings, which simplifies the configuration process. | |
 | **lines** | [**Array&lt;LineBase&gt;**](LineBase.html) | The list of linebases associated with the phone base. | |
 | **properties** | **Hash&lt;String, Object&gt;** |  | [optional] |
 | **capabilities** | [**PhoneCapabilities**](PhoneCapabilities.html) |  | [optional] |

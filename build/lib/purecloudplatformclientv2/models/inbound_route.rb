@@ -104,25 +104,25 @@ module PureCloud
         
         :'pattern' => :'String',
         
-        :'queue' => :'UriReference',
+        :'queue' => :'DomainEntityRef',
         
         :'priority' => :'Integer',
         
-        :'skills' => :'Array<UriReference>',
+        :'skills' => :'Array<DomainEntityRef>',
         
-        :'language' => :'UriReference',
+        :'language' => :'DomainEntityRef',
         
         :'from_name' => :'String',
         
         :'from_email' => :'String',
         
-        :'flow' => :'UriReference',
+        :'flow' => :'DomainEntityRef',
         
         :'reply_email_address' => :'QueueEmailAddress',
         
         :'auto_bcc' => :'Array<EmailAddress>',
         
-        :'spam_flow' => :'UriReference',
+        :'spam_flow' => :'DomainEntityRef',
         
         :'self_uri' => :'String'
         

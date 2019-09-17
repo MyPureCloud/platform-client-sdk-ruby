@@ -19,9 +19,9 @@ title: ScheduleGroup
 | **modified_by_app** | **String** | The application that last modified the resource. | [optional] |
 | **created_by_app** | **String** | The application that created the resource. | [optional] |
 | **time_zone** | **String** | The timezone the schedules are a part of.  This is not a schedule property to allow a schedule to be used in multiple timezones. | [optional] |
-| **open_schedules** | [**Array&lt;UriReference&gt;**](UriReference.html) | The schedules defining the hours an organization is open. | [optional] |
-| **closed_schedules** | [**Array&lt;UriReference&gt;**](UriReference.html) | The schedules defining the hours an organization is closed. | [optional] |
-| **holiday_schedules** | [**Array&lt;UriReference&gt;**](UriReference.html) | The schedules defining the hours an organization is closed for the holidays. | [optional] |
+| **open_schedules** | [**Array&lt;DomainEntityRef&gt;**](DomainEntityRef.html) | The schedules defining the hours an organization is open. | [optional] |
+| **closed_schedules** | [**Array&lt;DomainEntityRef&gt;**](DomainEntityRef.html) | The schedules defining the hours an organization is closed. | [optional] |
+| **holiday_schedules** | [**Array&lt;DomainEntityRef&gt;**](DomainEntityRef.html) | The schedules defining the hours an organization is closed for the holidays. | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

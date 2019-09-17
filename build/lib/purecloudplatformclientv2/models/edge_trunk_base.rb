@@ -125,7 +125,7 @@ module PureCloud
         
         :'created_by_app' => :'String',
         
-        :'trunk_metabase' => :'UriReference',
+        :'trunk_metabase' => :'DomainEntityRef',
         
         :'properties' => :'Hash<String, Object>',
         

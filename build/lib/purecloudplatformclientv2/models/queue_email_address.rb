@@ -37,7 +37,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'domain' => :'UriReference',
+        :'domain' => :'DomainEntityRef',
         
         :'route' => :'InboundRoute'
         

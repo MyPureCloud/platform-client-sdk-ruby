@@ -8,7 +8,7 @@ title: SecureSession
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **id** | **String** | The globally unique identifier for the object. | [optional] |
-| **flow** | [**UriReference**](UriReference.html) | The flow to execute securely | |
+| **flow** | [**DomainEntityRef**](DomainEntityRef.html) | The flow to execute securely | |
 | **user_data** | **String** | Customer-provided data | [optional] |
 | **state** | **String** | The current state of a secure session | |
 | **source_participant_id** | **String** | Unique identifier for the participant initiating the secure session. | [optional] |

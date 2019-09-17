@@ -74,7 +74,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'queue' => :'UriReference',
+        :'queue' => :'DomainEntityRef',
         
         :'users_in_queue' => :'Integer',
         

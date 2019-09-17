@@ -838,7 +838,7 @@ This endpoint does not need any parameter.
 
 <a name="get_authorization_role"></a>
 
-## [**DomainOrganizationRole**](DomainOrganizationRole.html) get_authorization_role(role_id)
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) get_authorization_role(role_id, opts)
 
 
 
@@ -872,10 +872,13 @@ api_instance = PureCloud::AuthorizationApi.new
 
 role_id = "role_id_example" # String | Role ID
 
+opts = { 
+  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand.
+}
 
 begin
   #Get a single organization role.
-  result = api_instance.get_authorization_role(role_id)
+  result = api_instance.get_authorization_role(role_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->get_authorization_role: #{e}"
@@ -887,6 +890,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role_id** | **String**| Role ID |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: unusedPermissions |
 {: class="table table-striped"}
 
 

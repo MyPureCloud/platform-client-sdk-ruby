@@ -21,7 +21,7 @@ module PureCloud
     # The aws-s3-recording-bulk-actions-integration that the policy uses for exports.
     attr_accessor :integration
 
-    # True if the policy should export screen recordings in addition to the other conversation media. Default = true
+    # True if the policy should export screen recordings in addition to the other conversation media. Default = false
     attr_accessor :should_export_screen_recordings
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -39,7 +39,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'integration' => :'UriReference',
+        :'integration' => :'DomainEntityRef',
         
         :'should_export_screen_recordings' => :'BOOLEAN'
         
@@ -88,6 +88,11 @@ module PureCloud
     # @return true if the model is valid
     def valid?
       
+      
+      if @integration.nil?
+        return false
+      end
+
       
       
       

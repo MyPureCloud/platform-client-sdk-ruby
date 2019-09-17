@@ -74,7 +74,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'contact_list' => :'UriReference',
+        :'contact_list' => :'DomainEntityRef',
         
         :'contacts_per_time_zone' => :'Hash<String, Integer>',
         

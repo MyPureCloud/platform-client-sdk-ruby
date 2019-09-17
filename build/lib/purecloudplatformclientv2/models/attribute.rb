@@ -78,11 +78,11 @@ module PureCloud
         
         :'description' => :'String',
         
-        :'created_by' => :'UriReference',
+        :'created_by' => :'DomainEntityRef',
         
         :'date_created' => :'DateTime',
         
-        :'modified_by' => :'UriReference',
+        :'modified_by' => :'DomainEntityRef',
         
         :'date_modified' => :'DateTime',
         

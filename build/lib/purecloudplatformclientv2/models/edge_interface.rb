@@ -71,7 +71,7 @@ module PureCloud
         
         :'if_name' => :'String',
         
-        :'endpoints' => :'Array<UriReference>',
+        :'endpoints' => :'Array<DomainEntityRef>',
         
         :'line_types' => :'Array<String>',
         

@@ -88,7 +88,7 @@ module PureCloud
         
         :'disabled' => :'BOOLEAN',
         
-        :'flow' => :'UriReference',
+        :'flow' => :'DomainEntityRef',
         
         :'allowed_domains' => :'Array<String>',
         

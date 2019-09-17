@@ -10,7 +10,7 @@ title: Response
 | **id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **version** | **Integer** | Version number required for updates. | [optional] |
-| **libraries** | [**Array&lt;UriReference&gt;**](UriReference.html) | One or more libraries response is associated with. | |
+| **libraries** | [**Array&lt;DomainEntityRef&gt;**](DomainEntityRef.html) | One or more libraries response is associated with. | |
 | **texts** | [**Array&lt;ResponseText&gt;**](ResponseText.html) | One or more texts associated with the response. | |
 | **created_by** | [**User**](User.html) | User that created the response | [optional] |
 | **date_created** | **DateTime** | The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

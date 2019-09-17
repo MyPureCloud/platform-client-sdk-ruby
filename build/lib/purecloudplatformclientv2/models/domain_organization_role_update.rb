@@ -30,6 +30,8 @@ module PureCloud
 
     attr_accessor :permissions
 
+    attr_accessor :unused_permissions
+
     attr_accessor :permission_policies
 
     attr_accessor :user_count
@@ -57,6 +59,8 @@ module PureCloud
         :'default_role_id' => :'defaultRoleId',
         
         :'permissions' => :'permissions',
+        
+        :'unused_permissions' => :'unusedPermissions',
         
         :'permission_policies' => :'permissionPolicies',
         
@@ -86,6 +90,8 @@ module PureCloud
         :'default_role_id' => :'String',
         
         :'permissions' => :'Array<String>',
+        
+        :'unused_permissions' => :'Array<String>',
         
         :'permission_policies' => :'Array<DomainPermissionPolicy>',
         
@@ -151,6 +157,17 @@ module PureCloud
         
         if (value = attributes[:'permissions']).is_a?(Array)
           self.permissions = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'unusedPermissions')
+        
+        if (value = attributes[:'unusedPermissions']).is_a?(Array)
+          self.unused_permissions = value
         end
         
         
@@ -278,8 +295,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -346,6 +372,7 @@ module PureCloud
           description == o.description &&
           default_role_id == o.default_role_id &&
           permissions == o.permissions &&
+          unused_permissions == o.unused_permissions &&
           permission_policies == o.permission_policies &&
           user_count == o.user_count &&
           role_needs_update == o.role_needs_update &&
@@ -363,7 +390,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, default_role_id, permissions, permission_policies, user_count, role_needs_update, default, base, self_uri].hash
+      [id, name, description, default_role_id, permissions, unused_permissions, permission_policies, user_count, role_needs_update, default, base, self_uri].hash
     end
 
     # build the object from hash

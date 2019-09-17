@@ -18,7 +18,7 @@ title: EdgeTrunkBase
 | **state** | **String** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **modified_by_app** | **String** | The application that last modified the resource. | [optional] |
 | **created_by_app** | **String** | The application that created the resource. | [optional] |
-| **trunk_metabase** | [**UriReference**](UriReference.html) | The meta-base this trunk is based on. | |
+| **trunk_metabase** | [**DomainEntityRef**](DomainEntityRef.html) | The meta-base this trunk is based on. | |
 | **properties** | **Hash&lt;String, Object&gt;** |  | [optional] |
 | **trunk_type** | **String** | The type of this trunk base. | |
 | **self_uri** | **String** | The URI for this object | [optional] |

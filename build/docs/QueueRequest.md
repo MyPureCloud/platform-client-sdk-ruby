@@ -20,8 +20,8 @@ title: QueueRequest
 | **bullseye** | [**Bullseye**](Bullseye.html) | The bulls-eye settings for the queue. | [optional] |
 | **acw_settings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | [optional] |
 | **skill_evaluation_method** | **String** | The skill evaluation method to use when routing conversations. | [optional] |
-| **queue_flow** | [**UriReference**](UriReference.html) | The in-queue flow to use for conversations waiting in queue. | [optional] |
-| **whisper_prompt** | [**UriReference**](UriReference.html) | The prompt used for whisper on the queue, if configured. | [optional] |
+| **queue_flow** | [**DomainEntityRef**](DomainEntityRef.html) | The in-queue flow to use for conversations waiting in queue. | [optional] |
+| **whisper_prompt** | [**DomainEntityRef**](DomainEntityRef.html) | The prompt used for whisper on the queue, if configured. | [optional] |
 | **auto_answer_only** | **BOOLEAN** | Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered. | [optional] |
 | **calling_party_name** | **String** | The name to use for caller identification for outbound calls from this queue. | [optional] |
 | **calling_party_number** | **String** | The phone number to use for caller identification for outbound calls from this queue. | [optional] |

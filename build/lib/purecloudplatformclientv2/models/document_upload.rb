@@ -49,7 +49,7 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'workspace' => :'UriReference',
+        :'workspace' => :'DomainEntityRef',
         
         :'tags' => :'Array<String>',
         

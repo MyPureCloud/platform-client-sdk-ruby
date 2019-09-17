@@ -8,7 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
-[**get_billing_reports_billableusage**](BillingApi.html#get_billing_reports_billableusage) | Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+[**get_billing_reports_billableusage**](BillingApi.html#get_billing_reports_billableusage) | Get a report of the billable license usages
 [**get_billing_trusteebillingoverview_trustor_org_id**](BillingApi.html#get_billing_trusteebillingoverview_trustor_org_id) | Get the billing overview for an organization that is managed by a partner.
 {: class="table table-striped"}
 
@@ -18,9 +18,9 @@ Method | Description
 
 
 
-Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+Get a report of the billable license usages
 
-
+Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
 
 Wraps GET /api/v2/billing/reports/billableusage 
 
@@ -55,7 +55,7 @@ end_date = DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | The period e
 
 
 begin
-  #Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+  #Get a report of the billable license usages
   result = api_instance.get_billing_reports_billableusage(start_date, end_date)
   p result
 rescue PureCloud::ApiError => e

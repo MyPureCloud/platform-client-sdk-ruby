@@ -24,8 +24,11 @@ module PureCloud
     # The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :action_date
 
-    # Integration ID
+    # Integration ID (Required only for EXPORT action)
     attr_accessor :integration_id
+
+    # Include Screen recordings for export action, default value = true 
+    attr_accessor :include_screen_recordings
 
     # Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.
     attr_accessor :conversation_query
@@ -39,6 +42,8 @@ module PureCloud
         :'action_date' => :'actionDate',
         
         :'integration_id' => :'integrationId',
+        
+        :'include_screen_recordings' => :'includeScreenRecordings',
         
         :'conversation_query' => :'conversationQuery'
         
@@ -54,6 +59,8 @@ module PureCloud
         :'action_date' => :'DateTime',
         
         :'integration_id' => :'String',
+        
+        :'include_screen_recordings' => :'BOOLEAN',
         
         :'conversation_query' => :'AsyncConversationQuery'
         
@@ -91,6 +98,15 @@ module PureCloud
         
         
         self.integration_id = attributes[:'integrationId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'includeScreenRecordings')
+        
+        
+        self.include_screen_recordings = attributes[:'includeScreenRecordings']
         
       
       end
@@ -144,10 +160,9 @@ module PureCloud
       
       
       
-      if @integration_id.nil?
-        return false
-      end
-
+      
+      
+      
       
       
       
@@ -193,6 +208,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -201,6 +221,7 @@ module PureCloud
           action == o.action &&
           action_date == o.action_date &&
           integration_id == o.integration_id &&
+          include_screen_recordings == o.include_screen_recordings &&
           conversation_query == o.conversation_query
     end
 
@@ -213,7 +234,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [action, action_date, integration_id, conversation_query].hash
+      [action, action_date, integration_id, include_screen_recordings, conversation_query].hash
     end
 
     # build the object from hash

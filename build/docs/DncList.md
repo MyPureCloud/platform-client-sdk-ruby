@@ -18,7 +18,7 @@ title: DncList
 | **login_id** | **String** | A dnc.com loginId. Required if the dncSourceType is dnc.com. | [optional] |
 | **dnc_codes** | **Array&lt;String&gt;** | The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com. | [optional] |
 | **license_id** | **String** | A gryphon license number. Required if the dncSourceType is gryphon. | [optional] |
-| **division** | [**UriReference**](UriReference.html) | The division this DncList belongs to. | [optional] |
+| **division** | [**DomainEntityRef**](DomainEntityRef.html) | The division this DncList belongs to. | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

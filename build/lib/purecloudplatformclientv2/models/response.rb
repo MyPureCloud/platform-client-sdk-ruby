@@ -90,7 +90,7 @@ module PureCloud
         
         :'version' => :'Integer',
         
-        :'libraries' => :'Array<UriReference>',
+        :'libraries' => :'Array<DomainEntityRef>',
         
         :'texts' => :'Array<ResponseText>',
         

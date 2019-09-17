@@ -134,11 +134,11 @@ module PureCloud
         
         :'time_zone' => :'String',
         
-        :'open_schedules' => :'Array<UriReference>',
+        :'open_schedules' => :'Array<DomainEntityRef>',
         
-        :'closed_schedules' => :'Array<UriReference>',
+        :'closed_schedules' => :'Array<DomainEntityRef>',
         
-        :'holiday_schedules' => :'Array<UriReference>',
+        :'holiday_schedules' => :'Array<DomainEntityRef>',
         
         :'self_uri' => :'String'
         

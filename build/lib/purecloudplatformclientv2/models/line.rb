@@ -151,21 +151,21 @@ module PureCloud
         
         :'properties' => :'Hash<String, Object>',
         
-        :'edge_group' => :'UriReference',
+        :'edge_group' => :'DomainEntityRef',
         
-        :'template' => :'UriReference',
+        :'template' => :'DomainEntityRef',
         
-        :'site' => :'UriReference',
+        :'site' => :'DomainEntityRef',
         
-        :'line_base_settings' => :'UriReference',
+        :'line_base_settings' => :'DomainEntityRef',
         
         :'primary_edge' => :'Edge',
         
         :'secondary_edge' => :'Edge',
         
-        :'logged_in_user' => :'UriReference',
+        :'logged_in_user' => :'DomainEntityRef',
         
-        :'default_for_user' => :'UriReference',
+        :'default_for_user' => :'DomainEntityRef',
         
         :'self_uri' => :'String'
         

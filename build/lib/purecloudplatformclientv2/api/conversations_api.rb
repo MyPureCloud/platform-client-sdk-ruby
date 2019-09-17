@@ -24,6 +24,70 @@ module PureCloud
       @api_client = api_client
     end
 
+    # Delete/cancel an async request
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_analytics_conversations_details_job(job_id, opts = {})
+      delete_analytics_conversations_details_job_with_http_info(job_id, opts)
+      return nil
+    end
+
+    # Delete/cancel an async request
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_analytics_conversations_details_job_with_http_info(job_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.delete_analytics_conversations_details_job ..."
+      end
+      
+      
+      # verify the required parameter 'job_id' is set
+      fail ArgumentError, "Missing the required parameter 'job_id' when calling ConversationsApi.delete_analytics_conversations_details_job" if job_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/analytics/conversations/details/jobs/{jobId}".sub('{format}','json').sub('{' + 'jobId' + '}', job_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#delete_analytics_conversations_details_job\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete a code used to add a communication to this participant
     # 
     # @param conversation_id conversation ID
@@ -647,6 +711,145 @@ module PureCloud
         :return_type => 'AnalyticsConversationMultiGetResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#get_analytics_conversations_details\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get status for async query for conversation details
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @return [AsyncQueryStatus]
+    def get_analytics_conversations_details_job(job_id, opts = {})
+      data, _status_code, _headers = get_analytics_conversations_details_job_with_http_info(job_id, opts)
+      return data
+    end
+
+    # Get status for async query for conversation details
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AsyncQueryStatus, Fixnum, Hash)>] AsyncQueryStatus data, response status code and response headers
+    def get_analytics_conversations_details_job_with_http_info(job_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_analytics_conversations_details_job ..."
+      end
+      
+      
+      # verify the required parameter 'job_id' is set
+      fail ArgumentError, "Missing the required parameter 'job_id' when calling ConversationsApi.get_analytics_conversations_details_job" if job_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/analytics/conversations/details/jobs/{jobId}".sub('{format}','json').sub('{' + 'jobId' + '}', job_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AsyncQueryStatus')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_analytics_conversations_details_job\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Fetch a page of results for an async query
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :cursor Indicates where to resume query results (not required for first page)
+    # @return [AnalyticsConversationAsyncQueryResponse]
+    def get_analytics_conversations_details_job_results(job_id, opts = {})
+      data, _status_code, _headers = get_analytics_conversations_details_job_results_with_http_info(job_id, opts)
+      return data
+    end
+
+    # Fetch a page of results for an async query
+    # 
+    # @param job_id jobId
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :cursor Indicates where to resume query results (not required for first page)
+    # @return [Array<(AnalyticsConversationAsyncQueryResponse, Fixnum, Hash)>] AnalyticsConversationAsyncQueryResponse data, response status code and response headers
+    def get_analytics_conversations_details_job_results_with_http_info(job_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_analytics_conversations_details_job_results ..."
+      end
+      
+      
+      # verify the required parameter 'job_id' is set
+      fail ArgumentError, "Missing the required parameter 'job_id' when calling ConversationsApi.get_analytics_conversations_details_job_results" if job_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/analytics/conversations/details/jobs/{jobId}/results".sub('{format}','json').sub('{' + 'jobId' + '}', job_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'cursor'] = opts[:'cursor'] if opts[:'cursor']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AnalyticsConversationAsyncQueryResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_analytics_conversations_details_job_results\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3771,6 +3974,144 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get a list of WhatsApp Integrations
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @return [WhatsAppIntegrationEntityListing]
+    def get_conversations_messaging_integrations_whatsapp(opts = {})
+      data, _status_code, _headers = get_conversations_messaging_integrations_whatsapp_with_http_info(opts)
+      return data
+    end
+
+    # Get a list of WhatsApp Integrations
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @return [Array<(WhatsAppIntegrationEntityListing, Fixnum, Hash)>] WhatsAppIntegrationEntityListing data, response status code and response headers
+    def get_conversations_messaging_integrations_whatsapp_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_messaging_integrations_whatsapp ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messaging/integrations/whatsapp".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WhatsAppIntegrationEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_messaging_integrations_whatsapp\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a WhatsApp messaging integration
+    # 
+    # @param integration_id Integration ID
+    # @param [Hash] opts the optional parameters
+    # @return [WhatsAppIntegration]
+    def get_conversations_messaging_integrations_whatsapp_integration_id(integration_id, opts = {})
+      data, _status_code, _headers = get_conversations_messaging_integrations_whatsapp_integration_id_with_http_info(integration_id, opts)
+      return data
+    end
+
+    # Get a WhatsApp messaging integration
+    # 
+    # @param integration_id Integration ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WhatsAppIntegration, Fixnum, Hash)>] WhatsAppIntegration data, response status code and response headers
+    def get_conversations_messaging_integrations_whatsapp_integration_id_with_http_info(integration_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_messaging_integrations_whatsapp_integration_id ..."
+      end
+      
+      
+      # verify the required parameter 'integration_id' is set
+      fail ArgumentError, "Missing the required parameter 'integration_id' when calling ConversationsApi.get_conversations_messaging_integrations_whatsapp_integration_id" if integration_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}".sub('{format}','json').sub('{' + 'integrationId' + '}', integration_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WhatsAppIntegration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_messaging_integrations_whatsapp_integration_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a list of Messaging Stickers
     # 
     # @param messenger_type Messenger Type
@@ -6127,6 +6468,81 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Activate a WhatsApp messaging integration.
+    # The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+    # @param integration_id Integration ID
+    # @param body WhatsAppIntegrationUpdateRequest
+    # @param [Hash] opts the optional parameters
+    # @return [WhatsAppIntegration]
+    def patch_conversations_messaging_integrations_whatsapp_integration_id(integration_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_messaging_integrations_whatsapp_integration_id_with_http_info(integration_id, body, opts)
+      return data
+    end
+
+    # Activate a WhatsApp messaging integration.
+    # The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+    # @param integration_id Integration ID
+    # @param body WhatsAppIntegrationUpdateRequest
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WhatsAppIntegration, Fixnum, Hash)>] WhatsAppIntegration data, response status code and response headers
+    def patch_conversations_messaging_integrations_whatsapp_integration_id_with_http_info(integration_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_messaging_integrations_whatsapp_integration_id ..."
+      end
+      
+      
+      # verify the required parameter 'integration_id' is set
+      fail ArgumentError, "Missing the required parameter 'integration_id' when calling ConversationsApi.patch_conversations_messaging_integrations_whatsapp_integration_id" if integration_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_messaging_integrations_whatsapp_integration_id" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}".sub('{format}','json').sub('{' + 'integrationId' + '}', integration_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WhatsAppIntegration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#patch_conversations_messaging_integrations_whatsapp_integration_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Index conversation properties
     # 
     # @param conversation_id conversationId
@@ -6263,6 +6679,71 @@ module PureCloud
         :return_type => 'AggregateQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#post_analytics_conversations_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Query for conversation details asynchronously
+    # 
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @return [AsyncQueryResponse]
+    def post_analytics_conversations_details_jobs(body, opts = {})
+      data, _status_code, _headers = post_analytics_conversations_details_jobs_with_http_info(body, opts)
+      return data
+    end
+
+    # Query for conversation details asynchronously
+    # 
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(AsyncQueryResponse, Fixnum, Hash)>] AsyncQueryResponse data, response status code and response headers
+    def post_analytics_conversations_details_jobs_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_analytics_conversations_details_jobs ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_analytics_conversations_details_jobs" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/analytics/conversations/details/jobs".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AsyncQueryResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_analytics_conversations_details_jobs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

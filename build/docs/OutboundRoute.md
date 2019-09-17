@@ -21,7 +21,7 @@ title: OutboundRoute
 | **classification_types** | **Array&lt;String&gt;** | The site associated to the outbound route. | |
 | **enabled** | **BOOLEAN** |  | [optional] |
 | **distribution** | **String** |  | [optional] |
-| **external_trunk_bases** | [**Array&lt;UriReference&gt;**](UriReference.html) | Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing. | [optional] |
+| **external_trunk_bases** | [**Array&lt;DomainEntityRef&gt;**](DomainEntityRef.html) | Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing. | [optional] |
 | **site** | [**Site**](Site.html) | The site associated to the outbound route. | [optional] |
 | **managed** | **BOOLEAN** | Is this outbound route being managed remotely. | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |

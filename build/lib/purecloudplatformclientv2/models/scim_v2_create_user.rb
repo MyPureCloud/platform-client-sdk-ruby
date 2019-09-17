@@ -19,7 +19,7 @@ require 'date'
 module PureCloud
   # Represents a SCIM V2 Create User
   class ScimV2CreateUser
-    # schemas supported
+    # The list of supported schemas.
     attr_accessor :schemas
 
     # Indicates whether the user's administrative status is active.
@@ -52,11 +52,8 @@ module PureCloud
     # A list of groups that the user is a member of.
     attr_accessor :groups
 
-    # Roles
+    # A list of roles assigned to the user.
     attr_accessor :roles
-
-    # Resource SCIM meta
-    attr_accessor :meta
 
     attr_accessor :urnietfparamsscimschemasextensionenterprise2_0_user
 
@@ -87,8 +84,6 @@ module PureCloud
         :'groups' => :'groups',
         
         :'roles' => :'roles',
-        
-        :'meta' => :'meta',
         
         :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'
         
@@ -122,8 +117,6 @@ module PureCloud
         :'groups' => :'Array<ScimV2GroupReference>',
         
         :'roles' => :'Array<String>',
-        
-        :'meta' => :'ScimMetadata',
         
         :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'ScimV2EnterpriseUser'
         
@@ -259,15 +252,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'meta')
-        
-        
-        self.meta = attributes[:'meta']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User')
         
         
@@ -354,17 +338,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -448,7 +423,6 @@ module PureCloud
           external_id == o.external_id &&
           groups == o.groups &&
           roles == o.roles &&
-          meta == o.meta &&
           urnietfparamsscimschemasextensionenterprise2_0_user == o.urnietfparamsscimschemasextensionenterprise2_0_user
     end
 
@@ -461,7 +435,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [schemas, active, user_name, display_name, password, title, phone_numbers, emails, photos, external_id, groups, roles, meta, urnietfparamsscimschemasextensionenterprise2_0_user].hash
+      [schemas, active, user_name, display_name, password, title, phone_numbers, emails, photos, external_id, groups, roles, urnietfparamsscimschemasextensionenterprise2_0_user].hash
     end
 
     # build the object from hash

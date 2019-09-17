@@ -83,7 +83,7 @@ module PureCloud
         
         :'enabled' => :'BOOLEAN',
         
-        :'created_by' => :'UriReference',
+        :'created_by' => :'DomainEntityRef',
         
         :'date_created' => :'DateTime',
         

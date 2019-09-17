@@ -17,12 +17,12 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM version 2 User
+  # SCIM V2 User
   class ScimV2User
-    # SCIM Resource identifier
+    # The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always.
     attr_accessor :id
 
-    # schemas supported
+    # The list of supported schemas.
     attr_accessor :schemas
 
     # Indicates whether the user's administrative status is active.
@@ -55,13 +55,13 @@ module PureCloud
     # A list of groups that the user is a member of.
     attr_accessor :groups
 
-    # Roles
+    # A list of roles assigned to the user.
     attr_accessor :roles
+
+    attr_accessor :urnietfparamsscimschemasextensionenterprise2_0_user
 
     # Resource SCIM meta
     attr_accessor :meta
-
-    attr_accessor :urnietfparamsscimschemasextensionenterprise2_0_user
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -93,9 +93,9 @@ module PureCloud
         
         :'roles' => :'roles',
         
-        :'meta' => :'meta',
+        :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User',
         
-        :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'
+        :'meta' => :'meta'
         
       }
     end
@@ -130,9 +130,9 @@ module PureCloud
         
         :'roles' => :'Array<String>',
         
-        :'meta' => :'ScimMetadata',
+        :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'ScimV2EnterpriseUser',
         
-        :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'ScimV2EnterpriseUser'
+        :'meta' => :'ScimMetadata'
         
       }
     end
@@ -275,19 +275,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'meta')
+      if attributes.has_key?(:'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User')
         
         
-        self.meta = attributes[:'meta']
+        self.urnietfparamsscimschemasextensionenterprise2_0_user = attributes[:'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User']
         
       
       end
 
       
-      if attributes.has_key?(:'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User')
+      if attributes.has_key?(:'meta')
         
         
-        self.urnietfparamsscimschemasextensionenterprise2_0_user = attributes[:'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User']
+        self.meta = attributes[:'meta']
         
       
       end
@@ -464,8 +464,8 @@ module PureCloud
           external_id == o.external_id &&
           groups == o.groups &&
           roles == o.roles &&
-          meta == o.meta &&
-          urnietfparamsscimschemasextensionenterprise2_0_user == o.urnietfparamsscimschemasextensionenterprise2_0_user
+          urnietfparamsscimschemasextensionenterprise2_0_user == o.urnietfparamsscimschemasextensionenterprise2_0_user &&
+          meta == o.meta
     end
 
     # @see the `==` method
@@ -477,7 +477,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, schemas, active, user_name, display_name, password, title, phone_numbers, emails, photos, external_id, groups, roles, meta, urnietfparamsscimschemasextensionenterprise2_0_user].hash
+      [id, schemas, active, user_name, display_name, password, title, phone_numbers, emails, photos, external_id, groups, roles, urnietfparamsscimschemasextensionenterprise2_0_user, meta].hash
     end
 
     # build the object from hash

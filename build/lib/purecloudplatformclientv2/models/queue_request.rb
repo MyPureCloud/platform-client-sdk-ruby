@@ -164,9 +164,9 @@ module PureCloud
         
         :'skill_evaluation_method' => :'String',
         
-        :'queue_flow' => :'UriReference',
+        :'queue_flow' => :'DomainEntityRef',
         
-        :'whisper_prompt' => :'UriReference',
+        :'whisper_prompt' => :'DomainEntityRef',
         
         :'auto_answer_only' => :'BOOLEAN',
         

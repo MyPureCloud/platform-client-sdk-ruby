@@ -145,7 +145,7 @@ module PureCloud
         
         :'distribution' => :'String',
         
-        :'external_trunk_bases' => :'Array<UriReference>',
+        :'external_trunk_bases' => :'Array<DomainEntityRef>',
         
         :'site' => :'Site',
         

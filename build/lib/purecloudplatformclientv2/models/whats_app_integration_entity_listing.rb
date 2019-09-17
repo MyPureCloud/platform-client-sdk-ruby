@@ -17,22 +17,50 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class UriReference
-    attr_accessor :id
+  class WhatsAppIntegrationEntityListing
+    attr_accessor :entities
 
-    attr_accessor :name
+    attr_accessor :page_size
+
+    attr_accessor :page_number
+
+    attr_accessor :total
+
+    attr_accessor :first_uri
 
     attr_accessor :self_uri
+
+    attr_accessor :next_uri
+
+    attr_accessor :previous_uri
+
+    attr_accessor :last_uri
+
+    attr_accessor :page_count
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id',
+        :'entities' => :'entities',
         
-        :'name' => :'name',
+        :'page_size' => :'pageSize',
         
-        :'self_uri' => :'selfUri'
+        :'page_number' => :'pageNumber',
+        
+        :'total' => :'total',
+        
+        :'first_uri' => :'firstUri',
+        
+        :'self_uri' => :'selfUri',
+        
+        :'next_uri' => :'nextUri',
+        
+        :'previous_uri' => :'previousUri',
+        
+        :'last_uri' => :'lastUri',
+        
+        :'page_count' => :'pageCount'
         
       }
     end
@@ -41,11 +69,25 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
+        :'entities' => :'Array<WhatsAppIntegration>',
         
-        :'name' => :'String',
+        :'page_size' => :'Integer',
         
-        :'self_uri' => :'String'
+        :'page_number' => :'Integer',
+        
+        :'total' => :'Integer',
+        
+        :'first_uri' => :'String',
+        
+        :'self_uri' => :'String',
+        
+        :'next_uri' => :'String',
+        
+        :'previous_uri' => :'String',
+        
+        :'last_uri' => :'String',
+        
+        :'page_count' => :'Integer'
         
       }
     end
@@ -59,19 +101,48 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'entities')
         
+        if (value = attributes[:'entities']).is_a?(Array)
+          self.entities = value
+        end
         
-        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes.has_key?(:'name')
+      if attributes.has_key?(:'pageSize')
         
         
-        self.name = attributes[:'name']
+        self.page_size = attributes[:'pageSize']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'pageNumber')
+        
+        
+        self.page_number = attributes[:'pageNumber']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'total')
+        
+        
+        self.total = attributes[:'total']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'firstUri')
+        
+        
+        self.first_uri = attributes[:'firstUri']
         
       
       end
@@ -81,6 +152,42 @@ module PureCloud
         
         
         self.self_uri = attributes[:'selfUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'nextUri')
+        
+        
+        self.next_uri = attributes[:'nextUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'previousUri')
+        
+        
+        self.previous_uri = attributes[:'previousUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'lastUri')
+        
+        
+        self.last_uri = attributes[:'lastUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'pageCount')
+        
+        
+        self.page_count = attributes[:'pageCount']
         
       
       end
@@ -113,8 +220,71 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -136,9 +306,16 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name &&
-          self_uri == o.self_uri
+          entities == o.entities &&
+          page_size == o.page_size &&
+          page_number == o.page_number &&
+          total == o.total &&
+          first_uri == o.first_uri &&
+          self_uri == o.self_uri &&
+          next_uri == o.next_uri &&
+          previous_uri == o.previous_uri &&
+          last_uri == o.last_uri &&
+          page_count == o.page_count
     end
 
     # @see the `==` method
@@ -150,7 +327,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, self_uri].hash
+      [entities, page_size, page_number, total, first_uri, self_uri, next_uri, previous_uri, last_uri, page_count].hash
     end
 
     # build the object from hash

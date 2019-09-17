@@ -62,7 +62,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'edge' => :'UriReference',
+        :'edge' => :'DomainEntityRef',
         
         :'event_time' => :'DateTime',
         

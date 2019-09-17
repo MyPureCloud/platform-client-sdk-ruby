@@ -217,15 +217,15 @@ module PureCloud
         
         :'wrapup_prompt' => :'String',
         
-        :'user' => :'UriReference',
+        :'user' => :'DomainEntityRef',
         
-        :'queue' => :'UriReference',
+        :'queue' => :'DomainEntityRef',
         
         :'attributes' => :'Hash<String, String>',
         
         :'error_info' => :'ErrorBody',
         
-        :'script' => :'UriReference',
+        :'script' => :'DomainEntityRef',
         
         :'wrapup_timeout_ms' => :'Integer',
         
@@ -235,9 +235,9 @@ module PureCloud
         
         :'provider' => :'String',
         
-        :'external_contact' => :'UriReference',
+        :'external_contact' => :'DomainEntityRef',
         
-        :'external_organization' => :'UriReference',
+        :'external_organization' => :'DomainEntityRef',
         
         :'wrapup' => :'Wrapup',
         

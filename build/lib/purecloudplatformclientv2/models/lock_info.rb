@@ -47,7 +47,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'locked_by' => :'UriReference',
+        :'locked_by' => :'DomainEntityRef',
         
         :'date_created' => :'DateTime',
         

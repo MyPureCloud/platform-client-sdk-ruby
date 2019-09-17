@@ -170,13 +170,13 @@ module PureCloud
         
         :'created_by_app' => :'String',
         
-        :'site' => :'UriReference',
+        :'site' => :'DomainEntityRef',
         
-        :'phone_base_settings' => :'UriReference',
+        :'phone_base_settings' => :'DomainEntityRef',
         
-        :'line_base_settings' => :'UriReference',
+        :'line_base_settings' => :'DomainEntityRef',
         
-        :'phone_meta_base' => :'UriReference',
+        :'phone_meta_base' => :'DomainEntityRef',
         
         :'lines' => :'Array<Line>',
         
@@ -190,7 +190,7 @@ module PureCloud
         
         :'capabilities' => :'PhoneCapabilities',
         
-        :'web_rtc_user' => :'UriReference',
+        :'web_rtc_user' => :'DomainEntityRef',
         
         :'primary_edge' => :'Edge',
         

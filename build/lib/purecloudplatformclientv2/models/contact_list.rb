@@ -118,7 +118,7 @@ module PureCloud
         
         :'version' => :'Integer',
         
-        :'division' => :'UriReference',
+        :'division' => :'DomainEntityRef',
         
         :'column_names' => :'Array<String>',
         
@@ -132,7 +132,7 @@ module PureCloud
         
         :'size' => :'Integer',
         
-        :'attempt_limits' => :'UriReference',
+        :'attempt_limits' => :'DomainEntityRef',
         
         :'automatic_time_zone_mapping' => :'BOOLEAN',
         

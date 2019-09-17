@@ -82,7 +82,7 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'created_by' => :'UriReference',
+        :'created_by' => :'DomainEntityRef',
         
         :'replacement_terms' => :'Array<ReplacementTerm>',
         
