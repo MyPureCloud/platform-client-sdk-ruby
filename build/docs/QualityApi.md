@@ -2695,7 +2695,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_evaluations_aggregates_query"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_evaluations_aggregates_query(body)
+## [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html) post_analytics_evaluations_aggregates_query(body)
 
 
 
@@ -2727,7 +2727,7 @@ end
 
 api_instance = PureCloud::QualityApi.new
 
-body = PureCloud::AggregationQuery.new # AggregationQuery | query
+body = PureCloud::EvaluationAggregationQuery.new # EvaluationAggregationQuery | query
 
 
 begin
@@ -2743,13 +2743,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+ **body** | [**EvaluationAggregationQuery**](EvaluationAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
 
 ### HTTP request headers
 
@@ -2760,7 +2760,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_surveys_aggregates_query"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_surveys_aggregates_query(body)
+## [**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html) post_analytics_surveys_aggregates_query(body)
 
 
 
@@ -2792,7 +2792,7 @@ end
 
 api_instance = PureCloud::QualityApi.new
 
-body = PureCloud::AggregationQuery.new # AggregationQuery | query
+body = PureCloud::SurveyAggregationQuery.new # SurveyAggregationQuery | query
 
 
 begin
@@ -2808,13 +2808,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+ **body** | [**SurveyAggregationQuery**](SurveyAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html)
 
 ### HTTP request headers
 

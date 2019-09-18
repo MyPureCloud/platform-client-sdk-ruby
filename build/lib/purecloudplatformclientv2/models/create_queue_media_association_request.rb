@@ -19,6 +19,9 @@ require 'date'
 module PureCloud
   # A combination of a single queue and one or more media types to associate with a service goal group
   class CreateQueueMediaAssociationRequest
+    # The globally unique identifier for the object.
+    attr_accessor :id
+
     # The queue to associate with the service goal group
     attr_accessor :queue
 
@@ -28,6 +31,8 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
+        :'id' => :'id',
         
         :'queue' => :'queue',
         
@@ -39,6 +44,8 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        
+        :'id' => :'String',
         
         :'queue' => :'QueueReference',
         
@@ -54,6 +61,15 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes.has_key?(:'id')
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
 
       
       if attributes.has_key?(:'queue')
@@ -99,8 +115,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -117,6 +142,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id == o.id &&
           queue == o.queue &&
           media_types == o.media_types
     end
@@ -130,7 +156,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [queue, media_types].hash
+      [id, queue, media_types].hash
     end
 
     # build the object from hash

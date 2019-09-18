@@ -24,17 +24,17 @@ module PureCloud
     # Filters that target conversation-level data
     attr_accessor :conversation_filters
 
-    # Filters that target quality management evaluation-level data
-    attr_accessor :evaluation_filters
-
-    # Filters that target quality management survey-level data
-    attr_accessor :survey_filters
-
-    # Filters that target call quality of service data
-    attr_accessor :media_endpoint_stat_filters
-
     # Filters that target individual segments within a conversation
     attr_accessor :segment_filters
+
+    # Filters that target evaluations
+    attr_accessor :evaluation_filters
+
+    # Filters that target mediaEndpointStats
+    attr_accessor :media_endpoint_stat_filters
+
+    # Filters that target surveys
+    attr_accessor :survey_filters
 
     # Sort the result set in ascending/descending order. Default is ascending
     attr_accessor :order
@@ -53,13 +53,13 @@ module PureCloud
         
         :'conversation_filters' => :'conversationFilters',
         
-        :'evaluation_filters' => :'evaluationFilters',
+        :'segment_filters' => :'segmentFilters',
         
-        :'survey_filters' => :'surveyFilters',
+        :'evaluation_filters' => :'evaluationFilters',
         
         :'media_endpoint_stat_filters' => :'mediaEndpointStatFilters',
         
-        :'segment_filters' => :'segmentFilters',
+        :'survey_filters' => :'surveyFilters',
         
         :'order' => :'order',
         
@@ -76,15 +76,15 @@ module PureCloud
         
         :'interval' => :'String',
         
-        :'conversation_filters' => :'Array<AnalyticsQueryFilter>',
+        :'conversation_filters' => :'Array<ConversationDetailQueryFilter>',
         
-        :'evaluation_filters' => :'Array<AnalyticsQueryFilter>',
+        :'segment_filters' => :'Array<SegmentDetailQueryFilter>',
         
-        :'survey_filters' => :'Array<AnalyticsQueryFilter>',
+        :'evaluation_filters' => :'Array<EvaluationDetailQueryFilter>',
         
-        :'media_endpoint_stat_filters' => :'Array<AnalyticsQueryFilter>',
+        :'media_endpoint_stat_filters' => :'Array<MediaEndpointStatDetailQueryFilter>',
         
-        :'segment_filters' => :'Array<AnalyticsQueryFilter>',
+        :'survey_filters' => :'Array<SurveyDetailQueryFilter>',
         
         :'order' => :'String',
         
@@ -124,10 +124,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'evaluationFilters')
+      if attributes.has_key?(:'segmentFilters')
         
-        if (value = attributes[:'evaluationFilters']).is_a?(Array)
-          self.evaluation_filters = value
+        if (value = attributes[:'segmentFilters']).is_a?(Array)
+          self.segment_filters = value
         end
         
         
@@ -135,10 +135,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'surveyFilters')
+      if attributes.has_key?(:'evaluationFilters')
         
-        if (value = attributes[:'surveyFilters']).is_a?(Array)
-          self.survey_filters = value
+        if (value = attributes[:'evaluationFilters']).is_a?(Array)
+          self.evaluation_filters = value
         end
         
         
@@ -157,10 +157,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'segmentFilters')
+      if attributes.has_key?(:'surveyFilters')
         
-        if (value = attributes[:'segmentFilters']).is_a?(Array)
-          self.segment_filters = value
+        if (value = attributes[:'surveyFilters']).is_a?(Array)
+          self.survey_filters = value
         end
         
         
@@ -329,10 +329,10 @@ module PureCloud
       self.class == o.class &&
           interval == o.interval &&
           conversation_filters == o.conversation_filters &&
-          evaluation_filters == o.evaluation_filters &&
-          survey_filters == o.survey_filters &&
-          media_endpoint_stat_filters == o.media_endpoint_stat_filters &&
           segment_filters == o.segment_filters &&
+          evaluation_filters == o.evaluation_filters &&
+          media_endpoint_stat_filters == o.media_endpoint_stat_filters &&
+          survey_filters == o.survey_filters &&
           order == o.order &&
           order_by == o.order_by &&
           limit == o.limit
@@ -347,7 +347,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [interval, conversation_filters, evaluation_filters, survey_filters, media_endpoint_stat_filters, segment_filters, order, order_by, limit].hash
+      [interval, conversation_filters, segment_filters, evaluation_filters, media_endpoint_stat_filters, survey_filters, order, order_by, limit].hash
     end
 
     # build the object from hash

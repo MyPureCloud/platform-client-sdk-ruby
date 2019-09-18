@@ -24,6 +24,9 @@ module PureCloud
     # A human readable name identifying the participant
     attr_accessor :participant_name
 
+    # List of attributes associated to this participant
+    attr_accessor :attributes
+
     # If a user, then this will be the unique identifier for the user
     attr_accessor :user_id
 
@@ -50,6 +53,8 @@ module PureCloud
         
         :'participant_name' => :'participantName',
         
+        :'attributes' => :'attributes',
+        
         :'user_id' => :'userId',
         
         :'purpose' => :'purpose',
@@ -72,6 +77,8 @@ module PureCloud
         :'participant_id' => :'String',
         
         :'participant_name' => :'String',
+        
+        :'attributes' => :'Hash<String, String>',
         
         :'user_id' => :'String',
         
@@ -110,6 +117,17 @@ module PureCloud
         
         
         self.participant_name = attributes[:'participantName']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'attributes')
+        
+        if (value = attributes[:'attributes']).is_a?(Array)
+          self.attributes = value
+        end
+        
         
       
       end
@@ -200,7 +218,11 @@ module PureCloud
       
       
       
-      allowed_values = ["manual", "dialer", "inbound", "acd", "ivr", "voicemail", "outbound", "agent", "user", "station", "group", "customer", "external", "fax", "workflow", "campaign"]
+      
+      
+      
+      
+      allowed_values = ["manual", "dialer", "inbound", "acd", "ivr", "voicemail", "outbound", "agent", "user", "station", "group", "customer", "external", "fax", "workflow", "campaign", "api"]
       if @purpose && !allowed_values.include?(@purpose)
         return false
       end
@@ -247,10 +269,15 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] purpose Object to be assigned
     def purpose=(purpose)
-      allowed_values = ["manual", "dialer", "inbound", "acd", "ivr", "voicemail", "outbound", "agent", "user", "station", "group", "customer", "external", "fax", "workflow", "campaign"]
+      allowed_values = ["manual", "dialer", "inbound", "acd", "ivr", "voicemail", "outbound", "agent", "user", "station", "group", "customer", "external", "fax", "workflow", "campaign", "api"]
       if purpose && !allowed_values.include?(purpose)
         fail ArgumentError, "invalid value for 'purpose', must be one of #{allowed_values}."
       end
@@ -296,6 +323,7 @@ module PureCloud
       self.class == o.class &&
           participant_id == o.participant_id &&
           participant_name == o.participant_name &&
+          attributes == o.attributes &&
           user_id == o.user_id &&
           purpose == o.purpose &&
           external_contact_id == o.external_contact_id &&
@@ -313,7 +341,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [participant_id, participant_name, user_id, purpose, external_contact_id, external_organization_id, flagged_reason, sessions].hash
+      [participant_id, participant_name, attributes, user_id, purpose, external_contact_id, external_organization_id, flagged_reason, sessions].hash
     end
 
     # build the object from hash

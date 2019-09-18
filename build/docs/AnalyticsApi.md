@@ -1148,7 +1148,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_conversations_aggregates_query"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_conversations_aggregates_query(body)
+## [**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html) post_analytics_conversations_aggregates_query(body)
 
 
 
@@ -1180,7 +1180,7 @@ end
 
 api_instance = PureCloud::AnalyticsApi.new
 
-body = PureCloud::AggregationQuery.new # AggregationQuery | query
+body = PureCloud::ConversationAggregationQuery.new # ConversationAggregationQuery | query
 
 
 begin
@@ -1196,13 +1196,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+ **body** | [**ConversationAggregationQuery**](ConversationAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html)
 
 ### HTTP request headers
 
@@ -1343,7 +1343,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_evaluations_aggregates_query"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_evaluations_aggregates_query(body)
+## [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html) post_analytics_evaluations_aggregates_query(body)
 
 
 
@@ -1375,7 +1375,7 @@ end
 
 api_instance = PureCloud::AnalyticsApi.new
 
-body = PureCloud::AggregationQuery.new # AggregationQuery | query
+body = PureCloud::EvaluationAggregationQuery.new # EvaluationAggregationQuery | query
 
 
 begin
@@ -1391,13 +1391,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+ **body** | [**EvaluationAggregationQuery**](EvaluationAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
 
 ### HTTP request headers
 
@@ -1408,7 +1408,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_flows_aggregates_query"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_flows_aggregates_query(body)
+## [**FlowAggregateQueryResponse**](FlowAggregateQueryResponse.html) post_analytics_flows_aggregates_query(body)
 
 
 
@@ -1440,7 +1440,7 @@ end
 
 api_instance = PureCloud::AnalyticsApi.new
 
-body = PureCloud::AggregationQuery.new # AggregationQuery | query
+body = PureCloud::FlowAggregationQuery.new # FlowAggregationQuery | query
 
 
 begin
@@ -1456,13 +1456,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+ **body** | [**FlowAggregationQuery**](FlowAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**FlowAggregateQueryResponse**](FlowAggregateQueryResponse.html)
 
 ### HTTP request headers
 
@@ -1473,7 +1473,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_flows_observations_query"></a>
 
-## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) post_analytics_flows_observations_query(body)
+## [**FlowObservationQueryResponse**](FlowObservationQueryResponse.html) post_analytics_flows_observations_query(body)
 
 
 
@@ -1505,7 +1505,7 @@ end
 
 api_instance = PureCloud::AnalyticsApi.new
 
-body = PureCloud::ObservationQuery.new # ObservationQuery | query
+body = PureCloud::FlowObservationQuery.new # FlowObservationQuery | query
 
 
 begin
@@ -1521,13 +1521,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
+ **body** | [**FlowObservationQuery**](FlowObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+[**FlowObservationQueryResponse**](FlowObservationQueryResponse.html)
 
 ### HTTP request headers
 
@@ -1538,7 +1538,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_queues_observations_query"></a>
 
-## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) post_analytics_queues_observations_query(body)
+## [**QueueObservationQueryResponse**](QueueObservationQueryResponse.html) post_analytics_queues_observations_query(body)
 
 
 
@@ -1570,7 +1570,7 @@ end
 
 api_instance = PureCloud::AnalyticsApi.new
 
-body = PureCloud::ObservationQuery.new # ObservationQuery | query
+body = PureCloud::QueueObservationQuery.new # QueueObservationQuery | query
 
 
 begin
@@ -1586,13 +1586,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
+ **body** | [**QueueObservationQuery**](QueueObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+[**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
 
 ### HTTP request headers
 
@@ -1796,7 +1796,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_surveys_aggregates_query"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_surveys_aggregates_query(body)
+## [**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html) post_analytics_surveys_aggregates_query(body)
 
 
 
@@ -1828,7 +1828,7 @@ end
 
 api_instance = PureCloud::AnalyticsApi.new
 
-body = PureCloud::AggregationQuery.new # AggregationQuery | query
+body = PureCloud::SurveyAggregationQuery.new # SurveyAggregationQuery | query
 
 
 begin
@@ -1844,13 +1844,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+ **body** | [**SurveyAggregationQuery**](SurveyAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html)
 
 ### HTTP request headers
 
@@ -1861,7 +1861,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_users_aggregates_query"></a>
 
-## [**PresenceQueryResponse**](PresenceQueryResponse.html) post_analytics_users_aggregates_query(body)
+## [**UserAggregateQueryResponse**](UserAggregateQueryResponse.html) post_analytics_users_aggregates_query(body)
 
 
 
@@ -1893,7 +1893,7 @@ end
 
 api_instance = PureCloud::AnalyticsApi.new
 
-body = PureCloud::AggregationQuery.new # AggregationQuery | query
+body = PureCloud::UserAggregationQuery.new # UserAggregationQuery | query
 
 
 begin
@@ -1909,13 +1909,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+ **body** | [**UserAggregationQuery**](UserAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**PresenceQueryResponse**](PresenceQueryResponse.html)
+[**UserAggregateQueryResponse**](UserAggregateQueryResponse.html)
 
 ### HTTP request headers
 
@@ -1991,7 +1991,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_users_observations_query"></a>
 
-## [**ObservationQueryResponse**](ObservationQueryResponse.html) post_analytics_users_observations_query(body)
+## [**UserObservationQueryResponse**](UserObservationQueryResponse.html) post_analytics_users_observations_query(body)
 
 
 
@@ -2023,7 +2023,7 @@ end
 
 api_instance = PureCloud::AnalyticsApi.new
 
-body = PureCloud::ObservationQuery.new # ObservationQuery | query
+body = PureCloud::UserObservationQuery.new # UserObservationQuery | query
 
 
 begin
@@ -2039,13 +2039,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
+ **body** | [**UserObservationQuery**](UserObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**ObservationQueryResponse**](ObservationQueryResponse.html)
+[**UserObservationQueryResponse**](UserObservationQueryResponse.html)
 
 ### HTTP request headers
 

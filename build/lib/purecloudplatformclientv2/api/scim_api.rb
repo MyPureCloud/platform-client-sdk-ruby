@@ -328,6 +328,204 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the SCIM configuration
+    # 
+    # @param resource_type The ID of a resource.
+    # @param [Hash] opts the optional parameters
+    # @return [ScimConfigResourceType]
+    def get_scim_resourcetype(resource_type, opts = {})
+      data, _status_code, _headers = get_scim_resourcetype_with_http_info(resource_type, opts)
+      return data
+    end
+
+    # Get the SCIM configuration
+    # 
+    # @param resource_type The ID of a resource.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ScimConfigResourceType, Fixnum, Hash)>] ScimConfigResourceType data, response status code and response headers
+    def get_scim_resourcetype_with_http_info(resource_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.get_scim_resourcetype ..."
+      end
+      
+      
+      # verify the required parameter 'resource_type' is set
+      fail ArgumentError, "Missing the required parameter 'resource_type' when calling SCIMApi.get_scim_resourcetype" if resource_type.nil?
+      
+      # verify enum value
+      unless ['User', 'Group', 'ServiceProviderConfig', 'ResourceType'].include?(resource_type)
+        fail ArgumentError, "invalid value for 'resource_type', must be one of User, Group, ServiceProviderConfig, ResourceType"
+      end
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/resourcetypes/{resourceType}".sub('{format}','json').sub('{' + 'resourceType' + '}', resource_type.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScimConfigResourceType')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#get_scim_resourcetype\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the SCIM resource types
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :filter Filtered results are invalid and will result in a 403 (Unauthorized) return.
+    # @return [ScimConfigResourceTypesListResponse]
+    def get_scim_resourcetypes(opts = {})
+      data, _status_code, _headers = get_scim_resourcetypes_with_http_info(opts)
+      return data
+    end
+
+    # Get the SCIM resource types
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :filter Filtered results are invalid and will result in a 403 (Unauthorized) return.
+    # @return [Array<(ScimConfigResourceTypesListResponse, Fixnum, Hash)>] ScimConfigResourceTypesListResponse data, response status code and response headers
+    def get_scim_resourcetypes_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.get_scim_resourcetypes ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/resourcetypes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'filter'] = opts[:'filter'] if opts[:'filter']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScimConfigResourceTypesListResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#get_scim_resourcetypes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the SCIM configuration
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :if_none_match The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. 
+    # @return [ScimServiceProviderConfig]
+    def get_scim_serviceproviderconfig(opts = {})
+      data, _status_code, _headers = get_scim_serviceproviderconfig_with_http_info(opts)
+      return data
+    end
+
+    # Get the SCIM configuration
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :if_none_match The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. 
+    # @return [Array<(ScimServiceProviderConfig, Fixnum, Hash)>] ScimServiceProviderConfig data, response status code and response headers
+    def get_scim_serviceproviderconfig_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.get_scim_serviceproviderconfig ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/serviceproviderconfig".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+      header_params[:'If-None-Match'] = opts[:'if_none_match'] if opts[:'if_none_match']
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScimServiceProviderConfig')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#get_scim_serviceproviderconfig\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a user
     # 
     # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
@@ -640,6 +838,140 @@ module PureCloud
         :return_type => 'ScimGroupListResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: SCIMApi#get_scim_v2_groups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the SCIM configuration
+    # 
+    # @param resource_type The ID of a resource.
+    # @param [Hash] opts the optional parameters
+    # @return [ScimConfigResourceType]
+    def get_scim_v2_resourcetype(resource_type, opts = {})
+      data, _status_code, _headers = get_scim_v2_resourcetype_with_http_info(resource_type, opts)
+      return data
+    end
+
+    # Get the SCIM configuration
+    # 
+    # @param resource_type The ID of a resource.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ScimConfigResourceType, Fixnum, Hash)>] ScimConfigResourceType data, response status code and response headers
+    def get_scim_v2_resourcetype_with_http_info(resource_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.get_scim_v2_resourcetype ..."
+      end
+      
+      
+      # verify the required parameter 'resource_type' is set
+      fail ArgumentError, "Missing the required parameter 'resource_type' when calling SCIMApi.get_scim_v2_resourcetype" if resource_type.nil?
+      
+      # verify enum value
+      unless ['User', 'Group', 'ServiceProviderConfig', 'ResourceType'].include?(resource_type)
+        fail ArgumentError, "invalid value for 'resource_type', must be one of User, Group, ServiceProviderConfig, ResourceType"
+      end
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/v2/resourcetypes/{resourceType}".sub('{format}','json').sub('{' + 'resourceType' + '}', resource_type.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScimConfigResourceType')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#get_scim_v2_resourcetype\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the SCIM resource types
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :filter Filtered results are invalid and will result in a 403 (Unauthorized) return.
+    # @return [ScimConfigResourceTypesListResponse]
+    def get_scim_v2_resourcetypes(opts = {})
+      data, _status_code, _headers = get_scim_v2_resourcetypes_with_http_info(opts)
+      return data
+    end
+
+    # Get the SCIM resource types
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :filter Filtered results are invalid and will result in a 403 (Unauthorized) return.
+    # @return [Array<(ScimConfigResourceTypesListResponse, Fixnum, Hash)>] ScimConfigResourceTypesListResponse data, response status code and response headers
+    def get_scim_v2_resourcetypes_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.get_scim_v2_resourcetypes ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/v2/resourcetypes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'filter'] = opts[:'filter'] if opts[:'filter']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScimConfigResourceTypesListResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#get_scim_v2_resourcetypes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

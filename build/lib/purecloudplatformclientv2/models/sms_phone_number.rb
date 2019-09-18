@@ -68,6 +68,9 @@ module PureCloud
     # The id of an address attached to this phone number.
     attr_accessor :address_id
 
+    # BillingType of this phone number, if the phoneNumberType is shortcode.
+    attr_accessor :short_code_billing_type
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -108,6 +111,8 @@ module PureCloud
         :'auto_renewable' => :'autoRenewable',
         
         :'address_id' => :'addressId',
+        
+        :'short_code_billing_type' => :'shortCodeBillingType',
         
         :'self_uri' => :'selfUri'
         
@@ -151,6 +156,8 @@ module PureCloud
         :'auto_renewable' => :'String',
         
         :'address_id' => :'SmsAddress',
+        
+        :'short_code_billing_type' => :'String',
         
         :'self_uri' => :'String'
         
@@ -319,6 +326,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'shortCodeBillingType')
+        
+        
+        self.short_code_billing_type = attributes[:'shortCodeBillingType']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -433,6 +449,15 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      allowed_values = ["Basic", "Vanity"]
+      if @short_code_billing_type && !allowed_values.include?(@short_code_billing_type)
+        return false
+      end
       
       
       
@@ -556,6 +581,20 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] short_code_billing_type Object to be assigned
+    def short_code_billing_type=(short_code_billing_type)
+      allowed_values = ["Basic", "Vanity"]
+      if short_code_billing_type && !allowed_values.include?(short_code_billing_type)
+        fail ArgumentError, "invalid value for 'short_code_billing_type', must be one of #{allowed_values}."
+      end
+      @short_code_billing_type = short_code_billing_type
+    end
+
+    
+    
+    
+    
     
     
     
@@ -582,6 +621,7 @@ module PureCloud
           renewal_date == o.renewal_date &&
           auto_renewable == o.auto_renewable &&
           address_id == o.address_id &&
+          short_code_billing_type == o.short_code_billing_type &&
           self_uri == o.self_uri
     end
 
@@ -594,7 +634,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, phone_number, phone_number_type, provisioned_through_pure_cloud, phone_number_status, country_code, date_created, date_modified, created_by, modified_by, version, purchase_date, cancellation_date, renewal_date, auto_renewable, address_id, self_uri].hash
+      [id, name, phone_number, phone_number_type, provisioned_through_pure_cloud, phone_number_status, country_code, date_created, date_modified, created_by, modified_by, version, purchase_date, cancellation_date, renewal_date, auto_renewable, address_id, short_code_billing_type, self_uri].hash
     end
 
     # build the object from hash

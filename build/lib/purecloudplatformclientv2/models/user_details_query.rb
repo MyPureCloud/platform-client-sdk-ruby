@@ -24,9 +24,6 @@ module PureCloud
     # Filters that target the users to retrieve data for
     attr_accessor :user_filters
 
-    # Filters that target system and organization presence-level data
-    attr_accessor :presence_filters
-
     # Filters that target agent routing status-level data
     attr_accessor :routing_status_filters
 
@@ -42,6 +39,8 @@ module PureCloud
     # Sort the result set in ascending/descending order. Default is ascending
     attr_accessor :order
 
+    attr_accessor :presence_detail_filters
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -49,8 +48,6 @@ module PureCloud
         :'interval' => :'interval',
         
         :'user_filters' => :'userFilters',
-        
-        :'presence_filters' => :'presenceFilters',
         
         :'routing_status_filters' => :'routingStatusFilters',
         
@@ -60,7 +57,9 @@ module PureCloud
         
         :'paging' => :'paging',
         
-        :'order' => :'order'
+        :'order' => :'order',
+        
+        :'presence_detail_filters' => :'presenceDetailFilters'
         
       }
     end
@@ -71,11 +70,9 @@ module PureCloud
         
         :'interval' => :'String',
         
-        :'user_filters' => :'Array<AnalyticsQueryFilter>',
+        :'user_filters' => :'Array<UserDetailQueryFilter>',
         
-        :'presence_filters' => :'Array<AnalyticsQueryFilter>',
-        
-        :'routing_status_filters' => :'Array<AnalyticsQueryFilter>',
+        :'routing_status_filters' => :'Array<RoutingStatusDetailQueryFilter>',
         
         :'presence_aggregations' => :'Array<AnalyticsQueryAggregation>',
         
@@ -83,7 +80,9 @@ module PureCloud
         
         :'paging' => :'PagingSpec',
         
-        :'order' => :'String'
+        :'order' => :'String',
+        
+        :'presence_detail_filters' => :'Array<PresenceDetailQueryFilter>'
         
       }
     end
@@ -110,17 +109,6 @@ module PureCloud
         
         if (value = attributes[:'userFilters']).is_a?(Array)
           self.user_filters = value
-        end
-        
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'presenceFilters')
-        
-        if (value = attributes[:'presenceFilters']).is_a?(Array)
-          self.presence_filters = value
         end
         
         
@@ -179,6 +167,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'presenceDetailFilters')
+        
+        if (value = attributes[:'presenceDetailFilters']).is_a?(Array)
+          self.presence_detail_filters = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -220,10 +219,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
       allowed_values = ["asc", "desc"]
       if @order && !allowed_values.include?(@order)
         return false
@@ -231,13 +226,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -283,6 +277,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -290,12 +289,12 @@ module PureCloud
       self.class == o.class &&
           interval == o.interval &&
           user_filters == o.user_filters &&
-          presence_filters == o.presence_filters &&
           routing_status_filters == o.routing_status_filters &&
           presence_aggregations == o.presence_aggregations &&
           routing_status_aggregations == o.routing_status_aggregations &&
           paging == o.paging &&
-          order == o.order
+          order == o.order &&
+          presence_detail_filters == o.presence_detail_filters
     end
 
     # @see the `==` method
@@ -307,7 +306,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [interval, user_filters, presence_filters, routing_status_filters, presence_aggregations, routing_status_aggregations, paging, order].hash
+      [interval, user_filters, routing_status_filters, presence_aggregations, routing_status_aggregations, paging, order, presence_detail_filters].hash
     end
 
     # build the object from hash

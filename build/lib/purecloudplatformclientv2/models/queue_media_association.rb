@@ -19,14 +19,14 @@ require 'date'
 module PureCloud
   # A combination of a single queue and one or more media types to associate with a service goal group
   class QueueMediaAssociation
+    # The reference ID for this QueueMediaAssociation
+    attr_accessor :id
+
     # The queue to associate with the service goal group
     attr_accessor :queue
 
     # The media types of the given queue to associate with the service goal group
     attr_accessor :media_types
-
-    # The reference ID for this QueueMediaAssociation
-    attr_accessor :id
 
     # If marked true on a PATCH, this QueueMediaAssociation will be permanently deleted
     attr_accessor :delete
@@ -35,11 +35,11 @@ module PureCloud
     def self.attribute_map
       {
         
+        :'id' => :'id',
+        
         :'queue' => :'queue',
         
         :'media_types' => :'mediaTypes',
-        
-        :'id' => :'id',
         
         :'delete' => :'delete'
         
@@ -50,11 +50,11 @@ module PureCloud
     def self.swagger_types
       {
         
+        :'id' => :'String',
+        
         :'queue' => :'QueueReference',
         
         :'media_types' => :'Array<String>',
-        
-        :'id' => :'String',
         
         :'delete' => :'BOOLEAN'
         
@@ -68,6 +68,15 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes.has_key?(:'id')
+        
+        
+        self.id = attributes[:'id']
+        
+      
+      end
 
       
       if attributes.has_key?(:'queue')
@@ -85,15 +94,6 @@ module PureCloud
           self.media_types = value
         end
         
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'id')
-        
-        
-        self.id = attributes[:'id']
         
       
       end
@@ -167,9 +167,9 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id == o.id &&
           queue == o.queue &&
           media_types == o.media_types &&
-          id == o.id &&
           delete == o.delete
     end
 
@@ -182,7 +182,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [queue, media_types, id, delete].hash
+      [id, queue, media_types, delete].hash
     end
 
     # build the object from hash

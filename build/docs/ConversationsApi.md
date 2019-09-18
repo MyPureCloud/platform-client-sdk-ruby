@@ -37,6 +37,8 @@ Method | Description
 [**get_conversations_calls_history**](ConversationsApi.html#get_conversations_calls_history) | Get call history
 [**get_conversations_calls_maximumconferenceparties**](ConversationsApi.html#get_conversations_calls_maximumconferenceparties) | Get the maximum number of participants that this user can have on a conference
 [**get_conversations_chat**](ConversationsApi.html#get_conversations_chat) | Get chat conversation
+[**get_conversations_chat_message**](ConversationsApi.html#get_conversations_chat_message) | Get a web chat conversation message
+[**get_conversations_chat_messages**](ConversationsApi.html#get_conversations_chat_messages) | Get the messages of a chat conversation.
 [**get_conversations_chat_participant_wrapup**](ConversationsApi.html#get_conversations_chat_participant_wrapup) | Get the wrap-up for this conversation participant. 
 [**get_conversations_chat_participant_wrapupcodes**](ConversationsApi.html#get_conversations_chat_participant_wrapupcodes) | Get list of wrapup codes for this conversation participant
 [**get_conversations_chats**](ConversationsApi.html#get_conversations_chats) | Get active chat conversations for the logged in user
@@ -112,6 +114,8 @@ Method | Description
 [**post_conversations_callback_participant_replace**](ConversationsApi.html#post_conversations_callback_participant_replace) | Replace this participant with the specified user and/or address
 [**post_conversations_callbacks**](ConversationsApi.html#post_conversations_callbacks) | Create a Callback
 [**post_conversations_calls**](ConversationsApi.html#post_conversations_calls) | Create a call conversation
+[**post_conversations_chat_communication_messages**](ConversationsApi.html#post_conversations_chat_communication_messages) | Send a message on behalf of a communication in a chat conversation.
+[**post_conversations_chat_communication_typing**](ConversationsApi.html#post_conversations_chat_communication_typing) | Send a typing-indicator on behalf of a communication in a chat conversation.
 [**post_conversations_chat_participant_replace**](ConversationsApi.html#post_conversations_chat_participant_replace) | Replace this participant with the specified user and/or address
 [**post_conversations_chats**](ConversationsApi.html#post_conversations_chats) | Create a web chat conversation
 [**post_conversations_cobrowsesession_participant_replace**](ConversationsApi.html#post_conversations_cobrowsesession_participant_replace) | Replace this participant with the specified user and/or address
@@ -2032,6 +2036,147 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ChatConversation**](ChatConversation.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_chat_message"></a>
+
+## [**WebChatMessage**](WebChatMessage.html) get_conversations_chat_message(conversation_id, message_id)
+
+
+
+Get a web chat conversation message
+
+
+
+Wraps GET /api/v2/conversations/chats/{conversationId}/messages/{messageId} 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+message_id = "message_id_example" # String | messageId
+
+
+begin
+  #Get a web chat conversation message
+  result = api_instance.get_conversations_chat_message(conversation_id, message_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->get_conversations_chat_message: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **message_id** | **String**| messageId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**WebChatMessage**](WebChatMessage.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_conversations_chat_messages"></a>
+
+## [**WebChatMessageEntityList**](WebChatMessageEntityList.html) get_conversations_chat_messages(conversation_id, opts)
+
+
+
+Get the messages of a chat conversation.
+
+
+
+Wraps GET /api/v2/conversations/chats/{conversationId}/messages 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+opts = { 
+  after: "after_example", # String | If specified, get the messages chronologically after the id of this message
+  before: "before_example", # String | If specified, get the messages chronologically before the id of this message
+  sort_order: "ascending", # String | Sort order
+  max_results: 100 # Integer | Limit the returned number of messages, up to a maximum of 100
+}
+
+begin
+  #Get the messages of a chat conversation.
+  result = api_instance.get_conversations_chat_messages(conversation_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->get_conversations_chat_messages: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **after** | **String**| If specified, get the messages chronologically after the id of this message | [optional]  |
+ **before** | **String**| If specified, get the messages chronologically before the id of this message | [optional]  |
+ **sort_order** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
+ **max_results** | **Integer**| Limit the returned number of messages, up to a maximum of 100 | [optional] [default to 100] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**WebChatMessageEntityList**](WebChatMessageEntityList.html)
 
 ### HTTP request headers
 
@@ -6045,7 +6190,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_conversations_aggregates_query"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) post_analytics_conversations_aggregates_query(body)
+## [**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html) post_analytics_conversations_aggregates_query(body)
 
 
 
@@ -6077,7 +6222,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-body = PureCloud::AggregationQuery.new # AggregationQuery | query
+body = PureCloud::ConversationAggregationQuery.new # ConversationAggregationQuery | query
 
 
 begin
@@ -6093,13 +6238,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+ **body** | [**ConversationAggregationQuery**](ConversationAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html)
 
 ### HTTP request headers
 
@@ -7115,6 +7260,143 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CreateCallResponse**](CreateCallResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversations_chat_communication_messages"></a>
+
+## [**WebChatMessage**](WebChatMessage.html) post_conversations_chat_communication_messages(conversation_id, communication_id, body)
+
+
+
+Send a message on behalf of a communication in a chat conversation.
+
+
+
+Wraps POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+communication_id = "communication_id_example" # String | communicationId
+
+body = PureCloud::CreateWebChatMessageRequest.new # CreateWebChatMessageRequest | Message
+
+
+begin
+  #Send a message on behalf of a communication in a chat conversation.
+  result = api_instance.post_conversations_chat_communication_messages(conversation_id, communication_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversations_chat_communication_messages: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **communication_id** | **String**| communicationId |  |
+ **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest.html)| Message |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**WebChatMessage**](WebChatMessage.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversations_chat_communication_typing"></a>
+
+## [**WebChatTyping**](WebChatTyping.html) post_conversations_chat_communication_typing(conversation_id, communication_id)
+
+
+
+Send a typing-indicator on behalf of a communication in a chat conversation.
+
+
+
+Wraps POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversationId
+
+communication_id = "communication_id_example" # String | communicationId
+
+
+begin
+  #Send a typing-indicator on behalf of a communication in a chat conversation.
+  result = api_instance.post_conversations_chat_communication_typing(conversation_id, communication_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversations_chat_communication_typing: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversationId |  |
+ **communication_id** | **String**| communicationId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**WebChatTyping**](WebChatTyping.html)
 
 ### HTTP request headers
 

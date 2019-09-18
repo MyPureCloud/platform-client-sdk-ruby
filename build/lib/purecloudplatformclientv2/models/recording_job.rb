@@ -48,6 +48,9 @@ module PureCloud
     # The URI for this object
     attr_accessor :self_uri
 
+    # Details of the user created the job
+    attr_accessor :user
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -70,7 +73,9 @@ module PureCloud
         
         :'error_message' => :'errorMessage',
         
-        :'self_uri' => :'selfUri'
+        :'self_uri' => :'selfUri',
+        
+        :'user' => :'user'
         
       }
     end
@@ -97,7 +102,9 @@ module PureCloud
         
         :'error_message' => :'String',
         
-        :'self_uri' => :'String'
+        :'self_uri' => :'String',
+        
+        :'user' => :'AddressableEntityRef'
         
       }
     end
@@ -201,6 +208,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'user')
+        
+        
+        self.user = attributes[:'user']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -231,6 +247,10 @@ module PureCloud
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -328,6 +348,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -342,7 +367,8 @@ module PureCloud
           total_processed_recordings == o.total_processed_recordings &&
           percent_progress == o.percent_progress &&
           error_message == o.error_message &&
-          self_uri == o.self_uri
+          self_uri == o.self_uri &&
+          user == o.user
     end
 
     # @see the `==` method
@@ -354,7 +380,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, recording_jobs_query, date_created, total_conversations, total_recordings, total_processed_recordings, percent_progress, error_message, self_uri].hash
+      [id, state, recording_jobs_query, date_created, total_conversations, total_recordings, total_processed_recordings, percent_progress, error_message, self_uri, user].hash
     end
 
     # build the object from hash

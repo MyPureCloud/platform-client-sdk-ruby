@@ -3207,7 +3207,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_users_aggregates_query"></a>
 
-## [**PresenceQueryResponse**](PresenceQueryResponse.html) post_analytics_users_aggregates_query(body)
+## [**UserAggregateQueryResponse**](UserAggregateQueryResponse.html) post_analytics_users_aggregates_query(body)
 
 
 
@@ -3239,7 +3239,7 @@ end
 
 api_instance = PureCloud::UsersApi.new
 
-body = PureCloud::AggregationQuery.new # AggregationQuery | query
+body = PureCloud::UserAggregationQuery.new # UserAggregationQuery | query
 
 
 begin
@@ -3255,13 +3255,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
+ **body** | [**UserAggregationQuery**](UserAggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**PresenceQueryResponse**](PresenceQueryResponse.html)
+[**UserAggregateQueryResponse**](UserAggregateQueryResponse.html)
 
 ### HTTP request headers
 
@@ -3337,7 +3337,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_users_observations_query"></a>
 
-## [**ObservationQueryResponse**](ObservationQueryResponse.html) post_analytics_users_observations_query(body)
+## [**UserObservationQueryResponse**](UserObservationQueryResponse.html) post_analytics_users_observations_query(body)
 
 
 
@@ -3369,7 +3369,7 @@ end
 
 api_instance = PureCloud::UsersApi.new
 
-body = PureCloud::ObservationQuery.new # ObservationQuery | query
+body = PureCloud::UserObservationQuery.new # UserObservationQuery | query
 
 
 begin
@@ -3385,13 +3385,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
+ **body** | [**UserObservationQuery**](UserObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**ObservationQueryResponse**](ObservationQueryResponse.html)
+[**UserObservationQueryResponse**](UserObservationQueryResponse.html)
 
 ### HTTP request headers
 
@@ -3441,7 +3441,7 @@ division_id = "division_id_example" # String | the id of the division to which t
 role_id = "role_id_example" # String | the id of the role to grant
 
 opts = { 
-  subject_type: "PC_USER" # String | what the type of the subject is, PC_GROUP or PC_USER
+  subject_type: "PC_USER" # String | what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints)
 }
 
 begin
@@ -3459,7 +3459,7 @@ Name | Type | Description  | Notes
  **subject_id** | **String**| Subject ID (user or group) |  |
  **division_id** | **String**| the id of the division to which to make the grant |  |
  **role_id** | **String**| the id of the role to grant |  |
- **subject_type** | **String**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+ **subject_type** | **String**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to PC_USER] |
 {: class="table table-striped"}
 
 

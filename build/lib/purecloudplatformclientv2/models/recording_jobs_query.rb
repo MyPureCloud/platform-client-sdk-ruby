@@ -24,7 +24,7 @@ module PureCloud
     # The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :action_date
 
-    # Integration ID (Required only for EXPORT action)
+    # IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is for EXPORT only
     attr_accessor :integration_id
 
     # Include Screen recordings for export action, default value = true 

@@ -20,6 +20,7 @@ module PureCloud
   class UserAuthorization
     attr_accessor :roles
 
+    # A collection of the roles the user is not using
     attr_accessor :unused_roles
 
     # A collection of the permissions granted by all assigned roles

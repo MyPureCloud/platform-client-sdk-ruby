@@ -326,7 +326,7 @@ module PureCloud
     # 
     # @param q64 q64
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :expand expand
+    # @option opts [Array<String>] :expand Provides more details about a specified resource
     # @return [LocationsSearchResponse]
     def get_locations_search(q64, opts = {})
       data, _status_code, _headers = get_locations_search_with_http_info(q64, opts)
@@ -337,7 +337,7 @@ module PureCloud
     # 
     # @param q64 q64
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :expand expand
+    # @option opts [Array<String>] :expand Provides more details about a specified resource
     # @return [Array<(LocationsSearchResponse, Fixnum, Hash)>] LocationsSearchResponse data, response status code and response headers
     def get_locations_search_with_http_info(q64, opts = {})
       if @api_client.config.debugging

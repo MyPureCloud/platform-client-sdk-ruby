@@ -1181,7 +1181,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [AggregateQueryResponse]
+    # @return [ConversationAggregateQueryResponse]
     def post_analytics_conversations_aggregates_query(body, opts = {})
       data, _status_code, _headers = post_analytics_conversations_aggregates_query_with_http_info(body, opts)
       return data
@@ -1191,7 +1191,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(AggregateQueryResponse, Fixnum, Hash)>] AggregateQueryResponse data, response status code and response headers
+    # @return [Array<(ConversationAggregateQueryResponse, Fixnum, Hash)>] ConversationAggregateQueryResponse data, response status code and response headers
     def post_analytics_conversations_aggregates_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_conversations_aggregates_query ..."
@@ -1235,7 +1235,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AggregateQueryResponse')
+        :return_type => 'ConversationAggregateQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AnalyticsApi#post_analytics_conversations_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1376,7 +1376,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [AggregateQueryResponse]
+    # @return [EvaluationAggregateQueryResponse]
     def post_analytics_evaluations_aggregates_query(body, opts = {})
       data, _status_code, _headers = post_analytics_evaluations_aggregates_query_with_http_info(body, opts)
       return data
@@ -1386,7 +1386,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(AggregateQueryResponse, Fixnum, Hash)>] AggregateQueryResponse data, response status code and response headers
+    # @return [Array<(EvaluationAggregateQueryResponse, Fixnum, Hash)>] EvaluationAggregateQueryResponse data, response status code and response headers
     def post_analytics_evaluations_aggregates_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_evaluations_aggregates_query ..."
@@ -1430,7 +1430,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AggregateQueryResponse')
+        :return_type => 'EvaluationAggregateQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AnalyticsApi#post_analytics_evaluations_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1441,7 +1441,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [AggregateQueryResponse]
+    # @return [FlowAggregateQueryResponse]
     def post_analytics_flows_aggregates_query(body, opts = {})
       data, _status_code, _headers = post_analytics_flows_aggregates_query_with_http_info(body, opts)
       return data
@@ -1451,7 +1451,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(AggregateQueryResponse, Fixnum, Hash)>] AggregateQueryResponse data, response status code and response headers
+    # @return [Array<(FlowAggregateQueryResponse, Fixnum, Hash)>] FlowAggregateQueryResponse data, response status code and response headers
     def post_analytics_flows_aggregates_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_flows_aggregates_query ..."
@@ -1495,7 +1495,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AggregateQueryResponse')
+        :return_type => 'FlowAggregateQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AnalyticsApi#post_analytics_flows_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1506,7 +1506,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [QualifierMappingObservationQueryResponse]
+    # @return [FlowObservationQueryResponse]
     def post_analytics_flows_observations_query(body, opts = {})
       data, _status_code, _headers = post_analytics_flows_observations_query_with_http_info(body, opts)
       return data
@@ -1516,7 +1516,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(QualifierMappingObservationQueryResponse, Fixnum, Hash)>] QualifierMappingObservationQueryResponse data, response status code and response headers
+    # @return [Array<(FlowObservationQueryResponse, Fixnum, Hash)>] FlowObservationQueryResponse data, response status code and response headers
     def post_analytics_flows_observations_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_flows_observations_query ..."
@@ -1560,7 +1560,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'QualifierMappingObservationQueryResponse')
+        :return_type => 'FlowObservationQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AnalyticsApi#post_analytics_flows_observations_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1571,7 +1571,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [QualifierMappingObservationQueryResponse]
+    # @return [QueueObservationQueryResponse]
     def post_analytics_queues_observations_query(body, opts = {})
       data, _status_code, _headers = post_analytics_queues_observations_query_with_http_info(body, opts)
       return data
@@ -1581,7 +1581,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(QualifierMappingObservationQueryResponse, Fixnum, Hash)>] QualifierMappingObservationQueryResponse data, response status code and response headers
+    # @return [Array<(QueueObservationQueryResponse, Fixnum, Hash)>] QueueObservationQueryResponse data, response status code and response headers
     def post_analytics_queues_observations_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_queues_observations_query ..."
@@ -1625,7 +1625,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'QualifierMappingObservationQueryResponse')
+        :return_type => 'QueueObservationQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AnalyticsApi#post_analytics_queues_observations_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1831,7 +1831,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [AggregateQueryResponse]
+    # @return [SurveyAggregateQueryResponse]
     def post_analytics_surveys_aggregates_query(body, opts = {})
       data, _status_code, _headers = post_analytics_surveys_aggregates_query_with_http_info(body, opts)
       return data
@@ -1841,7 +1841,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(AggregateQueryResponse, Fixnum, Hash)>] AggregateQueryResponse data, response status code and response headers
+    # @return [Array<(SurveyAggregateQueryResponse, Fixnum, Hash)>] SurveyAggregateQueryResponse data, response status code and response headers
     def post_analytics_surveys_aggregates_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_surveys_aggregates_query ..."
@@ -1885,7 +1885,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AggregateQueryResponse')
+        :return_type => 'SurveyAggregateQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AnalyticsApi#post_analytics_surveys_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1896,7 +1896,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [PresenceQueryResponse]
+    # @return [UserAggregateQueryResponse]
     def post_analytics_users_aggregates_query(body, opts = {})
       data, _status_code, _headers = post_analytics_users_aggregates_query_with_http_info(body, opts)
       return data
@@ -1906,7 +1906,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(PresenceQueryResponse, Fixnum, Hash)>] PresenceQueryResponse data, response status code and response headers
+    # @return [Array<(UserAggregateQueryResponse, Fixnum, Hash)>] UserAggregateQueryResponse data, response status code and response headers
     def post_analytics_users_aggregates_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_users_aggregates_query ..."
@@ -1950,7 +1950,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PresenceQueryResponse')
+        :return_type => 'UserAggregateQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AnalyticsApi#post_analytics_users_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -2026,7 +2026,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [ObservationQueryResponse]
+    # @return [UserObservationQueryResponse]
     def post_analytics_users_observations_query(body, opts = {})
       data, _status_code, _headers = post_analytics_users_observations_query_with_http_info(body, opts)
       return data
@@ -2036,7 +2036,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ObservationQueryResponse, Fixnum, Hash)>] ObservationQueryResponse data, response status code and response headers
+    # @return [Array<(UserObservationQueryResponse, Fixnum, Hash)>] UserObservationQueryResponse data, response status code and response headers
     def post_analytics_users_observations_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_users_observations_query ..."
@@ -2080,7 +2080,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ObservationQueryResponse')
+        :return_type => 'UserObservationQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AnalyticsApi#post_analytics_users_observations_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

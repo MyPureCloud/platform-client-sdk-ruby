@@ -873,7 +873,7 @@ api_instance = PureCloud::AuthorizationApi.new
 role_id = "role_id_example" # String | Role ID
 
 opts = { 
-  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand.
+  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role
 }
 
 begin
@@ -890,7 +890,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role_id** | **String**| Role ID |  |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: unusedPermissions |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role | [optional] <br />**Values**: unusedPermissions |
 {: class="table table-striped"}
 
 
@@ -1583,7 +1583,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **division_id** | **String**| Division ID |  |
- **object_type** | **String**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, USER |
+ **object_type** | **String**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MESSAGINGCAMPAIGN, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, USER |
  **body** | **Array&lt;String&gt;**| Object Id List |  |
 {: class="table table-striped"}
 
@@ -1704,7 +1704,7 @@ role_id = "role_id_example" # String | Role ID
 body = PureCloud::SubjectDivisions.new # SubjectDivisions | Subjects and Divisions
 
 opts = { 
-  subject_type: "PC_USER" # String | what the type of the subject is, PC_GROUP or PC_USER
+  subject_type: "PC_USER" # String | what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
 }
 
 begin
@@ -1721,7 +1721,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role_id** | **String**| Role ID |  |
  **body** | [**SubjectDivisions**](SubjectDivisions.html)| Subjects and Divisions |  |
- **subject_type** | **String**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+ **subject_type** | **String**| what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
 {: class="table table-striped"}
 
 
@@ -1979,7 +1979,7 @@ division_id = "division_id_example" # String | the id of the division to which t
 role_id = "role_id_example" # String | the id of the role to grant
 
 opts = { 
-  subject_type: "PC_USER" # String | what the type of the subject is, PC_GROUP or PC_USER
+  subject_type: "PC_USER" # String | what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints)
 }
 
 begin
@@ -1997,7 +1997,7 @@ Name | Type | Description  | Notes
  **subject_id** | **String**| Subject ID (user or group) |  |
  **division_id** | **String**| the id of the division to which to make the grant |  |
  **role_id** | **String**| the id of the role to grant |  |
- **subject_type** | **String**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+ **subject_type** | **String**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to PC_USER] |
 {: class="table table-striped"}
 
 

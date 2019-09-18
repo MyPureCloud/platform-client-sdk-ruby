@@ -29,6 +29,7 @@ module PureCloud
 
     attr_accessor :permissions
 
+    # A collection of the permissions the role is not using
     attr_accessor :unused_permissions
 
     attr_accessor :permission_policies

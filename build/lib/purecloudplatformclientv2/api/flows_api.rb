@@ -28,7 +28,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [AggregateQueryResponse]
+    # @return [FlowAggregateQueryResponse]
     def post_analytics_flows_aggregates_query(body, opts = {})
       data, _status_code, _headers = post_analytics_flows_aggregates_query_with_http_info(body, opts)
       return data
@@ -38,7 +38,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(AggregateQueryResponse, Fixnum, Hash)>] AggregateQueryResponse data, response status code and response headers
+    # @return [Array<(FlowAggregateQueryResponse, Fixnum, Hash)>] FlowAggregateQueryResponse data, response status code and response headers
     def post_analytics_flows_aggregates_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FlowsApi.post_analytics_flows_aggregates_query ..."
@@ -82,7 +82,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AggregateQueryResponse')
+        :return_type => 'FlowAggregateQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FlowsApi#post_analytics_flows_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -93,7 +93,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [QualifierMappingObservationQueryResponse]
+    # @return [FlowObservationQueryResponse]
     def post_analytics_flows_observations_query(body, opts = {})
       data, _status_code, _headers = post_analytics_flows_observations_query_with_http_info(body, opts)
       return data
@@ -103,7 +103,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(QualifierMappingObservationQueryResponse, Fixnum, Hash)>] QualifierMappingObservationQueryResponse data, response status code and response headers
+    # @return [Array<(FlowObservationQueryResponse, Fixnum, Hash)>] FlowObservationQueryResponse data, response status code and response headers
     def post_analytics_flows_observations_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: FlowsApi.post_analytics_flows_observations_query ..."
@@ -147,7 +147,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'QualifierMappingObservationQueryResponse')
+        :return_type => 'FlowObservationQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: FlowsApi#post_analytics_flows_observations_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

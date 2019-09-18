@@ -29,7 +29,7 @@ module PureCloud
     # One of \"CONTACT\" or \"EXTERNAL_ORGANIZATION\".  Indicates the built-in entity type to which this schema applies.
     attr_accessor :applies_to
 
-    # The schema's current enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists
+    # The schema's enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists.
     attr_accessor :enabled
 
     # The URI of the user that created this schema.

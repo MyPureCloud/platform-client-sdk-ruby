@@ -3682,7 +3682,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [QualifierMappingObservationQueryResponse]
+    # @return [QueueObservationQueryResponse]
     def post_analytics_queues_observations_query(body, opts = {})
       data, _status_code, _headers = post_analytics_queues_observations_query_with_http_info(body, opts)
       return data
@@ -3692,7 +3692,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(QualifierMappingObservationQueryResponse, Fixnum, Hash)>] QualifierMappingObservationQueryResponse data, response status code and response headers
+    # @return [Array<(QueueObservationQueryResponse, Fixnum, Hash)>] QueueObservationQueryResponse data, response status code and response headers
     def post_analytics_queues_observations_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.post_analytics_queues_observations_query ..."
@@ -3736,7 +3736,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'QualifierMappingObservationQueryResponse')
+        :return_type => 'QueueObservationQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#post_analytics_queues_observations_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

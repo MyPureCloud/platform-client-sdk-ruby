@@ -30,9 +30,9 @@ module PureCloud
 
     attr_accessor :edge_uri
 
-    attr_accessor :current
-
     attr_accessor :latest_release
+
+    attr_accessor :current
 
     # The URI for this object
     attr_accessor :self_uri
@@ -51,9 +51,9 @@ module PureCloud
         
         :'edge_uri' => :'edgeUri',
         
-        :'current' => :'current',
-        
         :'latest_release' => :'latestRelease',
+        
+        :'current' => :'current',
         
         :'self_uri' => :'selfUri'
         
@@ -74,9 +74,9 @@ module PureCloud
         
         :'edge_uri' => :'String',
         
-        :'current' => :'BOOLEAN',
-        
         :'latest_release' => :'BOOLEAN',
+        
+        :'current' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -137,19 +137,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'current')
+      if attributes.has_key?(:'latestRelease')
         
         
-        self.current = attributes[:'current']
+        self.latest_release = attributes[:'latestRelease']
         
       
       end
 
       
-      if attributes.has_key?(:'latestRelease')
+      if attributes.has_key?(:'current')
         
         
-        self.latest_release = attributes[:'latestRelease']
+        self.current = attributes[:'current']
         
       
       end
@@ -264,8 +264,8 @@ module PureCloud
           edge_version == o.edge_version &&
           publish_date == o.publish_date &&
           edge_uri == o.edge_uri &&
-          current == o.current &&
           latest_release == o.latest_release &&
+          current == o.current &&
           self_uri == o.self_uri
     end
 
@@ -278,7 +278,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, edge_version, publish_date, edge_uri, current, latest_release, self_uri].hash
+      [id, name, edge_version, publish_date, edge_uri, latest_release, current, self_uri].hash
     end
 
     # build the object from hash

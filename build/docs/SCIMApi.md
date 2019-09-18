@@ -12,10 +12,15 @@ Method | Description
 [**delete_scim_v2_user**](SCIMApi.html#delete_scim_v2_user) | Delete a user
 [**get_scim_group**](SCIMApi.html#get_scim_group) | Get a group
 [**get_scim_groups**](SCIMApi.html#get_scim_groups) | Get a list of groups
+[**get_scim_resourcetype**](SCIMApi.html#get_scim_resourcetype) | Get the SCIM configuration
+[**get_scim_resourcetypes**](SCIMApi.html#get_scim_resourcetypes) | Get the SCIM resource types
+[**get_scim_serviceproviderconfig**](SCIMApi.html#get_scim_serviceproviderconfig) | Get the SCIM configuration
 [**get_scim_user**](SCIMApi.html#get_scim_user) | Get a user
 [**get_scim_users**](SCIMApi.html#get_scim_users) | Get a list of users
 [**get_scim_v2_group**](SCIMApi.html#get_scim_v2_group) | Get a group
 [**get_scim_v2_groups**](SCIMApi.html#get_scim_v2_groups) | Get a list of groups
+[**get_scim_v2_resourcetype**](SCIMApi.html#get_scim_v2_resourcetype) | Get the SCIM configuration
+[**get_scim_v2_resourcetypes**](SCIMApi.html#get_scim_v2_resourcetypes) | Get the SCIM resource types
 [**get_scim_v2_serviceproviderconfig**](SCIMApi.html#get_scim_v2_serviceproviderconfig) | Get the SCIM configuration
 [**get_scim_v2_user**](SCIMApi.html#get_scim_v2_user) | Get a user
 [**get_scim_v2_users**](SCIMApi.html#get_scim_v2_users) | Get a list of users
@@ -308,6 +313,170 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_scim_resourcetype"></a>
+
+## [**ScimConfigResourceType**](ScimConfigResourceType.html) get_scim_resourcetype(resource_type)
+
+
+
+Get the SCIM configuration
+
+
+
+Wraps GET /api/v2/scim/resourcetypes/{resourceType} 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+
+api_instance = PureCloud::SCIMApi.new
+
+resource_type = "resource_type_example" # String | The ID of a resource.
+
+
+begin
+  #Get the SCIM configuration
+  result = api_instance.get_scim_resourcetype(resource_type)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->get_scim_resourcetype: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resource_type** | **String**| The ID of a resource. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScimConfigResourceType**](ScimConfigResourceType.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
+<a name="get_scim_resourcetypes"></a>
+
+## [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html) get_scim_resourcetypes(opts)
+
+
+
+Get the SCIM resource types
+
+
+
+Wraps GET /api/v2/scim/resourcetypes 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+
+api_instance = PureCloud::SCIMApi.new
+
+opts = { 
+  filter: "displayName eq groupName" # String | Filtered results are invalid and will result in a 403 (Unauthorized) return.
+}
+
+begin
+  #Get the SCIM resource types
+  result = api_instance.get_scim_resourcetypes(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->get_scim_resourcetypes: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
+<a name="get_scim_serviceproviderconfig"></a>
+
+## [**ScimServiceProviderConfig**](ScimServiceProviderConfig.html) get_scim_serviceproviderconfig(opts)
+
+
+
+Get the SCIM configuration
+
+
+
+Wraps GET /api/v2/scim/serviceproviderconfig 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+
+api_instance = PureCloud::SCIMApi.new
+
+opts = { 
+  if_none_match: "if_none_match_example" # String | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. 
+}
+
+begin
+  #Get the SCIM configuration
+  result = api_instance.get_scim_serviceproviderconfig(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->get_scim_serviceproviderconfig: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **if_none_match** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScimServiceProviderConfig**](ScimServiceProviderConfig.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
 <a name="get_scim_user"></a>
 
 ## [**ScimV2User**](ScimV2User.html) get_scim_user(user_id, opts)
@@ -582,6 +751,115 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ScimGroupListResponse**](ScimGroupListResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
+<a name="get_scim_v2_resourcetype"></a>
+
+## [**ScimConfigResourceType**](ScimConfigResourceType.html) get_scim_v2_resourcetype(resource_type)
+
+
+
+Get the SCIM configuration
+
+
+
+Wraps GET /api/v2/scim/v2/resourcetypes/{resourceType} 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+
+api_instance = PureCloud::SCIMApi.new
+
+resource_type = "resource_type_example" # String | The ID of a resource.
+
+
+begin
+  #Get the SCIM configuration
+  result = api_instance.get_scim_v2_resourcetype(resource_type)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->get_scim_v2_resourcetype: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resource_type** | **String**| The ID of a resource. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScimConfigResourceType**](ScimConfigResourceType.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
+<a name="get_scim_v2_resourcetypes"></a>
+
+## [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html) get_scim_v2_resourcetypes(opts)
+
+
+
+Get the SCIM resource types
+
+
+
+Wraps GET /api/v2/scim/v2/resourcetypes 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+
+api_instance = PureCloud::SCIMApi.new
+
+opts = { 
+  filter: "displayName eq groupName" # String | Filtered results are invalid and will result in a 403 (Unauthorized) return.
+}
+
+begin
+  #Get the SCIM resource types
+  result = api_instance.get_scim_v2_resourcetypes(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->get_scim_v2_resourcetypes: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html)
 
 ### HTTP request headers
 

@@ -912,7 +912,7 @@ module PureCloud
     # Get the organization role specified by its ID.
     # @param role_id Role ID
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :expand Which fields, if any, to expand.
+    # @option opts [Array<String>] :expand Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role
     # @return [DomainOrganizationRole]
     def get_authorization_role(role_id, opts = {})
       data, _status_code, _headers = get_authorization_role_with_http_info(role_id, opts)
@@ -923,7 +923,7 @@ module PureCloud
     # Get the organization role specified by its ID.
     # @param role_id Role ID
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :expand Which fields, if any, to expand.
+    # @option opts [Array<String>] :expand Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role
     # @return [Array<(DomainOrganizationRole, Fixnum, Hash)>] DomainOrganizationRole data, response status code and response headers
     def get_authorization_role_with_http_info(role_id, opts = {})
       if @api_client.config.debugging
@@ -1774,8 +1774,8 @@ module PureCloud
       fail ArgumentError, "Missing the required parameter 'object_type' when calling AuthorizationApi.post_authorization_division_object" if object_type.nil?
       
       # verify enum value
-      unless ['QUEUE', 'CAMPAIGN', 'CONTACTLIST', 'DNCLIST', 'MANAGEMENTUNIT', 'BUSINESSUNIT', 'FLOW', 'USER'].include?(object_type)
-        fail ArgumentError, "invalid value for 'object_type', must be one of QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, USER"
+      unless ['QUEUE', 'CAMPAIGN', 'CONTACTLIST', 'DNCLIST', 'MESSAGINGCAMPAIGN', 'MANAGEMENTUNIT', 'BUSINESSUNIT', 'FLOW', 'USER'].include?(object_type)
+        fail ArgumentError, "invalid value for 'object_type', must be one of QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MESSAGINGCAMPAIGN, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, USER"
       end
       
       
@@ -1896,7 +1896,7 @@ module PureCloud
     # @param role_id Role ID
     # @param body Subjects and Divisions
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :subject_type what the type of the subject is, PC_GROUP or PC_USER (default to PC_USER)
+    # @option opts [String] :subject_type what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (default to PC_USER)
     # @return [nil]
     def post_authorization_role(role_id, body, opts = {})
       post_authorization_role_with_http_info(role_id, body, opts)
@@ -1908,7 +1908,7 @@ module PureCloud
     # @param role_id Role ID
     # @param body Subjects and Divisions
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :subject_type what the type of the subject is, PC_GROUP or PC_USER
+    # @option opts [String] :subject_type what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def post_authorization_role_with_http_info(role_id, body, opts = {})
       if @api_client.config.debugging
@@ -2194,7 +2194,7 @@ module PureCloud
     # @param division_id the id of the division to which to make the grant
     # @param role_id the id of the role to grant
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :subject_type what the type of the subject is, PC_GROUP or PC_USER (default to PC_USER)
+    # @option opts [String] :subject_type what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (default to PC_USER)
     # @return [nil]
     def post_authorization_subject_division_role(subject_id, division_id, role_id, opts = {})
       post_authorization_subject_division_role_with_http_info(subject_id, division_id, role_id, opts)
@@ -2207,7 +2207,7 @@ module PureCloud
     # @param division_id the id of the division to which to make the grant
     # @param role_id the id of the role to grant
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :subject_type what the type of the subject is, PC_GROUP or PC_USER
+    # @option opts [String] :subject_type what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints)
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def post_authorization_subject_division_role_with_http_info(subject_id, division_id, role_id, opts = {})
       if @api_client.config.debugging

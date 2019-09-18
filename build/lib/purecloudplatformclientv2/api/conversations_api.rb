@@ -2071,6 +2071,186 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get a web chat conversation message
+    # 
+    # @param conversation_id conversationId
+    # @param message_id messageId
+    # @param [Hash] opts the optional parameters
+    # @return [WebChatMessage]
+    def get_conversations_chat_message(conversation_id, message_id, opts = {})
+      data, _status_code, _headers = get_conversations_chat_message_with_http_info(conversation_id, message_id, opts)
+      return data
+    end
+
+    # Get a web chat conversation message
+    # 
+    # @param conversation_id conversationId
+    # @param message_id messageId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WebChatMessage, Fixnum, Hash)>] WebChatMessage data, response status code and response headers
+    def get_conversations_chat_message_with_http_info(conversation_id, message_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_chat_message ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_chat_message" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'message_id' is set
+      fail ArgumentError, "Missing the required parameter 'message_id' when calling ConversationsApi.get_conversations_chat_message" if message_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/chats/{conversationId}/messages/{messageId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'messageId' + '}', message_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WebChatMessage')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_chat_message\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the messages of a chat conversation.
+    # 
+    # @param conversation_id conversationId
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :after If specified, get the messages chronologically after the id of this message
+    # @option opts [String] :before If specified, get the messages chronologically before the id of this message
+    # @option opts [String] :sort_order Sort order (default to ascending)
+    # @option opts [Integer] :max_results Limit the returned number of messages, up to a maximum of 100 (default to 100)
+    # @return [WebChatMessageEntityList]
+    def get_conversations_chat_messages(conversation_id, opts = {})
+      data, _status_code, _headers = get_conversations_chat_messages_with_http_info(conversation_id, opts)
+      return data
+    end
+
+    # Get the messages of a chat conversation.
+    # 
+    # @param conversation_id conversationId
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :after If specified, get the messages chronologically after the id of this message
+    # @option opts [String] :before If specified, get the messages chronologically before the id of this message
+    # @option opts [String] :sort_order Sort order
+    # @option opts [Integer] :max_results Limit the returned number of messages, up to a maximum of 100
+    # @return [Array<(WebChatMessageEntityList, Fixnum, Hash)>] WebChatMessageEntityList data, response status code and response headers
+    def get_conversations_chat_messages_with_http_info(conversation_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.get_conversations_chat_messages ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.get_conversations_chat_messages" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/chats/{conversationId}/messages".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'after'] = opts[:'after'] if opts[:'after']
+      query_params[:'before'] = opts[:'before'] if opts[:'before']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'maxResults'] = opts[:'max_results'] if opts[:'max_results']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WebChatMessageEntityList')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#get_conversations_chat_messages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get the wrap-up for this conversation participant. 
     # 
     # @param conversation_id conversationId
@@ -6622,7 +6802,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [AggregateQueryResponse]
+    # @return [ConversationAggregateQueryResponse]
     def post_analytics_conversations_aggregates_query(body, opts = {})
       data, _status_code, _headers = post_analytics_conversations_aggregates_query_with_http_info(body, opts)
       return data
@@ -6632,7 +6812,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(AggregateQueryResponse, Fixnum, Hash)>] AggregateQueryResponse data, response status code and response headers
+    # @return [Array<(ConversationAggregateQueryResponse, Fixnum, Hash)>] ConversationAggregateQueryResponse data, response status code and response headers
     def post_analytics_conversations_aggregates_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ConversationsApi.post_analytics_conversations_aggregates_query ..."
@@ -6676,7 +6856,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AggregateQueryResponse')
+        :return_type => 'ConversationAggregateQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#post_analytics_conversations_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -7812,6 +7992,166 @@ module PureCloud
         :return_type => 'CreateCallResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_calls\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Send a message on behalf of a communication in a chat conversation.
+    # 
+    # @param conversation_id conversationId
+    # @param communication_id communicationId
+    # @param body Message
+    # @param [Hash] opts the optional parameters
+    # @return [WebChatMessage]
+    def post_conversations_chat_communication_messages(conversation_id, communication_id, body, opts = {})
+      data, _status_code, _headers = post_conversations_chat_communication_messages_with_http_info(conversation_id, communication_id, body, opts)
+      return data
+    end
+
+    # Send a message on behalf of a communication in a chat conversation.
+    # 
+    # @param conversation_id conversationId
+    # @param communication_id communicationId
+    # @param body Message
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WebChatMessage, Fixnum, Hash)>] WebChatMessage data, response status code and response headers
+    def post_conversations_chat_communication_messages_with_http_info(conversation_id, communication_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_chat_communication_messages ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_chat_communication_messages" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'communication_id' is set
+      fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.post_conversations_chat_communication_messages" if communication_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_chat_communication_messages" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WebChatMessage')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_chat_communication_messages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Send a typing-indicator on behalf of a communication in a chat conversation.
+    # 
+    # @param conversation_id conversationId
+    # @param communication_id communicationId
+    # @param [Hash] opts the optional parameters
+    # @return [WebChatTyping]
+    def post_conversations_chat_communication_typing(conversation_id, communication_id, opts = {})
+      data, _status_code, _headers = post_conversations_chat_communication_typing_with_http_info(conversation_id, communication_id, opts)
+      return data
+    end
+
+    # Send a typing-indicator on behalf of a communication in a chat conversation.
+    # 
+    # @param conversation_id conversationId
+    # @param communication_id communicationId
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WebChatTyping, Fixnum, Hash)>] WebChatTyping data, response status code and response headers
+    def post_conversations_chat_communication_typing_with_http_info(conversation_id, communication_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_chat_communication_typing ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversations_chat_communication_typing" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'communication_id' is set
+      fail ArgumentError, "Missing the required parameter 'communication_id' when calling ConversationsApi.post_conversations_chat_communication_typing" if communication_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'communicationId' + '}', communication_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WebChatTyping')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_chat_communication_typing\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

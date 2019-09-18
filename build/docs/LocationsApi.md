@@ -321,7 +321,7 @@ api_instance = PureCloud::LocationsApi.new
 q64 = "q64_example" # String | q64
 
 opts = { 
-  expand: ["expand_example"] # Array<String> | expand
+  expand: ["expand_example"] # Array<String> | Provides more details about a specified resource
 }
 
 begin
@@ -338,7 +338,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **q64** | **String**| q64 |  |
- **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Provides more details about a specified resource | [optional] <br />**Values**: images |
 {: class="table table-striped"}
 
 

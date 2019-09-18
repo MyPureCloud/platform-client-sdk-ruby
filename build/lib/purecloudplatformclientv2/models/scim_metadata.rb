@@ -123,7 +123,7 @@ module PureCloud
       
       
       
-      allowed_values = ["User", "Group", "ServiceProviderConfig"]
+      allowed_values = ["User", "Group", "ServiceProviderConfig", "ResourceType"]
       if @resource_type && !allowed_values.include?(@resource_type)
         return false
       end
@@ -149,7 +149,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] resource_type Object to be assigned
     def resource_type=(resource_type)
-      allowed_values = ["User", "Group", "ServiceProviderConfig"]
+      allowed_values = ["User", "Group", "ServiceProviderConfig", "ResourceType"]
       if resource_type && !allowed_values.include?(resource_type)
         fail ArgumentError, "invalid value for 'resource_type', must be one of #{allowed_values}."
       end

@@ -3167,7 +3167,7 @@ Name | Type | Description  | Notes
 
 <a name="post_analytics_queues_observations_query"></a>
 
-## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) post_analytics_queues_observations_query(body)
+## [**QueueObservationQueryResponse**](QueueObservationQueryResponse.html) post_analytics_queues_observations_query(body)
 
 
 
@@ -3199,7 +3199,7 @@ end
 
 api_instance = PureCloud::RoutingApi.new
 
-body = PureCloud::ObservationQuery.new # ObservationQuery | query
+body = PureCloud::QueueObservationQuery.new # QueueObservationQuery | query
 
 
 begin
@@ -3215,13 +3215,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
+ **body** | [**QueueObservationQuery**](QueueObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+[**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
 
 ### HTTP request headers
 

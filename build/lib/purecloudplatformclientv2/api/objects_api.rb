@@ -445,8 +445,8 @@ module PureCloud
       fail ArgumentError, "Missing the required parameter 'object_type' when calling ObjectsApi.post_authorization_division_object" if object_type.nil?
       
       # verify enum value
-      unless ['QUEUE', 'CAMPAIGN', 'CONTACTLIST', 'DNCLIST', 'MANAGEMENTUNIT', 'BUSINESSUNIT', 'FLOW', 'USER'].include?(object_type)
-        fail ArgumentError, "invalid value for 'object_type', must be one of QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, USER"
+      unless ['QUEUE', 'CAMPAIGN', 'CONTACTLIST', 'DNCLIST', 'MESSAGINGCAMPAIGN', 'MANAGEMENTUNIT', 'BUSINESSUNIT', 'FLOW', 'USER'].include?(object_type)
+        fail ArgumentError, "invalid value for 'object_type', must be one of QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MESSAGINGCAMPAIGN, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, USER"
       end
       
       

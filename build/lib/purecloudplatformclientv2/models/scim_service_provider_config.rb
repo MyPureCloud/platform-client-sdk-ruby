@@ -17,18 +17,59 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
+  # SCIM Provider Config for PureCloud.
   class ScimServiceProviderConfig
+    # schemas supported
+    attr_accessor :schemas
+
     # Documentation
     attr_accessor :documentation_uri
 
-    # Configuration SCIM meta data
+    # Patch support
+    attr_accessor :patch
+
+    # Filter support. Additional properties: maxResults
+    attr_accessor :filter
+
+    # Entity Tag support
+    attr_accessor :etag
+
+    # Sort support
+    attr_accessor :sort
+
+    # Bulk support
+    attr_accessor :bulk
+
+    # Change password
+    attr_accessor :change_password
+
+    # Authentication schemes supported.
+    attr_accessor :authentication_schemes
+
+    # Resource SCIM meta
     attr_accessor :meta
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'schemas' => :'schemas',
+        
         :'documentation_uri' => :'documentationUri',
+        
+        :'patch' => :'patch',
+        
+        :'filter' => :'filter',
+        
+        :'etag' => :'etag',
+        
+        :'sort' => :'sort',
+        
+        :'bulk' => :'bulk',
+        
+        :'change_password' => :'changePassword',
+        
+        :'authentication_schemes' => :'authenticationSchemes',
         
         :'meta' => :'meta'
         
@@ -39,7 +80,23 @@ module PureCloud
     def self.swagger_types
       {
         
+        :'schemas' => :'Array<String>',
+        
         :'documentation_uri' => :'String',
+        
+        :'patch' => :'ScimServiceProviderConfigSimpleFeature',
+        
+        :'filter' => :'ScimServiceProviderConfigFilterFeature',
+        
+        :'etag' => :'ScimServiceProviderConfigSimpleFeature',
+        
+        :'sort' => :'ScimServiceProviderConfigSimpleFeature',
+        
+        :'bulk' => :'ScimServiceProviderConfigBulkFeature',
+        
+        :'change_password' => :'ScimServiceProviderConfigSimpleFeature',
+        
+        :'authentication_schemes' => :'Array<ScimServiceProviderConfigAuthenticationScheme>',
         
         :'meta' => :'ScimMetadata'
         
@@ -55,10 +112,86 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes.has_key?(:'schemas')
+        
+        if (value = attributes[:'schemas']).is_a?(Array)
+          self.schemas = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'documentationUri')
         
         
         self.documentation_uri = attributes[:'documentationUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'patch')
+        
+        
+        self.patch = attributes[:'patch']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'filter')
+        
+        
+        self.filter = attributes[:'filter']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'etag')
+        
+        
+        self.etag = attributes[:'etag']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'sort')
+        
+        
+        self.sort = attributes[:'sort']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'bulk')
+        
+        
+        self.bulk = attributes[:'bulk']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'changePassword')
+        
+        
+        self.change_password = attributes[:'changePassword']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'authenticationSchemes')
+        
+        if (value = attributes[:'authenticationSchemes']).is_a?(Array)
+          self.authentication_schemes = value
+        end
+        
         
       
       end
@@ -96,8 +229,80 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -114,7 +319,15 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          schemas == o.schemas &&
           documentation_uri == o.documentation_uri &&
+          patch == o.patch &&
+          filter == o.filter &&
+          etag == o.etag &&
+          sort == o.sort &&
+          bulk == o.bulk &&
+          change_password == o.change_password &&
+          authentication_schemes == o.authentication_schemes &&
           meta == o.meta
     end
 
@@ -127,7 +340,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [documentation_uri, meta].hash
+      [schemas, documentation_uri, patch, filter, etag, sort, bulk, change_password, authentication_schemes, meta].hash
     end
 
     # build the object from hash

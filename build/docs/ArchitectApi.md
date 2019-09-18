@@ -56,6 +56,7 @@ Method | Description
 [**get_flow_versions**](ArchitectApi.html#get_flow_versions) | Get flow version list
 [**get_flows**](ArchitectApi.html#get_flows) | Get a pageable list of flows, filtered by query parameters
 [**get_flows_datatable**](ArchitectApi.html#get_flows_datatable) | Returns a specific datatable by id
+[**get_flows_datatable_import_job**](ArchitectApi.html#get_flows_datatable_import_job) | Returns the state information about an import job
 [**get_flows_datatable_row**](ArchitectApi.html#get_flows_datatable_row) | Returns a specific row for the datatable
 [**get_flows_datatable_rows**](ArchitectApi.html#get_flows_datatable_rows) | Returns the rows for the datatable with the given id
 [**get_flows_datatables**](ArchitectApi.html#get_flows_datatables) | Retrieve a list of datatables for the org
@@ -3493,6 +3494,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DataTable**](DataTable.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_flows_datatable_import_job"></a>
+
+## [**DataTableImportJob**](DataTableImportJob.html) get_flows_datatable_import_job(datatable_id, import_job_id)
+
+
+
+Returns the state information about an import job
+
+Returns the state information about an import job.
+
+Wraps GET /api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId} 
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+import_job_id = "import_job_id_example" # String | id of import job
+
+
+begin
+  #Returns the state information about an import job
+  result = api_instance.get_flows_datatable_import_job(datatable_id, import_job_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_flows_datatable_import_job: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **import_job_id** | **String**| id of import job |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataTableImportJob**](DataTableImportJob.html)
 
 ### HTTP request headers
 

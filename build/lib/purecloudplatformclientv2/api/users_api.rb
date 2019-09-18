@@ -3583,7 +3583,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [PresenceQueryResponse]
+    # @return [UserAggregateQueryResponse]
     def post_analytics_users_aggregates_query(body, opts = {})
       data, _status_code, _headers = post_analytics_users_aggregates_query_with_http_info(body, opts)
       return data
@@ -3593,7 +3593,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(PresenceQueryResponse, Fixnum, Hash)>] PresenceQueryResponse data, response status code and response headers
+    # @return [Array<(UserAggregateQueryResponse, Fixnum, Hash)>] UserAggregateQueryResponse data, response status code and response headers
     def post_analytics_users_aggregates_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.post_analytics_users_aggregates_query ..."
@@ -3637,7 +3637,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PresenceQueryResponse')
+        :return_type => 'UserAggregateQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#post_analytics_users_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -3713,7 +3713,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [ObservationQueryResponse]
+    # @return [UserObservationQueryResponse]
     def post_analytics_users_observations_query(body, opts = {})
       data, _status_code, _headers = post_analytics_users_observations_query_with_http_info(body, opts)
       return data
@@ -3723,7 +3723,7 @@ module PureCloud
     # 
     # @param body query
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ObservationQueryResponse, Fixnum, Hash)>] ObservationQueryResponse data, response status code and response headers
+    # @return [Array<(UserObservationQueryResponse, Fixnum, Hash)>] UserObservationQueryResponse data, response status code and response headers
     def post_analytics_users_observations_query_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: UsersApi.post_analytics_users_observations_query ..."
@@ -3767,7 +3767,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ObservationQueryResponse')
+        :return_type => 'UserObservationQueryResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#post_analytics_users_observations_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -3780,7 +3780,7 @@ module PureCloud
     # @param division_id the id of the division to which to make the grant
     # @param role_id the id of the role to grant
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :subject_type what the type of the subject is, PC_GROUP or PC_USER (default to PC_USER)
+    # @option opts [String] :subject_type what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (default to PC_USER)
     # @return [nil]
     def post_authorization_subject_division_role(subject_id, division_id, role_id, opts = {})
       post_authorization_subject_division_role_with_http_info(subject_id, division_id, role_id, opts)
@@ -3793,7 +3793,7 @@ module PureCloud
     # @param division_id the id of the division to which to make the grant
     # @param role_id the id of the role to grant
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :subject_type what the type of the subject is, PC_GROUP or PC_USER
+    # @option opts [String] :subject_type what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints)
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def post_authorization_subject_division_role_with_http_info(subject_id, division_id, role_id, opts = {})
       if @api_client.config.debugging

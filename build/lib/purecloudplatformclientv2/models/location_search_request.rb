@@ -33,6 +33,9 @@ module PureCloud
     # Multi-value sort order, list of multiple sort values
     attr_accessor :sort
 
+    # Provides more details about a specified resource
+    attr_accessor :expand
+
     attr_accessor :query
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -48,6 +51,8 @@ module PureCloud
         :'page_number' => :'pageNumber',
         
         :'sort' => :'sort',
+        
+        :'expand' => :'expand',
         
         :'query' => :'query'
         
@@ -67,6 +72,8 @@ module PureCloud
         :'page_number' => :'Integer',
         
         :'sort' => :'Array<SearchSort>',
+        
+        :'expand' => :'Array<String>',
         
         :'query' => :'Array<LocationSearchCriteria>'
         
@@ -129,6 +136,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'expand')
+        
+        if (value = attributes[:'expand']).is_a?(Array)
+          self.expand = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'query')
         
         if (value = attributes[:'query']).is_a?(Array)
@@ -161,6 +179,10 @@ module PureCloud
       if @sort_order && !allowed_values.include?(@sort_order)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -226,6 +248,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -236,6 +263,7 @@ module PureCloud
           page_size == o.page_size &&
           page_number == o.page_number &&
           sort == o.sort &&
+          expand == o.expand &&
           query == o.query
     end
 
@@ -248,7 +276,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [sort_order, sort_by, page_size, page_number, sort, query].hash
+      [sort_order, sort_by, page_size, page_number, sort, expand, query].hash
     end
 
     # build the object from hash

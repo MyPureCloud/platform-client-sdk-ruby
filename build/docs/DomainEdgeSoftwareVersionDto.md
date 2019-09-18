@@ -12,8 +12,8 @@ title: DomainEdgeSoftwareVersionDto
 | **edge_version** | **String** |  | [optional] |
 | **publish_date** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **edge_uri** | **String** |  | [optional] |
-| **current** | **BOOLEAN** |  | [optional] |
 | **latest_release** | **BOOLEAN** |  | [optional] |
+| **current** | **BOOLEAN** |  | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 
