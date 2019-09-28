@@ -18,12 +18,16 @@ require 'date'
 
 module PureCloud
   class MessageInfo
+    # Key that can be used to localize the message.
     attr_accessor :localizable_message_code
 
+    # Description of the message.
     attr_accessor :message
 
+    # Message with template fields for variable replacement.
     attr_accessor :message_with_params
 
+    # Map with fields for variable replacement.
     attr_accessor :message_params
 
     # Attribute mapping from ruby-style variable name to JSON key.

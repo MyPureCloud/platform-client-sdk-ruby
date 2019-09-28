@@ -17,24 +17,27 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class LocationUpdateDefinition
+  class LocationCreateUpdateDefinition
     # The name of the Location.
     attr_accessor :name
 
     attr_accessor :address
 
-    attr_accessor :address_verified
-
     attr_accessor :emergency_number
+
+    attr_accessor :version
 
     # Current activity status of the location.
     attr_accessor :state
 
-    attr_accessor :version
+    attr_accessor :notes
+
+    # The user id of the location contact
+    attr_accessor :contact_user
 
     attr_accessor :path
 
-    attr_accessor :notes
+    attr_accessor :address_verified
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -44,17 +47,19 @@ module PureCloud
         
         :'address' => :'address',
         
-        :'address_verified' => :'addressVerified',
-        
         :'emergency_number' => :'emergencyNumber',
-        
-        :'state' => :'state',
         
         :'version' => :'version',
         
+        :'state' => :'state',
+        
+        :'notes' => :'notes',
+        
+        :'contact_user' => :'contactUser',
+        
         :'path' => :'path',
         
-        :'notes' => :'notes'
+        :'address_verified' => :'addressVerified'
         
       }
     end
@@ -67,17 +72,19 @@ module PureCloud
         
         :'address' => :'LocationAddress',
         
-        :'address_verified' => :'BOOLEAN',
-        
         :'emergency_number' => :'LocationEmergencyNumber',
-        
-        :'state' => :'String',
         
         :'version' => :'Integer',
         
+        :'state' => :'String',
+        
+        :'notes' => :'String',
+        
+        :'contact_user' => :'String',
+        
         :'path' => :'Array<String>',
         
-        :'notes' => :'String'
+        :'address_verified' => :'BOOLEAN'
         
       }
     end
@@ -109,19 +116,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'addressVerified')
+      if attributes.has_key?(:'emergencyNumber')
         
         
-        self.address_verified = attributes[:'addressVerified']
+        self.emergency_number = attributes[:'emergencyNumber']
         
       
       end
 
       
-      if attributes.has_key?(:'emergencyNumber')
+      if attributes.has_key?(:'version')
         
         
-        self.emergency_number = attributes[:'emergencyNumber']
+        self.version = attributes[:'version']
         
       
       end
@@ -136,10 +143,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'version')
+      if attributes.has_key?(:'notes')
         
         
-        self.version = attributes[:'version']
+        self.notes = attributes[:'notes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'contactUser')
+        
+        
+        self.contact_user = attributes[:'contactUser']
         
       
       end
@@ -156,10 +172,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'notes')
+      if attributes.has_key?(:'addressVerified')
         
         
-        self.notes = attributes[:'notes']
+        self.address_verified = attributes[:'addressVerified']
         
       
       end
@@ -180,6 +196,11 @@ module PureCloud
     # @return true if the model is valid
     def valid?
       
+      
+      if @name.nil?
+        return false
+      end
+
       
       
       
@@ -202,6 +223,10 @@ module PureCloud
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -269,6 +294,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -276,12 +306,13 @@ module PureCloud
       self.class == o.class &&
           name == o.name &&
           address == o.address &&
-          address_verified == o.address_verified &&
           emergency_number == o.emergency_number &&
-          state == o.state &&
           version == o.version &&
+          state == o.state &&
+          notes == o.notes &&
+          contact_user == o.contact_user &&
           path == o.path &&
-          notes == o.notes
+          address_verified == o.address_verified
     end
 
     # @see the `==` method
@@ -293,7 +324,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, address, address_verified, emergency_number, state, version, path, notes].hash
+      [name, address, emergency_number, version, state, notes, contact_user, path, address_verified].hash
     end
 
     # build the object from hash

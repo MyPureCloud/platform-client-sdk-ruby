@@ -27,7 +27,11 @@ module PureCloud
     # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :timestamp
 
+    # User associated with this entry.
     attr_accessor :user
+
+    # OAuth client associated with this entry.
+    attr_accessor :client
 
     attr_accessor :version
 
@@ -44,6 +48,8 @@ module PureCloud
         :'timestamp' => :'timestamp',
         
         :'user' => :'user',
+        
+        :'client' => :'client',
         
         :'version' => :'version',
         
@@ -63,6 +69,8 @@ module PureCloud
         :'timestamp' => :'DateTime',
         
         :'user' => :'User',
+        
+        :'client' => :'DomainEntityRef',
         
         :'version' => :'String',
         
@@ -111,6 +119,15 @@ module PureCloud
         
         
         self.user = attributes[:'user']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'client')
+        
+        
+        self.client = attributes[:'client']
         
       
       end
@@ -178,6 +195,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -220,6 +241,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -229,6 +255,7 @@ module PureCloud
           resource == o.resource &&
           timestamp == o.timestamp &&
           user == o.user &&
+          client == o.client &&
           version == o.version &&
           secure == o.secure
     end
@@ -242,7 +269,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [action, resource, timestamp, user, version, secure].hash
+      [action, resource, timestamp, user, client, version, secure].hash
     end
 
     # build the object from hash

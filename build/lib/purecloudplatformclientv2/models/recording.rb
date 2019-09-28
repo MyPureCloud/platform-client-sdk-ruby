@@ -27,8 +27,10 @@ module PureCloud
 
     attr_accessor :path
 
+    # The start time of the recording. Null when there is no playable media.
     attr_accessor :start_time
 
+    # The end time of the recording. Null when there is no playable media.
     attr_accessor :end_time
 
     # The type of media that the recording is. At the moment that could be audio, chat, or email.
@@ -52,7 +54,7 @@ module PureCloud
     # The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :restore_expiration_time
 
-    # The different mediaUris for the recording.
+    # The different mediaUris for the recording. Null when there is no playable media.
     attr_accessor :media_uris
 
     attr_accessor :estimated_transcode_time_ms
@@ -71,7 +73,7 @@ module PureCloud
     # Duration of transcoded media in milliseconds
     attr_accessor :output_duration_ms
 
-    # Size of transcoded media in bytes
+    # Size of transcoded media in bytes. 0 if there is no transcoded media.
     attr_accessor :output_size_in_bytes
 
     # How many archive restorations the organization is allowed to have.

@@ -23,7 +23,11 @@ module PureCloud
 
     attr_accessor :name
 
+    # User that initiated the build.
     attr_accessor :user
+
+    # OAuth client that initiated the build.
+    attr_accessor :client
 
     attr_accessor :build_id
 
@@ -50,6 +54,8 @@ module PureCloud
         
         :'user' => :'user',
         
+        :'client' => :'client',
+        
         :'build_id' => :'buildId',
         
         :'date_started' => :'dateStarted',
@@ -74,6 +80,8 @@ module PureCloud
         :'name' => :'String',
         
         :'user' => :'User',
+        
+        :'client' => :'DomainEntityRef',
         
         :'build_id' => :'String',
         
@@ -121,6 +129,15 @@ module PureCloud
         
         
         self.user = attributes[:'user']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'client')
+        
+        
+        self.client = attributes[:'client']
         
       
       end
@@ -223,6 +240,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["BUILDINITIALIZING", "BUILDINPROGRESS", "NOTBUILT", "OPERATIONAL", "OPERATIONALNEEDSREBUILD"]
       if @status && !allowed_values.include?(@status)
         return false
@@ -240,6 +261,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -303,6 +329,7 @@ module PureCloud
           id == o.id &&
           name == o.name &&
           user == o.user &&
+          client == o.client &&
           build_id == o.build_id &&
           date_started == o.date_started &&
           date_completed == o.date_completed &&
@@ -320,7 +347,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, user, build_id, date_started, date_completed, status, failed_objects, self_uri].hash
+      [id, name, user, client, build_id, date_started, date_completed, status, failed_objects, self_uri].hash
     end
 
     # build the object from hash

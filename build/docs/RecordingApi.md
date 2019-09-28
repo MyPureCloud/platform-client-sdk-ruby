@@ -656,7 +656,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation_recordingmetadata_recording_id"></a>
 
-## [**Recording**](Recording.html) get_conversation_recordingmetadata_recording_id(conversation_id, recording_id)
+## [**RecordingMetadata**](RecordingMetadata.html) get_conversation_recordingmetadata_recording_id(conversation_id, recording_id)
 
 
 
@@ -712,7 +712,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Recording**](Recording.html)
+[**RecordingMetadata**](RecordingMetadata.html)
 
 ### HTTP request headers
 

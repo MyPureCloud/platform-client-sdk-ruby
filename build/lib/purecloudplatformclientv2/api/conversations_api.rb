@@ -2072,7 +2072,7 @@ module PureCloud
     end
 
     # Get a web chat conversation message
-    # 
+    # The current user must be involved with the conversation to get its messages.
     # @param conversation_id conversationId
     # @param message_id messageId
     # @param [Hash] opts the optional parameters
@@ -2083,7 +2083,7 @@ module PureCloud
     end
 
     # Get a web chat conversation message
-    # 
+    # The current user must be involved with the conversation to get its messages.
     # @param conversation_id conversationId
     # @param message_id messageId
     # @param [Hash] opts the optional parameters
@@ -2147,7 +2147,7 @@ module PureCloud
     end
 
     # Get the messages of a chat conversation.
-    # 
+    # The current user must be involved with the conversation to get its messages.
     # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @option opts [String] :after If specified, get the messages chronologically after the id of this message
@@ -2161,7 +2161,7 @@ module PureCloud
     end
 
     # Get the messages of a chat conversation.
-    # 
+    # The current user must be involved with the conversation to get its messages.
     # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
     # @option opts [String] :after If specified, get the messages chronologically after the id of this message

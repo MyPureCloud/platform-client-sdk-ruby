@@ -65,6 +65,9 @@ module PureCloud
     # The percentage of the job that has completed processing
     attr_accessor :percentage_complete
 
+    # Indicates if durations are formatted in hh:mm:ss format instead of ms
+    attr_accessor :has_format_durations
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -103,6 +106,8 @@ module PureCloud
         :'locale' => :'locale',
         
         :'percentage_complete' => :'percentageComplete',
+        
+        :'has_format_durations' => :'hasFormatDurations',
         
         :'self_uri' => :'selfUri'
         
@@ -144,6 +149,8 @@ module PureCloud
         :'locale' => :'String',
         
         :'percentage_complete' => :'Float',
+        
+        :'has_format_durations' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -298,6 +305,15 @@ module PureCloud
         
         
         self.percentage_complete = attributes[:'percentageComplete']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'hasFormatDurations')
+        
+        
+        self.has_format_durations = attributes[:'hasFormatDurations']
         
       
       end
@@ -465,6 +481,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -589,6 +609,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -610,6 +635,7 @@ module PureCloud
           modified_date_time == o.modified_date_time &&
           locale == o.locale &&
           percentage_complete == o.percentage_complete &&
+          has_format_durations == o.has_format_durations &&
           self_uri == o.self_uri
     end
 
@@ -622,7 +648,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, self_uri].hash
+      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, has_format_durations, self_uri].hash
     end
 
     # build the object from hash

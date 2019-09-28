@@ -1,20 +1,21 @@
 ---
-title: LocationUpdateDefinition
+title: LocationCreateUpdateDefinition
 ---
-## PureCloud::LocationUpdateDefinition
+## PureCloud::LocationCreateUpdateDefinition
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **name** | **String** | The name of the Location. | [optional] |
+| **name** | **String** | The name of the Location. | |
 | **address** | [**LocationAddress**](LocationAddress.html) |  | [optional] |
-| **address_verified** | **BOOLEAN** |  | [optional] |
 | **emergency_number** | [**LocationEmergencyNumber**](LocationEmergencyNumber.html) |  | [optional] |
-| **state** | **String** | Current activity status of the location. | [optional] |
 | **version** | **Integer** |  | [optional] |
-| **path** | **Array&lt;String&gt;** |  | [optional] |
+| **state** | **String** | Current activity status of the location. | [optional] |
 | **notes** | **String** |  | [optional] |
+| **contact_user** | **String** | The user id of the location contact | [optional] |
+| **path** | **Array&lt;String&gt;** |  | [optional] |
+| **address_verified** | **BOOLEAN** |  | [optional] |
 {: class="table table-striped"}
 
 

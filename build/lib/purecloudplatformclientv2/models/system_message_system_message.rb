@@ -197,7 +197,7 @@ module PureCloud
       
       
       
-      allowed_values = ["no_longer_subscribed", "subscription_changed"]
+      allowed_values = ["no_longer_subscribed", "subscription_changed", "token_revoked"]
       if @system_topic_type && !allowed_values.include?(@system_topic_type)
         return false
       end
@@ -222,7 +222,7 @@ module PureCloud
       
       
       
-      allowed_values = ["another_channel_subscribed"]
+      allowed_values = ["another_channel_subscribed", "user_tokens_revoked"]
       if @reason && !allowed_values.include?(@reason)
         return false
       end
@@ -249,7 +249,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] system_topic_type Object to be assigned
     def system_topic_type=(system_topic_type)
-      allowed_values = ["no_longer_subscribed", "subscription_changed"]
+      allowed_values = ["no_longer_subscribed", "subscription_changed", "token_revoked"]
       if system_topic_type && !allowed_values.include?(system_topic_type)
         fail ArgumentError, "invalid value for 'system_topic_type', must be one of #{allowed_values}."
       end
@@ -283,7 +283,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] reason Object to be assigned
     def reason=(reason)
-      allowed_values = ["another_channel_subscribed"]
+      allowed_values = ["another_channel_subscribed", "user_tokens_revoked"]
       if reason && !allowed_values.include?(reason)
         fail ArgumentError, "invalid value for 'reason', must be one of #{allowed_values}."
       end

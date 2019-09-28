@@ -5102,7 +5102,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get the list of Number Plans for this Site.
+    # Get the list of Number Plans for this Site. Only fetches the first 200 records.
     # 
     # @param site_id Site ID
     # @param [Hash] opts the optional parameters
@@ -5112,7 +5112,7 @@ module PureCloud
       return data
     end
 
-    # Get the list of Number Plans for this Site.
+    # Get the list of Number Plans for this Site. Only fetches the first 200 records.
     # 
     # @param site_id Site ID
     # @param [Hash] opts the optional parameters
@@ -8947,7 +8947,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update the list of Number Plans.
+    # Update the list of Number Plans. A user can update maximum 200 number plans at a time.
     # 
     # @param site_id Site ID
     # @param body List of number plans
@@ -8958,7 +8958,7 @@ module PureCloud
       return data
     end
 
-    # Update the list of Number Plans.
+    # Update the list of Number Plans. A user can update maximum 200 number plans at a time.
     # 
     # @param site_id Site ID
     # @param body List of number plans

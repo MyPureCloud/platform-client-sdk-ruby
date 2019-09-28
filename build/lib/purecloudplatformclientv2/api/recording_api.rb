@@ -702,7 +702,7 @@ module PureCloud
     # @param conversation_id Conversation ID
     # @param recording_id Recording ID
     # @param [Hash] opts the optional parameters
-    # @return [Recording]
+    # @return [RecordingMetadata]
     def get_conversation_recordingmetadata_recording_id(conversation_id, recording_id, opts = {})
       data, _status_code, _headers = get_conversation_recordingmetadata_recording_id_with_http_info(conversation_id, recording_id, opts)
       return data
@@ -713,7 +713,7 @@ module PureCloud
     # @param conversation_id Conversation ID
     # @param recording_id Recording ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Recording, Fixnum, Hash)>] Recording data, response status code and response headers
+    # @return [Array<(RecordingMetadata, Fixnum, Hash)>] RecordingMetadata data, response status code and response headers
     def get_conversation_recordingmetadata_recording_id_with_http_info(conversation_id, recording_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_conversation_recordingmetadata_recording_id ..."
@@ -765,7 +765,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Recording')
+        :return_type => 'RecordingMetadata')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RecordingApi#get_conversation_recordingmetadata_recording_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

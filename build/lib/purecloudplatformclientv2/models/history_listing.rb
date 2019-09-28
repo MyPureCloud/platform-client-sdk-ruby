@@ -24,6 +24,8 @@ module PureCloud
 
     attr_accessor :user
 
+    attr_accessor :client
+
     attr_accessor :error_message
 
     attr_accessor :error_code
@@ -70,6 +72,8 @@ module PureCloud
         
         :'user' => :'user',
         
+        :'client' => :'client',
+        
         :'error_message' => :'errorMessage',
         
         :'error_code' => :'errorCode',
@@ -114,6 +118,8 @@ module PureCloud
         :'complete' => :'BOOLEAN',
         
         :'user' => :'User',
+        
+        :'client' => :'DomainEntityRef',
         
         :'error_message' => :'String',
         
@@ -181,6 +187,15 @@ module PureCloud
         
         
         self.user = attributes[:'user']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'client')
+        
+        
+        self.client = attributes[:'client']
         
       
       end
@@ -381,6 +396,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["CREATE", "CHECKIN", "DEBUG", "DELETE", "HISTORY", "PUBLISH", "STATE_CHANGE", "UPDATE", "VALIDATE"]
       if @action_name && !allowed_values.include?(@action_name)
         return false
@@ -439,6 +458,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -561,6 +585,7 @@ module PureCloud
           id == o.id &&
           complete == o.complete &&
           user == o.user &&
+          client == o.client &&
           error_message == o.error_message &&
           error_code == o.error_code &&
           error_details == o.error_details &&
@@ -588,7 +613,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, complete, user, error_message, error_code, error_details, error_message_params, action_name, action_status, name, description, system, started, completed, entities, total, page_size, page_number, page_count].hash
+      [id, complete, user, client, error_message, error_code, error_details, error_message_params, action_name, action_status, name, description, system, started, completed, entities, total, page_size, page_number, page_count].hash
     end
 
     # build the object from hash

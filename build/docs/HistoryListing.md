@@ -10,6 +10,7 @@ title: HistoryListing
 | **id** | **String** |  | [optional] |
 | **complete** | **BOOLEAN** |  | [optional] |
 | **user** | [**User**](User.html) |  | [optional] |
+| **client** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **error_message** | **String** |  | [optional] |
 | **error_code** | **String** |  | [optional] |
 | **error_details** | [**Array&lt;Detail&gt;**](Detail.html) |  | [optional] |

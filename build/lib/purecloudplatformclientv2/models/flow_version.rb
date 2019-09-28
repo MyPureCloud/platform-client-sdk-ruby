@@ -33,6 +33,8 @@ module PureCloud
 
     attr_accessor :created_by
 
+    attr_accessor :created_by_client
+
     attr_accessor :configuration_uri
 
     attr_accessor :date_created
@@ -61,6 +63,8 @@ module PureCloud
         :'secure' => :'secure',
         
         :'created_by' => :'createdBy',
+        
+        :'created_by_client' => :'createdByClient',
         
         :'configuration_uri' => :'configurationUri',
         
@@ -92,6 +96,8 @@ module PureCloud
         :'secure' => :'BOOLEAN',
         
         :'created_by' => :'User',
+        
+        :'created_by_client' => :'DomainEntityRef',
         
         :'configuration_uri' => :'String',
         
@@ -173,6 +179,15 @@ module PureCloud
         
         
         self.created_by = attributes[:'createdBy']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'createdByClient')
+        
+        
+        self.created_by_client = attributes[:'createdByClient']
         
       
       end
@@ -291,6 +306,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -363,6 +382,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -375,6 +399,7 @@ module PureCloud
           type == o.type &&
           secure == o.secure &&
           created_by == o.created_by &&
+          created_by_client == o.created_by_client &&
           configuration_uri == o.configuration_uri &&
           date_created == o.date_created &&
           generation_id == o.generation_id &&
@@ -391,7 +416,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, commit_version, configuration_version, type, secure, created_by, configuration_uri, date_created, generation_id, publish_result_uri, self_uri].hash
+      [id, name, commit_version, configuration_version, type, secure, created_by, created_by_client, configuration_uri, date_created, generation_id, publish_result_uri, self_uri].hash
     end
 
     # build the object from hash

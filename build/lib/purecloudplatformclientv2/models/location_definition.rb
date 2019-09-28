@@ -24,6 +24,9 @@ module PureCloud
     # The name of the Location.
     attr_accessor :name
 
+    # Site contact for the location
+    attr_accessor :contact_user
+
     attr_accessor :emergency_number
 
     attr_accessor :address
@@ -56,6 +59,8 @@ module PureCloud
         
         :'name' => :'name',
         
+        :'contact_user' => :'contactUser',
+        
         :'emergency_number' => :'emergencyNumber',
         
         :'address' => :'address',
@@ -86,6 +91,8 @@ module PureCloud
         :'id' => :'String',
         
         :'name' => :'String',
+        
+        :'contact_user' => :'AddressableEntityRef',
         
         :'emergency_number' => :'LocationEmergencyNumber',
         
@@ -132,6 +139,15 @@ module PureCloud
         
         
         self.name = attributes[:'name']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'contactUser')
+        
+        
+        self.contact_user = attributes[:'contactUser']
         
       
       end
@@ -275,6 +291,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["active", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
@@ -308,6 +328,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -385,6 +410,7 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
+          contact_user == o.contact_user &&
           emergency_number == o.emergency_number &&
           address == o.address &&
           address_verified == o.address_verified &&
@@ -406,7 +432,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, emergency_number, address, address_verified, state, notes, version, path, profile_image, floorplan_image, self_uri].hash
+      [id, name, contact_user, emergency_number, address, address_verified, state, notes, version, path, profile_image, floorplan_image, self_uri].hash
     end
 
     # build the object from hash

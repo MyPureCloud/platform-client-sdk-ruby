@@ -389,7 +389,7 @@ api_instance = PureCloud::LocationsApi.new
 
 location_id = "location_id_example" # String | Location ID
 
-body = PureCloud::LocationUpdateDefinition.new # LocationUpdateDefinition | Location
+body = PureCloud::LocationCreateUpdateDefinition.new # LocationCreateUpdateDefinition | Location
 
 
 begin
@@ -406,7 +406,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **location_id** | **String**| Location ID |  |
- **body** | [**LocationUpdateDefinition**](LocationUpdateDefinition.html)| Location |  |
+ **body** | [**LocationCreateUpdateDefinition**](LocationCreateUpdateDefinition.html)| Location |  |
 {: class="table table-striped"}
 
 
@@ -455,7 +455,7 @@ end
 
 api_instance = PureCloud::LocationsApi.new
 
-body = PureCloud::LocationDefinition.new # LocationDefinition | Location
+body = PureCloud::LocationCreateUpdateDefinition.new # LocationCreateUpdateDefinition | Location
 
 
 begin
@@ -471,7 +471,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**LocationDefinition**](LocationDefinition.html)| Location |  |
+ **body** | [**LocationCreateUpdateDefinition**](LocationCreateUpdateDefinition.html)| Location |  |
 {: class="table table-striped"}
 
 

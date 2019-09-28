@@ -31,7 +31,11 @@ module PureCloud
 
     attr_accessor :type
 
+    # User that has the flow locked.
     attr_accessor :locked_user
+
+    # OAuth client that has the flow locked.
+    attr_accessor :locked_client
 
     attr_accessor :active
 
@@ -74,6 +78,8 @@ module PureCloud
         
         :'locked_user' => :'lockedUser',
         
+        :'locked_client' => :'lockedClient',
+        
         :'active' => :'active',
         
         :'system' => :'system',
@@ -114,6 +120,8 @@ module PureCloud
         :'type' => :'String',
         
         :'locked_user' => :'User',
+        
+        :'locked_client' => :'DomainEntityRef',
         
         :'active' => :'BOOLEAN',
         
@@ -198,6 +206,15 @@ module PureCloud
         
         
         self.locked_user = attributes[:'lockedUser']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'lockedClient')
+        
+        
+        self.locked_client = attributes[:'lockedClient']
         
       
       end
@@ -395,6 +412,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -492,6 +513,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -503,6 +529,7 @@ module PureCloud
           description == o.description &&
           type == o.type &&
           locked_user == o.locked_user &&
+          locked_client == o.locked_client &&
           active == o.active &&
           system == o.system &&
           deleted == o.deleted &&
@@ -525,7 +552,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, description, type, locked_user, active, system, deleted, published_version, saved_version, input_schema, output_schema, checked_in_version, published_by, current_operation, self_uri].hash
+      [id, name, division, description, type, locked_user, locked_client, active, system, deleted, published_version, saved_version, input_schema, output_schema, checked_in_version, published_by, current_operation, self_uri].hash
     end
 
     # build the object from hash

@@ -18,12 +18,16 @@ require 'date'
 
 module PureCloud
   class Location
+    # Unique identifier for the location
     attr_accessor :id
 
+    # Unique identifier for the location floorplan image
     attr_accessor :floorplan_id
 
+    # Users coordinates on the floorplan. Only used when floorplanImage is set
     attr_accessor :coordinates
 
+    # Optional description on the users location
     attr_accessor :notes
 
     attr_accessor :location_definition

@@ -45,6 +45,9 @@ module PureCloud
     # The locale use for localization of the exported data, i.e. en-us, es-mx  
     attr_accessor :locale
 
+    # Indicates if durations are formatted in hh:mm:ss format instead of ms
+    attr_accessor :has_format_durations
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -65,7 +68,9 @@ module PureCloud
         
         :'read' => :'read',
         
-        :'locale' => :'locale'
+        :'locale' => :'locale',
+        
+        :'has_format_durations' => :'hasFormatDurations'
         
       }
     end
@@ -90,7 +95,9 @@ module PureCloud
         
         :'read' => :'BOOLEAN',
         
-        :'locale' => :'String'
+        :'locale' => :'String',
+        
+        :'has_format_durations' => :'BOOLEAN'
         
       }
     end
@@ -180,6 +187,15 @@ module PureCloud
         
         
         self.locale = attributes[:'locale']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'hasFormatDurations')
+        
+        
+        self.has_format_durations = attributes[:'hasFormatDurations']
         
       
       end
@@ -276,6 +292,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -342,6 +362,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -355,7 +380,8 @@ module PureCloud
           view_type == o.view_type &&
           filter == o.filter &&
           read == o.read &&
-          locale == o.locale
+          locale == o.locale &&
+          has_format_durations == o.has_format_durations
     end
 
     # @see the `==` method
@@ -367,7 +393,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, time_zone, export_format, interval, period, view_type, filter, read, locale].hash
+      [name, time_zone, export_format, interval, period, view_type, filter, read, locale, has_format_durations].hash
     end
 
     # build the object from hash
