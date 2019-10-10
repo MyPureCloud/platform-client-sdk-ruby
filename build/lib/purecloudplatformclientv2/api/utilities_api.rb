@@ -79,6 +79,61 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get public ip address ranges for PureCloud
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [IpAddressRangeListing]
+    def get_ipranges(opts = {})
+      data, _status_code, _headers = get_ipranges_with_http_info(opts)
+      return data
+    end
+
+    # Get public ip address ranges for PureCloud
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(IpAddressRangeListing, Fixnum, Hash)>] IpAddressRangeListing data, response status code and response headers
+    def get_ipranges_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UtilitiesApi.get_ipranges ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/ipranges".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IpAddressRangeListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UtilitiesApi#get_ipranges\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get time zones list
     # 
     # @param [Hash] opts the optional parameters

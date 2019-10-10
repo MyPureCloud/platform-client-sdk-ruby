@@ -59,6 +59,9 @@ module PureCloud
     # Date-time the contract ends. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :contract_end_date
 
+    # Minimum amount that will be charged for the month
+    attr_accessor :minimum_monthly_amount
+
     attr_accessor :in_ramp_period
 
     # The URI for this object
@@ -95,6 +98,8 @@ module PureCloud
         :'contract_effective_date' => :'contractEffectiveDate',
         
         :'contract_end_date' => :'contractEndDate',
+        
+        :'minimum_monthly_amount' => :'minimumMonthlyAmount',
         
         :'in_ramp_period' => :'inRampPeriod',
         
@@ -134,6 +139,8 @@ module PureCloud
         :'contract_effective_date' => :'DateTime',
         
         :'contract_end_date' => :'DateTime',
+        
+        :'minimum_monthly_amount' => :'String',
         
         :'in_ramp_period' => :'BOOLEAN',
         
@@ -281,6 +288,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'minimumMonthlyAmount')
+        
+        
+        self.minimum_monthly_amount = attributes[:'minimumMonthlyAmount']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'inRampPeriod')
         
         
@@ -408,6 +424,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -500,6 +520,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -519,6 +544,7 @@ module PureCloud
           contract_amendment_date == o.contract_amendment_date &&
           contract_effective_date == o.contract_effective_date &&
           contract_end_date == o.contract_end_date &&
+          minimum_monthly_amount == o.minimum_monthly_amount &&
           in_ramp_period == o.in_ramp_period &&
           self_uri == o.self_uri
     end
@@ -532,7 +558,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, organization, currency, enabled_products, subscription_type, ramp_period_start_date, ramp_period_end_date, billing_period_start_date, billing_period_end_date, usages, contract_amendment_date, contract_effective_date, contract_end_date, in_ramp_period, self_uri].hash
+      [id, name, organization, currency, enabled_products, subscription_type, ramp_period_start_date, ramp_period_end_date, billing_period_start_date, billing_period_end_date, usages, contract_amendment_date, contract_effective_date, contract_end_date, minimum_monthly_amount, in_ramp_period, self_uri].hash
     end
 
     # build the object from hash

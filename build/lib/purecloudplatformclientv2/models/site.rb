@@ -66,6 +66,8 @@ module PureCloud
     # Recurrance rule, time zone, and start/end settings for automatic edge updates for this site
     attr_accessor :edge_auto_update_config
 
+    attr_accessor :media_regions_use_latency_based
+
     # Location
     attr_accessor :location
 
@@ -117,6 +119,8 @@ module PureCloud
         
         :'edge_auto_update_config' => :'edgeAutoUpdateConfig',
         
+        :'media_regions_use_latency_based' => :'mediaRegionsUseLatencyBased',
+        
         :'location' => :'location',
         
         :'managed' => :'managed',
@@ -167,6 +171,8 @@ module PureCloud
         :'edges' => :'Array<Edge>',
         
         :'edge_auto_update_config' => :'EdgeAutoUpdateConfig',
+        
+        :'media_regions_use_latency_based' => :'BOOLEAN',
         
         :'location' => :'LocationDefinition',
         
@@ -362,6 +368,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'mediaRegionsUseLatencyBased')
+        
+        
+        self.media_regions_use_latency_based = attributes[:'mediaRegionsUseLatencyBased']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'location')
         
         
@@ -456,6 +471,10 @@ module PureCloud
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -638,6 +657,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -661,6 +685,7 @@ module PureCloud
           addresses == o.addresses &&
           edges == o.edges &&
           edge_auto_update_config == o.edge_auto_update_config &&
+          media_regions_use_latency_based == o.media_regions_use_latency_based &&
           location == o.location &&
           managed == o.managed &&
           ntp_settings == o.ntp_settings &&
@@ -676,7 +701,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, primary_sites, secondary_sites, primary_edges, secondary_edges, addresses, edges, edge_auto_update_config, location, managed, ntp_settings, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, primary_sites, secondary_sites, primary_edges, secondary_edges, addresses, edges, edge_auto_update_config, media_regions_use_latency_based, location, managed, ntp_settings, self_uri].hash
     end
 
     # build the object from hash

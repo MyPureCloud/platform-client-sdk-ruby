@@ -27,6 +27,9 @@ module PureCloud
     # Filters that target agent routing status-level data
     attr_accessor :routing_status_filters
 
+    # Sort the result set in ascending/descending order. Default is ascending
+    attr_accessor :order
+
     # Include faceted search and aggregate roll-ups of presence data in your search results. This does not function as a filter, but rather, summary data about the presence results matching your filters
     attr_accessor :presence_aggregations
 
@@ -35,9 +38,6 @@ module PureCloud
 
     # Page size and number to control iterating through large result sets. Default page size is 25
     attr_accessor :paging
-
-    # Sort the result set in ascending/descending order. Default is ascending
-    attr_accessor :order
 
     attr_accessor :presence_detail_filters
 
@@ -51,13 +51,13 @@ module PureCloud
         
         :'routing_status_filters' => :'routingStatusFilters',
         
+        :'order' => :'order',
+        
         :'presence_aggregations' => :'presenceAggregations',
         
         :'routing_status_aggregations' => :'routingStatusAggregations',
         
         :'paging' => :'paging',
-        
-        :'order' => :'order',
         
         :'presence_detail_filters' => :'presenceDetailFilters'
         
@@ -74,13 +74,13 @@ module PureCloud
         
         :'routing_status_filters' => :'Array<RoutingStatusDetailQueryFilter>',
         
+        :'order' => :'String',
+        
         :'presence_aggregations' => :'Array<AnalyticsQueryAggregation>',
         
         :'routing_status_aggregations' => :'Array<AnalyticsQueryAggregation>',
         
         :'paging' => :'PagingSpec',
-        
-        :'order' => :'String',
         
         :'presence_detail_filters' => :'Array<PresenceDetailQueryFilter>'
         
@@ -127,6 +127,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'order')
+        
+        
+        self.order = attributes[:'order']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'presenceAggregations')
         
         if (value = attributes[:'presenceAggregations']).is_a?(Array)
@@ -153,15 +162,6 @@ module PureCloud
         
         
         self.paging = attributes[:'paging']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'order')
-        
-        
-        self.order = attributes[:'order']
         
       
       end
@@ -207,18 +207,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       allowed_values = ["asc", "desc"]
       if @order && !allowed_values.include?(@order)
         return false
@@ -230,23 +218,20 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -282,6 +267,21 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -290,10 +290,10 @@ module PureCloud
           interval == o.interval &&
           user_filters == o.user_filters &&
           routing_status_filters == o.routing_status_filters &&
+          order == o.order &&
           presence_aggregations == o.presence_aggregations &&
           routing_status_aggregations == o.routing_status_aggregations &&
           paging == o.paging &&
-          order == o.order &&
           presence_detail_filters == o.presence_detail_filters
     end
 
@@ -306,7 +306,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [interval, user_filters, routing_status_filters, presence_aggregations, routing_status_aggregations, paging, order, presence_detail_filters].hash
+      [interval, user_filters, routing_status_filters, order, presence_aggregations, routing_status_aggregations, paging, presence_detail_filters].hash
     end
 
     # build the object from hash

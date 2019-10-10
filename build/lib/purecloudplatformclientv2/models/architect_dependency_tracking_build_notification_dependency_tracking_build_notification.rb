@@ -22,6 +22,8 @@ module PureCloud
 
     attr_accessor :user
 
+    attr_accessor :client
+
     attr_accessor :start_time
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -31,6 +33,8 @@ module PureCloud
         :'status' => :'status',
         
         :'user' => :'user',
+        
+        :'client' => :'client',
         
         :'start_time' => :'startTime'
         
@@ -44,6 +48,8 @@ module PureCloud
         :'status' => :'String',
         
         :'user' => :'ArchitectDependencyTrackingBuildNotificationUser',
+        
+        :'client' => :'ArchitectDependencyTrackingBuildNotificationClient',
         
         :'start_time' => :'DateTime'
         
@@ -72,6 +78,15 @@ module PureCloud
         
         
         self.user = attributes[:'user']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'client')
+        
+        
+        self.client = attributes[:'client']
         
       
       end
@@ -113,8 +128,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -138,6 +162,7 @@ module PureCloud
       self.class == o.class &&
           status == o.status &&
           user == o.user &&
+          client == o.client &&
           start_time == o.start_time
     end
 
@@ -150,7 +175,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [status, user, start_time].hash
+      [status, user, client, start_time].hash
     end
 
     # build the object from hash

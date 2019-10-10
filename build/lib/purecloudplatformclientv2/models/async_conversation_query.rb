@@ -45,6 +45,9 @@ module PureCloud
     # Specify number of results to be returned
     attr_accessor :limit
 
+    # Add a filter to only include conversations that started after the beginning of the interval start date (UTC)
+    attr_accessor :start_of_day_interval_matching
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -65,7 +68,9 @@ module PureCloud
         
         :'order_by' => :'orderBy',
         
-        :'limit' => :'limit'
+        :'limit' => :'limit',
+        
+        :'start_of_day_interval_matching' => :'startOfDayIntervalMatching'
         
       }
     end
@@ -90,7 +95,9 @@ module PureCloud
         
         :'order_by' => :'String',
         
-        :'limit' => :'Integer'
+        :'limit' => :'Integer',
+        
+        :'start_of_day_interval_matching' => :'BOOLEAN'
         
       }
     end
@@ -195,6 +202,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'startOfDayIntervalMatching')
+        
+        
+        self.start_of_day_interval_matching = attributes[:'startOfDayIntervalMatching']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -249,6 +265,10 @@ module PureCloud
       if @order_by && !allowed_values.include?(@order_by)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -322,6 +342,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -335,7 +360,8 @@ module PureCloud
           survey_filters == o.survey_filters &&
           order == o.order &&
           order_by == o.order_by &&
-          limit == o.limit
+          limit == o.limit &&
+          start_of_day_interval_matching == o.start_of_day_interval_matching
     end
 
     # @see the `==` method
@@ -347,7 +373,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [interval, conversation_filters, segment_filters, evaluation_filters, media_endpoint_stat_filters, survey_filters, order, order_by, limit].hash
+      [interval, conversation_filters, segment_filters, evaluation_filters, media_endpoint_stat_filters, survey_filters, order, order_by, limit, start_of_day_interval_matching].hash
     end
 
     # build the object from hash

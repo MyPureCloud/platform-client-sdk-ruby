@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 Method | Description
 ------------- | ------------- | -------------
 [**get_date**](UtilitiesApi.html#get_date) | Get the current system date/time
+[**get_ipranges**](UtilitiesApi.html#get_ipranges) | Get public ip address ranges for PureCloud
 [**get_timezones**](UtilitiesApi.html#get_timezones) | Get time zones list
 [**post_certificate_details**](UtilitiesApi.html#post_certificate_details) | Returns the information about an X509 PEM encoded certificate or certificate chain.
 [**post_gmsc_tokens**](UtilitiesApi.html#post_gmsc_tokens) | Generate a JWT for use with common cloud.
@@ -64,6 +65,64 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ServerDate**](ServerDate.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_ipranges"></a>
+
+## [**IpAddressRangeListing**](IpAddressRangeListing.html) get_ipranges
+
+
+
+Get public ip address ranges for PureCloud
+
+
+
+Wraps GET /api/v2/ipranges 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UtilitiesApi.new
+
+begin
+  #Get public ip address ranges for PureCloud
+  result = api_instance.get_ipranges
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UtilitiesApi->get_ipranges: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IpAddressRangeListing**](IpAddressRangeListing.html)
 
 ### HTTP request headers
 

@@ -24,6 +24,8 @@ module PureCloud
 
     attr_accessor :user
 
+    attr_accessor :client
+
     attr_accessor :action_name
 
     attr_accessor :action_status
@@ -45,6 +47,8 @@ module PureCloud
         :'complete' => :'complete',
         
         :'user' => :'user',
+        
+        :'client' => :'client',
         
         :'action_name' => :'actionName',
         
@@ -70,6 +74,8 @@ module PureCloud
         :'complete' => :'BOOLEAN',
         
         :'user' => :'ArchitectPromptNotificationUser',
+        
+        :'client' => :'ArchitectPromptNotificationClient',
         
         :'action_name' => :'String',
         
@@ -117,6 +123,15 @@ module PureCloud
         
         
         self.user = attributes[:'user']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'client')
+        
+        
+        self.client = attributes[:'client']
         
       
       end
@@ -207,6 +222,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["CREATE", "CHECKIN", "DEBUG", "DELETE", "HISTORY", "PUBLISH", "STATE_CHANGE", "UPDATE", "VALIDATE"]
       if @action_name && !allowed_values.include?(@action_name)
         return false
@@ -241,6 +260,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -313,6 +337,7 @@ module PureCloud
           id == o.id &&
           complete == o.complete &&
           user == o.user &&
+          client == o.client &&
           action_name == o.action_name &&
           action_status == o.action_status &&
           error_message == o.error_message &&
@@ -330,7 +355,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, complete, user, action_name, action_status, error_message, error_code, error_message_params, error_details].hash
+      [id, complete, user, client, action_name, action_status, error_message, error_code, error_message_params, error_details].hash
     end
 
     # build the object from hash

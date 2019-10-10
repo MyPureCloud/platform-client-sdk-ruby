@@ -381,7 +381,7 @@ module PureCloud
 
       
       
-      allowed_values = ["CSV"]
+      allowed_values = ["CSV", "PDF"]
       if @export_format && !allowed_values.include?(@export_format)
         return false
       end
@@ -521,7 +521,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] export_format Object to be assigned
     def export_format=(export_format)
-      allowed_values = ["CSV"]
+      allowed_values = ["CSV", "PDF"]
       if export_format && !allowed_values.include?(export_format)
         fail ArgumentError, "invalid value for 'export_format', must be one of #{allowed_values}."
       end

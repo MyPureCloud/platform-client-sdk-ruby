@@ -21,7 +21,7 @@ module PureCloud
     # Operation to perform bulk task
     attr_accessor :action
 
-    # The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The date when the action will be performed. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :action_date
 
     # IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is for EXPORT only

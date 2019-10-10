@@ -17,39 +17,14 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # State information for an import job of rows to a datatable
-  class DataTableImportJob
+  class SignedUrlResponse
     # The globally unique identifier for the object.
     attr_accessor :id
 
     attr_accessor :name
 
-    # The PureCloud user who started the import job
-    attr_accessor :owner
-
-    # The status of the import job
-    attr_accessor :status
-
-    # The timestamp of when the import began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-    attr_accessor :date_created
-
-    # The timestamp of when the import stopped (either successfully or unsuccessfully). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-    attr_accessor :date_completed
-
-    # The URL of the location at which the caller can upload the file to be imported
-    attr_accessor :upload_uri
-
-    # The indication of whether the processing should remove rows that don't appear in the import file
-    attr_accessor :import_mode
-
-    # Any error information, or null of the processing is not in an error state
-    attr_accessor :error_information
-
-    # The current count of the number of records processed
-    attr_accessor :count_records_processed
-
-    # The current count of the number of records that failed to import
-    attr_accessor :count_records_failed
+    # Url of the downloaded pcap file
+    attr_accessor :url
 
     # The URI for this object
     attr_accessor :self_uri
@@ -62,23 +37,7 @@ module PureCloud
         
         :'name' => :'name',
         
-        :'owner' => :'owner',
-        
-        :'status' => :'status',
-        
-        :'date_created' => :'dateCreated',
-        
-        :'date_completed' => :'dateCompleted',
-        
-        :'upload_uri' => :'uploadURI',
-        
-        :'import_mode' => :'importMode',
-        
-        :'error_information' => :'errorInformation',
-        
-        :'count_records_processed' => :'countRecordsProcessed',
-        
-        :'count_records_failed' => :'countRecordsFailed',
+        :'url' => :'url',
         
         :'self_uri' => :'selfUri'
         
@@ -93,23 +52,7 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'owner' => :'AddressableEntityRef',
-        
-        :'status' => :'String',
-        
-        :'date_created' => :'DateTime',
-        
-        :'date_completed' => :'DateTime',
-        
-        :'upload_uri' => :'String',
-        
-        :'import_mode' => :'String',
-        
-        :'error_information' => :'ErrorBody',
-        
-        :'count_records_processed' => :'Integer',
-        
-        :'count_records_failed' => :'Integer',
+        :'url' => :'String',
         
         :'self_uri' => :'String'
         
@@ -143,82 +86,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'owner')
+      if attributes.has_key?(:'url')
         
         
-        self.owner = attributes[:'owner']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'status')
-        
-        
-        self.status = attributes[:'status']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'dateCreated')
-        
-        
-        self.date_created = attributes[:'dateCreated']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'dateCompleted')
-        
-        
-        self.date_completed = attributes[:'dateCompleted']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'uploadURI')
-        
-        
-        self.upload_uri = attributes[:'uploadURI']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'importMode')
-        
-        
-        self.import_mode = attributes[:'importMode']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'errorInformation')
-        
-        
-        self.error_information = attributes[:'errorInformation']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'countRecordsProcessed')
-        
-        
-        self.count_records_processed = attributes[:'countRecordsProcessed']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'countRecordsFailed')
-        
-        
-        self.count_records_failed = attributes[:'countRecordsFailed']
+        self.url = attributes[:'url']
         
       
       end
@@ -261,116 +132,11 @@ module PureCloud
       
       
       
-      if @status.nil?
-        return false
-      end
-
-      
-      
-      allowed_values = ["WaitingForUpload", "Processing", "Failed", "Succeeded"]
-      if @status && !allowed_values.include?(@status)
-        return false
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      allowed_values = ["ReplaceAll", "Append"]
-      if @import_mode && !allowed_values.include?(@import_mode)
-        return false
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       
       
       
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] status Object to be assigned
-    def status=(status)
-      allowed_values = ["WaitingForUpload", "Processing", "Failed", "Succeeded"]
-      if status && !allowed_values.include?(status)
-        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
-      end
-      @status = status
-    end
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] import_mode Object to be assigned
-    def import_mode=(import_mode)
-      allowed_values = ["ReplaceAll", "Append"]
-      if import_mode && !allowed_values.include?(import_mode)
-        fail ArgumentError, "invalid value for 'import_mode', must be one of #{allowed_values}."
-      end
-      @import_mode = import_mode
-    end
-
-    
-    
     
     
     
@@ -399,15 +165,7 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
-          owner == o.owner &&
-          status == o.status &&
-          date_created == o.date_created &&
-          date_completed == o.date_completed &&
-          upload_uri == o.upload_uri &&
-          import_mode == o.import_mode &&
-          error_information == o.error_information &&
-          count_records_processed == o.count_records_processed &&
-          count_records_failed == o.count_records_failed &&
+          url == o.url &&
           self_uri == o.self_uri
     end
 
@@ -420,7 +178,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, owner, status, date_created, date_completed, upload_uri, import_mode, error_information, count_records_processed, count_records_failed, self_uri].hash
+      [id, name, url, self_uri].hash
     end
 
     # build the object from hash
