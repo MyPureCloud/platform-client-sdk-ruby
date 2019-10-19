@@ -19,7 +19,7 @@ require 'date'
 module PureCloud
   # SCIM V2 User
   class ScimV2User
-    # The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always.
+    # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"Mutability\" is set to \"readOnly\". \"Returned\" is set to \"always\".
     attr_accessor :id
 
     # The list of supported schemas.
@@ -31,31 +31,31 @@ module PureCloud
     # The user's PureCloud email address. Must be unique.
     attr_accessor :user_name
 
-    # The display name for the user.
+    # The display name of the user.
     attr_accessor :display_name
 
-    # A new password for a PureCloud user. Does not return an existing password.
+    # The new password for the PureCloud user. Does not return an existing password.
     attr_accessor :password
 
     # The user's title.
     attr_accessor :title
 
-    # A list of the user's phone numbers.
+    # The list of the user's phone numbers.
     attr_accessor :phone_numbers
 
-    # A list of the user's email addresses.
+    # The list of the user's email addresses.
     attr_accessor :emails
 
-    # A list of the user's photos.
+    # The list of the user's photos.
     attr_accessor :photos
 
-    # The external ID of the user. Set by the provisioning client. caseExact is set to true. mutability is set to readWrite.
+    # The external ID of the user. Set by the provisioning client. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readWrite\".
     attr_accessor :external_id
 
-    # A list of groups that the user is a member of.
+    # The list of groups that the user is a member of.
     attr_accessor :groups
 
-    # A list of roles assigned to the user.
+    # The list of roles assigned to the user.
     attr_accessor :roles
 
     attr_accessor :urnietfparamsscimschemasextensionenterprise2_0_user

@@ -48,6 +48,9 @@ module PureCloud
     # Indicates if durations are formatted in hh:mm:ss format instead of ms
     attr_accessor :has_format_durations
 
+    # Indicates if filters will be split in aggregate detail exports
+    attr_accessor :has_split_filters
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -70,7 +73,9 @@ module PureCloud
         
         :'locale' => :'locale',
         
-        :'has_format_durations' => :'hasFormatDurations'
+        :'has_format_durations' => :'hasFormatDurations',
+        
+        :'has_split_filters' => :'hasSplitFilters'
         
       }
     end
@@ -97,7 +102,9 @@ module PureCloud
         
         :'locale' => :'String',
         
-        :'has_format_durations' => :'BOOLEAN'
+        :'has_format_durations' => :'BOOLEAN',
+        
+        :'has_split_filters' => :'BOOLEAN'
         
       }
     end
@@ -201,6 +208,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'hasSplitFilters')
+        
+        
+        self.has_split_filters = attributes[:'hasSplitFilters']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -296,6 +312,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -367,6 +387,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -381,7 +406,8 @@ module PureCloud
           filter == o.filter &&
           read == o.read &&
           locale == o.locale &&
-          has_format_durations == o.has_format_durations
+          has_format_durations == o.has_format_durations &&
+          has_split_filters == o.has_split_filters
     end
 
     # @see the `==` method
@@ -393,7 +419,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, time_zone, export_format, interval, period, view_type, filter, read, locale, has_format_durations].hash
+      [name, time_zone, export_format, interval, period, view_type, filter, read, locale, has_format_durations, has_split_filters].hash
     end
 
     # build the object from hash

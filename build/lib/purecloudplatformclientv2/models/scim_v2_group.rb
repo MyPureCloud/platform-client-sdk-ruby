@@ -19,16 +19,16 @@ require 'date'
 module PureCloud
   # SCIM version 2 Group
   class ScimV2Group
-    # The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always.
+    # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"Mutability\" is set to \"readOnly\". \"Returned\" is set to \"always\".
     attr_accessor :id
 
     # The list of supported schemas.
     attr_accessor :schemas
 
-    # The display name for the group.
+    # The display name of the group.
     attr_accessor :display_name
 
-    # A list of members in a SCIM group.
+    # The list of members in the group.
     attr_accessor :members
 
     # Resource SCIM meta

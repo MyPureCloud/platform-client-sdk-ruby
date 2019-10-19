@@ -19,25 +19,25 @@ require 'date'
 module PureCloud
   # Common attributes to all SCIM resources
   class ScimConfigResourceType
-    # The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always.
+    # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"Mutability\" is set to \"readOnly\". \"Returned\" is set to \"always\".
     attr_accessor :id
 
-    # schemas supported
+    # The list of supported schemas.
     attr_accessor :schemas
 
-    # Resource name.
+    # The name of the resource type.
     attr_accessor :name
 
-    # Resource description.
+    # The description of the resource type.
     attr_accessor :description
 
-    # The resource type's primary/base schema URI.
+    # The URI of the primary or base schema for the resource type.
     attr_accessor :schema
 
-    # Resource extension schemas
+    # The list of schema extensions for the resource type.
     attr_accessor :schema_extensions
 
-    # Resource HTTP endpoint.
+    # The HTTP-addressable endpoint of the resource type. Appears after the base URL.
     attr_accessor :endpoint
 
     # Resource SCIM meta

@@ -7,8 +7,8 @@ title: ScimV2PatchRequest
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **schemas** | **Array&lt;String&gt;** | A list of schemas used in the patch request. | |
-| **operations** | [**Array&lt;ScimV2PatchOperation&gt;**](ScimV2PatchOperation.html) |  | [optional] |
+| **schemas** | **Array&lt;String&gt;** | The list of schemas used in the PATCH request. | |
+| **operations** | [**Array&lt;ScimV2PatchOperation&gt;**](ScimV2PatchOperation.html) | The list of operations to perform for the PATCH request. | [optional] |
 {: class="table table-striped"}
 
 

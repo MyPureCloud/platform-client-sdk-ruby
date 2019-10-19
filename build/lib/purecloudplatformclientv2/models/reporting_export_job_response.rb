@@ -68,6 +68,9 @@ module PureCloud
     # Indicates if durations are formatted in hh:mm:ss format instead of ms
     attr_accessor :has_format_durations
 
+    # Indicates if filters will be split in aggregate detail exports
+    attr_accessor :has_split_filters
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -108,6 +111,8 @@ module PureCloud
         :'percentage_complete' => :'percentageComplete',
         
         :'has_format_durations' => :'hasFormatDurations',
+        
+        :'has_split_filters' => :'hasSplitFilters',
         
         :'self_uri' => :'selfUri'
         
@@ -151,6 +156,8 @@ module PureCloud
         :'percentage_complete' => :'Float',
         
         :'has_format_durations' => :'BOOLEAN',
+        
+        :'has_split_filters' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -314,6 +321,15 @@ module PureCloud
         
         
         self.has_format_durations = attributes[:'hasFormatDurations']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'hasSplitFilters')
+        
+        
+        self.has_split_filters = attributes[:'hasSplitFilters']
         
       
       end
@@ -485,6 +501,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -614,6 +634,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -636,6 +661,7 @@ module PureCloud
           locale == o.locale &&
           percentage_complete == o.percentage_complete &&
           has_format_durations == o.has_format_durations &&
+          has_split_filters == o.has_split_filters &&
           self_uri == o.self_uri
     end
 
@@ -648,7 +674,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, has_format_durations, self_uri].hash
+      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, has_format_durations, has_split_filters, self_uri].hash
     end
 
     # build the object from hash

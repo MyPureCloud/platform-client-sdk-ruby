@@ -17,12 +17,12 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Filter support configuration.
+  # \"filter\" configuration options.
   class ScimServiceProviderConfigFilterFeature
-    # Indicates if configuration options is supported.
+    # Indicates whether configuration options are supported.
     attr_accessor :supported
 
-    # Maximum results returned from filtered query.
+    # The maximum number of results returned from a filtered query.
     attr_accessor :max_results
 
     # Attribute mapping from ruby-style variable name to JSON key.

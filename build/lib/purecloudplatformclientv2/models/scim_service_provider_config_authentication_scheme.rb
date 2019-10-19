@@ -17,24 +17,24 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Authentication Schema
+  # Authentication schema.
   class ScimServiceProviderConfigAuthenticationScheme
-    # Name
+    # The name of the authentication scheme, for example, HTTP Basic.
     attr_accessor :name
 
-    # Description
+    # The description of the authentication scheme.
     attr_accessor :description
 
-    # An HTTP-addressable URL pointing to the authentication scheme's specification.
+    # The HTTP-addressable URL that points to the authentication scheme's specification.
     attr_accessor :spec_uri
 
-    # An HTTP-addressable URL pointing to the authentication scheme's usage documentation
+    # The HTTP-addressable URL that points to the authentication scheme's usage documentation.
     attr_accessor :documentation_uri
 
-    # The authentication type.
+    # The type of authentication scheme.
     attr_accessor :type
 
-    # Indication of primary method of authentication.
+    # Indicates the primary method of authentication.
     attr_accessor :primary
 
     # Attribute mapping from ruby-style variable name to JSON key.

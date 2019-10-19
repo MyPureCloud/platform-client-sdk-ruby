@@ -19,31 +19,31 @@ require 'date'
 module PureCloud
   # SCIM Provider Config for PureCloud.
   class ScimServiceProviderConfig
-    # schemas supported
+    # The list of supported schemas.
     attr_accessor :schemas
 
-    # Documentation
+    # The HTTP-addressable URL that points to the service provider's documentation.
     attr_accessor :documentation_uri
 
-    # Patch support
+    # \"patch\" configuration options.
     attr_accessor :patch
 
-    # Filter support. Additional properties: maxResults
+    # \"filter\" configuration options.
     attr_accessor :filter
 
-    # Entity Tag support
+    # \"ETag\" configuration options.
     attr_accessor :etag
 
-    # Sort support
+    # \"sort\" configuration options.
     attr_accessor :sort
 
-    # Bulk support
+    # \"bulk\" configuration options.
     attr_accessor :bulk
 
-    # Change password
+    # \"changePassword\" configuration options.
     attr_accessor :change_password
 
-    # Authentication schemes supported.
+    # The list of supported authentication schemes.
     attr_accessor :authentication_schemes
 
     # Resource SCIM meta

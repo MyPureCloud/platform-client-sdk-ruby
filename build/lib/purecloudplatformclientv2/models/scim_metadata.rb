@@ -19,10 +19,10 @@ require 'date'
 module PureCloud
   # The meta object of the SCIM V2 implementation.
   class ScimMetadata
-    # The type of the resource.
+    # The type of SCIM resource.
     attr_accessor :resource_type
 
-    # The last time that the resource was modified. Time in ISO 6501 (UTC) format. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The last time that the resource was modified. Date time is represented as an ISO-8601 string, for example, yyyy-MM-ddTHH:mm:ss.SSSZ.
     attr_accessor :last_modified
 
     # The URI of the resource.

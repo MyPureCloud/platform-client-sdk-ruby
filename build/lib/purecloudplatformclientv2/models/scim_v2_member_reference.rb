@@ -19,10 +19,10 @@ require 'date'
 module PureCloud
   # SCIM Members of Group Reference
   class ScimV2MemberReference
-    # The SCIM resource type. Can be user or group.
+    # The type of SCIM resource.
     attr_accessor :type
 
-    # The ID of the group member. Can be userId or groupId.
+    # The ID of the group member. Can be \"userId\" or \"groupId\".
     attr_accessor :value
 
     # The reference URI of the SCIM resource.

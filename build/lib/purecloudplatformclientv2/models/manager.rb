@@ -22,7 +22,7 @@ module PureCloud
     # The ID of the manager.
     attr_accessor :value
 
-    # The URI of the manager's user record.
+    # The reference URI of the manager's user record.
     attr_accessor :ref
 
     # Attribute mapping from ruby-style variable name to JSON key.

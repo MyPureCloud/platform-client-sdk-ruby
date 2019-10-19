@@ -53,6 +53,9 @@ module PureCloud
     # The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :delete_date
 
+    # The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :export_date
+
     # How many archive restorations the organization is allowed to have.
     attr_accessor :max_allowed_restorations_for_org
 
@@ -95,6 +98,8 @@ module PureCloud
         
         :'delete_date' => :'deleteDate',
         
+        :'export_date' => :'exportDate',
+        
         :'max_allowed_restorations_for_org' => :'maxAllowedRestorationsForOrg',
         
         :'remaining_restorations_allowed_for_org' => :'remainingRestorationsAllowedForOrg',
@@ -135,6 +140,8 @@ module PureCloud
         :'archive_medium' => :'String',
         
         :'delete_date' => :'DateTime',
+        
+        :'export_date' => :'DateTime',
         
         :'max_allowed_restorations_for_org' => :'Integer',
         
@@ -275,6 +282,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'exportDate')
+        
+        
+        self.export_date = attributes[:'exportDate']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'maxAllowedRestorationsForOrg')
         
         
@@ -404,6 +420,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -510,6 +530,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -528,6 +553,7 @@ module PureCloud
           archive_date == o.archive_date &&
           archive_medium == o.archive_medium &&
           delete_date == o.delete_date &&
+          export_date == o.export_date &&
           max_allowed_restorations_for_org == o.max_allowed_restorations_for_org &&
           remaining_restorations_allowed_for_org == o.remaining_restorations_allowed_for_org &&
           session_id == o.session_id &&
@@ -543,7 +569,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, conversation_id, path, start_time, end_time, media, annotations, file_state, restore_expiration_time, archive_date, archive_medium, delete_date, max_allowed_restorations_for_org, remaining_restorations_allowed_for_org, session_id, self_uri].hash
+      [id, name, conversation_id, path, start_time, end_time, media, annotations, file_state, restore_expiration_time, archive_date, archive_medium, delete_date, export_date, max_allowed_restorations_for_org, remaining_restorations_allowed_for_org, session_id, self_uri].hash
     end
 
     # build the object from hash

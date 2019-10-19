@@ -17,15 +17,15 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Bulk feature configuration
+  # Bulk configuration options.
   class ScimServiceProviderConfigBulkFeature
-    # Indicates if configuration options is supported.
+    # Indicates whether configuration options are supported.
     attr_accessor :supported
 
-    # Maximum operations per bulk request.
+    # The maximum number of operations for each bulk request.
     attr_accessor :max_operations
 
-    # Maximum payload size.
+    # The maximum payload size.
     attr_accessor :max_payload_size
 
     # Attribute mapping from ruby-style variable name to JSON key.

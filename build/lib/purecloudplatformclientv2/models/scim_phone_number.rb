@@ -17,9 +17,9 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM V2 ScimEmail
+  # SCIM V2 phone number
   class ScimPhoneNumber
-    # A phone number in E.164 format.
+    # The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext=xxxxx.
     attr_accessor :value
 
     # The type of phone number.

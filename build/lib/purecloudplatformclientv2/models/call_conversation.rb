@@ -31,6 +31,9 @@ module PureCloud
 
     attr_accessor :recording_state
 
+    # If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference.
+    attr_accessor :max_participants
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -47,6 +50,8 @@ module PureCloud
         :'other_media_uris' => :'otherMediaUris',
         
         :'recording_state' => :'recordingState',
+        
+        :'max_participants' => :'maxParticipants',
         
         :'self_uri' => :'selfUri'
         
@@ -66,6 +71,8 @@ module PureCloud
         :'other_media_uris' => :'Array<String>',
         
         :'recording_state' => :'String',
+        
+        :'max_participants' => :'Integer',
         
         :'self_uri' => :'String'
         
@@ -130,6 +137,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'maxParticipants')
+        
+        
+        self.max_participants = attributes[:'maxParticipants']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -183,6 +199,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -225,6 +245,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -235,6 +260,7 @@ module PureCloud
           participants == o.participants &&
           other_media_uris == o.other_media_uris &&
           recording_state == o.recording_state &&
+          max_participants == o.max_participants &&
           self_uri == o.self_uri
     end
 
@@ -247,7 +273,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, participants, other_media_uris, recording_state, self_uri].hash
+      [id, name, participants, other_media_uris, recording_state, max_participants, self_uri].hash
     end
 
     # build the object from hash

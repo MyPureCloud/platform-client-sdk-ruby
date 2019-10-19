@@ -17,9 +17,9 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Configuration support.
+  # Configuration options.
   class ScimServiceProviderConfigSimpleFeature
-    # Indicates if configuration options is supported.
+    # Indicates whether configuration options are supported.
     attr_accessor :supported
 
     # Attribute mapping from ruby-style variable name to JSON key.

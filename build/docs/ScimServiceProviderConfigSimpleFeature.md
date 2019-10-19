@@ -7,7 +7,7 @@ title: ScimServiceProviderConfigSimpleFeature
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **supported** | **BOOLEAN** | Indicates if configuration options is supported. | [optional] |
+| **supported** | **BOOLEAN** | Indicates whether configuration options are supported. | [optional] |
 {: class="table table-striped"}
 
 

@@ -22,13 +22,13 @@ module PureCloud
     # The total number of results.
     attr_accessor :total_results
 
-    # The 1-based index of the first result returned by this request. Add this to itemsPerPage when requesting the next page of results.
+    # The 1-based index of the first result returned by this request. Add this to \"itemsPerPage\" when requesting the next page of results.
     attr_accessor :start_index
 
     # The number of resources returned per page.
     attr_accessor :items_per_page
 
-    # Resources
+    # The list of requested resources.
     attr_accessor :resources
 
     # The list of supported schemas.

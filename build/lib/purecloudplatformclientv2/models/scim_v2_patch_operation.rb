@@ -17,12 +17,12 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Represents an individual patch operation. Path and value have very specific rules based on operation type. See https://tools.ietf.org/html/rfc7644#section-3.5.2 for details.
+  # Represents an individual PATCH operation. Path and value have very specific rules based on operation type. See https://tools.ietf.org/html/rfc7644#section-3.5.2 for details.
   class ScimV2PatchOperation
-    # The patch operation to perform.
+    # The PATCH operation to perform.
     attr_accessor :op
 
-    # The attribute path that describes the target of the operation. Required for a 'remove' operation.
+    # The attribute path that describes the target of the operation. Required for a \"remove\" operation.
     attr_accessor :path
 
     # The value to set in the path.
