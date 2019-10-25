@@ -52,6 +52,12 @@ module PureCloud
     # Whether the activity duration is counted towards contiguous work time
     attr_accessor :counts_as_contiguous_work_time
 
+    # The minimum duration between shift start and shift item (e.g., break or meal) start in minutes
+    attr_accessor :minimum_length_from_shift_start_minutes
+
+    # The minimum duration between shift item (e.g., break or meal) end and shift end in minutes
+    attr_accessor :minimum_length_from_shift_end_minutes
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -76,7 +82,11 @@ module PureCloud
         
         :'counts_as_paid_time' => :'countsAsPaidTime',
         
-        :'counts_as_contiguous_work_time' => :'countsAsContiguousWorkTime'
+        :'counts_as_contiguous_work_time' => :'countsAsContiguousWorkTime',
+        
+        :'minimum_length_from_shift_start_minutes' => :'minimumLengthFromShiftStartMinutes',
+        
+        :'minimum_length_from_shift_end_minutes' => :'minimumLengthFromShiftEndMinutes'
         
       }
     end
@@ -105,7 +115,11 @@ module PureCloud
         
         :'counts_as_paid_time' => :'BOOLEAN',
         
-        :'counts_as_contiguous_work_time' => :'BOOLEAN'
+        :'counts_as_contiguous_work_time' => :'BOOLEAN',
+        
+        :'minimum_length_from_shift_start_minutes' => :'Integer',
+        
+        :'minimum_length_from_shift_end_minutes' => :'Integer'
         
       }
     end
@@ -218,6 +232,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'minimumLengthFromShiftStartMinutes')
+        
+        
+        self.minimum_length_from_shift_start_minutes = attributes[:'minimumLengthFromShiftStartMinutes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'minimumLengthFromShiftEndMinutes')
+        
+        
+        self.minimum_length_from_shift_end_minutes = attributes[:'minimumLengthFromShiftEndMinutes']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -277,8 +309,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -350,7 +400,9 @@ module PureCloud
           exact_start_time_minutes == o.exact_start_time_minutes &&
           start_time_increment_minutes == o.start_time_increment_minutes &&
           counts_as_paid_time == o.counts_as_paid_time &&
-          counts_as_contiguous_work_time == o.counts_as_contiguous_work_time
+          counts_as_contiguous_work_time == o.counts_as_contiguous_work_time &&
+          minimum_length_from_shift_start_minutes == o.minimum_length_from_shift_start_minutes &&
+          minimum_length_from_shift_end_minutes == o.minimum_length_from_shift_end_minutes
     end
 
     # @see the `==` method
@@ -362,7 +414,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [activity_code_id, description, length_minutes, start_time_is_relative_to_shift_start, flexible_start_time, earliest_start_time_minutes, latest_start_time_minutes, exact_start_time_minutes, start_time_increment_minutes, counts_as_paid_time, counts_as_contiguous_work_time].hash
+      [activity_code_id, description, length_minutes, start_time_is_relative_to_shift_start, flexible_start_time, earliest_start_time_minutes, latest_start_time_minutes, exact_start_time_minutes, start_time_increment_minutes, counts_as_paid_time, counts_as_contiguous_work_time, minimum_length_from_shift_start_minutes, minimum_length_from_shift_end_minutes].hash
     end
 
     # build the object from hash

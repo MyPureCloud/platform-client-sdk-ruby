@@ -28,6 +28,9 @@ module PureCloud
     # Shrinkage overrides for scheduling
     attr_accessor :shrinkage_overrides
 
+    # Planning period settings for scheduling
+    attr_accessor :planning_period
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -36,7 +39,9 @@ module PureCloud
         
         :'default_shrinkage_percent' => :'defaultShrinkagePercent',
         
-        :'shrinkage_overrides' => :'shrinkageOverrides'
+        :'shrinkage_overrides' => :'shrinkageOverrides',
+        
+        :'planning_period' => :'planningPeriod'
         
       }
     end
@@ -49,7 +54,9 @@ module PureCloud
         
         :'default_shrinkage_percent' => :'Float',
         
-        :'shrinkage_overrides' => :'ShrinkageOverrides'
+        :'shrinkage_overrides' => :'ShrinkageOverrides',
+        
+        :'planning_period' => :'PlanningPeriodSettings'
         
       }
     end
@@ -90,6 +97,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'planningPeriod')
+        
+        
+        self.planning_period = attributes[:'planningPeriod']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -117,8 +133,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -142,7 +167,8 @@ module PureCloud
       self.class == o.class &&
           max_occupancy_percent_for_deferred_work == o.max_occupancy_percent_for_deferred_work &&
           default_shrinkage_percent == o.default_shrinkage_percent &&
-          shrinkage_overrides == o.shrinkage_overrides
+          shrinkage_overrides == o.shrinkage_overrides &&
+          planning_period == o.planning_period
     end
 
     # @see the `==` method
@@ -154,7 +180,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [max_occupancy_percent_for_deferred_work, default_shrinkage_percent, shrinkage_overrides].hash
+      [max_occupancy_percent_for_deferred_work, default_shrinkage_percent, shrinkage_overrides, planning_period].hash
     end
 
     # build the object from hash

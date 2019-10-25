@@ -57,6 +57,39 @@ module PureCloud
     # Maximum number days in a week allowed to be scheduled for this work plan
     attr_accessor :maximum_days
 
+    # The day of the week for which the weekend starts, such as Saturday
+    attr_accessor :start_day_of_weekend
+
+    # Minimum amount of consecutive time off per week that agents who are assigned this work plan are allowed to have off
+    attr_accessor :minimum_consecutive_time_off_per_week_minutes
+
+    # Whether to constrain the maximum consecutive working weekends
+    attr_accessor :constrain_maximum_consecutive_working_weekends
+
+    # The maximum number of consecutive weekends that agents who are assigned to this work plan are allowed to work
+    attr_accessor :maximum_consecutive_working_weekends
+
+    # The minimum number of days that agents assigned to a work plan must work per week
+    attr_accessor :minimum_working_days_per_week
+
+    # The maximum number of consecutive days that agents assigned to this work plan are allowed to work
+    attr_accessor :maximum_consecutive_working_days
+
+    # The time period in minutes for the duration between the start times of two consecutive working days
+    attr_accessor :minimum_shift_start_distance_minutes
+
+    # Minimum days off in the planning period
+    attr_accessor :minimum_days_off_per_planning_period
+
+    # Maximum days off in the planning period
+    attr_accessor :maximum_days_off_per_planning_period
+
+    # Minimum paid hours in the planning period
+    attr_accessor :minimum_paid_hours_per_planning_period
+
+    # Maximum paid hours in the planning period
+    attr_accessor :maximum_paid_hours_per_planning_period
+
     # Optional days to schedule for this work plan
     attr_accessor :optional_days
 
@@ -105,6 +138,28 @@ module PureCloud
         
         :'maximum_days' => :'maximumDays',
         
+        :'start_day_of_weekend' => :'startDayOfWeekend',
+        
+        :'minimum_consecutive_time_off_per_week_minutes' => :'minimumConsecutiveTimeOffPerWeekMinutes',
+        
+        :'constrain_maximum_consecutive_working_weekends' => :'constrainMaximumConsecutiveWorkingWeekends',
+        
+        :'maximum_consecutive_working_weekends' => :'maximumConsecutiveWorkingWeekends',
+        
+        :'minimum_working_days_per_week' => :'minimumWorkingDaysPerWeek',
+        
+        :'maximum_consecutive_working_days' => :'maximumConsecutiveWorkingDays',
+        
+        :'minimum_shift_start_distance_minutes' => :'minimumShiftStartDistanceMinutes',
+        
+        :'minimum_days_off_per_planning_period' => :'minimumDaysOffPerPlanningPeriod',
+        
+        :'maximum_days_off_per_planning_period' => :'maximumDaysOffPerPlanningPeriod',
+        
+        :'minimum_paid_hours_per_planning_period' => :'minimumPaidHoursPerPlanningPeriod',
+        
+        :'maximum_paid_hours_per_planning_period' => :'maximumPaidHoursPerPlanningPeriod',
+        
         :'optional_days' => :'optionalDays',
         
         :'shift_start_variances' => :'shiftStartVariances',
@@ -149,6 +204,28 @@ module PureCloud
         :'minimum_time_between_shifts_minutes' => :'Integer',
         
         :'maximum_days' => :'Integer',
+        
+        :'start_day_of_weekend' => :'String',
+        
+        :'minimum_consecutive_time_off_per_week_minutes' => :'Integer',
+        
+        :'constrain_maximum_consecutive_working_weekends' => :'BOOLEAN',
+        
+        :'maximum_consecutive_working_weekends' => :'Integer',
+        
+        :'minimum_working_days_per_week' => :'Integer',
+        
+        :'maximum_consecutive_working_days' => :'Integer',
+        
+        :'minimum_shift_start_distance_minutes' => :'Integer',
+        
+        :'minimum_days_off_per_planning_period' => :'Integer',
+        
+        :'maximum_days_off_per_planning_period' => :'Integer',
+        
+        :'minimum_paid_hours_per_planning_period' => :'Integer',
+        
+        :'maximum_paid_hours_per_planning_period' => :'Integer',
         
         :'optional_days' => :'SetWrapperDayOfWeek',
         
@@ -291,6 +368,105 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'startDayOfWeekend')
+        
+        
+        self.start_day_of_weekend = attributes[:'startDayOfWeekend']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'minimumConsecutiveTimeOffPerWeekMinutes')
+        
+        
+        self.minimum_consecutive_time_off_per_week_minutes = attributes[:'minimumConsecutiveTimeOffPerWeekMinutes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'constrainMaximumConsecutiveWorkingWeekends')
+        
+        
+        self.constrain_maximum_consecutive_working_weekends = attributes[:'constrainMaximumConsecutiveWorkingWeekends']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'maximumConsecutiveWorkingWeekends')
+        
+        
+        self.maximum_consecutive_working_weekends = attributes[:'maximumConsecutiveWorkingWeekends']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'minimumWorkingDaysPerWeek')
+        
+        
+        self.minimum_working_days_per_week = attributes[:'minimumWorkingDaysPerWeek']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'maximumConsecutiveWorkingDays')
+        
+        
+        self.maximum_consecutive_working_days = attributes[:'maximumConsecutiveWorkingDays']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'minimumShiftStartDistanceMinutes')
+        
+        
+        self.minimum_shift_start_distance_minutes = attributes[:'minimumShiftStartDistanceMinutes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'minimumDaysOffPerPlanningPeriod')
+        
+        
+        self.minimum_days_off_per_planning_period = attributes[:'minimumDaysOffPerPlanningPeriod']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'maximumDaysOffPerPlanningPeriod')
+        
+        
+        self.maximum_days_off_per_planning_period = attributes[:'maximumDaysOffPerPlanningPeriod']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'minimumPaidHoursPerPlanningPeriod')
+        
+        
+        self.minimum_paid_hours_per_planning_period = attributes[:'minimumPaidHoursPerPlanningPeriod']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'maximumPaidHoursPerPlanningPeriod')
+        
+        
+        self.maximum_paid_hours_per_planning_period = attributes[:'maximumPaidHoursPerPlanningPeriod']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'optionalDays')
         
         
@@ -373,6 +549,55 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+      if @start_day_of_weekend && !allowed_values.include?(@start_day_of_weekend)
+        return false
+      end
       
       
       
@@ -514,6 +739,70 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] start_day_of_weekend Object to be assigned
+    def start_day_of_weekend=(start_day_of_weekend)
+      allowed_values = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+      if start_day_of_weekend && !allowed_values.include?(start_day_of_weekend)
+        fail ArgumentError, "invalid value for 'start_day_of_weekend', must be one of #{allowed_values}."
+      end
+      @start_day_of_weekend = start_day_of_weekend
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -561,6 +850,17 @@ module PureCloud
           constrain_minimum_time_between_shifts == o.constrain_minimum_time_between_shifts &&
           minimum_time_between_shifts_minutes == o.minimum_time_between_shifts_minutes &&
           maximum_days == o.maximum_days &&
+          start_day_of_weekend == o.start_day_of_weekend &&
+          minimum_consecutive_time_off_per_week_minutes == o.minimum_consecutive_time_off_per_week_minutes &&
+          constrain_maximum_consecutive_working_weekends == o.constrain_maximum_consecutive_working_weekends &&
+          maximum_consecutive_working_weekends == o.maximum_consecutive_working_weekends &&
+          minimum_working_days_per_week == o.minimum_working_days_per_week &&
+          maximum_consecutive_working_days == o.maximum_consecutive_working_days &&
+          minimum_shift_start_distance_minutes == o.minimum_shift_start_distance_minutes &&
+          minimum_days_off_per_planning_period == o.minimum_days_off_per_planning_period &&
+          maximum_days_off_per_planning_period == o.maximum_days_off_per_planning_period &&
+          minimum_paid_hours_per_planning_period == o.minimum_paid_hours_per_planning_period &&
+          maximum_paid_hours_per_planning_period == o.maximum_paid_hours_per_planning_period &&
           optional_days == o.optional_days &&
           shift_start_variances == o.shift_start_variances &&
           shifts == o.shifts &&
@@ -578,7 +878,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, enabled, constrain_weekly_paid_time, flexible_weekly_paid_time, weekly_exact_paid_minutes, weekly_minimum_paid_minutes, weekly_maximum_paid_minutes, constrain_paid_time_granularity, paid_time_granularity_minutes, constrain_minimum_time_between_shifts, minimum_time_between_shifts_minutes, maximum_days, optional_days, shift_start_variances, shifts, agents, metadata, self_uri].hash
+      [id, name, enabled, constrain_weekly_paid_time, flexible_weekly_paid_time, weekly_exact_paid_minutes, weekly_minimum_paid_minutes, weekly_maximum_paid_minutes, constrain_paid_time_granularity, paid_time_granularity_minutes, constrain_minimum_time_between_shifts, minimum_time_between_shifts_minutes, maximum_days, start_day_of_weekend, minimum_consecutive_time_off_per_week_minutes, constrain_maximum_consecutive_working_weekends, maximum_consecutive_working_weekends, minimum_working_days_per_week, maximum_consecutive_working_days, minimum_shift_start_distance_minutes, minimum_days_off_per_planning_period, maximum_days_off_per_planning_period, minimum_paid_hours_per_planning_period, maximum_paid_hours_per_planning_period, optional_days, shift_start_variances, shifts, agents, metadata, self_uri].hash
     end
 
     # build the object from hash
