@@ -84,6 +84,9 @@ module PureCloud
     # List of permissions required to permit user access to the integration type.
     attr_accessor :user_permissions
 
+    # List of OAuth Client IDs that must be authorized when the integration is created.
+    attr_accessor :vendor_o_auth_client_ids
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -134,6 +137,8 @@ module PureCloud
         :'max_instances' => :'maxInstances',
         
         :'user_permissions' => :'userPermissions',
+        
+        :'vendor_o_auth_client_ids' => :'vendorOAuthClientIds',
         
         :'self_uri' => :'selfUri'
         
@@ -187,6 +192,8 @@ module PureCloud
         :'max_instances' => :'Integer',
         
         :'user_permissions' => :'Array<String>',
+        
+        :'vendor_o_auth_client_ids' => :'Array<String>',
         
         :'self_uri' => :'String'
         
@@ -408,6 +415,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'vendorOAuthClientIds')
+        
+        if (value = attributes[:'vendorOAuthClientIds']).is_a?(Array)
+          self.vendor_o_auth_client_ids = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -529,8 +547,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -674,6 +701,7 @@ module PureCloud
           non_installable == o.non_installable &&
           max_instances == o.max_instances &&
           user_permissions == o.user_permissions &&
+          vendor_o_auth_client_ids == o.vendor_o_auth_client_ids &&
           self_uri == o.self_uri
     end
 
@@ -686,7 +714,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, provider, category, images, config_properties_schema_uri, config_advanced_schema_uri, help_uri, terms_of_service_uri, vendor_name, vendor_website_uri, marketplace_uri, faq_uri, privacy_policy_uri, support_contact_uri, sales_contact_uri, help_links, credentials, non_installable, max_instances, user_permissions, self_uri].hash
+      [id, name, description, provider, category, images, config_properties_schema_uri, config_advanced_schema_uri, help_uri, terms_of_service_uri, vendor_name, vendor_website_uri, marketplace_uri, faq_uri, privacy_policy_uri, support_contact_uri, sales_contact_uri, help_links, credentials, non_installable, max_instances, user_permissions, vendor_o_auth_client_ids, self_uri].hash
     end
 
     # build the object from hash

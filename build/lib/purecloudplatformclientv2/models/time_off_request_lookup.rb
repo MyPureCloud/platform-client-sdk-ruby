@@ -24,6 +24,45 @@ module PureCloud
     # The user that the time off request belongs to
     attr_accessor :user
 
+    # Whether this is a full day request (false means partial day)
+    attr_accessor :is_full_day_request
+
+    # Whether this request has been marked as read by the agent
+    attr_accessor :marked_as_read
+
+    # The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category
+    attr_accessor :activity_code_id
+
+    # The status of this time off request
+    attr_accessor :status
+
+    # A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false
+    attr_accessor :partial_day_start_date_times
+
+    # A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true
+    attr_accessor :full_day_management_unit_dates
+
+    # The daily duration of this time off request in minutes
+    attr_accessor :daily_duration_minutes
+
+    # Notes about the time off request
+    attr_accessor :notes
+
+    # The user who submitted this time off request
+    attr_accessor :submitted_by
+
+    # The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :submitted_date
+
+    # The user who reviewed this time off request
+    attr_accessor :reviewed_by
+
+    # The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :reviewed_date
+
+    # The version metadata of the time off request
+    attr_accessor :metadata
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -34,6 +73,32 @@ module PureCloud
         :'id' => :'id',
         
         :'user' => :'user',
+        
+        :'is_full_day_request' => :'isFullDayRequest',
+        
+        :'marked_as_read' => :'markedAsRead',
+        
+        :'activity_code_id' => :'activityCodeId',
+        
+        :'status' => :'status',
+        
+        :'partial_day_start_date_times' => :'partialDayStartDateTimes',
+        
+        :'full_day_management_unit_dates' => :'fullDayManagementUnitDates',
+        
+        :'daily_duration_minutes' => :'dailyDurationMinutes',
+        
+        :'notes' => :'notes',
+        
+        :'submitted_by' => :'submittedBy',
+        
+        :'submitted_date' => :'submittedDate',
+        
+        :'reviewed_by' => :'reviewedBy',
+        
+        :'reviewed_date' => :'reviewedDate',
+        
+        :'metadata' => :'metadata',
         
         :'self_uri' => :'selfUri'
         
@@ -47,6 +112,32 @@ module PureCloud
         :'id' => :'String',
         
         :'user' => :'User',
+        
+        :'is_full_day_request' => :'BOOLEAN',
+        
+        :'marked_as_read' => :'BOOLEAN',
+        
+        :'activity_code_id' => :'String',
+        
+        :'status' => :'String',
+        
+        :'partial_day_start_date_times' => :'Array<DateTime>',
+        
+        :'full_day_management_unit_dates' => :'Array<String>',
+        
+        :'daily_duration_minutes' => :'Integer',
+        
+        :'notes' => :'String',
+        
+        :'submitted_by' => :'User',
+        
+        :'submitted_date' => :'DateTime',
+        
+        :'reviewed_by' => :'User',
+        
+        :'reviewed_date' => :'DateTime',
+        
+        :'metadata' => :'WfmVersionedEntityMetadata',
         
         :'self_uri' => :'String'
         
@@ -75,6 +166,127 @@ module PureCloud
         
         
         self.user = attributes[:'user']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isFullDayRequest')
+        
+        
+        self.is_full_day_request = attributes[:'isFullDayRequest']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'markedAsRead')
+        
+        
+        self.marked_as_read = attributes[:'markedAsRead']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'activityCodeId')
+        
+        
+        self.activity_code_id = attributes[:'activityCodeId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'status')
+        
+        
+        self.status = attributes[:'status']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'partialDayStartDateTimes')
+        
+        if (value = attributes[:'partialDayStartDateTimes']).is_a?(Array)
+          self.partial_day_start_date_times = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'fullDayManagementUnitDates')
+        
+        if (value = attributes[:'fullDayManagementUnitDates']).is_a?(Array)
+          self.full_day_management_unit_dates = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'dailyDurationMinutes')
+        
+        
+        self.daily_duration_minutes = attributes[:'dailyDurationMinutes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'notes')
+        
+        
+        self.notes = attributes[:'notes']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'submittedBy')
+        
+        
+        self.submitted_by = attributes[:'submittedBy']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'submittedDate')
+        
+        
+        self.submitted_date = attributes[:'submittedDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'reviewedBy')
+        
+        
+        self.reviewed_by = attributes[:'reviewedBy']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'reviewedDate')
+        
+        
+        self.reviewed_date = attributes[:'reviewedDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'metadata')
+        
+        
+        self.metadata = attributes[:'metadata']
         
       
       end
@@ -126,8 +338,139 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["PENDING", "APPROVED", "DENIED", "CANCELED"]
+      if @status && !allowed_values.include?(@status)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      allowed_values = ["PENDING", "APPROVED", "DENIED", "CANCELED"]
+      if status && !allowed_values.include?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
+      end
+      @status = status
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -151,6 +494,19 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           user == o.user &&
+          is_full_day_request == o.is_full_day_request &&
+          marked_as_read == o.marked_as_read &&
+          activity_code_id == o.activity_code_id &&
+          status == o.status &&
+          partial_day_start_date_times == o.partial_day_start_date_times &&
+          full_day_management_unit_dates == o.full_day_management_unit_dates &&
+          daily_duration_minutes == o.daily_duration_minutes &&
+          notes == o.notes &&
+          submitted_by == o.submitted_by &&
+          submitted_date == o.submitted_date &&
+          reviewed_by == o.reviewed_by &&
+          reviewed_date == o.reviewed_date &&
+          metadata == o.metadata &&
           self_uri == o.self_uri
     end
 
@@ -163,7 +519,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, user, self_uri].hash
+      [id, user, is_full_day_request, marked_as_read, activity_code_id, status, partial_day_start_date_times, full_day_management_unit_dates, daily_duration_minutes, notes, submitted_by, submitted_date, reviewed_by, reviewed_date, metadata, self_uri].hash
     end
 
     # build the object from hash

@@ -29,6 +29,7 @@ title: IntegrationType
 | **non_installable** | **BOOLEAN** | Indicates if the integration type is installable or not. | [optional] |
 | **max_instances** | **Integer** | The maximum number of integration instances allowable for this integration type | [optional] |
 | **user_permissions** | **Array&lt;String&gt;** | List of permissions required to permit user access to the integration type. | [optional] |
+| **vendor_o_auth_client_ids** | **Array&lt;String&gt;** | List of OAuth Client IDs that must be authorized when the integration is created. | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

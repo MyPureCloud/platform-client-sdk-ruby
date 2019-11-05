@@ -2188,6 +2188,163 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Bulk-grant roles and divisions to a subject.
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param body Pairs of role and division IDs
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :subject_type what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (default to PC_USER)
+    # @return [nil]
+    def post_authorization_subject_bulkadd(subject_id, body, opts = {})
+      post_authorization_subject_bulkadd_with_http_info(subject_id, body, opts)
+      return nil
+    end
+
+    # Bulk-grant roles and divisions to a subject.
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param body Pairs of role and division IDs
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :subject_type what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def post_authorization_subject_bulkadd_with_http_info(subject_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.post_authorization_subject_bulkadd ..."
+      end
+      
+      
+      # verify the required parameter 'subject_id' is set
+      fail ArgumentError, "Missing the required parameter 'subject_id' when calling AuthorizationApi.post_authorization_subject_bulkadd" if subject_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.post_authorization_subject_bulkadd" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/subjects/{subjectId}/bulkadd".sub('{format}','json').sub('{' + 'subjectId' + '}', subject_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'subjectType'] = opts[:'subject_type'] if opts[:'subject_type']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#post_authorization_subject_bulkadd\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Bulk-remove grants from a subject.
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param body Pairs of role and division IDs
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def post_authorization_subject_bulkremove(subject_id, body, opts = {})
+      post_authorization_subject_bulkremove_with_http_info(subject_id, body, opts)
+      return nil
+    end
+
+    # Bulk-remove grants from a subject.
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param body Pairs of role and division IDs
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def post_authorization_subject_bulkremove_with_http_info(subject_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuthorizationApi.post_authorization_subject_bulkremove ..."
+      end
+      
+      
+      # verify the required parameter 'subject_id' is set
+      fail ArgumentError, "Missing the required parameter 'subject_id' when calling AuthorizationApi.post_authorization_subject_bulkremove" if subject_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling AuthorizationApi.post_authorization_subject_bulkremove" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/subjects/{subjectId}/bulkremove".sub('{format}','json').sub('{' + 'subjectId' + '}', subject_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuthorizationApi#post_authorization_subject_bulkremove\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Make a grant of a role in a division
     # 
     # @param subject_id Subject ID (user or group)

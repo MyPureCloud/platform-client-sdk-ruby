@@ -21,23 +21,28 @@ module PureCloud
     # The name of the Location.
     attr_accessor :name
 
-    attr_accessor :address
-
-    attr_accessor :emergency_number
-
+    # Current version of the location
     attr_accessor :version
 
     # Current activity status of the location.
     attr_accessor :state
 
+    # A list of ancestor ids
+    attr_accessor :path
+
+    attr_accessor :address_verified
+
+    # Notes for the location
     attr_accessor :notes
 
     # The user id of the location contact
     attr_accessor :contact_user
 
-    attr_accessor :path
+    # Emergency number for the location
+    attr_accessor :emergency_number
 
-    attr_accessor :address_verified
+    # Address of the location
+    attr_accessor :address
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -45,21 +50,21 @@ module PureCloud
         
         :'name' => :'name',
         
-        :'address' => :'address',
-        
-        :'emergency_number' => :'emergencyNumber',
-        
         :'version' => :'version',
         
         :'state' => :'state',
+        
+        :'path' => :'path',
+        
+        :'address_verified' => :'addressVerified',
         
         :'notes' => :'notes',
         
         :'contact_user' => :'contactUser',
         
-        :'path' => :'path',
+        :'emergency_number' => :'emergencyNumber',
         
-        :'address_verified' => :'addressVerified'
+        :'address' => :'address'
         
       }
     end
@@ -70,21 +75,21 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'address' => :'LocationAddress',
-        
-        :'emergency_number' => :'LocationEmergencyNumber',
-        
         :'version' => :'Integer',
         
         :'state' => :'String',
+        
+        :'path' => :'Array<String>',
+        
+        :'address_verified' => :'BOOLEAN',
         
         :'notes' => :'String',
         
         :'contact_user' => :'String',
         
-        :'path' => :'Array<String>',
+        :'emergency_number' => :'LocationEmergencyNumber',
         
-        :'address_verified' => :'BOOLEAN'
+        :'address' => :'LocationAddress'
         
       }
     end
@@ -102,24 +107,6 @@ module PureCloud
         
         
         self.name = attributes[:'name']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'address')
-        
-        
-        self.address = attributes[:'address']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'emergencyNumber')
-        
-        
-        self.emergency_number = attributes[:'emergencyNumber']
         
       
       end
@@ -143,6 +130,26 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'path')
+        
+        if (value = attributes[:'path']).is_a?(Array)
+          self.path = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'addressVerified')
+        
+        
+        self.address_verified = attributes[:'addressVerified']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'notes')
         
         
@@ -161,21 +168,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'path')
+      if attributes.has_key?(:'emergencyNumber')
         
-        if (value = attributes[:'path']).is_a?(Array)
-          self.path = value
-        end
         
+        self.emergency_number = attributes[:'emergencyNumber']
         
       
       end
 
       
-      if attributes.has_key?(:'addressVerified')
+      if attributes.has_key?(:'address')
         
         
-        self.address_verified = attributes[:'addressVerified']
+        self.address = attributes[:'address']
         
       
       end
@@ -211,14 +216,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
       allowed_values = ["active", "deleted"]
       if @state && !allowed_values.include?(@state)
         return false
@@ -242,18 +239,16 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -299,20 +294,30 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
           name == o.name &&
-          address == o.address &&
-          emergency_number == o.emergency_number &&
           version == o.version &&
           state == o.state &&
+          path == o.path &&
+          address_verified == o.address_verified &&
           notes == o.notes &&
           contact_user == o.contact_user &&
-          path == o.path &&
-          address_verified == o.address_verified
+          emergency_number == o.emergency_number &&
+          address == o.address
     end
 
     # @see the `==` method
@@ -324,7 +329,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, address, emergency_number, version, state, notes, contact_user, path, address_verified].hash
+      [name, version, state, path, address_verified, notes, contact_user, emergency_number, address].hash
     end
 
     # build the object from hash

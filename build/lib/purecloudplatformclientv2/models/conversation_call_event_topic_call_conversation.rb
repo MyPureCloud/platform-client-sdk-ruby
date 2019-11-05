@@ -28,6 +28,8 @@ module PureCloud
 
     attr_accessor :recording_state
 
+    attr_accessor :max_participants
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -40,7 +42,9 @@ module PureCloud
         
         :'other_media_uris' => :'otherMediaUris',
         
-        :'recording_state' => :'recordingState'
+        :'recording_state' => :'recordingState',
+        
+        :'max_participants' => :'maxParticipants'
         
       }
     end
@@ -57,7 +61,9 @@ module PureCloud
         
         :'other_media_uris' => :'Array<String>',
         
-        :'recording_state' => :'String'
+        :'recording_state' => :'String',
+        
+        :'max_participants' => :'Integer'
         
       }
     end
@@ -120,6 +126,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'maxParticipants')
+        
+        
+        self.max_participants = attributes[:'maxParticipants']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -160,6 +175,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -197,6 +216,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -206,7 +230,8 @@ module PureCloud
           name == o.name &&
           participants == o.participants &&
           other_media_uris == o.other_media_uris &&
-          recording_state == o.recording_state
+          recording_state == o.recording_state &&
+          max_participants == o.max_participants
     end
 
     # @see the `==` method
@@ -218,7 +243,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, participants, other_media_uris, recording_state].hash
+      [id, name, participants, other_media_uris, recording_state, max_participants].hash
     end
 
     # build the object from hash

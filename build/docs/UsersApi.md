@@ -57,6 +57,8 @@ Method | Description
 [**post_analytics_users_aggregates_query**](UsersApi.html#post_analytics_users_aggregates_query) | Query for user aggregates
 [**post_analytics_users_details_query**](UsersApi.html#post_analytics_users_details_query) | Query for user details
 [**post_analytics_users_observations_query**](UsersApi.html#post_analytics_users_observations_query) | Query for user observations
+[**post_authorization_subject_bulkadd**](UsersApi.html#post_authorization_subject_bulkadd) | Bulk-grant roles and divisions to a subject.
+[**post_authorization_subject_bulkremove**](UsersApi.html#post_authorization_subject_bulkremove) | Bulk-remove grants from a subject.
 [**post_authorization_subject_division_role**](UsersApi.html#post_authorization_subject_division_role) | Make a grant of a role in a division
 [**post_user_externalid**](UsersApi.html#post_user_externalid) | Create mapping between external identifier and user. Limit 100 per entity.
 [**post_user_invite**](UsersApi.html#post_user_invite) | Send an activation email to the user
@@ -3392,6 +3394,144 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserObservationQueryResponse**](UserObservationQueryResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_authorization_subject_bulkadd"></a>
+
+##  post_authorization_subject_bulkadd(subject_id, body, opts)
+
+
+
+Bulk-grant roles and divisions to a subject.
+
+
+
+Wraps POST /api/v2/authorization/subjects/{subjectId}/bulkadd 
+
+Requires ANY permissions: 
+
+* authorization:grant:add
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+subject_id = "subject_id_example" # String | Subject ID (user or group)
+
+body = PureCloud::RoleDivisionGrants.new # RoleDivisionGrants | Pairs of role and division IDs
+
+opts = { 
+  subject_type: "PC_USER" # String | what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+}
+
+begin
+  #Bulk-grant roles and divisions to a subject.
+  api_instance.post_authorization_subject_bulkadd(subject_id, body, opts)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->post_authorization_subject_bulkadd: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject_id** | **String**| Subject ID (user or group) |  |
+ **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs |  |
+ **subject_type** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_authorization_subject_bulkremove"></a>
+
+##  post_authorization_subject_bulkremove(subject_id, body)
+
+
+
+Bulk-remove grants from a subject.
+
+
+
+Wraps POST /api/v2/authorization/subjects/{subjectId}/bulkremove 
+
+Requires ANY permissions: 
+
+* authorization:grant:delete
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::UsersApi.new
+
+subject_id = "subject_id_example" # String | Subject ID (user or group)
+
+body = PureCloud::RoleDivisionGrants.new # RoleDivisionGrants | Pairs of role and division IDs
+
+
+begin
+  #Bulk-remove grants from a subject.
+  api_instance.post_authorization_subject_bulkremove(subject_id, body)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling UsersApi->post_authorization_subject_bulkremove: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject_id** | **String**| Subject ID (user or group) |  |
+ **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 

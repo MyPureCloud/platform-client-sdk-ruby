@@ -30,9 +30,9 @@ module PureCloud
 
     attr_accessor :self_uri
 
-    attr_accessor :last_uri
-
     attr_accessor :next_uri
+
+    attr_accessor :last_uri
 
     attr_accessor :previous_uri
 
@@ -54,9 +54,9 @@ module PureCloud
         
         :'self_uri' => :'selfUri',
         
-        :'last_uri' => :'lastUri',
-        
         :'next_uri' => :'nextUri',
+        
+        :'last_uri' => :'lastUri',
         
         :'previous_uri' => :'previousUri',
         
@@ -81,9 +81,9 @@ module PureCloud
         
         :'self_uri' => :'String',
         
-        :'last_uri' => :'String',
-        
         :'next_uri' => :'String',
+        
+        :'last_uri' => :'String',
         
         :'previous_uri' => :'String',
         
@@ -157,19 +157,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'lastUri')
+      if attributes.has_key?(:'nextUri')
         
         
-        self.last_uri = attributes[:'lastUri']
+        self.next_uri = attributes[:'nextUri']
         
       
       end
 
       
-      if attributes.has_key?(:'nextUri')
+      if attributes.has_key?(:'lastUri')
         
         
-        self.next_uri = attributes[:'nextUri']
+        self.last_uri = attributes[:'lastUri']
         
       
       end
@@ -312,8 +312,8 @@ module PureCloud
           total == o.total &&
           first_uri == o.first_uri &&
           self_uri == o.self_uri &&
-          last_uri == o.last_uri &&
           next_uri == o.next_uri &&
+          last_uri == o.last_uri &&
           previous_uri == o.previous_uri &&
           page_count == o.page_count
     end
@@ -327,7 +327,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [entities, page_size, page_number, total, first_uri, self_uri, last_uri, next_uri, previous_uri, page_count].hash
+      [entities, page_size, page_number, total, first_uri, self_uri, next_uri, last_uri, previous_uri, page_count].hash
     end
 
     # build the object from hash

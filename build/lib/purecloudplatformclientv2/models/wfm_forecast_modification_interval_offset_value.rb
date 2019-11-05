@@ -42,7 +42,7 @@ module PureCloud
         
         :'interval_index' => :'Integer',
         
-        :'value' => :'Integer'
+        :'value' => :'Float'
         
       }
     end

@@ -21,32 +21,44 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
-    # The name of the Location.
     attr_accessor :name
 
-    # Site contact for the location
+    # Site contact for the location entity
     attr_accessor :contact_user
 
+    # Emergency number for the location entity
     attr_accessor :emergency_number
 
     attr_accessor :address
 
-    attr_accessor :address_verified
-
-    # Current activity status of the location.
+    # Current state of the location entity
     attr_accessor :state
 
+    # Notes for the location entity
     attr_accessor :notes
 
+    # Current version of the location entity, value to be supplied should be retrieved by a GET or on create/update response
     attr_accessor :version
 
     # A list of ancestor IDs in order
     attr_accessor :path
 
-    # Profile image set for the location
+    # Profile image of the location entity, retrieved with ?expand=images query parameter
     attr_accessor :profile_image
 
+    # Floorplan images of the location entity, retrieved with ?expand=images query parameter
     attr_accessor :floorplan_image
+
+    # Address verification information, retrieve dwith the ?expand=addressVerificationDetails query parameter
+    attr_accessor :address_verification_details
+
+    # Boolean field which states if the address has been verified as an actual address
+    attr_accessor :address_verified
+
+    # Boolean field which states if the address has been stored for E911
+    attr_accessor :address_stored
+
+    attr_accessor :images
 
     # The URI for this object
     attr_accessor :self_uri
@@ -65,8 +77,6 @@ module PureCloud
         
         :'address' => :'address',
         
-        :'address_verified' => :'addressVerified',
-        
         :'state' => :'state',
         
         :'notes' => :'notes',
@@ -78,6 +88,14 @@ module PureCloud
         :'profile_image' => :'profileImage',
         
         :'floorplan_image' => :'floorplanImage',
+        
+        :'address_verification_details' => :'addressVerificationDetails',
+        
+        :'address_verified' => :'addressVerified',
+        
+        :'address_stored' => :'addressStored',
+        
+        :'images' => :'images',
         
         :'self_uri' => :'selfUri'
         
@@ -98,8 +116,6 @@ module PureCloud
         
         :'address' => :'LocationAddress',
         
-        :'address_verified' => :'BOOLEAN',
-        
         :'state' => :'String',
         
         :'notes' => :'String',
@@ -111,6 +127,14 @@ module PureCloud
         :'profile_image' => :'Array<LocationImage>',
         
         :'floorplan_image' => :'Array<LocationImage>',
+        
+        :'address_verification_details' => :'LocationAddressVerificationDetails',
+        
+        :'address_verified' => :'BOOLEAN',
+        
+        :'address_stored' => :'BOOLEAN',
+        
+        :'images' => :'String',
         
         :'self_uri' => :'String'
         
@@ -166,15 +190,6 @@ module PureCloud
         
         
         self.address = attributes[:'address']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'addressVerified')
-        
-        
-        self.address_verified = attributes[:'addressVerified']
         
       
       end
@@ -240,6 +255,42 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'addressVerificationDetails')
+        
+        
+        self.address_verification_details = attributes[:'addressVerificationDetails']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'addressVerified')
+        
+        
+        self.address_verified = attributes[:'addressVerified']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'addressStored')
+        
+        
+        self.address_stored = attributes[:'addressStored']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'images')
+        
+        
+        self.images = attributes[:'images']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -264,15 +315,6 @@ module PureCloud
     # @return true if the model is valid
     def valid?
       
-      
-      
-      
-      
-      
-      if @name.nil?
-        return false
-      end
-
       
       
       
@@ -326,13 +368,24 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -403,6 +456,26 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -413,13 +486,16 @@ module PureCloud
           contact_user == o.contact_user &&
           emergency_number == o.emergency_number &&
           address == o.address &&
-          address_verified == o.address_verified &&
           state == o.state &&
           notes == o.notes &&
           version == o.version &&
           path == o.path &&
           profile_image == o.profile_image &&
           floorplan_image == o.floorplan_image &&
+          address_verification_details == o.address_verification_details &&
+          address_verified == o.address_verified &&
+          address_stored == o.address_stored &&
+          images == o.images &&
           self_uri == o.self_uri
     end
 
@@ -432,7 +508,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, contact_user, emergency_number, address, address_verified, state, notes, version, path, profile_image, floorplan_image, self_uri].hash
+      [id, name, contact_user, emergency_number, address, state, notes, version, path, profile_image, floorplan_image, address_verification_details, address_verified, address_stored, images, self_uri].hash
     end
 
     # build the object from hash

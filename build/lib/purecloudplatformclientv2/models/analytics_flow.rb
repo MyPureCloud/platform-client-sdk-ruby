@@ -296,7 +296,7 @@ module PureCloud
       
       
       
-      allowed_values = ["COMMONMODULE", "INBOUNDCALL", "INBOUNDCHAT", "INBOUNDEMAIL", "INBOUNDSHORTMESSAGE", "INQUEUECALL", "OUTBOUNDCALL", "SECURECALL", "SPEECH", "SURVEYINVITE"]
+      allowed_values = ["COMMONMODULE", "INBOUNDCALL", "INBOUNDCHAT", "INBOUNDEMAIL", "INBOUNDSHORTMESSAGE", "INQUEUECALL", "OUTBOUNDCALL", "SECURECALL", "SPEECH", "SURVEYINVITE", "WORKFLOW"]
       if @flow_type && !allowed_values.include?(@flow_type)
         return false
       end
@@ -370,7 +370,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] flow_type Object to be assigned
     def flow_type=(flow_type)
-      allowed_values = ["COMMONMODULE", "INBOUNDCALL", "INBOUNDCHAT", "INBOUNDEMAIL", "INBOUNDSHORTMESSAGE", "INQUEUECALL", "OUTBOUNDCALL", "SECURECALL", "SPEECH", "SURVEYINVITE"]
+      allowed_values = ["COMMONMODULE", "INBOUNDCALL", "INBOUNDCHAT", "INBOUNDEMAIL", "INBOUNDSHORTMESSAGE", "INQUEUECALL", "OUTBOUNDCALL", "SECURECALL", "SPEECH", "SURVEYINVITE", "WORKFLOW"]
       if flow_type && !allowed_values.include?(flow_type)
         fail ArgumentError, "invalid value for 'flow_type', must be one of #{allowed_values}."
       end

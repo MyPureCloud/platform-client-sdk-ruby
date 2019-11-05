@@ -55,6 +55,7 @@ module PureCloud
     # The list of roles assigned to the user.
     attr_accessor :roles
 
+    # SCIM enterprise user attributes
     attr_accessor :urnietfparamsscimschemasextensionenterprise2_0_user
 
     # Attribute mapping from ruby-style variable name to JSON key.
