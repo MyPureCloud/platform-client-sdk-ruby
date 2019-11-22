@@ -38,6 +38,8 @@ title: ConversationSocialExpressionEventTopicSocialMediaParticipant
 | **screen_recording_state** | **String** |  | [optional] |
 | **flagged_reason** | **String** |  | [optional] |
 | **journey_context** | [**ConversationSocialExpressionEventTopicJourneyContext**](ConversationSocialExpressionEventTopicJourneyContext.html) |  | [optional] |
+| **start_acw_time** | **DateTime** |  | [optional] |
+| **end_acw_time** | **DateTime** |  | [optional] |
 | **social_media_id** | **String** |  | [optional] |
 | **social_media_hub** | **String** |  | [optional] |
 | **social_user_name** | **String** |  | [optional] |

@@ -3767,7 +3767,8 @@ opts = {
   publish_version_id: "publish_version_id_example", # String | Publish version ID
   published_after: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01", # String | Published after
   published_before: "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01", # String | Published before
-  division_id: ["division_id_example"] # Array<String> | division ID(s)
+  division_id: ["division_id_example"], # Array<String> | division ID(s)
+  include_schemas: false # BOOLEAN | Include variable schemas
 }
 
 begin
@@ -3794,6 +3795,7 @@ Name | Type | Description  | Notes
  **published_after** | **String**| Published after | [optional]  |
  **published_before** | **String**| Published before | [optional]  |
  **division_id** | [**Array&lt;String&gt;**](String.html)| division ID(s) | [optional]  |
+ **include_schemas** | **BOOLEAN**| Include variable schemas | [optional] [default to false] |
 {: class="table table-striped"}
 
 

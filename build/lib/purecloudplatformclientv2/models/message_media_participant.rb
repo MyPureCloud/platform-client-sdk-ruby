@@ -108,6 +108,12 @@ module PureCloud
     # Information on how a communication should be routed to an agent.
     attr_accessor :conversation_routing_data
 
+    # The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :start_acw_time
+
+    # The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :end_acw_time
+
     # Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended.
     attr_accessor :to_address
 
@@ -190,6 +196,10 @@ module PureCloud
         
         :'conversation_routing_data' => :'conversationRoutingData',
         
+        :'start_acw_time' => :'startAcwTime',
+        
+        :'end_acw_time' => :'endAcwTime',
+        
         :'to_address' => :'toAddress',
         
         :'from_address' => :'fromAddress',
@@ -268,6 +278,10 @@ module PureCloud
         :'journey_context' => :'JourneyContext',
         
         :'conversation_routing_data' => :'ConversationRoutingData',
+        
+        :'start_acw_time' => :'DateTime',
+        
+        :'end_acw_time' => :'DateTime',
         
         :'to_address' => :'Address',
         
@@ -565,6 +579,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'startAcwTime')
+        
+        
+        self.start_acw_time = attributes[:'startAcwTime']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'endAcwTime')
+        
+        
+        self.end_acw_time = attributes[:'endAcwTime']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'toAddress')
         
         
@@ -765,6 +797,14 @@ module PureCloud
       if @flagged_reason && !allowed_values.include?(@flagged_reason)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1010,6 +1050,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
@@ -1068,6 +1118,8 @@ module PureCloud
           flagged_reason == o.flagged_reason &&
           journey_context == o.journey_context &&
           conversation_routing_data == o.conversation_routing_data &&
+          start_acw_time == o.start_acw_time &&
+          end_acw_time == o.end_acw_time &&
           to_address == o.to_address &&
           from_address == o.from_address &&
           messages == o.messages &&
@@ -1085,7 +1137,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, peer, flagged_reason, journey_context, conversation_routing_data, to_address, from_address, messages, type, recipient_country, recipient_type].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, peer, flagged_reason, journey_context, conversation_routing_data, start_acw_time, end_acw_time, to_address, from_address, messages, type, recipient_country, recipient_type].hash
     end
 
     # build the object from hash

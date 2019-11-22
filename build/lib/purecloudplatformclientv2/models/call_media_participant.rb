@@ -108,6 +108,12 @@ module PureCloud
     # Information on how a communication should be routed to an agent.
     attr_accessor :conversation_routing_data
 
+    # The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :start_acw_time
+
+    # The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :end_acw_time
+
     # Value is true when the call is muted.
     attr_accessor :muted
 
@@ -208,6 +214,10 @@ module PureCloud
         
         :'conversation_routing_data' => :'conversationRoutingData',
         
+        :'start_acw_time' => :'startAcwTime',
+        
+        :'end_acw_time' => :'endAcwTime',
+        
         :'muted' => :'muted',
         
         :'confined' => :'confined',
@@ -298,6 +308,10 @@ module PureCloud
         :'journey_context' => :'JourneyContext',
         
         :'conversation_routing_data' => :'ConversationRoutingData',
+        
+        :'start_acw_time' => :'DateTime',
+        
+        :'end_acw_time' => :'DateTime',
         
         :'muted' => :'BOOLEAN',
         
@@ -607,6 +621,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'startAcwTime')
+        
+        
+        self.start_acw_time = attributes[:'startAcwTime']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'endAcwTime')
+        
+        
+        self.end_acw_time = attributes[:'endAcwTime']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'muted')
         
         
@@ -884,6 +916,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["none", "active", "paused"]
       if @recording_state && !allowed_values.include?(@recording_state)
         return false
@@ -1128,6 +1168,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] recording_state Object to be assigned
     def recording_state=(recording_state)
@@ -1216,6 +1266,8 @@ module PureCloud
           flagged_reason == o.flagged_reason &&
           journey_context == o.journey_context &&
           conversation_routing_data == o.conversation_routing_data &&
+          start_acw_time == o.start_acw_time &&
+          end_acw_time == o.end_acw_time &&
           muted == o.muted &&
           confined == o.confined &&
           recording == o.recording &&
@@ -1239,7 +1291,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, peer, flagged_reason, journey_context, conversation_routing_data, muted, confined, recording, recording_state, group, ani, dnis, document_id, fax_status, monitored_participant_id, consult_participant_id, uui_data].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, peer, flagged_reason, journey_context, conversation_routing_data, start_acw_time, end_acw_time, muted, confined, recording, recording_state, group, ani, dnis, document_id, fax_status, monitored_participant_id, consult_participant_id, uui_data].hash
     end
 
     # build the object from hash

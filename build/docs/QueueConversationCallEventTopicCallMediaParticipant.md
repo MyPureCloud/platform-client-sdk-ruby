@@ -38,6 +38,8 @@ title: QueueConversationCallEventTopicCallMediaParticipant
 | **screen_recording_state** | **String** |  | [optional] |
 | **flagged_reason** | **String** |  | [optional] |
 | **journey_context** | [**QueueConversationCallEventTopicJourneyContext**](QueueConversationCallEventTopicJourneyContext.html) |  | [optional] |
+| **start_acw_time** | **DateTime** |  | [optional] |
+| **end_acw_time** | **DateTime** |  | [optional] |
 | **muted** | **BOOLEAN** |  | [optional] |
 | **confined** | **BOOLEAN** |  | [optional] |
 | **recording** | **BOOLEAN** |  | [optional] |

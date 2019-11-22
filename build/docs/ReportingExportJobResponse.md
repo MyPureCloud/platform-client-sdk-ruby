@@ -25,6 +25,7 @@ title: ReportingExportJobResponse
 | **percentage_complete** | **Float** | The percentage of the job that has completed processing | |
 | **has_format_durations** | **BOOLEAN** | Indicates if durations are formatted in hh:mm:ss format instead of ms | [optional] |
 | **has_split_filters** | **BOOLEAN** | Indicates if filters will be split in aggregate detail exports | [optional] |
+| **selected_columns** | [**Array&lt;SelectedColumns&gt;**](SelectedColumns.html) | The list of ordered selected columns from the export view by the user | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -35,6 +35,9 @@ module PureCloud
     # Status of the provisioned phone number.
     attr_accessor :phone_number_status
 
+    # The capabilities of the phone number available for provisioning.
+    attr_accessor :capabilities
+
     # The ISO 3166-1 alpha-2 country code of the country this phone number is associated with.
     attr_accessor :country_code
 
@@ -90,6 +93,8 @@ module PureCloud
         
         :'phone_number_status' => :'phoneNumberStatus',
         
+        :'capabilities' => :'capabilities',
+        
         :'country_code' => :'countryCode',
         
         :'date_created' => :'dateCreated',
@@ -134,6 +139,8 @@ module PureCloud
         :'provisioned_through_pure_cloud' => :'BOOLEAN',
         
         :'phone_number_status' => :'String',
+        
+        :'capabilities' => :'Array<String>',
         
         :'country_code' => :'String',
         
@@ -222,6 +229,17 @@ module PureCloud
         
         
         self.phone_number_status = attributes[:'phoneNumberStatus']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'capabilities')
+        
+        if (value = attributes[:'capabilities']).is_a?(Array)
+          self.capabilities = value
+        end
+        
         
       
       end
@@ -419,6 +437,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       if @version.nil?
         return false
       end
@@ -562,6 +584,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] auto_renewable Object to be assigned
     def auto_renewable=(auto_renewable)
@@ -610,6 +637,7 @@ module PureCloud
           phone_number_type == o.phone_number_type &&
           provisioned_through_pure_cloud == o.provisioned_through_pure_cloud &&
           phone_number_status == o.phone_number_status &&
+          capabilities == o.capabilities &&
           country_code == o.country_code &&
           date_created == o.date_created &&
           date_modified == o.date_modified &&
@@ -634,7 +662,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, phone_number, phone_number_type, provisioned_through_pure_cloud, phone_number_status, country_code, date_created, date_modified, created_by, modified_by, version, purchase_date, cancellation_date, renewal_date, auto_renewable, address_id, short_code_billing_type, self_uri].hash
+      [id, name, phone_number, phone_number_type, provisioned_through_pure_cloud, phone_number_status, capabilities, country_code, date_created, date_modified, created_by, modified_by, version, purchase_date, cancellation_date, renewal_date, auto_renewable, address_id, short_code_billing_type, self_uri].hash
     end
 
     # build the object from hash

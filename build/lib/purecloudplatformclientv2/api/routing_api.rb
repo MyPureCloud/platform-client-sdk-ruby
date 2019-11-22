@@ -1842,7 +1842,6 @@ module PureCloud
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :sort_by Sort by (default to name)
     # @option opts [String] :name Name
-    # @option opts [BOOLEAN] :active Active
     # @option opts [Array<String>] :id ID(s)
     # @option opts [Array<String>] :division_id Division ID(s)
     # @return [QueueEntityListing]
@@ -1858,7 +1857,6 @@ module PureCloud
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :sort_by Sort by
     # @option opts [String] :name Name
-    # @option opts [BOOLEAN] :active Active
     # @option opts [Array<String>] :id ID(s)
     # @option opts [Array<String>] :division_id Division ID(s)
     # @return [Array<(QueueEntityListing, Fixnum, Hash)>] QueueEntityListing data, response status code and response headers
@@ -1866,12 +1864,6 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_queues ..."
       end
-      
-      
-      
-      
-      
-      
       
       
       
@@ -1918,7 +1910,6 @@ module PureCloud
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
-      query_params[:'active'] = opts[:'active'] if opts[:'active']
       query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
       query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
 

@@ -30,6 +30,8 @@ module PureCloud
 
     attr_accessor :responses
 
+    attr_accessor :beep_detection_enabled
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -47,6 +49,8 @@ module PureCloud
         :'version' => :'version',
         
         :'responses' => :'responses',
+        
+        :'beep_detection_enabled' => :'beepDetectionEnabled',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -68,6 +72,8 @@ module PureCloud
         :'version' => :'Integer',
         
         :'responses' => :'Hash<String, DialerResponsesetConfigChangeReaction>',
+        
+        :'beep_detection_enabled' => :'BOOLEAN',
         
         :'additional_properties' => :'Object'
         
@@ -139,6 +145,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'beepDetectionEnabled')
+        
+        
+        self.beep_detection_enabled = attributes[:'beepDetectionEnabled']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -191,8 +206,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -240,6 +264,7 @@ module PureCloud
           date_modified == o.date_modified &&
           version == o.version &&
           responses == o.responses &&
+          beep_detection_enabled == o.beep_detection_enabled &&
           additional_properties == o.additional_properties
     end
 
@@ -252,7 +277,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, version, responses, additional_properties].hash
+      [id, name, date_created, date_modified, version, responses, beep_detection_enabled, additional_properties].hash
     end
 
     # build the object from hash

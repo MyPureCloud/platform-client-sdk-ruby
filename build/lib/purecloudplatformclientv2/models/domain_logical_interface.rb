@@ -100,6 +100,15 @@ module PureCloud
     # This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group.
     attr_accessor :use_for_internal_edge_communication
 
+    # Site Interconnects using the \"Indirect\" method will communicate using the Public IP Address specified on the interface. Use this option when a NAT enabled firewall is between the Edge and the far end.
+    attr_accessor :use_for_indirect_edge_communication
+
+    # Site Interconnects using the \"Cloud Proxy\" method will broker the connection between them with a Cloud Proxy. This method is required for connections between one or more Sites using Cloud Media, but can optionally be used between two premises Sites if Direct or Indirect are not an option.
+    attr_accessor :use_for_cloud_proxy_edge_communication
+
+    # NENT IP Address
+    attr_accessor :public_nat_ip_address
+
     # External trunk base settings to use for external communication from this interface.
     attr_accessor :external_trunk_base_assignments
 
@@ -181,6 +190,12 @@ module PureCloud
         
         :'use_for_internal_edge_communication' => :'useForInternalEdgeCommunication',
         
+        :'use_for_indirect_edge_communication' => :'useForIndirectEdgeCommunication',
+        
+        :'use_for_cloud_proxy_edge_communication' => :'useForCloudProxyEdgeCommunication',
+        
+        :'public_nat_ip_address' => :'publicNatIpAddress',
+        
         :'external_trunk_base_assignments' => :'externalTrunkBaseAssignments',
         
         :'phone_trunk_base_assignments' => :'phoneTrunkBaseAssignments',
@@ -259,6 +274,12 @@ module PureCloud
         :'inherit_phone_trunk_bases_i_pv6' => :'BOOLEAN',
         
         :'use_for_internal_edge_communication' => :'BOOLEAN',
+        
+        :'use_for_indirect_edge_communication' => :'BOOLEAN',
+        
+        :'use_for_cloud_proxy_edge_communication' => :'BOOLEAN',
+        
+        :'public_nat_ip_address' => :'String',
         
         :'external_trunk_base_assignments' => :'Array<TrunkBaseAssignment>',
         
@@ -560,6 +581,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'useForIndirectEdgeCommunication')
+        
+        
+        self.use_for_indirect_edge_communication = attributes[:'useForIndirectEdgeCommunication']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'useForCloudProxyEdgeCommunication')
+        
+        
+        self.use_for_cloud_proxy_edge_communication = attributes[:'useForCloudProxyEdgeCommunication']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'publicNatIpAddress')
+        
+        
+        self.public_nat_ip_address = attributes[:'publicNatIpAddress']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'externalTrunkBaseAssignments')
         
         if (value = attributes[:'externalTrunkBaseAssignments']).is_a?(Array)
@@ -761,6 +809,18 @@ module PureCloud
       if @current_state && !allowed_values.include?(@current_state)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1022,6 +1082,21 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1057,6 +1132,9 @@ module PureCloud
           inherit_phone_trunk_bases_i_pv4 == o.inherit_phone_trunk_bases_i_pv4 &&
           inherit_phone_trunk_bases_i_pv6 == o.inherit_phone_trunk_bases_i_pv6 &&
           use_for_internal_edge_communication == o.use_for_internal_edge_communication &&
+          use_for_indirect_edge_communication == o.use_for_indirect_edge_communication &&
+          use_for_cloud_proxy_edge_communication == o.use_for_cloud_proxy_edge_communication &&
+          public_nat_ip_address == o.public_nat_ip_address &&
           external_trunk_base_assignments == o.external_trunk_base_assignments &&
           phone_trunk_base_assignments == o.phone_trunk_base_assignments &&
           trace_enabled == o.trace_enabled &&
@@ -1074,7 +1152,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, edge_uri, edge_assigned_id, friendly_name, vlan_tag_id, hardware_address, physical_adapter_id, if_status, interface_type, routes, addresses, ipv4_capabilities, ipv6_capabilities, current_state, last_modified_user_id, last_modified_correlation_id, command_responses, inherit_phone_trunk_bases_i_pv4, inherit_phone_trunk_bases_i_pv6, use_for_internal_edge_communication, external_trunk_base_assignments, phone_trunk_base_assignments, trace_enabled, start_date, end_date, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, edge_uri, edge_assigned_id, friendly_name, vlan_tag_id, hardware_address, physical_adapter_id, if_status, interface_type, routes, addresses, ipv4_capabilities, ipv6_capabilities, current_state, last_modified_user_id, last_modified_correlation_id, command_responses, inherit_phone_trunk_bases_i_pv4, inherit_phone_trunk_bases_i_pv6, use_for_internal_edge_communication, use_for_indirect_edge_communication, use_for_cloud_proxy_edge_communication, public_nat_ip_address, external_trunk_base_assignments, phone_trunk_base_assignments, trace_enabled, start_date, end_date, self_uri].hash
     end
 
     # build the object from hash

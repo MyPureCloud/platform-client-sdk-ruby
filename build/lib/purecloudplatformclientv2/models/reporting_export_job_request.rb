@@ -51,6 +51,9 @@ module PureCloud
     # Indicates if filters will be split in aggregate detail exports
     attr_accessor :has_split_filters
 
+    # The list of ordered selected columns from the export view by the user
+    attr_accessor :selected_columns
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -75,7 +78,9 @@ module PureCloud
         
         :'has_format_durations' => :'hasFormatDurations',
         
-        :'has_split_filters' => :'hasSplitFilters'
+        :'has_split_filters' => :'hasSplitFilters',
+        
+        :'selected_columns' => :'selectedColumns'
         
       }
     end
@@ -104,7 +109,9 @@ module PureCloud
         
         :'has_format_durations' => :'BOOLEAN',
         
-        :'has_split_filters' => :'BOOLEAN'
+        :'has_split_filters' => :'BOOLEAN',
+        
+        :'selected_columns' => :'Array<SelectedColumns>'
         
       }
     end
@@ -217,6 +224,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'selectedColumns')
+        
+        if (value = attributes[:'selectedColumns']).is_a?(Array)
+          self.selected_columns = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -316,6 +334,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -392,6 +414,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -407,7 +434,8 @@ module PureCloud
           read == o.read &&
           locale == o.locale &&
           has_format_durations == o.has_format_durations &&
-          has_split_filters == o.has_split_filters
+          has_split_filters == o.has_split_filters &&
+          selected_columns == o.selected_columns
     end
 
     # @see the `==` method
@@ -419,7 +447,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, time_zone, export_format, interval, period, view_type, filter, read, locale, has_format_durations, has_split_filters].hash
+      [name, time_zone, export_format, interval, period, view_type, filter, read, locale, has_format_durations, has_split_filters, selected_columns].hash
     end
 
     # build the object from hash

@@ -233,9 +233,8 @@ Get an organization's StationSettings
 
 Wraps GET /api/v2/stations/settings 
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* telephony:plugin:all
 
 
 ### Example

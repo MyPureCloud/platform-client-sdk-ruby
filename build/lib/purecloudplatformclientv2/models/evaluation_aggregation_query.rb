@@ -240,7 +240,7 @@ module PureCloud
       
       
       
-      allowed_values = ["calibrationId", "contextId", "conversationId", "divisionId", "evaluationCreatedDate", "evaluationId", "evaluatorId", "formId", "queueId", "rescind", "rescored", "userId"]
+      allowed_values = ["evaluationCreatedDate", "eventTime"]
       if @alternate_time_dimension && !allowed_values.include?(@alternate_time_dimension)
         return false
       end
@@ -294,7 +294,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] alternate_time_dimension Object to be assigned
     def alternate_time_dimension=(alternate_time_dimension)
-      allowed_values = ["calibrationId", "contextId", "conversationId", "divisionId", "evaluationCreatedDate", "evaluationId", "evaluatorId", "formId", "queueId", "rescind", "rescored", "userId"]
+      allowed_values = ["evaluationCreatedDate", "eventTime"]
       if alternate_time_dimension && !allowed_values.include?(alternate_time_dimension)
         fail ArgumentError, "invalid value for 'alternate_time_dimension', must be one of #{allowed_values}."
       end

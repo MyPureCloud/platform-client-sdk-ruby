@@ -38,6 +38,8 @@ title: QueueConversationChatEventTopicChatMediaParticipant
 | **screen_recording_state** | **String** |  | [optional] |
 | **flagged_reason** | **String** |  | [optional] |
 | **journey_context** | [**QueueConversationChatEventTopicJourneyContext**](QueueConversationChatEventTopicJourneyContext.html) |  | [optional] |
+| **start_acw_time** | **DateTime** |  | [optional] |
+| **end_acw_time** | **DateTime** |  | [optional] |
 | **room_id** | **String** |  | [optional] |
 | **avatar_image_url** | **String** |  | [optional] |
 {: class="table table-striped"}

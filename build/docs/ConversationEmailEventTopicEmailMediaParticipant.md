@@ -38,6 +38,8 @@ title: ConversationEmailEventTopicEmailMediaParticipant
 | **screen_recording_state** | **String** |  | [optional] |
 | **flagged_reason** | **String** |  | [optional] |
 | **journey_context** | [**ConversationEmailEventTopicJourneyContext**](ConversationEmailEventTopicJourneyContext.html) |  | [optional] |
+| **start_acw_time** | **DateTime** |  | [optional] |
+| **end_acw_time** | **DateTime** |  | [optional] |
 | **subject** | **String** |  | [optional] |
 | **messages_sent** | **Integer** |  | [optional] |
 | **auto_generated** | **BOOLEAN** |  | [optional] |

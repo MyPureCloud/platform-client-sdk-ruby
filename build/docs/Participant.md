@@ -48,6 +48,8 @@ title: Participant
 | **evaluations** | [**Array&lt;Evaluation&gt;**](Evaluation.html) |  | [optional] |
 | **screen_recording_state** | **String** | The current screen recording state for this participant. | [optional] |
 | **flagged_reason** | **String** | The reason specifying why participant flagged the conversation. | [optional] |
+| **start_acw_time** | **DateTime** | The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **end_acw_time** | **DateTime** | The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 {: class="table table-striped"}
 
 

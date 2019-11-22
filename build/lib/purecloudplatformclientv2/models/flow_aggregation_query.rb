@@ -42,6 +42,9 @@ module PureCloud
     # Custom derived metric views
     attr_accessor :views
 
+    # Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.
+    attr_accessor :alternate_time_dimension
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -60,7 +63,9 @@ module PureCloud
         
         :'flatten_multivalued_dimensions' => :'flattenMultivaluedDimensions',
         
-        :'views' => :'views'
+        :'views' => :'views',
+        
+        :'alternate_time_dimension' => :'alternateTimeDimension'
         
       }
     end
@@ -83,7 +88,9 @@ module PureCloud
         
         :'flatten_multivalued_dimensions' => :'BOOLEAN',
         
-        :'views' => :'Array<FlowAggregationView>'
+        :'views' => :'Array<FlowAggregationView>',
+        
+        :'alternate_time_dimension' => :'String'
         
       }
     end
@@ -175,6 +182,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'alternateTimeDimension')
+        
+        
+        self.alternate_time_dimension = attributes[:'alternateTimeDimension']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -222,6 +238,15 @@ module PureCloud
       
       
       
+      
+      
+      allowed_values = ["eventTime"]
+      if @alternate_time_dimension && !allowed_values.include?(@alternate_time_dimension)
+        return false
+      end
+      
+      
+      
     end
 
     
@@ -262,6 +287,20 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] alternate_time_dimension Object to be assigned
+    def alternate_time_dimension=(alternate_time_dimension)
+      allowed_values = ["eventTime"]
+      if alternate_time_dimension && !allowed_values.include?(alternate_time_dimension)
+        fail ArgumentError, "invalid value for 'alternate_time_dimension', must be one of #{allowed_values}."
+      end
+      @alternate_time_dimension = alternate_time_dimension
+    end
+
     
     
     
@@ -277,7 +316,8 @@ module PureCloud
           filter == o.filter &&
           metrics == o.metrics &&
           flatten_multivalued_dimensions == o.flatten_multivalued_dimensions &&
-          views == o.views
+          views == o.views &&
+          alternate_time_dimension == o.alternate_time_dimension
     end
 
     # @see the `==` method
@@ -289,7 +329,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [interval, granularity, time_zone, group_by, filter, metrics, flatten_multivalued_dimensions, views].hash
+      [interval, granularity, time_zone, group_by, filter, metrics, flatten_multivalued_dimensions, views, alternate_time_dimension].hash
     end
 
     # build the object from hash

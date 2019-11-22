@@ -131,6 +131,12 @@ module PureCloud
     # The reason specifying why participant flagged the conversation.
     attr_accessor :flagged_reason
 
+    # The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :start_acw_time
+
+    # The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :end_acw_time
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -215,7 +221,11 @@ module PureCloud
         
         :'screen_recording_state' => :'screenRecordingState',
         
-        :'flagged_reason' => :'flaggedReason'
+        :'flagged_reason' => :'flaggedReason',
+        
+        :'start_acw_time' => :'startAcwTime',
+        
+        :'end_acw_time' => :'endAcwTime'
         
       }
     end
@@ -304,7 +314,11 @@ module PureCloud
         
         :'screen_recording_state' => :'String',
         
-        :'flagged_reason' => :'String'
+        :'flagged_reason' => :'String',
+        
+        :'start_acw_time' => :'DateTime',
+        
+        :'end_acw_time' => :'DateTime'
         
       }
     end
@@ -709,6 +723,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'startAcwTime')
+        
+        
+        self.start_acw_time = attributes[:'startAcwTime']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'endAcwTime')
+        
+        
+        self.end_acw_time = attributes[:'endAcwTime']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -900,6 +932,14 @@ module PureCloud
       if @flagged_reason && !allowed_values.include?(@flagged_reason)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1138,6 +1178,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1183,7 +1233,9 @@ module PureCloud
           videos == o.videos &&
           evaluations == o.evaluations &&
           screen_recording_state == o.screen_recording_state &&
-          flagged_reason == o.flagged_reason
+          flagged_reason == o.flagged_reason &&
+          start_acw_time == o.start_acw_time &&
+          end_acw_time == o.end_acw_time
     end
 
     # @see the `==` method
@@ -1195,7 +1247,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, start_time, end_time, connected_time, name, user_uri, user_id, external_contact_id, external_organization_id, queue_id, group_id, queue_name, purpose, participant_type, consult_participant_id, address, ani, ani_name, dnis, locale, wrapup_required, wrapup_prompt, wrapup_timeout_ms, wrapup_skipped, wrapup, conversation_routing_data, alerting_timeout_ms, monitored_participant_id, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, evaluations, screen_recording_state, flagged_reason].hash
+      [id, start_time, end_time, connected_time, name, user_uri, user_id, external_contact_id, external_organization_id, queue_id, group_id, queue_name, purpose, participant_type, consult_participant_id, address, ani, ani_name, dnis, locale, wrapup_required, wrapup_prompt, wrapup_timeout_ms, wrapup_skipped, wrapup, conversation_routing_data, alerting_timeout_ms, monitored_participant_id, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, evaluations, screen_recording_state, flagged_reason, start_acw_time, end_acw_time].hash
     end
 
     # build the object from hash

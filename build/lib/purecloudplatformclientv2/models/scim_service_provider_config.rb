@@ -25,22 +25,22 @@ module PureCloud
     # The HTTP-addressable URL that points to the service provider's documentation.
     attr_accessor :documentation_uri
 
-    # \"patch\" configuration options.
+    # The \"patch\" configuration options.
     attr_accessor :patch
 
-    # \"filter\" configuration options.
+    # The \"filter\" configuration options.
     attr_accessor :filter
 
-    # \"ETag\" configuration options.
+    # The \"etag\" configuration options.
     attr_accessor :etag
 
-    # \"sort\" configuration options.
+    # The \"sort\" configuration options.
     attr_accessor :sort
 
-    # \"bulk\" configuration options.
+    # The \"bulk\" configuration options.
     attr_accessor :bulk
 
-    # \"changePassword\" configuration options.
+    # The \"changePassword\" configuration options.
     attr_accessor :change_password
 
     # The list of supported authentication schemes.

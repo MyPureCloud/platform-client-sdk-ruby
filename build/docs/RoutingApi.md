@@ -1727,7 +1727,6 @@ opts = {
   page_number: 1, # Integer | Page number
   sort_by: "name", # String | Sort by
   name: "name_example", # String | Name
-  active: true, # BOOLEAN | Active
   id: ["id_example"], # Array<String> | ID(s)
   division_id: ["division_id_example"] # Array<String> | Division ID(s)
 }
@@ -1749,7 +1748,6 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **sort_by** | **String**| Sort by | [optional] [default to name] |
  **name** | **String**| Name | [optional]  |
- **active** | **BOOLEAN**| Active | [optional]  |
  **id** | [**Array&lt;String&gt;**](String.html)| ID(s) | [optional]  |
  **division_id** | [**Array&lt;String&gt;**](String.html)| Division ID(s) | [optional]  |
 {: class="table table-striped"}

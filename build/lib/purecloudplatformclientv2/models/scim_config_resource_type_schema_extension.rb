@@ -19,7 +19,7 @@ require 'date'
 module PureCloud
   # Schema extensions supported by PureCloud SCIM.
   class ScimConfigResourceTypeSchemaExtension
-    # The URI of an extended schema, for example, \"urn:edu:2.0:Staff\". Must be equal to the \"id\" attribute of a schema. 
+    # The URI of an extended schema, for example, \"urn:edu:2.0:Staff\". Must be equal to the \"id\" attribute of a schema.
     attr_accessor :schema
 
     # Indicates whether a schema extension is required.

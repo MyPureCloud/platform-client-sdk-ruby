@@ -48,6 +48,12 @@ module PureCloud
     # Indicates whether the item is cancellable
     attr_accessor :is_cancellable
 
+    # Quantity multiplier for this charge
+    attr_accessor :bundle_quantity
+
+    # A charge from a third party entity
+    attr_accessor :is_third_party
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -70,7 +76,11 @@ module PureCloud
         
         :'usage_notes' => :'usageNotes',
         
-        :'is_cancellable' => :'isCancellable'
+        :'is_cancellable' => :'isCancellable',
+        
+        :'bundle_quantity' => :'bundleQuantity',
+        
+        :'is_third_party' => :'isThirdParty'
         
       }
     end
@@ -97,7 +107,11 @@ module PureCloud
         
         :'usage_notes' => :'String',
         
-        :'is_cancellable' => :'BOOLEAN'
+        :'is_cancellable' => :'BOOLEAN',
+        
+        :'bundle_quantity' => :'String',
+        
+        :'is_third_party' => :'BOOLEAN'
         
       }
     end
@@ -201,6 +215,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'bundleQuantity')
+        
+        
+        self.bundle_quantity = attributes[:'bundleQuantity']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'isThirdParty')
+        
+        
+        self.is_third_party = attributes[:'isThirdParty']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -286,8 +318,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -353,7 +403,9 @@ module PureCloud
           prepay_quantity == o.prepay_quantity &&
           prepay_price == o.prepay_price &&
           usage_notes == o.usage_notes &&
-          is_cancellable == o.is_cancellable
+          is_cancellable == o.is_cancellable &&
+          bundle_quantity == o.bundle_quantity &&
+          is_third_party == o.is_third_party
     end
 
     # @see the `==` method
@@ -365,7 +417,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, part_number, grouping, unit_of_measure_type, usage_quantity, overage_price, prepay_quantity, prepay_price, usage_notes, is_cancellable].hash
+      [name, part_number, grouping, unit_of_measure_type, usage_quantity, overage_price, prepay_quantity, prepay_price, usage_notes, is_cancellable, bundle_quantity, is_third_party].hash
     end
 
     # build the object from hash

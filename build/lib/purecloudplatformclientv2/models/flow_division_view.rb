@@ -29,6 +29,12 @@ module PureCloud
 
     attr_accessor :type
 
+    # json schema describing the inputs for the flow
+    attr_accessor :input_schema
+
+    # json schema describing the outputs for the flow
+    attr_accessor :output_schema
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -43,6 +49,10 @@ module PureCloud
         :'division' => :'division',
         
         :'type' => :'type',
+        
+        :'input_schema' => :'inputSchema',
+        
+        :'output_schema' => :'outputSchema',
         
         :'self_uri' => :'selfUri'
         
@@ -60,6 +70,10 @@ module PureCloud
         :'division' => :'WritableDivision',
         
         :'type' => :'String',
+        
+        :'input_schema' => :'JsonSchemaDocument',
+        
+        :'output_schema' => :'JsonSchemaDocument',
         
         :'self_uri' => :'String'
         
@@ -106,6 +120,24 @@ module PureCloud
         
         
         self.type = attributes[:'type']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'inputSchema')
+        
+        
+        self.input_schema = attributes[:'inputSchema']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'outputSchema')
+        
+        
+        self.output_schema = attributes[:'outputSchema']
         
       
       end
@@ -165,6 +197,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -202,6 +242,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -211,6 +261,8 @@ module PureCloud
           name == o.name &&
           division == o.division &&
           type == o.type &&
+          input_schema == o.input_schema &&
+          output_schema == o.output_schema &&
           self_uri == o.self_uri
     end
 
@@ -223,7 +275,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, type, self_uri].hash
+      [id, name, division, type, input_schema, output_schema, self_uri].hash
     end
 
     # build the object from hash

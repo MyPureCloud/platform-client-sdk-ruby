@@ -899,7 +899,7 @@ module PureCloud
     end
 
     # Get audits for conversation or recording
-    # 
+    # Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
     # @param conversation_id Conversation ID
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size The total page size requested (default to 25)
@@ -917,7 +917,7 @@ module PureCloud
     end
 
     # Get audits for conversation or recording
-    # 
+    # Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
     # @param conversation_id Conversation ID
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size The total page size requested
@@ -4428,7 +4428,7 @@ module PureCloud
     end
 
     # Update an evaluation
-    # 
+    # The quality:evaluation:edit permission allows modification of most fields, while the quality:evaluation:editScore permission allows an evaluator to change just the question scores, and the quality:evaluation:editAgentSignoff permission allows an agent to change the agent comments and sign off on the evaluation.
     # @param conversation_id conversationId
     # @param evaluation_id evaluationId
     # @param body evaluation
@@ -4441,7 +4441,7 @@ module PureCloud
     end
 
     # Update an evaluation
-    # 
+    # The quality:evaluation:edit permission allows modification of most fields, while the quality:evaluation:editScore permission allows an evaluator to change just the question scores, and the quality:evaluation:editAgentSignoff permission allows an agent to change the agent comments and sign off on the evaluation.
     # @param conversation_id conversationId
     # @param evaluation_id evaluationId
     # @param body evaluation

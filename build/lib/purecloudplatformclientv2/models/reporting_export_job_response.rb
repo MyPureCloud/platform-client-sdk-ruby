@@ -71,6 +71,9 @@ module PureCloud
     # Indicates if filters will be split in aggregate detail exports
     attr_accessor :has_split_filters
 
+    # The list of ordered selected columns from the export view by the user
+    attr_accessor :selected_columns
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -113,6 +116,8 @@ module PureCloud
         :'has_format_durations' => :'hasFormatDurations',
         
         :'has_split_filters' => :'hasSplitFilters',
+        
+        :'selected_columns' => :'selectedColumns',
         
         :'self_uri' => :'selfUri'
         
@@ -158,6 +163,8 @@ module PureCloud
         :'has_format_durations' => :'BOOLEAN',
         
         :'has_split_filters' => :'BOOLEAN',
+        
+        :'selected_columns' => :'Array<SelectedColumns>',
         
         :'self_uri' => :'String'
         
@@ -335,6 +342,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'selectedColumns')
+        
+        if (value = attributes[:'selectedColumns']).is_a?(Array)
+          self.selected_columns = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -505,6 +523,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -639,6 +661,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -662,6 +689,7 @@ module PureCloud
           percentage_complete == o.percentage_complete &&
           has_format_durations == o.has_format_durations &&
           has_split_filters == o.has_split_filters &&
+          selected_columns == o.selected_columns &&
           self_uri == o.self_uri
     end
 
@@ -674,7 +702,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, has_format_durations, has_split_filters, self_uri].hash
+      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, has_format_durations, has_split_filters, selected_columns, self_uri].hash
     end
 
     # build the object from hash

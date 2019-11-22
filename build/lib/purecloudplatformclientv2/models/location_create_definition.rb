@@ -17,8 +17,8 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class LocationCreateUpdateDefinition
-    # The name of the Location.
+  class LocationCreateDefinition
+    # The name of the Location. Required for creates, not required for updates
     attr_accessor :name
 
     # Current version of the location
@@ -29,8 +29,6 @@ module PureCloud
 
     # A list of ancestor ids
     attr_accessor :path
-
-    attr_accessor :address_verified
 
     # Notes for the location
     attr_accessor :notes
@@ -56,8 +54,6 @@ module PureCloud
         
         :'path' => :'path',
         
-        :'address_verified' => :'addressVerified',
-        
         :'notes' => :'notes',
         
         :'contact_user' => :'contactUser',
@@ -80,8 +76,6 @@ module PureCloud
         :'state' => :'String',
         
         :'path' => :'Array<String>',
-        
-        :'address_verified' => :'BOOLEAN',
         
         :'notes' => :'String',
         
@@ -136,15 +130,6 @@ module PureCloud
           self.path = value
         end
         
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'addressVerified')
-        
-        
-        self.address_verified = attributes[:'addressVerified']
         
       
       end
@@ -243,10 +228,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
     
@@ -299,11 +280,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -313,7 +289,6 @@ module PureCloud
           version == o.version &&
           state == o.state &&
           path == o.path &&
-          address_verified == o.address_verified &&
           notes == o.notes &&
           contact_user == o.contact_user &&
           emergency_number == o.emergency_number &&
@@ -329,7 +304,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, version, state, path, address_verified, notes, contact_user, emergency_number, address].hash
+      [name, version, state, path, notes, contact_user, emergency_number, address].hash
     end
 
     # build the object from hash

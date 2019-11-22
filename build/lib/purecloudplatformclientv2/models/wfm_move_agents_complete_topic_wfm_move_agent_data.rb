@@ -92,7 +92,7 @@ module PureCloud
       
       
       
-      allowed_values = ["MoveSuccessful", "NothingToDo", "AlreadyMoved", "DestinationManagementUnitDoesNotExist", "DestinationManagementUnitAgentLimitExceeded", "MovingToDifferentManagementUnit"]
+      allowed_values = ["AlreadyMoved", "DestinationBusinessUnitAgentLimitExceeded", "DestinationManagementUnitAgentLimitExceeded", "DestinationManagementUnitDoesNotExist", "MoveSuccessful", "MovingToDifferentManagementUnit", "NothingToDo", "SourceManagementUnitNotAuthorized"]
       if @result && !allowed_values.include?(@result)
         return false
       end
@@ -111,7 +111,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] result Object to be assigned
     def result=(result)
-      allowed_values = ["MoveSuccessful", "NothingToDo", "AlreadyMoved", "DestinationManagementUnitDoesNotExist", "DestinationManagementUnitAgentLimitExceeded", "MovingToDifferentManagementUnit"]
+      allowed_values = ["AlreadyMoved", "DestinationBusinessUnitAgentLimitExceeded", "DestinationManagementUnitAgentLimitExceeded", "DestinationManagementUnitDoesNotExist", "MoveSuccessful", "MovingToDifferentManagementUnit", "NothingToDo", "SourceManagementUnitNotAuthorized"]
       if result && !allowed_values.include?(result)
         fail ArgumentError, "invalid value for 'result', must be one of #{allowed_values}."
       end

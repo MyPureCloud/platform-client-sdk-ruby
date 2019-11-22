@@ -17,26 +17,14 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Defines a link between an External Identifier and Authority pair to a Entity Type and Entity Identifier pair. Represents the two way, one to one mapping of an External Authority or System of Record's identifier to a PureCloud entity. e.g. (ExternalId='05001',Authority='XyzCRM') to (entityType=user,entityId='8eb03b33-3acb-4bc1-a244-50b9b9f19495')
-  class UserExternalIdentifier
-    # Authority or System of Record which owns the External Identifier
-    attr_accessor :authority_name
-
-    # External Key
-    attr_accessor :external_key
-
-    # The URI for this object
-    attr_accessor :self_uri
+  class QueueUserEventTopicUserReference
+    attr_accessor :id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'authority_name' => :'authorityName',
-        
-        :'external_key' => :'externalKey',
-        
-        :'self_uri' => :'selfUri'
+        :'id' => :'id'
         
       }
     end
@@ -45,11 +33,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'authority_name' => :'String',
-        
-        :'external_key' => :'String',
-        
-        :'self_uri' => :'String'
+        :'id' => :'String'
         
       }
     end
@@ -63,28 +47,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'authorityName')
+      if attributes.has_key?(:'id')
         
         
-        self.authority_name = attributes[:'authorityName']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'externalKey')
-        
-        
-        self.external_key = attributes[:'externalKey']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'selfUri')
-        
-        
-        self.self_uri = attributes[:'selfUri']
+        self.id = attributes[:'id']
         
       
       end
@@ -106,39 +72,11 @@ module PureCloud
     def valid?
       
       
-      if @authority_name.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @external_key.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
       
       
       
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -150,9 +88,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          authority_name == o.authority_name &&
-          external_key == o.external_key &&
-          self_uri == o.self_uri
+          id == o.id
     end
 
     # @see the `==` method
@@ -164,7 +100,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [authority_name, external_key, self_uri].hash
+      [id].hash
     end
 
     # build the object from hash

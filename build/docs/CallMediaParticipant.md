@@ -37,6 +37,8 @@ title: CallMediaParticipant
 | **flagged_reason** | **String** | The reason specifying why participant flagged the conversation. | [optional] |
 | **journey_context** | [**JourneyContext**](JourneyContext.html) | Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context. | [optional] |
 | **conversation_routing_data** | [**ConversationRoutingData**](ConversationRoutingData.html) | Information on how a communication should be routed to an agent. | [optional] |
+| **start_acw_time** | **DateTime** | The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **end_acw_time** | **DateTime** | The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **muted** | **BOOLEAN** | Value is true when the call is muted. | [optional] |
 | **confined** | **BOOLEAN** | Value is true when the call is confined. | [optional] |
 | **recording** | **BOOLEAN** | Value is true when the call is being recorded. | [optional] |

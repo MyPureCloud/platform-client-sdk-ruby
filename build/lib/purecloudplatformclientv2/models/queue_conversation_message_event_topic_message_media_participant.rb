@@ -80,6 +80,10 @@ module PureCloud
 
     attr_accessor :journey_context
 
+    attr_accessor :start_acw_time
+
+    attr_accessor :end_acw_time
+
     attr_accessor :messages
 
     attr_accessor :type
@@ -153,6 +157,10 @@ module PureCloud
         :'flagged_reason' => :'flaggedReason',
         
         :'journey_context' => :'journeyContext',
+        
+        :'start_acw_time' => :'startAcwTime',
+        
+        :'end_acw_time' => :'endAcwTime',
         
         :'messages' => :'messages',
         
@@ -230,6 +238,10 @@ module PureCloud
         :'flagged_reason' => :'String',
         
         :'journey_context' => :'QueueConversationMessageEventTopicJourneyContext',
+        
+        :'start_acw_time' => :'DateTime',
+        
+        :'end_acw_time' => :'DateTime',
         
         :'messages' => :'Array<QueueConversationMessageEventTopicMessageDetails>',
         
@@ -532,6 +544,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'startAcwTime')
+        
+        
+        self.start_acw_time = attributes[:'startAcwTime']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'endAcwTime')
+        
+        
+        self.end_acw_time = attributes[:'endAcwTime']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'messages')
         
         if (value = attributes[:'messages']).is_a?(Array)
@@ -722,6 +752,14 @@ module PureCloud
       if @flagged_reason && !allowed_values.include?(@flagged_reason)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -950,6 +988,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
@@ -1009,6 +1057,8 @@ module PureCloud
           screen_recording_state == o.screen_recording_state &&
           flagged_reason == o.flagged_reason &&
           journey_context == o.journey_context &&
+          start_acw_time == o.start_acw_time &&
+          end_acw_time == o.end_acw_time &&
           messages == o.messages &&
           type == o.type &&
           recipient_country == o.recipient_country &&
@@ -1024,7 +1074,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, conversation_routing_data, peer, screen_recording_state, flagged_reason, journey_context, messages, type, recipient_country, recipient_type].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, conversation_routing_data, peer, screen_recording_state, flagged_reason, journey_context, start_acw_time, end_acw_time, messages, type, recipient_country, recipient_type].hash
     end
 
     # build the object from hash

@@ -80,6 +80,10 @@ module PureCloud
 
     attr_accessor :journey_context
 
+    attr_accessor :start_acw_time
+
+    attr_accessor :end_acw_time
+
     attr_accessor :subject
 
     attr_accessor :messages_sent
@@ -157,6 +161,10 @@ module PureCloud
         :'flagged_reason' => :'flaggedReason',
         
         :'journey_context' => :'journeyContext',
+        
+        :'start_acw_time' => :'startAcwTime',
+        
+        :'end_acw_time' => :'endAcwTime',
         
         :'subject' => :'subject',
         
@@ -238,6 +246,10 @@ module PureCloud
         :'flagged_reason' => :'String',
         
         :'journey_context' => :'QueueConversationEmailEventTopicJourneyContext',
+        
+        :'start_acw_time' => :'DateTime',
+        
+        :'end_acw_time' => :'DateTime',
         
         :'subject' => :'String',
         
@@ -544,6 +556,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'startAcwTime')
+        
+        
+        self.start_acw_time = attributes[:'startAcwTime']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'endAcwTime')
+        
+        
+        self.end_acw_time = attributes[:'endAcwTime']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'subject')
         
         
@@ -752,6 +782,14 @@ module PureCloud
       if @flagged_reason && !allowed_values.include?(@flagged_reason)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1007,6 +1045,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1043,6 +1091,8 @@ module PureCloud
           screen_recording_state == o.screen_recording_state &&
           flagged_reason == o.flagged_reason &&
           journey_context == o.journey_context &&
+          start_acw_time == o.start_acw_time &&
+          end_acw_time == o.end_acw_time &&
           subject == o.subject &&
           messages_sent == o.messages_sent &&
           auto_generated == o.auto_generated &&
@@ -1060,7 +1110,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, conversation_routing_data, peer, screen_recording_state, flagged_reason, journey_context, subject, messages_sent, auto_generated, message_id, draft_attachments, spam].hash
+      [id, name, address, start_time, connected_time, end_time, start_hold_time, purpose, state, direction, disconnect_type, held, wrapup_required, wrapup_prompt, user, queue, attributes, error_info, script, wrapup_timeout_ms, wrapup_skipped, alerting_timeout_ms, provider, external_contact, external_organization, wrapup, conversation_routing_data, peer, screen_recording_state, flagged_reason, journey_context, start_acw_time, end_acw_time, subject, messages_sent, auto_generated, message_id, draft_attachments, spam].hash
     end
 
     # build the object from hash

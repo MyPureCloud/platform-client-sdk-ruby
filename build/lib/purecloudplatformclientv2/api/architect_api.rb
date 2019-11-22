@@ -4583,6 +4583,7 @@ module PureCloud
     # @option opts [String] :published_after Published after
     # @option opts [String] :published_before Published before
     # @option opts [Array<String>] :division_id division ID(s)
+    # @option opts [BOOLEAN] :include_schemas Include variable schemas (default to false)
     # @return [FlowDivisionViewEntityListing]
     def get_flows_divisionviews(opts = {})
       data, _status_code, _headers = get_flows_divisionviews_with_http_info(opts)
@@ -4603,11 +4604,18 @@ module PureCloud
     # @option opts [String] :published_after Published after
     # @option opts [String] :published_before Published before
     # @option opts [Array<String>] :division_id division ID(s)
+    # @option opts [BOOLEAN] :include_schemas Include variable schemas
     # @return [Array<(FlowDivisionViewEntityListing, Fixnum, Hash)>] FlowDivisionViewEntityListing data, response status code and response headers
     def get_flows_divisionviews_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_divisionviews ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -4691,6 +4699,7 @@ module PureCloud
       query_params[:'publishedAfter'] = opts[:'published_after'] if opts[:'published_after']
       query_params[:'publishedBefore'] = opts[:'published_before'] if opts[:'published_before']
       query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
+      query_params[:'includeSchemas'] = opts[:'include_schemas'] if opts[:'include_schemas']
 
       # header parameters
       header_params = {}

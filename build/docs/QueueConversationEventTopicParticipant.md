@@ -24,6 +24,8 @@ title: QueueConversationEventTopicParticipant
 | **wrapup_prompt** | **String** |  | [optional] |
 | **wrapup_timeout_ms** | **Integer** |  | [optional] |
 | **wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
+| **start_acw_time** | **DateTime** |  | [optional] |
+| **end_acw_time** | **DateTime** |  | [optional] |
 | **conversation_routing_data** | [**QueueConversationEventTopicConversationRoutingData**](QueueConversationEventTopicConversationRoutingData.html) |  | [optional] |
 | **alerting_timeout_ms** | **Integer** |  | [optional] |
 | **monitored_participant_id** | **String** |  | [optional] |

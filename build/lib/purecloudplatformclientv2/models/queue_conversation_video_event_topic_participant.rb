@@ -52,6 +52,10 @@ module PureCloud
 
     attr_accessor :wrapup
 
+    attr_accessor :start_acw_time
+
+    attr_accessor :end_acw_time
+
     attr_accessor :conversation_routing_data
 
     attr_accessor :alerting_timeout_ms
@@ -121,6 +125,10 @@ module PureCloud
         :'wrapup_timeout_ms' => :'wrapupTimeoutMs',
         
         :'wrapup' => :'wrapup',
+        
+        :'start_acw_time' => :'startAcwTime',
+        
+        :'end_acw_time' => :'endAcwTime',
         
         :'conversation_routing_data' => :'conversationRoutingData',
         
@@ -194,6 +202,10 @@ module PureCloud
         :'wrapup_timeout_ms' => :'Integer',
         
         :'wrapup' => :'QueueConversationVideoEventTopicWrapup',
+        
+        :'start_acw_time' => :'DateTime',
+        
+        :'end_acw_time' => :'DateTime',
         
         :'conversation_routing_data' => :'QueueConversationVideoEventTopicConversationRoutingData',
         
@@ -387,6 +399,24 @@ module PureCloud
         
         
         self.wrapup = attributes[:'wrapup']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'startAcwTime')
+        
+        
+        self.start_acw_time = attributes[:'startAcwTime']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'endAcwTime')
+        
+        
+        self.end_acw_time = attributes[:'endAcwTime']
         
       
       end
@@ -653,6 +683,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["REQUESTED", "ACTIVE", "PAUSED", "STOPPED", "ERROR", "TIMEOUT"]
       if @screen_recording_state && !allowed_values.include?(@screen_recording_state)
         return false
@@ -710,6 +748,16 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -907,6 +955,8 @@ module PureCloud
           wrapup_prompt == o.wrapup_prompt &&
           wrapup_timeout_ms == o.wrapup_timeout_ms &&
           wrapup == o.wrapup &&
+          start_acw_time == o.start_acw_time &&
+          end_acw_time == o.end_acw_time &&
           conversation_routing_data == o.conversation_routing_data &&
           alerting_timeout_ms == o.alerting_timeout_ms &&
           monitored_participant_id == o.monitored_participant_id &&
@@ -934,7 +984,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, connected_time, end_time, user_id, external_contact_id, external_organization_id, name, queue_id, group_id, purpose, consult_participant_id, address, wrapup_required, wrapup_expected, wrapup_prompt, wrapup_timeout_ms, wrapup, conversation_routing_data, alerting_timeout_ms, monitored_participant_id, screen_recording_state, flagged_reason, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, additional_properties].hash
+      [id, connected_time, end_time, user_id, external_contact_id, external_organization_id, name, queue_id, group_id, purpose, consult_participant_id, address, wrapup_required, wrapup_expected, wrapup_prompt, wrapup_timeout_ms, wrapup, start_acw_time, end_acw_time, conversation_routing_data, alerting_timeout_ms, monitored_participant_id, screen_recording_state, flagged_reason, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, additional_properties].hash
     end
 
     # build the object from hash
