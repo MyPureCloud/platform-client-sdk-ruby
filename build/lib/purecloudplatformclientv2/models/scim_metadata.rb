@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # The meta object of the SCIM V2 implementation.
+  # Defines the SCIM metadata.
   class ScimMetadata
     # The type of SCIM resource.
     attr_accessor :resource_type

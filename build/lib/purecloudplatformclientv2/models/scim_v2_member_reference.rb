@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM Members of Group Reference
+  # Defines a reference to SCIM group members.
   class ScimV2MemberReference
     # The type of SCIM resource.
     attr_accessor :type

@@ -61,7 +61,7 @@ module PureCloud
         
         :'start_day_of_week' => :'String',
         
-        :'settings' => :'CreateManagementUnitSettings',
+        :'settings' => :'CreateManagementUnitSettingsRequest',
         
         :'division_id' => :'String'
         

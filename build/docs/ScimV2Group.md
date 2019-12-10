@@ -11,7 +11,7 @@ title: ScimV2Group
 | **schemas** | **Array&lt;String&gt;** | The list of supported schemas. | [optional] |
 | **display_name** | **String** | The display name of the group. | [optional] |
 | **members** | [**Array&lt;ScimV2MemberReference&gt;**](ScimV2MemberReference.html) | The list of members in the group. | [optional] |
-| **meta** | [**ScimMetadata**](ScimMetadata.html) | Resource SCIM meta | [optional] |
+| **meta** | [**ScimMetadata**](ScimMetadata.html) | The metadata of the SCIM resource. | [optional] |
 {: class="table table-striped"}
 
 

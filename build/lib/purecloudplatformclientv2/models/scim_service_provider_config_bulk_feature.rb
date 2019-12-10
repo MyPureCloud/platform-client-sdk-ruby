@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Bulk configuration options.
+  # Defines a \"bulk\" request in the SCIM service provider's configuration.
   class ScimServiceProviderConfigBulkFeature
     # Indicates whether configuration options are supported.
     attr_accessor :supported

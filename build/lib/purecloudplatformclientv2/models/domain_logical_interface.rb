@@ -71,6 +71,12 @@ module PureCloud
     # The type of this network interface.
     attr_accessor :interface_type
 
+    # IPv4 NENT IP Address
+    attr_accessor :public_nat_address_ip_v4
+
+    # IPv6 NENT IP Address
+    attr_accessor :public_nat_address_ip_v6
+
     # The list of routes assigned to this interface.
     attr_accessor :routes
 
@@ -105,9 +111,6 @@ module PureCloud
 
     # Site Interconnects using the \"Cloud Proxy\" method will broker the connection between them with a Cloud Proxy. This method is required for connections between one or more Sites using Cloud Media, but can optionally be used between two premises Sites if Direct or Indirect are not an option.
     attr_accessor :use_for_cloud_proxy_edge_communication
-
-    # NENT IP Address
-    attr_accessor :public_nat_ip_address
 
     # External trunk base settings to use for external communication from this interface.
     attr_accessor :external_trunk_base_assignments
@@ -168,6 +171,10 @@ module PureCloud
         
         :'interface_type' => :'interfaceType',
         
+        :'public_nat_address_ip_v4' => :'publicNatAddressIpV4',
+        
+        :'public_nat_address_ip_v6' => :'publicNatAddressIpV6',
+        
         :'routes' => :'routes',
         
         :'addresses' => :'addresses',
@@ -193,8 +200,6 @@ module PureCloud
         :'use_for_indirect_edge_communication' => :'useForIndirectEdgeCommunication',
         
         :'use_for_cloud_proxy_edge_communication' => :'useForCloudProxyEdgeCommunication',
-        
-        :'public_nat_ip_address' => :'publicNatIpAddress',
         
         :'external_trunk_base_assignments' => :'externalTrunkBaseAssignments',
         
@@ -253,6 +258,10 @@ module PureCloud
         
         :'interface_type' => :'String',
         
+        :'public_nat_address_ip_v4' => :'String',
+        
+        :'public_nat_address_ip_v6' => :'String',
+        
         :'routes' => :'Array<DomainNetworkRoute>',
         
         :'addresses' => :'Array<DomainNetworkAddress>',
@@ -278,8 +287,6 @@ module PureCloud
         :'use_for_indirect_edge_communication' => :'BOOLEAN',
         
         :'use_for_cloud_proxy_edge_communication' => :'BOOLEAN',
-        
-        :'public_nat_ip_address' => :'String',
         
         :'external_trunk_base_assignments' => :'Array<TrunkBaseAssignment>',
         
@@ -476,6 +483,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'publicNatAddressIpV4')
+        
+        
+        self.public_nat_address_ip_v4 = attributes[:'publicNatAddressIpV4']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'publicNatAddressIpV6')
+        
+        
+        self.public_nat_address_ip_v6 = attributes[:'publicNatAddressIpV6']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'routes')
         
         if (value = attributes[:'routes']).is_a?(Array)
@@ -594,15 +619,6 @@ module PureCloud
         
         
         self.use_for_cloud_proxy_edge_communication = attributes[:'useForCloudProxyEdgeCommunication']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'publicNatIpAddress')
-        
-        
-        self.public_nat_ip_address = attributes[:'publicNatIpAddress']
         
       
       end
@@ -805,14 +821,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["INIT", "CREATING", "UPDATING", "OK", "EXCEPTION", "DELETING"]
       if @current_state && !allowed_values.include?(@current_state)
         return false
       end
-      
-      
-      
-      
       
       
       
@@ -1009,6 +1029,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] current_state Object to be assigned
     def current_state=(current_state)
@@ -1019,11 +1049,6 @@ module PureCloud
       @current_state = current_state
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -1121,6 +1146,8 @@ module PureCloud
           physical_adapter_id == o.physical_adapter_id &&
           if_status == o.if_status &&
           interface_type == o.interface_type &&
+          public_nat_address_ip_v4 == o.public_nat_address_ip_v4 &&
+          public_nat_address_ip_v6 == o.public_nat_address_ip_v6 &&
           routes == o.routes &&
           addresses == o.addresses &&
           ipv4_capabilities == o.ipv4_capabilities &&
@@ -1134,7 +1161,6 @@ module PureCloud
           use_for_internal_edge_communication == o.use_for_internal_edge_communication &&
           use_for_indirect_edge_communication == o.use_for_indirect_edge_communication &&
           use_for_cloud_proxy_edge_communication == o.use_for_cloud_proxy_edge_communication &&
-          public_nat_ip_address == o.public_nat_ip_address &&
           external_trunk_base_assignments == o.external_trunk_base_assignments &&
           phone_trunk_base_assignments == o.phone_trunk_base_assignments &&
           trace_enabled == o.trace_enabled &&
@@ -1152,7 +1178,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, edge_uri, edge_assigned_id, friendly_name, vlan_tag_id, hardware_address, physical_adapter_id, if_status, interface_type, routes, addresses, ipv4_capabilities, ipv6_capabilities, current_state, last_modified_user_id, last_modified_correlation_id, command_responses, inherit_phone_trunk_bases_i_pv4, inherit_phone_trunk_bases_i_pv6, use_for_internal_edge_communication, use_for_indirect_edge_communication, use_for_cloud_proxy_edge_communication, public_nat_ip_address, external_trunk_base_assignments, phone_trunk_base_assignments, trace_enabled, start_date, end_date, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, edge_uri, edge_assigned_id, friendly_name, vlan_tag_id, hardware_address, physical_adapter_id, if_status, interface_type, public_nat_address_ip_v4, public_nat_address_ip_v6, routes, addresses, ipv4_capabilities, ipv6_capabilities, current_state, last_modified_user_id, last_modified_correlation_id, command_responses, inherit_phone_trunk_bases_i_pv4, inherit_phone_trunk_bases_i_pv6, use_for_internal_edge_communication, use_for_indirect_edge_communication, use_for_cloud_proxy_edge_communication, external_trunk_base_assignments, phone_trunk_base_assignments, trace_enabled, start_date, end_date, self_uri].hash
     end
 
     # build the object from hash

@@ -73,6 +73,9 @@ module PureCloud
     # The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :export_date
 
+    # The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :exported_date
+
     # Duration of transcoded media in milliseconds
     attr_accessor :output_duration_ms
 
@@ -138,6 +141,8 @@ module PureCloud
         
         :'export_date' => :'exportDate',
         
+        :'exported_date' => :'exportedDate',
+        
         :'output_duration_ms' => :'outputDurationMs',
         
         :'output_size_in_bytes' => :'outputSizeInBytes',
@@ -198,6 +203,8 @@ module PureCloud
         :'delete_date' => :'DateTime',
         
         :'export_date' => :'DateTime',
+        
+        :'exported_date' => :'DateTime',
         
         :'output_duration_ms' => :'Integer',
         
@@ -415,6 +422,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'exportedDate')
+        
+        
+        self.exported_date = attributes[:'exportedDate']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'outputDurationMs')
         
         
@@ -613,6 +629,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -769,6 +789,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -794,6 +819,7 @@ module PureCloud
           archive_medium == o.archive_medium &&
           delete_date == o.delete_date &&
           export_date == o.export_date &&
+          exported_date == o.exported_date &&
           output_duration_ms == o.output_duration_ms &&
           output_size_in_bytes == o.output_size_in_bytes &&
           max_allowed_restorations_for_org == o.max_allowed_restorations_for_org &&
@@ -812,7 +838,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, conversation_id, path, start_time, end_time, media, annotations, transcript, email_transcript, messaging_transcript, file_state, restore_expiration_time, media_uris, estimated_transcode_time_ms, actual_transcode_time_ms, archive_date, archive_medium, delete_date, export_date, output_duration_ms, output_size_in_bytes, max_allowed_restorations_for_org, remaining_restorations_allowed_for_org, session_id, users, self_uri].hash
+      [id, name, conversation_id, path, start_time, end_time, media, annotations, transcript, email_transcript, messaging_transcript, file_state, restore_expiration_time, media_uris, estimated_transcode_time_ms, actual_transcode_time_ms, archive_date, archive_medium, delete_date, export_date, exported_date, output_duration_ms, output_size_in_bytes, max_allowed_restorations_for_org, remaining_restorations_allowed_for_org, session_id, users, self_uri].hash
     end
 
     # build the object from hash

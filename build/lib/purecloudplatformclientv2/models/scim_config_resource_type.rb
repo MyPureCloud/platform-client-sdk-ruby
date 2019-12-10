@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Common attributes to all SCIM resources
+  # Defines a SCIM resource.
   class ScimConfigResourceType
     # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"Mutability\" is set to \"readOnly\". \"Returned\" is set to \"always\".
     attr_accessor :id
@@ -40,7 +40,7 @@ module PureCloud
     # The HTTP-addressable endpoint of the resource type. Appears after the base URL.
     attr_accessor :endpoint
 
-    # Resource SCIM meta
+    # The metadata of the SCIM resource.
     attr_accessor :meta
 
     # Attribute mapping from ruby-style variable name to JSON key.

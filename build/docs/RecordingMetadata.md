@@ -21,6 +21,7 @@ title: RecordingMetadata
 | **archive_medium** | **String** | The type of archive medium used. Example: CloudArchive | [optional] |
 | **delete_date** | **DateTime** | The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **export_date** | **DateTime** | The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **exported_date** | **DateTime** | The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **max_allowed_restorations_for_org** | **Integer** | How many archive restorations the organization is allowed to have. | [optional] |
 | **remaining_restorations_allowed_for_org** | **Integer** | The remaining archive restorations the organization has. | [optional] |
 | **session_id** | **String** | The session id represents an external resource id, such as email, call, chat, etc | [optional] |

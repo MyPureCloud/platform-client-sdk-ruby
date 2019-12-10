@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Represents a SCIM V2 Patch Request (See RFC7644 for detailed usage)
+  # Defines a SCIM PATCH request. See section 3.5.2 \"Modifying with PATCH\" in RFC 7644 for details.
   class ScimV2PatchRequest
     # The list of schemas used in the PATCH request.
     attr_accessor :schemas

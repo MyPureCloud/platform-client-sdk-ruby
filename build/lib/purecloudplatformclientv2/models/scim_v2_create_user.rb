@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Represents a SCIM V2 Create User
+  # Defines the creation of a SCIM user.
   class ScimV2CreateUser
     # The list of supported schemas.
     attr_accessor :schemas
@@ -55,7 +55,7 @@ module PureCloud
     # The list of roles assigned to the user.
     attr_accessor :roles
 
-    # SCIM enterprise user attributes
+    # The URI of the schema for the enterprise user.
     attr_accessor :urnietfparamsscimschemasextensionenterprise2_0_user
 
     # Attribute mapping from ruby-style variable name to JSON key.

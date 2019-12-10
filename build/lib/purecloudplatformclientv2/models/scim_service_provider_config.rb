@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM Provider Config for PureCloud.
+  # Defines a SCIM service provider's configuration.
   class ScimServiceProviderConfig
     # The list of supported schemas.
     attr_accessor :schemas
@@ -46,7 +46,7 @@ module PureCloud
     # The list of supported authentication schemes.
     attr_accessor :authentication_schemes
 
-    # Resource SCIM meta
+    # The metadata of the SCIM resource.
     attr_accessor :meta
 
     # Attribute mapping from ruby-style variable name to JSON key.

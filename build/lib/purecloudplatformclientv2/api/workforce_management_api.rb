@@ -1407,7 +1407,7 @@ module PureCloud
     # 
     # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
-    # @return [ManagementUnitSettings]
+    # @return [ManagementUnitSettingsResponse]
     def get_workforcemanagement_managementunit_settings(mu_id, opts = {})
       data, _status_code, _headers = get_workforcemanagement_managementunit_settings_with_http_info(mu_id, opts)
       return data
@@ -1417,7 +1417,7 @@ module PureCloud
     # 
     # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ManagementUnitSettings, Fixnum, Hash)>] ManagementUnitSettings data, response status code and response headers
+    # @return [Array<(ManagementUnitSettingsResponse, Fixnum, Hash)>] ManagementUnitSettingsResponse data, response status code and response headers
     def get_workforcemanagement_managementunit_settings_with_http_info(mu_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.get_workforcemanagement_managementunit_settings ..."
@@ -1461,7 +1461,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ManagementUnitSettings')
+        :return_type => 'ManagementUnitSettingsResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#get_workforcemanagement_managementunit_settings\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -3246,8 +3246,8 @@ module PureCloud
     # 
     # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
-    # @option opts [ManagementUnitSettings] :body config
-    # @return [ManagementUnitSettings]
+    # @option opts [ManagementUnitSettingsRequest] :body config
+    # @return [ManagementUnitSettingsResponse]
     def patch_workforcemanagement_managementunit_settings(mu_id, opts = {})
       data, _status_code, _headers = patch_workforcemanagement_managementunit_settings_with_http_info(mu_id, opts)
       return data
@@ -3257,8 +3257,8 @@ module PureCloud
     # 
     # @param mu_id The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
-    # @option opts [ManagementUnitSettings] :body config
-    # @return [Array<(ManagementUnitSettings, Fixnum, Hash)>] ManagementUnitSettings data, response status code and response headers
+    # @option opts [ManagementUnitSettingsRequest] :body config
+    # @return [Array<(ManagementUnitSettingsResponse, Fixnum, Hash)>] ManagementUnitSettingsResponse data, response status code and response headers
     def patch_workforcemanagement_managementunit_settings_with_http_info(mu_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.patch_workforcemanagement_managementunit_settings ..."
@@ -3308,7 +3308,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ManagementUnitSettings')
+        :return_type => 'ManagementUnitSettingsResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#patch_workforcemanagement_managementunit_settings\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

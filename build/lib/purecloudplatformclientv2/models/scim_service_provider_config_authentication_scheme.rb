@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Authentication schema.
+  # Defines an authentication scheme in the SCIM service provider's configuration.
   class ScimServiceProviderConfigAuthenticationScheme
     # The name of the authentication scheme, for example, HTTP Basic.
     attr_accessor :name

@@ -1441,7 +1441,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_settings"></a>
 
-## [**ManagementUnitSettings**](ManagementUnitSettings.html) get_workforcemanagement_managementunit_settings(mu_id)
+## [**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html) get_workforcemanagement_managementunit_settings(mu_id)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1495,7 +1495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ManagementUnitSettings**](ManagementUnitSettings.html)
+[**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html)
 
 ### HTTP request headers
 
@@ -3104,7 +3104,7 @@ Name | Type | Description  | Notes
 
 <a name="patch_workforcemanagement_managementunit_settings"></a>
 
-## [**ManagementUnitSettings**](ManagementUnitSettings.html) patch_workforcemanagement_managementunit_settings(mu_id, opts)
+## [**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html) patch_workforcemanagement_managementunit_settings(mu_id, opts)
 
 
 
@@ -3139,7 +3139,7 @@ api_instance = PureCloud::WorkforceManagementApi.new
 mu_id = "mu_id_example" # String | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 opts = { 
-  body: PureCloud::ManagementUnitSettings.new # ManagementUnitSettings | config
+  body: PureCloud::ManagementUnitSettingsRequest.new # ManagementUnitSettingsRequest | config
 }
 
 begin
@@ -3156,13 +3156,13 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mu_id** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
- **body** | [**ManagementUnitSettings**](ManagementUnitSettings.html)| config | [optional]  |
+ **body** | [**ManagementUnitSettingsRequest**](ManagementUnitSettingsRequest.html)| config | [optional]  |
 {: class="table table-striped"}
 
 
 ### Return type
 
-[**ManagementUnitSettings**](ManagementUnitSettings.html)
+[**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html)
 
 ### HTTP request headers
 

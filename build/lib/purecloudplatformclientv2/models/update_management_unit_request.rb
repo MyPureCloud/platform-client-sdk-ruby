@@ -48,7 +48,7 @@ module PureCloud
         
         :'division_id' => :'String',
         
-        :'settings' => :'ManagementUnitSettings'
+        :'settings' => :'ManagementUnitSettingsRequest'
         
       }
     end

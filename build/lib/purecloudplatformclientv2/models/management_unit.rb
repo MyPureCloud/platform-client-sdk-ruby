@@ -94,7 +94,7 @@ module PureCloud
         
         :'time_zone' => :'String',
         
-        :'settings' => :'ManagementUnitSettings',
+        :'settings' => :'ManagementUnitSettingsResponse',
         
         :'metadata' => :'WfmVersionedEntityMetadata',
         

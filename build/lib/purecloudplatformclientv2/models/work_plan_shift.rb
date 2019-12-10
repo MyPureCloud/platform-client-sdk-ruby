@@ -46,12 +46,6 @@ module PureCloud
     # Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true
     attr_accessor :latest_stop_time_minutes_from_midnight
 
-    # Whether the earliest stop time constraint for the shift is enabled
-    attr_accessor :constrain_earliest_stop_time
-
-    # This is the earliest time a shift can end
-    attr_accessor :earliest_stop_time_minutes_from_midnight
-
     # Increment in offset minutes that would contribute to different possible start times for the shift. Used if flexibleStartTime == true
     attr_accessor :start_increment_minutes
 
@@ -75,18 +69,6 @@ module PureCloud
 
     # Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true
     attr_accessor :maximum_contiguous_work_time_minutes
-
-    # Whether synchronization for agent is enabled
-    attr_accessor :synchronize_agents_schedules
-
-    # This constraint ensures that an agent starts each workday within a user-defined time threshold. Used if synchronizeAgentsSchedules == true
-    attr_accessor :synchronization_type
-
-    # Whether day off rule is enabled
-    attr_accessor :constrain_day_off
-
-    # The day off rule for agents to have next day off or previous day off. used if constrainDayOff = true
-    attr_accessor :day_off_rule
 
     # Activities configured for this shift
     attr_accessor :activities
@@ -119,10 +101,6 @@ module PureCloud
         
         :'latest_stop_time_minutes_from_midnight' => :'latestStopTimeMinutesFromMidnight',
         
-        :'constrain_earliest_stop_time' => :'constrainEarliestStopTime',
-        
-        :'earliest_stop_time_minutes_from_midnight' => :'earliestStopTimeMinutesFromMidnight',
-        
         :'start_increment_minutes' => :'startIncrementMinutes',
         
         :'flexible_paid_time' => :'flexiblePaidTime',
@@ -138,14 +116,6 @@ module PureCloud
         :'minimum_contiguous_work_time_minutes' => :'minimumContiguousWorkTimeMinutes',
         
         :'maximum_contiguous_work_time_minutes' => :'maximumContiguousWorkTimeMinutes',
-        
-        :'synchronize_agents_schedules' => :'synchronizeAgentsSchedules',
-        
-        :'synchronization_type' => :'synchronizationType',
-        
-        :'constrain_day_off' => :'constrainDayOff',
-        
-        :'day_off_rule' => :'dayOffRule',
         
         :'activities' => :'activities',
         
@@ -178,10 +148,6 @@ module PureCloud
         
         :'latest_stop_time_minutes_from_midnight' => :'Integer',
         
-        :'constrain_earliest_stop_time' => :'BOOLEAN',
-        
-        :'earliest_stop_time_minutes_from_midnight' => :'Integer',
-        
         :'start_increment_minutes' => :'Integer',
         
         :'flexible_paid_time' => :'BOOLEAN',
@@ -197,14 +163,6 @@ module PureCloud
         :'minimum_contiguous_work_time_minutes' => :'Integer',
         
         :'maximum_contiguous_work_time_minutes' => :'Integer',
-        
-        :'synchronize_agents_schedules' => :'BOOLEAN',
-        
-        :'synchronization_type' => :'String',
-        
-        :'constrain_day_off' => :'BOOLEAN',
-        
-        :'day_off_rule' => :'String',
         
         :'activities' => :'Array<WorkPlanActivity>',
         
@@ -305,24 +263,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'constrainEarliestStopTime')
-        
-        
-        self.constrain_earliest_stop_time = attributes[:'constrainEarliestStopTime']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'earliestStopTimeMinutesFromMidnight')
-        
-        
-        self.earliest_stop_time_minutes_from_midnight = attributes[:'earliestStopTimeMinutesFromMidnight']
-        
-      
-      end
-
-      
       if attributes.has_key?(:'startIncrementMinutes')
         
         
@@ -390,42 +330,6 @@ module PureCloud
         
         
         self.maximum_contiguous_work_time_minutes = attributes[:'maximumContiguousWorkTimeMinutes']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'synchronizeAgentsSchedules')
-        
-        
-        self.synchronize_agents_schedules = attributes[:'synchronizeAgentsSchedules']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'synchronizationType')
-        
-        
-        self.synchronization_type = attributes[:'synchronizationType']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'constrainDayOff')
-        
-        
-        self.constrain_day_off = attributes[:'constrainDayOff']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'dayOffRule')
-        
-        
-        self.day_off_rule = attributes[:'dayOffRule']
         
       
       end
@@ -560,40 +464,6 @@ module PureCloud
       
       
       
-      
-      
-      allowed_values = ["ShiftStart", "ShiftStartAndPaidDuration"]
-      if @synchronization_type && !allowed_values.include?(@synchronization_type)
-        return false
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      allowed_values = ["NextDayOff", "PreviousDayOff"]
-      if @day_off_rule && !allowed_values.include?(@day_off_rule)
-        return false
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
     
@@ -679,54 +549,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] synchronization_type Object to be assigned
-    def synchronization_type=(synchronization_type)
-      allowed_values = ["ShiftStart", "ShiftStartAndPaidDuration"]
-      if synchronization_type && !allowed_values.include?(synchronization_type)
-        fail ArgumentError, "invalid value for 'synchronization_type', must be one of #{allowed_values}."
-      end
-      @synchronization_type = synchronization_type
-    end
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] day_off_rule Object to be assigned
-    def day_off_rule=(day_off_rule)
-      allowed_values = ["NextDayOff", "PreviousDayOff"]
-      if day_off_rule && !allowed_values.include?(day_off_rule)
-        fail ArgumentError, "invalid value for 'day_off_rule', must be one of #{allowed_values}."
-      end
-      @day_off_rule = day_off_rule
-    end
-
     
     
     
@@ -759,8 +581,6 @@ module PureCloud
           constrain_stop_time == o.constrain_stop_time &&
           constrain_latest_stop_time == o.constrain_latest_stop_time &&
           latest_stop_time_minutes_from_midnight == o.latest_stop_time_minutes_from_midnight &&
-          constrain_earliest_stop_time == o.constrain_earliest_stop_time &&
-          earliest_stop_time_minutes_from_midnight == o.earliest_stop_time_minutes_from_midnight &&
           start_increment_minutes == o.start_increment_minutes &&
           flexible_paid_time == o.flexible_paid_time &&
           exact_paid_time_minutes == o.exact_paid_time_minutes &&
@@ -769,10 +589,6 @@ module PureCloud
           constrain_contiguous_work_time == o.constrain_contiguous_work_time &&
           minimum_contiguous_work_time_minutes == o.minimum_contiguous_work_time_minutes &&
           maximum_contiguous_work_time_minutes == o.maximum_contiguous_work_time_minutes &&
-          synchronize_agents_schedules == o.synchronize_agents_schedules &&
-          synchronization_type == o.synchronization_type &&
-          constrain_day_off == o.constrain_day_off &&
-          day_off_rule == o.day_off_rule &&
           activities == o.activities &&
           id == o.id &&
           delete == o.delete
@@ -787,7 +603,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, days, flexible_start_time, exact_start_time_minutes_from_midnight, earliest_start_time_minutes_from_midnight, latest_start_time_minutes_from_midnight, constrain_stop_time, constrain_latest_stop_time, latest_stop_time_minutes_from_midnight, constrain_earliest_stop_time, earliest_stop_time_minutes_from_midnight, start_increment_minutes, flexible_paid_time, exact_paid_time_minutes, minimum_paid_time_minutes, maximum_paid_time_minutes, constrain_contiguous_work_time, minimum_contiguous_work_time_minutes, maximum_contiguous_work_time_minutes, synchronize_agents_schedules, synchronization_type, constrain_day_off, day_off_rule, activities, id, delete].hash
+      [name, days, flexible_start_time, exact_start_time_minutes_from_midnight, earliest_start_time_minutes_from_midnight, latest_start_time_minutes_from_midnight, constrain_stop_time, constrain_latest_stop_time, latest_stop_time_minutes_from_midnight, start_increment_minutes, flexible_paid_time, exact_paid_time_minutes, minimum_paid_time_minutes, maximum_paid_time_minutes, constrain_contiguous_work_time, minimum_contiguous_work_time_minutes, maximum_contiguous_work_time_minutes, activities, id, delete].hash
     end
 
     # build the object from hash

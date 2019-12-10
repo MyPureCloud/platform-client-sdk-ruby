@@ -26,9 +26,9 @@ module PureCloud
 
     attr_accessor :total
 
-    attr_accessor :self_uri
-
     attr_accessor :first_uri
+
+    attr_accessor :self_uri
 
     attr_accessor :next_uri
 
@@ -50,9 +50,9 @@ module PureCloud
         
         :'total' => :'total',
         
-        :'self_uri' => :'selfUri',
-        
         :'first_uri' => :'firstUri',
+        
+        :'self_uri' => :'selfUri',
         
         :'next_uri' => :'nextUri',
         
@@ -77,9 +77,9 @@ module PureCloud
         
         :'total' => :'Integer',
         
-        :'self_uri' => :'String',
-        
         :'first_uri' => :'String',
+        
+        :'self_uri' => :'String',
         
         :'next_uri' => :'String',
         
@@ -139,19 +139,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'selfUri')
+      if attributes.has_key?(:'firstUri')
         
         
-        self.self_uri = attributes[:'selfUri']
+        self.first_uri = attributes[:'firstUri']
         
       
       end
 
       
-      if attributes.has_key?(:'firstUri')
+      if attributes.has_key?(:'selfUri')
         
         
-        self.first_uri = attributes[:'firstUri']
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -310,8 +310,8 @@ module PureCloud
           page_size == o.page_size &&
           page_number == o.page_number &&
           total == o.total &&
-          self_uri == o.self_uri &&
           first_uri == o.first_uri &&
+          self_uri == o.self_uri &&
           next_uri == o.next_uri &&
           last_uri == o.last_uri &&
           previous_uri == o.previous_uri &&
@@ -327,7 +327,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [entities, page_size, page_number, total, self_uri, first_uri, next_uri, last_uri, previous_uri, page_count].hash
+      [entities, page_size, page_number, total, first_uri, self_uri, next_uri, last_uri, previous_uri, page_count].hash
     end
 
     # build the object from hash

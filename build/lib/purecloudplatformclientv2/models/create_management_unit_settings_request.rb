@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   # Management Unit Settings
-  class CreateManagementUnitSettings
+  class CreateManagementUnitSettingsRequest
     # Adherence settings for this management unit
     attr_accessor :adherence
 
@@ -61,7 +61,7 @@ module PureCloud
         
         :'time_off' => :'TimeOffRequestSettings',
         
-        :'scheduling' => :'SchedulingSettings',
+        :'scheduling' => :'SchedulingSettingsRequest',
         
         :'shift_trading' => :'ShiftTradeSettings'
         

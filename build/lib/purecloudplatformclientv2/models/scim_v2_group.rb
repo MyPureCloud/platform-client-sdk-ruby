@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM version 2 Group
+  # Defines a SCIM group.
   class ScimV2Group
     # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"Mutability\" is set to \"readOnly\". \"Returned\" is set to \"always\".
     attr_accessor :id
@@ -31,7 +31,7 @@ module PureCloud
     # The list of members in the group.
     attr_accessor :members
 
-    # Resource SCIM meta
+    # The metadata of the SCIM resource.
     attr_accessor :meta
 
     # Attribute mapping from ruby-style variable name to JSON key.

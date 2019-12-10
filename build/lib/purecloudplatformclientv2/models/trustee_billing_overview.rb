@@ -372,7 +372,7 @@ module PureCloud
 
       
       
-      allowed_values = ["ININ", "MONTH_TO_MONTH", "FREE_TRIAL_MONTH_TO_MONTH", "PREPAY_MONTHLY_COMMITMENT", "PREPAY", "DEV_ORG_PREPAY_MONTHLY_COMMITMENT", "DEV_ORG_PREPAY"]
+      allowed_values = ["ININ", "MONTH_TO_MONTH", "FREE_TRIAL_MONTH_TO_MONTH", "PREPAY_MONTHLY_COMMITMENT", "PREPAY", "DEV_ORG_MONTH_TO_MONTH", "DEV_ORG_PREPAY_MONTHLY_COMMITMENT", "DEV_ORG_PREPAY"]
       if @subscription_type && !allowed_values.include?(@subscription_type)
         return false
       end
@@ -460,7 +460,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] subscription_type Object to be assigned
     def subscription_type=(subscription_type)
-      allowed_values = ["ININ", "MONTH_TO_MONTH", "FREE_TRIAL_MONTH_TO_MONTH", "PREPAY_MONTHLY_COMMITMENT", "PREPAY", "DEV_ORG_PREPAY_MONTHLY_COMMITMENT", "DEV_ORG_PREPAY"]
+      allowed_values = ["ININ", "MONTH_TO_MONTH", "FREE_TRIAL_MONTH_TO_MONTH", "PREPAY_MONTHLY_COMMITMENT", "PREPAY", "DEV_ORG_MONTH_TO_MONTH", "DEV_ORG_PREPAY_MONTHLY_COMMITMENT", "DEV_ORG_PREPAY"]
       if subscription_type && !allowed_values.include?(subscription_type)
         fail ArgumentError, "invalid value for 'subscription_type', must be one of #{allowed_values}."
       end

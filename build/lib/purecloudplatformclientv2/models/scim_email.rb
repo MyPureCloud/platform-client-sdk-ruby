@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM V2 ScimEmail
+  # Defines a SCIM email address.
   class ScimEmail
     # The email address.
     attr_accessor :value

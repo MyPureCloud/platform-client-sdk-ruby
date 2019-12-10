@@ -17,41 +17,15 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Management Unit Settings
-  class ManagementUnitSettings
-    # Adherence settings for this management unit
-    attr_accessor :adherence
-
-    # Short term forecasting settings for this management unit
-    attr_accessor :short_term_forecasting
-
-    # Time off request settings for this management unit
-    attr_accessor :time_off
-
-    # Scheduling settings for this management unit
-    attr_accessor :scheduling
-
-    # Shift trade settings for this management unit
-    attr_accessor :shift_trading
-
-    # Version info metadata for the associated management unit
-    attr_accessor :metadata
+  class ContactCenterSettings
+    # Strip skills from transfer
+    attr_accessor :remove_skills_from_blind_transfer
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'adherence' => :'adherence',
-        
-        :'short_term_forecasting' => :'shortTermForecasting',
-        
-        :'time_off' => :'timeOff',
-        
-        :'scheduling' => :'scheduling',
-        
-        :'shift_trading' => :'shiftTrading',
-        
-        :'metadata' => :'metadata'
+        :'remove_skills_from_blind_transfer' => :'removeSkillsFromBlindTransfer'
         
       }
     end
@@ -60,17 +34,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'adherence' => :'AdherenceSettings',
-        
-        :'short_term_forecasting' => :'ShortTermForecastingSettings',
-        
-        :'time_off' => :'TimeOffRequestSettings',
-        
-        :'scheduling' => :'SchedulingSettings',
-        
-        :'shift_trading' => :'ShiftTradeSettings',
-        
-        :'metadata' => :'WfmVersionedEntityMetadata'
+        :'remove_skills_from_blind_transfer' => :'BOOLEAN'
         
       }
     end
@@ -84,55 +48,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'adherence')
+      if attributes.has_key?(:'removeSkillsFromBlindTransfer')
         
         
-        self.adherence = attributes[:'adherence']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'shortTermForecasting')
-        
-        
-        self.short_term_forecasting = attributes[:'shortTermForecasting']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'timeOff')
-        
-        
-        self.time_off = attributes[:'timeOff']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'scheduling')
-        
-        
-        self.scheduling = attributes[:'scheduling']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'shiftTrading')
-        
-        
-        self.shift_trading = attributes[:'shiftTrading']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'metadata')
-        
-        
-        self.metadata = attributes[:'metadata']
+        self.remove_skills_from_blind_transfer = attributes[:'removeSkillsFromBlindTransfer']
         
       
       end
@@ -157,58 +76,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      if @metadata.nil?
-        return false
-      end
-
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -220,12 +89,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          adherence == o.adherence &&
-          short_term_forecasting == o.short_term_forecasting &&
-          time_off == o.time_off &&
-          scheduling == o.scheduling &&
-          shift_trading == o.shift_trading &&
-          metadata == o.metadata
+          remove_skills_from_blind_transfer == o.remove_skills_from_blind_transfer
     end
 
     # @see the `==` method
@@ -237,7 +101,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [adherence, short_term_forecasting, time_off, scheduling, shift_trading, metadata].hash
+      [remove_skills_from_blind_transfer].hash
     end
 
     # build the object from hash

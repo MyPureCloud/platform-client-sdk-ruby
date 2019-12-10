@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # \"filter\" configuration options.
+  # Defines a \"filter\" request in the SCIM service provider's configuration.
   class ScimServiceProviderConfigFilterFeature
     # Indicates whether configuration options are supported.
     attr_accessor :supported

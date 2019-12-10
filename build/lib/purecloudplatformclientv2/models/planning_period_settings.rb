@@ -21,7 +21,7 @@ module PureCloud
     # Planning period length in weeks
     attr_accessor :week_count
 
-    # Start date of the planning period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # Start date of the planning period in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
     attr_accessor :start_date
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -41,7 +41,7 @@ module PureCloud
         
         :'week_count' => :'Integer',
         
-        :'start_date' => :'DateTime'
+        :'start_date' => :'Date'
         
       }
     end

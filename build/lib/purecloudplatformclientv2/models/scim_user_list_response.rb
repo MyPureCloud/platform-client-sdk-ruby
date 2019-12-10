@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM User List Response
+  # Defines a response for a list of SCIM users.
   class ScimUserListResponse
     # The total number of results.
     attr_accessor :total_results

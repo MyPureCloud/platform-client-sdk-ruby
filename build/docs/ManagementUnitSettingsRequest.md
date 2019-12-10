@@ -1,7 +1,7 @@
 ---
-title: ManagementUnitSettings
+title: ManagementUnitSettingsRequest
 ---
-## PureCloud::ManagementUnitSettings
+## PureCloud::ManagementUnitSettingsRequest
 
 ## Properties
 
@@ -10,7 +10,7 @@ title: ManagementUnitSettings
 | **adherence** | [**AdherenceSettings**](AdherenceSettings.html) | Adherence settings for this management unit | [optional] |
 | **short_term_forecasting** | [**ShortTermForecastingSettings**](ShortTermForecastingSettings.html) | Short term forecasting settings for this management unit | [optional] |
 | **time_off** | [**TimeOffRequestSettings**](TimeOffRequestSettings.html) | Time off request settings for this management unit | [optional] |
-| **scheduling** | [**SchedulingSettings**](SchedulingSettings.html) | Scheduling settings for this management unit | [optional] |
+| **scheduling** | [**SchedulingSettingsRequest**](SchedulingSettingsRequest.html) | Scheduling settings for this management unit | [optional] |
 | **shift_trading** | [**ShiftTradeSettings**](ShiftTradeSettings.html) | Shift trade settings for this management unit | [optional] |
 | **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version info metadata for the associated management unit | |
 {: class="table table-striped"}

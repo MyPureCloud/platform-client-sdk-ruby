@@ -24,9 +24,9 @@ module PureCloud
 
     attr_accessor :previous_page
 
-    attr_accessor :self_uri
-
     attr_accessor :_next
+
+    attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -38,9 +38,9 @@ module PureCloud
         
         :'previous_page' => :'previousPage',
         
-        :'self_uri' => :'selfUri',
+        :'_next' => :'next',
         
-        :'_next' => :'next'
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -55,9 +55,9 @@ module PureCloud
         
         :'previous_page' => :'String',
         
-        :'self_uri' => :'String',
+        :'_next' => :'String',
         
-        :'_next' => :'String'
+        :'self_uri' => :'String'
         
       }
     end
@@ -100,19 +100,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'selfUri')
+      if attributes.has_key?(:'next')
         
         
-        self.self_uri = attributes[:'selfUri']
+        self._next = attributes[:'next']
         
       
       end
 
       
-      if attributes.has_key?(:'next')
+      if attributes.has_key?(:'selfUri')
         
         
-        self._next = attributes[:'next']
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -189,8 +189,8 @@ module PureCloud
           page_size == o.page_size &&
           entities == o.entities &&
           previous_page == o.previous_page &&
-          self_uri == o.self_uri &&
-          _next == o._next
+          _next == o._next &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -202,7 +202,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [page_size, entities, previous_page, self_uri, _next].hash
+      [page_size, entities, previous_page, _next, self_uri].hash
     end
 
     # build the object from hash

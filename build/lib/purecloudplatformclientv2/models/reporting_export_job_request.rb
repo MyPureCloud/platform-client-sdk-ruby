@@ -54,6 +54,9 @@ module PureCloud
     # The list of ordered selected columns from the export view by the user
     attr_accessor :selected_columns
 
+    # Indicates if custom participant attributes will be exported
+    attr_accessor :has_custom_participant_attributes
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -80,7 +83,9 @@ module PureCloud
         
         :'has_split_filters' => :'hasSplitFilters',
         
-        :'selected_columns' => :'selectedColumns'
+        :'selected_columns' => :'selectedColumns',
+        
+        :'has_custom_participant_attributes' => :'hasCustomParticipantAttributes'
         
       }
     end
@@ -111,7 +116,9 @@ module PureCloud
         
         :'has_split_filters' => :'BOOLEAN',
         
-        :'selected_columns' => :'Array<SelectedColumns>'
+        :'selected_columns' => :'Array<SelectedColumns>',
+        
+        :'has_custom_participant_attributes' => :'BOOLEAN'
         
       }
     end
@@ -235,6 +242,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'hasCustomParticipantAttributes')
+        
+        
+        self.has_custom_participant_attributes = attributes[:'hasCustomParticipantAttributes']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -338,6 +354,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -419,6 +439,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -435,7 +460,8 @@ module PureCloud
           locale == o.locale &&
           has_format_durations == o.has_format_durations &&
           has_split_filters == o.has_split_filters &&
-          selected_columns == o.selected_columns
+          selected_columns == o.selected_columns &&
+          has_custom_participant_attributes == o.has_custom_participant_attributes
     end
 
     # @see the `==` method
@@ -447,7 +473,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, time_zone, export_format, interval, period, view_type, filter, read, locale, has_format_durations, has_split_filters, selected_columns].hash
+      [name, time_zone, export_format, interval, period, view_type, filter, read, locale, has_format_durations, has_split_filters, selected_columns, has_custom_participant_attributes].hash
     end
 
     # build the object from hash

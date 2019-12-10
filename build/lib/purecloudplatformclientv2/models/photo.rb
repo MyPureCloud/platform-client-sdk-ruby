@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM V2 Photo
+  # Defines a SCIM photo.
   class Photo
     # The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG.
     attr_accessor :value

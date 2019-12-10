@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # The user's manager.
+  # Defines a SCIM manager.
   class Manager
     # The ID of the manager.
     attr_accessor :value

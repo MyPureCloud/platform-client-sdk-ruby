@@ -17,18 +17,18 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM Error
+  # Defines a SCIM error.
   class ScimError
-    # HTTP Status Code
+    # The HTTP status code returned for the SCIM error.
     attr_accessor :status
 
-    # Optional SCIM Error Type when httpStatus is 400 error
+    # The type of SCIM error when httpStatus is a \"400\" error.
     attr_accessor :scim_type
 
-    # Optional detailed error description
+    # The detailed description of the SCIM error.
     attr_accessor :detail
 
-    # Schemas for the SCIM Error
+    # The list of schemas for the SCIM error.
     attr_accessor :schemas
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM V2 User
+  # Defines a SCIM user.
   class ScimV2User
     # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"Mutability\" is set to \"readOnly\". \"Returned\" is set to \"always\".
     attr_accessor :id
@@ -58,10 +58,10 @@ module PureCloud
     # The list of roles assigned to the user.
     attr_accessor :roles
 
-    # SCIM enterprise user attributes
+    # The URI of the schema for the enterprise user.
     attr_accessor :urnietfparamsscimschemasextensionenterprise2_0_user
 
-    # Resource SCIM meta
+    # The metadata of the SCIM resource.
     attr_accessor :meta
 
     # Attribute mapping from ruby-style variable name to JSON key.
