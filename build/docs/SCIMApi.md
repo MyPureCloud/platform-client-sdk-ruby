@@ -8,7 +8,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
+[**delete_scim_group**](SCIMApi.html#delete_scim_group) | Delete a group.
 [**delete_scim_user**](SCIMApi.html#delete_scim_user) | Delete a user
+[**delete_scim_v2_group**](SCIMApi.html#delete_scim_v2_group) | Delete a group.
 [**delete_scim_v2_user**](SCIMApi.html#delete_scim_v2_user) | Delete a user
 [**get_scim_group**](SCIMApi.html#get_scim_group) | Get a group
 [**get_scim_groups**](SCIMApi.html#get_scim_groups) | Get a list of groups
@@ -28,13 +30,83 @@ Method | Description
 [**patch_scim_user**](SCIMApi.html#patch_scim_user) | Modify a user
 [**patch_scim_v2_group**](SCIMApi.html#patch_scim_v2_group) | Modify a group
 [**patch_scim_v2_user**](SCIMApi.html#patch_scim_v2_user) | Modify a user
+[**post_scim_groups**](SCIMApi.html#post_scim_groups) | The information used to create a group.
 [**post_scim_users**](SCIMApi.html#post_scim_users) | Create a user
+[**post_scim_v2_groups**](SCIMApi.html#post_scim_v2_groups) | The information used to create a group.
 [**post_scim_v2_users**](SCIMApi.html#post_scim_v2_users) | Create a user
 [**put_scim_group**](SCIMApi.html#put_scim_group) | Replace a group
 [**put_scim_user**](SCIMApi.html#put_scim_user) | Replace a user
 [**put_scim_v2_group**](SCIMApi.html#put_scim_v2_group) | Replace a group
 [**put_scim_v2_user**](SCIMApi.html#put_scim_v2_user) | Replace a user
 {: class="table table-striped"}
+
+<a name="delete_scim_group"></a>
+
+##  delete_scim_group(group_id, opts)
+
+
+
+Delete a group.
+
+
+
+Wraps DELETE /api/v2/scim/groups/{groupId} 
+
+Requires ANY permissions: 
+
+* directory:group:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::SCIMApi.new
+
+group_id = "group_id_example" # String | The ID of a group. Returned with GET /api/v2/scim/v2/groups.
+
+opts = { 
+  if_match: "if_match_example" # String | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
+}
+
+begin
+  #Delete a group.
+  api_instance.delete_scim_group(group_id, opts)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->delete_scim_group: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
+ **if_match** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
 
 <a name="delete_scim_user"></a>
 
@@ -97,6 +169,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Empty**](Empty.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
+<a name="delete_scim_v2_group"></a>
+
+##  delete_scim_v2_group(group_id, opts)
+
+
+
+Delete a group.
+
+
+
+Wraps DELETE /api/v2/scim/v2/groups/{groupId} 
+
+Requires ANY permissions: 
+
+* directory:group:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::SCIMApi.new
+
+group_id = "group_id_example" # String | The ID of a group. Returned with GET /api/v2/scim/v2/groups.
+
+opts = { 
+  if_match: "if_match_example" # String | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
+}
+
+begin
+  #Delete a group.
+  api_instance.delete_scim_v2_group(group_id, opts)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->delete_scim_v2_group: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
+ **if_match** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -1347,6 +1487,71 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_scim_groups"></a>
+
+## [**ScimV2Group**](ScimV2Group.html) post_scim_groups(body)
+
+
+
+The information used to create a group.
+
+PureCloud group will be created as \"Official\" group with visibility set \"Public\", and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+
+Wraps POST /api/v2/scim/groups 
+
+Requires ANY permissions: 
+
+* directory:group:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::SCIMApi.new
+
+body = PureCloud::ScimV2Group.new # ScimV2Group | The information used to create a group.
+
+
+begin
+  #The information used to create a group.
+  result = api_instance.post_scim_groups(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->post_scim_groups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to create a group. |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScimV2Group**](ScimV2Group.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
 <a name="post_scim_users"></a>
 
 ## [**ScimV2User**](ScimV2User.html) post_scim_users(body)
@@ -1404,6 +1609,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ScimV2User**](ScimV2User.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
+<a name="post_scim_v2_groups"></a>
+
+## [**ScimV2Group**](ScimV2Group.html) post_scim_v2_groups(body)
+
+
+
+The information used to create a group.
+
+PureCloud group will be created as \"Official\" group with visibility set \"Public\", and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+
+Wraps POST /api/v2/scim/v2/groups 
+
+Requires ANY permissions: 
+
+* directory:group:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::SCIMApi.new
+
+body = PureCloud::ScimV2Group.new # ScimV2Group | The information used to create a group.
+
+
+begin
+  #The information used to create a group.
+  result = api_instance.post_scim_v2_groups(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->post_scim_v2_groups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to create a group. |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScimV2Group**](ScimV2Group.html)
 
 ### HTTP request headers
 

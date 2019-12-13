@@ -34,7 +34,7 @@ module PureCloud
     # The type of authentication scheme.
     attr_accessor :type
 
-    # Indicates the primary method of authentication.
+    # Indicates whether this authentication scheme is the primary method of authentication.
     attr_accessor :primary
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -51,6 +51,9 @@ module PureCloud
     # Whether to constrain shift trades to agents with matching skills
     attr_accessor :requires_matching_skills
 
+    # Whether to constrain shift trades to agents with matching planning groups
+    attr_accessor :requires_matching_planning_groups
+
     # Rules that specify what to do with activity categories that are part of a shift defined in a trade
     attr_accessor :activity_category_rules
 
@@ -79,6 +82,8 @@ module PureCloud
         :'requires_matching_languages' => :'requiresMatchingLanguages',
         
         :'requires_matching_skills' => :'requiresMatchingSkills',
+        
+        :'requires_matching_planning_groups' => :'requiresMatchingPlanningGroups',
         
         :'activity_category_rules' => :'activityCategoryRules'
         
@@ -110,6 +115,8 @@ module PureCloud
         :'requires_matching_languages' => :'BOOLEAN',
         
         :'requires_matching_skills' => :'BOOLEAN',
+        
+        :'requires_matching_planning_groups' => :'BOOLEAN',
         
         :'activity_category_rules' => :'Array<ShiftTradeActivityRule>'
         
@@ -224,6 +231,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'requiresMatchingPlanningGroups')
+        
+        
+        self.requires_matching_planning_groups = attributes[:'requiresMatchingPlanningGroups']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'activityCategoryRules')
         
         if (value = attributes[:'activityCategoryRules']).is_a?(Array)
@@ -299,6 +315,10 @@ module PureCloud
       if @weekly_max_paid_violations && !allowed_values.include?(@weekly_max_paid_violations)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -417,6 +437,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -433,6 +458,7 @@ module PureCloud
           requires_matching_queues == o.requires_matching_queues &&
           requires_matching_languages == o.requires_matching_languages &&
           requires_matching_skills == o.requires_matching_skills &&
+          requires_matching_planning_groups == o.requires_matching_planning_groups &&
           activity_category_rules == o.activity_category_rules
     end
 
@@ -445,7 +471,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [enabled, auto_review, allow_direct_trades, min_hours_in_future, unequal_paid, one_sided, weekly_min_paid_violations, weekly_max_paid_violations, requires_matching_queues, requires_matching_languages, requires_matching_skills, activity_category_rules].hash
+      [enabled, auto_review, allow_direct_trades, min_hours_in_future, unequal_paid, one_sided, weekly_min_paid_violations, weekly_max_paid_violations, requires_matching_queues, requires_matching_languages, requires_matching_skills, requires_matching_planning_groups, activity_category_rules].hash
     end
 
     # build the object from hash

@@ -37,6 +37,7 @@ Method | Description
 [**get_routing_queues_divisionviews_all**](RoutingApi.html#get_routing_queues_divisionviews_all) | Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
 [**get_routing_queues_me**](RoutingApi.html#get_routing_queues_me) | Get a paged listing of queues the user is a member of.
 [**get_routing_settings_contactcenter**](RoutingApi.html#get_routing_settings_contactcenter) | Get Contact Center Settings
+[**get_routing_settings_transcription**](RoutingApi.html#get_routing_settings_transcription) | Get Transcription Settings
 [**get_routing_skill**](RoutingApi.html#get_routing_skill) | Get Routing Skill
 [**get_routing_skills**](RoutingApi.html#get_routing_skills) | Get the list of routing skills.
 [**get_routing_sms_address**](RoutingApi.html#get_routing_sms_address) | Get an Address by Id for SMS
@@ -71,6 +72,7 @@ Method | Description
 [**put_routing_email_domain_route**](RoutingApi.html#put_routing_email_domain_route) | Update a route
 [**put_routing_message_recipient**](RoutingApi.html#put_routing_message_recipient) | Update a recipient
 [**put_routing_queue**](RoutingApi.html#put_routing_queue) | Update a queue
+[**put_routing_settings_transcription**](RoutingApi.html#put_routing_settings_transcription) | Update Transcription Settings
 [**put_routing_sms_phonenumber**](RoutingApi.html#put_routing_sms_phonenumber) | Update a phone number provisioned for SMS.
 [**put_routing_utilization**](RoutingApi.html#put_routing_utilization) | Update the utilization settings.
 [**put_routing_wrapupcode**](RoutingApi.html#put_routing_wrapupcode) | Update wrap-up code
@@ -2039,6 +2041,65 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ContactCenterSettings**](ContactCenterSettings.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_routing_settings_transcription"></a>
+
+## [**TranscriptionSettings**](TranscriptionSettings.html) get_routing_settings_transcription
+
+
+
+Get Transcription Settings
+
+
+
+Wraps GET /api/v2/routing/settings/transcription 
+
+Requires ANY permissions: 
+
+* routing:transcriptionSettings:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+begin
+  #Get Transcription Settings
+  result = api_instance.get_routing_settings_transcription
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->get_routing_settings_transcription: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TranscriptionSettings**](TranscriptionSettings.html)
 
 ### HTTP request headers
 
@@ -4351,6 +4412,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Queue**](Queue.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_routing_settings_transcription"></a>
+
+## [**TranscriptionSettings**](TranscriptionSettings.html) put_routing_settings_transcription(body)
+
+
+
+Update Transcription Settings
+
+
+
+Wraps PUT /api/v2/routing/settings/transcription 
+
+Requires ANY permissions: 
+
+* routing:transcriptionSettings:add
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+body = PureCloud::TranscriptionSettings.new # TranscriptionSettings | Organization Settings
+
+
+begin
+  #Update Transcription Settings
+  result = api_instance.put_routing_settings_transcription(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->put_routing_settings_transcription: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**TranscriptionSettings**](TranscriptionSettings.html)| Organization Settings |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TranscriptionSettings**](TranscriptionSettings.html)
 
 ### HTTP request headers
 

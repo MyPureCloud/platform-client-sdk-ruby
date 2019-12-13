@@ -586,6 +586,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete a WhatsApp messaging integration
+    # 
+    # @param integration_id Integration ID
+    # @param [Hash] opts the optional parameters
+    # @return [WhatsAppIntegration]
+    def delete_conversations_messaging_integrations_whatsapp_integration_id(integration_id, opts = {})
+      data, _status_code, _headers = delete_conversations_messaging_integrations_whatsapp_integration_id_with_http_info(integration_id, opts)
+      return data
+    end
+
+    # Delete a WhatsApp messaging integration
+    # 
+    # @param integration_id Integration ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WhatsAppIntegration, Fixnum, Hash)>] WhatsAppIntegration data, response status code and response headers
+    def delete_conversations_messaging_integrations_whatsapp_integration_id_with_http_info(integration_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.delete_conversations_messaging_integrations_whatsapp_integration_id ..."
+      end
+      
+      
+      # verify the required parameter 'integration_id' is set
+      fail ArgumentError, "Missing the required parameter 'integration_id' when calling ConversationsApi.delete_conversations_messaging_integrations_whatsapp_integration_id" if integration_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}".sub('{format}','json').sub('{' + 'integrationId' + '}', integration_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WhatsAppIntegration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#delete_conversations_messaging_integrations_whatsapp_integration_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a conversation by id
     # 
     # @param conversation_id conversationId
@@ -9133,6 +9198,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Send an agentless outbound message
+    # Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+    # @param body Create agentless outbound messaging request
+    # @param [Hash] opts the optional parameters
+    # @return [SendAgentlessOutboundMessageResponse]
+    def post_conversations_messages_agentless(body, opts = {})
+      data, _status_code, _headers = post_conversations_messages_agentless_with_http_info(body, opts)
+      return data
+    end
+
+    # Send an agentless outbound message
+    # Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+    # @param body Create agentless outbound messaging request
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(SendAgentlessOutboundMessageResponse, Fixnum, Hash)>] SendAgentlessOutboundMessageResponse data, response status code and response headers
+    def post_conversations_messages_agentless_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_messages_agentless ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_messages_agentless" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messages/agentless".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SendAgentlessOutboundMessageResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_messages_agentless\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create a Facebook Integration
     # 
     # @param body FacebookIntegrationRequest
@@ -9324,6 +9454,71 @@ module PureCloud
         :return_type => 'TwitterIntegration')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_messaging_integrations_twitter\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a WhatsApp Integration
+    # 
+    # @param body WhatsAppIntegrationRequest
+    # @param [Hash] opts the optional parameters
+    # @return [WhatsAppIntegration]
+    def post_conversations_messaging_integrations_whatsapp(body, opts = {})
+      data, _status_code, _headers = post_conversations_messaging_integrations_whatsapp_with_http_info(body, opts)
+      return data
+    end
+
+    # Create a WhatsApp Integration
+    # 
+    # @param body WhatsAppIntegrationRequest
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(WhatsAppIntegration, Fixnum, Hash)>] WhatsAppIntegration data, response status code and response headers
+    def post_conversations_messaging_integrations_whatsapp_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversations_messaging_integrations_whatsapp ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversations_messaging_integrations_whatsapp" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messaging/integrations/whatsapp".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WhatsAppIntegration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_conversations_messaging_integrations_whatsapp\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

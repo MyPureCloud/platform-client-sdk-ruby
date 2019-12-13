@@ -16,6 +16,7 @@ Method | Description
 [**delete_conversations_messaging_integrations_facebook_integration_id**](ConversationsApi.html#delete_conversations_messaging_integrations_facebook_integration_id) | Delete a Facebook messaging integration
 [**delete_conversations_messaging_integrations_line_integration_id**](ConversationsApi.html#delete_conversations_messaging_integrations_line_integration_id) | Delete a LINE messenger integration
 [**delete_conversations_messaging_integrations_twitter_integration_id**](ConversationsApi.html#delete_conversations_messaging_integrations_twitter_integration_id) | Delete a Twitter messaging integration
+[**delete_conversations_messaging_integrations_whatsapp_integration_id**](ConversationsApi.html#delete_conversations_messaging_integrations_whatsapp_integration_id) | Delete a WhatsApp messaging integration
 [**get_analytics_conversation_details**](ConversationsApi.html#get_analytics_conversation_details) | Get a conversation by id
 [**get_analytics_conversations_details**](ConversationsApi.html#get_analytics_conversations_details) | Gets multiple conversations by id
 [**get_analytics_conversations_details_job**](ConversationsApi.html#get_analytics_conversations_details_job) | Get status for async query for conversation details
@@ -129,9 +130,11 @@ Method | Description
 [**post_conversations_message_messages_bulk**](ConversationsApi.html#post_conversations_message_messages_bulk) | Get messages in batch
 [**post_conversations_message_participant_replace**](ConversationsApi.html#post_conversations_message_participant_replace) | Replace this participant with the specified user and/or address
 [**post_conversations_messages**](ConversationsApi.html#post_conversations_messages) | Create an outbound messaging conversation.
+[**post_conversations_messages_agentless**](ConversationsApi.html#post_conversations_messages_agentless) | Send an agentless outbound message
 [**post_conversations_messaging_integrations_facebook**](ConversationsApi.html#post_conversations_messaging_integrations_facebook) | Create a Facebook Integration
 [**post_conversations_messaging_integrations_line**](ConversationsApi.html#post_conversations_messaging_integrations_line) | Create a LINE messenger Integration
 [**post_conversations_messaging_integrations_twitter**](ConversationsApi.html#post_conversations_messaging_integrations_twitter) | Create a Twitter Integration
+[**post_conversations_messaging_integrations_whatsapp**](ConversationsApi.html#post_conversations_messaging_integrations_whatsapp) | Create a WhatsApp Integration
 [**put_conversation_participant_flaggedreason**](ConversationsApi.html#put_conversation_participant_flaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality.
 [**put_conversations_call_participant_communication_uuidata**](ConversationsApi.html#put_conversations_call_participant_communication_uuidata) | Set uuiData to be sent on future commands.
 [**put_conversations_email_messages_draft**](ConversationsApi.html#put_conversations_email_messages_draft) | Update conversation draft reply
@@ -653,6 +656,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_conversations_messaging_integrations_whatsapp_integration_id"></a>
+
+## [**WhatsAppIntegration**](WhatsAppIntegration.html) delete_conversations_messaging_integrations_whatsapp_integration_id(integration_id)
+
+
+
+Delete a WhatsApp messaging integration
+
+
+
+Wraps DELETE /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} 
+
+Requires ANY permissions: 
+
+* messaging:integration:delete
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+integration_id = "integration_id_example" # String | Integration ID
+
+
+begin
+  #Delete a WhatsApp messaging integration
+  result = api_instance.delete_conversations_messaging_integrations_whatsapp_integration_id(integration_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->delete_conversations_messaging_integrations_whatsapp_integration_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**WhatsAppIntegration**](WhatsAppIntegration.html)
 
 ### HTTP request headers
 
@@ -8283,6 +8351,71 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_conversations_messages_agentless"></a>
+
+## [**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse.html) post_conversations_messages_agentless(body)
+
+
+
+Send an agentless outbound message
+
+Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+
+Wraps POST /api/v2/conversations/messages/agentless 
+
+Requires ANY permissions: 
+
+* conversation:message:create
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+body = PureCloud::SendAgentlessOutboundMessageRequest.new # SendAgentlessOutboundMessageRequest | Create agentless outbound messaging request
+
+
+begin
+  #Send an agentless outbound message
+  result = api_instance.post_conversations_messages_agentless(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversations_messages_agentless: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**SendAgentlessOutboundMessageRequest**](SendAgentlessOutboundMessageRequest.html)| Create agentless outbound messaging request |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_conversations_messaging_integrations_facebook"></a>
 
 ## [**FacebookIntegration**](FacebookIntegration.html) post_conversations_messaging_integrations_facebook(body)
@@ -8470,6 +8603,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TwitterIntegration**](TwitterIntegration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversations_messaging_integrations_whatsapp"></a>
+
+## [**WhatsAppIntegration**](WhatsAppIntegration.html) post_conversations_messaging_integrations_whatsapp(body)
+
+
+
+Create a WhatsApp Integration
+
+
+
+Wraps POST /api/v2/conversations/messaging/integrations/whatsapp 
+
+Requires ANY permissions: 
+
+* messaging:whatsappIntegration:add
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+body = PureCloud::WhatsAppIntegrationRequest.new # WhatsAppIntegrationRequest | WhatsAppIntegrationRequest
+
+
+begin
+  #Create a WhatsApp Integration
+  result = api_instance.post_conversations_messaging_integrations_whatsapp(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversations_messaging_integrations_whatsapp: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**WhatsAppIntegrationRequest**](WhatsAppIntegrationRequest.html)| WhatsAppIntegrationRequest |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**WhatsAppIntegration**](WhatsAppIntegration.html)
 
 ### HTTP request headers
 

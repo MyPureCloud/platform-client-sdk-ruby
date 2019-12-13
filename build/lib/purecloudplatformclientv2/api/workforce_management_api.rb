@@ -3811,6 +3811,79 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Query published schedules for given given time range for set of users
+    # 
+    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BuSearchAgentSchedulesRequest] :body body
+    # @return [UserScheduleContainer]
+    def post_workforcemanagement_managementunit_agentschedules_search(mu_id, opts = {})
+      data, _status_code, _headers = post_workforcemanagement_managementunit_agentschedules_search_with_http_info(mu_id, opts)
+      return data
+    end
+
+    # Query published schedules for given given time range for set of users
+    # 
+    # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BuSearchAgentSchedulesRequest] :body body
+    # @return [Array<(UserScheduleContainer, Fixnum, Hash)>] UserScheduleContainer data, response status code and response headers
+    def post_workforcemanagement_managementunit_agentschedules_search_with_http_info(mu_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_agentschedules_search ..."
+      end
+      
+      
+      # verify the required parameter 'mu_id' is set
+      fail ArgumentError, "Missing the required parameter 'mu_id' when calling WorkforceManagementApi.post_workforcemanagement_managementunit_agentschedules_search" if mu_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserScheduleContainer')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_agentschedules_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Request a historical adherence report
     # The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
     # @param mu_id The management unit ID of the management unit

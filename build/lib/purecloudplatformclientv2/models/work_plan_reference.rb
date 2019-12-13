@@ -17,15 +17,26 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
+  # Work plan information
   class WorkPlanReference
-    # The ID of the work plan
+    # The globally unique identifier for the object.
     attr_accessor :id
+
+    # The management unit to which this work plan belongs.  Nullable in some routes
+    attr_accessor :management_unit
+
+    # The URI for this object
+    attr_accessor :self_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id'
+        :'id' => :'id',
+        
+        :'management_unit' => :'managementUnit',
+        
+        :'self_uri' => :'selfUri'
         
       }
     end
@@ -34,7 +45,11 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String'
+        :'id' => :'String',
+        
+        :'management_unit' => :'ManagementUnitReference',
+        
+        :'self_uri' => :'String'
         
       }
     end
@@ -57,6 +72,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'managementUnit')
+        
+        
+        self.management_unit = attributes[:'managementUnit']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -73,16 +106,29 @@ module PureCloud
     def valid?
       
       
-      if @id.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
       
       
       
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -94,7 +140,9 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id
+          id == o.id &&
+          management_unit == o.management_unit &&
+          self_uri == o.self_uri
     end
 
     # @see the `==` method
@@ -106,7 +154,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id].hash
+      [id, management_unit, self_uri].hash
     end
 
     # build the object from hash

@@ -28,6 +28,9 @@ module PureCloud
     # The display name of the group.
     attr_accessor :display_name
 
+    # The external ID of the group. Set by the provisioning client. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readWrite\".
+    attr_accessor :external_id
+
     # The list of members in the group.
     attr_accessor :members
 
@@ -43,6 +46,8 @@ module PureCloud
         :'schemas' => :'schemas',
         
         :'display_name' => :'displayName',
+        
+        :'external_id' => :'externalId',
         
         :'members' => :'members',
         
@@ -60,6 +65,8 @@ module PureCloud
         :'schemas' => :'Array<String>',
         
         :'display_name' => :'String',
+        
+        :'external_id' => :'String',
         
         :'members' => :'Array<ScimV2MemberReference>',
         
@@ -101,6 +108,15 @@ module PureCloud
         
         
         self.display_name = attributes[:'displayName']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'externalId')
+        
+        
+        self.external_id = attributes[:'externalId']
         
       
       end
@@ -150,6 +166,15 @@ module PureCloud
       
       
       
+      if @display_name.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       
       
       
@@ -163,6 +188,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -197,6 +227,7 @@ module PureCloud
           id == o.id &&
           schemas == o.schemas &&
           display_name == o.display_name &&
+          external_id == o.external_id &&
           members == o.members &&
           meta == o.meta
     end
@@ -210,7 +241,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, schemas, display_name, members, meta].hash
+      [id, schemas, display_name, external_id, members, meta].hash
     end
 
     # build the object from hash

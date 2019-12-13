@@ -24,6 +24,79 @@ module PureCloud
       @api_client = api_client
     end
 
+    # Delete a group.
+    # 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :if_match The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;.
+    # @return [nil]
+    def delete_scim_group(group_id, opts = {})
+      delete_scim_group_with_http_info(group_id, opts)
+      return nil
+    end
+
+    # Delete a group.
+    # 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :if_match The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;.
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_scim_group_with_http_info(group_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.delete_scim_group ..."
+      end
+      
+      
+      # verify the required parameter 'group_id' is set
+      fail ArgumentError, "Missing the required parameter 'group_id' when calling SCIMApi.delete_scim_group" if group_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/groups/{groupId}".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+      header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#delete_scim_group\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete a user
     # 
     # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
@@ -94,6 +167,79 @@ module PureCloud
         :return_type => 'Empty')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: SCIMApi#delete_scim_user\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Delete a group.
+    # 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :if_match The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;.
+    # @return [nil]
+    def delete_scim_v2_group(group_id, opts = {})
+      delete_scim_v2_group_with_http_info(group_id, opts)
+      return nil
+    end
+
+    # Delete a group.
+    # 
+    # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :if_match The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;.
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_scim_v2_group_with_http_info(group_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.delete_scim_v2_group ..."
+      end
+      
+      
+      # verify the required parameter 'group_id' is set
+      fail ArgumentError, "Missing the required parameter 'group_id' when calling SCIMApi.delete_scim_v2_group" if group_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/v2/groups/{groupId}".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+      header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#delete_scim_v2_group\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1584,6 +1730,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # The information used to create a group.
+    # PureCloud group will be created as \"Official\" group with visibility set \"Public\", and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+    # @param body The information used to create a group.
+    # @param [Hash] opts the optional parameters
+    # @return [ScimV2Group]
+    def post_scim_groups(body, opts = {})
+      data, _status_code, _headers = post_scim_groups_with_http_info(body, opts)
+      return data
+    end
+
+    # The information used to create a group.
+    # PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+    # @param body The information used to create a group.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ScimV2Group, Fixnum, Hash)>] ScimV2Group data, response status code and response headers
+    def post_scim_groups_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.post_scim_groups ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling SCIMApi.post_scim_groups" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/groups".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScimV2Group')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#post_scim_groups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create a user
     # 
     # @param body The information used to create a user.
@@ -1645,6 +1856,71 @@ module PureCloud
         :return_type => 'ScimV2User')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: SCIMApi#post_scim_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # The information used to create a group.
+    # PureCloud group will be created as \"Official\" group with visibility set \"Public\", and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+    # @param body The information used to create a group.
+    # @param [Hash] opts the optional parameters
+    # @return [ScimV2Group]
+    def post_scim_v2_groups(body, opts = {})
+      data, _status_code, _headers = post_scim_v2_groups_with_http_info(body, opts)
+      return data
+    end
+
+    # The information used to create a group.
+    # PureCloud group will be created as \&quot;Official\&quot; group with visibility set \&quot;Public\&quot;, and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+    # @param body The information used to create a group.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ScimV2Group, Fixnum, Hash)>] ScimV2Group data, response status code and response headers
+    def post_scim_v2_groups_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.post_scim_v2_groups ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling SCIMApi.post_scim_v2_groups" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/v2/groups".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScimV2Group')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#post_scim_v2_groups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
