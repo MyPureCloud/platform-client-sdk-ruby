@@ -42,7 +42,6 @@ Method | Description
 [**post_recording_localkeys_settings**](RecordingApi.html#post_recording_localkeys_settings) | create settings for local key creation
 [**post_recording_mediaretentionpolicies**](RecordingApi.html#post_recording_mediaretentionpolicies) | Create media retention policy
 [**post_recording_recordingkeys**](RecordingApi.html#post_recording_recordingkeys) | Create encryption key
-[**post_recordings_deletionprotection**](RecordingApi.html#post_recordings_deletionprotection) | Get a list of conversations with protected recordings
 [**put_conversation_recording**](RecordingApi.html#put_conversation_recording) | Updates the retention records on a recording.
 [**put_conversation_recording_annotation**](RecordingApi.html#put_conversation_recording_annotation) | Update annotation
 [**put_orphanrecording**](RecordingApi.html#put_orphanrecording) | Updates an orphan recording to a regular recording with retention values
@@ -51,7 +50,6 @@ Method | Description
 [**put_recording_mediaretentionpolicy**](RecordingApi.html#put_recording_mediaretentionpolicy) | Update a media retention policy
 [**put_recording_recordingkeys_rotationschedule**](RecordingApi.html#put_recording_recordingkeys_rotationschedule) | Update key rotation schedule
 [**put_recording_settings**](RecordingApi.html#put_recording_settings) | Update the Recording Settings for the Organization
-[**put_recordings_deletionprotection**](RecordingApi.html#put_recordings_deletionprotection) | Apply or revoke recording protection for conversations
 {: class="table table-striped"}
 
 <a name="delete_conversation_recording_annotation"></a>
@@ -2347,70 +2345,6 @@ This endpoint does not need any parameter.
 
 
 
-<a name="post_recordings_deletionprotection"></a>
-
-## [**Array&lt;AddressableEntityRef&gt;**](AddressableEntityRef.html) post_recordings_deletionprotection(body)
-
-
-
-Get a list of conversations with protected recordings
-
-
-
-Wraps POST /api/v2/recordings/deletionprotection 
-
-Requires NO permissions: 
-
-
-
-### Example
-```{"language":"ruby"}
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::RecordingApi.new
-
-body = PureCloud::ConversationDeletionProtectionQuery.new # ConversationDeletionProtectionQuery | conversationIds
-
-
-begin
-  #Get a list of conversations with protected recordings
-  result = api_instance.post_recordings_deletionprotection(body)
-  p result
-rescue PureCloud::ApiError => e
-  puts "Exception when calling RecordingApi->post_recordings_deletionprotection: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery.html)| conversationIds |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-[**Array&lt;AddressableEntityRef&gt;**](AddressableEntityRef.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
 <a name="put_conversation_recording"></a>
 
 ## [**Recording**](Recording.html) put_conversation_recording(conversation_id, recording_id, body)
@@ -2953,74 +2887,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RecordingSettings**](RecordingSettings.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-<a name="put_recordings_deletionprotection"></a>
-
-##  put_recordings_deletionprotection(opts)
-
-
-
-Apply or revoke recording protection for conversations
-
-
-
-Wraps PUT /api/v2/recordings/deletionprotection 
-
-Requires ANY permissions: 
-
-* recording:deletionProtection:apply
-* recording:deletionProtection:revoke
-
-
-### Example
-```{"language":"ruby"}
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::RecordingApi.new
-
-opts = { 
-  protect: true, # BOOLEAN | Check for apply, uncheck for revoke (each action requires the respective permission)
-  body: PureCloud::ConversationDeletionProtectionQuery.new # ConversationDeletionProtectionQuery | 
-}
-
-begin
-  #Apply or revoke recording protection for conversations
-  api_instance.put_recordings_deletionprotection(opts)
-rescue PureCloud::ApiError => e
-  puts "Exception when calling RecordingApi->put_recordings_deletionprotection: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **protect** | **BOOLEAN**| Check for apply, uncheck for revoke (each action requires the respective permission) | [optional] [default to true] |
- **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery.html)|  | [optional]  |
-{: class="table table-striped"}
-
-
-### Return type
-
-nil (empty response body)
 
 ### HTTP request headers
 

@@ -17,14 +17,22 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class QueueUserEventTopicUserReference
-    attr_accessor :id
+  class WfmBuScheduleTopicBuScheduleGenerationResultSummary
+    attr_accessor :failed
+
+    attr_accessor :run_id
+
+    attr_accessor :message_count
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id'
+        :'failed' => :'failed',
+        
+        :'run_id' => :'runId',
+        
+        :'message_count' => :'messageCount'
         
       }
     end
@@ -33,7 +41,11 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String'
+        :'failed' => :'BOOLEAN',
+        
+        :'run_id' => :'String',
+        
+        :'message_count' => :'Integer'
         
       }
     end
@@ -47,10 +59,28 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'failed')
         
         
-        self.id = attributes[:'id']
+        self.failed = attributes[:'failed']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'runId')
+        
+        
+        self.run_id = attributes[:'runId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'messageCount')
+        
+        
+        self.message_count = attributes[:'messageCount']
         
       
       end
@@ -75,8 +105,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -88,7 +136,9 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id
+          failed == o.failed &&
+          run_id == o.run_id &&
+          message_count == o.message_count
     end
 
     # @see the `==` method
@@ -100,7 +150,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id].hash
+      [failed, run_id, message_count].hash
     end
 
     # build the object from hash

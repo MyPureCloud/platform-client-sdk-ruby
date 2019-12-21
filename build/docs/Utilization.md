@@ -7,7 +7,7 @@ title: Utilization
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **utilization** | [**Hash&lt;String, OrgMediaUtilization&gt;**](OrgMediaUtilization.html) | Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression | [optional] |
+| **utilization** | [**Hash&lt;String, OrgMediaUtilization&gt;**](OrgMediaUtilization.html) | Map of media types to utilization settings.  Valid media types include call, callback, chat, email, and message. | [optional] |
 {: class="table table-striped"}
 
 

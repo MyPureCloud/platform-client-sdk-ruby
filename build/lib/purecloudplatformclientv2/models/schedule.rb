@@ -352,9 +352,19 @@ module PureCloud
       
       
       
+      if @start.nil?
+        return false
+      end
+
       
       
       
+      
+      
+      if @_end.nil?
+        return false
+      end
+
       
       
       

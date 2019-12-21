@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class Utilization
-    # Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression
+    # Map of media types to utilization settings.  Valid media types include call, callback, chat, email, and message.
     attr_accessor :utilization
 
     # Attribute mapping from ruby-style variable name to JSON key.

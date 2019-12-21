@@ -9,8 +9,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 Method | Description
 ------------- | ------------- | -------------
 [**delete_oauth_client**](OAuthApi.html#delete_oauth_client) | Delete OAuth Client
+[**get_oauth_authorization**](OAuthApi.html#get_oauth_authorization) | Get a client that is authorized by the resource owner
+[**get_oauth_authorizations**](OAuthApi.html#get_oauth_authorizations) | List clients that are authorized by the resource owner
 [**get_oauth_client**](OAuthApi.html#get_oauth_client) | Get OAuth Client
 [**get_oauth_clients**](OAuthApi.html#get_oauth_clients) | The list of OAuth clients
+[**get_oauth_scope**](OAuthApi.html#get_oauth_scope) | An OAuth scope
+[**get_oauth_scopes**](OAuthApi.html#get_oauth_scopes) | The list of OAuth scopes
 [**post_oauth_client_secret**](OAuthApi.html#post_oauth_client_secret) | Regenerate Client Secret
 [**post_oauth_clients**](OAuthApi.html#post_oauth_clients) | Create OAuth client
 [**put_oauth_client**](OAuthApi.html#put_oauth_client) | Update OAuth Client
@@ -72,6 +76,130 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_oauth_authorization"></a>
+
+## [**OAuthAuthorization**](OAuthAuthorization.html) get_oauth_authorization(client_id)
+
+
+
+Get a client that is authorized by the resource owner
+
+
+
+Wraps GET /api/v2/oauth/authorizations/{clientId} 
+
+Requires ANY permissions: 
+
+* oauth:client:authorize
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OAuthApi.new
+
+client_id = "client_id_example" # String | The ID of client
+
+
+begin
+  #Get a client that is authorized by the resource owner
+  result = api_instance.get_oauth_authorization(client_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OAuthApi->get_oauth_authorization: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **client_id** | **String**| The ID of client |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OAuthAuthorization**](OAuthAuthorization.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_oauth_authorizations"></a>
+
+## [**OAuthAuthorizationListing**](OAuthAuthorizationListing.html) get_oauth_authorizations
+
+
+
+List clients that are authorized by the resource owner
+
+
+
+Wraps GET /api/v2/oauth/authorizations 
+
+Requires ANY permissions: 
+
+* oauth:client:authorize
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OAuthApi.new
+
+begin
+  #List clients that are authorized by the resource owner
+  result = api_instance.get_oauth_authorizations
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OAuthApi->get_oauth_authorizations: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OAuthAuthorizationListing**](OAuthAuthorizationListing.html)
 
 ### HTTP request headers
 
@@ -196,6 +324,139 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**OAuthClientEntityListing**](OAuthClientEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_oauth_scope"></a>
+
+## [**OAuthScope**](OAuthScope.html) get_oauth_scope(scope_id, opts)
+
+
+
+An OAuth scope
+
+
+
+Wraps GET /api/v2/oauth/scopes/{scopeId} 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OAuthApi.new
+
+scope_id = "scope_id_example" # String | Scope ID
+
+opts = { 
+  accept_language: "en-us" # String | The language with which to display the scope description.
+}
+
+begin
+  #An OAuth scope
+  result = api_instance.get_oauth_scope(scope_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OAuthApi->get_oauth_scope: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scope_id** | **String**| Scope ID |  |
+ **accept_language** | **String**| The language with which to display the scope description. | [optional] [default to en-us] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OAuthScope**](OAuthScope.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_oauth_scopes"></a>
+
+## [**OAuthScopeListing**](OAuthScopeListing.html) get_oauth_scopes(opts)
+
+
+
+The list of OAuth scopes
+
+
+
+Wraps GET /api/v2/oauth/scopes 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OAuthApi.new
+
+opts = { 
+  accept_language: "en-us" # String | The language with which to display the scope descriptions.
+}
+
+begin
+  #The list of OAuth scopes
+  result = api_instance.get_oauth_scopes(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OAuthApi->get_oauth_scopes: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accept_language** | **String**| The language with which to display the scope descriptions. | [optional] [default to en-us] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OAuthScopeListing**](OAuthScopeListing.html)
 
 ### HTTP request headers
 

@@ -26,7 +26,7 @@ module PureCloud
     # The current status of the export request
     attr_accessor :status
 
-    # The requested timezone of the exported data
+    # The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
     attr_accessor :time_zone
 
     # The requested format of the exported data
@@ -139,7 +139,7 @@ module PureCloud
         
         :'status' => :'String',
         
-        :'time_zone' => :'TimeZone',
+        :'time_zone' => :'String',
         
         :'export_format' => :'String',
         
@@ -439,6 +439,11 @@ module PureCloud
       
       
       
+      if @interval.nil?
+        return false
+      end
+
+      
       
       
       
@@ -469,6 +474,11 @@ module PureCloud
       
       
       
+      
+      if @period.nil?
+        return false
+      end
+
       
       
       

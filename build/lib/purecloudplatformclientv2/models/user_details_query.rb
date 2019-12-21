@@ -195,6 +195,11 @@ module PureCloud
     def valid?
       
       
+      if @interval.nil?
+        return false
+      end
+
+      
       
       
       

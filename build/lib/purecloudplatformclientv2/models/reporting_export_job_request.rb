@@ -21,7 +21,7 @@ module PureCloud
     # The user supplied name of the export request
     attr_accessor :name
 
-    # The requested timezone of the exported data
+    # The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
     attr_accessor :time_zone
 
     # The requested format of the exported data
@@ -96,7 +96,7 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'time_zone' => :'TimeZone',
+        :'time_zone' => :'String',
         
         :'export_format' => :'String',
         
@@ -299,9 +299,19 @@ module PureCloud
       
       
       
+      if @interval.nil?
+        return false
+      end
+
       
       
       
+      
+      
+      if @period.nil?
+        return false
+      end
+
       
       
       

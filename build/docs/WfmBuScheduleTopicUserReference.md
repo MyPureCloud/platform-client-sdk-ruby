@@ -1,7 +1,7 @@
 ---
-title: QueueUserEventTopicUserReference
+title: WfmBuScheduleTopicUserReference
 ---
-## PureCloud::QueueUserEventTopicUserReference
+## PureCloud::WfmBuScheduleTopicUserReference
 
 ## Properties
 

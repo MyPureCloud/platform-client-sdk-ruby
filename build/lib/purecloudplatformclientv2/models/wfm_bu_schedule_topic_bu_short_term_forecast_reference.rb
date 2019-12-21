@@ -17,15 +17,22 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class ConversationDeletionProtectionQuery
-    # list of ConversationIds
-    attr_accessor :conversation_ids
+  class WfmBuScheduleTopicBuShortTermForecastReference
+    attr_accessor :id
+
+    attr_accessor :week_date
+
+    attr_accessor :description
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'conversation_ids' => :'conversationIds'
+        :'id' => :'id',
+        
+        :'week_date' => :'weekDate',
+        
+        :'description' => :'description'
         
       }
     end
@@ -34,7 +41,11 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'conversation_ids' => :'Array<String>'
+        :'id' => :'String',
+        
+        :'week_date' => :'String',
+        
+        :'description' => :'String'
         
       }
     end
@@ -48,12 +59,28 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'conversationIds')
+      if attributes.has_key?(:'id')
         
-        if (value = attributes[:'conversationIds']).is_a?(Array)
-          self.conversation_ids = value
-        end
         
+        self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'weekDate')
+        
+        
+        self.week_date = attributes[:'weekDate']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'description')
+        
+        
+        self.description = attributes[:'description']
         
       
       end
@@ -75,16 +102,29 @@ module PureCloud
     def valid?
       
       
-      if @conversation_ids.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
       
       
       
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -96,7 +136,9 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          conversation_ids == o.conversation_ids
+          id == o.id &&
+          week_date == o.week_date &&
+          description == o.description
     end
 
     # @see the `==` method
@@ -108,7 +150,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [conversation_ids].hash
+      [id, week_date, description].hash
     end
 
     # build the object from hash

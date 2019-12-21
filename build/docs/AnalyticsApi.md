@@ -10,6 +10,7 @@ Method | Description
 ------------- | ------------- | -------------
 [**delete_analytics_conversations_details_job**](AnalyticsApi.html#delete_analytics_conversations_details_job) | Delete/cancel an async request
 [**delete_analytics_reporting_schedule**](AnalyticsApi.html#delete_analytics_reporting_schedule) | Delete a scheduled report job.
+[**delete_analytics_users_details_job**](AnalyticsApi.html#delete_analytics_users_details_job) | Delete/cancel an async request
 [**get_analytics_conversation_details**](AnalyticsApi.html#get_analytics_conversation_details) | Get a conversation by id
 [**get_analytics_conversations_details**](AnalyticsApi.html#get_analytics_conversations_details) | Gets multiple conversations by id
 [**get_analytics_conversations_details_job**](AnalyticsApi.html#get_analytics_conversations_details_job) | Get status for async query for conversation details
@@ -24,6 +25,8 @@ Method | Description
 [**get_analytics_reporting_schedule_history_run_id**](AnalyticsApi.html#get_analytics_reporting_schedule_history_run_id) | A completed scheduled report job
 [**get_analytics_reporting_schedules**](AnalyticsApi.html#get_analytics_reporting_schedules) | Get a list of scheduled report jobs
 [**get_analytics_reporting_timeperiods**](AnalyticsApi.html#get_analytics_reporting_timeperiods) | Get a list of report time periods.
+[**get_analytics_users_details_job**](AnalyticsApi.html#get_analytics_users_details_job) | Get status for async query for user details
+[**get_analytics_users_details_job_results**](AnalyticsApi.html#get_analytics_users_details_job_results) | Fetch a page of results for an async query
 [**post_analytics_conversation_details_properties**](AnalyticsApi.html#post_analytics_conversation_details_properties) | Index conversation properties
 [**post_analytics_conversations_aggregates_query**](AnalyticsApi.html#post_analytics_conversations_aggregates_query) | Query for conversation aggregates
 [**post_analytics_conversations_details_jobs**](AnalyticsApi.html#post_analytics_conversations_details_jobs) | Query for conversation details asynchronously
@@ -37,6 +40,7 @@ Method | Description
 [**post_analytics_reporting_schedules**](AnalyticsApi.html#post_analytics_reporting_schedules) | Create a scheduled report job
 [**post_analytics_surveys_aggregates_query**](AnalyticsApi.html#post_analytics_surveys_aggregates_query) | Query for survey aggregates
 [**post_analytics_users_aggregates_query**](AnalyticsApi.html#post_analytics_users_aggregates_query) | Query for user aggregates
+[**post_analytics_users_details_jobs**](AnalyticsApi.html#post_analytics_users_details_jobs) | Query for user details asynchronously
 [**post_analytics_users_details_query**](AnalyticsApi.html#post_analytics_users_details_query) | Query for user details
 [**post_analytics_users_observations_query**](AnalyticsApi.html#post_analytics_users_observations_query) | Query for user observations
 [**put_analytics_reporting_schedule**](AnalyticsApi.html#put_analytics_reporting_schedule) | Update a scheduled report job.
@@ -155,6 +159,70 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **schedule_id** | **String**| Schedule ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_analytics_users_details_job"></a>
+
+##  delete_analytics_users_details_job(job_id)
+
+
+
+Delete/cancel an async request
+
+
+
+Wraps DELETE /api/v2/analytics/users/details/jobs/{jobId} 
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+job_id = "job_id_example" # String | jobId
+
+
+begin
+  #Delete/cancel an async request
+  api_instance.delete_analytics_users_details_job(job_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->delete_analytics_users_details_job: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| jobId |  |
 {: class="table table-striped"}
 
 
@@ -1078,6 +1146,140 @@ This endpoint does not need any parameter.
 
 
 
+<a name="get_analytics_users_details_job"></a>
+
+## [**AsyncQueryStatus**](AsyncQueryStatus.html) get_analytics_users_details_job(job_id)
+
+
+
+Get status for async query for user details
+
+
+
+Wraps GET /api/v2/analytics/users/details/jobs/{jobId} 
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+job_id = "job_id_example" # String | jobId
+
+
+begin
+  #Get status for async query for user details
+  result = api_instance.get_analytics_users_details_job(job_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->get_analytics_users_details_job: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| jobId |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_analytics_users_details_job_results"></a>
+
+## [**AnalyticsUserDetailsAsyncQueryResponse**](AnalyticsUserDetailsAsyncQueryResponse.html) get_analytics_users_details_job_results(job_id, opts)
+
+
+
+Fetch a page of results for an async query
+
+
+
+Wraps GET /api/v2/analytics/users/details/jobs/{jobId}/results 
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+job_id = "job_id_example" # String | jobId
+
+opts = { 
+  cursor: "cursor_example" # String | Indicates where to resume query results (not required for first page)
+}
+
+begin
+  #Fetch a page of results for an async query
+  result = api_instance.get_analytics_users_details_job_results(job_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->get_analytics_users_details_job_results: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_id** | **String**| jobId |  |
+ **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AnalyticsUserDetailsAsyncQueryResponse**](AnalyticsUserDetailsAsyncQueryResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_analytics_conversation_details_properties"></a>
 
 ## [**PropertyIndexRequest**](PropertyIndexRequest.html) post_analytics_conversation_details_properties(conversation_id, body)
@@ -1916,6 +2118,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserAggregateQueryResponse**](UserAggregateQueryResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_analytics_users_details_jobs"></a>
+
+## [**AsyncQueryResponse**](AsyncQueryResponse.html) post_analytics_users_details_jobs(body)
+
+
+
+Query for user details asynchronously
+
+
+
+Wraps POST /api/v2/analytics/users/details/jobs 
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+body = PureCloud::AsyncUserDetailsQuery.new # AsyncUserDetailsQuery | query
+
+
+begin
+  #Query for user details asynchronously
+  result = api_instance.post_analytics_users_details_jobs(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->post_analytics_users_details_jobs: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AsyncUserDetailsQuery**](AsyncUserDetailsQuery.html)| query |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse.html)
 
 ### HTTP request headers
 

@@ -363,6 +363,11 @@ module PureCloud
       
       
       
+      if @interval.nil?
+        return false
+      end
+
+      
       
       
       

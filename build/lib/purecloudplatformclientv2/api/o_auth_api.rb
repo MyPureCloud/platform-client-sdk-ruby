@@ -88,6 +88,126 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get a client that is authorized by the resource owner
+    # 
+    # @param client_id The ID of client
+    # @param [Hash] opts the optional parameters
+    # @return [OAuthAuthorization]
+    def get_oauth_authorization(client_id, opts = {})
+      data, _status_code, _headers = get_oauth_authorization_with_http_info(client_id, opts)
+      return data
+    end
+
+    # Get a client that is authorized by the resource owner
+    # 
+    # @param client_id The ID of client
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(OAuthAuthorization, Fixnum, Hash)>] OAuthAuthorization data, response status code and response headers
+    def get_oauth_authorization_with_http_info(client_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OAuthApi.get_oauth_authorization ..."
+      end
+      
+      
+      # verify the required parameter 'client_id' is set
+      fail ArgumentError, "Missing the required parameter 'client_id' when calling OAuthApi.get_oauth_authorization" if client_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/oauth/authorizations/{clientId}".sub('{format}','json').sub('{' + 'clientId' + '}', client_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'OAuthAuthorization')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OAuthApi#get_oauth_authorization\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List clients that are authorized by the resource owner
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [OAuthAuthorizationListing]
+    def get_oauth_authorizations(opts = {})
+      data, _status_code, _headers = get_oauth_authorizations_with_http_info(opts)
+      return data
+    end
+
+    # List clients that are authorized by the resource owner
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(OAuthAuthorizationListing, Fixnum, Hash)>] OAuthAuthorizationListing data, response status code and response headers
+    def get_oauth_authorizations_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OAuthApi.get_oauth_authorizations ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/oauth/authorizations".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'OAuthAuthorizationListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OAuthApi#get_oauth_authorizations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get OAuth Client
     # 
     # @param client_id Client ID
@@ -204,6 +324,144 @@ module PureCloud
         :return_type => 'OAuthClientEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OAuthApi#get_oauth_clients\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # An OAuth scope
+    # 
+    # @param scope_id Scope ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language The language with which to display the scope description. (default to en-us)
+    # @return [OAuthScope]
+    def get_oauth_scope(scope_id, opts = {})
+      data, _status_code, _headers = get_oauth_scope_with_http_info(scope_id, opts)
+      return data
+    end
+
+    # An OAuth scope
+    # 
+    # @param scope_id Scope ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language The language with which to display the scope description.
+    # @return [Array<(OAuthScope, Fixnum, Hash)>] OAuthScope data, response status code and response headers
+    def get_oauth_scope_with_http_info(scope_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OAuthApi.get_oauth_scope ..."
+      end
+      
+      
+      # verify the required parameter 'scope_id' is set
+      fail ArgumentError, "Missing the required parameter 'scope_id' when calling OAuthApi.get_oauth_scope" if scope_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/oauth/scopes/{scopeId}".sub('{format}','json').sub('{' + 'scopeId' + '}', scope_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if opts[:'accept_language']
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'OAuthScope')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OAuthApi#get_oauth_scope\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # The list of OAuth scopes
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language The language with which to display the scope descriptions. (default to en-us)
+    # @return [OAuthScopeListing]
+    def get_oauth_scopes(opts = {})
+      data, _status_code, _headers = get_oauth_scopes_with_http_info(opts)
+      return data
+    end
+
+    # The list of OAuth scopes
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language The language with which to display the scope descriptions.
+    # @return [Array<(OAuthScopeListing, Fixnum, Hash)>] OAuthScopeListing data, response status code and response headers
+    def get_oauth_scopes_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OAuthApi.get_oauth_scopes ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/oauth/scopes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if opts[:'accept_language']
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'OAuthScopeListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OAuthApi#get_oauth_scopes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
