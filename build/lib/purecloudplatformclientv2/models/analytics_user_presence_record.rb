@@ -30,9 +30,6 @@ module PureCloud
     # The identifier for the user's organization presence
     attr_accessor :organization_presence_id
 
-    # The duration of the status (in milliseconds)
-    attr_accessor :duration_milliseconds
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -43,9 +40,7 @@ module PureCloud
         
         :'system_presence' => :'systemPresence',
         
-        :'organization_presence_id' => :'organizationPresenceId',
-        
-        :'duration_milliseconds' => :'durationMilliseconds'
+        :'organization_presence_id' => :'organizationPresenceId'
         
       }
     end
@@ -60,9 +55,7 @@ module PureCloud
         
         :'system_presence' => :'String',
         
-        :'organization_presence_id' => :'String',
-        
-        :'duration_milliseconds' => :'Integer'
+        :'organization_presence_id' => :'String'
         
       }
     end
@@ -112,15 +105,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'durationMilliseconds')
-        
-        
-        self.duration_milliseconds = attributes[:'durationMilliseconds']
-        
-      
-      end
-
-      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -150,10 +134,6 @@ module PureCloud
       if @system_presence && !allowed_values.include?(@system_presence)
         return false
       end
-      
-      
-      
-      
       
       
       
@@ -193,11 +173,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -206,8 +181,7 @@ module PureCloud
           start_time == o.start_time &&
           end_time == o.end_time &&
           system_presence == o.system_presence &&
-          organization_presence_id == o.organization_presence_id &&
-          duration_milliseconds == o.duration_milliseconds
+          organization_presence_id == o.organization_presence_id
     end
 
     # @see the `==` method
@@ -219,7 +193,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [start_time, end_time, system_presence, organization_presence_id, duration_milliseconds].hash
+      [start_time, end_time, system_presence, organization_presence_id].hash
     end
 
     # build the object from hash

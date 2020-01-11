@@ -23,9 +23,9 @@ module PureCloud
 
     attr_accessor :name
 
-    attr_accessor :certificate
-
     attr_accessor :issuer_uri
+
+    attr_accessor :certificate
 
     attr_accessor :sso_target_uri
 
@@ -42,9 +42,9 @@ module PureCloud
         
         :'name' => :'name',
         
-        :'certificate' => :'certificate',
-        
         :'issuer_uri' => :'issuerURI',
+        
+        :'certificate' => :'certificate',
         
         :'sso_target_uri' => :'ssoTargetURI',
         
@@ -63,9 +63,9 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'certificate' => :'String',
-        
         :'issuer_uri' => :'String',
+        
+        :'certificate' => :'String',
         
         :'sso_target_uri' => :'String',
         
@@ -103,19 +103,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'certificate')
+      if attributes.has_key?(:'issuerURI')
         
         
-        self.certificate = attributes[:'certificate']
+        self.issuer_uri = attributes[:'issuerURI']
         
       
       end
 
       
-      if attributes.has_key?(:'issuerURI')
+      if attributes.has_key?(:'certificate')
         
         
-        self.issuer_uri = attributes[:'issuerURI']
+        self.certificate = attributes[:'certificate']
         
       
       end
@@ -236,8 +236,8 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
-          certificate == o.certificate &&
           issuer_uri == o.issuer_uri &&
+          certificate == o.certificate &&
           sso_target_uri == o.sso_target_uri &&
           disabled == o.disabled &&
           self_uri == o.self_uri
@@ -252,7 +252,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, certificate, issuer_uri, sso_target_uri, disabled, self_uri].hash
+      [id, name, issuer_uri, certificate, sso_target_uri, disabled, self_uri].hash
     end
 
     # build the object from hash

@@ -3640,7 +3640,9 @@ api_instance = PureCloud::WorkforceManagementApi.new
 mu_id = "mu_id_example" # String | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 opts = { 
-  body: PureCloud::BuSearchAgentSchedulesRequest.new # BuSearchAgentSchedulesRequest | body
+  body: PureCloud::BuSearchAgentSchedulesRequest.new, # BuSearchAgentSchedulesRequest | body
+  force_async: true, # BOOLEAN | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+  force_download_service: true # BOOLEAN | Force the result of this operation to be sent via download service.  For testing/app development purposes
 }
 
 begin
@@ -3658,6 +3660,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mu_id** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
  **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional]  |
+ **force_async** | **BOOLEAN**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
+ **force_download_service** | **BOOLEAN**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional]  |
 {: class="table table-striped"}
 
 

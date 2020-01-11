@@ -34,6 +34,8 @@ module PureCloud
 
     attr_accessor :other_notification_ids_in_group
 
+    attr_accessor :marked_as_read
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -52,7 +54,9 @@ module PureCloud
         
         :'agent_notification' => :'agentNotification',
         
-        :'other_notification_ids_in_group' => :'otherNotificationIdsInGroup'
+        :'other_notification_ids_in_group' => :'otherNotificationIdsInGroup',
+        
+        :'marked_as_read' => :'markedAsRead'
         
       }
     end
@@ -75,7 +79,9 @@ module PureCloud
         
         :'agent_notification' => :'BOOLEAN',
         
-        :'other_notification_ids_in_group' => :'Array<String>'
+        :'other_notification_ids_in_group' => :'Array<String>',
+        
+        :'marked_as_read' => :'BOOLEAN'
         
       }
     end
@@ -163,6 +169,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'markedAsRead')
+        
+        
+        self.marked_as_read = attributes[:'markedAsRead']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -196,6 +211,10 @@ module PureCloud
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -267,6 +286,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -279,7 +303,8 @@ module PureCloud
           shift_trade == o.shift_trade &&
           time_off_request == o.time_off_request &&
           agent_notification == o.agent_notification &&
-          other_notification_ids_in_group == o.other_notification_ids_in_group
+          other_notification_ids_in_group == o.other_notification_ids_in_group &&
+          marked_as_read == o.marked_as_read
     end
 
     # @see the `==` method
@@ -291,7 +316,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, mutable_group_id, timestamp, type, shift_trade, time_off_request, agent_notification, other_notification_ids_in_group].hash
+      [id, mutable_group_id, timestamp, type, shift_trade, time_off_request, agent_notification, other_notification_ids_in_group, marked_as_read].hash
     end
 
     # build the object from hash

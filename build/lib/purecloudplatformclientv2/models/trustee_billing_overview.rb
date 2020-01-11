@@ -116,7 +116,7 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'organization' => :'Entity',
+        :'organization' => :'NamedEntity',
         
         :'currency' => :'String',
         

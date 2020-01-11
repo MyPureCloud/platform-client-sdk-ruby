@@ -27,9 +27,6 @@ module PureCloud
     # The user's ACD routing status
     attr_accessor :routing_status
 
-    # The duration of the status (in milliseconds)
-    attr_accessor :duration_milliseconds
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -38,9 +35,7 @@ module PureCloud
         
         :'end_time' => :'endTime',
         
-        :'routing_status' => :'routingStatus',
-        
-        :'duration_milliseconds' => :'durationMilliseconds'
+        :'routing_status' => :'routingStatus'
         
       }
     end
@@ -53,9 +48,7 @@ module PureCloud
         
         :'end_time' => :'DateTime',
         
-        :'routing_status' => :'String',
-        
-        :'duration_milliseconds' => :'Integer'
+        :'routing_status' => :'String'
         
       }
     end
@@ -96,15 +89,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'durationMilliseconds')
-        
-        
-        self.duration_milliseconds = attributes[:'durationMilliseconds']
-        
-      
-      end
-
-      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -137,10 +121,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
     
@@ -168,11 +148,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -180,8 +155,7 @@ module PureCloud
       self.class == o.class &&
           start_time == o.start_time &&
           end_time == o.end_time &&
-          routing_status == o.routing_status &&
-          duration_milliseconds == o.duration_milliseconds
+          routing_status == o.routing_status
     end
 
     # @see the `==` method
@@ -193,7 +167,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [start_time, end_time, routing_status, duration_milliseconds].hash
+      [start_time, end_time, routing_status].hash
     end
 
     # build the object from hash

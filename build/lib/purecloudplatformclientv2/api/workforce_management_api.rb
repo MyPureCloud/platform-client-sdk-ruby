@@ -3816,6 +3816,8 @@ module PureCloud
     # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @option opts [BuSearchAgentSchedulesRequest] :body body
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
     # @return [UserScheduleContainer]
     def post_workforcemanagement_managementunit_agentschedules_search(mu_id, opts = {})
       data, _status_code, _headers = post_workforcemanagement_managementunit_agentschedules_search_with_http_info(mu_id, opts)
@@ -3827,6 +3829,8 @@ module PureCloud
     # @param mu_id The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param [Hash] opts the optional parameters
     # @option opts [BuSearchAgentSchedulesRequest] :body body
+    # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+    # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
     # @return [Array<(UserScheduleContainer, Fixnum, Hash)>] UserScheduleContainer data, response status code and response headers
     def post_workforcemanagement_managementunit_agentschedules_search_with_http_info(mu_id, opts = {})
       if @api_client.config.debugging
@@ -3847,11 +3851,25 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search".sub('{format}','json').sub('{' + 'muId' + '}', mu_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'forceAsync'] = opts[:'force_async'] if opts[:'force_async']
+      query_params[:'forceDownloadService'] = opts[:'force_download_service'] if opts[:'force_download_service']
 
       # header parameters
       header_params = {}

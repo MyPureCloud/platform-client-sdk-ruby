@@ -17,15 +17,26 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class Entity
-    # The globally unique identifier for the object.
-    attr_accessor :id
+  class WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateNotification
+    attr_accessor :status
+
+    attr_accessor :operation_id
+
+    attr_accessor :result
+
+    attr_accessor :week_date
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'id' => :'id'
+        :'status' => :'status',
+        
+        :'operation_id' => :'operationId',
+        
+        :'result' => :'result',
+        
+        :'week_date' => :'weekDate'
         
       }
     end
@@ -34,7 +45,13 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String'
+        :'status' => :'String',
+        
+        :'operation_id' => :'String',
+        
+        :'result' => :'WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing',
+        
+        :'week_date' => :'WfmBulkShiftTradeStateUpdateNotificationTopicLocalDate'
         
       }
     end
@@ -48,10 +65,37 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'id')
+      if attributes.has_key?(:'status')
         
         
-        self.id = attributes[:'id']
+        self.status = attributes[:'status']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'operationId')
+        
+        
+        self.operation_id = attributes[:'operationId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'result')
+        
+        
+        self.result = attributes[:'result']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'weekDate')
+        
+        
+        self.week_date = attributes[:'weekDate']
         
       
       end
@@ -74,10 +118,51 @@ module PureCloud
       
       
       
+      allowed_values = ["Processing", "Complete", "Canceled", "Error"]
+      if @status && !allowed_values.include?(@status)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
     end
 
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      allowed_values = ["Processing", "Complete", "Canceled", "Error"]
+      if status && !allowed_values.include?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
+      end
+      @status = status
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -89,7 +174,10 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id
+          status == o.status &&
+          operation_id == o.operation_id &&
+          result == o.result &&
+          week_date == o.week_date
     end
 
     # @see the `==` method
@@ -101,7 +189,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id].hash
+      [status, operation_id, result, week_date].hash
     end
 
     # build the object from hash

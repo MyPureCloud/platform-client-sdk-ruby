@@ -21,7 +21,7 @@ module PureCloud
     # The aws-s3-recording-bulk-actions-integration that the policy uses for exports.
     attr_accessor :integration
 
-    # True if the policy should export screen recordings in addition to the other conversation media. Default = false
+    # True if the policy should export screen recordings in addition to the other conversation media. Default = true
     attr_accessor :should_export_screen_recordings
 
     # Attribute mapping from ruby-style variable name to JSON key.
