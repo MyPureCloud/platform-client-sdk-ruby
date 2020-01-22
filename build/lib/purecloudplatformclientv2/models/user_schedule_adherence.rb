@@ -65,6 +65,9 @@ module PureCloud
     # Time when the list of active queues for this user was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :active_queues_modified_time
 
+    # For notification purposes. Used to indicate that a user was removed from the management unit
+    attr_accessor :removed_from_management_unit
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -103,6 +106,8 @@ module PureCloud
         :'active_queues' => :'activeQueues',
         
         :'active_queues_modified_time' => :'activeQueuesModifiedTime',
+        
+        :'removed_from_management_unit' => :'removedFromManagementUnit',
         
         :'self_uri' => :'selfUri'
         
@@ -144,6 +149,8 @@ module PureCloud
         :'active_queues' => :'Array<QueueReference>',
         
         :'active_queues_modified_time' => :'DateTime',
+        
+        :'removed_from_management_unit' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -305,6 +312,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'removedFromManagementUnit')
+        
+        
+        self.removed_from_management_unit = attributes[:'removedFromManagementUnit']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -404,6 +420,10 @@ module PureCloud
       if @impact && !allowed_values.include?(@impact)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -569,6 +589,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -590,6 +615,7 @@ module PureCloud
           presence_update_time == o.presence_update_time &&
           active_queues == o.active_queues &&
           active_queues_modified_time == o.active_queues_modified_time &&
+          removed_from_management_unit == o.removed_from_management_unit &&
           self_uri == o.self_uri
     end
 
@@ -602,7 +628,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, user, management_unit, scheduled_activity_category, system_presence, organization_secondary_presence_id, routing_status, actual_activity_category, is_out_of_office, adherence_state, impact, time_of_adherence_change, presence_update_time, active_queues, active_queues_modified_time, self_uri].hash
+      [id, name, user, management_unit, scheduled_activity_category, system_presence, organization_secondary_presence_id, routing_status, actual_activity_category, is_out_of_office, adherence_state, impact, time_of_adherence_change, presence_update_time, active_queues, active_queues_modified_time, removed_from_management_unit, self_uri].hash
     end
 
     # build the object from hash

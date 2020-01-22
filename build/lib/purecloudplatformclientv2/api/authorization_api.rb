@@ -28,6 +28,7 @@ module PureCloud
     # 
     # @param division_id Division ID
     # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force Force delete this division as well as the grants and objects associated with it (default to false)
     # @return [nil]
     def delete_authorization_division(division_id, opts = {})
       delete_authorization_division_with_http_info(division_id, opts)
@@ -38,6 +39,7 @@ module PureCloud
     # 
     # @param division_id Division ID
     # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :force Force delete this division as well as the grants and objects associated with it
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_authorization_division_with_http_info(division_id, opts = {})
       if @api_client.config.debugging
@@ -52,11 +54,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/authorization/divisions/{divisionId}".sub('{format}','json').sub('{' + 'divisionId' + '}', division_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'force'] = opts[:'force'] if opts[:'force']
 
       # header parameters
       header_params = {}

@@ -21,8 +21,11 @@ module PureCloud
     # Trustee User or Group Id
     attr_accessor :id
 
-    # The list of trustor organization roles granting this user or group access.
+    # The list of roles to be granted to this user or group. Roles will be granted in all divisions.
     attr_accessor :role_ids
+
+    # The list of trustor organization roles granting this user or group access paired with the divisions for those roles.
+    attr_accessor :role_divisions
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -30,7 +33,9 @@ module PureCloud
         
         :'id' => :'id',
         
-        :'role_ids' => :'roleIds'
+        :'role_ids' => :'roleIds',
+        
+        :'role_divisions' => :'roleDivisions'
         
       }
     end
@@ -41,7 +46,9 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'role_ids' => :'Array<String>'
+        :'role_ids' => :'Array<String>',
+        
+        :'role_divisions' => :'RoleDivisionGrants'
         
       }
     end
@@ -75,6 +82,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'roleDivisions')
+        
+        
+        self.role_divisions = attributes[:'roleDivisions']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -100,16 +116,20 @@ module PureCloud
       
       
       
-      if @role_ids.nil?
-        return false
-      end
-
+      
+      
+      
       
       
       
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -127,7 +147,8 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          role_ids == o.role_ids
+          role_ids == o.role_ids &&
+          role_divisions == o.role_divisions
     end
 
     # @see the `==` method
@@ -139,7 +160,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, role_ids].hash
+      [id, role_ids, role_divisions].hash
     end
 
     # build the object from hash

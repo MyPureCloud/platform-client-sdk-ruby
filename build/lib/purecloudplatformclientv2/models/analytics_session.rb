@@ -164,6 +164,9 @@ module PureCloud
     # Name, phone number, or email address of the remote party.
     attr_accessor :remote
 
+    # Count of any media (images, files, etc) included in this session
+    attr_accessor :media_count
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -268,7 +271,9 @@ module PureCloud
         
         :'provider' => :'provider',
         
-        :'remote' => :'remote'
+        :'remote' => :'remote',
+        
+        :'media_count' => :'mediaCount'
         
       }
     end
@@ -377,7 +382,9 @@ module PureCloud
         
         :'provider' => :'String',
         
-        :'remote' => :'String'
+        :'remote' => :'String',
+        
+        :'media_count' => :'Integer'
         
       }
     end
@@ -858,6 +865,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'mediaCount')
+        
+        
+        self.media_count = attributes[:'mediaCount']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -921,6 +937,10 @@ module PureCloud
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -1377,6 +1397,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1432,7 +1457,8 @@ module PureCloud
           journey_action_map_version == o.journey_action_map_version &&
           protocol_call_id == o.protocol_call_id &&
           provider == o.provider &&
-          remote == o.remote
+          remote == o.remote &&
+          media_count == o.media_count
     end
 
     # @see the `==` method
@@ -1444,7 +1470,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, session_dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording, journey_customer_id, journey_customer_id_type, journey_customer_session_id, journey_customer_session_id_type, journey_action_id, journey_action_map_id, journey_action_map_version, protocol_call_id, provider, remote].hash
+      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, session_dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording, journey_customer_id, journey_customer_id_type, journey_customer_session_id, journey_customer_session_id_type, journey_action_id, journey_action_map_id, journey_action_map_version, protocol_call_id, provider, remote, media_count].hash
     end
 
     # build the object from hash

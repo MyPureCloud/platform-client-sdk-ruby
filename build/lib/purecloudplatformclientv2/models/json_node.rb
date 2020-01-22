@@ -24,9 +24,9 @@ module PureCloud
 
     attr_accessor :number
 
-    attr_accessor :object
-
     attr_accessor :boolean
+
+    attr_accessor :object
 
     attr_accessor :value_node
 
@@ -70,9 +70,9 @@ module PureCloud
         
         :'number' => :'number',
         
-        :'object' => :'object',
-        
         :'boolean' => :'boolean',
+        
+        :'object' => :'object',
         
         :'value_node' => :'valueNode',
         
@@ -119,9 +119,9 @@ module PureCloud
         
         :'number' => :'BOOLEAN',
         
-        :'object' => :'BOOLEAN',
-        
         :'boolean' => :'BOOLEAN',
+        
+        :'object' => :'BOOLEAN',
         
         :'value_node' => :'BOOLEAN',
         
@@ -194,19 +194,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'object')
+      if attributes.has_key?(:'boolean')
         
         
-        self.object = attributes[:'object']
+        self.boolean = attributes[:'boolean']
         
       
       end
 
       
-      if attributes.has_key?(:'boolean')
+      if attributes.has_key?(:'object')
         
         
-        self.boolean = attributes[:'boolean']
+        self.object = attributes[:'object']
         
       
       end
@@ -585,8 +585,8 @@ module PureCloud
           node_type == o.node_type &&
           float == o.float &&
           number == o.number &&
-          object == o.object &&
           boolean == o.boolean &&
+          object == o.object &&
           value_node == o.value_node &&
           container_node == o.container_node &&
           missing_node == o.missing_node &&
@@ -614,7 +614,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [node_type, float, number, object, boolean, value_node, container_node, missing_node, pojo, floating_point_number, integral_number, short, int, long, double, big_decimal, big_integer, textual, binary, array, null].hash
+      [node_type, float, number, boolean, object, value_node, container_node, missing_node, pojo, floating_point_number, integral_number, short, int, long, double, big_decimal, big_integer, textual, binary, array, null].hash
     end
 
     # build the object from hash

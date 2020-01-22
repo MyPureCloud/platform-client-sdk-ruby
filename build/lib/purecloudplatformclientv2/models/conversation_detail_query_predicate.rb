@@ -172,7 +172,7 @@ module PureCloud
       
       
       
-      allowed_values = ["nBlindTransferred", "nConnected", "nConsult", "nConsultTransferred", "nError", "nFlow", "nFlowOutcome", "nFlowOutcomeFailed", "nOffered", "nOutbound", "nOutboundAbandoned", "nOutboundAttempted", "nOutboundConnected", "nStateTransitionError", "nTransferred", "tAbandon", "tAcd", "tAcw", "tAgentResponseTime", "tAlert", "tAnswered", "tContacting", "tConversationDuration", "tDialing", "tFlow", "tFlowDisconnect", "tFlowExit", "tFlowOut", "tFlowOutcome", "tHandle", "tHeld", "tHeldComplete", "tIvr", "tNotResponding", "tTalk", "tTalkComplete", "tUserResponseTime", "tVoicemail"]
+      allowed_values = ["nBlindTransferred", "nConnected", "nConsult", "nConsultTransferred", "nError", "nFlow", "nFlowOutcome", "nFlowOutcomeFailed", "nOffered", "nOutbound", "nOutboundAbandoned", "nOutboundAttempted", "nOutboundConnected", "nStateTransitionError", "nTransferred", "tAbandon", "tAcd", "tAcw", "tAgentResponseTime", "tAlert", "tAnswered", "tContacting", "tConversationDuration", "tDialing", "tFlow", "tFlowDisconnect", "tFlowExit", "tFlowOut", "tFlowOutcome", "tHandle", "tHeld", "tHeldComplete", "tIvr", "tMonitoring", "tNotResponding", "tTalk", "tTalkComplete", "tUserResponseTime", "tVoicemail"]
       if @metric && !allowed_values.include?(@metric)
         return false
       end
@@ -231,7 +231,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] metric Object to be assigned
     def metric=(metric)
-      allowed_values = ["nBlindTransferred", "nConnected", "nConsult", "nConsultTransferred", "nError", "nFlow", "nFlowOutcome", "nFlowOutcomeFailed", "nOffered", "nOutbound", "nOutboundAbandoned", "nOutboundAttempted", "nOutboundConnected", "nStateTransitionError", "nTransferred", "tAbandon", "tAcd", "tAcw", "tAgentResponseTime", "tAlert", "tAnswered", "tContacting", "tConversationDuration", "tDialing", "tFlow", "tFlowDisconnect", "tFlowExit", "tFlowOut", "tFlowOutcome", "tHandle", "tHeld", "tHeldComplete", "tIvr", "tNotResponding", "tTalk", "tTalkComplete", "tUserResponseTime", "tVoicemail"]
+      allowed_values = ["nBlindTransferred", "nConnected", "nConsult", "nConsultTransferred", "nError", "nFlow", "nFlowOutcome", "nFlowOutcomeFailed", "nOffered", "nOutbound", "nOutboundAbandoned", "nOutboundAttempted", "nOutboundConnected", "nStateTransitionError", "nTransferred", "tAbandon", "tAcd", "tAcw", "tAgentResponseTime", "tAlert", "tAnswered", "tContacting", "tConversationDuration", "tDialing", "tFlow", "tFlowDisconnect", "tFlowExit", "tFlowOut", "tFlowOutcome", "tHandle", "tHeld", "tHeldComplete", "tIvr", "tMonitoring", "tNotResponding", "tTalk", "tTalkComplete", "tUserResponseTime", "tVoicemail"]
       if metric && !allowed_values.include?(metric)
         fail ArgumentError, "invalid value for 'metric', must be one of #{allowed_values}."
       end

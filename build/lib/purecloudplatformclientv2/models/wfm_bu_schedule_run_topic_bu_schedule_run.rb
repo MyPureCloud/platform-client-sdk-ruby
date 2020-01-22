@@ -20,11 +20,17 @@ module PureCloud
   class WfmBuScheduleRunTopicBuScheduleRun
     attr_accessor :id
 
+    attr_accessor :percent_complete
+
+    attr_accessor :intraday_rescheduling
+
+    attr_accessor :state
+
     attr_accessor :week_count
 
     attr_accessor :schedule
 
-    attr_accessor :scheduling_canceled_by_user
+    attr_accessor :scheduling_canceled_by
 
     attr_accessor :scheduling_completed_time
 
@@ -36,11 +42,17 @@ module PureCloud
         
         :'id' => :'id',
         
+        :'percent_complete' => :'percentComplete',
+        
+        :'intraday_rescheduling' => :'intradayRescheduling',
+        
+        :'state' => :'state',
+        
         :'week_count' => :'weekCount',
         
         :'schedule' => :'schedule',
         
-        :'scheduling_canceled_by_user' => :'schedulingCanceledByUser',
+        :'scheduling_canceled_by' => :'schedulingCanceledBy',
         
         :'scheduling_completed_time' => :'schedulingCompletedTime',
         
@@ -55,11 +67,17 @@ module PureCloud
         
         :'id' => :'String',
         
+        :'percent_complete' => :'Float',
+        
+        :'intraday_rescheduling' => :'BOOLEAN',
+        
+        :'state' => :'String',
+        
         :'week_count' => :'Integer',
         
         :'schedule' => :'WfmBuScheduleRunTopicBuScheduleReference',
         
-        :'scheduling_canceled_by_user' => :'WfmBuScheduleRunTopicUserReference',
+        :'scheduling_canceled_by' => :'WfmBuScheduleRunTopicUserReference',
         
         :'scheduling_completed_time' => :'String',
         
@@ -86,6 +104,33 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'percentComplete')
+        
+        
+        self.percent_complete = attributes[:'percentComplete']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'intradayRescheduling')
+        
+        
+        self.intraday_rescheduling = attributes[:'intradayRescheduling']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'state')
+        
+        
+        self.state = attributes[:'state']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'weekCount')
         
         
@@ -104,10 +149,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'schedulingCanceledByUser')
+      if attributes.has_key?(:'schedulingCanceledBy')
         
         
-        self.scheduling_canceled_by_user = attributes[:'schedulingCanceledByUser']
+        self.scheduling_canceled_by = attributes[:'schedulingCanceledBy']
         
       
       end
@@ -160,6 +205,23 @@ module PureCloud
       
       
       
+      allowed_values = ["None", "Queued", "Scheduling", "Canceled", "Failed", "Complete"]
+      if @state && !allowed_values.include?(@state)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -175,6 +237,30 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] state Object to be assigned
+    def state=(state)
+      allowed_values = ["None", "Queued", "Scheduling", "Canceled", "Failed", "Complete"]
+      if state && !allowed_values.include?(state)
+        fail ArgumentError, "invalid value for 'state', must be one of #{allowed_values}."
+      end
+      @state = state
+    end
+
     
     
     
@@ -209,9 +295,12 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
+          percent_complete == o.percent_complete &&
+          intraday_rescheduling == o.intraday_rescheduling &&
+          state == o.state &&
           week_count == o.week_count &&
           schedule == o.schedule &&
-          scheduling_canceled_by_user == o.scheduling_canceled_by_user &&
+          scheduling_canceled_by == o.scheduling_canceled_by &&
           scheduling_completed_time == o.scheduling_completed_time &&
           message_count == o.message_count
     end
@@ -225,7 +314,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, week_count, schedule, scheduling_canceled_by_user, scheduling_completed_time, message_count].hash
+      [id, percent_complete, intraday_rescheduling, state, week_count, schedule, scheduling_canceled_by, scheduling_completed_time, message_count].hash
     end
 
     # build the object from hash

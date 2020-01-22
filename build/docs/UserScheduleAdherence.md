@@ -23,6 +23,7 @@ title: UserScheduleAdherence
 | **presence_update_time** | **DateTime** | Time when presence was last updated.  Used to calculate time in current status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **active_queues** | [**Array&lt;QueueReference&gt;**](QueueReference.html) | The list of queues to which this user is joined | [optional] |
 | **active_queues_modified_time** | **DateTime** | Time when the list of active queues for this user was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **removed_from_management_unit** | **BOOLEAN** | For notification purposes. Used to indicate that a user was removed from the management unit | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

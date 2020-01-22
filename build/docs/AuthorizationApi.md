@@ -49,7 +49,7 @@ Method | Description
 
 <a name="delete_authorization_division"></a>
 
-##  delete_authorization_division(division_id)
+##  delete_authorization_division(division_id, opts)
 
 
 
@@ -83,10 +83,13 @@ api_instance = PureCloud::AuthorizationApi.new
 
 division_id = "division_id_example" # String | Division ID
 
+opts = { 
+  force: false # BOOLEAN | Force delete this division as well as the grants and objects associated with it
+}
 
 begin
   #Delete a division.
-  api_instance.delete_authorization_division(division_id)
+  api_instance.delete_authorization_division(division_id, opts)
 rescue PureCloud::ApiError => e
   puts "Exception when calling AuthorizationApi->delete_authorization_division: #{e}"
 end
@@ -97,6 +100,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **division_id** | **String**| Division ID |  |
+ **force** | **BOOLEAN**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
 {: class="table table-striped"}
 
 
@@ -646,7 +650,7 @@ Name | Type | Description  | Notes
 
 ## [**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Returns whether or not specified user can perform the specified action(s).
 

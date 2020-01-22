@@ -1592,6 +1592,91 @@ module PureCloud
     # 
     # @param trustee_org_id Trustee Organization Id
     # @param trustee_user_id Trustee User Id
+    # @param body Set of roles with corresponding divisions to apply
+    # @param [Hash] opts the optional parameters
+    # @return [UserAuthorization]
+    def put_orgauthorization_trustee_user_roledivisions(trustee_org_id, trustee_user_id, body, opts = {})
+      data, _status_code, _headers = put_orgauthorization_trustee_user_roledivisions_with_http_info(trustee_org_id, trustee_user_id, body, opts)
+      return data
+    end
+
+    # Update Trustee User Roles
+    # 
+    # @param trustee_org_id Trustee Organization Id
+    # @param trustee_user_id Trustee User Id
+    # @param body Set of roles with corresponding divisions to apply
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UserAuthorization, Fixnum, Hash)>] UserAuthorization data, response status code and response headers
+    def put_orgauthorization_trustee_user_roledivisions_with_http_info(trustee_org_id, trustee_user_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OrganizationAuthorizationApi.put_orgauthorization_trustee_user_roledivisions ..."
+      end
+      
+      
+      # verify the required parameter 'trustee_org_id' is set
+      fail ArgumentError, "Missing the required parameter 'trustee_org_id' when calling OrganizationAuthorizationApi.put_orgauthorization_trustee_user_roledivisions" if trustee_org_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'trustee_user_id' is set
+      fail ArgumentError, "Missing the required parameter 'trustee_user_id' when calling OrganizationAuthorizationApi.put_orgauthorization_trustee_user_roledivisions" if trustee_user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling OrganizationAuthorizationApi.put_orgauthorization_trustee_user_roledivisions" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions".sub('{format}','json').sub('{' + 'trusteeOrgId' + '}', trustee_org_id.to_s).sub('{' + 'trusteeUserId' + '}', trustee_user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserAuthorization')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OrganizationAuthorizationApi#put_orgauthorization_trustee_user_roledivisions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update Trustee User Roles
+    # 
+    # @param trustee_org_id Trustee Organization Id
+    # @param trustee_user_id Trustee User Id
     # @param body List of roles
     # @param [Hash] opts the optional parameters
     # @return [UserAuthorization]

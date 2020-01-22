@@ -58,6 +58,7 @@ title: AnalyticsSession
 | **protocol_call_id** | **String** | The original voice protocol call ID, e.g. a SIP call ID | [optional] |
 | **provider** | **String** | The source provider for the communication | [optional] |
 | **remote** | **String** | Name, phone number, or email address of the remote party. | [optional] |
+| **media_count** | **Integer** | Count of any media (images, files, etc) included in this session | [optional] |
 {: class="table table-striped"}
 
 

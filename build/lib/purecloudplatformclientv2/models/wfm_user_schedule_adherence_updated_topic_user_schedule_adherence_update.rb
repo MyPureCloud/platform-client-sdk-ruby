@@ -46,6 +46,8 @@ module PureCloud
 
     attr_accessor :active_queues_modified_time
 
+    attr_accessor :removed_from_management_unit
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -76,7 +78,9 @@ module PureCloud
         
         :'active_queues' => :'activeQueues',
         
-        :'active_queues_modified_time' => :'activeQueuesModifiedTime'
+        :'active_queues_modified_time' => :'activeQueuesModifiedTime',
+        
+        :'removed_from_management_unit' => :'removedFromManagementUnit'
         
       }
     end
@@ -111,7 +115,9 @@ module PureCloud
         
         :'active_queues' => :'Array<WfmUserScheduleAdherenceUpdatedTopicQueueReference>',
         
-        :'active_queues_modified_time' => :'DateTime'
+        :'active_queues_modified_time' => :'DateTime',
+        
+        :'removed_from_management_unit' => :'BOOLEAN'
         
       }
     end
@@ -253,6 +259,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'removedFromManagementUnit')
+        
+        
+        self.removed_from_management_unit = attributes[:'removedFromManagementUnit']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -311,6 +326,10 @@ module PureCloud
       if @adherence_state && !allowed_values.include?(@adherence_state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -425,6 +444,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -443,7 +467,8 @@ module PureCloud
           adherence_change_time == o.adherence_change_time &&
           presence_update_time == o.presence_update_time &&
           active_queues == o.active_queues &&
-          active_queues_modified_time == o.active_queues_modified_time
+          active_queues_modified_time == o.active_queues_modified_time &&
+          removed_from_management_unit == o.removed_from_management_unit
     end
 
     # @see the `==` method
@@ -455,7 +480,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user, management_unit_id, scheduled_activity_category, system_presence, organization_secondary_presence_id, routing_status, actual_activity_category, is_out_of_office, adherence_state, impact, adherence_change_time, presence_update_time, active_queues, active_queues_modified_time].hash
+      [user, management_unit_id, scheduled_activity_category, system_presence, organization_secondary_presence_id, routing_status, actual_activity_category, is_out_of_office, adherence_state, impact, adherence_change_time, presence_update_time, active_queues, active_queues_modified_time, removed_from_management_unit].hash
     end
 
     # build the object from hash

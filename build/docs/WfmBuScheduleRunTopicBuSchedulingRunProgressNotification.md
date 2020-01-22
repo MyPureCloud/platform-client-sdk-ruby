@@ -7,11 +7,9 @@ title: WfmBuScheduleRunTopicBuSchedulingRunProgressNotification
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **status** | **String** |  | [optional] |
 | **operation_id** | **String** |  | [optional] |
-| **state** | **String** |  | [optional] |
-| **percent_complete** | **Float** |  | [optional] |
-| **intraday_rescheduling** | **BOOLEAN** |  | [optional] |
-| **run** | [**WfmBuScheduleRunTopicBuScheduleRun**](WfmBuScheduleRunTopicBuScheduleRun.html) |  | [optional] |
+| **result** | [**WfmBuScheduleRunTopicBuScheduleRun**](WfmBuScheduleRunTopicBuScheduleRun.html) |  | [optional] |
 {: class="table table-striped"}
 
 

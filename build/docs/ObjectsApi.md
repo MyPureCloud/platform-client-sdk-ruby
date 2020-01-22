@@ -20,7 +20,7 @@ Method | Description
 
 <a name="delete_authorization_division"></a>
 
-##  delete_authorization_division(division_id)
+##  delete_authorization_division(division_id, opts)
 
 
 
@@ -54,10 +54,13 @@ api_instance = PureCloud::ObjectsApi.new
 
 division_id = "division_id_example" # String | Division ID
 
+opts = { 
+  force: false # BOOLEAN | Force delete this division as well as the grants and objects associated with it
+}
 
 begin
   #Delete a division.
-  api_instance.delete_authorization_division(division_id)
+  api_instance.delete_authorization_division(division_id, opts)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ObjectsApi->delete_authorization_division: #{e}"
 end
@@ -68,6 +71,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **division_id** | **String**| Division ID |  |
+ **force** | **BOOLEAN**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
 {: class="table table-striped"}
 
 

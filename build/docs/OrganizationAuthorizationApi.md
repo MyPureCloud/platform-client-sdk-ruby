@@ -29,6 +29,7 @@ Method | Description
 [**post_orgauthorization_trustees_audits**](OrganizationAuthorizationApi.html#post_orgauthorization_trustees_audits) | Get Org Trustee Audits
 [**post_orgauthorization_trustor_audits**](OrganizationAuthorizationApi.html#post_orgauthorization_trustor_audits) | Get Org Trustor Audits
 [**put_orgauthorization_trustee**](OrganizationAuthorizationApi.html#put_orgauthorization_trustee) | Update Org Trust
+[**put_orgauthorization_trustee_user_roledivisions**](OrganizationAuthorizationApi.html#put_orgauthorization_trustee_user_roledivisions) | Update Trustee User Roles
 [**put_orgauthorization_trustee_user_roles**](OrganizationAuthorizationApi.html#put_orgauthorization_trustee_user_roles) | Update Trustee User Roles
 [**put_orgauthorization_trustor_user**](OrganizationAuthorizationApi.html#put_orgauthorization_trustor_user) | Add a Trustee user to the trust.
 {: class="table table-striped"}
@@ -1449,6 +1450,77 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Trustee**](Trustee.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_orgauthorization_trustee_user_roledivisions"></a>
+
+## [**UserAuthorization**](UserAuthorization.html) put_orgauthorization_trustee_user_roledivisions(trustee_org_id, trustee_user_id, body)
+
+
+
+Update Trustee User Roles
+
+
+
+Wraps PUT /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions 
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OrganizationAuthorizationApi.new
+
+trustee_org_id = "trustee_org_id_example" # String | Trustee Organization Id
+
+trustee_user_id = "trustee_user_id_example" # String | Trustee User Id
+
+body = PureCloud::RoleDivisionGrants.new # RoleDivisionGrants | Set of roles with corresponding divisions to apply
+
+
+begin
+  #Update Trustee User Roles
+  result = api_instance.put_orgauthorization_trustee_user_roledivisions(trustee_org_id, trustee_user_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OrganizationAuthorizationApi->put_orgauthorization_trustee_user_roledivisions: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **trustee_org_id** | **String**| Trustee Organization Id |  |
+ **trustee_user_id** | **String**| Trustee User Id |  |
+ **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Set of roles with corresponding divisions to apply |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserAuthorization**](UserAuthorization.html)
 
 ### HTTP request headers
 

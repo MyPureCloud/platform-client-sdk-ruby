@@ -127,7 +127,7 @@ module PureCloud
 
       
       
-      allowed_values = ["nBlindTransferred", "nConnected", "nConsult", "nConsultTransferred", "nError", "nOffered", "nOutbound", "nOutboundAbandoned", "nOutboundAttempted", "nOutboundConnected", "nOverSla", "nStateTransitionError", "nTransferred", "oInteracting", "oServiceLevel", "oServiceTarget", "oWaiting", "tAbandon", "tAcd", "tAcw", "tAgentResponseTime", "tAlert", "tAnswered", "tContacting", "tDialing", "tFlowOut", "tHandle", "tHeld", "tHeldComplete", "tIvr", "tNotResponding", "tShortAbandon", "tTalk", "tTalkComplete", "tUserResponseTime", "tVoicemail", "tWait"]
+      allowed_values = ["nBlindTransferred", "nConnected", "nConsult", "nConsultTransferred", "nError", "nOffered", "nOutbound", "nOutboundAbandoned", "nOutboundAttempted", "nOutboundConnected", "nOverSla", "nStateTransitionError", "nTransferred", "oInteracting", "oServiceLevel", "oServiceTarget", "oWaiting", "tAbandon", "tAcd", "tAcw", "tAgentResponseTime", "tAlert", "tAnswered", "tContacting", "tDialing", "tFlowOut", "tHandle", "tHeld", "tHeldComplete", "tIvr", "tMonitoring", "tNotResponding", "tShortAbandon", "tTalk", "tTalkComplete", "tUserResponseTime", "tVoicemail", "tWait"]
       if @target && !allowed_values.include?(@target)
         return false
       end
@@ -168,7 +168,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] target Object to be assigned
     def target=(target)
-      allowed_values = ["nBlindTransferred", "nConnected", "nConsult", "nConsultTransferred", "nError", "nOffered", "nOutbound", "nOutboundAbandoned", "nOutboundAttempted", "nOutboundConnected", "nOverSla", "nStateTransitionError", "nTransferred", "oInteracting", "oServiceLevel", "oServiceTarget", "oWaiting", "tAbandon", "tAcd", "tAcw", "tAgentResponseTime", "tAlert", "tAnswered", "tContacting", "tDialing", "tFlowOut", "tHandle", "tHeld", "tHeldComplete", "tIvr", "tNotResponding", "tShortAbandon", "tTalk", "tTalkComplete", "tUserResponseTime", "tVoicemail", "tWait"]
+      allowed_values = ["nBlindTransferred", "nConnected", "nConsult", "nConsultTransferred", "nError", "nOffered", "nOutbound", "nOutboundAbandoned", "nOutboundAttempted", "nOutboundConnected", "nOverSla", "nStateTransitionError", "nTransferred", "oInteracting", "oServiceLevel", "oServiceTarget", "oWaiting", "tAbandon", "tAcd", "tAcw", "tAgentResponseTime", "tAlert", "tAnswered", "tContacting", "tDialing", "tFlowOut", "tHandle", "tHeld", "tHeldComplete", "tIvr", "tMonitoring", "tNotResponding", "tShortAbandon", "tTalk", "tTalkComplete", "tUserResponseTime", "tVoicemail", "tWait"]
       if target && !allowed_values.include?(target)
         fail ArgumentError, "invalid value for 'target', must be one of #{allowed_values}."
       end

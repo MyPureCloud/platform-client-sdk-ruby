@@ -18,29 +18,21 @@ require 'date'
 
 module PureCloud
   class WfmBuScheduleRunTopicBuSchedulingRunProgressNotification
+    attr_accessor :status
+
     attr_accessor :operation_id
 
-    attr_accessor :state
-
-    attr_accessor :percent_complete
-
-    attr_accessor :intraday_rescheduling
-
-    attr_accessor :run
+    attr_accessor :result
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
+        :'status' => :'status',
+        
         :'operation_id' => :'operationId',
         
-        :'state' => :'state',
-        
-        :'percent_complete' => :'percentComplete',
-        
-        :'intraday_rescheduling' => :'intradayRescheduling',
-        
-        :'run' => :'run'
+        :'result' => :'result'
         
       }
     end
@@ -49,15 +41,11 @@ module PureCloud
     def self.swagger_types
       {
         
+        :'status' => :'String',
+        
         :'operation_id' => :'String',
         
-        :'state' => :'String',
-        
-        :'percent_complete' => :'Float',
-        
-        :'intraday_rescheduling' => :'BOOLEAN',
-        
-        :'run' => :'WfmBuScheduleRunTopicBuScheduleRun'
+        :'result' => :'WfmBuScheduleRunTopicBuScheduleRun'
         
       }
     end
@@ -71,6 +59,15 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes.has_key?(:'status')
+        
+        
+        self.status = attributes[:'status']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'operationId')
         
         
@@ -80,37 +77,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'state')
+      if attributes.has_key?(:'result')
         
         
-        self.state = attributes[:'state']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'percentComplete')
-        
-        
-        self.percent_complete = attributes[:'percentComplete']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'intradayRescheduling')
-        
-        
-        self.intraday_rescheduling = attributes[:'intradayRescheduling']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'run')
-        
-        
-        self.run = attributes[:'run']
+        self.result = attributes[:'result']
         
       
       end
@@ -133,12 +103,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      allowed_values = ["None", "Queued", "Scheduling", "Canceled", "Failed", "Complete"]
-      if @state && !allowed_values.include?(@state)
+      allowed_values = ["Processing", "Complete", "Canceled", "Error"]
+      if @status && !allowed_values.include?(@status)
         return false
       end
       
@@ -152,34 +118,20 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] state Object to be assigned
-    def state=(state)
-      allowed_values = ["None", "Queued", "Scheduling", "Canceled", "Failed", "Complete"]
-      if state && !allowed_values.include?(state)
-        fail ArgumentError, "invalid value for 'state', must be one of #{allowed_values}."
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      allowed_values = ["Processing", "Complete", "Canceled", "Error"]
+      if status && !allowed_values.include?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
       end
-      @state = state
+      @status = status
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -198,11 +150,9 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          status == o.status &&
           operation_id == o.operation_id &&
-          state == o.state &&
-          percent_complete == o.percent_complete &&
-          intraday_rescheduling == o.intraday_rescheduling &&
-          run == o.run
+          result == o.result
     end
 
     # @see the `==` method
@@ -214,7 +164,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [operation_id, state, percent_complete, intraday_rescheduling, run].hash
+      [status, operation_id, result].hash
     end
 
     # build the object from hash
