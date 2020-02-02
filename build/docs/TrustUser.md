@@ -38,6 +38,7 @@ title: TrustUser
 | **languages** | [**Array&lt;UserRoutingLanguage&gt;**](UserRoutingLanguage.html) | Routing (ACD) languages possessed by the user | [optional] |
 | **acd_auto_answer** | **BOOLEAN** | acd auto answer | [optional] |
 | **language_preference** | **String** | preferred language by the user | [optional] |
+| **last_token_issued** | [**OAuthLastTokenIssued**](OAuthLastTokenIssued.html) |  | [optional] |
 | **trust_user_details** | [**TrustUserDetails**](TrustUserDetails.html) |  | [optional] |
 {: class="table table-striped"}
 

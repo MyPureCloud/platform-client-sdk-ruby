@@ -18,6 +18,7 @@ title: PolicyActions
 | **retention_duration** | [**RetentionDuration**](RetentionDuration.html) |  | [optional] |
 | **initiate_screen_recording** | [**InitiateScreenRecording**](InitiateScreenRecording.html) |  | [optional] |
 | **media_transcriptions** | [**Array&lt;MediaTranscription&gt;**](MediaTranscription.html) |  | [optional] |
+| **integration_export** | [**IntegrationExport**](IntegrationExport.html) | Policy action for exporting recordings using an integration to 3rd party s3. | [optional] |
 {: class="table table-striped"}
 
 

@@ -42,6 +42,9 @@ module PureCloud
     # Indicates filtering for flagged
     attr_accessor :is_flagged
 
+    # Indicates filtering for monitored
+    attr_accessor :is_monitored
+
     # Indicates filtering for WrapUpNotes
     attr_accessor :filter_wrap_up_notes
 
@@ -67,6 +70,8 @@ module PureCloud
         :'is_voicemail' => :'isVoicemail',
         
         :'is_flagged' => :'isFlagged',
+        
+        :'is_monitored' => :'isMonitored',
         
         :'filter_wrap_up_notes' => :'filterWrapUpNotes',
         
@@ -94,6 +99,8 @@ module PureCloud
         :'is_voicemail' => :'BOOLEAN',
         
         :'is_flagged' => :'BOOLEAN',
+        
+        :'is_monitored' => :'BOOLEAN',
         
         :'filter_wrap_up_notes' => :'BOOLEAN',
         
@@ -183,6 +190,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'isMonitored')
+        
+        
+        self.is_monitored = attributes[:'isMonitored']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'filterWrapUpNotes')
         
         
@@ -256,8 +272,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -322,6 +347,7 @@ module PureCloud
           is_cobrowse == o.is_cobrowse &&
           is_voicemail == o.is_voicemail &&
           is_flagged == o.is_flagged &&
+          is_monitored == o.is_monitored &&
           filter_wrap_up_notes == o.filter_wrap_up_notes &&
           match_all == o.match_all
     end
@@ -335,7 +361,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [is_waiting, is_active, is_acd, is_preferred, is_screenshare, is_cobrowse, is_voicemail, is_flagged, filter_wrap_up_notes, match_all].hash
+      [is_waiting, is_active, is_acd, is_preferred, is_screenshare, is_cobrowse, is_voicemail, is_flagged, is_monitored, filter_wrap_up_notes, match_all].hash
     end
 
     # build the object from hash

@@ -511,7 +511,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Delete utilization settings and revert to system defaults.
+    # Delete the organization-wide max utilization settings and revert to the system default.
     # 
     # @param [Hash] opts the optional parameters
     # @return [nil]
@@ -520,7 +520,7 @@ module PureCloud
       return nil
     end
 
-    # Delete utilization settings and revert to system defaults.
+    # Delete the organization-wide max utilization settings and revert to the system default.
     # 
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
@@ -2977,7 +2977,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Get the utilization settings.
+    # Get the organization-wide max utilization settings.
     # 
     # @param [Hash] opts the optional parameters
     # @return [Utilization]
@@ -2986,7 +2986,7 @@ module PureCloud
       return data
     end
 
-    # Get the utilization settings.
+    # Get the organization-wide max utilization settings.
     # 
     # @param [Hash] opts the optional parameters
     # @return [Array<(Utilization, Fixnum, Hash)>] Utilization data, response status code and response headers
@@ -3188,6 +3188,107 @@ module PureCloud
         :return_type => 'WrapupCodeEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#get_routing_wrapupcodes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get queues for user
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [BOOLEAN] :joined Is joined to the queue (default to true)
+    # @option opts [Array<String>] :division_id Division ID(s)
+    # @return [UserQueueEntityListing]
+    def get_user_queues(user_id, opts = {})
+      data, _status_code, _headers = get_user_queues_with_http_info(user_id, opts)
+      return data
+    end
+
+    # Get queues for user
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @option opts [BOOLEAN] :joined Is joined to the queue
+    # @option opts [Array<String>] :division_id Division ID(s)
+    # @return [Array<(UserQueueEntityListing, Fixnum, Hash)>] UserQueueEntityListing data, response status code and response headers
+    def get_user_queues_with_http_info(user_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.get_user_queues ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling RoutingApi.get_user_queues" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/queues".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'joined'] = opts[:'joined'] if opts[:'joined']
+      query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserQueueEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#get_user_queues\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3604,6 +3705,175 @@ module PureCloud
         :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#patch_routing_settings_contactcenter\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Join or unjoin a queue for a user
+    # 
+    # @param queue_id Queue ID
+    # @param user_id User ID
+    # @param body Queue Member
+    # @param [Hash] opts the optional parameters
+    # @return [UserQueue]
+    def patch_user_queue(queue_id, user_id, body, opts = {})
+      data, _status_code, _headers = patch_user_queue_with_http_info(queue_id, user_id, body, opts)
+      return data
+    end
+
+    # Join or unjoin a queue for a user
+    # 
+    # @param queue_id Queue ID
+    # @param user_id User ID
+    # @param body Queue Member
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UserQueue, Fixnum, Hash)>] UserQueue data, response status code and response headers
+    def patch_user_queue_with_http_info(queue_id, user_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.patch_user_queue ..."
+      end
+      
+      
+      # verify the required parameter 'queue_id' is set
+      fail ArgumentError, "Missing the required parameter 'queue_id' when calling RoutingApi.patch_user_queue" if queue_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling RoutingApi.patch_user_queue" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.patch_user_queue" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/queues/{queueId}".sub('{format}','json').sub('{' + 'queueId' + '}', queue_id.to_s).sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserQueue')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#patch_user_queue\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Join or unjoin a set of queues for a user
+    # 
+    # @param user_id User ID
+    # @param body User Queues
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :division_id Division ID(s)
+    # @return [UserQueueEntityListing]
+    def patch_user_queues(user_id, body, opts = {})
+      data, _status_code, _headers = patch_user_queues_with_http_info(user_id, body, opts)
+      return data
+    end
+
+    # Join or unjoin a set of queues for a user
+    # 
+    # @param user_id User ID
+    # @param body User Queues
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :division_id Division ID(s)
+    # @return [Array<(UserQueueEntityListing, Fixnum, Hash)>] UserQueueEntityListing data, response status code and response headers
+    def patch_user_queues_with_http_info(user_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.patch_user_queues ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling RoutingApi.patch_user_queues" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.patch_user_queues" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/queues".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserQueueEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#patch_user_queues\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -5122,7 +5392,7 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Update the utilization settings.
+    # Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
     # 
     # @param body utilization
     # @param [Hash] opts the optional parameters
@@ -5132,7 +5402,7 @@ module PureCloud
       return data
     end
 
-    # Update the utilization settings.
+    # Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
     # 
     # @param body utilization
     # @param [Hash] opts the optional parameters

@@ -31,6 +31,8 @@ module PureCloud
 
     attr_accessor :secure
 
+    attr_accessor :debug
+
     attr_accessor :created_by
 
     attr_accessor :created_by_client
@@ -42,6 +44,10 @@ module PureCloud
     attr_accessor :generation_id
 
     attr_accessor :publish_result_uri
+
+    attr_accessor :input_schema
+
+    attr_accessor :output_schema
 
     # The URI for this object
     attr_accessor :self_uri
@@ -62,6 +68,8 @@ module PureCloud
         
         :'secure' => :'secure',
         
+        :'debug' => :'debug',
+        
         :'created_by' => :'createdBy',
         
         :'created_by_client' => :'createdByClient',
@@ -73,6 +81,10 @@ module PureCloud
         :'generation_id' => :'generationId',
         
         :'publish_result_uri' => :'publishResultUri',
+        
+        :'input_schema' => :'inputSchema',
+        
+        :'output_schema' => :'outputSchema',
         
         :'self_uri' => :'selfUri'
         
@@ -95,6 +107,8 @@ module PureCloud
         
         :'secure' => :'BOOLEAN',
         
+        :'debug' => :'BOOLEAN',
+        
         :'created_by' => :'User',
         
         :'created_by_client' => :'DomainEntityRef',
@@ -106,6 +120,10 @@ module PureCloud
         :'generation_id' => :'String',
         
         :'publish_result_uri' => :'String',
+        
+        :'input_schema' => :'JsonSchemaDocument',
+        
+        :'output_schema' => :'JsonSchemaDocument',
         
         :'self_uri' => :'String'
         
@@ -175,6 +193,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'debug')
+        
+        
+        self.debug = attributes[:'debug']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'createdBy')
         
         
@@ -229,6 +256,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'inputSchema')
+        
+        
+        self.input_schema = attributes[:'inputSchema']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'outputSchema')
+        
+        
+        self.output_schema = attributes[:'outputSchema']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -275,6 +320,18 @@ module PureCloud
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -387,6 +444,21 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -398,12 +470,15 @@ module PureCloud
           configuration_version == o.configuration_version &&
           type == o.type &&
           secure == o.secure &&
+          debug == o.debug &&
           created_by == o.created_by &&
           created_by_client == o.created_by_client &&
           configuration_uri == o.configuration_uri &&
           date_created == o.date_created &&
           generation_id == o.generation_id &&
           publish_result_uri == o.publish_result_uri &&
+          input_schema == o.input_schema &&
+          output_schema == o.output_schema &&
           self_uri == o.self_uri
     end
 
@@ -416,7 +491,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, commit_version, configuration_version, type, secure, created_by, created_by_client, configuration_uri, date_created, generation_id, publish_result_uri, self_uri].hash
+      [id, name, commit_version, configuration_version, type, secure, debug, created_by, created_by_client, configuration_uri, date_created, generation_id, publish_result_uri, input_schema, output_schema, self_uri].hash
     end
 
     # build the object from hash

@@ -22,8 +22,11 @@ module PureCloud
     # The query ID to listen for
     attr_accessor :id
 
-    # The uri to query to GET the results of the Historical Adherence query. This will return unpopulated but will be populated in the notification
+    # Deprecated. Use downloadUrls instead.
     attr_accessor :download_url
+
+    # The uri list to GET the results of the Historical Adherence query. For notification purposes only
+    attr_accessor :download_urls
 
     # The state of the adherence query
     attr_accessor :query_state
@@ -35,6 +38,8 @@ module PureCloud
         :'id' => :'id',
         
         :'download_url' => :'downloadUrl',
+        
+        :'download_urls' => :'downloadUrls',
         
         :'query_state' => :'queryState'
         
@@ -48,6 +53,8 @@ module PureCloud
         :'id' => :'String',
         
         :'download_url' => :'String',
+        
+        :'download_urls' => :'Array<String>',
         
         :'query_state' => :'String'
         
@@ -76,6 +83,17 @@ module PureCloud
         
         
         self.download_url = attributes[:'downloadUrl']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'downloadUrls')
+        
+        if (value = attributes[:'downloadUrls']).is_a?(Array)
+          self.download_urls = value
+        end
+        
         
       
       end
@@ -115,6 +133,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["Processing", "Complete", "Error"]
       if @query_state && !allowed_values.include?(@query_state)
         return false
@@ -124,6 +146,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -156,6 +183,7 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           download_url == o.download_url &&
+          download_urls == o.download_urls &&
           query_state == o.query_state
     end
 
@@ -168,7 +196,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, download_url, query_state].hash
+      [id, download_url, download_urls, query_state].hash
     end
 
     # build the object from hash

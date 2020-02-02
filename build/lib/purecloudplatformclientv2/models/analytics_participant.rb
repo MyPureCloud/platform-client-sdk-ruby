@@ -24,9 +24,6 @@ module PureCloud
     # A human readable name identifying the participant
     attr_accessor :participant_name
 
-    # List of attributes associated to this participant
-    attr_accessor :attributes
-
     # If a user, then this will be the unique identifier for the user
     attr_accessor :user_id
 
@@ -45,6 +42,9 @@ module PureCloud
     # List of sessions associated to this participant
     attr_accessor :sessions
 
+    # List of attributes associated to this participant
+    attr_accessor :attributes
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -52,8 +52,6 @@ module PureCloud
         :'participant_id' => :'participantId',
         
         :'participant_name' => :'participantName',
-        
-        :'attributes' => :'attributes',
         
         :'user_id' => :'userId',
         
@@ -65,7 +63,9 @@ module PureCloud
         
         :'flagged_reason' => :'flaggedReason',
         
-        :'sessions' => :'sessions'
+        :'sessions' => :'sessions',
+        
+        :'attributes' => :'attributes'
         
       }
     end
@@ -78,8 +78,6 @@ module PureCloud
         
         :'participant_name' => :'String',
         
-        :'attributes' => :'Hash<String, String>',
-        
         :'user_id' => :'String',
         
         :'purpose' => :'String',
@@ -90,7 +88,9 @@ module PureCloud
         
         :'flagged_reason' => :'String',
         
-        :'sessions' => :'Array<AnalyticsSession>'
+        :'sessions' => :'Array<AnalyticsSession>',
+        
+        :'attributes' => :'Hash<String, String>'
         
       }
     end
@@ -117,17 +117,6 @@ module PureCloud
         
         
         self.participant_name = attributes[:'participantName']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'attributes')
-        
-        if (value = attributes[:'attributes']).is_a?(Array)
-          self.attributes = value
-        end
-        
         
       
       end
@@ -189,6 +178,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'attributes')
+        
+        if (value = attributes[:'attributes']).is_a?(Array)
+          self.attributes = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -203,10 +203,6 @@ module PureCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      
-      
-      
-      
       
       
       
@@ -250,13 +246,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -316,6 +311,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -323,13 +323,13 @@ module PureCloud
       self.class == o.class &&
           participant_id == o.participant_id &&
           participant_name == o.participant_name &&
-          attributes == o.attributes &&
           user_id == o.user_id &&
           purpose == o.purpose &&
           external_contact_id == o.external_contact_id &&
           external_organization_id == o.external_organization_id &&
           flagged_reason == o.flagged_reason &&
-          sessions == o.sessions
+          sessions == o.sessions &&
+          attributes == o.attributes
     end
 
     # @see the `==` method
@@ -341,7 +341,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [participant_id, participant_name, attributes, user_id, purpose, external_contact_id, external_organization_id, flagged_reason, sessions].hash
+      [participant_id, participant_name, user_id, purpose, external_contact_id, external_organization_id, flagged_reason, sessions, attributes].hash
     end
 
     # build the object from hash

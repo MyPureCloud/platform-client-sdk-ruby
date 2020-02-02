@@ -731,7 +731,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_conversation_details"></a>
 
-## [**AnalyticsConversation**](AnalyticsConversation.html) get_analytics_conversation_details(conversation_id)
+## [**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes.html) get_analytics_conversation_details(conversation_id)
 
 
 
@@ -785,7 +785,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AnalyticsConversation**](AnalyticsConversation.html)
+[**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes.html)
 
 ### HTTP request headers
 
@@ -796,7 +796,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_conversations_details"></a>
 
-## [**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html) get_analytics_conversations_details(opts)
+## [**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse.html) get_analytics_conversations_details(opts)
 
 
 
@@ -851,7 +851,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html)
+[**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse.html)
 
 ### HTTP request headers
 

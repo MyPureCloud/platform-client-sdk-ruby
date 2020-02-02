@@ -22,6 +22,8 @@ module PureCloud
 
     attr_accessor :download_url
 
+    attr_accessor :download_urls
+
     attr_accessor :query_state
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -31,6 +33,8 @@ module PureCloud
         :'id' => :'id',
         
         :'download_url' => :'downloadUrl',
+        
+        :'download_urls' => :'downloadUrls',
         
         :'query_state' => :'queryState'
         
@@ -44,6 +48,8 @@ module PureCloud
         :'id' => :'String',
         
         :'download_url' => :'String',
+        
+        :'download_urls' => :'Array<String>',
         
         :'query_state' => :'String'
         
@@ -72,6 +78,17 @@ module PureCloud
         
         
         self.download_url = attributes[:'downloadUrl']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'downloadUrls')
+        
+        if (value = attributes[:'downloadUrls']).is_a?(Array)
+          self.download_urls = value
+        end
+        
         
       
       end
@@ -111,6 +128,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["Processing", "Complete", "Canceled", "Error"]
       if @query_state && !allowed_values.include?(@query_state)
         return false
@@ -120,6 +141,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -152,6 +178,7 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           download_url == o.download_url &&
+          download_urls == o.download_urls &&
           query_state == o.query_state
     end
 
@@ -164,7 +191,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, download_url, query_state].hash
+      [id, download_url, download_urls, query_state].hash
     end
 
     # build the object from hash

@@ -15,7 +15,7 @@ Method | Description
 [**delete_routing_queue_wrapupcode**](RoutingApi.html#delete_routing_queue_wrapupcode) | Delete a wrap-up code from a queue
 [**delete_routing_skill**](RoutingApi.html#delete_routing_skill) | Delete Routing Skill
 [**delete_routing_sms_phonenumber**](RoutingApi.html#delete_routing_sms_phonenumber) | Delete a phone number provisioned for SMS.
-[**delete_routing_utilization**](RoutingApi.html#delete_routing_utilization) | Delete utilization settings and revert to system defaults.
+[**delete_routing_utilization**](RoutingApi.html#delete_routing_utilization) | Delete the organization-wide max utilization settings and revert to the system default.
 [**delete_routing_wrapupcode**](RoutingApi.html#delete_routing_wrapupcode) | Delete wrap-up code
 [**delete_user_routinglanguage**](RoutingApi.html#delete_user_routinglanguage) | Remove routing language from user
 [**delete_user_routingskill**](RoutingApi.html#delete_user_routingskill) | Remove routing skill from user
@@ -45,14 +45,17 @@ Method | Description
 [**get_routing_sms_availablephonenumbers**](RoutingApi.html#get_routing_sms_availablephonenumbers) | Get a list of available phone numbers for SMS provisioning.
 [**get_routing_sms_phonenumber**](RoutingApi.html#get_routing_sms_phonenumber) | Get a phone number provisioned for SMS.
 [**get_routing_sms_phonenumbers**](RoutingApi.html#get_routing_sms_phonenumbers) | Get a list of provisioned phone numbers.
-[**get_routing_utilization**](RoutingApi.html#get_routing_utilization) | Get the utilization settings.
+[**get_routing_utilization**](RoutingApi.html#get_routing_utilization) | Get the organization-wide max utilization settings.
 [**get_routing_wrapupcode**](RoutingApi.html#get_routing_wrapupcode) | Get details about this wrap-up code.
 [**get_routing_wrapupcodes**](RoutingApi.html#get_routing_wrapupcodes) | Get list of wrapup codes.
+[**get_user_queues**](RoutingApi.html#get_user_queues) | Get queues for user
 [**get_user_routinglanguages**](RoutingApi.html#get_user_routinglanguages) | List routing language for user
 [**get_user_routingskills**](RoutingApi.html#get_user_routingskills) | List routing skills for user
 [**patch_routing_queue_user**](RoutingApi.html#patch_routing_queue_user) | Update the ring number OR joined status for a User in a Queue
 [**patch_routing_queue_users**](RoutingApi.html#patch_routing_queue_users) | Join or unjoin a set of users for a queue
 [**patch_routing_settings_contactcenter**](RoutingApi.html#patch_routing_settings_contactcenter) | Update Contact Center Settings
+[**patch_user_queue**](RoutingApi.html#patch_user_queue) | Join or unjoin a queue for a user
+[**patch_user_queues**](RoutingApi.html#patch_user_queues) | Join or unjoin a set of queues for a user
 [**patch_user_routinglanguage**](RoutingApi.html#patch_user_routinglanguage) | Update routing language proficiency or state.
 [**patch_user_routinglanguages_bulk**](RoutingApi.html#patch_user_routinglanguages_bulk) | Add bulk routing language to user. Max limit 50 languages
 [**patch_user_routingskills_bulk**](RoutingApi.html#patch_user_routingskills_bulk) | Bulk add routing skills to user
@@ -74,7 +77,7 @@ Method | Description
 [**put_routing_queue**](RoutingApi.html#put_routing_queue) | Update a queue
 [**put_routing_settings_transcription**](RoutingApi.html#put_routing_settings_transcription) | Update Transcription Settings
 [**put_routing_sms_phonenumber**](RoutingApi.html#put_routing_sms_phonenumber) | Update a phone number provisioned for SMS.
-[**put_routing_utilization**](RoutingApi.html#put_routing_utilization) | Update the utilization settings.
+[**put_routing_utilization**](RoutingApi.html#put_routing_utilization) | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
 [**put_routing_wrapupcode**](RoutingApi.html#put_routing_wrapupcode) | Update wrap-up code
 [**put_user_routingskill**](RoutingApi.html#put_user_routingskill) | Update routing skill proficiency or state.
 [**put_user_routingskills_bulk**](RoutingApi.html#put_user_routingskills_bulk) | Replace all routing skills assigned to a user
@@ -547,7 +550,7 @@ nil (empty response body)
 
 
 
-Delete utilization settings and revert to system defaults.
+Delete the organization-wide max utilization settings and revert to the system default.
 
 
 
@@ -576,7 +579,7 @@ end
 api_instance = PureCloud::RoutingApi.new
 
 begin
-  #Delete utilization settings and revert to system defaults.
+  #Delete the organization-wide max utilization settings and revert to the system default.
   api_instance.delete_routing_utilization
 rescue PureCloud::ApiError => e
   puts "Exception when calling RoutingApi->delete_routing_utilization: #{e}"
@@ -1599,7 +1602,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **sort_by** | **String**| Sort by | [optional] [default to name] |
- **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, authorization.unusedRoles, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
  **joined** | **BOOLEAN**| Filter by joined status | [optional]  |
  **name** | **String**| Filter by queue member name | [optional]  |
  **profile_skills** | [**Array&lt;String&gt;**](String.html)| Filter by profile skill | [optional]  |
@@ -2601,7 +2604,7 @@ Name | Type | Description  | Notes
 
 
 
-Get the utilization settings.
+Get the organization-wide max utilization settings.
 
 
 
@@ -2631,7 +2634,7 @@ end
 api_instance = PureCloud::RoutingApi.new
 
 begin
-  #Get the utilization settings.
+  #Get the organization-wide max utilization settings.
   result = api_instance.get_routing_utilization
   p result
 rescue PureCloud::ApiError => e
@@ -2784,6 +2787,82 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_user_queues"></a>
+
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) get_user_queues(user_id, opts)
+
+
+
+Get queues for user
+
+
+
+Wraps GET /api/v2/users/{userId}/queues 
+
+Requires ANY permissions: 
+
+* routing:queue:view
+* routing:queue:join
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  joined: true, # BOOLEAN | Is joined to the queue
+  division_id: ["division_id_example"] # Array<String> | Division ID(s)
+}
+
+begin
+  #Get queues for user
+  result = api_instance.get_user_queues(user_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->get_user_queues: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **joined** | **BOOLEAN**| Is joined to the queue | [optional] [default to true] |
+ **division_id** | [**Array&lt;String&gt;**](String.html)| Division ID(s) | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserQueueEntityListing**](UserQueueEntityListing.html)
 
 ### HTTP request headers
 
@@ -3131,6 +3210,149 @@ Name | Type | Description  | Notes
 ### Return type
 
 nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_user_queue"></a>
+
+## [**UserQueue**](UserQueue.html) patch_user_queue(queue_id, user_id, body)
+
+
+
+Join or unjoin a queue for a user
+
+
+
+Wraps PATCH /api/v2/users/{userId}/queues/{queueId} 
+
+Requires ANY permissions: 
+
+* routing:queue:join
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+queue_id = "queue_id_example" # String | Queue ID
+
+user_id = "user_id_example" # String | User ID
+
+body = PureCloud::UserQueue.new # UserQueue | Queue Member
+
+
+begin
+  #Join or unjoin a queue for a user
+  result = api_instance.patch_user_queue(queue_id, user_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->patch_user_queue: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **queue_id** | **String**| Queue ID |  |
+ **user_id** | **String**| User ID |  |
+ **body** | [**UserQueue**](UserQueue.html)| Queue Member |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserQueue**](UserQueue.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_user_queues"></a>
+
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) patch_user_queues(user_id, body, opts)
+
+
+
+Join or unjoin a set of queues for a user
+
+
+
+Wraps PATCH /api/v2/users/{userId}/queues 
+
+Requires ANY permissions: 
+
+* routing:queue:join
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+body = [PureCloud::UserQueue.new] # Array<UserQueue> | User Queues
+
+opts = { 
+  division_id: ["division_id_example"] # Array<String> | Division ID(s)
+}
+
+begin
+  #Join or unjoin a set of queues for a user
+  result = api_instance.patch_user_queues(user_id, body, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->patch_user_queues: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **body** | [**Array&lt;UserQueue&gt;**](UserQueue.html)| User Queues |  |
+ **division_id** | [**Array&lt;String&gt;**](String.html)| Division ID(s) | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserQueueEntityListing**](UserQueueEntityListing.html)
 
 ### HTTP request headers
 
@@ -4559,7 +4781,7 @@ Name | Type | Description  | Notes
 
 
 
-Update the utilization settings.
+Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
 
 
 
@@ -4591,7 +4813,7 @@ body = PureCloud::Utilization.new # Utilization | utilization
 
 
 begin
-  #Update the utilization settings.
+  #Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
   result = api_instance.put_routing_utilization(body)
   p result
 rescue PureCloud::ApiError => e

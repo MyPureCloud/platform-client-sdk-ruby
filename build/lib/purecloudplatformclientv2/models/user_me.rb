@@ -100,6 +100,8 @@ module PureCloud
     # preferred language by the user
     attr_accessor :language_preference
 
+    attr_accessor :last_token_issued
+
     # The PureCloud system date time.
     attr_accessor :date
 
@@ -214,6 +216,8 @@ module PureCloud
         
         :'language_preference' => :'languagePreference',
         
+        :'last_token_issued' => :'lastTokenIssued',
+        
         :'date' => :'date',
         
         :'geolocation_settings' => :'geolocationSettings',
@@ -314,6 +318,8 @@ module PureCloud
         :'acd_auto_answer' => :'BOOLEAN',
         
         :'language_preference' => :'String',
+        
+        :'last_token_issued' => :'OAuthLastTokenIssued',
         
         :'date' => :'ServerDate',
         
@@ -656,6 +662,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'lastTokenIssued')
+        
+        
+        self.last_token_issued = attributes[:'lastTokenIssued']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'date')
         
         
@@ -895,6 +910,10 @@ module PureCloud
         return false
       end
 
+      
+      
+      
+      
       
       
       
@@ -1278,6 +1297,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1314,6 +1338,7 @@ module PureCloud
           languages == o.languages &&
           acd_auto_answer == o.acd_auto_answer &&
           language_preference == o.language_preference &&
+          last_token_issued == o.last_token_issued &&
           date == o.date &&
           geolocation_settings == o.geolocation_settings &&
           organization == o.organization &&
@@ -1341,7 +1366,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, certifications, biography, employer_info, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, skills, languages, acd_auto_answer, language_preference, date, geolocation_settings, organization, presence_definitions, location_definitions, org_authorization, favorites, superiors, direct_reports, adjacents, routing_skills, field_configs, token, trustors, org_products, self_uri].hash
+      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, certifications, biography, employer_info, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, skills, languages, acd_auto_answer, language_preference, last_token_issued, date, geolocation_settings, organization, presence_definitions, location_definitions, org_authorization, favorites, superiors, direct_reports, adjacents, routing_skills, field_configs, token, trustors, org_products, self_uri].hash
     end
 
     # build the object from hash

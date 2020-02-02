@@ -909,7 +909,7 @@ module PureCloud
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :recording_id id of the recording
-    # @option opts [String] :entity_type entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (default to RECORDING)
+    # @option opts [String] :entity_type entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (default to Recording)
     # @return [QualityAuditPage]
     def get_quality_conversation_audits(conversation_id, opts = {})
       data, _status_code, _headers = get_quality_conversation_audits_with_http_info(conversation_id, opts)

@@ -17,15 +17,25 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class Token
-    # Token for use with common api
-    attr_accessor :jwt
+  class MediaUtilization
+    # Defines the maximum number of conversations of this type that an agent can handle at one time.
+    attr_accessor :maximum_capacity
+
+    # Defines the list of other media types that can interrupt a conversation of this media type.  Values include call, chat, email, callback, and message.
+    attr_accessor :interruptable_media_types
+
+    # If true, then track non-ACD conversations against utilization
+    attr_accessor :include_non_acd
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'jwt' => :'jwt'
+        :'maximum_capacity' => :'maximumCapacity',
+        
+        :'interruptable_media_types' => :'interruptableMediaTypes',
+        
+        :'include_non_acd' => :'includeNonAcd'
         
       }
     end
@@ -34,7 +44,11 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'jwt' => :'String'
+        :'maximum_capacity' => :'Integer',
+        
+        :'interruptable_media_types' => :'Array<String>',
+        
+        :'include_non_acd' => :'BOOLEAN'
         
       }
     end
@@ -48,10 +62,30 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'jwt')
+      if attributes.has_key?(:'maximumCapacity')
         
         
-        self.jwt = attributes[:'jwt']
+        self.maximum_capacity = attributes[:'maximumCapacity']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'interruptableMediaTypes')
+        
+        if (value = attributes[:'interruptableMediaTypes']).is_a?(Array)
+          self.interruptable_media_types = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'includeNonAcd')
+        
+        
+        self.include_non_acd = attributes[:'includeNonAcd']
         
       
       end
@@ -73,16 +107,29 @@ module PureCloud
     def valid?
       
       
-      if @jwt.nil?
-        return false
-      end
-
+      
+      
+      
+      
+      
+      
+      
       
       
       
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -94,7 +141,9 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          jwt == o.jwt
+          maximum_capacity == o.maximum_capacity &&
+          interruptable_media_types == o.interruptable_media_types &&
+          include_non_acd == o.include_non_acd
     end
 
     # @see the `==` method
@@ -106,7 +155,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [jwt].hash
+      [maximum_capacity, interruptable_media_types, include_non_acd].hash
     end
 
     # build the object from hash

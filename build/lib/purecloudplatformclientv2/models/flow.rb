@@ -55,6 +55,8 @@ module PureCloud
 
     attr_accessor :checked_in_version
 
+    attr_accessor :debug_version
+
     attr_accessor :published_by
 
     attr_accessor :current_operation
@@ -95,6 +97,8 @@ module PureCloud
         :'output_schema' => :'outputSchema',
         
         :'checked_in_version' => :'checkedInVersion',
+        
+        :'debug_version' => :'debugVersion',
         
         :'published_by' => :'publishedBy',
         
@@ -138,6 +142,8 @@ module PureCloud
         :'output_schema' => :'Object',
         
         :'checked_in_version' => :'FlowVersion',
+        
+        :'debug_version' => :'FlowVersion',
         
         :'published_by' => :'User',
         
@@ -292,6 +298,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'debugVersion')
+        
+        
+        self.debug_version = attributes[:'debugVersion']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'publishedBy')
         
         
@@ -361,6 +376,10 @@ module PureCloud
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -518,6 +537,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -538,6 +562,7 @@ module PureCloud
           input_schema == o.input_schema &&
           output_schema == o.output_schema &&
           checked_in_version == o.checked_in_version &&
+          debug_version == o.debug_version &&
           published_by == o.published_by &&
           current_operation == o.current_operation &&
           self_uri == o.self_uri
@@ -552,7 +577,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, description, type, locked_user, locked_client, active, system, deleted, published_version, saved_version, input_schema, output_schema, checked_in_version, published_by, current_operation, self_uri].hash
+      [id, name, division, description, type, locked_user, locked_client, active, system, deleted, published_version, saved_version, input_schema, output_schema, checked_in_version, debug_version, published_by, current_operation, self_uri].hash
     end
 
     # build the object from hash

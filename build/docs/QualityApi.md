@@ -821,7 +821,7 @@ opts = {
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   recording_id: "recording_id_example", # String | id of the recording
-  entity_type: "RECORDING" # String | entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording
+  entity_type: "Recording" # String | entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording
 }
 
 begin
@@ -845,7 +845,7 @@ Name | Type | Description  | Notes
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **recording_id** | **String**| id of the recording | [optional]  |
- **entity_type** | **String**| entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording | [optional] [default to RECORDING] |
+ **entity_type** | **String**| entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording | [optional] [default to Recording] |
 {: class="table table-striped"}
 
 

@@ -15,6 +15,7 @@ title: ConversationProperties
 | **is_cobrowse** | **BOOLEAN** | Indicates filtering for Cobrowse | [optional] |
 | **is_voicemail** | **BOOLEAN** | Indicates filtering for Voice mail | [optional] |
 | **is_flagged** | **BOOLEAN** | Indicates filtering for flagged | [optional] |
+| **is_monitored** | **BOOLEAN** | Indicates filtering for monitored | [optional] |
 | **filter_wrap_up_notes** | **BOOLEAN** | Indicates filtering for WrapUpNotes | [optional] |
 | **match_all** | **BOOLEAN** | Indicates comparison operation, TRUE indicates filters will use AND logic, FALSE indicates OR logic | [optional] |
 {: class="table table-striped"}

@@ -220,7 +220,7 @@ module PureCloud
     # 
     # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
-    # @return [AnalyticsConversation]
+    # @return [AnalyticsConversationWithoutAttributes]
     def get_analytics_conversation_details(conversation_id, opts = {})
       data, _status_code, _headers = get_analytics_conversation_details_with_http_info(conversation_id, opts)
       return data
@@ -230,7 +230,7 @@ module PureCloud
     # 
     # @param conversation_id conversationId
     # @param [Hash] opts the optional parameters
-    # @return [Array<(AnalyticsConversation, Fixnum, Hash)>] AnalyticsConversation data, response status code and response headers
+    # @return [Array<(AnalyticsConversationWithoutAttributes, Fixnum, Hash)>] AnalyticsConversationWithoutAttributes data, response status code and response headers
     def get_analytics_conversation_details_with_http_info(conversation_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_conversation_details ..."
@@ -274,7 +274,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AnalyticsConversation')
+        :return_type => 'AnalyticsConversationWithoutAttributes')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AnalyticsApi#get_analytics_conversation_details\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -285,7 +285,7 @@ module PureCloud
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :id Comma-separated conversation ids
-    # @return [AnalyticsConversationMultiGetResponse]
+    # @return [AnalyticsConversationWithoutAttributesMultiGetResponse]
     def get_analytics_conversations_details(opts = {})
       data, _status_code, _headers = get_analytics_conversations_details_with_http_info(opts)
       return data
@@ -295,7 +295,7 @@ module PureCloud
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :id Comma-separated conversation ids
-    # @return [Array<(AnalyticsConversationMultiGetResponse, Fixnum, Hash)>] AnalyticsConversationMultiGetResponse data, response status code and response headers
+    # @return [Array<(AnalyticsConversationWithoutAttributesMultiGetResponse, Fixnum, Hash)>] AnalyticsConversationWithoutAttributesMultiGetResponse data, response status code and response headers
     def get_analytics_conversations_details_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_conversations_details ..."
@@ -338,7 +338,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AnalyticsConversationMultiGetResponse')
+        :return_type => 'AnalyticsConversationWithoutAttributesMultiGetResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AnalyticsApi#get_analytics_conversations_details\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

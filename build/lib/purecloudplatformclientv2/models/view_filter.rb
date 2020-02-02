@@ -75,11 +75,35 @@ module PureCloud
     # The contact ids are used to filter the view
     attr_accessor :contact_ids
 
+    # The external contact ids are used to filter the view
+    attr_accessor :external_contact_ids
+
+    # The external org ids are used to filter the view
+    attr_accessor :external_org_ids
+
     # The ani list ids are used to filter the view
     attr_accessor :ani_list
 
     # The durations in milliseconds used to filter the view
     attr_accessor :durations_milliseconds
+
+    # The acd durations in milliseconds used to filter the view
+    attr_accessor :acd_durations_milliseconds
+
+    # The talk durations in milliseconds used to filter the view
+    attr_accessor :talk_durations_milliseconds
+
+    # The acw durations in milliseconds used to filter the view
+    attr_accessor :acw_durations_milliseconds
+
+    # The handle durations in milliseconds used to filter the view
+    attr_accessor :handle_durations_milliseconds
+
+    # The hold durations in milliseconds used to filter the view
+    attr_accessor :hold_durations_milliseconds
+
+    # The abandon durations in milliseconds used to filter the view
+    attr_accessor :abandon_durations_milliseconds
 
     # The evaluationScore is used to filter the view
     attr_accessor :evaluation_score
@@ -279,9 +303,25 @@ module PureCloud
         
         :'contact_ids' => :'contactIds',
         
+        :'external_contact_ids' => :'externalContactIds',
+        
+        :'external_org_ids' => :'externalOrgIds',
+        
         :'ani_list' => :'aniList',
         
         :'durations_milliseconds' => :'durationsMilliseconds',
+        
+        :'acd_durations_milliseconds' => :'acdDurationsMilliseconds',
+        
+        :'talk_durations_milliseconds' => :'talkDurationsMilliseconds',
+        
+        :'acw_durations_milliseconds' => :'acwDurationsMilliseconds',
+        
+        :'handle_durations_milliseconds' => :'handleDurationsMilliseconds',
+        
+        :'hold_durations_milliseconds' => :'holdDurationsMilliseconds',
+        
+        :'abandon_durations_milliseconds' => :'abandonDurationsMilliseconds',
         
         :'evaluation_score' => :'evaluationScore',
         
@@ -432,9 +472,25 @@ module PureCloud
         
         :'contact_ids' => :'Array<String>',
         
+        :'external_contact_ids' => :'Array<String>',
+        
+        :'external_org_ids' => :'Array<String>',
+        
         :'ani_list' => :'Array<String>',
         
         :'durations_milliseconds' => :'Array<NumericRange>',
+        
+        :'acd_durations_milliseconds' => :'Array<NumericRange>',
+        
+        :'talk_durations_milliseconds' => :'Array<NumericRange>',
+        
+        :'acw_durations_milliseconds' => :'Array<NumericRange>',
+        
+        :'handle_durations_milliseconds' => :'Array<NumericRange>',
+        
+        :'hold_durations_milliseconds' => :'Array<NumericRange>',
+        
+        :'abandon_durations_milliseconds' => :'Array<NumericRange>',
         
         :'evaluation_score' => :'NumericRange',
         
@@ -761,6 +817,28 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'externalContactIds')
+        
+        if (value = attributes[:'externalContactIds']).is_a?(Array)
+          self.external_contact_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'externalOrgIds')
+        
+        if (value = attributes[:'externalOrgIds']).is_a?(Array)
+          self.external_org_ids = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'aniList')
         
         if (value = attributes[:'aniList']).is_a?(Array)
@@ -776,6 +854,72 @@ module PureCloud
         
         if (value = attributes[:'durationsMilliseconds']).is_a?(Array)
           self.durations_milliseconds = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'acdDurationsMilliseconds')
+        
+        if (value = attributes[:'acdDurationsMilliseconds']).is_a?(Array)
+          self.acd_durations_milliseconds = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'talkDurationsMilliseconds')
+        
+        if (value = attributes[:'talkDurationsMilliseconds']).is_a?(Array)
+          self.talk_durations_milliseconds = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'acwDurationsMilliseconds')
+        
+        if (value = attributes[:'acwDurationsMilliseconds']).is_a?(Array)
+          self.acw_durations_milliseconds = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'handleDurationsMilliseconds')
+        
+        if (value = attributes[:'handleDurationsMilliseconds']).is_a?(Array)
+          self.handle_durations_milliseconds = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'holdDurationsMilliseconds')
+        
+        if (value = attributes[:'holdDurationsMilliseconds']).is_a?(Array)
+          self.hold_durations_milliseconds = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'abandonDurationsMilliseconds')
+        
+        if (value = attributes[:'abandonDurationsMilliseconds']).is_a?(Array)
+          self.abandon_durations_milliseconds = value
         end
         
         
@@ -1460,6 +1604,38 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       allowed_values = ["ascending", "descending"]
       if @agent_duration_sort_order && !allowed_values.include?(@agent_duration_sort_order)
         return false
@@ -1631,6 +1807,46 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -2048,8 +2264,16 @@ module PureCloud
           outbound_campaign_ids == o.outbound_campaign_ids &&
           outbound_contact_list_ids == o.outbound_contact_list_ids &&
           contact_ids == o.contact_ids &&
+          external_contact_ids == o.external_contact_ids &&
+          external_org_ids == o.external_org_ids &&
           ani_list == o.ani_list &&
           durations_milliseconds == o.durations_milliseconds &&
+          acd_durations_milliseconds == o.acd_durations_milliseconds &&
+          talk_durations_milliseconds == o.talk_durations_milliseconds &&
+          acw_durations_milliseconds == o.acw_durations_milliseconds &&
+          handle_durations_milliseconds == o.handle_durations_milliseconds &&
+          hold_durations_milliseconds == o.hold_durations_milliseconds &&
+          abandon_durations_milliseconds == o.abandon_durations_milliseconds &&
           evaluation_score == o.evaluation_score &&
           evaluation_critical_score == o.evaluation_critical_score &&
           evaluation_form_ids == o.evaluation_form_ids &&
@@ -2113,7 +2337,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, originating_directions, wrap_up_codes, dnis_list, session_dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, ani_list, durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, sip_call_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, flow_versions, group_ids, has_journey_customer_id, has_journey_action_map_id, has_journey_visit_id, oauth_client_ids, api_operations].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, originating_directions, wrap_up_codes, dnis_list, session_dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, external_contact_ids, external_org_ids, ani_list, durations_milliseconds, acd_durations_milliseconds, talk_durations_milliseconds, acw_durations_milliseconds, handle_durations_milliseconds, hold_durations_milliseconds, abandon_durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, sip_call_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, flow_versions, group_ids, has_journey_customer_id, has_journey_action_map_id, has_journey_visit_id, oauth_client_ids, api_operations].hash
     end
 
     # build the object from hash

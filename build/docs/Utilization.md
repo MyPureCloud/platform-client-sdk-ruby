@@ -7,7 +7,7 @@ title: Utilization
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **utilization** | [**Hash&lt;String, OrgMediaUtilization&gt;**](OrgMediaUtilization.html) | Map of media types to utilization settings.  Valid media types include call, callback, chat, email, and message. | [optional] |
+| **utilization** | [**Hash&lt;String, MediaUtilization&gt;**](MediaUtilization.html) | Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message. | [optional] |
 {: class="table table-striped"}
 
 

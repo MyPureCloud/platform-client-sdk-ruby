@@ -36,9 +36,6 @@ module PureCloud
     # The original direction of the conversation
     attr_accessor :originating_direction
 
-    # Participants in the conversation
-    attr_accessor :participants
-
     # Evaluations tied to this conversation
     attr_accessor :evaluations
 
@@ -47,6 +44,9 @@ module PureCloud
 
     # Identifiers of divisions associated with this conversation
     attr_accessor :division_ids
+
+    # Participants in the conversation
+    attr_accessor :participants
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -64,13 +64,13 @@ module PureCloud
         
         :'originating_direction' => :'originatingDirection',
         
-        :'participants' => :'participants',
-        
         :'evaluations' => :'evaluations',
         
         :'surveys' => :'surveys',
         
-        :'division_ids' => :'divisionIds'
+        :'division_ids' => :'divisionIds',
+        
+        :'participants' => :'participants'
         
       }
     end
@@ -91,13 +91,13 @@ module PureCloud
         
         :'originating_direction' => :'String',
         
-        :'participants' => :'Array<AnalyticsParticipant>',
-        
         :'evaluations' => :'Array<AnalyticsEvaluation>',
         
         :'surveys' => :'Array<AnalyticsSurvey>',
         
-        :'division_ids' => :'Array<String>'
+        :'division_ids' => :'Array<String>',
+        
+        :'participants' => :'Array<AnalyticsParticipant>'
         
       }
     end
@@ -165,17 +165,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'participants')
-        
-        if (value = attributes[:'participants']).is_a?(Array)
-          self.participants = value
-        end
-        
-        
-      
-      end
-
-      
       if attributes.has_key?(:'evaluations')
         
         if (value = attributes[:'evaluations']).is_a?(Array)
@@ -202,6 +191,17 @@ module PureCloud
         
         if (value = attributes[:'divisionIds']).is_a?(Array)
           self.division_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'participants')
+        
+        if (value = attributes[:'participants']).is_a?(Array)
+          self.participants = value
         end
         
         
@@ -342,10 +342,10 @@ module PureCloud
           media_stats_min_conversation_mos == o.media_stats_min_conversation_mos &&
           media_stats_min_conversation_r_factor == o.media_stats_min_conversation_r_factor &&
           originating_direction == o.originating_direction &&
-          participants == o.participants &&
           evaluations == o.evaluations &&
           surveys == o.surveys &&
-          division_ids == o.division_ids
+          division_ids == o.division_ids &&
+          participants == o.participants
     end
 
     # @see the `==` method
@@ -357,7 +357,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [conversation_id, conversation_start, conversation_end, media_stats_min_conversation_mos, media_stats_min_conversation_r_factor, originating_direction, participants, evaluations, surveys, division_ids].hash
+      [conversation_id, conversation_start, conversation_end, media_stats_min_conversation_mos, media_stats_min_conversation_r_factor, originating_direction, evaluations, surveys, division_ids, participants].hash
     end
 
     # build the object from hash

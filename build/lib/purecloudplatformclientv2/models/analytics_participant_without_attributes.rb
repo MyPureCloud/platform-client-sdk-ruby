@@ -17,25 +17,50 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  class OrgMediaUtilization
-    # Defines the maximum number of conversations of this type that an agent can handle at one time.
-    attr_accessor :maximum_capacity
+  class AnalyticsParticipantWithoutAttributes
+    # Unique identifier for the participant
+    attr_accessor :participant_id
 
-    # Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression
-    attr_accessor :interruptable_media_types
+    # A human readable name identifying the participant
+    attr_accessor :participant_name
 
-    # If true, then track non-ACD conversations against utilization
-    attr_accessor :include_non_acd
+    # If a user, then this will be the unique identifier for the user
+    attr_accessor :user_id
+
+    # The participant's purpose
+    attr_accessor :purpose
+
+    # External Contact Identifier
+    attr_accessor :external_contact_id
+
+    # External Organization Identifier
+    attr_accessor :external_organization_id
+
+    # Reason for which participant flagged conversation
+    attr_accessor :flagged_reason
+
+    # List of sessions associated to this participant
+    attr_accessor :sessions
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'maximum_capacity' => :'maximumCapacity',
+        :'participant_id' => :'participantId',
         
-        :'interruptable_media_types' => :'interruptableMediaTypes',
+        :'participant_name' => :'participantName',
         
-        :'include_non_acd' => :'includeNonAcd'
+        :'user_id' => :'userId',
+        
+        :'purpose' => :'purpose',
+        
+        :'external_contact_id' => :'externalContactId',
+        
+        :'external_organization_id' => :'externalOrganizationId',
+        
+        :'flagged_reason' => :'flaggedReason',
+        
+        :'sessions' => :'sessions'
         
       }
     end
@@ -44,11 +69,21 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'maximum_capacity' => :'Integer',
+        :'participant_id' => :'String',
         
-        :'interruptable_media_types' => :'Array<String>',
+        :'participant_name' => :'String',
         
-        :'include_non_acd' => :'BOOLEAN'
+        :'user_id' => :'String',
+        
+        :'purpose' => :'String',
+        
+        :'external_contact_id' => :'String',
+        
+        :'external_organization_id' => :'String',
+        
+        :'flagged_reason' => :'String',
+        
+        :'sessions' => :'Array<AnalyticsSession>'
         
       }
     end
@@ -62,30 +97,75 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'maximumCapacity')
+      if attributes.has_key?(:'participantId')
         
         
-        self.maximum_capacity = attributes[:'maximumCapacity']
+        self.participant_id = attributes[:'participantId']
         
       
       end
 
       
-      if attributes.has_key?(:'interruptableMediaTypes')
+      if attributes.has_key?(:'participantName')
         
-        if (value = attributes[:'interruptableMediaTypes']).is_a?(Array)
-          self.interruptable_media_types = value
+        
+        self.participant_name = attributes[:'participantName']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'userId')
+        
+        
+        self.user_id = attributes[:'userId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'purpose')
+        
+        
+        self.purpose = attributes[:'purpose']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'externalContactId')
+        
+        
+        self.external_contact_id = attributes[:'externalContactId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'externalOrganizationId')
+        
+        
+        self.external_organization_id = attributes[:'externalOrganizationId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'flaggedReason')
+        
+        
+        self.flagged_reason = attributes[:'flaggedReason']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'sessions')
+        
+        if (value = attributes[:'sessions']).is_a?(Array)
+          self.sessions = value
         end
         
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'includeNonAcd')
-        
-        
-        self.include_non_acd = attributes[:'includeNonAcd']
         
       
       end
@@ -118,6 +198,36 @@ module PureCloud
       
       
       
+      
+      
+      allowed_values = ["manual", "dialer", "inbound", "acd", "ivr", "voicemail", "outbound", "agent", "user", "station", "group", "customer", "external", "fax", "workflow", "campaign", "api"]
+      if @purpose && !allowed_values.include?(@purpose)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["general"]
+      if @flagged_reason && !allowed_values.include?(@flagged_reason)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -128,6 +238,49 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] purpose Object to be assigned
+    def purpose=(purpose)
+      allowed_values = ["manual", "dialer", "inbound", "acd", "ivr", "voicemail", "outbound", "agent", "user", "station", "group", "customer", "external", "fax", "workflow", "campaign", "api"]
+      if purpose && !allowed_values.include?(purpose)
+        fail ArgumentError, "invalid value for 'purpose', must be one of #{allowed_values}."
+      end
+      @purpose = purpose
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] flagged_reason Object to be assigned
+    def flagged_reason=(flagged_reason)
+      allowed_values = ["general"]
+      if flagged_reason && !allowed_values.include?(flagged_reason)
+        fail ArgumentError, "invalid value for 'flagged_reason', must be one of #{allowed_values}."
+      end
+      @flagged_reason = flagged_reason
+    end
+
     
     
     
@@ -141,9 +294,14 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          maximum_capacity == o.maximum_capacity &&
-          interruptable_media_types == o.interruptable_media_types &&
-          include_non_acd == o.include_non_acd
+          participant_id == o.participant_id &&
+          participant_name == o.participant_name &&
+          user_id == o.user_id &&
+          purpose == o.purpose &&
+          external_contact_id == o.external_contact_id &&
+          external_organization_id == o.external_organization_id &&
+          flagged_reason == o.flagged_reason &&
+          sessions == o.sessions
     end
 
     # @see the `==` method
@@ -155,7 +313,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [maximum_capacity, interruptable_media_types, include_non_acd].hash
+      [participant_id, participant_name, user_id, purpose, external_contact_id, external_organization_id, flagged_reason, sessions].hash
     end
 
     # build the object from hash

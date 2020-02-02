@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class Utilization
-    # Map of media types to utilization settings.  Valid media types include call, callback, chat, email, and message.
+    # Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message.
     attr_accessor :utilization
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -34,7 +34,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'utilization' => :'Hash<String, OrgMediaUtilization>'
+        :'utilization' => :'Hash<String, MediaUtilization>'
         
       }
     end

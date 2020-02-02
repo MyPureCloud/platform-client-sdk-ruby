@@ -43,6 +43,9 @@ module PureCloud
 
     attr_accessor :media_transcriptions
 
+    # Policy action for exporting recordings using an integration to 3rd party s3.
+    attr_accessor :integration_export
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -67,7 +70,9 @@ module PureCloud
         
         :'initiate_screen_recording' => :'initiateScreenRecording',
         
-        :'media_transcriptions' => :'mediaTranscriptions'
+        :'media_transcriptions' => :'mediaTranscriptions',
+        
+        :'integration_export' => :'integrationExport'
         
       }
     end
@@ -96,7 +101,9 @@ module PureCloud
         
         :'initiate_screen_recording' => :'InitiateScreenRecording',
         
-        :'media_transcriptions' => :'Array<MediaTranscription>'
+        :'media_transcriptions' => :'Array<MediaTranscription>',
+        
+        :'integration_export' => :'IntegrationExport'
         
       }
     end
@@ -221,6 +228,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'integrationExport')
+        
+        
+        self.integration_export = attributes[:'integrationExport']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -280,8 +296,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -353,7 +378,8 @@ module PureCloud
           assign_surveys == o.assign_surveys &&
           retention_duration == o.retention_duration &&
           initiate_screen_recording == o.initiate_screen_recording &&
-          media_transcriptions == o.media_transcriptions
+          media_transcriptions == o.media_transcriptions &&
+          integration_export == o.integration_export
     end
 
     # @see the `==` method
@@ -365,7 +391,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [retain_recording, delete_recording, always_delete, assign_evaluations, assign_metered_evaluations, assign_metered_assignment_by_agent, assign_calibrations, assign_surveys, retention_duration, initiate_screen_recording, media_transcriptions].hash
+      [retain_recording, delete_recording, always_delete, assign_evaluations, assign_metered_evaluations, assign_metered_assignment_by_agent, assign_calibrations, assign_surveys, retention_duration, initiate_screen_recording, media_transcriptions, integration_export].hash
     end
 
     # build the object from hash
