@@ -27,6 +27,10 @@ Method | Description
 [**get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id**](TelephonyProvidersEdgeApi.html#get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id) | Get a json schema (Deprecated)
 [**get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id**](TelephonyProvidersEdgeApi.html#get_configuration_schemas_edges_vnext_schema_category_schema_type_schema_id_extension_type_metadata_id) | Get metadata for a schema (Deprecated)
 [**get_telephony_providers_edge**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge) | Get edge.
+[**get_telephony_providers_edge_diagnostic_nslookup**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_diagnostic_nslookup) | Get networking-related information from an Edge for a target IP or host.
+[**get_telephony_providers_edge_diagnostic_ping**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_diagnostic_ping) | Get networking-related information from an Edge for a target IP or host.
+[**get_telephony_providers_edge_diagnostic_route**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_diagnostic_route) | Get networking-related information from an Edge for a target IP or host.
+[**get_telephony_providers_edge_diagnostic_tracepath**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_diagnostic_tracepath) | Get networking-related information from an Edge for a target IP or host.
 [**get_telephony_providers_edge_line**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_line) | Get line
 [**get_telephony_providers_edge_lines**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_lines) | Get the list of lines.
 [**get_telephony_providers_edge_logicalinterface**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edge_logicalinterface) | Get an edge logical interface
@@ -89,6 +93,10 @@ Method | Description
 [**get_telephony_providers_edges_trunks**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunks) | Get the list of available trunks.
 [**get_telephony_providers_edges_trunks_metrics**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunks_metrics) | Get the metrics for a list of trunks.
 [**get_telephony_providers_edges_trunkswithrecording**](TelephonyProvidersEdgeApi.html#get_telephony_providers_edges_trunkswithrecording) | Get Counts of trunks that have recording disabled or enabled
+[**post_telephony_providers_edge_diagnostic_nslookup**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edge_diagnostic_nslookup) | Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+[**post_telephony_providers_edge_diagnostic_ping**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edge_diagnostic_ping) | Ping Request command to collect networking-related information from an Edge for a target IP or host.
+[**post_telephony_providers_edge_diagnostic_route**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edge_diagnostic_route) | Route request command to collect networking-related information from an Edge for a target IP or host.
+[**post_telephony_providers_edge_diagnostic_tracepath**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edge_diagnostic_tracepath) | Tracepath request command to collect networking-related information from an Edge for a target IP or host.
 [**post_telephony_providers_edge_logicalinterfaces**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edge_logicalinterfaces) | Create an edge logical interface.
 [**post_telephony_providers_edge_logs_job_upload**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edge_logs_job_upload) | Request that the specified fileIds be uploaded from the Edge.
 [**post_telephony_providers_edge_logs_jobs**](TelephonyProvidersEdgeApi.html#post_telephony_providers_edge_logs_jobs) | Create a job to upload a list of Edge logs.
@@ -1388,6 +1396,266 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Edge**](Edge.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_telephony_providers_edge_diagnostic_nslookup"></a>
+
+## [**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html) get_telephony_providers_edge_diagnostic_nslookup(edge_id)
+
+
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_id = "edge_id_example" # String | Edge Id
+
+
+begin
+  #Get networking-related information from an Edge for a target IP or host.
+  result = api_instance.get_telephony_providers_edge_diagnostic_nslookup(edge_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_diagnostic_nslookup: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_id** | **String**| Edge Id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_telephony_providers_edge_diagnostic_ping"></a>
+
+## [**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html) get_telephony_providers_edge_diagnostic_ping(edge_id)
+
+
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_id = "edge_id_example" # String | Edge Id
+
+
+begin
+  #Get networking-related information from an Edge for a target IP or host.
+  result = api_instance.get_telephony_providers_edge_diagnostic_ping(edge_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_diagnostic_ping: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_id** | **String**| Edge Id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_telephony_providers_edge_diagnostic_route"></a>
+
+## [**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html) get_telephony_providers_edge_diagnostic_route(edge_id)
+
+
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_id = "edge_id_example" # String | Edge Id
+
+
+begin
+  #Get networking-related information from an Edge for a target IP or host.
+  result = api_instance.get_telephony_providers_edge_diagnostic_route(edge_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_diagnostic_route: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_id** | **String**| Edge Id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_telephony_providers_edge_diagnostic_tracepath"></a>
+
+## [**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html) get_telephony_providers_edge_diagnostic_tracepath(edge_id)
+
+
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_id = "edge_id_example" # String | Edge Id
+
+
+begin
+  #Get networking-related information from an Edge for a target IP or host.
+  result = api_instance.get_telephony_providers_edge_diagnostic_tracepath(edge_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->get_telephony_providers_edge_diagnostic_tracepath: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_id** | **String**| Edge Id |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
 
 ### HTTP request headers
 
@@ -5651,6 +5919,278 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_telephony_providers_edge_diagnostic_nslookup"></a>
+
+## [**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html) post_telephony_providers_edge_diagnostic_nslookup(edge_id, body)
+
+
+
+Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_id = "edge_id_example" # String | Edge Id
+
+body = PureCloud::EdgeNetworkDiagnosticRequest.new # EdgeNetworkDiagnosticRequest | request payload to get network diagnostic
+
+
+begin
+  #Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+  result = api_instance.post_telephony_providers_edge_diagnostic_nslookup(edge_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edge_diagnostic_nslookup: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_id** | **String**| Edge Id |  |
+ **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_telephony_providers_edge_diagnostic_ping"></a>
+
+## [**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html) post_telephony_providers_edge_diagnostic_ping(edge_id, body)
+
+
+
+Ping Request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_id = "edge_id_example" # String | Edge Id
+
+body = PureCloud::EdgeNetworkDiagnosticRequest.new # EdgeNetworkDiagnosticRequest | request payload to get network diagnostic
+
+
+begin
+  #Ping Request command to collect networking-related information from an Edge for a target IP or host.
+  result = api_instance.post_telephony_providers_edge_diagnostic_ping(edge_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edge_diagnostic_ping: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_id** | **String**| Edge Id |  |
+ **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_telephony_providers_edge_diagnostic_route"></a>
+
+## [**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html) post_telephony_providers_edge_diagnostic_route(edge_id, body)
+
+
+
+Route request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_id = "edge_id_example" # String | Edge Id
+
+body = PureCloud::EdgeNetworkDiagnosticRequest.new # EdgeNetworkDiagnosticRequest | request payload to get network diagnostic
+
+
+begin
+  #Route request command to collect networking-related information from an Edge for a target IP or host.
+  result = api_instance.post_telephony_providers_edge_diagnostic_route(edge_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edge_diagnostic_route: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_id** | **String**| Edge Id |  |
+ **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_telephony_providers_edge_diagnostic_tracepath"></a>
+
+## [**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html) post_telephony_providers_edge_diagnostic_tracepath(edge_id, body)
+
+
+
+Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::TelephonyProvidersEdgeApi.new
+
+edge_id = "edge_id_example" # String | Edge Id
+
+body = PureCloud::EdgeNetworkDiagnosticRequest.new # EdgeNetworkDiagnosticRequest | request payload to get network diagnostic
+
+
+begin
+  #Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+  result = api_instance.post_telephony_providers_edge_diagnostic_tracepath(edge_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling TelephonyProvidersEdgeApi->post_telephony_providers_edge_diagnostic_tracepath: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **edge_id** | **String**| Edge Id |  |
+ **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
 
 ### HTTP request headers
 

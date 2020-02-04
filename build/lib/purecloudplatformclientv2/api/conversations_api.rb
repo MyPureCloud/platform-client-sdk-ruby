@@ -8977,8 +8977,8 @@ module PureCloud
     end
 
     # Get messages in batch
-    # 
-    # @param conversation_id conversationId
+    # The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\"a3069a33b-bbb1-4703-9d68-061d9e9db96e\", \"55bc6be3-078c-4a49-a4e6-1e05776ed7e8\"]
+    # @param conversation_id 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :body messageIds
     # @return [TextMessageListing]
@@ -8988,8 +8988,8 @@ module PureCloud
     end
 
     # Get messages in batch
-    # 
-    # @param conversation_id conversationId
+    # The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
+    # @param conversation_id 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :body messageIds
     # @return [Array<(TextMessageListing, Fixnum, Hash)>] TextMessageListing data, response status code and response headers

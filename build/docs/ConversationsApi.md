@@ -8156,7 +8156,7 @@ Name | Type | Description  | Notes
 
 Get messages in batch
 
-
+The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\"a3069a33b-bbb1-4703-9d68-061d9e9db96e\", \"55bc6be3-078c-4a49-a4e6-1e05776ed7e8\"]
 
 Wraps POST /api/v2/conversations/messages/{conversationId}/messages/bulk 
 
@@ -8182,7 +8182,7 @@ end
 
 api_instance = PureCloud::ConversationsApi.new
 
-conversation_id = "conversation_id_example" # String | conversationId
+conversation_id = "conversation_id_example" # String | 
 
 opts = { 
   body: [PureCloud::Array<String>.new] # Array<String> | messageIds
@@ -8201,7 +8201,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| conversationId |  |
+ **conversation_id** | **String**|  |  |
  **body** | **Array&lt;String&gt;**| messageIds | [optional]  |
 {: class="table table-striped"}
 

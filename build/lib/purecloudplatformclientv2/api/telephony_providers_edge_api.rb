@@ -1398,6 +1398,266 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param [Hash] opts the optional parameters
+    # @return [EdgeNetworkDiagnosticResponse]
+    def get_telephony_providers_edge_diagnostic_nslookup(edge_id, opts = {})
+      data, _status_code, _headers = get_telephony_providers_edge_diagnostic_nslookup_with_http_info(edge_id, opts)
+      return data
+    end
+
+    # Get networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EdgeNetworkDiagnosticResponse, Fixnum, Hash)>] EdgeNetworkDiagnosticResponse data, response status code and response headers
+    def get_telephony_providers_edge_diagnostic_nslookup_with_http_info(edge_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_diagnostic_nslookup ..."
+      end
+      
+      
+      # verify the required parameter 'edge_id' is set
+      fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_diagnostic_nslookup" if edge_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EdgeNetworkDiagnosticResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edge_diagnostic_nslookup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param [Hash] opts the optional parameters
+    # @return [EdgeNetworkDiagnosticResponse]
+    def get_telephony_providers_edge_diagnostic_ping(edge_id, opts = {})
+      data, _status_code, _headers = get_telephony_providers_edge_diagnostic_ping_with_http_info(edge_id, opts)
+      return data
+    end
+
+    # Get networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EdgeNetworkDiagnosticResponse, Fixnum, Hash)>] EdgeNetworkDiagnosticResponse data, response status code and response headers
+    def get_telephony_providers_edge_diagnostic_ping_with_http_info(edge_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_diagnostic_ping ..."
+      end
+      
+      
+      # verify the required parameter 'edge_id' is set
+      fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_diagnostic_ping" if edge_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EdgeNetworkDiagnosticResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edge_diagnostic_ping\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param [Hash] opts the optional parameters
+    # @return [EdgeNetworkDiagnosticResponse]
+    def get_telephony_providers_edge_diagnostic_route(edge_id, opts = {})
+      data, _status_code, _headers = get_telephony_providers_edge_diagnostic_route_with_http_info(edge_id, opts)
+      return data
+    end
+
+    # Get networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EdgeNetworkDiagnosticResponse, Fixnum, Hash)>] EdgeNetworkDiagnosticResponse data, response status code and response headers
+    def get_telephony_providers_edge_diagnostic_route_with_http_info(edge_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_diagnostic_route ..."
+      end
+      
+      
+      # verify the required parameter 'edge_id' is set
+      fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_diagnostic_route" if edge_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EdgeNetworkDiagnosticResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edge_diagnostic_route\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param [Hash] opts the optional parameters
+    # @return [EdgeNetworkDiagnosticResponse]
+    def get_telephony_providers_edge_diagnostic_tracepath(edge_id, opts = {})
+      data, _status_code, _headers = get_telephony_providers_edge_diagnostic_tracepath_with_http_info(edge_id, opts)
+      return data
+    end
+
+    # Get networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EdgeNetworkDiagnosticResponse, Fixnum, Hash)>] EdgeNetworkDiagnosticResponse data, response status code and response headers
+    def get_telephony_providers_edge_diagnostic_tracepath_with_http_info(edge_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edge_diagnostic_tracepath ..."
+      end
+      
+      
+      # verify the required parameter 'edge_id' is set
+      fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.get_telephony_providers_edge_diagnostic_tracepath" if edge_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EdgeNetworkDiagnosticResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edge_diagnostic_tracepath\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get line
     # 
     # @param edge_id Edge ID
@@ -6361,6 +6621,306 @@ module PureCloud
         :return_type => 'TrunkRecordingEnabledCount')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#get_telephony_providers_edges_trunkswithrecording\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param body request payload to get network diagnostic
+    # @param [Hash] opts the optional parameters
+    # @return [EdgeNetworkDiagnostic]
+    def post_telephony_providers_edge_diagnostic_nslookup(edge_id, body, opts = {})
+      data, _status_code, _headers = post_telephony_providers_edge_diagnostic_nslookup_with_http_info(edge_id, body, opts)
+      return data
+    end
+
+    # Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param body request payload to get network diagnostic
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EdgeNetworkDiagnostic, Fixnum, Hash)>] EdgeNetworkDiagnostic data, response status code and response headers
+    def post_telephony_providers_edge_diagnostic_nslookup_with_http_info(edge_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_nslookup ..."
+      end
+      
+      
+      # verify the required parameter 'edge_id' is set
+      fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_nslookup" if edge_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_nslookup" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EdgeNetworkDiagnostic')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#post_telephony_providers_edge_diagnostic_nslookup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Ping Request command to collect networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param body request payload to get network diagnostic
+    # @param [Hash] opts the optional parameters
+    # @return [EdgeNetworkDiagnostic]
+    def post_telephony_providers_edge_diagnostic_ping(edge_id, body, opts = {})
+      data, _status_code, _headers = post_telephony_providers_edge_diagnostic_ping_with_http_info(edge_id, body, opts)
+      return data
+    end
+
+    # Ping Request command to collect networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param body request payload to get network diagnostic
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EdgeNetworkDiagnostic, Fixnum, Hash)>] EdgeNetworkDiagnostic data, response status code and response headers
+    def post_telephony_providers_edge_diagnostic_ping_with_http_info(edge_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_ping ..."
+      end
+      
+      
+      # verify the required parameter 'edge_id' is set
+      fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_ping" if edge_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_ping" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EdgeNetworkDiagnostic')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#post_telephony_providers_edge_diagnostic_ping\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Route request command to collect networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param body request payload to get network diagnostic
+    # @param [Hash] opts the optional parameters
+    # @return [EdgeNetworkDiagnostic]
+    def post_telephony_providers_edge_diagnostic_route(edge_id, body, opts = {})
+      data, _status_code, _headers = post_telephony_providers_edge_diagnostic_route_with_http_info(edge_id, body, opts)
+      return data
+    end
+
+    # Route request command to collect networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param body request payload to get network diagnostic
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EdgeNetworkDiagnostic, Fixnum, Hash)>] EdgeNetworkDiagnostic data, response status code and response headers
+    def post_telephony_providers_edge_diagnostic_route_with_http_info(edge_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_route ..."
+      end
+      
+      
+      # verify the required parameter 'edge_id' is set
+      fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_route" if edge_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_route" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EdgeNetworkDiagnostic')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#post_telephony_providers_edge_diagnostic_route\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param body request payload to get network diagnostic
+    # @param [Hash] opts the optional parameters
+    # @return [EdgeNetworkDiagnostic]
+    def post_telephony_providers_edge_diagnostic_tracepath(edge_id, body, opts = {})
+      data, _status_code, _headers = post_telephony_providers_edge_diagnostic_tracepath_with_http_info(edge_id, body, opts)
+      return data
+    end
+
+    # Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+    # 
+    # @param edge_id Edge Id
+    # @param body request payload to get network diagnostic
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(EdgeNetworkDiagnostic, Fixnum, Hash)>] EdgeNetworkDiagnostic data, response status code and response headers
+    def post_telephony_providers_edge_diagnostic_tracepath_with_http_info(edge_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_tracepath ..."
+      end
+      
+      
+      # verify the required parameter 'edge_id' is set
+      fail ArgumentError, "Missing the required parameter 'edge_id' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_tracepath" if edge_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling TelephonyProvidersEdgeApi.post_telephony_providers_edge_diagnostic_tracepath" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath".sub('{format}','json').sub('{' + 'edgeId' + '}', edge_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EdgeNetworkDiagnostic')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: TelephonyProvidersEdgeApi#post_telephony_providers_edge_diagnostic_tracepath\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
