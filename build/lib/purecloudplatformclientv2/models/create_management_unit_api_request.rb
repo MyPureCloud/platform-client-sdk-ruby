@@ -22,10 +22,10 @@ module PureCloud
     # The name of the management unit
     attr_accessor :name
 
-    # The default time zone to use for this management unit
+    # The default time zone to use for this management unit.  Moving to Business Unit
     attr_accessor :time_zone
 
-    # The configured first day of the week for scheduling and forecasting purposes
+    # The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit
     attr_accessor :start_day_of_week
 
     # The configuration for the management unit.  If omitted, reasonable defaults will be assigned
@@ -33,6 +33,9 @@ module PureCloud
 
     # The id of the division to which this management unit belongs.  Defaults to home division ID
     attr_accessor :division_id
+
+    # The id of the business unit to which this management unit belongs.  Required after business unit launch
+    attr_accessor :business_unit_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -46,7 +49,9 @@ module PureCloud
         
         :'settings' => :'settings',
         
-        :'division_id' => :'divisionId'
+        :'division_id' => :'divisionId',
+        
+        :'business_unit_id' => :'businessUnitId'
         
       }
     end
@@ -63,7 +68,9 @@ module PureCloud
         
         :'settings' => :'CreateManagementUnitSettingsRequest',
         
-        :'division_id' => :'String'
+        :'division_id' => :'String',
+        
+        :'business_unit_id' => :'String'
         
       }
     end
@@ -122,6 +129,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'businessUnitId')
+        
+        
+        self.business_unit_id = attributes[:'businessUnitId']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -147,19 +163,9 @@ module PureCloud
       
       
       
-      if @time_zone.nil?
-        return false
-      end
-
       
       
       
-      
-      
-      if @start_day_of_week.nil?
-        return false
-      end
-
       
       
       allowed_values = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -173,6 +179,15 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      if @business_unit_id.nil?
+        return false
+      end
+
       
       
       
@@ -214,6 +229,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -223,7 +243,8 @@ module PureCloud
           time_zone == o.time_zone &&
           start_day_of_week == o.start_day_of_week &&
           settings == o.settings &&
-          division_id == o.division_id
+          division_id == o.division_id &&
+          business_unit_id == o.business_unit_id
     end
 
     # @see the `==` method
@@ -235,7 +256,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, time_zone, start_day_of_week, settings, division_id].hash
+      [name, time_zone, start_day_of_week, settings, division_id, business_unit_id].hash
     end
 
     # build the object from hash

@@ -27,10 +27,10 @@ module PureCloud
     # The division to which this entity belongs.
     attr_accessor :division
 
-    # Start day of week for scheduling and forecasting purposes
+    # Start day of week for scheduling and forecasting purposes. Moving to Business Unit
     attr_accessor :start_day_of_week
 
-    # The time zone for the management unit in standard Olson format
+    # The time zone for the management unit in standard Olson format.  Moving to Business Unit
     attr_accessor :time_zone
 
     # The configuration settings for this management unit

@@ -21,6 +21,9 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
+    # The URI for this object
+    attr_accessor :self_uri
+
     # First day of this week schedule in yyyy-MM-dd format
     attr_accessor :week_date
 
@@ -39,14 +42,13 @@ module PureCloud
     # Version metadata for this work plan
     attr_accessor :metadata
 
-    # The URI for this object
-    attr_accessor :self_uri
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'id' => :'id',
+        
+        :'self_uri' => :'selfUri',
         
         :'week_date' => :'weekDate',
         
@@ -58,9 +60,7 @@ module PureCloud
         
         :'short_term_forecast' => :'shortTermForecast',
         
-        :'metadata' => :'metadata',
-        
-        :'self_uri' => :'selfUri'
+        :'metadata' => :'metadata'
         
       }
     end
@@ -70,6 +70,8 @@ module PureCloud
       {
         
         :'id' => :'String',
+        
+        :'self_uri' => :'String',
         
         :'week_date' => :'String',
         
@@ -81,9 +83,7 @@ module PureCloud
         
         :'short_term_forecast' => :'ShortTermForecastReference',
         
-        :'metadata' => :'WfmVersionedEntityMetadata',
-        
-        :'self_uri' => :'String'
+        :'metadata' => :'WfmVersionedEntityMetadata'
         
       }
     end
@@ -101,6 +101,15 @@ module PureCloud
         
         
         self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -155,15 +164,6 @@ module PureCloud
         
         
         self.metadata = attributes[:'metadata']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'selfUri')
-        
-        
-        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -265,13 +265,13 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
+          self_uri == o.self_uri &&
           week_date == o.week_date &&
           description == o.description &&
           published == o.published &&
           generation_results == o.generation_results &&
           short_term_forecast == o.short_term_forecast &&
-          metadata == o.metadata &&
-          self_uri == o.self_uri
+          metadata == o.metadata
     end
 
     # @see the `==` method
@@ -283,7 +283,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, week_date, description, published, generation_results, short_term_forecast, metadata, self_uri].hash
+      [id, self_uri, week_date, description, published, generation_results, short_term_forecast, metadata].hash
     end
 
     # build the object from hash

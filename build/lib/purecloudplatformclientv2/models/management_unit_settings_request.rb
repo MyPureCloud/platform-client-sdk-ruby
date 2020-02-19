@@ -22,7 +22,7 @@ module PureCloud
     # Adherence settings for this management unit
     attr_accessor :adherence
 
-    # Short term forecasting settings for this management unit
+    # Short term forecasting settings for this management unit.  Moving to Business Unit
     attr_accessor :short_term_forecasting
 
     # Time off request settings for this management unit

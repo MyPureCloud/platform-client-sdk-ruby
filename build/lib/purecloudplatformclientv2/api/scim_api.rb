@@ -322,6 +322,8 @@ module PureCloud
     # 
     # @param group_id The ID of a group. Returned with GET /api/v2/scim/groups.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output.
     # @option opts [String] :if_none_match The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.
     # @return [ScimV2Group]
     def get_scim_group(group_id, opts = {})
@@ -333,6 +335,8 @@ module PureCloud
     # 
     # @param group_id The ID of a group. Returned with GET /api/v2/scim/groups.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output.
     # @option opts [String] :if_none_match The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.
     # @return [Array<(ScimV2Group, Fixnum, Hash)>] ScimV2Group data, response status code and response headers
     def get_scim_group_with_http_info(group_id, opts = {})
@@ -354,11 +358,25 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scim/groups/{groupId}".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'attributes'] = @api_client.build_collection_param(opts[:'attributes'], :multi) if opts[:'attributes']
+      query_params[:'excludedAttributes'] = @api_client.build_collection_param(opts[:'excluded_attributes'], :multi) if opts[:'excluded_attributes']
 
       # header parameters
       header_params = {}
@@ -397,6 +415,8 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_index The 1-based index of the first query result. (default to 1)
     # @option opts [Integer] :count The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (default to 25)
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output.
     # @option opts [String] :filter Filters results.
     # @return [ScimGroupListResponse]
     def get_scim_groups(opts = {})
@@ -409,12 +429,26 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_index The 1-based index of the first query result.
     # @option opts [Integer] :count The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;.
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output.
     # @option opts [String] :filter Filters results.
     # @return [Array<(ScimGroupListResponse, Fixnum, Hash)>] ScimGroupListResponse data, response status code and response headers
     def get_scim_groups_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: SCIMApi.get_scim_groups ..."
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -441,6 +475,8 @@ module PureCloud
       query_params = {}
       query_params[:'startIndex'] = opts[:'start_index'] if opts[:'start_index']
       query_params[:'count'] = opts[:'count'] if opts[:'count']
+      query_params[:'attributes'] = @api_client.build_collection_param(opts[:'attributes'], :multi) if opts[:'attributes']
+      query_params[:'excludedAttributes'] = @api_client.build_collection_param(opts[:'excluded_attributes'], :multi) if opts[:'excluded_attributes']
       query_params[:'filter'] = opts[:'filter'] if opts[:'filter']
 
       # header parameters
@@ -499,8 +535,8 @@ module PureCloud
       fail ArgumentError, "Missing the required parameter 'resource_type' when calling SCIMApi.get_scim_resourcetype" if resource_type.nil?
       
       # verify enum value
-      unless ['User', 'Group', 'ServiceProviderConfig', 'ResourceType'].include?(resource_type)
-        fail ArgumentError, "invalid value for 'resource_type', must be one of User, Group, ServiceProviderConfig, ResourceType"
+      unless ['User', 'Group', 'ServiceProviderConfig', 'ResourceType', 'Schema'].include?(resource_type)
+        fail ArgumentError, "invalid value for 'resource_type', must be one of User, Group, ServiceProviderConfig, ResourceType, Schema"
       end
       
       
@@ -530,7 +566,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = []
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -585,7 +621,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = []
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -595,6 +631,140 @@ module PureCloud
         :return_type => 'ScimConfigResourceTypesListResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: SCIMApi#get_scim_resourcetypes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the SCIM schema by id
+    # 
+    # @param schema_id The ID of a schema.
+    # @param [Hash] opts the optional parameters
+    # @return [ScimConfigResourceType]
+    def get_scim_schema(schema_id, opts = {})
+      data, _status_code, _headers = get_scim_schema_with_http_info(schema_id, opts)
+      return data
+    end
+
+    # Get the SCIM schema by id
+    # 
+    # @param schema_id The ID of a schema.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ScimConfigResourceType, Fixnum, Hash)>] ScimConfigResourceType data, response status code and response headers
+    def get_scim_schema_with_http_info(schema_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.get_scim_schema ..."
+      end
+      
+      
+      # verify the required parameter 'schema_id' is set
+      fail ArgumentError, "Missing the required parameter 'schema_id' when calling SCIMApi.get_scim_schema" if schema_id.nil?
+      
+      # verify enum value
+      unless ['urn:ietf:params:scim:schemas:core:2.0:User', 'urn:ietf:params:scim:schemas:core:2.0:Group', 'urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig', 'urn:ietf:params:scim:schemas:core:2.0:ResourceType', 'urn:ietf:params:scim:schemas:core:2.0:Schema', 'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User', 'urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User'].include?(schema_id)
+        fail ArgumentError, "invalid value for 'schema_id', must be one of urn:ietf:params:scim:schemas:core:2.0:User, urn:ietf:params:scim:schemas:core:2.0:Group, urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig, urn:ietf:params:scim:schemas:core:2.0:ResourceType, urn:ietf:params:scim:schemas:core:2.0:Schema, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
+      end
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/schemas/{schemaId}".sub('{format}','json').sub('{' + 'schemaId' + '}', schema_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScimConfigResourceType')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#get_scim_schema\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the SCIM schemas
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :filter Filtered results are invalid and will result in a 403 (Unauthorized) return.
+    # @return [ScimConfigResourceTypesListResponse]
+    def get_scim_schemas(opts = {})
+      data, _status_code, _headers = get_scim_schemas_with_http_info(opts)
+      return data
+    end
+
+    # Get the SCIM schemas
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :filter Filtered results are invalid and will result in a 403 (Unauthorized) return.
+    # @return [Array<(ScimConfigResourceTypesListResponse, Fixnum, Hash)>] ScimConfigResourceTypesListResponse data, response status code and response headers
+    def get_scim_schemas_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.get_scim_schemas ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/schemas".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'filter'] = opts[:'filter'] if opts[:'filter']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScimConfigResourceTypesListResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#get_scim_schemas\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -649,7 +819,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = []
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -667,8 +837,8 @@ module PureCloud
     # 
     # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
-    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output.
     # @option opts [String] :if_none_match TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.
     # @return [ScimV2User]
     def get_scim_user(user_id, opts = {})
@@ -680,8 +850,8 @@ module PureCloud
     # 
     # @param user_id The ID of a user. Returned with GET /api/v2/scim/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
-    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output.
     # @option opts [String] :if_none_match TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.
     # @return [Array<(ScimV2User, Fixnum, Hash)>] ScimV2User data, response status code and response headers
     def get_scim_user_with_http_info(user_id, opts = {})
@@ -760,8 +930,8 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_index The 1-based index of the first query result. (default to 1)
     # @option opts [Integer] :count The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (default to 25)
-    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
-    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output.
     # @option opts [String] :filter Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;.
     # @return [ScimUserListResponse]
     def get_scim_users(opts = {})
@@ -774,8 +944,8 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_index The 1-based index of the first query result.
     # @option opts [Integer] :count The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;.
-    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
-    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output.
     # @option opts [String] :filter Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;.
     # @return [Array<(ScimUserListResponse, Fixnum, Hash)>] ScimUserListResponse data, response status code and response headers
     def get_scim_users_with_http_info(opts = {})
@@ -859,6 +1029,8 @@ module PureCloud
     # 
     # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output.
     # @option opts [String] :if_none_match TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. 
     # @return [ScimV2Group]
     def get_scim_v2_group(group_id, opts = {})
@@ -870,6 +1042,8 @@ module PureCloud
     # 
     # @param group_id The ID of a group. Returned with GET /api/v2/scim/v2/groups.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output.
     # @option opts [String] :if_none_match TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. 
     # @return [Array<(ScimV2Group, Fixnum, Hash)>] ScimV2Group data, response status code and response headers
     def get_scim_v2_group_with_http_info(group_id, opts = {})
@@ -891,11 +1065,25 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scim/v2/groups/{groupId}".sub('{format}','json').sub('{' + 'groupId' + '}', group_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'attributes'] = @api_client.build_collection_param(opts[:'attributes'], :multi) if opts[:'attributes']
+      query_params[:'excludedAttributes'] = @api_client.build_collection_param(opts[:'excluded_attributes'], :multi) if opts[:'excluded_attributes']
 
       # header parameters
       header_params = {}
@@ -935,6 +1123,8 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_index The 1-based index of the first query result. (default to 1)
     # @option opts [Integer] :count The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (default to 25)
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output.
     # @return [ScimGroupListResponse]
     def get_scim_v2_groups(filter, opts = {})
       data, _status_code, _headers = get_scim_v2_groups_with_http_info(filter, opts)
@@ -947,6 +1137,8 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_index The 1-based index of the first query result.
     # @option opts [Integer] :count The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;.
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output.
     # @return [Array<(ScimGroupListResponse, Fixnum, Hash)>] ScimGroupListResponse data, response status code and response headers
     def get_scim_v2_groups_with_http_info(filter, opts = {})
       if @api_client.config.debugging
@@ -973,6 +1165,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/scim/v2/groups".sub('{format}','json')
 
@@ -981,6 +1185,8 @@ module PureCloud
       query_params[:'filter'] = filter
       query_params[:'startIndex'] = opts[:'start_index'] if opts[:'start_index']
       query_params[:'count'] = opts[:'count'] if opts[:'count']
+      query_params[:'attributes'] = @api_client.build_collection_param(opts[:'attributes'], :multi) if opts[:'attributes']
+      query_params[:'excludedAttributes'] = @api_client.build_collection_param(opts[:'excluded_attributes'], :multi) if opts[:'excluded_attributes']
 
       # header parameters
       header_params = {}
@@ -1038,8 +1244,8 @@ module PureCloud
       fail ArgumentError, "Missing the required parameter 'resource_type' when calling SCIMApi.get_scim_v2_resourcetype" if resource_type.nil?
       
       # verify enum value
-      unless ['User', 'Group', 'ServiceProviderConfig', 'ResourceType'].include?(resource_type)
-        fail ArgumentError, "invalid value for 'resource_type', must be one of User, Group, ServiceProviderConfig, ResourceType"
+      unless ['User', 'Group', 'ServiceProviderConfig', 'ResourceType', 'Schema'].include?(resource_type)
+        fail ArgumentError, "invalid value for 'resource_type', must be one of User, Group, ServiceProviderConfig, ResourceType, Schema"
       end
       
       
@@ -1069,7 +1275,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = []
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1124,7 +1330,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = []
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1134,6 +1340,140 @@ module PureCloud
         :return_type => 'ScimConfigResourceTypesListResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: SCIMApi#get_scim_v2_resourcetypes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the SCIM schema by id
+    # 
+    # @param schema_id The ID of a schema.
+    # @param [Hash] opts the optional parameters
+    # @return [ScimV2SchemaDefinition]
+    def get_scim_v2_schema(schema_id, opts = {})
+      data, _status_code, _headers = get_scim_v2_schema_with_http_info(schema_id, opts)
+      return data
+    end
+
+    # Get the SCIM schema by id
+    # 
+    # @param schema_id The ID of a schema.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ScimV2SchemaDefinition, Fixnum, Hash)>] ScimV2SchemaDefinition data, response status code and response headers
+    def get_scim_v2_schema_with_http_info(schema_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.get_scim_v2_schema ..."
+      end
+      
+      
+      # verify the required parameter 'schema_id' is set
+      fail ArgumentError, "Missing the required parameter 'schema_id' when calling SCIMApi.get_scim_v2_schema" if schema_id.nil?
+      
+      # verify enum value
+      unless ['urn:ietf:params:scim:schemas:core:2.0:User', 'urn:ietf:params:scim:schemas:core:2.0:Group', 'urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig', 'urn:ietf:params:scim:schemas:core:2.0:ResourceType', 'urn:ietf:params:scim:schemas:core:2.0:Schema', 'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User', 'urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User'].include?(schema_id)
+        fail ArgumentError, "invalid value for 'schema_id', must be one of urn:ietf:params:scim:schemas:core:2.0:User, urn:ietf:params:scim:schemas:core:2.0:Group, urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig, urn:ietf:params:scim:schemas:core:2.0:ResourceType, urn:ietf:params:scim:schemas:core:2.0:Schema, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
+      end
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/v2/schemas/{schemaId}".sub('{format}','json').sub('{' + 'schemaId' + '}', schema_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScimV2SchemaDefinition')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#get_scim_v2_schema\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the SCIM schemas
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :filter Filtered results are invalid and will result in a 403 (Unauthorized) return.
+    # @return [ScimV2SchemaListResponse]
+    def get_scim_v2_schemas(opts = {})
+      data, _status_code, _headers = get_scim_v2_schemas_with_http_info(opts)
+      return data
+    end
+
+    # Get the SCIM schemas
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :filter Filtered results are invalid and will result in a 403 (Unauthorized) return.
+    # @return [Array<(ScimV2SchemaListResponse, Fixnum, Hash)>] ScimV2SchemaListResponse data, response status code and response headers
+    def get_scim_v2_schemas_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SCIMApi.get_scim_v2_schemas ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/scim/v2/schemas".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'filter'] = opts[:'filter'] if opts[:'filter']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json', 'application/scim+json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json', 'application/scim+json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ScimV2SchemaListResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SCIMApi#get_scim_v2_schemas\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1188,7 +1528,7 @@ module PureCloud
       # http body (model)
       post_body = nil
       
-      auth_names = []
+      auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
@@ -1206,8 +1546,8 @@ module PureCloud
     # 
     # @param user_id The ID of a user. Returned with GET /api/v2/scim/v2/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
-    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output.
     # @option opts [String] :if_none_match The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.
     # @return [ScimV2User]
     def get_scim_v2_user(user_id, opts = {})
@@ -1219,8 +1559,8 @@ module PureCloud
     # 
     # @param user_id The ID of a user. Returned with GET /api/v2/scim/v2/users.
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
-    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output.
     # @option opts [String] :if_none_match The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.
     # @return [Array<(ScimV2User, Fixnum, Hash)>] ScimV2User data, response status code and response headers
     def get_scim_v2_user_with_http_info(user_id, opts = {})
@@ -1299,8 +1639,8 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_index The 1-based index of the first query result. (default to 1)
     # @option opts [Integer] :count The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (default to 25)
-    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
-    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output.
     # @option opts [String] :filter Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;.
     # @return [ScimUserListResponse]
     def get_scim_v2_users(opts = {})
@@ -1313,8 +1653,8 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_index The 1-based index of the first query result.
     # @option opts [Integer] :count The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;.
-    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
-    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :attributes Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes.
+    # @option opts [Array<String>] :excluded_attributes Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output.
     # @option opts [String] :filter Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;.
     # @return [Array<(ScimUserListResponse, Fixnum, Hash)>] ScimUserListResponse data, response status code and response headers
     def get_scim_v2_users_with_http_info(opts = {})

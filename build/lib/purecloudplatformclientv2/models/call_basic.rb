@@ -173,7 +173,7 @@ module PureCloud
         
         :'segments' => :'Array<Segment>',
         
-        :'error_info' => :'ErrorBody',
+        :'error_info' => :'ErrorInfo',
         
         :'disconnect_type' => :'String',
         

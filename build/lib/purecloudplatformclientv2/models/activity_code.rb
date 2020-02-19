@@ -22,6 +22,9 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
+    # The URI for this object
+    attr_accessor :self_uri
+
     # The name of the activity code. Default activity codes will be created with an empty name
     attr_accessor :name
 
@@ -49,14 +52,13 @@ module PureCloud
     # Version metadata for the associated management unit's list of activity codes
     attr_accessor :metadata
 
-    # The URI for this object
-    attr_accessor :self_uri
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'id' => :'id',
+        
+        :'self_uri' => :'selfUri',
         
         :'name' => :'name',
         
@@ -74,9 +76,7 @@ module PureCloud
         
         :'agent_time_off_selectable' => :'agentTimeOffSelectable',
         
-        :'metadata' => :'metadata',
-        
-        :'self_uri' => :'selfUri'
+        :'metadata' => :'metadata'
         
       }
     end
@@ -86,6 +86,8 @@ module PureCloud
       {
         
         :'id' => :'String',
+        
+        :'self_uri' => :'String',
         
         :'name' => :'String',
         
@@ -103,9 +105,7 @@ module PureCloud
         
         :'agent_time_off_selectable' => :'BOOLEAN',
         
-        :'metadata' => :'WfmVersionedEntityMetadata',
-        
-        :'self_uri' => :'String'
+        :'metadata' => :'WfmVersionedEntityMetadata'
         
       }
     end
@@ -123,6 +123,15 @@ module PureCloud
         
         
         self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -209,15 +218,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'selfUri')
-        
-        
-        self.self_uri = attributes[:'selfUri']
-        
-      
-      end
-
-      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -232,6 +232,10 @@ module PureCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      
+      
+      
+      
       
       
       
@@ -283,12 +287,13 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -349,17 +354,13 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
+          self_uri == o.self_uri &&
           name == o.name &&
           is_active == o.is_active &&
           is_default == o.is_default &&
@@ -368,8 +369,7 @@ module PureCloud
           counts_as_paid_time == o.counts_as_paid_time &&
           counts_as_work_time == o.counts_as_work_time &&
           agent_time_off_selectable == o.agent_time_off_selectable &&
-          metadata == o.metadata &&
-          self_uri == o.self_uri
+          metadata == o.metadata
     end
 
     # @see the `==` method
@@ -381,7 +381,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, is_active, is_default, category, length_in_minutes, counts_as_paid_time, counts_as_work_time, agent_time_off_selectable, metadata, self_uri].hash
+      [id, self_uri, name, is_active, is_default, category, length_in_minutes, counts_as_paid_time, counts_as_work_time, agent_time_off_selectable, metadata].hash
     end
 
     # build the object from hash

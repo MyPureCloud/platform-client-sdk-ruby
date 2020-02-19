@@ -383,6 +383,60 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete an organization's routing settings
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_routing_settings(opts = {})
+      delete_routing_settings_with_http_info(opts)
+      return nil
+    end
+
+    # Delete an organization&#39;s routing settings
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_routing_settings_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.delete_routing_settings ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/routing/settings".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#delete_routing_settings\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete Routing Skill
     # 
     # @param skill_id Skill ID
@@ -2265,6 +2319,61 @@ module PureCloud
         :return_type => 'UserQueueEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#get_routing_queues_me\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get an organization's routing settings
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [RoutingSettings]
+    def get_routing_settings(opts = {})
+      data, _status_code, _headers = get_routing_settings_with_http_info(opts)
+      return data
+    end
+
+    # Get an organization&#39;s routing settings
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(RoutingSettings, Fixnum, Hash)>] RoutingSettings data, response status code and response headers
+    def get_routing_settings_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.get_routing_settings ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/routing/settings".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'RoutingSettings')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#get_routing_settings\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -5248,6 +5357,71 @@ module PureCloud
         :return_type => 'Queue')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#put_routing_queue\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update an organization's routing settings
+    # 
+    # @param body Organization Settings
+    # @param [Hash] opts the optional parameters
+    # @return [RoutingSettings]
+    def put_routing_settings(body, opts = {})
+      data, _status_code, _headers = put_routing_settings_with_http_info(body, opts)
+      return data
+    end
+
+    # Update an organization&#39;s routing settings
+    # 
+    # @param body Organization Settings
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(RoutingSettings, Fixnum, Hash)>] RoutingSettings data, response status code and response headers
+    def put_routing_settings_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.put_routing_settings ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.put_routing_settings" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/settings".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'RoutingSettings')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#put_routing_settings\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

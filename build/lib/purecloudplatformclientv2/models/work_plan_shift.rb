@@ -37,7 +37,7 @@ module PureCloud
     # Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true
     attr_accessor :latest_start_time_minutes_from_midnight
 
-    # Whether the latest stop time constraint for the shift is enabled
+    # Whether the latest stop time constraint for the shift is enabled.  Deprecated, use constrainLatestStopTime instead
     attr_accessor :constrain_stop_time
 
     # Whether the latest stop time constraint for the shift is enabled

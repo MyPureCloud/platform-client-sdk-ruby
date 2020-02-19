@@ -283,7 +283,7 @@ module PureCloud
         
         :'attributes' => :'Hash<String, String>',
         
-        :'error_info' => :'ErrorBody',
+        :'error_info' => :'ErrorInfo',
         
         :'script' => :'DomainEntityRef',
         

@@ -21,11 +21,11 @@ module PureCloud
     # The globally unique identifier for the object.
     attr_accessor :id
 
-    # First day of this week schedule in yyyy-MM-dd format
-    attr_accessor :week_date
-
     # The URI for this object
     attr_accessor :self_uri
+
+    # First day of this week schedule in yyyy-MM-dd format
+    attr_accessor :week_date
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -33,9 +33,9 @@ module PureCloud
         
         :'id' => :'id',
         
-        :'week_date' => :'weekDate',
+        :'self_uri' => :'selfUri',
         
-        :'self_uri' => :'selfUri'
+        :'week_date' => :'weekDate'
         
       }
     end
@@ -46,9 +46,9 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'week_date' => :'String',
+        :'self_uri' => :'String',
         
-        :'self_uri' => :'String'
+        :'week_date' => :'String'
         
       }
     end
@@ -71,19 +71,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'weekDate')
+      if attributes.has_key?(:'selfUri')
         
         
-        self.week_date = attributes[:'weekDate']
+        self.self_uri = attributes[:'selfUri']
         
       
       end
 
       
-      if attributes.has_key?(:'selfUri')
+      if attributes.has_key?(:'weekDate')
         
         
-        self.self_uri = attributes[:'selfUri']
+        self.week_date = attributes[:'weekDate']
         
       
       end
@@ -140,8 +140,8 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          week_date == o.week_date &&
-          self_uri == o.self_uri
+          self_uri == o.self_uri &&
+          week_date == o.week_date
     end
 
     # @see the `==` method
@@ -153,7 +153,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, week_date, self_uri].hash
+      [id, self_uri, week_date].hash
     end
 
     # build the object from hash

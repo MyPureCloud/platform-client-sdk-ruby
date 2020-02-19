@@ -16,6 +16,8 @@ Method | Description
 [**get_scim_groups**](SCIMApi.html#get_scim_groups) | Get a list of groups
 [**get_scim_resourcetype**](SCIMApi.html#get_scim_resourcetype) | Get a resource type
 [**get_scim_resourcetypes**](SCIMApi.html#get_scim_resourcetypes) | Get a list of resource types
+[**get_scim_schema**](SCIMApi.html#get_scim_schema) | Get the SCIM schema by id
+[**get_scim_schemas**](SCIMApi.html#get_scim_schemas) | Get the SCIM schemas
 [**get_scim_serviceproviderconfig**](SCIMApi.html#get_scim_serviceproviderconfig) | Get a service provider&#39;s configuration
 [**get_scim_user**](SCIMApi.html#get_scim_user) | Get a user
 [**get_scim_users**](SCIMApi.html#get_scim_users) | Get a list of users
@@ -23,6 +25,8 @@ Method | Description
 [**get_scim_v2_groups**](SCIMApi.html#get_scim_v2_groups) | Get a list of groups
 [**get_scim_v2_resourcetype**](SCIMApi.html#get_scim_v2_resourcetype) | Get a resource type
 [**get_scim_v2_resourcetypes**](SCIMApi.html#get_scim_v2_resourcetypes) | Get a list of resource types
+[**get_scim_v2_schema**](SCIMApi.html#get_scim_v2_schema) | Get the SCIM schema by id
+[**get_scim_v2_schemas**](SCIMApi.html#get_scim_v2_schemas) | Get the SCIM schemas
 [**get_scim_v2_serviceproviderconfig**](SCIMApi.html#get_scim_v2_serviceproviderconfig) | Get a service provider&#39;s configuration
 [**get_scim_v2_user**](SCIMApi.html#get_scim_v2_user) | Get a user
 [**get_scim_v2_users**](SCIMApi.html#get_scim_v2_users) | Get a list of users
@@ -351,6 +355,8 @@ api_instance = PureCloud::SCIMApi.new
 group_id = "group_id_example" # String | The ID of a group. Returned with GET /api/v2/scim/groups.
 
 opts = { 
+  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes and the 'id', 'active', and 'meta attributes . Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+  excluded_attributes: ["excluded_attributes_example"], # Array<String> | Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. The'id', 'active', and 'meta'  attributes will always be present in the output.
   if_none_match: "if_none_match_example" # String | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.
 }
 
@@ -368,6 +374,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **String**| The ID of a group. Returned with GET /api/v2/scim/groups. |  |
+ **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
+ **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. | [optional] <br />**Values**: id, displayName, members, externalId, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
  **if_none_match** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional]  |
 {: class="table table-striped"}
 
@@ -420,6 +428,8 @@ api_instance = PureCloud::SCIMApi.new
 opts = { 
   start_index: 1, # Integer | The 1-based index of the first query result.
   count: 25, # Integer | The requested number of items per page. A value of 0 returns \"totalResults\".
+  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes and the 'id', 'active', and 'meta attributes . Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+  excluded_attributes: ["excluded_attributes_example"], # Array<String> | Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. The'id', 'active', and 'meta'  attributes will always be present in the output.
   filter: "displayName eq groupName" # String | Filters results.
 }
 
@@ -438,6 +448,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_index** | **Integer**| The 1-based index of the first query result. | [optional] [default to 1] |
  **count** | **Integer**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
+ **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
+ **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. | [optional] <br />**Values**: id, displayName, members, externalId, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
  **filter** | **String**| Filters results. | [optional]  |
 {: class="table table-striped"}
 
@@ -473,6 +485,16 @@ Requires NO permissions:
 ```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
 
 api_instance = PureCloud::SCIMApi.new
 
@@ -492,7 +514,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resource_type** | **String**| The type of resource. Returned with GET /api/v2/scim/resourcetypes. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType |
+ **resource_type** | **String**| The type of resource. Returned with GET /api/v2/scim/resourcetypes. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType, Schema |
 {: class="table table-striped"}
 
 
@@ -527,6 +549,16 @@ Requires NO permissions:
 ```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
 
 api_instance = PureCloud::SCIMApi.new
 
@@ -541,6 +573,135 @@ end
 
 ### Parameters
 This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
+<a name="get_scim_schema"></a>
+
+## [**ScimConfigResourceType**](ScimConfigResourceType.html) get_scim_schema(schema_id)
+
+
+
+Get the SCIM schema by id
+
+
+
+Wraps GET /api/v2/scim/schemas/{schemaId} 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::SCIMApi.new
+
+schema_id = "schema_id_example" # String | The ID of a schema.
+
+
+begin
+  #Get the SCIM schema by id
+  result = api_instance.get_scim_schema(schema_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->get_scim_schema: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schema_id** | **String**| The ID of a schema. | <br />**Values**: urn:ietf:params:scim:schemas:core:2.0:User, urn:ietf:params:scim:schemas:core:2.0:Group, urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig, urn:ietf:params:scim:schemas:core:2.0:ResourceType, urn:ietf:params:scim:schemas:core:2.0:Schema, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScimConfigResourceType**](ScimConfigResourceType.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
+<a name="get_scim_schemas"></a>
+
+## [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html) get_scim_schemas(opts)
+
+
+
+Get the SCIM schemas
+
+
+
+Wraps GET /api/v2/scim/schemas 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::SCIMApi.new
+
+opts = { 
+  filter: "displayName eq groupName" # String | Filtered results are invalid and will result in a 403 (Unauthorized) return.
+}
+
+begin
+  #Get the SCIM schemas
+  result = api_instance.get_scim_schemas(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->get_scim_schemas: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional]  |
 {: class="table table-striped"}
 
 
@@ -575,6 +736,16 @@ Requires NO permissions:
 ```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
 
 api_instance = PureCloud::SCIMApi.new
 
@@ -622,8 +793,11 @@ Get a user
 
 Wraps GET /api/v2/scim/users/{userId} 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* authorization:grant:view
+* authorization:grant:add
+* authorization:grant:delete
 
 
 ### Example
@@ -646,8 +820,8 @@ api_instance = PureCloud::SCIMApi.new
 user_id = "user_id_example" # String | The ID of a user. Returned with GET /api/v2/scim/users.
 
 opts = { 
-  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \"attributes\" to avoid expensive secondary calls for the default attributes.
-  excluded_attributes: ["excluded_attributes_example"], # Array<String> | Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes.
+  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes ant the 'id', 'userName', 'active', and 'meta' attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+  excluded_attributes: ["excluded_attributes_example"], # Array<String> | Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. The 'id', 'userName', 'active', 'meta' attributes  will always be present in output.
   if_none_match: "if_none_match_example" # String | TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.
 }
 
@@ -665,8 +839,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| The ID of a user. Returned with GET /api/v2/scim/users. |  |
- **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value |
- **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value |
+ **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages |
+ **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages |
  **if_none_match** | **String**| TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional]  |
 {: class="table table-striped"}
 
@@ -694,8 +868,11 @@ To return all active users, do not use a filter parameter. To return inactive us
 
 Wraps GET /api/v2/scim/users 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* authorization:grant:view
+* authorization:grant:add
+* authorization:grant:delete
 
 
 ### Example
@@ -718,8 +895,8 @@ api_instance = PureCloud::SCIMApi.new
 opts = { 
   start_index: 1, # Integer | The 1-based index of the first query result.
   count: 25, # Integer | The requested number of items per page. A value of 0 returns \"totalResults\".
-  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \"attributes\" to avoid expensive secondary calls for the default attributes.
-  excluded_attributes: ["excluded_attributes_example"], # Array<String> | Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes.
+  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes ant the 'id', 'userName', 'active', and 'meta' attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+  excluded_attributes: ["excluded_attributes_example"], # Array<String> | Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. The 'id', 'userName', 'active', 'meta' attributes  will always be present in output.
   filter: "filter_example" # String | Filters results. If nothing is specified, returns all active users. Examples of valid values: \"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\", \"userName eq search@sample.org\", \"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\", \"email eq search@sample.org\", \"division eq divisionName\", \"externalId eq 167844\", \"active eq false\".
 }
 
@@ -738,8 +915,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_index** | **Integer**| The 1-based index of the first query result. | [optional] [default to 1] |
  **count** | **Integer**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
- **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value |
- **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value |
+ **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages |
+ **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages |
  **filter** | **String**| Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. | [optional]  |
 {: class="table table-striped"}
 
@@ -792,6 +969,8 @@ api_instance = PureCloud::SCIMApi.new
 group_id = "group_id_example" # String | The ID of a group. Returned with GET /api/v2/scim/v2/groups.
 
 opts = { 
+  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes and the 'id', 'active', and 'meta attributes . Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+  excluded_attributes: ["excluded_attributes_example"], # Array<String> | Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. The'id', 'active', and 'meta'  attributes will always be present in the output.
   if_none_match: "if_none_match_example" # String | TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. 
 }
 
@@ -809,6 +988,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **String**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
+ **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
+ **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. | [optional] <br />**Values**: id, displayName, members, externalId, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
  **if_none_match** | **String**| TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional]  |
 {: class="table table-striped"}
 
@@ -862,7 +1043,9 @@ filter = "displayName eq groupName" # String | Filters results.
 
 opts = { 
   start_index: 1, # Integer | The 1-based index of the first query result.
-  count: 25 # Integer | The requested number of items per page. A value of 0 returns \"totalResults\".
+  count: 25, # Integer | The requested number of items per page. A value of 0 returns \"totalResults\".
+  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes and the 'id', 'active', and 'meta attributes . Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+  excluded_attributes: ["excluded_attributes_example"] # Array<String> | Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. The'id', 'active', and 'meta'  attributes will always be present in the output.
 }
 
 begin
@@ -881,6 +1064,8 @@ Name | Type | Description  | Notes
  **filter** | **String**| Filters results. |  |
  **start_index** | **Integer**| The 1-based index of the first query result. | [optional] [default to 1] |
  **count** | **Integer**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
+ **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
+ **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. | [optional] <br />**Values**: id, displayName, members, externalId, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
 {: class="table table-striped"}
 
 
@@ -915,6 +1100,16 @@ Requires NO permissions:
 ```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
 
 api_instance = PureCloud::SCIMApi.new
 
@@ -934,7 +1129,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resource_type** | **String**| The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType |
+ **resource_type** | **String**| The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType, Schema |
 {: class="table table-striped"}
 
 
@@ -969,6 +1164,16 @@ Requires NO permissions:
 ```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
 
 api_instance = PureCloud::SCIMApi.new
 
@@ -997,6 +1202,135 @@ This endpoint does not need any parameter.
 
 
 
+<a name="get_scim_v2_schema"></a>
+
+## [**ScimV2SchemaDefinition**](ScimV2SchemaDefinition.html) get_scim_v2_schema(schema_id)
+
+
+
+Get the SCIM schema by id
+
+
+
+Wraps GET /api/v2/scim/v2/schemas/{schemaId} 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::SCIMApi.new
+
+schema_id = "schema_id_example" # String | The ID of a schema.
+
+
+begin
+  #Get the SCIM schema by id
+  result = api_instance.get_scim_v2_schema(schema_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->get_scim_v2_schema: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schema_id** | **String**| The ID of a schema. | <br />**Values**: urn:ietf:params:scim:schemas:core:2.0:User, urn:ietf:params:scim:schemas:core:2.0:Group, urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig, urn:ietf:params:scim:schemas:core:2.0:ResourceType, urn:ietf:params:scim:schemas:core:2.0:Schema, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScimV2SchemaDefinition**](ScimV2SchemaDefinition.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
+<a name="get_scim_v2_schemas"></a>
+
+## [**ScimV2SchemaListResponse**](ScimV2SchemaListResponse.html) get_scim_v2_schemas(opts)
+
+
+
+Get the SCIM schemas
+
+
+
+Wraps GET /api/v2/scim/v2/schemas 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::SCIMApi.new
+
+opts = { 
+  filter: "displayName eq groupName" # String | Filtered results are invalid and will result in a 403 (Unauthorized) return.
+}
+
+begin
+  #Get the SCIM schemas
+  result = api_instance.get_scim_v2_schemas(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SCIMApi->get_scim_v2_schemas: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ScimV2SchemaListResponse**](ScimV2SchemaListResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
+
+
+
 <a name="get_scim_v2_serviceproviderconfig"></a>
 
 ## [**ScimServiceProviderConfig**](ScimServiceProviderConfig.html) get_scim_v2_serviceproviderconfig(opts)
@@ -1017,6 +1351,16 @@ Requires NO permissions:
 ```{"language":"ruby"}
 # load the gem
 require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
 
 api_instance = PureCloud::SCIMApi.new
 
@@ -1064,8 +1408,11 @@ Get a user
 
 Wraps GET /api/v2/scim/v2/users/{userId} 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* authorization:grant:view
+* authorization:grant:add
+* authorization:grant:delete
 
 
 ### Example
@@ -1088,8 +1435,8 @@ api_instance = PureCloud::SCIMApi.new
 user_id = "user_id_example" # String | The ID of a user. Returned with GET /api/v2/scim/v2/users.
 
 opts = { 
-  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \"attributes\" to avoid expensive secondary calls for the default attributes.
-  excluded_attributes: ["excluded_attributes_example"], # Array<String> | Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes.
+  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes ant the 'id', 'userName', 'active', and 'meta' attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+  excluded_attributes: ["excluded_attributes_example"], # Array<String> | Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. The 'id', 'userName', 'active', 'meta' attributes  will always be present in output.
   if_none_match: "if_none_match_example" # String | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.
 }
 
@@ -1107,8 +1454,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| The ID of a user. Returned with GET /api/v2/scim/v2/users. |  |
- **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value |
- **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value |
+ **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages |
+ **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages |
  **if_none_match** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional]  |
 {: class="table table-striped"}
 
@@ -1136,8 +1483,11 @@ To return all active users, do not use a filter parameter. To return inactive us
 
 Wraps GET /api/v2/scim/v2/users 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* authorization:grant:view
+* authorization:grant:add
+* authorization:grant:delete
 
 
 ### Example
@@ -1160,8 +1510,8 @@ api_instance = PureCloud::SCIMApi.new
 opts = { 
   start_index: 1, # Integer | The 1-based index of the first query result.
   count: 25, # Integer | The requested number of items per page. A value of 0 returns \"totalResults\".
-  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \"attributes\" to avoid expensive secondary calls for the default attributes.
-  excluded_attributes: ["excluded_attributes_example"], # Array<String> | Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes.
+  attributes: ["attributes_example"], # Array<String> | Indicates which attributes to include. Returns these attributes ant the 'id', 'userName', 'active', and 'meta' attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+  excluded_attributes: ["excluded_attributes_example"], # Array<String> | Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. The 'id', 'userName', 'active', 'meta' attributes  will always be present in output.
   filter: "filter_example" # String | Filters results. If nothing is specified, returns all active users. Examples of valid values: \"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\", \"userName eq search@sample.org\", \"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\", \"email eq search@sample.org\", \"division eq divisionName\", \"externalId eq 167844\", \"active eq false\".
 }
 
@@ -1180,8 +1530,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_index** | **Integer**| The 1-based index of the first query result. | [optional] [default to 1] |
  **count** | **Integer**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
- **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value |
- **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value |
+ **attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages |
+ **excluded_attributes** | [**Array&lt;String&gt;**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, photos, groups, rolesurn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:photos, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages |
  **filter** | **String**| Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. | [optional]  |
 {: class="table table-striped"}
 
@@ -1285,6 +1635,10 @@ Requires ANY permissions:
 
 * directory:user:edit
 * directory:user:setPassword
+* authorization:grant:add
+* authorization:grant:delete
+* routing:skill:assign
+* routing:language:assign
 
 
 ### Example
@@ -1430,6 +1784,10 @@ Requires ANY permissions:
 
 * directory:user:edit
 * directory:user:setPassword
+* authorization:grant:add
+* authorization:grant:delete
+* routing:skill:assign
+* routing:language:assign
 
 
 ### Example
@@ -1567,6 +1925,10 @@ Wraps POST /api/v2/scim/users
 Requires ANY permissions: 
 
 * directory:user:add
+* authorization:grant:add
+* authorization:grant:delete
+* routing:skill:assign
+* routing:language:assign
 
 
 ### Example
@@ -1697,6 +2059,10 @@ Wraps POST /api/v2/scim/v2/users
 Requires ANY permissions: 
 
 * directory:user:add
+* authorization:grant:add
+* authorization:grant:delete
+* routing:skill:assign
+* routing:language:assign
 
 
 ### Example
@@ -1835,6 +2201,10 @@ Requires ANY permissions:
 
 * directory:user:edit
 * directory:user:setPassword
+* authorization:grant:add
+* authorization:grant:delete
+* routing:skill:assign
+* routing:language:assign
 
 
 ### Example
@@ -1980,6 +2350,10 @@ Requires ANY permissions:
 
 * directory:user:edit
 * directory:user:setPassword
+* authorization:grant:add
+* authorization:grant:delete
+* routing:skill:assign
+* routing:language:assign
 
 
 ### Example

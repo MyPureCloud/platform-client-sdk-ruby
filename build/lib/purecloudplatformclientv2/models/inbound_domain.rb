@@ -29,6 +29,12 @@ module PureCloud
     # Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email.
     attr_accessor :sub_domain
 
+    # The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false.
+    attr_accessor :mail_from_settings
+
+    # The custom SMTP server integration to use when sending outbound emails from this domain.
+    attr_accessor :custom_smtp_server
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -43,6 +49,10 @@ module PureCloud
         :'mx_record_status' => :'mxRecordStatus',
         
         :'sub_domain' => :'subDomain',
+        
+        :'mail_from_settings' => :'mailFromSettings',
+        
+        :'custom_smtp_server' => :'customSMTPServer',
         
         :'self_uri' => :'selfUri'
         
@@ -60,6 +70,10 @@ module PureCloud
         :'mx_record_status' => :'String',
         
         :'sub_domain' => :'BOOLEAN',
+        
+        :'mail_from_settings' => :'MailFromResult',
+        
+        :'custom_smtp_server' => :'DomainEntityRef',
         
         :'self_uri' => :'String'
         
@@ -106,6 +120,24 @@ module PureCloud
         
         
         self.sub_domain = attributes[:'subDomain']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'mailFromSettings')
+        
+        
+        self.mail_from_settings = attributes[:'mailFromSettings']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'customSMTPServer')
+        
+        
+        self.custom_smtp_server = attributes[:'customSMTPServer']
         
       
       end
@@ -165,6 +197,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -202,6 +242,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -211,6 +261,8 @@ module PureCloud
           name == o.name &&
           mx_record_status == o.mx_record_status &&
           sub_domain == o.sub_domain &&
+          mail_from_settings == o.mail_from_settings &&
+          custom_smtp_server == o.custom_smtp_server &&
           self_uri == o.self_uri
     end
 
@@ -223,7 +275,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, mx_record_status, sub_domain, self_uri].hash
+      [id, name, mx_record_status, sub_domain, mail_from_settings, custom_smtp_server, self_uri].hash
     end
 
     # build the object from hash

@@ -24,12 +24,17 @@ module PureCloud
     # The library name.
     attr_accessor :name
 
+    # Current version for this resource.
     attr_accessor :version
 
+    # User that created the library.
     attr_accessor :created_by
 
-    # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_created
+
+    # The response type for the library. If set, only response's of this type may be added to this library.
+    attr_accessor :response_type
 
     # The URI for this object
     attr_accessor :self_uri
@@ -47,6 +52,8 @@ module PureCloud
         :'created_by' => :'createdBy',
         
         :'date_created' => :'dateCreated',
+        
+        :'response_type' => :'responseType',
         
         :'self_uri' => :'selfUri'
         
@@ -66,6 +73,8 @@ module PureCloud
         :'created_by' => :'User',
         
         :'date_created' => :'DateTime',
+        
+        :'response_type' => :'String',
         
         :'self_uri' => :'String'
         
@@ -126,6 +135,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'responseType')
+        
+        
+        self.response_type = attributes[:'responseType']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -177,6 +195,15 @@ module PureCloud
       
       
       
+      allowed_values = ["MessagingTemplate"]
+      if @response_type && !allowed_values.include?(@response_type)
+        return false
+      end
+      
+      
+      
+      
+      
       
       
     end
@@ -204,6 +231,20 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] response_type Object to be assigned
+    def response_type=(response_type)
+      allowed_values = ["MessagingTemplate"]
+      if response_type && !allowed_values.include?(response_type)
+        fail ArgumentError, "invalid value for 'response_type', must be one of #{allowed_values}."
+      end
+      @response_type = response_type
+    end
+
     
     
     
@@ -222,6 +263,7 @@ module PureCloud
           version == o.version &&
           created_by == o.created_by &&
           date_created == o.date_created &&
+          response_type == o.response_type &&
           self_uri == o.self_uri
     end
 
@@ -234,7 +276,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, version, created_by, date_created, self_uri].hash
+      [id, name, version, created_by, date_created, response_type, self_uri].hash
     end
 
     # build the object from hash

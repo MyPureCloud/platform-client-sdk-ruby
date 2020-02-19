@@ -16,6 +16,7 @@ Method | Description
 [**get_analytics_conversations_details_job**](AnalyticsApi.html#get_analytics_conversations_details_job) | Get status for async query for conversation details
 [**get_analytics_conversations_details_job_results**](AnalyticsApi.html#get_analytics_conversations_details_job_results) | Fetch a page of results for an async query
 [**get_analytics_reporting_exports**](AnalyticsApi.html#get_analytics_reporting_exports) | Get all view export requests for a user
+[**get_analytics_reporting_exports_metadata**](AnalyticsApi.html#get_analytics_reporting_exports_metadata) | Get all export metadata
 [**get_analytics_reporting_metadata**](AnalyticsApi.html#get_analytics_reporting_metadata) | Get list of reporting metadata.
 [**get_analytics_reporting_report_id_metadata**](AnalyticsApi.html#get_analytics_reporting_report_id_metadata) | Get a reporting metadata.
 [**get_analytics_reporting_reportformats**](AnalyticsApi.html#get_analytics_reporting_reportformats) | Get a list of report formats
@@ -553,6 +554,65 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ReportingExportJobListing**](ReportingExportJobListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_analytics_reporting_exports_metadata"></a>
+
+## [**ReportingExportMetadataJobListing**](ReportingExportMetadataJobListing.html) get_analytics_reporting_exports_metadata
+
+
+
+Get all export metadata
+
+
+
+Wraps GET /api/v2/analytics/reporting/exports/metadata 
+
+Requires ANY permissions: 
+
+* analytics:dataExport:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+begin
+  #Get all export metadata
+  result = api_instance.get_analytics_reporting_exports_metadata
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->get_analytics_reporting_exports_metadata: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ReportingExportMetadataJobListing**](ReportingExportMetadataJobListing.html)
 
 ### HTTP request headers
 

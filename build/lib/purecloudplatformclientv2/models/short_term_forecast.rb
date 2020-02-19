@@ -19,8 +19,11 @@ require 'date'
 module PureCloud
   # Short Term Forecast
   class ShortTermForecast
-    # The id of the short term forecast
+    # The globally unique identifier for the object.
     attr_accessor :id
+
+    # The URI for this object
+    attr_accessor :self_uri
 
     # The weekDate of the short term forecast in yyyy-MM-dd format
     attr_accessor :week_date
@@ -46,14 +49,13 @@ module PureCloud
     # Forecast generation results, if applicable
     attr_accessor :generation_results
 
-    # The URI for this object
-    attr_accessor :self_uri
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'id' => :'id',
+        
+        :'self_uri' => :'selfUri',
         
         :'week_date' => :'weekDate',
         
@@ -69,9 +71,7 @@ module PureCloud
         
         :'modifications' => :'modifications',
         
-        :'generation_results' => :'generationResults',
-        
-        :'self_uri' => :'selfUri'
+        :'generation_results' => :'generationResults'
         
       }
     end
@@ -81,6 +81,8 @@ module PureCloud
       {
         
         :'id' => :'String',
+        
+        :'self_uri' => :'String',
         
         :'week_date' => :'String',
         
@@ -96,9 +98,7 @@ module PureCloud
         
         :'modifications' => :'ListWrapperWfmForecastModification',
         
-        :'generation_results' => :'ForecastGenerationResult',
-        
-        :'self_uri' => :'String'
+        :'generation_results' => :'ForecastGenerationResult'
         
       }
     end
@@ -116,6 +116,15 @@ module PureCloud
         
         
         self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selfUri')
+        
+        
+        self.self_uri = attributes[:'selfUri']
         
       
       end
@@ -193,15 +202,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'selfUri')
-        
-        
-        self.self_uri = attributes[:'selfUri']
-        
-      
-      end
-
-      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -218,10 +218,9 @@ module PureCloud
     def valid?
       
       
-      if @id.nil?
-        return false
-      end
-
+      
+      
+      
       
       
       
@@ -273,12 +272,13 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -334,17 +334,13 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
+          self_uri == o.self_uri &&
           week_date == o.week_date &&
           description == o.description &&
           creation_method == o.creation_method &&
@@ -352,8 +348,7 @@ module PureCloud
           source_data == o.source_data &&
           reference_start_date == o.reference_start_date &&
           modifications == o.modifications &&
-          generation_results == o.generation_results &&
-          self_uri == o.self_uri
+          generation_results == o.generation_results
     end
 
     # @see the `==` method
@@ -365,7 +360,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, week_date, description, creation_method, metadata, source_data, reference_start_date, modifications, generation_results, self_uri].hash
+      [id, self_uri, week_date, description, creation_method, metadata, source_data, reference_start_date, modifications, generation_results].hash
     end
 
     # build the object from hash

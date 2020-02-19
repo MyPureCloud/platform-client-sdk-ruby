@@ -152,7 +152,7 @@ nil (empty response body)
 
 ##  delete_workforcemanagement_managementunit_activitycode(mu_id, ac_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Deletes an activity code
 
@@ -219,7 +219,7 @@ nil (empty response body)
 
 ##  delete_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Cancel a schedule run
 
@@ -286,7 +286,7 @@ nil (empty response body)
 
 ##  delete_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a service goal group
 
@@ -353,7 +353,7 @@ nil (empty response body)
 
 ##  delete_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a schedule
 
@@ -423,7 +423,7 @@ nil (empty response body)
 
 ##  delete_workforcemanagement_managementunit_week_shorttermforecast(management_unit_id, week_date_id, forecast_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a short term forecast
 
@@ -801,7 +801,7 @@ Name | Type | Description  | Notes
 
 ## [**ActivityCode**](ActivityCode.html) get_workforcemanagement_managementunit_activitycode(mu_id, ac_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get an activity code
 
@@ -869,7 +869,7 @@ Name | Type | Description  | Notes
 
 ## [**ActivityCodeContainer**](ActivityCodeContainer.html) get_workforcemanagement_managementunit_activitycodes(mu_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get activity codes
 
@@ -1041,7 +1041,7 @@ Name | Type | Description  | Notes
 
 ## [**WfmIntradayQueueListing**](WfmIntradayQueueListing.html) get_workforcemanagement_managementunit_intraday_queues(mu_id, date)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get intraday queues for the given date
 
@@ -1109,7 +1109,7 @@ Name | Type | Description  | Notes
 
 ## [**SchedulingRunResponse**](SchedulingRunResponse.html) get_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Gets the status for a specific scheduling run
 
@@ -1177,7 +1177,7 @@ Name | Type | Description  | Notes
 
 ## [**RescheduleResult**](RescheduleResult.html) get_workforcemanagement_managementunit_scheduling_run_result(management_unit_id, run_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Gets the result of a specific scheduling run
 
@@ -1245,7 +1245,7 @@ Name | Type | Description  | Notes
 
 ## [**SchedulingRunListResponse**](SchedulingRunListResponse.html) get_workforcemanagement_managementunit_scheduling_runs(management_unit_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get the status of all the ongoing schedule runs
 
@@ -1310,7 +1310,7 @@ Name | Type | Description  | Notes
 
 ## [**ServiceGoalGroup**](ServiceGoalGroup.html) get_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a service goal group
 
@@ -1378,7 +1378,7 @@ Name | Type | Description  | Notes
 
 ## [**ServiceGoalGroupList**](ServiceGoalGroupList.html) get_workforcemanagement_managementunit_servicegoalgroups(management_unit_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get service goal groups
 
@@ -1854,7 +1854,7 @@ Name | Type | Description  | Notes
 
 ## [**WeekScheduleResponse**](WeekScheduleResponse.html) get_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a week schedule
 
@@ -1932,7 +1932,7 @@ Name | Type | Description  | Notes
 
 ## [**WeekScheduleGenerationResult**](WeekScheduleGenerationResult.html) get_workforcemanagement_managementunit_week_schedule_generationresults(management_unit_id, week_id, schedule_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get week schedule generation results
 
@@ -2004,7 +2004,7 @@ Name | Type | Description  | Notes
 
 ## [**WeekScheduleListResponse**](WeekScheduleListResponse.html) get_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get the list of schedules in a week in management unit
 
@@ -2081,7 +2081,7 @@ Name | Type | Description  | Notes
 
 ## [**ForecastResultResponse**](ForecastResultResponse.html) get_workforcemanagement_managementunit_week_shorttermforecast_final(management_unit_id, week_date_id, forecast_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get the final result of a short term forecast calculation with modifications applied
 
@@ -2156,7 +2156,7 @@ Name | Type | Description  | Notes
 
 ## [**ShortTermForecastListResponse**](ShortTermForecastListResponse.html) get_workforcemanagement_managementunit_week_shorttermforecasts(management_unit_id, week_date_id)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get short term forecasts
 
@@ -2891,7 +2891,7 @@ Name | Type | Description  | Notes
 
 ## [**ActivityCode**](ActivityCode.html) patch_workforcemanagement_managementunit_activitycode(mu_id, ac_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update an activity code
 
@@ -2963,7 +2963,7 @@ Name | Type | Description  | Notes
 
 ## [**RescheduleResult**](RescheduleResult.html) patch_workforcemanagement_managementunit_scheduling_run(management_unit_id, run_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
 
@@ -3035,7 +3035,7 @@ Name | Type | Description  | Notes
 
 ## [**ServiceGoalGroup**](ServiceGoalGroup.html) patch_workforcemanagement_managementunit_servicegoalgroup(management_unit_id, service_goal_group_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update a service goal group
 
@@ -3107,7 +3107,7 @@ Name | Type | Description  | Notes
 
 ## [**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html) patch_workforcemanagement_managementunit_settings(mu_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update the settings for the requested management unit
 
@@ -3251,7 +3251,7 @@ Name | Type | Description  | Notes
 
 ## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) patch_workforcemanagement_managementunit_week_schedule(management_unit_id, week_id, schedule_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update a week schedule
 
@@ -3537,7 +3537,7 @@ Name | Type | Description  | Notes
 
 ## [**ActivityCode**](ActivityCode.html) post_workforcemanagement_managementunit_activitycodes(mu_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create a new activity code
 
@@ -3749,7 +3749,7 @@ Name | Type | Description  | Notes
 
 ## [**IntradayResponse**](IntradayResponse.html) post_workforcemanagement_managementunit_intraday(mu_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get intraday data for the given date for the requested queueIds
 
@@ -3887,7 +3887,7 @@ Name | Type | Description  | Notes
 
 ## [**UserScheduleContainer**](UserScheduleContainer.html) post_workforcemanagement_managementunit_schedules_search(mu_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Query published schedules for given given time range for set of users
 
@@ -3957,7 +3957,7 @@ Name | Type | Description  | Notes
 
 ## [**ServiceGoalGroup**](ServiceGoalGroup.html) post_workforcemanagement_managementunit_servicegoalgroups(management_unit_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create a new service goal group
 
@@ -4095,7 +4095,7 @@ Name | Type | Description  | Notes
 
 ## [**TimeOffRequestEntityList**](TimeOffRequestEntityList.html) post_workforcemanagement_managementunit_timeoffrequests_fetchdetails(mu_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Gets a list of time off requests from lookup ids
 
@@ -4233,7 +4233,7 @@ Name | Type | Description  | Notes
 
 ## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedule_copy(management_unit_id, week_id, schedule_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Copy a week schedule
 
@@ -4312,7 +4312,7 @@ Name | Type | Description  | Notes
 
 ## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedule_reschedule(management_unit_id, week_id, schedule_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
 
@@ -4387,7 +4387,7 @@ Name | Type | Description  | Notes
 
 ## [**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedules(management_unit_id, week_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
 
@@ -4463,7 +4463,7 @@ Name | Type | Description  | Notes
 
 ## [**GenerateWeekScheduleResponse**](GenerateWeekScheduleResponse.html) post_workforcemanagement_managementunit_week_schedules_generate(management_unit_id, week_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Generate a week schedule
 
@@ -4535,7 +4535,7 @@ Name | Type | Description  | Notes
 
 ## [**PartialUploadResponse**](PartialUploadResponse.html) post_workforcemanagement_managementunit_week_schedules_partialupload(management_unit_id, week_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Partial upload of user schedules where activity count is greater than 17500
 
@@ -4608,7 +4608,7 @@ Name | Type | Description  | Notes
 
 ## [**ShortTermForecastResponse**](ShortTermForecastResponse.html) post_workforcemanagement_managementunit_week_shorttermforecast_copy(management_unit_id, week_date_id, forecast_id, body, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Copy a short term forecast
 
@@ -4686,7 +4686,7 @@ Name | Type | Description  | Notes
 
 ## [**ShortTermForecastResponse**](ShortTermForecastResponse.html) post_workforcemanagement_managementunit_week_shorttermforecasts(management_unit_id, week_date_id, body, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Import a short term forecast
 
@@ -4761,7 +4761,7 @@ Name | Type | Description  | Notes
 
 ## [**GenerateShortTermForecastResponse**](GenerateShortTermForecastResponse.html) post_workforcemanagement_managementunit_week_shorttermforecasts_generate(management_unit_id, week_date_id, body, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Generate a short term forecast
 
@@ -4836,7 +4836,7 @@ Name | Type | Description  | Notes
 
 ## [**PartialUploadResponse**](PartialUploadResponse.html) post_workforcemanagement_managementunit_week_shorttermforecasts_partialupload(management_unit_id, week_date_id, body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Import a short term forecast
 
@@ -5179,7 +5179,7 @@ Name | Type | Description  | Notes
 
 ## [**UserScheduleContainer**](UserScheduleContainer.html) post_workforcemanagement_schedules(opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get published schedule for the current user
 
@@ -5190,7 +5190,6 @@ Wraps POST /api/v2/workforcemanagement/schedules
 Requires ANY permissions: 
 
 * wfm:agentSchedule:view
-* wfm:publishedSchedule:view
 
 
 ### Example

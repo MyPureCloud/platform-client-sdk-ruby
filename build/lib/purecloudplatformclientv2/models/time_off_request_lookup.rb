@@ -111,7 +111,7 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'user' => :'User',
+        :'user' => :'UserReference',
         
         :'is_full_day_request' => :'BOOLEAN',
         
@@ -129,11 +129,11 @@ module PureCloud
         
         :'notes' => :'String',
         
-        :'submitted_by' => :'User',
+        :'submitted_by' => :'UserReference',
         
         :'submitted_date' => :'DateTime',
         
-        :'reviewed_by' => :'User',
+        :'reviewed_by' => :'UserReference',
         
         :'reviewed_date' => :'DateTime',
         

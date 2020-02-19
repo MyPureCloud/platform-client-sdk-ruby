@@ -58,6 +58,8 @@ module PureCloud
     # The URI of the schema for the enterprise user.
     attr_accessor :urnietfparamsscimschemasextensionenterprise2_0_user
 
+    attr_accessor :urnietfparamsscimschemasextensiongenesyspurecloud2_0_user
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -86,7 +88,9 @@ module PureCloud
         
         :'roles' => :'roles',
         
-        :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'
+        :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User',
+        
+        :'urnietfparamsscimschemasextensiongenesyspurecloud2_0_user' => :'urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User'
         
       }
     end
@@ -117,9 +121,11 @@ module PureCloud
         
         :'groups' => :'Array<ScimV2GroupReference>',
         
-        :'roles' => :'Array<String>',
+        :'roles' => :'Array<ScimUserRole>',
         
-        :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'ScimV2EnterpriseUser'
+        :'urnietfparamsscimschemasextensionenterprise2_0_user' => :'ScimV2EnterpriseUser',
+        
+        :'urnietfparamsscimschemasextensiongenesyspurecloud2_0_user' => :'ScimUserExtensions'
         
       }
     end
@@ -262,6 +268,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User')
+        
+        
+        self.urnietfparamsscimschemasextensiongenesyspurecloud2_0_user = attributes[:'urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -339,8 +354,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -424,7 +448,8 @@ module PureCloud
           external_id == o.external_id &&
           groups == o.groups &&
           roles == o.roles &&
-          urnietfparamsscimschemasextensionenterprise2_0_user == o.urnietfparamsscimschemasextensionenterprise2_0_user
+          urnietfparamsscimschemasextensionenterprise2_0_user == o.urnietfparamsscimschemasextensionenterprise2_0_user &&
+          urnietfparamsscimschemasextensiongenesyspurecloud2_0_user == o.urnietfparamsscimschemasextensiongenesyspurecloud2_0_user
     end
 
     # @see the `==` method
@@ -436,7 +461,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [schemas, active, user_name, display_name, password, title, phone_numbers, emails, photos, external_id, groups, roles, urnietfparamsscimschemasextensionenterprise2_0_user].hash
+      [schemas, active, user_name, display_name, password, title, phone_numbers, emails, photos, external_id, groups, roles, urnietfparamsscimschemasextensionenterprise2_0_user, urnietfparamsscimschemasextensiongenesyspurecloud2_0_user].hash
     end
 
     # build the object from hash

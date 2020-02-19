@@ -261,6 +261,18 @@ module PureCloud
     # A list of API operations (ex: [\"GET /api/v2/users/{userId}/queues\"])
     attr_accessor :api_operations
 
+    # Indicates filtering for presence of MMS media
+    attr_accessor :has_media
+
+    # The role Ids used to filter the view
+    attr_accessor :role_ids
+
+    # The report to user IDs used to filter the view
+    attr_accessor :reports_tos
+
+    # The location Ids used to filter the view
+    attr_accessor :location_ids
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -425,7 +437,15 @@ module PureCloud
         
         :'oauth_client_ids' => :'oauthClientIds',
         
-        :'api_operations' => :'apiOperations'
+        :'api_operations' => :'apiOperations',
+        
+        :'has_media' => :'hasMedia',
+        
+        :'role_ids' => :'roleIds',
+        
+        :'reports_tos' => :'reportsTos',
+        
+        :'location_ids' => :'locationIds'
         
       }
     end
@@ -594,7 +614,15 @@ module PureCloud
         
         :'oauth_client_ids' => :'Array<String>',
         
-        :'api_operations' => :'Array<String>'
+        :'api_operations' => :'Array<String>',
+        
+        :'has_media' => :'BOOLEAN',
+        
+        :'role_ids' => :'Array<String>',
+        
+        :'reports_tos' => :'Array<String>',
+        
+        :'location_ids' => :'Array<String>'
         
       }
     end
@@ -1451,6 +1479,48 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'hasMedia')
+        
+        
+        self.has_media = attributes[:'hasMedia']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'roleIds')
+        
+        if (value = attributes[:'roleIds']).is_a?(Array)
+          self.role_ids = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'reportsTos')
+        
+        if (value = attributes[:'reportsTos']).is_a?(Array)
+          self.reports_tos = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'locationIds')
+        
+        if (value = attributes[:'locationIds']).is_a?(Array)
+          self.location_ids = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -1658,6 +1728,22 @@ module PureCloud
       if @interacting_duration_sort_order && !allowed_values.include?(@interacting_duration_sort_order)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2240,6 +2326,26 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -2325,7 +2431,11 @@ module PureCloud
           has_journey_action_map_id == o.has_journey_action_map_id &&
           has_journey_visit_id == o.has_journey_visit_id &&
           oauth_client_ids == o.oauth_client_ids &&
-          api_operations == o.api_operations
+          api_operations == o.api_operations &&
+          has_media == o.has_media &&
+          role_ids == o.role_ids &&
+          reports_tos == o.reports_tos &&
+          location_ids == o.location_ids
     end
 
     # @see the `==` method
@@ -2337,7 +2447,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, originating_directions, wrap_up_codes, dnis_list, session_dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, external_contact_ids, external_org_ids, ani_list, durations_milliseconds, acd_durations_milliseconds, talk_durations_milliseconds, acw_durations_milliseconds, handle_durations_milliseconds, hold_durations_milliseconds, abandon_durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, sip_call_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, flow_versions, group_ids, has_journey_customer_id, has_journey_action_map_id, has_journey_visit_id, oauth_client_ids, api_operations].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, originating_directions, wrap_up_codes, dnis_list, session_dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, external_contact_ids, external_org_ids, ani_list, durations_milliseconds, acd_durations_milliseconds, talk_durations_milliseconds, acw_durations_milliseconds, handle_durations_milliseconds, hold_durations_milliseconds, abandon_durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, sip_call_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, flow_versions, group_ids, has_journey_customer_id, has_journey_action_map_id, has_journey_visit_id, oauth_client_ids, api_operations, has_media, role_ids, reports_tos, location_ids].hash
     end
 
     # build the object from hash

@@ -7,11 +7,11 @@ title: ErrorBody
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **status** | **Integer** |  | [optional] |
+| **message** | **String** |  | [optional] |
 | **code** | **String** |  | [optional] |
+| **status** | **Integer** |  | [optional] |
 | **entity_id** | **String** |  | [optional] |
 | **entity_name** | **String** |  | [optional] |
-| **message** | **String** |  | [optional] |
 | **message_with_params** | **String** |  | [optional] |
 | **message_params** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **context_id** | **String** |  | [optional] |

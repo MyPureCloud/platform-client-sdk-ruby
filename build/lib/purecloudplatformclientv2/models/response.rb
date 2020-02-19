@@ -48,6 +48,12 @@ module PureCloud
     # Metadata about the text substitutions in json schema format.
     attr_accessor :substitutions_schema
 
+    # The response type represented by the response
+    attr_accessor :response_type
+
+    # The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate.
+    attr_accessor :messaging_template
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -74,6 +80,10 @@ module PureCloud
         :'substitutions' => :'substitutions',
         
         :'substitutions_schema' => :'substitutionsSchema',
+        
+        :'response_type' => :'responseType',
+        
+        :'messaging_template' => :'messagingTemplate',
         
         :'self_uri' => :'selfUri'
         
@@ -103,6 +113,10 @@ module PureCloud
         :'substitutions' => :'Array<ResponseSubstitution>',
         
         :'substitutions_schema' => :'JsonSchemaDocument',
+        
+        :'response_type' => :'String',
+        
+        :'messaging_template' => :'MessagingTemplate',
         
         :'self_uri' => :'String'
         
@@ -214,6 +228,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'responseType')
+        
+        
+        self.response_type = attributes[:'responseType']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'messagingTemplate')
+        
+        
+        self.messaging_template = attributes[:'messagingTemplate']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -295,6 +327,19 @@ module PureCloud
       
       
       
+      allowed_values = ["MessagingTemplate"]
+      if @response_type && !allowed_values.include?(@response_type)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
     end
@@ -360,6 +405,25 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] response_type Object to be assigned
+    def response_type=(response_type)
+      allowed_values = ["MessagingTemplate"]
+      if response_type && !allowed_values.include?(response_type)
+        fail ArgumentError, "invalid value for 'response_type', must be one of #{allowed_values}."
+      end
+      @response_type = response_type
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -379,6 +443,8 @@ module PureCloud
           interaction_type == o.interaction_type &&
           substitutions == o.substitutions &&
           substitutions_schema == o.substitutions_schema &&
+          response_type == o.response_type &&
+          messaging_template == o.messaging_template &&
           self_uri == o.self_uri
     end
 
@@ -391,7 +457,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, version, libraries, texts, created_by, date_created, interaction_type, substitutions, substitutions_schema, self_uri].hash
+      [id, name, version, libraries, texts, created_by, date_created, interaction_type, substitutions, substitutions_schema, response_type, messaging_template, self_uri].hash
     end
 
     # build the object from hash

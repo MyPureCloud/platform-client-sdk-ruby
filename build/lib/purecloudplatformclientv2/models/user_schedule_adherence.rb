@@ -122,7 +122,7 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'user' => :'User',
+        :'user' => :'UserReference',
         
         :'management_unit' => :'ManagementUnit',
         

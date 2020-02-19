@@ -18,15 +18,15 @@ require 'date'
 
 module PureCloud
   class ErrorBody
-    attr_accessor :status
+    attr_accessor :message
 
     attr_accessor :code
+
+    attr_accessor :status
 
     attr_accessor :entity_id
 
     attr_accessor :entity_name
-
-    attr_accessor :message
 
     attr_accessor :message_with_params
 
@@ -42,15 +42,15 @@ module PureCloud
     def self.attribute_map
       {
         
-        :'status' => :'status',
+        :'message' => :'message',
         
         :'code' => :'code',
+        
+        :'status' => :'status',
         
         :'entity_id' => :'entityId',
         
         :'entity_name' => :'entityName',
-        
-        :'message' => :'message',
         
         :'message_with_params' => :'messageWithParams',
         
@@ -69,15 +69,15 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'status' => :'Integer',
+        :'message' => :'String',
         
         :'code' => :'String',
+        
+        :'status' => :'Integer',
         
         :'entity_id' => :'String',
         
         :'entity_name' => :'String',
-        
-        :'message' => :'String',
         
         :'message_with_params' => :'String',
         
@@ -101,10 +101,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'status')
+      if attributes.has_key?(:'message')
         
         
-        self.status = attributes[:'status']
+        self.message = attributes[:'message']
         
       
       end
@@ -114,6 +114,15 @@ module PureCloud
         
         
         self.code = attributes[:'code']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'status')
+        
+        
+        self.status = attributes[:'status']
         
       
       end
@@ -132,15 +141,6 @@ module PureCloud
         
         
         self.entity_name = attributes[:'entityName']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'message')
-        
-        
-        self.message = attributes[:'message']
         
       
       end
@@ -310,11 +310,11 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          status == o.status &&
+          message == o.message &&
           code == o.code &&
+          status == o.status &&
           entity_id == o.entity_id &&
           entity_name == o.entity_name &&
-          message == o.message &&
           message_with_params == o.message_with_params &&
           message_params == o.message_params &&
           context_id == o.context_id &&
@@ -331,7 +331,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [status, code, entity_id, entity_name, message, message_with_params, message_params, context_id, details, errors].hash
+      [message, code, status, entity_id, entity_name, message_with_params, message_params, context_id, details, errors].hash
     end
 
     # build the object from hash
