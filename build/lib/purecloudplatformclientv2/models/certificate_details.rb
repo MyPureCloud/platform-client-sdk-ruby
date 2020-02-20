@@ -34,9 +34,9 @@ module PureCloud
     # True if the certificate is expired, false otherwise.
     attr_accessor :expired
 
-    attr_accessor :signature_valid
-
     attr_accessor :valid
+
+    attr_accessor :signature_valid
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -52,9 +52,9 @@ module PureCloud
         
         :'expired' => :'expired',
         
-        :'signature_valid' => :'signatureValid',
+        :'valid' => :'valid',
         
-        :'valid' => :'valid'
+        :'signature_valid' => :'signatureValid'
         
       }
     end
@@ -73,9 +73,9 @@ module PureCloud
         
         :'expired' => :'BOOLEAN',
         
-        :'signature_valid' => :'BOOLEAN',
+        :'valid' => :'BOOLEAN',
         
-        :'valid' => :'BOOLEAN'
+        :'signature_valid' => :'BOOLEAN'
         
       }
     end
@@ -134,19 +134,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'signatureValid')
+      if attributes.has_key?(:'valid')
         
         
-        self.signature_valid = attributes[:'signatureValid']
+        self.valid = attributes[:'valid']
         
       
       end
 
       
-      if attributes.has_key?(:'valid')
+      if attributes.has_key?(:'signatureValid')
         
         
-        self.valid = attributes[:'valid']
+        self.signature_valid = attributes[:'signatureValid']
         
       
       end
@@ -243,8 +243,8 @@ module PureCloud
           expiration_date == o.expiration_date &&
           issue_date == o.issue_date &&
           expired == o.expired &&
-          signature_valid == o.signature_valid &&
-          valid == o.valid
+          valid == o.valid &&
+          signature_valid == o.signature_valid
     end
 
     # @see the `==` method
@@ -256,7 +256,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [issuer, subject, expiration_date, issue_date, expired, signature_valid, valid].hash
+      [issuer, subject, expiration_date, issue_date, expired, valid, signature_valid].hash
     end
 
     # build the object from hash

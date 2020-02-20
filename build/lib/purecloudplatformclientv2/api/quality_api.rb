@@ -3270,25 +3270,27 @@ module PureCloud
 
     # Get a survey as an end-customer, for the purposes of scoring it.
     # 
+    # @param customer_survey_url customerSurveyUrl
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :customer_survey_url customerSurveyUrl
     # @return [ScorableSurvey]
-    def get_quality_surveys_scorable(opts = {})
-      data, _status_code, _headers = get_quality_surveys_scorable_with_http_info(opts)
+    def get_quality_surveys_scorable(customer_survey_url, opts = {})
+      data, _status_code, _headers = get_quality_surveys_scorable_with_http_info(customer_survey_url, opts)
       return data
     end
 
     # Get a survey as an end-customer, for the purposes of scoring it.
     # 
+    # @param customer_survey_url customerSurveyUrl
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :customer_survey_url customerSurveyUrl
     # @return [Array<(ScorableSurvey, Fixnum, Hash)>] ScorableSurvey data, response status code and response headers
-    def get_quality_surveys_scorable_with_http_info(opts = {})
+    def get_quality_surveys_scorable_with_http_info(customer_survey_url, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: QualityApi.get_quality_surveys_scorable ..."
       end
       
       
+      # verify the required parameter 'customer_survey_url' is set
+      fail ArgumentError, "Missing the required parameter 'customer_survey_url' when calling QualityApi.get_quality_surveys_scorable" if customer_survey_url.nil?
       
       
       
@@ -3299,7 +3301,7 @@ module PureCloud
 
       # query parameters
       query_params = {}
-      query_params[:'customerSurveyUrl'] = opts[:'customer_survey_url'] if opts[:'customer_survey_url']
+      query_params[:'customerSurveyUrl'] = customer_survey_url
 
       # header parameters
       header_params = {}

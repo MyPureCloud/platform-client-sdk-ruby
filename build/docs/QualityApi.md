@@ -2592,7 +2592,7 @@ Name | Type | Description  | Notes
 
 <a name="get_quality_surveys_scorable"></a>
 
-## [**ScorableSurvey**](ScorableSurvey.html) get_quality_surveys_scorable(opts)
+## [**ScorableSurvey**](ScorableSurvey.html) get_quality_surveys_scorable(customer_survey_url)
 
 
 
@@ -2613,13 +2613,12 @@ require 'purecloudplatformclientv2'
 
 api_instance = PureCloud::QualityApi.new
 
-opts = { 
-  customer_survey_url: "customer_survey_url_example" # String | customerSurveyUrl
-}
+customer_survey_url = "customer_survey_url_example" # String | customerSurveyUrl
+
 
 begin
   #Get a survey as an end-customer, for the purposes of scoring it.
-  result = api_instance.get_quality_surveys_scorable(opts)
+  result = api_instance.get_quality_surveys_scorable(customer_survey_url)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling QualityApi->get_quality_surveys_scorable: #{e}"
@@ -2630,7 +2629,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_survey_url** | **String**| customerSurveyUrl | [optional]  |
+ **customer_survey_url** | **String**| customerSurveyUrl |  |
 {: class="table table-striped"}
 
 
