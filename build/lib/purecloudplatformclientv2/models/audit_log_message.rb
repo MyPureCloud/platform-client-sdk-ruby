@@ -302,7 +302,7 @@ module PureCloud
       
       
       
-      allowed_values = ["Document", "Queue", "Recording", "Role", "VoicemailUserPolicy", "WrapupCode", "AccessToken", "OAuthClient", "AuthOrganization", "AuthUser", "BulkActions", "Feedback", "Topic", "Program"]
+      allowed_values = ["Document", "Queue", "Recording", "Role", "VoicemailUserPolicy", "WrapupCode", "AccessToken", "OAuthClient", "OAuthClientAuthorization", "AuthOrganization", "AuthUser", "BulkActions", "Feedback", "Topic", "Program"]
       if @entity_type && !allowed_values.include?(@entity_type)
         return false
       end
@@ -387,7 +387,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] entity_type Object to be assigned
     def entity_type=(entity_type)
-      allowed_values = ["Document", "Queue", "Recording", "Role", "VoicemailUserPolicy", "WrapupCode", "AccessToken", "OAuthClient", "AuthOrganization", "AuthUser", "BulkActions", "Feedback", "Topic", "Program"]
+      allowed_values = ["Document", "Queue", "Recording", "Role", "VoicemailUserPolicy", "WrapupCode", "AccessToken", "OAuthClient", "OAuthClientAuthorization", "AuthOrganization", "AuthUser", "BulkActions", "Feedback", "Topic", "Program"]
       if entity_type && !allowed_values.include?(entity_type)
         fail ArgumentError, "invalid value for 'entity_type', must be one of #{allowed_values}."
       end

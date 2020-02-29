@@ -33,10 +33,10 @@ module PureCloud
     # The page Id of a facebook page. The pageId is required when userAccessToken is provided.
     attr_accessor :page_id
 
-    # The app Id of a facebook app
+    # The app Id of a facebook app. The appId is required when a customer wants to use their own approved facebook app.
     attr_accessor :app_id
 
-    # The app Secret of a facebook app
+    # The app Secret of a facebook app. The appSecret is required when appId is provided.
     attr_accessor :app_secret
 
     # The URI for this object
@@ -209,11 +209,6 @@ module PureCloud
       
       
       
-      
-      if @app_id.nil?
-        return false
-      end
-
       
       
       

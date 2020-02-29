@@ -18,10 +18,10 @@ require 'date'
 
 module PureCloud
   class GDPRJourneyCustomer
-    # The type of the customerId within the Journey System (e.g. cookie).
+    # The type of the customerId within the Journey System (e.g. cookie). Required if `id` is defined.
     attr_accessor :type
 
-    # An ID of a customer within the Journey System at a point-in-time.
+    # An ID of a customer within the Journey System at a point-in-time. Required if `type` is defined.
     attr_accessor :id
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -89,19 +89,9 @@ module PureCloud
     def valid?
       
       
-      if @type.nil?
-        return false
-      end
-
       
       
       
-      
-      
-      if @id.nil?
-        return false
-      end
-
       
       
       

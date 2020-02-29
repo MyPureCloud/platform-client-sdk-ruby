@@ -850,6 +850,7 @@ module PureCloud
     # @param job_id jobId
     # @param [Hash] opts the optional parameters
     # @option opts [String] :cursor Indicates where to resume query results (not required for first page)
+    # @option opts [Integer] :page_size The desired maximum number of results
     # @return [AnalyticsConversationAsyncQueryResponse]
     def get_analytics_conversations_details_job_results(job_id, opts = {})
       data, _status_code, _headers = get_analytics_conversations_details_job_results_with_http_info(job_id, opts)
@@ -861,6 +862,7 @@ module PureCloud
     # @param job_id jobId
     # @param [Hash] opts the optional parameters
     # @option opts [String] :cursor Indicates where to resume query results (not required for first page)
+    # @option opts [Integer] :page_size The desired maximum number of results
     # @return [Array<(AnalyticsConversationAsyncQueryResponse, Fixnum, Hash)>] AnalyticsConversationAsyncQueryResponse data, response status code and response headers
     def get_analytics_conversations_details_job_results_with_http_info(job_id, opts = {})
       if @api_client.config.debugging
@@ -881,12 +883,19 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/conversations/details/jobs/{jobId}/results".sub('{format}','json').sub('{' + 'jobId' + '}', job_id.to_s)
 
       # query parameters
       query_params = {}
       query_params[:'cursor'] = opts[:'cursor'] if opts[:'cursor']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
 
       # header parameters
       header_params = {}

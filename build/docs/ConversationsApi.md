@@ -963,7 +963,8 @@ api_instance = PureCloud::ConversationsApi.new
 job_id = "job_id_example" # String | jobId
 
 opts = { 
-  cursor: "cursor_example" # String | Indicates where to resume query results (not required for first page)
+  cursor: "cursor_example", # String | Indicates where to resume query results (not required for first page)
+  page_size: 56 # Integer | The desired maximum number of results
 }
 
 begin
@@ -981,6 +982,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **job_id** | **String**| jobId |  |
  **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional]  |
+ **page_size** | **Integer**| The desired maximum number of results | [optional]  |
 {: class="table table-striped"}
 
 
