@@ -56,6 +56,9 @@ Method | Description
 [**get_flow_versions**](ArchitectApi.html#get_flow_versions) | Get flow version list
 [**get_flows**](ArchitectApi.html#get_flows) | Get a pageable list of flows, filtered by query parameters
 [**get_flows_datatable**](ArchitectApi.html#get_flows_datatable) | Returns a specific datatable by id
+[**get_flows_datatable_export_job**](ArchitectApi.html#get_flows_datatable_export_job) | Returns the state information about an export job
+[**get_flows_datatable_import_job**](ArchitectApi.html#get_flows_datatable_import_job) | Returns the state information about an import job
+[**get_flows_datatable_import_jobs**](ArchitectApi.html#get_flows_datatable_import_jobs) | Get all recent import jobs
 [**get_flows_datatable_row**](ArchitectApi.html#get_flows_datatable_row) | Returns a specific row for the datatable
 [**get_flows_datatable_rows**](ArchitectApi.html#get_flows_datatable_rows) | Returns the rows for the datatable with the given id
 [**get_flows_datatables**](ArchitectApi.html#get_flows_datatables) | Retrieve a list of datatables for the org
@@ -80,6 +83,8 @@ Method | Description
 [**post_flows_actions_publish**](ArchitectApi.html#post_flows_actions_publish) | Publish flow
 [**post_flows_actions_revert**](ArchitectApi.html#post_flows_actions_revert) | Revert flow
 [**post_flows_actions_unlock**](ArchitectApi.html#post_flows_actions_unlock) | Unlock flow
+[**post_flows_datatable_export_jobs**](ArchitectApi.html#post_flows_datatable_export_jobs) | Begin an export process for exporting all rows from a datatable
+[**post_flows_datatable_import_jobs**](ArchitectApi.html#post_flows_datatable_import_jobs) | Begin an import process for importing rows into a datatable
 [**post_flows_datatable_rows**](ArchitectApi.html#post_flows_datatable_rows) | Create a new row entry for the datatable.
 [**post_flows_datatables**](ArchitectApi.html#post_flows_datatables) | Create a new datatable with the specified json-schema definition
 [**post_flows_outcomes**](ArchitectApi.html#post_flows_outcomes) | Create a flow outcome
@@ -3503,6 +3508,213 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_flows_datatable_export_job"></a>
+
+## [**DataTableExportJob**](DataTableExportJob.html) get_flows_datatable_export_job(datatable_id, export_job_id)
+
+
+
+Returns the state information about an export job
+
+Returns the state information about an export job.
+
+Wraps GET /api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId} 
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+export_job_id = "export_job_id_example" # String | id of export job
+
+
+begin
+  #Returns the state information about an export job
+  result = api_instance.get_flows_datatable_export_job(datatable_id, export_job_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_flows_datatable_export_job: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **export_job_id** | **String**| id of export job |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataTableExportJob**](DataTableExportJob.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_flows_datatable_import_job"></a>
+
+## [**DataTableImportJob**](DataTableImportJob.html) get_flows_datatable_import_job(datatable_id, import_job_id)
+
+
+
+Returns the state information about an import job
+
+Returns the state information about an import job.
+
+Wraps GET /api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId} 
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+import_job_id = "import_job_id_example" # String | id of import job
+
+
+begin
+  #Returns the state information about an import job
+  result = api_instance.get_flows_datatable_import_job(datatable_id, import_job_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_flows_datatable_import_job: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **import_job_id** | **String**| id of import job |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataTableImportJob**](DataTableImportJob.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_flows_datatable_import_jobs"></a>
+
+## [**EntityListing**](EntityListing.html) get_flows_datatable_import_jobs(datatable_id, opts)
+
+
+
+Get all recent import jobs
+
+Get all recent import jobs
+
+Wraps GET /api/v2/flows/datatables/{datatableId}/import/jobs 
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25 # Integer | Page size
+}
+
+begin
+  #Get all recent import jobs
+  result = api_instance.get_flows_datatable_import_jobs(datatable_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_flows_datatable_import_jobs: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**EntityListing**](EntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_flows_datatable_row"></a>
 
 ## Hash&lt;String, Object&gt;** get_flows_datatable_row(datatable_id, row_id, opts)
@@ -5125,6 +5337,139 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Flow**](Flow.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_flows_datatable_export_jobs"></a>
+
+## [**DataTableExportJob**](DataTableExportJob.html) post_flows_datatable_export_jobs(datatable_id)
+
+
+
+Begin an export process for exporting all rows from a datatable
+
+Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+
+Wraps POST /api/v2/flows/datatables/{datatableId}/export/jobs 
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+
+begin
+  #Begin an export process for exporting all rows from a datatable
+  result = api_instance.post_flows_datatable_export_jobs(datatable_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->post_flows_datatable_export_jobs: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataTableExportJob**](DataTableExportJob.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_flows_datatable_import_jobs"></a>
+
+## [**DataTableImportJob**](DataTableImportJob.html) post_flows_datatable_import_jobs(datatable_id, body)
+
+
+
+Begin an import process for importing rows into a datatable
+
+Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+
+Wraps POST /api/v2/flows/datatables/{datatableId}/import/jobs 
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+datatable_id = "datatable_id_example" # String | id of datatable
+
+body = PureCloud::DataTableImportJob.new # DataTableImportJob | import job information
+
+
+begin
+  #Begin an import process for importing rows into a datatable
+  result = api_instance.post_flows_datatable_import_jobs(datatable_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->post_flows_datatable_import_jobs: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datatable_id** | **String**| id of datatable |  |
+ **body** | [**DataTableImportJob**](DataTableImportJob.html)| import job information |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataTableImportJob**](DataTableImportJob.html)
 
 ### HTTP request headers
 

@@ -16,6 +16,7 @@ Method | Description
 [**delete_routing_settings**](RoutingApi.html#delete_routing_settings) | Delete an organization&#39;s routing settings
 [**delete_routing_skill**](RoutingApi.html#delete_routing_skill) | Delete Routing Skill
 [**delete_routing_sms_phonenumber**](RoutingApi.html#delete_routing_sms_phonenumber) | Delete a phone number provisioned for SMS.
+[**delete_routing_user_utilization**](RoutingApi.html#delete_routing_user_utilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default.
 [**delete_routing_utilization**](RoutingApi.html#delete_routing_utilization) | Delete the organization-wide max utilization settings and revert to the system default.
 [**delete_routing_wrapupcode**](RoutingApi.html#delete_routing_wrapupcode) | Delete wrap-up code
 [**delete_user_routinglanguage**](RoutingApi.html#delete_user_routinglanguage) | Remove routing language from user
@@ -47,6 +48,7 @@ Method | Description
 [**get_routing_sms_availablephonenumbers**](RoutingApi.html#get_routing_sms_availablephonenumbers) | Get a list of available phone numbers for SMS provisioning.
 [**get_routing_sms_phonenumber**](RoutingApi.html#get_routing_sms_phonenumber) | Get a phone number provisioned for SMS.
 [**get_routing_sms_phonenumbers**](RoutingApi.html#get_routing_sms_phonenumbers) | Get a list of provisioned phone numbers.
+[**get_routing_user_utilization**](RoutingApi.html#get_routing_user_utilization) | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
 [**get_routing_utilization**](RoutingApi.html#get_routing_utilization) | Get the organization-wide max utilization settings.
 [**get_routing_wrapupcode**](RoutingApi.html#get_routing_wrapupcode) | Get details about this wrap-up code.
 [**get_routing_wrapupcodes**](RoutingApi.html#get_routing_wrapupcodes) | Get list of wrapup codes.
@@ -80,6 +82,7 @@ Method | Description
 [**put_routing_settings**](RoutingApi.html#put_routing_settings) | Update an organization&#39;s routing settings
 [**put_routing_settings_transcription**](RoutingApi.html#put_routing_settings_transcription) | Update Transcription Settings
 [**put_routing_sms_phonenumber**](RoutingApi.html#put_routing_sms_phonenumber) | Update a phone number provisioned for SMS.
+[**put_routing_user_utilization**](RoutingApi.html#put_routing_user_utilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
 [**put_routing_utilization**](RoutingApi.html#put_routing_utilization) | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
 [**put_routing_wrapupcode**](RoutingApi.html#put_routing_wrapupcode) | Update wrap-up code
 [**put_user_routingskill**](RoutingApi.html#put_user_routingskill) | Update routing skill proficiency or state.
@@ -591,6 +594,70 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address_id** | **String**| Address ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_routing_user_utilization"></a>
+
+##  delete_routing_user_utilization(user_id)
+
+
+
+Delete the user's max utilization settings and revert to the organization-wide default.
+
+
+
+Wraps DELETE /api/v2/routing/users/{userId}/utilization 
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+
+begin
+  #Delete the user's max utilization settings and revert to the organization-wide default.
+  api_instance.delete_routing_user_utilization(user_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->delete_routing_user_utilization: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
@@ -2709,6 +2776,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_routing_user_utilization"></a>
+
+## [**Utilization**](Utilization.html) get_routing_user_utilization(user_id)
+
+
+
+Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+
+
+
+Wraps GET /api/v2/routing/users/{userId}/utilization 
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+* routing:utilization:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+
+begin
+  #Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+  result = api_instance.get_routing_user_utilization(user_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->get_routing_user_utilization: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Utilization**](Utilization.html)
 
 ### HTTP request headers
 
@@ -4951,6 +5084,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SmsPhoneNumber**](SmsPhoneNumber.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_routing_user_utilization"></a>
+
+## [**Utilization**](Utilization.html) put_routing_user_utilization(user_id, body)
+
+
+
+Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+
+
+
+Wraps PUT /api/v2/routing/users/{userId}/utilization 
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+user_id = "user_id_example" # String | User ID
+
+body = PureCloud::Utilization.new # Utilization | utilization
+
+
+begin
+  #Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+  result = api_instance.put_routing_user_utilization(user_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->put_routing_user_utilization: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| User ID |  |
+ **body** | [**Utilization**](Utilization.html)| utilization |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Utilization**](Utilization.html)
 
 ### HTTP request headers
 

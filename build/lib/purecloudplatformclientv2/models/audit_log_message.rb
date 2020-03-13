@@ -91,7 +91,7 @@ module PureCloud
         
         :'id' => :'String',
         
-        :'user' => :'AddressableEntityRef',
+        :'user' => :'DomainEntityRef',
         
         :'client' => :'AddressableEntityRef',
         

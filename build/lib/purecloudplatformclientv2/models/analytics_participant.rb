@@ -39,6 +39,9 @@ module PureCloud
     # Reason for which participant flagged conversation
     attr_accessor :flagged_reason
 
+    # The team id the user is a member of
+    attr_accessor :team_id
+
     # List of sessions associated to this participant
     attr_accessor :sessions
 
@@ -62,6 +65,8 @@ module PureCloud
         :'external_organization_id' => :'externalOrganizationId',
         
         :'flagged_reason' => :'flaggedReason',
+        
+        :'team_id' => :'teamId',
         
         :'sessions' => :'sessions',
         
@@ -87,6 +92,8 @@ module PureCloud
         :'external_organization_id' => :'String',
         
         :'flagged_reason' => :'String',
+        
+        :'team_id' => :'String',
         
         :'sessions' => :'Array<AnalyticsSession>',
         
@@ -162,6 +169,15 @@ module PureCloud
         
         
         self.flagged_reason = attributes[:'flaggedReason']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'teamId')
+        
+        
+        self.team_id = attributes[:'teamId']
         
       
       end
@@ -250,6 +266,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -316,6 +336,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -328,6 +353,7 @@ module PureCloud
           external_contact_id == o.external_contact_id &&
           external_organization_id == o.external_organization_id &&
           flagged_reason == o.flagged_reason &&
+          team_id == o.team_id &&
           sessions == o.sessions &&
           attributes == o.attributes
     end
@@ -341,7 +367,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [participant_id, participant_name, user_id, purpose, external_contact_id, external_organization_id, flagged_reason, sessions, attributes].hash
+      [participant_id, participant_name, user_id, purpose, external_contact_id, external_organization_id, flagged_reason, team_id, sessions, attributes].hash
     end
 
     # build the object from hash

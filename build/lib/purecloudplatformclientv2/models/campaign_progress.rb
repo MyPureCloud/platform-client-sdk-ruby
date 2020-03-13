@@ -24,8 +24,11 @@ module PureCloud
     # Identifier of the contact list
     attr_accessor :contact_list
 
-    # Number of contacts processed during the campaign
+    # Number of contacts called during the campaign
     attr_accessor :number_of_contacts_called
+
+    # Number of contacts messaged during the campaign
+    attr_accessor :number_of_contacts_messaged
 
     # Total number of contacts in the campaign
     attr_accessor :total_number_of_contacts
@@ -43,6 +46,8 @@ module PureCloud
         
         :'number_of_contacts_called' => :'numberOfContactsCalled',
         
+        :'number_of_contacts_messaged' => :'numberOfContactsMessaged',
+        
         :'total_number_of_contacts' => :'totalNumberOfContacts',
         
         :'percentage' => :'percentage'
@@ -59,6 +64,8 @@ module PureCloud
         :'contact_list' => :'DomainEntityRef',
         
         :'number_of_contacts_called' => :'Integer',
+        
+        :'number_of_contacts_messaged' => :'Integer',
         
         :'total_number_of_contacts' => :'Integer',
         
@@ -98,6 +105,15 @@ module PureCloud
         
         
         self.number_of_contacts_called = attributes[:'numberOfContactsCalled']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'numberOfContactsMessaged')
+        
+        
+        self.number_of_contacts_messaged = attributes[:'numberOfContactsMessaged']
         
       
       end
@@ -166,8 +182,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -202,6 +227,7 @@ module PureCloud
           campaign == o.campaign &&
           contact_list == o.contact_list &&
           number_of_contacts_called == o.number_of_contacts_called &&
+          number_of_contacts_messaged == o.number_of_contacts_messaged &&
           total_number_of_contacts == o.total_number_of_contacts &&
           percentage == o.percentage
     end
@@ -215,7 +241,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [campaign, contact_list, number_of_contacts_called, total_number_of_contacts, percentage].hash
+      [campaign, contact_list, number_of_contacts_called, number_of_contacts_messaged, total_number_of_contacts, percentage].hash
     end
 
     # build the object from hash

@@ -18,17 +18,17 @@ require 'date'
 
 module PureCloud
   class AnalyticsConversationQueryResponse
-    attr_accessor :conversations
-
     attr_accessor :aggregations
+
+    attr_accessor :conversations
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'conversations' => :'conversations',
+        :'aggregations' => :'aggregations',
         
-        :'aggregations' => :'aggregations'
+        :'conversations' => :'conversations'
         
       }
     end
@@ -37,9 +37,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'conversations' => :'Array<AnalyticsConversation>',
+        :'aggregations' => :'Array<AggregationResult>',
         
-        :'aggregations' => :'Array<AggregationResult>'
+        :'conversations' => :'Array<AnalyticsConversationWithoutAttributes>'
         
       }
     end
@@ -53,10 +53,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'conversations')
+      if attributes.has_key?(:'aggregations')
         
-        if (value = attributes[:'conversations']).is_a?(Array)
-          self.conversations = value
+        if (value = attributes[:'aggregations']).is_a?(Array)
+          self.aggregations = value
         end
         
         
@@ -64,10 +64,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'aggregations')
+      if attributes.has_key?(:'conversations')
         
-        if (value = attributes[:'aggregations']).is_a?(Array)
-          self.aggregations = value
+        if (value = attributes[:'conversations']).is_a?(Array)
+          self.conversations = value
         end
         
         
@@ -116,8 +116,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          conversations == o.conversations &&
-          aggregations == o.aggregations
+          aggregations == o.aggregations &&
+          conversations == o.conversations
     end
 
     # @see the `==` method
@@ -129,7 +129,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [conversations, aggregations].hash
+      [aggregations, conversations].hash
     end
 
     # build the object from hash

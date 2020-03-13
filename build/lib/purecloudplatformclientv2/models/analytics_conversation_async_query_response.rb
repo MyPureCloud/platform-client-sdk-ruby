@@ -18,18 +18,18 @@ require 'date'
 
 module PureCloud
   class AnalyticsConversationAsyncQueryResponse
-    attr_accessor :conversations
-
     # Optional cursor to indicate where to resume the results
     attr_accessor :cursor
+
+    attr_accessor :conversations
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'conversations' => :'conversations',
+        :'cursor' => :'cursor',
         
-        :'cursor' => :'cursor'
+        :'conversations' => :'conversations'
         
       }
     end
@@ -38,9 +38,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'conversations' => :'Array<AnalyticsConversation>',
+        :'cursor' => :'String',
         
-        :'cursor' => :'String'
+        :'conversations' => :'Array<AnalyticsConversation>'
         
       }
     end
@@ -54,21 +54,21 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
+      if attributes.has_key?(:'cursor')
+        
+        
+        self.cursor = attributes[:'cursor']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'conversations')
         
         if (value = attributes[:'conversations']).is_a?(Array)
           self.conversations = value
         end
         
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'cursor')
-        
-        
-        self.cursor = attributes[:'cursor']
         
       
       end
@@ -115,8 +115,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          conversations == o.conversations &&
-          cursor == o.cursor
+          cursor == o.cursor &&
+          conversations == o.conversations
     end
 
     # @see the `==` method
@@ -128,7 +128,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [conversations, cursor].hash
+      [cursor, conversations].hash
     end
 
     # build the object from hash

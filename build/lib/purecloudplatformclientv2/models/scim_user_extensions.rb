@@ -19,10 +19,10 @@ require 'date'
 module PureCloud
   # SCIM PureCloud extensions of user.
   class ScimUserExtensions
-    # Routing Skills assigned to user.
+    # Routing Skills assigned to user. No more than 50 skills may be assigned to a user.
     attr_accessor :routing_skills
 
-    # Routing Languages assigned to user
+    # Routing Languages assigned to user. No more than 50 languages may be assigned to a user.
     attr_accessor :routing_languages
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -3818,7 +3818,7 @@ module PureCloud
     # @option opts [BuSearchAgentSchedulesRequest] :body body
     # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
     # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
-    # @return [UserScheduleContainer]
+    # @return [BuAsyncAgentSchedulesSearchResponse]
     def post_workforcemanagement_managementunit_agentschedules_search(mu_id, opts = {})
       data, _status_code, _headers = post_workforcemanagement_managementunit_agentschedules_search_with_http_info(mu_id, opts)
       return data
@@ -3831,7 +3831,7 @@ module PureCloud
     # @option opts [BuSearchAgentSchedulesRequest] :body body
     # @option opts [BOOLEAN] :force_async Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
     # @option opts [BOOLEAN] :force_download_service Force the result of this operation to be sent via download service.  For testing/app development purposes
-    # @return [Array<(UserScheduleContainer, Fixnum, Hash)>] UserScheduleContainer data, response status code and response headers
+    # @return [Array<(BuAsyncAgentSchedulesSearchResponse, Fixnum, Hash)>] BuAsyncAgentSchedulesSearchResponse data, response status code and response headers
     def post_workforcemanagement_managementunit_agentschedules_search_with_http_info(mu_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: WorkforceManagementApi.post_workforcemanagement_managementunit_agentschedules_search ..."
@@ -3895,7 +3895,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'UserScheduleContainer')
+        :return_type => 'BuAsyncAgentSchedulesSearchResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: WorkforceManagementApi#post_workforcemanagement_managementunit_agentschedules_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

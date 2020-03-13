@@ -116,7 +116,8 @@ transaction_id = "transaction_id_example" # String | Transaction ID
 
 opts = { 
   cursor: "cursor_example", # String | Indicates where to resume query results (not required for first page)
-  page_size: 25 # Integer | Page size
+  page_size: 25, # Integer | Page size
+  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand
 }
 
 begin
@@ -135,6 +136,7 @@ Name | Type | Description  | Notes
  **transaction_id** | **String**| Transaction ID |  |
  **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional]  |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: user |
 {: class="table table-striped"}
 
 

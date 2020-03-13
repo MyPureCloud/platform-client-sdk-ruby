@@ -4285,6 +4285,239 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Returns the state information about an export job
+    # Returns the state information about an export job.
+    # @param datatable_id id of datatable
+    # @param export_job_id id of export job
+    # @param [Hash] opts the optional parameters
+    # @return [DataTableExportJob]
+    def get_flows_datatable_export_job(datatable_id, export_job_id, opts = {})
+      data, _status_code, _headers = get_flows_datatable_export_job_with_http_info(datatable_id, export_job_id, opts)
+      return data
+    end
+
+    # Returns the state information about an export job
+    # Returns the state information about an export job.
+    # @param datatable_id id of datatable
+    # @param export_job_id id of export job
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataTableExportJob, Fixnum, Hash)>] DataTableExportJob data, response status code and response headers
+    def get_flows_datatable_export_job_with_http_info(datatable_id, export_job_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_datatable_export_job ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.get_flows_datatable_export_job" if datatable_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'export_job_id' is set
+      fail ArgumentError, "Missing the required parameter 'export_job_id' when calling ArchitectApi.get_flows_datatable_export_job" if export_job_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId}".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s).sub('{' + 'exportJobId' + '}', export_job_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataTableExportJob')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flows_datatable_export_job\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns the state information about an import job
+    # Returns the state information about an import job.
+    # @param datatable_id id of datatable
+    # @param import_job_id id of import job
+    # @param [Hash] opts the optional parameters
+    # @return [DataTableImportJob]
+    def get_flows_datatable_import_job(datatable_id, import_job_id, opts = {})
+      data, _status_code, _headers = get_flows_datatable_import_job_with_http_info(datatable_id, import_job_id, opts)
+      return data
+    end
+
+    # Returns the state information about an import job
+    # Returns the state information about an import job.
+    # @param datatable_id id of datatable
+    # @param import_job_id id of import job
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataTableImportJob, Fixnum, Hash)>] DataTableImportJob data, response status code and response headers
+    def get_flows_datatable_import_job_with_http_info(datatable_id, import_job_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_datatable_import_job ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.get_flows_datatable_import_job" if datatable_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'import_job_id' is set
+      fail ArgumentError, "Missing the required parameter 'import_job_id' when calling ArchitectApi.get_flows_datatable_import_job" if import_job_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s).sub('{' + 'importJobId' + '}', import_job_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataTableImportJob')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flows_datatable_import_job\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get all recent import jobs
+    # Get all recent import jobs
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @return [EntityListing]
+    def get_flows_datatable_import_jobs(datatable_id, opts = {})
+      data, _status_code, _headers = get_flows_datatable_import_jobs_with_http_info(datatable_id, opts)
+      return data
+    end
+
+    # Get all recent import jobs
+    # Get all recent import jobs
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @return [Array<(EntityListing, Fixnum, Hash)>] EntityListing data, response status code and response headers
+    def get_flows_datatable_import_jobs_with_http_info(datatable_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_datatable_import_jobs ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.get_flows_datatable_import_jobs" if datatable_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}/import/jobs".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'EntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flows_datatable_import_jobs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Returns a specific row for the datatable
     # Given a datatableId and a rowId (the value of the key field) this will return the full row contents for that rowId.
     # @param datatable_id id of datatable
@@ -6124,6 +6357,146 @@ module PureCloud
         :return_type => 'Flow')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#post_flows_actions_unlock\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Begin an export process for exporting all rows from a datatable
+    # Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @return [DataTableExportJob]
+    def post_flows_datatable_export_jobs(datatable_id, opts = {})
+      data, _status_code, _headers = post_flows_datatable_export_jobs_with_http_info(datatable_id, opts)
+      return data
+    end
+
+    # Begin an export process for exporting all rows from a datatable
+    # Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+    # @param datatable_id id of datatable
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataTableExportJob, Fixnum, Hash)>] DataTableExportJob data, response status code and response headers
+    def post_flows_datatable_export_jobs_with_http_info(datatable_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_datatable_export_jobs ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.post_flows_datatable_export_jobs" if datatable_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}/export/jobs".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataTableExportJob')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_flows_datatable_export_jobs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Begin an import process for importing rows into a datatable
+    # Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+    # @param datatable_id id of datatable
+    # @param body import job information
+    # @param [Hash] opts the optional parameters
+    # @return [DataTableImportJob]
+    def post_flows_datatable_import_jobs(datatable_id, body, opts = {})
+      data, _status_code, _headers = post_flows_datatable_import_jobs_with_http_info(datatable_id, body, opts)
+      return data
+    end
+
+    # Begin an import process for importing rows into a datatable
+    # Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+    # @param datatable_id id of datatable
+    # @param body import job information
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataTableImportJob, Fixnum, Hash)>] DataTableImportJob data, response status code and response headers
+    def post_flows_datatable_import_jobs_with_http_info(datatable_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_datatable_import_jobs ..."
+      end
+      
+      
+      # verify the required parameter 'datatable_id' is set
+      fail ArgumentError, "Missing the required parameter 'datatable_id' when calling ArchitectApi.post_flows_datatable_import_jobs" if datatable_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ArchitectApi.post_flows_datatable_import_jobs" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/datatables/{datatableId}/import/jobs".sub('{format}','json').sub('{' + 'datatableId' + '}', datatable_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataTableImportJob')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_flows_datatable_import_jobs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

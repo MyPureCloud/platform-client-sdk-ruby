@@ -95,6 +95,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :cursor Indicates where to resume query results (not required for first page)
     # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Array<String>] :expand Which fields, if any, to expand
     # @return [AuditQueryExecutionResultsResponse]
     def get_audits_query_transaction_id_results(transaction_id, opts = {})
       data, _status_code, _headers = get_audits_query_transaction_id_results_with_http_info(transaction_id, opts)
@@ -107,6 +108,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :cursor Indicates where to resume query results (not required for first page)
     # @option opts [Integer] :page_size Page size
+    # @option opts [Array<String>] :expand Which fields, if any, to expand
     # @return [Array<(AuditQueryExecutionResultsResponse, Fixnum, Hash)>] AuditQueryExecutionResultsResponse data, response status code and response headers
     def get_audits_query_transaction_id_results_with_http_info(transaction_id, opts = {})
       if @api_client.config.debugging
@@ -133,6 +135,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/audits/query/{transactionId}/results".sub('{format}','json').sub('{' + 'transactionId' + '}', transaction_id.to_s)
 
@@ -140,6 +148,7 @@ module PureCloud
       query_params = {}
       query_params[:'cursor'] = opts[:'cursor'] if opts[:'cursor']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
 
       # header parameters
       header_params = {}

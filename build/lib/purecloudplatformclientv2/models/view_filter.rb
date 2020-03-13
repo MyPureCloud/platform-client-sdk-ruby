@@ -141,27 +141,6 @@ module PureCloud
     # The survey NPS score used to filter the view
     attr_accessor :survey_nps_score
 
-    # Indicates if the Secondary Status should be shown
-    attr_accessor :show_secondary_status
-
-    # Provides the agent duration sort order
-    attr_accessor :agent_duration_sort_order
-
-    # Provides the waiting duration sort order
-    attr_accessor :waiting_duration_sort_order
-
-    # Provides the interacting duration sort order
-    attr_accessor :interacting_duration_sort_order
-
-    # Displays the Agent name as provided by the user
-    attr_accessor :agent_name
-
-    # The list of skill strings as free form text
-    attr_accessor :skills_list
-
-    # The list of language strings as free form text
-    attr_accessor :language_list
-
     # The desired range for mos values
     attr_accessor :mos
 
@@ -213,9 +192,6 @@ module PureCloud
     # The list of remote participants used to filter the view
     attr_accessor :remote_participants
 
-    # A list of status for the configuration view
-    attr_accessor :status_list
-
     # The list of flow Ids
     attr_accessor :flow_ids
 
@@ -254,12 +230,6 @@ module PureCloud
 
     # Indicates filtering for Journey visit id
     attr_accessor :has_journey_visit_id
-
-    # A list of OAuth client IDs
-    attr_accessor :oauth_client_ids
-
-    # A list of API operations (ex: [\"GET /api/v2/users/{userId}/queues\"])
-    attr_accessor :api_operations
 
     # Indicates filtering for presence of MMS media
     attr_accessor :has_media
@@ -359,20 +329,6 @@ module PureCloud
         
         :'survey_nps_score' => :'surveyNpsScore',
         
-        :'show_secondary_status' => :'showSecondaryStatus',
-        
-        :'agent_duration_sort_order' => :'agentDurationSortOrder',
-        
-        :'waiting_duration_sort_order' => :'waitingDurationSortOrder',
-        
-        :'interacting_duration_sort_order' => :'interactingDurationSortOrder',
-        
-        :'agent_name' => :'agentName',
-        
-        :'skills_list' => :'skillsList',
-        
-        :'language_list' => :'languageList',
-        
         :'mos' => :'mos',
         
         :'survey_question_group_score' => :'surveyQuestionGroupScore',
@@ -407,8 +363,6 @@ module PureCloud
         
         :'remote_participants' => :'remoteParticipants',
         
-        :'status_list' => :'statusList',
-        
         :'flow_ids' => :'flowIds',
         
         :'flow_outcome_ids' => :'flowOutcomeIds',
@@ -434,10 +388,6 @@ module PureCloud
         :'has_journey_action_map_id' => :'hasJourneyActionMapId',
         
         :'has_journey_visit_id' => :'hasJourneyVisitId',
-        
-        :'oauth_client_ids' => :'oauthClientIds',
-        
-        :'api_operations' => :'apiOperations',
         
         :'has_media' => :'hasMedia',
         
@@ -536,20 +486,6 @@ module PureCloud
         
         :'survey_nps_score' => :'NumericRange',
         
-        :'show_secondary_status' => :'BOOLEAN',
-        
-        :'agent_duration_sort_order' => :'String',
-        
-        :'waiting_duration_sort_order' => :'String',
-        
-        :'interacting_duration_sort_order' => :'String',
-        
-        :'agent_name' => :'String',
-        
-        :'skills_list' => :'Array<String>',
-        
-        :'language_list' => :'Array<String>',
-        
         :'mos' => :'NumericRange',
         
         :'survey_question_group_score' => :'NumericRange',
@@ -584,8 +520,6 @@ module PureCloud
         
         :'remote_participants' => :'Array<String>',
         
-        :'status_list' => :'Array<String>',
-        
         :'flow_ids' => :'Array<String>',
         
         :'flow_outcome_ids' => :'Array<String>',
@@ -611,10 +545,6 @@ module PureCloud
         :'has_journey_action_map_id' => :'BOOLEAN',
         
         :'has_journey_visit_id' => :'BOOLEAN',
-        
-        :'oauth_client_ids' => :'Array<String>',
-        
-        :'api_operations' => :'Array<String>',
         
         :'has_media' => :'BOOLEAN',
         
@@ -1075,73 +1005,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'showSecondaryStatus')
-        
-        
-        self.show_secondary_status = attributes[:'showSecondaryStatus']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'agentDurationSortOrder')
-        
-        
-        self.agent_duration_sort_order = attributes[:'agentDurationSortOrder']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'waitingDurationSortOrder')
-        
-        
-        self.waiting_duration_sort_order = attributes[:'waitingDurationSortOrder']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'interactingDurationSortOrder')
-        
-        
-        self.interacting_duration_sort_order = attributes[:'interactingDurationSortOrder']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'agentName')
-        
-        
-        self.agent_name = attributes[:'agentName']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'skillsList')
-        
-        if (value = attributes[:'skillsList']).is_a?(Array)
-          self.skills_list = value
-        end
-        
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'languageList')
-        
-        if (value = attributes[:'languageList']).is_a?(Array)
-          self.language_list = value
-        end
-        
-        
-      
-      end
-
-      
       if attributes.has_key?(:'mos')
         
         
@@ -1309,17 +1172,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'statusList')
-        
-        if (value = attributes[:'statusList']).is_a?(Array)
-          self.status_list = value
-        end
-        
-        
-      
-      end
-
-      
       if attributes.has_key?(:'flowIds')
         
         if (value = attributes[:'flowIds']).is_a?(Array)
@@ -1452,28 +1304,6 @@ module PureCloud
         
         
         self.has_journey_visit_id = attributes[:'hasJourneyVisitId']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'oauthClientIds')
-        
-        if (value = attributes[:'oauthClientIds']).is_a?(Array)
-          self.oauth_client_ids = value
-        end
-        
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'apiOperations')
-        
-        if (value = attributes[:'apiOperations']).is_a?(Array)
-          self.api_operations = value
-        end
-        
         
       
       end
@@ -1706,61 +1536,6 @@ module PureCloud
       
       
       
-      allowed_values = ["ascending", "descending"]
-      if @agent_duration_sort_order && !allowed_values.include?(@agent_duration_sort_order)
-        return false
-      end
-      
-      
-      
-      
-      
-      allowed_values = ["ascending", "descending"]
-      if @waiting_duration_sort_order && !allowed_values.include?(@waiting_duration_sort_order)
-        return false
-      end
-      
-      
-      
-      
-      
-      allowed_values = ["ascending", "descending"]
-      if @interacting_duration_sort_order && !allowed_values.include?(@interacting_duration_sort_order)
-        return false
-      end
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       
       
       
@@ -2066,83 +1841,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] agent_duration_sort_order Object to be assigned
-    def agent_duration_sort_order=(agent_duration_sort_order)
-      allowed_values = ["ascending", "descending"]
-      if agent_duration_sort_order && !allowed_values.include?(agent_duration_sort_order)
-        fail ArgumentError, "invalid value for 'agent_duration_sort_order', must be one of #{allowed_values}."
-      end
-      @agent_duration_sort_order = agent_duration_sort_order
-    end
-
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] waiting_duration_sort_order Object to be assigned
-    def waiting_duration_sort_order=(waiting_duration_sort_order)
-      allowed_values = ["ascending", "descending"]
-      if waiting_duration_sort_order && !allowed_values.include?(waiting_duration_sort_order)
-        fail ArgumentError, "invalid value for 'waiting_duration_sort_order', must be one of #{allowed_values}."
-      end
-      @waiting_duration_sort_order = waiting_duration_sort_order
-    end
-
-    
-    
-    
-    
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] interacting_duration_sort_order Object to be assigned
-    def interacting_duration_sort_order=(interacting_duration_sort_order)
-      allowed_values = ["ascending", "descending"]
-      if interacting_duration_sort_order && !allowed_values.include?(interacting_duration_sort_order)
-        fail ArgumentError, "invalid value for 'interacting_duration_sort_order', must be one of #{allowed_values}."
-      end
-      @interacting_duration_sort_order = interacting_duration_sort_order
-    end
-
     
     
     
@@ -2392,13 +2090,6 @@ module PureCloud
           survey_form_ids == o.survey_form_ids &&
           survey_total_score == o.survey_total_score &&
           survey_nps_score == o.survey_nps_score &&
-          show_secondary_status == o.show_secondary_status &&
-          agent_duration_sort_order == o.agent_duration_sort_order &&
-          waiting_duration_sort_order == o.waiting_duration_sort_order &&
-          interacting_duration_sort_order == o.interacting_duration_sort_order &&
-          agent_name == o.agent_name &&
-          skills_list == o.skills_list &&
-          language_list == o.language_list &&
           mos == o.mos &&
           survey_question_group_score == o.survey_question_group_score &&
           survey_promoter_score == o.survey_promoter_score &&
@@ -2416,7 +2107,6 @@ module PureCloud
           is_consulted == o.is_consulted &&
           is_consult_transferred == o.is_consult_transferred &&
           remote_participants == o.remote_participants &&
-          status_list == o.status_list &&
           flow_ids == o.flow_ids &&
           flow_outcome_ids == o.flow_outcome_ids &&
           flow_outcome_values == o.flow_outcome_values &&
@@ -2430,8 +2120,6 @@ module PureCloud
           has_journey_customer_id == o.has_journey_customer_id &&
           has_journey_action_map_id == o.has_journey_action_map_id &&
           has_journey_visit_id == o.has_journey_visit_id &&
-          oauth_client_ids == o.oauth_client_ids &&
-          api_operations == o.api_operations &&
           has_media == o.has_media &&
           role_ids == o.role_ids &&
           reports_tos == o.reports_tos &&
@@ -2447,7 +2135,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, originating_directions, wrap_up_codes, dnis_list, session_dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, external_contact_ids, external_org_ids, ani_list, durations_milliseconds, acd_durations_milliseconds, talk_durations_milliseconds, acw_durations_milliseconds, handle_durations_milliseconds, hold_durations_milliseconds, abandon_durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, show_secondary_status, agent_duration_sort_order, waiting_duration_sort_order, interacting_duration_sort_order, agent_name, skills_list, language_list, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, sip_call_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, status_list, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, flow_versions, group_ids, has_journey_customer_id, has_journey_action_map_id, has_journey_visit_id, oauth_client_ids, api_operations, has_media, role_ids, reports_tos, location_ids].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, originating_directions, wrap_up_codes, dnis_list, session_dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, external_contact_ids, external_org_ids, ani_list, durations_milliseconds, acd_durations_milliseconds, talk_durations_milliseconds, acw_durations_milliseconds, handle_durations_milliseconds, hold_durations_milliseconds, abandon_durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, sip_call_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, flow_versions, group_ids, has_journey_customer_id, has_journey_action_map_id, has_journey_visit_id, has_media, role_ids, reports_tos, location_ids].hash
     end
 
     # build the object from hash

@@ -49,6 +49,9 @@ module PureCloud
 
     attr_accessor :voicemail_enabled
 
+    # Organizations Originating Platform.
+    attr_accessor :product_platform
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -82,6 +85,8 @@ module PureCloud
         :'support_uri' => :'supportURI',
         
         :'voicemail_enabled' => :'voicemailEnabled',
+        
+        :'product_platform' => :'productPlatform',
         
         :'self_uri' => :'selfUri',
         
@@ -117,6 +122,8 @@ module PureCloud
         :'support_uri' => :'String',
         
         :'voicemail_enabled' => :'BOOLEAN',
+        
+        :'product_platform' => :'String',
         
         :'self_uri' => :'String',
         
@@ -242,6 +249,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'productPlatform')
+        
+        
+        self.product_platform = attributes[:'productPlatform']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -337,6 +353,15 @@ module PureCloud
       
       
       
+      allowed_values = ["PureCloud", "PureEngage", "PureEngageCloud", "PureConnect", "PureConnectCloud", "Unknown"]
+      if @product_platform && !allowed_values.include?(@product_platform)
+        return false
+      end
+      
+      
+      
+      
+      
       
       
       
@@ -416,6 +441,20 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] product_platform Object to be assigned
+    def product_platform=(product_platform)
+      allowed_values = ["PureCloud", "PureEngage", "PureEngageCloud", "PureConnect", "PureConnectCloud", "Unknown"]
+      if product_platform && !allowed_values.include?(product_platform)
+        fail ArgumentError, "invalid value for 'product_platform', must be one of #{allowed_values}."
+      end
+      @product_platform = product_platform
+    end
+
+    
+    
+    
+    
     
     
     
@@ -442,6 +481,7 @@ module PureCloud
           default_site_id == o.default_site_id &&
           support_uri == o.support_uri &&
           voicemail_enabled == o.voicemail_enabled &&
+          product_platform == o.product_platform &&
           self_uri == o.self_uri &&
           features == o.features
     end
@@ -455,7 +495,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, default_language, default_country_code, third_party_org_name, third_party_uri, domain, version, state, default_site_id, support_uri, voicemail_enabled, self_uri, features].hash
+      [id, name, default_language, default_country_code, third_party_org_name, third_party_uri, domain, version, state, default_site_id, support_uri, voicemail_enabled, product_platform, self_uri, features].hash
     end
 
     # build the object from hash

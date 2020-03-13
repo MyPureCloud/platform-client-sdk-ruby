@@ -3604,7 +3604,7 @@ Name | Type | Description  | Notes
 
 <a name="post_workforcemanagement_managementunit_agentschedules_search"></a>
 
-## [**UserScheduleContainer**](UserScheduleContainer.html) post_workforcemanagement_managementunit_agentschedules_search(mu_id, opts)
+## [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html) post_workforcemanagement_managementunit_agentschedules_search(mu_id, opts)
 
 
 
@@ -3667,7 +3667,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserScheduleContainer**](UserScheduleContainer.html)
+[**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html)
 
 ### HTTP request headers
 

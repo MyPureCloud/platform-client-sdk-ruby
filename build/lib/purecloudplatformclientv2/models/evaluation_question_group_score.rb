@@ -30,6 +30,10 @@ module PureCloud
 
     attr_accessor :max_total_critical_score
 
+    attr_accessor :total_non_critical_score
+
+    attr_accessor :max_total_non_critical_score
+
     attr_accessor :total_score_unweighted
 
     attr_accessor :max_total_score_unweighted
@@ -37,6 +41,10 @@ module PureCloud
     attr_accessor :total_critical_score_unweighted
 
     attr_accessor :max_total_critical_score_unweighted
+
+    attr_accessor :total_non_critical_score_unweighted
+
+    attr_accessor :max_total_non_critical_score_unweighted
 
     attr_accessor :question_scores
 
@@ -56,6 +64,10 @@ module PureCloud
         
         :'max_total_critical_score' => :'maxTotalCriticalScore',
         
+        :'total_non_critical_score' => :'totalNonCriticalScore',
+        
+        :'max_total_non_critical_score' => :'maxTotalNonCriticalScore',
+        
         :'total_score_unweighted' => :'totalScoreUnweighted',
         
         :'max_total_score_unweighted' => :'maxTotalScoreUnweighted',
@@ -63,6 +75,10 @@ module PureCloud
         :'total_critical_score_unweighted' => :'totalCriticalScoreUnweighted',
         
         :'max_total_critical_score_unweighted' => :'maxTotalCriticalScoreUnweighted',
+        
+        :'total_non_critical_score_unweighted' => :'totalNonCriticalScoreUnweighted',
+        
+        :'max_total_non_critical_score_unweighted' => :'maxTotalNonCriticalScoreUnweighted',
         
         :'question_scores' => :'questionScores'
         
@@ -85,6 +101,10 @@ module PureCloud
         
         :'max_total_critical_score' => :'Float',
         
+        :'total_non_critical_score' => :'Float',
+        
+        :'max_total_non_critical_score' => :'Float',
+        
         :'total_score_unweighted' => :'Float',
         
         :'max_total_score_unweighted' => :'Float',
@@ -92,6 +112,10 @@ module PureCloud
         :'total_critical_score_unweighted' => :'Float',
         
         :'max_total_critical_score_unweighted' => :'Float',
+        
+        :'total_non_critical_score_unweighted' => :'Float',
+        
+        :'max_total_non_critical_score_unweighted' => :'Float',
         
         :'question_scores' => :'Array<EvaluationQuestionScore>'
         
@@ -161,6 +185,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'totalNonCriticalScore')
+        
+        
+        self.total_non_critical_score = attributes[:'totalNonCriticalScore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'maxTotalNonCriticalScore')
+        
+        
+        self.max_total_non_critical_score = attributes[:'maxTotalNonCriticalScore']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'totalScoreUnweighted')
         
         
@@ -192,6 +234,24 @@ module PureCloud
         
         
         self.max_total_critical_score_unweighted = attributes[:'maxTotalCriticalScoreUnweighted']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'totalNonCriticalScoreUnweighted')
+        
+        
+        self.total_non_critical_score_unweighted = attributes[:'totalNonCriticalScoreUnweighted']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'maxTotalNonCriticalScoreUnweighted')
+        
+        
+        self.max_total_non_critical_score_unweighted = attributes[:'maxTotalNonCriticalScoreUnweighted']
         
       
       end
@@ -267,8 +327,44 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -336,10 +432,14 @@ module PureCloud
           marked_na == o.marked_na &&
           total_critical_score == o.total_critical_score &&
           max_total_critical_score == o.max_total_critical_score &&
+          total_non_critical_score == o.total_non_critical_score &&
+          max_total_non_critical_score == o.max_total_non_critical_score &&
           total_score_unweighted == o.total_score_unweighted &&
           max_total_score_unweighted == o.max_total_score_unweighted &&
           total_critical_score_unweighted == o.total_critical_score_unweighted &&
           max_total_critical_score_unweighted == o.max_total_critical_score_unweighted &&
+          total_non_critical_score_unweighted == o.total_non_critical_score_unweighted &&
+          max_total_non_critical_score_unweighted == o.max_total_non_critical_score_unweighted &&
           question_scores == o.question_scores
     end
 
@@ -352,7 +452,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [question_group_id, total_score, max_total_score, marked_na, total_critical_score, max_total_critical_score, total_score_unweighted, max_total_score_unweighted, total_critical_score_unweighted, max_total_critical_score_unweighted, question_scores].hash
+      [question_group_id, total_score, max_total_score, marked_na, total_critical_score, max_total_critical_score, total_non_critical_score, max_total_non_critical_score, total_score_unweighted, max_total_score_unweighted, total_critical_score_unweighted, max_total_critical_score_unweighted, total_non_critical_score_unweighted, max_total_non_critical_score_unweighted, question_scores].hash
     end
 
     # build the object from hash

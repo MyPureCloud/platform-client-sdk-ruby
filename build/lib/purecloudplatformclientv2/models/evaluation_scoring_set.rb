@@ -22,6 +22,8 @@ module PureCloud
 
     attr_accessor :total_critical_score
 
+    attr_accessor :total_non_critical_score
+
     attr_accessor :question_group_scores
 
     attr_accessor :any_failed_kill_questions
@@ -37,6 +39,8 @@ module PureCloud
         :'total_score' => :'totalScore',
         
         :'total_critical_score' => :'totalCriticalScore',
+        
+        :'total_non_critical_score' => :'totalNonCriticalScore',
         
         :'question_group_scores' => :'questionGroupScores',
         
@@ -56,6 +60,8 @@ module PureCloud
         :'total_score' => :'Float',
         
         :'total_critical_score' => :'Float',
+        
+        :'total_non_critical_score' => :'Float',
         
         :'question_group_scores' => :'Array<EvaluationQuestionGroupScore>',
         
@@ -90,6 +96,15 @@ module PureCloud
         
         
         self.total_critical_score = attributes[:'totalCriticalScore']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'totalNonCriticalScore')
+        
+        
+        self.total_non_critical_score = attributes[:'totalNonCriticalScore']
         
       
       end
@@ -172,8 +187,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -212,6 +236,7 @@ module PureCloud
       self.class == o.class &&
           total_score == o.total_score &&
           total_critical_score == o.total_critical_score &&
+          total_non_critical_score == o.total_non_critical_score &&
           question_group_scores == o.question_group_scores &&
           any_failed_kill_questions == o.any_failed_kill_questions &&
           comments == o.comments &&
@@ -227,7 +252,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [total_score, total_critical_score, question_group_scores, any_failed_kill_questions, comments, agent_comments].hash
+      [total_score, total_critical_score, total_non_critical_score, question_group_scores, any_failed_kill_questions, comments, agent_comments].hash
     end
 
     # build the object from hash

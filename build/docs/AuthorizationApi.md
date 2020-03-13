@@ -16,8 +16,10 @@ Method | Description
 [**get_authorization_divisions**](AuthorizationApi.html#get_authorization_divisions) | Retrieve a list of all divisions defined for the organization
 [**get_authorization_divisions_home**](AuthorizationApi.html#get_authorization_divisions_home) | Retrieve the home division for the organization.
 [**get_authorization_divisions_limit**](AuthorizationApi.html#get_authorization_divisions_limit) | Returns the maximum allowed number of divisions.
-[**get_authorization_divisionspermitted_me**](AuthorizationApi.html#get_authorization_divisionspermitted_me) | Returns whether or not current user can perform the specified action(s).
-[**get_authorization_divisionspermitted_subject_id**](AuthorizationApi.html#get_authorization_divisionspermitted_subject_id) | Returns whether or not specified user can perform the specified action(s).
+[**get_authorization_divisionspermitted_me**](AuthorizationApi.html#get_authorization_divisionspermitted_me) | Returns which divisions the current user has the given permission in.
+[**get_authorization_divisionspermitted_paged_me**](AuthorizationApi.html#get_authorization_divisionspermitted_paged_me) | Returns which divisions the current user has the given permission in.
+[**get_authorization_divisionspermitted_paged_subject_id**](AuthorizationApi.html#get_authorization_divisionspermitted_paged_subject_id) | Returns which divisions the specified user has the given permission in.
+[**get_authorization_divisionspermitted_subject_id**](AuthorizationApi.html#get_authorization_divisionspermitted_subject_id) | Returns which divisions the specified user has the given permission in.
 [**get_authorization_permissions**](AuthorizationApi.html#get_authorization_permissions) | Get all permissions.
 [**get_authorization_products**](AuthorizationApi.html#get_authorization_products) | Get the list of enabled products
 [**get_authorization_role**](AuthorizationApi.html#get_authorization_role) | Get a single organization role.
@@ -582,11 +584,11 @@ This endpoint does not need any parameter.
 
 ## [**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_me(permission, opts)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
+Returns which divisions the current user has the given permission in.
 
-Returns whether or not current user can perform the specified action(s).
-
-
+This route is deprecated, use authorization/divisionspermitted/paged/me instead.
 
 Wraps GET /api/v2/authorization/divisionspermitted/me 
 
@@ -618,7 +620,7 @@ opts = {
 }
 
 begin
-  #Returns whether or not current user can perform the specified action(s).
+  #Returns which divisions the current user has the given permission in.
   result = api_instance.get_authorization_divisionspermitted_me(permission, opts)
   p result
 rescue PureCloud::ApiError => e
@@ -646,15 +648,158 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_authorization_divisionspermitted_paged_me"></a>
+
+## [**DivsPermittedEntityListing**](DivsPermittedEntityListing.html) get_authorization_divisionspermitted_paged_me(permission, opts)
+
+
+
+Returns which divisions the current user has the given permission in.
+
+
+
+Wraps GET /api/v2/authorization/divisionspermitted/paged/me 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+permission = "permission_example" # String | The permission string, including the object to access, e.g. routing:queue:view
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25 # Integer | Page size
+}
+
+begin
+  #Returns which divisions the current user has the given permission in.
+  result = api_instance.get_authorization_divisionspermitted_paged_me(permission, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_divisionspermitted_paged_me: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DivsPermittedEntityListing**](DivsPermittedEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_authorization_divisionspermitted_paged_subject_id"></a>
+
+## [**DivsPermittedEntityListing**](DivsPermittedEntityListing.html) get_authorization_divisionspermitted_paged_subject_id(subject_id, permission, opts)
+
+
+
+Returns which divisions the specified user has the given permission in.
+
+
+
+Wraps GET /api/v2/authorization/divisionspermitted/paged/{subjectId} 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuthorizationApi.new
+
+subject_id = "subject_id_example" # String | Subject ID (user or group)
+
+permission = "permission_example" # String | The permission string, including the object to access, e.g. routing:queue:view
+
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25 # Integer | Page size
+}
+
+begin
+  #Returns which divisions the specified user has the given permission in.
+  result = api_instance.get_authorization_divisionspermitted_paged_subject_id(subject_id, permission, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuthorizationApi->get_authorization_divisionspermitted_paged_subject_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject_id** | **String**| Subject ID (user or group) |  |
+ **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view |  |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DivsPermittedEntityListing**](DivsPermittedEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_authorization_divisionspermitted_subject_id"></a>
 
 ## [**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Returns whether or not specified user can perform the specified action(s).
+Returns which divisions the specified user has the given permission in.
 
-
+This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
 
 Wraps GET /api/v2/authorization/divisionspermitted/{subjectId} 
 
@@ -688,7 +833,7 @@ opts = {
 }
 
 begin
-  #Returns whether or not specified user can perform the specified action(s).
+  #Returns which divisions the specified user has the given permission in.
   result = api_instance.get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
   p result
 rescue PureCloud::ApiError => e

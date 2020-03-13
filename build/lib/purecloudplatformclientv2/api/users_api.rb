@@ -172,6 +172,70 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete the user's max utilization settings and revert to the organization-wide default.
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_routing_user_utilization(user_id, opts = {})
+      delete_routing_user_utilization_with_http_info(user_id, opts)
+      return nil
+    end
+
+    # Delete the user&#39;s max utilization settings and revert to the organization-wide default.
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_routing_user_utilization_with_http_info(user_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.delete_routing_user_utilization ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.delete_routing_user_utilization" if user_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/users/{userId}/utilization".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#delete_routing_user_utilization\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete user
     # 
     # @param user_id User ID
@@ -725,8 +789,8 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Returns whether or not current user can perform the specified action(s).
-    # 
+    # Returns which divisions the current user has the given permission in.
+    # This route is deprecated, use authorization/divisionspermitted/paged/me instead.
     # @param permission The permission string, including the object to access, e.g. routing:queue:view
     # @param [Hash] opts the optional parameters
     # @option opts [String] :name Search term to filter by division name
@@ -736,8 +800,8 @@ module PureCloud
       return data
     end
 
-    # Returns whether or not current user can perform the specified action(s).
-    # 
+    # Returns which divisions the current user has the given permission in.
+    # This route is deprecated, use authorization/divisionspermitted/paged/me instead.
     # @param permission The permission string, including the object to access, e.g. routing:queue:view
     # @param [Hash] opts the optional parameters
     # @option opts [String] :name Search term to filter by division name
@@ -800,8 +864,186 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Returns whether or not specified user can perform the specified action(s).
+    # Returns which divisions the current user has the given permission in.
     # 
+    # @param permission The permission string, including the object to access, e.g. routing:queue:view
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @return [DivsPermittedEntityListing]
+    def get_authorization_divisionspermitted_paged_me(permission, opts = {})
+      data, _status_code, _headers = get_authorization_divisionspermitted_paged_me_with_http_info(permission, opts)
+      return data
+    end
+
+    # Returns which divisions the current user has the given permission in.
+    # 
+    # @param permission The permission string, including the object to access, e.g. routing:queue:view
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @return [Array<(DivsPermittedEntityListing, Fixnum, Hash)>] DivsPermittedEntityListing data, response status code and response headers
+    def get_authorization_divisionspermitted_paged_me_with_http_info(permission, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.get_authorization_divisionspermitted_paged_me ..."
+      end
+      
+      
+      # verify the required parameter 'permission' is set
+      fail ArgumentError, "Missing the required parameter 'permission' when calling UsersApi.get_authorization_divisionspermitted_paged_me" if permission.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisionspermitted/paged/me".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'permission'] = permission
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DivsPermittedEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#get_authorization_divisionspermitted_paged_me\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns which divisions the specified user has the given permission in.
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param permission The permission string, including the object to access, e.g. routing:queue:view
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @return [DivsPermittedEntityListing]
+    def get_authorization_divisionspermitted_paged_subject_id(subject_id, permission, opts = {})
+      data, _status_code, _headers = get_authorization_divisionspermitted_paged_subject_id_with_http_info(subject_id, permission, opts)
+      return data
+    end
+
+    # Returns which divisions the specified user has the given permission in.
+    # 
+    # @param subject_id Subject ID (user or group)
+    # @param permission The permission string, including the object to access, e.g. routing:queue:view
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
+    # @return [Array<(DivsPermittedEntityListing, Fixnum, Hash)>] DivsPermittedEntityListing data, response status code and response headers
+    def get_authorization_divisionspermitted_paged_subject_id_with_http_info(subject_id, permission, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.get_authorization_divisionspermitted_paged_subject_id ..."
+      end
+      
+      
+      # verify the required parameter 'subject_id' is set
+      fail ArgumentError, "Missing the required parameter 'subject_id' when calling UsersApi.get_authorization_divisionspermitted_paged_subject_id" if subject_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'permission' is set
+      fail ArgumentError, "Missing the required parameter 'permission' when calling UsersApi.get_authorization_divisionspermitted_paged_subject_id" if permission.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/authorization/divisionspermitted/paged/{subjectId}".sub('{format}','json').sub('{' + 'subjectId' + '}', subject_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'permission'] = permission
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DivsPermittedEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#get_authorization_divisionspermitted_paged_subject_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns which divisions the specified user has the given permission in.
+    # This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
     # @param subject_id Subject ID (user or group)
     # @param permission The permission string, including the object to access, e.g. routing:queue:view
     # @param [Hash] opts the optional parameters
@@ -812,8 +1054,8 @@ module PureCloud
       return data
     end
 
-    # Returns whether or not specified user can perform the specified action(s).
-    # 
+    # Returns which divisions the specified user has the given permission in.
+    # This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
     # @param subject_id Subject ID (user or group)
     # @param permission The permission string, including the object to access, e.g. routing:queue:view
     # @param [Hash] opts the optional parameters
@@ -1185,6 +1427,71 @@ module PureCloud
         :return_type => 'UserProfileEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#get_profiles_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @return [Utilization]
+    def get_routing_user_utilization(user_id, opts = {})
+      data, _status_code, _headers = get_routing_user_utilization_with_http_info(user_id, opts)
+      return data
+    end
+
+    # Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
+    # 
+    # @param user_id User ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Utilization, Fixnum, Hash)>] Utilization data, response status code and response headers
+    def get_routing_user_utilization_with_http_info(user_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.get_routing_user_utilization ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.get_routing_user_utilization" if user_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/users/{userId}/utilization".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Utilization')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#get_routing_user_utilization\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4480,6 +4787,81 @@ module PureCloud
         :return_type => 'UsersSearchResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UsersApi#post_users_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+    # 
+    # @param user_id User ID
+    # @param body utilization
+    # @param [Hash] opts the optional parameters
+    # @return [Utilization]
+    def put_routing_user_utilization(user_id, body, opts = {})
+      data, _status_code, _headers = put_routing_user_utilization_with_http_info(user_id, body, opts)
+      return data
+    end
+
+    # Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
+    # 
+    # @param user_id User ID
+    # @param body utilization
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Utilization, Fixnum, Hash)>] Utilization data, response status code and response headers
+    def put_routing_user_utilization_with_http_info(user_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: UsersApi.put_routing_user_utilization ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling UsersApi.put_routing_user_utilization" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling UsersApi.put_routing_user_utilization" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/users/{userId}/utilization".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Utilization')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UsersApi#put_routing_user_utilization\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -13,6 +13,7 @@ Method | Description
 [**get_license_toggle**](LicenseApi.html#get_license_toggle) | Get PureCloud license feature toggle value.
 [**get_license_user**](LicenseApi.html#get_license_user) | Get licenses for specified user.
 [**get_license_users**](LicenseApi.html#get_license_users) | Get a page of users and their licenses
+[**post_license_infer**](LicenseApi.html#post_license_infer) | Get a list of licenses inferred based on a list of roleIds
 [**post_license_organization**](LicenseApi.html#post_license_organization) | Update the organization&#39;s license assignments in a batch.
 [**post_license_toggle**](LicenseApi.html#post_license_toggle) | Switch PureCloud license feature toggle value.
 [**post_license_users**](LicenseApi.html#post_license_users) | Fetch user licenses in a batch.
@@ -331,6 +332,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserLicensesEntityListing**](UserLicensesEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_license_infer"></a>
+
+## Array&lt;String&gt;** post_license_infer(opts)
+
+
+
+Get a list of licenses inferred based on a list of roleIds
+
+
+
+Wraps POST /api/v2/license/infer 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::LicenseApi.new
+
+opts = { 
+  body: [PureCloud::Array<String>.new] # Array<String> | The roleIds to use while inferring licenses
+}
+
+begin
+  #Get a list of licenses inferred based on a list of roleIds
+  result = api_instance.post_license_infer(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling LicenseApi->post_license_infer: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **Array&lt;String&gt;**| The roleIds to use while inferring licenses | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+**Array&lt;String&gt;**
 
 ### HTTP request headers
 

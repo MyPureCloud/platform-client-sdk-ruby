@@ -14,6 +14,7 @@ title: AnalyticsParticipant
 | **external_contact_id** | **String** | External Contact Identifier | [optional] |
 | **external_organization_id** | **String** | External Organization Identifier | [optional] |
 | **flagged_reason** | **String** | Reason for which participant flagged conversation | [optional] |
+| **team_id** | **String** | The team id the user is a member of | [optional] |
 | **sessions** | [**Array&lt;AnalyticsSession&gt;**](AnalyticsSession.html) | List of sessions associated to this participant | [optional] |
 | **attributes** | **Hash&lt;String, String&gt;** | List of attributes associated to this participant | [optional] |
 {: class="table table-striped"}

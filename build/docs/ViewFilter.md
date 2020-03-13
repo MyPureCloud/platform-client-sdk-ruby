@@ -48,13 +48,6 @@ title: ViewFilter
 | **survey_form_ids** | **Array&lt;String&gt;** | The survey form ids used to filter the view | [optional] |
 | **survey_total_score** | [**NumericRange**](NumericRange.html) | The survey total score used to filter the view | [optional] |
 | **survey_nps_score** | [**NumericRange**](NumericRange.html) | The survey NPS score used to filter the view | [optional] |
-| **show_secondary_status** | **BOOLEAN** | Indicates if the Secondary Status should be shown | [optional] |
-| **agent_duration_sort_order** | **String** | Provides the agent duration sort order | [optional] |
-| **waiting_duration_sort_order** | **String** | Provides the waiting duration sort order | [optional] |
-| **interacting_duration_sort_order** | **String** | Provides the interacting duration sort order | [optional] |
-| **agent_name** | **String** | Displays the Agent name as provided by the user | [optional] |
-| **skills_list** | **Array&lt;String&gt;** | The list of skill strings as free form text | [optional] |
-| **language_list** | **Array&lt;String&gt;** | The list of language strings as free form text | [optional] |
 | **mos** | [**NumericRange**](NumericRange.html) | The desired range for mos values | [optional] |
 | **survey_question_group_score** | [**NumericRange**](NumericRange.html) | The survey question group score used to filter the view | [optional] |
 | **survey_promoter_score** | [**NumericRange**](NumericRange.html) | The survey promoter score used to filter the view | [optional] |
@@ -72,7 +65,6 @@ title: ViewFilter
 | **is_consulted** | **BOOLEAN** | Indicates filtering for consulted | [optional] |
 | **is_consult_transferred** | **BOOLEAN** | Indicates filtering for consult transferred | [optional] |
 | **remote_participants** | **Array&lt;String&gt;** | The list of remote participants used to filter the view | [optional] |
-| **status_list** | **Array&lt;String&gt;** | A list of status for the configuration view | [optional] |
 | **flow_ids** | **Array&lt;String&gt;** | The list of flow Ids | [optional] |
 | **flow_outcome_ids** | **Array&lt;String&gt;** | A list of outcome ids of the flow | [optional] |
 | **flow_outcome_values** | **Array&lt;String&gt;** | A list of outcome values of the flow | [optional] |
@@ -86,8 +78,6 @@ title: ViewFilter
 | **has_journey_customer_id** | **BOOLEAN** | Indicates filtering for journey customer id | [optional] |
 | **has_journey_action_map_id** | **BOOLEAN** | Indicates filtering for Journey action map id | [optional] |
 | **has_journey_visit_id** | **BOOLEAN** | Indicates filtering for Journey visit id | [optional] |
-| **oauth_client_ids** | **Array&lt;String&gt;** | A list of OAuth client IDs | [optional] |
-| **api_operations** | **Array&lt;String&gt;** | A list of API operations (ex: [\&quot;GET /api/v2/users/{userId}/queues\&quot;]) | [optional] |
 | **has_media** | **BOOLEAN** | Indicates filtering for presence of MMS media | [optional] |
 | **role_ids** | **Array&lt;String&gt;** | The role Ids used to filter the view | [optional] |
 | **reports_tos** | **Array&lt;String&gt;** | The report to user IDs used to filter the view | [optional] |
