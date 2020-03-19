@@ -22,6 +22,8 @@ module PureCloud
 
     attr_accessor :number_of_contacts_called
 
+    attr_accessor :number_of_contacts_messaged
+
     attr_accessor :total_number_of_contacts
 
     attr_accessor :percentage
@@ -35,6 +37,8 @@ module PureCloud
         :'campaign' => :'campaign',
         
         :'number_of_contacts_called' => :'numberOfContactsCalled',
+        
+        :'number_of_contacts_messaged' => :'numberOfContactsMessaged',
         
         :'total_number_of_contacts' => :'totalNumberOfContacts',
         
@@ -52,6 +56,8 @@ module PureCloud
         :'campaign' => :'DialerCampaignProgressEventUriReference',
         
         :'number_of_contacts_called' => :'Float',
+        
+        :'number_of_contacts_messaged' => :'Float',
         
         :'total_number_of_contacts' => :'Float',
         
@@ -84,6 +90,15 @@ module PureCloud
         
         
         self.number_of_contacts_called = attributes[:'numberOfContactsCalled']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'numberOfContactsMessaged')
+        
+        
+        self.number_of_contacts_messaged = attributes[:'numberOfContactsMessaged']
         
       
       end
@@ -151,8 +166,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -186,6 +210,7 @@ module PureCloud
       self.class == o.class &&
           campaign == o.campaign &&
           number_of_contacts_called == o.number_of_contacts_called &&
+          number_of_contacts_messaged == o.number_of_contacts_messaged &&
           total_number_of_contacts == o.total_number_of_contacts &&
           percentage == o.percentage &&
           additional_properties == o.additional_properties
@@ -200,7 +225,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [campaign, number_of_contacts_called, total_number_of_contacts, percentage, additional_properties].hash
+      [campaign, number_of_contacts_called, number_of_contacts_messaged, total_number_of_contacts, percentage, additional_properties].hash
     end
 
     # build the object from hash

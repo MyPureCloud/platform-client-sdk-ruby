@@ -46,9 +46,6 @@ module PureCloud
     # The list of the user's email addresses.
     attr_accessor :emails
 
-    # The list of the user's photos.
-    attr_accessor :photos
-
     # The external ID of the user. Set by the provisioning client. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readWrite\".
     attr_accessor :external_id
 
@@ -88,8 +85,6 @@ module PureCloud
         
         :'emails' => :'emails',
         
-        :'photos' => :'photos',
-        
         :'external_id' => :'externalId',
         
         :'groups' => :'groups',
@@ -126,8 +121,6 @@ module PureCloud
         :'phone_numbers' => :'Array<ScimPhoneNumber>',
         
         :'emails' => :'Array<ScimEmail>',
-        
-        :'photos' => :'Array<Photo>',
         
         :'external_id' => :'String',
         
@@ -233,17 +226,6 @@ module PureCloud
         
         if (value = attributes[:'emails']).is_a?(Array)
           self.emails = value
-        end
-        
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'photos')
-        
-        if (value = attributes[:'photos']).is_a?(Array)
-          self.photos = value
         end
         
         
@@ -384,17 +366,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -485,7 +458,6 @@ module PureCloud
           title == o.title &&
           phone_numbers == o.phone_numbers &&
           emails == o.emails &&
-          photos == o.photos &&
           external_id == o.external_id &&
           groups == o.groups &&
           roles == o.roles &&
@@ -503,7 +475,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, schemas, active, user_name, display_name, password, title, phone_numbers, emails, photos, external_id, groups, roles, urnietfparamsscimschemasextensionenterprise2_0_user, urnietfparamsscimschemasextensiongenesyspurecloud2_0_user, meta].hash
+      [id, schemas, active, user_name, display_name, password, title, phone_numbers, emails, external_id, groups, roles, urnietfparamsscimschemasextensionenterprise2_0_user, urnietfparamsscimschemasextensiongenesyspurecloud2_0_user, meta].hash
     end
 
     # build the object from hash

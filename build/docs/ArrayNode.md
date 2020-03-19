@@ -15,9 +15,8 @@ title: ArrayNode
 | **value_node** | **BOOLEAN** |  | [optional] |
 | **container_node** | **BOOLEAN** |  | [optional] |
 | **missing_node** | **BOOLEAN** |  | [optional] |
-| **pojo** | **BOOLEAN** |  | [optional] |
-| **floating_point_number** | **BOOLEAN** |  | [optional] |
 | **integral_number** | **BOOLEAN** |  | [optional] |
+| **floating_point_number** | **BOOLEAN** |  | [optional] |
 | **short** | **BOOLEAN** |  | [optional] |
 | **int** | **BOOLEAN** |  | [optional] |
 | **long** | **BOOLEAN** |  | [optional] |
@@ -26,6 +25,7 @@ title: ArrayNode
 | **big_integer** | **BOOLEAN** |  | [optional] |
 | **textual** | **BOOLEAN** |  | [optional] |
 | **binary** | **BOOLEAN** |  | [optional] |
+| **pojo** | **BOOLEAN** |  | [optional] |
 | **array** | **BOOLEAN** |  | [optional] |
 | **null** | **BOOLEAN** |  | [optional] |
 {: class="table table-striped"}
