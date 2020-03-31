@@ -36,6 +36,8 @@ module PureCloud
 
     attr_accessor :group_id
 
+    attr_accessor :team_id
+
     attr_accessor :purpose
 
     attr_accessor :consult_participant_id
@@ -109,6 +111,8 @@ module PureCloud
         :'queue_id' => :'queueId',
         
         :'group_id' => :'groupId',
+        
+        :'team_id' => :'teamId',
         
         :'purpose' => :'purpose',
         
@@ -186,6 +190,8 @@ module PureCloud
         :'queue_id' => :'String',
         
         :'group_id' => :'String',
+        
+        :'team_id' => :'String',
         
         :'purpose' => :'String',
         
@@ -327,6 +333,15 @@ module PureCloud
         
         
         self.group_id = attributes[:'groupId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'teamId')
+        
+        
+        self.team_id = attributes[:'teamId']
         
       
       end
@@ -691,6 +706,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["REQUESTED", "ACTIVE", "PAUSED", "STOPPED", "ERROR", "TIMEOUT"]
       if @screen_recording_state && !allowed_values.include?(@screen_recording_state)
         return false
@@ -748,6 +767,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -947,6 +971,7 @@ module PureCloud
           name == o.name &&
           queue_id == o.queue_id &&
           group_id == o.group_id &&
+          team_id == o.team_id &&
           purpose == o.purpose &&
           consult_participant_id == o.consult_participant_id &&
           address == o.address &&
@@ -984,7 +1009,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, connected_time, end_time, user_id, external_contact_id, external_organization_id, name, queue_id, group_id, purpose, consult_participant_id, address, wrapup_required, wrapup_expected, wrapup_prompt, wrapup_timeout_ms, wrapup, start_acw_time, end_acw_time, conversation_routing_data, alerting_timeout_ms, monitored_participant_id, screen_recording_state, flagged_reason, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, additional_properties].hash
+      [id, connected_time, end_time, user_id, external_contact_id, external_organization_id, name, queue_id, group_id, team_id, purpose, consult_participant_id, address, wrapup_required, wrapup_expected, wrapup_prompt, wrapup_timeout_ms, wrapup, start_acw_time, end_acw_time, conversation_routing_data, alerting_timeout_ms, monitored_participant_id, screen_recording_state, flagged_reason, attributes, calls, callbacks, chats, cobrowsesessions, emails, messages, screenshares, social_expressions, videos, additional_properties].hash
     end
 
     # build the object from hash

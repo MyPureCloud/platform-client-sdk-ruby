@@ -1,58 +1,62 @@
-Platform API version: 3829
+Platform API version: 3856
 
 
 # Major Changes (6 changes)
 
-**Photo** (1 change)
+**/api/v2/users/{userId}/roles** (1 change)
 
-* Model Photo was removed
+* Operation DELETE was removed
 
-**ScimV2User** (1 change)
+**EntityListing** (5 changes)
 
-* Property photos was removed
-
-**ScimV2CreateUser** (1 change)
-
-* Property photos was removed
-
-**AuditQueryExecutionStatusResponse** (1 change)
-
-* Enum value TopicsDefinitionsService was removed from property serviceName
-
-**AuditQueryRequest** (1 change)
-
-* Enum value TopicsDefinitionsService was removed from property serviceName
-
-**AuditLogMessage** (1 change)
-
-* Enum value TopicsDefinitionsService was removed from property serviceName
+* Property pageSize was removed
+* Property pageNumber was removed
+* Property total was removed
+* Property pageCount was removed
+* Property entities was changed from DataTableImportJob[] to object[]
 
 
-# Minor Changes (6 changes)
+# Minor Changes (10 changes)
 
-**CampaignRuleParameters** (1 change)
+**SegmentDetailQueryPredicate** (1 change)
 
-* Enum value external was added to property dialingMode
+* Enum value flowOutType was added to property dimension
 
-**ObservationValue** (1 change)
+**Participant** (1 change)
 
 * Optional property teamId was added
 
-**Campaign** (1 change)
+**CobrowseMediaParticipant** (1 change)
 
-* Enum value external was added to property dialingMode
+* Optional property team was added
 
-**AuditQueryExecutionStatusResponse** (1 change)
+**ChatMediaParticipant** (1 change)
 
-* Enum value TopicsDefinitions was added to property serviceName
+* Optional property team was added
 
-**AuditQueryRequest** (1 change)
+**EmailMediaParticipant** (1 change)
 
-* Enum value TopicsDefinitions was added to property serviceName
+* Optional property team was added
 
-**AuditLogMessage** (1 change)
+**CallMediaParticipant** (1 change)
 
-* Enum value TopicsDefinitions was added to property serviceName
+* Optional property team was added
+
+**ParticipantBasic** (1 change)
+
+* Optional property teamId was added
+
+**MessageMediaParticipant** (1 change)
+
+* Optional property team was added
+
+**AnalyticsSession** (1 change)
+
+* Optional property flowOutType was added
+
+**CallbackMediaParticipant** (1 change)
+
+* Optional property team was added
 
 
 # Point Changes (0 changes)

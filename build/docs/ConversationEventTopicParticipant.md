@@ -16,6 +16,7 @@ title: ConversationEventTopicParticipant
 | **name** | **String** |  | [optional] |
 | **queue_id** | **String** |  | [optional] |
 | **group_id** | **String** |  | [optional] |
+| **team_id** | **String** |  | [optional] |
 | **purpose** | **String** |  | [optional] |
 | **consult_participant_id** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |

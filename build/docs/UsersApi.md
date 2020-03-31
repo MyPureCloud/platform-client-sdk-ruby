@@ -12,7 +12,6 @@ Method | Description
 [**delete_authorization_subject_division_role**](UsersApi.html#delete_authorization_subject_division_role) | Delete a grant of a role in a division
 [**delete_routing_user_utilization**](UsersApi.html#delete_routing_user_utilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default.
 [**delete_user**](UsersApi.html#delete_user) | Delete user
-[**delete_user_roles**](UsersApi.html#delete_user_roles) | Removes all the roles from the user.
 [**delete_user_routinglanguage**](UsersApi.html#delete_user_routinglanguage) | Remove routing language from user
 [**delete_user_routingskill**](UsersApi.html#delete_user_routingskill) | Remove routing skill from user
 [**delete_user_station_associatedstation**](UsersApi.html#delete_user_station_associatedstation) | Clear associated station
@@ -338,70 +337,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Empty**](Empty.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-<a name="delete_user_roles"></a>
-
-##  delete_user_roles(user_id)
-
-
-
-Removes all the roles from the user.
-
-
-
-Wraps DELETE /api/v2/users/{userId}/roles 
-
-Requires ANY permissions: 
-
-* authorization:grant:delete
-
-
-### Example
-```{"language":"ruby"}
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::UsersApi.new
-
-user_id = "user_id_example" # String | User ID
-
-
-begin
-  #Removes all the roles from the user.
-  api_instance.delete_user_roles(user_id)
-rescue PureCloud::ApiError => e
-  puts "Exception when calling UsersApi->delete_user_roles: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-nil (empty response body)
 
 ### HTTP request headers
 

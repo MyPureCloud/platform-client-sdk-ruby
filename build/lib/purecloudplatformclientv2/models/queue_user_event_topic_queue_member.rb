@@ -18,29 +18,29 @@ require 'date'
 
 module PureCloud
   class QueueUserEventTopicQueueMember
-    attr_accessor :member_id
+    attr_accessor :id
 
-    attr_accessor :name
+    attr_accessor :user
 
-    attr_accessor :ring_number
-
-    attr_accessor :type
+    attr_accessor :queue_id
 
     attr_accessor :joined
+
+    attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'member_id' => :'memberId',
+        :'id' => :'id',
         
-        :'name' => :'name',
+        :'user' => :'user',
         
-        :'ring_number' => :'ringNumber',
+        :'queue_id' => :'queueId',
         
-        :'type' => :'type',
+        :'joined' => :'joined',
         
-        :'joined' => :'joined'
+        :'additional_properties' => :'additionalProperties'
         
       }
     end
@@ -49,15 +49,15 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'member_id' => :'String',
+        :'id' => :'String',
         
-        :'name' => :'String',
+        :'user' => :'QueueUserEventTopicUserReference',
         
-        :'ring_number' => :'Integer',
+        :'queue_id' => :'String',
         
-        :'type' => :'String',
+        :'joined' => :'BOOLEAN',
         
-        :'joined' => :'BOOLEAN'
+        :'additional_properties' => :'Object'
         
       }
     end
@@ -71,37 +71,28 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'memberId')
+      if attributes.has_key?(:'id')
         
         
-        self.member_id = attributes[:'memberId']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
+        self.id = attributes[:'id']
         
       
       end
 
       
-      if attributes.has_key?(:'ringNumber')
+      if attributes.has_key?(:'user')
         
         
-        self.ring_number = attributes[:'ringNumber']
+        self.user = attributes[:'user']
         
       
       end
 
       
-      if attributes.has_key?(:'type')
+      if attributes.has_key?(:'queueId')
         
         
-        self.type = attributes[:'type']
+        self.queue_id = attributes[:'queueId']
         
       
       end
@@ -111,6 +102,15 @@ module PureCloud
         
         
         self.joined = attributes[:'joined']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'additionalProperties')
+        
+        
+        self.additional_properties = attributes[:'additionalProperties']
         
       
       end
@@ -184,11 +184,11 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          member_id == o.member_id &&
-          name == o.name &&
-          ring_number == o.ring_number &&
-          type == o.type &&
-          joined == o.joined
+          id == o.id &&
+          user == o.user &&
+          queue_id == o.queue_id &&
+          joined == o.joined &&
+          additional_properties == o.additional_properties
     end
 
     # @see the `==` method
@@ -200,7 +200,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [member_id, name, ring_number, type, joined].hash
+      [id, user, queue_id, joined, additional_properties].hash
     end
 
     # build the object from hash

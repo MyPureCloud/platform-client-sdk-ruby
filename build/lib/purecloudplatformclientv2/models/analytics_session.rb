@@ -167,6 +167,9 @@ module PureCloud
     # Count of any media (images, files, etc) included in this session
     attr_accessor :media_count
 
+    # Type of flow out that occurred, e.g. voicemail, callback, or acd
+    attr_accessor :flow_out_type
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -273,7 +276,9 @@ module PureCloud
         
         :'remote' => :'remote',
         
-        :'media_count' => :'mediaCount'
+        :'media_count' => :'mediaCount',
+        
+        :'flow_out_type' => :'flowOutType'
         
       }
     end
@@ -384,7 +389,9 @@ module PureCloud
         
         :'remote' => :'String',
         
-        :'media_count' => :'Integer'
+        :'media_count' => :'Integer',
+        
+        :'flow_out_type' => :'String'
         
       }
     end
@@ -874,6 +881,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'flowOutType')
+        
+        
+        self.flow_out_type = attributes[:'flowOutType']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -937,6 +953,10 @@ module PureCloud
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -1402,6 +1422,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1458,7 +1483,8 @@ module PureCloud
           protocol_call_id == o.protocol_call_id &&
           provider == o.provider &&
           remote == o.remote &&
-          media_count == o.media_count
+          media_count == o.media_count &&
+          flow_out_type == o.flow_out_type
     end
 
     # @see the `==` method
@@ -1470,7 +1496,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, session_dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording, journey_customer_id, journey_customer_id_type, journey_customer_session_id, journey_customer_session_id_type, journey_action_id, journey_action_map_id, journey_action_map_version, protocol_call_id, provider, remote, media_count].hash
+      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, session_dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording, journey_customer_id, journey_customer_id_type, journey_customer_session_id, journey_customer_session_id_type, journey_action_id, journey_action_map_id, journey_action_map_version, protocol_call_id, provider, remote, media_count, flow_out_type].hash
     end
 
     # build the object from hash

@@ -11,7 +11,6 @@ Method | Description
 [**delete_authorization_division**](AuthorizationApi.html#delete_authorization_division) | Delete a division.
 [**delete_authorization_role**](AuthorizationApi.html#delete_authorization_role) | Delete an organization role.
 [**delete_authorization_subject_division_role**](AuthorizationApi.html#delete_authorization_subject_division_role) | Delete a grant of a role in a division
-[**delete_user_roles**](AuthorizationApi.html#delete_user_roles) | Removes all the roles from the user.
 [**get_authorization_division**](AuthorizationApi.html#get_authorization_division) | Returns an authorization division.
 [**get_authorization_divisions**](AuthorizationApi.html#get_authorization_divisions) | Retrieve a list of all divisions defined for the organization
 [**get_authorization_divisions_home**](AuthorizationApi.html#get_authorization_divisions_home) | Retrieve the home division for the organization.
@@ -237,70 +236,6 @@ Name | Type | Description  | Notes
  **subject_id** | **String**| Subject ID (user or group) |  |
  **division_id** | **String**| the id of the division of the grant |  |
  **role_id** | **String**| the id of the role of the grant |  |
-{: class="table table-striped"}
-
-
-### Return type
-
-nil (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-<a name="delete_user_roles"></a>
-
-##  delete_user_roles(user_id)
-
-
-
-Removes all the roles from the user.
-
-
-
-Wraps DELETE /api/v2/users/{userId}/roles 
-
-Requires ANY permissions: 
-
-* authorization:grant:delete
-
-
-### Example
-```{"language":"ruby"}
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::AuthorizationApi.new
-
-user_id = "user_id_example" # String | User ID
-
-
-begin
-  #Removes all the roles from the user.
-  api_instance.delete_user_roles(user_id)
-rescue PureCloud::ApiError => e
-  puts "Exception when calling AuthorizationApi->delete_user_roles: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| User ID |  |
 {: class="table table-striped"}
 
 
