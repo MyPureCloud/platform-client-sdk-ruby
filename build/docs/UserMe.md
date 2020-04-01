@@ -34,6 +34,7 @@ title: UserMe
 | **profile_skills** | **Array&lt;String&gt;** | Profile skills possessed by the user | [optional] |
 | **locations** | [**Array&lt;Location&gt;**](Location.html) | The user placement at each site location. | [optional] |
 | **groups** | [**Array&lt;Group&gt;**](Group.html) | The groups the user is a member of | [optional] |
+| **team** | [**Team**](Team.html) | The team the user is a member of | [optional] |
 | **skills** | [**Array&lt;UserRoutingSkill&gt;**](UserRoutingSkill.html) | Routing (ACD) skills possessed by the user | [optional] |
 | **languages** | [**Array&lt;UserRoutingLanguage&gt;**](UserRoutingLanguage.html) | Routing (ACD) languages possessed by the user | [optional] |
 | **acd_auto_answer** | **BOOLEAN** | acd auto answer | [optional] |

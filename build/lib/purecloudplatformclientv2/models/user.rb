@@ -88,6 +88,9 @@ module PureCloud
     # The groups the user is a member of
     attr_accessor :groups
 
+    # The team the user is a member of
+    attr_accessor :team
+
     # Routing (ACD) skills possessed by the user
     attr_accessor :skills
 
@@ -163,6 +166,8 @@ module PureCloud
         
         :'groups' => :'groups',
         
+        :'team' => :'team',
+        
         :'skills' => :'skills',
         
         :'languages' => :'languages',
@@ -235,6 +240,8 @@ module PureCloud
         :'locations' => :'Array<Location>',
         
         :'groups' => :'Array<Group>',
+        
+        :'team' => :'Team',
         
         :'skills' => :'Array<UserRoutingSkill>',
         
@@ -517,6 +524,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'team')
+        
+        
+        self.team = attributes[:'team']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'skills')
         
         if (value = attributes[:'skills']).is_a?(Array)
@@ -652,6 +668,10 @@ module PureCloud
         return false
       end
 
+      
+      
+      
+      
       
       
       
@@ -909,6 +929,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -941,6 +966,7 @@ module PureCloud
           profile_skills == o.profile_skills &&
           locations == o.locations &&
           groups == o.groups &&
+          team == o.team &&
           skills == o.skills &&
           languages == o.languages &&
           acd_auto_answer == o.acd_auto_answer &&
@@ -958,7 +984,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, certifications, biography, employer_info, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, skills, languages, acd_auto_answer, language_preference, last_token_issued, self_uri].hash
+      [id, name, division, chat, department, email, primary_contact_info, addresses, state, title, username, manager, images, version, certifications, biography, employer_info, routing_status, presence, conversation_summary, out_of_office, geolocation, station, authorization, profile_skills, locations, groups, team, skills, languages, acd_auto_answer, language_preference, last_token_issued, self_uri].hash
     end
 
     # build the object from hash
