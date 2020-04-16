@@ -126,6 +126,9 @@ module PureCloud
     # Indicates filtering for abandons
     attr_accessor :abandoned
 
+    # Indicates filtering for answered interactions
+    attr_accessor :answered
+
     # The message media types used to filter the view
     attr_accessor :message_types
 
@@ -243,6 +246,12 @@ module PureCloud
     # The location Ids used to filter the view
     attr_accessor :location_ids
 
+    # A list of flow out types
+    attr_accessor :flow_out_types
+
+    # A list of providers
+    attr_accessor :provider_list
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -318,6 +327,8 @@ module PureCloud
         :'transferred' => :'transferred',
         
         :'abandoned' => :'abandoned',
+        
+        :'answered' => :'answered',
         
         :'message_types' => :'messageTypes',
         
@@ -395,7 +406,11 @@ module PureCloud
         
         :'reports_tos' => :'reportsTos',
         
-        :'location_ids' => :'locationIds'
+        :'location_ids' => :'locationIds',
+        
+        :'flow_out_types' => :'flowOutTypes',
+        
+        :'provider_list' => :'providerList'
         
       }
     end
@@ -476,6 +491,8 @@ module PureCloud
         
         :'abandoned' => :'BOOLEAN',
         
+        :'answered' => :'BOOLEAN',
+        
         :'message_types' => :'Array<String>',
         
         :'division_ids' => :'Array<String>',
@@ -552,7 +569,11 @@ module PureCloud
         
         :'reports_tos' => :'Array<String>',
         
-        :'location_ids' => :'Array<String>'
+        :'location_ids' => :'Array<String>',
+        
+        :'flow_out_types' => :'Array<String>',
+        
+        :'provider_list' => :'Array<String>'
         
       }
     end
@@ -949,6 +970,15 @@ module PureCloud
         
         
         self.abandoned = attributes[:'abandoned']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'answered')
+        
+        
+        self.answered = attributes[:'answered']
         
       
       end
@@ -1351,6 +1381,28 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'flowOutTypes')
+        
+        if (value = attributes[:'flowOutTypes']).is_a?(Array)
+          self.flow_out_types = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'providerList')
+        
+        if (value = attributes[:'providerList']).is_a?(Array)
+          self.provider_list = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -1666,8 +1718,35 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -2085,6 +2164,7 @@ module PureCloud
           evaluator_ids == o.evaluator_ids &&
           transferred == o.transferred &&
           abandoned == o.abandoned &&
+          answered == o.answered &&
           message_types == o.message_types &&
           division_ids == o.division_ids &&
           survey_form_ids == o.survey_form_ids &&
@@ -2123,7 +2203,9 @@ module PureCloud
           has_media == o.has_media &&
           role_ids == o.role_ids &&
           reports_tos == o.reports_tos &&
-          location_ids == o.location_ids
+          location_ids == o.location_ids &&
+          flow_out_types == o.flow_out_types &&
+          provider_list == o.provider_list
     end
 
     # @see the `==` method
@@ -2135,7 +2217,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, originating_directions, wrap_up_codes, dnis_list, session_dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, external_contact_ids, external_org_ids, ani_list, durations_milliseconds, acd_durations_milliseconds, talk_durations_milliseconds, acw_durations_milliseconds, handle_durations_milliseconds, hold_durations_milliseconds, abandon_durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, sip_call_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, flow_versions, group_ids, has_journey_customer_id, has_journey_action_map_id, has_journey_visit_id, has_media, role_ids, reports_tos, location_ids].hash
+      [media_types, queue_ids, skill_ids, skill_groups, language_ids, language_groups, directions, originating_directions, wrap_up_codes, dnis_list, session_dnis_list, filter_queues_by_user_ids, filter_users_by_queue_ids, user_ids, address_tos, address_froms, outbound_campaign_ids, outbound_contact_list_ids, contact_ids, external_contact_ids, external_org_ids, ani_list, durations_milliseconds, acd_durations_milliseconds, talk_durations_milliseconds, acw_durations_milliseconds, handle_durations_milliseconds, hold_durations_milliseconds, abandon_durations_milliseconds, evaluation_score, evaluation_critical_score, evaluation_form_ids, evaluated_agent_ids, evaluator_ids, transferred, abandoned, answered, message_types, division_ids, survey_form_ids, survey_total_score, survey_nps_score, mos, survey_question_group_score, survey_promoter_score, survey_form_context_ids, conversation_ids, sip_call_ids, is_ended, is_surveyed, survey_scores, promoter_scores, is_campaign, survey_statuses, conversation_properties, is_blind_transferred, is_consulted, is_consult_transferred, remote_participants, flow_ids, flow_outcome_ids, flow_outcome_values, flow_destination_types, flow_disconnect_reasons, flow_types, flow_entry_types, flow_entry_reasons, flow_versions, group_ids, has_journey_customer_id, has_journey_action_map_id, has_journey_visit_id, has_media, role_ids, reports_tos, location_ids, flow_out_types, provider_list].hash
     end
 
     # build the object from hash

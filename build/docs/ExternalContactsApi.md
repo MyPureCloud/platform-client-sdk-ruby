@@ -42,7 +42,7 @@ Method | Description
 
 <a name="delete_externalcontacts_contact"></a>
 
-##  delete_externalcontacts_contact(contact_id)
+## [**Empty**](Empty.html) delete_externalcontacts_contact(contact_id)
 
 
 
@@ -79,7 +79,8 @@ contact_id = "contact_id_example" # String | ExternalContact ID
 
 begin
   #Delete an external contact
-  api_instance.delete_externalcontacts_contact(contact_id)
+  result = api_instance.delete_externalcontacts_contact(contact_id)
+  p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->delete_externalcontacts_contact: #{e}"
 end
@@ -95,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+[**Empty**](Empty.html)
 
 ### HTTP request headers
 
@@ -106,7 +107,7 @@ nil (empty response body)
 
 <a name="delete_externalcontacts_contact_note"></a>
 
-##  delete_externalcontacts_contact_note(contact_id, note_id)
+## [**Empty**](Empty.html) delete_externalcontacts_contact_note(contact_id, note_id)
 
 
 
@@ -145,7 +146,8 @@ note_id = "note_id_example" # String | Note Id
 
 begin
   #Delete a note for an external contact
-  api_instance.delete_externalcontacts_contact_note(contact_id, note_id)
+  result = api_instance.delete_externalcontacts_contact_note(contact_id, note_id)
+  p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->delete_externalcontacts_contact_note: #{e}"
 end
@@ -162,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+[**Empty**](Empty.html)
 
 ### HTTP request headers
 
@@ -173,7 +175,7 @@ nil (empty response body)
 
 <a name="delete_externalcontacts_organization"></a>
 
-##  delete_externalcontacts_organization(external_organization_id)
+## [**Empty**](Empty.html) delete_externalcontacts_organization(external_organization_id)
 
 
 
@@ -210,7 +212,8 @@ external_organization_id = "external_organization_id_example" # String | Externa
 
 begin
   #Delete an external organization
-  api_instance.delete_externalcontacts_organization(external_organization_id)
+  result = api_instance.delete_externalcontacts_organization(external_organization_id)
+  p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->delete_externalcontacts_organization: #{e}"
 end
@@ -226,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+[**Empty**](Empty.html)
 
 ### HTTP request headers
 
@@ -237,7 +240,7 @@ nil (empty response body)
 
 <a name="delete_externalcontacts_organization_note"></a>
 
-##  delete_externalcontacts_organization_note(external_organization_id, note_id)
+## [**Empty**](Empty.html) delete_externalcontacts_organization_note(external_organization_id, note_id)
 
 
 
@@ -276,7 +279,8 @@ note_id = "note_id_example" # String | Note Id
 
 begin
   #Delete a note for an external organization
-  api_instance.delete_externalcontacts_organization_note(external_organization_id, note_id)
+  result = api_instance.delete_externalcontacts_organization_note(external_organization_id, note_id)
+  p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->delete_externalcontacts_organization_note: #{e}"
 end
@@ -293,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+[**Empty**](Empty.html)
 
 ### HTTP request headers
 
@@ -368,7 +372,7 @@ nil (empty response body)
 
 <a name="delete_externalcontacts_relationship"></a>
 
-##  delete_externalcontacts_relationship(relationship_id)
+## [**Empty**](Empty.html) delete_externalcontacts_relationship(relationship_id)
 
 
 
@@ -405,7 +409,8 @@ relationship_id = "relationship_id_example" # String | Relationship Id
 
 begin
   #Delete a relationship
-  api_instance.delete_externalcontacts_relationship(relationship_id)
+  result = api_instance.delete_externalcontacts_relationship(relationship_id)
+  p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->delete_externalcontacts_relationship: #{e}"
 end
@@ -421,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+[**Empty**](Empty.html)
 
 ### HTTP request headers
 

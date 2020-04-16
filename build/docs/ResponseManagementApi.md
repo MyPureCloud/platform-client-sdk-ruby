@@ -182,7 +182,8 @@ api_instance = PureCloud::ResponseManagementApi.new
 
 opts = { 
   page_number: 1, # Integer | Page number
-  page_size: 25 # Integer | Page size
+  page_size: 25, # Integer | Page size
+  messaging_template_filter: "messaging_template_filter_example" # String | Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel
 }
 
 begin
@@ -200,6 +201,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **messaging_template_filter** | **String**| Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel | [optional] <br />**Values**: whatsapp |
 {: class="table table-striped"}
 
 

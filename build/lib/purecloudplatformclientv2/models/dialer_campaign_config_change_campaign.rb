@@ -608,7 +608,7 @@ module PureCloud
       
       
       
-      allowed_values = ["AGENTLESS", "PREVIEW", "POWER", "PREDICTIVE", "PROGRESSIVE"]
+      allowed_values = ["AGENTLESS", "EXTERNAL", "PREVIEW", "POWER", "PREDICTIVE", "PROGRESSIVE"]
       if @dialing_mode && !allowed_values.include?(@dialing_mode)
         return false
       end
@@ -766,7 +766,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] dialing_mode Object to be assigned
     def dialing_mode=(dialing_mode)
-      allowed_values = ["AGENTLESS", "PREVIEW", "POWER", "PREDICTIVE", "PROGRESSIVE"]
+      allowed_values = ["AGENTLESS", "EXTERNAL", "PREVIEW", "POWER", "PREDICTIVE", "PROGRESSIVE"]
       if dialing_mode && !allowed_values.include?(dialing_mode)
         fail ArgumentError, "invalid value for 'dialing_mode', must be one of #{allowed_values}."
       end

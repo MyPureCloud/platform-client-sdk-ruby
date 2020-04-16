@@ -157,6 +157,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [String] :messaging_template_filter Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel
     # @return [LibraryEntityListing]
     def get_responsemanagement_libraries(opts = {})
       data, _status_code, _headers = get_responsemanagement_libraries_with_http_info(opts)
@@ -168,6 +169,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_number Page number
     # @option opts [Integer] :page_size Page size
+    # @option opts [String] :messaging_template_filter Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel
     # @return [Array<(LibraryEntityListing, Fixnum, Hash)>] LibraryEntityListing data, response status code and response headers
     def get_responsemanagement_libraries_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -186,6 +188,16 @@ module PureCloud
       
       
       
+      
+      
+      
+      if opts[:'messaging_template_filter'] && !['whatsapp'].include?(opts[:'messaging_template_filter'])
+        fail ArgumentError, 'invalid value for "messaging_template_filter", must be one of whatsapp'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/responsemanagement/libraries".sub('{format}','json')
 
@@ -193,6 +205,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'messagingTemplateFilter'] = opts[:'messaging_template_filter'] if opts[:'messaging_template_filter']
 
       # header parameters
       header_params = {}

@@ -725,7 +725,7 @@ module PureCloud
     end
 
     # Returns which divisions the specified user has the given permission in.
-    # 
+    # This route is deprecated, use authorization/divisionspermitted/paged/me instead.
     # @param subject_id Subject ID (user or group)
     # @param permission The permission string, including the object to access, e.g. routing:queue:view
     # @param [Hash] opts the optional parameters
@@ -738,7 +738,7 @@ module PureCloud
     end
 
     # Returns which divisions the specified user has the given permission in.
-    # 
+    # This route is deprecated, use authorization/divisionspermitted/paged/me instead.
     # @param subject_id Subject ID (user or group)
     # @param permission The permission string, including the object to access, e.g. routing:queue:view
     # @param [Hash] opts the optional parameters

@@ -17,26 +17,16 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # The messaging template identifies a structured message templates supported by a messaging channel. For example, WhatsApp
+  # The messaging template identifies a structured message templates supported by a messaging channel.
   class MessagingTemplate
-    # The messaging template name.
-    attr_accessor :name
-
-    # The messaging template namespace.
-    attr_accessor :namespace
-
-    # The messaging template language. For example, 'en-US'
-    attr_accessor :language
+    # Defines a messaging template for a WhatsApp messaging channel
+    attr_accessor :whats_app
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'name' => :'name',
-        
-        :'namespace' => :'namespace',
-        
-        :'language' => :'language'
+        :'whats_app' => :'whatsApp'
         
       }
     end
@@ -45,11 +35,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'name' => :'String',
-        
-        :'namespace' => :'String',
-        
-        :'language' => :'String'
+        :'whats_app' => :'WhatsAppDefinition'
         
       }
     end
@@ -63,28 +49,10 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'name')
+      if attributes.has_key?(:'whatsApp')
         
         
-        self.name = attributes[:'name']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'namespace')
-        
-        
-        self.namespace = attributes[:'namespace']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'language')
-        
-        
-        self.language = attributes[:'language']
+        self.whats_app = attributes[:'whatsApp']
         
       
       end
@@ -106,44 +74,11 @@ module PureCloud
     def valid?
       
       
-      if @name.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @namespace.nil?
-        return false
-      end
-
-      
-      
-      
-      
-      
-      if @language.nil?
-        return false
-      end
-
-      
       
       
       
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -155,9 +90,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          name == o.name &&
-          namespace == o.namespace &&
-          language == o.language
+          whats_app == o.whats_app
     end
 
     # @see the `==` method
@@ -169,7 +102,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, namespace, language].hash
+      [whats_app].hash
     end
 
     # build the object from hash

@@ -33,7 +33,7 @@ module PureCloud
     # The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_created
 
-    # The response type for the library. If set, only response's of this type may be added to this library.
+    # This value is deprecated. Responses representing message templates may be added to any library.
     attr_accessor :response_type
 
     # The URI for this object

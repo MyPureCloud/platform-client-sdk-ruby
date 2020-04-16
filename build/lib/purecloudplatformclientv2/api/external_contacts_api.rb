@@ -28,17 +28,17 @@ module PureCloud
     # 
     # @param contact_id ExternalContact ID
     # @param [Hash] opts the optional parameters
-    # @return [nil]
+    # @return [Empty]
     def delete_externalcontacts_contact(contact_id, opts = {})
-      delete_externalcontacts_contact_with_http_info(contact_id, opts)
-      return nil
+      data, _status_code, _headers = delete_externalcontacts_contact_with_http_info(contact_id, opts)
+      return data
     end
 
     # Delete an external contact
     # 
     # @param contact_id ExternalContact ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
     def delete_externalcontacts_contact_with_http_info(contact_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_contact ..."
@@ -81,7 +81,8 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names)
+        :auth_names => auth_names,
+        :return_type => 'Empty')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ExternalContactsApi#delete_externalcontacts_contact\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -93,10 +94,10 @@ module PureCloud
     # @param contact_id ExternalContact Id
     # @param note_id Note Id
     # @param [Hash] opts the optional parameters
-    # @return [nil]
+    # @return [Empty]
     def delete_externalcontacts_contact_note(contact_id, note_id, opts = {})
-      delete_externalcontacts_contact_note_with_http_info(contact_id, note_id, opts)
-      return nil
+      data, _status_code, _headers = delete_externalcontacts_contact_note_with_http_info(contact_id, note_id, opts)
+      return data
     end
 
     # Delete a note for an external contact
@@ -104,7 +105,7 @@ module PureCloud
     # @param contact_id ExternalContact Id
     # @param note_id Note Id
     # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
     def delete_externalcontacts_contact_note_with_http_info(contact_id, note_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_contact_note ..."
@@ -155,7 +156,8 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names)
+        :auth_names => auth_names,
+        :return_type => 'Empty')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ExternalContactsApi#delete_externalcontacts_contact_note\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -166,17 +168,17 @@ module PureCloud
     # 
     # @param external_organization_id External Organization ID
     # @param [Hash] opts the optional parameters
-    # @return [nil]
+    # @return [Empty]
     def delete_externalcontacts_organization(external_organization_id, opts = {})
-      delete_externalcontacts_organization_with_http_info(external_organization_id, opts)
-      return nil
+      data, _status_code, _headers = delete_externalcontacts_organization_with_http_info(external_organization_id, opts)
+      return data
     end
 
     # Delete an external organization
     # 
     # @param external_organization_id External Organization ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
     def delete_externalcontacts_organization_with_http_info(external_organization_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_organization ..."
@@ -219,7 +221,8 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names)
+        :auth_names => auth_names,
+        :return_type => 'Empty')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ExternalContactsApi#delete_externalcontacts_organization\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -231,10 +234,10 @@ module PureCloud
     # @param external_organization_id External Organization Id
     # @param note_id Note Id
     # @param [Hash] opts the optional parameters
-    # @return [nil]
+    # @return [Empty]
     def delete_externalcontacts_organization_note(external_organization_id, note_id, opts = {})
-      delete_externalcontacts_organization_note_with_http_info(external_organization_id, note_id, opts)
-      return nil
+      data, _status_code, _headers = delete_externalcontacts_organization_note_with_http_info(external_organization_id, note_id, opts)
+      return data
     end
 
     # Delete a note for an external organization
@@ -242,7 +245,7 @@ module PureCloud
     # @param external_organization_id External Organization Id
     # @param note_id Note Id
     # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
     def delete_externalcontacts_organization_note_with_http_info(external_organization_id, note_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_organization_note ..."
@@ -293,7 +296,8 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names)
+        :auth_names => auth_names,
+        :return_type => 'Empty')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ExternalContactsApi#delete_externalcontacts_organization_note\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -368,17 +372,17 @@ module PureCloud
     # 
     # @param relationship_id Relationship Id
     # @param [Hash] opts the optional parameters
-    # @return [nil]
+    # @return [Empty]
     def delete_externalcontacts_relationship(relationship_id, opts = {})
-      delete_externalcontacts_relationship_with_http_info(relationship_id, opts)
-      return nil
+      data, _status_code, _headers = delete_externalcontacts_relationship_with_http_info(relationship_id, opts)
+      return data
     end
 
     # Delete a relationship
     # 
     # @param relationship_id Relationship Id
     # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    # @return [Array<(Empty, Fixnum, Hash)>] Empty data, response status code and response headers
     def delete_externalcontacts_relationship_with_http_info(relationship_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_relationship ..."
@@ -421,7 +425,8 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names)
+        :auth_names => auth_names,
+        :return_type => 'Empty')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ExternalContactsApi#delete_externalcontacts_relationship\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -48,10 +48,10 @@ module PureCloud
     # Metadata about the text substitutions in json schema format.
     attr_accessor :substitutions_schema
 
-    # The response type represented by the response
+    # The response type represented by the response.
     attr_accessor :response_type
 
-    # The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate.
+    # An optional messaging template definition for responseType.MessagingTemplate.
     attr_accessor :messaging_template
 
     # The URI for this object
