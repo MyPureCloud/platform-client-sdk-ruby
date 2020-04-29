@@ -507,7 +507,7 @@ Name | Type | Description  | Notes
 
 <a name="get_analytics_reporting_exports"></a>
 
-## [**ReportingExportJobListing**](ReportingExportJobListing.html) get_analytics_reporting_exports
+## [**ReportingExportJobListing**](ReportingExportJobListing.html) get_analytics_reporting_exports(opts)
 
 
 
@@ -517,7 +517,7 @@ Get all view export requests for a user
 
 Wraps GET /api/v2/analytics/reporting/exports 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * analytics:dataExport:view
 
@@ -539,9 +539,14 @@ end
 
 api_instance = PureCloud::AnalyticsApi.new
 
+opts = { 
+  page_number: 1, # Integer | Page number
+  page_size: 25 # Integer | Page size
+}
+
 begin
   #Get all view export requests for a user
-  result = api_instance.get_analytics_reporting_exports
+  result = api_instance.get_analytics_reporting_exports(opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling AnalyticsApi->get_analytics_reporting_exports: #{e}"
@@ -549,7 +554,11 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
 
 
@@ -576,7 +585,7 @@ Get all export metadata
 
 Wraps GET /api/v2/analytics/reporting/exports/metadata 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * analytics:dataExport:view
 
@@ -1881,7 +1890,7 @@ Generate a view export request
 
 Wraps POST /api/v2/analytics/reporting/exports 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * analytics:dataExport:add
 

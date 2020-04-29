@@ -44,6 +44,7 @@ Method | Description
 [**get_integrations_type**](IntegrationsApi.html#get_integrations_type) | Get integration type.
 [**get_integrations_type_configschema**](IntegrationsApi.html#get_integrations_type_configschema) | Get properties config schema for an integration type.
 [**get_integrations_types**](IntegrationsApi.html#get_integrations_types) | List integration types
+[**get_integrations_userapps**](IntegrationsApi.html#get_integrations_userapps) | List permitted user app integrations for the logged in user
 [**patch_integration**](IntegrationsApi.html#patch_integration) | Update an integration.
 [**patch_integrations_action**](IntegrationsApi.html#patch_integrations_action) | Patch an Action
 [**patch_integrations_action_draft**](IntegrationsApi.html#patch_integrations_action_draft) | Update an existing Draft
@@ -2557,6 +2558,83 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_integrations_userapps"></a>
+
+## [**UserAppEntityListing**](UserAppEntityListing.html) get_integrations_userapps(opts)
+
+
+
+List permitted user app integrations for the logged in user
+
+
+
+Wraps GET /api/v2/integrations/userapps 
+
+Requires NO permissions: 
+
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IntegrationsApi.new
+
+opts = { 
+  page_size: 25, # Integer | The total page size requested
+  page_number: 1, # Integer | The page number requested
+  sort_by: "sort_by_example", # String | variable name requested to sort by
+  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  next_page: "next_page_example", # String | next page token
+  previous_page: "previous_page_example", # String | Previous page token
+  app_host: "app_host_example" # String | The type of UserApp to filter by
+}
+
+begin
+  #List permitted user app integrations for the logged in user
+  result = api_instance.get_integrations_userapps(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IntegrationsApi->get_integrations_userapps: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
+ **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
+ **sort_by** | **String**| variable name requested to sort by | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **next_page** | **String**| next page token | [optional]  |
+ **previous_page** | **String**| Previous page token | [optional]  |
+ **app_host** | **String**| The type of UserApp to filter by | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UserAppEntityListing**](UserAppEntityListing.html)
 
 ### HTTP request headers
 

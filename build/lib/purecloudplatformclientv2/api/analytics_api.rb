@@ -496,6 +496,8 @@ module PureCloud
     # Get all view export requests for a user
     # 
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Integer] :page_size Page size (default to 25)
     # @return [ReportingExportJobListing]
     def get_analytics_reporting_exports(opts = {})
       data, _status_code, _headers = get_analytics_reporting_exports_with_http_info(opts)
@@ -505,17 +507,33 @@ module PureCloud
     # Get all view export requests for a user
     # 
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Integer] :page_size Page size
     # @return [Array<(ReportingExportJobListing, Fixnum, Hash)>] ReportingExportJobListing data, response status code and response headers
     def get_analytics_reporting_exports_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: AnalyticsApi.get_analytics_reporting_exports ..."
       end
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/analytics/reporting/exports".sub('{format}','json')
 
       # query parameters
       query_params = {}
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
 
       # header parameters
       header_params = {}

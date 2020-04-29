@@ -5491,7 +5491,7 @@ module PureCloud
     end
 
     # Add a management unit
-    # 
+    # It may take a minute or two for a new management unit to be available for api operations
     # @param [Hash] opts the optional parameters
     # @option opts [CreateManagementUnitApiRequest] :body body
     # @return [ManagementUnit]
@@ -5501,7 +5501,7 @@ module PureCloud
     end
 
     # Add a management unit
-    # 
+    # It may take a minute or two for a new management unit to be available for api operations
     # @param [Hash] opts the optional parameters
     # @option opts [CreateManagementUnitApiRequest] :body body
     # @return [Array<(ManagementUnit, Fixnum, Hash)>] ManagementUnit data, response status code and response headers

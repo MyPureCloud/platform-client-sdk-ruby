@@ -14,6 +14,7 @@ title: OAuthAuthorization
 | **date_modified** | **DateTime** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **created_by** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **modified_by** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **pending** | **BOOLEAN** |  | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

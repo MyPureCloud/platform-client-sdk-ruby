@@ -28,13 +28,13 @@ module PureCloud
 
     attr_accessor :first_uri
 
-    attr_accessor :next_uri
-
-    attr_accessor :page_count
+    attr_accessor :previous_uri
 
     attr_accessor :last_uri
 
-    attr_accessor :previous_uri
+    attr_accessor :next_uri
+
+    attr_accessor :page_count
 
     attr_accessor :self_uri
 
@@ -52,13 +52,13 @@ module PureCloud
         
         :'first_uri' => :'firstUri',
         
-        :'next_uri' => :'nextUri',
-        
-        :'page_count' => :'pageCount',
+        :'previous_uri' => :'previousUri',
         
         :'last_uri' => :'lastUri',
         
-        :'previous_uri' => :'previousUri',
+        :'next_uri' => :'nextUri',
+        
+        :'page_count' => :'pageCount',
         
         :'self_uri' => :'selfUri'
         
@@ -79,13 +79,13 @@ module PureCloud
         
         :'first_uri' => :'String',
         
-        :'next_uri' => :'String',
-        
-        :'page_count' => :'Integer',
+        :'previous_uri' => :'String',
         
         :'last_uri' => :'String',
         
-        :'previous_uri' => :'String',
+        :'next_uri' => :'String',
+        
+        :'page_count' => :'Integer',
         
         :'self_uri' => :'String'
         
@@ -148,19 +148,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'nextUri')
+      if attributes.has_key?(:'previousUri')
         
         
-        self.next_uri = attributes[:'nextUri']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'pageCount')
-        
-        
-        self.page_count = attributes[:'pageCount']
+        self.previous_uri = attributes[:'previousUri']
         
       
       end
@@ -175,10 +166,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'previousUri')
+      if attributes.has_key?(:'nextUri')
         
         
-        self.previous_uri = attributes[:'previousUri']
+        self.next_uri = attributes[:'nextUri']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'pageCount')
+        
+        
+        self.page_count = attributes[:'pageCount']
         
       
       end
@@ -311,10 +311,10 @@ module PureCloud
           page_number == o.page_number &&
           total == o.total &&
           first_uri == o.first_uri &&
+          previous_uri == o.previous_uri &&
+          last_uri == o.last_uri &&
           next_uri == o.next_uri &&
           page_count == o.page_count &&
-          last_uri == o.last_uri &&
-          previous_uri == o.previous_uri &&
           self_uri == o.self_uri
     end
 
@@ -327,7 +327,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [entities, page_size, page_number, total, first_uri, next_uri, page_count, last_uri, previous_uri, self_uri].hash
+      [entities, page_size, page_number, total, first_uri, previous_uri, last_uri, next_uri, page_count, self_uri].hash
     end
 
     # build the object from hash

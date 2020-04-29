@@ -101,7 +101,7 @@ Delete a domain
 
 Wraps DELETE /api/v2/routing/email/domains/{domainId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -165,7 +165,7 @@ Delete a route
 
 Wraps DELETE /api/v2/routing/email/domains/{domainName}/routes/{routeId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -492,7 +492,7 @@ Delete Routing Skill
 
 Wraps DELETE /api/v2/routing/skills/{skillId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:manage
 
@@ -556,7 +556,7 @@ Delete a phone number provisioned for SMS.
 
 Wraps DELETE /api/v2/routing/sms/phonenumbers/{addressId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:delete
 
@@ -684,7 +684,7 @@ Delete the organization-wide max utilization settings and revert to the system d
 
 Wraps DELETE /api/v2/routing/utilization 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:utilization:manage
 
@@ -742,7 +742,7 @@ Delete wrap-up code
 
 Wraps DELETE /api/v2/routing/wrapupcodes/{codeId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:wrapupCode:delete
 
@@ -874,7 +874,7 @@ Remove routing skill from user
 
 Wraps DELETE /api/v2/users/{userId}/routingskills/{skillId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -941,7 +941,7 @@ Get domain
 
 Wraps GET /api/v2/routing/email/domains/{domainId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -1006,7 +1006,7 @@ Get a route
 
 Wraps GET /api/v2/routing/email/domains/{domainName}/routes/{routeId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -1074,7 +1074,7 @@ Get routes
 
 Wraps GET /api/v2/routing/email/domains/{domainName}/routes 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -1147,7 +1147,7 @@ Get domains
 
 Wraps GET /api/v2/routing/email/domains 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -1206,7 +1206,7 @@ Get email setup
 
 Wraps GET /api/v2/routing/email/setup 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -1338,7 +1338,7 @@ Get a recipient
 
 Wraps GET /api/v2/routing/message/recipients/{recipientId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:message:manage
 
@@ -1403,7 +1403,7 @@ Get recipients
 
 Wraps GET /api/v2/routing/message/recipients 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:message:manage
 
@@ -1911,7 +1911,7 @@ Get a paged listing of simplified queue objects, filterable by name, queue ID(s)
 
 Wraps GET /api/v2/routing/queues/divisionviews 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:queue:search
 
@@ -1989,7 +1989,7 @@ Get a paged listing of simplified queue objects.  Can be used to get a digest of
 
 Wraps GET /api/v2/routing/queues/divisionviews/all 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:queue:search
 
@@ -2444,7 +2444,7 @@ Get an Address by Id for SMS
 
 Wraps GET /api/v2/routing/sms/addresses/{addressId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:view
 
@@ -2509,7 +2509,7 @@ Get a list of Addresses for SMS
 
 Wraps GET /api/v2/routing/sms/addresses 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:view
 
@@ -2577,7 +2577,7 @@ This request will return up to 30 random phone numbers matching the criteria spe
 
 Wraps GET /api/v2/routing/sms/availablephonenumbers 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:add
 
@@ -2657,7 +2657,7 @@ Get a phone number provisioned for SMS.
 
 Wraps GET /api/v2/routing/sms/phonenumbers/{addressId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:view
 
@@ -2722,7 +2722,7 @@ Get a list of provisioned phone numbers.
 
 Wraps GET /api/v2/routing/sms/phonenumbers 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:view
 
@@ -2922,7 +2922,7 @@ Get details about this wrap-up code.
 
 Wraps GET /api/v2/routing/wrapupcodes/{codeId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:wrapupCode:view
 
@@ -2987,7 +2987,7 @@ Get list of wrapup codes.
 
 Wraps GET /api/v2/routing/wrapupcodes 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:wrapupCode:view
 
@@ -3899,7 +3899,7 @@ Create a route
 
 Wraps POST /api/v2/routing/email/domains/{domainName}/routes 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -3967,7 +3967,7 @@ Create a domain
 
 Wraps POST /api/v2/routing/email/domains 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -4367,7 +4367,7 @@ Provision an Address for SMS
 
 Wraps POST /api/v2/routing/sms/addresses 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:add
 
@@ -4432,7 +4432,7 @@ Provision a phone number for SMS
 
 Wraps POST /api/v2/routing/sms/phonenumbers 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:add
 
@@ -4497,7 +4497,7 @@ Create a wrap-up code
 
 Wraps POST /api/v2/routing/wrapupcodes 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:wrapupCode:add
 
@@ -4631,7 +4631,7 @@ Add routing skill to user
 
 Wraps POST /api/v2/users/{userId}/routingskills 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -4699,7 +4699,7 @@ Update a route
 
 Wraps PUT /api/v2/routing/email/domains/{domainName}/routes/{routeId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:email:manage
 
@@ -4770,7 +4770,7 @@ Update a recipient
 
 Wraps PUT /api/v2/routing/message/recipients/{recipientId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:message:manage
 
@@ -4974,6 +4974,7 @@ Wraps PUT /api/v2/routing/settings/transcription
 Requires ANY permissions: 
 
 * routing:transcriptionSettings:add
+* routing:transcriptionSettings:edit
 
 
 ### Example
@@ -5036,7 +5037,7 @@ Update a phone number provisioned for SMS.
 
 Wraps PUT /api/v2/routing/sms/phonenumbers/{addressId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * sms:phoneNumber:edit
 
@@ -5172,7 +5173,7 @@ Update the organization-wide max utilization settings.  Include only those media
 
 Wraps PUT /api/v2/routing/utilization 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:utilization:manage
 
@@ -5237,7 +5238,7 @@ Update wrap-up code
 
 Wraps PUT /api/v2/routing/wrapupcodes/{codeId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:wrapupCode:edit
 
@@ -5305,7 +5306,7 @@ Update routing skill proficiency or state.
 
 Wraps PUT /api/v2/users/{userId}/routingskills/{skillId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 

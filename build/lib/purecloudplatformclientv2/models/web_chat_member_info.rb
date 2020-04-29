@@ -24,6 +24,18 @@ module PureCloud
     # The display name of the member.
     attr_accessor :display_name
 
+    # The first name of the member.
+    attr_accessor :first_name
+
+    # The last name of the member.
+    attr_accessor :last_name
+
+    # The email address of the member.
+    attr_accessor :email
+
+    # The phone number of the member.
+    attr_accessor :phone_number
+
     # The url to the avatar image of the member.
     attr_accessor :avatar_image_url
 
@@ -53,6 +65,14 @@ module PureCloud
         
         :'display_name' => :'displayName',
         
+        :'first_name' => :'firstName',
+        
+        :'last_name' => :'lastName',
+        
+        :'email' => :'email',
+        
+        :'phone_number' => :'phoneNumber',
+        
         :'avatar_image_url' => :'avatarImageUrl',
         
         :'role' => :'role',
@@ -77,6 +97,14 @@ module PureCloud
         :'id' => :'String',
         
         :'display_name' => :'String',
+        
+        :'first_name' => :'String',
+        
+        :'last_name' => :'String',
+        
+        :'email' => :'String',
+        
+        :'phone_number' => :'String',
         
         :'avatar_image_url' => :'String',
         
@@ -117,6 +145,42 @@ module PureCloud
         
         
         self.display_name = attributes[:'displayName']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'firstName')
+        
+        
+        self.first_name = attributes[:'firstName']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'lastName')
+        
+        
+        self.last_name = attributes[:'lastName']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'email')
+        
+        
+        self.email = attributes[:'email']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'phoneNumber')
+        
+        
+        self.phone_number = attributes[:'phoneNumber']
         
       
       end
@@ -215,6 +279,22 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       if @role.nil?
         return false
       end
@@ -255,6 +335,26 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -326,6 +426,10 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           display_name == o.display_name &&
+          first_name == o.first_name &&
+          last_name == o.last_name &&
+          email == o.email &&
+          phone_number == o.phone_number &&
           avatar_image_url == o.avatar_image_url &&
           role == o.role &&
           join_date == o.join_date &&
@@ -344,7 +448,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, display_name, avatar_image_url, role, join_date, leave_date, authenticated_guest, custom_fields, state].hash
+      [id, display_name, first_name, last_name, email, phone_number, avatar_image_url, role, join_date, leave_date, authenticated_guest, custom_fields, state].hash
     end
 
     # build the object from hash

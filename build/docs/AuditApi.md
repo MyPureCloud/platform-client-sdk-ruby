@@ -25,7 +25,7 @@ Get status of audit query execution
 
 Wraps GET /api/v2/audits/query/{transactionId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * audits:audit:view
 
@@ -90,7 +90,7 @@ Get results of audit query
 
 Wraps GET /api/v2/audits/query/{transactionId}/results 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * audits:audit:view
 
@@ -163,7 +163,7 @@ Create audit query execution
 
 Wraps POST /api/v2/audits/query 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * audits:audit:view
 

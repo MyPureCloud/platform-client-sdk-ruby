@@ -25,7 +25,7 @@ Fetch SIP metadata that matches a given parameter. If exactMatch is passed as a 
 
 Wraps GET /api/v2/telephony/siptraces 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * telephony:pcap:view
 
@@ -103,7 +103,7 @@ Get signed S3 URL for a pcap download
 
 Wraps GET /api/v2/telephony/siptraces/download/{downloadId} 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * telephony:pcap:view
 
@@ -168,7 +168,7 @@ Request a download of a pcap file to S3
 
 Wraps POST /api/v2/telephony/siptraces/download 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * telephony:pcap:add
 

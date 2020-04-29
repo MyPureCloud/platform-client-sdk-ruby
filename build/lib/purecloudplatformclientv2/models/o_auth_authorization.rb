@@ -34,6 +34,8 @@ module PureCloud
 
     attr_accessor :modified_by
 
+    attr_accessor :pending
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -54,6 +56,8 @@ module PureCloud
         :'created_by' => :'createdBy',
         
         :'modified_by' => :'modifiedBy',
+        
+        :'pending' => :'pending',
         
         :'self_uri' => :'selfUri'
         
@@ -77,6 +81,8 @@ module PureCloud
         :'created_by' => :'DomainEntityRef',
         
         :'modified_by' => :'DomainEntityRef',
+        
+        :'pending' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -157,6 +163,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'pending')
+        
+        
+        self.pending = attributes[:'pending']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -213,8 +228,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -268,6 +292,7 @@ module PureCloud
           date_modified == o.date_modified &&
           created_by == o.created_by &&
           modified_by == o.modified_by &&
+          pending == o.pending &&
           self_uri == o.self_uri
     end
 
@@ -280,7 +305,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [client, scope, resource_owner, date_created, date_modified, created_by, modified_by, self_uri].hash
+      [client, scope, resource_owner, date_created, date_modified, created_by, modified_by, pending, self_uri].hash
     end
 
     # build the object from hash

@@ -42,11 +42,11 @@ module PureCloud
     # The version of the underlying entity.  Deprecated, use field from settings.metadata instead
     attr_accessor :version
 
-    # The user who last modified this entity.  Deprecated, use field from settings.metadata instead
-    attr_accessor :modified_by
-
     # The date and time at which this entity was last modified.  Deprecated, use field from settings.metadata instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_modified
+
+    # The user who last modified this entity.  Deprecated, use field from settings.metadata instead
+    attr_accessor :modified_by
 
     # The URI for this object
     attr_accessor :self_uri
@@ -71,9 +71,9 @@ module PureCloud
         
         :'version' => :'version',
         
-        :'modified_by' => :'modifiedBy',
-        
         :'date_modified' => :'dateModified',
+        
+        :'modified_by' => :'modifiedBy',
         
         :'self_uri' => :'selfUri'
         
@@ -100,9 +100,9 @@ module PureCloud
         
         :'version' => :'Integer',
         
-        :'modified_by' => :'UserReference',
-        
         :'date_modified' => :'DateTime',
+        
+        :'modified_by' => :'UserReference',
         
         :'self_uri' => :'String'
         
@@ -190,19 +190,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'modifiedBy')
+      if attributes.has_key?(:'dateModified')
         
         
-        self.modified_by = attributes[:'modifiedBy']
+        self.date_modified = attributes[:'dateModified']
         
       
       end
 
       
-      if attributes.has_key?(:'dateModified')
+      if attributes.has_key?(:'modifiedBy')
         
         
-        self.date_modified = attributes[:'dateModified']
+        self.modified_by = attributes[:'modifiedBy']
         
       
       end
@@ -361,8 +361,8 @@ module PureCloud
           settings == o.settings &&
           metadata == o.metadata &&
           version == o.version &&
-          modified_by == o.modified_by &&
           date_modified == o.date_modified &&
+          modified_by == o.modified_by &&
           self_uri == o.self_uri
     end
 
@@ -375,7 +375,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, start_day_of_week, time_zone, settings, metadata, version, modified_by, date_modified, self_uri].hash
+      [id, name, division, start_day_of_week, time_zone, settings, metadata, version, date_modified, modified_by, self_uri].hash
     end
 
     # build the object from hash
