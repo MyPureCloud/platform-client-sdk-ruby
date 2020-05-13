@@ -27,6 +27,9 @@ module PureCloud
     # The sticker ids associated with the text message.
     attr_accessor :sticker_ids
 
+    # The messaging template use to send a predefined canned response with the message
+    attr_accessor :messaging_template
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -35,7 +38,9 @@ module PureCloud
         
         :'media_ids' => :'mediaIds',
         
-        :'sticker_ids' => :'stickerIds'
+        :'sticker_ids' => :'stickerIds',
+        
+        :'messaging_template' => :'messagingTemplate'
         
       }
     end
@@ -48,7 +53,9 @@ module PureCloud
         
         :'media_ids' => :'Array<String>',
         
-        :'sticker_ids' => :'Array<String>'
+        :'sticker_ids' => :'Array<String>',
+        
+        :'messaging_template' => :'MessagingTemplateRequest'
         
       }
     end
@@ -93,6 +100,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'messagingTemplate')
+        
+        
+        self.messaging_template = attributes[:'messagingTemplate']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -125,8 +141,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -150,7 +175,8 @@ module PureCloud
       self.class == o.class &&
           text_body == o.text_body &&
           media_ids == o.media_ids &&
-          sticker_ids == o.sticker_ids
+          sticker_ids == o.sticker_ids &&
+          messaging_template == o.messaging_template
     end
 
     # @see the `==` method
@@ -162,7 +188,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [text_body, media_ids, sticker_ids].hash
+      [text_body, media_ids, sticker_ids, messaging_template].hash
     end
 
     # build the object from hash

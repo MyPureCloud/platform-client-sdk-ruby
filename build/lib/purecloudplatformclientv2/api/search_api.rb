@@ -819,6 +819,79 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Search Documents
+    # 
+    # @param knowledge_base_id Knowledge base ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [KnowledgeSearchRequest] :body 
+    # @return [KnowledgeSearchResponse]
+    def post_knowledge_knowledgebase_search(knowledge_base_id, opts = {})
+      data, _status_code, _headers = post_knowledge_knowledgebase_search_with_http_info(knowledge_base_id, opts)
+      return data
+    end
+
+    # Search Documents
+    # 
+    # @param knowledge_base_id Knowledge base ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [KnowledgeSearchRequest] :body 
+    # @return [Array<(KnowledgeSearchResponse, Fixnum, Hash)>] KnowledgeSearchResponse data, response status code and response headers
+    def post_knowledge_knowledgebase_search_with_http_info(knowledge_base_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SearchApi.post_knowledge_knowledgebase_search ..."
+      end
+      
+      
+      # verify the required parameter 'knowledge_base_id' is set
+      fail ArgumentError, "Missing the required parameter 'knowledge_base_id' when calling SearchApi.post_knowledge_knowledgebase_search" if knowledge_base_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search".sub('{format}','json').sub('{' + 'knowledgeBaseId' + '}', knowledge_base_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'KnowledgeSearchResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SearchApi#post_knowledge_knowledgebase_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Search locations
     # 
     # @param body Search request options

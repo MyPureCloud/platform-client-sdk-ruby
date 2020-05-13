@@ -3579,7 +3579,7 @@ Get Genesys Facebook App Id
 
 Wraps GET /api/v2/conversations/messaging/facebook/app 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * messaging:integration:add
 

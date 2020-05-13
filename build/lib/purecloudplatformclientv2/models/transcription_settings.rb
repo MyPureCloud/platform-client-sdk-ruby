@@ -24,13 +24,18 @@ module PureCloud
     # Configure confidence threshold. The possible values are from 1 to 100.
     attr_accessor :transcription_confidence_threshold
 
+    # Setting to enable/disable content search
+    attr_accessor :content_search_enabled
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'transcription' => :'transcription',
         
-        :'transcription_confidence_threshold' => :'transcriptionConfidenceThreshold'
+        :'transcription_confidence_threshold' => :'transcriptionConfidenceThreshold',
+        
+        :'content_search_enabled' => :'contentSearchEnabled'
         
       }
     end
@@ -41,7 +46,9 @@ module PureCloud
         
         :'transcription' => :'String',
         
-        :'transcription_confidence_threshold' => :'Integer'
+        :'transcription_confidence_threshold' => :'Integer',
+        
+        :'content_search_enabled' => :'BOOLEAN'
         
       }
     end
@@ -68,6 +75,15 @@ module PureCloud
         
         
         self.transcription_confidence_threshold = attributes[:'transcriptionConfidenceThreshold']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'contentSearchEnabled')
+        
+        
+        self.content_search_enabled = attributes[:'contentSearchEnabled']
         
       
       end
@@ -111,6 +127,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -133,13 +153,19 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
           transcription == o.transcription &&
-          transcription_confidence_threshold == o.transcription_confidence_threshold
+          transcription_confidence_threshold == o.transcription_confidence_threshold &&
+          content_search_enabled == o.content_search_enabled
     end
 
     # @see the `==` method
@@ -151,7 +177,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [transcription, transcription_confidence_threshold].hash
+      [transcription, transcription_confidence_threshold, content_search_enabled].hash
     end
 
     # build the object from hash

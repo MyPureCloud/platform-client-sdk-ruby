@@ -55,6 +55,7 @@ Method | Description
 [**get_user_queues**](RoutingApi.html#get_user_queues) | Get queues for user
 [**get_user_routinglanguages**](RoutingApi.html#get_user_routinglanguages) | List routing language for user
 [**get_user_routingskills**](RoutingApi.html#get_user_routingskills) | List routing skills for user
+[**patch_routing_email_domain**](RoutingApi.html#patch_routing_email_domain) | Update domain settings
 [**patch_routing_queue_user**](RoutingApi.html#patch_routing_queue_user) | Update the ring number OR joined status for a User in a Queue
 [**patch_routing_queue_users**](RoutingApi.html#patch_routing_queue_users) | Join or unjoin a set of users for a queue
 [**patch_routing_settings_contactcenter**](RoutingApi.html#patch_routing_settings_contactcenter) | Update Contact Center Settings
@@ -65,6 +66,7 @@ Method | Description
 [**patch_user_routingskills_bulk**](RoutingApi.html#patch_user_routingskills_bulk) | Bulk add routing skills to user
 [**post_analytics_queues_observations_query**](RoutingApi.html#post_analytics_queues_observations_query) | Query for queue observations
 [**post_routing_email_domain_routes**](RoutingApi.html#post_routing_email_domain_routes) | Create a route
+[**post_routing_email_domain_testconnection**](RoutingApi.html#post_routing_email_domain_testconnection) | Tests the custom SMTP server integration connection set on this domain
 [**post_routing_email_domains**](RoutingApi.html#post_routing_email_domains) | Create a domain
 [**post_routing_languages**](RoutingApi.html#post_routing_languages) | Create Language
 [**post_routing_queue_users**](RoutingApi.html#post_routing_queue_users) | Bulk add or delete up to 100 queue members
@@ -3267,6 +3269,74 @@ Name | Type | Description  | Notes
 
 
 
+<a name="patch_routing_email_domain"></a>
+
+## [**InboundDomain**](InboundDomain.html) patch_routing_email_domain(domain_id, body)
+
+
+
+Update domain settings
+
+
+
+Wraps PATCH /api/v2/routing/email/domains/{domainId} 
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+domain_id = "domain_id_example" # String | domain ID
+
+body = PureCloud::InboundDomainPatchRequest.new # InboundDomainPatchRequest | Domain settings
+
+
+begin
+  #Update domain settings
+  result = api_instance.patch_routing_email_domain(domain_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->patch_routing_email_domain: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain_id** | **String**| domain ID |  |
+ **body** | [**InboundDomainPatchRequest**](InboundDomainPatchRequest.html)| Domain settings |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**InboundDomain**](InboundDomain.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="patch_routing_queue_user"></a>
 
 ## [**QueueMember**](QueueMember.html) patch_routing_queue_user(queue_id, member_id, body)
@@ -3947,6 +4017,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InboundRoute**](InboundRoute.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_routing_email_domain_testconnection"></a>
+
+## [**TestMessage**](TestMessage.html) post_routing_email_domain_testconnection(domain_id, opts)
+
+
+
+Tests the custom SMTP server integration connection set on this domain
+
+The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+
+Wraps POST /api/v2/routing/email/domains/{domainId}/testconnection 
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+domain_id = "domain_id_example" # String | domain ID
+
+opts = { 
+  body: PureCloud::TestMessage.new # TestMessage | TestMessage
+}
+
+begin
+  #Tests the custom SMTP server integration connection set on this domain
+  result = api_instance.post_routing_email_domain_testconnection(domain_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->post_routing_email_domain_testconnection: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain_id** | **String**| domain ID |  |
+ **body** | [**TestMessage**](TestMessage.html)| TestMessage | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**TestMessage**](TestMessage.html)
 
 ### HTTP request headers
 

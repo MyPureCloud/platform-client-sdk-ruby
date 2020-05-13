@@ -2294,7 +2294,7 @@ module PureCloud
     # @param external_organization_id External Organization ID
     # @param trustor_id Trustor ID
     # @param [Hash] opts the optional parameters
-    # @return [ExternalOrganization]
+    # @return [ExternalOrganizationTrustorLink]
     def put_externalcontacts_organization_trustor_trustor_id(external_organization_id, trustor_id, opts = {})
       data, _status_code, _headers = put_externalcontacts_organization_trustor_trustor_id_with_http_info(external_organization_id, trustor_id, opts)
       return data
@@ -2305,7 +2305,7 @@ module PureCloud
     # @param external_organization_id External Organization ID
     # @param trustor_id Trustor ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ExternalOrganization, Fixnum, Hash)>] ExternalOrganization data, response status code and response headers
+    # @return [Array<(ExternalOrganizationTrustorLink, Fixnum, Hash)>] ExternalOrganizationTrustorLink data, response status code and response headers
     def put_externalcontacts_organization_trustor_trustor_id_with_http_info(external_organization_id, trustor_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_organization_trustor_trustor_id ..."
@@ -2357,7 +2357,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ExternalOrganization')
+        :return_type => 'ExternalOrganizationTrustorLink')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ExternalContactsApi#put_externalcontacts_organization_trustor_trustor_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

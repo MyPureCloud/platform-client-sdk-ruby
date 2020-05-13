@@ -23,13 +23,18 @@ module PureCloud
     # Optional cursor to indicate where to resume the results
     attr_accessor :cursor
 
+    # Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :data_availability_date
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'user_details' => :'userDetails',
         
-        :'cursor' => :'cursor'
+        :'cursor' => :'cursor',
+        
+        :'data_availability_date' => :'dataAvailabilityDate'
         
       }
     end
@@ -40,7 +45,9 @@ module PureCloud
         
         :'user_details' => :'Array<AnalyticsUserDetail>',
         
-        :'cursor' => :'String'
+        :'cursor' => :'String',
+        
+        :'data_availability_date' => :'DateTime'
         
       }
     end
@@ -74,6 +81,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'dataAvailabilityDate')
+        
+        
+        self.data_availability_date = attributes[:'dataAvailabilityDate']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -97,8 +113,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -116,7 +141,8 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           user_details == o.user_details &&
-          cursor == o.cursor
+          cursor == o.cursor &&
+          data_availability_date == o.data_availability_date
     end
 
     # @see the `==` method
@@ -128,7 +154,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user_details, cursor].hash
+      [user_details, cursor, data_availability_date].hash
     end
 
     # build the object from hash

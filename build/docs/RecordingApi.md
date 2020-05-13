@@ -46,7 +46,7 @@ Method | Description
 [**put_conversation_recording**](RecordingApi.html#put_conversation_recording) | Updates the retention records on a recording.
 [**put_conversation_recording_annotation**](RecordingApi.html#put_conversation_recording_annotation) | Update annotation
 [**put_orphanrecording**](RecordingApi.html#put_orphanrecording) | Updates an orphan recording to a regular recording with retention values
-[**put_recording_job**](RecordingApi.html#put_recording_job) | Execute the recording bulk job
+[**put_recording_job**](RecordingApi.html#put_recording_job) | Execute the recording bulk job.
 [**put_recording_localkeys_setting**](RecordingApi.html#put_recording_localkeys_setting) | Update the local encryption settings
 [**put_recording_mediaretentionpolicy**](RecordingApi.html#put_recording_mediaretentionpolicy) | Update a media retention policy
 [**put_recording_recordingkeys_rotationschedule**](RecordingApi.html#put_recording_recordingkeys_rotationschedule) | Update key rotation schedule
@@ -422,7 +422,8 @@ recording_id = "recording_id_example" # String | Recording ID
 opts = { 
   format_id: "WEBM", # String | The desired media format.
   download: false, # BOOLEAN | requesting a download format of the recording
-  file_name: "file_name_example" # String | the name of the downloaded fileName
+  file_name: "file_name_example", # String | the name of the downloaded fileName
+  locale: "locale_example" # String | The locale for the requested file when downloading, as an ISO 639-1 code
 }
 
 begin
@@ -443,6 +444,7 @@ Name | Type | Description  | Notes
  **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
  **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false] |
  **file_name** | **String**| the name of the downloaded fileName | [optional]  |
+ **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
 {: class="table table-striped"}
 
 
@@ -903,7 +905,8 @@ orphan_id = "orphan_id_example" # String | Orphan ID
 opts = { 
   format_id: "WEBM", # String | The desired media format.
   download: false, # BOOLEAN | requesting a download format of the recording
-  file_name: "file_name_example" # String | the name of the downloaded fileName
+  file_name: "file_name_example", # String | the name of the downloaded fileName
+  locale: "locale_example" # String | The locale for the requested file when downloading, as an ISO 639-1 code
 }
 
 begin
@@ -923,6 +926,7 @@ Name | Type | Description  | Notes
  **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
  **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false] |
  **file_name** | **String**| the name of the downloaded fileName | [optional]  |
+ **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2633,15 +2637,17 @@ Name | Type | Description  | Notes
 
 
 
-Execute the recording bulk job
+Execute the recording bulk job.
 
-
+A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
 
 Wraps PUT /api/v2/recording/jobs/{jobId} 
 
 Requires ALL permissions: 
 
 * recording:job:edit
+* recording:recording:editRetention
+* recording:screenRecording:editRetention
 
 
 ### Example
@@ -2667,7 +2673,7 @@ body = PureCloud::ExecuteRecordingJobsQuery.new # ExecuteRecordingJobsQuery | qu
 
 
 begin
-  #Execute the recording bulk job
+  #Execute the recording bulk job.
   result = api_instance.put_recording_job(job_id, body)
   p result
 rescue PureCloud::ApiError => e

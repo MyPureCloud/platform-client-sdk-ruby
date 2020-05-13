@@ -1228,6 +1228,7 @@ module PureCloud
     # @param object_type Consumed object type
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :resource_type Types of consuming resources to show.  Only versioned types are allowed here.
+    # @option opts [String] :version Object version
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [String] :flow_filter Show only checkedIn or published flows
@@ -1243,6 +1244,7 @@ module PureCloud
     # @param object_type Consumed object type
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :resource_type Types of consuming resources to show.  Only versioned types are allowed here.
+    # @option opts [String] :version Object version
     # @option opts [Integer] :page_number Page number
     # @option opts [Integer] :page_size Page size
     # @option opts [String] :flow_filter Show only checkedIn or published flows
@@ -1294,6 +1296,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       if opts[:'flow_filter'] && !['checkedIn', 'published'].include?(opts[:'flow_filter'])
         fail ArgumentError, 'invalid value for "flow_filter", must be one of checkedIn, published'
       end
@@ -1309,6 +1317,7 @@ module PureCloud
       query_params[:'id'] = id
       query_params[:'objectType'] = object_type
       query_params[:'resourceType'] = @api_client.build_collection_param(opts[:'resource_type'], :multi) if opts[:'resource_type']
+      query_params[:'version'] = opts[:'version'] if opts[:'version']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'flowFilter'] = opts[:'flow_filter'] if opts[:'flow_filter']
@@ -1476,6 +1485,7 @@ module PureCloud
     # @option opts [BOOLEAN] :consuming_resources Include resources that consume this item
     # @option opts [Array<String>] :consumed_resource_type Types of consumed resources to return, if consumed resources are requested
     # @option opts [Array<String>] :consuming_resource_type Types of consuming resources to return, if consuming resources are requested
+    # @option opts [BOOLEAN] :consumed_resource_request Indicate that this is going to look up a consumed resource object
     # @return [DependencyObject]
     def get_architect_dependencytracking_object(id, opts = {})
       data, _status_code, _headers = get_architect_dependencytracking_object_with_http_info(id, opts)
@@ -1492,6 +1502,7 @@ module PureCloud
     # @option opts [BOOLEAN] :consuming_resources Include resources that consume this item
     # @option opts [Array<String>] :consumed_resource_type Types of consumed resources to return, if consumed resources are requested
     # @option opts [Array<String>] :consuming_resource_type Types of consuming resources to return, if consuming resources are requested
+    # @option opts [BOOLEAN] :consumed_resource_request Indicate that this is going to look up a consumed resource object
     # @return [Array<(DependencyObject, Fixnum, Hash)>] DependencyObject data, response status code and response headers
     def get_architect_dependencytracking_object_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -1546,6 +1557,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/architect/dependencytracking/object".sub('{format}','json')
 
@@ -1558,6 +1575,7 @@ module PureCloud
       query_params[:'consumingResources'] = opts[:'consuming_resources'] if opts[:'consuming_resources']
       query_params[:'consumedResourceType'] = @api_client.build_collection_param(opts[:'consumed_resource_type'], :multi) if opts[:'consumed_resource_type']
       query_params[:'consumingResourceType'] = @api_client.build_collection_param(opts[:'consuming_resource_type'], :multi) if opts[:'consuming_resource_type']
+      query_params[:'consumedResourceRequest'] = opts[:'consumed_resource_request'] if opts[:'consumed_resource_request']
 
       # header parameters
       header_params = {}

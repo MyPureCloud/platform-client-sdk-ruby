@@ -19,6 +19,7 @@ Method | Description
 [**post_documentation_gkn_search**](SearchApi.html#post_documentation_gkn_search) | Search gkn documentation
 [**post_documentation_search**](SearchApi.html#post_documentation_search) | Search documentation
 [**post_groups_search**](SearchApi.html#post_groups_search) | Search groups
+[**post_knowledge_knowledgebase_search**](SearchApi.html#post_knowledge_knowledgebase_search) | Search Documents
 [**post_locations_search**](SearchApi.html#post_locations_search) | Search locations
 [**post_search**](SearchApi.html#post_search) | Search resources.
 [**post_search_suggest**](SearchApi.html#post_search_suggest) | Suggest resources.
@@ -710,6 +711,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GroupsSearchResponse**](GroupsSearchResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_knowledge_knowledgebase_search"></a>
+
+## [**KnowledgeSearchResponse**](KnowledgeSearchResponse.html) post_knowledge_knowledgebase_search(knowledge_base_id, opts)
+
+
+
+Search Documents
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search 
+
+Requires ALL permissions: 
+
+* knowledge:knowledgebase:search
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::SearchApi.new
+
+knowledge_base_id = "knowledge_base_id_example" # String | Knowledge base ID
+
+opts = { 
+  body: PureCloud::KnowledgeSearchRequest.new # KnowledgeSearchRequest | 
+}
+
+begin
+  #Search Documents
+  result = api_instance.post_knowledge_knowledgebase_search(knowledge_base_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling SearchApi->post_knowledge_knowledgebase_search: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **knowledge_base_id** | **String**| Knowledge base ID |  |
+ **body** | [**KnowledgeSearchRequest**](KnowledgeSearchRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**KnowledgeSearchResponse**](KnowledgeSearchResponse.html)
 
 ### HTTP request headers
 

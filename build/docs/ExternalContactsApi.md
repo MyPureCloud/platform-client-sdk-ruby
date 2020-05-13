@@ -1997,7 +1997,7 @@ Name | Type | Description  | Notes
 
 <a name="put_externalcontacts_organization_trustor_trustor_id"></a>
 
-## [**ExternalOrganization**](ExternalOrganization.html) put_externalcontacts_organization_trustor_trustor_id(external_organization_id, trustor_id)
+## [**ExternalOrganizationTrustorLink**](ExternalOrganizationTrustorLink.html) put_externalcontacts_organization_trustor_trustor_id(external_organization_id, trustor_id)
 
 
 
@@ -2054,7 +2054,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ExternalOrganization**](ExternalOrganization.html)
+[**ExternalOrganizationTrustorLink**](ExternalOrganizationTrustorLink.html)
 
 ### HTTP request headers
 

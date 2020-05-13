@@ -21,7 +21,6 @@ Method | Description
 [**get_authorization_divisionspermitted_me**](UsersApi.html#get_authorization_divisionspermitted_me) | Returns which divisions the current user has the given permission in.
 [**get_authorization_divisionspermitted_paged_me**](UsersApi.html#get_authorization_divisionspermitted_paged_me) | Returns which divisions the current user has the given permission in.
 [**get_authorization_divisionspermitted_paged_subject_id**](UsersApi.html#get_authorization_divisionspermitted_paged_subject_id) | Returns which divisions the specified user has the given permission in.
-[**get_authorization_divisionspermitted_subject_id**](UsersApi.html#get_authorization_divisionspermitted_subject_id) | Returns which divisions the specified user has the given permission in.
 [**get_authorization_subject**](UsersApi.html#get_authorization_subject) | Returns a listing of roles and permissions for a user.
 [**get_authorization_subjects_me**](UsersApi.html#get_authorization_subjects_me) | Returns a listing of roles and permissions for the currently authenticated user.
 [**get_fieldconfig**](UsersApi.html#get_fieldconfig) | Fetch field config for an entity type
@@ -947,77 +946,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DivsPermittedEntityListing**](DivsPermittedEntityListing.html)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-<a name="get_authorization_divisionspermitted_subject_id"></a>
-
-## [**Array&lt;AuthzDivision&gt;**](AuthzDivision.html) get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Returns which divisions the specified user has the given permission in.
-
-This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
-
-Wraps GET /api/v2/authorization/divisionspermitted/{subjectId} 
-
-Requires NO permissions: 
-
-
-
-### Example
-```{"language":"ruby"}
-# load the gem
-require 'purecloudplatformclientv2'
-# setup authorization
-@secret = ENV['PURECLOUD_SECRET']
-@id = ENV['PURECLOUD_CLIENT_ID']
-environment = "mypurecloud.com"
-
-@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
-
-PureCloud.configure do |config|
-  config.access_token = @authToken
-end
-
-api_instance = PureCloud::UsersApi.new
-
-subject_id = "subject_id_example" # String | Subject ID (user or group)
-
-permission = "permission_example" # String | The permission string, including the object to access, e.g. routing:queue:view
-
-opts = { 
-  name: "name_example" # String | Search term to filter by division name
-}
-
-begin
-  #Returns which divisions the specified user has the given permission in.
-  result = api_instance.get_authorization_divisionspermitted_subject_id(subject_id, permission, opts)
-  p result
-rescue PureCloud::ApiError => e
-  puts "Exception when calling UsersApi->get_authorization_divisionspermitted_subject_id: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **subject_id** | **String**| Subject ID (user or group) |  |
- **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view |  |
- **name** | **String**| Search term to filter by division name | [optional]  |
-{: class="table table-striped"}
-
-
-### Return type
-
-[**Array&lt;AuthzDivision&gt;**](AuthzDivision.html)
 
 ### HTTP request headers
 

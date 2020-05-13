@@ -374,6 +374,7 @@ module PureCloud
     # @option opts [String] :format_id The desired media format. (default to WEBM)
     # @option opts [BOOLEAN] :download requesting a download format of the recording (default to false)
     # @option opts [String] :file_name the name of the downloaded fileName
+    # @option opts [String] :locale The locale for the requested file when downloading, as an ISO 639-1 code
     # @return [Recording]
     def get_conversation_recording(conversation_id, recording_id, opts = {})
       data, _status_code, _headers = get_conversation_recording_with_http_info(conversation_id, recording_id, opts)
@@ -388,6 +389,7 @@ module PureCloud
     # @option opts [String] :format_id The desired media format.
     # @option opts [BOOLEAN] :download requesting a download format of the recording
     # @option opts [String] :file_name the name of the downloaded fileName
+    # @option opts [String] :locale The locale for the requested file when downloading, as an ISO 639-1 code
     # @return [Array<(Recording, Fixnum, Hash)>] Recording data, response status code and response headers
     def get_conversation_recording_with_http_info(conversation_id, recording_id, opts = {})
       if @api_client.config.debugging
@@ -432,6 +434,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s).sub('{' + 'recordingId' + '}', recording_id.to_s)
 
@@ -440,6 +448,7 @@ module PureCloud
       query_params[:'formatId'] = opts[:'format_id'] if opts[:'format_id']
       query_params[:'download'] = opts[:'download'] if opts[:'download']
       query_params[:'fileName'] = opts[:'file_name'] if opts[:'file_name']
+      query_params[:'locale'] = opts[:'locale'] if opts[:'locale']
 
       # header parameters
       header_params = {}
@@ -931,6 +940,7 @@ module PureCloud
     # @option opts [String] :format_id The desired media format. (default to WEBM)
     # @option opts [BOOLEAN] :download requesting a download format of the recording (default to false)
     # @option opts [String] :file_name the name of the downloaded fileName
+    # @option opts [String] :locale The locale for the requested file when downloading, as an ISO 639-1 code
     # @return [Recording]
     def get_orphanrecording_media(orphan_id, opts = {})
       data, _status_code, _headers = get_orphanrecording_media_with_http_info(orphan_id, opts)
@@ -944,6 +954,7 @@ module PureCloud
     # @option opts [String] :format_id The desired media format.
     # @option opts [BOOLEAN] :download requesting a download format of the recording
     # @option opts [String] :file_name the name of the downloaded fileName
+    # @option opts [String] :locale The locale for the requested file when downloading, as an ISO 639-1 code
     # @return [Array<(Recording, Fixnum, Hash)>] Recording data, response status code and response headers
     def get_orphanrecording_media_with_http_info(orphan_id, opts = {})
       if @api_client.config.debugging
@@ -980,6 +991,12 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/orphanrecordings/{orphanId}/media".sub('{format}','json').sub('{' + 'orphanId' + '}', orphan_id.to_s)
 
@@ -988,6 +1005,7 @@ module PureCloud
       query_params[:'formatId'] = opts[:'format_id'] if opts[:'format_id']
       query_params[:'download'] = opts[:'download'] if opts[:'download']
       query_params[:'fileName'] = opts[:'file_name'] if opts[:'file_name']
+      query_params[:'locale'] = opts[:'locale'] if opts[:'locale']
 
       # header parameters
       header_params = {}
@@ -2927,8 +2945,8 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Execute the recording bulk job
-    # 
+    # Execute the recording bulk job.
+    # A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
     # @param job_id jobId
     # @param body query
     # @param [Hash] opts the optional parameters
@@ -2938,8 +2956,8 @@ module PureCloud
       return data
     end
 
-    # Execute the recording bulk job
-    # 
+    # Execute the recording bulk job.
+    # A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording&#39;s retention.
     # @param job_id jobId
     # @param body query
     # @param [Hash] opts the optional parameters

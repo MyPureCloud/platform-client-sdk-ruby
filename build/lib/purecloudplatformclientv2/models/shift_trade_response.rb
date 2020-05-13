@@ -24,7 +24,7 @@ module PureCloud
     # The start week date of the associated schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
     attr_accessor :week_date
 
-    # The ID of the associated schedule
+    # A reference to the associated schedule
     attr_accessor :schedule
 
     # The state of this shift trade
@@ -122,7 +122,7 @@ module PureCloud
         
         :'week_date' => :'Date',
         
-        :'schedule' => :'WeekScheduleReference',
+        :'schedule' => :'BuScheduleReferenceForMuRoute',
         
         :'state' => :'String',
         

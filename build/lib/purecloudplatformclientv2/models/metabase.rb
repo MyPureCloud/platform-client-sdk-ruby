@@ -318,7 +318,7 @@ module PureCloud
       
       
       
-      allowed_values = ["EXTERNAL", "EXTERNAL_PCV", "EXTERNAL_PCV_AWS", "EXTERNAL_BYOC_CARRIER", "EXTERNAL_BYOC_PBX", "STATION", "TIE", "TIE_DIRECT", "TIE_INDIRECT", "TIE_CLOUD_PROXY"]
+      allowed_values = ["EXTERNAL", "EXTERNAL_PCV", "EXTERNAL_PCV_AWS", "EXTERNAL_BYOC_CARRIER", "EXTERNAL_BYOC_PBX", "STATION_CDM", "STATION_CDM_WEBRTC", "STATION", "TIE", "TIE_DIRECT", "TIE_INDIRECT", "TIE_CLOUD_PROXY"]
       if @type && !allowed_values.include?(@type)
         return false
       end
@@ -400,7 +400,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
-      allowed_values = ["EXTERNAL", "EXTERNAL_PCV", "EXTERNAL_PCV_AWS", "EXTERNAL_BYOC_CARRIER", "EXTERNAL_BYOC_PBX", "STATION", "TIE", "TIE_DIRECT", "TIE_INDIRECT", "TIE_CLOUD_PROXY"]
+      allowed_values = ["EXTERNAL", "EXTERNAL_PCV", "EXTERNAL_PCV_AWS", "EXTERNAL_BYOC_CARRIER", "EXTERNAL_BYOC_PBX", "STATION_CDM", "STATION_CDM_WEBRTC", "STATION", "TIE", "TIE_DIRECT", "TIE_INDIRECT", "TIE_CLOUD_PROXY"]
       if type && !allowed_values.include?(type)
         fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
       end

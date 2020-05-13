@@ -3723,6 +3723,81 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Update domain settings
+    # 
+    # @param domain_id domain ID
+    # @param body Domain settings
+    # @param [Hash] opts the optional parameters
+    # @return [InboundDomain]
+    def patch_routing_email_domain(domain_id, body, opts = {})
+      data, _status_code, _headers = patch_routing_email_domain_with_http_info(domain_id, body, opts)
+      return data
+    end
+
+    # Update domain settings
+    # 
+    # @param domain_id domain ID
+    # @param body Domain settings
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(InboundDomain, Fixnum, Hash)>] InboundDomain data, response status code and response headers
+    def patch_routing_email_domain_with_http_info(domain_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.patch_routing_email_domain ..."
+      end
+      
+      
+      # verify the required parameter 'domain_id' is set
+      fail ArgumentError, "Missing the required parameter 'domain_id' when calling RoutingApi.patch_routing_email_domain" if domain_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling RoutingApi.patch_routing_email_domain" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/email/domains/{domainId}".sub('{format}','json').sub('{' + 'domainId' + '}', domain_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InboundDomain')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#patch_routing_email_domain\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Update the ring number OR joined status for a User in a Queue
     # 
     # @param queue_id Queue ID
@@ -4487,6 +4562,79 @@ module PureCloud
         :return_type => 'InboundRoute')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RoutingApi#post_routing_email_domain_routes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Tests the custom SMTP server integration connection set on this domain
+    # The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+    # @param domain_id domain ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [TestMessage] :body TestMessage
+    # @return [TestMessage]
+    def post_routing_email_domain_testconnection(domain_id, opts = {})
+      data, _status_code, _headers = post_routing_email_domain_testconnection_with_http_info(domain_id, opts)
+      return data
+    end
+
+    # Tests the custom SMTP server integration connection set on this domain
+    # The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+    # @param domain_id domain ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [TestMessage] :body TestMessage
+    # @return [Array<(TestMessage, Fixnum, Hash)>] TestMessage data, response status code and response headers
+    def post_routing_email_domain_testconnection_with_http_info(domain_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: RoutingApi.post_routing_email_domain_testconnection ..."
+      end
+      
+      
+      # verify the required parameter 'domain_id' is set
+      fail ArgumentError, "Missing the required parameter 'domain_id' when calling RoutingApi.post_routing_email_domain_testconnection" if domain_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/routing/email/domains/{domainId}/testconnection".sub('{format}','json').sub('{' + 'domainId' + '}', domain_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'TestMessage')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: RoutingApi#post_routing_email_domain_testconnection\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

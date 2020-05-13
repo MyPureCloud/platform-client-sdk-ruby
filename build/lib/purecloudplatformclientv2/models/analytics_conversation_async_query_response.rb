@@ -21,6 +21,9 @@ module PureCloud
     # Optional cursor to indicate where to resume the results
     attr_accessor :cursor
 
+    # Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :data_availability_date
+
     attr_accessor :conversations
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -28,6 +31,8 @@ module PureCloud
       {
         
         :'cursor' => :'cursor',
+        
+        :'data_availability_date' => :'dataAvailabilityDate',
         
         :'conversations' => :'conversations'
         
@@ -39,6 +44,8 @@ module PureCloud
       {
         
         :'cursor' => :'String',
+        
+        :'data_availability_date' => :'DateTime',
         
         :'conversations' => :'Array<AnalyticsConversation>'
         
@@ -58,6 +65,15 @@ module PureCloud
         
         
         self.cursor = attributes[:'cursor']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'dataAvailabilityDate')
+        
+        
+        self.data_availability_date = attributes[:'dataAvailabilityDate']
         
       
       end
@@ -97,8 +113,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -116,6 +141,7 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           cursor == o.cursor &&
+          data_availability_date == o.data_availability_date &&
           conversations == o.conversations
     end
 
@@ -128,7 +154,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [cursor, conversations].hash
+      [cursor, data_availability_date, conversations].hash
     end
 
     # build the object from hash
