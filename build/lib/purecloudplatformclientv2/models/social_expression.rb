@@ -69,6 +69,9 @@ module PureCloud
     # The id of the peer communication corresponding to a matching leg for this communication.
     attr_accessor :peer_id
 
+    # Call wrap up or disposition data.
+    attr_accessor :wrapup
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -105,7 +108,9 @@ module PureCloud
         
         :'script_id' => :'scriptId',
         
-        :'peer_id' => :'peerId'
+        :'peer_id' => :'peerId',
+        
+        :'wrapup' => :'wrapup'
         
       }
     end
@@ -146,7 +151,9 @@ module PureCloud
         
         :'script_id' => :'String',
         
-        :'peer_id' => :'String'
+        :'peer_id' => :'String',
+        
+        :'wrapup' => :'Wrapup'
         
       }
     end
@@ -315,6 +322,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'wrapup')
+        
+        
+        self.wrapup = attributes[:'wrapup']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -377,6 +393,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -514,6 +534,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -535,7 +560,8 @@ module PureCloud
           disconnected_time == o.disconnected_time &&
           provider == o.provider &&
           script_id == o.script_id &&
-          peer_id == o.peer_id
+          peer_id == o.peer_id &&
+          wrapup == o.wrapup
     end
 
     # @see the `==` method
@@ -547,7 +573,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, social_media_id, social_media_hub, social_user_name, preview_text, recording_id, segments, held, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, script_id, peer_id].hash
+      [state, id, social_media_id, social_media_hub, social_user_name, preview_text, recording_id, segments, held, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, script_id, peer_id, wrapup].hash
     end
 
     # build the object from hash

@@ -77,6 +77,12 @@ module PureCloud
     # Indicates if custom participant attributes will be exported
     attr_accessor :has_custom_participant_attributes
 
+    # The list of email recipients for the exports
+    attr_accessor :recipient_emails
+
+    # The status of individual email addresses as a map
+    attr_accessor :email_statuses
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -123,6 +129,10 @@ module PureCloud
         :'selected_columns' => :'selectedColumns',
         
         :'has_custom_participant_attributes' => :'hasCustomParticipantAttributes',
+        
+        :'recipient_emails' => :'recipientEmails',
+        
+        :'email_statuses' => :'emailStatuses',
         
         :'self_uri' => :'selfUri'
         
@@ -172,6 +182,10 @@ module PureCloud
         :'selected_columns' => :'Array<SelectedColumns>',
         
         :'has_custom_participant_attributes' => :'BOOLEAN',
+        
+        :'recipient_emails' => :'Array<String>',
+        
+        :'email_statuses' => :'Hash<String, String>',
         
         :'self_uri' => :'String'
         
@@ -369,6 +383,28 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'recipientEmails')
+        
+        if (value = attributes[:'recipientEmails']).is_a?(Array)
+          self.recipient_emails = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'emailStatuses')
+        
+        if (value = attributes[:'emailStatuses']).is_a?(Array)
+          self.email_statuses = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -557,6 +593,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -701,6 +745,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -726,6 +780,8 @@ module PureCloud
           has_split_filters == o.has_split_filters &&
           selected_columns == o.selected_columns &&
           has_custom_participant_attributes == o.has_custom_participant_attributes &&
+          recipient_emails == o.recipient_emails &&
+          email_statuses == o.email_statuses &&
           self_uri == o.self_uri
     end
 
@@ -738,7 +794,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, has_format_durations, has_split_filters, selected_columns, has_custom_participant_attributes, self_uri].hash
+      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, has_format_durations, has_split_filters, selected_columns, has_custom_participant_attributes, recipient_emails, email_statuses, self_uri].hash
     end
 
     # build the object from hash

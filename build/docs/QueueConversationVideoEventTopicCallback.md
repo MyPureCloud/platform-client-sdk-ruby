@@ -19,6 +19,7 @@ title: QueueConversationVideoEventTopicCallback
 | **callback_user_name** | **String** |  | [optional] |
 | **script_id** | **String** |  | [optional] |
 | **peer_id** | **String** |  | [optional] |
+| **external_campaign** | **BOOLEAN** |  | [optional] |
 | **skip_enabled** | **BOOLEAN** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **timeout_seconds** | **Integer** |  | [optional] |

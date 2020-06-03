@@ -26,11 +26,14 @@ module PureCloud
     # The project this Dialogflow agent belongs to
     attr_accessor :project
 
-    # The target languages of the Dialogflow agent
+    # The supported languages of the Dialogflow agent
     attr_accessor :languages
 
-    # An array of Intents associated with this bot alias
+    # An array of Intents associated with this agent
     attr_accessor :intents
+
+    # Available environments for this agent
+    attr_accessor :environments
 
     # The URI for this object
     attr_accessor :self_uri
@@ -48,6 +51,8 @@ module PureCloud
         :'languages' => :'languages',
         
         :'intents' => :'intents',
+        
+        :'environments' => :'environments',
         
         :'self_uri' => :'selfUri'
         
@@ -67,6 +72,8 @@ module PureCloud
         :'languages' => :'Array<String>',
         
         :'intents' => :'Array<DialogflowIntent>',
+        
+        :'environments' => :'Array<String>',
         
         :'self_uri' => :'String'
         
@@ -131,6 +138,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'environments')
+        
+        if (value = attributes[:'environments']).is_a?(Array)
+          self.environments = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -179,8 +197,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -222,6 +249,7 @@ module PureCloud
           project == o.project &&
           languages == o.languages &&
           intents == o.intents &&
+          environments == o.environments &&
           self_uri == o.self_uri
     end
 
@@ -234,7 +262,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, project, languages, intents, self_uri].hash
+      [id, name, project, languages, intents, environments, self_uri].hash
     end
 
     # build the object from hash

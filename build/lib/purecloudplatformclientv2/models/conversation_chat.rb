@@ -69,6 +69,9 @@ module PureCloud
     # A subset of the Journey System's data relevant to a part of a conversation (for external linkage and internal usage/context).
     attr_accessor :journey_context
 
+    # Call wrap up or disposition data.
+    attr_accessor :wrapup
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -105,7 +108,9 @@ module PureCloud
         
         :'avatar_image_url' => :'avatarImageUrl',
         
-        :'journey_context' => :'journeyContext'
+        :'journey_context' => :'journeyContext',
+        
+        :'wrapup' => :'wrapup'
         
       }
     end
@@ -146,7 +151,9 @@ module PureCloud
         
         :'avatar_image_url' => :'String',
         
-        :'journey_context' => :'JourneyContext'
+        :'journey_context' => :'JourneyContext',
+        
+        :'wrapup' => :'Wrapup'
         
       }
     end
@@ -315,6 +322,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'wrapup')
+        
+        
+        self.wrapup = attributes[:'wrapup']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -374,6 +390,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -528,6 +548,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -549,7 +574,8 @@ module PureCloud
           script_id == o.script_id &&
           peer_id == o.peer_id &&
           avatar_image_url == o.avatar_image_url &&
-          journey_context == o.journey_context
+          journey_context == o.journey_context &&
+          wrapup == o.wrapup
     end
 
     # @see the `==` method
@@ -561,7 +587,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, script_id, peer_id, avatar_image_url, journey_context].hash
+      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, script_id, peer_id, avatar_image_url, journey_context, wrapup].hash
     end
 
     # build the object from hash

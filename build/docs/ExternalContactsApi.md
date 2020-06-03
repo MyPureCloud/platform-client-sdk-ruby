@@ -10,6 +10,7 @@ Method | Description
 ------------- | ------------- | -------------
 [**delete_externalcontacts_contact**](ExternalContactsApi.html#delete_externalcontacts_contact) | Delete an external contact
 [**delete_externalcontacts_contact_note**](ExternalContactsApi.html#delete_externalcontacts_contact_note) | Delete a note for an external contact
+[**delete_externalcontacts_contacts_schema**](ExternalContactsApi.html#delete_externalcontacts_contacts_schema) | Delete a schema
 [**delete_externalcontacts_organization**](ExternalContactsApi.html#delete_externalcontacts_organization) | Delete an external organization
 [**delete_externalcontacts_organization_note**](ExternalContactsApi.html#delete_externalcontacts_organization_note) | Delete a note for an external organization
 [**delete_externalcontacts_organization_trustor**](ExternalContactsApi.html#delete_externalcontacts_organization_trustor) | Unlink the Trustor for this External Organization
@@ -18,25 +19,37 @@ Method | Description
 [**get_externalcontacts_contact_note**](ExternalContactsApi.html#get_externalcontacts_contact_note) | Fetch a note for an external contact
 [**get_externalcontacts_contact_notes**](ExternalContactsApi.html#get_externalcontacts_contact_notes) | List notes for an external contact
 [**get_externalcontacts_contacts**](ExternalContactsApi.html#get_externalcontacts_contacts) | Search for external contacts
+[**get_externalcontacts_contacts_schema**](ExternalContactsApi.html#get_externalcontacts_contacts_schema) | Get a schema
+[**get_externalcontacts_contacts_schema_version**](ExternalContactsApi.html#get_externalcontacts_contacts_schema_version) | Get a specific version of a schema
+[**get_externalcontacts_contacts_schema_versions**](ExternalContactsApi.html#get_externalcontacts_contacts_schema_versions) | Get all versions of an external contact&#39;s schema
+[**get_externalcontacts_contacts_schemas**](ExternalContactsApi.html#get_externalcontacts_contacts_schemas) | Get a list of schemas.
 [**get_externalcontacts_organization**](ExternalContactsApi.html#get_externalcontacts_organization) | Fetch an external organization
 [**get_externalcontacts_organization_contacts**](ExternalContactsApi.html#get_externalcontacts_organization_contacts) | Search for external contacts in an external organization
 [**get_externalcontacts_organization_note**](ExternalContactsApi.html#get_externalcontacts_organization_note) | Fetch a note for an external organization
 [**get_externalcontacts_organization_notes**](ExternalContactsApi.html#get_externalcontacts_organization_notes) | List notes for an external organization
 [**get_externalcontacts_organization_relationships**](ExternalContactsApi.html#get_externalcontacts_organization_relationships) | Fetch a relationship for an external organization
 [**get_externalcontacts_organizations**](ExternalContactsApi.html#get_externalcontacts_organizations) | Search for external organizations
+[**get_externalcontacts_organizations_schema**](ExternalContactsApi.html#get_externalcontacts_organizations_schema) | Get a schema
+[**get_externalcontacts_organizations_schema_version**](ExternalContactsApi.html#get_externalcontacts_organizations_schema_version) | Get a specific version of a schema
+[**get_externalcontacts_organizations_schema_versions**](ExternalContactsApi.html#get_externalcontacts_organizations_schema_versions) | Get all versions of an external organization&#39;s schema
+[**get_externalcontacts_organizations_schemas**](ExternalContactsApi.html#get_externalcontacts_organizations_schemas) | Get a list of schemas.
 [**get_externalcontacts_relationship**](ExternalContactsApi.html#get_externalcontacts_relationship) | Fetch a relationship
 [**get_externalcontacts_reversewhitepageslookup**](ExternalContactsApi.html#get_externalcontacts_reversewhitepageslookup) | Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
 [**post_externalcontacts_contact_notes**](ExternalContactsApi.html#post_externalcontacts_contact_notes) | Create a note for an external contact
 [**post_externalcontacts_contacts**](ExternalContactsApi.html#post_externalcontacts_contacts) | Create an external contact
+[**post_externalcontacts_contacts_schemas**](ExternalContactsApi.html#post_externalcontacts_contacts_schemas) | Create a schema
 [**post_externalcontacts_organization_notes**](ExternalContactsApi.html#post_externalcontacts_organization_notes) | Create a note for an external organization
 [**post_externalcontacts_organizations**](ExternalContactsApi.html#post_externalcontacts_organizations) | Create an external organization
+[**post_externalcontacts_organizations_schemas**](ExternalContactsApi.html#post_externalcontacts_organizations_schemas) | Create a schema
 [**post_externalcontacts_relationships**](ExternalContactsApi.html#post_externalcontacts_relationships) | Create a relationship
 [**put_externalcontacts_contact**](ExternalContactsApi.html#put_externalcontacts_contact) | Update an external contact
 [**put_externalcontacts_contact_note**](ExternalContactsApi.html#put_externalcontacts_contact_note) | Update a note for an external contact
+[**put_externalcontacts_contacts_schema**](ExternalContactsApi.html#put_externalcontacts_contacts_schema) | Update a schema
 [**put_externalcontacts_conversation**](ExternalContactsApi.html#put_externalcontacts_conversation) | Associate an external contact with a conversation
 [**put_externalcontacts_organization**](ExternalContactsApi.html#put_externalcontacts_organization) | Update an external organization
 [**put_externalcontacts_organization_note**](ExternalContactsApi.html#put_externalcontacts_organization_note) | Update a note for an external organization
 [**put_externalcontacts_organization_trustor_trustor_id**](ExternalContactsApi.html#put_externalcontacts_organization_trustor_trustor_id) | Links a Trustor with an External Organization
+[**put_externalcontacts_organizations_schema**](ExternalContactsApi.html#put_externalcontacts_organizations_schema) | Update a schema
 [**put_externalcontacts_relationship**](ExternalContactsApi.html#put_externalcontacts_relationship) | Update a relationship
 {: class="table table-striped"}
 
@@ -165,6 +178,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Empty**](Empty.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_externalcontacts_contacts_schema"></a>
+
+##  delete_externalcontacts_contacts_schema(schema_id)
+
+
+
+Delete a schema
+
+
+
+Wraps DELETE /api/v2/externalcontacts/contacts/schemas/{schemaId} 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+schema_id = "schema_id_example" # String | Schema ID
+
+
+begin
+  #Delete a schema
+  api_instance.delete_externalcontacts_contacts_schema(schema_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->delete_externalcontacts_contacts_schema: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schema_id** | **String**| Schema ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
 
 ### HTTP request headers
 
@@ -726,6 +803,263 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_externalcontacts_contacts_schema"></a>
+
+## [**DataSchema**](DataSchema.html) get_externalcontacts_contacts_schema(schema_id)
+
+
+
+Get a schema
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/schemas/{schemaId} 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+schema_id = "schema_id_example" # String | Schema ID
+
+
+begin
+  #Get a schema
+  result = api_instance.get_externalcontacts_contacts_schema(schema_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_contacts_schema: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schema_id** | **String**| Schema ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_externalcontacts_contacts_schema_version"></a>
+
+## [**DataSchema**](DataSchema.html) get_externalcontacts_contacts_schema_version(schema_id, version_id)
+
+
+
+Get a specific version of a schema
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId} 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+schema_id = "schema_id_example" # String | Schema ID
+
+version_id = "version_id_example" # String | Schema version
+
+
+begin
+  #Get a specific version of a schema
+  result = api_instance.get_externalcontacts_contacts_schema_version(schema_id, version_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_contacts_schema_version: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schema_id** | **String**| Schema ID |  |
+ **version_id** | **String**| Schema version |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_externalcontacts_contacts_schema_versions"></a>
+
+## [**DataSchema**](DataSchema.html) get_externalcontacts_contacts_schema_versions(schema_id)
+
+
+
+Get all versions of an external contact's schema
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+schema_id = "schema_id_example" # String | Schema ID
+
+
+begin
+  #Get all versions of an external contact's schema
+  result = api_instance.get_externalcontacts_contacts_schema_versions(schema_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_contacts_schema_versions: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schema_id** | **String**| Schema ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_externalcontacts_contacts_schemas"></a>
+
+## [**DataSchemaListing**](DataSchemaListing.html) get_externalcontacts_contacts_schemas
+
+
+
+Get a list of schemas.
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/schemas 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+begin
+  #Get a list of schemas.
+  result = api_instance.get_externalcontacts_contacts_schemas
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_contacts_schemas: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchemaListing**](DataSchemaListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_externalcontacts_organization"></a>
 
 ## [**ExternalOrganization**](ExternalOrganization.html) get_externalcontacts_organization(external_organization_id, opts)
@@ -1178,6 +1512,263 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_externalcontacts_organizations_schema"></a>
+
+## [**DataSchema**](DataSchema.html) get_externalcontacts_organizations_schema(schema_id)
+
+
+
+Get a schema
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/schemas/{schemaId} 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+schema_id = "schema_id_example" # String | Schema ID
+
+
+begin
+  #Get a schema
+  result = api_instance.get_externalcontacts_organizations_schema(schema_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_organizations_schema: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schema_id** | **String**| Schema ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_externalcontacts_organizations_schema_version"></a>
+
+## [**DataSchema**](DataSchema.html) get_externalcontacts_organizations_schema_version(schema_id, version_id)
+
+
+
+Get a specific version of a schema
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId} 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+schema_id = "schema_id_example" # String | Schema ID
+
+version_id = "version_id_example" # String | Schema version
+
+
+begin
+  #Get a specific version of a schema
+  result = api_instance.get_externalcontacts_organizations_schema_version(schema_id, version_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_organizations_schema_version: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schema_id** | **String**| Schema ID |  |
+ **version_id** | **String**| Schema version |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_externalcontacts_organizations_schema_versions"></a>
+
+## [**DataSchema**](DataSchema.html) get_externalcontacts_organizations_schema_versions(schema_id)
+
+
+
+Get all versions of an external organization's schema
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/schemas/{schemaId}/versions 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+schema_id = "schema_id_example" # String | Schema ID
+
+
+begin
+  #Get all versions of an external organization's schema
+  result = api_instance.get_externalcontacts_organizations_schema_versions(schema_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_organizations_schema_versions: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schema_id** | **String**| Schema ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_externalcontacts_organizations_schemas"></a>
+
+## [**DataSchemaListing**](DataSchemaListing.html) get_externalcontacts_organizations_schemas
+
+
+
+Get a list of schemas.
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/schemas 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+begin
+  #Get a list of schemas.
+  result = api_instance.get_externalcontacts_organizations_schemas
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_organizations_schemas: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchemaListing**](DataSchemaListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_externalcontacts_relationship"></a>
 
 ## [**Relationship**](Relationship.html) get_externalcontacts_relationship(relationship_id, opts)
@@ -1449,6 +2040,71 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_externalcontacts_contacts_schemas"></a>
+
+## [**DataSchema**](DataSchema.html) post_externalcontacts_contacts_schemas(body)
+
+
+
+Create a schema
+
+
+
+Wraps POST /api/v2/externalcontacts/contacts/schemas 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:add
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+body = PureCloud::DataSchema.new # DataSchema | Schema
+
+
+begin
+  #Create a schema
+  result = api_instance.post_externalcontacts_contacts_schemas(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->post_externalcontacts_contacts_schemas: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DataSchema**](DataSchema.html)| Schema |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_externalcontacts_organization_notes"></a>
 
 ## [**Note**](Note.html) post_externalcontacts_organization_notes(external_organization_id, body)
@@ -1576,6 +2232,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ExternalOrganization**](ExternalOrganization.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_externalcontacts_organizations_schemas"></a>
+
+## [**DataSchema**](DataSchema.html) post_externalcontacts_organizations_schemas(body)
+
+
+
+Create a schema
+
+
+
+Wraps POST /api/v2/externalcontacts/organizations/schemas 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:add
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+body = PureCloud::DataSchema.new # DataSchema | Schema
+
+
+begin
+  #Create a schema
+  result = api_instance.post_externalcontacts_organizations_schemas(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->post_externalcontacts_organizations_schemas: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DataSchema**](DataSchema.html)| Schema |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
 
 ### HTTP request headers
 
@@ -1780,6 +2501,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Note**](Note.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_externalcontacts_contacts_schema"></a>
+
+## [**DataSchema**](DataSchema.html) put_externalcontacts_contacts_schema(schema_id, body)
+
+
+
+Update a schema
+
+
+
+Wraps PUT /api/v2/externalcontacts/contacts/schemas/{schemaId} 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+schema_id = "schema_id_example" # String | Schema ID
+
+body = PureCloud::DataSchema.new # DataSchema | Data Schema
+
+
+begin
+  #Update a schema
+  result = api_instance.put_externalcontacts_contacts_schema(schema_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->put_externalcontacts_contacts_schema: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schema_id** | **String**| Schema ID |  |
+ **body** | [**DataSchema**](DataSchema.html)| Data Schema |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
 
 ### HTTP request headers
 
@@ -2055,6 +2844,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ExternalOrganizationTrustorLink**](ExternalOrganizationTrustorLink.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_externalcontacts_organizations_schema"></a>
+
+## [**DataSchema**](DataSchema.html) put_externalcontacts_organizations_schema(schema_id, body)
+
+
+
+Update a schema
+
+
+
+Wraps PUT /api/v2/externalcontacts/organizations/schemas/{schemaId} 
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+schema_id = "schema_id_example" # String | Schema ID
+
+body = PureCloud::DataSchema.new # DataSchema | Data Schema
+
+
+begin
+  #Update a schema
+  result = api_instance.put_externalcontacts_organizations_schema(schema_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->put_externalcontacts_organizations_schema: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **schema_id** | **String**| Schema ID |  |
+ **body** | [**DataSchema**](DataSchema.html)| Data Schema |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
 
 ### HTTP request headers
 

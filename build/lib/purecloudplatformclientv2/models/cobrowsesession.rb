@@ -63,6 +63,9 @@ module PureCloud
     # The time line of the participant's call, divided into activity segments.
     attr_accessor :segments
 
+    # Call wrap up or disposition data.
+    attr_accessor :wrapup
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -95,7 +98,9 @@ module PureCloud
         
         :'peer_id' => :'peerId',
         
-        :'segments' => :'segments'
+        :'segments' => :'segments',
+        
+        :'wrapup' => :'wrapup'
         
       }
     end
@@ -132,7 +137,9 @@ module PureCloud
         
         :'peer_id' => :'String',
         
-        :'segments' => :'Array<Segment>'
+        :'segments' => :'Array<Segment>',
+        
+        :'wrapup' => :'Wrapup'
         
       }
     end
@@ -285,6 +292,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'wrapup')
+        
+        
+        self.wrapup = attributes[:'wrapup']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -319,6 +335,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -466,6 +486,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -485,7 +510,8 @@ module PureCloud
           disconnected_time == o.disconnected_time &&
           provider == o.provider &&
           peer_id == o.peer_id &&
-          segments == o.segments
+          segments == o.segments &&
+          wrapup == o.wrapup
     end
 
     # @see the `==` method
@@ -497,7 +523,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, disconnect_type, _self, cobrowse_session_id, cobrowse_role, controlling, viewer_url, provider_event_time, start_alerting_time, connected_time, disconnected_time, provider, peer_id, segments].hash
+      [state, id, disconnect_type, _self, cobrowse_session_id, cobrowse_role, controlling, viewer_url, provider_event_time, start_alerting_time, connected_time, disconnected_time, provider, peer_id, segments, wrapup].hash
     end
 
     # build the object from hash

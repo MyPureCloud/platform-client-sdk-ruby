@@ -20,27 +20,11 @@ module PureCloud
   class EntityListing
     attr_accessor :entities
 
-    attr_accessor :page_size
-
-    attr_accessor :page_number
-
-    attr_accessor :total
-
-    attr_accessor :page_count
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'entities' => :'entities',
-        
-        :'page_size' => :'pageSize',
-        
-        :'page_number' => :'pageNumber',
-        
-        :'total' => :'total',
-        
-        :'page_count' => :'pageCount'
+        :'entities' => :'entities'
         
       }
     end
@@ -49,15 +33,7 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'entities' => :'Array<DataTableImportJob>',
-        
-        :'page_size' => :'Integer',
-        
-        :'page_number' => :'Integer',
-        
-        :'total' => :'Integer',
-        
-        :'page_count' => :'Integer'
+        :'entities' => :'Array<Object>'
         
       }
     end
@@ -82,42 +58,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'pageSize')
-        
-        
-        self.page_size = attributes[:'pageSize']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'pageNumber')
-        
-        
-        self.page_number = attributes[:'pageNumber']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'total')
-        
-        
-        self.total = attributes[:'total']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'pageCount')
-        
-        
-        self.page_count = attributes[:'pageCount']
-        
-      
-      end
-
-      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -137,44 +77,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -186,11 +90,7 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          entities == o.entities &&
-          page_size == o.page_size &&
-          page_number == o.page_number &&
-          total == o.total &&
-          page_count == o.page_count
+          entities == o.entities
     end
 
     # @see the `==` method
@@ -202,7 +102,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [entities, page_size, page_number, total, page_count].hash
+      [entities].hash
     end
 
     # build the object from hash

@@ -42,6 +42,8 @@ module PureCloud
 
     attr_accessor :peer_id
 
+    attr_accessor :external_campaign
+
     attr_accessor :skip_enabled
 
     attr_accessor :provider
@@ -85,6 +87,8 @@ module PureCloud
         :'script_id' => :'scriptId',
         
         :'peer_id' => :'peerId',
+        
+        :'external_campaign' => :'externalCampaign',
         
         :'skip_enabled' => :'skipEnabled',
         
@@ -132,6 +136,8 @@ module PureCloud
         :'script_id' => :'String',
         
         :'peer_id' => :'String',
+        
+        :'external_campaign' => :'BOOLEAN',
         
         :'skip_enabled' => :'BOOLEAN',
         
@@ -271,6 +277,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'externalCampaign')
+        
+        
+        self.external_campaign = attributes[:'externalCampaign']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'skipEnabled')
         
         
@@ -390,6 +405,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -583,6 +602,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -600,6 +624,7 @@ module PureCloud
           callback_user_name == o.callback_user_name &&
           script_id == o.script_id &&
           peer_id == o.peer_id &&
+          external_campaign == o.external_campaign &&
           skip_enabled == o.skip_enabled &&
           provider == o.provider &&
           timeout_seconds == o.timeout_seconds &&
@@ -619,7 +644,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, direction, held, disconnect_type, start_hold_time, dialer_preview, voicemail, callback_numbers, callback_user_name, script_id, peer_id, skip_enabled, provider, timeout_seconds, connected_time, disconnected_time, callback_scheduled_time, automated_callback_config_id, additional_properties].hash
+      [state, id, direction, held, disconnect_type, start_hold_time, dialer_preview, voicemail, callback_numbers, callback_user_name, script_id, peer_id, external_campaign, skip_enabled, provider, timeout_seconds, connected_time, disconnected_time, callback_scheduled_time, automated_callback_config_id, additional_properties].hash
     end
 
     # build the object from hash

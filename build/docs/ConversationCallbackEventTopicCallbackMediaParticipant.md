@@ -46,6 +46,7 @@ title: ConversationCallbackEventTopicCallbackMediaParticipant
 | **callback_numbers** | **Array&lt;String&gt;** |  | [optional] |
 | **callback_user_name** | **String** |  | [optional] |
 | **skip_enabled** | **BOOLEAN** |  | [optional] |
+| **external_campaign** | **BOOLEAN** |  | [optional] |
 | **timeout_seconds** | **Integer** |  | [optional] |
 | **callback_scheduled_time** | **DateTime** |  | [optional] |
 | **automated_callback_config_id** | **String** |  | [optional] |

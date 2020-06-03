@@ -175,7 +175,7 @@ module PureCloud
       
       
       
-      allowed_values = ["InitiatingAgentScheduleNotFound", "InitiatingAgentShiftNotFound", "ReceivingAgentNotFound", "ReceivingAgentScheduleNotFound", "ReceivingAgentShiftNotFound", "ScheduleNotPublished", "TransitionNotAllowed"]
+      allowed_values = ["InitiatingAgentScheduleNotFound", "InitiatingAgentShiftHasExternalActivities", "InitiatingAgentShiftNotFound", "ReceivingAgentNotFound", "ReceivingAgentScheduleNotFound", "ReceivingAgentShiftHasExternalActivities", "ReceivingAgentShiftNotFound", "ScheduleNotPublished", "TransitionNotAllowed"]
       if @failure_reason && !allowed_values.include?(@failure_reason)
         return false
       end
@@ -222,7 +222,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] failure_reason Object to be assigned
     def failure_reason=(failure_reason)
-      allowed_values = ["InitiatingAgentScheduleNotFound", "InitiatingAgentShiftNotFound", "ReceivingAgentNotFound", "ReceivingAgentScheduleNotFound", "ReceivingAgentShiftNotFound", "ScheduleNotPublished", "TransitionNotAllowed"]
+      allowed_values = ["InitiatingAgentScheduleNotFound", "InitiatingAgentShiftHasExternalActivities", "InitiatingAgentShiftNotFound", "ReceivingAgentNotFound", "ReceivingAgentScheduleNotFound", "ReceivingAgentShiftHasExternalActivities", "ReceivingAgentShiftNotFound", "ScheduleNotPublished", "TransitionNotAllowed"]
       if failure_reason && !allowed_values.include?(failure_reason)
         fail ArgumentError, "invalid value for 'failure_reason', must be one of #{allowed_values}."
       end

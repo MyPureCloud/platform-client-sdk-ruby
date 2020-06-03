@@ -80,6 +80,9 @@ module PureCloud
     # The messages sent on this communication channel.
     attr_accessor :messages
 
+    # Call wrap up or disposition data.
+    attr_accessor :wrapup
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -124,7 +127,9 @@ module PureCloud
         
         :'from_address' => :'fromAddress',
         
-        :'messages' => :'messages'
+        :'messages' => :'messages',
+        
+        :'wrapup' => :'wrapup'
         
       }
     end
@@ -173,7 +178,9 @@ module PureCloud
         
         :'from_address' => :'Address',
         
-        :'messages' => :'Array<MessageDetails>'
+        :'messages' => :'Array<MessageDetails>',
+        
+        :'wrapup' => :'Wrapup'
         
       }
     end
@@ -380,6 +387,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'wrapup')
+        
+        
+        self.wrapup = attributes[:'wrapup']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -468,6 +484,10 @@ module PureCloud
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -643,6 +663,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -668,7 +693,8 @@ module PureCloud
           peer_id == o.peer_id &&
           to_address == o.to_address &&
           from_address == o.from_address &&
-          messages == o.messages
+          messages == o.messages &&
+          wrapup == o.wrapup
     end
 
     # @see the `==` method
@@ -680,7 +706,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, held, segments, direction, recording_id, error_info, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, type, recipient_country, recipient_type, script_id, peer_id, to_address, from_address, messages].hash
+      [state, id, held, segments, direction, recording_id, error_info, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, type, recipient_country, recipient_type, script_id, peer_id, to_address, from_address, messages, wrapup].hash
     end
 
     # build the object from hash

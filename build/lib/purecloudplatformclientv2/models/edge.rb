@@ -91,6 +91,7 @@ module PureCloud
     # The Site to which the Edge is assigned.
     attr_accessor :site
 
+    # Details about an in-progress or recently in-progress Edge software upgrade. This node appears only if a software upgrade was recently initiated for this Edge.
     attr_accessor :software_status
 
     attr_accessor :online_status

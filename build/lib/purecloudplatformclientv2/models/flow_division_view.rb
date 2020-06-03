@@ -35,6 +35,12 @@ module PureCloud
     # json schema describing the outputs for the flow
     attr_accessor :output_schema
 
+    # published version information if there is a published version
+    attr_accessor :published_version
+
+    # debug version information if there is a debug version
+    attr_accessor :debug_version
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -53,6 +59,10 @@ module PureCloud
         :'input_schema' => :'inputSchema',
         
         :'output_schema' => :'outputSchema',
+        
+        :'published_version' => :'publishedVersion',
+        
+        :'debug_version' => :'debugVersion',
         
         :'self_uri' => :'selfUri'
         
@@ -74,6 +84,10 @@ module PureCloud
         :'input_schema' => :'JsonSchemaDocument',
         
         :'output_schema' => :'JsonSchemaDocument',
+        
+        :'published_version' => :'FlowVersion',
+        
+        :'debug_version' => :'FlowVersion',
         
         :'self_uri' => :'String'
         
@@ -143,6 +157,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'publishedVersion')
+        
+        
+        self.published_version = attributes[:'publishedVersion']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'debugVersion')
+        
+        
+        self.debug_version = attributes[:'debugVersion']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -205,6 +237,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -252,6 +292,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -263,6 +313,8 @@ module PureCloud
           type == o.type &&
           input_schema == o.input_schema &&
           output_schema == o.output_schema &&
+          published_version == o.published_version &&
+          debug_version == o.debug_version &&
           self_uri == o.self_uri
     end
 
@@ -275,7 +327,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, type, input_schema, output_schema, self_uri].hash
+      [id, name, division, type, input_schema, output_schema, published_version, debug_version, self_uri].hash
     end
 
     # build the object from hash

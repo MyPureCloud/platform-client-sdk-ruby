@@ -63,6 +63,9 @@ module PureCloud
     # Address and name data for a call endpoint.
     attr_accessor :_self
 
+    # Call wrap up or disposition data.
+    attr_accessor :wrapup
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -95,7 +98,9 @@ module PureCloud
         
         :'msids' => :'msids',
         
-        :'_self' => :'self'
+        :'_self' => :'self',
+        
+        :'wrapup' => :'wrapup'
         
       }
     end
@@ -132,7 +137,9 @@ module PureCloud
         
         :'msids' => :'Array<String>',
         
-        :'_self' => :'Address'
+        :'_self' => :'Address',
+        
+        :'wrapup' => :'Wrapup'
         
       }
     end
@@ -283,6 +290,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'wrapup')
+        
+        
+        self.wrapup = attributes[:'wrapup']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -337,6 +353,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -464,6 +484,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -483,7 +508,8 @@ module PureCloud
           provider == o.provider &&
           peer_id == o.peer_id &&
           msids == o.msids &&
-          _self == o._self
+          _self == o._self &&
+          wrapup == o.wrapup
     end
 
     # @see the `==` method
@@ -495,7 +521,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, context, audio_muted, video_muted, sharing_screen, peer_count, disconnect_type, start_alerting_time, connected_time, disconnected_time, provider, peer_id, msids, _self].hash
+      [state, id, context, audio_muted, video_muted, sharing_screen, peer_count, disconnect_type, start_alerting_time, connected_time, disconnected_time, provider, peer_id, msids, _self, wrapup].hash
     end
 
     # build the object from hash

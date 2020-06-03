@@ -20,6 +20,7 @@ title: ReportingExportJobRequest
 | **has_split_filters** | **BOOLEAN** | Indicates if filters will be split in aggregate detail exports | [optional] |
 | **selected_columns** | [**Array&lt;SelectedColumns&gt;**](SelectedColumns.html) | The list of ordered selected columns from the export view by the user | [optional] |
 | **has_custom_participant_attributes** | **BOOLEAN** | Indicates if custom participant attributes will be exported | [optional] |
+| **recipient_emails** | **Array&lt;String&gt;** | The list of email recipients for the exports | [optional] |
 {: class="table table-striped"}
 
 

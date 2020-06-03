@@ -15,6 +15,7 @@ Method | Description
 [**delete_routing_queue_wrapupcode**](RoutingApi.html#delete_routing_queue_wrapupcode) | Delete a wrap-up code from a queue
 [**delete_routing_settings**](RoutingApi.html#delete_routing_settings) | Delete an organization&#39;s routing settings
 [**delete_routing_skill**](RoutingApi.html#delete_routing_skill) | Delete Routing Skill
+[**delete_routing_sms_address**](RoutingApi.html#delete_routing_sms_address) | Delete an Address by Id for SMS
 [**delete_routing_sms_phonenumber**](RoutingApi.html#delete_routing_sms_phonenumber) | Delete a phone number provisioned for SMS.
 [**delete_routing_user_utilization**](RoutingApi.html#delete_routing_user_utilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default.
 [**delete_routing_utilization**](RoutingApi.html#delete_routing_utilization) | Delete the organization-wide max utilization settings and revert to the system default.
@@ -532,6 +533,70 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **skill_id** | **String**| Skill ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+nil (empty response body)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_routing_sms_address"></a>
+
+##  delete_routing_sms_address(address_id)
+
+
+
+Delete an Address by Id for SMS
+
+
+
+Wraps DELETE /api/v2/routing/sms/addresses/{addressId} 
+
+Requires ALL permissions: 
+
+* sms:phoneNumber:delete
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::RoutingApi.new
+
+address_id = "address_id_example" # String | Address ID
+
+
+begin
+  #Delete an Address by Id for SMS
+  api_instance.delete_routing_sms_address(address_id)
+rescue PureCloud::ApiError => e
+  puts "Exception when calling RoutingApi->delete_routing_sms_address: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address_id** | **String**| Address ID |  |
 {: class="table table-striped"}
 
 

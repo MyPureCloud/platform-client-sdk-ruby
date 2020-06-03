@@ -57,6 +57,9 @@ module PureCloud
     # Indicates if custom participant attributes will be exported
     attr_accessor :has_custom_participant_attributes
 
+    # The list of email recipients for the exports
+    attr_accessor :recipient_emails
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -85,7 +88,9 @@ module PureCloud
         
         :'selected_columns' => :'selectedColumns',
         
-        :'has_custom_participant_attributes' => :'hasCustomParticipantAttributes'
+        :'has_custom_participant_attributes' => :'hasCustomParticipantAttributes',
+        
+        :'recipient_emails' => :'recipientEmails'
         
       }
     end
@@ -118,7 +123,9 @@ module PureCloud
         
         :'selected_columns' => :'Array<SelectedColumns>',
         
-        :'has_custom_participant_attributes' => :'BOOLEAN'
+        :'has_custom_participant_attributes' => :'BOOLEAN',
+        
+        :'recipient_emails' => :'Array<String>'
         
       }
     end
@@ -251,6 +258,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'recipientEmails')
+        
+        if (value = attributes[:'recipientEmails']).is_a?(Array)
+          self.recipient_emails = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -368,6 +386,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -454,6 +476,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -471,7 +498,8 @@ module PureCloud
           has_format_durations == o.has_format_durations &&
           has_split_filters == o.has_split_filters &&
           selected_columns == o.selected_columns &&
-          has_custom_participant_attributes == o.has_custom_participant_attributes
+          has_custom_participant_attributes == o.has_custom_participant_attributes &&
+          recipient_emails == o.recipient_emails
     end
 
     # @see the `==` method
@@ -483,7 +511,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, time_zone, export_format, interval, period, view_type, filter, read, locale, has_format_durations, has_split_filters, selected_columns, has_custom_participant_attributes].hash
+      [name, time_zone, export_format, interval, period, view_type, filter, read, locale, has_format_durations, has_split_filters, selected_columns, has_custom_participant_attributes, recipient_emails].hash
     end
 
     # build the object from hash

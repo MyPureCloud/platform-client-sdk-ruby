@@ -164,6 +164,70 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete a schema
+    # 
+    # @param schema_id Schema ID
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_externalcontacts_contacts_schema(schema_id, opts = {})
+      delete_externalcontacts_contacts_schema_with_http_info(schema_id, opts)
+      return nil
+    end
+
+    # Delete a schema
+    # 
+    # @param schema_id Schema ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_externalcontacts_contacts_schema_with_http_info(schema_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.delete_externalcontacts_contacts_schema ..."
+      end
+      
+      
+      # verify the required parameter 'schema_id' is set
+      fail ArgumentError, "Missing the required parameter 'schema_id' when calling ExternalContactsApi.delete_externalcontacts_contacts_schema" if schema_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/contacts/schemas/{schemaId}".sub('{format}','json').sub('{' + 'schemaId' + '}', schema_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#delete_externalcontacts_contacts_schema\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete an external organization
     # 
     # @param external_organization_id External Organization ID
@@ -792,6 +856,266 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get a schema
+    # 
+    # @param schema_id Schema ID
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchema]
+    def get_externalcontacts_contacts_schema(schema_id, opts = {})
+      data, _status_code, _headers = get_externalcontacts_contacts_schema_with_http_info(schema_id, opts)
+      return data
+    end
+
+    # Get a schema
+    # 
+    # @param schema_id Schema ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchema, Fixnum, Hash)>] DataSchema data, response status code and response headers
+    def get_externalcontacts_contacts_schema_with_http_info(schema_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_contacts_schema ..."
+      end
+      
+      
+      # verify the required parameter 'schema_id' is set
+      fail ArgumentError, "Missing the required parameter 'schema_id' when calling ExternalContactsApi.get_externalcontacts_contacts_schema" if schema_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/contacts/schemas/{schemaId}".sub('{format}','json').sub('{' + 'schemaId' + '}', schema_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchema')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_contacts_schema\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a specific version of a schema
+    # 
+    # @param schema_id Schema ID
+    # @param version_id Schema version
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchema]
+    def get_externalcontacts_contacts_schema_version(schema_id, version_id, opts = {})
+      data, _status_code, _headers = get_externalcontacts_contacts_schema_version_with_http_info(schema_id, version_id, opts)
+      return data
+    end
+
+    # Get a specific version of a schema
+    # 
+    # @param schema_id Schema ID
+    # @param version_id Schema version
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchema, Fixnum, Hash)>] DataSchema data, response status code and response headers
+    def get_externalcontacts_contacts_schema_version_with_http_info(schema_id, version_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_contacts_schema_version ..."
+      end
+      
+      
+      # verify the required parameter 'schema_id' is set
+      fail ArgumentError, "Missing the required parameter 'schema_id' when calling ExternalContactsApi.get_externalcontacts_contacts_schema_version" if schema_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'version_id' is set
+      fail ArgumentError, "Missing the required parameter 'version_id' when calling ExternalContactsApi.get_externalcontacts_contacts_schema_version" if version_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId}".sub('{format}','json').sub('{' + 'schemaId' + '}', schema_id.to_s).sub('{' + 'versionId' + '}', version_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchema')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_contacts_schema_version\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get all versions of an external contact's schema
+    # 
+    # @param schema_id Schema ID
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchema]
+    def get_externalcontacts_contacts_schema_versions(schema_id, opts = {})
+      data, _status_code, _headers = get_externalcontacts_contacts_schema_versions_with_http_info(schema_id, opts)
+      return data
+    end
+
+    # Get all versions of an external contact&#39;s schema
+    # 
+    # @param schema_id Schema ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchema, Fixnum, Hash)>] DataSchema data, response status code and response headers
+    def get_externalcontacts_contacts_schema_versions_with_http_info(schema_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_contacts_schema_versions ..."
+      end
+      
+      
+      # verify the required parameter 'schema_id' is set
+      fail ArgumentError, "Missing the required parameter 'schema_id' when calling ExternalContactsApi.get_externalcontacts_contacts_schema_versions" if schema_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions".sub('{format}','json').sub('{' + 'schemaId' + '}', schema_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchema')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_contacts_schema_versions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of schemas.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchemaListing]
+    def get_externalcontacts_contacts_schemas(opts = {})
+      data, _status_code, _headers = get_externalcontacts_contacts_schemas_with_http_info(opts)
+      return data
+    end
+
+    # Get a list of schemas.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchemaListing, Fixnum, Hash)>] DataSchemaListing data, response status code and response headers
+    def get_externalcontacts_contacts_schemas_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_contacts_schemas ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/contacts/schemas".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchemaListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_contacts_schemas\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Fetch an external organization
     # 
     # @param external_organization_id External Organization ID
@@ -1397,6 +1721,266 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get a schema
+    # 
+    # @param schema_id Schema ID
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchema]
+    def get_externalcontacts_organizations_schema(schema_id, opts = {})
+      data, _status_code, _headers = get_externalcontacts_organizations_schema_with_http_info(schema_id, opts)
+      return data
+    end
+
+    # Get a schema
+    # 
+    # @param schema_id Schema ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchema, Fixnum, Hash)>] DataSchema data, response status code and response headers
+    def get_externalcontacts_organizations_schema_with_http_info(schema_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_organizations_schema ..."
+      end
+      
+      
+      # verify the required parameter 'schema_id' is set
+      fail ArgumentError, "Missing the required parameter 'schema_id' when calling ExternalContactsApi.get_externalcontacts_organizations_schema" if schema_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/organizations/schemas/{schemaId}".sub('{format}','json').sub('{' + 'schemaId' + '}', schema_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchema')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_organizations_schema\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a specific version of a schema
+    # 
+    # @param schema_id Schema ID
+    # @param version_id Schema version
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchema]
+    def get_externalcontacts_organizations_schema_version(schema_id, version_id, opts = {})
+      data, _status_code, _headers = get_externalcontacts_organizations_schema_version_with_http_info(schema_id, version_id, opts)
+      return data
+    end
+
+    # Get a specific version of a schema
+    # 
+    # @param schema_id Schema ID
+    # @param version_id Schema version
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchema, Fixnum, Hash)>] DataSchema data, response status code and response headers
+    def get_externalcontacts_organizations_schema_version_with_http_info(schema_id, version_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_organizations_schema_version ..."
+      end
+      
+      
+      # verify the required parameter 'schema_id' is set
+      fail ArgumentError, "Missing the required parameter 'schema_id' when calling ExternalContactsApi.get_externalcontacts_organizations_schema_version" if schema_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'version_id' is set
+      fail ArgumentError, "Missing the required parameter 'version_id' when calling ExternalContactsApi.get_externalcontacts_organizations_schema_version" if version_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId}".sub('{format}','json').sub('{' + 'schemaId' + '}', schema_id.to_s).sub('{' + 'versionId' + '}', version_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchema')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_organizations_schema_version\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get all versions of an external organization's schema
+    # 
+    # @param schema_id Schema ID
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchema]
+    def get_externalcontacts_organizations_schema_versions(schema_id, opts = {})
+      data, _status_code, _headers = get_externalcontacts_organizations_schema_versions_with_http_info(schema_id, opts)
+      return data
+    end
+
+    # Get all versions of an external organization&#39;s schema
+    # 
+    # @param schema_id Schema ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchema, Fixnum, Hash)>] DataSchema data, response status code and response headers
+    def get_externalcontacts_organizations_schema_versions_with_http_info(schema_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_organizations_schema_versions ..."
+      end
+      
+      
+      # verify the required parameter 'schema_id' is set
+      fail ArgumentError, "Missing the required parameter 'schema_id' when calling ExternalContactsApi.get_externalcontacts_organizations_schema_versions" if schema_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions".sub('{format}','json').sub('{' + 'schemaId' + '}', schema_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchema')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_organizations_schema_versions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a list of schemas.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchemaListing]
+    def get_externalcontacts_organizations_schemas(opts = {})
+      data, _status_code, _headers = get_externalcontacts_organizations_schemas_with_http_info(opts)
+      return data
+    end
+
+    # Get a list of schemas.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchemaListing, Fixnum, Hash)>] DataSchemaListing data, response status code and response headers
+    def get_externalcontacts_organizations_schemas_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_organizations_schemas ..."
+      end
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/organizations/schemas".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchemaListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_organizations_schemas\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Fetch a relationship
     # 
     # @param relationship_id Relationship Id
@@ -1690,6 +2274,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Create a schema
+    # 
+    # @param body Schema
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchema]
+    def post_externalcontacts_contacts_schemas(body, opts = {})
+      data, _status_code, _headers = post_externalcontacts_contacts_schemas_with_http_info(body, opts)
+      return data
+    end
+
+    # Create a schema
+    # 
+    # @param body Schema
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchema, Fixnum, Hash)>] DataSchema data, response status code and response headers
+    def post_externalcontacts_contacts_schemas_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_contacts_schemas ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.post_externalcontacts_contacts_schemas" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/contacts/schemas".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchema')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#post_externalcontacts_contacts_schemas\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create a note for an external organization
     # 
     # @param external_organization_id External Organization Id
@@ -1826,6 +2475,71 @@ module PureCloud
         :return_type => 'ExternalOrganization')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ExternalContactsApi#post_externalcontacts_organizations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a schema
+    # 
+    # @param body Schema
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchema]
+    def post_externalcontacts_organizations_schemas(body, opts = {})
+      data, _status_code, _headers = post_externalcontacts_organizations_schemas_with_http_info(body, opts)
+      return data
+    end
+
+    # Create a schema
+    # 
+    # @param body Schema
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchema, Fixnum, Hash)>] DataSchema data, response status code and response headers
+    def post_externalcontacts_organizations_schemas_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.post_externalcontacts_organizations_schemas ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.post_externalcontacts_organizations_schemas" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/organizations/schemas".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchema')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#post_externalcontacts_organizations_schemas\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2051,6 +2765,81 @@ module PureCloud
         :return_type => 'Note')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ExternalContactsApi#put_externalcontacts_contact_note\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a schema
+    # 
+    # @param schema_id Schema ID
+    # @param body Data Schema
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchema]
+    def put_externalcontacts_contacts_schema(schema_id, body, opts = {})
+      data, _status_code, _headers = put_externalcontacts_contacts_schema_with_http_info(schema_id, body, opts)
+      return data
+    end
+
+    # Update a schema
+    # 
+    # @param schema_id Schema ID
+    # @param body Data Schema
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchema, Fixnum, Hash)>] DataSchema data, response status code and response headers
+    def put_externalcontacts_contacts_schema_with_http_info(schema_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_contacts_schema ..."
+      end
+      
+      
+      # verify the required parameter 'schema_id' is set
+      fail ArgumentError, "Missing the required parameter 'schema_id' when calling ExternalContactsApi.put_externalcontacts_contacts_schema" if schema_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.put_externalcontacts_contacts_schema" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/contacts/schemas/{schemaId}".sub('{format}','json').sub('{' + 'schemaId' + '}', schema_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchema')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#put_externalcontacts_contacts_schema\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2360,6 +3149,81 @@ module PureCloud
         :return_type => 'ExternalOrganizationTrustorLink')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ExternalContactsApi#put_externalcontacts_organization_trustor_trustor_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a schema
+    # 
+    # @param schema_id Schema ID
+    # @param body Data Schema
+    # @param [Hash] opts the optional parameters
+    # @return [DataSchema]
+    def put_externalcontacts_organizations_schema(schema_id, body, opts = {})
+      data, _status_code, _headers = put_externalcontacts_organizations_schema_with_http_info(schema_id, body, opts)
+      return data
+    end
+
+    # Update a schema
+    # 
+    # @param schema_id Schema ID
+    # @param body Data Schema
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DataSchema, Fixnum, Hash)>] DataSchema data, response status code and response headers
+    def put_externalcontacts_organizations_schema_with_http_info(schema_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_organizations_schema ..."
+      end
+      
+      
+      # verify the required parameter 'schema_id' is set
+      fail ArgumentError, "Missing the required parameter 'schema_id' when calling ExternalContactsApi.put_externalcontacts_organizations_schema" if schema_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.put_externalcontacts_organizations_schema" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/organizations/schemas/{schemaId}".sub('{format}','json').sub('{' + 'schemaId' + '}', schema_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DataSchema')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#put_externalcontacts_organizations_schema\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
