@@ -32,9 +32,9 @@ module PureCloud
 
     attr_accessor :next_uri
 
-    attr_accessor :last_uri
-
     attr_accessor :previous_uri
+
+    attr_accessor :last_uri
 
     attr_accessor :page_count
 
@@ -56,9 +56,9 @@ module PureCloud
         
         :'next_uri' => :'nextUri',
         
-        :'last_uri' => :'lastUri',
-        
         :'previous_uri' => :'previousUri',
+        
+        :'last_uri' => :'lastUri',
         
         :'page_count' => :'pageCount'
         
@@ -83,9 +83,9 @@ module PureCloud
         
         :'next_uri' => :'String',
         
-        :'last_uri' => :'String',
-        
         :'previous_uri' => :'String',
+        
+        :'last_uri' => :'String',
         
         :'page_count' => :'Integer'
         
@@ -166,19 +166,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'lastUri')
+      if attributes.has_key?(:'previousUri')
         
         
-        self.last_uri = attributes[:'lastUri']
+        self.previous_uri = attributes[:'previousUri']
         
       
       end
 
       
-      if attributes.has_key?(:'previousUri')
+      if attributes.has_key?(:'lastUri')
         
         
-        self.previous_uri = attributes[:'previousUri']
+        self.last_uri = attributes[:'lastUri']
         
       
       end
@@ -313,8 +313,8 @@ module PureCloud
           first_uri == o.first_uri &&
           self_uri == o.self_uri &&
           next_uri == o.next_uri &&
-          last_uri == o.last_uri &&
           previous_uri == o.previous_uri &&
+          last_uri == o.last_uri &&
           page_count == o.page_count
     end
 
@@ -327,7 +327,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [entities, page_size, page_number, total, first_uri, self_uri, next_uri, last_uri, previous_uri, page_count].hash
+      [entities, page_size, page_number, total, first_uri, self_uri, next_uri, previous_uri, last_uri, page_count].hash
     end
 
     # build the object from hash
