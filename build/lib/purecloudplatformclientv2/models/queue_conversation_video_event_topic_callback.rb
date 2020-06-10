@@ -58,6 +58,8 @@ module PureCloud
 
     attr_accessor :automated_callback_config_id
 
+    attr_accessor :wrapup
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -103,6 +105,8 @@ module PureCloud
         :'callback_scheduled_time' => :'callbackScheduledTime',
         
         :'automated_callback_config_id' => :'automatedCallbackConfigId',
+        
+        :'wrapup' => :'wrapup',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -152,6 +156,8 @@ module PureCloud
         :'callback_scheduled_time' => :'DateTime',
         
         :'automated_callback_config_id' => :'String',
+        
+        :'wrapup' => :'QueueConversationVideoEventTopicWrapup',
         
         :'additional_properties' => :'Object'
         
@@ -349,6 +355,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'wrapup')
+        
+        
+        self.wrapup = attributes[:'wrapup']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -405,6 +420,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -607,6 +626,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -632,6 +656,7 @@ module PureCloud
           disconnected_time == o.disconnected_time &&
           callback_scheduled_time == o.callback_scheduled_time &&
           automated_callback_config_id == o.automated_callback_config_id &&
+          wrapup == o.wrapup &&
           additional_properties == o.additional_properties
     end
 
@@ -644,7 +669,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, direction, held, disconnect_type, start_hold_time, dialer_preview, voicemail, callback_numbers, callback_user_name, script_id, peer_id, external_campaign, skip_enabled, provider, timeout_seconds, connected_time, disconnected_time, callback_scheduled_time, automated_callback_config_id, additional_properties].hash
+      [state, id, direction, held, disconnect_type, start_hold_time, dialer_preview, voicemail, callback_numbers, callback_user_name, script_id, peer_id, external_campaign, skip_enabled, provider, timeout_seconds, connected_time, disconnected_time, callback_scheduled_time, automated_callback_config_id, wrapup, additional_properties].hash
     end
 
     # build the object from hash

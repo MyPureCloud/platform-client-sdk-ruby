@@ -51,9 +51,9 @@ module PureCloud
     # Whether this evaluation has been deleted
     attr_accessor :deleted
 
-    attr_accessor :o_total_critical_score
-
     attr_accessor :o_total_score
+
+    attr_accessor :o_total_critical_score
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -81,9 +81,9 @@ module PureCloud
         
         :'deleted' => :'deleted',
         
-        :'o_total_critical_score' => :'oTotalCriticalScore',
+        :'o_total_score' => :'oTotalScore',
         
-        :'o_total_score' => :'oTotalScore'
+        :'o_total_critical_score' => :'oTotalCriticalScore'
         
       }
     end
@@ -114,9 +114,9 @@ module PureCloud
         
         :'deleted' => :'BOOLEAN',
         
-        :'o_total_critical_score' => :'Integer',
+        :'o_total_score' => :'Integer',
         
-        :'o_total_score' => :'Integer'
+        :'o_total_critical_score' => :'Integer'
         
       }
     end
@@ -229,19 +229,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'oTotalCriticalScore')
+      if attributes.has_key?(:'oTotalScore')
         
         
-        self.o_total_critical_score = attributes[:'oTotalCriticalScore']
+        self.o_total_score = attributes[:'oTotalScore']
         
       
       end
 
       
-      if attributes.has_key?(:'oTotalScore')
+      if attributes.has_key?(:'oTotalCriticalScore')
         
         
-        self.o_total_score = attributes[:'oTotalScore']
+        self.o_total_critical_score = attributes[:'oTotalCriticalScore']
         
       
       end
@@ -398,8 +398,8 @@ module PureCloud
           calibration_id == o.calibration_id &&
           rescored == o.rescored &&
           deleted == o.deleted &&
-          o_total_critical_score == o.o_total_critical_score &&
-          o_total_score == o.o_total_score
+          o_total_score == o.o_total_score &&
+          o_total_critical_score == o.o_total_critical_score
     end
 
     # @see the `==` method
@@ -411,7 +411,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [evaluation_id, evaluator_id, user_id, event_time, queue_id, form_id, context_id, form_name, calibration_id, rescored, deleted, o_total_critical_score, o_total_score].hash
+      [evaluation_id, evaluator_id, user_id, event_time, queue_id, form_id, context_id, form_name, calibration_id, rescored, deleted, o_total_score, o_total_critical_score].hash
     end
 
     # build the object from hash

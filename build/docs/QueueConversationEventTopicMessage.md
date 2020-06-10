@@ -24,6 +24,7 @@ title: QueueConversationEventTopicMessage
 | **type** | **String** |  | [optional] |
 | **recipient_country** | **String** |  | [optional] |
 | **recipient_type** | **String** |  | [optional] |
+| **wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

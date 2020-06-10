@@ -24,6 +24,7 @@ title: QueueConversationVideoEventTopicMessage
 | **type** | **String** |  | [optional] |
 | **recipient_country** | **String** |  | [optional] |
 | **recipient_type** | **String** |  | [optional] |
+| **wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

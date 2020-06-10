@@ -29,6 +29,7 @@ title: QueueConversationVideoEventTopicCall
 | **disconnect_reasons** | [**Array&lt;QueueConversationVideoEventTopicDisconnectReason&gt;**](QueueConversationVideoEventTopicDisconnectReason.html) |  | [optional] |
 | **fax_status** | [**QueueConversationVideoEventTopicFaxStatus**](QueueConversationVideoEventTopicFaxStatus.html) |  | [optional] |
 | **uui_data** | **String** |  | [optional] |
+| **wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

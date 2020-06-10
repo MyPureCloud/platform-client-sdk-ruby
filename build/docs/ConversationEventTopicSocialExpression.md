@@ -22,6 +22,7 @@ title: ConversationEventTopicSocialExpression
 | **start_hold_time** | **DateTime** |  | [optional] |
 | **connected_time** | **DateTime** |  | [optional] |
 | **disconnected_time** | **DateTime** |  | [optional] |
+| **wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 
