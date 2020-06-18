@@ -36,6 +36,9 @@ module PureCloud
     # Filters for the audit query.
     attr_accessor :filters
 
+    # Sort parameter for the audit query.
+    attr_accessor :sort
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -50,7 +53,9 @@ module PureCloud
         
         :'service_name' => :'serviceName',
         
-        :'filters' => :'filters'
+        :'filters' => :'filters',
+        
+        :'sort' => :'sort'
         
       }
     end
@@ -69,7 +74,9 @@ module PureCloud
         
         :'service_name' => :'String',
         
-        :'filters' => :'Array<AuditQueryFilter>'
+        :'filters' => :'Array<AuditQueryFilter>',
+        
+        :'sort' => :'Array<AuditQuerySort>'
         
       }
     end
@@ -139,6 +146,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'sort')
+        
+        if (value = attributes[:'sort']).is_a?(Array)
+          self.sort = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -181,6 +199,10 @@ module PureCloud
       if @service_name && !allowed_values.include?(@service_name)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -239,6 +261,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -249,7 +276,8 @@ module PureCloud
           start_date == o.start_date &&
           interval == o.interval &&
           service_name == o.service_name &&
-          filters == o.filters
+          filters == o.filters &&
+          sort == o.sort
     end
 
     # @see the `==` method
@@ -261,7 +289,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, start_date, interval, service_name, filters].hash
+      [id, state, start_date, interval, service_name, filters, sort].hash
     end
 
     # build the object from hash

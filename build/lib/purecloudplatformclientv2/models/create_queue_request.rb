@@ -48,6 +48,9 @@ module PureCloud
     # The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM
     attr_accessor :media_settings
 
+    # The routing rules for the queue, used for routing to known or preferred agents.
+    attr_accessor :routing_rules
+
     # The bulls-eye settings for the queue.
     attr_accessor :bullseye
 
@@ -110,6 +113,8 @@ module PureCloud
         
         :'media_settings' => :'mediaSettings',
         
+        :'routing_rules' => :'routingRules',
+        
         :'bullseye' => :'bullseye',
         
         :'acw_settings' => :'acwSettings',
@@ -162,6 +167,8 @@ module PureCloud
         :'member_count' => :'Integer',
         
         :'media_settings' => :'Hash<String, MediaSetting>',
+        
+        :'routing_rules' => :'Array<RoutingRule>',
         
         :'bullseye' => :'Bullseye',
         
@@ -286,6 +293,17 @@ module PureCloud
         
         if (value = attributes[:'mediaSettings']).is_a?(Array)
           self.media_settings = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'routingRules')
+        
+        if (value = attributes[:'routingRules']).is_a?(Array)
+          self.routing_rules = value
         end
         
         
@@ -482,6 +500,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["NONE", "BEST", "ALL"]
       if @skill_evaluation_method && !allowed_values.include?(@skill_evaluation_method)
         return false
@@ -531,6 +553,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -671,6 +698,7 @@ module PureCloud
           created_by == o.created_by &&
           member_count == o.member_count &&
           media_settings == o.media_settings &&
+          routing_rules == o.routing_rules &&
           bullseye == o.bullseye &&
           acw_settings == o.acw_settings &&
           skill_evaluation_method == o.skill_evaluation_method &&
@@ -695,7 +723,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, description, date_created, date_modified, modified_by, created_by, member_count, media_settings, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_messaging_addresses, outbound_email_address, source_queue_id, self_uri].hash
+      [id, name, division, description, date_created, date_modified, modified_by, created_by, member_count, media_settings, routing_rules, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_messaging_addresses, outbound_email_address, source_queue_id, self_uri].hash
     end
 
     # build the object from hash

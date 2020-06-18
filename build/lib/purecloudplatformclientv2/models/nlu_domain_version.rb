@@ -45,6 +45,9 @@ module PureCloud
     # The training status of the NLU domain version.
     attr_accessor :training_status
 
+    # The evaluation status of the NLU domain version.
+    attr_accessor :evaluation_status
+
     # The intents defined for this NLU domain version.
     attr_accessor :intents
 
@@ -76,6 +79,8 @@ module PureCloud
         
         :'training_status' => :'trainingStatus',
         
+        :'evaluation_status' => :'evaluationStatus',
+        
         :'intents' => :'intents',
         
         :'entity_types' => :'entityTypes',
@@ -106,6 +111,8 @@ module PureCloud
         :'date_published' => :'DateTime',
         
         :'training_status' => :'String',
+        
+        :'evaluation_status' => :'String',
         
         :'intents' => :'Array<IntentDefinition>',
         
@@ -206,6 +213,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'evaluationStatus')
+        
+        
+        self.evaluation_status = attributes[:'evaluationStatus']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'intents')
         
         if (value = attributes[:'intents']).is_a?(Array)
@@ -295,6 +311,15 @@ module PureCloud
       
       
       
+      allowed_values = ["Unevaluated", "Evaluating", "Evaluated", "Error"]
+      if @evaluation_status && !allowed_values.include?(@evaluation_status)
+        return false
+      end
+      
+      
+      
+      
+      
       
       
       
@@ -363,6 +388,20 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] evaluation_status Object to be assigned
+    def evaluation_status=(evaluation_status)
+      allowed_values = ["Unevaluated", "Evaluating", "Evaluated", "Error"]
+      if evaluation_status && !allowed_values.include?(evaluation_status)
+        fail ArgumentError, "invalid value for 'evaluation_status', must be one of #{allowed_values}."
+      end
+      @evaluation_status = evaluation_status
+    end
+
+    
+    
+    
+    
     
     
     
@@ -391,6 +430,7 @@ module PureCloud
           date_trained == o.date_trained &&
           date_published == o.date_published &&
           training_status == o.training_status &&
+          evaluation_status == o.evaluation_status &&
           intents == o.intents &&
           entity_types == o.entity_types &&
           self_uri == o.self_uri
@@ -405,7 +445,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, domain, description, language, date_created, date_modified, date_trained, date_published, training_status, intents, entity_types, self_uri].hash
+      [id, domain, description, language, date_created, date_modified, date_trained, date_published, training_status, evaluation_status, intents, entity_types, self_uri].hash
     end
 
     # build the object from hash

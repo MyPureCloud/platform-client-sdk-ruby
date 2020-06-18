@@ -372,6 +372,9 @@ module PureCloud
     # @param recording_id Recording ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format_id The desired media format. (default to WEBM)
+    # @option opts [String] :email_format_id The desired media format when downloading an email recording. (default to EML)
+    # @option opts [String] :chat_format_id The desired media format when downloading a chat recording. (default to ZIP)
+    # @option opts [String] :message_format_id The desired media format when downloading a message recording. (default to ZIP)
     # @option opts [BOOLEAN] :download requesting a download format of the recording (default to false)
     # @option opts [String] :file_name the name of the downloaded fileName
     # @option opts [String] :locale The locale for the requested file when downloading, as an ISO 639-1 code
@@ -387,6 +390,9 @@ module PureCloud
     # @param recording_id Recording ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format_id The desired media format.
+    # @option opts [String] :email_format_id The desired media format when downloading an email recording.
+    # @option opts [String] :chat_format_id The desired media format when downloading a chat recording.
+    # @option opts [String] :message_format_id The desired media format when downloading a message recording.
     # @option opts [BOOLEAN] :download requesting a download format of the recording
     # @option opts [String] :file_name the name of the downloaded fileName
     # @option opts [String] :locale The locale for the requested file when downloading, as an ISO 639-1 code
@@ -425,6 +431,36 @@ module PureCloud
       
       
       
+      if opts[:'email_format_id'] && !['EML', 'NONE'].include?(opts[:'email_format_id'])
+        fail ArgumentError, 'invalid value for "email_format_id", must be one of EML, NONE'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'chat_format_id'] && !['ZIP', 'NONE'].include?(opts[:'chat_format_id'])
+        fail ArgumentError, 'invalid value for "chat_format_id", must be one of ZIP, NONE'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'message_format_id'] && !['ZIP', 'NONE'].include?(opts[:'message_format_id'])
+        fail ArgumentError, 'invalid value for "message_format_id", must be one of ZIP, NONE'
+      end
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -446,6 +482,9 @@ module PureCloud
       # query parameters
       query_params = {}
       query_params[:'formatId'] = opts[:'format_id'] if opts[:'format_id']
+      query_params[:'emailFormatId'] = opts[:'email_format_id'] if opts[:'email_format_id']
+      query_params[:'chatFormatId'] = opts[:'chat_format_id'] if opts[:'chat_format_id']
+      query_params[:'messageFormatId'] = opts[:'message_format_id'] if opts[:'message_format_id']
       query_params[:'download'] = opts[:'download'] if opts[:'download']
       query_params[:'fileName'] = opts[:'file_name'] if opts[:'file_name']
       query_params[:'locale'] = opts[:'locale'] if opts[:'locale']
@@ -938,6 +977,9 @@ module PureCloud
     # @param orphan_id Orphan ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format_id The desired media format. (default to WEBM)
+    # @option opts [String] :email_format_id The desired media format when downloading an email recording. (default to EML)
+    # @option opts [String] :chat_format_id The desired media format when downloading a chat recording. (default to ZIP)
+    # @option opts [String] :message_format_id The desired media format when downloading a message recording. (default to ZIP)
     # @option opts [BOOLEAN] :download requesting a download format of the recording (default to false)
     # @option opts [String] :file_name the name of the downloaded fileName
     # @option opts [String] :locale The locale for the requested file when downloading, as an ISO 639-1 code
@@ -952,6 +994,9 @@ module PureCloud
     # @param orphan_id Orphan ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format_id The desired media format.
+    # @option opts [String] :email_format_id The desired media format when downloading an email recording.
+    # @option opts [String] :chat_format_id The desired media format when downloading a chat recording.
+    # @option opts [String] :message_format_id The desired media format when downloading a message recording.
     # @option opts [BOOLEAN] :download requesting a download format of the recording
     # @option opts [String] :file_name the name of the downloaded fileName
     # @option opts [String] :locale The locale for the requested file when downloading, as an ISO 639-1 code
@@ -982,6 +1027,36 @@ module PureCloud
       
       
       
+      if opts[:'email_format_id'] && !['EML', 'NONE'].include?(opts[:'email_format_id'])
+        fail ArgumentError, 'invalid value for "email_format_id", must be one of EML, NONE'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'chat_format_id'] && !['ZIP', 'NONE'].include?(opts[:'chat_format_id'])
+        fail ArgumentError, 'invalid value for "chat_format_id", must be one of ZIP, NONE'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'message_format_id'] && !['ZIP', 'NONE'].include?(opts[:'message_format_id'])
+        fail ArgumentError, 'invalid value for "message_format_id", must be one of ZIP, NONE'
+      end
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1003,6 +1078,9 @@ module PureCloud
       # query parameters
       query_params = {}
       query_params[:'formatId'] = opts[:'format_id'] if opts[:'format_id']
+      query_params[:'emailFormatId'] = opts[:'email_format_id'] if opts[:'email_format_id']
+      query_params[:'chatFormatId'] = opts[:'chat_format_id'] if opts[:'chat_format_id']
+      query_params[:'messageFormatId'] = opts[:'message_format_id'] if opts[:'message_format_id']
       query_params[:'download'] = opts[:'download'] if opts[:'download']
       query_params[:'fileName'] = opts[:'file_name'] if opts[:'file_name']
       query_params[:'locale'] = opts[:'locale'] if opts[:'locale']

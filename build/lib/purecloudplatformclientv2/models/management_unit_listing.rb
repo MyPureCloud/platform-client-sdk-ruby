@@ -28,11 +28,11 @@ module PureCloud
 
     attr_accessor :first_uri
 
+    attr_accessor :previous_uri
+
     attr_accessor :next_uri
 
     attr_accessor :page_count
-
-    attr_accessor :previous_uri
 
     attr_accessor :last_uri
 
@@ -52,11 +52,11 @@ module PureCloud
         
         :'first_uri' => :'firstUri',
         
+        :'previous_uri' => :'previousUri',
+        
         :'next_uri' => :'nextUri',
         
         :'page_count' => :'pageCount',
-        
-        :'previous_uri' => :'previousUri',
         
         :'last_uri' => :'lastUri',
         
@@ -79,11 +79,11 @@ module PureCloud
         
         :'first_uri' => :'String',
         
+        :'previous_uri' => :'String',
+        
         :'next_uri' => :'String',
         
         :'page_count' => :'Integer',
-        
-        :'previous_uri' => :'String',
         
         :'last_uri' => :'String',
         
@@ -148,6 +148,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'previousUri')
+        
+        
+        self.previous_uri = attributes[:'previousUri']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'nextUri')
         
         
@@ -161,15 +170,6 @@ module PureCloud
         
         
         self.page_count = attributes[:'pageCount']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'previousUri')
-        
-        
-        self.previous_uri = attributes[:'previousUri']
         
       
       end
@@ -311,9 +311,9 @@ module PureCloud
           page_number == o.page_number &&
           total == o.total &&
           first_uri == o.first_uri &&
+          previous_uri == o.previous_uri &&
           next_uri == o.next_uri &&
           page_count == o.page_count &&
-          previous_uri == o.previous_uri &&
           last_uri == o.last_uri &&
           self_uri == o.self_uri
     end
@@ -327,7 +327,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [entities, page_size, page_number, total, first_uri, next_uri, page_count, previous_uri, last_uri, self_uri].hash
+      [entities, page_size, page_number, total, first_uri, previous_uri, next_uri, page_count, last_uri, self_uri].hash
     end
 
     # build the object from hash

@@ -16,6 +16,7 @@ title: NluDomainVersion
 | **date_trained** | **DateTime** | The date when the NLU domain version was trained. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **date_published** | **DateTime** | The date when the NLU domain version was published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **training_status** | **String** | The training status of the NLU domain version. | [optional] |
+| **evaluation_status** | **String** | The evaluation status of the NLU domain version. | [optional] |
 | **intents** | [**Array&lt;IntentDefinition&gt;**](IntentDefinition.html) | The intents defined for this NLU domain version. | [optional] |
 | **entity_types** | [**Array&lt;NamedEntityTypeDefinition&gt;**](NamedEntityTypeDefinition.html) | The entity types defined for this NLU domain version. | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |

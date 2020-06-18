@@ -26,8 +26,10 @@ module PureCloud
 
     attr_accessor :description
 
+    # List of resources associated with this prompt
     attr_accessor :resources
 
+    # Current prompt operation status
     attr_accessor :current_operation
 
     # The URI for this object

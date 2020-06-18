@@ -17,6 +17,7 @@ title: QueueRequest
 | **created_by** | **String** | The ID of the user that created the queue. | [optional] |
 | **member_count** | **Integer** | The number of users in the queue. | [optional] |
 | **media_settings** | [**Hash&lt;String, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM | [optional] |
+| **routing_rules** | [**Array&lt;RoutingRule&gt;**](RoutingRule.html) | The routing rules for the queue, used for routing to known or preferred agents. | [optional] |
 | **bullseye** | [**Bullseye**](Bullseye.html) | The bulls-eye settings for the queue. | [optional] |
 | **acw_settings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | [optional] |
 | **skill_evaluation_method** | **String** | The skill evaluation method to use when routing conversations. | [optional] |

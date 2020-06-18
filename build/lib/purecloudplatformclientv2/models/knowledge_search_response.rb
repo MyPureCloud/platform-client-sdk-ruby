@@ -18,6 +18,9 @@ require 'date'
 
 module PureCloud
   class KnowledgeSearchResponse
+    # Search Id
+    attr_accessor :search_id
+
     # Total number of records returned
     attr_accessor :total
 
@@ -30,15 +33,14 @@ module PureCloud
     # Current page number for the returned records
     attr_accessor :page_number
 
-    # ID of the Search Response
-    attr_accessor :search_id
-
     # Results associated to the search response
     attr_accessor :results
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        
+        :'search_id' => :'searchId',
         
         :'total' => :'total',
         
@@ -47,8 +49,6 @@ module PureCloud
         :'page_size' => :'pageSize',
         
         :'page_number' => :'pageNumber',
-        
-        :'search_id' => :'searchId',
         
         :'results' => :'results'
         
@@ -59,6 +59,8 @@ module PureCloud
     def self.swagger_types
       {
         
+        :'search_id' => :'String',
+        
         :'total' => :'Integer',
         
         :'page_count' => :'Integer',
@@ -66,8 +68,6 @@ module PureCloud
         :'page_size' => :'Integer',
         
         :'page_number' => :'Integer',
-        
-        :'search_id' => :'String',
         
         :'results' => :'Array<KnowledgeSearchDocument>'
         
@@ -81,6 +81,15 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      
+      if attributes.has_key?(:'searchId')
+        
+        
+        self.search_id = attributes[:'searchId']
+        
+      
+      end
 
       
       if attributes.has_key?(:'total')
@@ -114,15 +123,6 @@ module PureCloud
         
         
         self.page_number = attributes[:'pageNumber']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'searchId')
-        
-        
-        self.search_id = attributes[:'searchId']
         
       
       end
@@ -216,11 +216,11 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          search_id == o.search_id &&
           total == o.total &&
           page_count == o.page_count &&
           page_size == o.page_size &&
           page_number == o.page_number &&
-          search_id == o.search_id &&
           results == o.results
     end
 
@@ -233,7 +233,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [total, page_count, page_size, page_number, search_id, results].hash
+      [search_id, total, page_count, page_size, page_number, results].hash
     end
 
     # build the object from hash

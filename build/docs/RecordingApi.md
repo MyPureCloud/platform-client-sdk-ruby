@@ -421,6 +421,9 @@ recording_id = "recording_id_example" # String | Recording ID
 
 opts = { 
   format_id: "WEBM", # String | The desired media format.
+  email_format_id: "EML", # String | The desired media format when downloading an email recording.
+  chat_format_id: "ZIP", # String | The desired media format when downloading a chat recording.
+  message_format_id: "ZIP", # String | The desired media format when downloading a message recording.
   download: false, # BOOLEAN | requesting a download format of the recording
   file_name: "file_name_example", # String | the name of the downloaded fileName
   locale: "locale_example" # String | The locale for the requested file when downloading, as an ISO 639-1 code
@@ -442,6 +445,9 @@ Name | Type | Description  | Notes
  **conversation_id** | **String**| Conversation ID |  |
  **recording_id** | **String**| Recording ID |  |
  **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+ **email_format_id** | **String**| The desired media format when downloading an email recording. | [optional] [default to EML]<br />**Values**: EML, NONE |
+ **chat_format_id** | **String**| The desired media format when downloading a chat recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
+ **message_format_id** | **String**| The desired media format when downloading a message recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
  **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false] |
  **file_name** | **String**| the name of the downloaded fileName | [optional]  |
  **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
@@ -904,6 +910,9 @@ orphan_id = "orphan_id_example" # String | Orphan ID
 
 opts = { 
   format_id: "WEBM", # String | The desired media format.
+  email_format_id: "EML", # String | The desired media format when downloading an email recording.
+  chat_format_id: "ZIP", # String | The desired media format when downloading a chat recording.
+  message_format_id: "ZIP", # String | The desired media format when downloading a message recording.
   download: false, # BOOLEAN | requesting a download format of the recording
   file_name: "file_name_example", # String | the name of the downloaded fileName
   locale: "locale_example" # String | The locale for the requested file when downloading, as an ISO 639-1 code
@@ -924,6 +933,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orphan_id** | **String**| Orphan ID |  |
  **format_id** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+ **email_format_id** | **String**| The desired media format when downloading an email recording. | [optional] [default to EML]<br />**Values**: EML, NONE |
+ **chat_format_id** | **String**| The desired media format when downloading a chat recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
+ **message_format_id** | **String**| The desired media format when downloading a message recording. | [optional] [default to ZIP]<br />**Values**: ZIP, NONE |
  **download** | **BOOLEAN**| requesting a download format of the recording | [optional] [default to false] |
  **file_name** | **String**| the name of the downloaded fileName | [optional]  |
  **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |

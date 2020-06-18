@@ -70,6 +70,12 @@ module PureCloud
     # A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace.
     attr_accessor :external_system_url
 
+    # The schema defining custom fields for this contact
+    attr_accessor :schema
+
+    # Custom fields defined in the schema referenced by schemaId and schemaVersion.
+    attr_accessor :custom_fields
+
     # Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
     attr_accessor :external_data_sources
 
@@ -125,6 +131,10 @@ module PureCloud
         :'survey_opt_out' => :'surveyOptOut',
         
         :'external_system_url' => :'externalSystemUrl',
+        
+        :'schema' => :'schema',
+        
+        :'custom_fields' => :'customFields',
         
         :'external_data_sources' => :'externalDataSources',
         
@@ -182,6 +192,10 @@ module PureCloud
         :'survey_opt_out' => :'BOOLEAN',
         
         :'external_system_url' => :'String',
+        
+        :'schema' => :'DataSchema',
+        
+        :'custom_fields' => :'Hash<String, Object>',
         
         :'external_data_sources' => :'Array<ExternalDataSource>',
         
@@ -406,6 +420,26 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'schema')
+        
+        
+        self.schema = attributes[:'schema']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'customFields')
+        
+        if (value = attributes[:'customFields']).is_a?(Array)
+          self.custom_fields = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'externalDataSources')
         
         if (value = attributes[:'externalDataSources']).is_a?(Array)
@@ -551,8 +585,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -707,6 +759,8 @@ module PureCloud
           external_organization == o.external_organization &&
           survey_opt_out == o.survey_opt_out &&
           external_system_url == o.external_system_url &&
+          schema == o.schema &&
+          custom_fields == o.custom_fields &&
           external_data_sources == o.external_data_sources &&
           self_uri == o.self_uri
     end
@@ -720,7 +774,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, first_name, middle_name, last_name, salutation, title, work_phone, cell_phone, home_phone, other_phone, work_email, personal_email, other_email, address, twitter_id, line_id, whats_app_id, facebook_id, modify_date, create_date, external_organization, survey_opt_out, external_system_url, external_data_sources, self_uri].hash
+      [id, first_name, middle_name, last_name, salutation, title, work_phone, cell_phone, home_phone, other_phone, work_email, personal_email, other_email, address, twitter_id, line_id, whats_app_id, facebook_id, modify_date, create_date, external_organization, survey_opt_out, external_system_url, schema, custom_fields, external_data_sources, self_uri].hash
     end
 
     # build the object from hash

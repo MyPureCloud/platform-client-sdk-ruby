@@ -27,6 +27,9 @@ module PureCloud
     # Additional filters for the query.
     attr_accessor :filters
 
+    # Sort parameter for the query.
+    attr_accessor :sort
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -35,7 +38,9 @@ module PureCloud
         
         :'service_name' => :'serviceName',
         
-        :'filters' => :'filters'
+        :'filters' => :'filters',
+        
+        :'sort' => :'sort'
         
       }
     end
@@ -48,7 +53,9 @@ module PureCloud
         
         :'service_name' => :'String',
         
-        :'filters' => :'Array<AuditQueryFilter>'
+        :'filters' => :'Array<AuditQueryFilter>',
+        
+        :'sort' => :'Array<AuditQuerySort>'
         
       }
     end
@@ -84,6 +91,17 @@ module PureCloud
         
         if (value = attributes[:'filters']).is_a?(Array)
           self.filters = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'sort')
+        
+        if (value = attributes[:'sort']).is_a?(Array)
+          self.sort = value
         end
         
         
@@ -133,6 +151,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -160,6 +182,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -167,7 +194,8 @@ module PureCloud
       self.class == o.class &&
           interval == o.interval &&
           service_name == o.service_name &&
-          filters == o.filters
+          filters == o.filters &&
+          sort == o.sort
     end
 
     # @see the `==` method
@@ -179,7 +207,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [interval, service_name, filters].hash
+      [interval, service_name, filters, sort].hash
     end
 
     # build the object from hash

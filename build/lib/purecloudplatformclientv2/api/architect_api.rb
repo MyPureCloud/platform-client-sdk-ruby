@@ -4983,6 +4983,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get a flow execution's details. Flow execution details are available for several days after the flow is started.
+    # 
+    # @param flow_execution_id flow execution ID
+    # @param [Hash] opts the optional parameters
+    # @return [FlowRuntimeExecution]
+    def get_flows_execution(flow_execution_id, opts = {})
+      data, _status_code, _headers = get_flows_execution_with_http_info(flow_execution_id, opts)
+      return data
+    end
+
+    # Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
+    # 
+    # @param flow_execution_id flow execution ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(FlowRuntimeExecution, Fixnum, Hash)>] FlowRuntimeExecution data, response status code and response headers
+    def get_flows_execution_with_http_info(flow_execution_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.get_flows_execution ..."
+      end
+      
+      
+      # verify the required parameter 'flow_execution_id' is set
+      fail ArgumentError, "Missing the required parameter 'flow_execution_id' when calling ArchitectApi.get_flows_execution" if flow_execution_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/executions/{flowExecutionId}".sub('{format}','json').sub('{' + 'flowExecutionId' + '}', flow_execution_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FlowRuntimeExecution')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#get_flows_execution\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a flow outcome
     # Returns a specified flow outcome
     # @param flow_outcome_id flow outcome ID
@@ -6655,6 +6720,71 @@ module PureCloud
         :return_type => 'DataTable')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ArchitectApi#post_flows_datatables\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+    # The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+    # @param flow_launch_request 
+    # @param [Hash] opts the optional parameters
+    # @return [FlowExecutionLaunchResponse]
+    def post_flows_executions(flow_launch_request, opts = {})
+      data, _status_code, _headers = post_flows_executions_with_http_info(flow_launch_request, opts)
+      return data
+    end
+
+    # Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
+    # The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+    # @param flow_launch_request 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(FlowExecutionLaunchResponse, Fixnum, Hash)>] FlowExecutionLaunchResponse data, response status code and response headers
+    def post_flows_executions_with_http_info(flow_launch_request, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ArchitectApi.post_flows_executions ..."
+      end
+      
+      
+      # verify the required parameter 'flow_launch_request' is set
+      fail ArgumentError, "Missing the required parameter 'flow_launch_request' when calling ArchitectApi.post_flows_executions" if flow_launch_request.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/flows/executions".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(flow_launch_request)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FlowExecutionLaunchResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ArchitectApi#post_flows_executions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

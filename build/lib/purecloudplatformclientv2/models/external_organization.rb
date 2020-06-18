@@ -59,6 +59,12 @@ module PureCloud
 
     attr_accessor :trustor
 
+    # The schema defining custom fields for this contact
+    attr_accessor :schema
+
+    # Custom fields defined in the schema referenced by schemaId and schemaVersion.
+    attr_accessor :custom_fields
+
     # Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
     attr_accessor :external_data_sources
 
@@ -104,6 +110,10 @@ module PureCloud
         :'create_date' => :'createDate',
         
         :'trustor' => :'trustor',
+        
+        :'schema' => :'schema',
+        
+        :'custom_fields' => :'customFields',
         
         :'external_data_sources' => :'externalDataSources',
         
@@ -151,6 +161,10 @@ module PureCloud
         :'create_date' => :'DateTime',
         
         :'trustor' => :'Trustor',
+        
+        :'schema' => :'DataSchema',
+        
+        :'custom_fields' => :'Hash<String, Object>',
         
         :'external_data_sources' => :'Array<ExternalDataSource>',
         
@@ -336,6 +350,26 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'schema')
+        
+        
+        self.schema = attributes[:'schema']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'customFields')
+        
+        if (value = attributes[:'customFields']).is_a?(Array)
+          self.custom_fields = value
+        end
+        
+        
+      
+      end
+
+      
       if attributes.has_key?(:'externalDataSources')
         
         if (value = attributes[:'externalDataSources']).is_a?(Array)
@@ -456,8 +490,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -582,6 +634,8 @@ module PureCloud
           modify_date == o.modify_date &&
           create_date == o.create_date &&
           trustor == o.trustor &&
+          schema == o.schema &&
+          custom_fields == o.custom_fields &&
           external_data_sources == o.external_data_sources &&
           self_uri == o.self_uri
     end
@@ -595,7 +649,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, company_type, industry, primary_contact_id, address, phone_number, fax_number, employee_count, revenue, tags, websites, tickers, twitter_id, external_system_url, modify_date, create_date, trustor, external_data_sources, self_uri].hash
+      [id, name, company_type, industry, primary_contact_id, address, phone_number, fax_number, employee_count, revenue, tags, websites, tickers, twitter_id, external_system_url, modify_date, create_date, trustor, schema, custom_fields, external_data_sources, self_uri].hash
     end
 
     # build the object from hash

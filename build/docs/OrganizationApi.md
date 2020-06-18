@@ -10,10 +10,12 @@ Method | Description
 ------------- | ------------- | -------------
 [**get_fieldconfig**](OrganizationApi.html#get_fieldconfig) | Fetch field config for an entity type
 [**get_organizations_embeddedintegration**](OrganizationApi.html#get_organizations_embeddedintegration) | Get the list of domains that will be allowed to embed PureCloud applications
+[**get_organizations_ipaddressauthentication**](OrganizationApi.html#get_organizations_ipaddressauthentication) | Get organization IP address whitelist settings
 [**get_organizations_me**](OrganizationApi.html#get_organizations_me) | Get organization.
 [**get_organizations_whitelist**](OrganizationApi.html#get_organizations_whitelist) | Use PUT /api/v2/organizations/embeddedintegration instead
 [**patch_organizations_feature**](OrganizationApi.html#patch_organizations_feature) | Update organization
 [**put_organizations_embeddedintegration**](OrganizationApi.html#put_organizations_embeddedintegration) | Update the list of domains that will be allowed to embed PureCloud applications
+[**put_organizations_ipaddressauthentication**](OrganizationApi.html#put_organizations_ipaddressauthentication) | Update organization IP address whitelist settings
 [**put_organizations_me**](OrganizationApi.html#put_organizations_me) | Update organization.
 [**put_organizations_whitelist**](OrganizationApi.html#put_organizations_whitelist) | Use PUT /api/v2/organizations/embeddedintegration instead
 {: class="table table-striped"}
@@ -132,6 +134,65 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**EmbeddedIntegration**](EmbeddedIntegration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_organizations_ipaddressauthentication"></a>
+
+## [**IpAddressAuthentication**](IpAddressAuthentication.html) get_organizations_ipaddressauthentication
+
+
+
+Get organization IP address whitelist settings
+
+
+
+Wraps GET /api/v2/organizations/ipaddressauthentication 
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OrganizationApi.new
+
+begin
+  #Get organization IP address whitelist settings
+  result = api_instance.get_organizations_ipaddressauthentication
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OrganizationApi->get_organizations_ipaddressauthentication: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IpAddressAuthentication**](IpAddressAuthentication.html)
 
 ### HTTP request headers
 
@@ -381,6 +442,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmbeddedIntegration**](EmbeddedIntegration.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_organizations_ipaddressauthentication"></a>
+
+## [**IpAddressAuthentication**](IpAddressAuthentication.html) put_organizations_ipaddressauthentication(body)
+
+
+
+Update organization IP address whitelist settings
+
+
+
+Wraps PUT /api/v2/organizations/ipaddressauthentication 
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OrganizationApi.new
+
+body = PureCloud::IpAddressAuthentication.new # IpAddressAuthentication | IP address Whitelist settings
+
+
+begin
+  #Update organization IP address whitelist settings
+  result = api_instance.put_organizations_ipaddressauthentication(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OrganizationApi->put_organizations_ipaddressauthentication: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**IpAddressAuthentication**](IpAddressAuthentication.html)| IP address Whitelist settings |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**IpAddressAuthentication**](IpAddressAuthentication.html)
 
 ### HTTP request headers
 

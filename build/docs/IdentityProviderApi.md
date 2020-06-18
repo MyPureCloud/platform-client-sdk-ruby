@@ -10,6 +10,7 @@ Method | Description
 ------------- | ------------- | -------------
 [**delete_identityproviders_adfs**](IdentityProviderApi.html#delete_identityproviders_adfs) | Delete ADFS Identity Provider
 [**delete_identityproviders_cic**](IdentityProviderApi.html#delete_identityproviders_cic) | Delete Customer Interaction Center (CIC) Identity Provider
+[**delete_identityproviders_generic**](IdentityProviderApi.html#delete_identityproviders_generic) | Delete Generic SAML Identity Provider
 [**delete_identityproviders_gsuite**](IdentityProviderApi.html#delete_identityproviders_gsuite) | Delete G Suite Identity Provider
 [**delete_identityproviders_identitynow**](IdentityProviderApi.html#delete_identityproviders_identitynow) | Delete IdentityNow Provider
 [**delete_identityproviders_okta**](IdentityProviderApi.html#delete_identityproviders_okta) | Delete Okta Identity Provider
@@ -21,6 +22,7 @@ Method | Description
 [**get_identityproviders**](IdentityProviderApi.html#get_identityproviders) | The list of identity providers
 [**get_identityproviders_adfs**](IdentityProviderApi.html#get_identityproviders_adfs) | Get ADFS Identity Provider
 [**get_identityproviders_cic**](IdentityProviderApi.html#get_identityproviders_cic) | Get Customer Interaction Center (CIC) Identity Provider
+[**get_identityproviders_generic**](IdentityProviderApi.html#get_identityproviders_generic) | Get Generic SAML Identity Provider
 [**get_identityproviders_gsuite**](IdentityProviderApi.html#get_identityproviders_gsuite) | Get G Suite Identity Provider
 [**get_identityproviders_identitynow**](IdentityProviderApi.html#get_identityproviders_identitynow) | Get IdentityNow Provider
 [**get_identityproviders_okta**](IdentityProviderApi.html#get_identityproviders_okta) | Get Okta Identity Provider
@@ -31,6 +33,7 @@ Method | Description
 [**get_identityproviders_salesforce**](IdentityProviderApi.html#get_identityproviders_salesforce) | Get Salesforce Identity Provider
 [**put_identityproviders_adfs**](IdentityProviderApi.html#put_identityproviders_adfs) | Update/Create ADFS Identity Provider
 [**put_identityproviders_cic**](IdentityProviderApi.html#put_identityproviders_cic) | Update/Create Customer Interaction Center (CIC) Identity Provider
+[**put_identityproviders_generic**](IdentityProviderApi.html#put_identityproviders_generic) | Update/Create Generic SAML Identity Provider
 [**put_identityproviders_gsuite**](IdentityProviderApi.html#put_identityproviders_gsuite) | Update/Create G Suite Identity Provider
 [**put_identityproviders_identitynow**](IdentityProviderApi.html#put_identityproviders_identitynow) | Update/Create IdentityNow Provider
 [**put_identityproviders_okta**](IdentityProviderApi.html#put_identityproviders_okta) | Update/Create Okta Identity Provider
@@ -140,6 +143,65 @@ begin
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling IdentityProviderApi->delete_identityproviders_cic: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Empty**](Empty.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="delete_identityproviders_generic"></a>
+
+## [**Empty**](Empty.html) delete_identityproviders_generic
+
+
+
+Delete Generic SAML Identity Provider
+
+
+
+Wraps DELETE /api/v2/identityproviders/generic 
+
+Requires ANY permissions: 
+
+* sso:provider:delete
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IdentityProviderApi.new
+
+begin
+  #Delete Generic SAML Identity Provider
+  result = api_instance.delete_identityproviders_generic
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IdentityProviderApi->delete_identityproviders_generic: #{e}"
 end
 ```
 
@@ -808,6 +870,65 @@ This endpoint does not need any parameter.
 
 
 
+<a name="get_identityproviders_generic"></a>
+
+## [**GenericSAML**](GenericSAML.html) get_identityproviders_generic
+
+
+
+Get Generic SAML Identity Provider
+
+
+
+Wraps GET /api/v2/identityproviders/generic 
+
+Requires ANY permissions: 
+
+* sso:provider:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IdentityProviderApi.new
+
+begin
+  #Get Generic SAML Identity Provider
+  result = api_instance.get_identityproviders_generic
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IdentityProviderApi->get_identityproviders_generic: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**GenericSAML**](GenericSAML.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_identityproviders_gsuite"></a>
 
 ## [**GSuite**](GSuite.html) get_identityproviders_gsuite
@@ -1398,6 +1519,72 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**CustomerInteractionCenter**](CustomerInteractionCenter.html)| Provider |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**OAuthProvider**](OAuthProvider.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_identityproviders_generic"></a>
+
+## [**OAuthProvider**](OAuthProvider.html) put_identityproviders_generic(body)
+
+
+
+Update/Create Generic SAML Identity Provider
+
+
+
+Wraps PUT /api/v2/identityproviders/generic 
+
+Requires ANY permissions: 
+
+* sso:provider:add
+* sso:provider:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::IdentityProviderApi.new
+
+body = PureCloud::GenericSAML.new # GenericSAML | Provider
+
+
+begin
+  #Update/Create Generic SAML Identity Provider
+  result = api_instance.put_identityproviders_generic(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling IdentityProviderApi->put_identityproviders_generic: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**GenericSAML**](GenericSAML.html)| Provider |  |
 {: class="table table-striped"}
 
 

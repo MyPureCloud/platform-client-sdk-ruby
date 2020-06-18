@@ -12,10 +12,13 @@ Method | Description
 [**get_oauth_authorization**](OAuthApi.html#get_oauth_authorization) | Get a client that is authorized by the resource owner
 [**get_oauth_authorizations**](OAuthApi.html#get_oauth_authorizations) | List clients that are authorized by the resource owner
 [**get_oauth_client**](OAuthApi.html#get_oauth_client) | Get OAuth Client
+[**get_oauth_client_usage_query_result**](OAuthApi.html#get_oauth_client_usage_query_result) | Get the results of a usage query
+[**get_oauth_client_usage_summary**](OAuthApi.html#get_oauth_client_usage_summary) | Get a summary of OAuth client API usage
 [**get_oauth_clients**](OAuthApi.html#get_oauth_clients) | The list of OAuth clients
 [**get_oauth_scope**](OAuthApi.html#get_oauth_scope) | An OAuth scope
 [**get_oauth_scopes**](OAuthApi.html#get_oauth_scopes) | The list of OAuth scopes
 [**post_oauth_client_secret**](OAuthApi.html#post_oauth_client_secret) | Regenerate Client Secret
+[**post_oauth_client_usage_query**](OAuthApi.html#post_oauth_client_usage_query) | Query for OAuth client API usage
 [**post_oauth_clients**](OAuthApi.html#post_oauth_clients) | Create OAuth client
 [**put_oauth_client**](OAuthApi.html#put_oauth_client) | Update OAuth Client
 {: class="table table-striped"}
@@ -273,6 +276,143 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_oauth_client_usage_query_result"></a>
+
+## [**ApiUsageQueryResult**](ApiUsageQueryResult.html) get_oauth_client_usage_query_result(execution_id, client_id)
+
+
+
+Get the results of a usage query
+
+
+
+Wraps GET /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId} 
+
+Requires ANY permissions: 
+
+* oauth:client:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OAuthApi.new
+
+execution_id = "execution_id_example" # String | ID of the query execution
+
+client_id = "client_id_example" # String | Client ID
+
+
+begin
+  #Get the results of a usage query
+  result = api_instance.get_oauth_client_usage_query_result(execution_id, client_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OAuthApi->get_oauth_client_usage_query_result: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **execution_id** | **String**| ID of the query execution |  |
+ **client_id** | **String**| Client ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**ApiUsageQueryResult**](ApiUsageQueryResult.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_oauth_client_usage_summary"></a>
+
+## [**UsageExecutionResult**](UsageExecutionResult.html) get_oauth_client_usage_summary(client_id, opts)
+
+
+
+Get a summary of OAuth client API usage
+
+After calling this method, you will then need to poll for the query results based on the returned execution Id
+
+Wraps GET /api/v2/oauth/clients/{clientId}/usage/summary 
+
+Requires ANY permissions: 
+
+* oauth:client:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OAuthApi.new
+
+client_id = "client_id_example" # String | Client ID
+
+opts = { 
+  days: "7" # String | Previous number of days to query
+}
+
+begin
+  #Get a summary of OAuth client API usage
+  result = api_instance.get_oauth_client_usage_summary(client_id, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OAuthApi->get_oauth_client_usage_summary: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **client_id** | **String**| Client ID |  |
+ **days** | **String**| Previous number of days to query | [optional] [default to 7] |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UsageExecutionResult**](UsageExecutionResult.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_oauth_clients"></a>
 
 ## [**OAuthClientEntityListing**](OAuthClientEntityListing.html) get_oauth_clients
@@ -522,6 +662,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OAuthClient**](OAuthClient.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_oauth_client_usage_query"></a>
+
+## [**UsageExecutionResult**](UsageExecutionResult.html) post_oauth_client_usage_query(client_id, body)
+
+
+
+Query for OAuth client API usage
+
+After calling this method, you will then need to poll for the query results based on the returned execution Id
+
+Wraps POST /api/v2/oauth/clients/{clientId}/usage/query 
+
+Requires ANY permissions: 
+
+* oauth:client:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OAuthApi.new
+
+client_id = "client_id_example" # String | Client ID
+
+body = PureCloud::ApiUsageQuery.new # ApiUsageQuery | Query
+
+
+begin
+  #Query for OAuth client API usage
+  result = api_instance.post_oauth_client_usage_query(client_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OAuthApi->post_oauth_client_usage_query: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **client_id** | **String**| Client ID |  |
+ **body** | [**ApiUsageQuery**](ApiUsageQuery.html)| Query |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**UsageExecutionResult**](UsageExecutionResult.html)
 
 ### HTTP request headers
 

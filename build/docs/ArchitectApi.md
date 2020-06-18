@@ -63,6 +63,7 @@ Method | Description
 [**get_flows_datatable_rows**](ArchitectApi.html#get_flows_datatable_rows) | Returns the rows for the datatable with the given id
 [**get_flows_datatables**](ArchitectApi.html#get_flows_datatables) | Retrieve a list of datatables for the org
 [**get_flows_divisionviews**](ArchitectApi.html#get_flows_divisionviews) | Get a pageable list of basic flow information objects filterable by query parameters.
+[**get_flows_execution**](ArchitectApi.html#get_flows_execution) | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
 [**get_flows_outcome**](ArchitectApi.html#get_flows_outcome) | Get a flow outcome
 [**get_flows_outcomes**](ArchitectApi.html#get_flows_outcomes) | Get a pageable list of flow outcomes, filtered by query parameters
 [**post_architect_dependencytracking_build**](ArchitectApi.html#post_architect_dependencytracking_build) | Rebuild Dependency Tracking data for an organization
@@ -87,6 +88,7 @@ Method | Description
 [**post_flows_datatable_import_jobs**](ArchitectApi.html#post_flows_datatable_import_jobs) | Begin an import process for importing rows into a datatable
 [**post_flows_datatable_rows**](ArchitectApi.html#post_flows_datatable_rows) | Create a new row entry for the datatable.
 [**post_flows_datatables**](ArchitectApi.html#post_flows_datatables) | Create a new datatable with the specified json-schema definition
+[**post_flows_executions**](ArchitectApi.html#post_flows_executions) | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
 [**post_flows_outcomes**](ArchitectApi.html#post_flows_outcomes) | Create a flow outcome
 [**put_architect_emergencygroup**](ArchitectApi.html#put_architect_emergencygroup) | Updates a emergency group by ID
 [**put_architect_ivr**](ArchitectApi.html#put_architect_ivr) | Update an IVR Config.
@@ -4026,6 +4028,71 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_flows_execution"></a>
+
+## [**FlowRuntimeExecution**](FlowRuntimeExecution.html) get_flows_execution(flow_execution_id)
+
+
+
+Get a flow execution's details. Flow execution details are available for several days after the flow is started.
+
+
+
+Wraps GET /api/v2/flows/executions/{flowExecutionId} 
+
+Requires ANY permissions: 
+
+* architect:flowExecution:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+flow_execution_id = "flow_execution_id_example" # String | flow execution ID
+
+
+begin
+  #Get a flow execution's details. Flow execution details are available for several days after the flow is started.
+  result = api_instance.get_flows_execution(flow_execution_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->get_flows_execution: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **flow_execution_id** | **String**| flow execution ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**FlowRuntimeExecution**](FlowRuntimeExecution.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_flows_outcome"></a>
 
 ## [**FlowOutcome**](FlowOutcome.html) get_flows_outcome(flow_outcome_id)
@@ -5607,6 +5674,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DataTable**](DataTable.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_flows_executions"></a>
+
+## [**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse.html) post_flows_executions(flow_launch_request)
+
+
+
+Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+
+The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+
+Wraps POST /api/v2/flows/executions 
+
+Requires ANY permissions: 
+
+* architect:flow:launch
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ArchitectApi.new
+
+flow_launch_request = PureCloud::FlowExecutionLaunchRequest.new # FlowExecutionLaunchRequest | 
+
+
+begin
+  #Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+  result = api_instance.post_flows_executions(flow_launch_request)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ArchitectApi->post_flows_executions: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **flow_launch_request** | [**FlowExecutionLaunchRequest**](FlowExecutionLaunchRequest.html)|  |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse.html)
 
 ### HTTP request headers
 

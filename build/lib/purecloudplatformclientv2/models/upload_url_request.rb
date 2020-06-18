@@ -27,6 +27,8 @@ module PureCloud
     # The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 600 seconds
     attr_accessor :signed_url_timeout_seconds
 
+    attr_accessor :server_side_encryption
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -35,7 +37,9 @@ module PureCloud
         
         :'content_md5' => :'contentMd5',
         
-        :'signed_url_timeout_seconds' => :'signedUrlTimeoutSeconds'
+        :'signed_url_timeout_seconds' => :'signedUrlTimeoutSeconds',
+        
+        :'server_side_encryption' => :'serverSideEncryption'
         
       }
     end
@@ -48,7 +52,9 @@ module PureCloud
         
         :'content_md5' => :'String',
         
-        :'signed_url_timeout_seconds' => :'Integer'
+        :'signed_url_timeout_seconds' => :'Integer',
+        
+        :'server_side_encryption' => :'String'
         
       }
     end
@@ -89,6 +95,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'serverSideEncryption')
+        
+        
+        self.server_side_encryption = attributes[:'serverSideEncryption']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -116,6 +131,15 @@ module PureCloud
       
       
       
+      
+      
+      allowed_values = ["AES256"]
+      if @server_side_encryption && !allowed_values.include?(@server_side_encryption)
+        return false
+      end
+      
+      
+      
     end
 
     
@@ -134,6 +158,20 @@ module PureCloud
     
     
     
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] server_side_encryption Object to be assigned
+    def server_side_encryption=(server_side_encryption)
+      allowed_values = ["AES256"]
+      if server_side_encryption && !allowed_values.include?(server_side_encryption)
+        fail ArgumentError, "invalid value for 'server_side_encryption', must be one of #{allowed_values}."
+      end
+      @server_side_encryption = server_side_encryption
+    end
+
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -141,7 +179,8 @@ module PureCloud
       self.class == o.class &&
           file_name == o.file_name &&
           content_md5 == o.content_md5 &&
-          signed_url_timeout_seconds == o.signed_url_timeout_seconds
+          signed_url_timeout_seconds == o.signed_url_timeout_seconds &&
+          server_side_encryption == o.server_side_encryption
     end
 
     # @see the `==` method
@@ -153,7 +192,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [file_name, content_md5, signed_url_timeout_seconds].hash
+      [file_name, content_md5, signed_url_timeout_seconds, server_side_encryption].hash
     end
 
     # build the object from hash

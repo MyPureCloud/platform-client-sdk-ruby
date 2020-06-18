@@ -273,6 +273,155 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get the results of a usage query
+    # 
+    # @param execution_id ID of the query execution
+    # @param client_id Client ID
+    # @param [Hash] opts the optional parameters
+    # @return [ApiUsageQueryResult]
+    def get_oauth_client_usage_query_result(execution_id, client_id, opts = {})
+      data, _status_code, _headers = get_oauth_client_usage_query_result_with_http_info(execution_id, client_id, opts)
+      return data
+    end
+
+    # Get the results of a usage query
+    # 
+    # @param execution_id ID of the query execution
+    # @param client_id Client ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ApiUsageQueryResult, Fixnum, Hash)>] ApiUsageQueryResult data, response status code and response headers
+    def get_oauth_client_usage_query_result_with_http_info(execution_id, client_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OAuthApi.get_oauth_client_usage_query_result ..."
+      end
+      
+      
+      # verify the required parameter 'execution_id' is set
+      fail ArgumentError, "Missing the required parameter 'execution_id' when calling OAuthApi.get_oauth_client_usage_query_result" if execution_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'client_id' is set
+      fail ArgumentError, "Missing the required parameter 'client_id' when calling OAuthApi.get_oauth_client_usage_query_result" if client_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/oauth/clients/{clientId}/usage/query/results/{executionId}".sub('{format}','json').sub('{' + 'executionId' + '}', execution_id.to_s).sub('{' + 'clientId' + '}', client_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ApiUsageQueryResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OAuthApi#get_oauth_client_usage_query_result\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a summary of OAuth client API usage
+    # After calling this method, you will then need to poll for the query results based on the returned execution Id
+    # @param client_id Client ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :days Previous number of days to query (default to 7)
+    # @return [UsageExecutionResult]
+    def get_oauth_client_usage_summary(client_id, opts = {})
+      data, _status_code, _headers = get_oauth_client_usage_summary_with_http_info(client_id, opts)
+      return data
+    end
+
+    # Get a summary of OAuth client API usage
+    # After calling this method, you will then need to poll for the query results based on the returned execution Id
+    # @param client_id Client ID
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :days Previous number of days to query
+    # @return [Array<(UsageExecutionResult, Fixnum, Hash)>] UsageExecutionResult data, response status code and response headers
+    def get_oauth_client_usage_summary_with_http_info(client_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OAuthApi.get_oauth_client_usage_summary ..."
+      end
+      
+      
+      # verify the required parameter 'client_id' is set
+      fail ArgumentError, "Missing the required parameter 'client_id' when calling OAuthApi.get_oauth_client_usage_summary" if client_id.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/oauth/clients/{clientId}/usage/summary".sub('{format}','json').sub('{' + 'clientId' + '}', client_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'days'] = opts[:'days'] if opts[:'days']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UsageExecutionResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OAuthApi#get_oauth_client_usage_summary\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # The list of OAuth clients
     # 
     # @param [Hash] opts the optional parameters
@@ -527,6 +676,81 @@ module PureCloud
         :return_type => 'OAuthClient')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OAuthApi#post_oauth_client_secret\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Query for OAuth client API usage
+    # After calling this method, you will then need to poll for the query results based on the returned execution Id
+    # @param client_id Client ID
+    # @param body Query
+    # @param [Hash] opts the optional parameters
+    # @return [UsageExecutionResult]
+    def post_oauth_client_usage_query(client_id, body, opts = {})
+      data, _status_code, _headers = post_oauth_client_usage_query_with_http_info(client_id, body, opts)
+      return data
+    end
+
+    # Query for OAuth client API usage
+    # After calling this method, you will then need to poll for the query results based on the returned execution Id
+    # @param client_id Client ID
+    # @param body Query
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UsageExecutionResult, Fixnum, Hash)>] UsageExecutionResult data, response status code and response headers
+    def post_oauth_client_usage_query_with_http_info(client_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OAuthApi.post_oauth_client_usage_query ..."
+      end
+      
+      
+      # verify the required parameter 'client_id' is set
+      fail ArgumentError, "Missing the required parameter 'client_id' when calling OAuthApi.post_oauth_client_usage_query" if client_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling OAuthApi.post_oauth_client_usage_query" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/oauth/clients/{clientId}/usage/query".sub('{format}','json').sub('{' + 'clientId' + '}', client_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UsageExecutionResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OAuthApi#post_oauth_client_usage_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
