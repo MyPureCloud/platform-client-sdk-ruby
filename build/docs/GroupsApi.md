@@ -425,11 +425,11 @@ Name | Type | Description  | Notes
 
 ## [**GroupProfile**](GroupProfile.html) get_group_profile(group_id, opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get group profile
 
-
+This api is deprecated. Use /api/v2/groups instead
 
 Wraps GET /api/v2/groups/{groupId}/profile 
 
@@ -634,11 +634,11 @@ Name | Type | Description  | Notes
 
 ## [**GroupProfileEntityListing**](GroupProfileEntityListing.html) get_profiles_groups(opts)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get group profile listing
 
-
+This api is deprecated. Use /api/v2/groups instead.
 
 Wraps GET /api/v2/profiles/groups 
 

@@ -19,7 +19,7 @@ require 'date'
 module PureCloud
   # Defines a SCIM email address.
   class ScimEmail
-    # The email address.
+    # The email address. Note value for type 'other'is immutable.
     attr_accessor :value
 
     # The type of email address.

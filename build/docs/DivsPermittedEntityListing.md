@@ -13,10 +13,10 @@ title: DivsPermittedEntityListing
 | **total** | **Integer** |  | [optional] |
 | **all_divs_permitted** | **BOOLEAN** |  | [optional] |
 | **first_uri** | **String** |  | [optional] |
-| **previous_uri** | **String** |  | [optional] |
-| **self_uri** | **String** |  | [optional] |
 | **next_uri** | **String** |  | [optional] |
+| **self_uri** | **String** |  | [optional] |
 | **last_uri** | **String** |  | [optional] |
+| **previous_uri** | **String** |  | [optional] |
 | **page_count** | **Integer** |  | [optional] |
 {: class="table table-striped"}
 

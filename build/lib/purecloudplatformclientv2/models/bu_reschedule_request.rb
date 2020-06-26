@@ -18,10 +18,10 @@ require 'date'
 
 module PureCloud
   class BuRescheduleRequest
-    # The start of the range to reschedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The start of the range to reschedule.  Defaults to the beginning of the schedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :start_date
 
-    # The end of the range to reschedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The end of the range to reschedule.  Defaults the the end of the schedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :end_date
 
     # The IDs of the agents to consider for rescheduling.  Omit to consider all agents in the specified management units.Agents not in the specified management units will be ignored
@@ -207,19 +207,9 @@ module PureCloud
     def valid?
       
       
-      if @start_date.nil?
-        return false
-      end
-
       
       
       
-      
-      
-      if @end_date.nil?
-        return false
-      end
-
       
       
       

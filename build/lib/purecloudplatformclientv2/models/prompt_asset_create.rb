@@ -298,6 +298,11 @@ module PureCloud
       
       
       
+      allowed_values = ["created", "uploaded", "transcoded", "transcodeFailed"]
+      if @upload_status && !allowed_values.include?(@upload_status)
+        return false
+      end
+      
       
       
       
@@ -359,7 +364,16 @@ module PureCloud
     
     
     
-    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] upload_status Object to be assigned
+    def upload_status=(upload_status)
+      allowed_values = ["created", "uploaded", "transcoded", "transcodeFailed"]
+      if upload_status && !allowed_values.include?(upload_status)
+        fail ArgumentError, "invalid value for 'upload_status', must be one of #{allowed_values}."
+      end
+      @upload_status = upload_status
+    end
+
     
     
     

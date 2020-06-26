@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
  **interval** | **String**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional]  |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
- **statuses** | [**Array&lt;String&gt;**](String.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed |
+ **statuses** | [**Array&lt;String&gt;**](String.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed, InvalidSchedule |
  **facilitator_ids** | [**Array&lt;String&gt;**](String.html)| The facilitator IDs for which to retrieve appointments | [optional]  |
  **sort_order** | **String**| Sort (by due date) either Asc or Desc | [optional] <br />**Values**: Desc, Asc |
 {: class="table table-striped"}

@@ -1170,7 +1170,7 @@ module PureCloud
     end
 
     # Get a user profile listing
-    # 
+    # This api is deprecated. User /api/v2/users
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
@@ -1185,7 +1185,7 @@ module PureCloud
     end
 
     # Get a user profile listing
-    # 
+    # This api is deprecated. User /api/v2/users
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
@@ -1889,7 +1889,7 @@ module PureCloud
     end
 
     # Get user profile
-    # 
+    # This api has been deprecated. Use api/v2/users instead
     # @param user_id userId
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand Which fields, if any, to expand
@@ -1900,7 +1900,7 @@ module PureCloud
     end
 
     # Get user profile
-    # 
+    # This api has been deprecated. Use api/v2/users instead
     # @param user_id userId
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand Which fields, if any, to expand

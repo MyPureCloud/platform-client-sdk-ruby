@@ -471,7 +471,7 @@ module PureCloud
     end
 
     # Get group profile
-    # 
+    # This api is deprecated. Use /api/v2/groups instead
     # @param group_id groupId
     # @param [Hash] opts the optional parameters
     # @option opts [String] :fields Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList
@@ -482,7 +482,7 @@ module PureCloud
     end
 
     # Get group profile
-    # 
+    # This api is deprecated. Use /api/v2/groups instead
     # @param group_id groupId
     # @param [Hash] opts the optional parameters
     # @option opts [String] :fields Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList
@@ -724,7 +724,7 @@ module PureCloud
     end
 
     # Get group profile listing
-    # 
+    # This api is deprecated. Use /api/v2/groups instead.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
@@ -737,7 +737,7 @@ module PureCloud
     end
 
     # Get group profile listing
-    # 
+    # This api is deprecated. Use /api/v2/groups instead.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
