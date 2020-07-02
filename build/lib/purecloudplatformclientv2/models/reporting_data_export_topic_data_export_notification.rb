@@ -40,6 +40,8 @@ module PureCloud
 
     attr_accessor :percentage_complete
 
+    attr_accessor :email_statuses
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -64,7 +66,9 @@ module PureCloud
         
         :'modified_date_time' => :'modifiedDateTime',
         
-        :'percentage_complete' => :'percentageComplete'
+        :'percentage_complete' => :'percentageComplete',
+        
+        :'email_statuses' => :'emailStatuses'
         
       }
     end
@@ -93,7 +97,9 @@ module PureCloud
         
         :'modified_date_time' => :'DateTime',
         
-        :'percentage_complete' => :'Float'
+        :'percentage_complete' => :'Float',
+        
+        :'email_statuses' => :'Hash<String, String>'
         
       }
     end
@@ -206,6 +212,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'emailStatuses')
+        
+        if (value = attributes[:'emailStatuses']).is_a?(Array)
+          self.email_statuses = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -266,6 +283,10 @@ module PureCloud
       if @export_error_messages_type && !allowed_values.include?(@export_error_messages_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -379,6 +400,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -394,7 +420,8 @@ module PureCloud
           read == o.read &&
           created_date_time == o.created_date_time &&
           modified_date_time == o.modified_date_time &&
-          percentage_complete == o.percentage_complete
+          percentage_complete == o.percentage_complete &&
+          email_statuses == o.email_statuses
     end
 
     # @see the `==` method
@@ -406,7 +433,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, status, export_format, download_url, view_type, export_error_messages_type, read, created_date_time, modified_date_time, percentage_complete].hash
+      [id, name, status, export_format, download_url, view_type, export_error_messages_type, read, created_date_time, modified_date_time, percentage_complete, email_statuses].hash
     end
 
     # build the object from hash

@@ -42,6 +42,10 @@ module PureCloud
 
     attr_accessor :modified_by_user_id
 
+    attr_accessor :copied_to
+
+    attr_accessor :copied_from
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -68,7 +72,11 @@ module PureCloud
         
         :'deleted' => :'deleted',
         
-        :'modified_by_user_id' => :'modifiedByUserId'
+        :'modified_by_user_id' => :'modifiedByUserId',
+        
+        :'copied_to' => :'copiedTo',
+        
+        :'copied_from' => :'copiedFrom'
         
       }
     end
@@ -99,7 +107,11 @@ module PureCloud
         
         :'deleted' => :'BOOLEAN',
         
-        :'modified_by_user_id' => :'String'
+        :'modified_by_user_id' => :'String',
+        
+        :'copied_to' => :'Array<VoicemailMessagesTopicVoicemailCopyRecord>',
+        
+        :'copied_from' => :'VoicemailMessagesTopicVoicemailCopyRecord'
         
       }
     end
@@ -221,6 +233,26 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'copiedTo')
+        
+        if (value = attributes[:'copiedTo']).is_a?(Array)
+          self.copied_to = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'copiedFrom')
+        
+        
+        self.copied_from = attributes[:'copiedFrom']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -284,8 +316,26 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -363,7 +413,9 @@ module PureCloud
           action == o.action &&
           note == o.note &&
           deleted == o.deleted &&
-          modified_by_user_id == o.modified_by_user_id
+          modified_by_user_id == o.modified_by_user_id &&
+          copied_to == o.copied_to &&
+          copied_from == o.copied_from
     end
 
     # @see the `==` method
@@ -375,7 +427,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, read, audio_recording_duration_seconds, audio_recording_size_bytes, created_date, modified_date, caller_address, caller_name, action, note, deleted, modified_by_user_id].hash
+      [id, read, audio_recording_duration_seconds, audio_recording_size_bytes, created_date, modified_date, caller_address, caller_name, action, note, deleted, modified_by_user_id, copied_to, copied_from].hash
     end
 
     # build the object from hash

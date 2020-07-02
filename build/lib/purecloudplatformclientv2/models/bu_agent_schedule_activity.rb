@@ -36,6 +36,12 @@ module PureCloud
     # The ID of the time off request associated with this activity, if applicable
     attr_accessor :time_off_request_id
 
+    # The ID of the external activity associated with this activity, if applicable
+    attr_accessor :external_activity_id
+
+    # The type of the external activity associated with this activity, if applicable
+    attr_accessor :external_activity_type
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -50,7 +56,11 @@ module PureCloud
         
         :'paid' => :'paid',
         
-        :'time_off_request_id' => :'timeOffRequestId'
+        :'time_off_request_id' => :'timeOffRequestId',
+        
+        :'external_activity_id' => :'externalActivityId',
+        
+        :'external_activity_type' => :'externalActivityType'
         
       }
     end
@@ -69,7 +79,11 @@ module PureCloud
         
         :'paid' => :'BOOLEAN',
         
-        :'time_off_request_id' => :'String'
+        :'time_off_request_id' => :'String',
+        
+        :'external_activity_id' => :'String',
+        
+        :'external_activity_type' => :'String'
         
       }
     end
@@ -137,6 +151,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'externalActivityId')
+        
+        
+        self.external_activity_id = attributes[:'externalActivityId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'externalActivityType')
+        
+        
+        self.external_activity_type = attributes[:'externalActivityType']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -176,6 +208,19 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      allowed_values = ["Coaching"]
+      if @external_activity_type && !allowed_values.include?(@external_activity_type)
+        return false
+      end
+      
+      
+      
     end
 
     
@@ -206,6 +251,25 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] external_activity_type Object to be assigned
+    def external_activity_type=(external_activity_type)
+      allowed_values = ["Coaching"]
+      if external_activity_type && !allowed_values.include?(external_activity_type)
+        fail ArgumentError, "invalid value for 'external_activity_type', must be one of #{allowed_values}."
+      end
+      @external_activity_type = external_activity_type
+    end
+
     
     
     
@@ -219,7 +283,9 @@ module PureCloud
           description == o.description &&
           activity_code_id == o.activity_code_id &&
           paid == o.paid &&
-          time_off_request_id == o.time_off_request_id
+          time_off_request_id == o.time_off_request_id &&
+          external_activity_id == o.external_activity_id &&
+          external_activity_type == o.external_activity_type
     end
 
     # @see the `==` method
@@ -231,7 +297,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [start_date, length_minutes, description, activity_code_id, paid, time_off_request_id].hash
+      [start_date, length_minutes, description, activity_code_id, paid, time_off_request_id, external_activity_id, external_activity_type].hash
     end
 
     # build the object from hash
