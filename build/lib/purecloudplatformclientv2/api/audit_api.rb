@@ -300,5 +300,79 @@ module PureCloud
       end
       return data, status_code, headers
     end
+
+    # This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+    # 
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @return [AuditRealtimeQueryResultsResponse]
+    def post_audits_query_realtime(body, opts = {})
+      data, _status_code, _headers = post_audits_query_realtime_with_http_info(body, opts)
+      return data
+    end
+
+    # This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+    # 
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @return [Array<(AuditRealtimeQueryResultsResponse, Fixnum, Hash)>] AuditRealtimeQueryResultsResponse data, response status code and response headers
+    def post_audits_query_realtime_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AuditApi.post_audits_query_realtime ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling AuditApi.post_audits_query_realtime" if body.nil?
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/audits/query/realtime".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AuditRealtimeQueryResultsResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AuditApi#post_audits_query_realtime\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
   end
 end

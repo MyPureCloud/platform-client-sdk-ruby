@@ -30,6 +30,9 @@ module PureCloud
     # The language that the NLU domain version supports.
     attr_accessor :language
 
+    # Whether this NLU domain version has been published.
+    attr_accessor :published
+
     # The date when the NLU domain version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_created
 
@@ -69,6 +72,8 @@ module PureCloud
         
         :'language' => :'language',
         
+        :'published' => :'published',
+        
         :'date_created' => :'dateCreated',
         
         :'date_modified' => :'dateModified',
@@ -101,6 +106,8 @@ module PureCloud
         :'description' => :'String',
         
         :'language' => :'String',
+        
+        :'published' => :'BOOLEAN',
         
         :'date_created' => :'DateTime',
         
@@ -163,6 +170,15 @@ module PureCloud
         
         
         self.language = attributes[:'language']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'published')
+        
+        
+        self.published = attributes[:'published']
         
       
       end
@@ -281,6 +297,15 @@ module PureCloud
       
       
       
+      if @language.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       
       
       
@@ -374,6 +399,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] training_status Object to be assigned
     def training_status=(training_status)
@@ -425,6 +455,7 @@ module PureCloud
           domain == o.domain &&
           description == o.description &&
           language == o.language &&
+          published == o.published &&
           date_created == o.date_created &&
           date_modified == o.date_modified &&
           date_trained == o.date_trained &&
@@ -445,7 +476,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, domain, description, language, date_created, date_modified, date_trained, date_published, training_status, evaluation_status, intents, entity_types, self_uri].hash
+      [id, domain, description, language, published, date_created, date_modified, date_trained, date_published, training_status, evaluation_status, intents, entity_types, self_uri].hash
     end
 
     # build the object from hash

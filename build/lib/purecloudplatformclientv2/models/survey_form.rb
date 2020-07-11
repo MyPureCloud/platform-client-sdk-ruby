@@ -39,12 +39,6 @@ module PureCloud
     # Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW
     attr_accessor :language
 
-    # Id of the header image appearing at the top of the form.
-    attr_accessor :header_image_id
-
-    # Temporary URL for accessing header image
-    attr_accessor :header_image_url
-
     # Markdown text for the top of the form.
     attr_accessor :header
 
@@ -78,10 +72,6 @@ module PureCloud
         
         :'language' => :'language',
         
-        :'header_image_id' => :'headerImageId',
-        
-        :'header_image_url' => :'headerImageUrl',
-        
         :'header' => :'header',
         
         :'footer' => :'footer',
@@ -112,10 +102,6 @@ module PureCloud
         :'context_id' => :'String',
         
         :'language' => :'String',
-        
-        :'header_image_id' => :'String',
-        
-        :'header_image_url' => :'String',
         
         :'header' => :'String',
         
@@ -197,24 +183,6 @@ module PureCloud
         
         
         self.language = attributes[:'language']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'headerImageId')
-        
-        
-        self.header_image_id = attributes[:'headerImageId']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'headerImageUrl')
-        
-        
-        self.header_image_url = attributes[:'headerImageUrl']
         
       
       end
@@ -334,14 +302,6 @@ module PureCloud
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
       if @question_groups.nil?
         return false
       end
@@ -421,16 +381,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -443,8 +393,6 @@ module PureCloud
           disabled == o.disabled &&
           context_id == o.context_id &&
           language == o.language &&
-          header_image_id == o.header_image_id &&
-          header_image_url == o.header_image_url &&
           header == o.header &&
           footer == o.footer &&
           question_groups == o.question_groups &&
@@ -461,7 +409,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, modified_date, published, disabled, context_id, language, header_image_id, header_image_url, header, footer, question_groups, published_versions, self_uri].hash
+      [id, name, modified_date, published, disabled, context_id, language, header, footer, question_groups, published_versions, self_uri].hash
     end
 
     # build the object from hash

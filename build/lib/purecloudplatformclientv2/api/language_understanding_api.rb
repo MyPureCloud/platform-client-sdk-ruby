@@ -162,6 +162,80 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete an NLU Domain Version
+    # 
+    # @param domain_id ID of the NLU domain.
+    # @param domain_version_id ID of the NLU domain version.
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete_languageunderstanding_domain_version(domain_id, domain_version_id, opts = {})
+      delete_languageunderstanding_domain_version_with_http_info(domain_id, domain_version_id, opts)
+      return nil
+    end
+
+    # Delete an NLU Domain Version
+    # 
+    # @param domain_id ID of the NLU domain.
+    # @param domain_version_id ID of the NLU domain version.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def delete_languageunderstanding_domain_version_with_http_info(domain_id, domain_version_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: LanguageUnderstandingApi.delete_languageunderstanding_domain_version ..."
+      end
+      
+      
+      # verify the required parameter 'domain_id' is set
+      fail ArgumentError, "Missing the required parameter 'domain_id' when calling LanguageUnderstandingApi.delete_languageunderstanding_domain_version" if domain_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'domain_version_id' is set
+      fail ArgumentError, "Missing the required parameter 'domain_version_id' when calling LanguageUnderstandingApi.delete_languageunderstanding_domain_version" if domain_version_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}".sub('{format}','json').sub('{' + 'domainId' + '}', domain_id.to_s).sub('{' + 'domainVersionId' + '}', domain_version_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: LanguageUnderstandingApi#delete_languageunderstanding_domain_version\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Find an NLU Domain.
     # 
     # @param domain_id ID of the NLU domain.
@@ -779,21 +853,21 @@ module PureCloud
     # Update an NLU Domain.
     # 
     # @param domain_id ID of the NLU domain.
+    # @param body The updated NLU Domain.
     # @param [Hash] opts the optional parameters
-    # @option opts [NluDomain] :body 
     # @return [NluDomain]
-    def patch_languageunderstanding_domain(domain_id, opts = {})
-      data, _status_code, _headers = patch_languageunderstanding_domain_with_http_info(domain_id, opts)
+    def patch_languageunderstanding_domain(domain_id, body, opts = {})
+      data, _status_code, _headers = patch_languageunderstanding_domain_with_http_info(domain_id, body, opts)
       return data
     end
 
     # Update an NLU Domain.
     # 
     # @param domain_id ID of the NLU domain.
+    # @param body The updated NLU Domain.
     # @param [Hash] opts the optional parameters
-    # @option opts [NluDomain] :body 
     # @return [Array<(NluDomain, Fixnum, Hash)>] NluDomain data, response status code and response headers
-    def patch_languageunderstanding_domain_with_http_info(domain_id, opts = {})
+    def patch_languageunderstanding_domain_with_http_info(domain_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguageUnderstandingApi.patch_languageunderstanding_domain ..."
       end
@@ -807,6 +881,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling LanguageUnderstandingApi.patch_languageunderstanding_domain" if body.nil?
       
       
       
@@ -833,7 +909,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
@@ -852,21 +928,21 @@ module PureCloud
     # Create feedback for the NLU Domain Version.
     # 
     # @param domain_id ID of the NLU domain.
+    # @param body The Feedback to create.
     # @param [Hash] opts the optional parameters
-    # @option opts [NluFeedbackRequest] :body 
     # @return [NluFeedbackResponse]
-    def post_languageunderstanding_domain_feedback(domain_id, opts = {})
-      data, _status_code, _headers = post_languageunderstanding_domain_feedback_with_http_info(domain_id, opts)
+    def post_languageunderstanding_domain_feedback(domain_id, body, opts = {})
+      data, _status_code, _headers = post_languageunderstanding_domain_feedback_with_http_info(domain_id, body, opts)
       return data
     end
 
     # Create feedback for the NLU Domain Version.
     # 
     # @param domain_id ID of the NLU domain.
+    # @param body The Feedback to create.
     # @param [Hash] opts the optional parameters
-    # @option opts [NluFeedbackRequest] :body 
     # @return [Array<(NluFeedbackResponse, Fixnum, Hash)>] NluFeedbackResponse data, response status code and response headers
-    def post_languageunderstanding_domain_feedback_with_http_info(domain_id, opts = {})
+    def post_languageunderstanding_domain_feedback_with_http_info(domain_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguageUnderstandingApi.post_languageunderstanding_domain_feedback ..."
       end
@@ -880,6 +956,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling LanguageUnderstandingApi.post_languageunderstanding_domain_feedback" if body.nil?
       
       
       
@@ -906,7 +984,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -926,11 +1004,11 @@ module PureCloud
     # 
     # @param domain_id ID of the NLU domain.
     # @param domain_version_id ID of the NLU domain version.
+    # @param body The input data to perform detection on.
     # @param [Hash] opts the optional parameters
-    # @option opts [NluDetectionRequest] :body 
     # @return [NluDetectionResponse]
-    def post_languageunderstanding_domain_version_detect(domain_id, domain_version_id, opts = {})
-      data, _status_code, _headers = post_languageunderstanding_domain_version_detect_with_http_info(domain_id, domain_version_id, opts)
+    def post_languageunderstanding_domain_version_detect(domain_id, domain_version_id, body, opts = {})
+      data, _status_code, _headers = post_languageunderstanding_domain_version_detect_with_http_info(domain_id, domain_version_id, body, opts)
       return data
     end
 
@@ -938,10 +1016,10 @@ module PureCloud
     # 
     # @param domain_id ID of the NLU domain.
     # @param domain_version_id ID of the NLU domain version.
+    # @param body The input data to perform detection on.
     # @param [Hash] opts the optional parameters
-    # @option opts [NluDetectionRequest] :body 
     # @return [Array<(NluDetectionResponse, Fixnum, Hash)>] NluDetectionResponse data, response status code and response headers
-    def post_languageunderstanding_domain_version_detect_with_http_info(domain_id, domain_version_id, opts = {})
+    def post_languageunderstanding_domain_version_detect_with_http_info(domain_id, domain_version_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguageUnderstandingApi.post_languageunderstanding_domain_version_detect ..."
       end
@@ -963,6 +1041,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling LanguageUnderstandingApi.post_languageunderstanding_domain_version_detect" if body.nil?
       
       
       
@@ -989,7 +1069,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -1155,27 +1235,104 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Create an NLU Domain Version.
+    # 
+    # @param domain_id ID of the NLU domain.
+    # @param body The NLU Domain Version to create.
+    # @param [Hash] opts the optional parameters
+    # @return [NluDomainVersion]
+    def post_languageunderstanding_domain_versions(domain_id, body, opts = {})
+      data, _status_code, _headers = post_languageunderstanding_domain_versions_with_http_info(domain_id, body, opts)
+      return data
+    end
+
+    # Create an NLU Domain Version.
+    # 
+    # @param domain_id ID of the NLU domain.
+    # @param body The NLU Domain Version to create.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(NluDomainVersion, Fixnum, Hash)>] NluDomainVersion data, response status code and response headers
+    def post_languageunderstanding_domain_versions_with_http_info(domain_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: LanguageUnderstandingApi.post_languageunderstanding_domain_versions ..."
+      end
+      
+      
+      # verify the required parameter 'domain_id' is set
+      fail ArgumentError, "Missing the required parameter 'domain_id' when calling LanguageUnderstandingApi.post_languageunderstanding_domain_versions" if domain_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling LanguageUnderstandingApi.post_languageunderstanding_domain_versions" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/languageunderstanding/domains/{domainId}/versions".sub('{format}','json').sub('{' + 'domainId' + '}', domain_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'NluDomainVersion')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: LanguageUnderstandingApi#post_languageunderstanding_domain_versions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create an NLU Domain.
     # 
+    # @param body The NLU Domain to create.
     # @param [Hash] opts the optional parameters
-    # @option opts [NluDomain] :body 
     # @return [NluDomain]
-    def post_languageunderstanding_domains(opts = {})
-      data, _status_code, _headers = post_languageunderstanding_domains_with_http_info(opts)
+    def post_languageunderstanding_domains(body, opts = {})
+      data, _status_code, _headers = post_languageunderstanding_domains_with_http_info(body, opts)
       return data
     end
 
     # Create an NLU Domain.
     # 
+    # @param body The NLU Domain to create.
     # @param [Hash] opts the optional parameters
-    # @option opts [NluDomain] :body 
     # @return [Array<(NluDomain, Fixnum, Hash)>] NluDomain data, response status code and response headers
-    def post_languageunderstanding_domains_with_http_info(opts = {})
+    def post_languageunderstanding_domains_with_http_info(body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguageUnderstandingApi.post_languageunderstanding_domains ..."
       end
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling LanguageUnderstandingApi.post_languageunderstanding_domains" if body.nil?
       
       
       
@@ -1202,7 +1359,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -1222,11 +1379,11 @@ module PureCloud
     # 
     # @param domain_id ID of the NLU domain.
     # @param domain_version_id ID of the NLU domain version.
+    # @param body The updated NLU Domain Version.
     # @param [Hash] opts the optional parameters
-    # @option opts [NluDomainVersion] :body 
     # @return [NluDomainVersion]
-    def put_languageunderstanding_domain_version(domain_id, domain_version_id, opts = {})
-      data, _status_code, _headers = put_languageunderstanding_domain_version_with_http_info(domain_id, domain_version_id, opts)
+    def put_languageunderstanding_domain_version(domain_id, domain_version_id, body, opts = {})
+      data, _status_code, _headers = put_languageunderstanding_domain_version_with_http_info(domain_id, domain_version_id, body, opts)
       return data
     end
 
@@ -1234,10 +1391,10 @@ module PureCloud
     # 
     # @param domain_id ID of the NLU domain.
     # @param domain_version_id ID of the NLU domain version.
+    # @param body The updated NLU Domain Version.
     # @param [Hash] opts the optional parameters
-    # @option opts [NluDomainVersion] :body 
     # @return [Array<(NluDomainVersion, Fixnum, Hash)>] NluDomainVersion data, response status code and response headers
-    def put_languageunderstanding_domain_version_with_http_info(domain_id, domain_version_id, opts = {})
+    def put_languageunderstanding_domain_version_with_http_info(domain_id, domain_version_id, body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LanguageUnderstandingApi.put_languageunderstanding_domain_version ..."
       end
@@ -1259,6 +1416,8 @@ module PureCloud
       
       
       
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling LanguageUnderstandingApi.put_languageunderstanding_domain_version" if body.nil?
       
       
       
@@ -1285,7 +1444,7 @@ module PureCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = @api_client.object_to_http_body(body)
       
       auth_names = ['PureCloud OAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,

@@ -54,6 +54,9 @@ module PureCloud
     # Is this edge group being managed remotely.
     attr_accessor :managed
 
+    # Is this edge group hybrid.
+    attr_accessor :hybrid
+
     # A trunk base settings assignment of trunkType \"EDGE\" to use for edge-to-edge communication.
     attr_accessor :edge_trunk_base_assignment
 
@@ -91,6 +94,8 @@ module PureCloud
         
         :'managed' => :'managed',
         
+        :'hybrid' => :'hybrid',
+        
         :'edge_trunk_base_assignment' => :'edgeTrunkBaseAssignment',
         
         :'phone_trunk_bases' => :'phoneTrunkBases',
@@ -127,6 +132,8 @@ module PureCloud
         :'created_by_app' => :'String',
         
         :'managed' => :'BOOLEAN',
+        
+        :'hybrid' => :'BOOLEAN',
         
         :'edge_trunk_base_assignment' => :'TrunkBaseAssignment',
         
@@ -254,6 +261,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'hybrid')
+        
+        
+        self.hybrid = attributes[:'hybrid']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'edgeTrunkBaseAssignment')
         
         
@@ -341,6 +357,10 @@ module PureCloud
       if @state && !allowed_values.include?(@state)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -465,6 +485,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -482,6 +507,7 @@ module PureCloud
           modified_by_app == o.modified_by_app &&
           created_by_app == o.created_by_app &&
           managed == o.managed &&
+          hybrid == o.hybrid &&
           edge_trunk_base_assignment == o.edge_trunk_base_assignment &&
           phone_trunk_bases == o.phone_trunk_bases &&
           self_uri == o.self_uri
@@ -496,7 +522,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, managed, edge_trunk_base_assignment, phone_trunk_bases, self_uri].hash
+      [id, name, description, version, date_created, date_modified, modified_by, created_by, state, modified_by_app, created_by_app, managed, hybrid, edge_trunk_base_assignment, phone_trunk_bases, self_uri].hash
     end
 
     # build the object from hash

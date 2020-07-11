@@ -12,6 +12,7 @@ Method | Description
 [**get_audits_query_transaction_id**](AuditApi.html#get_audits_query_transaction_id) | Get status of audit query execution
 [**get_audits_query_transaction_id_results**](AuditApi.html#get_audits_query_transaction_id_results) | Get results of audit query
 [**post_audits_query**](AuditApi.html#post_audits_query) | Create audit query execution
+[**post_audits_query_realtime**](AuditApi.html#post_audits_query_realtime) | This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
 {: class="table table-striped"}
 
 <a name="get_audits_query_servicemapping"></a>
@@ -268,6 +269,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_audits_query_realtime"></a>
+
+## [**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse.html) post_audits_query_realtime(body, opts)
+
+
+
+This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+
+
+
+Wraps POST /api/v2/audits/query/realtime 
+
+Requires ALL permissions: 
+
+* audits:audit:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuditApi.new
+
+body = PureCloud::AuditRealtimeQueryRequest.new # AuditRealtimeQueryRequest | query
+
+opts = { 
+  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand
+}
+
+begin
+  #This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+  result = api_instance.post_audits_query_realtime(body, opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuditApi->post_audits_query_realtime: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AuditRealtimeQueryRequest**](AuditRealtimeQueryRequest.html)| query |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: user |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse.html)
 
 ### HTTP request headers
 
