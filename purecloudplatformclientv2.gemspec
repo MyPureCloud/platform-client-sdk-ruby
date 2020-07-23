@@ -13,7 +13,6 @@ Gem::Specification.new do |s|
   s.description = "A Ruby library to interface with the PureCloud Platform API"
   s.license     = "MIT"
 
-
   s.add_runtime_dependency 'typhoeus', '~> 1.3.1'
   s.add_runtime_dependency 'json', '~> 2.1'
   s.add_runtime_dependency 'rest-client', '~> 2.0', '>= 2.0.1'

@@ -5,6 +5,18 @@ title: Platform API Client SDK - Ruby
 
 Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/ruby/](https://developer.mypurecloud.com/api/rest/client-libraries/ruby/)
 
+## Customization
+
+Steps to customize the gem from the original:
+
+1. `gem install --local build/purecloudplatformclientv2-92.0.0.gem`
+1. `gem unpack purecloudplatformclientv2`
+1. `gem uninstall purecloudplatformclientv2`
+1. `rm -rf docs && mv purecloudplatformclientv2-92.0.0/docs .`
+1. `rm -rf lib && mv purecloudplatformclientv2-92.0.0/lib .`
+1. `rm -rf spec && mv purecloudplatformclientv2-92.0.0/spec .`
+1. `rm purecloudplatformclientv2.gemspec && mv purecloudplatformclientv2-92.0.0/purecloudplatformclientv2.gemspec .`
+
 ## Installation
 
 ### from rubygems.org
