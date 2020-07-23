@@ -1,0 +1,20 @@
+---
+title: SegmentDetailQueryPredicate
+---
+## PureCloud::SegmentDetailQueryPredicate
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **type** | **String** | Optional type, can usually be inferred | [optional] |
+| **dimension** | **String** | Left hand side for dimension predicates | [optional] |
+| **property_type** | **String** | Left hand side for property predicates | [optional] |
+| **property** | **String** | Left hand side for property predicates | [optional] |
+| **metric** | **String** | Left hand side for metric predicates | [optional] |
+| **operator** | **String** | Optional operator, default is matches | [optional] |
+| **value** | **String** | Right hand side for dimension, metric, or property predicates | [optional] |
+| **range** | [**NumericRange**](NumericRange.html) | Right hand side for dimension, metric, or property predicates | [optional] |
+{: class="table table-striped"}
+
+

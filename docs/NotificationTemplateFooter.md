@@ -1,0 +1,13 @@
+---
+title: NotificationTemplateFooter
+---
+## PureCloud::NotificationTemplateFooter
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **text** | **String** | Footer text. For WhatsApp, ignored | [optional] |
+{: class="table table-striped"}
+
+
