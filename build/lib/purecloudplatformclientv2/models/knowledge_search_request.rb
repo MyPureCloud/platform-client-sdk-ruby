@@ -162,28 +162,13 @@ module PureCloud
       
       
       
-      if @page_size.nil?
-        return false
-      end
-
       
       
       
       
       
-      if @page_number.nil?
-        return false
-      end
-
       
       
-      
-      
-      
-      if @document_type.nil?
-        return false
-      end
-
       
       
       allowed_values = ["Faq"]

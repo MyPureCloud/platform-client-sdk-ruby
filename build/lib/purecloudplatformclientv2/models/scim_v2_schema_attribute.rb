@@ -17,42 +17,42 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # A complex type that defines service provider attributes, or sub-attributes and their qualities.
+  # A complex type that defines service provider attributes or subattributes and their qualities.
   class ScimV2SchemaAttribute
     # The attribute's name
     attr_accessor :name
 
-    # The attribute's data type.  Valid values are \"string\", \"boolean\", \"decimal\", \"integer\", \"dateTime\", \"reference\", and \"complex\".
+    # The data type of the attribute.
     attr_accessor :type
 
-    # When an attribute is of type \"complex\", \"subAttributes\" defines a set of sub-attributes. \"subAttributes\" has the same schema sub-attributes as \"attributes\"
+    # The list of subattributes for an attribute of the type \"complex\". Uses the same schema as \"attributes\".
     attr_accessor :sub_attributes
 
-    # A Boolean value indicating the attribute's plurality.
+    # Indicates whether an attribute contains multiple values.
     attr_accessor :multi_valued
 
-    # The attribute's human-readable description.
+    # The description of the attribute.
     attr_accessor :description
 
-    # A Boolean value that specifies whether or not the attribute is required.
+    # Indicates whether an attribute is required.
     attr_accessor :required
 
-    # A collection of suggested canonical values that MAY be used (e.g., \"work\" and \"home\").  In some cases, service providers MAY choose to ignore unsupported values.  OPTIONAL.
+    # The list of standard values that service providers may use. Service providers may ignore unsupported values.
     attr_accessor :canonical_values
 
-    # A Boolean value that specifies whether or not a string attribute is case sensitive.  The server SHALL use case sensitivity when evaluating filters.  For attributes that are case exact, the server SHALL preserve case for any value submitted.  If the attribute is case insensitive, the server MAY alter case for a submitted value.  Case sensitivity also impacts how attribute values MAY be compared against filter values (see Section 3.4.2.2 of [RFC7644])
+    # Indicates whether a string attribute is case-sensitive. If set to \"true\", the server preserves case sensitivity. If set to \"false\", the server may change the case. The server also uses case sensitivity when evaluating filters. See section 3.4.2.2 \"Filtering\" in RFC 7644 for details.
     attr_accessor :case_exact
 
-    # A single keyword indicating the circumstances under which the value of the attribute can be (re)defined. Value are readOnly, readWrite, immutable, writeOnly
+    # The circumstances under which an attribute can be defined or redefined. The default is \"readWrite\".
     attr_accessor :mutability
 
-    # A single keyword that indicates when an attribute and associated values are returned in response to a GET request, or in response to a PUT, POST, or PATCH request.  Valid keywords are as follows: always, never, default, request
+    # The circumstances under which an attribute and its values are returned in response to a GET, PUT, POST, or PATCH request.
     attr_accessor :returned
 
-    # A single keyword value that specifies how the service provider enforces uniqueness of attribute values.  A server MAY reject an invalid value based on uniqueness by returning HTTP response code 400 (Bad Request).  A client MAY enforce uniqueness on the client side to a greater degree than the service provider enforces.  For example, a client could make a value unique while the server has uniqueness of \"none\".  Valid keywords are as follows: none, server, global
+    # The method by which the service provider enforces the uniqueness of an attribute value. A server can reject a value by returning the HTTP response code 400 (Bad Request). A client can enforce uniqueness to a greater degree than the server provider enforces. For example, a client could make a value unique even though the server has \"uniqueness\" set to \"none\".
     attr_accessor :uniqueness
 
-    # A multi-valued array of JSON strings that indicate the SCIM resource types that may be referenced. Values include User, Group, external and uri.
+    # The list of SCIM resource types that may be referenced. Only applies when \"type\" is set to \"reference\".
     attr_accessor :reference_types
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -22,7 +22,9 @@ title: ObservationValue
 | **address_to** | **String** | The address receiving an action | [optional] |
 | **ani** | **String** | Automatic Number Identification (caller&#39;s number) | [optional] |
 | **dnis** | **String** | Dialed number identification service (number dialed by the calling party) | [optional] |
-| **team_id** | **String** | The team Id the user is a member of | [optional] |
+| **team_id** | **String** | The team id the user is a member of | [optional] |
+| **requested_routings** | **Array&lt;String&gt;** | All routing types for requested/attempted routing methods | [optional] |
+| **used_routing** | **String** | Complete routing method | [optional] |
 | **scored_agents** | [**Array&lt;AnalyticsScoredAgent&gt;**](AnalyticsScoredAgent.html) |  | [optional] |
 {: class="table table-striped"}
 

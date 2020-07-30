@@ -17,12 +17,12 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Routing skill assigned to user.
+  # The routing skill assigned to a user.
   class ScimUserRoutingSkill
-    # Case-sensitive name identifying a skill configured in routing skills.
+    # The case-sensitive name of a routing skill configured in Genesys Cloud.
     attr_accessor :name
 
-    # Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \"Best available skills\" mode to allow acd interactions to target agents with higher proficiency ratings.
+    # A rating from 0.0 to 5.0 that indicates how adept an agent is at a particular skill. When \"Best available skills\" is enabled for a queue in Genesys Cloud, ACD interactions in that queue are routed to agents with higher proficiency ratings.
     attr_accessor :proficiency
 
     # Attribute mapping from ruby-style variable name to JSON key.

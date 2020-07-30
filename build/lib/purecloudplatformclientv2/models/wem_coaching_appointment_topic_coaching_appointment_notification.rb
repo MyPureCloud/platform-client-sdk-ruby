@@ -290,7 +290,7 @@ module PureCloud
       
       
       
-      allowed_values = ["Scheduled", "InProgress", "Completed"]
+      allowed_values = ["Scheduled", "InProgress", "Completed", "InvalidSchedule"]
       if @status && !allowed_values.include?(@status)
         return false
       end
@@ -331,7 +331,7 @@ module PureCloud
       
       
       
-      allowed_values = ["Create", "Update", "Delete"]
+      allowed_values = ["Create", "Update", "Delete", "Invalidate"]
       if @change_type && !allowed_values.include?(@change_type)
         return false
       end
@@ -365,7 +365,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status Object to be assigned
     def status=(status)
-      allowed_values = ["Scheduled", "InProgress", "Completed"]
+      allowed_values = ["Scheduled", "InProgress", "Completed", "InvalidSchedule"]
       if status && !allowed_values.include?(status)
         fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
       end
@@ -419,7 +419,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] change_type Object to be assigned
     def change_type=(change_type)
-      allowed_values = ["Create", "Update", "Delete"]
+      allowed_values = ["Create", "Update", "Delete", "Invalidate"]
       if change_type && !allowed_values.include?(change_type)
         fail ArgumentError, "invalid value for 'change_type', must be one of #{allowed_values}."
       end

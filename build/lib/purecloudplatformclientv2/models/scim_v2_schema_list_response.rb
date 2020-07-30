@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM Resource Types list response
+  # Defines the list response for SCIM resource types.
   class ScimV2SchemaListResponse
     # The total number of results.
     attr_accessor :total_results
@@ -28,7 +28,7 @@ module PureCloud
     # The number of resources returned per page.
     attr_accessor :items_per_page
 
-    # Resources
+    # The list of requested resources.
     attr_accessor :resources
 
     # The list of supported schemas.

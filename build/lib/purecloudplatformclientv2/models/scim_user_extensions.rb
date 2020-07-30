@@ -17,12 +17,12 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # SCIM PureCloud extensions of user.
+  # Defines a SCIM Genesys Cloud user.
   class ScimUserExtensions
-    # Routing Skills assigned to user. No more than 50 skills may be assigned to a user.
+    # The list of routing skills assigned to a user. Maximum 50 skills.
     attr_accessor :routing_skills
 
-    # Routing Languages assigned to user. No more than 50 languages may be assigned to a user.
+    # The list of routing languages assigned to a user. Maximum 50 languages.
     attr_accessor :routing_languages
 
     # Attribute mapping from ruby-style variable name to JSON key.

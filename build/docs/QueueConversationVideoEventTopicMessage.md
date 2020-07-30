@@ -10,6 +10,7 @@ title: QueueConversationVideoEventTopicMessage
 | **id** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **held** | **BOOLEAN** |  | [optional] |
+| **error_info** | [**QueueConversationVideoEventTopicErrorDetails**](QueueConversationVideoEventTopicErrorDetails.html) |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **script_id** | **String** |  | [optional] |
 | **peer_id** | **String** |  | [optional] |

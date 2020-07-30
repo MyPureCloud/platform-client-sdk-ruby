@@ -18,6 +18,8 @@ title: ReportingExportJobRequest
 | **locale** | **String** | The locale use for localization of the exported data, i.e. en-us, es-mx   | |
 | **has_format_durations** | **BOOLEAN** | Indicates if durations are formatted in hh:mm:ss format instead of ms | [optional] |
 | **has_split_filters** | **BOOLEAN** | Indicates if filters will be split in aggregate detail exports | [optional] |
+| **exclude_empty_rows** | **BOOLEAN** | Excludes empty rows from the exports | [optional] |
+| **has_split_by_media** | **BOOLEAN** | Indicates if media type will be split in aggregate detail exports | [optional] |
 | **selected_columns** | [**Array&lt;SelectedColumns&gt;**](SelectedColumns.html) | The list of ordered selected columns from the export view by the user | [optional] |
 | **has_custom_participant_attributes** | **BOOLEAN** | Indicates if custom participant attributes will be exported | [optional] |
 | **recipient_emails** | **Array&lt;String&gt;** | The list of email recipients for the exports | [optional] |

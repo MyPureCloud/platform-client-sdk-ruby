@@ -19,7 +19,7 @@ require 'date'
 module PureCloud
   # Defines a SCIM user.
   class ScimV2User
-    # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"Mutability\" is set to \"readOnly\". \"Returned\" is set to \"always\".
+    # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readOnly\". \"returned\" is set to \"always\".
     attr_accessor :id
 
     # The list of supported schemas.
@@ -28,13 +28,13 @@ module PureCloud
     # Indicates whether the user's administrative status is active.
     attr_accessor :active
 
-    # The user's PureCloud email address. Must be unique.
+    # The user's Genesys Cloud email address. Must be unique.
     attr_accessor :user_name
 
     # The display name of the user.
     attr_accessor :display_name
 
-    # The new password for the PureCloud user. Does not return an existing password.
+    # The new password for the Genesys Cloud user. Does not return an existing password.
     attr_accessor :password
 
     # The user's title.
@@ -58,6 +58,7 @@ module PureCloud
     # The URI of the schema for the enterprise user.
     attr_accessor :urnietfparamsscimschemasextensionenterprise2_0_user
 
+    # The URI of the schema for the Genesys Cloud user.
     attr_accessor :urnietfparamsscimschemasextensiongenesyspurecloud2_0_user
 
     # The metadata of the SCIM resource.

@@ -71,6 +71,12 @@ module PureCloud
     # Indicates if filters will be split in aggregate detail exports
     attr_accessor :has_split_filters
 
+    # Excludes empty rows from the exports
+    attr_accessor :exclude_empty_rows
+
+    # Indicates if media type will be split in aggregate detail exports
+    attr_accessor :has_split_by_media
+
     # The list of ordered selected columns from the export view by the user
     attr_accessor :selected_columns
 
@@ -82,6 +88,8 @@ module PureCloud
 
     # The status of individual email addresses as a map
     attr_accessor :email_statuses
+
+    attr_accessor :enabled
 
     # The URI for this object
     attr_accessor :self_uri
@@ -126,6 +134,10 @@ module PureCloud
         
         :'has_split_filters' => :'hasSplitFilters',
         
+        :'exclude_empty_rows' => :'excludeEmptyRows',
+        
+        :'has_split_by_media' => :'hasSplitByMedia',
+        
         :'selected_columns' => :'selectedColumns',
         
         :'has_custom_participant_attributes' => :'hasCustomParticipantAttributes',
@@ -133,6 +145,8 @@ module PureCloud
         :'recipient_emails' => :'recipientEmails',
         
         :'email_statuses' => :'emailStatuses',
+        
+        :'enabled' => :'enabled',
         
         :'self_uri' => :'selfUri'
         
@@ -179,6 +193,10 @@ module PureCloud
         
         :'has_split_filters' => :'BOOLEAN',
         
+        :'exclude_empty_rows' => :'BOOLEAN',
+        
+        :'has_split_by_media' => :'BOOLEAN',
+        
         :'selected_columns' => :'Array<SelectedColumns>',
         
         :'has_custom_participant_attributes' => :'BOOLEAN',
@@ -186,6 +204,8 @@ module PureCloud
         :'recipient_emails' => :'Array<String>',
         
         :'email_statuses' => :'Hash<String, String>',
+        
+        :'enabled' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -363,6 +383,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'excludeEmptyRows')
+        
+        
+        self.exclude_empty_rows = attributes[:'excludeEmptyRows']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'hasSplitByMedia')
+        
+        
+        self.has_split_by_media = attributes[:'hasSplitByMedia']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selectedColumns')
         
         if (value = attributes[:'selectedColumns']).is_a?(Array)
@@ -400,6 +438,15 @@ module PureCloud
           self.email_statuses = value
         end
         
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'enabled')
+        
+        
+        self.enabled = attributes[:'enabled']
         
       
       end
@@ -601,6 +648,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -755,6 +814,21 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -778,10 +852,13 @@ module PureCloud
           percentage_complete == o.percentage_complete &&
           has_format_durations == o.has_format_durations &&
           has_split_filters == o.has_split_filters &&
+          exclude_empty_rows == o.exclude_empty_rows &&
+          has_split_by_media == o.has_split_by_media &&
           selected_columns == o.selected_columns &&
           has_custom_participant_attributes == o.has_custom_participant_attributes &&
           recipient_emails == o.recipient_emails &&
           email_statuses == o.email_statuses &&
+          enabled == o.enabled &&
           self_uri == o.self_uri
     end
 
@@ -794,7 +871,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, has_format_durations, has_split_filters, selected_columns, has_custom_participant_attributes, recipient_emails, email_statuses, self_uri].hash
+      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, has_format_durations, has_split_filters, exclude_empty_rows, has_split_by_media, selected_columns, has_custom_participant_attributes, recipient_emails, email_statuses, enabled, self_uri].hash
     end
 
     # build the object from hash

@@ -19,7 +19,7 @@ require 'date'
 module PureCloud
   # Defines a SCIM resource.
   class ScimConfigResourceType
-    # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"Mutability\" is set to \"readOnly\". \"Returned\" is set to \"always\".
+    # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readOnly\". \"returned\" is set to \"always\".
     attr_accessor :id
 
     # The list of supported schemas.

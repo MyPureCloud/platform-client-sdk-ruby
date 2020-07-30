@@ -28,7 +28,7 @@ Method | Description
 
 <a name="delete_coaching_appointment"></a>
 
-##  delete_coaching_appointment(appointment_id)
+## [**CoachingAppointmentReference**](CoachingAppointmentReference.html) delete_coaching_appointment(appointment_id)
 
 
 
@@ -65,7 +65,8 @@ appointment_id = "appointment_id_example" # String | The ID of the coaching appo
 
 begin
   #Delete an existing appointment
-  api_instance.delete_coaching_appointment(appointment_id)
+  result = api_instance.delete_coaching_appointment(appointment_id)
+  p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling CoachingApi->delete_coaching_appointment: #{e}"
 end
@@ -81,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+[**CoachingAppointmentReference**](CoachingAppointmentReference.html)
 
 ### HTTP request headers
 
@@ -472,7 +473,7 @@ api_instance = PureCloud::CoachingApi.new
 user_ids = ["user_ids_example"] # Array<String> | The user IDs for which to retrieve appointments
 
 opts = { 
-  interval: "interval_example", # String | Interval string; format is ISO-8601. Separate start and end times with forward slash '/'
+  interval: "interval_example", # String | Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
   page_number: 1, # Integer | Page number
   page_size: 25, # Integer | Page size
   statuses: ["statuses_example"], # Array<String> | Appointment Statuses to filter by
@@ -494,7 +495,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_ids** | [**Array&lt;String&gt;**](String.html)| The user IDs for which to retrieve appointments |  |
- **interval** | **String**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional]  |
+ **interval** | **String**| Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **statuses** | [**Array&lt;String&gt;**](String.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed, InvalidSchedule |
@@ -548,7 +549,7 @@ end
 api_instance = PureCloud::CoachingApi.new
 
 opts = { 
-  interval: "interval_example", # String | Interval string; format is ISO-8601. Separate start and end times with forward slash '/'
+  interval: "interval_example", # String | Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
   page_number: 1, # Integer | Page number
   page_size: 25, # Integer | Page size
   statuses: ["statuses_example"], # Array<String> | Appointment Statuses to filter by
@@ -569,7 +570,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **interval** | **String**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional]  |
+ **interval** | **String**| Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **statuses** | [**Array&lt;String&gt;**](String.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed |

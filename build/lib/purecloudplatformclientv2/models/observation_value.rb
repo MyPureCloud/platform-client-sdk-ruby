@@ -63,8 +63,14 @@ module PureCloud
     # Dialed number identification service (number dialed by the calling party)
     attr_accessor :dnis
 
-    # The team Id the user is a member of
+    # The team id the user is a member of
     attr_accessor :team_id
+
+    # All routing types for requested/attempted routing methods
+    attr_accessor :requested_routings
+
+    # Complete routing method
+    attr_accessor :used_routing
 
     attr_accessor :scored_agents
 
@@ -103,6 +109,10 @@ module PureCloud
         :'dnis' => :'dnis',
         
         :'team_id' => :'teamId',
+        
+        :'requested_routings' => :'requestedRoutings',
+        
+        :'used_routing' => :'usedRouting',
         
         :'scored_agents' => :'scoredAgents'
         
@@ -144,6 +154,10 @@ module PureCloud
         :'dnis' => :'String',
         
         :'team_id' => :'String',
+        
+        :'requested_routings' => :'Array<String>',
+        
+        :'used_routing' => :'String',
         
         :'scored_agents' => :'Array<AnalyticsScoredAgent>'
         
@@ -305,6 +319,26 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'requestedRoutings')
+        
+        if (value = attributes[:'requestedRoutings']).is_a?(Array)
+          self.requested_routings = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'usedRouting')
+        
+        
+        self.used_routing = attributes[:'usedRouting']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'scoredAgents')
         
         if (value = attributes[:'scoredAgents']).is_a?(Array)
@@ -409,6 +443,19 @@ module PureCloud
       
       
       
+      
+      
+      allowed_values = ["Predictive", "Preferred", "Manual", "Last", "Bullseye", "Standard"]
+      if @used_routing && !allowed_values.include?(@used_routing)
+        return false
+      end
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -506,6 +553,25 @@ module PureCloud
     
     
     
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] used_routing Object to be assigned
+    def used_routing=(used_routing)
+      allowed_values = ["Predictive", "Preferred", "Manual", "Last", "Bullseye", "Standard"]
+      if used_routing && !allowed_values.include?(used_routing)
+        fail ArgumentError, "invalid value for 'used_routing', must be one of #{allowed_values}."
+      end
+      @used_routing = used_routing
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -527,6 +593,8 @@ module PureCloud
           ani == o.ani &&
           dnis == o.dnis &&
           team_id == o.team_id &&
+          requested_routings == o.requested_routings &&
+          used_routing == o.used_routing &&
           scored_agents == o.scored_agents
     end
 
@@ -539,7 +607,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [observation_date, conversation_id, session_id, requested_routing_skill_ids, requested_language_id, routing_priority, participant_name, user_id, direction, converted_from, converted_to, address_from, address_to, ani, dnis, team_id, scored_agents].hash
+      [observation_date, conversation_id, session_id, requested_routing_skill_ids, requested_language_id, routing_priority, participant_name, user_id, direction, converted_from, converted_to, address_from, address_to, ani, dnis, team_id, requested_routings, used_routing, scored_agents].hash
     end
 
     # build the object from hash

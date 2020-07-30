@@ -2844,8 +2844,8 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Associate an external contact with a conversation
-    # 
+    # Associate/disassociate an external contact with a conversation
+    # To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
     # @param conversation_id Conversation ID
     # @param body ConversationAssociation
     # @param [Hash] opts the optional parameters
@@ -2855,8 +2855,8 @@ module PureCloud
       return nil
     end
 
-    # Associate an external contact with a conversation
-    # 
+    # Associate/disassociate an external contact with a conversation
+    # To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
     # @param conversation_id Conversation ID
     # @param body ConversationAssociation
     # @param [Hash] opts the optional parameters

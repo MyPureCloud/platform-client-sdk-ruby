@@ -28,17 +28,17 @@ module PureCloud
     # Permission not required if you are the creator of the appointment
     # @param appointment_id The ID of the coaching appointment.
     # @param [Hash] opts the optional parameters
-    # @return [nil]
+    # @return [CoachingAppointmentReference]
     def delete_coaching_appointment(appointment_id, opts = {})
-      delete_coaching_appointment_with_http_info(appointment_id, opts)
-      return nil
+      data, _status_code, _headers = delete_coaching_appointment_with_http_info(appointment_id, opts)
+      return data
     end
 
     # Delete an existing appointment
     # Permission not required if you are the creator of the appointment
     # @param appointment_id The ID of the coaching appointment.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    # @return [Array<(CoachingAppointmentReference, Fixnum, Hash)>] CoachingAppointmentReference data, response status code and response headers
     def delete_coaching_appointment_with_http_info(appointment_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CoachingApi.delete_coaching_appointment ..."
@@ -81,7 +81,8 @@ module PureCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names)
+        :auth_names => auth_names,
+        :return_type => 'CoachingAppointmentReference')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CoachingApi#delete_coaching_appointment\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -472,7 +473,7 @@ module PureCloud
     # 
     # @param user_ids The user IDs for which to retrieve appointments
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :interval Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39;
+    # @option opts [String] :interval Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Array<String>] :statuses Appointment Statuses to filter by
@@ -488,7 +489,7 @@ module PureCloud
     # 
     # @param user_ids The user IDs for which to retrieve appointments
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :interval Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39;
+    # @option opts [String] :interval Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
     # @option opts [Integer] :page_number Page number
     # @option opts [Integer] :page_size Page size
     # @option opts [Array<String>] :statuses Appointment Statuses to filter by
@@ -595,7 +596,7 @@ module PureCloud
     # Get my appointments for a given date range
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :interval Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39;
+    # @option opts [String] :interval Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Array<String>] :statuses Appointment Statuses to filter by
@@ -610,7 +611,7 @@ module PureCloud
     # Get my appointments for a given date range
     # 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :interval Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39;
+    # @option opts [String] :interval Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
     # @option opts [Integer] :page_number Page number
     # @option opts [Integer] :page_size Page size
     # @option opts [Array<String>] :statuses Appointment Statuses to filter by

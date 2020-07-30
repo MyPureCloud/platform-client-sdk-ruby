@@ -30,6 +30,9 @@ module PureCloud
     # The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :modified_date
 
+    # Whether email notifications are sent to the user when a new voicemail is received
+    attr_accessor :send_email_notifications
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -40,7 +43,9 @@ module PureCloud
         
         :'pin' => :'pin',
         
-        :'modified_date' => :'modifiedDate'
+        :'modified_date' => :'modifiedDate',
+        
+        :'send_email_notifications' => :'sendEmailNotifications'
         
       }
     end
@@ -55,7 +60,9 @@ module PureCloud
         
         :'pin' => :'String',
         
-        :'modified_date' => :'DateTime'
+        :'modified_date' => :'DateTime',
+        
+        :'send_email_notifications' => :'BOOLEAN'
         
       }
     end
@@ -105,6 +112,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'sendEmailNotifications')
+        
+        
+        self.send_email_notifications = attributes[:'sendEmailNotifications']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -136,8 +152,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -167,7 +192,8 @@ module PureCloud
           enabled == o.enabled &&
           alert_timeout_seconds == o.alert_timeout_seconds &&
           pin == o.pin &&
-          modified_date == o.modified_date
+          modified_date == o.modified_date &&
+          send_email_notifications == o.send_email_notifications
     end
 
     # @see the `==` method
@@ -179,7 +205,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [enabled, alert_timeout_seconds, pin, modified_date].hash
+      [enabled, alert_timeout_seconds, pin, modified_date, send_email_notifications].hash
     end
 
     # build the object from hash

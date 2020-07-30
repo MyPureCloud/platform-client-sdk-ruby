@@ -25,6 +25,9 @@ module PureCloud
     # Deprecated. Use downloadUrls instead.
     attr_accessor :download_url
 
+    # Result will always come via downloadUrls; however the schema is included for documentation
+    attr_accessor :download_result
+
     # The uri list to GET the results of the Historical Adherence query. For notification purposes only
     attr_accessor :download_urls
 
@@ -38,6 +41,8 @@ module PureCloud
         :'id' => :'id',
         
         :'download_url' => :'downloadUrl',
+        
+        :'download_result' => :'downloadResult',
         
         :'download_urls' => :'downloadUrls',
         
@@ -53,6 +58,8 @@ module PureCloud
         :'id' => :'String',
         
         :'download_url' => :'String',
+        
+        :'download_result' => :'WfmHistoricalAdherenceResultWrapper',
         
         :'download_urls' => :'Array<String>',
         
@@ -83,6 +90,15 @@ module PureCloud
         
         
         self.download_url = attributes[:'downloadUrl']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'downloadResult')
+        
+        
+        self.download_result = attributes[:'downloadResult']
         
       
       end
@@ -137,6 +153,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["Processing", "Complete", "Error"]
       if @query_state && !allowed_values.include?(@query_state)
         return false
@@ -146,6 +166,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -183,6 +208,7 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           download_url == o.download_url &&
+          download_result == o.download_result &&
           download_urls == o.download_urls &&
           query_state == o.query_state
     end
@@ -196,7 +222,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, download_url, download_urls, query_state].hash
+      [id, download_url, download_result, download_urls, query_state].hash
     end
 
     # build the object from hash

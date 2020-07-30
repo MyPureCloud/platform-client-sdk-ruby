@@ -17,18 +17,18 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # A SCIM schema definition.
+  # Defines a SCIM schema.
   class ScimV2SchemaDefinition
-    # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"Mutability\" is set to \"readOnly\". \"Returned\" is set to \"always\".
+    # The ID of the SCIM resource. Set by the service provider. \"caseExact\" is set to \"true\". \"mutability\" is set to \"readOnly\". \"returned\" is set to \"always\".
     attr_accessor :id
 
-    # Schema name.
+    # The name of the schema.
     attr_accessor :name
 
-    # Schema description.
+    # The description of the schema.
     attr_accessor :description
 
-    # A complex type that defines service provider attributes and their qualities.
+    # The list of service provider attributes.
     attr_accessor :attributes
 
     # The metadata of the SCIM resource.

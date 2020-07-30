@@ -10,6 +10,7 @@ title: ConversationEventTopicMessage
 | **id** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **held** | **BOOLEAN** |  | [optional] |
+| **error_info** | [**ConversationEventTopicErrorDetails**](ConversationEventTopicErrorDetails.html) |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **script_id** | **String** |  | [optional] |
 | **peer_id** | **String** |  | [optional] |

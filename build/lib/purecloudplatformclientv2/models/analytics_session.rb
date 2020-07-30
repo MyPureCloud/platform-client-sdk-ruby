@@ -170,6 +170,18 @@ module PureCloud
     # Type of flow out that occurred, e.g. voicemail, callback, or acd
     attr_accessor :flow_out_type
 
+    # All routing types for requested/attempted routing methods.
+    attr_accessor :requested_routings
+
+    # Complete routing method
+    attr_accessor :used_routing
+
+    # Selected agent id
+    attr_accessor :selected_agent_id
+
+    # Selected agent GPR rank
+    attr_accessor :selected_agent_rank
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -278,7 +290,15 @@ module PureCloud
         
         :'media_count' => :'mediaCount',
         
-        :'flow_out_type' => :'flowOutType'
+        :'flow_out_type' => :'flowOutType',
+        
+        :'requested_routings' => :'requestedRoutings',
+        
+        :'used_routing' => :'usedRouting',
+        
+        :'selected_agent_id' => :'selectedAgentId',
+        
+        :'selected_agent_rank' => :'selectedAgentRank'
         
       }
     end
@@ -391,7 +411,15 @@ module PureCloud
         
         :'media_count' => :'Integer',
         
-        :'flow_out_type' => :'String'
+        :'flow_out_type' => :'String',
+        
+        :'requested_routings' => :'Array<String>',
+        
+        :'used_routing' => :'String',
+        
+        :'selected_agent_id' => :'String',
+        
+        :'selected_agent_rank' => :'Integer'
         
       }
     end
@@ -890,6 +918,44 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'requestedRoutings')
+        
+        if (value = attributes[:'requestedRoutings']).is_a?(Array)
+          self.requested_routings = value
+        end
+        
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'usedRouting')
+        
+        
+        self.used_routing = attributes[:'usedRouting']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selectedAgentId')
+        
+        
+        self.selected_agent_id = attributes[:'selectedAgentId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'selectedAgentRank')
+        
+        
+        self.selected_agent_rank = attributes[:'selectedAgentRank']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -1121,6 +1187,27 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      allowed_values = ["Predictive", "Preferred", "Manual", "Last", "Bullseye", "Standard"]
+      if @used_routing && !allowed_values.include?(@used_routing)
+        return false
+      end
       
       
       
@@ -1427,6 +1514,35 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] used_routing Object to be assigned
+    def used_routing=(used_routing)
+      allowed_values = ["Predictive", "Preferred", "Manual", "Last", "Bullseye", "Standard"]
+      if used_routing && !allowed_values.include?(used_routing)
+        fail ArgumentError, "invalid value for 'used_routing', must be one of #{allowed_values}."
+      end
+      @used_routing = used_routing
+    end
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1484,7 +1600,11 @@ module PureCloud
           provider == o.provider &&
           remote == o.remote &&
           media_count == o.media_count &&
-          flow_out_type == o.flow_out_type
+          flow_out_type == o.flow_out_type &&
+          requested_routings == o.requested_routings &&
+          used_routing == o.used_routing &&
+          selected_agent_id == o.selected_agent_id &&
+          selected_agent_rank == o.selected_agent_rank
     end
 
     # @see the `==` method
@@ -1496,7 +1616,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, session_dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording, journey_customer_id, journey_customer_id_type, journey_customer_session_id, journey_customer_session_id_type, journey_action_id, journey_action_map_id, journey_action_map_version, protocol_call_id, provider, remote, media_count, flow_out_type].hash
+      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, session_dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording, journey_customer_id, journey_customer_id_type, journey_customer_session_id, journey_customer_session_id_type, journey_action_id, journey_action_map_id, journey_action_map_version, protocol_call_id, provider, remote, media_count, flow_out_type, requested_routings, used_routing, selected_agent_id, selected_agent_rank].hash
     end
 
     # build the object from hash

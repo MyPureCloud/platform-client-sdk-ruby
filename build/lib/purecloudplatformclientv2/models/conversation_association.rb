@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class ConversationAssociation
-    # External Contact ID
+    # An external contact ID.  If not supplied, implies the conversation should be disassociated with any external contact.
     attr_accessor :external_contact_id
 
     # Conversation ID

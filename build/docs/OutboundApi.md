@@ -20,6 +20,7 @@ Method | Description
 [**delete_outbound_contactlistfilter**](OutboundApi.html#delete_outbound_contactlistfilter) | Delete Contact List Filter
 [**delete_outbound_contactlists**](OutboundApi.html#delete_outbound_contactlists) | Delete multiple contact lists.
 [**delete_outbound_dnclist**](OutboundApi.html#delete_outbound_dnclist) | Delete dialer DNC list
+[**delete_outbound_messagingcampaign**](OutboundApi.html#delete_outbound_messagingcampaign) | Delete an Outbound Messaging Campaign
 [**delete_outbound_ruleset**](OutboundApi.html#delete_outbound_ruleset) | Delete a Rule set.
 [**delete_outbound_schedules_campaign**](OutboundApi.html#delete_outbound_schedules_campaign) | Delete a dialer campaign schedule.
 [**delete_outbound_schedules_sequence**](OutboundApi.html#delete_outbound_schedules_sequence) | Delete a dialer sequence schedule.
@@ -38,6 +39,8 @@ Method | Description
 [**get_outbound_campaignrule**](OutboundApi.html#get_outbound_campaignrule) | Get Campaign Rule
 [**get_outbound_campaignrules**](OutboundApi.html#get_outbound_campaignrules) | Query Campaign Rule list
 [**get_outbound_campaigns**](OutboundApi.html#get_outbound_campaigns) | Query a list of dialer campaigns.
+[**get_outbound_campaigns_all**](OutboundApi.html#get_outbound_campaigns_all) | Query across all types of campaigns by division
+[**get_outbound_campaigns_all_divisionviews**](OutboundApi.html#get_outbound_campaigns_all_divisionviews) | Query across all types of campaigns
 [**get_outbound_campaigns_divisionview**](OutboundApi.html#get_outbound_campaigns_divisionview) | Get a basic Campaign information object
 [**get_outbound_campaigns_divisionviews**](OutboundApi.html#get_outbound_campaigns_divisionviews) | Query a list of basic Campaign information objects
 [**get_outbound_contactlist**](OutboundApi.html#get_outbound_contactlist) | Get a dialer contact list.
@@ -58,6 +61,11 @@ Method | Description
 [**get_outbound_dnclists_divisionviews**](OutboundApi.html#get_outbound_dnclists_divisionviews) | Query a list of simplified dnc list objects.
 [**get_outbound_event**](OutboundApi.html#get_outbound_event) | Get Dialer Event
 [**get_outbound_events**](OutboundApi.html#get_outbound_events) | Query Event Logs
+[**get_outbound_messagingcampaign**](OutboundApi.html#get_outbound_messagingcampaign) | Get an Outbound Messaging Campaign
+[**get_outbound_messagingcampaign_progress**](OutboundApi.html#get_outbound_messagingcampaign_progress) | Get messaging campaign&#39;s progress
+[**get_outbound_messagingcampaigns**](OutboundApi.html#get_outbound_messagingcampaigns) | Query a list of Messaging Campaigns
+[**get_outbound_messagingcampaigns_divisionview**](OutboundApi.html#get_outbound_messagingcampaigns_divisionview) | Get a basic Messaging Campaign information object
+[**get_outbound_messagingcampaigns_divisionviews**](OutboundApi.html#get_outbound_messagingcampaigns_divisionviews) | Query a list of basic Messaging Campaign information objects
 [**get_outbound_ruleset**](OutboundApi.html#get_outbound_ruleset) | Get a Rule Set by ID.
 [**get_outbound_rulesets**](OutboundApi.html#get_outbound_rulesets) | Query a list of Rule Sets.
 [**get_outbound_schedules_campaign**](OutboundApi.html#get_outbound_schedules_campaign) | Get a dialer campaign schedule.
@@ -88,6 +96,8 @@ Method | Description
 [**post_outbound_dnclist_export**](OutboundApi.html#post_outbound_dnclist_export) | Initiate the export of a dnc list.
 [**post_outbound_dnclist_phonenumbers**](OutboundApi.html#post_outbound_dnclist_phonenumbers) | Add phone numbers to a Dialer DNC list.
 [**post_outbound_dnclists**](OutboundApi.html#post_outbound_dnclists) | Create dialer DNC list
+[**post_outbound_messagingcampaigns**](OutboundApi.html#post_outbound_messagingcampaigns) | Create a Messaging Campaign
+[**post_outbound_messagingcampaigns_progress**](OutboundApi.html#post_outbound_messagingcampaigns_progress) | Get progress for a list of messaging campaigns
 [**post_outbound_rulesets**](OutboundApi.html#post_outbound_rulesets) | Create a Dialer Call Analysis Response Set.
 [**post_outbound_sequences**](OutboundApi.html#post_outbound_sequences) | Create a new campaign sequence.
 [**put_outbound_attemptlimit**](OutboundApi.html#put_outbound_attemptlimit) | Update attempt limits
@@ -100,6 +110,7 @@ Method | Description
 [**put_outbound_contactlist_contact**](OutboundApi.html#put_outbound_contactlist_contact) | Update a contact.
 [**put_outbound_contactlistfilter**](OutboundApi.html#put_outbound_contactlistfilter) | Update Contact List Filter
 [**put_outbound_dnclist**](OutboundApi.html#put_outbound_dnclist) | Update dialer DNC list
+[**put_outbound_messagingcampaign**](OutboundApi.html#put_outbound_messagingcampaign) | Update an Outbound Messaging Campaign
 [**put_outbound_ruleset**](OutboundApi.html#put_outbound_ruleset) | Update a RuleSet.
 [**put_outbound_schedules_campaign**](OutboundApi.html#put_outbound_schedules_campaign) | Update a new campaign schedule.
 [**put_outbound_schedules_sequence**](OutboundApi.html#put_outbound_schedules_sequence) | Update a new sequence schedule.
@@ -882,6 +893,71 @@ nil (empty response body)
 
 
 
+<a name="delete_outbound_messagingcampaign"></a>
+
+## [**MessagingCampaign**](MessagingCampaign.html) delete_outbound_messagingcampaign(messaging_campaign_id)
+
+
+
+Delete an Outbound Messaging Campaign
+
+
+
+Wraps DELETE /api/v2/outbound/messagingcampaigns/{messagingCampaignId} 
+
+Requires ANY permissions: 
+
+* outbound:campaign:delete
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+messaging_campaign_id = "messaging_campaign_id_example" # String | The Messaging Campaign ID
+
+
+begin
+  #Delete an Outbound Messaging Campaign
+  result = api_instance.delete_outbound_messagingcampaign(messaging_campaign_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->delete_outbound_messagingcampaign: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messaging_campaign_id** | **String**| The Messaging Campaign ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="delete_outbound_ruleset"></a>
 
 ##  delete_outbound_ruleset(rule_set_id)
@@ -1240,6 +1316,7 @@ api_instance = PureCloud::OutboundApi.new
 opts = { 
   page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
+  allow_empty_result: false, # BOOLEAN | Whether to return an empty page when there are no results for that page
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
   sort_by: "sort_by_example", # String | Sort by
@@ -1261,6 +1338,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **allow_empty_result** | **BOOLEAN**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
  **sort_by** | **String**| Sort by | [optional]  |
@@ -1381,6 +1459,7 @@ api_instance = PureCloud::OutboundApi.new
 opts = { 
   page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
+  allow_empty_result: false, # BOOLEAN | Whether to return an empty page when there are no results for that page
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
   sort_by: "sort_by_example", # String | Sort by
@@ -1402,6 +1481,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **allow_empty_result** | **BOOLEAN**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
  **sort_by** | **String**| Sort by | [optional]  |
@@ -1522,6 +1602,7 @@ api_instance = PureCloud::OutboundApi.new
 opts = { 
   page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
+  allow_empty_result: false, # BOOLEAN | Whether to return an empty page when there are no results for that page
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
   sort_by: "sort_by_example", # String | Sort by
@@ -1543,6 +1624,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **allow_empty_result** | **BOOLEAN**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
  **sort_by** | **String**| Sort by | [optional]  |
@@ -1988,6 +2070,7 @@ api_instance = PureCloud::OutboundApi.new
 opts = { 
   page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
+  allow_empty_result: false, # BOOLEAN | Whether to return an empty page when there are no results for that page
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
   sort_by: "sort_by_example", # String | Sort by
@@ -2009,6 +2092,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **allow_empty_result** | **BOOLEAN**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
  **sort_by** | **String**| Sort by | [optional]  |
@@ -2109,6 +2193,164 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CampaignEntityListing**](CampaignEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_outbound_campaigns_all"></a>
+
+## [**CommonCampaignEntityListing**](CommonCampaignEntityListing.html) get_outbound_campaigns_all(opts)
+
+
+
+Query across all types of campaigns by division
+
+
+
+Wraps GET /api/v2/outbound/campaigns/all 
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
+* outbound:messagingCampaign:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  id: ["id_example"], # Array<String> | Campaign ID(s)
+  name: "name_example", # String | Campaign name(s)
+  division_id: ["division_id_example"], # Array<String> | Division ID(s)
+  media_type: ["media_type_example"], # Array<String> | Media type(s)
+  sort_order: "a" # String | Sort order
+}
+
+begin
+  #Query across all types of campaigns by division
+  result = api_instance.get_outbound_campaigns_all(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_campaigns_all: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **id** | [**Array&lt;String&gt;**](String.html)| Campaign ID(s) | [optional]  |
+ **name** | **String**| Campaign name(s) | [optional]  |
+ **division_id** | [**Array&lt;String&gt;**](String.html)| Division ID(s) | [optional]  |
+ **media_type** | [**Array&lt;String&gt;**](String.html)| Media type(s) | [optional] <br />**Values**: sms, voice |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CommonCampaignEntityListing**](CommonCampaignEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_outbound_campaigns_all_divisionviews"></a>
+
+## [**CommonCampaignDivisionViewEntityListing**](CommonCampaignDivisionViewEntityListing.html) get_outbound_campaigns_all_divisionviews(opts)
+
+
+
+Query across all types of campaigns
+
+
+
+Wraps GET /api/v2/outbound/campaigns/all/divisionviews 
+
+Requires ANY permissions: 
+
+* outbound:campaign:search
+* outbound:messagingCampaign:search
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size
+  page_number: 1, # Integer | Page number
+  id: ["id_example"], # Array<String> | Campaign ID(s)
+  name: "name_example", # String | Campaign name(s)
+  division_id: ["division_id_example"], # Array<String> | Division ID(s)
+  media_type: ["media_type_example"], # Array<String> | Media type(s)
+  sort_order: "a" # String | Sort order
+}
+
+begin
+  #Query across all types of campaigns
+  result = api_instance.get_outbound_campaigns_all_divisionviews(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_campaigns_all_divisionviews: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **id** | [**Array&lt;String&gt;**](String.html)| Campaign ID(s) | [optional]  |
+ **name** | **String**| Campaign name(s) | [optional]  |
+ **division_id** | [**Array&lt;String&gt;**](String.html)| Division ID(s) | [optional]  |
+ **media_type** | [**Array&lt;String&gt;**](String.html)| Media type(s) | [optional] <br />**Values**: sms, voice |
+ **sort_order** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CommonCampaignDivisionViewEntityListing**](CommonCampaignDivisionViewEntityListing.html)
 
 ### HTTP request headers
 
@@ -2701,6 +2943,7 @@ api_instance = PureCloud::OutboundApi.new
 opts = { 
   page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
+  allow_empty_result: false, # BOOLEAN | Whether to return an empty page when there are no results for that page
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
   sort_by: "sort_by_example", # String | Sort by
@@ -2723,6 +2966,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **allow_empty_result** | **BOOLEAN**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
  **sort_by** | **String**| Sort by | [optional]  |
@@ -2781,6 +3025,7 @@ opts = {
   include_size: false, # BOOLEAN | Include size
   page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
+  allow_empty_result: false, # BOOLEAN | Whether to return an empty page when there are no results for that page
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
   id: ["id_example"], # Array<String> | id
@@ -2806,6 +3051,7 @@ Name | Type | Description  | Notes
  **include_size** | **BOOLEAN**| Include size | [optional] [default to false] |
  **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **allow_empty_result** | **BOOLEAN**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
  **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
@@ -3224,6 +3470,7 @@ opts = {
   include_size: false, # BOOLEAN | Include size
   page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
+  allow_empty_result: false, # BOOLEAN | Whether to return an empty page when there are no results for that page
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
   dnc_source_type: "dnc_source_type_example", # String | DncSourceType
@@ -3249,6 +3496,7 @@ Name | Type | Description  | Notes
  **include_size** | **BOOLEAN**| Include size | [optional] [default to false] |
  **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **allow_empty_result** | **BOOLEAN**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
  **dnc_source_type** | **String**| DncSourceType | [optional] <br />**Values**: rds, dnc.com, gryphon |
@@ -3565,6 +3813,361 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_outbound_messagingcampaign"></a>
+
+## [**MessagingCampaign**](MessagingCampaign.html) get_outbound_messagingcampaign(messaging_campaign_id)
+
+
+
+Get an Outbound Messaging Campaign
+
+
+
+Wraps GET /api/v2/outbound/messagingcampaigns/{messagingCampaignId} 
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+messaging_campaign_id = "messaging_campaign_id_example" # String | The Messaging Campaign ID
+
+
+begin
+  #Get an Outbound Messaging Campaign
+  result = api_instance.get_outbound_messagingcampaign(messaging_campaign_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_messagingcampaign: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messaging_campaign_id** | **String**| The Messaging Campaign ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_outbound_messagingcampaign_progress"></a>
+
+## [**CampaignProgress**](CampaignProgress.html) get_outbound_messagingcampaign_progress(messaging_campaign_id)
+
+
+
+Get messaging campaign's progress
+
+
+
+Wraps GET /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress 
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+messaging_campaign_id = "messaging_campaign_id_example" # String | The Messaging Campaign ID
+
+
+begin
+  #Get messaging campaign's progress
+  result = api_instance.get_outbound_messagingcampaign_progress(messaging_campaign_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_messagingcampaign_progress: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messaging_campaign_id** | **String**| The Messaging Campaign ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CampaignProgress**](CampaignProgress.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_outbound_messagingcampaigns"></a>
+
+## [**MessagingCampaignEntityListing**](MessagingCampaignEntityListing.html) get_outbound_messagingcampaigns(opts)
+
+
+
+Query a list of Messaging Campaigns
+
+
+
+Wraps GET /api/v2/outbound/messagingcampaigns 
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
+  page_number: 1, # Integer | Page number
+  sort_by: "name", # String | The field to sort by
+  sort_order: "ascending", # String | The direction to sort
+  name: "name_example", # String | Name
+  contact_list_id: "contact_list_id_example", # String | Contact List ID
+  division_id: ["division_id_example"], # Array<String> | Division ID(s)
+  type: "type_example", # String | Campaign Type
+  sender_sms_phone_number: "sender_sms_phone_number_example", # String | Sender SMS Phone Number
+  id: ["id_example"] # Array<String> | A list of messaging campaign ids to bulk fetch
+}
+
+begin
+  #Query a list of Messaging Campaigns
+  result = api_instance.get_outbound_messagingcampaigns(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_messagingcampaigns: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_by** | **String**| The field to sort by | [optional] [default to name]<br />**Values**: campaignStatus, name, type |
+ **sort_order** | **String**| The direction to sort | [optional] [default to ascending]<br />**Values**: ascending, descending |
+ **name** | **String**| Name | [optional]  |
+ **contact_list_id** | **String**| Contact List ID | [optional]  |
+ **division_id** | [**Array&lt;String&gt;**](String.html)| Division ID(s) | [optional]  |
+ **type** | **String**| Campaign Type | [optional] <br />**Values**: SMS |
+ **sender_sms_phone_number** | **String**| Sender SMS Phone Number | [optional]  |
+ **id** | [**Array&lt;String&gt;**](String.html)| A list of messaging campaign ids to bulk fetch | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessagingCampaignEntityListing**](MessagingCampaignEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_outbound_messagingcampaigns_divisionview"></a>
+
+## [**MessagingCampaignDivisionView**](MessagingCampaignDivisionView.html) get_outbound_messagingcampaigns_divisionview(messaging_campaign_id)
+
+
+
+Get a basic Messaging Campaign information object
+
+This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
+
+Wraps GET /api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId} 
+
+Requires ALL permissions: 
+
+* outbound:messagingCampaign:search
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+messaging_campaign_id = "messaging_campaign_id_example" # String | The Messaging Campaign ID
+
+
+begin
+  #Get a basic Messaging Campaign information object
+  result = api_instance.get_outbound_messagingcampaigns_divisionview(messaging_campaign_id)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_messagingcampaigns_divisionview: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messaging_campaign_id** | **String**| The Messaging Campaign ID |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessagingCampaignDivisionView**](MessagingCampaignDivisionView.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_outbound_messagingcampaigns_divisionviews"></a>
+
+## [**MessagingCampaignDivisionViewEntityListing**](MessagingCampaignDivisionViewEntityListing.html) get_outbound_messagingcampaigns_divisionviews(opts)
+
+
+
+Query a list of basic Messaging Campaign information objects
+
+This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
+
+Wraps GET /api/v2/outbound/messagingcampaigns/divisionviews 
+
+Requires ALL permissions: 
+
+* outbound:messagingCampaign:search
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+opts = { 
+  page_size: 25, # Integer | Page size. The max that will be returned is 100.
+  page_number: 1, # Integer | Page number
+  sort_order: "a", # String | The direction to sort
+  name: "name_example", # String | Name
+  id: ["id_example"], # Array<String> | id
+  sender_sms_phone_number: "sender_sms_phone_number_example" # String | Sender SMS Phone Number
+}
+
+begin
+  #Query a list of basic Messaging Campaign information objects
+  result = api_instance.get_outbound_messagingcampaigns_divisionviews(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->get_outbound_messagingcampaigns_divisionviews: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
+ **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **sort_order** | **String**| The direction to sort | [optional] [default to a]<br />**Values**: ascending, descending |
+ **name** | **String**| Name | [optional]  |
+ **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
+ **sender_sms_phone_number** | **String**| Sender SMS Phone Number | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessagingCampaignDivisionViewEntityListing**](MessagingCampaignDivisionViewEntityListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="get_outbound_ruleset"></a>
 
 ## [**RuleSet**](RuleSet.html) get_outbound_ruleset(rule_set_id)
@@ -3667,6 +4270,7 @@ api_instance = PureCloud::OutboundApi.new
 opts = { 
   page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
+  allow_empty_result: false, # BOOLEAN | Whether to return an empty page when there are no results for that page
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
   sort_by: "sort_by_example", # String | Sort by
@@ -3688,6 +4292,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **allow_empty_result** | **BOOLEAN**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
  **sort_by** | **String**| Sort by | [optional]  |
@@ -4056,6 +4661,7 @@ api_instance = PureCloud::OutboundApi.new
 opts = { 
   page_size: 25, # Integer | Page size. The max that will be returned is 100.
   page_number: 1, # Integer | Page number
+  allow_empty_result: false, # BOOLEAN | Whether to return an empty page when there are no results for that page
   filter_type: "Prefix", # String | Filter type
   name: "name_example", # String | Name
   sort_by: "sort_by_example", # String | Sort by
@@ -4077,6 +4683,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **Integer**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
+ **allow_empty_result** | **BOOLEAN**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
  **filter_type** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
  **name** | **String**| Name | [optional]  |
  **sort_by** | **String**| Sort by | [optional]  |
@@ -5542,6 +6149,136 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_outbound_messagingcampaigns"></a>
+
+## [**MessagingCampaign**](MessagingCampaign.html) post_outbound_messagingcampaigns(body)
+
+
+
+Create a Messaging Campaign
+
+
+
+Wraps POST /api/v2/outbound/messagingcampaigns 
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:add
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+body = PureCloud::MessagingCampaign.new # MessagingCampaign | Messaging Campaign
+
+
+begin
+  #Create a Messaging Campaign
+  result = api_instance.post_outbound_messagingcampaigns(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->post_outbound_messagingcampaigns: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**MessagingCampaign**](MessagingCampaign.html)| Messaging Campaign |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_outbound_messagingcampaigns_progress"></a>
+
+## [**Array&lt;CampaignProgress&gt;**](CampaignProgress.html) post_outbound_messagingcampaigns_progress(body)
+
+
+
+Get progress for a list of messaging campaigns
+
+
+
+Wraps POST /api/v2/outbound/messagingcampaigns/progress 
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+body = [PureCloud::Array<String>.new] # Array<String> | Messaging Campaign IDs
+
+
+begin
+  #Get progress for a list of messaging campaigns
+  result = api_instance.post_outbound_messagingcampaigns_progress(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->post_outbound_messagingcampaigns_progress: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **Array&lt;String&gt;**| Messaging Campaign IDs |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**Array&lt;CampaignProgress&gt;**](CampaignProgress.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_outbound_rulesets"></a>
 
 ## [**RuleSet**](RuleSet.html) post_outbound_rulesets(body)
@@ -6349,6 +7086,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DncList**](DncList.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="put_outbound_messagingcampaign"></a>
+
+## [**MessagingCampaign**](MessagingCampaign.html) put_outbound_messagingcampaign(messaging_campaign_id, body)
+
+
+
+Update an Outbound Messaging Campaign
+
+
+
+Wraps PUT /api/v2/outbound/messagingcampaigns/{messagingCampaignId} 
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::OutboundApi.new
+
+messaging_campaign_id = "messaging_campaign_id_example" # String | The Messaging Campaign ID
+
+body = PureCloud::MessagingCampaign.new # MessagingCampaign | MessagingCampaign
+
+
+begin
+  #Update an Outbound Messaging Campaign
+  result = api_instance.put_outbound_messagingcampaign(messaging_campaign_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling OutboundApi->put_outbound_messagingcampaign: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messaging_campaign_id** | **String**| The Messaging Campaign ID |  |
+ **body** | [**MessagingCampaign**](MessagingCampaign.html)| MessagingCampaign |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
 
 ### HTTP request headers
 

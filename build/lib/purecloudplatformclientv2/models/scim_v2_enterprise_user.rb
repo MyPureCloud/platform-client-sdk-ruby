@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Defines an SCIM enterprise user.
+  # Defines a SCIM enterprise user.
   class ScimV2EnterpriseUser
     # The division that the user belongs to.
     attr_accessor :division

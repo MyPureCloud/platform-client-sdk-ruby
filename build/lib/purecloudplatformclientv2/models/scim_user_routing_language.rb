@@ -17,12 +17,12 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Routing language assigned to user.
+  # The routing language assigned to a user.
   class ScimUserRoutingLanguage
-    # Case-sensitive name identifying a language configured in routing languages.
+    # The case-sensitive name of a routing language configured in Genesys Cloud.
     attr_accessor :name
 
-    # Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \"Best available language\" mode to allow acd interactions to target agents with higher proficiency ratings.
+    # A rating from 0.0 to 5.0 that indicates how fluent an agent is in a particular language. ACD interactions are routed to agents with higher proficiency ratings.
     attr_accessor :proficiency
 
     # Attribute mapping from ruby-style variable name to JSON key.

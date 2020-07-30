@@ -17,20 +17,20 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Represents an organization langauge assigned to a user. When assigning to a user specify the organization language id as the id.
+  # Represents an organization language assigned to a user. When assigning to a user specify the organization language id as the id.
   class UserRoutingLanguage
     # The globally unique identifier for the object.
     attr_accessor :id
 
     attr_accessor :name
 
-    # Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \"Best available language\" mode to allow acd interactions to target agents with higher proficiency ratings.
+    # A rating from 0.0 to 5.0 that indicates how fluent an agent is in a particular language. ACD interactions are routed to agents with higher proficiency ratings.
     attr_accessor :proficiency
 
-    # Activate or deactivate this routing langauge.
+    # Activate or deactivate this routing language.
     attr_accessor :state
 
-    # URI to the organization language used by this user langauge.
+    # URI to the organization language used by this user language.
     attr_accessor :language_uri
 
     # The URI for this object

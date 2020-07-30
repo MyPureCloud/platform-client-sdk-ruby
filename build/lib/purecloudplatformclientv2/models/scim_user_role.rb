@@ -19,7 +19,7 @@ require 'date'
 module PureCloud
   # Defines a user role.
   class ScimUserRole
-    # Purecloud user role name
+    # The role of the Genesys Cloud user.
     attr_accessor :value
 
     # Attribute mapping from ruby-style variable name to JSON key.

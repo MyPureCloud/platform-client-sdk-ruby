@@ -51,6 +51,12 @@ module PureCloud
     # Indicates if filters will be split in aggregate detail exports
     attr_accessor :has_split_filters
 
+    # Excludes empty rows from the exports
+    attr_accessor :exclude_empty_rows
+
+    # Indicates if media type will be split in aggregate detail exports
+    attr_accessor :has_split_by_media
+
     # The list of ordered selected columns from the export view by the user
     attr_accessor :selected_columns
 
@@ -86,6 +92,10 @@ module PureCloud
         
         :'has_split_filters' => :'hasSplitFilters',
         
+        :'exclude_empty_rows' => :'excludeEmptyRows',
+        
+        :'has_split_by_media' => :'hasSplitByMedia',
+        
         :'selected_columns' => :'selectedColumns',
         
         :'has_custom_participant_attributes' => :'hasCustomParticipantAttributes',
@@ -120,6 +130,10 @@ module PureCloud
         :'has_format_durations' => :'BOOLEAN',
         
         :'has_split_filters' => :'BOOLEAN',
+        
+        :'exclude_empty_rows' => :'BOOLEAN',
+        
+        :'has_split_by_media' => :'BOOLEAN',
         
         :'selected_columns' => :'Array<SelectedColumns>',
         
@@ -233,6 +247,24 @@ module PureCloud
         
         
         self.has_split_filters = attributes[:'hasSplitFilters']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'excludeEmptyRows')
+        
+        
+        self.exclude_empty_rows = attributes[:'excludeEmptyRows']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'hasSplitByMedia')
+        
+        
+        self.has_split_by_media = attributes[:'hasSplitByMedia']
         
       
       end
@@ -390,6 +422,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -481,6 +521,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -497,6 +547,8 @@ module PureCloud
           locale == o.locale &&
           has_format_durations == o.has_format_durations &&
           has_split_filters == o.has_split_filters &&
+          exclude_empty_rows == o.exclude_empty_rows &&
+          has_split_by_media == o.has_split_by_media &&
           selected_columns == o.selected_columns &&
           has_custom_participant_attributes == o.has_custom_participant_attributes &&
           recipient_emails == o.recipient_emails
@@ -511,7 +563,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, time_zone, export_format, interval, period, view_type, filter, read, locale, has_format_durations, has_split_filters, selected_columns, has_custom_participant_attributes, recipient_emails].hash
+      [name, time_zone, export_format, interval, period, view_type, filter, read, locale, has_format_durations, has_split_filters, exclude_empty_rows, has_split_by_media, selected_columns, has_custom_participant_attributes, recipient_emails].hash
     end
 
     # build the object from hash

@@ -24,6 +24,8 @@ module PureCloud
 
     attr_accessor :held
 
+    attr_accessor :error_info
+
     attr_accessor :provider
 
     attr_accessor :script_id
@@ -65,6 +67,8 @@ module PureCloud
         :'state' => :'state',
         
         :'held' => :'held',
+        
+        :'error_info' => :'errorInfo',
         
         :'provider' => :'provider',
         
@@ -110,6 +114,8 @@ module PureCloud
         :'state' => :'String',
         
         :'held' => :'BOOLEAN',
+        
+        :'error_info' => :'QueueConversationEventTopicErrorDetails',
         
         :'provider' => :'String',
         
@@ -177,6 +183,15 @@ module PureCloud
         
         
         self.held = attributes[:'held']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'errorInfo')
+        
+        
+        self.error_info = attributes[:'errorInfo']
         
       
       end
@@ -374,6 +389,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["ENDPOINT", "CLIENT", "SYSTEM", "TIMEOUT", "TRANSFER", "TRANSFER_CONFERENCE", "TRANSFER_CONSULT", "TRANSFER_FORWARD", "TRANSFER_NOANSWER", "TRANSFER_NOTAVAILABLE", "TRANSPORT_FAILURE", "ERROR", "PEER", "OTHER", "SPAM", "UNCALLABLE"]
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
@@ -453,6 +472,11 @@ module PureCloud
       @state = state
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -567,6 +591,7 @@ module PureCloud
           id == o.id &&
           state == o.state &&
           held == o.held &&
+          error_info == o.error_info &&
           provider == o.provider &&
           script_id == o.script_id &&
           peer_id == o.peer_id &&
@@ -594,7 +619,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, held, provider, script_id, peer_id, disconnect_type, start_hold_time, connected_time, disconnected_time, to_address, from_address, messages, messages_transcript_uri, type, recipient_country, recipient_type, wrapup, additional_properties].hash
+      [id, state, held, error_info, provider, script_id, peer_id, disconnect_type, start_hold_time, connected_time, disconnected_time, to_address, from_address, messages, messages_transcript_uri, type, recipient_country, recipient_type, wrapup, additional_properties].hash
     end
 
     # build the object from hash

@@ -815,6 +815,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Delete an Outbound Messaging Campaign
+    # 
+    # @param messaging_campaign_id The Messaging Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [MessagingCampaign]
+    def delete_outbound_messagingcampaign(messaging_campaign_id, opts = {})
+      data, _status_code, _headers = delete_outbound_messagingcampaign_with_http_info(messaging_campaign_id, opts)
+      return data
+    end
+
+    # Delete an Outbound Messaging Campaign
+    # 
+    # @param messaging_campaign_id The Messaging Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(MessagingCampaign, Fixnum, Hash)>] MessagingCampaign data, response status code and response headers
+    def delete_outbound_messagingcampaign_with_http_info(messaging_campaign_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.delete_outbound_messagingcampaign ..."
+      end
+      
+      
+      # verify the required parameter 'messaging_campaign_id' is set
+      fail ArgumentError, "Missing the required parameter 'messaging_campaign_id' when calling OutboundApi.delete_outbound_messagingcampaign" if messaging_campaign_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}".sub('{format}','json').sub('{' + 'messagingCampaignId' + '}', messaging_campaign_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessagingCampaign')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#delete_outbound_messagingcampaign\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete a Rule set.
     # 
     # @param rule_set_id Rule Set ID
@@ -1141,6 +1206,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page (default to false)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -1156,6 +1222,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -1165,6 +1232,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_attemptlimits ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1217,6 +1290,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'allowEmptyResult'] = opts[:'allow_empty_result'] if opts[:'allow_empty_result']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
@@ -1323,6 +1397,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page (default to false)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -1338,6 +1413,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -1347,6 +1423,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_callabletimesets ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1399,6 +1481,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'allowEmptyResult'] = opts[:'allow_empty_result'] if opts[:'allow_empty_result']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
@@ -1505,6 +1588,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page (default to false)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -1520,6 +1604,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -1529,6 +1614,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_callanalysisresponsesets ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1581,6 +1672,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'allowEmptyResult'] = opts[:'allow_empty_result'] if opts[:'allow_empty_result']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
@@ -2012,6 +2104,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page (default to false)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -2027,6 +2120,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -2036,6 +2130,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaignrules ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2088,6 +2188,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'allowEmptyResult'] = opts[:'allow_empty_result'] if opts[:'allow_empty_result']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
@@ -2300,6 +2401,250 @@ module PureCloud
         :return_type => 'CampaignEntityListing')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#get_outbound_campaigns\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Query across all types of campaigns by division
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Array<String>] :id Campaign ID(s)
+    # @option opts [String] :name Campaign name(s)
+    # @option opts [Array<String>] :division_id Division ID(s)
+    # @option opts [Array<String>] :media_type Media type(s)
+    # @option opts [String] :sort_order Sort order (default to a)
+    # @return [CommonCampaignEntityListing]
+    def get_outbound_campaigns_all(opts = {})
+      data, _status_code, _headers = get_outbound_campaigns_all_with_http_info(opts)
+      return data
+    end
+
+    # Query across all types of campaigns by division
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Array<String>] :id Campaign ID(s)
+    # @option opts [String] :name Campaign name(s)
+    # @option opts [Array<String>] :division_id Division ID(s)
+    # @option opts [Array<String>] :media_type Media type(s)
+    # @option opts [String] :sort_order Sort order
+    # @return [Array<(CommonCampaignEntityListing, Fixnum, Hash)>] CommonCampaignEntityListing data, response status code and response headers
+    def get_outbound_campaigns_all_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaigns_all ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
+      end
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/campaigns/all".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
+      query_params[:'mediaType'] = @api_client.build_collection_param(opts[:'media_type'], :multi) if opts[:'media_type']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CommonCampaignEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_campaigns_all\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Query across all types of campaigns
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [Array<String>] :id Campaign ID(s)
+    # @option opts [String] :name Campaign name(s)
+    # @option opts [Array<String>] :division_id Division ID(s)
+    # @option opts [Array<String>] :media_type Media type(s)
+    # @option opts [String] :sort_order Sort order (default to a)
+    # @return [CommonCampaignDivisionViewEntityListing]
+    def get_outbound_campaigns_all_divisionviews(opts = {})
+      data, _status_code, _headers = get_outbound_campaigns_all_divisionviews_with_http_info(opts)
+      return data
+    end
+
+    # Query across all types of campaigns
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size
+    # @option opts [Integer] :page_number Page number
+    # @option opts [Array<String>] :id Campaign ID(s)
+    # @option opts [String] :name Campaign name(s)
+    # @option opts [Array<String>] :division_id Division ID(s)
+    # @option opts [Array<String>] :media_type Media type(s)
+    # @option opts [String] :sort_order Sort order
+    # @return [Array<(CommonCampaignDivisionViewEntityListing, Fixnum, Hash)>] CommonCampaignDivisionViewEntityListing data, response status code and response headers
+    def get_outbound_campaigns_all_divisionviews_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_campaigns_all_divisionviews ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
+      end
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/campaigns/all/divisionviews".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
+      query_params[:'mediaType'] = @api_client.build_collection_param(opts[:'media_type'], :multi) if opts[:'media_type']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CommonCampaignDivisionViewEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_campaigns_all_divisionviews\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2927,6 +3272,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page (default to false)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -2943,6 +3289,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -2953,6 +3300,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_contactlistfilters ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -3011,6 +3364,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'allowEmptyResult'] = opts[:'allow_empty_result'] if opts[:'allow_empty_result']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
@@ -3055,6 +3409,7 @@ module PureCloud
     # @option opts [BOOLEAN] :include_size Include size (default to false)
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page (default to false)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
     # @option opts [Array<String>] :id id
@@ -3074,6 +3429,7 @@ module PureCloud
     # @option opts [BOOLEAN] :include_size Include size
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
     # @option opts [Array<String>] :id id
@@ -3085,6 +3441,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_contactlists ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -3163,6 +3525,7 @@ module PureCloud
       query_params[:'includeSize'] = opts[:'include_size'] if opts[:'include_size']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'allowEmptyResult'] = opts[:'allow_empty_result'] if opts[:'allow_empty_result']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
@@ -3657,6 +4020,7 @@ module PureCloud
     # @option opts [BOOLEAN] :include_size Include size (default to false)
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page (default to false)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
     # @option opts [String] :dnc_source_type DncSourceType
@@ -3676,6 +4040,7 @@ module PureCloud
     # @option opts [BOOLEAN] :include_size Include size
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
     # @option opts [String] :dnc_source_type DncSourceType
@@ -3687,6 +4052,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_dnclists ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -3769,6 +4140,7 @@ module PureCloud
       query_params[:'includeSize'] = opts[:'include_size'] if opts[:'include_size']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'allowEmptyResult'] = opts[:'allow_empty_result'] if opts[:'allow_empty_result']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'dncSourceType'] = opts[:'dnc_source_type'] if opts[:'dnc_source_type']
@@ -4225,6 +4597,471 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Get an Outbound Messaging Campaign
+    # 
+    # @param messaging_campaign_id The Messaging Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [MessagingCampaign]
+    def get_outbound_messagingcampaign(messaging_campaign_id, opts = {})
+      data, _status_code, _headers = get_outbound_messagingcampaign_with_http_info(messaging_campaign_id, opts)
+      return data
+    end
+
+    # Get an Outbound Messaging Campaign
+    # 
+    # @param messaging_campaign_id The Messaging Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(MessagingCampaign, Fixnum, Hash)>] MessagingCampaign data, response status code and response headers
+    def get_outbound_messagingcampaign_with_http_info(messaging_campaign_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_messagingcampaign ..."
+      end
+      
+      
+      # verify the required parameter 'messaging_campaign_id' is set
+      fail ArgumentError, "Missing the required parameter 'messaging_campaign_id' when calling OutboundApi.get_outbound_messagingcampaign" if messaging_campaign_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}".sub('{format}','json').sub('{' + 'messagingCampaignId' + '}', messaging_campaign_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessagingCampaign')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_messagingcampaign\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get messaging campaign's progress
+    # 
+    # @param messaging_campaign_id The Messaging Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [CampaignProgress]
+    def get_outbound_messagingcampaign_progress(messaging_campaign_id, opts = {})
+      data, _status_code, _headers = get_outbound_messagingcampaign_progress_with_http_info(messaging_campaign_id, opts)
+      return data
+    end
+
+    # Get messaging campaign&#39;s progress
+    # 
+    # @param messaging_campaign_id The Messaging Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CampaignProgress, Fixnum, Hash)>] CampaignProgress data, response status code and response headers
+    def get_outbound_messagingcampaign_progress_with_http_info(messaging_campaign_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_messagingcampaign_progress ..."
+      end
+      
+      
+      # verify the required parameter 'messaging_campaign_id' is set
+      fail ArgumentError, "Missing the required parameter 'messaging_campaign_id' when calling OutboundApi.get_outbound_messagingcampaign_progress" if messaging_campaign_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress".sub('{format}','json').sub('{' + 'messagingCampaignId' + '}', messaging_campaign_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CampaignProgress')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_messagingcampaign_progress\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Query a list of Messaging Campaigns
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [String] :sort_by The field to sort by (default to name)
+    # @option opts [String] :sort_order The direction to sort (default to ascending)
+    # @option opts [String] :name Name
+    # @option opts [String] :contact_list_id Contact List ID
+    # @option opts [Array<String>] :division_id Division ID(s)
+    # @option opts [String] :type Campaign Type
+    # @option opts [String] :sender_sms_phone_number Sender SMS Phone Number
+    # @option opts [Array<String>] :id A list of messaging campaign ids to bulk fetch
+    # @return [MessagingCampaignEntityListing]
+    def get_outbound_messagingcampaigns(opts = {})
+      data, _status_code, _headers = get_outbound_messagingcampaigns_with_http_info(opts)
+      return data
+    end
+
+    # Query a list of Messaging Campaigns
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
+    # @option opts [Integer] :page_number Page number
+    # @option opts [String] :sort_by The field to sort by
+    # @option opts [String] :sort_order The direction to sort
+    # @option opts [String] :name Name
+    # @option opts [String] :contact_list_id Contact List ID
+    # @option opts [Array<String>] :division_id Division ID(s)
+    # @option opts [String] :type Campaign Type
+    # @option opts [String] :sender_sms_phone_number Sender SMS Phone Number
+    # @option opts [Array<String>] :id A list of messaging campaign ids to bulk fetch
+    # @return [Array<(MessagingCampaignEntityListing, Fixnum, Hash)>] MessagingCampaignEntityListing data, response status code and response headers
+    def get_outbound_messagingcampaigns_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_messagingcampaigns ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_by'] && !['campaignStatus', 'name', 'type'].include?(opts[:'sort_by'])
+        fail ArgumentError, 'invalid value for "sort_by", must be one of campaignStatus, name, type'
+      end
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'type'] && !['SMS'].include?(opts[:'type'])
+        fail ArgumentError, 'invalid value for "type", must be one of SMS'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/messagingcampaigns".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'contactListId'] = opts[:'contact_list_id'] if opts[:'contact_list_id']
+      query_params[:'divisionId'] = @api_client.build_collection_param(opts[:'division_id'], :multi) if opts[:'division_id']
+      query_params[:'type'] = opts[:'type'] if opts[:'type']
+      query_params[:'senderSmsPhoneNumber'] = opts[:'sender_sms_phone_number'] if opts[:'sender_sms_phone_number']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessagingCampaignEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_messagingcampaigns\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a basic Messaging Campaign information object
+    # This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
+    # @param messaging_campaign_id The Messaging Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [MessagingCampaignDivisionView]
+    def get_outbound_messagingcampaigns_divisionview(messaging_campaign_id, opts = {})
+      data, _status_code, _headers = get_outbound_messagingcampaigns_divisionview_with_http_info(messaging_campaign_id, opts)
+      return data
+    end
+
+    # Get a basic Messaging Campaign information object
+    # This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
+    # @param messaging_campaign_id The Messaging Campaign ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(MessagingCampaignDivisionView, Fixnum, Hash)>] MessagingCampaignDivisionView data, response status code and response headers
+    def get_outbound_messagingcampaigns_divisionview_with_http_info(messaging_campaign_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_messagingcampaigns_divisionview ..."
+      end
+      
+      
+      # verify the required parameter 'messaging_campaign_id' is set
+      fail ArgumentError, "Missing the required parameter 'messaging_campaign_id' when calling OutboundApi.get_outbound_messagingcampaigns_divisionview" if messaging_campaign_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId}".sub('{format}','json').sub('{' + 'messagingCampaignId' + '}', messaging_campaign_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessagingCampaignDivisionView')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_messagingcampaigns_divisionview\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Query a list of basic Messaging Campaign information objects
+    # This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
+    # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [String] :sort_order The direction to sort (default to a)
+    # @option opts [String] :name Name
+    # @option opts [Array<String>] :id id
+    # @option opts [String] :sender_sms_phone_number Sender SMS Phone Number
+    # @return [MessagingCampaignDivisionViewEntityListing]
+    def get_outbound_messagingcampaigns_divisionviews(opts = {})
+      data, _status_code, _headers = get_outbound_messagingcampaigns_divisionviews_with_http_info(opts)
+      return data
+    end
+
+    # Query a list of basic Messaging Campaign information objects
+    # This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
+    # @option opts [Integer] :page_number Page number
+    # @option opts [String] :sort_order The direction to sort
+    # @option opts [String] :name Name
+    # @option opts [Array<String>] :id id
+    # @option opts [String] :sender_sms_phone_number Sender SMS Phone Number
+    # @return [Array<(MessagingCampaignDivisionViewEntityListing, Fixnum, Hash)>] MessagingCampaignDivisionViewEntityListing data, response status code and response headers
+    def get_outbound_messagingcampaigns_divisionviews_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_messagingcampaigns_divisionviews ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'sort_order'] && !['ascending', 'descending'].include?(opts[:'sort_order'])
+        fail ArgumentError, 'invalid value for "sort_order", must be one of ascending, descending'
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/messagingcampaigns/divisionviews".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'name'] = opts[:'name'] if opts[:'name']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
+      query_params[:'senderSmsPhoneNumber'] = opts[:'sender_sms_phone_number'] if opts[:'sender_sms_phone_number']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessagingCampaignDivisionViewEntityListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#get_outbound_messagingcampaigns_divisionviews\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get a Rule Set by ID.
     # 
     # @param rule_set_id Rule Set ID
@@ -4295,6 +5132,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page (default to false)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -4310,6 +5148,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -4319,6 +5158,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_rulesets ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -4371,6 +5216,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'allowEmptyResult'] = opts[:'allow_empty_result'] if opts[:'allow_empty_result']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
@@ -4717,6 +5563,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100. (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page (default to false)
     # @option opts [String] :filter_type Filter type (default to Prefix)
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -4732,6 +5579,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_size Page size. The max that will be returned is 100.
     # @option opts [Integer] :page_number Page number
+    # @option opts [BOOLEAN] :allow_empty_result Whether to return an empty page when there are no results for that page
     # @option opts [String] :filter_type Filter type
     # @option opts [String] :name Name
     # @option opts [String] :sort_by Sort by
@@ -4741,6 +5589,12 @@ module PureCloud
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: OutboundApi.get_outbound_sequences ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -4793,6 +5647,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
+      query_params[:'allowEmptyResult'] = opts[:'allow_empty_result'] if opts[:'allow_empty_result']
       query_params[:'filterType'] = opts[:'filter_type'] if opts[:'filter_type']
       query_params[:'name'] = opts[:'name'] if opts[:'name']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
@@ -6347,6 +7202,136 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Create a Messaging Campaign
+    # 
+    # @param body Messaging Campaign
+    # @param [Hash] opts the optional parameters
+    # @return [MessagingCampaign]
+    def post_outbound_messagingcampaigns(body, opts = {})
+      data, _status_code, _headers = post_outbound_messagingcampaigns_with_http_info(body, opts)
+      return data
+    end
+
+    # Create a Messaging Campaign
+    # 
+    # @param body Messaging Campaign
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(MessagingCampaign, Fixnum, Hash)>] MessagingCampaign data, response status code and response headers
+    def post_outbound_messagingcampaigns_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_messagingcampaigns ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_messagingcampaigns" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/messagingcampaigns".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessagingCampaign')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#post_outbound_messagingcampaigns\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get progress for a list of messaging campaigns
+    # 
+    # @param body Messaging Campaign IDs
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CampaignProgress>]
+    def post_outbound_messagingcampaigns_progress(body, opts = {})
+      data, _status_code, _headers = post_outbound_messagingcampaigns_progress_with_http_info(body, opts)
+      return data
+    end
+
+    # Get progress for a list of messaging campaigns
+    # 
+    # @param body Messaging Campaign IDs
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CampaignProgress>, Fixnum, Hash)>] Array<CampaignProgress> data, response status code and response headers
+    def post_outbound_messagingcampaigns_progress_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.post_outbound_messagingcampaigns_progress ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.post_outbound_messagingcampaigns_progress" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/messagingcampaigns/progress".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<CampaignProgress>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#post_outbound_messagingcampaigns_progress\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create a Dialer Call Analysis Response Set.
     # 
     # @param body RuleSet
@@ -7243,6 +8228,81 @@ module PureCloud
         :return_type => 'DncList')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: OutboundApi#put_outbound_dnclist\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update an Outbound Messaging Campaign
+    # 
+    # @param messaging_campaign_id The Messaging Campaign ID
+    # @param body MessagingCampaign
+    # @param [Hash] opts the optional parameters
+    # @return [MessagingCampaign]
+    def put_outbound_messagingcampaign(messaging_campaign_id, body, opts = {})
+      data, _status_code, _headers = put_outbound_messagingcampaign_with_http_info(messaging_campaign_id, body, opts)
+      return data
+    end
+
+    # Update an Outbound Messaging Campaign
+    # 
+    # @param messaging_campaign_id The Messaging Campaign ID
+    # @param body MessagingCampaign
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(MessagingCampaign, Fixnum, Hash)>] MessagingCampaign data, response status code and response headers
+    def put_outbound_messagingcampaign_with_http_info(messaging_campaign_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: OutboundApi.put_outbound_messagingcampaign ..."
+      end
+      
+      
+      # verify the required parameter 'messaging_campaign_id' is set
+      fail ArgumentError, "Missing the required parameter 'messaging_campaign_id' when calling OutboundApi.put_outbound_messagingcampaign" if messaging_campaign_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling OutboundApi.put_outbound_messagingcampaign" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}".sub('{format}','json').sub('{' + 'messagingCampaignId' + '}', messaging_campaign_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'MessagingCampaign')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: OutboundApi#put_outbound_messagingcampaign\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
