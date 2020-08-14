@@ -56,6 +56,8 @@ module PureCloud
 
     attr_accessor :wrapup
 
+    attr_accessor :after_call_work
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -99,6 +101,8 @@ module PureCloud
         :'spam' => :'spam',
         
         :'wrapup' => :'wrapup',
+        
+        :'after_call_work' => :'afterCallWork',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -146,6 +150,8 @@ module PureCloud
         :'spam' => :'BOOLEAN',
         
         :'wrapup' => :'QueueConversationEventTopicWrapup',
+        
+        :'after_call_work' => :'QueueConversationEventTopicAfterCallWork',
         
         :'additional_properties' => :'Object'
         
@@ -334,6 +340,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'afterCallWork')
+        
+        
+        self.after_call_work = attributes[:'afterCallWork']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -434,6 +449,10 @@ module PureCloud
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -583,6 +602,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -607,6 +631,7 @@ module PureCloud
           draft_attachments == o.draft_attachments &&
           spam == o.spam &&
           wrapup == o.wrapup &&
+          after_call_work == o.after_call_work &&
           additional_properties == o.additional_properties
     end
 
@@ -619,7 +644,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, held, auto_generated, subject, provider, script_id, peer_id, messages_sent, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, message_id, direction, draft_attachments, spam, wrapup, additional_properties].hash
+      [id, state, held, auto_generated, subject, provider, script_id, peer_id, messages_sent, error_info, disconnect_type, start_hold_time, connected_time, disconnected_time, message_id, direction, draft_attachments, spam, wrapup, after_call_work, additional_properties].hash
     end
 
     # build the object from hash

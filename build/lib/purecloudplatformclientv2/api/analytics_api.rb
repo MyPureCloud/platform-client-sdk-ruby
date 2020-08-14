@@ -1861,6 +1861,71 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Query for journey aggregates
+    # 
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @return [JourneyAggregateQueryResponse]
+    def post_analytics_journeys_aggregates_query(body, opts = {})
+      data, _status_code, _headers = post_analytics_journeys_aggregates_query_with_http_info(body, opts)
+      return data
+    end
+
+    # Query for journey aggregates
+    # 
+    # @param body query
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(JourneyAggregateQueryResponse, Fixnum, Hash)>] JourneyAggregateQueryResponse data, response status code and response headers
+    def post_analytics_journeys_aggregates_query_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AnalyticsApi.post_analytics_journeys_aggregates_query ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling AnalyticsApi.post_analytics_journeys_aggregates_query" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/analytics/journeys/aggregates/query".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'JourneyAggregateQueryResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AnalyticsApi#post_analytics_journeys_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Query for queue observations
     # 
     # @param body query
@@ -1927,7 +1992,7 @@ module PureCloud
     end
 
     # Generate a view export request
-    # 
+    # This API creates a reporting export but the desired way to export analytics data is to use the analytics query APIs instead
     # @param body ReportingExportJobRequest
     # @param [Hash] opts the optional parameters
     # @return [ReportingExportJobResponse]
@@ -1937,7 +2002,7 @@ module PureCloud
     end
 
     # Generate a view export request
-    # 
+    # This API creates a reporting export but the desired way to export analytics data is to use the analytics query APIs instead
     # @param body ReportingExportJobRequest
     # @param [Hash] opts the optional parameters
     # @return [Array<(ReportingExportJobResponse, Fixnum, Hash)>] ReportingExportJobResponse data, response status code and response headers

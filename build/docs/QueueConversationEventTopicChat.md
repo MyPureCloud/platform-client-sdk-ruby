@@ -21,6 +21,7 @@ title: QueueConversationEventTopicChat
 | **disconnected_time** | **DateTime** |  | [optional] |
 | **journey_context** | [**QueueConversationEventTopicJourneyContext**](QueueConversationEventTopicJourneyContext.html) |  | [optional] |
 | **wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
+| **after_call_work** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

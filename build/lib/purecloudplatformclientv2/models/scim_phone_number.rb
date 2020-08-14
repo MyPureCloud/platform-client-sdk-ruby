@@ -111,7 +111,7 @@ module PureCloud
       
       
       
-      allowed_values = ["work", "work2", "work3", "work4", "home", "mobile", "other"]
+      allowed_values = ["work", "work2", "work3", "work4", "home", "mobile", "other", "microsoftteams", "zoomphone"]
       if @type && !allowed_values.include?(@type)
         return false
       end
@@ -134,7 +134,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
-      allowed_values = ["work", "work2", "work3", "work4", "home", "mobile", "other"]
+      allowed_values = ["work", "work2", "work3", "work4", "home", "mobile", "other", "microsoftteams", "zoomphone"]
       if type && !allowed_values.include?(type)
         fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
       end

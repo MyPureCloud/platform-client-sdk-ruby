@@ -2134,6 +2134,298 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Scan for external contacts using paging
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of contacts per page; must be between 10 and 200, default is 100)
+    # @option opts [String] :cursor Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+    # @return [CursorContactListing]
+    def get_externalcontacts_scan_contacts(opts = {})
+      data, _status_code, _headers = get_externalcontacts_scan_contacts_with_http_info(opts)
+      return data
+    end
+
+    # Scan for external contacts using paging
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of contacts per page; must be between 10 and 200, default is 100)
+    # @option opts [String] :cursor Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+    # @return [Array<(CursorContactListing, Fixnum, Hash)>] CursorContactListing data, response status code and response headers
+    def get_externalcontacts_scan_contacts_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_scan_contacts ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/scan/contacts".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'cursor'] = opts[:'cursor'] if opts[:'cursor']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CursorContactListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_scan_contacts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Scan for notes using paging
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of notes per page; must be between 10 and 200, default is 100)
+    # @option opts [String] :cursor Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+    # @return [CursorNoteListing]
+    def get_externalcontacts_scan_notes(opts = {})
+      data, _status_code, _headers = get_externalcontacts_scan_notes_with_http_info(opts)
+      return data
+    end
+
+    # Scan for notes using paging
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of notes per page; must be between 10 and 200, default is 100)
+    # @option opts [String] :cursor Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+    # @return [Array<(CursorNoteListing, Fixnum, Hash)>] CursorNoteListing data, response status code and response headers
+    def get_externalcontacts_scan_notes_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_scan_notes ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/scan/notes".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'cursor'] = opts[:'cursor'] if opts[:'cursor']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CursorNoteListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_scan_notes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Scan for external organizations using paging
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of organizations per page; must be between 10 and 200, default is 100)
+    # @option opts [String] :cursor Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+    # @return [CursorOrganizationListing]
+    def get_externalcontacts_scan_organizations(opts = {})
+      data, _status_code, _headers = get_externalcontacts_scan_organizations_with_http_info(opts)
+      return data
+    end
+
+    # Scan for external organizations using paging
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of organizations per page; must be between 10 and 200, default is 100)
+    # @option opts [String] :cursor Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+    # @return [Array<(CursorOrganizationListing, Fixnum, Hash)>] CursorOrganizationListing data, response status code and response headers
+    def get_externalcontacts_scan_organizations_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_scan_organizations ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/scan/organizations".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'cursor'] = opts[:'cursor'] if opts[:'cursor']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CursorOrganizationListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_scan_organizations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Scan for relationships
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of relationships per page; must be between 10 and 200, default is 100)
+    # @option opts [String] :cursor Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+    # @return [CursorRelationshipListing]
+    def get_externalcontacts_scan_relationships(opts = {})
+      data, _status_code, _headers = get_externalcontacts_scan_relationships_with_http_info(opts)
+      return data
+    end
+
+    # Scan for relationships
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of relationships per page; must be between 10 and 200, default is 100)
+    # @option opts [String] :cursor Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+    # @return [Array<(CursorRelationshipListing, Fixnum, Hash)>] CursorRelationshipListing data, response status code and response headers
+    def get_externalcontacts_scan_relationships_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ExternalContactsApi.get_externalcontacts_scan_relationships ..."
+      end
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/externalcontacts/scan/relationships".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+      query_params[:'limit'] = opts[:'limit'] if opts[:'limit']
+      query_params[:'cursor'] = opts[:'cursor'] if opts[:'cursor']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CursorRelationshipListing')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ExternalContactsApi#get_externalcontacts_scan_relationships\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create a note for an external contact
     # 
     # @param contact_id ExternalContact Id
@@ -2846,37 +3138,37 @@ module PureCloud
 
     # Associate/disassociate an external contact with a conversation
     # To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
-    # @param conversation_id Conversation ID
     # @param body ConversationAssociation
+    # @param conversation_id Conversation ID
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def put_externalcontacts_conversation(conversation_id, body, opts = {})
-      put_externalcontacts_conversation_with_http_info(conversation_id, body, opts)
+    def put_externalcontacts_conversation(body, conversation_id, opts = {})
+      put_externalcontacts_conversation_with_http_info(body, conversation_id, opts)
       return nil
     end
 
     # Associate/disassociate an external contact with a conversation
     # To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
-    # @param conversation_id Conversation ID
     # @param body ConversationAssociation
+    # @param conversation_id Conversation ID
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def put_externalcontacts_conversation_with_http_info(conversation_id, body, opts = {})
+    def put_externalcontacts_conversation_with_http_info(body, conversation_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: ExternalContactsApi.put_externalcontacts_conversation ..."
       end
       
       
-      # verify the required parameter 'conversation_id' is set
-      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ExternalContactsApi.put_externalcontacts_conversation" if conversation_id.nil?
-      
-      
-      
-      
-      
-      
       # verify the required parameter 'body' is set
       fail ArgumentError, "Missing the required parameter 'body' when calling ExternalContactsApi.put_externalcontacts_conversation" if body.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ExternalContactsApi.put_externalcontacts_conversation" if conversation_id.nil?
       
       
       

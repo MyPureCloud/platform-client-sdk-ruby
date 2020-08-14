@@ -30,6 +30,7 @@ title: QueueConversationVideoEventTopicCall
 | **fax_status** | [**QueueConversationVideoEventTopicFaxStatus**](QueueConversationVideoEventTopicFaxStatus.html) |  | [optional] |
 | **uui_data** | **String** |  | [optional] |
 | **wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
+| **after_call_work** | [**QueueConversationVideoEventTopicAfterCallWork**](QueueConversationVideoEventTopicAfterCallWork.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

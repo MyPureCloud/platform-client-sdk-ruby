@@ -35,6 +35,10 @@ Method | Description
 [**get_externalcontacts_organizations_schemas**](ExternalContactsApi.html#get_externalcontacts_organizations_schemas) | Get a list of schemas.
 [**get_externalcontacts_relationship**](ExternalContactsApi.html#get_externalcontacts_relationship) | Fetch a relationship
 [**get_externalcontacts_reversewhitepageslookup**](ExternalContactsApi.html#get_externalcontacts_reversewhitepageslookup) | Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
+[**get_externalcontacts_scan_contacts**](ExternalContactsApi.html#get_externalcontacts_scan_contacts) | Scan for external contacts using paging
+[**get_externalcontacts_scan_notes**](ExternalContactsApi.html#get_externalcontacts_scan_notes) | Scan for notes using paging
+[**get_externalcontacts_scan_organizations**](ExternalContactsApi.html#get_externalcontacts_scan_organizations) | Scan for external organizations using paging
+[**get_externalcontacts_scan_relationships**](ExternalContactsApi.html#get_externalcontacts_scan_relationships) | Scan for relationships
 [**post_externalcontacts_contact_notes**](ExternalContactsApi.html#post_externalcontacts_contact_notes) | Create a note for an external contact
 [**post_externalcontacts_contacts**](ExternalContactsApi.html#post_externalcontacts_contacts) | Create an external contact
 [**post_externalcontacts_contacts_schemas**](ExternalContactsApi.html#post_externalcontacts_contacts_schemas) | Create a schema
@@ -1907,6 +1911,278 @@ Name | Type | Description  | Notes
 
 
 
+<a name="get_externalcontacts_scan_contacts"></a>
+
+## [**CursorContactListing**](CursorContactListing.html) get_externalcontacts_scan_contacts(opts)
+
+
+
+Scan for external contacts using paging
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/contacts 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+opts = { 
+  limit: 56, # Integer | The number of contacts per page; must be between 10 and 200, default is 100)
+  cursor: "cursor_example" # String | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+}
+
+begin
+  #Scan for external contacts using paging
+  result = api_instance.get_externalcontacts_scan_contacts(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_scan_contacts: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**| The number of contacts per page; must be between 10 and 200, default is 100) | [optional]  |
+ **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CursorContactListing**](CursorContactListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_externalcontacts_scan_notes"></a>
+
+## [**CursorNoteListing**](CursorNoteListing.html) get_externalcontacts_scan_notes(opts)
+
+
+
+Scan for notes using paging
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/notes 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+opts = { 
+  limit: 56, # Integer | The number of notes per page; must be between 10 and 200, default is 100)
+  cursor: "cursor_example" # String | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+}
+
+begin
+  #Scan for notes using paging
+  result = api_instance.get_externalcontacts_scan_notes(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_scan_notes: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**| The number of notes per page; must be between 10 and 200, default is 100) | [optional]  |
+ **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CursorNoteListing**](CursorNoteListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_externalcontacts_scan_organizations"></a>
+
+## [**CursorOrganizationListing**](CursorOrganizationListing.html) get_externalcontacts_scan_organizations(opts)
+
+
+
+Scan for external organizations using paging
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/organizations 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+opts = { 
+  limit: 56, # Integer | The number of organizations per page; must be between 10 and 200, default is 100)
+  cursor: "cursor_example" # String | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+}
+
+begin
+  #Scan for external organizations using paging
+  result = api_instance.get_externalcontacts_scan_organizations(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_scan_organizations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**| The number of organizations per page; must be between 10 and 200, default is 100) | [optional]  |
+ **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CursorOrganizationListing**](CursorOrganizationListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="get_externalcontacts_scan_relationships"></a>
+
+## [**CursorRelationshipListing**](CursorRelationshipListing.html) get_externalcontacts_scan_relationships(opts)
+
+
+
+Scan for relationships
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/relationships 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ExternalContactsApi.new
+
+opts = { 
+  limit: 56, # Integer | The number of relationships per page; must be between 10 and 200, default is 100)
+  cursor: "cursor_example" # String | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+}
+
+begin
+  #Scan for relationships
+  result = api_instance.get_externalcontacts_scan_relationships(opts)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ExternalContactsApi->get_externalcontacts_scan_relationships: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**| The number of relationships per page; must be between 10 and 200, default is 100) | [optional]  |
+ **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CursorRelationshipListing**](CursorRelationshipListing.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_externalcontacts_contact_notes"></a>
 
 ## [**Note**](Note.html) post_externalcontacts_contact_notes(contact_id, body)
@@ -2579,7 +2855,7 @@ Name | Type | Description  | Notes
 
 <a name="put_externalcontacts_conversation"></a>
 
-##  put_externalcontacts_conversation(conversation_id, body)
+##  put_externalcontacts_conversation(body, conversation_id)
 
 
 
@@ -2611,14 +2887,14 @@ end
 
 api_instance = PureCloud::ExternalContactsApi.new
 
-conversation_id = "conversation_id_example" # String | Conversation ID
-
 body = PureCloud::ConversationAssociation.new # ConversationAssociation | ConversationAssociation
+
+conversation_id = "conversation_id_example" # String | Conversation ID
 
 
 begin
   #Associate/disassociate an external contact with a conversation
-  api_instance.put_externalcontacts_conversation(conversation_id, body)
+  api_instance.put_externalcontacts_conversation(body, conversation_id)
 rescue PureCloud::ApiError => e
   puts "Exception when calling ExternalContactsApi->put_externalcontacts_conversation: #{e}"
 end
@@ -2628,8 +2904,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **String**| Conversation ID |  |
  **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation |  |
+ **conversation_id** | **String**| Conversation ID |  |
 {: class="table table-striped"}
 
 

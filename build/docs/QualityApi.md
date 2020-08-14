@@ -566,12 +566,12 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  expand: nil, # Array<Object> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   start_time: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
   end_time: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-  agent_user_id: ["agent_user_id_example"], # Array<String> | user id of agent requested
+  agent_user_id: nil, # Array<Object> | user id of agent requested
   evaluator_user_id: "evaluator_user_id_example", # String | user id of the evaluator
   name: "name_example", # String | name
   group: "group_example" # String | group id
@@ -593,12 +593,12 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **start_time** | **DateTime**| Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
  **end_time** | **DateTime**| End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
- **agent_user_id** | [**Array&lt;String&gt;**](String.html)| user id of agent requested | [optional]  |
+ **agent_user_id** | [**Array&lt;Object&gt;**](Object.html)| user id of agent requested | [optional]  |
  **evaluator_user_id** | **String**| user id of the evaluator | [optional]  |
  **name** | **String**| name | [optional]  |
  **group** | **String**| group id | [optional]  |
@@ -727,7 +727,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  expand: nil, # Array<Object> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   conversation_id: "conversation_id_example", # String | conversation id
@@ -752,7 +752,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **conversation_id** | **String**| conversation id | [optional]  |
@@ -817,7 +817,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  expand: nil, # Array<Object> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   recording_id: "recording_id_example", # String | id of the recording
@@ -841,7 +841,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **recording_id** | **String**| id of the recording | [optional]  |
@@ -1035,7 +1035,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  expand: nil, # Array<Object> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   conversation_id: "conversation_id_example", # String | conversationId specified
@@ -1044,7 +1044,7 @@ opts = {
   queue_id: "queue_id_example", # String | queue id
   start_time: "start_time_example", # String | start time of the evaluation query
   end_time: "end_time_example", # String | end time of the evaluation query
-  evaluation_state: ["evaluation_state_example"], # Array<String> | 
+  evaluation_state: nil, # Array<Object> | 
   is_released: true, # BOOLEAN | the evaluation has been released
   agent_has_read: true, # BOOLEAN | agent has the evaluation
   expand_answer_total_scores: true, # BOOLEAN | get the total scores for evaluations
@@ -1068,7 +1068,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **conversation_id** | **String**| conversationId specified | [optional]  |
@@ -1077,7 +1077,7 @@ Name | Type | Description  | Notes
  **queue_id** | **String**| queue id | [optional]  |
  **start_time** | **String**| start time of the evaluation query | [optional]  |
  **end_time** | **String**| end time of the evaluation query | [optional]  |
- **evaluation_state** | [**Array&lt;String&gt;**](String.html)|  | [optional]  |
+ **evaluation_state** | [**Array&lt;Object&gt;**](Object.html)|  | [optional]  |
  **is_released** | **BOOLEAN**| the evaluation has been released | [optional]  |
  **agent_has_read** | **BOOLEAN**| agent has the evaluation | [optional]  |
  **expand_answer_total_scores** | **BOOLEAN**| get the total scores for evaluations | [optional]  |
@@ -1135,13 +1135,13 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  expand: nil, # Array<Object> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   start_time: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
   end_time: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
   name: "name_example", # String | Evaluator name
-  permission: ["permission_example"], # Array<String> | permission strings
+  permission: nil, # Array<Object> | permission strings
   group: "group_example" # String | group id
 }
 
@@ -1161,13 +1161,13 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **start_time** | **DateTime**| The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
  **end_time** | **DateTime**| The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
  **name** | **String**| Evaluator name | [optional]  |
- **permission** | [**Array&lt;String&gt;**](String.html)| permission strings | [optional]  |
+ **permission** | [**Array&lt;Object&gt;**](Object.html)| permission strings | [optional]  |
  **group** | **String**| group id | [optional]  |
 {: class="table table-striped"}
 
@@ -2068,7 +2068,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  expand: nil, # Array<Object> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   name: "name_example", # String | the keyword set name - used for filtering results in searches.
@@ -2093,7 +2093,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **name** | **String**| the keyword set name - used for filtering results in searches. | [optional]  |

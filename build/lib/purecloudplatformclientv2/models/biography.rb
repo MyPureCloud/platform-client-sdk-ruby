@@ -27,6 +27,9 @@ module PureCloud
 
     attr_accessor :spouse
 
+    # User education details
+    attr_accessor :education
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -37,7 +40,9 @@ module PureCloud
         
         :'hobbies' => :'hobbies',
         
-        :'spouse' => :'spouse'
+        :'spouse' => :'spouse',
+        
+        :'education' => :'education'
         
       }
     end
@@ -52,7 +57,9 @@ module PureCloud
         
         :'hobbies' => :'Array<String>',
         
-        :'spouse' => :'String'
+        :'spouse' => :'String',
+        
+        :'education' => :'Array<Education>'
         
       }
     end
@@ -106,6 +113,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'education')
+        
+        if (value = attributes[:'education']).is_a?(Array)
+          self.education = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -137,8 +155,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -168,7 +195,8 @@ module PureCloud
           biography == o.biography &&
           interests == o.interests &&
           hobbies == o.hobbies &&
-          spouse == o.spouse
+          spouse == o.spouse &&
+          education == o.education
     end
 
     # @see the `==` method
@@ -180,7 +208,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [biography, interests, hobbies, spouse].hash
+      [biography, interests, hobbies, spouse, education].hash
     end
 
     # build the object from hash

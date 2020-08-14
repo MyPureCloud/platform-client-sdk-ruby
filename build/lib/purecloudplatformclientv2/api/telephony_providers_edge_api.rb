@@ -3001,6 +3001,7 @@ module PureCloud
     # @option opts [Integer] :page_size Page size (default to 25)
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [String] :sort_by Sort by (default to number)
+    # @option opts [Array<String>] :id Filter by a specific list of ID&#39;s
     # @return [DIDPoolEntityListing]
     def get_telephony_providers_edges_didpools(opts = {})
       data, _status_code, _headers = get_telephony_providers_edges_didpools_with_http_info(opts)
@@ -3013,11 +3014,18 @@ module PureCloud
     # @option opts [Integer] :page_size Page size
     # @option opts [Integer] :page_number Page number
     # @option opts [String] :sort_by Sort by
+    # @option opts [Array<String>] :id Filter by a specific list of ID&#39;s
     # @return [Array<(DIDPoolEntityListing, Fixnum, Hash)>] DIDPoolEntityListing data, response status code and response headers
     def get_telephony_providers_edges_didpools_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_didpools ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -3045,6 +3053,7 @@ module PureCloud
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'sortBy'] = opts[:'sort_by'] if opts[:'sort_by']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
 
       # header parameters
       header_params = {}
@@ -3087,6 +3096,7 @@ module PureCloud
     # @option opts [String] :phone_number Filter by phoneNumber
     # @option opts [String] :owner_id Filter by the owner of a phone number
     # @option opts [String] :did_pool_id Filter by the DID Pool assignment
+    # @option opts [Array<String>] :id Filter by a specific list of ID&#39;s
     # @return [DIDEntityListing]
     def get_telephony_providers_edges_dids(opts = {})
       data, _status_code, _headers = get_telephony_providers_edges_dids_with_http_info(opts)
@@ -3103,11 +3113,18 @@ module PureCloud
     # @option opts [String] :phone_number Filter by phoneNumber
     # @option opts [String] :owner_id Filter by the owner of a phone number
     # @option opts [String] :did_pool_id Filter by the DID Pool assignment
+    # @option opts [Array<String>] :id Filter by a specific list of ID&#39;s
     # @return [Array<(DIDEntityListing, Fixnum, Hash)>] DIDEntityListing data, response status code and response headers
     def get_telephony_providers_edges_dids_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: TelephonyProvidersEdgeApi.get_telephony_providers_edges_dids ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -3163,6 +3180,7 @@ module PureCloud
       query_params[:'phoneNumber'] = opts[:'phone_number'] if opts[:'phone_number']
       query_params[:'owner.id'] = opts[:'owner_id'] if opts[:'owner_id']
       query_params[:'didPool.id'] = opts[:'did_pool_id'] if opts[:'did_pool_id']
+      query_params[:'id'] = @api_client.build_collection_param(opts[:'id'], :multi) if opts[:'id']
 
       # header parameters
       header_params = {}

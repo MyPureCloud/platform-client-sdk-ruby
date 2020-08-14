@@ -1180,7 +1180,8 @@ opts = {
   id: ["id_example"], # Array<String> | id
   jid: ["jid_example"], # Array<String> | jid
   sort_order: "ASC", # String | Ascending or descending sort order
-  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand
+  expand: ["expand_example"], # Array<String> | Which fields, if any, to expand
+  integration_presence_source: "integration_presence_source_example" # String | Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\".
 }
 
 begin
@@ -1202,6 +1203,7 @@ Name | Type | Description  | Notes
  **jid** | [**Array&lt;String&gt;**](String.html)| jid | [optional]  |
  **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
  **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization |
+ **integration_presence_source** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 {: class="table table-striped"}
 
 
@@ -1319,6 +1321,7 @@ user_id = "user_id_example" # String | User ID
 
 opts = { 
   expand: ["expand_example"], # Array<String> | Which fields, if any, to expand
+  integration_presence_source: "integration_presence_source_example", # String | Gets an integration presence for a user instead of their default.
   state: "active" # String | Search for a user with this state
 }
 
@@ -1337,6 +1340,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| User ID |  |
  **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+ **integration_presence_source** | **String**| Gets an integration presence for a user instead of their default. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
  **state** | **String**| Search for a user with this state | [optional] [default to active]<br />**Values**: active, deleted |
 {: class="table table-striped"}
 
@@ -1793,7 +1797,8 @@ api_instance = PureCloud::UsersApi.new
 user_id = "user_id_example" # String | userId
 
 opts = { 
-  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand
+  expand: ["expand_example"], # Array<String> | Which fields, if any, to expand
+  integration_presence_source: "integration_presence_source_example" # String | Gets an integration presence for a user instead of their default.
 }
 
 begin
@@ -1811,6 +1816,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| userId |  |
  **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team |
+ **integration_presence_source** | **String**| Gets an integration presence for a user instead of their default. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 {: class="table table-striped"}
 
 
@@ -2482,6 +2488,7 @@ opts = {
   jabber_id: ["jabber_id_example"], # Array<String> | A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter)
   sort_order: "ASC", # String | Ascending or descending sort order
   expand: ["expand_example"], # Array<String> | Which fields, if any, to expand
+  integration_presence_source: "integration_presence_source_example", # String | Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 10.
   state: "active" # String | Only list users of this state
 }
 
@@ -2504,6 +2511,7 @@ Name | Type | Description  | Notes
  **jabber_id** | [**Array&lt;String&gt;**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional]  |
  **sort_order** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
  **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+ **integration_presence_source** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
  **state** | **String**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted, any |
 {: class="table table-striped"}
 
@@ -2553,7 +2561,8 @@ end
 api_instance = PureCloud::UsersApi.new
 
 opts = { 
-  expand: ["expand_example"] # Array<String> | Which fields, if any, to expand.
+  expand: ["expand_example"], # Array<String> | Which fields, if any, to expand.
+  integration_presence_source: "integration_presence_source_example" # String | Get your presence for a given integration. This parameter will only be used when presence is provided as an \"expand\".
 }
 
 begin
@@ -2570,6 +2579,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **expand** | [**Array&lt;String&gt;**](String.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, orgproducts, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors |
+ **integration_presence_source** | **String**| Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 {: class="table table-striped"}
 
 
@@ -2620,7 +2630,8 @@ api_instance = PureCloud::UsersApi.new
 q64 = "q64_example" # String | q64
 
 opts = { 
-  expand: ["expand_example"] # Array<String> | expand
+  expand: ["expand_example"], # Array<String> | expand
+  integration_presence_source: "integration_presence_source_example" # String | integrationPresenceSource
 }
 
 begin
@@ -2638,6 +2649,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **q64** | **String**| q64 |  |
  **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional]  |
+ **integration_presence_source** | **String**| integrationPresenceSource | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 {: class="table table-striped"}
 
 

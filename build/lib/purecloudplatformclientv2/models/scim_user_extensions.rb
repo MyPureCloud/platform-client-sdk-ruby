@@ -17,7 +17,7 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Defines a SCIM Genesys Cloud user.
+  # Genesys Cloud user extensions to SCIM RFC.
   class ScimUserExtensions
     # The list of routing skills assigned to a user. Maximum 50 skills.
     attr_accessor :routing_skills
@@ -25,13 +25,18 @@ module PureCloud
     # The list of routing languages assigned to a user. Maximum 50 languages.
     attr_accessor :routing_languages
 
+    # External Identifiers assigned to user. SCIM External ID will be visible here with authority prefix 'x-pc:scimv2:v1' but will be immutable.
+    attr_accessor :external_ids
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
         :'routing_skills' => :'routingSkills',
         
-        :'routing_languages' => :'routingLanguages'
+        :'routing_languages' => :'routingLanguages',
+        
+        :'external_ids' => :'externalIds'
         
       }
     end
@@ -42,7 +47,9 @@ module PureCloud
         
         :'routing_skills' => :'Array<ScimUserRoutingSkill>',
         
-        :'routing_languages' => :'Array<ScimUserRoutingLanguage>'
+        :'routing_languages' => :'Array<ScimUserRoutingLanguage>',
+        
+        :'external_ids' => :'Array<ScimGenesysUserExternalId>'
         
       }
     end
@@ -78,6 +85,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'externalIds')
+        
+        if (value = attributes[:'externalIds']).is_a?(Array)
+          self.external_ids = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -101,8 +119,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -120,7 +147,8 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           routing_skills == o.routing_skills &&
-          routing_languages == o.routing_languages
+          routing_languages == o.routing_languages &&
+          external_ids == o.external_ids
     end
 
     # @see the `==` method
@@ -132,7 +160,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [routing_skills, routing_languages].hash
+      [routing_skills, routing_languages, external_ids].hash
     end
 
     # build the object from hash

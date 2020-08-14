@@ -447,7 +447,8 @@ api_instance = PureCloud::SearchApi.new
 q64 = "q64_example" # String | q64
 
 opts = { 
-  expand: ["expand_example"] # Array<String> | expand
+  expand: ["expand_example"], # Array<String> | expand
+  integration_presence_source: "integration_presence_source_example" # String | integrationPresenceSource
 }
 
 begin
@@ -465,6 +466,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **q64** | **String**| q64 |  |
  **expand** | [**Array&lt;String&gt;**](String.html)| expand | [optional]  |
+ **integration_presence_source** | **String**| integrationPresenceSource | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone |
 {: class="table table-striped"}
 
 

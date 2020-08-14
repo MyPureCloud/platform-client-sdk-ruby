@@ -19,6 +19,7 @@ title: QueueConversationEventTopicScreenshare
 | **connected_time** | **DateTime** |  | [optional] |
 | **disconnected_time** | **DateTime** |  | [optional] |
 | **wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
+| **after_call_work** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

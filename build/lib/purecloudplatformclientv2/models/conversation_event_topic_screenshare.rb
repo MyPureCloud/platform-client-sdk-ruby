@@ -42,6 +42,8 @@ module PureCloud
 
     attr_accessor :wrapup
 
+    attr_accessor :after_call_work
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -71,6 +73,8 @@ module PureCloud
         :'disconnected_time' => :'disconnectedTime',
         
         :'wrapup' => :'wrapup',
+        
+        :'after_call_work' => :'afterCallWork',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -104,6 +108,8 @@ module PureCloud
         :'disconnected_time' => :'DateTime',
         
         :'wrapup' => :'ConversationEventTopicWrapup',
+        
+        :'after_call_work' => :'ConversationEventTopicAfterCallWork',
         
         :'additional_properties' => :'Object'
         
@@ -227,6 +233,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'afterCallWork')
+        
+        
+        self.after_call_work = attributes[:'afterCallWork']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -294,6 +309,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -399,6 +418,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -416,6 +440,7 @@ module PureCloud
           connected_time == o.connected_time &&
           disconnected_time == o.disconnected_time &&
           wrapup == o.wrapup &&
+          after_call_work == o.after_call_work &&
           additional_properties == o.additional_properties
     end
 
@@ -428,7 +453,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, _self, id, context, sharing, provider, script_id, peer_id, disconnect_type, connected_time, disconnected_time, wrapup, additional_properties].hash
+      [state, _self, id, context, sharing, provider, script_id, peer_id, disconnect_type, connected_time, disconnected_time, wrapup, after_call_work, additional_properties].hash
     end
 
     # build the object from hash

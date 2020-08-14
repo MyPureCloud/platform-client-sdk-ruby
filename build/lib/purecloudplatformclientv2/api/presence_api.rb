@@ -309,9 +309,9 @@ module PureCloud
     end
 
     # Get a user's Presence
-    # 
+    # Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources.
     # @param user_id user Id
-    # @param source_id Source
+    # @param source_id Presence source ID
     # @param [Hash] opts the optional parameters
     # @return [UserPresence]
     def get_user_presence(user_id, source_id, opts = {})
@@ -320,9 +320,9 @@ module PureCloud
     end
 
     # Get a user&#39;s Presence
-    # 
+    # Get a user&#39;s presence for the specified source that is not specifically listed.  Used to support custom presence sources.
     # @param user_id user Id
-    # @param source_id Source
+    # @param source_id Presence source ID
     # @param [Hash] opts the optional parameters
     # @return [Array<(UserPresence, Fixnum, Hash)>] UserPresence data, response status code and response headers
     def get_user_presence_with_http_info(user_id, source_id, opts = {})
@@ -383,10 +383,140 @@ module PureCloud
       return data, status_code, headers
     end
 
-    # Patch a user's Presence
-    # The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+    # Get a user's Microsoft Teams presence.
+    # Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
     # @param user_id user Id
-    # @param source_id Source
+    # @param [Hash] opts the optional parameters
+    # @return [PresenceExpand]
+    def get_user_presences_microsoftteams(user_id, opts = {})
+      data, _status_code, _headers = get_user_presences_microsoftteams_with_http_info(user_id, opts)
+      return data
+    end
+
+    # Get a user&#39;s Microsoft Teams presence.
+    # Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+    # @param user_id user Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(PresenceExpand, Fixnum, Hash)>] PresenceExpand data, response status code and response headers
+    def get_user_presences_microsoftteams_with_http_info(user_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PresenceApi.get_user_presences_microsoftteams ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling PresenceApi.get_user_presences_microsoftteams" if user_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/presences/microsoftteams".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PresenceExpand')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PresenceApi#get_user_presences_microsoftteams\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a user's GenesysCloud presence.
+    # Get the default GenesysCloud user presence source PURECLOUD
+    # @param user_id user Id
+    # @param [Hash] opts the optional parameters
+    # @return [UserPresence]
+    def get_user_presences_purecloud(user_id, opts = {})
+      data, _status_code, _headers = get_user_presences_purecloud_with_http_info(user_id, opts)
+      return data
+    end
+
+    # Get a user&#39;s GenesysCloud presence.
+    # Get the default GenesysCloud user presence source PURECLOUD
+    # @param user_id user Id
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UserPresence, Fixnum, Hash)>] UserPresence data, response status code and response headers
+    def get_user_presences_purecloud_with_http_info(user_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PresenceApi.get_user_presences_purecloud ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling PresenceApi.get_user_presences_purecloud" if user_id.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/presences/purecloud".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserPresence')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PresenceApi#get_user_presences_purecloud\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Patch a user's Presence
+    # Patch a user's presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+    # @param user_id user Id
+    # @param source_id Presence source ID
     # @param body User presence
     # @param [Hash] opts the optional parameters
     # @return [UserPresence]
@@ -396,9 +526,9 @@ module PureCloud
     end
 
     # Patch a user&#39;s Presence
-    # The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+    # Patch a user&#39;s presence for the specified source that is not specifically listed. The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the &#39;source&#39; defined in the path as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
     # @param user_id user Id
-    # @param source_id Source
+    # @param source_id Presence source ID
     # @param body User presence
     # @param [Hash] opts the optional parameters
     # @return [Array<(UserPresence, Fixnum, Hash)>] UserPresence data, response status code and response headers
@@ -464,6 +594,81 @@ module PureCloud
         :return_type => 'UserPresence')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: PresenceApi#patch_user_presence\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Patch a GenesysCloud user's presence
+    # The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+    # @param user_id user Id
+    # @param body User presence
+    # @param [Hash] opts the optional parameters
+    # @return [UserPresence]
+    def patch_user_presences_purecloud(user_id, body, opts = {})
+      data, _status_code, _headers = patch_user_presences_purecloud_with_http_info(user_id, body, opts)
+      return data
+    end
+
+    # Patch a GenesysCloud user&#39;s presence
+    # The presence object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the PURECLOUD source as the user&#39;s primary presence source. Option 2: Provide the presenceDefinition value. The &#39;id&#39; is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+    # @param user_id user Id
+    # @param body User presence
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(UserPresence, Fixnum, Hash)>] UserPresence data, response status code and response headers
+    def patch_user_presences_purecloud_with_http_info(user_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PresenceApi.patch_user_presences_purecloud ..."
+      end
+      
+      
+      # verify the required parameter 'user_id' is set
+      fail ArgumentError, "Missing the required parameter 'user_id' when calling PresenceApi.patch_user_presences_purecloud" if user_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling PresenceApi.patch_user_presences_purecloud" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/users/{userId}/presences/purecloud".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'UserPresence')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PresenceApi#patch_user_presences_purecloud\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

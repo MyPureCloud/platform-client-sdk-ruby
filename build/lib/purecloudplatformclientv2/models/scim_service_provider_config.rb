@@ -46,9 +46,6 @@ module PureCloud
     # The list of supported authentication schemes.
     attr_accessor :authentication_schemes
 
-    # The metadata of the SCIM resource.
-    attr_accessor :meta
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -69,9 +66,7 @@ module PureCloud
         
         :'change_password' => :'changePassword',
         
-        :'authentication_schemes' => :'authenticationSchemes',
-        
-        :'meta' => :'meta'
+        :'authentication_schemes' => :'authenticationSchemes'
         
       }
     end
@@ -96,9 +91,7 @@ module PureCloud
         
         :'change_password' => :'ScimServiceProviderConfigSimpleFeature',
         
-        :'authentication_schemes' => :'Array<ScimServiceProviderConfigAuthenticationScheme>',
-        
-        :'meta' => :'ScimMetadata'
+        :'authentication_schemes' => :'Array<ScimServiceProviderConfigAuthenticationScheme>'
         
       }
     end
@@ -197,15 +190,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'meta')
-        
-        
-        self.meta = attributes[:'meta']
-        
-      
-      end
-
-      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -257,17 +241,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -327,8 +302,7 @@ module PureCloud
           sort == o.sort &&
           bulk == o.bulk &&
           change_password == o.change_password &&
-          authentication_schemes == o.authentication_schemes &&
-          meta == o.meta
+          authentication_schemes == o.authentication_schemes
     end
 
     # @see the `==` method
@@ -340,7 +314,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [schemas, documentation_uri, patch, filter, etag, sort, bulk, change_password, authentication_schemes, meta].hash
+      [schemas, documentation_uri, patch, filter, etag, sort, bulk, change_password, authentication_schemes].hash
     end
 
     # build the object from hash

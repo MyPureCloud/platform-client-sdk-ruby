@@ -2909,7 +2909,8 @@ api_instance = PureCloud::TelephonyProvidersEdgeApi.new
 opts = { 
   page_size: 25, # Integer | Page size
   page_number: 1, # Integer | Page number
-  sort_by: "number" # String | Sort by
+  sort_by: "number", # String | Sort by
+  id: ["id_example"] # Array<String> | Filter by a specific list of ID's
 }
 
 begin
@@ -2928,6 +2929,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **sort_by** | **String**| Sort by | [optional] [default to number] |
+ **id** | [**Array&lt;String&gt;**](String.html)| Filter by a specific list of ID&#39;s | [optional]  |
 {: class="table table-striped"}
 
 
@@ -2983,7 +2985,8 @@ opts = {
   sort_order: "ASC", # String | Sort order
   phone_number: "phone_number_example", # String | Filter by phoneNumber
   owner_id: "owner_id_example", # String | Filter by the owner of a phone number
-  did_pool_id: "did_pool_id_example" # String | Filter by the DID Pool assignment
+  did_pool_id: "did_pool_id_example", # String | Filter by the DID Pool assignment
+  id: ["id_example"] # Array<String> | Filter by a specific list of ID's
 }
 
 begin
@@ -3006,6 +3009,7 @@ Name | Type | Description  | Notes
  **phone_number** | **String**| Filter by phoneNumber | [optional]  |
  **owner_id** | **String**| Filter by the owner of a phone number | [optional]  |
  **did_pool_id** | **String**| Filter by the DID Pool assignment | [optional]  |
+ **id** | [**Array&lt;String&gt;**](String.html)| Filter by a specific list of ID&#39;s | [optional]  |
 {: class="table table-striped"}
 
 

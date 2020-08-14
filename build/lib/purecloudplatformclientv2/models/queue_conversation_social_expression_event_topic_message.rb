@@ -56,6 +56,8 @@ module PureCloud
 
     attr_accessor :wrapup
 
+    attr_accessor :after_call_work
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -99,6 +101,8 @@ module PureCloud
         :'recipient_type' => :'recipientType',
         
         :'wrapup' => :'wrapup',
+        
+        :'after_call_work' => :'afterCallWork',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -146,6 +150,8 @@ module PureCloud
         :'recipient_type' => :'String',
         
         :'wrapup' => :'QueueConversationSocialExpressionEventTopicWrapup',
+        
+        :'after_call_work' => :'QueueConversationSocialExpressionEventTopicAfterCallWork',
         
         :'additional_properties' => :'Object'
         
@@ -334,6 +340,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'afterCallWork')
+        
+        
+        self.after_call_work = attributes[:'afterCallWork']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -434,6 +449,10 @@ module PureCloud
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -583,6 +602,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -607,6 +631,7 @@ module PureCloud
           recipient_country == o.recipient_country &&
           recipient_type == o.recipient_type &&
           wrapup == o.wrapup &&
+          after_call_work == o.after_call_work &&
           additional_properties == o.additional_properties
     end
 
@@ -619,7 +644,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, held, error_info, provider, script_id, peer_id, disconnect_type, start_hold_time, connected_time, disconnected_time, to_address, from_address, messages, messages_transcript_uri, type, recipient_country, recipient_type, wrapup, additional_properties].hash
+      [id, state, held, error_info, provider, script_id, peer_id, disconnect_type, start_hold_time, connected_time, disconnected_time, to_address, from_address, messages, messages_transcript_uri, type, recipient_country, recipient_type, wrapup, after_call_work, additional_properties].hash
     end
 
     # build the object from hash

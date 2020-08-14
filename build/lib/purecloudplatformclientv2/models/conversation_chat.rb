@@ -72,6 +72,9 @@ module PureCloud
     # Call wrap up or disposition data.
     attr_accessor :wrapup
 
+    # After-call work for the communication.
+    attr_accessor :after_call_work
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -110,7 +113,9 @@ module PureCloud
         
         :'journey_context' => :'journeyContext',
         
-        :'wrapup' => :'wrapup'
+        :'wrapup' => :'wrapup',
+        
+        :'after_call_work' => :'afterCallWork'
         
       }
     end
@@ -153,7 +158,9 @@ module PureCloud
         
         :'journey_context' => :'JourneyContext',
         
-        :'wrapup' => :'Wrapup'
+        :'wrapup' => :'Wrapup',
+        
+        :'after_call_work' => :'AfterCallWork'
         
       }
     end
@@ -331,6 +338,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'afterCallWork')
+        
+        
+        self.after_call_work = attributes[:'afterCallWork']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -390,6 +406,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -553,6 +573,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -575,7 +600,8 @@ module PureCloud
           peer_id == o.peer_id &&
           avatar_image_url == o.avatar_image_url &&
           journey_context == o.journey_context &&
-          wrapup == o.wrapup
+          wrapup == o.wrapup &&
+          after_call_work == o.after_call_work
     end
 
     # @see the `==` method
@@ -587,7 +613,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, script_id, peer_id, avatar_image_url, journey_context, wrapup].hash
+      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, script_id, peer_id, avatar_image_url, journey_context, wrapup, after_call_work].hash
     end
 
     # build the object from hash

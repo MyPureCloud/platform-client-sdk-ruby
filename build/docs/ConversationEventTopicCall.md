@@ -30,6 +30,7 @@ title: ConversationEventTopicCall
 | **fax_status** | [**ConversationEventTopicFaxStatus**](ConversationEventTopicFaxStatus.html) |  | [optional] |
 | **uui_data** | **String** |  | [optional] |
 | **wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
+| **after_call_work** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

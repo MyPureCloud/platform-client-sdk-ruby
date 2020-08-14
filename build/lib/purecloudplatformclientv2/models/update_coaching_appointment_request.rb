@@ -37,6 +37,9 @@ module PureCloud
     # IDs of documents associated with this coaching appointment.
     attr_accessor :document_ids
 
+    # The status of the coaching appointment.
+    attr_accessor :status
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -51,7 +54,9 @@ module PureCloud
         
         :'conversation_ids' => :'conversationIds',
         
-        :'document_ids' => :'documentIds'
+        :'document_ids' => :'documentIds',
+        
+        :'status' => :'status'
         
       }
     end
@@ -70,7 +75,9 @@ module PureCloud
         
         :'conversation_ids' => :'Array<String>',
         
-        :'document_ids' => :'Array<String>'
+        :'document_ids' => :'Array<String>',
+        
+        :'status' => :'String'
         
       }
     end
@@ -142,6 +149,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'status')
+        
+        
+        self.status = attributes[:'status']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -181,6 +197,15 @@ module PureCloud
       
       
       
+      
+      
+      allowed_values = ["Scheduled", "InProgress", "Completed", "InvalidSchedule"]
+      if @status && !allowed_values.include?(@status)
+        return false
+      end
+      
+      
+      
     end
 
     
@@ -211,6 +236,20 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      allowed_values = ["Scheduled", "InProgress", "Completed", "InvalidSchedule"]
+      if status && !allowed_values.include?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{allowed_values}."
+      end
+      @status = status
+    end
+
     
     
     
@@ -224,7 +263,8 @@ module PureCloud
           date_start == o.date_start &&
           length_in_minutes == o.length_in_minutes &&
           conversation_ids == o.conversation_ids &&
-          document_ids == o.document_ids
+          document_ids == o.document_ids &&
+          status == o.status
     end
 
     # @see the `==` method
@@ -236,7 +276,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, description, date_start, length_in_minutes, conversation_ids, document_ids].hash
+      [name, description, date_start, length_in_minutes, conversation_ids, document_ids, status].hash
     end
 
     # build the object from hash

@@ -354,11 +354,11 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  expand: nil, # Array<Object> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   object_count: false, # BOOLEAN | Include the count of objects contained in the division
-  id: ["id_example"], # Array<String> | Optionally request specific divisions by their IDs
+  id: nil, # Array<Object> | Optionally request specific divisions by their IDs
   name: "name_example" # String | Search term to filter by division name
 }
 
@@ -378,11 +378,11 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **object_count** | **BOOLEAN**| Include the count of objects contained in the division | [optional] [default to false] |
- **id** | [**Array&lt;String&gt;**](String.html)| Optionally request specific divisions by their IDs | [optional]  |
+ **id** | [**Array&lt;Object&gt;**](Object.html)| Optionally request specific divisions by their IDs | [optional]  |
  **name** | **String**| Search term to filter by division name | [optional]  |
 {: class="table table-striped"}
 
@@ -1027,7 +1027,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  expand: nil, # Array<Object> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example" # String | Previous page token
 }
@@ -1049,7 +1049,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -1174,12 +1174,12 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: ["expand_example"], # Array<String> | variable name requested by expand list
+  expand: nil, # Array<Object> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   name: "name_example", # String | 
-  permission: ["permission_example"], # Array<String> | 
-  default_role_id: ["default_role_id_example"], # Array<String> | 
+  permission: nil, # Array<Object> | 
+  default_role_id: nil, # Array<Object> | 
   user_count: true, # BOOLEAN | 
   id: ["id_example"] # Array<String> | id
 }
@@ -1200,12 +1200,12 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **name** | **String**|  | [optional]  |
- **permission** | [**Array&lt;String&gt;**](String.html)|  | [optional]  |
- **default_role_id** | [**Array&lt;String&gt;**](String.html)|  | [optional]  |
+ **permission** | [**Array&lt;Object&gt;**](Object.html)|  | [optional]  |
+ **default_role_id** | [**Array&lt;Object&gt;**](Object.html)|  | [optional]  |
  **user_count** | **BOOLEAN**|  | [optional] [default to true] |
  **id** | [**Array&lt;String&gt;**](String.html)| id | [optional]  |
 {: class="table table-striped"}

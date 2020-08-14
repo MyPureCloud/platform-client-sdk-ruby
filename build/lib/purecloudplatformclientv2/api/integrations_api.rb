@@ -288,7 +288,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @return [Integration]
@@ -304,7 +304,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @return [Array<(Integration, Fixnum, Hash)>] Integration data, response status code and response headers
@@ -471,7 +471,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @return [IntegrationEntityListing]
@@ -486,7 +486,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @return [Array<(IntegrationEntityListing, Fixnum, Hash)>] IntegrationEntityListing data, response status code and response headers
@@ -1277,7 +1277,7 @@ module PureCloud
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
-    # @option opts [String] :sort_by Root level field name to sort on.
+    # @option opts [String] :sort_by Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint.
     # @option opts [String] :sort_order Direction to sort &#39;sortBy&#39; field. (default to asc)
     # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
     # @return [CategoryEntityListing]
@@ -1293,7 +1293,7 @@ module PureCloud
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
-    # @option opts [String] :sort_by Root level field name to sort on.
+    # @option opts [String] :sort_by Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint.
     # @option opts [String] :sort_order Direction to sort &#39;sortBy&#39; field.
     # @option opts [String] :secure Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
     # @return [Array<(CategoryEntityListing, Fixnum, Hash)>] CategoryEntityListing data, response status code and response headers
@@ -1559,7 +1559,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @return [ClientAppEntityListing]
@@ -1574,7 +1574,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @return [Array<(ClientAppEntityListing, Fixnum, Hash)>] ClientAppEntityListing data, response status code and response headers
@@ -2957,7 +2957,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @return [IntegrationTypeEntityListing]
@@ -2972,7 +2972,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @return [Array<(IntegrationTypeEntityListing, Fixnum, Hash)>] IntegrationTypeEntityListing data, response status code and response headers
@@ -3066,7 +3066,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :app_host The type of UserApp to filter by
@@ -3082,7 +3082,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :app_host The type of UserApp to filter by
@@ -3186,7 +3186,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @return [Integration]
@@ -3203,7 +3203,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @return [Array<(Integration, Fixnum, Hash)>] Integration data, response status code and response headers

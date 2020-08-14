@@ -479,6 +479,7 @@ module PureCloud
     # @param q64 q64
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand expand
+    # @option opts [String] :integration_presence_source integrationPresenceSource
     # @return [UsersSearchResponse]
     def get_users_search(q64, opts = {})
       data, _status_code, _headers = get_users_search_with_http_info(q64, opts)
@@ -490,6 +491,7 @@ module PureCloud
     # @param q64 q64
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand expand
+    # @option opts [String] :integration_presence_source integrationPresenceSource
     # @return [Array<(UsersSearchResponse, Fixnum, Hash)>] UsersSearchResponse data, response status code and response headers
     def get_users_search_with_http_info(q64, opts = {})
       if @api_client.config.debugging
@@ -510,6 +512,16 @@ module PureCloud
       
       
       
+      
+      
+      
+      if opts[:'integration_presence_source'] && !['MicrosoftTeams', 'ZoomPhone'].include?(opts[:'integration_presence_source'])
+        fail ArgumentError, 'invalid value for "integration_presence_source", must be one of MicrosoftTeams, ZoomPhone'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/search".sub('{format}','json')
 
@@ -517,6 +529,7 @@ module PureCloud
       query_params = {}
       query_params[:'q64'] = q64
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'integrationPresenceSource'] = opts[:'integration_presence_source'] if opts[:'integration_presence_source']
 
       # header parameters
       header_params = {}

@@ -41,6 +41,9 @@ module PureCloud
     # Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant
     attr_accessor :role_divisions
 
+    # The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted.
+    attr_accessor :state
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -59,7 +62,9 @@ module PureCloud
         
         :'scope' => :'scope',
         
-        :'role_divisions' => :'roleDivisions'
+        :'role_divisions' => :'roleDivisions',
+        
+        :'state' => :'state'
         
       }
     end
@@ -82,7 +87,9 @@ module PureCloud
         
         :'scope' => :'Array<String>',
         
-        :'role_divisions' => :'Array<RoleDivision>'
+        :'role_divisions' => :'Array<RoleDivision>',
+        
+        :'state' => :'String'
         
       }
     end
@@ -176,6 +183,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'state')
+        
+        
+        self.state = attributes[:'state']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -238,6 +254,15 @@ module PureCloud
       
       
       
+      
+      
+      allowed_values = ["active", "disabled", "inactive"]
+      if @state && !allowed_values.include?(@state)
+        return false
+      end
+      
+      
+      
     end
 
     
@@ -290,6 +315,20 @@ module PureCloud
     
     
     
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] state Object to be assigned
+    def state=(state)
+      allowed_values = ["active", "disabled", "inactive"]
+      if state && !allowed_values.include?(state)
+        fail ArgumentError, "invalid value for 'state', must be one of #{allowed_values}."
+      end
+      @state = state
+    end
+
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -302,7 +341,8 @@ module PureCloud
           role_ids == o.role_ids &&
           authorized_grant_type == o.authorized_grant_type &&
           scope == o.scope &&
-          role_divisions == o.role_divisions
+          role_divisions == o.role_divisions &&
+          state == o.state
     end
 
     # @see the `==` method
@@ -314,7 +354,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, access_token_validity_seconds, description, registered_redirect_uri, role_ids, authorized_grant_type, scope, role_divisions].hash
+      [name, access_token_validity_seconds, description, registered_redirect_uri, role_ids, authorized_grant_type, scope, role_divisions, state].hash
     end
 
     # build the object from hash

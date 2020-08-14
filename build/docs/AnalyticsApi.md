@@ -35,6 +35,7 @@ Method | Description
 [**post_analytics_evaluations_aggregates_query**](AnalyticsApi.html#post_analytics_evaluations_aggregates_query) | Query for evaluation aggregates
 [**post_analytics_flows_aggregates_query**](AnalyticsApi.html#post_analytics_flows_aggregates_query) | Query for flow aggregates
 [**post_analytics_flows_observations_query**](AnalyticsApi.html#post_analytics_flows_observations_query) | Query for flow observations
+[**post_analytics_journeys_aggregates_query**](AnalyticsApi.html#post_analytics_journeys_aggregates_query) | Query for journey aggregates
 [**post_analytics_queues_observations_query**](AnalyticsApi.html#post_analytics_queues_observations_query) | Query for queue observations
 [**post_analytics_reporting_exports**](AnalyticsApi.html#post_analytics_reporting_exports) | Generate a view export request
 [**post_analytics_reporting_schedule_runreport**](AnalyticsApi.html#post_analytics_reporting_schedule_runreport) | Place a scheduled report immediately into the reporting queue
@@ -1813,6 +1814,71 @@ Name | Type | Description  | Notes
 
 
 
+<a name="post_analytics_journeys_aggregates_query"></a>
+
+## [**JourneyAggregateQueryResponse**](JourneyAggregateQueryResponse.html) post_analytics_journeys_aggregates_query(body)
+
+
+
+Query for journey aggregates
+
+
+
+Wraps POST /api/v2/analytics/journeys/aggregates/query 
+
+Requires ANY permissions: 
+
+* analytics:journeyAggregate:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AnalyticsApi.new
+
+body = PureCloud::JourneyAggregationQuery.new # JourneyAggregationQuery | query
+
+
+begin
+  #Query for journey aggregates
+  result = api_instance.post_analytics_journeys_aggregates_query(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AnalyticsApi->post_analytics_journeys_aggregates_query: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**JourneyAggregationQuery**](JourneyAggregationQuery.html)| query |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**JourneyAggregateQueryResponse**](JourneyAggregateQueryResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 <a name="post_analytics_queues_observations_query"></a>
 
 ## [**QueueObservationQueryResponse**](QueueObservationQueryResponse.html) post_analytics_queues_observations_query(body)
@@ -1886,7 +1952,7 @@ Name | Type | Description  | Notes
 
 Generate a view export request
 
-
+This API creates a reporting export but the desired way to export analytics data is to use the analytics query APIs instead
 
 Wraps POST /api/v2/analytics/reporting/exports 
 

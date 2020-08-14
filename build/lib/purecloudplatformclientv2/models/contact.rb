@@ -31,6 +31,8 @@ module PureCloud
     # Use internal extension instead of address. Mutually exclusive with the address field.
     attr_accessor :extension
 
+    attr_accessor :country_code
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -43,7 +45,9 @@ module PureCloud
         
         :'type' => :'type',
         
-        :'extension' => :'extension'
+        :'extension' => :'extension',
+        
+        :'country_code' => :'countryCode'
         
       }
     end
@@ -60,7 +64,9 @@ module PureCloud
         
         :'type' => :'String',
         
-        :'extension' => :'String'
+        :'extension' => :'String',
+        
+        :'country_code' => :'String'
         
       }
     end
@@ -119,6 +125,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'countryCode')
+        
+        
+        self.country_code = attributes[:'countryCode']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -157,6 +172,10 @@ module PureCloud
       if @type && !allowed_values.include?(@type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -210,6 +229,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -219,7 +243,8 @@ module PureCloud
           display == o.display &&
           media_type == o.media_type &&
           type == o.type &&
-          extension == o.extension
+          extension == o.extension &&
+          country_code == o.country_code
     end
 
     # @see the `==` method
@@ -231,7 +256,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [address, display, media_type, type, extension].hash
+      [address, display, media_type, type, extension, country_code].hash
     end
 
     # build the object from hash

@@ -30,6 +30,7 @@ title: QueueConversationSocialExpressionEventTopicCall
 | **fax_status** | [**QueueConversationSocialExpressionEventTopicFaxStatus**](QueueConversationSocialExpressionEventTopicFaxStatus.html) |  | [optional] |
 | **uui_data** | **String** |  | [optional] |
 | **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
+| **after_call_work** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

@@ -177,11 +177,11 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [BOOLEAN] :object_count Include the count of objects contained in the division (default to false)
-    # @option opts [Array<String>] :id Optionally request specific divisions by their IDs
+    # @option opts [Array<Object>] :id Optionally request specific divisions by their IDs
     # @option opts [String] :name Search term to filter by division name
     # @return [AuthzDivisionEntityListing]
     def get_authorization_divisions(opts = {})
@@ -195,11 +195,11 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [BOOLEAN] :object_count Include the count of objects contained in the division
-    # @option opts [Array<String>] :id Optionally request specific divisions by their IDs
+    # @option opts [Array<Object>] :id Optionally request specific divisions by their IDs
     # @option opts [String] :name Search term to filter by division name
     # @return [Array<(AuthzDivisionEntityListing, Fixnum, Hash)>] AuthzDivisionEntityListing data, response status code and response headers
     def get_authorization_divisions_with_http_info(opts = {})

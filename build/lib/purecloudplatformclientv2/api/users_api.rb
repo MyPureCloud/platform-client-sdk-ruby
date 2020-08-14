@@ -1178,6 +1178,7 @@ module PureCloud
     # @option opts [Array<String>] :jid jid
     # @option opts [String] :sort_order Ascending or descending sort order (default to ASC)
     # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @option opts [String] :integration_presence_source Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;.
     # @return [UserProfileEntityListing]
     def get_profiles_users(opts = {})
       data, _status_code, _headers = get_profiles_users_with_http_info(opts)
@@ -1193,6 +1194,7 @@ module PureCloud
     # @option opts [Array<String>] :jid jid
     # @option opts [String] :sort_order Ascending or descending sort order
     # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @option opts [String] :integration_presence_source Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;.
     # @return [Array<(UserProfileEntityListing, Fixnum, Hash)>] UserProfileEntityListing data, response status code and response headers
     def get_profiles_users_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1239,6 +1241,16 @@ module PureCloud
       
       
       
+      
+      
+      
+      if opts[:'integration_presence_source'] && !['MicrosoftTeams', 'ZoomPhone'].include?(opts[:'integration_presence_source'])
+        fail ArgumentError, 'invalid value for "integration_presence_source", must be one of MicrosoftTeams, ZoomPhone'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/profiles/users".sub('{format}','json')
 
@@ -1250,6 +1262,7 @@ module PureCloud
       query_params[:'jid'] = @api_client.build_collection_param(opts[:'jid'], :multi) if opts[:'jid']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'integrationPresenceSource'] = opts[:'integration_presence_source'] if opts[:'integration_presence_source']
 
       # header parameters
       header_params = {}
@@ -1352,6 +1365,7 @@ module PureCloud
     # @param user_id User ID
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @option opts [String] :integration_presence_source Gets an integration presence for a user instead of their default.
     # @option opts [String] :state Search for a user with this state (default to active)
     # @return [User]
     def get_user(user_id, opts = {})
@@ -1364,6 +1378,7 @@ module PureCloud
     # @param user_id User ID
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @option opts [String] :integration_presence_source Gets an integration presence for a user instead of their default.
     # @option opts [String] :state Search for a user with this state
     # @return [Array<(User, Fixnum, Hash)>] User data, response status code and response headers
     def get_user_with_http_info(user_id, opts = {})
@@ -1388,6 +1403,16 @@ module PureCloud
       
       
       
+      if opts[:'integration_presence_source'] && !['MicrosoftTeams', 'ZoomPhone'].include?(opts[:'integration_presence_source'])
+        fail ArgumentError, 'invalid value for "integration_presence_source", must be one of MicrosoftTeams, ZoomPhone'
+      end
+      
+      
+      
+      
+      
+      
+      
       if opts[:'state'] && !['active', 'deleted'].include?(opts[:'state'])
         fail ArgumentError, 'invalid value for "state", must be one of active, deleted'
       end
@@ -1401,6 +1426,7 @@ module PureCloud
       # query parameters
       query_params = {}
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'integrationPresenceSource'] = opts[:'integration_presence_source'] if opts[:'integration_presence_source']
       query_params[:'state'] = opts[:'state'] if opts[:'state']
 
       # header parameters
@@ -1893,6 +1919,7 @@ module PureCloud
     # @param user_id userId
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @option opts [String] :integration_presence_source Gets an integration presence for a user instead of their default.
     # @return [UserProfile]
     def get_user_profile(user_id, opts = {})
       data, _status_code, _headers = get_user_profile_with_http_info(user_id, opts)
@@ -1904,6 +1931,7 @@ module PureCloud
     # @param user_id userId
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @option opts [String] :integration_presence_source Gets an integration presence for a user instead of their default.
     # @return [Array<(UserProfile, Fixnum, Hash)>] UserProfile data, response status code and response headers
     def get_user_profile_with_http_info(user_id, opts = {})
       if @api_client.config.debugging
@@ -1924,12 +1952,23 @@ module PureCloud
       
       
       
+      
+      
+      
+      if opts[:'integration_presence_source'] && !['MicrosoftTeams', 'ZoomPhone'].include?(opts[:'integration_presence_source'])
+        fail ArgumentError, 'invalid value for "integration_presence_source", must be one of MicrosoftTeams, ZoomPhone'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/{userId}/profile".sub('{format}','json').sub('{' + 'userId' + '}', user_id.to_s)
 
       # query parameters
       query_params = {}
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'integrationPresenceSource'] = opts[:'integration_presence_source'] if opts[:'integration_presence_source']
 
       # header parameters
       header_params = {}
@@ -2681,6 +2720,7 @@ module PureCloud
     # @option opts [Array<String>] :jabber_id A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter)
     # @option opts [String] :sort_order Ascending or descending sort order (default to ASC)
     # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @option opts [String] :integration_presence_source Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10.
     # @option opts [String] :state Only list users of this state (default to active)
     # @return [UserEntityListing]
     def get_users(opts = {})
@@ -2697,6 +2737,7 @@ module PureCloud
     # @option opts [Array<String>] :jabber_id A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter)
     # @option opts [String] :sort_order Ascending or descending sort order
     # @option opts [Array<String>] :expand Which fields, if any, to expand
+    # @option opts [String] :integration_presence_source Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10.
     # @option opts [String] :state Only list users of this state
     # @return [Array<(UserEntityListing, Fixnum, Hash)>] UserEntityListing data, response status code and response headers
     def get_users_with_http_info(opts = {})
@@ -2747,6 +2788,16 @@ module PureCloud
       
       
       
+      if opts[:'integration_presence_source'] && !['MicrosoftTeams', 'ZoomPhone'].include?(opts[:'integration_presence_source'])
+        fail ArgumentError, 'invalid value for "integration_presence_source", must be one of MicrosoftTeams, ZoomPhone'
+      end
+      
+      
+      
+      
+      
+      
+      
       if opts[:'state'] && !['active', 'inactive', 'deleted', 'any'].include?(opts[:'state'])
         fail ArgumentError, 'invalid value for "state", must be one of active, inactive, deleted, any'
       end
@@ -2765,6 +2816,7 @@ module PureCloud
       query_params[:'jabberId'] = @api_client.build_collection_param(opts[:'jabber_id'], :multi) if opts[:'jabber_id']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'integrationPresenceSource'] = opts[:'integration_presence_source'] if opts[:'integration_presence_source']
       query_params[:'state'] = opts[:'state'] if opts[:'state']
 
       # header parameters
@@ -2802,6 +2854,7 @@ module PureCloud
     # This request is not valid when using the Client Credentials OAuth grant.
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand Which fields, if any, to expand.
+    # @option opts [String] :integration_presence_source Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;.
     # @return [UserMe]
     def get_users_me(opts = {})
       data, _status_code, _headers = get_users_me_with_http_info(opts)
@@ -2812,6 +2865,7 @@ module PureCloud
     # This request is not valid when using the Client Credentials OAuth grant.
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand Which fields, if any, to expand.
+    # @option opts [String] :integration_presence_source Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;.
     # @return [Array<(UserMe, Fixnum, Hash)>] UserMe data, response status code and response headers
     def get_users_me_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -2824,12 +2878,23 @@ module PureCloud
       
       
       
+      
+      
+      
+      if opts[:'integration_presence_source'] && !['MicrosoftTeams', 'ZoomPhone'].include?(opts[:'integration_presence_source'])
+        fail ArgumentError, 'invalid value for "integration_presence_source", must be one of MicrosoftTeams, ZoomPhone'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/me".sub('{format}','json')
 
       # query parameters
       query_params = {}
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'integrationPresenceSource'] = opts[:'integration_presence_source'] if opts[:'integration_presence_source']
 
       # header parameters
       header_params = {}
@@ -2867,6 +2932,7 @@ module PureCloud
     # @param q64 q64
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand expand
+    # @option opts [String] :integration_presence_source integrationPresenceSource
     # @return [UsersSearchResponse]
     def get_users_search(q64, opts = {})
       data, _status_code, _headers = get_users_search_with_http_info(q64, opts)
@@ -2878,6 +2944,7 @@ module PureCloud
     # @param q64 q64
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :expand expand
+    # @option opts [String] :integration_presence_source integrationPresenceSource
     # @return [Array<(UsersSearchResponse, Fixnum, Hash)>] UsersSearchResponse data, response status code and response headers
     def get_users_search_with_http_info(q64, opts = {})
       if @api_client.config.debugging
@@ -2898,6 +2965,16 @@ module PureCloud
       
       
       
+      
+      
+      
+      if opts[:'integration_presence_source'] && !['MicrosoftTeams', 'ZoomPhone'].include?(opts[:'integration_presence_source'])
+        fail ArgumentError, 'invalid value for "integration_presence_source", must be one of MicrosoftTeams, ZoomPhone'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/users/search".sub('{format}','json')
 
@@ -2905,6 +2982,7 @@ module PureCloud
       query_params = {}
       query_params[:'q64'] = q64
       query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
+      query_params[:'integrationPresenceSource'] = opts[:'integration_presence_source'] if opts[:'integration_presence_source']
 
       # header parameters
       header_params = {}

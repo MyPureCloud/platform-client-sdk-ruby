@@ -23,6 +23,7 @@ title: ConversationEventTopicSocialExpression
 | **connected_time** | **DateTime** |  | [optional] |
 | **disconnected_time** | **DateTime** |  | [optional] |
 | **wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
+| **after_call_work** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

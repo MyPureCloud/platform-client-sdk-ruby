@@ -40,9 +40,6 @@ module PureCloud
     # The HTTP-addressable endpoint of the resource type. Appears after the base URL.
     attr_accessor :endpoint
 
-    # The metadata of the SCIM resource.
-    attr_accessor :meta
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -59,9 +56,7 @@ module PureCloud
         
         :'schema_extensions' => :'schemaExtensions',
         
-        :'endpoint' => :'endpoint',
-        
-        :'meta' => :'meta'
+        :'endpoint' => :'endpoint'
         
       }
     end
@@ -82,9 +77,7 @@ module PureCloud
         
         :'schema_extensions' => :'Array<ScimConfigResourceTypeSchemaExtension>',
         
-        :'endpoint' => :'String',
-        
-        :'meta' => :'ScimMetadata'
+        :'endpoint' => :'String'
         
       }
     end
@@ -165,15 +158,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'meta')
-        
-        
-        self.meta = attributes[:'meta']
-        
-      
-      end
-
-      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -217,17 +201,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -275,8 +250,7 @@ module PureCloud
           description == o.description &&
           schema == o.schema &&
           schema_extensions == o.schema_extensions &&
-          endpoint == o.endpoint &&
-          meta == o.meta
+          endpoint == o.endpoint
     end
 
     # @see the `==` method
@@ -288,7 +262,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, schemas, name, description, schema, schema_extensions, endpoint, meta].hash
+      [id, schemas, name, description, schema, schema_extensions, endpoint].hash
     end
 
     # build the object from hash

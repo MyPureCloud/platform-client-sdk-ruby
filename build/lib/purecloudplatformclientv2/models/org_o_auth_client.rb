@@ -45,6 +45,9 @@ module PureCloud
     # Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant
     attr_accessor :role_divisions
 
+    # The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted.
+    attr_accessor :state
+
     # The  oauth client's organization.
     attr_accessor :organization
 
@@ -69,6 +72,8 @@ module PureCloud
         :'scope' => :'scope',
         
         :'role_divisions' => :'roleDivisions',
+        
+        :'state' => :'state',
         
         :'organization' => :'organization'
         
@@ -96,6 +101,8 @@ module PureCloud
         :'scope' => :'Array<String>',
         
         :'role_divisions' => :'Array<RoleDivision>',
+        
+        :'state' => :'String',
         
         :'organization' => :'NamedEntity'
         
@@ -196,6 +203,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'state')
+        
+        
+        self.state = attributes[:'state']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'organization')
         
         
@@ -273,6 +289,15 @@ module PureCloud
       
       
       
+      allowed_values = ["active", "disabled", "inactive"]
+      if @state && !allowed_values.include?(@state)
+        return false
+      end
+      
+      
+      
+      
+      
       
       
     end
@@ -333,6 +358,20 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] state Object to be assigned
+    def state=(state)
+      allowed_values = ["active", "disabled", "inactive"]
+      if state && !allowed_values.include?(state)
+        fail ArgumentError, "invalid value for 'state', must be one of #{allowed_values}."
+      end
+      @state = state
+    end
+
+    
+    
+    
+    
     
     
     
@@ -351,6 +390,7 @@ module PureCloud
           authorized_grant_type == o.authorized_grant_type &&
           scope == o.scope &&
           role_divisions == o.role_divisions &&
+          state == o.state &&
           organization == o.organization
     end
 
@@ -363,7 +403,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_created, date_modified, created_by, modified_by, authorized_grant_type, scope, role_divisions, organization].hash
+      [id, name, date_created, date_modified, created_by, modified_by, authorized_grant_type, scope, role_divisions, state, organization].hash
     end
 
     # build the object from hash

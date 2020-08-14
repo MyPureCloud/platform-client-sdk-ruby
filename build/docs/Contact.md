@@ -12,6 +12,7 @@ title: Contact
 | **media_type** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **extension** | **String** | Use internal extension instead of address. Mutually exclusive with the address field. | [optional] |
+| **country_code** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

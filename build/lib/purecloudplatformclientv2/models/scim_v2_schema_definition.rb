@@ -31,9 +31,6 @@ module PureCloud
     # The list of service provider attributes.
     attr_accessor :attributes
 
-    # The metadata of the SCIM resource.
-    attr_accessor :meta
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -44,9 +41,7 @@ module PureCloud
         
         :'description' => :'description',
         
-        :'attributes' => :'attributes',
-        
-        :'meta' => :'meta'
+        :'attributes' => :'attributes'
         
       }
     end
@@ -61,9 +56,7 @@ module PureCloud
         
         :'description' => :'String',
         
-        :'attributes' => :'Array<ScimV2SchemaAttribute>',
-        
-        :'meta' => :'ScimMetadata'
+        :'attributes' => :'Array<ScimV2SchemaAttribute>'
         
       }
     end
@@ -115,15 +108,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'meta')
-        
-        
-        self.meta = attributes[:'meta']
-        
-      
-      end
-
-      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -155,17 +139,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -195,8 +170,7 @@ module PureCloud
           id == o.id &&
           name == o.name &&
           description == o.description &&
-          attributes == o.attributes &&
-          meta == o.meta
+          attributes == o.attributes
     end
 
     # @see the `==` method
@@ -208,7 +182,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, attributes, meta].hash
+      [id, name, description, attributes].hash
     end
 
     # build the object from hash

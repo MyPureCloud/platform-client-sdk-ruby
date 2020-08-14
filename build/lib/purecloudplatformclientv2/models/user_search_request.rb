@@ -38,6 +38,9 @@ module PureCloud
 
     attr_accessor :query
 
+    # Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 10.
+    attr_accessor :integration_presence_source
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -54,7 +57,9 @@ module PureCloud
         
         :'expand' => :'expand',
         
-        :'query' => :'query'
+        :'query' => :'query',
+        
+        :'integration_presence_source' => :'integrationPresenceSource'
         
       }
     end
@@ -75,7 +80,9 @@ module PureCloud
         
         :'expand' => :'Array<String>',
         
-        :'query' => :'Array<UserSearchCriteria>'
+        :'query' => :'Array<UserSearchCriteria>',
+        
+        :'integration_presence_source' => :'String'
         
       }
     end
@@ -158,6 +165,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'integrationPresenceSource')
+        
+        
+        self.integration_presence_source = attributes[:'integrationPresenceSource']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -203,6 +219,15 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      allowed_values = ["MicrosoftTeams", "ZoomPhone"]
+      if @integration_presence_source && !allowed_values.include?(@integration_presence_source)
+        return false
+      end
       
       
       
@@ -253,6 +278,20 @@ module PureCloud
     
     
     
+    
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] integration_presence_source Object to be assigned
+    def integration_presence_source=(integration_presence_source)
+      allowed_values = ["MicrosoftTeams", "ZoomPhone"]
+      if integration_presence_source && !allowed_values.include?(integration_presence_source)
+        fail ArgumentError, "invalid value for 'integration_presence_source', must be one of #{allowed_values}."
+      end
+      @integration_presence_source = integration_presence_source
+    end
+
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -264,7 +303,8 @@ module PureCloud
           page_number == o.page_number &&
           sort == o.sort &&
           expand == o.expand &&
-          query == o.query
+          query == o.query &&
+          integration_presence_source == o.integration_presence_source
     end
 
     # @see the `==` method
@@ -276,7 +316,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [sort_order, sort_by, page_size, page_number, sort, expand, query].hash
+      [sort_order, sort_by, page_size, page_number, sort, expand, query, integration_presence_source].hash
     end
 
     # build the object from hash

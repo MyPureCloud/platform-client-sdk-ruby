@@ -327,7 +327,7 @@ module PureCloud
       
       
       
-      allowed_values = ["MessagingTemplate"]
+      allowed_values = ["MessagingTemplate", "CampaignSmsTemplate"]
       if @response_type && !allowed_values.include?(@response_type)
         return false
       end
@@ -408,7 +408,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] response_type Object to be assigned
     def response_type=(response_type)
-      allowed_values = ["MessagingTemplate"]
+      allowed_values = ["MessagingTemplate", "CampaignSmsTemplate"]
       if response_type && !allowed_values.include?(response_type)
         fail ArgumentError, "invalid value for 'response_type', must be one of #{allowed_values}."
       end

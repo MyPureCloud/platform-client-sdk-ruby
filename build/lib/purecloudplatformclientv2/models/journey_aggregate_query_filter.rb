@@ -17,31 +17,25 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 require 'date'
 
 module PureCloud
-  # Defines the SCIM metadata.
-  class ScimMetadata
-    # The type of SCIM resource.
-    attr_accessor :resource_type
+  class JourneyAggregateQueryFilter
+    # Boolean operation to apply to the provided predicates and clauses
+    attr_accessor :type
 
-    # The last time that the resource was modified. Date time is represented as an ISO-8601 string, for example, yyyy-MM-ddTHH:mm:ss.SSSZ.
-    attr_accessor :last_modified
+    # Boolean 'and/or' logic with up to two-levels of nesting
+    attr_accessor :clauses
 
-    # The URI of the resource.
-    attr_accessor :location
-
-    # The version of the resource. Matches the ETag HTTP response header.
-    attr_accessor :version
+    # Like a three-word sentence: (attribute-name) (operator) (target-value).
+    attr_accessor :predicates
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'resource_type' => :'resourceType',
+        :'type' => :'type',
         
-        :'last_modified' => :'lastModified',
+        :'clauses' => :'clauses',
         
-        :'location' => :'location',
-        
-        :'version' => :'version'
+        :'predicates' => :'predicates'
         
       }
     end
@@ -50,13 +44,11 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'resource_type' => :'String',
+        :'type' => :'String',
         
-        :'last_modified' => :'DateTime',
+        :'clauses' => :'Array<JourneyAggregateQueryClause>',
         
-        :'location' => :'String',
-        
-        :'version' => :'String'
+        :'predicates' => :'Array<JourneyAggregateQueryPredicate>'
         
       }
     end
@@ -70,37 +62,32 @@ module PureCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       
-      if attributes.has_key?(:'resourceType')
+      if attributes.has_key?(:'type')
         
         
-        self.resource_type = attributes[:'resourceType']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'lastModified')
-        
-        
-        self.last_modified = attributes[:'lastModified']
+        self.type = attributes[:'type']
         
       
       end
 
       
-      if attributes.has_key?(:'location')
+      if attributes.has_key?(:'clauses')
         
+        if (value = attributes[:'clauses']).is_a?(Array)
+          self.clauses = value
+        end
         
-        self.location = attributes[:'location']
         
       
       end
 
       
-      if attributes.has_key?(:'version')
+      if attributes.has_key?(:'predicates')
         
+        if (value = attributes[:'predicates']).is_a?(Array)
+          self.predicates = value
+        end
         
-        self.version = attributes[:'version']
         
       
       end
@@ -122,15 +109,16 @@ module PureCloud
     def valid?
       
       
-      
-      allowed_values = ["User", "Group", "ServiceProviderConfig", "ResourceType", "Schema"]
-      if @resource_type && !allowed_values.include?(@resource_type)
+      if @type.nil?
         return false
       end
+
       
       
-      
-      
+      allowed_values = ["and", "or"]
+      if @type && !allowed_values.include?(@type)
+        return false
+      end
       
       
       
@@ -147,20 +135,15 @@ module PureCloud
     
     
     # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] resource_type Object to be assigned
-    def resource_type=(resource_type)
-      allowed_values = ["User", "Group", "ServiceProviderConfig", "ResourceType", "Schema"]
-      if resource_type && !allowed_values.include?(resource_type)
-        fail ArgumentError, "invalid value for 'resource_type', must be one of #{allowed_values}."
+    # @param [Object] type Object to be assigned
+    def type=(type)
+      allowed_values = ["and", "or"]
+      if type && !allowed_values.include?(type)
+        fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
       end
-      @resource_type = resource_type
+      @type = type
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -179,10 +162,9 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          resource_type == o.resource_type &&
-          last_modified == o.last_modified &&
-          location == o.location &&
-          version == o.version
+          type == o.type &&
+          clauses == o.clauses &&
+          predicates == o.predicates
     end
 
     # @see the `==` method
@@ -194,7 +176,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [resource_type, last_modified, location, version].hash
+      [type, clauses, predicates].hash
     end
 
     # build the object from hash

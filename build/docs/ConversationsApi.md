@@ -98,6 +98,7 @@ Method | Description
 [**patch_conversations_message_participant**](ConversationsApi.html#patch_conversations_message_participant) | Update conversation participant
 [**patch_conversations_message_participant_attributes**](ConversationsApi.html#patch_conversations_message_participant_attributes) | Update the attributes on a conversation participant.
 [**patch_conversations_message_participant_communication**](ConversationsApi.html#patch_conversations_message_participant_communication) | Update conversation participant&#39;s communication by disconnecting it.
+[**patch_conversations_messaging_integrations_facebook_integration_id**](ConversationsApi.html#patch_conversations_messaging_integrations_facebook_integration_id) | Update Facebook messaging integration
 [**patch_conversations_messaging_integrations_whatsapp_integration_id**](ConversationsApi.html#patch_conversations_messaging_integrations_whatsapp_integration_id) | Activate a WhatsApp messaging integration.
 [**post_analytics_conversation_details_properties**](ConversationsApi.html#post_analytics_conversation_details_properties) | Index conversation properties
 [**post_analytics_conversations_aggregates_query**](ConversationsApi.html#post_analytics_conversations_aggregates_query) | Query for conversation aggregates
@@ -6175,6 +6176,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Empty**](Empty.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="patch_conversations_messaging_integrations_facebook_integration_id"></a>
+
+## [**FacebookIntegration**](FacebookIntegration.html) patch_conversations_messaging_integrations_facebook_integration_id(integration_id, body)
+
+
+
+Update Facebook messaging integration
+
+
+
+Wraps PATCH /api/v2/conversations/messaging/integrations/facebook/{integrationId} 
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+integration_id = "integration_id_example" # String | Integration ID
+
+body = PureCloud::FacebookIntegrationUpdateRequest.new # FacebookIntegrationUpdateRequest | FacebookIntegrationUpdateRequest
+
+
+begin
+  #Update Facebook messaging integration
+  result = api_instance.patch_conversations_messaging_integrations_facebook_integration_id(integration_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->patch_conversations_messaging_integrations_facebook_integration_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration_id** | **String**| Integration ID |  |
+ **body** | [**FacebookIntegrationUpdateRequest**](FacebookIntegrationUpdateRequest.html)| FacebookIntegrationUpdateRequest |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**FacebookIntegration**](FacebookIntegration.html)
 
 ### HTTP request headers
 

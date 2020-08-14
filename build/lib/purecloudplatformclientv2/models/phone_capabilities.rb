@@ -34,6 +34,8 @@ module PureCloud
 
     attr_accessor :media_codecs
 
+    attr_accessor :cdm
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -52,7 +54,9 @@ module PureCloud
         
         :'no_cloud_provisioning' => :'noCloudProvisioning',
         
-        :'media_codecs' => :'mediaCodecs'
+        :'media_codecs' => :'mediaCodecs',
+        
+        :'cdm' => :'cdm'
         
       }
     end
@@ -75,7 +79,9 @@ module PureCloud
         
         :'no_cloud_provisioning' => :'BOOLEAN',
         
-        :'media_codecs' => :'Array<String>'
+        :'media_codecs' => :'Array<String>',
+        
+        :'cdm' => :'BOOLEAN'
         
       }
     end
@@ -163,6 +169,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'cdm')
+        
+        
+        self.cdm = attributes[:'cdm']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -210,8 +225,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -265,7 +289,8 @@ module PureCloud
           allow_reboot == o.allow_reboot &&
           no_rebalance == o.no_rebalance &&
           no_cloud_provisioning == o.no_cloud_provisioning &&
-          media_codecs == o.media_codecs
+          media_codecs == o.media_codecs &&
+          cdm == o.cdm
     end
 
     # @see the `==` method
@@ -277,7 +302,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [provisions, registers, dual_registers, hardware_id_type, allow_reboot, no_rebalance, no_cloud_provisioning, media_codecs].hash
+      [provisions, registers, dual_registers, hardware_id_type, allow_reboot, no_rebalance, no_cloud_provisioning, media_codecs, cdm].hash
     end
 
     # build the object from hash

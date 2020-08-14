@@ -28,6 +28,7 @@ title: QueueConversationSocialExpressionEventTopicCallback
 | **callback_scheduled_time** | **DateTime** |  | [optional] |
 | **automated_callback_config_id** | **String** |  | [optional] |
 | **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
+| **after_call_work** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

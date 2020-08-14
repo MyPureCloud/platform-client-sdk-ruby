@@ -1122,7 +1122,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [BOOLEAN] :has_conversation Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (default to false)
@@ -1139,7 +1139,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [BOOLEAN] :has_conversation Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization.
@@ -1624,7 +1624,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :name the policy name - used for filtering results in searches.
@@ -1643,7 +1643,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<String>] :expand variable name requested by expand list
+    # @option opts [Array<Object>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :name the policy name - used for filtering results in searches.

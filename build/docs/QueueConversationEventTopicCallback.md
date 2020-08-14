@@ -28,6 +28,7 @@ title: QueueConversationEventTopicCallback
 | **callback_scheduled_time** | **DateTime** |  | [optional] |
 | **automated_callback_config_id** | **String** |  | [optional] |
 | **wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
+| **after_call_work** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

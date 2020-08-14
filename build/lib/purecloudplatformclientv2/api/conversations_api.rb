@@ -6777,6 +6777,81 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Update Facebook messaging integration
+    # 
+    # @param integration_id Integration ID
+    # @param body FacebookIntegrationUpdateRequest
+    # @param [Hash] opts the optional parameters
+    # @return [FacebookIntegration]
+    def patch_conversations_messaging_integrations_facebook_integration_id(integration_id, body, opts = {})
+      data, _status_code, _headers = patch_conversations_messaging_integrations_facebook_integration_id_with_http_info(integration_id, body, opts)
+      return data
+    end
+
+    # Update Facebook messaging integration
+    # 
+    # @param integration_id Integration ID
+    # @param body FacebookIntegrationUpdateRequest
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(FacebookIntegration, Fixnum, Hash)>] FacebookIntegration data, response status code and response headers
+    def patch_conversations_messaging_integrations_facebook_integration_id_with_http_info(integration_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.patch_conversations_messaging_integrations_facebook_integration_id ..."
+      end
+      
+      
+      # verify the required parameter 'integration_id' is set
+      fail ArgumentError, "Missing the required parameter 'integration_id' when calling ConversationsApi.patch_conversations_messaging_integrations_facebook_integration_id" if integration_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.patch_conversations_messaging_integrations_facebook_integration_id" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/messaging/integrations/facebook/{integrationId}".sub('{format}','json').sub('{' + 'integrationId' + '}', integration_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FacebookIntegration')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#patch_conversations_messaging_integrations_facebook_integration_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Activate a WhatsApp messaging integration.
     # The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
     # @param integration_id Integration ID

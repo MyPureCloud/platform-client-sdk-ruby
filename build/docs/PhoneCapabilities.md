@@ -15,6 +15,7 @@ title: PhoneCapabilities
 | **no_rebalance** | **BOOLEAN** |  | [optional] |
 | **no_cloud_provisioning** | **BOOLEAN** |  | [optional] |
 | **media_codecs** | **Array&lt;String&gt;** |  | [optional] |
+| **cdm** | **BOOLEAN** |  | [optional] |
 {: class="table table-striped"}
 
 
