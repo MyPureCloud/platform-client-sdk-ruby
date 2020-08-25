@@ -511,12 +511,12 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [DateTime] :start_time Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     # @option opts [DateTime] :end_time End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-    # @option opts [Array<Object>] :agent_user_id user id of agent requested
+    # @option opts [Array<String>] :agent_user_id user id of agent requested
     # @option opts [String] :evaluator_user_id user id of the evaluator
     # @option opts [String] :name name
     # @option opts [String] :group group id
@@ -532,12 +532,12 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [DateTime] :start_time Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     # @option opts [DateTime] :end_time End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-    # @option opts [Array<Object>] :agent_user_id user id of agent requested
+    # @option opts [Array<String>] :agent_user_id user id of agent requested
     # @option opts [String] :evaluator_user_id user id of the evaluator
     # @option opts [String] :name name
     # @option opts [String] :group group id
@@ -758,7 +758,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :conversation_id conversation id
@@ -777,7 +777,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :conversation_id conversation id
@@ -905,7 +905,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :recording_id id of the recording
@@ -923,7 +923,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :recording_id id of the recording
@@ -1190,7 +1190,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :conversation_id conversationId specified
@@ -1199,7 +1199,7 @@ module PureCloud
     # @option opts [String] :queue_id queue id
     # @option opts [String] :start_time start time of the evaluation query
     # @option opts [String] :end_time end time of the evaluation query
-    # @option opts [Array<Object>] :evaluation_state 
+    # @option opts [Array<String>] :evaluation_state 
     # @option opts [BOOLEAN] :is_released the evaluation has been released
     # @option opts [BOOLEAN] :agent_has_read agent has the evaluation
     # @option opts [BOOLEAN] :expand_answer_total_scores get the total scores for evaluations
@@ -1217,7 +1217,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :conversation_id conversationId specified
@@ -1226,7 +1226,7 @@ module PureCloud
     # @option opts [String] :queue_id queue id
     # @option opts [String] :start_time start time of the evaluation query
     # @option opts [String] :end_time end time of the evaluation query
-    # @option opts [Array<Object>] :evaluation_state 
+    # @option opts [Array<String>] :evaluation_state 
     # @option opts [BOOLEAN] :is_released the evaluation has been released
     # @option opts [BOOLEAN] :agent_has_read agent has the evaluation
     # @option opts [BOOLEAN] :expand_answer_total_scores get the total scores for evaluations
@@ -1407,13 +1407,13 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [DateTime] :start_time The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     # @option opts [DateTime] :end_time The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     # @option opts [String] :name Evaluator name
-    # @option opts [Array<Object>] :permission permission strings
+    # @option opts [Array<String>] :permission permission strings
     # @option opts [String] :group group id
     # @return [EvaluatorActivityEntityListing]
     def get_quality_evaluators_activity(opts = {})
@@ -1427,13 +1427,13 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [DateTime] :start_time The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     # @option opts [DateTime] :end_time The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     # @option opts [String] :name Evaluator name
-    # @option opts [Array<Object>] :permission permission strings
+    # @option opts [Array<String>] :permission permission strings
     # @option opts [String] :group group id
     # @return [Array<(EvaluatorActivityEntityListing, Fixnum, Hash)>] EvaluatorActivityEntityListing data, response status code and response headers
     def get_quality_evaluators_activity_with_http_info(opts = {})
@@ -2592,7 +2592,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :name the keyword set name - used for filtering results in searches.
@@ -2611,7 +2611,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :name the keyword set name - used for filtering results in searches.

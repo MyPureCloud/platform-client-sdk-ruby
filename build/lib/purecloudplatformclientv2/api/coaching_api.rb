@@ -710,6 +710,7 @@ module PureCloud
     # Permission not required if you are the owner of the notification.
     # @param notification_id The ID of the notification.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :expand Indicates a field in the response which should be expanded.
     # @return [CoachingNotification]
     def get_coaching_notification(notification_id, opts = {})
       data, _status_code, _headers = get_coaching_notification_with_http_info(notification_id, opts)
@@ -720,6 +721,7 @@ module PureCloud
     # Permission not required if you are the owner of the notification.
     # @param notification_id The ID of the notification.
     # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :expand Indicates a field in the response which should be expanded.
     # @return [Array<(CoachingNotification, Fixnum, Hash)>] CoachingNotification data, response status code and response headers
     def get_coaching_notification_with_http_info(notification_id, opts = {})
       if @api_client.config.debugging
@@ -734,11 +736,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/coaching/notifications/{notificationId}".sub('{format}','json').sub('{' + 'notificationId' + '}', notification_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
 
       # header parameters
       header_params = {}
@@ -776,6 +785,7 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_number Page number (default to 1)
     # @option opts [Integer] :page_size Page size (default to 25)
+    # @option opts [Array<String>] :expand Indicates a field in the response which should be expanded.
     # @return [CoachingNotificationList]
     def get_coaching_notifications(opts = {})
       data, _status_code, _headers = get_coaching_notifications_with_http_info(opts)
@@ -787,11 +797,18 @@ module PureCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page_number Page number
     # @option opts [Integer] :page_size Page size
+    # @option opts [Array<String>] :expand Indicates a field in the response which should be expanded.
     # @return [Array<(CoachingNotificationList, Fixnum, Hash)>] CoachingNotificationList data, response status code and response headers
     def get_coaching_notifications_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CoachingApi.get_coaching_notifications ..."
       end
+      
+      
+      
+      
+      
+      
       
       
       
@@ -812,6 +829,7 @@ module PureCloud
       query_params = {}
       query_params[:'pageNumber'] = opts[:'page_number'] if opts[:'page_number']
       query_params[:'pageSize'] = opts[:'page_size'] if opts[:'page_size']
+      query_params[:'expand'] = @api_client.build_collection_param(opts[:'expand'], :multi) if opts[:'expand']
 
       # header parameters
       header_params = {}

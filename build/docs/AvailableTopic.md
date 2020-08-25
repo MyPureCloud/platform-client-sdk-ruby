@@ -13,6 +13,7 @@ title: AvailableTopic
 | **schema** | **Hash&lt;String, Object&gt;** |  | [optional] |
 | **requires_current_user** | **BOOLEAN** | True if the topic user ID is required to match the subscribing user ID | [optional] |
 | **requires_current_user_or_permission** | **BOOLEAN** | True if permissions are only required when the topic user ID does not match the subscribing user ID | [optional] |
+| **transports** | **Array&lt;String&gt;** | Transports that support events for the topic | [optional] |
 {: class="table table-striped"}
 
 

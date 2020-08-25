@@ -684,7 +684,7 @@ module PureCloud
     # 
     # @param conversation_id Conversation ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<Recording>]
+    # @return [Array<RecordingMetadata>]
     def get_conversation_recordingmetadata(conversation_id, opts = {})
       data, _status_code, _headers = get_conversation_recordingmetadata_with_http_info(conversation_id, opts)
       return data
@@ -694,7 +694,7 @@ module PureCloud
     # 
     # @param conversation_id Conversation ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<Recording>, Fixnum, Hash)>] Array<Recording> data, response status code and response headers
+    # @return [Array<(Array<RecordingMetadata>, Fixnum, Hash)>] Array<RecordingMetadata> data, response status code and response headers
     def get_conversation_recordingmetadata_with_http_info(conversation_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: RecordingApi.get_conversation_recordingmetadata ..."
@@ -738,7 +738,7 @@ module PureCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<Recording>')
+        :return_type => 'Array<RecordingMetadata>')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: RecordingApi#get_conversation_recordingmetadata\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1122,7 +1122,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [BOOLEAN] :has_conversation Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (default to false)
@@ -1139,7 +1139,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [BOOLEAN] :has_conversation Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization.
@@ -1624,7 +1624,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested (default to 25)
     # @option opts [Integer] :page_number The page number requested (default to 1)
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :name the policy name - used for filtering results in searches.
@@ -1643,7 +1643,7 @@ module PureCloud
     # @option opts [Integer] :page_size The total page size requested
     # @option opts [Integer] :page_number The page number requested
     # @option opts [String] :sort_by variable name requested to sort by
-    # @option opts [Array<Object>] :expand variable name requested by expand list
+    # @option opts [Array<String>] :expand variable name requested by expand list
     # @option opts [String] :next_page next page token
     # @option opts [String] :previous_page Previous page token
     # @option opts [String] :name the policy name - used for filtering results in searches.

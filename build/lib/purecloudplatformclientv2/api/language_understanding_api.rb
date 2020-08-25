@@ -354,8 +354,8 @@ module PureCloud
       
       
       
-      if opts[:'assessment'] && !['Incorrect', 'Correct', 'Unknown'].include?(opts[:'assessment'])
-        fail ArgumentError, 'invalid value for "assessment", must be one of Incorrect, Correct, Unknown'
+      if opts[:'assessment'] && !['Incorrect', 'Correct', 'Unknown', 'Disabled'].include?(opts[:'assessment'])
+        fail ArgumentError, 'invalid value for "assessment", must be one of Incorrect, Correct, Unknown, Disabled'
       end
       
       

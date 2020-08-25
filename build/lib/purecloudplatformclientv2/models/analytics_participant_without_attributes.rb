@@ -42,9 +42,6 @@ module PureCloud
     # The team id the user is a member of
     attr_accessor :team_id
 
-    # Unique identifiers of the active virtual agent assistants
-    attr_accessor :agent_assistant_ids
-
     # List of sessions associated to this participant
     attr_accessor :sessions
 
@@ -67,8 +64,6 @@ module PureCloud
         :'flagged_reason' => :'flaggedReason',
         
         :'team_id' => :'teamId',
-        
-        :'agent_assistant_ids' => :'agentAssistantIds',
         
         :'sessions' => :'sessions'
         
@@ -94,8 +89,6 @@ module PureCloud
         :'flagged_reason' => :'String',
         
         :'team_id' => :'String',
-        
-        :'agent_assistant_ids' => :'Array<String>',
         
         :'sessions' => :'Array<AnalyticsSession>'
         
@@ -183,17 +176,6 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'agentAssistantIds')
-        
-        if (value = attributes[:'agentAssistantIds']).is_a?(Array)
-          self.agent_assistant_ids = value
-        end
-        
-        
-      
-      end
-
-      
       if attributes.has_key?(:'sessions')
         
         if (value = attributes[:'sessions']).is_a?(Array)
@@ -255,10 +237,6 @@ module PureCloud
       if @flagged_reason && !allowed_values.include?(@flagged_reason)
         return false
       end
-      
-      
-      
-      
       
       
       
@@ -336,11 +314,6 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -354,7 +327,6 @@ module PureCloud
           external_organization_id == o.external_organization_id &&
           flagged_reason == o.flagged_reason &&
           team_id == o.team_id &&
-          agent_assistant_ids == o.agent_assistant_ids &&
           sessions == o.sessions
     end
 
@@ -367,7 +339,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [participant_id, participant_name, user_id, purpose, external_contact_id, external_organization_id, flagged_reason, team_id, agent_assistant_ids, sessions].hash
+      [participant_id, participant_name, user_id, purpose, external_contact_id, external_organization_id, flagged_reason, team_id, sessions].hash
     end
 
     # build the object from hash

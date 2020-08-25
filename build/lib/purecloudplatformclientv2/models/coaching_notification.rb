@@ -102,7 +102,7 @@ module PureCloud
         
         :'user' => :'UserReference',
         
-        :'appointment' => :'CoachingAppointmentReference',
+        :'appointment' => :'CoachingAppointmentResponse',
         
         :'self_uri' => :'String'
         

@@ -33,6 +33,9 @@ module PureCloud
     # True if permissions are only required when the topic user ID does not match the subscribing user ID
     attr_accessor :requires_current_user_or_permission
 
+    # Transports that support events for the topic
+    attr_accessor :transports
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -47,7 +50,9 @@ module PureCloud
         
         :'requires_current_user' => :'requiresCurrentUser',
         
-        :'requires_current_user_or_permission' => :'requiresCurrentUserOrPermission'
+        :'requires_current_user_or_permission' => :'requiresCurrentUserOrPermission',
+        
+        :'transports' => :'transports'
         
       }
     end
@@ -66,7 +71,9 @@ module PureCloud
         
         :'requires_current_user' => :'BOOLEAN',
         
-        :'requires_current_user_or_permission' => :'BOOLEAN'
+        :'requires_current_user_or_permission' => :'BOOLEAN',
+        
+        :'transports' => :'Array<String>'
         
       }
     end
@@ -138,6 +145,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'transports')
+        
+        if (value = attributes[:'transports']).is_a?(Array)
+          self.transports = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -177,8 +195,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -220,7 +247,8 @@ module PureCloud
           requires_permissions == o.requires_permissions &&
           schema == o.schema &&
           requires_current_user == o.requires_current_user &&
-          requires_current_user_or_permission == o.requires_current_user_or_permission
+          requires_current_user_or_permission == o.requires_current_user_or_permission &&
+          transports == o.transports
     end
 
     # @see the `==` method
@@ -232,7 +260,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [description, id, requires_permissions, schema, requires_current_user, requires_current_user_or_permission].hash
+      [description, id, requires_permissions, schema, requires_current_user, requires_current_user_or_permission, transports].hash
     end
 
     # build the object from hash

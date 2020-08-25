@@ -357,7 +357,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: nil, # Array<Object> | variable name requested by expand list
+  expand: ["expand_example"], # Array<String> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example" # String | Previous page token
 }
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -497,7 +497,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: nil, # Array<Object> | variable name requested by expand list
+  expand: ["expand_example"], # Array<String> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example" # String | Previous page token
 }
@@ -518,7 +518,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -1145,7 +1145,7 @@ opts = {
   page_number: 1, # Integer | The page number requested
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
-  sort_by: "sort_by_example", # String | Root level field name to sort on.  Only 'name' is supported on this endpoint.
+  sort_by: "sort_by_example", # String | Root level field name to sort on.
   sort_order: "asc", # String | Direction to sort 'sortBy' field.
   secure: "secure_example" # String | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
 }
@@ -1167,7 +1167,7 @@ Name | Type | Description  | Notes
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
- **sort_by** | **String**| Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. | [optional]  |
+ **sort_by** | **String**| Root level field name to sort on. | [optional]  |
  **sort_order** | **String**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: ASC, DESC |
  **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
 {: class="table table-striped"}
@@ -1306,7 +1306,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: nil, # Array<Object> | variable name requested by expand list
+  expand: ["expand_example"], # Array<String> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example" # String | Previous page token
 }
@@ -1327,7 +1327,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -2528,7 +2528,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: nil, # Array<Object> | variable name requested by expand list
+  expand: ["expand_example"], # Array<String> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example" # String | Previous page token
 }
@@ -2549,7 +2549,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -2603,7 +2603,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: nil, # Array<Object> | variable name requested by expand list
+  expand: ["expand_example"], # Array<String> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   app_host: "app_host_example" # String | The type of UserApp to filter by
@@ -2625,7 +2625,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **app_host** | **String**| The type of UserApp to filter by | [optional]  |
@@ -2683,7 +2683,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: nil, # Array<Object> | variable name requested by expand list
+  expand: ["expand_example"], # Array<String> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example" # String | Previous page token
 }
@@ -2706,7 +2706,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
 {: class="table table-striped"}

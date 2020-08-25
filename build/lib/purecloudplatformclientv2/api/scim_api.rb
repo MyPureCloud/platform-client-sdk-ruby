@@ -70,11 +70,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 
@@ -143,11 +143,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 
@@ -217,11 +217,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 
@@ -290,11 +290,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 
@@ -382,11 +382,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if opts[:'if_none_match']
 
@@ -483,11 +483,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -553,11 +553,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -608,11 +608,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -678,11 +678,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -742,11 +742,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -805,11 +805,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if opts[:'if_none_match']
 
@@ -897,11 +897,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if opts[:'if_none_match']
 
@@ -998,11 +998,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -1089,11 +1089,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if opts[:'if_none_match']
 
@@ -1192,11 +1192,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -1262,11 +1262,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -1317,11 +1317,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -1387,11 +1387,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -1451,11 +1451,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -1514,11 +1514,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if opts[:'if_none_match']
 
@@ -1606,11 +1606,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if opts[:'if_none_match']
 
@@ -1707,11 +1707,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -1790,11 +1790,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 
@@ -1874,11 +1874,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 
@@ -1958,11 +1958,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 
@@ -2042,11 +2042,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 
@@ -2108,11 +2108,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -2173,11 +2173,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -2238,11 +2238,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -2303,11 +2303,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
 
       # form parameters
@@ -2386,11 +2386,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 
@@ -2470,11 +2470,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 
@@ -2554,11 +2554,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 
@@ -2638,11 +2638,11 @@ module PureCloud
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/scim+json', 'application/json']
+      local_header_accept = ['application/json', 'application/scim+json']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
-      local_header_content_type = ['application/scim+json', 'application/json']
+      local_header_content_type = ['application/json', 'application/scim+json']
       header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
       header_params[:'If-Match'] = opts[:'if_match'] if opts[:'if_match']
 

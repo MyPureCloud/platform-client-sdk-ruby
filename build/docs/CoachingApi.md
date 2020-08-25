@@ -592,7 +592,7 @@ Name | Type | Description  | Notes
 
 <a name="get_coaching_notification"></a>
 
-## [**CoachingNotification**](CoachingNotification.html) get_coaching_notification(notification_id)
+## [**CoachingNotification**](CoachingNotification.html) get_coaching_notification(notification_id, opts)
 
 
 
@@ -626,10 +626,13 @@ api_instance = PureCloud::CoachingApi.new
 
 notification_id = "notification_id_example" # String | The ID of the notification.
 
+opts = { 
+  expand: ["expand_example"] # Array<String> | Indicates a field in the response which should be expanded.
+}
 
 begin
   #Get an existing notification
-  result = api_instance.get_coaching_notification(notification_id)
+  result = api_instance.get_coaching_notification(notification_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling CoachingApi->get_coaching_notification: #{e}"
@@ -641,6 +644,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **notification_id** | **String**| The ID of the notification. |  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: appointment |
 {: class="table table-striped"}
 
 
@@ -690,7 +694,8 @@ api_instance = PureCloud::CoachingApi.new
 
 opts = { 
   page_number: 1, # Integer | Page number
-  page_size: 25 # Integer | Page size
+  page_size: 25, # Integer | Page size
+  expand: ["expand_example"] # Array<String> | Indicates a field in the response which should be expanded.
 }
 
 begin
@@ -708,6 +713,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
+ **expand** | [**Array&lt;String&gt;**](String.html)| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: appointment |
 {: class="table table-striped"}
 
 

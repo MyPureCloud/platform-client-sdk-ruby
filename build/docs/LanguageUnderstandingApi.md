@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain_id** | **String**| ID of the NLU domain. |  |
  **intent_name** | **String**| The top intent name to retrieve feedback for. | [optional]  |
- **assessment** | **String**| The top assessment to retrieve feedback for. | [optional] <br />**Values**: Incorrect, Correct, Unknown |
+ **assessment** | **String**| The top assessment to retrieve feedback for. | [optional] <br />**Values**: Incorrect, Correct, Unknown, Disabled |
  **date_start** | **Date**| Begin of time window as ISO-8601 date. | [optional]  |
  **date_end** | **Date**| End of time window as ISO-8601 date. | [optional]  |
  **include_deleted** | **BOOLEAN**| Whether to include soft-deleted items in the result. | [optional]  |

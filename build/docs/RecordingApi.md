@@ -606,7 +606,7 @@ Name | Type | Description  | Notes
 
 <a name="get_conversation_recordingmetadata"></a>
 
-## [**Array&lt;Recording&gt;**](Recording.html) get_conversation_recordingmetadata(conversation_id)
+## [**Array&lt;RecordingMetadata&gt;**](RecordingMetadata.html) get_conversation_recordingmetadata(conversation_id)
 
 
 
@@ -659,7 +659,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;Recording&gt;**](Recording.html)
+[**Array&lt;RecordingMetadata&gt;**](RecordingMetadata.html)
 
 ### HTTP request headers
 
@@ -991,7 +991,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: nil, # Array<Object> | variable name requested by expand list
+  expand: ["expand_example"], # Array<String> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   has_conversation: false, # BOOLEAN | Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization.
@@ -1014,7 +1014,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **has_conversation** | **BOOLEAN**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false] |
@@ -1400,7 +1400,7 @@ opts = {
   page_size: 25, # Integer | The total page size requested
   page_number: 1, # Integer | The page number requested
   sort_by: "sort_by_example", # String | variable name requested to sort by
-  expand: nil, # Array<Object> | variable name requested by expand list
+  expand: ["expand_example"], # Array<String> | variable name requested by expand list
   next_page: "next_page_example", # String | next page token
   previous_page: "previous_page_example", # String | Previous page token
   name: "name_example", # String | the policy name - used for filtering results in searches.
@@ -1425,7 +1425,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**| The total page size requested | [optional] [default to 25] |
  **page_number** | **Integer**| The page number requested | [optional] [default to 1] |
  **sort_by** | **String**| variable name requested to sort by | [optional]  |
- **expand** | [**Array&lt;Object&gt;**](Object.html)| variable name requested by expand list | [optional]  |
+ **expand** | [**Array&lt;String&gt;**](String.html)| variable name requested by expand list | [optional]  |
  **next_page** | **String**| next page token | [optional]  |
  **previous_page** | **String**| Previous page token | [optional]  |
  **name** | **String**| the policy name - used for filtering results in searches. | [optional]  |

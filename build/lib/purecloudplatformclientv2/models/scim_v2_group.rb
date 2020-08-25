@@ -34,6 +34,9 @@ module PureCloud
     # The list of members in the group.
     attr_accessor :members
 
+    # The metadata of the SCIM resource.
+    attr_accessor :meta
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -46,7 +49,9 @@ module PureCloud
         
         :'external_id' => :'externalId',
         
-        :'members' => :'members'
+        :'members' => :'members',
+        
+        :'meta' => :'meta'
         
       }
     end
@@ -63,7 +68,9 @@ module PureCloud
         
         :'external_id' => :'String',
         
-        :'members' => :'Array<ScimV2MemberReference>'
+        :'members' => :'Array<ScimV2MemberReference>',
+        
+        :'meta' => :'ScimMetadata'
         
       }
     end
@@ -126,6 +133,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'meta')
+        
+        
+        self.meta = attributes[:'meta']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -166,8 +182,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -203,7 +228,8 @@ module PureCloud
           schemas == o.schemas &&
           display_name == o.display_name &&
           external_id == o.external_id &&
-          members == o.members
+          members == o.members &&
+          meta == o.meta
     end
 
     # @see the `==` method
@@ -215,7 +241,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, schemas, display_name, external_id, members].hash
+      [id, schemas, display_name, external_id, members, meta].hash
     end
 
     # build the object from hash

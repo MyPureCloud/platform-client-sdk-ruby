@@ -94,6 +94,9 @@ module PureCloud
     # The users participating in the conversation
     attr_accessor :users
 
+    # Role of the file recording. It can be either customer_experience or adhoc.
+    attr_accessor :recording_file_role
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -154,6 +157,8 @@ module PureCloud
         :'session_id' => :'sessionId',
         
         :'users' => :'users',
+        
+        :'recording_file_role' => :'recordingFileRole',
         
         :'self_uri' => :'selfUri'
         
@@ -217,6 +222,8 @@ module PureCloud
         :'session_id' => :'String',
         
         :'users' => :'Array<User>',
+        
+        :'recording_file_role' => :'String',
         
         :'self_uri' => :'String'
         
@@ -487,6 +494,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'recordingFileRole')
+        
+        
+        self.recording_file_role = attributes[:'recordingFileRole']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -626,6 +642,15 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      allowed_values = ["CUSTOMER_EXPERIENCE", "ADHOC"]
+      if @recording_file_role && !allowed_values.include?(@recording_file_role)
+        return false
+      end
       
       
       
@@ -790,6 +815,20 @@ module PureCloud
     
     
     
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] recording_file_role Object to be assigned
+    def recording_file_role=(recording_file_role)
+      allowed_values = ["CUSTOMER_EXPERIENCE", "ADHOC"]
+      if recording_file_role && !allowed_values.include?(recording_file_role)
+        fail ArgumentError, "invalid value for 'recording_file_role', must be one of #{allowed_values}."
+      end
+      @recording_file_role = recording_file_role
+    end
+
+    
+    
+    
+    
     
     
     
@@ -826,6 +865,7 @@ module PureCloud
           remaining_restorations_allowed_for_org == o.remaining_restorations_allowed_for_org &&
           session_id == o.session_id &&
           users == o.users &&
+          recording_file_role == o.recording_file_role &&
           self_uri == o.self_uri
     end
 
@@ -838,7 +878,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, conversation_id, path, start_time, end_time, media, annotations, transcript, email_transcript, messaging_transcript, file_state, restore_expiration_time, media_uris, estimated_transcode_time_ms, actual_transcode_time_ms, archive_date, archive_medium, delete_date, export_date, exported_date, output_duration_ms, output_size_in_bytes, max_allowed_restorations_for_org, remaining_restorations_allowed_for_org, session_id, users, self_uri].hash
+      [id, name, conversation_id, path, start_time, end_time, media, annotations, transcript, email_transcript, messaging_transcript, file_state, restore_expiration_time, media_uris, estimated_transcode_time_ms, actual_transcode_time_ms, archive_date, archive_medium, delete_date, export_date, exported_date, output_duration_ms, output_size_in_bytes, max_allowed_restorations_for_org, remaining_restorations_allowed_for_org, session_id, users, recording_file_role, self_uri].hash
     end
 
     # build the object from hash

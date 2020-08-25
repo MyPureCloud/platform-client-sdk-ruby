@@ -34,6 +34,7 @@ title: Recording
 | **remaining_restorations_allowed_for_org** | **Integer** | The remaining archive restorations the organization has. | [optional] |
 | **session_id** | **String** | The session id represents an external resource id, such as email, call, chat, etc | [optional] |
 | **users** | [**Array&lt;User&gt;**](User.html) | The users participating in the conversation | [optional] |
+| **recording_file_role** | **String** | Role of the file recording. It can be either customer_experience or adhoc. | [optional] |
 | **self_uri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -107,8 +107,8 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -176,8 +176,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -244,8 +244,8 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -313,8 +313,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -386,8 +386,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -460,8 +460,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -524,8 +524,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -582,8 +582,8 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -646,8 +646,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -711,8 +711,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -776,8 +776,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -848,8 +848,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -921,8 +921,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -994,8 +994,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1069,8 +1069,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1133,8 +1133,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1191,8 +1191,8 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1255,8 +1255,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1320,8 +1320,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1385,8 +1385,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1457,8 +1457,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1530,8 +1530,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1602,8 +1602,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1679,8 +1679,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1751,8 +1751,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1828,8 +1828,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1893,8 +1893,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -1962,8 +1962,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -2027,8 +2027,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -2096,8 +2096,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -2168,8 +2168,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -2245,8 +2245,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -2317,8 +2317,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 
@@ -2394,8 +2394,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/scim+json, application/json
- - **Accept**: application/scim+json, application/json
+ - **Content-Type**: application/json, application/scim+json
+ - **Accept**: application/json, application/scim+json
 
 
 

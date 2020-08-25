@@ -136,7 +136,7 @@ module PureCloud
       
       
       
-      allowed_values = ["Incorrect", "Correct", "Unknown"]
+      allowed_values = ["Incorrect", "Correct", "Unknown", "Disabled"]
       if @assessment && !allowed_values.include?(@assessment)
         return false
       end
@@ -165,7 +165,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] assessment Object to be assigned
     def assessment=(assessment)
-      allowed_values = ["Incorrect", "Correct", "Unknown"]
+      allowed_values = ["Incorrect", "Correct", "Unknown", "Disabled"]
       if assessment && !allowed_values.include?(assessment)
         fail ArgumentError, "invalid value for 'assessment', must be one of #{allowed_values}."
       end

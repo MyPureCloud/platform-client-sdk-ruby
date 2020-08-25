@@ -9,7 +9,7 @@ title: UpdateCoachingAppointmentRequest
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of coaching appointment. | [optional] |
 | **description** | **String** | The description of coaching appointment. | [optional] |
-| **date_start** | **DateTime** | The date/time the coaching appointment starts. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **date_start** | **DateTime** | The date/time the coaching appointment starts. Times will be rounded down to the minute. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **length_in_minutes** | **Integer** | The duration of coaching appointment in minutes. | [optional] |
 | **conversation_ids** | **Array&lt;String&gt;** | IDs of conversations associated with this coaching appointment. | [optional] |
 | **document_ids** | **Array&lt;String&gt;** | IDs of documents associated with this coaching appointment. | [optional] |

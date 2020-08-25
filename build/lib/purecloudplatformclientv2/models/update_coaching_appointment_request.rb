@@ -25,7 +25,7 @@ module PureCloud
     # The description of coaching appointment.
     attr_accessor :description
 
-    # The date/time the coaching appointment starts. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    # The date/time the coaching appointment starts. Times will be rounded down to the minute. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_start
 
     # The duration of coaching appointment in minutes.
