@@ -792,7 +792,7 @@ module PureCloud
       
       
       
-      allowed_values = ["SMS", "TWITTER", "FACEBOOK", "LINE", "VIBER", "WECHAT", "WHATSAPP", "TELEGRAM", "KAKAO"]
+      allowed_values = ["UNKNOWN", "SMS", "TWITTER", "FACEBOOK", "LINE", "VIBER", "WECHAT", "WHATSAPP", "TELEGRAM", "KAKAO", "WEBMESSAGING"]
       if @type && !allowed_values.include?(@type)
         return false
       end
@@ -1025,7 +1025,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
-      allowed_values = ["SMS", "TWITTER", "FACEBOOK", "LINE", "VIBER", "WECHAT", "WHATSAPP", "TELEGRAM", "KAKAO"]
+      allowed_values = ["UNKNOWN", "SMS", "TWITTER", "FACEBOOK", "LINE", "VIBER", "WECHAT", "WHATSAPP", "TELEGRAM", "KAKAO", "WEBMESSAGING"]
       if type && !allowed_values.include?(type)
         fail ArgumentError, "invalid value for 'type', must be one of #{allowed_values}."
       end

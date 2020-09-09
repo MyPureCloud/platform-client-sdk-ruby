@@ -18,21 +18,12 @@ require 'date'
 
 module PureCloud
   class Permissions
-    # The globally unique identifier for the object.
-    attr_accessor :id
-
-    attr_accessor :name
-
     # List of permission ids.
     attr_accessor :ids
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        
-        :'id' => :'id',
-        
-        :'name' => :'name',
         
         :'ids' => :'ids'
         
@@ -42,10 +33,6 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        
-        :'id' => :'String',
-        
-        :'name' => :'String',
         
         :'ids' => :'Array<String>'
         
@@ -59,24 +46,6 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes.has_key?(:'id')
-        
-        
-        self.id = attributes[:'id']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'name')
-        
-        
-        self.name = attributes[:'name']
-        
-      
-      end
 
       
       if attributes.has_key?(:'ids')
@@ -106,14 +75,6 @@ module PureCloud
     def valid?
       
       
-      
-      
-      
-      
-      
-      
-      
-      
       if @ids.nil?
         return false
       end
@@ -130,23 +91,11 @@ module PureCloud
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name &&
           ids == o.ids
     end
 
@@ -159,7 +108,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, ids].hash
+      [ids].hash
     end
 
     # build the object from hash

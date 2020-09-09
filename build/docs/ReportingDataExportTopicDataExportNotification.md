@@ -8,6 +8,7 @@ title: ReportingDataExportTopicDataExportNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **id** | **String** |  | [optional] |
+| **run_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
 | **export_format** | **String** |  | [optional] |

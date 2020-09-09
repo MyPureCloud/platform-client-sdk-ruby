@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class WfmScheduleReference
-    # The globally unique identifier for the object.
+    # The ID of the WFM schedule
     attr_accessor :id
 
     # A reference to a Workforce Management Business Unit
@@ -121,13 +121,28 @@ module PureCloud
     def valid?
       
       
+      if @id.nil?
+        return false
+      end
+
       
       
       
       
       
+      if @business_unit.nil?
+        return false
+      end
+
       
       
+      
+      
+      
+      if @week_date.nil?
+        return false
+      end
+
       
       
       

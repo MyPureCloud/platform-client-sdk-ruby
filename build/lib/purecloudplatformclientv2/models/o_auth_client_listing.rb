@@ -59,6 +59,9 @@ module PureCloud
     # The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted.
     attr_accessor :state
 
+    # The time at which this client will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :date_to_delete
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -93,6 +96,8 @@ module PureCloud
         :'role_divisions' => :'roleDivisions',
         
         :'state' => :'state',
+        
+        :'date_to_delete' => :'dateToDelete',
         
         :'self_uri' => :'selfUri'
         
@@ -130,6 +135,8 @@ module PureCloud
         :'role_divisions' => :'Array<RoleDivision>',
         
         :'state' => :'String',
+        
+        :'date_to_delete' => :'DateTime',
         
         :'self_uri' => :'String'
         
@@ -279,6 +286,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'dateToDelete')
+        
+        
+        self.date_to_delete = attributes[:'dateToDelete']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -373,6 +389,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -460,6 +480,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -479,6 +504,7 @@ module PureCloud
           scope == o.scope &&
           role_divisions == o.role_divisions &&
           state == o.state &&
+          date_to_delete == o.date_to_delete &&
           self_uri == o.self_uri
     end
 
@@ -491,7 +517,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, access_token_validity_seconds, description, registered_redirect_uri, secret, role_ids, date_created, date_modified, created_by, modified_by, scope, role_divisions, state, self_uri].hash
+      [id, name, access_token_validity_seconds, description, registered_redirect_uri, secret, role_ids, date_created, date_modified, created_by, modified_by, scope, role_divisions, state, date_to_delete, self_uri].hash
     end
 
     # build the object from hash

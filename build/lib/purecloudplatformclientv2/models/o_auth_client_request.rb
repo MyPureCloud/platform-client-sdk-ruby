@@ -44,6 +44,9 @@ module PureCloud
     # The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted.
     attr_accessor :state
 
+    # The time at which this client will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+    attr_accessor :date_to_delete
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -64,7 +67,9 @@ module PureCloud
         
         :'role_divisions' => :'roleDivisions',
         
-        :'state' => :'state'
+        :'state' => :'state',
+        
+        :'date_to_delete' => :'dateToDelete'
         
       }
     end
@@ -89,7 +94,9 @@ module PureCloud
         
         :'role_divisions' => :'Array<RoleDivision>',
         
-        :'state' => :'String'
+        :'state' => :'String',
+        
+        :'date_to_delete' => :'DateTime'
         
       }
     end
@@ -192,6 +199,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'dateToDelete')
+        
+        
+        self.date_to_delete = attributes[:'dateToDelete']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -263,6 +279,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
     
@@ -329,6 +349,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -342,7 +367,8 @@ module PureCloud
           authorized_grant_type == o.authorized_grant_type &&
           scope == o.scope &&
           role_divisions == o.role_divisions &&
-          state == o.state
+          state == o.state &&
+          date_to_delete == o.date_to_delete
     end
 
     # @see the `==` method
@@ -354,7 +380,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, access_token_validity_seconds, description, registered_redirect_uri, role_ids, authorized_grant_type, scope, role_divisions, state].hash
+      [name, access_token_validity_seconds, description, registered_redirect_uri, role_ids, authorized_grant_type, scope, role_divisions, state, date_to_delete].hash
     end
 
     # build the object from hash

@@ -21,11 +21,16 @@ module PureCloud
     # The requested agent schedules
     attr_accessor :agent_schedules
 
+    # The time zone configured for the business unit to which these schedules apply
+    attr_accessor :business_unit_time_zone
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         
-        :'agent_schedules' => :'agentSchedules'
+        :'agent_schedules' => :'agentSchedules',
+        
+        :'business_unit_time_zone' => :'businessUnitTimeZone'
         
       }
     end
@@ -34,7 +39,9 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'agent_schedules' => :'Array<BuAgentScheduleQueryResponse>'
+        :'agent_schedules' => :'Array<BuAgentScheduleQueryResponse>',
+        
+        :'business_unit_time_zone' => :'String'
         
       }
     end
@@ -59,6 +66,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'businessUnitTimeZone')
+        
+        
+        self.business_unit_time_zone = attributes[:'businessUnitTimeZone']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -78,8 +94,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -91,7 +116,8 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          agent_schedules == o.agent_schedules
+          agent_schedules == o.agent_schedules &&
+          business_unit_time_zone == o.business_unit_time_zone
     end
 
     # @see the `==` method
@@ -103,7 +129,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [agent_schedules].hash
+      [agent_schedules, business_unit_time_zone].hash
     end
 
     # build the object from hash

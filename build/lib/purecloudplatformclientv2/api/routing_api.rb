@@ -1497,8 +1497,8 @@ module PureCloud
       
       
       
-      if opts[:'messenger_type'] && !['sms', 'facebook', 'twitter', 'line', 'whatsapp'].include?(opts[:'messenger_type'])
-        fail ArgumentError, 'invalid value for "messenger_type", must be one of sms, facebook, twitter, line, whatsapp'
+      if opts[:'messenger_type'] && !['sms', 'facebook', 'twitter', 'line', 'whatsapp', 'webmessaging'].include?(opts[:'messenger_type'])
+        fail ArgumentError, 'invalid value for "messenger_type", must be one of sms, facebook, twitter, line, whatsapp, webmessaging'
       end
       
       

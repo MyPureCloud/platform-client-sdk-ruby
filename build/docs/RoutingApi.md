@@ -1511,7 +1511,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **messenger_type** | **String**| Messenger Type | [optional] <br />**Values**: sms, facebook, twitter, line, whatsapp |
+ **messenger_type** | **String**| Messenger Type | [optional] <br />**Values**: sms, facebook, twitter, line, whatsapp, webmessaging |
  **page_size** | **Integer**| Page size | [optional] [default to 25] |
  **page_number** | **Integer**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}

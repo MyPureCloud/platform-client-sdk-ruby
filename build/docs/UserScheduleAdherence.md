@@ -11,6 +11,7 @@ title: UserScheduleAdherence
 | **name** | **String** |  | [optional] |
 | **user** | [**UserReference**](UserReference.html) | The user for whom this status applies | [optional] |
 | **management_unit** | [**ManagementUnit**](ManagementUnit.html) | The management unit to which this user belongs | [optional] |
+| **team** | [**Team**](Team.html) | The team to which this user belongs | [optional] |
 | **scheduled_activity_category** | **String** | Activity for which the user is scheduled | [optional] |
 | **system_presence** | **String** | Actual underlying system presence value | [optional] |
 | **organization_secondary_presence_id** | **String** | Organization Secondary Presence Id. | [optional] |

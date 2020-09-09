@@ -147,7 +147,7 @@ module PureCloud
       
       
       
-      allowed_values = ["journeyActionId", "journeyActionMapId", "journeyActionMapVersion", "journeyActionMediaType", "journeyActionTemplateId", "journeyCustomerId", "journeyCustomerIdType", "journeyDeviceCategory", "journeyDeviceType", "journeyOutcomeId", "journeySegmentId", "journeySessionType", "journeySegmentScope"]
+      allowed_values = ["journeyActionId", "journeyActionMapId", "journeyActionMapVersion", "journeyActionMediaType", "journeyActionTemplateId", "journeyCustomerId", "journeyCustomerIdType", "journeyDeviceCategory", "journeyDeviceType", "journeyOutcomeId", "journeySegmentId", "journeySegmentScope", "journeySessionType"]
       if @dimension && !allowed_values.include?(@dimension)
         return false
       end
@@ -192,7 +192,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] dimension Object to be assigned
     def dimension=(dimension)
-      allowed_values = ["journeyActionId", "journeyActionMapId", "journeyActionMapVersion", "journeyActionMediaType", "journeyActionTemplateId", "journeyCustomerId", "journeyCustomerIdType", "journeyDeviceCategory", "journeyDeviceType", "journeyOutcomeId", "journeySegmentId", "journeySessionType", "journeySegmentScope"]
+      allowed_values = ["journeyActionId", "journeyActionMapId", "journeyActionMapVersion", "journeyActionMediaType", "journeyActionTemplateId", "journeyCustomerId", "journeyCustomerIdType", "journeyDeviceCategory", "journeyDeviceType", "journeyOutcomeId", "journeySegmentId", "journeySegmentScope", "journeySessionType"]
       if dimension && !allowed_values.include?(dimension)
         fail ArgumentError, "invalid value for 'dimension', must be one of #{allowed_values}."
       end

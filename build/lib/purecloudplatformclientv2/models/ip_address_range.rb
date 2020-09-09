@@ -107,7 +107,7 @@ module PureCloud
       
       
       
-      allowed_values = ["data-actions"]
+      allowed_values = ["data-actions", "smtp"]
       if @service && !allowed_values.include?(@service)
         return false
       end
@@ -130,7 +130,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] service Object to be assigned
     def service=(service)
-      allowed_values = ["data-actions"]
+      allowed_values = ["data-actions", "smtp"]
       if service && !allowed_values.include?(service)
         fail ArgumentError, "invalid value for 'service', must be one of #{allowed_values}."
       end

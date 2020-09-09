@@ -8,12 +8,72 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Method | Description
 ------------- | ------------- | -------------
+[**get_audits_query_realtime_servicemapping**](AuditApi.html#get_audits_query_realtime_servicemapping) | Get service mapping information used in audits.
 [**get_audits_query_servicemapping**](AuditApi.html#get_audits_query_servicemapping) | Get service mapping information used in audits.
 [**get_audits_query_transaction_id**](AuditApi.html#get_audits_query_transaction_id) | Get status of audit query execution
 [**get_audits_query_transaction_id_results**](AuditApi.html#get_audits_query_transaction_id_results) | Get results of audit query
 [**post_audits_query**](AuditApi.html#post_audits_query) | Create audit query execution
 [**post_audits_query_realtime**](AuditApi.html#post_audits_query_realtime) | This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
 {: class="table table-striped"}
+
+<a name="get_audits_query_realtime_servicemapping"></a>
+
+## [**AuditQueryServiceMapping**](AuditQueryServiceMapping.html) get_audits_query_realtime_servicemapping
+
+
+
+Get service mapping information used in audits.
+
+
+
+Wraps GET /api/v2/audits/query/realtime/servicemapping 
+
+Requires ALL permissions: 
+
+* audits:audit:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::AuditApi.new
+
+begin
+  #Get service mapping information used in audits.
+  result = api_instance.get_audits_query_realtime_servicemapping
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling AuditApi->get_audits_query_realtime_servicemapping: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+{: class="table table-striped"}
+
+
+### Return type
+
+[**AuditQueryServiceMapping**](AuditQueryServiceMapping.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 <a name="get_audits_query_servicemapping"></a>
 

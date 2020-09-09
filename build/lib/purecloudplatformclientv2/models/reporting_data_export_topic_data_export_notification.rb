@@ -20,6 +20,8 @@ module PureCloud
   class ReportingDataExportTopicDataExportNotification
     attr_accessor :id
 
+    attr_accessor :run_id
+
     attr_accessor :name
 
     attr_accessor :status
@@ -47,6 +49,8 @@ module PureCloud
       {
         
         :'id' => :'id',
+        
+        :'run_id' => :'runId',
         
         :'name' => :'name',
         
@@ -78,6 +82,8 @@ module PureCloud
       {
         
         :'id' => :'String',
+        
+        :'run_id' => :'String',
         
         :'name' => :'String',
         
@@ -117,6 +123,15 @@ module PureCloud
         
         
         self.id = attributes[:'id']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'runId')
+        
+        
+        self.run_id = attributes[:'runId']
         
       
       end
@@ -248,6 +263,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["SUBMITTED", "RUNNING", "CANCELLING", "CANCELLED", "COMPLETED", "COMPLETED_WITH_PARTIAL_RESULTS", "FAILED"]
       if @status && !allowed_values.include?(@status)
         return false
@@ -308,6 +327,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -411,6 +435,7 @@ module PureCloud
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
+          run_id == o.run_id &&
           name == o.name &&
           status == o.status &&
           export_format == o.export_format &&
@@ -433,7 +458,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, status, export_format, download_url, view_type, export_error_messages_type, read, created_date_time, modified_date_time, percentage_complete, email_statuses].hash
+      [id, run_id, name, status, export_format, download_url, view_type, export_error_messages_type, read, created_date_time, modified_date_time, percentage_complete, email_statuses].hash
     end
 
     # build the object from hash

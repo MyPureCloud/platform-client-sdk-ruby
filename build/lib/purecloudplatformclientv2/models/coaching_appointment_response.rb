@@ -61,6 +61,9 @@ module PureCloud
     # The list of documents associated with coaching appointment.
     attr_accessor :documents
 
+    # Whether the appointment is overdue.
+    attr_accessor :is_overdue
+
     # The URI for this object
     attr_accessor :self_uri
 
@@ -95,6 +98,8 @@ module PureCloud
         :'conversations' => :'conversations',
         
         :'documents' => :'documents',
+        
+        :'is_overdue' => :'isOverdue',
         
         :'self_uri' => :'selfUri'
         
@@ -132,6 +137,8 @@ module PureCloud
         :'conversations' => :'Array<ConversationReference>',
         
         :'documents' => :'Array<DocumentReference>',
+        
+        :'is_overdue' => :'BOOLEAN',
         
         :'self_uri' => :'String'
         
@@ -279,6 +286,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'isOverdue')
+        
+        
+        self.is_overdue = attributes[:'isOverdue']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'selfUri')
         
         
@@ -329,6 +345,10 @@ module PureCloud
       if @status && !allowed_values.include?(@status)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -455,6 +475,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -474,6 +499,7 @@ module PureCloud
           date_modified == o.date_modified &&
           conversations == o.conversations &&
           documents == o.documents &&
+          is_overdue == o.is_overdue &&
           self_uri == o.self_uri
     end
 
@@ -486,7 +512,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, description, date_start, length_in_minutes, status, facilitator, attendees, created_by, date_created, modified_by, date_modified, conversations, documents, self_uri].hash
+      [id, name, description, date_start, length_in_minutes, status, facilitator, attendees, created_by, date_created, modified_by, date_modified, conversations, documents, is_overdue, self_uri].hash
     end
 
     # build the object from hash

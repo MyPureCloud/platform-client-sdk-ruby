@@ -18,9 +18,6 @@ require 'date'
 
 module PureCloud
   class ExternalOrganizationTrustorLink
-    # The globally unique identifier for the object.
-    attr_accessor :id
-
     # The id of a PureCloud External Organization entity in the External Contacts system that will be used to represent the trustor org
     attr_accessor :external_organization_id
 
@@ -30,14 +27,12 @@ module PureCloud
     # Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
     attr_accessor :date_created
 
-    # The URI for this object
-    attr_accessor :self_uri
+    # The URI for the External Organization that is linked to the trustor org
+    attr_accessor :external_organization_uri
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        
-        :'id' => :'id',
         
         :'external_organization_id' => :'externalOrganizationId',
         
@@ -45,7 +40,7 @@ module PureCloud
         
         :'date_created' => :'dateCreated',
         
-        :'self_uri' => :'selfUri'
+        :'external_organization_uri' => :'externalOrganizationUri'
         
       }
     end
@@ -54,15 +49,13 @@ module PureCloud
     def self.swagger_types
       {
         
-        :'id' => :'String',
-        
         :'external_organization_id' => :'String',
         
         :'trustor_org_id' => :'String',
         
         :'date_created' => :'DateTime',
         
-        :'self_uri' => :'String'
+        :'external_organization_uri' => :'String'
         
       }
     end
@@ -74,15 +67,6 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes.has_key?(:'id')
-        
-        
-        self.id = attributes[:'id']
-        
-      
-      end
 
       
       if attributes.has_key?(:'externalOrganizationId')
@@ -112,10 +96,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'selfUri')
+      if attributes.has_key?(:'externalOrganizationUri')
         
         
-        self.self_uri = attributes[:'selfUri']
+        self.external_organization_uri = attributes[:'externalOrganizationUri']
         
       
       end
@@ -152,17 +136,8 @@ module PureCloud
       
       
       
-      
-      
-      
-      
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -189,11 +164,10 @@ module PureCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
           external_organization_id == o.external_organization_id &&
           trustor_org_id == o.trustor_org_id &&
           date_created == o.date_created &&
-          self_uri == o.self_uri
+          external_organization_uri == o.external_organization_uri
     end
 
     # @see the `==` method
@@ -205,7 +179,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, external_organization_id, trustor_org_id, date_created, self_uri].hash
+      [external_organization_id, trustor_org_id, date_created, external_organization_uri].hash
     end
 
     # build the object from hash

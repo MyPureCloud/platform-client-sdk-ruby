@@ -22,6 +22,8 @@ module PureCloud
 
     attr_accessor :management_unit_id
 
+    attr_accessor :team
+
     attr_accessor :scheduled_activity_category
 
     attr_accessor :system_presence
@@ -55,6 +57,8 @@ module PureCloud
         :'user' => :'user',
         
         :'management_unit_id' => :'managementUnitId',
+        
+        :'team' => :'team',
         
         :'scheduled_activity_category' => :'scheduledActivityCategory',
         
@@ -92,6 +96,8 @@ module PureCloud
         :'user' => :'WfmUserScheduleAdherenceUpdatedTopicUserReference',
         
         :'management_unit_id' => :'String',
+        
+        :'team' => :'WfmUserScheduleAdherenceUpdatedTopicUriReference',
         
         :'scheduled_activity_category' => :'String',
         
@@ -144,6 +150,15 @@ module PureCloud
         
         
         self.management_unit_id = attributes[:'managementUnitId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'team')
+        
+        
+        self.team = attributes[:'team']
         
       
       end
@@ -305,6 +320,10 @@ module PureCloud
       
       
       
+      
+      
+      
+      
       allowed_values = ["__EMPTY__", "OFF_QUEUE", "IDLE", "INTERACTING", "NOT_RESPONDING", "COMMUNICATING", "OFFLINE"]
       if @routing_status && !allowed_values.include?(@routing_status)
         return false
@@ -355,6 +374,11 @@ module PureCloud
       
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -456,6 +480,7 @@ module PureCloud
       self.class == o.class &&
           user == o.user &&
           management_unit_id == o.management_unit_id &&
+          team == o.team &&
           scheduled_activity_category == o.scheduled_activity_category &&
           system_presence == o.system_presence &&
           organization_secondary_presence_id == o.organization_secondary_presence_id &&
@@ -480,7 +505,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user, management_unit_id, scheduled_activity_category, system_presence, organization_secondary_presence_id, routing_status, actual_activity_category, is_out_of_office, adherence_state, impact, adherence_change_time, presence_update_time, active_queues, active_queues_modified_time, removed_from_management_unit].hash
+      [user, management_unit_id, team, scheduled_activity_category, system_presence, organization_secondary_presence_id, routing_status, actual_activity_category, is_out_of_office, adherence_state, impact, adherence_change_time, presence_update_time, active_queues, active_queues_modified_time, removed_from_management_unit].hash
     end
 
     # build the object from hash

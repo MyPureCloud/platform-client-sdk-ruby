@@ -195,7 +195,7 @@ module PureCloud
       
       
       
-      allowed_values = ["ContactCenter", "ContentManagement", "PeoplePermissions", "Quality", "LanguageUnderstanding", "TopicsDefinitions", "PredictiveEngagement", "WorkforceManagement"]
+      allowed_values = ["ContactCenter", "ContentManagement", "PeoplePermissions", "Quality", "LanguageUnderstanding", "TopicsDefinitions", "PredictiveEngagement", "WorkforceManagement", "Triggers"]
       if @service_name && !allowed_values.include?(@service_name)
         return false
       end
@@ -246,7 +246,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] service_name Object to be assigned
     def service_name=(service_name)
-      allowed_values = ["ContactCenter", "ContentManagement", "PeoplePermissions", "Quality", "LanguageUnderstanding", "TopicsDefinitions", "PredictiveEngagement", "WorkforceManagement"]
+      allowed_values = ["ContactCenter", "ContentManagement", "PeoplePermissions", "Quality", "LanguageUnderstanding", "TopicsDefinitions", "PredictiveEngagement", "WorkforceManagement", "Triggers"]
       if service_name && !allowed_values.include?(service_name)
         fail ArgumentError, "invalid value for 'service_name', must be one of #{allowed_values}."
       end

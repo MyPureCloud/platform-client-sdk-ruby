@@ -23,6 +23,9 @@ module PureCloud
 
     attr_accessor :name
 
+    # The unique run id of the export schedule execute
+    attr_accessor :run_id
+
     # The current status of the export request
     attr_accessor :status
 
@@ -102,6 +105,8 @@ module PureCloud
         
         :'name' => :'name',
         
+        :'run_id' => :'runId',
+        
         :'status' => :'status',
         
         :'time_zone' => :'timeZone',
@@ -160,6 +165,8 @@ module PureCloud
         :'id' => :'String',
         
         :'name' => :'String',
+        
+        :'run_id' => :'String',
         
         :'status' => :'String',
         
@@ -234,6 +241,15 @@ module PureCloud
         
         
         self.name = attributes[:'name']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'runId')
+        
+        
+        self.run_id = attributes[:'runId']
         
       
       end
@@ -485,6 +501,15 @@ module PureCloud
       
       
       
+      if @run_id.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       if @status.nil?
         return false
       end
@@ -674,6 +699,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] status Object to be assigned
     def status=(status)
@@ -836,6 +866,7 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
+          run_id == o.run_id &&
           status == o.status &&
           time_zone == o.time_zone &&
           export_format == o.export_format &&
@@ -871,7 +902,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, has_format_durations, has_split_filters, exclude_empty_rows, has_split_by_media, selected_columns, has_custom_participant_attributes, recipient_emails, email_statuses, enabled, self_uri].hash
+      [id, name, run_id, status, time_zone, export_format, interval, download_url, view_type, export_error_messages_type, period, filter, read, created_date_time, modified_date_time, locale, percentage_complete, has_format_durations, has_split_filters, exclude_empty_rows, has_split_by_media, selected_columns, has_custom_participant_attributes, recipient_emails, email_statuses, enabled, self_uri].hash
     end
 
     # build the object from hash

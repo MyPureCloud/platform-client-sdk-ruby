@@ -182,6 +182,12 @@ module PureCloud
     # Selected agent GPR rank
     attr_accessor :selected_agent_rank
 
+    # Unique identifier of the active virtual agent assistant
+    attr_accessor :agent_assistant_id
+
+    # Proposed agents
+    attr_accessor :proposed_agents
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -298,7 +304,11 @@ module PureCloud
         
         :'selected_agent_id' => :'selectedAgentId',
         
-        :'selected_agent_rank' => :'selectedAgentRank'
+        :'selected_agent_rank' => :'selectedAgentRank',
+        
+        :'agent_assistant_id' => :'agentAssistantId',
+        
+        :'proposed_agents' => :'proposedAgents'
         
       }
     end
@@ -419,7 +429,11 @@ module PureCloud
         
         :'selected_agent_id' => :'String',
         
-        :'selected_agent_rank' => :'Integer'
+        :'selected_agent_rank' => :'Integer',
+        
+        :'agent_assistant_id' => :'String',
+        
+        :'proposed_agents' => :'Array<AnalyticsProposedAgent>'
         
       }
     end
@@ -956,6 +970,26 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'agentAssistantId')
+        
+        
+        self.agent_assistant_id = attributes[:'agentAssistantId']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'proposedAgents')
+        
+        if (value = attributes[:'proposedAgents']).is_a?(Array)
+          self.proposed_agents = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -1208,6 +1242,14 @@ module PureCloud
       if @used_routing && !allowed_values.include?(@used_routing)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1543,6 +1585,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -1604,7 +1656,9 @@ module PureCloud
           requested_routings == o.requested_routings &&
           used_routing == o.used_routing &&
           selected_agent_id == o.selected_agent_id &&
-          selected_agent_rank == o.selected_agent_rank
+          selected_agent_rank == o.selected_agent_rank &&
+          agent_assistant_id == o.agent_assistant_id &&
+          proposed_agents == o.proposed_agents
     end
 
     # @see the `==` method
@@ -1616,7 +1670,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, session_dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording, journey_customer_id, journey_customer_id_type, journey_customer_session_id, journey_customer_session_id_type, journey_action_id, journey_action_map_id, journey_action_map_version, protocol_call_id, provider, remote, media_count, flow_out_type, requested_routings, used_routing, selected_agent_id, selected_agent_rank].hash
+      [media_type, session_id, address_other, address_self, address_from, address_to, message_type, ani, direction, dnis, session_dnis, outbound_campaign_id, outbound_contact_id, outbound_contact_list_id, disposition_analyzer, disposition_name, edge_id, remote_name_displayable, room_id, monitored_session_id, monitored_participant_id, callback_user_name, callback_numbers, callback_scheduled_time, script_id, peer_id, skip_enabled, timeout_seconds, cobrowse_role, cobrowse_room_id, media_bridge_id, screen_share_address_self, sharing_screen, screen_share_room_id, video_room_id, video_address_self, segments, metrics, flow, media_endpoint_stats, recording, journey_customer_id, journey_customer_id_type, journey_customer_session_id, journey_customer_session_id_type, journey_action_id, journey_action_map_id, journey_action_map_version, protocol_call_id, provider, remote, media_count, flow_out_type, requested_routings, used_routing, selected_agent_id, selected_agent_rank, agent_assistant_id, proposed_agents].hash
     end
 
     # build the object from hash

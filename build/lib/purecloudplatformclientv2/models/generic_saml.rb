@@ -23,9 +23,9 @@ module PureCloud
 
     attr_accessor :name
 
-    attr_accessor :relying_party_identifier
-
     attr_accessor :logo_image_data
+
+    attr_accessor :relying_party_identifier
 
     attr_accessor :endpoint_compression
 
@@ -48,9 +48,9 @@ module PureCloud
         
         :'name' => :'name',
         
-        :'relying_party_identifier' => :'relyingPartyIdentifier',
-        
         :'logo_image_data' => :'logoImageData',
+        
+        :'relying_party_identifier' => :'relyingPartyIdentifier',
         
         :'endpoint_compression' => :'endpointCompression',
         
@@ -75,9 +75,9 @@ module PureCloud
         
         :'name' => :'String',
         
-        :'relying_party_identifier' => :'String',
-        
         :'logo_image_data' => :'String',
+        
+        :'relying_party_identifier' => :'String',
         
         :'endpoint_compression' => :'BOOLEAN',
         
@@ -121,19 +121,19 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'relyingPartyIdentifier')
+      if attributes.has_key?(:'logoImageData')
         
         
-        self.relying_party_identifier = attributes[:'relyingPartyIdentifier']
+        self.logo_image_data = attributes[:'logoImageData']
         
       
       end
 
       
-      if attributes.has_key?(:'logoImageData')
+      if attributes.has_key?(:'relyingPartyIdentifier')
         
         
-        self.logo_image_data = attributes[:'logoImageData']
+        self.relying_party_identifier = attributes[:'relyingPartyIdentifier']
         
       
       end
@@ -308,8 +308,8 @@ module PureCloud
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
-          relying_party_identifier == o.relying_party_identifier &&
           logo_image_data == o.logo_image_data &&
+          relying_party_identifier == o.relying_party_identifier &&
           endpoint_compression == o.endpoint_compression &&
           certificate == o.certificate &&
           issuer_uri == o.issuer_uri &&
@@ -327,7 +327,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, relying_party_identifier, logo_image_data, endpoint_compression, certificate, issuer_uri, sso_target_uri, disabled, self_uri].hash
+      [id, name, logo_image_data, relying_party_identifier, endpoint_compression, certificate, issuer_uri, sso_target_uri, disabled, self_uri].hash
     end
 
     # build the object from hash

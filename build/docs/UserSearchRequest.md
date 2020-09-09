@@ -15,6 +15,7 @@ title: UserSearchRequest
 | **expand** | **Array&lt;String&gt;** | Provides more details about a specified resource | [optional] |
 | **query** | [**Array&lt;UserSearchCriteria&gt;**](UserSearchCriteria.html) |  | [optional] |
 | **integration_presence_source** | **String** | Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. | [optional] |
+| **enforce_permissions** | **BOOLEAN** | Enforce view permission on request | [optional] |
 {: class="table table-striped"}
 
 

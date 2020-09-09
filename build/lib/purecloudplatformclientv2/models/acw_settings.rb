@@ -90,7 +90,7 @@ module PureCloud
       
       
       
-      allowed_values = ["MANDATORY", "OPTIONAL", "MANDATORY_TIMEOUT", "MANDATORY_FORCED_TIMEOUT"]
+      allowed_values = ["MANDATORY", "OPTIONAL", "MANDATORY_TIMEOUT", "MANDATORY_FORCED_TIMEOUT", "AGENT_REQUESTED"]
       if @wrapup_prompt && !allowed_values.include?(@wrapup_prompt)
         return false
       end
@@ -108,7 +108,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] wrapup_prompt Object to be assigned
     def wrapup_prompt=(wrapup_prompt)
-      allowed_values = ["MANDATORY", "OPTIONAL", "MANDATORY_TIMEOUT", "MANDATORY_FORCED_TIMEOUT"]
+      allowed_values = ["MANDATORY", "OPTIONAL", "MANDATORY_TIMEOUT", "MANDATORY_FORCED_TIMEOUT", "AGENT_REQUESTED"]
       if wrapup_prompt && !allowed_values.include?(wrapup_prompt)
         fail ArgumentError, "invalid value for 'wrapup_prompt', must be one of #{allowed_values}."
       end

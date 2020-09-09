@@ -24,6 +24,7 @@ Method | Description
 [**patch_coaching_notification**](CoachingApi.html#patch_coaching_notification) | Update an existing notification.
 [**post_coaching_appointment_annotations**](CoachingApi.html#post_coaching_appointment_annotations) | Create a new annotation.
 [**post_coaching_appointments**](CoachingApi.html#post_coaching_appointments) | Create a new appointment
+[**post_coaching_appointments_aggregates_query**](CoachingApi.html#post_coaching_appointments_aggregates_query) | Retrieve aggregated appointment data
 {: class="table table-striped"}
 
 <a name="delete_coaching_appointment"></a>
@@ -478,7 +479,10 @@ opts = {
   page_size: 25, # Integer | Page size
   statuses: ["statuses_example"], # Array<String> | Appointment Statuses to filter by
   facilitator_ids: ["facilitator_ids_example"], # Array<String> | The facilitator IDs for which to retrieve appointments
-  sort_order: "sort_order_example" # String | Sort (by due date) either Asc or Desc
+  sort_order: "sort_order_example", # String | Sort (by due date) either Asc or Desc
+  relationships: ["relationships_example"], # Array<String> | Relationships to filter by
+  completion_interval: "completion_interval_example", # String | Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+  overdue: "overdue_example" # String | Overdue status to filter by
 }
 
 begin
@@ -501,6 +505,9 @@ Name | Type | Description  | Notes
  **statuses** | [**Array&lt;String&gt;**](String.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed, InvalidSchedule |
  **facilitator_ids** | [**Array&lt;String&gt;**](String.html)| The facilitator IDs for which to retrieve appointments | [optional]  |
  **sort_order** | **String**| Sort (by due date) either Asc or Desc | [optional] <br />**Values**: Desc, Asc |
+ **relationships** | [**Array&lt;String&gt;**](String.html)| Relationships to filter by | [optional] <br />**Values**: Creator, Facilitator, Attendee |
+ **completion_interval** | **String**| Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
+ **overdue** | **String**| Overdue status to filter by | [optional] <br />**Values**: Any, True, False |
 {: class="table table-striped"}
 
 
@@ -554,7 +561,10 @@ opts = {
   page_size: 25, # Integer | Page size
   statuses: ["statuses_example"], # Array<String> | Appointment Statuses to filter by
   facilitator_ids: ["facilitator_ids_example"], # Array<String> | The facilitator IDs for which to retrieve appointments
-  sort_order: "sort_order_example" # String | Sort (by due date) either Asc or Desc
+  sort_order: "sort_order_example", # String | Sort (by due date) either Asc or Desc
+  relationships: ["relationships_example"], # Array<String> | Relationships to filter by
+  completion_interval: "completion_interval_example", # String | Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+  overdue: "overdue_example" # String | Overdue status to filter by
 }
 
 begin
@@ -576,6 +586,9 @@ Name | Type | Description  | Notes
  **statuses** | [**Array&lt;String&gt;**](String.html)| Appointment Statuses to filter by | [optional] <br />**Values**: Scheduled, InProgress, Completed |
  **facilitator_ids** | [**Array&lt;String&gt;**](String.html)| The facilitator IDs for which to retrieve appointments | [optional]  |
  **sort_order** | **String**| Sort (by due date) either Asc or Desc | [optional] <br />**Values**: Desc, Asc |
+ **relationships** | [**Array&lt;String&gt;**](String.html)| Relationships to filter by | [optional] <br />**Values**: Creator, Facilitator, Attendee |
+ **completion_interval** | **String**| Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
+ **overdue** | **String**| Overdue status to filter by | [optional] <br />**Values**: Any, True, False |
 {: class="table table-striped"}
 
 
@@ -1129,6 +1142,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CoachingAppointmentResponse**](CoachingAppointmentResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_coaching_appointments_aggregates_query"></a>
+
+## [**CoachingAppointmentAggregateResponse**](CoachingAppointmentAggregateResponse.html) post_coaching_appointments_aggregates_query(body)
+
+
+
+Retrieve aggregated appointment data
+
+
+
+Wraps POST /api/v2/coaching/appointments/aggregates/query 
+
+Requires ANY permissions: 
+
+* coaching:appointment:view
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::CoachingApi.new
+
+body = PureCloud::CoachingAppointmentAggregateRequest.new # CoachingAppointmentAggregateRequest | Aggregate Request
+
+
+begin
+  #Retrieve aggregated appointment data
+  result = api_instance.post_coaching_appointments_aggregates_query(body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling CoachingApi->post_coaching_appointments_aggregates_query: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CoachingAppointmentAggregateRequest**](CoachingAppointmentAggregateRequest.html)| Aggregate Request |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+[**CoachingAppointmentAggregateResponse**](CoachingAppointmentAggregateResponse.html)
 
 ### HTTP request headers
 

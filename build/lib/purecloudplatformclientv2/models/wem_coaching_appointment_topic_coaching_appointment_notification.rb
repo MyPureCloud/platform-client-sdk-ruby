@@ -46,6 +46,8 @@ module PureCloud
 
     attr_accessor :change_type
 
+    attr_accessor :date_completed
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -76,7 +78,9 @@ module PureCloud
         
         :'documents' => :'documents',
         
-        :'change_type' => :'changeType'
+        :'change_type' => :'changeType',
+        
+        :'date_completed' => :'dateCompleted'
         
       }
     end
@@ -111,7 +115,9 @@ module PureCloud
         
         :'documents' => :'Array<WemCoachingAppointmentTopicCoachingAppointmentDocument>',
         
-        :'change_type' => :'String'
+        :'change_type' => :'String',
+        
+        :'date_completed' => :'DateTime'
         
       }
     end
@@ -257,6 +263,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'dateCompleted')
+        
+        
+        self.date_completed = attributes[:'dateCompleted']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -335,6 +350,10 @@ module PureCloud
       if @change_type && !allowed_values.include?(@change_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -429,6 +448,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -447,7 +471,8 @@ module PureCloud
           date_modified == o.date_modified &&
           conversations == o.conversations &&
           documents == o.documents &&
-          change_type == o.change_type
+          change_type == o.change_type &&
+          date_completed == o.date_completed
     end
 
     # @see the `==` method
@@ -459,7 +484,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, date_start, length_in_minutes, status, facilitator, attendees, created_by, date_created, modified_by, date_modified, conversations, documents, change_type].hash
+      [id, name, date_start, length_in_minutes, status, facilitator, attendees, created_by, date_created, modified_by, date_modified, conversations, documents, change_type, date_completed].hash
     end
 
     # build the object from hash

@@ -9,6 +9,7 @@ title: WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate
 |------------ | ------------- | ------------- | -------------|
 | **user** | [**WfmUserScheduleAdherenceUpdatedMuTopicUserReference**](WfmUserScheduleAdherenceUpdatedMuTopicUserReference.html) |  | [optional] |
 | **management_unit_id** | **String** |  | [optional] |
+| **team** | [**WfmUserScheduleAdherenceUpdatedMuTopicUriReference**](WfmUserScheduleAdherenceUpdatedMuTopicUriReference.html) |  | [optional] |
 | **scheduled_activity_category** | **String** |  | [optional] |
 | **system_presence** | **String** |  | [optional] |
 | **organization_secondary_presence_id** | **String** |  | [optional] |

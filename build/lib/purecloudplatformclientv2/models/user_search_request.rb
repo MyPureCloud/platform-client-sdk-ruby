@@ -41,6 +41,9 @@ module PureCloud
     # Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 10.
     attr_accessor :integration_presence_source
 
+    # Enforce view permission on request
+    attr_accessor :enforce_permissions
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -59,7 +62,9 @@ module PureCloud
         
         :'query' => :'query',
         
-        :'integration_presence_source' => :'integrationPresenceSource'
+        :'integration_presence_source' => :'integrationPresenceSource',
+        
+        :'enforce_permissions' => :'enforcePermissions'
         
       }
     end
@@ -82,7 +87,9 @@ module PureCloud
         
         :'query' => :'Array<UserSearchCriteria>',
         
-        :'integration_presence_source' => :'String'
+        :'integration_presence_source' => :'String',
+        
+        :'enforce_permissions' => :'BOOLEAN'
         
       }
     end
@@ -174,6 +181,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'enforcePermissions')
+        
+        
+        self.enforce_permissions = attributes[:'enforcePermissions']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -228,6 +244,10 @@ module PureCloud
       if @integration_presence_source && !allowed_values.include?(@integration_presence_source)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -292,6 +312,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -304,7 +329,8 @@ module PureCloud
           sort == o.sort &&
           expand == o.expand &&
           query == o.query &&
-          integration_presence_source == o.integration_presence_source
+          integration_presence_source == o.integration_presence_source &&
+          enforce_permissions == o.enforce_permissions
     end
 
     # @see the `==` method
@@ -316,7 +342,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [sort_order, sort_by, page_size, page_number, sort, expand, query, integration_presence_source].hash
+      [sort_order, sort_by, page_size, page_number, sort, expand, query, integration_presence_source, enforce_permissions].hash
     end
 
     # build the object from hash

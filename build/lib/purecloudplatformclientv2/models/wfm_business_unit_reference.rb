@@ -18,7 +18,7 @@ require 'date'
 
 module PureCloud
   class WfmBusinessUnitReference
-    # The globally unique identifier for the object.
+    # The ID of the business unit
     attr_accessor :id
 
     # The URI for this object
@@ -88,6 +88,11 @@ module PureCloud
     # @return true if the model is valid
     def valid?
       
+      
+      if @id.nil?
+        return false
+      end
+
       
       
       

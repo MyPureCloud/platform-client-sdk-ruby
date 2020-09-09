@@ -9,8 +9,8 @@ title: GenericSAML
 |------------ | ------------- | ------------- | -------------|
 | **id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **relying_party_identifier** | **String** |  | [optional] |
 | **logo_image_data** | **String** |  | [optional] |
+| **relying_party_identifier** | **String** |  | [optional] |
 | **endpoint_compression** | **BOOLEAN** |  | [optional] |
 | **certificate** | **String** |  | [optional] |
 | **issuer_uri** | **String** |  | [optional] |

@@ -479,6 +479,9 @@ module PureCloud
     # @option opts [Array<String>] :statuses Appointment Statuses to filter by
     # @option opts [Array<String>] :facilitator_ids The facilitator IDs for which to retrieve appointments
     # @option opts [String] :sort_order Sort (by due date) either Asc or Desc
+    # @option opts [Array<String>] :relationships Relationships to filter by
+    # @option opts [String] :completion_interval Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+    # @option opts [String] :overdue Overdue status to filter by
     # @return [CoachingAppointmentResponseList]
     def get_coaching_appointments(user_ids, opts = {})
       data, _status_code, _headers = get_coaching_appointments_with_http_info(user_ids, opts)
@@ -495,6 +498,9 @@ module PureCloud
     # @option opts [Array<String>] :statuses Appointment Statuses to filter by
     # @option opts [Array<String>] :facilitator_ids The facilitator IDs for which to retrieve appointments
     # @option opts [String] :sort_order Sort (by due date) either Asc or Desc
+    # @option opts [Array<String>] :relationships Relationships to filter by
+    # @option opts [String] :completion_interval Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+    # @option opts [String] :overdue Overdue status to filter by
     # @return [Array<(CoachingAppointmentResponseList, Fixnum, Hash)>] CoachingAppointmentResponseList data, response status code and response headers
     def get_coaching_appointments_with_http_info(user_ids, opts = {})
       if @api_client.config.debugging
@@ -549,6 +555,28 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'overdue'] && !['Any', 'True', 'False'].include?(opts[:'overdue'])
+        fail ArgumentError, 'invalid value for "overdue", must be one of Any, True, False'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/coaching/appointments".sub('{format}','json')
 
@@ -561,6 +589,9 @@ module PureCloud
       query_params[:'statuses'] = @api_client.build_collection_param(opts[:'statuses'], :multi) if opts[:'statuses']
       query_params[:'facilitatorIds'] = @api_client.build_collection_param(opts[:'facilitator_ids'], :multi) if opts[:'facilitator_ids']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'relationships'] = @api_client.build_collection_param(opts[:'relationships'], :multi) if opts[:'relationships']
+      query_params[:'completionInterval'] = opts[:'completion_interval'] if opts[:'completion_interval']
+      query_params[:'overdue'] = opts[:'overdue'] if opts[:'overdue']
 
       # header parameters
       header_params = {}
@@ -602,6 +633,9 @@ module PureCloud
     # @option opts [Array<String>] :statuses Appointment Statuses to filter by
     # @option opts [Array<String>] :facilitator_ids The facilitator IDs for which to retrieve appointments
     # @option opts [String] :sort_order Sort (by due date) either Asc or Desc
+    # @option opts [Array<String>] :relationships Relationships to filter by
+    # @option opts [String] :completion_interval Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+    # @option opts [String] :overdue Overdue status to filter by
     # @return [CoachingAppointmentResponseList]
     def get_coaching_appointments_me(opts = {})
       data, _status_code, _headers = get_coaching_appointments_me_with_http_info(opts)
@@ -617,6 +651,9 @@ module PureCloud
     # @option opts [Array<String>] :statuses Appointment Statuses to filter by
     # @option opts [Array<String>] :facilitator_ids The facilitator IDs for which to retrieve appointments
     # @option opts [String] :sort_order Sort (by due date) either Asc or Desc
+    # @option opts [Array<String>] :relationships Relationships to filter by
+    # @option opts [String] :completion_interval Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+    # @option opts [String] :overdue Overdue status to filter by
     # @return [Array<(CoachingAppointmentResponseList, Fixnum, Hash)>] CoachingAppointmentResponseList data, response status code and response headers
     def get_coaching_appointments_me_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -663,6 +700,28 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      if opts[:'overdue'] && !['Any', 'True', 'False'].include?(opts[:'overdue'])
+        fail ArgumentError, 'invalid value for "overdue", must be one of Any, True, False'
+      end
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/coaching/appointments/me".sub('{format}','json')
 
@@ -674,6 +733,9 @@ module PureCloud
       query_params[:'statuses'] = @api_client.build_collection_param(opts[:'statuses'], :multi) if opts[:'statuses']
       query_params[:'facilitatorIds'] = @api_client.build_collection_param(opts[:'facilitator_ids'], :multi) if opts[:'facilitator_ids']
       query_params[:'sortOrder'] = opts[:'sort_order'] if opts[:'sort_order']
+      query_params[:'relationships'] = @api_client.build_collection_param(opts[:'relationships'], :multi) if opts[:'relationships']
+      query_params[:'completionInterval'] = opts[:'completion_interval'] if opts[:'completion_interval']
+      query_params[:'overdue'] = opts[:'overdue'] if opts[:'overdue']
 
       # header parameters
       header_params = {}
@@ -1308,6 +1370,71 @@ module PureCloud
         :return_type => 'CoachingAppointmentResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CoachingApi#post_coaching_appointments\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Retrieve aggregated appointment data
+    # 
+    # @param body Aggregate Request
+    # @param [Hash] opts the optional parameters
+    # @return [CoachingAppointmentAggregateResponse]
+    def post_coaching_appointments_aggregates_query(body, opts = {})
+      data, _status_code, _headers = post_coaching_appointments_aggregates_query_with_http_info(body, opts)
+      return data
+    end
+
+    # Retrieve aggregated appointment data
+    # 
+    # @param body Aggregate Request
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CoachingAppointmentAggregateResponse, Fixnum, Hash)>] CoachingAppointmentAggregateResponse data, response status code and response headers
+    def post_coaching_appointments_aggregates_query_with_http_info(body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CoachingApi.post_coaching_appointments_aggregates_query ..."
+      end
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling CoachingApi.post_coaching_appointments_aggregates_query" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/coaching/appointments/aggregates/query".sub('{format}','json')
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CoachingAppointmentAggregateResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CoachingApi#post_coaching_appointments_aggregates_query\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
