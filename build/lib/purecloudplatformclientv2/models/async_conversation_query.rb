@@ -18,9 +18,6 @@ require 'date'
 
 module PureCloud
   class AsyncConversationQuery
-    # Specifies the date and time range of data being queried. Results will include conversations that both started on a day touched by the interval AND either started, ended, or any activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
-    attr_accessor :interval
-
     # Filters that target conversation-level data
     attr_accessor :conversation_filters
 
@@ -42,6 +39,9 @@ module PureCloud
     # Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart
     attr_accessor :order_by
 
+    # Specifies the date and time range of data being queried. Results will include all conversations that had activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+    attr_accessor :interval
+
     # Specify number of results to be returned
     attr_accessor :limit
 
@@ -51,8 +51,6 @@ module PureCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        
-        :'interval' => :'interval',
         
         :'conversation_filters' => :'conversationFilters',
         
@@ -68,6 +66,8 @@ module PureCloud
         
         :'order_by' => :'orderBy',
         
+        :'interval' => :'interval',
+        
         :'limit' => :'limit',
         
         :'start_of_day_interval_matching' => :'startOfDayIntervalMatching'
@@ -78,8 +78,6 @@ module PureCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        
-        :'interval' => :'String',
         
         :'conversation_filters' => :'Array<ConversationDetailQueryFilter>',
         
@@ -95,6 +93,8 @@ module PureCloud
         
         :'order_by' => :'String',
         
+        :'interval' => :'String',
+        
         :'limit' => :'Integer',
         
         :'start_of_day_interval_matching' => :'BOOLEAN'
@@ -109,15 +109,6 @@ module PureCloud
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      
-      if attributes.has_key?(:'interval')
-        
-        
-        self.interval = attributes[:'interval']
-        
-      
-      end
 
       
       if attributes.has_key?(:'conversationFilters')
@@ -193,6 +184,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'interval')
+        
+        
+        self.interval = attributes[:'interval']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'limit')
         
         
@@ -225,15 +225,6 @@ module PureCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      
-      
-      if @interval.nil?
-        return false
-      end
-
-      
-      
-      
       
       
       
@@ -274,6 +265,15 @@ module PureCloud
       
       
       
+      if @interval.nil?
+        return false
+      end
+
+      
+      
+      
+      
+      
       
       
       
@@ -283,11 +283,6 @@ module PureCloud
       
     end
 
-    
-    
-    
-    
-    
     
     
     
@@ -352,12 +347,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          interval == o.interval &&
           conversation_filters == o.conversation_filters &&
           segment_filters == o.segment_filters &&
           evaluation_filters == o.evaluation_filters &&
@@ -365,6 +364,7 @@ module PureCloud
           survey_filters == o.survey_filters &&
           order == o.order &&
           order_by == o.order_by &&
+          interval == o.interval &&
           limit == o.limit &&
           start_of_day_interval_matching == o.start_of_day_interval_matching
     end
@@ -378,7 +378,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [interval, conversation_filters, segment_filters, evaluation_filters, media_endpoint_stat_filters, survey_filters, order, order_by, limit, start_of_day_interval_matching].hash
+      [conversation_filters, segment_filters, evaluation_filters, media_endpoint_stat_filters, survey_filters, order, order_by, interval, limit, start_of_day_interval_matching].hash
     end
 
     # build the object from hash

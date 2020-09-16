@@ -118,6 +118,7 @@ Wraps DELETE /api/v2/architect/emergencygroups/{emergencyGroupId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:emergencyGroup:delete
 
 
 ### Example
@@ -182,6 +183,7 @@ Wraps DELETE /api/v2/architect/ivrs/{ivrId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:callRoute:delete
 
 
 ### Example
@@ -513,6 +515,7 @@ Wraps DELETE /api/v2/architect/schedules/{scheduleId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:schedule:delete
 
 
 ### Example
@@ -577,6 +580,7 @@ Wraps DELETE /api/v2/architect/schedulegroups/{scheduleGroupId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:scheduleGroup:delete
 
 
 ### Example
@@ -1639,6 +1643,7 @@ Wraps GET /api/v2/architect/emergencygroups/{emergencyGroupId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:emergencyGroup:view
 
 
 ### Example
@@ -1704,6 +1709,7 @@ Wraps GET /api/v2/architect/emergencygroups
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:emergencyGroup:view
 
 
 ### Example
@@ -1778,6 +1784,7 @@ Wraps GET /api/v2/architect/ivrs/{ivrId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:callRoute:view
 
 
 ### Example
@@ -1843,6 +1850,7 @@ Wraps GET /api/v2/architect/ivrs
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:callRoute:view
 
 
 ### Example
@@ -2279,6 +2287,7 @@ Wraps GET /api/v2/architect/schedules/{scheduleId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:schedule:view
 
 
 ### Example
@@ -2344,6 +2353,7 @@ Wraps GET /api/v2/architect/schedulegroups/{scheduleGroupId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:scheduleGroup:view
 
 
 ### Example
@@ -2409,6 +2419,7 @@ Wraps GET /api/v2/architect/schedulegroups
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:scheduleGroup:view
 
 
 ### Example
@@ -2485,6 +2496,7 @@ Wraps GET /api/v2/architect/schedules
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:schedule:view
 
 
 ### Example
@@ -4313,6 +4325,7 @@ Wraps POST /api/v2/architect/emergencygroups
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:emergencyGroup:add
 
 
 ### Example
@@ -4378,6 +4391,7 @@ Wraps POST /api/v2/architect/ivrs
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:callRoute:add
 
 
 ### Example
@@ -4641,6 +4655,7 @@ Wraps POST /api/v2/architect/schedulegroups
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:scheduleGroup:add
 
 
 ### Example
@@ -4706,6 +4721,7 @@ Wraps POST /api/v2/architect/schedules
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:schedule:add
 
 
 ### Example
@@ -5830,6 +5846,7 @@ Wraps PUT /api/v2/architect/emergencygroups/{emergencyGroupId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:emergencyGroup:edit
 
 
 ### Example
@@ -5898,6 +5915,7 @@ Wraps PUT /api/v2/architect/ivrs/{ivrId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:callRoute:edit
 
 
 ### Example
@@ -6105,6 +6123,7 @@ Wraps PUT /api/v2/architect/schedules/{scheduleId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:schedule:edit
 
 
 ### Example
@@ -6173,6 +6192,7 @@ Wraps PUT /api/v2/architect/schedulegroups/{scheduleGroupId}
 Requires ANY permissions: 
 
 * telephony:plugin:all
+* routing:scheduleGroup:edit
 
 
 ### Example

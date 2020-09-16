@@ -25,29 +25,29 @@ module PureCloud
     # The user associated with this data
     attr_accessor :user
 
-    # The work plan associated with this agent
+    # The work plan associated with this agent, if applicable
     attr_accessor :work_plan
 
-    # The time zone for this agent. Defaults to the time zone of the management unit to which the agent belongs
-    attr_accessor :time_zone
+    # The work plan rotation associated with this agent, if applicable
+    attr_accessor :work_plan_rotation
 
     # Whether the agent accepts direct shift trade requests
     attr_accessor :accept_direct_shift_trades
 
-    # Metadata for this agent
-    attr_accessor :metadata
-
-    # List of queues to which the agent belongs and which are defined in the service goal groups in this management unit
+    # List of queues to which this agent is capable of handling
     attr_accessor :queues
 
-    # The list of languages
+    # The list of languages this agent is capable of handling
     attr_accessor :languages
 
-    # The list of skills
+    # The list of skills this agent is capable of handling
     attr_accessor :skills
 
     # Whether the agent has the permission to be included in schedule generation
     attr_accessor :schedulable
+
+    # Metadata for this agent
+    attr_accessor :metadata
 
     # The URI for this object
     attr_accessor :self_uri
@@ -62,11 +62,9 @@ module PureCloud
         
         :'work_plan' => :'workPlan',
         
-        :'time_zone' => :'timeZone',
+        :'work_plan_rotation' => :'workPlanRotation',
         
         :'accept_direct_shift_trades' => :'acceptDirectShiftTrades',
-        
-        :'metadata' => :'metadata',
         
         :'queues' => :'queues',
         
@@ -75,6 +73,8 @@ module PureCloud
         :'skills' => :'skills',
         
         :'schedulable' => :'schedulable',
+        
+        :'metadata' => :'metadata',
         
         :'self_uri' => :'selfUri'
         
@@ -91,11 +91,9 @@ module PureCloud
         
         :'work_plan' => :'WorkPlanReference',
         
-        :'time_zone' => :'WfmTimeZone',
+        :'work_plan_rotation' => :'WorkPlanRotationReference',
         
         :'accept_direct_shift_trades' => :'BOOLEAN',
-        
-        :'metadata' => :'WfmVersionedEntityMetadata',
         
         :'queues' => :'Array<QueueReference>',
         
@@ -104,6 +102,8 @@ module PureCloud
         :'skills' => :'Array<RoutingSkillReference>',
         
         :'schedulable' => :'BOOLEAN',
+        
+        :'metadata' => :'WfmVersionedEntityMetadata',
         
         :'self_uri' => :'String'
         
@@ -146,10 +146,10 @@ module PureCloud
       end
 
       
-      if attributes.has_key?(:'timeZone')
+      if attributes.has_key?(:'workPlanRotation')
         
         
-        self.time_zone = attributes[:'timeZone']
+        self.work_plan_rotation = attributes[:'workPlanRotation']
         
       
       end
@@ -159,15 +159,6 @@ module PureCloud
         
         
         self.accept_direct_shift_trades = attributes[:'acceptDirectShiftTrades']
-        
-      
-      end
-
-      
-      if attributes.has_key?(:'metadata')
-        
-        
-        self.metadata = attributes[:'metadata']
         
       
       end
@@ -210,6 +201,15 @@ module PureCloud
         
         
         self.schedulable = attributes[:'schedulable']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'metadata')
+        
+        
+        self.metadata = attributes[:'metadata']
         
       
       end
@@ -349,13 +349,13 @@ module PureCloud
           id == o.id &&
           user == o.user &&
           work_plan == o.work_plan &&
-          time_zone == o.time_zone &&
+          work_plan_rotation == o.work_plan_rotation &&
           accept_direct_shift_trades == o.accept_direct_shift_trades &&
-          metadata == o.metadata &&
           queues == o.queues &&
           languages == o.languages &&
           skills == o.skills &&
           schedulable == o.schedulable &&
+          metadata == o.metadata &&
           self_uri == o.self_uri
     end
 
@@ -368,7 +368,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, user, work_plan, time_zone, accept_direct_shift_trades, metadata, queues, languages, skills, schedulable, self_uri].hash
+      [id, user, work_plan, work_plan_rotation, accept_direct_shift_trades, queues, languages, skills, schedulable, metadata, self_uri].hash
     end
 
     # build the object from hash

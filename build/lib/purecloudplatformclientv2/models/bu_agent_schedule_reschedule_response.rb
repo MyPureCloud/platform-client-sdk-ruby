@@ -30,6 +30,9 @@ module PureCloud
     # The work plan for this user
     attr_accessor :work_plan
 
+    # The work plans per week for this user from the work plan rotation. Null values in the list denotes that user is not part of any work plan for that week
+    attr_accessor :work_plans_per_week
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -40,7 +43,9 @@ module PureCloud
         
         :'full_day_time_off_markers' => :'fullDayTimeOffMarkers',
         
-        :'work_plan' => :'workPlan'
+        :'work_plan' => :'workPlan',
+        
+        :'work_plans_per_week' => :'workPlansPerWeek'
         
       }
     end
@@ -55,7 +60,9 @@ module PureCloud
         
         :'full_day_time_off_markers' => :'Array<BuFullDayTimeOffMarker>',
         
-        :'work_plan' => :'WorkPlanReference'
+        :'work_plan' => :'WorkPlanReference',
+        
+        :'work_plans_per_week' => :'Array<WorkPlanReference>'
         
       }
     end
@@ -109,6 +116,17 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'workPlansPerWeek')
+        
+        if (value = attributes[:'workPlansPerWeek']).is_a?(Array)
+          self.work_plans_per_week = value
+        end
+        
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -140,8 +158,17 @@ module PureCloud
       
       
       
+      
+      
+      
+      
     end
 
+    
+    
+    
+    
+    
     
     
     
@@ -171,7 +198,8 @@ module PureCloud
           user == o.user &&
           shifts == o.shifts &&
           full_day_time_off_markers == o.full_day_time_off_markers &&
-          work_plan == o.work_plan
+          work_plan == o.work_plan &&
+          work_plans_per_week == o.work_plans_per_week
     end
 
     # @see the `==` method
@@ -183,7 +211,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user, shifts, full_day_time_off_markers, work_plan].hash
+      [user, shifts, full_day_time_off_markers, work_plan, work_plans_per_week].hash
     end
 
     # build the object from hash

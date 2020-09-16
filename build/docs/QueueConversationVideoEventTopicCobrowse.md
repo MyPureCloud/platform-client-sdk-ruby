@@ -24,6 +24,7 @@ title: QueueConversationVideoEventTopicCobrowse
 | **disconnected_time** | **DateTime** |  | [optional] |
 | **wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
 | **after_call_work** | [**QueueConversationVideoEventTopicAfterCallWork**](QueueConversationVideoEventTopicAfterCallWork.html) |  | [optional] |
+| **after_call_work_required** | **BOOLEAN** |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

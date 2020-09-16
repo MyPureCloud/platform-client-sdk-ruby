@@ -31,6 +31,8 @@ title: QueueConversationEventTopicCall
 | **uui_data** | **String** |  | [optional] |
 | **wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
 | **after_call_work** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) |  | [optional] |
+| **after_call_work_required** | **BOOLEAN** |  | [optional] |
+| **agent_assistant_id** | **String** |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

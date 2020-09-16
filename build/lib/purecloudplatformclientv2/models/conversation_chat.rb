@@ -75,6 +75,9 @@ module PureCloud
     # After-call work for the communication.
     attr_accessor :after_call_work
 
+    # Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.
+    attr_accessor :after_call_work_required
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -115,7 +118,9 @@ module PureCloud
         
         :'wrapup' => :'wrapup',
         
-        :'after_call_work' => :'afterCallWork'
+        :'after_call_work' => :'afterCallWork',
+        
+        :'after_call_work_required' => :'afterCallWorkRequired'
         
       }
     end
@@ -160,7 +165,9 @@ module PureCloud
         
         :'wrapup' => :'Wrapup',
         
-        :'after_call_work' => :'AfterCallWork'
+        :'after_call_work' => :'AfterCallWork',
+        
+        :'after_call_work_required' => :'BOOLEAN'
         
       }
     end
@@ -347,6 +354,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'afterCallWorkRequired')
+        
+        
+        self.after_call_work_required = attributes[:'afterCallWorkRequired']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -406,6 +422,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -578,6 +598,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -601,7 +626,8 @@ module PureCloud
           avatar_image_url == o.avatar_image_url &&
           journey_context == o.journey_context &&
           wrapup == o.wrapup &&
-          after_call_work == o.after_call_work
+          after_call_work == o.after_call_work &&
+          after_call_work_required == o.after_call_work_required
     end
 
     # @see the `==` method
@@ -613,7 +639,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, script_id, peer_id, avatar_image_url, journey_context, wrapup, after_call_work].hash
+      [state, id, room_id, recording_id, segments, held, direction, disconnect_type, start_hold_time, start_alerting_time, connected_time, disconnected_time, provider, script_id, peer_id, avatar_image_url, journey_context, wrapup, after_call_work, after_call_work_required].hash
     end
 
     # build the object from hash

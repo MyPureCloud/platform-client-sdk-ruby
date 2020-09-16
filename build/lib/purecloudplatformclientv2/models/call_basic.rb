@@ -98,6 +98,12 @@ module PureCloud
     # After-call work for the communication.
     attr_accessor :after_call_work
 
+    # Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested.
+    attr_accessor :after_call_work_required
+
+    # UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation.
+    attr_accessor :agent_assistant_id
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -154,7 +160,11 @@ module PureCloud
         
         :'wrapup' => :'wrapup',
         
-        :'after_call_work' => :'afterCallWork'
+        :'after_call_work' => :'afterCallWork',
+        
+        :'after_call_work_required' => :'afterCallWorkRequired',
+        
+        :'agent_assistant_id' => :'agentAssistantId'
         
       }
     end
@@ -215,7 +225,11 @@ module PureCloud
         
         :'wrapup' => :'Wrapup',
         
-        :'after_call_work' => :'AfterCallWork'
+        :'after_call_work' => :'AfterCallWork',
+        
+        :'after_call_work_required' => :'BOOLEAN',
+        
+        :'agent_assistant_id' => :'String'
         
       }
     end
@@ -476,6 +490,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'afterCallWorkRequired')
+        
+        
+        self.after_call_work_required = attributes[:'afterCallWorkRequired']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'agentAssistantId')
+        
+        
+        self.agent_assistant_id = attributes[:'agentAssistantId']
+        
+      
+      end
+
+      
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -556,6 +588,14 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -793,6 +833,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -824,7 +874,9 @@ module PureCloud
           _self == o._self &&
           other == o.other &&
           wrapup == o.wrapup &&
-          after_call_work == o.after_call_work
+          after_call_work == o.after_call_work &&
+          after_call_work_required == o.after_call_work_required &&
+          agent_assistant_id == o.agent_assistant_id
     end
 
     # @see the `==` method
@@ -836,7 +888,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, direction, recording, recording_state, muted, confined, held, recording_id, segments, error_info, disconnect_type, start_hold_time, document_id, start_alerting_time, connected_time, disconnected_time, disconnect_reasons, fax_status, provider, script_id, peer_id, uui_data, _self, other, wrapup, after_call_work].hash
+      [state, id, direction, recording, recording_state, muted, confined, held, recording_id, segments, error_info, disconnect_type, start_hold_time, document_id, start_alerting_time, connected_time, disconnected_time, disconnect_reasons, fax_status, provider, script_id, peer_id, uui_data, _self, other, wrapup, after_call_work, after_call_work_required, agent_assistant_id].hash
     end
 
     # build the object from hash

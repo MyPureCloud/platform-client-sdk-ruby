@@ -92,7 +92,7 @@ module PureCloud
       
       
       
-      allowed_values = ["Document", "Queue", "Recording", "Role", "VoicemailUserPolicy", "WrapupCode", "AccessToken", "OAuthClient", "OAuthClientAuthorization", "AuthOrganization", "AuthUser", "BulkActions", "Feedback", "Topic", "Program", "Segment", "Outcome", "ClickstreamSettings", "Schedule", "Trigger"]
+      allowed_values = ["Document", "Queue", "Recording", "Role", "VoicemailUserPolicy", "WrapupCode", "AccessToken", "OAuthClient", "OAuthClientAuthorization", "AuthOrganization", "AuthUser", "BulkActions", "Feedback", "Topic", "Program", "Segment", "Outcome", "SessionType", "EventType", "ClickstreamSettings", "Schedule", "Trigger", "Response"]
       if @name && !allowed_values.include?(@name)
         return false
       end
@@ -110,7 +110,7 @@ module PureCloud
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] name Object to be assigned
     def name=(name)
-      allowed_values = ["Document", "Queue", "Recording", "Role", "VoicemailUserPolicy", "WrapupCode", "AccessToken", "OAuthClient", "OAuthClientAuthorization", "AuthOrganization", "AuthUser", "BulkActions", "Feedback", "Topic", "Program", "Segment", "Outcome", "ClickstreamSettings", "Schedule", "Trigger"]
+      allowed_values = ["Document", "Queue", "Recording", "Role", "VoicemailUserPolicy", "WrapupCode", "AccessToken", "OAuthClient", "OAuthClientAuthorization", "AuthOrganization", "AuthUser", "BulkActions", "Feedback", "Topic", "Program", "Segment", "Outcome", "SessionType", "EventType", "ClickstreamSettings", "Schedule", "Trigger", "Response"]
       if name && !allowed_values.include?(name)
         fail ArgumentError, "invalid value for 'name', must be one of #{allowed_values}."
       end

@@ -12,8 +12,11 @@ title: JsonNode
 | **number** | **BOOLEAN** |  | [optional] |
 | **boolean** | **BOOLEAN** |  | [optional] |
 | **object** | **BOOLEAN** |  | [optional] |
-| **floating_point_number** | **BOOLEAN** |  | [optional] |
+| **value_node** | **BOOLEAN** |  | [optional] |
 | **pojo** | **BOOLEAN** |  | [optional] |
+| **container_node** | **BOOLEAN** |  | [optional] |
+| **missing_node** | **BOOLEAN** |  | [optional] |
+| **floating_point_number** | **BOOLEAN** |  | [optional] |
 | **integral_number** | **BOOLEAN** |  | [optional] |
 | **short** | **BOOLEAN** |  | [optional] |
 | **int** | **BOOLEAN** |  | [optional] |
@@ -23,9 +26,6 @@ title: JsonNode
 | **big_integer** | **BOOLEAN** |  | [optional] |
 | **textual** | **BOOLEAN** |  | [optional] |
 | **binary** | **BOOLEAN** |  | [optional] |
-| **value_node** | **BOOLEAN** |  | [optional] |
-| **container_node** | **BOOLEAN** |  | [optional] |
-| **missing_node** | **BOOLEAN** |  | [optional] |
 | **array** | **BOOLEAN** |  | [optional] |
 | **null** | **BOOLEAN** |  | [optional] |
 {: class="table table-striped"}

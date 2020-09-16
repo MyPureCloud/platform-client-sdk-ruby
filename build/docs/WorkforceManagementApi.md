@@ -1272,6 +1272,12 @@ Requires ANY permissions:
 * wfm:workPlan:delete
 * wfm:workPlan:edit
 * wfm:workPlan:view
+* wfm:workPlanRotation:add
+* wfm:workPlanRotation:delete
+* wfm:workPlanRotation:edit
+* wfm:workPlanRotation:view
+* coaching:appointment:add
+* coaching:appointment:edit
 
 
 ### Example
@@ -1626,7 +1632,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **business_unit_id** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
- **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlans |
+ **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans |
  **division_id** | **String**|  | [optional]  |
 {: class="table table-striped"}
 
@@ -2836,7 +2842,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlans |
+ **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans |
  **division_id** | **String**|  | [optional]  |
 {: class="table table-striped"}
 
@@ -2983,6 +2989,10 @@ Requires ANY permissions:
 * wfm:workPlan:delete
 * wfm:workPlan:edit
 * wfm:workPlan:view
+* wfm:workPlanRotation:add
+* wfm:workPlanRotation:delete
+* wfm:workPlanRotation:edit
+* wfm:workPlanRotation:view
 
 
 ### Example
@@ -3280,7 +3290,7 @@ Name | Type | Description  | Notes
 
 <a name="get_workforcemanagement_managementunit_agent"></a>
 
-## [**WfmAgent**](WfmAgent.html) get_workforcemanagement_managementunit_agent(management_unit_id, agent_id)
+## [**WfmAgent**](WfmAgent.html) get_workforcemanagement_managementunit_agent(management_unit_id, agent_id, opts)
 
 
 
@@ -3316,10 +3326,13 @@ management_unit_id = "management_unit_id_example" # String | The id of the manag
 
 agent_id = "agent_id_example" # String | The agent id
 
+opts = { 
+  exclude_capabilities: true # BOOLEAN | Excludes all capabilities of the agent such as queues, languages, and skills
+}
 
 begin
   #Get data for agent in the management unit
-  result = api_instance.get_workforcemanagement_managementunit_agent(management_unit_id, agent_id)
+  result = api_instance.get_workforcemanagement_managementunit_agent(management_unit_id, agent_id, opts)
   p result
 rescue PureCloud::ApiError => e
   puts "Exception when calling WorkforceManagementApi->get_workforcemanagement_managementunit_agent: #{e}"
@@ -3332,6 +3345,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **management_unit_id** | **String**| The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
  **agent_id** | **String**| The agent id |  |
+ **exclude_capabilities** | **BOOLEAN**| Excludes all capabilities of the agent such as queues, languages, and skills | [optional]  |
 {: class="table table-striped"}
 
 
@@ -4159,6 +4173,7 @@ Requires ANY permissions:
 * wfm:realtimeAdherence:view
 * wfm:schedule:view
 * wfm:timeOffRequest:view
+* wfm:workPlanRotation:view
 * wfm:workPlan:view
 
 
@@ -4656,6 +4671,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/workpla
 
 Requires ANY permissions: 
 
+* wfm:workPlanRotation:view
 * wfm:workPlan:view
 * wfm:schedule:edit
 
@@ -4728,6 +4744,7 @@ Requires ANY permissions:
 * wfm:agent:view
 * wfm:publishedSchedule:view
 * wfm:schedule:view
+* wfm:workPlanRotation:view
 * wfm:workPlan:view
 
 
@@ -4840,7 +4857,7 @@ Name | Type | Description  | Notes
  **page_size** | **Integer**|  | [optional]  |
  **page_number** | **Integer**|  | [optional]  |
  **expand** | **String**|  | [optional] <br />**Values**: details |
- **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlans |
+ **feature** | **String**|  | [optional] <br />**Values**: AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans |
  **division_id** | **String**|  | [optional]  |
 {: class="table table-striped"}
 

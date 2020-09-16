@@ -22,6 +22,7 @@ title: QueueConversationEventTopicChat
 | **journey_context** | [**QueueConversationEventTopicJourneyContext**](QueueConversationEventTopicJourneyContext.html) |  | [optional] |
 | **wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
 | **after_call_work** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) |  | [optional] |
+| **after_call_work_required** | **BOOLEAN** |  | [optional] |
 | **additional_properties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

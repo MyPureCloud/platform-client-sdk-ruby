@@ -48,6 +48,8 @@ module PureCloud
 
     attr_accessor :after_call_work
 
+    attr_accessor :after_call_work_required
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -83,6 +85,8 @@ module PureCloud
         :'wrapup' => :'wrapup',
         
         :'after_call_work' => :'afterCallWork',
+        
+        :'after_call_work_required' => :'afterCallWorkRequired',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -122,6 +126,8 @@ module PureCloud
         :'wrapup' => :'QueueConversationEventTopicWrapup',
         
         :'after_call_work' => :'QueueConversationEventTopicAfterCallWork',
+        
+        :'after_call_work_required' => :'BOOLEAN',
         
         :'additional_properties' => :'Object'
         
@@ -272,6 +278,15 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'afterCallWorkRequired')
+        
+        
+        self.after_call_work_required = attributes[:'afterCallWorkRequired']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -339,6 +354,10 @@ module PureCloud
       if @disconnect_type && !allowed_values.include?(@disconnect_type)
         return false
       end
+      
+      
+      
+      
       
       
       
@@ -471,6 +490,11 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -491,6 +515,7 @@ module PureCloud
           journey_context == o.journey_context &&
           wrapup == o.wrapup &&
           after_call_work == o.after_call_work &&
+          after_call_work_required == o.after_call_work_required &&
           additional_properties == o.additional_properties
     end
 
@@ -503,7 +528,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [state, id, provider, script_id, peer_id, room_id, avatar_image_url, held, disconnect_type, start_hold_time, connected_time, disconnected_time, journey_context, wrapup, after_call_work, additional_properties].hash
+      [state, id, provider, script_id, peer_id, room_id, avatar_image_url, held, disconnect_type, start_hold_time, connected_time, disconnected_time, journey_context, wrapup, after_call_work, after_call_work_required, additional_properties].hash
     end
 
     # build the object from hash

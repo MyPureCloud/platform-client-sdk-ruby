@@ -7197,6 +7197,81 @@ module PureCloud
       return data, status_code, headers
     end
 
+    # Attempts to manually assign a specified conversation to a specified agent.  Ignores bullseye ring, PAR score, skills, and languages.
+    # 
+    # @param conversation_id conversation ID
+    # @param body Targeted user
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def post_conversation_assign(conversation_id, body, opts = {})
+      data, _status_code, _headers = post_conversation_assign_with_http_info(conversation_id, body, opts)
+      return data
+    end
+
+    # Attempts to manually assign a specified conversation to a specified agent.  Ignores bullseye ring, PAR score, skills, and languages.
+    # 
+    # @param conversation_id conversation ID
+    # @param body Targeted user
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def post_conversation_assign_with_http_info(conversation_id, body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationsApi.post_conversation_assign ..."
+      end
+      
+      
+      # verify the required parameter 'conversation_id' is set
+      fail ArgumentError, "Missing the required parameter 'conversation_id' when calling ConversationsApi.post_conversation_assign" if conversation_id.nil?
+      
+      
+      
+      
+      
+      
+      # verify the required parameter 'body' is set
+      fail ArgumentError, "Missing the required parameter 'body' when calling ConversationsApi.post_conversation_assign" if body.nil?
+      
+      
+      
+      
+      
+      # resource path
+      local_var_path = "/api/v2/conversations/{conversationId}/assign".sub('{format}','json').sub('{' + 'conversationId' + '}', conversation_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      local_header_accept = ['application/json']
+      local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
+
+      # HTTP header 'Content-Type'
+      local_header_content_type = ['application/json']
+      header_params['Content-Type'] = @api_client.select_header_content_type(local_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(body)
+      
+      auth_names = ['PureCloud OAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationsApi#post_conversation_assign\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation.
     # 
     # @param conversation_id conversation ID

@@ -1537,8 +1537,8 @@ module PureCloud
       
       
       
-      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'ActivityCodes', 'Agents', 'BuActivityCodes', 'BusinessUnits', 'HistoricalAdherence', 'IntradayMonitoring', 'BuIntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'BuSchedules', 'ServiceGoalGroups', 'ServiceGoalTemplates', 'PlanningGroups', 'ShiftTrading', 'ShortTermForecasts', 'BuShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
-        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlans'
+      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'Coaching', 'ActivityCodes', 'Agents', 'BuActivityCodes', 'BusinessUnits', 'HistoricalAdherence', 'IntradayMonitoring', 'BuIntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'BuSchedules', 'ServiceGoalGroups', 'ServiceGoalTemplates', 'PlanningGroups', 'ShiftTrading', 'ShortTermForecasts', 'BuShortTermForecasts', 'TimeOffRequests', 'WorkPlanRotations', 'WorkPlans'].include?(opts[:'feature'])
+        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans'
       end
       
       
@@ -2934,8 +2934,8 @@ module PureCloud
       
       
       
-      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'ActivityCodes', 'Agents', 'BuActivityCodes', 'BusinessUnits', 'HistoricalAdherence', 'IntradayMonitoring', 'BuIntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'BuSchedules', 'ServiceGoalGroups', 'ServiceGoalTemplates', 'PlanningGroups', 'ShiftTrading', 'ShortTermForecasts', 'BuShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
-        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlans'
+      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'Coaching', 'ActivityCodes', 'Agents', 'BuActivityCodes', 'BusinessUnits', 'HistoricalAdherence', 'IntradayMonitoring', 'BuIntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'BuSchedules', 'ServiceGoalGroups', 'ServiceGoalTemplates', 'PlanningGroups', 'ShiftTrading', 'ShortTermForecasts', 'BuShortTermForecasts', 'TimeOffRequests', 'WorkPlanRotations', 'WorkPlans'].include?(opts[:'feature'])
+        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans'
       end
       
       
@@ -3343,6 +3343,7 @@ module PureCloud
     # @param management_unit_id The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param agent_id The agent id
     # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :exclude_capabilities Excludes all capabilities of the agent such as queues, languages, and skills
     # @return [WfmAgent]
     def get_workforcemanagement_managementunit_agent(management_unit_id, agent_id, opts = {})
       data, _status_code, _headers = get_workforcemanagement_managementunit_agent_with_http_info(management_unit_id, agent_id, opts)
@@ -3354,6 +3355,7 @@ module PureCloud
     # @param management_unit_id The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.
     # @param agent_id The agent id
     # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :exclude_capabilities Excludes all capabilities of the agent such as queues, languages, and skills
     # @return [Array<(WfmAgent, Fixnum, Hash)>] WfmAgent data, response status code and response headers
     def get_workforcemanagement_managementunit_agent_with_http_info(management_unit_id, agent_id, opts = {})
       if @api_client.config.debugging
@@ -3376,11 +3378,18 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
       # resource path
       local_var_path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}".sub('{format}','json').sub('{' + 'managementUnitId' + '}', management_unit_id.to_s).sub('{' + 'agentId' + '}', agent_id.to_s)
 
       # query parameters
       query_params = {}
+      query_params[:'excludeCapabilities'] = opts[:'exclude_capabilities'] if opts[:'exclude_capabilities']
 
       # header parameters
       header_params = {}
@@ -5067,8 +5076,8 @@ module PureCloud
       
       
       
-      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'ActivityCodes', 'Agents', 'BuActivityCodes', 'BusinessUnits', 'HistoricalAdherence', 'IntradayMonitoring', 'BuIntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'BuSchedules', 'ServiceGoalGroups', 'ServiceGoalTemplates', 'PlanningGroups', 'ShiftTrading', 'ShortTermForecasts', 'BuShortTermForecasts', 'TimeOffRequests', 'WorkPlans'].include?(opts[:'feature'])
-        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlans'
+      if opts[:'feature'] && !['AgentSchedule', 'AgentTimeOffRequest', 'Coaching', 'ActivityCodes', 'Agents', 'BuActivityCodes', 'BusinessUnits', 'HistoricalAdherence', 'IntradayMonitoring', 'BuIntradayMonitoring', 'ManagementUnits', 'RealTimeAdherence', 'Schedules', 'BuSchedules', 'ServiceGoalGroups', 'ServiceGoalTemplates', 'PlanningGroups', 'ShiftTrading', 'ShortTermForecasts', 'BuShortTermForecasts', 'TimeOffRequests', 'WorkPlanRotations', 'WorkPlans'].include?(opts[:'feature'])
+        fail ArgumentError, 'invalid value for "feature", must be one of AgentSchedule, AgentTimeOffRequest, Coaching, ActivityCodes, Agents, BuActivityCodes, BusinessUnits, HistoricalAdherence, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalGroups, ServiceGoalTemplates, PlanningGroups, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, TimeOffRequests, WorkPlanRotations, WorkPlans'
       end
       
       

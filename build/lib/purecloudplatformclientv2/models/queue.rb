@@ -68,6 +68,12 @@ module PureCloud
     # Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.
     attr_accessor :auto_answer_only
 
+    # Indicates whether voice transcription is enabled for this queue.
+    attr_accessor :enable_transcription
+
+    # Indicates whether manual assignment is enabled for this queue.
+    attr_accessor :enable_manual_assignment
+
     # The name to use for caller identification for outbound calls from this queue.
     attr_accessor :calling_party_name
 
@@ -123,6 +129,10 @@ module PureCloud
         
         :'auto_answer_only' => :'autoAnswerOnly',
         
+        :'enable_transcription' => :'enableTranscription',
+        
+        :'enable_manual_assignment' => :'enableManualAssignment',
+        
         :'calling_party_name' => :'callingPartyName',
         
         :'calling_party_number' => :'callingPartyNumber',
@@ -175,6 +185,10 @@ module PureCloud
         :'whisper_prompt' => :'DomainEntityRef',
         
         :'auto_answer_only' => :'BOOLEAN',
+        
+        :'enable_transcription' => :'BOOLEAN',
+        
+        :'enable_manual_assignment' => :'BOOLEAN',
         
         :'calling_party_name' => :'String',
         
@@ -357,6 +371,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'enableTranscription')
+        
+        
+        self.enable_transcription = attributes[:'enableTranscription']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'enableManualAssignment')
+        
+        
+        self.enable_manual_assignment = attributes[:'enableManualAssignment']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'callingPartyName')
         
         
@@ -525,6 +557,14 @@ module PureCloud
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     
@@ -652,6 +692,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -674,6 +724,8 @@ module PureCloud
           queue_flow == o.queue_flow &&
           whisper_prompt == o.whisper_prompt &&
           auto_answer_only == o.auto_answer_only &&
+          enable_transcription == o.enable_transcription &&
+          enable_manual_assignment == o.enable_manual_assignment &&
           calling_party_name == o.calling_party_name &&
           calling_party_number == o.calling_party_number &&
           default_scripts == o.default_scripts &&
@@ -691,7 +743,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, division, description, date_created, date_modified, modified_by, created_by, member_count, media_settings, routing_rules, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, auto_answer_only, calling_party_name, calling_party_number, default_scripts, outbound_messaging_addresses, outbound_email_address, self_uri].hash
+      [id, name, division, description, date_created, date_modified, modified_by, created_by, member_count, media_settings, routing_rules, bullseye, acw_settings, skill_evaluation_method, queue_flow, whisper_prompt, auto_answer_only, enable_transcription, enable_manual_assignment, calling_party_name, calling_party_number, default_scripts, outbound_messaging_addresses, outbound_email_address, self_uri].hash
     end
 
     # build the object from hash

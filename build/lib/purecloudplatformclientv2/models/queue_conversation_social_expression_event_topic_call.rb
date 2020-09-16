@@ -66,6 +66,10 @@ module PureCloud
 
     attr_accessor :after_call_work
 
+    attr_accessor :after_call_work_required
+
+    attr_accessor :agent_assistant_id
+
     attr_accessor :additional_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -119,6 +123,10 @@ module PureCloud
         :'wrapup' => :'wrapup',
         
         :'after_call_work' => :'afterCallWork',
+        
+        :'after_call_work_required' => :'afterCallWorkRequired',
+        
+        :'agent_assistant_id' => :'agentAssistantId',
         
         :'additional_properties' => :'additionalProperties'
         
@@ -176,6 +184,10 @@ module PureCloud
         :'wrapup' => :'QueueConversationSocialExpressionEventTopicWrapup',
         
         :'after_call_work' => :'QueueConversationSocialExpressionEventTopicAfterCallWork',
+        
+        :'after_call_work_required' => :'BOOLEAN',
+        
+        :'agent_assistant_id' => :'String',
         
         :'additional_properties' => :'Object'
         
@@ -409,6 +421,24 @@ module PureCloud
       end
 
       
+      if attributes.has_key?(:'afterCallWorkRequired')
+        
+        
+        self.after_call_work_required = attributes[:'afterCallWorkRequired']
+        
+      
+      end
+
+      
+      if attributes.has_key?(:'agentAssistantId')
+        
+        
+        self.agent_assistant_id = attributes[:'agentAssistantId']
+        
+      
+      end
+
+      
       if attributes.has_key?(:'additionalProperties')
         
         
@@ -494,6 +524,14 @@ module PureCloud
       if @direction && !allowed_values.include?(@direction)
         return false
       end
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -717,6 +755,16 @@ module PureCloud
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
@@ -746,6 +794,8 @@ module PureCloud
           uui_data == o.uui_data &&
           wrapup == o.wrapup &&
           after_call_work == o.after_call_work &&
+          after_call_work_required == o.after_call_work_required &&
+          agent_assistant_id == o.agent_assistant_id &&
           additional_properties == o.additional_properties
     end
 
@@ -758,7 +808,7 @@ module PureCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, state, recording, recording_state, muted, confined, held, error_info, disconnect_type, start_hold_time, direction, document_id, _self, other, provider, script_id, peer_id, connected_time, disconnected_time, disconnect_reasons, fax_status, uui_data, wrapup, after_call_work, additional_properties].hash
+      [id, state, recording, recording_state, muted, confined, held, error_info, disconnect_type, start_hold_time, direction, document_id, _self, other, provider, script_id, peer_id, connected_time, disconnected_time, disconnect_reasons, fax_status, uui_data, wrapup, after_call_work, after_call_work_required, agent_assistant_id, additional_properties].hash
     end
 
     # build the object from hash

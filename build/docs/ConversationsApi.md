@@ -104,6 +104,7 @@ Method | Description
 [**post_analytics_conversations_aggregates_query**](ConversationsApi.html#post_analytics_conversations_aggregates_query) | Query for conversation aggregates
 [**post_analytics_conversations_details_jobs**](ConversationsApi.html#post_analytics_conversations_details_jobs) | Query for conversation details asynchronously
 [**post_analytics_conversations_details_query**](ConversationsApi.html#post_analytics_conversations_details_query) | Query for conversation details
+[**post_conversation_assign**](ConversationsApi.html#post_conversation_assign) | Attempts to manually assign a specified conversation to a specified agent.  Ignores bullseye ring, PAR score, skills, and languages.
 [**post_conversation_disconnect**](ConversationsApi.html#post_conversation_disconnect) | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation.
 [**post_conversation_participant_callbacks**](ConversationsApi.html#post_conversation_participant_callbacks) | Create a new callback for the specified participant on the conversation.
 [**post_conversation_participant_digits**](ConversationsApi.html#post_conversation_participant_digits) | Sends DTMF to the participant
@@ -6575,6 +6576,83 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+<a name="post_conversation_assign"></a>
+
+## String** post_conversation_assign(conversation_id, body)
+
+
+
+Attempts to manually assign a specified conversation to a specified agent.  Ignores bullseye ring, PAR score, skills, and languages.
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/assign 
+
+Requires ANY permissions: 
+
+* conversation:call:pull
+* conversation:call:assign
+* conversation:callback:pull
+* conversation:callback:assign
+* conversation:webchat:pull
+* conversation:webchat:assign
+* conversation:email:pull
+* conversation:email:assign
+* conversation:message:pull
+* conversation:message:assign
+
+
+### Example
+```{"language":"ruby"}
+# load the gem
+require 'purecloudplatformclientv2'
+# setup authorization
+@secret = ENV['PURECLOUD_SECRET']
+@id = ENV['PURECLOUD_CLIENT_ID']
+environment = "mypurecloud.com"
+
+@authToken = PureCloud.authenticate_with_client_credentials @id, @secret, environment
+
+PureCloud.configure do |config|
+  config.access_token = @authToken
+end
+
+api_instance = PureCloud::ConversationsApi.new
+
+conversation_id = "conversation_id_example" # String | conversation ID
+
+body = PureCloud::ConversationUser.new # ConversationUser | Targeted user
+
+
+begin
+  #Attempts to manually assign a specified conversation to a specified agent.  Ignores bullseye ring, PAR score, skills, and languages.
+  result = api_instance.post_conversation_assign(conversation_id, body)
+  p result
+rescue PureCloud::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversation_assign: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **String**| conversation ID |  |
+ **body** | [**ConversationUser**](ConversationUser.html)| Targeted user |  |
+{: class="table table-striped"}
+
+
+### Return type
+
+**String**
 
 ### HTTP request headers
 
