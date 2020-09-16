@@ -15,5 +15,5 @@ Terms of Service: https://help.mypurecloud.com/articles/terms-and-conditions/
 =end
 
 module PureCloud
-  VERSION = "97.0.19"
+  VERSION = "97.0.20"
 end
