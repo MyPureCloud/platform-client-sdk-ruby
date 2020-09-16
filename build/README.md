@@ -1,7 +1,7 @@
 ---
 title: Platform API Client SDK - Ruby
 ---
-![](http://ruby-gem-downloads-badge.herokuapp.com/purecloudplatformclientv2?label=97.0.17)
+![](http://ruby-gem-downloads-badge.herokuapp.com/purecloudplatformclientv2?label=97.0.18)
 
 Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/ruby/](https://developer.mypurecloud.com/api/rest/client-libraries/ruby/)
 
@@ -10,7 +10,7 @@ Documentation can be found at [https://developer.mypurecloud.com/api/rest/client
 ### from rubygems.org
 
 ```{"language":"ruby"}
-gem install 'purecloudplatformclientv2', '~> 97.0.17'
+gem install 'purecloudplatformclientv2', '~> 97.0.18'
 ```
 
 ### Install from Git
